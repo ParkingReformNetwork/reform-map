@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+
+
+	<title><%=city%>, <%=state%></title>
+</head>
+<body style='background-image: url("bg-photo.jpg");'>
+    <!-- Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous"></script>
+    
+
+    <div class="container site-container-wrap justify-content-center mt-2 col-9" style="background-color: #ffffff">
+	    <header>
+	    	<h1 class="display-3 p-2">
+	    		<a href=https://parkingreform.org style="background-color: #ff4747; color: #ffffff; text-transform: uppercase;text-decoration-line:none">Parking Reform Network</a>
+	    	</h1>
+	    </header>
+	    <div class="container site-container-wrap">
+			<h1><%=city%>, <%=state%></h1>
+		    <% for(j in 1:nrow(city_df)) { %>
+		        <h2> Citation <%= j %></h2>
+		        <h3>Summary</h3>
+		        <p><%= city_df$Summary[j] %></p>
+		        <h3>Source Description </h3>
+		        <p><%= city_df$Source.Description[j] %></p>
+		        <h3>Type</h3>
+		        <p><%= city_df$Type[j] %></p>
+		        <h3>URL</h3>
+		        <p><%= city_df$URL[j] %></p>
+		        
+		        <% if(nchar(city_df$Attachments[j]) > 0) { %>
+		            <h3>Attachments</h3>
+		            <% attachments <- strsplit(city_df$Attachments[j], " ") %>
+		            <% for(k in 1:length(attachments)) { %>
+		                <img src = "<%= attachments[k] %>" class="attachments img-fluid">
+		            <% } %>
+		        <% } %>
+		    <% } %>
+
+	    </div>
+    </div>
+
+</body>
+</html>

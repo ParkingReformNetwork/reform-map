@@ -118,8 +118,8 @@ ui <- bootstrapPage(
                                  textOutput("clicked_report_summary"),
                                  textOutput("clicked_report_magnitude"),
                                  textOutput("clicked_land_uses"),
-                                 textOutput("clicked_reporter")
-                                 
+                                 textOutput("clicked_reporter"),
+                                 uiOutput("clicked_city_state")
                                  )
                              })
                          )
@@ -226,6 +226,19 @@ server <- function(input, output, session) {
             select(reporter_name) %>%
             paste0()
         }
+    )
+    
+    # render city_state for citation link
+    output$clicked_city_state <- renderUI({
+        req(input$map_marker_click$id)
+        map_data %>%
+            filter(id == input$map_marker_click$id) %>%
+            mutate(city_state = str_replace_all(paste(city, state, sep="_"), " ", "")) %>%
+            select(city_state) %>%
+            paste0() %>%
+            paste("http://www.google.com/", ., sep="") -> url
+        HTML(paste(a("link", href=url)))
+    }
     )
     
     
