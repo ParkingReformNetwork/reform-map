@@ -231,13 +231,14 @@ server <- function(input, output, session) {
     # render city_state for citation link
     output$clicked_city_state <- renderUI({
         req(input$map_marker_click$id)
+        
         map_data %>%
             filter(id == input$map_marker_click$id) %>%
             mutate(city_state = str_replace_all(paste(city, state, sep="_"), " ", "")) %>%
             select(city_state) %>%
             paste0() %>%
-            paste("http://www.google.com/", ., sep="") -> url
-        HTML(paste(a("link", href=url)))
+            paste("https://htmlpreview.github.io/?https://github.com/bradbakermusic/parking_map/blob/main/city_detail/", .,".html", sep="") -> url
+        HTML(paste(a("More Info", href=url, target="_blank")))
     }
     )
     
