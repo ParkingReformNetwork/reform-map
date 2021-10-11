@@ -3,6 +3,25 @@ html, body {
     height:100%
 }
 
+@media only screen and (max-width: 600px) {
+  #selector_pane {
+    visibility: hidden;
+  }
+  #legend {
+    visibility: hidden; 
+  }
+   #logos {
+    bottom:10px;
+   }
+}
+
+@media only screen and (min-width: 600px) {
+    #logos {
+        top:10px;
+    }
+}
+
+
 .map_and_selectors {
     position: absolute;
     left:0 ;
@@ -21,6 +40,10 @@ html, body {
     border-style: solid;
     border-width: 20px;
     z-index: 1000000;
+}
+
+.clicked_city_first_row > div {
+    display:inline-block;
 }
 
 #clicked_city, #clicked_population,
@@ -48,7 +71,6 @@ html, body {
 
 #logos {
 	right:10px;
-	top:10px;
 	position:absolute;
 	cursor:inherit;
 }
@@ -74,10 +96,24 @@ html, body {
 	margin-left: 0px;
 }
 
-#strong_towns_link > img, #parking_reform_link > img{
+#strong_towns_link > img, #parking_reform_link > img {
 	height: 50px;
 }
 
 #legend > div > .awesome-marker-legend {
 	position: static;
+}
+
+.notify-badge{
+    position: absolute;
+    background:red;
+    text-align: right;
+    border-radius: 20px 20px 20px 20px;
+    color:white;
+    padding:2px 2px;
+    font-size:20px;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    right:-25px;
+    top:-20px;
+    transform: rotate(30deg); 
 }

@@ -14,14 +14,14 @@ map_icons <- awesomeIconList(test = makeAwesomeIcon(text = fa('car')))
 for(mag in unique(map_data$magnitude_encoded)){
     for(lu in unique(map_data$land_use_encoded)) {
         for(pop in unique(map_data$population_encoded)) {
-            map_icons[paste("icon", mag, lu, pop, sep = "_")] <- 
-                awesomeIconList(makeAwesomeIcon(text = fa(lu, fill = pop), 
-                                                markerColor = mag, 
-                                                #iconColor = pop, 
-                                                #squareMarker = T,
-                                                extraClasses = paste("population", 
-                                                                     pop,
-                                                                     sep = "-")))
+            for(spec in unique(map_data$is_special)) {
+                map_icons[paste("icon", mag, lu, pop, spec, sep = "_")] <- 
+                    awesomeIconList(makeAwesomeIcon(text = fa(lu, fill = pop), 
+                                                    markerColor = mag,
+                                                    #iconColor = pop, 
+                                                    #squareMarker = T,
+                                                    extraClasses = spec))
+            }
         }
     }
 }
@@ -37,8 +37,10 @@ ui <- bootstrapPage(
                   type = "text/css",
                   href = "map_stylings.css"),
         tags$script(src = "https://kit.fontawesome.com/37a140b4a8.js",
-                    crossorigin="anonymous")
+                    crossorigin="anonymous"),
+        tags$script(src = "add_highlights.js")
     ),
+    
 
     # generate map and selectors
     withTags({
@@ -110,7 +112,7 @@ ui <- bootstrapPage(
                     column(12,
                          withTags({
                              div(class = "clicked_city_info",
-                                 fluidRow(
+                                 fluidRow(class="clicked_city_first_row",
                                      column(11, h4(textOutput("clicked_city"))),
                                      column(1, actionButton("close_detail", "x"))
                                      ),
@@ -268,7 +270,8 @@ server <- function(input, output, session) {
             mutate(all_encoded = paste("icon", 
                                        magnitude_encoded, 
                                        land_use_encoded,
-                                       population_encoded, 
+                                       population_encoded,
+                                       is_special,
                                        sep = "_"
                                        )) %>%
             leafletProxy("map", data = .) %>%
@@ -277,15 +280,13 @@ server <- function(input, output, session) {
                        lat = ~map_points$lat,
                        layerId = ~map_points$id,
                        icon = ~map_icons[all_encoded],
-                       labelOptions(className = "test"),
                        options = markerOptions( opacity = map_points$population_encoded)
                        #clusterOptions = markerClusterOptions()
                        #popup = map_points$popup_info tooltip, ignoring for now
                        )
-        
+        session$sendCustomMessage("map_markers_added", message)
         })
 }
 
 # Run the application
-
 shinyApp(ui = ui, server = server)

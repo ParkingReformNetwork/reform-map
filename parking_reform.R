@@ -122,7 +122,10 @@ report_trimmed %>%
   mutate(magnitude_encoded = magnitude_to_color(report_magnitude)) %>%
   mutate(land_use_encoded = land_use_to_string(land_uses)) %>%
   mutate(population = sample(1200000,1)) %>%# TODO: remove next row once population is added
-  mutate(population_encoded = population_to_bin(population)) -> report_trimmed
+  mutate(population_encoded = population_to_bin(population)) %>%
+  mutate(is_new = sample(100,1)) %>% 
+  mutate(is_highlighted = sample(100,1)) %>%
+  mutate(is_special = if_else(is_highlighted < 5, "highlighed_icon", if_else(is_new < 10, "new_icon", "not_special_icon")))  -> report_trimmed
 
 # delete old file and save over the new one
 system("rm -fr tidied_map_data.csv")
