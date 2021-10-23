@@ -54,6 +54,10 @@ ui <- bootstrapPage(
                                   map_data$city,
                                   multiple = TRUE
                                   ),
+                              checkboxGroupInput("verified_selector",
+                                                 h4("Verified Selector"),
+                                                 choices = c(1, 0),
+                                                 selected = c(1, 0)),
                               checkboxGroupInput("magnitude_selector",
                                                  h4("Magnitude Selector"),
                                                  choices = c("Citywide", "City Center", "Transit Oriented", "Main Street"),
@@ -152,6 +156,7 @@ server <- function(input, output, session) {
         if(is.null(input$city_selector )){
             map_data %>%
                 filter(report_status %in% input$status_selector) %>%
+                filter(is_verified %in% input$verified_selector) %>%
                 filter(str_detect(tolower(report_magnitude), tolower(paste(input$magnitude_selector, collapse = "|")))) %>%
                 filter(str_detect(tolower(report_type), tolower(paste(input$type_selector, collapse = "|")))) %>%
                 filter(str_detect(tolower(land_uses), tolower(paste(input$land_use_selector, collapse = "|"))))
@@ -159,6 +164,7 @@ server <- function(input, output, session) {
         } else {
             map_data %>%
                 filter(report_status %in% input$status_selector) %>%
+                filter(is_verified %in% input$verified_selector) %>%
                 filter(city %in% input$city_selector) %>%
                 filter(str_detect(tolower(report_magnitude), tolower(paste(input$magnitude_selector, collapse = "|")))) %>%
                 filter(str_detect(tolower(report_type), tolower(paste(input$type_selector, collapse = "|")))) %>%

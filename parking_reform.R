@@ -16,7 +16,7 @@ contact <- read.csv(url("https://area120tables.googleapis.com/link/9yPvvVQT8vbbb
 report %>%
   mutate(population = 1) %>% # TODO: update when population is added
   mutate(is_verified = ifelse(lengths(strsplit(Verified.By, ",")) >= 2, 1, 0)) %>%
-  filter(is_verified == 1) %>% 
+  ## filter(is_verified == 1) %>%  ## TODO: add this filter back in
   select(city_id,
          state,
          country,
