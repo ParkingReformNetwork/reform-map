@@ -46,7 +46,7 @@ ui <- bootstrapPage(
     fluidRow(
         column(
             id="sidePanel",
-            width = 4,
+            width = 3,
             div(id = "selector_pane",
                 selectInput(
                     "city_selector", 
@@ -102,7 +102,8 @@ ui <- bootstrapPage(
             )
         ),
         column(
-            width = 8,
+            id = "mapView",
+            width = 9,
             leafletOutput("map", ),
             # add in logos
             withTags({

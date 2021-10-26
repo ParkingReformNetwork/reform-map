@@ -1,6 +1,9 @@
-html, body {
-    width:100%;
-    height:100%
+html,
+body {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  overflow-x: hidden;
 }
 
 @media only screen and (max-width: 900px) {
@@ -8,95 +11,164 @@ html, body {
     visibility: hidden;
   }
   #legend {
-    visibility: hidden; 
+    visibility: hidden;
   }
-   
+  #logos {
+    bottom: 10px;
+  }
 }
 
-#city_detail_info{
-    position:absolute;
-    top:50px;
-    left: 50px;
-    width:60%;
+#city_detail_info {
+  position: absolute;
+  top: 50px;
+  left: 50px;
+  width: 60%;
 }
 
 .clicked_city_first_row > div {
-    display:inline-block;
+  display: inline-block;
 }
 
-#clicked_city, #clicked_population,
-#clicked_report_summary, #clicked_reporter, 
-#clicked_report_magnitude, #clicked_land_uses,
+#clicked_city,
+#clicked_population,
+#clicked_report_summary,
+#clicked_reporter,
+#clicked_report_magnitude,
+#clicked_land_uses,
 #clicked_city_state {
-    margin-left: 10px;
-    margin-bottom: 10px;
+  margin-left: 10px;
+  margin-bottom: 10px;
 }
 
 #close_detail {
-    background-color: #66FF00;
-    border-color: #FFFF00;
-    color: #800080;
+  background-color: #c9c9c9;
+  /* border-color: #ffff00; */
+  color: #000000;
 }
 
+#selector_pane {
+  width: 100%;
+}
 
 #logos {
-	right:10px;
-	position:absolute;
-	cursor:inherit;
+  right: 10px;
+  position: absolute;
+  cursor: inherit;
 }
 
 #logos > div {
-    float: right;
+  float: right;
 }
 
+/* #legend {
+  left: 10px;
+  bottom: 10px;
+  position: absolute;
+  cursor: inherit;
+  background: rgba(76, 175, 80, 0.7);
+  border-color: rgba(255, 192, 203, 0.7);
+  border-style: solid;
+  border-width: 20px;
+} */
+
+#city_detail_info {
+  position: absolute;
+  left: 20%;
+  width: 60%;
+  cursor: inherit;
+  background: rgba(255, 255, 255, 1);
+  border-color: rgba(186, 186, 186, 0.7);
+  border-style: solid;
+  padding: 20px;
+  border-radius: 10px;
+}
 
 #legend {
-    left:10px;
-	bottom:10px;
-	position:absolute;
-	cursor:inherit;
-	background: rgba(76, 175, 80, 0.7);
-    border-color: rgba(255, 192, 203, 0.7);
-    border-style: solid;
-    border-width: 20px;
+  left: 10px;
+  bottom: 10px;
+  position: absolute;
+  cursor: inherit;
+  background: rgba(255, 255, 255, 1);
+  border-color: rgba(186, 186, 186, 0.7);
+  border-style: solid;
+  /* border-width: 2px; */
+  /* overflow-y: auto; */
+  padding: 20px;
+  border-radius: 10px;
 }
 
 #legend > .row {
-	margin-right: 0px;
-	margin-left: 0px;
+  margin-right: 0px;
+  margin-left: 0px;
 }
 
 #map {
-    height: calc(100vh) !important;
+  height: calc(100vh) !important;
+  margin: 0;
 }
 
 #sidePanel {
-    height: calc(100vh) !important;
-    overflow-y:scroll;
+  height: calc(100vh) !important;
+  background: rgba(255, 255, 255, 1);
+  border-color: rgba(186, 186, 186, 0.7);
+  overflow-y: scroll;
+  padding-left: 50px;
+  padding-top: 20px;
 }
 
-#strong_towns_link > img, #parking_reform_link > img {
-	height: 50px;
+#strong_towns_link > img,
+#parking_reform_link > img {
+  height: 50px;
 }
 
 #logos {
-    bottom:10px;
+  bottom: 10px;
 }
 
 #legend > div > .awesome-marker-legend {
-	position: static;
+  position: static;
 }
 
-.notify-badge{
-    position: absolute;
-    background:red;
-    text-align: right;
-    border-radius: 20px 20px 20px 20px;
-    color:white;
-    padding:2px 2px;
-    font-size:20px;
-    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-    right:-25px;
-    top:-20px;
-    transform: rotate(30deg); 
+.notify-badge {
+  position: absolute;
+  background: red;
+  text-align: right;
+  border-radius: 20px 20px 20px 20px;
+  color: white;
+  padding: 2px 2px;
+  font-size: 20px;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  right: -25px;
+  top: -20px;
+  transform: rotate(30deg);
+}
+
+/* custom scrollbar */
+::-webkit-scrollbar {
+  width: 20px;
+}
+
+::-webkit-scrollbar-track {
+  background-color: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #d6dee1;
+  border-radius: 20px;
+  border: 6px solid transparent;
+  background-clip: content-box;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: #a8bbbf;
+}
+
+.control-label {
+  font-weight: 900 !important;
+}
+
+#mapView {
+  margin: 0;
+  border: 0;
+  padding: 0 !important;
 }
