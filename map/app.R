@@ -30,7 +30,7 @@ for(mag in unique(map_data$magnitude_encoded)){
 ui <- bootstrapPage(
     # use shiny js to be able to show and hide more detail pane
     useShinyjs(),
-
+    
     # load up css
     tags$head(
         tags$link(rel = "stylesheet",
@@ -41,100 +41,100 @@ ui <- bootstrapPage(
         tags$script(src = "add_highlights.js")
     ),
     
-
+    
     # generate map and selectors
-    withTags({
-        div(class = "map_and_selectors",
-            leafletOutput("map", width = "100%", height = "100%"),
+    fluidRow(
+        column(
+            id="sidePanel",
+            width = 4,
             div(id = "selector_pane",
-                absolutePanel(bottom = 10, right = 10,
-                              selectInput(
-                                  "city_selector", 
-                                  h4("City Selector"), 
-                                  map_data$city,
-                                  multiple = TRUE
-                                  ),
-                              checkboxGroupInput("verified_selector",
-                                                 h4("Verified Selector"),
-                                                 choices = c(1, 0),
-                                                 selected = c(1, 0)),
-                              checkboxGroupInput("magnitude_selector",
-                                                 h4("Magnitude Selector"),
-                                                 choices = c("Citywide", "City Center", "Transit Oriented", "Main Street"),
-                                                 selected = c("Citywide", "City Center", "Transit Oriented", "Main Street")),
-                              checkboxGroupInput("status_selector",
-                                                 h4("Policy Selector"),
-                                                 choices = unique(map_data$report_status),
-                                                 selected = unique(map_data$report_status)),
-                              checkboxGroupInput("type_selector",
-                                                 h4("Report Type Selector"),
-                                                 choices = c("Reduce Parking Minimums", "Eliminate Parking Minimums", "Parking Maximums"),
-                                                 selected = c("Reduce Parking Minimums", "Eliminate Parking Minimums", "Parking Maximums")),
-                              checkboxGroupInput("land_use_selector",
-                                                 h4("Land Use Selector"),
-                                                 choices = c( "All Uses", "Commercial", "Residential", "Medical", "Industrial"),
-                                                 selected = c("All Uses", "Commercial", "Residential", "Medical", "Industrial"))
-                )
-            ),
+                selectInput(
+                    "city_selector", 
+                    h4("City Selector"), 
+                    map_data$city,
+                    multiple = TRUE
+                ),
+                checkboxGroupInput("verified_selector",
+                                   h4("Verified Selector"),
+                                   choices = c(1, 0),
+                                   selected = c(1, 0)),
+                checkboxGroupInput("magnitude_selector",
+                                   h4("Magnitude Selector"),
+                                   choiceNames = list(HTML("<p style='color: blue'>  Citywide</p>"),
+                                                      HTML("<p style='color: orange'>  City Center</p>"),
+                                                      HTML("<p style='color: green'>  Transit Oriented</p>"),
+                                                      HTML("<p style='color: purple'>  Main Street</p>")
+                                   ),
+                                   choiceValues = c("Citywide", "City Center", "Transit Oriented", "Main Street"),
+                                   selected = c("Citywide", "City Center", "Transit Oriented", "Main Street")),
+                checkboxGroupInput("status_selector",
+                                   h4("Policy Selector"),
+                                   choices = unique(map_data$report_status),
+                                   selected = unique(map_data$report_status)),
+                checkboxGroupInput("type_selector",
+                                   h4("Report Type Selector"),
+                                   choices = c("Reduce Parking Minimums", "Eliminate Parking Minimums", "Parking Maximums"),
+                                   selected = c("Reduce Parking Minimums", "Eliminate Parking Minimums", "Parking Maximums")),
+                checkboxGroupInput("land_use_selector",
+                                   h4("Land Use Selector"),
+                                   choiceNames = list(HTML(HTML("<p>"),
+                                                            fa("city"), 
+                                                            HTML(" - All Land Uses</p>")
+                                                            ),
+                                                   HTML(HTML("<p>"),
+                                                            fa("building"),
+                                                            HTML(" - Commercial</p>")
+                                                            ),
+                                                   HTML(HTML("<p>"),
+                                                            fa("home"),
+                                                            HTML(" - Residential</p>")
+                                                   ),
+                                                   HTML(HTML("<p>"),
+                                                            fa("car"),
+                                                            HTML(" - Medical</p>")
+                                                   ),
+                                                   HTML(HTML("<p>"),
+                                                            fa("car"),
+                                                            HTML(" - Industrial</p>")
+                                                   )),
+                                   choiceValues = c( "All Uses", "Commercial", "Residential", "Medical", "Industrial"),
+                                   selected = c("All Uses", "Commercial", "Residential", "Medical", "Industrial")),
+            )
+        ),
+        column(
+            width = 8,
+            leafletOutput("map", ),
             # add in logos
             withTags({
                 div(id = "logos",
                     column(1, 
                            fluidRow(tags$a(img(src = "assets/st_logo.png", align = "right"), href = "https://www.strongtowns.org/", id = "strong_towns_link", target = "_blank")),
                            fluidRow(tags$a(img(src = "assets/prn_logo.jpeg", align = "right"), href = "https://parkingreform.org/", id = "parking_reform_link", target = "_blank"))
-                           )
-                )
-            }),
-            # add in legend
-            withTags({
-                div(id = "legend",
-                    h4("Land Uses"),
-                    fluidRow(HTML("<p>"), fa("city"), HTML(" - All Land Uses</p>")),
-                    fluidRow(HTML("<p>"), fa("laptop"), HTML(" - Residential and Commercial</p>")), 
-                    fluidRow(HTML("<p>"), fa("building"), HTML(" - Commercial Only</p>")), 
-                    fluidRow(HTML("<p>"), fa("home"), HTML(" - Residential Only</p>")), 
-                    fluidRow(HTML("<p>"), fa("car"), HTML(" - Other</p>")), 
-                    h4("Magnitude"),
-                    fluidRow(HTML("<div class='awesome-marker-icon-darkblue awesome-marker awesome-marker-legend leaflet-zoom-animated' style='display:inline-block'></div>
-                                   <p style='display:inline-block'> - Citywide</p>")),
-                    fluidRow(HTML("<div class='awesome-marker-icon-blue awesome-marker awesome-marker-legend leaflet-zoom-animated' style='display:inline-block'></div>
-                                   <p style='display:inline-block'> - City Center</p>")),
-                    fluidRow(HTML("<div class='awesome-marker-icon-lightblue awesome-marker awesome-marker-legend leaflet-zoom-animated' style='display:inline-block'></div>
-                                   <p style='display:inline-block'> - Transit Oriented</p>")),
-                    fluidRow(HTML("<div class='awesome-marker-icon-darkred awesome-marker awesome-marker-legend leaflet-zoom-animated' style='display:inline-block'></div>
-                                   <p style='display:inline-block'> - Main Street</p>"))
-                )
-            })
-        )
-    }),
-
-    # create more detail pane but leave it hidden
-    hidden(
-        withTags({
-            div(id = "city_detail_info",
-                fluidRow(
-                    column(12,
-                         withTags({
-                             div(class = "clicked_city_info",
-                                 fluidRow(class="clicked_city_first_row",
-                                     column(11, h4(textOutput("clicked_city"))),
-                                     column(1, actionButton("close_detail", "x"))
-                                     ),
-                                 textOutput("clicked_population"),
-                                 textOutput("clicked_report_summary"),
-                                 textOutput("clicked_report_magnitude"),
-                                 textOutput("clicked_land_uses"),
-                                 textOutput("clicked_reporter"),
-                                 uiOutput("clicked_city_state")
-                                 )
-                             })
-                         )
                     )
                 )
-            })
+            }),
+            # create more detail pane but leave it hidden
+            hidden(
+                withTags({
+                    div(id = "city_detail_info",
+                        fluidRow(class="clicked_city_first_row",
+                                 column(11, h4(textOutput("clicked_city"))),
+                                 column(1, actionButton("close_detail", "x"))
+                        ),
+                        textOutput("clicked_population"),
+                        textOutput("clicked_report_summary"),
+                        textOutput("clicked_report_magnitude"),
+                        textOutput("clicked_land_uses"),
+                        textOutput("clicked_reporter"),
+                        uiOutput("clicked_city_state")
+                    )
+                })
+            )
         )
-    )
+    )        
+)
 
+    
 # set up back end
 server <- function(input, output, session) {
 
@@ -273,8 +273,8 @@ server <- function(input, output, session) {
         map_points <- filtered_data()
         
         map_points %>%
-            mutate(all_encoded = paste("icon", 
-                                       magnitude_encoded, 
+            mutate(all_encoded = paste("icon",
+                                       magnitude_encoded,
                                        land_use_encoded,
                                        population_encoded,
                                        is_special,

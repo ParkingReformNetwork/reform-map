@@ -2,13 +2,13 @@
 magnitude_to_color <- function(magnitude_string) {
   magnitude_numeric <- "red"
   if(str_detect(tolower(magnitude_string), "citywide")) {
-    magnitude_numeric <- "darkblue"
-  } else if(str_detect(tolower(magnitude_string), "city center")) {
     magnitude_numeric <- "blue"
+  } else if(str_detect(tolower(magnitude_string), "city center")) {
+    magnitude_numeric <- "orange"
   } else if(str_detect(tolower(magnitude_string), "transit oriented")) {
-    magnitude_numeric <- "lightblue"
+    magnitude_numeric <- "green"
   } else if(str_detect(tolower(magnitude_string), "main street")) {
-    magnitude_numeric <- "darkred"
+    magnitude_numeric <- "purple"
   }
   return(magnitude_numeric)
 }
