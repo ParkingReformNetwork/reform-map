@@ -29,11 +29,11 @@ land_use_to_string <- function(land_use_string) {
 }
 
 population_to_bin <- function(population) {
-  if(population > 1000000) {
+  if(population > 500000) {
     bin <- 1
-  } else if(population > 700000) {
+  } else if(population > 200000) {
     bin <- .7
-  } else if(population > 500000) {
+  } else if(population > 100000) {
     bin <- .4
   } else { 
     bin <- .2

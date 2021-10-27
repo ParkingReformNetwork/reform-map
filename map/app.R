@@ -60,10 +60,10 @@ ui <- bootstrapPage(
                                    selected = c(1, 0)),
                 checkboxGroupInput("magnitude_selector",
                                    h4("Magnitude Selector"),
-                                   choiceNames = list(HTML("<p style='color: blue'>  Citywide</p>"),
-                                                      HTML("<p style='color: orange'>  City Center</p>"),
-                                                      HTML("<p style='color: green'>  Transit Oriented</p>"),
-                                                      HTML("<p style='color: purple'>  Main Street</p>")
+                                   choiceNames = list(HTML("<p style='color: blue; font-weight: bold;'>  Citywide</p>"),
+                                                      HTML("<p style='color: orange; font-weight: bold;'>  City Center</p>"),
+                                                      HTML("<p style='color: green; font-weight: bold;'>  Transit Oriented</p>"),
+                                                      HTML("<p style='color: purple; font-weight: bold;'>  Main Street</p>")
                                    ),
                                    choiceValues = c("Citywide", "City Center", "Transit Oriented", "Main Street"),
                                    selected = c("Citywide", "City Center", "Transit Oriented", "Main Street")),
