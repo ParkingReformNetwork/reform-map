@@ -15,7 +15,9 @@ The app is built in Shiny, so you need to install
 
 #### Map App
 
-* Generate the most up to date data by running `parking_reform.R` which fetches new data
+* Copy the `initial_tidied_map_data.csv` in the same folder and call it `tidied_map_data.csv`. This is a snapshot of the Parking Reform Network data.
+* If you want the most up to date data, run the `generate_map_data.R` script.
+Generate the most up to date data by running `parking_reform.R` which fetches new data
 * The local path may need to be changed to work on your computer. The intent is to overwrite the `tidied_map_data.csv` file.
 * Run `app.R` to launch the app.
 
