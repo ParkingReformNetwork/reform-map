@@ -45,3 +45,8 @@ Generate the most up to date data by running `parking_reform.R` which fetches ne
 
 ### Static Pages: 
 * Clean up design on static pages generated from `create_city_detail_pages.R`.
+
+### Shiny Server
+* set up cron job to pull data once per day using `generate_map_data.R`. ensure path is set up correctly. 
+* debug why city/state isn't showing up correctly on detail pane click
+* any path changes we want to do for the map app or city pages.
