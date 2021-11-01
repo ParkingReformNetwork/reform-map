@@ -7,7 +7,7 @@ library(fontawesome)
 library(stringr)
 
 # data generated from parking_reform.R
-map_data <- read.csv(file = "tidied_map_data.csv")
+map_data <- read.csv(file = "tidied_map_data.csv", stringsAsFactors = F)
 
 # Make a list of icons based on magnitude, land use, and icon
 map_icons <- awesomeIconList(test = makeAwesomeIcon(text = fa('car')))

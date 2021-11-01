@@ -2,15 +2,14 @@
 library(dplyr)
 library(tidygeocoder)
 library(stringr)
-setwd("~/repos/parking_map/map/")
-source(file="encoding_logic.R")
+source(file="map/encoding_logic.R")
 
 
 # download files
-city <- read.csv(url("https://area120tables.googleapis.com/link/aR_AWTAZ6WF8_ZB3HgfOvN/export?key=8-SifuDc4Fg7purFrntOa7bjE0ikjGAy28t36wUBIOJx9vFGZuSR89N1PkSTFXpOk6"))
-report <- read.csv(url("https://area120tables.googleapis.com/link/bAc5xhhLJ2q4jYYGjaq_24/export?key=8_S1APcQHGN9zfTXEMz_Gz8sel3FCo3RUfEV4f-PBOqE8zy3vG3FpCQcSXQjRDXOqZ"))
-# citation <- read.csv(url("https://area120tables.googleapis.com/link/aUJhBkwwY9j1NpD-Enh4WU/export?key=aasll5u2e8Xf-jxNNGlk3vbnOYcDsJn-JbgeI3z6IkPk8z5CxpWOLEp5EXd8iMF_bc"))
-# contact <- read.csv(url("https://area120tables.googleapis.com/link/9yPvvVQT8vbbbmal5Oc4I6/export?key=8VZHmPJawsY3T39bP2t4nL9Q7_dfkZR5g6wMCY1fOOswaEJMLQ4jEwF6sFsaB5SkfJ"))
+city <- read.csv(url("https://area120tables.googleapis.com/link/aR_AWTAZ6WF8_ZB3HgfOvN/export?key=8-SifuDc4Fg7purFrntOa7bjE0ikjGAy28t36wUBIOJx9vFGZuSR89N1PkSTFXpOk6"), stringsAsFactors = F)
+report <- read.csv(url("https://area120tables.googleapis.com/link/bAc5xhhLJ2q4jYYGjaq_24/export?key=8_S1APcQHGN9zfTXEMz_Gz8sel3FCo3RUfEV4f-PBOqE8zy3vG3FpCQcSXQjRDXOqZ"), stringsAsFactors = F)
+# citation <- read.csv(url("https://area120tables.googleapis.com/link/aUJhBkwwY9j1NpD-Enh4WU/export?key=aasll5u2e8Xf-jxNNGlk3vbnOYcDsJn-JbgeI3z6IkPk8z5CxpWOLEp5EXd8iMF_bc"), stringsAsFactors = F  )
+# contact <- read.csv(url("https://area120tables.googleapis.com/link/9yPvvVQT8vbbbmal5Oc4I6/export?key=8VZHmPJawsY3T39bP2t4nL9Q7_dfkZR5g6wMCY1fOOswaEJMLQ4jEwF6sFsaB5SkfJ"), stringsAsFactors = F)
 
 city %>% 
   select(City, State.Province, Country, Population, Notable, Recent) %>%
@@ -51,7 +50,7 @@ report %>%
 
 # geocode addresses
 # read in past geocoded files to not have to hit geocoding api as much
-read.csv(file = "tidied_map_data.csv") %>%
+read.csv(file = "map/tidied_map_data.csv", stringsAsFactors = F) %>%
   select(city, state, country, lat, long) %>%
   distinct() -> old_report
 
@@ -137,6 +136,6 @@ report_trimmed %>%
   mutate(is_special = if_else(is_notable == "true", "highlighed_icon", if_else(is_recent == "true", "new_icon", "not_special_icon")))  -> report_trimmed
 
 # delete old file and save over the new one
-system("rm -fr tidied_map_data.csv")
-write.csv(report_trimmed, file = "tidied_map_data.csv")
+system("rm -fr map/tidied_map_data.csv")
+write.csv(report_trimmed, file = "map/tidied_map_data.csv")
 
