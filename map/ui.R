@@ -5,6 +5,8 @@ library(dplyr)
 library(leaflet)
 library(fontawesome)
 library(stringr)
+library(shinyWidgets)
+library(RColorBrewer)
 
 # data generated from parking_reform.R
 map_data <- read.csv(file = "tidied_map_data.csv", stringsAsFactors = F)
@@ -47,58 +49,98 @@ bootstrapPage(
         column(
             id="sidePanel",
             width = 3,
+            
             div(id = "selector_pane",
-                selectInput(
-                    "city_selector", 
-                    h4("City Selector"), 
-                    map_data$city,
-                    multiple = TRUE
-                ),
-                checkboxGroupInput("verified_selector",
-                                   h4("Verified Selector"),
-                                   choices = c(1, 0),
-                                   selected = c(1, 0)),
-                checkboxGroupInput("magnitude_selector",
-                                   h4("Magnitude Selector"),
-                                   choiceNames = list(HTML("<p style='color: blue; font-weight: bold;'>  Citywide</p>"),
-                                                      HTML("<p style='color: orange; font-weight: bold;'>  City Center</p>"),
-                                                      HTML("<p style='color: green; font-weight: bold;'>  Transit Oriented</p>"),
-                                                      HTML("<p style='color: purple; font-weight: bold;'>  Main Street</p>")
-                                   ),
-                                   choiceValues = c("Citywide", "City Center", "Transit Oriented", "Main Street"),
-                                   selected = c("Citywide", "City Center", "Transit Oriented", "Main Street")),
-                checkboxGroupInput("status_selector",
-                                   h4("Policy Selector"),
-                                   choices = unique(map_data$report_status),
-                                   selected = unique(map_data$report_status)),
-                checkboxGroupInput("type_selector",
-                                   h4("Report Type Selector"),
-                                   choices = c("Reduce Parking Minimums", "Eliminate Parking Minimums", "Parking Maximums"),
-                                   selected = c("Reduce Parking Minimums", "Eliminate Parking Minimums", "Parking Maximums")),
-                checkboxGroupInput("land_use_selector",
-                                   h4("Land Use Selector"),
-                                   choiceNames = list(HTML(HTML("<p>"),
-                                                            fa("city"), 
-                                                            HTML(" - All Land Uses</p>")
-                                                            ),
-                                                   HTML(HTML("<p>"),
-                                                            fa("building"),
-                                                            HTML(" - Commercial</p>")
-                                                            ),
-                                                   HTML(HTML("<p>"),
-                                                            fa("home"),
-                                                            HTML(" - Residential</p>")
-                                                   ),
-                                                   HTML(HTML("<p>"),
-                                                            fa("car"),
-                                                            HTML(" - Medical</p>")
-                                                   ),
-                                                   HTML(HTML("<p>"),
-                                                            fa("car"),
-                                                            HTML(" - Industrial</p>")
-                                                   )),
-                                   choiceValues = c( "All Uses", "Commercial", "Residential", "Medical", "Industrial"),
-                                   selected = c("All Uses", "Commercial", "Residential", "Medical", "Industrial")),
+                
+                #NEW SELECTOR INPUTS
+                pickerInput("verified_selector",
+                            h5("Varification Update"),
+                            choices = c("Varified"=1, "Not Yet Varified"=0),
+                            options = list(`actions-box` = TRUE),
+                            multiple = T,
+                            selected = c("Varified"=1, "Not Yet Varified"=0)),
+                
+                pickerInput("magnitude_selector",
+                            h5("Targeted Area"),
+                            choices = c("Citywide", "City Center", "Transit Oriented", "Main Street"),
+                            options = list(`actions-box` = TRUE),
+                            multiple = T,
+                            selected = c("Citywide", "City Center", "Transit Oriented", "Main Street")),
+                
+                pickerInput("status_selector",
+                            h5("Implementation Stage"),
+                            choices = unique(map_data$report_status),
+                            selected = unique(map_data$report_status),
+                            options = list(`actions-box` = TRUE),
+                            multiple = T),
+                
+                pickerInput("type_selector",
+                            h5("Policy Change"),
+                            choices = c("Reduce Parking Minimums", "Eliminate Parking Minimums", "Parking Maximums"),
+                            selected = c("Reduce Parking Minimums", "Eliminate Parking Minimums", "Parking Maximums"),
+                            options = list(`actions-box` = TRUE),
+                            multiple = T),
+                
+                pickerInput("land_use_selector",
+                            h5("Affected Land Use"),
+                            choices = c( "All Uses", "Commercial", "Residential", "Medical", "Industrial"),
+                            selected = c("All Uses", "Commercial", "Residential", "Medical", "Industrial"),
+                            options = list(`actions-box` = TRUE),
+                            multiple = T)
+                
+                # OLD SELECTOR INPUTS 
+                
+                # selectInput(
+                #     "city_selector", 
+                #     h4("City Selector"), 
+                #     map_data$city,
+                #     multiple = TRUE
+                # ),
+                # checkboxGroupInput("verified_selector",
+                #                    h4("Verified Selector"),
+                #                    choices = c(1, 0),
+                #                    selected = c(1, 0)),
+                # checkboxGroupInput("magnitude_selector",
+                #                    h4("Magnitude Selector"),
+                #                    choiceNames = list(HTML("<p style='color: blue; font-weight: bold;'>  Citywide</p>"),
+                #                                       HTML("<p style='color: orange; font-weight: bold;'>  City Center</p>"),
+                #                                       HTML("<p style='color: green; font-weight: bold;'>  Transit Oriented</p>"),
+                #                                       HTML("<p style='color: purple; font-weight: bold;'>  Main Street</p>")
+                #                    ),
+                #                    choiceValues = c("Citywide", "City Center", "Transit Oriented", "Main Street"),
+                #                    selected = c("Citywide", "City Center", "Transit Oriented", "Main Street")),
+                # checkboxGroupInput("status_selector",
+                #                    h4("Policy Selector"),
+                #                    choices = unique(map_data$report_status),
+                #                    selected = unique(map_data$report_status)),
+                # checkboxGroupInput("type_selector",
+                #                    h4("Report Type Selector"),
+                #                    choices = c("Reduce Parking Minimums", "Eliminate Parking Minimums", "Parking Maximums"),
+                #                    selected = c("Reduce Parking Minimums", "Eliminate Parking Minimums", "Parking Maximums")),
+                # checkboxGroupInput("land_use_selector",
+                #                    h4("Land Use Selector"),
+                #                    choiceNames = list(HTML(HTML("<p>"),
+                #                                             fa("city"), 
+                #                                             HTML(" - All Land Uses</p>")
+                #                                             ),
+                #                                    HTML(HTML("<p>"),
+                #                                             fa("building"),
+                #                                             HTML(" - Commercial</p>")
+                #                                             ),
+                #                                    HTML(HTML("<p>"),
+                #                                             fa("home"),
+                #                                             HTML(" - Residential</p>")
+                #                                    ),
+                #                                    HTML(HTML("<p>"),
+                #                                             fa("car"),
+                #                                             HTML(" - Medical</p>")
+                #                                    ),
+                #                                    HTML(HTML("<p>"),
+                #                                             fa("car"),
+                #                                             HTML(" - Industrial</p>")
+                #                                    )),
+                #                    choiceValues = c( "All Uses", "Commercial", "Residential", "Medical", "Industrial"),
+                #                    selected = c("All Uses", "Commercial", "Residential", "Medical", "Industrial")),
             )
         ),
         column(
