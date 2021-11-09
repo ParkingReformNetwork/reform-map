@@ -54,11 +54,11 @@ bootstrapPage(
                 
                 #NEW SELECTOR INPUTS
                 pickerInput("verified_selector",
-                            h5("Varification Update"),
-                            choices = c("Varified"=1, "Not Yet Varified"=0),
+                            h5("Verification Update"),
+                            choices = c("Verified"=1, "Not Yet Verified"=0),
                             options = list(`actions-box` = TRUE),
                             multiple = T,
-                            selected = c("Varified"=1, "Not Yet Varified"=0)),
+                            selected = c("Verified"=1, "Not Yet Verified"=0)),
                 
                 pickerInput("magnitude_selector",
                             h5("Targeted Area"),
