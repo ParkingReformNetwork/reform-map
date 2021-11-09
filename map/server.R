@@ -178,7 +178,7 @@ function(input, output, session) {
                        lat = ~map_points$lat,
                        layerId = ~map_points$id,
                        icon = ~map_icons[all_encoded],
-                       options = markerOptions( opacity = map_points$population_encoded)
+                       #options = markerOptions(opacity = map_points$population_encoded)
                        #clusterOptions = markerClusterOptions()
                        #popup = map_points$popup_info tooltip, ignoring for now
                        )
