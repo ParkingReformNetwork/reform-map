@@ -7,6 +7,7 @@ library(fontawesome)
 library(stringr)
 library(shinyWidgets)
 library(RColorBrewer)
+library(BAMMtools)
 
 # data generated from parking_reform.R
 map_data <- read.csv(file = "tidied_map_data.csv", stringsAsFactors = F)
@@ -147,6 +148,15 @@ bootstrapPage(
             id = "mapView",
             width = 9,
             leafletOutput("map", ),
+            absolutePanel(id = "controls", class = "panel panel-default",
+                          top = 10, right = 25, #draggable = TRUE,
+                          # sliderInput("poprange", "Population", min(map_data$population), max(map_data$population),
+                          #             value = range(tidied_map_data$population), step = NULL),
+                          sliderTextInput(inputId = "poprange",
+                                          label = "Population:",
+                                          choices = getJenksBreaks(map_data$population, 20)[c(1:10, 15, 20)],
+                                          selected = range(map_data$population),
+                                          grid = TRUE)),
             # add in logos
             withTags({
                 div(id = "logos",
@@ -176,3 +186,4 @@ bootstrapPage(
         )
     )        
 )
+
