@@ -180,7 +180,8 @@ function(input, output, session) {
                               lat = ~map_points$lat,
                               layerId = ~map_points$id,
                               icon = ~map_icons[all_encoded],
-                              label = ~ paste(map_points$city, map_points$state, sep = ", ")
+                              label = ~ paste(map_points$city, map_points$state, sep = ", "),
+                              options = markerOptions(zIndexOffset = map_points$population)
                               #options = markerOptions(opacity = map_points$population_encoded)
                               #clusterOptions = markerClusterOptions()
                               #popup = map_points$popup_info tooltip, ignoring for now
