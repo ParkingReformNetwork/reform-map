@@ -26,10 +26,10 @@ for(mag in unique(map_data$magnitude_encoded)){
     }
 }
 
-    
+
 # set up back end
 function(input, output, session) {
-
+    
     # initial map create
     output$map <- renderLeaflet({
         leaflet() %>%
@@ -42,11 +42,12 @@ function(input, output, session) {
                 zoom = 4
             )
     })
-
+    
     # create data subset based on user input
     filtered_data <- reactive({
         if(is.null(input$city_selector )){
             map_data %>%
+                filter(population >= input$poprange[1] & population <= input$poprange[2]) %>%
                 filter(report_status %in% input$status_selector) %>%
                 filter(is_verified %in% input$verified_selector) %>%
                 filter(str_detect(tolower(report_magnitude), tolower(paste(input$magnitude_selector, collapse = "|")))) %>%
@@ -55,6 +56,7 @@ function(input, output, session) {
             
         } else {
             map_data %>%
+                filter(population >= input$poprange[1] & population <= input$poprange[2]) %>%
                 filter(report_status %in% input$status_selector) %>%
                 filter(is_verified %in% input$verified_selector) %>%
                 filter(city %in% input$city_selector) %>%
@@ -63,7 +65,7 @@ function(input, output, session) {
                 filter(str_detect(tolower(land_uses), tolower(paste(input$land_use_selector, collapse = "|"))))
         }
     })
-
+    
     # display city and state for clicked map point. will end up in more detail pane
     output$clicked_city <- renderText({
         req(input$map_marker_click$id)
@@ -71,8 +73,8 @@ function(input, output, session) {
             filter(id == input$map_marker_click$id) %>%
             select(city, state) %>%
             paste0(collapse = ", ")
-              }
-        )
+    }
+    )
     
     # display population for clicked city
     output$clicked_population <- renderText({
@@ -103,7 +105,7 @@ function(input, output, session) {
             filter(id == input$map_marker_click$id) %>%
             select(report_summary) %>%
             paste0()
-        }
+    }
     )
     
     # display report data for clicked map point
@@ -125,7 +127,7 @@ function(input, output, session) {
             mutate(reporter_name = paste("Reporter Name:", reporter_name)) %>%
             select(reporter_name) %>%
             paste0()
-        }
+    }
     )
     
     # render city_state for citation link
@@ -150,7 +152,7 @@ function(input, output, session) {
              animType = "fade",
              time = 0.5)
     })
-
+    
     # show the more detail pane when a city is clicked on the map
     observeEvent(input$map_marker_click, {
         show(id = "city_detail_info",
@@ -158,8 +160,8 @@ function(input, output, session) {
              animType = "fade",
              time = 0.5)
     })
-
-
+    
+    
     # changes to map based on selection
     observe({
         map_points <- filtered_data()
@@ -171,18 +173,19 @@ function(input, output, session) {
                                        population_encoded,
                                        is_special,
                                        sep = "_"
-                                       )) %>%
+            )) %>%
             leafletProxy("map", data = .) %>%
             clearMarkers() %>%
             addAwesomeMarkers(lng = ~map_points$long,
-                       lat = ~map_points$lat,
-                       layerId = ~map_points$id,
-                       icon = ~map_icons[all_encoded],
-                       #options = markerOptions(opacity = map_points$population_encoded)
-                       #clusterOptions = markerClusterOptions()
-                       #popup = map_points$popup_info tooltip, ignoring for now
-                       )
+                              lat = ~map_points$lat,
+                              layerId = ~map_points$id,
+                              icon = ~map_icons[all_encoded],
+                              label = ~ paste(map_points$city, map_points$state, sep = ", ")
+                              #options = markerOptions(opacity = map_points$population_encoded)
+                              #clusterOptions = markerClusterOptions()
+                              #popup = map_points$popup_info tooltip, ignoring for now
+            )
         session$sendCustomMessage("map_markers_added", message)
-        })
+    })
 }
 
