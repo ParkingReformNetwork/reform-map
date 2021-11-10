@@ -148,24 +148,25 @@ bootstrapPage(
             id = "mapView",
             width = 9,
             leafletOutput("map", ),
-            absolutePanel(id = "controls", class = "panel panel-default",
-                          top = 10, right = 25, #draggable = TRUE,
-                          # sliderInput("poprange", "Population", min(map_data$population), max(map_data$population),
-                          #             value = range(tidied_map_data$population), step = NULL),
-                          sliderTextInput(inputId = "poprange",
-                                          label = "Population:",
-                                          choices = getJenksBreaks(map_data$population, 20)[c(1:10, 15, 20)],
-                                          selected = range(map_data$population),
-                                          grid = TRUE)),
+            # absolutePanel(id = "controls", class = "panel panel-default",
+            #               top = 10, right = 25, #draggable = TRUE,
+            #               # sliderInput("poprange", "Population", min(map_data$population), max(map_data$population),
+            #               #             value = range(tidied_map_data$population), step = NULL),
+            #               sliderTextInput(inputId = "poprange",
+            #                               label = "Population:",
+            #                               choices = getJenksBreaks(map_data$population, 20)[c(1:10, 15, 20)],
+            #                               selected = range(map_data$population),
+            #                               grid = TRUE)
+            #               ),
             # add in logos
-            withTags({
-                div(id = "logos",
-                    column(1, 
-                           fluidRow(tags$a(img(src = "assets/st_logo.png", align = "right"), href = "https://www.strongtowns.org/", id = "strong_towns_link", target = "_blank")),
-                           fluidRow(tags$a(img(src = "assets/prn_logo.jpeg", align = "right"), href = "https://parkingreform.org/", id = "parking_reform_link", target = "_blank"))
-                    )
-                )
-            }),
+            # withTags({
+            #     div(id = "logos",
+            #         column(1, 
+            #                fluidRow(tags$a(img(src = "assets/st_logo.png", align = "right"), href = "https://www.strongtowns.org/", id = "strong_towns_link", target = "_blank")),
+            #                fluidRow(tags$a(img(src = "assets/prn_logo.jpeg", align = "right"), href = "https://parkingreform.org/", id = "parking_reform_link", target = "_blank"))
+            #         )
+            #     )
+            # }),
             # create more detail pane but leave it hidden
             hidden(
                 withTags({

@@ -47,7 +47,7 @@ function(input, output, session) {
     filtered_data <- reactive({
         if(is.null(input$city_selector )){
             map_data %>%
-                filter(population >= input$poprange[1] & population <= input$poprange[2]) %>%
+                # filter(population >= input$poprange[1] & population <= input$poprange[2]) %>%
                 filter(report_status %in% input$status_selector) %>%
                 filter(is_verified %in% input$verified_selector) %>%
                 filter(str_detect(tolower(report_magnitude), tolower(paste(input$magnitude_selector, collapse = "|")))) %>%
@@ -56,7 +56,7 @@ function(input, output, session) {
             
         } else {
             map_data %>%
-                filter(population >= input$poprange[1] & population <= input$poprange[2]) %>%
+                # filter(population >= input$poprange[1] & population <= input$poprange[2]) %>%
                 filter(report_status %in% input$status_selector) %>%
                 filter(is_verified %in% input$verified_selector) %>%
                 filter(city %in% input$city_selector) %>%
@@ -180,7 +180,8 @@ function(input, output, session) {
                               lat = ~map_points$lat,
                               layerId = ~map_points$id,
                               icon = ~map_icons[all_encoded],
-                              label = ~ paste(map_points$city, map_points$state, sep = ", ")
+                              label = ~ paste(map_points$city, map_points$state, sep = ", "),
+                              options = markerOptions(zIndexOffset = map_points$population)
                               #options = markerOptions(opacity = map_points$population_encoded)
                               #clusterOptions = markerClusterOptions()
                               #popup = map_points$popup_info tooltip, ignoring for now
