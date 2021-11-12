@@ -48,47 +48,47 @@ bootstrapPage(
     
     # generate map and selectors
     fluidRow(
-        column(
-            id="sidePanel",
-            width = 3,
-            
-            div(id = "selector_pane",
-                
-                #NEW SELECTOR INPUTS
-                pickerInput("verified_selector",
-                            h5("Verification Update"),
-                            choices = c("Verified"=1, "Not Yet Verified"=0),
-                            options = list(`actions-box` = TRUE),
-                            multiple = T,
-                            selected = c("Verified"=1, "Not Yet Verified"=0)),
-                
-                pickerInput("magnitude_selector",
-                            h5("Targeted Area"),
-                            choices = c("Citywide", "City Center", "Transit Oriented", "Main Street"),
-                            options = list(`actions-box` = TRUE),
-                            multiple = T,
-                            selected = c("Citywide", "City Center", "Transit Oriented", "Main Street")),
-                
-                pickerInput("status_selector",
-                            h5("Implementation Stage"),
-                            choices = unique(map_data$report_status),
-                            selected = unique(map_data$report_status),
-                            options = list(`actions-box` = TRUE),
-                            multiple = T),
-                
-                pickerInput("type_selector",
-                            h5("Policy Change"),
-                            choices = c("Reduce Parking Minimums", "Eliminate Parking Minimums", "Parking Maximums"),
-                            selected = c("Reduce Parking Minimums", "Eliminate Parking Minimums", "Parking Maximums"),
-                            options = list(`actions-box` = TRUE),
-                            multiple = T),
-                
-                pickerInput("land_use_selector",
-                            h5("Affected Land Use"),
-                            choices = c( "All Uses", "Commercial", "Residential", "Medical", "Industrial"),
-                            selected = c("All Uses", "Commercial", "Residential", "Medical", "Industrial"),
-                            options = list(`actions-box` = TRUE),
-                            multiple = T)
+        # column(
+        #     id="sidePanel",
+        #     width = 3,
+        #     
+        #     div(id = "selector_pane",
+        #         
+        #         #NEW SELECTOR INPUTS
+        #         pickerInput("verified_selector",
+        #                     h5("Verification Update"),
+        #                     choices = c("Verified"=1, "Not Yet Verified"=0),
+        #                     options = list(`actions-box` = TRUE),
+        #                     multiple = T,
+        #                     selected = c("Verified"=1, "Not Yet Verified"=0)),
+        #         
+        #         pickerInput("magnitude_selector",
+        #                     h5("Targeted Area"),
+        #                     choices = c("Citywide", "City Center", "Transit Oriented", "Main Street"),
+        #                     options = list(`actions-box` = TRUE),
+        #                     multiple = T,
+        #                     selected = c("Citywide", "City Center", "Transit Oriented", "Main Street")),
+        #         
+        #         pickerInput("status_selector",
+        #                     h5("Implementation Stage"),
+        #                     choices = unique(map_data$report_status),
+        #                     selected = unique(map_data$report_status),
+        #                     options = list(`actions-box` = TRUE),
+        #                     multiple = T),
+        #         
+        #         pickerInput("type_selector",
+        #                     h5("Policy Change"),
+        #                     choices = c("Reduce Parking Minimums", "Eliminate Parking Minimums", "Parking Maximums"),
+        #                     selected = c("Reduce Parking Minimums", "Eliminate Parking Minimums", "Parking Maximums"),
+        #                     options = list(`actions-box` = TRUE),
+        #                     multiple = T),
+        #         
+        #         pickerInput("land_use_selector",
+        #                     h5("Affected Land Use"),
+        #                     choices = c( "All Uses", "Commercial", "Residential", "Medical", "Industrial"),
+        #                     selected = c("All Uses", "Commercial", "Residential", "Medical", "Industrial"),
+        #                     options = list(`actions-box` = TRUE),
+        #                     multiple = T)
                 
                 # OLD SELECTOR INPUTS 
                 
@@ -143,22 +143,73 @@ bootstrapPage(
                 #                                    )),
                 #                    choiceValues = c( "All Uses", "Commercial", "Residential", "Medical", "Industrial"),
                 #                    selected = c("All Uses", "Commercial", "Residential", "Medical", "Industrial")),
-            )
+            # )
         ),
         column(
             id = "mapView",
-            width = 9,
+            width = 12,
             leafletOutput("map", ),
-            # absolutePanel(id = "controls", class = "panel panel-default",
-            #               top = 10, right = 25, #draggable = TRUE,
-            #               # sliderInput("poprange", "Population", min(map_data$population), max(map_data$population),
-            #               #             value = range(tidied_map_data$population), step = NULL),
-            #               sliderTextInput(inputId = "poprange",
-            #                               label = "Population:",
-            #                               choices = getJenksBreaks(map_data$population, 20)[c(1:10, 15, 20)],
-            #                               selected = range(map_data$population),
-            #                               grid = TRUE)
-            #               ),
+            absolutePanel(
+                top = 10,
+                left = 50,
+                draggable = FALSE,
+                width = "100%",
+                dropdown(
+                    # pickerInput("verified_selector",
+                    #   tags$b("Varification Update"),
+                    #   choices = c("Varified" = 1, "Not Yet Varified" = 0),
+                    #   options = pickerOptions(actionsBox = TRUE),
+                    #   multiple = T,
+                    #   inline = TRUE,
+                    #   selected = c("Varified" = 1, "Not Yet Varified" = 0)
+                    # ),
+                    pickerInput("magnitude_selector",
+                                tags$b("Targeted Area"),
+                                choices = c("Citywide", "City Center", "Transit Oriented", "Main Street"),
+                                options = pickerOptions(actionsBox = TRUE),
+                                multiple = T,
+                                selected = c("Citywide", "City Center", "Transit Oriented", "Main Street")
+                    ),
+                    pickerInput("status_selector",
+                                tags$b("Implementation Stage"),
+                                choices = c(unique(map_data$report_status)),
+                                selected = c(unique(map_data$report_status))
+                                ,
+                                options = pickerOptions(actionsBox = TRUE),
+                                multiple = T
+                    ),
+                    pickerInput("type_selector",
+                                tags$b("Policy Change"),
+                                choices = c("Reduce Parking Minimums", "Eliminate Parking Minimums", "Parking Maximums"),
+                                selected = c("Reduce Parking Minimums", "Eliminate Parking Minimums", "Parking Maximums"),
+                                options = pickerOptions(actionsBox = TRUE),
+                                multiple = T
+                    ),
+                    pickerInput("land_use_selector",
+                                tags$b("Affected Land Use"),
+                                choices = c("All Uses", "Commercial", "Residential", "Medical", "Industrial"),
+                                selected = c("All Uses", "Commercial", "Residential", "Medical", "Industrial"),
+                                options = pickerOptions(actionsBox = TRUE,
+                                                        noneSelectedText = "nothingselected"
+                                ),
+                                multiple = T
+                    ),
+                    
+                    # sliderInput("poprange", "Population",
+                    #             min(map_data$population), max(map_data$population),
+                    #             value = range(map_data$population), step = NULL),
+                    sliderTextInput(
+                        inputId = "poprange",
+                        label = "Population:",
+                        choices = getJenksBreaks(map_data$population, 20)[c(1:10, 15, 20)],
+                        selected = range(map_data$population),
+                        grid = TRUE
+                    ),
+                    circle = TRUE,
+                    status = "danger",
+                    icon = icon("gear"),
+                    width = "300px"
+                          ),
             # add in logos
             withTags({
                 div(id = "logos",
