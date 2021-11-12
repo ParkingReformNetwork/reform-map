@@ -46,25 +46,28 @@ function(input, output, session) {
     
     # create data subset based on user input
     filtered_data <- reactive({
-        if(is.null(input$city_selector )){
+        if (is.null(input$city_selector)) {
             map_data %>%
-                # filter(population >= input$poprange[1] & population <= input$poprange[2]) %>%
-                filter(report_status %in% input$status_selector) %>%
-                # filter(is_verified %in% input$verified_selector) %>%
-                filter(str_detect(tolower(report_magnitude), tolower(paste(input$magnitude_selector, collapse = "|")))) %>%
-                filter(str_detect(tolower(report_type), tolower(paste(input$type_selector, collapse = "|")))) %>%
-                filter(str_detect(tolower(land_uses), tolower(paste(input$land_use_selector, collapse = "|")))) %>% 
+                filter(if(is.null(input$magnitude_selector)){is.na(report_magnitude)} 
+                       else {is.na(report_magnitude) | grepl(tolower(paste(input$magnitude_selector, collapse = "|")), report_magnitude, ignore.case=TRUE)}) %>%
+                filter(if(is.null(input$status_selector)){is.na(report_status)} 
+                       else {is.na(report_status) | grepl(tolower(paste(input$status_selector, collapse = "|")), report_status, ignore.case=TRUE)}) %>%
+                filter(if(is.null(input$type_selector)){is.na(report_type)} 
+                       else {is.na(report_type) | grepl(tolower(paste(input$type_selector, collapse = "|")), report_type, ignore.case=TRUE)}) %>%
+                filter(if(is.null(input$land_use_selector)){is.na(land_uses)} 
+                       else {is.na(land_uses) | grepl(tolower(paste(input$land_use_selector, collapse = "|")), land_uses, ignore.case=TRUE)}) %>%
                 filter(population >= input$poprange[1] & population <= input$poprange[2])
-            
         } else {
             map_data %>%
-                # filter(population >= input$poprange[1] & population <= input$poprange[2]) %>%
-                filter(report_status %in% input$status_selector) %>%
-                # filter(is_verified %in% input$verified_selector) %>%
+                filter(if(is.null(input$magnitude_selector)){is.na(report_magnitude)} 
+                       else {is.na(report_magnitude) | grepl(tolower(paste(input$magnitude_selector, collapse = "|")), report_magnitude, ignore.case=TRUE)}) %>%
+                filter(if(is.null(input$status_selector)){is.na(report_status)} 
+                       else {is.na(report_status) | grepl(tolower(paste(input$status_selector, collapse = "|")), report_status, ignore.case=TRUE)}) %>%
+                filter(if(is.null(input$type_selector)){is.na(report_type)} 
+                       else {is.na(report_type) | grepl(tolower(paste(input$type_selector, collapse = "|")), report_type, ignore.case=TRUE)}) %>%
+                filter(if(is.null(input$land_use_selector)){is.na(land_uses)} 
+                       else {is.na(land_uses) | grepl(tolower(paste(input$land_use_selector, collapse = "|")), land_uses, ignore.case=TRUE)}) %>%
                 filter(city %in% input$city_selector) %>%
-                filter(str_detect(tolower(report_magnitude), tolower(paste(input$magnitude_selector, collapse = "|")))) %>%
-                filter(str_detect(tolower(report_type), tolower(paste(input$type_selector, collapse = "|")))) %>%
-                filter(str_detect(tolower(land_uses), tolower(paste(input$land_use_selector, collapse = "|")))) %>% 
                 filter(population >= input$poprange[1] & population <= input$poprange[2])
         }
     })
