@@ -20,7 +20,8 @@ for(mag in unique(map_data$magnitude_encoded)){
                                                     markerColor = mag,
                                                     #iconColor = pop, 
                                                     #squareMarker = T,
-                                                    extraClasses = spec))
+                                                    # extraClasses = spec
+                                                    ))
             }
         }
     }
