@@ -130,7 +130,8 @@ bootstrapPage(
                     status = "danger",
                     icon = icon("gear"),
                     width = "300px"
-                          ),
+                          )
+                ),
                 
             # add in logos
             withTags({
@@ -160,5 +161,5 @@ bootstrapPage(
             )
         )
     )        
-))
+)
 
