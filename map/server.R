@@ -165,29 +165,47 @@ function(input, output, session) {
     
     # changes to map based on selection
     observe({
-        map_points <- filtered_data()
         
-        map_points %>%
-            mutate(all_encoded = paste("icon",
-                                       magnitude_encoded,
-                                       land_use_encoded,
-                                       population_encoded,
-                                       is_special,
-                                       sep = "_"
-            )) %>%
-            leafletProxy("map", data = .) %>%
-            clearMarkers() %>%
-            addAwesomeMarkers(lng = ~map_points$long,
-                              lat = ~map_points$lat,
-                              layerId = ~map_points$id,
-                              icon = ~map_icons[all_encoded],
-                              label = ~ paste(map_points$city, map_points$state, sep = ", "),
-                              options = markerOptions(zIndexOffset = map_points$population)
-                              #options = markerOptions(opacity = map_points$population_encoded)
-                              #clusterOptions = markerClusterOptions()
-                              #popup = map_points$popup_info tooltip, ignoring for now
-            )
-        session$sendCustomMessage("map_markers_added", message)
+        if(nrow(filtered_data()) == 0) {
+            map_points <- filtered_data()
+            
+            map_points %>%
+                mutate(all_encoded = paste("icon",
+                                           magnitude_encoded,
+                                           land_use_encoded,
+                                           population_encoded,
+                                           is_special,
+                                           sep = "_"
+                )) %>%
+                leafletProxy("map", data = .) %>%
+                clearMarkers()
+        }
+        
+        else {
+            map_points <- filtered_data()
+            
+            map_points %>%
+                mutate(all_encoded = paste("icon",
+                                           magnitude_encoded,
+                                           land_use_encoded,
+                                           population_encoded,
+                                           is_special,
+                                           sep = "_"
+                )) %>%
+                leafletProxy("map", data = .) %>%
+                clearMarkers() %>%
+                addAwesomeMarkers(lng = ~map_points$long,
+                                  lat = ~map_points$lat,
+                                  layerId = ~map_points$id,
+                                  icon = ~map_icons[all_encoded],
+                                  label = ~ paste(map_points$city, map_points$state, sep = ", "),
+                                  options = markerOptions(zIndexOffset = map_points$population)
+                                  #options = markerOptions(opacity = map_points$population_encoded)
+                                  #clusterOptions = markerClusterOptions()
+                                  #popup = map_points$popup_info tooltip, ignoring for now
+                )
+            session$sendCustomMessage("map_markers_added", message)
+        }
     })
 }
 
