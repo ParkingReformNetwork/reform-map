@@ -53,7 +53,8 @@ function(input, output, session) {
                 # filter(is_verified %in% input$verified_selector) %>%
                 filter(str_detect(tolower(report_magnitude), tolower(paste(input$magnitude_selector, collapse = "|")))) %>%
                 filter(str_detect(tolower(report_type), tolower(paste(input$type_selector, collapse = "|")))) %>%
-                filter(str_detect(tolower(land_uses), tolower(paste(input$land_use_selector, collapse = "|"))))
+                filter(str_detect(tolower(land_uses), tolower(paste(input$land_use_selector, collapse = "|")))) %>% 
+                filter(population >= input$poprange[1] & population <= input$poprange[2])
             
         } else {
             map_data %>%
@@ -63,7 +64,8 @@ function(input, output, session) {
                 filter(city %in% input$city_selector) %>%
                 filter(str_detect(tolower(report_magnitude), tolower(paste(input$magnitude_selector, collapse = "|")))) %>%
                 filter(str_detect(tolower(report_type), tolower(paste(input$type_selector, collapse = "|")))) %>%
-                filter(str_detect(tolower(land_uses), tolower(paste(input$land_use_selector, collapse = "|"))))
+                filter(str_detect(tolower(land_uses), tolower(paste(input$land_use_selector, collapse = "|")))) %>% 
+                filter(population >= input$poprange[1] & population <= input$poprange[2])
         }
     })
     

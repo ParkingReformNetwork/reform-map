@@ -55,7 +55,6 @@ bootstrapPage(
             absolutePanel(id = "controls", class = "panel panel-default",
                           bottom = 10,
                           left = 10,
-                          
                           tags$div(class = "my-legend",
                                    tags$div(class = "legend-scale",
                                             tags$ul(class = "legend-labels",
