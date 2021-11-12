@@ -20,34 +20,12 @@ body {
 }
 */
 
-
-
-.sw-dropdown {
-  position: relative;
-  display: inline-block;
+#city_detail_info {
+  position: absolute;
+  top: 50px;
+  left: 50px;
+  width: 60%;
 }
-
-.sw-dropdown-content {
-  color: #339FFF; text-align: left; font-weight:bold; font-size: 10px;
-}
-
-.control-label{
-  font-size: 10px;
-}
-
-.dropdown-item {
-  font-size: 10px;
-}
-
-.filter-option {
-  font-size: 10px;
-}
-
-.row {
-  margin: 0;
-}
-
-
 
 .clicked_city_first_row > div {
   display: inline-block;
@@ -68,7 +46,6 @@ body {
   background-color: #c9c9c9;
   /* border-color: #ffff00; */
   color: #000000;
-
 }
 
 #selector_pane {
@@ -98,19 +75,15 @@ body {
 
 #city_detail_info {
   position: absolute;
-  top: 1%;
-  right: 1%;
-  width: 40%;
-  height: 90%;
+  left: 20%;
+  width: 60%;
   cursor: inherit;
   background: rgba(255, 255, 255, 1);
   border-color: rgba(186, 186, 186, 0.7);
   border-style: solid;
   padding: 20px;
   border-radius: 10px;
-  overflow:auto;
 }
-
 
 #legend {
   left: 10px;
@@ -147,12 +120,11 @@ body {
 
 #strong_towns_link > img,
 #parking_reform_link > img {
-  width: 50px;
+  height: 50px;
 }
 
 #logos {
-  bottom: 20px;
-  right: 20px;
+  bottom: 10px;
 }
 
 #legend > div > .awesome-marker-legend {
@@ -202,42 +174,3 @@ body {
   border: 0;
   padding: 0 !important;
 }
-
-.my-legend .legend-title {
-    text-align: left;
-    margin-bottom: 5px;
-    font-weight: bold;
-    font-size: 90%;
-    }
-    
-.my-legend .legend-scale ul {
-  margin: 0;
-  margin-bottom: 5px;
-  padding: 0;
-  float: left;
-  list-style: none;
-  }
-  
-.my-legend .legend-scale ul li {
-  font-size: 80%;
-  list-style: none;
-  margin-left: 0;
-  line-height: 18px;
-  margin-bottom: 2px;
-  }
-  
-.my-legend ul.legend-labels li span {
-  display: block;
-  float: left;
-  height: 16px;
-  width: 30px;
-  margin-right: 5px;
-  margin-left: 0;
-  border: 1px solid #999;
-  }
-
-#controls {
-          background-color: #ddd;
-      
-        }
-
