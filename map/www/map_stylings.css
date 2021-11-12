@@ -65,6 +65,9 @@ body {
 
 
 #close_detail {
+  position: fixed;
+  top: 5%;
+  right: 5%;
   background-color: #c9c9c9;
   /* border-color: #ffff00; */
   color: #000000;
