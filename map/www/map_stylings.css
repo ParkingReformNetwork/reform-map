@@ -214,14 +214,14 @@ body {
 
 
 
-.color-legend .legend-title {
+.my-legend .legend-title {
     text-align: left;
     margin-bottom: 5px;
     font-weight: bold;
     font-size: 90%;
     }
     
-.color-legend .legend-scale ul {
+.my-legend .legend-scale ul {
   margin: 0;
   margin-bottom: 5px;
   padding: 0;
@@ -229,7 +229,7 @@ body {
   list-style: none;
   }
   
-.color-legend .legend-scale ul li {
+.my-legend .legend-scale ul li {
   font-size: 80%;
   list-style: none;
   margin-left: 0;
@@ -237,7 +237,7 @@ body {
   margin-bottom: 2px;
   }
   
-.color-legend ul.legend-labels li span {
+.my-legend ul.legend-labels li span {
   display: block;
   float: left;
   height: 16px;
@@ -246,16 +246,8 @@ body {
   margin-left: 0;
   border: 1px solid #999;
   }
-  
-.icon-legend{
-  font-size: 80%;
-  margin: 2px;
-
-}
 
 #controls {
-          background-color: "white";
-          padding: 6px;
-          border-top-color: "black";
-          border-style: groove;
+          background-color: #ddd;
+      
         }
