@@ -166,13 +166,13 @@ bootstrapPage(
                         fluidRow(class="clicked_city_first_row",
                                  column(11, h4(textOutput("clicked_city"))),
                                  column(1, actionButton("close_detail", "x"))
-                        ),
+                        ),                        
+                        uiOutput("clicked_city_state"),
                         textOutput("clicked_population"),
                         textOutput("clicked_report_summary"),
                         textOutput("clicked_report_magnitude"),
                         textOutput("clicked_land_uses"),
-                        textOutput("clicked_reporter"),
-                        uiOutput("clicked_city_state")
+                        #textOutput("clicked_reporter")
                     )
                 })
             )
