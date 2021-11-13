@@ -247,7 +247,15 @@ body {
   border: 1px solid #999;
   }
 
+.icon-legend{
+  font-size: 80%;
+  margin: 2px;
+
+}
+
 #controls {
-          background-color: #ddd;
-      
+          background-color: "white";
+          padding: 6px;
+          border-top-color: "black";
+          border-style: groove;
         }

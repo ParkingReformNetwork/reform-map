@@ -53,8 +53,8 @@ bootstrapPage(
             width = 12,
             leafletOutput("map", ),
             absolutePanel(id = "controls", class = "panel panel-default",
-                          bottom = 10,
-                          left = 10,
+                          bottom = -13,
+                          left = 5,
                           tags$div(class = "my-legend",
                                    tags$div(class = "legend-scale",
                                             tags$ul(class = "legend-labels",
@@ -65,10 +65,39 @@ bootstrapPage(
                                                     tags$li(tags$span(style = "background:orange;"),
                                                             "City Center"),
                                                     tags$li(tags$span(style = "background:purple;"),
-                                                            "Main Street"),
-                                                    tags$li(tags$span(style = "background:red;"),
-                                                            "NA")))
+                                                            "Main Street")))
                           )
+            ),
+            absolutePanel(
+                id = "controls", 
+                class = "panel panel-default",
+                draggable = FALSE,
+                bottom = 90,
+                left = 5,
+                tags$div(
+                    class = "icon-legend",
+                    list(HTML(HTML("<p>"),
+                              fa("city"), 
+                              HTML(" - All Land Uses</p>")
+                    ),
+                    HTML(HTML("<p>"),
+                         fa("building"),
+                         HTML(" - Commercial</p>")
+                    ),
+                    HTML(HTML("<p>"),
+                         fa("home"),
+                         HTML(" - Residential</p>")
+                    ),
+                    HTML(HTML("<p>"),
+                         fa("car"),
+                         HTML(" - Medical</p>")
+                    ),
+                    HTML(HTML("<p>"),
+                         fa("car"),
+                         HTML(" - Industrial</p>")
+                    ))
+                )
+                
             ),
             absolutePanel(
                 top = 10,
@@ -76,14 +105,6 @@ bootstrapPage(
                 draggable = FALSE,
                 width = "100%",
                 dropdown(
-                    # pickerInput("verified_selector",
-                    #   tags$b("Varification Update"),
-                    #   choices = c("Varified" = 1, "Not Yet Varified" = 0),
-                    #   options = pickerOptions(actionsBox = TRUE),
-                    #   multiple = T,
-                    #   inline = TRUE,
-                    #   selected = c("Varified" = 1, "Not Yet Varified" = 0)
-                    # ),
                     pickerInput("magnitude_selector",
                                 tags$b("Targeted Area"),
                                 choices = c("Citywide", "City Center", "Transit Oriented", "Main Street"),
@@ -115,10 +136,6 @@ bootstrapPage(
                                 ),
                                 multiple = T
                     ),
-                    
-                    # sliderInput("poprange", "Population",
-                    #             min(map_data$population), max(map_data$population),
-                    #             value = range(map_data$population), step = NULL),
                     sliderTextInput(
                         inputId = "poprange",
                         label = "Population:",
