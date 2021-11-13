@@ -5,9 +5,11 @@ library(dplyr)
 library(leaflet)
 library(fontawesome)
 library(stringr)
+library(leaflegend)
 
 # data generated from parking_reform.R
 map_data <- read.csv(file = "tidied_map_data.csv", stringsAsFactors = F)
+#map_data$population <- format(map_data$population, big.mark = ",", scientific = FALSE)
 
 # Make a list of icons based on magnitude, land use, and icon
 map_icons <- awesomeIconList(test = makeAwesomeIcon(text = fa('car')))
@@ -38,7 +40,7 @@ function(input, output, session) {
                              options = providerTileOptions(noWrap = TRUE)
             ) %>%
             setView(
-                lng = -96.7449732,
+                lng = -98.7449732,
                 lat = 43.2796758,
                 zoom = 4
             )
@@ -205,10 +207,8 @@ function(input, output, session) {
                                   icon = ~map_icons[all_encoded],
                                   label = ~ paste(map_points$city, map_points$state, sep = ", "),
                                   options = markerOptions(zIndexOffset = map_points$population)
-                                  #options = markerOptions(opacity = map_points$population_encoded)
-                                  #clusterOptions = markerClusterOptions()
-                                  #popup = map_points$popup_info tooltip, ignoring for now
-                )
+                                  )
+                
             session$sendCustomMessage("map_markers_added", message)
         }
     })
