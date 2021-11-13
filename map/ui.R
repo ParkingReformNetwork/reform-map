@@ -53,8 +53,8 @@ bootstrapPage(
             width = 12,
             leafletOutput("map", ),
             absolutePanel(id = "controls", class = "panel panel-default",
-                          bottom = 10,
-                          left = 10,
+                          bottom = -13,
+                          left = 5,
                           tags$div(class = "my-legend",
                                    tags$div(class = "legend-scale",
                                             tags$ul(class = "legend-labels",
@@ -67,6 +67,37 @@ bootstrapPage(
                                                     tags$li(tags$span(style = "background:purple;"),
                                                             "Main Street")))
                           )
+            ),
+            absolutePanel(
+                id = "controls", 
+                class = "panel panel-default",
+                draggable = FALSE,
+                bottom = 90,
+                left = 5,
+                tags$div(
+                    class = "icon-legend",
+                    list(HTML(HTML("<p>"),
+                              fa("city"), 
+                              HTML(" - All Land Uses</p>")
+                    ),
+                    HTML(HTML("<p>"),
+                         fa("building"),
+                         HTML(" - Commercial</p>")
+                    ),
+                    HTML(HTML("<p>"),
+                         fa("home"),
+                         HTML(" - Residential</p>")
+                    ),
+                    HTML(HTML("<p>"),
+                         fa("car"),
+                         HTML(" - Medical</p>")
+                    ),
+                    HTML(HTML("<p>"),
+                         fa("car"),
+                         HTML(" - Industrial</p>")
+                    ))
+                )
+                
             ),
             absolutePanel(
                 top = 10,
