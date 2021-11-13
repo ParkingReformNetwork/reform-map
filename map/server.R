@@ -73,14 +73,23 @@ function(input, output, session) {
     })
     
     # display city and state for clicked map point. will end up in more detail pane
-    output$clicked_city <- renderText({
-        req(input$map_marker_click$id)
-        map_data %>%
-            filter(id == input$map_marker_click$id) %>%
-            select(city, state) %>%
-            paste0(collapse = ", ")
+    output$clicked_city <- renderUI({
+      req(input$map_marker_click$id)
+      map_data %>%
+        filter(id == input$map_marker_click$id) %>%
+        select(city, state) %>%
+        paste0(collapse = ", ") -> city_label
+      
+      map_data %>%
+        filter(id == input$map_marker_click$id) %>%
+        mutate(city_state = str_replace_all(paste(city, state, sep="_"), " ", "")) %>%
+        select(city_state) %>%
+        paste0() %>%
+        paste("https://map.parkingreform.org/parking_map/city_detail/", .,".html", sep="") -> url
+      HTML(paste(a(city_label, href=url, target="_blank")))
     }
     )
+  
     
     # display population for clicked city
     output$clicked_population <- renderText({
@@ -125,17 +134,6 @@ function(input, output, session) {
     }
     )
     
-    # display reporter data for clicked map point
-    output$clicked_reporter <- renderText({
-        req(input$map_marker_click$id)
-        map_data %>%
-            filter(id == input$map_marker_click$id) %>%
-            mutate(reporter_name = paste("Reporter Name:", reporter_name)) %>%
-            select(reporter_name) %>%
-            paste0()
-    }
-    )
-    
     # render city_state for citation link
     output$clicked_city_state <- renderUI({
         req(input$map_marker_click$id)
@@ -146,7 +144,7 @@ function(input, output, session) {
             select(city_state) %>%
             paste0() %>%
             paste("https://map.parkingreform.org/parking_map/city_detail/", .,".html", sep="") -> url
-        HTML(paste(a("More Info", href=url, target="_blank")))
+        HTML(paste(a("Detailed Information and Citations", href=url, target="_blank")))
     }
     )
     

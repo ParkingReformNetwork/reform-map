@@ -164,7 +164,7 @@ bootstrapPage(
                 withTags({
                     div(id = "city_detail_info",
                         fluidRow(class="clicked_city_first_row",
-                                 column(11, h4(textOutput("clicked_city"))),
+                                 column(style='padding:0px;', 11, h4(uiOutput("clicked_city"))),
                                  column(1, actionButton("close_detail", "x"))
                         ),                        
                         uiOutput("clicked_city_state"),
@@ -172,7 +172,6 @@ bootstrapPage(
                         textOutput("clicked_report_summary"),
                         textOutput("clicked_report_magnitude"),
                         textOutput("clicked_land_uses"),
-                        #textOutput("clicked_reporter")
                     )
                 })
             )
