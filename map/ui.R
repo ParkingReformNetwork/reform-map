@@ -76,14 +76,6 @@ bootstrapPage(
                 draggable = FALSE,
                 width = "100%",
                 dropdown(
-                    # pickerInput("verified_selector",
-                    #   tags$b("Varification Update"),
-                    #   choices = c("Varified" = 1, "Not Yet Varified" = 0),
-                    #   options = pickerOptions(actionsBox = TRUE),
-                    #   multiple = T,
-                    #   inline = TRUE,
-                    #   selected = c("Varified" = 1, "Not Yet Varified" = 0)
-                    # ),
                     pickerInput("magnitude_selector",
                                 tags$b("Targeted Area"),
                                 choices = c("Citywide", "City Center", "Transit Oriented", "Main Street"),
@@ -115,10 +107,6 @@ bootstrapPage(
                                 ),
                                 multiple = T
                     ),
-                    
-                    # sliderInput("poprange", "Population",
-                    #             min(map_data$population), max(map_data$population),
-                    #             value = range(map_data$population), step = NULL),
                     sliderTextInput(
                         inputId = "poprange",
                         label = "Population:",
