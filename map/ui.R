@@ -69,16 +69,14 @@ bootstrapPage(
                                                     tags$li(tags$span(style = "background:orange;"),
                                                             "City Center"),
                                                     tags$li(tags$span(style = "background:purple;"),
-                                                            "Main Street"),
-                                                    tags$li(tags$span(style = "background:red;"),
-                                                            "NA")))
+                                                            "Main Street")))
                           )
             ),
             absolutePanel(
                 id = "controls", 
                 class = "panel panel-default",
                 draggable = FALSE,
-                bottom = 106,
+                bottom = 90,
                 left = 5,
                 tags$div(
                     class = "icon-legend",
