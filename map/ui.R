@@ -8,9 +8,12 @@ library(stringr)
 library(shinyWidgets)
 library(RColorBrewer)
 library(BAMMtools)
+library(leaflegend)
 
 # data generated from parking_reform.R
 map_data <- read.csv(file = "tidied_map_data.csv", stringsAsFactors = F)
+#map_data$population <- format(map_data$population, big.mark = ",", scientific = FALSE)
+
 
 # Make a list of icons based on magnitude, land use, and icon
 map_icons <- awesomeIconList(test = makeAwesomeIcon(text = fa('car')))
@@ -53,9 +56,10 @@ bootstrapPage(
             width = 12,
             leafletOutput("map", ),
             absolutePanel(id = "controls", class = "panel panel-default",
-                          bottom = 10,
-                          left = 10,
-                          tags$div(class = "my-legend",
+                          draggable = FALSE,
+                          bottom = -13,
+                          left = 5,
+                          tags$div(class = "color-legend",
                                    tags$div(class = "legend-scale",
                                             tags$ul(class = "legend-labels",
                                                     tags$li(tags$span(style = "background:blue;"),
@@ -71,19 +75,42 @@ bootstrapPage(
                           )
             ),
             absolutePanel(
+                id = "controls", 
+                class = "panel panel-default",
+                draggable = FALSE,
+                bottom = 106,
+                left = 5,
+                tags$div(
+                    class = "icon-legend",
+                    list(HTML(HTML("<p>"),
+                              fa("city"), 
+                              HTML(" - All Land Uses</p>")
+                    ),
+                    HTML(HTML("<p>"),
+                         fa("building"),
+                         HTML(" - Commercial</p>")
+                    ),
+                    HTML(HTML("<p>"),
+                         fa("home"),
+                         HTML(" - Residential</p>")
+                    ),
+                    HTML(HTML("<p>"),
+                         fa("car"),
+                         HTML(" - Medical</p>")
+                    ),
+                    HTML(HTML("<p>"),
+                         fa("car"),
+                         HTML(" - Industrial</p>")
+                    ))
+                )
+                
+            ),
+            absolutePanel(
                 top = 10,
                 left = 50,
                 draggable = FALSE,
                 width = "100%",
                 dropdown(
-                    # pickerInput("verified_selector",
-                    #   tags$b("Varification Update"),
-                    #   choices = c("Varified" = 1, "Not Yet Varified" = 0),
-                    #   options = pickerOptions(actionsBox = TRUE),
-                    #   multiple = T,
-                    #   inline = TRUE,
-                    #   selected = c("Varified" = 1, "Not Yet Varified" = 0)
-                    # ),
                     pickerInput("magnitude_selector",
                                 tags$b("Targeted Area"),
                                 choices = c("Citywide", "City Center", "Transit Oriented", "Main Street"),
