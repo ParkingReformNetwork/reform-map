@@ -65,9 +65,7 @@ bootstrapPage(
                                                     tags$li(tags$span(style = "background:orange;"),
                                                             "City Center"),
                                                     tags$li(tags$span(style = "background:purple;"),
-                                                            "Main Street"),
-                                                    tags$li(tags$span(style = "background:red;"),
-                                                            "NA")))
+                                                            "Main Street")))
                           )
             ),
             absolutePanel(
