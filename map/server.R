@@ -35,7 +35,7 @@ function(input, output, session) {
     output$map <- renderLeaflet({
         leaflet() %>%
             addProviderTiles(providers$Stamen.TonerLite,
-                             options = providerTileOptions(noWrap = TRUE)
+                             options = providerTileOptions(noWrap = FALSE)
             ) %>%
             setView(
                 lng = -96.7449732,
