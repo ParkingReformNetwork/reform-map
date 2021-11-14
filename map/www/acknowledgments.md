@@ -19,18 +19,24 @@ This project is based on [A Map of Cities That Got Rid of Parking Minimums](http
 - Jane Wilberding
 - Jonathan Wicks
 - Henry Vorosmarti
+- Caleb Susuras
+- Aidan Simpson
 - Bobby Siemiaszko
 - Eric Pruett
+- Andrew Oliver
 - Syihan Muhammad
+- Alexander Morgan
+- Trevor Luu
 - Mike Kwan
 - Maggie Kochman
 - Tony Jordan
 - Ryan Johnson
 - Zane Jacobson
 - John Hersey
+- Matthew Hall
+- Scott Goodman
 - Sean Doyle
 - Lindsay Bayley
-- Portland State University Planning Club
 
 ## Parking Reform Network Advisory Board
 
