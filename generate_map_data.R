@@ -5,6 +5,7 @@ library(stringr)
 source(file="map/encoding_logic.R")
 
 
+
 # download files
 city <- read.csv(url("https://area120tables.googleapis.com/link/aR_AWTAZ6WF8_ZB3HgfOvN/export?key=8-SifuDc4Fg7purFrntOa7bjE0ikjGAy28t36wUBIOJx9vFGZuSR89N1PkSTFXpOk6"), stringsAsFactors = F)
 report <- read.csv(url("https://area120tables.googleapis.com/link/bAc5xhhLJ2q4jYYGjaq_24/export?key=8_S1APcQHGN9zfTXEMz_Gz8sel3FCo3RUfEV4f-PBOqE8zy3vG3FpCQcSXQjRDXOqZ"), stringsAsFactors = F)
@@ -24,6 +25,19 @@ city %>%
 # create a flag for verified, only select columns we need, tidy up the names a bit
 report %>%
   mutate(is_verified = ifelse(lengths(strsplit(Verified.By, ",")) >= 2, 1, 0)) %>%
+  mutate(is_magnitude_citywide = ifelse(str_detect(tolower(Magnitude), "citywide"), 1, 0))  %>%
+  mutate(is_magnitude_citycenter = ifelse(str_detect(tolower(Magnitude), "city center/business district"), 1, 0))  %>%
+  mutate(is_magnitude_transit = ifelse(str_detect(tolower(Magnitude), "transit oriented"), 1, 0))  %>%
+  mutate(is_magnitude_mainstreet = ifelse(str_detect(tolower(Magnitude), "main street/special"), 1, 0))  %>%
+  mutate(is_type_eliminated = ifelse(str_detect(tolower(Type), "eliminate parking minimums"), 1, 0))  %>%
+  mutate(is_type_reduced = ifelse(str_detect(tolower(Type), "reduce parking minimums"), 1, 0))  %>%
+  mutate(is_type_maximums = ifelse(str_detect(tolower(Type), "parking maximums"), 1, 0))  %>%
+  mutate(is_uses_alluses = ifelse(str_detect(tolower(Uses), "all uses"), 1, 0))  %>%
+  mutate(is_uses_residental = ifelse(str_detect(tolower(Uses), "residential"), 1, 0))  %>%
+  mutate(is_uses_commercial = ifelse(str_detect(tolower(Uses), "commercial"), 1, 0))  %>%
+  mutate(is_uses_lowdensity = ifelse(str_detect(tolower(Uses), "low density (sf) residential"), 1, 0))  %>%
+  mutate(is_uses_multifamily = ifelse(str_detect(tolower(Uses), "multi-family residential"), 1, 0))  %>%
+  
   ## filter(is_verified == 1) %>%  ## TODO: add this filter back in
   select(city_id,
          state,
@@ -34,7 +48,18 @@ report %>%
          Magnitude,
          Uses,
          Reporter,
-         is_verified) %>%
+         is_verified,
+         is_magnitude_citywide,
+         is_magnitude_citycenter,
+         is_magnitude_transit,
+         is_type_eliminated,
+         is_type_reduced,
+         is_type_maximums,
+         is_uses_alluses,
+         is_uses_residental,
+         is_uses_commercial,
+         is_uses_lowdensity,
+         is_uses_multifamily) %>%
   rename(city = city_id,
          report_summary = Summary,
          report_status = Status,
