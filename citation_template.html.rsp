@@ -42,9 +42,12 @@
 		        
 		        <% if(nchar(city_df$Attachments[j]) > 0) { %>
 		            <h3>Attachments</h3>
-		            <% attachments <- strsplit(city_df$Attachments[j], " ") %>
+		            <% attachments <- strsplit(city_df$Attachments[j], "\\s+") [[1]] %>
 		            <% for(k in 1:length(attachments)) { %>
-		                <img src = "<%= attachments[k] %>" class="attachments img-fluid">
+		                <% file_type <- str_extract(attachments[k], "\\.[a-zA-Z]+$") %>
+		                <% img_path <- paste("attachment_images/", city_state_no_space, "_", j, "_", k, file_type, sep = "") %>
+		                <% download.file(attachments[k], paste("city_detail/", img_path, sep =""))  %>
+		                <img src = "<%= img_path %>" class="attachments img-fluid">
 		            <% } %>
 		        <% } %>
 		    <% } %>
