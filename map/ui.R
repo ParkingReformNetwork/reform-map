@@ -89,12 +89,8 @@ bootstrapPage(
                          HTML(" - Residential</p>")
                     ),
                     HTML(HTML("<p>"),
-                         fa("car"),
-                         HTML(" - Medical</p>")
-                    ),
-                    HTML(HTML("<p>"),
-                         fa("car"),
-                         HTML(" - Industrial</p>")
+                         fa("laptop"),
+                         HTML(" - Mixed Use</p>")
                     ))
                 )
                 
