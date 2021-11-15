@@ -90,6 +90,9 @@
 
                     <dt class="col-12 col-sm-4 col-lg-3">URL</dt>
                     <dd class="col-12 col-sm-8 col-lg-9"><a target="_blank" href="<%= city_df$URL[j] %>"><%= city_df$URL[j] %></a></dd>
+
+                    <dt class="col-12 col-sm-4 col-lg-3">Notes</dt>
+                    <dd class="col-12 col-sm-8 col-lg-9"><%= city_df$Notes[j] %></dd>
                 </dl>
                 <% if(nchar(city_df$Attachments[j]) > 0) { %>
                     <h3>Attachments and Screenshots</h3>
@@ -97,11 +100,14 @@
                     <% attachments <- strsplit(city_df$Attachments[j], "\\s+") [[1]] %>
                     <% for(k in 1:length(attachments)) { %>
                         <li class="attachment">
-                            <% file_type <- str_extract(attachments[k], "\\.[a-zA-Z]+$") %>
+                            <% file_type <- str_extract(attachments[k], "\\.[a-zA-Z_]+$") %>
                             <% img_path <- paste("attachment_images/", city_state_no_space, "_", j, "_", k, file_type, sep = "") %>
                             <% download.file(attachments[k], paste("city_detail/", img_path, sep =""))  %>
-                            <img class="img-fluid" border="1"   src="<%= img_path %>">
-                        </li>
+                            <% if(file_type == ".docx" || file_type == ".pdf") { %>
+                            <a target="_blank" href="<%= img_path %>"><%= paste(city_state_no_space, "_", j, "_", k, file_type, sep = "") %></a>
+                            <% } else { %>
+                            <img class="img-fluid" border="1" src="<%= img_path %>">
+                            <% } %>
                     <% } %>
                     </ul>
                 <% } %>
