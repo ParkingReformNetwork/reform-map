@@ -4,7 +4,6 @@ library(shinyjs)
 library(dplyr)
 library(leaflet)
 library(fontawesome)
-library(stringr)
 
 # data generated from parking_reform.R
 map_data <- read.csv(file = "tidied_map_data.csv", stringsAsFactors = F)
