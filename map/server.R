@@ -1,4 +1,4 @@
-# the libraries, map_data, and map_icons are both in server and ui. Not sure if necessary
+1 && 1# the libraries, map_data, and map_icons are both in server and ui. Not sure if necessary
 library(shiny)
 library(shinyjs)
 library(dplyr)
@@ -46,30 +46,27 @@ function(input, output, session) {
     
     # create data subset based on user input
     filtered_data <- reactive({
-        if (is.null(input$city_selector)) {
-            map_data %>%
-                filter(if(is.null(input$magnitude_selector)){is.na(report_magnitude)} 
-                       else {is.na(report_magnitude) | grepl(tolower(paste(input$magnitude_selector, collapse = "|")), report_magnitude, ignore.case=TRUE)}) %>%
-                filter(if(is.null(input$status_selector)){is.na(report_status)} 
-                       else {is.na(report_status) | grepl(tolower(paste(input$status_selector, collapse = "|")), report_status, ignore.case=TRUE)}) %>%
-                filter(if(is.null(input$type_selector)){is.na(report_type)} 
-                       else {is.na(report_type) | grepl(tolower(paste(input$type_selector, collapse = "|")), report_type, ignore.case=TRUE)}) %>%
-                filter(if(is.null(input$land_use_selector)){is.na(land_uses)} 
-                       else {is.na(land_uses) | grepl(tolower(paste(input$land_use_selector, collapse = "|")), land_uses, ignore.case=TRUE)}) %>%
-                filter(population >= input$poprange[1] & population <= input$poprange[2])
-        } else {
-            map_data %>%
-                filter(if(is.null(input$magnitude_selector)){is.na(report_magnitude)} 
-                       else {is.na(report_magnitude) | grepl(tolower(paste(input$magnitude_selector, collapse = "|")), report_magnitude, ignore.case=TRUE)}) %>%
-                filter(if(is.null(input$status_selector)){is.na(report_status)} 
-                       else {is.na(report_status) | grepl(tolower(paste(input$status_selector, collapse = "|")), report_status, ignore.case=TRUE)}) %>%
-                filter(if(is.null(input$type_selector)){is.na(report_type)} 
-                       else {is.na(report_type) | grepl(tolower(paste(input$type_selector, collapse = "|")), report_type, ignore.case=TRUE)}) %>%
-                filter(if(is.null(input$land_use_selector)){is.na(land_uses)} 
-                       else {is.na(land_uses) | grepl(tolower(paste(input$land_use_selector, collapse = "|")), land_uses, ignore.case=TRUE)}) %>%
-                filter(city %in% input$city_selector) %>%
-                filter(population >= input$poprange[1] & population <= input$poprange[2])
-        }
+        input_citywide <- any(input$magnitude_selector %in% "Citywide")
+        input_citycenter <- any(input$magnitude_selector %in% "City Center")
+        input_transit <- any(input$magnitude_selector %in% "Transit Oriented")
+        input_mainstreet <- any(input$magnitude_selector %in% "Main Street")
+        
+        input_residential <- any(input$land_use_selector %in% "Residential")
+        input_commercial <- any(input$land_use_selector %in% "Commercial")
+        input_alluses <- any(input$land_use_selector %in% "All Uses")
+        
+        input_reduce <- any(input$type_selector %in% "Reduce Parking Minimums")
+        input_eliminate <- any(input$type_selector %in% "Eliminate Parking Minimums")
+        input_maximums <- any(input$type_selector %in% "Parking Maximums")
+        
+        
+               map_data %>%
+               filter((is_uses_residential & input_residential) | (is_uses_commercial & input_commercial) | (is_uses_alluses & input_alluses)) %>%
+               filter((is_magnitude_citycenter & input_citycenter)| (is_magnitude_citywide & input_citywide) | (is_magnitude_transit & input_transit)| (is_magnitude_mainstreet & input_mainstreet)) %>%
+               filter((is_type_eliminated & input_eliminate) | (is_type_reduced & input_reduce)| (is_type_maximums & input_maximums)) %>%
+               filter(if(is.null(input$status_selector)){is.na(report_status)} 
+                        else {is.na(report_status) | grepl(tolower(paste(input$status_selector, collapse = "|")), report_status, ignore.case=TRUE)}) %>%
+               filter(population >= input$poprange[1] & population <= input$poprange[2])
     })
     
     # display city and state for clicked map point. will end up in more detail pane
