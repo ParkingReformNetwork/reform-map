@@ -33,7 +33,7 @@ report %>%
   mutate(is_type_reduced = ifelse(str_detect(tolower(Type), "reduce parking minimums"), 1, 0))  %>%
   mutate(is_type_maximums = ifelse(str_detect(tolower(Type), "parking maximums"), 1, 0))  %>%
   mutate(is_uses_alluses = ifelse(str_detect(tolower(Uses), "all uses"), 1, 0))  %>%
-  mutate(is_uses_residental = ifelse(str_detect(tolower(Uses), "residential"), 1, 0))  %>%
+  mutate(is_uses_residential = ifelse(str_detect(tolower(Uses), "residential"), 1, 0))  %>%
   mutate(is_uses_commercial = ifelse(str_detect(tolower(Uses), "commercial"), 1, 0))  %>%
   mutate(is_uses_lowdensity = ifelse(str_detect(tolower(Uses), "low density (sf) residential"), 1, 0))  %>%
   mutate(is_uses_multifamily = ifelse(str_detect(tolower(Uses), "multi-family residential"), 1, 0))  %>%
@@ -52,11 +52,12 @@ report %>%
          is_magnitude_citywide,
          is_magnitude_citycenter,
          is_magnitude_transit,
+         is_magnitude_mainstreet,
          is_type_eliminated,
          is_type_reduced,
          is_type_maximums,
          is_uses_alluses,
-         is_uses_residental,
+         is_uses_residential,
          is_uses_commercial,
          is_uses_lowdensity,
          is_uses_multifamily) %>%

@@ -110,9 +110,8 @@ bootstrapPage(
                     ),
                     pickerInput("status_selector",
                                 tags$b("Implementation Stage"),
-                                choices = c(unique(map_data$report_status)),
-                                selected = c(unique(map_data$report_status))
-                                ,
+                                choices = c("Implemented", "Passed", "Planned", "Proposed","Repealed"),
+                                selected = c("Implemented", "Passed", "Planned", "Proposed"),
                                 options = pickerOptions(actionsBox = TRUE),
                                 multiple = T
                     ),
@@ -125,10 +124,10 @@ bootstrapPage(
                     ),
                     pickerInput("land_use_selector",
                                 tags$b("Affected Land Use"),
-                                choices = c("All Uses", "Commercial", "Residential", "Medical", "Industrial"),
-                                selected = c("All Uses", "Commercial", "Residential", "Medical", "Industrial"),
+                                choices = c("All Uses", "Commercial", "Residential"),
+                                selected = c("All Uses", "Commercial", "Residential"),
                                 options = pickerOptions(actionsBox = TRUE,
-                                                        noneSelectedText = "nothingselected"
+                                noneSelectedText = "nothingselected"
                                 ),
                                 multiple = T
                     ),
