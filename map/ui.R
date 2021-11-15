@@ -32,69 +32,55 @@ bootstrapPage(
             id = "mapView",
             width = 12,
             leafletOutput("map", ),
-            # absolutePanel(id = "controls", class = "panel panel-default",
-            #               bottom = -13,
-            #               left = 5,
-            #               tags$div(class = "my-legend",
-            #                        tags$div(class = "legend-scale",
-            #                                 tags$ul(class = "legend-labels",
-            #                                         tags$li(tags$span(style = "background:blue;"),
-            #                                                 "Citywide"),
-            #                                         tags$li(tags$span(style = "background:green;"),
-            #                                                 "Transit Oriented"),
-            #                                         tags$li(tags$span(style = "background:orange;"),
-            #                                                 "City Center"),
-            #                                         tags$li(tags$span(style = "background:purple;"),
-            #                                                 "Main Street")))
-            #               )
-            # ),
-            # absolutePanel(
-            #     id = "controls", 
-            #     class = "panel panel-default",
-            #     draggable = FALSE,
-            #     bottom = 90,
-            #     left = 5,
-            #     tags$div(
-            #         class = "icon-legend",
-            #         list(HTML(HTML("<p>"),
-            #                   fa("city"), 
-            #                   HTML(" - All Land Uses</p>")
-            #         ),
-            #         HTML(HTML("<p>"),
-            #              fa("building"),
-            #              HTML(" - Commercial</p>")
-            #         ),
-            #         HTML(HTML("<p>"),
-            #              fa("home"),
-            #              HTML(" - Residential</p>")
-            #         ),
-            #         HTML(HTML("<p>"),
-            #              fa("laptop"),
-            #              HTML(" - Mixed Use</p>")
-            #         ))
-            #     )
-            #     
-            # ),
+            absolutePanel(id = "controls", class = "panel panel-default",
+                          bottom = -13,
+                          left = 5,
+                          tags$div(class = "my-legend",
+                                   tags$div(class = "legend-scale",
+                                            tags$ul(class = "legend-labels",
+                                                    tags$li(tags$span(style = "background:blue;"),
+                                                            "Citywide"),
+                                                    tags$li(tags$span(style = "background:green;"),
+                                                            "Transit Oriented"),
+                                                    tags$li(tags$span(style = "background:orange;"),
+                                                            "City Center"),
+                                                    tags$li(tags$span(style = "background:purple;"),
+                                                            "Main Street")))
+                          )
+            ),
+            absolutePanel(
+                id = "controls", 
+                class = "panel panel-default",
+                draggable = FALSE,
+                bottom = 90,
+                left = 5,
+                tags$div(
+                    class = "icon-legend",
+                    list(HTML(HTML("<p>"),
+                              fa("city"), 
+                              HTML(" - All Land Uses</p>")
+                    ),
+                    HTML(HTML("<p>"),
+                         fa("building"),
+                         HTML(" - Commercial</p>")
+                    ),
+                    HTML(HTML("<p>"),
+                         fa("home"),
+                         HTML(" - Residential</p>")
+                    ),
+                    HTML(HTML("<p>"),
+                         fa("laptop"),
+                         HTML(" - Mixed Use</p>")
+                    ))
+                )
+                
+            ),
             absolutePanel(
                 top = 10,
                 left = 50,
                 draggable = FALSE,
                 width = "100%",
                 dropdown(
-                    sliderInput("radsize",
-                                "Circle Radius",
-                                min = 0,
-                                max = 20,
-                                value = 7.5,
-                                step = 0.5),
-                    sliderInput("opac",
-                                "Opacity",
-                                min = 0,
-                                max = 1,
-                                value = 0.7,
-                                step = 0.05),
-                    selectInput("colors", "Color Scheme",
-                                rownames(subset(brewer.pal.info, category %in% c("seq", "div")))),
                     pickerInput("magnitude_selector",
                                 tags$b("Targeted Area"),
                                 choices = c("Citywide", "City Center", "Transit Oriented", "Main Street"),
