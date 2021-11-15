@@ -1,34 +1,12 @@
 # the libraries, map_data, and map_icons are both in server and ui. Not sure if necessary
 library(shiny)
 library(shinyjs)
-library(dplyr)
-library(leaflet)
 library(fontawesome)
-library(stringr)
 library(shinyWidgets)
-library(RColorBrewer)
 library(BAMMtools)
 
 # data generated from parking_reform.R
 map_data <- read.csv(file = "tidied_map_data.csv", stringsAsFactors = F)
-
-# Make a list of icons based on magnitude, land use, and icon
-map_icons <- awesomeIconList(test = makeAwesomeIcon(text = fa('car')))
-for(mag in unique(map_data$magnitude_encoded)){
-    for(lu in unique(map_data$land_use_encoded)) {
-        for(pop in unique(map_data$population_encoded)) {
-            for(spec in unique(map_data$is_special)) {
-                map_icons[paste("icon", mag, lu, pop, spec, sep = "_")] <- 
-                    awesomeIconList(makeAwesomeIcon(text = fa(lu, fill = pop), 
-                                                    markerColor = mag,
-                                                    #iconColor = pop, 
-                                                    #squareMarker = T,
-                                                    # extraClasses = spec
-                                                    ))
-            }
-        }
-    }
-}
 
 # Define UI and front end
 bootstrapPage(
