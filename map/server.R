@@ -4,7 +4,6 @@ library(shinyjs)
 library(dplyr)
 library(leaflet)
 library(fontawesome)
-library(stringr)
 
 # data generated from parking_reform.R
 map_data <- read.csv(file = "tidied_map_data.csv", stringsAsFactors = F)
@@ -190,7 +189,6 @@ function(input, output, session) {
                                    sep = "_"
         )) %>%
         leafletProxy("map", data = .) %>%
-      
         clearMarkers()
     }
     
@@ -226,26 +224,25 @@ function(input, output, session) {
         # )
         
       addCircleMarkers(
-          lat = ~map_points$lat,
-          layerId = ~map_points$id,
-          radius = ~ input$radsize,
-          stroke = TRUE,
-          weight = 2,
-          color = ~pal(mag_encoded),
-          fillColor = ~pal(mag_encoded),
-          fillOpacity = ~input$opac,
-          label = ~ paste(map_points$city, map_points$state, sep = ", "),
-          options = markerOptions(zIndexOffset = map_points$population)) %>% 
+        lat = ~map_points$lat,
+        layerId = ~map_points$id,
+        radius = ~ input$radsize,
+        stroke = TRUE,
+        weight = 2,
+        color = ~pal(mag_encoded),
+        fillColor = ~pal(mag_encoded),
+        fillOpacity = ~input$opac,
+        label = ~ paste(map_points$city, map_points$state, sep = ", "),
+        options = markerOptions(zIndexOffset = map_points$population)) %>% 
         
         addLegend(
           title = "Policy Target Area",
           position = "bottomleft",
           pal = pal,
           values = ~map_points$mag_encoded)
-        
+      
       session$sendCustomMessage("map_markers_added", message)
     }
   })
-
+  
 }
-
