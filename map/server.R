@@ -190,6 +190,7 @@ function(input, output, session) {
                                    sep = "_"
         )) %>%
         leafletProxy("map", data = .) %>%
+      
         clearMarkers()
     }
     
