@@ -3,7 +3,6 @@ library(shiny)
 library(shinyjs)
 library(dplyr)
 library(leaflet)
-library(RColorBrewer)
 library(fontawesome)
 
 # data generated from parking_reform.R
@@ -176,6 +175,7 @@ function(input, output, session) {
                                    sep = "_"
         )) %>%
         leafletProxy("map", data = .) %>%
+      
         clearMarkers()
     }
     
@@ -192,37 +192,18 @@ function(input, output, session) {
         )) %>%
         leafletProxy("map", data = .) %>%
         clearMarkers() %>%
-        # addAwesomeMarkers(lng = ~map_points$long,
-        #                   lat = ~map_points$lat,
-        #                   layerId = ~map_points$id,
-        #                   icon = ~map_icons[all_encoded],
-        #                   label = ~ paste(map_points$city, map_points$state, sep = ", "),
-        #                   options = markerOptions(zIndexOffset = map_points$population)
-        #                   #options = markerOptions(opacity = map_points$population_encoded)
-        #                   #clusterOptions = markerClusterOptions()
-        #                   #popup = map_points$popup_info tooltip, ignoring for now
-        # )
-        
-      addCircleMarkers(
-        lat = ~map_points$lat,
-        layerId = ~map_points$id,
-        radius = ~ input$radsize,
-        stroke = TRUE,
-        weight = 2,
-        color = ~pal(mag_encoded),
-        fillColor = ~pal(mag_encoded),
-        fillOpacity = ~input$opac,
-        label = ~ paste(map_points$city, map_points$state, sep = ", "),
-        options = markerOptions(zIndexOffset = map_points$population)) %>% 
-        
-        addLegend(
-          title = "Policy Target Area",
-          position = "bottomleft",
-          pal = pal,
-          values = ~map_points$mag_encoded)
-      
+        addAwesomeMarkers(lng = ~map_points$long,
+                          lat = ~map_points$lat,
+                          layerId = ~map_points$id,
+                          icon = ~map_icons[all_encoded],
+                          label = ~ paste(map_points$city, map_points$state, sep = ", "),
+                          options = markerOptions(zIndexOffset = map_points$population)
+                          #options = markerOptions(opacity = map_points$population_encoded)
+                          #clusterOptions = markerClusterOptions()
+                          #popup = map_points$popup_info tooltip, ignoring for now
+        )
       session$sendCustomMessage("map_markers_added", message)
     }
   })
-  
 }
+
