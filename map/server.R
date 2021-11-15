@@ -40,19 +40,7 @@ for(mag in unique(map_data$magnitude_encoded)){
 # set up back end
 function(input, output, session) {
   
-  # initial map create
-  output$map <- renderLeaflet({
-    leaflet() %>%
-      addProviderTiles(providers$Stamen.TonerLite,
-                       options = providerTileOptions(noWrap = FALSE)
-      ) %>%
-      
-      setView(
-        lng = -96.7449732,
-        lat = 43.2796758,
-        zoom = 4
-      )
-  })
+  
   
   # create data subset based on user input
   filtered_d <- reactive({
@@ -171,16 +159,27 @@ function(input, output, session) {
          time = 0.5)
   })
   
+  # initial map create
+  output$map <- renderLeaflet({
+    leaflet() %>%
+      addProviderTiles(providers$Stamen.TonerLite,
+                       options = providerTileOptions(noWrap = FALSE)
+      ) %>%
+      
+      setView(
+        lng = -96.7449732,
+        lat = 43.2796758,
+        zoom = 4
+      ) 
+  })
+  
   
   # changes to map based on selection
   observe({
     if(nrow(filtered_data()) == 0) {
       map_points <- filtered_data()
       
-      pal <- colorFactor(
-        palette = input$colors,
-        map_points$mag_encoded
-      )
+      
       
       map_points %>%
         mutate(all_encoded = paste("icon",
@@ -211,7 +210,8 @@ function(input, output, session) {
                                    sep = "_"
         )) %>%
         leafletProxy("map", data = .) %>%
-         
+        
+        clearControls() %>%  
         clearMarkers() %>%
         # addAwesomeMarkers(lng = ~map_points$long,
         #                   lat = ~map_points$lat,
@@ -228,8 +228,10 @@ function(input, output, session) {
           lat = ~map_points$lat,
           layerId = ~map_points$id,
           radius = ~ input$radsize,
-          stroke = FALSE,
+          stroke = TRUE,
+          weight = 2,
           color = ~pal(mag_encoded),
+          fillColor = ~pal(mag_encoded),
           fillOpacity = ~input$opac,
           label = ~ paste(map_points$city, map_points$state, sep = ", "),
           options = markerOptions(zIndexOffset = map_points$population)) %>% 
@@ -238,7 +240,7 @@ function(input, output, session) {
           title = "Policy Target Area",
           position = "bottomleft",
           pal = pal,
-          values = ~mag_encoded)
+          values = ~map_points$mag_encoded)
         
       session$sendCustomMessage("map_markers_added", message)
     }
