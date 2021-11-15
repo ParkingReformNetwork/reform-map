@@ -232,21 +232,17 @@ function(input, output, session) {
           color = ~pal(mag_encoded),
           fillOpacity = ~input$opac,
           label = ~ paste(map_points$city, map_points$state, sep = ", "),
-          options = markerOptions(zIndexOffset = map_points$population)) 
+          options = markerOptions(zIndexOffset = map_points$population)) %>% 
         
+        addLegend(
+          title = "Policy Target Area",
+          position = "bottomleft",
+          pal = pal,
+          values = ~mag_encoded)
         
-      
       session$sendCustomMessage("map_markers_added", message)
     }
   })
-  
-  observe({
-    leafletProxy("map",) %>% 
-      addLegend(
-        title = "Policy Target Area",
-        position = "bottomleft",
-        pal = pal,
-        values = ~mag_encoded) 
-  })
+
 }
 
