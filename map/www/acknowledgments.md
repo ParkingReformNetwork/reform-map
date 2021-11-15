@@ -12,6 +12,7 @@ This project is based on [A Map of Cities That Got Rid of Parking Minimums](http
 - Tony Jordan
 - Alireza Karduni
 - Devin Macarthur
+- Aaron Snailwood
 - Jane Wilberding
 
 ## Report Verification
