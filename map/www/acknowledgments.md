@@ -12,6 +12,7 @@ This project is based on [A Map of Cities That Got Rid of Parking Minimums](http
 - Tony Jordan
 - Alireza Karduni
 - Devin Macarthur
+- Justin Ross
 - Aaron Snailwood
 - Jane Wilberding
 
@@ -37,6 +38,7 @@ This project is based on [A Map of Cities That Got Rid of Parking Minimums](http
 - Matthew Hall
 - Scott Goodman
 - Sean Doyle
+- Mary Chase
 - Lindsay Bayley
 
 ## Parking Reform Network Advisory Board
