@@ -3,6 +3,7 @@ library(shiny)
 library(shinyjs)
 library(dplyr)
 library(leaflet)
+library(RColorBrewer)
 library(fontawesome)
 
 # data generated from parking_reform.R
