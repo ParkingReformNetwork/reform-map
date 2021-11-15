@@ -1,28 +1,27 @@
 <html lang="en">
-<head>
-    <script src="https://use.fontawesome.com/dcb7ff85be.js"></script>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <head>
 
-  <title>A Map of Progress Eliminating Costly Parking Mandates</title>
-  <meta name="description" content="A map of cities which have policies reducing or eliminating costly parking mandates.">
-  <meta name="author" content="Parking Reform Network">
-  <style type="text/css">
-            body, html
-            {
-                margin: 0; padding: 0; height: 100%; overflow: hidden;
-            }
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
-            #content
-            {
-                position:absolute; left: 0; right: 0; bottom: 0; top: 0px;
-            }
-        </style>
-    </head>
-    <body>
-    <div id="content" style="display: flex; flex-direction: column;">
-    <div style="padding: 1rem 10px; background: #4d4d4d;color: white;font-family:Helvetica,Arial,sans-serif;"><span style="margin: 0; font-weight: bold; font-size:1em">Progress on Costly Car Parking Mandates</span><i class="fas fa-arrows-alt fa-inverse" style="float: right"></i></div>
-        <iframe width="100%" height="100%" frameborder="0" src="https://map.parkingreform.org/minimums/"></iframe>
+    <title>A Map of Progress Eliminating Costly Parking Mandates</title>
+    <meta name="description" content="A map of cities which have policies reducing or eliminating costly parking mandates.">
+    <meta name="author" content="Parking Reform Network">
+    <link type="text/css" rel="stylesheet" href="./main_iframe.css">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+  </head>
+  <body>
+  <div id="content">
+  <div class="banner">
+    <span style="margin: 0; font-weight: bold; font-size:1em">Progress on Costly Car Parking Mandates</span>
+    <div class="right">
+      <a href="https://parkingreform.org/mandates-map" target="_blank">
+        <i class="expand-icon fas fa-external-link-alt fa-inverse" title="View fullscreen"></i>
+      </a>
     </div>
-    </body>
+  </div>
+      <iframe id="prn-minimums-iframe" width="100%" height="100%" frameborder="0" src="https://map.parkingreform.org/minimums/"></iframe>
+  </div>
+  <script src="./main_iframe.js"></script>
+  </body>
 </html>

@@ -1,0 +1,26 @@
+body, html
+{
+	margin: 0; padding: 0; height: 100%; overflow: hidden;
+}
+
+#content
+{
+	display: flex;
+	height: 100%;
+	flex-direction: column;
+}
+
+i {
+	font-family: 'FontAwesome';
+	font-style: normal;
+	cursor: pointer;
+}
+
+.banner {
+	display: flex;
+	padding: 1rem 10px;
+	background: #4d4d4d;
+	color: white;
+	font-family: Helvetica,Arial,sans-serif;
+	justify-content: space-between;
+}
