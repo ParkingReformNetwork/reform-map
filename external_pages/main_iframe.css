@@ -10,14 +10,6 @@ body, html
 	flex-direction: column;
 }
 
-#content.expanded {
-	position: fixed;
-	top: 0;
-	left: 0;
-	right: 0;
-	bottom: 0;
-}
-
 i {
 	font-family: 'FontAwesome';
 	font-style: normal;
