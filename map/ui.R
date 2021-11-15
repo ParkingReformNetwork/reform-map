@@ -5,6 +5,7 @@ library(fontawesome)
 library(shinyWidgets)
 library(BAMMtools)
 library(leaflet)
+library(stringr)
 
 
 # data generated from parking_reform.R
