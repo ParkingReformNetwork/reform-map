@@ -40,7 +40,7 @@
         }
     </style>
 
-    <title><%=city%>, <%=state%></title>
+    <title>Parking Reform Network - Reforms in <%=city%>, <%=state%></title>
 </head>
 <body>
     <header class="site-header container-fluid">
@@ -60,13 +60,27 @@
             <h1 class="display-3"><%=city%>, <%=state%></h1>
         </header>
         <hr />
+        <h2>Summary</h2>
+        <p class="lead"><%= city_df$Summary[1] %></p>
+        <hr />
+        <dl class="row">
+            <dt class="col-12 col-sm-4 col-lg-3">Implementation Status</dt>
+            <dd class="col-12 col-sm-8 col-lg-9"><%= city_df$Status[1] %></dd>
+
+            <dt class="col-12 col-sm-4 col-lg-3">Reform Type</dt>
+            <dd class="col-12 col-sm-8 col-lg-9"><%= city_df$Reform.Type[1] %></dd>
+
+            <dt class="col-12 col-sm-4 col-lg-3">Land Uses</dt>
+            <dd class="col-12 col-sm-8 col-lg-9"><%= city_df$Uses[1] %></dd>
+
+            <dt class="col-12 col-sm-4 col-lg-3">Scope of Reform</dt>
+            <dd class="col-12 col-sm-8 col-lg-9"><%= city_df$Magnitude[1] %></dd>
+       
         <% for(j in 1:nrow(city_df)) { %>
             <section class="my-3">
                 <header>
                     <h2>Citation <%= j %></h2>
                 </header>
-                <h3>Summary</h3>
-                <p class="lead"><%= city_df$Summary[j] %></p>
                 <dl class="row">
                     <dt class="col-12 col-sm-4 col-lg-3">Source Description</dt>
                     <dd class="col-12 col-sm-8 col-lg-9"><%= city_df$Source.Description[j] %></dd>
@@ -75,10 +89,10 @@
                     <dd class="col-12 col-sm-8 col-lg-9"><%= city_df$Type[j] %></dd>
 
                     <dt class="col-12 col-sm-4 col-lg-3">URL</dt>
-                    <dd class="col-12 col-sm-8 col-lg-9"><%= city_df$URL[j] %></dd>
+                    <dd class="col-12 col-sm-8 col-lg-9"><a target="_blank" href="<%= city_df$URL[j] %>"><%= city_df$URL[j] %></a></dd>
                 </dl>
                 <% if(nchar(city_df$Attachments[j]) > 0) { %>
-                    <h3>Attachments</h3>
+                    <h3>Attachments and Screenshots</h3>
                     <ul class="mt-4 list-unstyled">
                     <% attachments <- strsplit(city_df$Attachments[j], "\\s+") [[1]] %>
                     <% for(k in 1:length(attachments)) { %>
@@ -86,7 +100,7 @@
                             <% file_type <- str_extract(attachments[k], "\\.[a-zA-Z]+$") %>
                             <% img_path <- paste("attachment_images/", city_state_no_space, "_", j, "_", k, file_type, sep = "") %>
                             <% download.file(attachments[k], paste("city_detail/", img_path, sep =""))  %>
-                            <img class="img-fluid" src="<%= img_path %>">
+                            <img class="img-fluid" border="1"   src="<%= img_path %>">
                         </li>
                     <% } %>
                     </ul>
