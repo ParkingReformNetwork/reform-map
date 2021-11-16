@@ -5,7 +5,6 @@ library(dplyr)
 library(leaflet)
 library(fontawesome)
 library(stringr)
-library(colorspace)
 library(RColorBrewer)
 
 # data generated from parking_reform.R
@@ -206,8 +205,8 @@ function(input, output, session) {
       map_points <- filtered_data()
       
       pal <- colorFactor(
-        palette = input$colors,
-        map_points$mag2_encoded
+        palette = c("#d7191c", "#fdae61", "#abdda4", "#2b83ba"),
+        c("Citywide", "City Center", "Main Street", "TOD")
       )
       
       pal2 <- colorFactor(
