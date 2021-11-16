@@ -33,7 +33,7 @@ function(input, output, session) {
       filter(if(is.null(input$status_selector)){is.na(report_status)} 
              else {is.na(report_status) | grepl(tolower(paste(input$status_selector, collapse = "|")), report_status, ignore.case=TRUE)}) %>%
       filter(population >= input$poprange[1] & population <= input$poprange[2]) %>%
-      filter((city %in% input$city_selector) | is.null(input$city_selector ))
+      filter((city_search %in% input$city_selector) | is.null(input$city_selector ))
   })
   
   filtered_data <- filtered_d %>% debounce(550)
@@ -72,7 +72,7 @@ function(input, output, session) {
     req(input$map_marker_click$id)
     map_data %>%
       filter(id == input$map_marker_click$id) %>%
-      mutate(report_magnitude = paste("Report Magnitude:", report_magnitude)) %>%
+      mutate(report_magnitude = paste("Scope of Reform:", report_magnitude)) %>%
       select(report_magnitude) %>%
       paste0()
   }
@@ -186,16 +186,16 @@ function(input, output, session) {
           layerId = ~map_points$id,
           radius = 7,
           stroke = TRUE,
-          weight = 2,
-          color = ~pal(magnitude_encoded),
+          weight = .9,
+          color = "#FFFFFF",
           fillColor = ~pal(magnitude_encoded),
-          fillOpacity = .8,
+          fillOpacity = 1,
           label = ~ paste(map_points$city, map_points$state, sep = ", "),
           options = markerOptions(zIndexOffset = map_points$population)) %>%
-        
+     
         addLegend(
-          title = "Policy Target Area",
-          position = "bottomleft",
+          title = "Scope of Reform",
+          position = "bottomright",
           labels  = c("Citywide", "City Center/District","Transit Oriented", "Main Street/Special" ),
           colors = c("#d7191c", "#fdae61", "#2b83ba", "#abdda4")
         )

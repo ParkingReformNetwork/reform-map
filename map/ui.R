@@ -37,7 +37,7 @@ bootstrapPage(
         left = 120,
         selectInput(
           "city_selector",
-          "City Selector: ",
+          "City Search: ",
           map_data$city_search,
           multiple = TRUE)
         ),
@@ -54,13 +54,6 @@ bootstrapPage(
                       multiple = T,
                       selected = c("Citywide", "City Center", "Transit Oriented", "Main Street")
           ),
-          pickerInput("status_selector",
-                      tags$b("Implementation Stage"),
-                      choices = c("Implemented", "Passed", "Planned", "Proposed","Repealed"),
-                      selected = c("Implemented", "Passed", "Planned", "Proposed"),
-                      options = pickerOptions(actionsBox = TRUE),
-                      multiple = T
-          ),
           pickerInput("type_selector",
                       tags$b("Policy Change"),
                       choices = c("Reduce Parking Minimums", "Eliminate Parking Minimums", "Parking Maximums"),
@@ -75,6 +68,13 @@ bootstrapPage(
                       options = pickerOptions(actionsBox = TRUE,
                                               noneSelectedText = "nothingselected"
                       ),
+                      multiple = T
+          ),
+          pickerInput("status_selector",
+                      tags$b("Implementation Stage"),
+                      choices = c("Implemented", "Passed", "Planned", "Proposed","Repealed"),
+                      selected = c("Implemented", "Passed", "Planned", "Proposed"),
+                      options = pickerOptions(actionsBox = TRUE),
                       multiple = T
           ),
           sliderTextInput(
