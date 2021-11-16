@@ -33,7 +33,16 @@ bootstrapPage(
       width = 12,
       leafletOutput("map", ),
       absolutePanel(
-        top = 10,
+        top = 0,
+        left = 120,
+        selectInput(
+          "city_selector",
+          "City Selector: ",
+          map_data$city,
+          multiple = TRUE)
+        ),
+      absolutePanel(
+        top = 23,
         left = 50,
         draggable = FALSE,
         width = "100%",
@@ -79,12 +88,6 @@ bootstrapPage(
           status = "danger",
           icon = icon("gear"),
           width = "300px"
-        ),
-        selectInput(
-          "city_selector",
-          h4("City Selector"),
-          map_data$CitySearch,
-          multiple = TRUE
         )
       ),
       
