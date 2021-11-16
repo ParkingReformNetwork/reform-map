@@ -9,15 +9,23 @@ library(stringr)
 # data generated from parking_reform.R
 map_data <- read.csv(file = "tidied_map_data.csv", stringsAsFactors = F)
 
-map_data <- map_data %>%
-  mutate(mag_encoded = ifelse(magnitude_encoded == "blue", "citywide",
-                              ifelse(magnitude_encoded == "green", "transit oriented",
-                                     ifelse(magnitude_encoded == "orange", "city center",
-                                            ifelse(magnitude_encoded == "purple", "main street", NA)
-                                     )
-                              )
-  ))
-
+# Make a list of icons based on magnitude, land use, and icon
+map_icons <- awesomeIconList(test = makeAwesomeIcon(text = fa('car')))
+for(mag in unique(map_data$magnitude_encoded)){
+  for(lu in unique(map_data$land_use_encoded)) {
+    for(pop in unique(map_data$population_encoded)) {
+      for(spec in unique(map_data$is_special)) {
+        map_icons[paste("icon", mag, lu, pop, spec, sep = "_")] <- 
+          awesomeIconList(makeAwesomeIcon(text = fa(lu, fill = pop), 
+                                          markerColor = mag,
+                                          #iconColor = pop, 
+                                          #squareMarker = T,
+                                          # extraClasses = spec
+          ))
+      }
+    }
+  }
+}
 
 
 # set up back end
@@ -174,10 +182,7 @@ function(input, output, session) {
     
     else {
       map_points <- filtered_data()
-      pal <- colorFactor(
-        palette = input$colors,
-        map_points$mag_encoded
-      )
+      
       map_points %>%
         mutate(all_encoded = paste("icon",
                                    magnitude_encoded,
