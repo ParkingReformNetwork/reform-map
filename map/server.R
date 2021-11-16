@@ -188,12 +188,12 @@ function(input, output, session) {
       addCircleMarkers(
         lat = ~map_points$lat,
         layerId = ~map_points$id,
-        radius = 7.5,
+        radius = 9,
         stroke = TRUE,
         weight = 1,
         color = ~pal2(is_uses_alluses),
         fillColor = ~pal(mag_encoded),
-        fillOpacity = .7,
+        fillOpacity = .8,
         label = ~ paste(map_points$city, map_points$state, sep = ", "),
         options = markerOptions(zIndexOffset = map_points$population)) %>% 
         
