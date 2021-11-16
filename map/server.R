@@ -205,7 +205,7 @@ function(input, output, session) {
       map_points <- filtered_data()
       
       pal <- colorFactor(
-        palette = c("#d7191c", "#fdae61", "#abdda4", "#2b83ba"),
+        palette = c("#fdae61", "#d7191c", "#abdda4", "#2b83ba"),
         c("Citywide", "City Center", "Main Street", "TOD")
       )
       
