@@ -9,13 +9,6 @@ library(stringr)
 # data generated from parking_reform.R
 map_data <- read.csv(file = "tidied_map_data.csv", stringsAsFactors = F)
 
-#encode magnitude 
-map_data <- map_data %>% 
-  mutate(mag_encoded = ifelse(is_magnitude_citywide == 1, "Citywide",
-                              ifelse(is_magnitude_citycenter == 1, "City Center",
-                                     ifelse(is_magnitude_transit == 1, "TOD",
-                                            ifelse(is_magnitude_mainstreet == 1, "Main Street", "NA")))))
-
 # set up back end
 function(input, output, session) {
   
@@ -174,26 +167,28 @@ function(input, output, session) {
       
       pal <- colorFactor(
         palette = c("#fdae61", "#d7191c", "#abdda4", "#2b83ba"),
-        c("Citywide", "City Center", "Main Street", "TOD")
+        c("City Center","Citywide","Main Street", "TOD"), ordered= TRUE
       )
       
       pal2 <- colorFactor(
-        palette = c("#fffafa", "#020000"),
-        map_points$is_uses_alluses
+        palette = c("#fdae61","#c4874b", "#d7191c","#a71316", "#abdda4", "#84ab7f", "#2b83ba","#216590"),
+        c("City Center", "City Center All","Citywide","Citywide All",  "Main Street", "Main Street All", "TOD", "TOD All"), ordered = TRUE
       )
       
+    
       map_points %>%
         leafletProxy("map", data = .) %>%
         clearControls() %>%
         clearMarkers() %>%
         addCircleMarkers(
           lat = ~map_points$lat,
+          lng = ~map_points$long,
           layerId = ~map_points$id,
-          radius = 9,
+          radius = 7,
           stroke = TRUE,
-          weight = 1,
-          color = ~pal2(is_uses_alluses),
-          fillColor = ~pal(mag_encoded),
+          weight = 2,
+          color = ~pal(magnitude_encoded),
+          fillColor = ~pal(magnitude_encoded),
           fillOpacity = .8,
           label = ~ paste(map_points$city, map_points$state, sep = ", "),
           options = markerOptions(zIndexOffset = map_points$population)) %>%

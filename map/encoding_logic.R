@@ -1,17 +1,42 @@
 # encode magnitude for coloring icons
-magnitude_to_color <- function(magnitude_string) {
-  magnitude_numeric <- "red"
+magnitude_to_highest <- function(magnitude_string) {
+  magnitude_highest <- "NA"
   if(str_detect(tolower(magnitude_string), "citywide")) {
-    magnitude_numeric <- "blue"
+    magnitude_highest <- "Citywide"
   } else if(str_detect(tolower(magnitude_string), "city center")) {
-    magnitude_numeric <- "orange"
+    magnitude_highest <- "City Center"
   } else if(str_detect(tolower(magnitude_string), "transit oriented")) {
-    magnitude_numeric <- "green"
+    magnitude_highest <- "TOD"
   } else if(str_detect(tolower(magnitude_string), "main street")) {
-    magnitude_numeric <- "purple"
+    magnitude_highest <- "Main Street"
   }
-  return(magnitude_numeric)
+  return(magnitude_highest)
 }
+
+# encode magnitude for coloring icons
+magnitude_to_highest_or_alluses <- function(magnitude_string, landuses_string) {
+  magnitude_highest <- "NA"
+  is_all_use = any(str_detect(tolower(landuses_string), "all uses"))
+  if((str_detect(tolower(magnitude_string), "citywide") & is_all_use)) {
+    magnitude_highest <- "Citywide All"
+  } else if(str_detect(tolower(magnitude_string), "citywide")) {
+    magnitude_highest <- "Citywide"
+  } else if(str_detect(tolower(magnitude_string), "city center") & is_all_use) {
+    magnitude_highest <- "City Center All"
+  } else if(str_detect(tolower(magnitude_string), "city center")) {
+    magnitude_highest <- "City Center"
+  } else if(str_detect(tolower(magnitude_string), "transit oriented") & is_all_use) {
+    magnitude_highest <- "TOD"
+  } else if(str_detect(tolower(magnitude_string), "transit oriented")) {
+    magnitude_highest <- "TOD All"
+  } else if(str_detect(tolower(magnitude_string), "main street") & is_all_use) {
+    magnitude_highest <- "Main Street"
+  } else if(str_detect(tolower(magnitude_string), "main street")) {
+    magnitude_highest <- "Main Street All"
+  }
+  return(magnitude_highest)
+}
+
 
 land_use_to_string <- function(land_use_string) {
   land_use_icon <- "car"
