@@ -149,9 +149,10 @@ if(exists("new_lat_long_city") &&
   
 }
 
-# add id column 
-report_trimmed <- report_trimmed %>%
-  mutate(id = paste(city, state, country, sep = ""))
+# add id column and sort by population
+report_trimmed %>%
+  mutate(id = paste(city, state, country, sep = "")) %>%
+  arrange(population) -> report_trimmed
 
 # apply encoding logic for the map icons, transparency, and color
 report_trimmed %>% 
@@ -164,4 +165,3 @@ report_trimmed %>%
 # delete old file and save over the new one
 system("rm -fr map/tidied_map_data.csv")
 write.csv(report_trimmed, file = "map/tidied_map_data.csv")
-
