@@ -12,9 +12,9 @@ map_data <- read.csv(file = "tidied_map_data.csv", stringsAsFactors = F)
 #encode magnitude 
 map_data <- map_data %>% 
   mutate(mag_encoded = ifelse(is_magnitude_citywide == 1, "Citywide",
-                               ifelse(is_magnitude_citycenter == 1, "City Center",
-                                      ifelse(is_magnitude_transit == 1, "TOD",
-                                             ifelse(is_magnitude_mainstreet == 1, "Main Street", "NA")))))
+                              ifelse(is_magnitude_citycenter == 1, "City Center",
+                                     ifelse(is_magnitude_transit == 1, "TOD",
+                                            ifelse(is_magnitude_mainstreet == 1, "Main Street", "NA")))))
 
 # set up back end
 function(input, output, session) {
@@ -39,7 +39,8 @@ function(input, output, session) {
       filter((is_type_eliminated & input_eliminate) | (is_type_reduced & input_reduce)| (is_type_maximums & input_maximums)) %>%
       filter(if(is.null(input$status_selector)){is.na(report_status)} 
              else {is.na(report_status) | grepl(tolower(paste(input$status_selector, collapse = "|")), report_status, ignore.case=TRUE)}) %>%
-      filter(population >= input$poprange[1] & population <= input$poprange[2])
+      filter(population >= input$poprange[1] & population <= input$poprange[2]) %>%
+      filter((city %in% input$city_selector) | is.null(input$city_selector ))
   })
   
   filtered_data <- filtered_d %>% debounce(550)
@@ -182,27 +183,27 @@ function(input, output, session) {
       )
       
       map_points %>%
-      leafletProxy("map", data = .) %>%
-      clearControls() %>%  
-      clearMarkers() %>%
-      addCircleMarkers(
-        lat = ~map_points$lat,
-        layerId = ~map_points$id,
-        radius = 9,
-        stroke = TRUE,
-        weight = 1,
-        color = ~pal2(is_uses_alluses),
-        fillColor = ~pal(mag_encoded),
-        fillOpacity = .8,
-        label = ~ paste(map_points$city, map_points$state, sep = ", "),
-        options = markerOptions(zIndexOffset = map_points$population)) %>% 
+        leafletProxy("map", data = .) %>%
+        clearControls() %>%
+        clearMarkers() %>%
+        addCircleMarkers(
+          lat = ~map_points$lat,
+          layerId = ~map_points$id,
+          radius = 9,
+          stroke = TRUE,
+          weight = 1,
+          color = ~pal2(is_uses_alluses),
+          fillColor = ~pal(mag_encoded),
+          fillOpacity = .8,
+          label = ~ paste(map_points$city, map_points$state, sep = ", "),
+          options = markerOptions(zIndexOffset = map_points$population)) %>%
         
         addLegend(
           title = "Policy Target Area",
           position = "bottomleft",
           labels  = c("Citywide", "City Center/District","Transit Oriented", "Main Street/Special" ),
           colors = c("#d7191c", "#fdae61", "#2b83ba", "#abdda4")
-          )
+        )
       
     }
   })
