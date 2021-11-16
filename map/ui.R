@@ -8,7 +8,6 @@ library(stringr)
 library(shinyWidgets)
 library(RColorBrewer)
 library(BAMMtools)
-library(colorspace)
 
 # data generated from parking_reform.R
 map_data <- read.csv(file = "tidied_map_data.csv", stringsAsFactors = F)
@@ -176,7 +175,7 @@ bootstrapPage(
               fluidRow(class="clicked_city_first_row",
                        column(style='padding:0px;', 11, h4(uiOutput("clicked_city"))),
                        column(1, actionButton("close_detail", "x"))
-              ),                        
+              ),
               uiOutput("clicked_city_state"),
               textOutput("clicked_population"),
               textOutput("clicked_report_summary"),
