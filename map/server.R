@@ -206,7 +206,7 @@ function(input, output, session) {
       
       pal <- colorFactor(
         palette = c("#d7191c", "#fdae61", "#abdda4", "#2b83ba"),
-        c("Citywide", "City Center", "Main Street", "TOD")
+        c("City Center", "Citywide", "Main Street", "TOD")
       )
       
       pal2 <- colorFactor(
