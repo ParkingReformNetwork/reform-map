@@ -9,6 +9,15 @@ library(stringr)
 # data generated from parking_reform.R
 map_data <- read.csv(file = "tidied_map_data.csv", stringsAsFactors = F)
 
+map_data <- map_data %>%
+  mutate(mag_encoded = ifelse(magnitude_encoded == "blue", "citywide",
+                              ifelse(magnitude_encoded == "green", "transit oriented",
+                                     ifelse(magnitude_encoded == "orange", "city center",
+                                            ifelse(magnitude_encoded == "purple", "main street", NA)
+                                     )
+                              )
+  ))
+
 # Make a list of icons based on magnitude, land use, and icon
 map_icons <- awesomeIconList(test = makeAwesomeIcon(text = fa('car')))
 for(mag in unique(map_data$magnitude_encoded)){
@@ -31,18 +40,7 @@ for(mag in unique(map_data$magnitude_encoded)){
 # set up back end
 function(input, output, session) {
   
-  # initial map create
-  output$map <- renderLeaflet({
-    leaflet() %>%
-      addProviderTiles(providers$Stamen.TonerLite,
-                       options = providerTileOptions(noWrap = FALSE)
-      ) %>%
-      setView(
-        lng = -96.7449732,
-        lat = 43.2796758,
-        zoom = 4
-      )
-  })
+  
   
   # create data subset based on user input
   filtered_d <- reactive({
@@ -161,12 +159,28 @@ function(input, output, session) {
          time = 0.5)
   })
   
+  # initial map create
+  output$map <- renderLeaflet({
+    leaflet() %>%
+      addProviderTiles(providers$Stamen.TonerLite,
+                       options = providerTileOptions(noWrap = FALSE)
+      ) %>%
+      
+      setView(
+        lng = -96.7449732,
+        lat = 43.2796758,
+        zoom = 4
+      ) 
+  })
+  
   
   # changes to map based on selection
   observe({
     if(nrow(filtered_data()) == 0) {
       map_points <- filtered_data()
       
+      
+      
       map_points %>%
         mutate(all_encoded = paste("icon",
                                    magnitude_encoded,
@@ -176,13 +190,18 @@ function(input, output, session) {
                                    sep = "_"
         )) %>%
         leafletProxy("map", data = .) %>%
-      
+        
         clearMarkers()
     }
     
     else {
       map_points <- filtered_data()
       
+      pal <- colorFactor(
+        palette = input$colors,
+        map_points$mag_encoded
+      )
+      
       map_points %>%
         mutate(all_encoded = paste("icon",
                                    magnitude_encoded,
@@ -192,19 +211,40 @@ function(input, output, session) {
                                    sep = "_"
         )) %>%
         leafletProxy("map", data = .) %>%
+        
+        clearControls() %>%  
         clearMarkers() %>%
-        addAwesomeMarkers(lng = ~map_points$long,
-                          lat = ~map_points$lat,
-                          layerId = ~map_points$id,
-                          icon = ~map_icons[all_encoded],
-                          label = ~ paste(map_points$city, map_points$state, sep = ", "),
-                          options = markerOptions(zIndexOffset = map_points$population)
-                          #options = markerOptions(opacity = map_points$population_encoded)
-                          #clusterOptions = markerClusterOptions()
-                          #popup = map_points$popup_info tooltip, ignoring for now
-        )
+        # addAwesomeMarkers(lng = ~map_points$long,
+        #                   lat = ~map_points$lat,
+        #                   layerId = ~map_points$id,
+        #                   icon = ~map_icons[all_encoded],
+        #                   label = ~ paste(map_points$city, map_points$state, sep = ", "),
+        #                   options = markerOptions(zIndexOffset = map_points$population)
+        #                   #options = markerOptions(opacity = map_points$population_encoded)
+        #                   #clusterOptions = markerClusterOptions()
+        #                   #popup = map_points$popup_info tooltip, ignoring for now
+        # )
+        
+      addCircleMarkers(
+        lat = ~map_points$lat,
+        layerId = ~map_points$id,
+        radius = ~ input$radsize,
+        stroke = TRUE,
+        weight = 2,
+        color = ~pal(mag_encoded),
+        fillColor = ~pal(mag_encoded),
+        fillOpacity = ~input$opac,
+        label = ~ paste(map_points$city, map_points$state, sep = ", "),
+        options = markerOptions(zIndexOffset = map_points$population)) %>% 
+        
+        addLegend(
+          title = "Policy Target Area",
+          position = "bottomleft",
+          pal = pal,
+          values = ~map_points$mag_encoded)
+      
       session$sendCustomMessage("map_markers_added", message)
     }
   })
+  
 }
-
