@@ -83,7 +83,7 @@ bootstrapPage(
         selectInput(
           "city_selector",
           h4("City Selector"),
-          map_data$city,
+          map_data$CitySearch,
           multiple = TRUE
         )
       ),
