@@ -38,7 +38,7 @@ bootstrapPage(
         selectInput(
           "city_selector",
           "City Selector: ",
-          map_data$city,
+          map_data$city_search,
           multiple = TRUE)
         ),
       absolutePanel(

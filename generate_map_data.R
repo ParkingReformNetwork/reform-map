@@ -161,7 +161,7 @@ report_trimmed %>%
   mutate(border_encoded = magnitude_to_highest_or_alluses(report_magnitude, land_uses)) %>%
   mutate(land_use_encoded = land_use_to_string(land_uses)) %>%
   mutate(population_encoded = population_to_bin(population)) %>%
-  mutate(CitySearch = paste(city, state, sep = ", ")) %>%
+  mutate(city_search = paste(city, state, sep = ", ")) %>%
   mutate(is_special = if_else(is_notable == "true", "highlighed_icon", if_else(is_recent == "true", "new_icon", "not_special_icon")))  -> report_trimmed
 
 # delete old file and save over the new one
