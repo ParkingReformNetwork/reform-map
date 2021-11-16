@@ -5,6 +5,8 @@ library(dplyr)
 library(leaflet)
 library(fontawesome)
 library(stringr)
+library(colorspace)
+library(RColorBrewer)
 
 # data generated from parking_reform.R
 map_data <- read.csv(file = "tidied_map_data.csv", stringsAsFactors = F)
@@ -17,6 +19,12 @@ map_data <- map_data %>%
                                      )
                               )
   ))
+
+map_data <- map_data %>% 
+  mutate(mag2_encoded = ifelse(is_magnitude_citywide == 1, "Citywide",
+                               ifelse(is_magnitude_citycenter == 1, "City Center",
+                                      ifelse(is_magnitude_transit == 1, "TOD",
+                                             ifelse(is_magnitude_mainstreet == 1, "Main Street", "NA")))))
 
 # Make a list of icons based on magnitude, land use, and icon
 map_icons <- awesomeIconList(test = makeAwesomeIcon(text = fa('car')))
@@ -199,7 +207,12 @@ function(input, output, session) {
       
       pal <- colorFactor(
         palette = input$colors,
-        map_points$mag_encoded
+        map_points$mag2_encoded
+      )
+      
+      pal2 <- colorFactor(
+        palette = c("#fffafa", "#020000"),
+        map_points$is_uses_alluses
       )
       
       map_points %>%
@@ -210,6 +223,7 @@ function(input, output, session) {
                                    is_special,
                                    sep = "_"
         )) %>%
+        
         leafletProxy("map", data = .) %>%
         
         clearControls() %>%  
@@ -230,9 +244,9 @@ function(input, output, session) {
         layerId = ~map_points$id,
         radius = ~ input$radsize,
         stroke = TRUE,
-        weight = 2,
-        color = ~pal(mag_encoded),
-        fillColor = ~pal(mag_encoded),
+        weight = 1,
+        color = ~pal2(is_uses_alluses),
+        fillColor = ~pal(mag2_encoded),
         fillOpacity = ~input$opac,
         label = ~ paste(map_points$city, map_points$state, sep = ", "),
         options = markerOptions(zIndexOffset = map_points$population)) %>% 
@@ -241,7 +255,7 @@ function(input, output, session) {
           title = "Policy Target Area",
           position = "bottomleft",
           pal = pal,
-          values = ~map_points$mag_encoded)
+          values = ~map_points$mag2_encoded)
       
       session$sendCustomMessage("map_markers_added", message)
     }
