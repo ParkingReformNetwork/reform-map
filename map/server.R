@@ -130,6 +130,13 @@ function(input, output, session) {
          time = 0.5)
   })
   
+  observeEvent(input$clickinfoIn, {
+    toggle('click_info')
+    output$clickinfoOut <- renderUI({
+      includeHTML("./www/acknowledgments.html")})
+
+  })
+  
   # initial map create
   output$map <- renderLeaflet({
     leaflet() %>%
@@ -143,7 +150,6 @@ function(input, output, session) {
         zoom = 4
       ) 
   })
-  
   
   # changes to map based on selection
   observe({
@@ -161,7 +167,6 @@ function(input, output, session) {
         leafletProxy("map", data = .) %>%
         clearMarkers()
     }
-    
     else {
       map_points <- filtered_data()
       

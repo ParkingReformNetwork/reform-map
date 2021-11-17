@@ -27,11 +27,39 @@ bootstrapPage(
   
   
   # generate map and selectors
-  fluidRow(
+  fluidRow(id="mainrow",
+    
+    # hidden(box(htmlOutput("clickinfoOut"), width =12)),
     column(
       id = "mapView",
       width = 12,
-      leafletOutput("map", ),
+      leafletOutput("map", width = "100%"),
+      
+      absolutePanel(
+        top = 10,
+        right = 10,
+        actionButton("clickinfoIn", "", 
+                     icon = icon("info-circle"))
+                     #onclick = includeHTML("www/acknowledgments.html"))
+                     
+      ),
+      
+      hidden(tags$div(id = "click_info",
+                      style=
+                      "position: absolute;
+                      top: 10%;
+                      left: 20%;
+                      width: 60%;
+                      height: 80%;
+                      background: rgba(255, 255, 255, 1);
+                      border-color: rgba(186, 186, 186, 0.7);
+                      border-style: solid;
+                      padding: 0;
+                      border-radius: 0;
+                      margin: 0;
+                      overflow:auto;",
+               htmlOutput("clickinfoOut"))),
+      
       absolutePanel(
         top = 0,
         left = 120,
@@ -41,6 +69,7 @@ bootstrapPage(
           map_data$city_search,
           multiple = TRUE)
         ),
+      
       absolutePanel(
         top = 23,
         left = 50,
@@ -115,7 +144,14 @@ bootstrapPage(
               textOutput("clicked_land_uses"),
           )
         })
-      )
+      ),
+      # hidden(
+      #   withTags({
+      #     div(id = "click_info",
+      #         uiOutput("clickinfoOut")
+      #     )
+      #   })
+      # )
     )
   )        
 )
