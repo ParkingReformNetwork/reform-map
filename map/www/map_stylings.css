@@ -100,13 +100,13 @@ body {
 
 
 #logos {
-  right: 10px;
+  left: 10px;
   position: absolute;
   cursor: inherit;
 }
 
 #logos > div {
-  float: right;
+  float: left;
 }
 
 #legend {
@@ -177,8 +177,8 @@ body {
 }
 
 #logos {
-  bottom: 20px;
-  right: 20px;
+  bottom: 10px;
+  left: 50px;
 }
 
 #legend > div > .awesome-marker-legend {
