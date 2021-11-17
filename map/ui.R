@@ -38,7 +38,9 @@ bootstrapPage(
       absolutePanel(
         top = 10,
         right = 10,
-        actionButton("clickinfoIn", "", 
+        actionLink("clickinfoIn", "",
+                     width = "100%",
+                     height = "100%",
                      icon = icon("info-circle"))
                      #onclick = includeHTML("www/acknowledgments.html"))
                      
