@@ -27,7 +27,7 @@ bootstrapPage(
   
   
   # generate map and selectors
-  fluidRow(
+  fluidRow(id="mainrow",
     
     # hidden(box(htmlOutput("clickinfoOut"), width =12)),
     column(
