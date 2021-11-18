@@ -15,7 +15,7 @@ RUN apt-get update && apt-get install -y \
     libssl1.1 \
     && rm -rf /var/lib/apt/lists/*
 
-# system library dependency for the euler app
+# system library dependency for the app
 RUN apt-get update && apt-get install -y \
     libmpfr-dev \
     && rm -rf /var/lib/apt/lists/*
@@ -23,8 +23,11 @@ RUN apt-get update && apt-get install -y \
 # basic shiny functionality
 RUN R -e "install.packages(c('shiny', 'rmarkdown'), repos='https://cloud.r-project.org/')"
 
-# install dependencies of the euler app
-RUN R -e "install.packages(c('BAMMtools', 'dplyr', 'fontawesome', 'leaflet', 'shinyjs', 'stringr', 'shinyWidgets'), repos='https://cloud.r-project.org/')"
+# install app dependencies
+RUN R -e "install.packages(c('BAMMtools', 'dplyr', 'fontawesome', 'shinyjs', 'stringr', 'shinyWidgets'), repos='https://cloud.r-project.org/')"
+
+# install leaflet from source
+RUN R -e "install.packages("https://cran.r-project.org/src/contrib/leaflet_2.0.4.1.tar.gz", repos=NULL)"
 
 # copy the app to the image
 RUN mkdir /root/map
