@@ -24,8 +24,7 @@ RUN apt-get update && apt-get install -y \
 RUN R -e "install.packages(c('shiny', 'rmarkdown'), repos='https://cloud.r-project.org/')"
 
 # install dependencies of the euler app
-RUN R -e "install.packages(c('BAMMtools', 'dplyr', 'fontawesome', 'leaflet', 'shinyjs', 'stringr', 'shinyWidgets')
-, repos='https://cloud.r-project.org/')"
+RUN R -e "install.packages(c('BAMMtools', 'dplyr', 'fontawesome', 'leaflet', 'shinyjs', 'stringr', 'shinyWidgets'), repos='https://cloud.r-project.org/')"
 
 # copy the app to the image
 RUN mkdir /root/map
