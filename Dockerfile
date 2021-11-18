@@ -20,6 +20,10 @@ RUN apt-get update && apt-get install -y \
     libmpfr-dev \
     && rm -rf /var/lib/apt/lists/*
 
+# install leaflet prereqs
+RUN apt-get install gdal-bin
+RUN apt-get install libgdal-dev
+
 # basic shiny functionality
 RUN R -e "install.packages(c('shiny', 'rmarkdown'), repos='https://cloud.r-project.org/')"
 
@@ -27,6 +31,7 @@ RUN R -e "install.packages(c('shiny', 'rmarkdown'), repos='https://cloud.r-proje
 RUN R -e "install.packages(c('BAMMtools', 'dplyr', 'fontawesome', 'shinyjs', 'stringr', 'shinyWidgets'), repos='https://cloud.r-project.org/')"
 
 # install leaflet from source
+RUN R -e "install.packages(c('leaflet'), repos='https://cloud.r-project.org/')"
 RUN R -e "install.packages('https://cran.r-project.org/src/contrib/leaflet_2.0.4.1.tar.gz', repos=NULL)"
 
 # copy the app to the image
