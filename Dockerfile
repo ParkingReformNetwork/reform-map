@@ -27,7 +27,7 @@ RUN R -e "install.packages(c('shiny', 'rmarkdown'), repos='https://cloud.r-proje
 RUN R -e "install.packages(c('BAMMtools', 'dplyr', 'fontawesome', 'shinyjs', 'stringr', 'shinyWidgets'), repos='https://cloud.r-project.org/')"
 
 # install leaflet from source
-RUN R -e "install.packages("https://cran.r-project.org/src/contrib/leaflet_2.0.4.1.tar.gz", repos=NULL)"
+RUN R -e "install.packages('https://cran.r-project.org/src/contrib/leaflet_2.0.4.1.tar.gz', repos=NULL)"
 
 # copy the app to the image
 RUN mkdir /root/map
