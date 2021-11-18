@@ -41,9 +41,7 @@ bootstrapPage(
         actionLink("clickinfoIn", "",
                      width = "100%",
                      height = "100%",
-                     icon = icon("info-circle"))
-                     #onclick = includeHTML("www/info.html"))
-                     
+                     icon = icon("info-circle", "fa-2x"))      
       ),
       
       hidden(tags$div(id = "click_info",
@@ -79,7 +77,7 @@ bootstrapPage(
         width = "100%",
         dropdown(
           pickerInput("magnitude_selector",
-                      tags$b("Targeted Area"),
+                      tags$b("Scope of Reform"),
                       choices = c("Citywide", "City Center", "Transit Oriented", "Main Street"),
                       options = pickerOptions(actionsBox = TRUE),
                       multiple = T,
