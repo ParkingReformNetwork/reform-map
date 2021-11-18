@@ -41,9 +41,7 @@ bootstrapPage(
         actionLink("clickinfoIn", "",
                      width = "100%",
                      height = "100%",
-                     icon = icon("info-circle", "fa-2x"))
-
-                     
+                     icon = icon("info-circle", "fa-2x"))      
       ),
       
       hidden(tags$div(id = "click_info",
