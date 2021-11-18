@@ -21,8 +21,8 @@ RUN apt-get update && apt-get install -y \
     && rm -rf /var/lib/apt/lists/*
 
 # install leaflet prereqs
-RUN apt-get install gdal-bin
-RUN apt-get install libgdal-dev
+RUN apt-get update &&\
+    apt-get install -y gdal-bin libgdal-dev
 
 # basic shiny functionality
 RUN R -e "install.packages(c('shiny', 'rmarkdown'), repos='https://cloud.r-project.org/')"
