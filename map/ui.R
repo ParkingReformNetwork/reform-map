@@ -41,7 +41,7 @@ bootstrapPage(
         actionLink("clickinfoIn", "",
                      width = "100%",
                      height = "100%",
-                     icon = icon("info-circle"))
+                     icon = icon("info-circle", "fa-2x"))
                      #onclick = includeHTML("www/acknowledgments.html"))
                      
       ),
