@@ -133,7 +133,7 @@ function(input, output, session) {
   observeEvent(input$clickinfoIn, {
     toggle('click_info')
     output$clickinfoOut <- renderUI({
-      includeHTML("./www/acknowledgments.html")})
+      includeHTML("./www/info.html")})
 
   })
   

@@ -42,7 +42,7 @@ bootstrapPage(
                      width = "100%",
                      height = "100%",
                      icon = icon("info-circle"))
-                     #onclick = includeHTML("www/acknowledgments.html"))
+                     #onclick = includeHTML("www/info.html"))
                      
       ),
       
