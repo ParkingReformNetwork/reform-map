@@ -79,7 +79,7 @@ bootstrapPage(
         width = "100%",
         dropdown(
           pickerInput("magnitude_selector",
-                      tags$b("Targeted Area"),
+                      tags$b("Scope of Reform"),
                       choices = c("Citywide", "City Center", "Transit Oriented", "Main Street"),
                       options = pickerOptions(actionsBox = TRUE),
                       multiple = T,
