@@ -132,9 +132,6 @@ function(input, output, session) {
   
   observeEvent(input$clickinfoIn, {
     toggle('click_info')
-    output$clickinfoOut <- renderUI({
-      includeHTML("./www/info.html")})
-
   })
   
   # initial map create
