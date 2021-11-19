@@ -32,7 +32,7 @@ Generate the most up to date data by running `parking_reform.R` which fetches ne
 - Alireza Karduni
 - Devin Macarthur
 - Tony Jordan [@twjpdx23](https://twitter.com/twjpdx23)
-- Aaron Sherwood
+- Aaron Snailwood
 - Justin Ross
 - complete acknowledgements for the project can be found [here](https://parkingreform.org/mandates-map/acknowledgments.html)
 
