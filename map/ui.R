@@ -44,7 +44,7 @@ bootstrapPage(
                      icon = icon("info-circle", "fa-2x"))      
       ),
       
-      hidden(tags$div(id = "click_info",
+      hidden(tags$iframe(id = "click_info",
                       style=
                       "position: absolute;
                       top: 10%;
@@ -58,7 +58,7 @@ bootstrapPage(
                       border-radius: 0;
                       margin: 0;
                       overflow:auto;",
-               htmlOutput("clickinfoOut"))),
+               src=("info.html"))),
       
       absolutePanel(
         top = 0,
