@@ -30,23 +30,20 @@ Generate the most up to date data by running `parking_reform.R` which fetches ne
 
 - Brad Baker [@bradmbak](https://twitter.com/bradmbak)
 - Alireza Karduni
+- Devin Macarthur
+- Tony Jordan [@twjpdx23](https://twitter.com/twjpdx23)
+- Aaron Sherwood
+- Justin Ross
+- complete acknowledgements for the project can be found [here](https://parkingreform.org/mandates-map/acknowledgments.html)
 
 ## TODOs:
 
 ### Map App:
-* Update population transparency scales to make large cities "pop" and have smaller cities fade into the background. Scales found in `encoding_logic.R`.
-* Make sidebar menu collapseable.  
-* Update city markers to be circles from current teardrop shape.
-* Experiment to see if marker size is a better indicator of size than transparency.
-* Experiment with both marker size and marker transparency to see if that better conveys transparency.
-* Update city icons to custom icons. (Currently waiting on the icons)
-* Update badges to custom badges from the "new" and "!!!" badges. (currently waiting on the badges)
-* Make PRN and StrongTown logos the same size
 
 ### Static Pages: 
-* Clean up design on static pages generated from `create_city_detail_pages.R`.
 
-### Shiny Server
-* set up cron job to pull data once per day using `generate_map_data.R`. ensure path is set up correctly. 
-* debug why city/state isn't showing up correctly on detail pane click
-* any path changes we want to do for the map app or city pages.
+### Shiny Server/app
+* figure out how to automate data update
+
+### Overall
+* develop simple standalone map in leaflet/similar
