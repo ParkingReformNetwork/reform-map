@@ -100,11 +100,12 @@
                     <% attachments <- strsplit(city_df$Attachments[j], "\\s+") [[1]] %>
                     <% for(k in 1:length(attachments)) { %>
                         <li class="attachment">
+                             <% file_name <- sapply(attachments[k], basename) %>
                             <% file_type <- str_extract(attachments[k], "\\.[a-zA-Z_]+$") %>
                             <% img_path <- paste("attachment_images/", city_state_no_space, "_", j, "_", k, file_type, sep = "") %>
                             <% download.file(attachments[k], paste("city_detail/", img_path, sep =""))  %>
                             <% if(file_type == ".docx" || file_type == ".pdf") { %>
-                            <a target="_blank" href="<%= img_path %>"><%= paste(city_state_no_space, "_", j, "_", k, file_type, sep = "") %></a>
+                            <a target="_blank" href="<%= img_path %>"><%= paste(file_name) %></a>
                             <% } else { %>
                             <img class="img-fluid" border="1" src="<%= img_path %>">
                             <% } %>
