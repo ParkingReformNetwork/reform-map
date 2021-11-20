@@ -58,7 +58,7 @@ bootstrapPage(
                       border-radius: 0;
                       margin: 0;
                       overflow:auto;",
-               src=("info.html"))),
+               src=("https://parkingreform.org/mandates-map/info.html"))),
       
       absolutePanel(
         top = 0,

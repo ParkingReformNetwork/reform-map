@@ -51,7 +51,7 @@ function(input, output, session) {
       mutate(city_state = str_replace_all(paste(city, state, sep="_"), " ", "")) %>%
       select(city_state) %>%
       paste0() %>%
-      paste("https://map.parkingreform.org/minimums/detail/", .,".html", sep="") -> url
+      paste("https://parkingreform.org/mandates-map/city_detail/", .,".html", sep="") -> url
     HTML(paste(a(city_label, href=url, target="_blank")))
   }
   )
@@ -108,7 +108,7 @@ function(input, output, session) {
       mutate(city_state = str_replace_all(paste(city, state, sep="_"), " ", "")) %>%
       select(city_state) %>%
       paste0() %>%
-      paste("https://map.parkingreform.org/parking_map/city_detail/", .,".html", sep="") -> url
+      paste("https://parkingreform.org/mandates-map/city_detail/", .,".html", sep="") -> url
     HTML(paste(a("Detailed Information and Citations", href=url, target="_blank")))
   }
   )
