@@ -1,260 +1,337 @@
-body{
-    margin: 0 auto;
-    font-family: Georgia, Palatino, serif;
-    color: #444444;
-    line-height: 1;
-    max-width: 960px;
-    padding: 30px;
-}
-h1, h2, h3, h4 {
-    color: #111111;
-    font-weight: 400;
-}
-h1, h2, h3, h4, h5, p {
-    margin-bottom: 24px;
-    padding: 0;
-}
-h1 {
-    font-size: 48px;
-}
-h2 {
-    font-size: 36px;
-    /* The bottom margin is small. It's designed to be used with gray meta text
-     * below a post title. */
-    margin: 24px 0 6px;
-}
-h3 {
-    font-size: 24px;
-}
-h4 {
-    font-size: 21px;
-}
-h5 {
-    font-size: 18px;
-}
-a {
-    color: #0099ff;
+
+
+@import url('https://fonts.googleapis.com/css?family=Raleway:400,400i,500,500i,600,600i,700,700i');
+
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
     margin: 0;
     padding: 0;
-    vertical-align: baseline;
-}
-a:hover {
-    text-decoration: none;
-    color: #ff6600;
-}
-a:visited {
-    color: purple;
-}
-ul, ol {
-    padding: 0;
-    margin: 0;
-}
-li {
-    line-height: 24px;
-}
-li ul, li ul {
-    margin-left: 24px;
-}
-p, ul, ol {
-    font-size: 16px;
-    line-height: 24px;
-    max-width: 540px;
-}
-pre {
-    padding: 0px 24px;
-    max-width: 800px;
-    white-space: pre-wrap;
-}
-code {
-    font-family: Consolas, Monaco, Andale Mono, monospace;
-    line-height: 1.5;
-    font-size: 13px;
-}
-aside {
-    display: block;
-    float: right;
-    width: 390px;
-}
-blockquote {
-    border-left:.5em solid #eee;
-    padding: 0 2em;
-    margin-left:0;
-    max-width: 476px;
-}
-blockquote  cite {
-    font-size:14px;
-    line-height:20px;
-    color:#bfbfbf;
-}
-blockquote cite:before {
-    content: '\2014 \00A0';
+    border: 0;
+    font: inherit;
+    font-size: 100%;
+    vertical-align: baseline
 }
 
-blockquote p {  
-    color: #666;
-    max-width: 460px;
+html {
+    line-height: 1
 }
-hr {
-    width: 540px;
+
+ol,
+ul {
+    list-style: none
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0
+}
+
+caption,
+th,
+td {
     text-align: left;
-    margin: 0 auto 0 0;
-    color: #999;
+    font-weight: normal;
+    vertical-align: middle
 }
 
-/* Code below this line is copyright Twitter Inc. */
-
-button,
-input,
-select,
-textarea {
-  font-size: 100%;
-  margin: 0;
-  vertical-align: baseline;
-  *vertical-align: middle;
-}
-button, input {
-  line-height: normal;
-  *overflow: visible;
-}
-button::-moz-focus-inner, input::-moz-focus-inner {
-  border: 0;
-  padding: 0;
-}
-button,
-input[type="button"],
-input[type="reset"],
-input[type="submit"] {
-  cursor: pointer;
-  -webkit-appearance: button;
-}
-input[type=checkbox], input[type=radio] {
-  cursor: pointer;
-}
-/* override default chrome & firefox settings */
-input:not([type="image"]), textarea {
-  -webkit-box-sizing: content-box;
-  -moz-box-sizing: content-box;
-  box-sizing: content-box;
+q,
+blockquote {
+    quotes: none
 }
 
-input[type="search"] {
-  -webkit-appearance: textfield;
-  -webkit-box-sizing: content-box;
-  -moz-box-sizing: content-box;
-  box-sizing: content-box;
-}
-input[type="search"]::-webkit-search-decoration {
-  -webkit-appearance: none;
-}
-label,
-input,
-select,
-textarea {
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-  font-size: 13px;
-  font-weight: normal;
-  line-height: normal;
-  margin-bottom: 18px;
-}
-input[type=checkbox], input[type=radio] {
-  cursor: pointer;
-  margin-bottom: 0;
-}
-input[type=text],
-input[type=password],
-textarea,
-select {
-  display: inline-block;
-  width: 210px;
-  padding: 4px;
-  font-size: 13px;
-  font-weight: normal;
-  line-height: 18px;
-  height: 18px;
-  color: #808080;
-  border: 1px solid #ccc;
-  -webkit-border-radius: 3px;
-  -moz-border-radius: 3px;
-  border-radius: 3px;
-}
-select, input[type=file] {
-  height: 27px;
-  line-height: 27px;
-}
-textarea {
-  height: auto;
+q:before,
+q:after,
+blockquote:before,
+blockquote:after {
+    content: "";
+    content: none
 }
 
-/* grey out placeholders */
-:-moz-placeholder {
-  color: #bfbfbf;
-}
-::-webkit-input-placeholder {
-  color: #bfbfbf;
+a img {
+    border: none
 }
 
-input[type=text],
-input[type=password],
-select,
-textarea {
-  -webkit-transition: border linear 0.2s, box-shadow linear 0.2s;
-  -moz-transition: border linear 0.2s, box-shadow linear 0.2s;
-  transition: border linear 0.2s, box-shadow linear 0.2s;
-  -webkit-box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1);
-  -moz-box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1);
-  box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1);
-}
-input[type=text]:focus, input[type=password]:focus, textarea:focus {
-  outline: none;
-  border-color: rgba(82, 168, 236, 0.8);
-  -webkit-box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1), 0 0 8px rgba(82, 168, 236, 0.6);
-  -moz-box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1), 0 0 8px rgba(82, 168, 236, 0.6);
-  box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1), 0 0 8px rgba(82, 168, 236, 0.6);
+article, aside, details, figcaption, figure, footer, header, hgroup, main, menu, nav, section, summary {
+    display: block
 }
 
-/* buttons */
-button {
-  display: inline-block;
-  padding: 4px 14px;
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-  font-size: 13px;
-  line-height: 18px;
-  -webkit-border-radius: 4px;
-  -moz-border-radius: 4px;
-  border-radius: 4px;
-  -webkit-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2), 0 1px 2px rgba(0, 0, 0, 0.05);
-  -moz-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2), 0 1px 2px rgba(0, 0, 0, 0.05);
-  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2), 0 1px 2px rgba(0, 0, 0, 0.05);
-  background-color: #0064cd;
-  background-repeat: repeat-x;
-  background-image: -khtml-gradient(linear, left top, left bottom, from(#049cdb), to(#0064cd));
-  background-image: -moz-linear-gradient(top, #049cdb, #0064cd);
-  background-image: -ms-linear-gradient(top, #049cdb, #0064cd);
-  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #049cdb), color-stop(100%, #0064cd));
-  background-image: -webkit-linear-gradient(top, #049cdb, #0064cd);
-  background-image: -o-linear-gradient(top, #049cdb, #0064cd);
-  background-image: linear-gradient(top, #049cdb, #0064cd);
-  color: #fff;
-  text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
-  border: 1px solid #004b9a;
-  border-bottom-color: #003f81;
-  -webkit-transition: 0.1s linear all;
-  -moz-transition: 0.1s linear all;
-  transition: 0.1s linear all;
-  border-color: #0064cd #0064cd #003f81;
-  border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);
+* {
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box
 }
-button:hover {
-  color: #fff;
-  background-position: 0 -15px;
-  text-decoration: none;
+
+html {
+    font-size: 16px;
+    line-height: 1.6em;
+    -webkit-text-size-adjust: 100%
 }
-button:active {
-  -webkit-box-shadow: inset 0 3px 7px rgba(0, 0, 0, 0.15), 0 1px 2px rgba(0, 0, 0, 0.05);
-  -moz-box-shadow: inset 0 3px 7px rgba(0, 0, 0, 0.15), 0 1px 2px rgba(0, 0, 0, 0.05);
-  box-shadow: inset 0 3px 7px rgba(0, 0, 0, 0.15), 0 1px 2px rgba(0, 0, 0, 0.05);
+
+
+body {
+    background-color: #fff;
+    color: #545454;
+
+    font-family: "Raleway", sans-serif;
+    text-rendering: optimizeLegibility;
+
+    max-width: 46em;
+    margin: 2em auto;
+    
+    padding: 1.6em 3.15em;
 }
-button::-moz-focus-inner {
-  padding: 0;
-  border: 0;
+
+
+h1 {
+    font-family: "Raleway", sans-serif;
+    font-weight: 700;
+    color: #333;
+    font-size: 1.6em;
+    line-height: 1.3em;
+    margin-bottom: .78571em
+}
+
+h2 {
+    font-family: "Raleway", sans-serif;
+    font-weight: 600;
+    color: #333;
+    font-size: 1.3em;
+    line-height: 1em;
+    margin-top: 2em;
+    margin-bottom: .6em
+}
+
+h3 {
+    font-family: "Raleway", sans-serif;
+    font-weight: 600;
+    color: #333;
+    font-size: 1.15em;
+    line-height: 1em;
+    margin-top: 1em;
+    margin-bottom: .6em
+}
+
+h4 {
+    font-family: "Raleway", sans-serif;
+    font-weight: 500;
+    color: #333;
+    font-size: 1em;
+    line-height: 1em;
+    margin-top: 1em;
+    margin-bottom: .6em
+}
+
+
+
+p {
+    margin-bottom: 1.57143em;
+    hyphens: auto
+}
+
+
+b, strong {
+    font-family: "Raleway", sans-serif;
+    font-weight: 700;
+}
+
+i, em {
+    font-family: "Raleway", sans-serif;
+    font-style: italic;
+}
+
+u {
+    text-decoration: none;
+    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0) 50%, #e06e73 50%);
+    background-repeat: repeat-x;
+    background-size: 2px 2px;
+    background-position: 0 1.05em
+}
+
+s {
+    color: #878787
+}
+
+
+a {
+    color: #e74c3c;
+    text-decoration: none
+}
+
+img {
+    max-width: 100%;
+    height: auto
+}
+
+blockquote {
+    display: block;
+    margin-left: -1em;
+    padding-left: 0.8em;
+    border-left: 0.2em solid #e74c3c;
+    background-color: transparent;
+}
+
+hr {
+    height: 1px;
+    border: 0;
+    background-color: #dedede;
+    margin: .7em auto .7em
+}
+
+/* LISTS */
+
+ul li {
+    text-indent: -0.45em
+}
+
+ul li:before {
+    content: "•";
+    color: #e74c3c;
+    display: inline-block;
+    margin-right: 0.3em;
+    font-size: 1.5em;
+    vertical-align: middle;
+}
+
+ul ul {
+    margin-left: 1.25714em
+}
+
+ol li {
+    text-indent: -1.45em
+}
+
+ol ol {
+    margin-left: 1.25714em
+}
+
+ul, ol {
+    margin-bottom: 1.5em;
+}
+
+ul ul, ul ol,
+ol ul, ol ol {
+    margin-bottom: 0;
+}
+
+ol {
+    counter-reset: ol;
+}
+
+ol li {
+    counter-increment: ol;
+}
+
+ol li:before {
+    content: counter(ol) ".";
+    color: #e06e73;
+    text-align: right;
+    display: inline-block;
+    min-width: 1em;
+    margin-right: 0.5em
+}
+
+ol li p {
+    display: inline;
+}
+
+/* CODE */
+code {
+    display: inline;
+    background: #fcfcfc;
+    border: 1px solid #dedede;
+    border-radius: .3em;
+    padding: 0.2em 0.5em;
+    font-family: "Fira Code Retina", monospace;
+    font-size: 0.7em;
+}
+
+pre {
+    display: block;
+    background: transparent;
+    padding: 0;
+    margin: 0;
+}
+
+pre code {
+    display: block;
+    width: 100%;
+    line-height: 1.45em;
+
+    padding: 1.2em 1em;    
+    margin: 0 0 1.5em;
+}
+
+.hljs {
+    padding: 0;
+}
+
+/* TODO LIST */
+
+input[type="checkbox"] {
+    position: relative;
+    width: 1rem;
+    height: 1rem;
+    background: white;
+    -webkit-appearance: none;
+    border: 1px solid #ccc;
+    border-radius: .2em;
+    margin: 0.2em .5em 0em -1.7em;
+    margin-bottom: .5em;
+    display: block;
+    float: left;
+    page-break-after: avoid;
+}
+
+input[type="checkbox"]:checked::before {
+    display: block;
+    content: '✓';
+    display: initial;
+    font-size: 1.1em;
+    font-weight: bold;
+    color: #e06e73;
+    position: absolute;
+    left: .1em;
+    bottom: -0.2em;
+}
+
+input[type="checkbox"] ~ label {
+    display: block;
+    width: 100%;
+    margin-bottom: 0.1em;
+}
+
+ul li input[type="checkbox"] {
+    font: none;
+}
+
+ul li input[type="checkbox"] ~ label {
+    display: inline-block;
+    width: auto;
+    margin-bottom: 0.1em;
+    margin-left: 0.5em;
+}
+
+/*  TABLE */
+
+table {
+    width: calc(100% + 3em);
+    margin-bottom: 1.5em;
+    margin-left: -1.5em;
+}
+
+table tr {
+    border-bottom: 1px solid #dedede;
+}
+
+table th {
+    font-weight: 700;    
+}
+
+table td, table th {
+    vertical-align: top;
+    padding: .2em 1.5em;
+    font-size: .95em
+}
+
+thead tr {
+    border-bottom: 4px double #dedede;
 }
