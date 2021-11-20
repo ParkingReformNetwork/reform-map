@@ -45,19 +45,20 @@ bootstrapPage(
       ),
       
       hidden(tags$iframe(id = "click_info",
-                      style=
-                      "position: absolute;
-                      top: 10%;
-                      left: 20%;
-                      width: 60%;
-                      height: 80%;
-                      background: rgba(255, 255, 255, 1);
-                      border-color: rgba(186, 186, 186, 0.7);
-                      border-style: solid;
-                      padding: 0;
-                      border-radius: 0;
-                      margin: 0;
-                      overflow:auto;",
+                         class="click_info",
+                        style="position: absolute;
+                         top: 10%;
+                         left: 10%;
+                         width: 80%;
+                         height: 80%;
+                         background: rgba(255, 255, 255, 1);
+                         border-color: rgba(186, 186, 186, 0.7);
+                         border-style: solid;
+                         padding: 0;
+                         border-radius: 0;
+                         margin: 0;
+                         overflow:auto;
+                         z-index: 1000;",
                src=("https://parkingreform.org/mandates-map/info.html"))),
       
       absolutePanel(
@@ -67,6 +68,7 @@ bootstrapPage(
         selectInput(
           "city_selector",
           "City Search: ",
+          width = 200,
           map_data$city_search,
           multiple = TRUE)
         ),
