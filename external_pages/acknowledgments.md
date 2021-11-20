@@ -1,10 +1,12 @@
 # Acknowledgements
 
-This map and the backing dataset was built and compiled by the [Parking Reform Network](https://parkingreform.org/) with the help of many generous individuals.
+- [General App Information](info.html)
+
+This map and the backing dataset was built and compiled by the <a href="https://parkingreform.org" target="_blank">Parking Reform Network</a> with the help of many generous individuals.
 
 ## Concept and Initial Report Data
 
-This project is based on [A Map of Cities That Got Rid of Parking Minimums](https://www.strongtowns.org/journal/2015/11/18/a-map-of-cities-that-got-rid-of-parking-minimums) intially published by [StrongTowns](https://strongtowns.org) in November 2015. Reports have been submitted by many StrongTowns readers over the years and reporters are, generally, credited on the city detailed information pages.
+This project is based on "A Map of Cities That Got Rid of Parking Minimums" intially published by <a href="https://strongtowns.org" target="_blank">StrongTowns</a> in November 2015. Reports have been submitted by many StrongTowns readers over the years and reporters are, generally, credited on the city detailed information pages.
 
 ## Map Application
 
