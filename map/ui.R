@@ -61,6 +61,7 @@ bootstrapPage(
                src=("https://parkingreform.org/mandates-map/info.html"))),
       
       absolutePanel(
+        id= "city_search",
         top = 0,
         left = 120,
         selectInput(
