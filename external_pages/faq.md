@@ -5,13 +5,13 @@
 ### How can I add my city to the map? 
 * <a href="https://forms.gle/PaYXUP5J7YR1Zi6q6" target="_blank">Submit a report here.</a>
 
+### How can I support the maintenance of this project? 
+* **<a href="https://parkingreform.org/join" target="_blank">Become a member of</a>** or **<a href="https://parkingreform.org/donate" target="_blank">Donate to</a>** the Parking Reform Network!
+
 ### Who did this? What were your sources? 
 * The map was built by the <a href="https://parkingreform.org" target="_blank">Parking Reform Network</a>and was based on reports submitted by <a href="https://strongtowns.org" target="_blank">StrongTowns</a> readers, most of whom are acknowledged on city detail pages for the reports they submitted.
 * Visit the [acknowledgments page](acknowledgments.html) for more information.
 * The <a href="https://github.com/bradbakermusic/parking_map">sourcecode for the map is on GitHub</a>.
-
-### How can I support the maintenance of this project? 
-* **<a href="https://parkingreform.org/join" target="_blank">Become a member of</a>** or **<a href="https://parkingreform.org/donate" target="_blank">Donate to</a>** the Parking Reform Network!
 
 ### What does “Scope of Reform” mean?
 * Citywide - the reform applies citywide (special exemptions, hazard zones, etc. are OK)
