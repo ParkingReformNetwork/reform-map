@@ -5,23 +5,78 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <title>A Map of Progress Eliminating Costly Parking Mandates</title>
+    <meta name="title" property="og:title" content="A Map of Progress Eliminating Costly Parking Mandates">
     <meta name="description" content="A map of cities which have policies reducing or eliminating costly parking mandates.">
     <meta name="author" content="Parking Reform Network">
+    <meta property="og:url" content="https://parkingreform.org/mandates-map"/>
+    <meta property="og:image" content="//media.example.com/ 1234567.jpg"/>
     <link type="text/css" rel="stylesheet" href="./main_iframe.css">
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
     <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
   </head>
   <body>
-  <div id="content">
-  <div class="banner">
-    <span style="margin: 0; font-weight: bold; font-size:1em">Progress on Costly Car Parking Mandates</span>
-    <div class="right">
-      <a href="https://parkingreform.org/mandates-map" target="_blank">
-        <i class="expand-icon fas fa-external-link-alt fa-inverse" title="View fullscreen"></i>
-      </a>
-    </div>
-  </div>
+    <div id="content">
+      <div class="banner">
+        <span style="margin: 0; font-weight: bold; font-size:1em">Progress on Costly Car Parking Mandates</span>
+        <div class="right row gx-2 banner__actions align-items-center">
+          <div class="col dropdown">
+            <button class="btn btn-outline-light dropdown-toggle banner__button" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+              <i class="fas fa-share-alt" title="See sharing options"></i>
+            </button>
+            <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+              <li>
+                <a class="dropdown-item" href="https://twitter.com/intent/tweet?text=Costly%20parking%20mandates%20make%20it%20harder%20to%20build%20homes%20and%20fight%20climate%20change!%20Lots%20of%20cities%20are%20reforming%20their%20rules.%20Find%20out%20who!%0A%0Ahttps://parkingreform.org/resources/mandates-map/" target="_blank">
+                  Twitter
+                </a>
+              </li>
+              <li>
+                <a class="dropdown-item" href="https://www.facebook.com/sharer/sharer.php?u=https://parkingreform.org/resources/mandates-map/" target="_blank">
+                  Facebook
+                </a>
+              </li>
+              <li>
+                <a class="dropdown-item" href="https://www.linkedin.com/sharing/share-offsite/?url=https%3A%2F%2Fparkingreform.org%2Fresources%2Fmandates-map%2F" target="_blank">
+                  LinkedIn
+                </a>
+              </li>
+              <li>
+                <button type="button" class="dropdown-item" data-bs-toggle="modal" data-bs-target="#embedModal">
+                  Embed
+                </button>
+              </li>
+            </ul>
+          </div>
+          <a class="btn btn-outline-light banner__button col" href="https://parkingreform.org/mandates-map" target="_blank">
+            <i class="expand-icon fas fa-external-link-alt" title="View fullscreen"></i>
+          </a>
+        </div>
+      </div>
       <iframe id="prn-minimums-iframe" width="100%" height="100%" frameborder="0" src="https://parkingreform.shinyapps.io/parkingmap/"></iframe>
-  </div>
-  <script src="./main_iframe.js"></script>
+    </div>
+    <!-- Embed Modal -->
+    <div class="modal fade" id="embedModal" tabindex="-1" aria-labelledby="embedModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="embedModalLabel">Embed on your website</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <textarea class="col form-control" rows="6" readonly><iframe
+  src="https://parkingreform.org/mandates-map/"
+  width="100%"
+  height="600"
+></iframe></textarea>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="./main_iframe.js"></script>
+    <!-- Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous"></script>
   </body>
 </html>
