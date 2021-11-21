@@ -27,6 +27,9 @@ i {
 	font-family: Helvetica,Arial,sans-serif;
 	justify-content: space-between;
 }
+.row.banner__actions {
+	flex-wrap: nowrap;
+}
 .btn.banner__button {
 	display: flex;
 	align-items: center;
