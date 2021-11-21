@@ -17,12 +17,13 @@
 * Citywide - the reform applies citywide (special exemptions, hazard zones, etc. are OK)
 	* <a href=“https://wsbt.com/news/local/south-bend-city-council-votes-to-end-parking-space-minimum-for-businesses” target=“_blank”>https://wsbt.com/news/local/south-bend-city-council-votes-to-end-parking-space-minimum-for-businesses</a>
 	* <a href=“https://www.berkeleyside.com/2021/01/27/berkeley-parking-reform?goal=0_aad4b5ee64-aa3e0327bf-333370437” target=“_blank”>https://www.berkeleyside.com/2021/01/27/berkeley-parking-reform?goal=0_aad4b5ee64-aa3e0327bf-333370437”</a>
-* City Center_Business District - Reform applies to certain centers_corridors and districts.
+* City Center/Business District - Reform applies to certain centers_corridors and districts.
 	* <a href=“https://www.advertiserandtimes.co.uk/parking-christchurch” target=“_blank”>https://www.advertiserandtimes.co.uk/parking-christchurch</a>
 * Transit Oriented - Reform is based on transit stations and bus lines.
 * Main Street/Special - Reform is specific to certain streets, historic districts, etc.
 	* <a href=“https://abcnews4.com/news/local/city-council-allows-no-minimum-parking-requirements-on-king-street-to-drive-business” target=“_blank”>https://abcnews4.com/news/local/city-council-allows-no-minimum-parking-requirements-on-king-street-to-drive-business</a> 
 	* <a href=“https://www.msn.com/en-us/travel/news/charlotte-oks-car-free-residential-development-in-effort-to-reduce-housing-prices/ar-BB1adgEJ?ocid=msedgntp” target=“_blank”>https://www.msn.com/en-us/travel/news/charlotte-oks-car-free-residential-development-in-effort-to-reduce-housing-prices/ar-BB1adgEJ?ocid=msedgntp</a>
+
 ### What does “Policy Change” mean? 
 * Reduce minimum parking requirements - ratios have been lowered, but not eliminated. This could be overall or based on inclusionary housing, transit proximity, etc.
 * Eliminate minimum parking requirements - parking requirements can be completely avoided, either by-right or by reasonable condition.
