@@ -1,4 +1,7 @@
 # Frequently Asked Questions
+
+- [General App Information](info.html)
+
 ### How can I add my city to the map? 
 * [Fill out this form to submit a report.](https://forms.gle/PaYXUP5J7YR1Zi6q6)
 
