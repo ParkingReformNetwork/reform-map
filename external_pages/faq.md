@@ -81,28 +81,3 @@ Passed - City Council or the governing planning body has passed the parking refo
 * Car Share - reduction is based on providing space for community vehicles
 * TDM - developer must provide transportation demand management for residents or businesses, such as bus passes.
 * Tree Preservation - parking requirement can be reduced for tree preservation
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-\
