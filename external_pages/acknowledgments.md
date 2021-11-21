@@ -1,6 +1,6 @@
 # Acknowledgements
 
-- [General App Information](info.html)
+- [Back to General App Information](info.html)
 
 This map and the backing dataset was built and compiled by the <a href="https://parkingreform.org" target="_blank">Parking Reform Network</a> with the help of many generous individuals.
 
