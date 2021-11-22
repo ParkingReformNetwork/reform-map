@@ -9,6 +9,26 @@ library(stringr)
 # data generated from parking_reform.R
 map_data <- read.csv(file = "tidied_map_data.csv", stringsAsFactors = F)
 
+# population slider to numeric
+population_slider_to_numeric <- function(slider_value) {
+  slider_numeric <- 0
+  if(slider_value == "100") {
+    slider_numeric <- 100
+  } else if(slider_value == "1K") {
+    slider_numeric <- 1000
+  } else if(slider_value == "10K") {
+    slider_numeric <- 10000
+  } else if(slider_value == "100K") {
+    slider_numeric <- 100000
+  } else if(slider_value == "1M") {
+    slider_numeric <- 1000000
+  } else if(slider_value == "10M") {
+    slider_numeric <- 10000000
+  }
+  return(slider_numeric)
+}
+
+
 # set up back end
 function(input, output, session) {
   
@@ -32,7 +52,7 @@ function(input, output, session) {
       filter((is_type_eliminated & input_eliminate) | (is_type_reduced & input_reduce)| (is_type_maximums & input_maximums)) %>%
       filter(if(is.null(input$status_selector)){is.na(report_status)} 
              else {is.na(report_status) | grepl(tolower(paste(input$status_selector, collapse = "|")), report_status, ignore.case=TRUE)}) %>%
-      filter(population >= input$poprange[1] & population <= input$poprange[2]) %>%
+      filter(population >= population_slider_to_numeric(input$poprange[1]) & population <= population_slider_to_numeric(input$poprange[2])) %>%
       filter((city_search %in% input$city_selector) | is.null(input$city_selector ))
   })
   
