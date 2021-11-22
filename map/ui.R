@@ -22,6 +22,7 @@ bootstrapPage(
               href = "map_stylings.css"),
     tags$script(src = "https://kit.fontawesome.com/37a140b4a8.js",
                 crossorigin="anonymous"),
+    tags$script(src = "close_info.js"),
     tags$script(src = "add_highlights.js")
   ),
   
