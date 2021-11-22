@@ -5,7 +5,6 @@ library(dplyr)
 library(leaflet)
 library(stringr)
 library(shinyWidgets)
-library(BAMMtools)
 
 # data generated from parking_reform.R
 map_data <- read.csv(file = "tidied_map_data.csv", stringsAsFactors = F)
@@ -113,8 +112,8 @@ bootstrapPage(
           sliderTextInput(
             inputId = "poprange",
             label = "Population:",
-            choices = getJenksBreaks(map_data$population, 20)[c(1:10, 15, 20)],
-            selected = range(map_data$population),
+            choices = c(100, 1000, 10000, 100000, 1000000, 10000000),
+            selected = c(100,10000000),
             grid = TRUE
           ),
           circle = TRUE,
