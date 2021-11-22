@@ -28,11 +28,11 @@ i {
 	justify-content: space-between;
 }
 .row.banner__actions {
-	// TODO: remove !important after diagnosing why styles are not applying as expected in safari/iOS
+	/* TODO: remove !important after diagnosing why styles are not applying as expected in safari/iOS */
 	flex-wrap: nowrap !important;
 }
 .btn.banner__button {
-	// TODO: remove !important after diagnosing why styles are not applying as expected in safari/iOS
+	/* TODO: remove !important after diagnosing why styles are not applying as expected in safari/iOS */
 	display: flex !important;
 	align-items: center !important;
 	gap: 0.25rem;
