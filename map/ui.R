@@ -112,7 +112,7 @@ bootstrapPage(
           sliderTextInput(
             inputId = "poprange",
             label = "Population:",
-            choices = c("100", "1K", "10K", "100K", "1M", "10M"),
+            choices = c("100", "500", "1K", "5K", "10K", "50K", "100K", "500K", "1M", "5M", "10M"),
             selected = c("100","10M"),
             grid = TRUE
           ),

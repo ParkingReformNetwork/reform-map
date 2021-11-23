@@ -11,20 +11,19 @@ map_data <- read.csv(file = "tidied_map_data.csv", stringsAsFactors = F)
 
 # population slider to numeric
 population_slider_to_numeric <- function(slider_value) {
-  slider_numeric <- 0
-  if(slider_value == "100") {
-    slider_numeric <- 100
-  } else if(slider_value == "1K") {
-    slider_numeric <- 1000
-  } else if(slider_value == "10K") {
-    slider_numeric <- 10000
-  } else if(slider_value == "100K") {
-    slider_numeric <- 100000
-  } else if(slider_value == "1M") {
-    slider_numeric <- 1000000
-  } else if(slider_value == "10M") {
-    slider_numeric <- 10000000
-  }
+  slider_numeric <- case_when(
+    slider_value == "100"  ~ 100,
+    slider_value == "500"  ~ 500,
+    slider_value == "1K"   ~ 1000,
+    slider_value == "5K"   ~ 5000,
+    slider_value == "10K"  ~ 10000,
+    slider_value == "50K"  ~ 50000,
+    slider_value == "100K" ~ 100000,
+    slider_value == "500K" ~ 500000,
+    slider_value == "1M"   ~ 1000000,
+    slider_value == "5M"   ~ 5000000,
+    slider_value == "10M"  ~ 10000000
+  )
   return(slider_numeric)
 }
 
