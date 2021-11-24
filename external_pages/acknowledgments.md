@@ -14,19 +14,21 @@ This project is based on "A Map of Cities That Got Rid of Parking Minimums" inti
 - Tony Jordan
 - Alireza Karduni
 - Devin Macarthur
+- Leaf Nunes
 - Justin Ross
+- Justin Sawyer
 - Aaron Snailwood
 - Jane Wilberding
 
 ## Report Verification
 
 - Jane Wilberding
-- Jonathan Wicks
 - Henry Vorosmarti
 - Caleb Susuras
 - Aidan Simpson
 - Bobby Siemiaszko
 - Eric Pruett
+- Jonathan Pira
 - Andrew Oliver
 - Syihan Muhammad
 - Alexander Morgan
@@ -41,6 +43,7 @@ This project is based on "A Map of Cities That Got Rid of Parking Minimums" inti
 - Scott Goodman
 - Sean Doyle
 - Mary Chase
+- Jack Blashchishen
 - Lindsay Bayley
 
 ## Parking Reform Network Advisory Board
