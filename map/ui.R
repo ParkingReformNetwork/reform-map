@@ -122,14 +122,12 @@ bootstrapPage(
           icon = icon("gear"),
           width = "300px"
         ),
-        checkboxGroupInput(
+        checkboxInput(
           inputId = "no_mandate_city_selector",
           label = "No Parking Mandates", 
-          choiceNames = c("No Mandates", "Has Mandates"),
-          choiceValues = c(1, 0),
-          selected = c(1, 0),
-          inline = TRUE
-        )
+          value = FALSE
+        ),
+        
       ),
       
       # add in logos
