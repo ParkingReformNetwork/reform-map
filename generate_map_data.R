@@ -37,6 +37,7 @@ report %>%
   mutate(is_uses_commercial = ifelse(str_detect(tolower(Uses), "commercial"), 1, 0))  %>%
   mutate(is_uses_lowdensity = ifelse(str_detect(tolower(Uses), "low density (sf) residential"), 1, 0))  %>%
   mutate(is_uses_multifamily = ifelse(str_detect(tolower(Uses), "multi-family residential"), 1, 0))  %>%
+  mutate(is_no_mandate_city = ifelse(str_detect(tolower(Highlights), "no mandates"), 1, 0))  %>%
   
   ## filter(is_verified == 1) %>%  ## TODO: add this filter back in
   select(city_id,
@@ -60,7 +61,8 @@ report %>%
          is_uses_residential,
          is_uses_commercial,
          is_uses_lowdensity,
-         is_uses_multifamily) %>%
+         is_uses_multifamily,
+         is_no_mandate_city) %>%
   rename(city = city_id,
          report_summary = Summary,
          report_status = Status,

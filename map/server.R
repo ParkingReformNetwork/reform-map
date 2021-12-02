@@ -52,7 +52,8 @@ function(input, output, session) {
       filter(if(is.null(input$status_selector)){is.na(report_status)} 
              else {is.na(report_status) | grepl(tolower(paste(input$status_selector, collapse = "|")), report_status, ignore.case=TRUE)}) %>%
       filter(population >= population_slider_to_numeric(input$poprange[1]) & population <= population_slider_to_numeric(input$poprange[2])) %>%
-      filter((city_search %in% input$city_selector) | is.null(input$city_selector ))
+      filter((city_search %in% input$city_selector) | is.null(input$city_selector )) %>%
+      filter(is_no_mandate_city %in% input$no_mandate_city_selector)
   })
   
   filtered_data <- filtered_d %>% debounce(550)
