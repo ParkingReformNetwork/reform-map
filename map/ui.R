@@ -121,13 +121,19 @@ bootstrapPage(
           status = "danger",
           icon = icon("gear"),
           width = "300px"
-        ),
-        checkboxInput(
+        )
+      ),
+      absolutePanel(
+        top = 75,
+        left = 50,
+        draggable = FALSE,
+        id= "highlight-panel",
+        materialSwitch(
           inputId = "no_mandate_city_selector",
-          label = "No Parking Mandates", 
+          label = "No Parking Requirements", 
+          status="success",
           value = FALSE
-        ),
-        
+        )
       ),
       
       # add in logos

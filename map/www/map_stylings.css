@@ -20,6 +20,22 @@ body {
 }
 */
 
+/* Put shiny notifications front and center */
+#shiny-notification-panel {
+  top: 0;
+  bottom: unset;
+  left: 0;
+  right: 0;
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+  max-width: 450px;
+}
+
+.shiny-notification {
+  opacity: 95%;
+}
+
 .sw-dropdown {
   position: relative;
   display: inline-block;
@@ -93,7 +109,21 @@ body {
   border-width: 20px;
 } 
 
+#highlight-panel {
+    background: rgba(255, 255, 255, 1);
+    box-shadow: 0px 0px 15px 0px #c0c0c0;
+    border-radius: 5px;
+}
 
+#highlight-panel .shiny-input-container {
+    width: auto !important;
+}
+#highlight-panel .form-group {
+    margin: 0px
+}
+.material-switch {
+  padding: 7px;
+}
 
 #city_detail_info {
   position: absolute;

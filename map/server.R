@@ -31,9 +31,10 @@ population_slider_to_numeric <- function(slider_value) {
 # set up back end
 function(input, output, session) {
   highlights <- reactiveValues(mandates = c(0,1))
+  sessionVars <- reactiveValues(notifyMandate = TRUE)
+  
   # create data subset based on user input
   filtered_d <- reactive({
-    print(highlights$mandates)
     input_citywide <- any(input$magnitude_selector %in% "Citywide")
     input_citycenter <- any(input$magnitude_selector %in% "City Center")
     input_transit <- any(input$magnitude_selector %in% "Transit Oriented")
@@ -59,11 +60,22 @@ function(input, output, session) {
   
   filtered_data <- filtered_d %>% debounce(550)
   
+  noMandateMessage = "Cities displayed may still have rare parking requirements for one or two specific uses or in special cases. View summary and detail pages for more information."
   # observe filter for highlights
   observeEvent(input$no_mandate_city_selector, {
-    if(input$no_mandate_city_selector) { highlights$mandates = c(1) }
-    else { highlights$mandates = c(0,1)}
-    print(highlights$mandates)
+    if(input$no_mandate_city_selector) { 
+      highlights$mandates = c(1) 
+      if(sessionVars$notifyMandate) {
+        showNotification(noMandateMessage,
+                       duration=30,
+                       type = "warning",
+                       id = "highlightMessage")
+        sessionVars$notifyMandate = FALSE
+      }
+      }
+    else { 
+        highlights$mandates = c(0,1)
+        }
      }
                )
   
