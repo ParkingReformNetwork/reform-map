@@ -60,7 +60,7 @@ function(input, output, session) {
   
   filtered_data <- filtered_d %>% debounce(550)
   
-  noMandateMessage = "Cities displayed may still have rare parking requirements for one or two specific uses or in special cases. View summary and detail pages for more information."
+  noMandateMessage = "Cities displayed may still have parking requirements for one or two specific uses or in special cases. View summary and detail pages for more information."
   # observe filter for highlights
   observeEvent(input$no_mandate_city_selector, {
     if(input$no_mandate_city_selector) { 
