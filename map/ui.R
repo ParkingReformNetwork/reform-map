@@ -6,6 +6,7 @@ library(leaflet)
 library(stringr)
 library(shinyWidgets)
 
+
 # data generated from parking_reform.R
 map_data <- read.csv(file = "tidied_map_data.csv", stringsAsFactors = F)
 
@@ -120,6 +121,18 @@ bootstrapPage(
           status = "danger",
           icon = icon("gear"),
           width = "300px"
+        )
+      ),
+      absolutePanel(
+        top = 75,
+        left = 50,
+        draggable = FALSE,
+        id= "highlight-panel",
+        materialSwitch(
+          inputId = "no_mandate_city_selector",
+          label = "No Parking Requirements", 
+          status="success",
+          value = FALSE
         )
       ),
       

@@ -30,6 +30,8 @@ population_slider_to_numeric <- function(slider_value) {
 
 # set up back end
 function(input, output, session) {
+  highlights <- reactiveValues(mandates = c(0,1))
+  sessionVars <- reactiveValues(notifyMandate = TRUE)
   
   # create data subset based on user input
   filtered_d <- reactive({
@@ -52,10 +54,30 @@ function(input, output, session) {
       filter(if(is.null(input$status_selector)){is.na(report_status)} 
              else {is.na(report_status) | grepl(tolower(paste(input$status_selector, collapse = "|")), report_status, ignore.case=TRUE)}) %>%
       filter(population >= population_slider_to_numeric(input$poprange[1]) & population <= population_slider_to_numeric(input$poprange[2])) %>%
-      filter((city_search %in% input$city_selector) | is.null(input$city_selector ))
+      filter((city_search %in% input$city_selector) | is.null(input$city_selector )) %>%
+      filter(is_no_mandate_city %in% highlights$mandates)
   })
   
   filtered_data <- filtered_d %>% debounce(550)
+  
+  noMandateMessage = "Cities displayed may still have rare parking requirements for one or two specific uses or in special cases. View summary and detail pages for more information."
+  # observe filter for highlights
+  observeEvent(input$no_mandate_city_selector, {
+    if(input$no_mandate_city_selector) { 
+      highlights$mandates = c(1) 
+      if(sessionVars$notifyMandate) {
+        showNotification(noMandateMessage,
+                       duration=30,
+                       type = "warning",
+                       id = "highlightMessage")
+        sessionVars$notifyMandate = FALSE
+      }
+      }
+    else { 
+        highlights$mandates = c(0,1)
+        }
+     }
+               )
   
   # display city and state for clicked map point. will end up in more detail pane
   output$clicked_city <- renderUI({
