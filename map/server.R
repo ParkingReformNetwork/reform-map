@@ -129,13 +129,35 @@ function(input, output, session) {
   }
   )
   
-  # display report data for clicked map point
-  output$clicked_land_uses <- renderText({
+  # display land uses data for clicked map point
+  output$clicked_report_land_uses <- renderText({
     req(input$map_marker_click$id)
     map_data %>%
       filter(id == input$map_marker_click$id) %>%
       mutate(land_uses = paste("Land Uses:", land_uses)) %>%
       select(land_uses) %>%
+      paste0()
+  }
+  )
+  
+  # display status data for clicked map point
+  output$clicked_report_status <- renderText({
+    req(input$map_marker_click$id)
+    map_data %>%
+      filter(id == input$map_marker_click$id) %>%
+      mutate(status = paste("Reform Status:", report_status)) %>%
+      select(status) %>%
+      paste0()
+  }
+  )
+  
+  # display type data for clicked map point
+  output$clicked_report_type <- renderText({
+    req(input$map_marker_click$id)
+    map_data %>%
+      filter(id == input$map_marker_click$id) %>%
+      mutate(type = paste("Type of Reform:", report_type)) %>%
+      select(type) %>%
       paste0()
   }
   )

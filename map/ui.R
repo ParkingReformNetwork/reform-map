@@ -154,10 +154,12 @@ bootstrapPage(
                        column(1, actionButton("close_detail", "x"))
               ),
               uiOutput("clicked_city_state"),
-              textOutput("clicked_population"),
               textOutput("clicked_report_summary"),
+              textOutput("clicked_population"),
+              textOutput("clicked_report_type"),
+              textOutput("clicked_report_status"),
               textOutput("clicked_report_magnitude"),
-              textOutput("clicked_land_uses"),
+              textOutput("clicked_report_land_uses"),
           )
         })
       ),
