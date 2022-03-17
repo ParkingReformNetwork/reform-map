@@ -82,10 +82,10 @@ bootstrapPage(
         dropdown(
           pickerInput("magnitude_selector",
                       tags$b("Scope of Reform"),
-                      choices = c("Citywide", "City Center", "Transit Oriented", "Main Street"),
+                      choices = c("Regional","Citywide", "City Center", "Transit Oriented", "Main Street"),
                       options = pickerOptions(actionsBox = TRUE),
                       multiple = T,
-                      selected = c("Citywide", "City Center", "Transit Oriented", "Main Street")
+                      selected = c("Regional","Citywide", "City Center", "Transit Oriented", "Main Street")
           ),
           pickerInput("type_selector",
                       tags$b("Policy Change"),
@@ -113,8 +113,8 @@ bootstrapPage(
           sliderTextInput(
             inputId = "poprange",
             label = "Population:",
-            choices = c("100", "500", "1K", "5K", "10K", "50K", "100K", "500K", "1M", "5M", "10M"),
-            selected = c("100","10M"),
+            choices = c("100", "500", "1K", "5K", "10K", "50K", "100K", "500K", "1M", "5M", "10M", "50M"),
+            selected = c("100","50M"),
             grid = TRUE
           ),
           circle = TRUE,

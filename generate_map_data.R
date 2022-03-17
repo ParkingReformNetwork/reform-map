@@ -25,6 +25,7 @@ city %>%
 # create a flag for verified, only select columns we need, tidy up the names a bit
 report %>%
   mutate(is_verified = ifelse(lengths(strsplit(Verified.By, ",")) >= 2, 1, 0)) %>%
+  mutate(is_magnitude_regional = ifelse(str_detect(tolower(Magnitude), "regional"), 1, 0))  %>%
   mutate(is_magnitude_citywide = ifelse(str_detect(tolower(Magnitude), "citywide"), 1, 0))  %>%
   mutate(is_magnitude_citycenter = ifelse(str_detect(tolower(Magnitude), "city center/business district"), 1, 0))  %>%
   mutate(is_magnitude_transit = ifelse(str_detect(tolower(Magnitude), "transit oriented"), 1, 0))  %>%
@@ -50,6 +51,7 @@ report %>%
          Uses,
          Reporter,
          is_verified,
+         is_magnitude_regional,
          is_magnitude_citywide,
          is_magnitude_citycenter,
          is_magnitude_transit,

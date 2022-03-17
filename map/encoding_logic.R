@@ -1,7 +1,9 @@
 # encode magnitude for coloring icons
 magnitude_to_highest <- function(magnitude_string) {
   magnitude_highest <- "NA"
-  if(str_detect(tolower(magnitude_string), "citywide")) {
+  if(str_detect(tolower(magnitude_string), "regional")) {
+    magnitude_highest <- "Regional"
+  } else if(str_detect(tolower(magnitude_string), "citywide")) {
     magnitude_highest <- "Citywide"
   } else if(str_detect(tolower(magnitude_string), "city center")) {
     magnitude_highest <- "City Center"

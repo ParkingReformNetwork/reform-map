@@ -22,7 +22,8 @@ population_slider_to_numeric <- function(slider_value) {
     slider_value == "500K" ~ 500000,
     slider_value == "1M"   ~ 1000000,
     slider_value == "5M"   ~ 5000000,
-    slider_value == "10M"  ~ 10000000
+    slider_value == "10M"  ~ 10000000,
+    slider_value == "50M"  ~ 50000000
   )
   return(slider_numeric)
 }
@@ -35,6 +36,7 @@ function(input, output, session) {
   
   # create data subset based on user input
   filtered_d <- reactive({
+    input_regional <- any(input$magnitude_selector %in% "Regional")
     input_citywide <- any(input$magnitude_selector %in% "Citywide")
     input_citycenter <- any(input$magnitude_selector %in% "City Center")
     input_transit <- any(input$magnitude_selector %in% "Transit Oriented")
@@ -49,7 +51,7 @@ function(input, output, session) {
     input_maximums <- any(input$type_selector %in% "Parking Maximums")
     map_data %>%
       filter((is_uses_residential & input_residential) | (is_uses_commercial & input_commercial) | (is_uses_alluses & input_alluses)) %>%
-      filter((is_magnitude_citycenter & input_citycenter)| (is_magnitude_citywide & input_citywide) | (is_magnitude_transit & input_transit)| (is_magnitude_mainstreet & input_mainstreet)) %>%
+      filter((is_magnitude_citycenter & input_citycenter)| (is_magnitude_regional & input_regional) | (is_magnitude_citywide & input_citywide) | (is_magnitude_transit & input_transit)| (is_magnitude_mainstreet & input_mainstreet)) %>%
       filter((is_type_eliminated & input_eliminate) | (is_type_reduced & input_reduce)| (is_type_maximums & input_maximums)) %>%
       filter(if(is.null(input$status_selector)){is.na(report_status)} 
              else {is.na(report_status) | grepl(tolower(paste(input$status_selector, collapse = "|")), report_status, ignore.case=TRUE)}) %>%
@@ -93,7 +95,7 @@ function(input, output, session) {
       select(city_state) %>%
       paste0() %>%
       paste("https://parkingreform.org/mandates-map/city_detail/", .,".html", sep="") -> url
-    HTML(paste(a(city_label, href=url, target="_blank")))
+      HTML(paste(a(city_label, href=url, target="_blank")))
   }
   )
   
@@ -231,13 +233,13 @@ function(input, output, session) {
       map_points <- filtered_data()
       
       pal <- colorFactor(
-        palette = c("#fdae61", "#d7191c", "#abdda4", "#2b83ba"),
-        c("City Center","Citywide","Main Street", "TOD"), ordered= TRUE
+        palette = c("#7b3294", "#fdae61", "#d7191c", "#abdda4", "#2b83ba"),
+        c("Regional","City Center","Citywide","Main Street", "TOD"), ordered= TRUE
       )
       
       pal2 <- colorFactor(
-        palette = c("#fdae61","#c4874b", "#d7191c","#a71316", "#abdda4", "#84ab7f", "#2b83ba","#216590"),
-        c("City Center", "City Center All","Citywide","Citywide All",  "Main Street", "Main Street All", "TOD", "TOD All"), ordered = TRUE
+        palette = c("#7b3294","#fdae61","#c4874b", "#d7191c","#a71316", "#abdda4", "#84ab7f", "#2b83ba","#216590"),
+        c("Regional","City Center", "City Center All","Citywide","Citywide All",  "Main Street", "Main Street All", "TOD", "TOD All"), ordered = TRUE
       )
       
     
@@ -261,8 +263,8 @@ function(input, output, session) {
         addLegend(
           title = "Scope of Reform",
           position = "bottomright",
-          labels  = c("Citywide", "City Center/District","Transit Oriented", "Main Street/Special" ),
-          colors = c("#d7191c", "#fdae61", "#2b83ba", "#abdda4")
+          labels  = c("Regional","Citywide", "City Center/District","Transit Oriented", "Main Street/Special" ),
+          colors = c("#7b3294", "#d7191c", "#fdae61", "#2b83ba", "#abdda4")
         )
       
     }
