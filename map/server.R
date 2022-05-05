@@ -49,19 +49,26 @@ function(input, output, session) {
     input_reduce <- any(input$type_selector %in% "Reduce Parking Minimums")
     input_eliminate <- any(input$type_selector %in% "Eliminate Parking Minimums")
     input_maximums <- any(input$type_selector %in% "Parking Maximums")
+    if(isTRUE(input$no_mandate_city_selector)) {
+      map_data %>%
+        filter(is_no_mandate_city %in% highlights$mandates)
+    } else if (!is.null(input$city_selector)) {
+      map_data %>%
+       filter((city_search %in% input$city_selector) | is.null(input$city_selector ))
+    } else {
     map_data %>%
       filter((is_uses_residential & input_residential) | (is_uses_commercial & input_commercial) | (is_uses_alluses & input_alluses)) %>%
       filter((is_magnitude_citycenter & input_citycenter)| (is_magnitude_regional & input_regional) | (is_magnitude_citywide & input_citywide) | (is_magnitude_transit & input_transit)| (is_magnitude_mainstreet & input_mainstreet)) %>%
       filter((is_type_eliminated & input_eliminate) | (is_type_reduced & input_reduce)| (is_type_maximums & input_maximums)) %>%
       filter(if(is.null(input$status_selector)){is.na(report_status)} 
              else {is.na(report_status) | grepl(tolower(paste(input$status_selector, collapse = "|")), report_status, ignore.case=TRUE)}) %>%
-      filter(population >= population_slider_to_numeric(input$poprange[1]) & population <= population_slider_to_numeric(input$poprange[2])) %>%
-      filter((city_search %in% input$city_selector) | is.null(input$city_selector )) %>%
-      filter(is_no_mandate_city %in% highlights$mandates)
+      filter(population >= population_slider_to_numeric(input$poprange[1]) & population <= population_slider_to_numeric(input$poprange[2])) 
+    }
   })
   
   filtered_data <- filtered_d %>% debounce(550)
   
+  howToMessage = "Cities displayed may still have parking requirements for a few specific uses or in special cases. View summary and detail pages for more information."
   noMandateMessage = "Cities displayed may still have parking requirements for a few specific uses or in special cases. View summary and detail pages for more information."
   # observe filter for highlights
   observeEvent(input$no_mandate_city_selector, {

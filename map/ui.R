@@ -90,7 +90,7 @@ bootstrapPage(
           pickerInput("type_selector",
                       tags$b("Policy Change"),
                       choices = c("Reduce Parking Minimums", "Eliminate Parking Minimums", "Parking Maximums"),
-                      selected = c("Reduce Parking Minimums", "Eliminate Parking Minimums", "Parking Maximums"),
+                      selected = c("Eliminate Parking Minimums"),
                       options = pickerOptions(actionsBox = TRUE),
                       multiple = T
           ),
@@ -106,7 +106,7 @@ bootstrapPage(
           pickerInput("status_selector",
                       tags$b("Implementation Stage"),
                       choices = c("Implemented", "Passed", "Planned", "Proposed","Repealed"),
-                      selected = c("Implemented", "Passed", "Planned", "Proposed"),
+                      selected = c("Implemented", "Passed"),
                       options = pickerOptions(actionsBox = TRUE),
                       multiple = T
           ),
