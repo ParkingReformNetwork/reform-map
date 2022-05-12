@@ -49,10 +49,7 @@ function(input, output, session) {
     input_reduce <- any(input$type_selector %in% "Reduce Parking Minimums")
     input_eliminate <- any(input$type_selector %in% "Eliminate Parking Minimums")
     input_maximums <- any(input$type_selector %in% "Parking Maximums")
-    if(isTRUE(input$no_mandate_city_selector)) {
-      map_data %>%
-        filter(is_no_mandate_city %in% highlights$mandates)
-    } else if (!is.null(input$city_selector)) {
+    if (!is.null(input$city_selector)) {
       map_data %>%
        filter((city_search %in% input$city_selector) | is.null(input$city_selector ))
     } else {
@@ -62,6 +59,7 @@ function(input, output, session) {
       filter((is_type_eliminated & input_eliminate) | (is_type_reduced & input_reduce)| (is_type_maximums & input_maximums)) %>%
       filter(if(is.null(input$status_selector)){is.na(report_status)} 
              else {is.na(report_status) | grepl(tolower(paste(input$status_selector, collapse = "|")), report_status, ignore.case=TRUE)}) %>%
+        filter(is_no_mandate_city %in% highlights$mandates) %>%
       filter(population >= population_slider_to_numeric(input$poprange[1]) & population <= population_slider_to_numeric(input$poprange[2])) 
     }
   })

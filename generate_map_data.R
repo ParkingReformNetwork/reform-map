@@ -13,7 +13,9 @@ report <- read.csv(url("https://area120tables.googleapis.com/link/bAc5xhhLJ2q4jY
 # contact <- read.csv(url("https://area120tables.googleapis.com/link/9yPvvVQT8vbbbmal5Oc4I6/export?key=8VZHmPJawsY3T39bP2t4nL9Q7_dfkZR5g6wMCY1fOOswaEJMLQ4jEwF6sFsaB5SkfJ"), stringsAsFactors = F)
 
 city %>% 
-  select(City, State.Province, Country, Population, Notable, Recent) %>%
+  mutate(city_state = str_replace_all(paste(City, State.Province, sep="_"), " ", "")) %>%
+  mutate(citation_url = paste("https://parkingreform.org/mandates-map/city_detail/", city_state,".html", sep="")) %>%
+  select(City, State.Province, Country, Population, Notable, Recent, citation_url) %>%
   mutate(Population = as.numeric(gsub(",", "", Population))) %>%
   rename(city = City,
          state = State.Province,
@@ -50,6 +52,7 @@ report %>%
          Magnitude,
          Uses,
          Reporter,
+         Date.of.Reform,
          is_verified,
          is_magnitude_regional,
          is_magnitude_citywide,
@@ -66,6 +69,7 @@ report %>%
          is_uses_multifamily,
          is_no_mandate_city) %>%
   rename(city = city_id,
+         date_of_reform = Date.of.Reform,
          report_summary = Summary,
          report_status = Status,
          report_type = Type,
