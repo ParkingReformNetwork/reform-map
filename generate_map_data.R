@@ -53,6 +53,7 @@ report %>%
          Uses,
          Reporter,
          Date.of.Reform,
+         Last.updated,
          is_verified,
          is_magnitude_regional,
          is_magnitude_citywide,
@@ -70,6 +71,7 @@ report %>%
          is_no_mandate_city) %>%
   rename(city = city_id,
          date_of_reform = Date.of.Reform,
+         last_updated = Last.updated,
          report_summary = Summary,
          report_status = Status,
          report_type = Type,
@@ -175,3 +177,15 @@ report_trimmed %>%
 # delete old file and save over the new one
 system("rm -fr map/tidied_map_data.csv")
 write.csv(report_trimmed, file = "map/tidied_map_data.csv")
+report_trimmed %>% select(-contains('is_magnitude')) %>% select(-contains('is_type')) -> report_trimmed
+report_trimmed %>% select(-contains('is_uses')) -> report_trimmed
+report_trimmed %>% select(-contains('encoded')) -> report_trimmed
+report_trimmed %>% select(-one_of('is_notable', 'is_recent', 'is_special', 'lat', 'long', 'id', 'is_verified', 'city_search')) -> report_trimmed
+
+# delete old file and save over the new one
+system("rm -fr map/trimmed_map_data.csv")
+write.csv(report_trimmed, file = "map/trimmed_map_data.csv")
+
+
+
+
