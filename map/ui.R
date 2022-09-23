@@ -140,8 +140,8 @@ bootstrapPage(
       withTags({
         div(id = "logos",
             column(1,
-                   fluidRow(tags$a(img(src = "assets/st_logo.png", align = "right"), href = "https://www.strongtowns.org/", id = "strong_towns_link", target = "_blank")),
-                   fluidRow(tags$a(img(src = "assets/prn_logo.jpeg", align = "right"), href = "https://parkingreform.org/", id = "parking_reform_link", target = "_blank"))
+                   fluidRow(tags$a(img(src = "assets/support.png", align = "right"), href = "https://parkingreform.org/support/", id = "support_link", target = "_blank")),
+                   fluidRow(tags$a(img(src = "assets/prn_logo.png", align = "right"), href = "https://parkingreform.org/", id = "parking_reform_link", target = "_blank"))
             )
         )
       }),

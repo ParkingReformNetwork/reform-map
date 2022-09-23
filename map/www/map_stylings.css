@@ -203,14 +203,16 @@ body {
   padding-top: 20px;
 }
 
+
+#support_link > img,
 #strong_towns_link > img,
 #parking_reform_link > img {
-  width: 50px;
+  width: 75px;
 }
 
 #logos {
-  bottom: 10px;
-  left: 50px;
+  bottom: 15px;
+  left: 75px;
 }
 
 #legend > div > .awesome-marker-legend {
