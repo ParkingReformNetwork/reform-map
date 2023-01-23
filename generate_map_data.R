@@ -180,7 +180,7 @@ write.csv(report_trimmed, file = "map/tidied_map_data.csv")
 report_trimmed %>% select(-contains('is_magnitude')) %>% select(-contains('is_type')) -> report_trimmed
 report_trimmed %>% select(-contains('is_uses')) -> report_trimmed
 report_trimmed %>% select(-contains('encoded')) -> report_trimmed
-report_trimmed %>% select(-one_of('is_notable', 'is_recent', 'is_special', 'lat', 'long', 'id', 'is_verified', 'city_search')) -> report_trimmed
+report_trimmed %>% select(-one_of('is_notable', 'is_recent', 'is_special', 'id', 'is_verified', 'city_search')) -> report_trimmed
 
 # delete old file and save over the new one
 system("rm -fr map/trimmed_map_data.csv")
