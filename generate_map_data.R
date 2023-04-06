@@ -135,7 +135,29 @@ if(num_na_lats > 0) {
     select(!c(lat, long)) %>%
     geocode(city = city,
             method = "osm", verbose = TRUE) -> new_lat_long_city
+  
+  # check if there are still missing lats
+  new_lat_long_city_state %>%
+    filter(is.na(lat)) %>%
+    count() %>% as.integer()-> num_na_lats
 }
+
+if(num_na_lats > 0) {
+  # get lat/longs for county state if above failed
+  new_lat_long_city_state %>%
+    filter(is.na(lat)) %>% 
+    select(!c(lat, long)) %>%
+    geocode(county = city, state = state,
+            method = "osm", verbose = TRUE) -> new_lat_long_city_state
+  
+  # check if there are still missing lats
+  new_lat_long_city_state %>%
+    filter(is.na(lat)) %>%
+    count() %>% as.integer()-> num_na_lats
+}
+
+
+
 
 # union up data if it exists
 if(exists("new_lat_long_city_state_country") && 
