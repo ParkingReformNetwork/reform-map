@@ -17,6 +17,7 @@ The app is built in [Shiny](https://shiny.rstudio.com/), so you need to install:
     * `dplyr`
     * `fontawesome`
     * `leaflet`
+    * `lubridate`
     * `R.rsp`
     * `shiny`
     * `shinyjs`
