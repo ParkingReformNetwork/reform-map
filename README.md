@@ -1,7 +1,8 @@
 # Parking Reform Network Map
 
-This code runs the map app for the Parking Reform Network. 
+This code runs the Mandates Map app for the Parking Reform Network: https://parkingreform.org/mandates-map/.
 
+It is written in R, but in the process of being converted to JavaScript.
 
 ## Getting Started
 
