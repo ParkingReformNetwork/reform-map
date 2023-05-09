@@ -23,7 +23,12 @@ for(i in 1:length(city_states)) {
   city_state <- city_states[i]
   city_df <- citation[citation$city_state == city_state,]
 
-  city_last_updated <- mdy_hms(city_df$Last.updated[1])
+  city_last_updated <- max(
+    # This may be >1 citation.
+    mdy_hms(city_df$Last.updated),
+    mdy_hms(city_df$Report.Last.updated[1]),
+    mdy_hms(city_df$City.Last.updated[1])
+  )
   if (city_last_updated < global_last_updated) {
     cat("Skipping", city_state, "\n")
     next
