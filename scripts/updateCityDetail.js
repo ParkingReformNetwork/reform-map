@@ -4,6 +4,7 @@ import fs from "fs/promises";
 
 import fetch from "node-fetch";
 import Papa from "papaparse";
+import Handlebars from "handlebars";
 import { DateTime } from "luxon";
 
 const GLOBAL_LAST_UPDATED_FP = "scripts/city_detail_last_updated.txt";
@@ -53,13 +54,82 @@ const needsUpdate = (cityEntries, globalLastUpdated) => {
   return maxLastUpdated >= globalLastUpdated;
 };
 
-const processCity = (cityState, entries, globalLastUpdated) => {
+/**
+ Rewrite the entries' attachments field to a normalized object.
+ */
+const normalizeAttachments = (cityEntries, cityStateNoSpace) => {
+  cityEntries.forEach((entry, i) => {
+    if (!entry.Attachments) {
+      entry.Attachments = []; // eslint-disable-line no-param-reassign
+      return;
+    }
+    const attachments = entry.Attachments.split(/\s+/);
+    // eslint-disable-next-line no-param-reassign
+    entry.Attachments = attachments.map((val, j) => {
+      const fileType = val.match(/\.[a-zA-Z_]+$/)[0];
+      return {
+        url: val,
+        fileName: new URL(val).pathname.split("/").pop(),
+        isDoc: fileType === ".docx" || fileType === ".pdf",
+        outputPath: `attachment_images/${cityStateNoSpace}_${i + 1}_${
+          j + 1
+        }${fileType}`,
+      };
+    });
+  });
+};
+
+const setupAttachmentDownloads = (cityEntries) =>
+  cityEntries.flatMap((entry) =>
+    entry.Attachments.map(async (attachment) => {
+      const response = await fetch(attachment.url);
+      const buffer = await response.arrayBuffer();
+      return fs.writeFile(
+        `city_detail_js/${attachment.outputPath}`,
+        Buffer.from(buffer)
+      );
+    })
+  );
+
+const renderHandlebars = (cityEntries, template) => {
+  const citations = cityEntries.map((entry, i) => ({
+    idx: i + 1,
+    sourceDescription: entry["Source Description"],
+    type: entry.Type,
+    notes: entry.Notes,
+    url: entry.URL,
+    attachments: entry.Attachments,
+  }));
+  const entry0 = cityEntries[0];
+  return template({
+    city: entry0.City,
+    state: entry0.State,
+    summary: entry0.Summary,
+    status: entry0.Status,
+    reformType: entry0["Reform Type"],
+    uses: entry0.Uses,
+    magnitude: entry0.Magnitude,
+    requirements: entry0.Requirements,
+    reporter: entry0.Reporter,
+    citations,
+  });
+};
+
+const processCity = (cityState, entries, template, globalLastUpdated) => {
   if (!needsUpdate(entries, globalLastUpdated)) {
     console.log(`Skipping ${cityState}`);
-    return;
+    return Promise.resolve(undefined);
   }
 
   console.log(`Updating ${cityState}`);
+
+  const cityStateNoSpace = cityState.replace(/ /g, "");
+  normalizeAttachments(entries, cityStateNoSpace);
+  const writeHtmlPromise = fs.writeFile(
+    `city_detail_js/${cityStateNoSpace}.html`,
+    renderHandlebars(entries, template)
+  );
+  return [writeHtmlPromise, ...setupAttachmentDownloads(entries)];
 };
 
 const updateLastUpdatedFile = async () => {
@@ -68,14 +138,16 @@ const updateLastUpdatedFile = async () => {
   );
   const currentDatetime = DateTime.local().setZone("local");
   const formatted = currentDatetime.toFormat(TIME_FORMAT);
-  await fs.writeFile(GLOBAL_LAST_UPDATED_FP, formatted, "utf-8");
+  await fs.writeFile(GLOBAL_LAST_UPDATED_FP, formatted);
 };
 
 const updateCities = async () => {
-  const [rawGlobalLastUpdated, data] = await Promise.all([
+  const [rawGlobalLastUpdated, rawTemplate, data] = await Promise.all([
     fs.readFile(GLOBAL_LAST_UPDATED_FP, "utf-8"),
+    fs.readFile("scripts/city_detail.html.handlebars", "utf-8"),
     fetchData(),
   ]);
+  const template = Handlebars.compile(rawTemplate);
   const globalLastUpdated = parseDatetime(rawGlobalLastUpdated, false);
 
   const cityStateMap = {};
@@ -90,10 +162,11 @@ const updateCities = async () => {
     cityStateMap[cityState].push(row);
   });
 
-  Object.entries(cityStateMap).forEach(([cityState, entries]) =>
-    processCity(cityState, entries, globalLastUpdated)
+  const cityPromises = Object.entries(cityStateMap).flatMap(
+    ([cityState, entries]) =>
+      processCity(cityState, entries, template, globalLastUpdated)
   );
-
+  await Promise.all(cityPromises);
   await updateLastUpdatedFile();
 };
 
@@ -101,4 +174,4 @@ if (process.env.NODE_ENV !== "test") {
   updateCities().catch((error) => console.error(error));
 }
 
-export { needsUpdate, parseDatetime };
+export { needsUpdate, normalizeAttachments, parseDatetime };
