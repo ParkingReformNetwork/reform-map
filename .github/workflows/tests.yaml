@@ -16,4 +16,4 @@ jobs:
       - name: Lint
         run: npm run lint
       - name: Run tests
-        run: npm test || true
+        run: npm test
