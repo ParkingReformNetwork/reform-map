@@ -1,5 +1,9 @@
 const { describe, expect, test } = require("@jest/globals");
-const { needsUpdate, parseDatetime } = require("../updateCityDetail");
+const {
+  needsUpdate,
+  normalizeAttachments,
+  parseDatetime,
+} = require("../updateCityDetail");
 
 describe("needsUpdate()", () => {
   test("returns false if everything is older than globalLastUpdated", () => {
@@ -100,4 +104,42 @@ describe("needsUpdate()", () => {
     globalLastUpdated = parseDatetime("May 6, 2023, 11:00:00 AM PDT");
     expect(needsUpdate(entries, globalLastUpdated)).toBe(true);
   });
+});
+
+test("normalizeAttachments() converts string entries into objects", () => {
+  const input = [
+    { Attachments: "" },
+    { Attachments: "https://prn.org/photo1.png" },
+    { Attachments: "https://prn.org/doc1.pdf https://prn.org/img2.jpg" },
+  ];
+  normalizeAttachments(input, "MyCity_AZ");
+  expect(input).toEqual([
+    { Attachments: [] },
+    {
+      Attachments: [
+        {
+          url: "https://prn.org/photo1.png",
+          fileName: "photo1.png",
+          isDoc: false,
+          outputPath: "attachment_images/MyCity_AZ_2_1.png",
+        },
+      ],
+    },
+    {
+      Attachments: [
+        {
+          url: "https://prn.org/doc1.pdf",
+          fileName: "doc1.pdf",
+          isDoc: true,
+          outputPath: "attachment_images/MyCity_AZ_3_1.pdf",
+        },
+        {
+          url: "https://prn.org/img2.jpg",
+          fileName: "img2.jpg",
+          isDoc: false,
+          outputPath: "attachment_images/MyCity_AZ_3_2.jpg",
+        },
+      ],
+    },
+  ]);
 });
