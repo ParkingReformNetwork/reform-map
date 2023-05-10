@@ -9,44 +9,47 @@ It is written in R, but in the process of being converted to JavaScript.
 ### Dependencies
 
 The app is built in [Shiny](https://shiny.rstudio.com/), so you need to install:
-* System software:
-    * R ('r-base' in Debian/Ubuntu)
-    * libcurl4-openssl-dev (`libcurl4-openssl-dev` in Debian/Ubuntu)
-    * libgdal-dev (`libgdal-dev` in Debian/Ubuntu)
-    * libssl-dev (`libssl-dev`in Debian/Ubuntu)
-* R libraries for local development: 
-    * `dplyr`
-    * `fontawesome`
-    * `leaflet`
-    * `lubridate`
-    * `R.rsp`
-    * `shiny`
-    * `shinyjs`
-    * `stringr`
-    * `tidygeocoder`
-* R libraries for [shinyapps.io](shinyapps.io) deployment:
-    * `anytime`
-    * `BH`
-    * `shinyWidgets`
+
+- System software:
+  - R ('r-base' in Debian/Ubuntu)
+  - libcurl4-openssl-dev (`libcurl4-openssl-dev` in Debian/Ubuntu)
+  - libgdal-dev (`libgdal-dev` in Debian/Ubuntu)
+  - libssl-dev (`libssl-dev`in Debian/Ubuntu)
+- R libraries for local development:
+  - `dplyr`
+  - `fontawesome`
+  - `leaflet`
+  - `lubridate`
+  - `R.rsp`
+  - `shiny`
+  - `shinyjs`
+  - `stringr`
+  - `tidygeocoder`
+- R libraries for [shinyapps.io](shinyapps.io) deployment:
+  - `anytime`
+  - `BH`
+  - `shinyWidgets`
 
 ### Executing program
 
 #### Map App
 
-* Copy the `initial_tidied_map_data.csv` in the same folder and call it `tidied_map_data.csv`. This is a snapshot of the Parking Reform Network data.
-* If you want the most up to date data, run the `generate_map_data.R` script.
-* The local path may need to be changed to work on your computer. The intent is to overwrite the `tidied_map_data.csv` file.
-* In the R console, run:
+- Copy the `initial_tidied_map_data.csv` in the same folder and call it `tidied_map_data.csv`. This is a snapshot of the Parking Reform Network data.
+- If you want the most up to date data, run the `generate_map_data.R` script.
+- The local path may need to be changed to work on your computer. The intent is to overwrite the `tidied_map_data.csv` file.
+- In the R console, run:
+
 ```
 library(shiny)
 runApp('map')
 ```
-* Go to `localhost:[provided port]` in a browser
+
+- Go to `localhost:[provided port]` in a browser
 
 #### Generating Static Webpages
 
-* To generate static pages for each city, run the `create_city_detail_pages.R` script.
-* Again local paths may need to changed. The goal is to output files into the `parking_map/city_detail/` folder.
+- To generate static pages for each city, run the `create_city_detail_pages.R` script.
+- Again local paths may need to changed. The goal is to output files into the `parking_map/city_detail/` folder.
 
 ## Authors
 
@@ -62,10 +65,12 @@ runApp('map')
 
 ### Map App:
 
-### Static Pages: 
+### Static Pages:
 
 ### Shiny Server/app
-* figure out how to automate data update
+
+- figure out how to automate data update
 
 ### Overall
-* develop simple standalone map in leaflet/similar
+
+- develop simple standalone map in leaflet/similar

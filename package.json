@@ -4,16 +4,25 @@
   "type": "module",
   "scripts": {
     "test": "jest",
-    "fmt": "prettier --write .github",
-    "fix": "prettier --write .github; eslint --fix",
-    "lint": "prettier --check .github && eslint"
+    "fmt": "prettier --write .",
+    "fix": "prettier --write .; eslint --fix .",
+    "lint": "prettier --check . && eslint .",
+    "update-city-detail": "node scripts/update-city-detail.js"
   },
   "devDependencies": {
+    "@babel/core": "^7.21.4",
+    "@babel/preset-env": "^7.21.4",
     "@jest/globals": "^29.5.0",
+    "babel-jest": "^29.5.0",
     "eslint": "^8.37.0",
     "eslint-config-airbnb-base": "^15.0.0",
     "eslint-config-prettier": "^8.8.0",
     "jest": "^29.5.0",
     "prettier": "^2.8.7"
+  },
+  "babel": {
+    "presets": [
+      "@babel/preset-env"
+    ]
   }
 }
