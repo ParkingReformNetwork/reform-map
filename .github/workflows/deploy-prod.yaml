@@ -8,6 +8,8 @@ jobs:
     if: github.repository_owner == 'ParkingReformNetwork'
     runs-on: ubuntu-latest
     steps:
+      - name: Check out repository code
+        uses: actions/checkout@v2
       - name: Archive city_detail/ contents
         run: |
           cd city_detail
