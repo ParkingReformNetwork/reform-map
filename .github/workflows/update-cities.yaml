@@ -1,0 +1,37 @@
+name: Update City Details
+on:
+  schedule:
+    - cron: '0 8 * * *' # Runs every day at 12 midnight PT
+  workflow_dispatch:
+jobs:
+  update-city-details:
+    if: github.repository_owner == 'ParkingReformNetwork'
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository code
+        uses: actions/checkout@v3
+      - name: Set up Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: 18
+      - name: Install dependencies
+        run: npm ci
+      - name: Run script
+        run: npm run update-city-detail
+      - name: Check for changes
+        id: git_status
+        run: |
+          if [[ -n $(git status --porcelain) ]]; then
+            echo "::set-output name=has_changes::true"
+          else
+            echo "::set-output name=has_changes::false"
+          fi
+      - name: Create Pull Request
+        if: steps.git_status.outputs.has_changes == 'true'
+        uses: peter-evans/create-pull-request@v3
+        with:
+          token: ${{ secrets.UPDATE_DATA_GITHUB_TOKEN }}
+          commit-message: "Update city details"
+          title: "Update city details"
+          body: "This PR updates cities with the latest changes."
+          branch: "update-city-details"
