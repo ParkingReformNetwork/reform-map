@@ -1,7 +1,7 @@
 name: Update City Details
 on:
   schedule:
-    - cron: '0 8 * * *' # Runs every day at 12 midnight PT
+    - cron: "0 8 * * *" # Runs every day at 12 midnight PT
   workflow_dispatch:
 jobs:
   update-city-details:
