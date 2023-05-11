@@ -6,6 +6,7 @@ import fetch from "node-fetch";
 import Papa from "papaparse";
 import Handlebars from "handlebars";
 import { DateTime } from "luxon";
+import pLimit from "p-limit";
 
 const GLOBAL_LAST_UPDATED_FP = "scripts/city_detail_last_updated.txt";
 const TIME_FORMAT = "MMMM d, yyyy, h:mm:ss a z";
@@ -85,7 +86,7 @@ const setupAttachmentDownloads = (cityEntries) =>
       const response = await fetch(attachment.url);
       const buffer = await response.arrayBuffer();
       return fs.writeFile(
-        `city_detail_js/${attachment.outputPath}`,
+        `city_detail/${attachment.outputPath}`,
         Buffer.from(buffer)
       );
     })
@@ -126,7 +127,7 @@ const processCity = (cityState, entries, template, globalLastUpdated) => {
   const cityStateNoSpace = cityState.replace(/ /g, "");
   normalizeAttachments(entries, cityStateNoSpace);
   const writeHtmlPromise = fs.writeFile(
-    `city_detail_js/${cityStateNoSpace}.html`,
+    `city_detail/${cityStateNoSpace}.html`,
     renderHandlebars(entries, template)
   );
   return [writeHtmlPromise, ...setupAttachmentDownloads(entries)];
@@ -162,10 +163,13 @@ const updateCities = async () => {
     cityStateMap[cityState].push(row);
   });
 
+  // If download concurrency is too high, we get ERR_SOCKET_CONNECTION_TIMEOUT.
+  const limit = pLimit(10);
   const cityPromises = Object.entries(cityStateMap).flatMap(
     ([cityState, entries]) =>
-      processCity(cityState, entries, template, globalLastUpdated)
+      limit(() => processCity(cityState, entries, template, globalLastUpdated))
   );
+
   await Promise.all(cityPromises);
   await updateLastUpdatedFile();
 };

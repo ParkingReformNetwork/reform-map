@@ -50,7 +50,7 @@
             }
     </style>
 
-    <title>Parking Reform Network - Reforms in <%=city%>, <%=state%></title>
+    <title>Parking Reform Network - Reforms in Lewistown, IL</title>
     <!-- Global site tag (gtag.js) - Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-5MFS4ZVMY3"></script>
 <script>
@@ -80,7 +80,7 @@
       <div class="row" >
         <div class="col-sm-8">
         <header>
-            <h1 class="display-3"><%=city%>, <%=state%></h1>
+            <h1 class="display-3">Lewistown, IL</h1>
         </header>
         </div>
         <div class="col-sm-4" align="center">
@@ -93,64 +93,49 @@
     </div>
         <hr />
         <h2>Summary</h2>
-        <p class="lead"><%= city_df$Summary[1] %></p>
+        <p class="lead">Exemptions from off street parking are provided for in the B-1 Central Business District.</p>
         <hr />
         <dl class="row">
             <dt class="col-12 col-sm-4 col-lg-3">Implementation Status</dt>
-            <dd class="col-12 col-sm-8 col-lg-9"><%= city_df$Status[1] %></dd>
+            <dd class="col-12 col-sm-8 col-lg-9">Implemented</dd>
 
             <dt class="col-12 col-sm-4 col-lg-3">Reform Type</dt>
-            <dd class="col-12 col-sm-8 col-lg-9"><%= city_df$Reform.Type[1] %></dd>
+            <dd class="col-12 col-sm-8 col-lg-9">Eliminate Parking Minimums</dd>
 
             <dt class="col-12 col-sm-4 col-lg-3">Land Uses</dt>
-            <dd class="col-12 col-sm-8 col-lg-9"><%= city_df$Uses[1] %></dd>
+            <dd class="col-12 col-sm-8 col-lg-9">All Uses</dd>
 
             <dt class="col-12 col-sm-4 col-lg-3">Scope of Reform</dt>
-            <dd class="col-12 col-sm-8 col-lg-9"><%= city_df$Magnitude[1] %></dd>
+            <dd class="col-12 col-sm-8 col-lg-9">City Center/Business District</dd>
             <dt class="col-12 col-sm-4 col-lg-3">Requirements</dt>
-            <dd class="col-12 col-sm-8 col-lg-9"><%= city_df$Requirements[1] %></dd>
+            <dd class="col-12 col-sm-8 col-lg-9">By Right</dd>
             <dt class="col-12 col-sm-4 col-lg-3">Reporter</dt>
-            <dd class="col-12 col-sm-8 col-lg-9"><%= city_df$Reporter[1] %></dd>
-       
-       
-        <% for(j in 1:nrow(city_df)) { %>
+            <dd class="col-12 col-sm-8 col-lg-9">Samuel Deetz</dd>
+
+
             <section class="my-3">
                 <header>
-                    <h2>Citation <%= j %></h2>
+                    <h2>Citation 1</h2>
                 </header>
                 <dl class="row">
                     <dt class="col-12 col-sm-4 col-lg-3">Source Description</dt>
-                    <dd class="col-12 col-sm-8 col-lg-9"><%= city_df$Source.Description[j] %></dd>
+                    <dd class="col-12 col-sm-8 col-lg-9">Lewiston city code</dd>
 
                     <dt class="col-12 col-sm-4 col-lg-3">Type</dt>
-                    <dd class="col-12 col-sm-8 col-lg-9"><%= city_df$Type[j] %></dd>
+                    <dd class="col-12 col-sm-8 col-lg-9">City Code</dd>
 
                     <dt class="col-12 col-sm-4 col-lg-3">URL</dt>
-                    <dd class="col-12 col-sm-8 col-lg-9"><a target="_blank" href="<%= city_df$URL[j] %>"><%= city_df$URL[j] %></a></dd>
+                    <dd class="col-12 col-sm-8 col-lg-9"><a target="_blank" href="https://www.codepublishing.com/IL/Lewistown/#!/Lewistown15/Lewistown15153.html">https://www.codepublishing.com/IL/Lewistown/#!/Lewistown15/Lewistown15153.html</a></dd>
 
                     <dt class="col-12 col-sm-4 col-lg-3">Notes</dt>
-                    <dd class="col-12 col-sm-8 col-lg-9"><%= city_df$Notes[j] %></dd>
+                    <dd class="col-12 col-sm-8 col-lg-9">153.270 (C)</dd>
                 </dl>
-                <% if(nchar(city_df$Attachments[j]) > 0) { %>
                     <h3>Attachments and Screenshots</h3>
                     <ul class="mt-4 list-unstyled">
-                    <% attachments <- strsplit(city_df$Attachments[j], "\\s+") [[1]] %>
-                    <% for(k in 1:length(attachments)) { %>
                         <li class="attachment">
-                             <% file_name <- sapply(attachments[k], basename) %>
-                            <% file_type <- str_extract(attachments[k], "\\.[a-zA-Z_]+$") %>
-                            <% img_path <- paste("attachment_images/", city_state_no_space, "_", j, "_", k, file_type, sep = "") %>
-                            <% download.file(attachments[k], paste("city_detail/", img_path, sep =""))  %>
-                            <% if(file_type == ".docx" || file_type == ".pdf") { %>
-                            <a target="_blank" href="<%= img_path %>"><%= paste(file_name) %></a>
-                            <% } else { %>
-                            <img class="img-fluid" border="1" src="<%= img_path %>">
-                            <% } %>
-                    <% } %>
+                            <img class="img-fluid" border="1" src="attachment_images/Lewistown_IL_1_1.jpg">
                     </ul>
-                <% } %>
             </section>
-        <% } %>
         </div>
     </div>
 
