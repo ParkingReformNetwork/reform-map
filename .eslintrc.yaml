@@ -3,12 +3,8 @@ extends:
   - airbnb-base
   - prettier
 ignorePatterns:
-  - city_detail/
-  - external_pages/
   - map/
 overrides: []
 parserOptions:
   ecmaVersion: latest
   sourceType: module
-rules:
-  import/prefer-default-export: off
