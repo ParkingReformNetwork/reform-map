@@ -19,7 +19,6 @@ The app is built in [Shiny](https://shiny.rstudio.com/), so you need to install:
   - `dplyr`
   - `fontawesome`
   - `leaflet`
-  - `lubridate`
   - `R.rsp`
   - `shiny`
   - `shinyjs`
@@ -45,11 +44,6 @@ runApp('map')
 ```
 
 - Go to `localhost:[provided port]` in a browser
-
-#### Generating Static Webpages
-
-- To generate static pages for each city, run the `create_city_detail_pages.R` script.
-- Again local paths may need to changed. The goal is to output files into the `parking_map/city_detail/` folder.
 
 ## Authors
 

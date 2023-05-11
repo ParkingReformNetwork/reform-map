@@ -85,7 +85,7 @@ const setupAttachmentDownloads = (cityEntries) =>
       const response = await fetch(attachment.url);
       const buffer = await response.arrayBuffer();
       return fs.writeFile(
-        `city_detail_js/${attachment.outputPath}`,
+        `city_detail/${attachment.outputPath}`,
         Buffer.from(buffer)
       );
     })
@@ -126,7 +126,7 @@ const processCity = (cityState, entries, template, globalLastUpdated) => {
   const cityStateNoSpace = cityState.replace(/ /g, "");
   normalizeAttachments(entries, cityStateNoSpace);
   const writeHtmlPromise = fs.writeFile(
-    `city_detail_js/${cityStateNoSpace}.html`,
+    `city_detail/${cityStateNoSpace}.html`,
     renderHandlebars(entries, template)
   );
   return [writeHtmlPromise, ...setupAttachmentDownloads(entries)];
@@ -166,6 +166,7 @@ const updateCities = async () => {
     ([cityState, entries]) =>
       processCity(cityState, entries, template, globalLastUpdated)
   );
+
   await Promise.all(cityPromises);
   await updateLastUpdatedFile();
 };
