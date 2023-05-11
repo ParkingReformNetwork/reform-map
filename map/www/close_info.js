@@ -1,8 +1,9 @@
-window.onload = function () {
-  var click_info = document.getElementById("click_info");
-  document.onclick = function (e) {
+/* global window, document */
+window.onload = () => {
+  const clickInfo = document.getElementById("click_info");
+  document.onclick = (e) => {
     if (e.target.id !== "click_info") {
-      click_info.style.display = "none";
+      clickInfo.style.display = "none";
     }
   };
 };
