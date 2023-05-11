@@ -64,6 +64,3 @@ This project is based on "A Map of Cities That Got Rid of Parking Minimums" inti
 ## Our Donors and Members
 
 Thank you to the donors and the members of the Parking Reform Network for their financial and structural support.
-
-
-
