@@ -6,7 +6,6 @@ import fetch from "node-fetch";
 import Papa from "papaparse";
 import Handlebars from "handlebars";
 import { DateTime } from "luxon";
-import pLimit from "p-limit";
 
 const GLOBAL_LAST_UPDATED_FP = "scripts/city_detail_last_updated.txt";
 const TIME_FORMAT = "MMMM d, yyyy, h:mm:ss a z";
@@ -163,11 +162,9 @@ const updateCities = async () => {
     cityStateMap[cityState].push(row);
   });
 
-  // If download concurrency is too high, we get ERR_SOCKET_CONNECTION_TIMEOUT.
-  const limit = pLimit(10);
   const cityPromises = Object.entries(cityStateMap).flatMap(
     ([cityState, entries]) =>
-      limit(() => processCity(cityState, entries, template, globalLastUpdated))
+      processCity(cityState, entries, template, globalLastUpdated)
   );
 
   await Promise.all(cityPromises);
