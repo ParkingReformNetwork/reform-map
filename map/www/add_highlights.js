@@ -1,6 +1,9 @@
+/* global Shiny, window, $ */
+/* eslint-disable no-console */
+
 // This function adds custom text badges to the markers
-Shiny.addCustomMessageHandler("map_markers_added", function (needs_one_arg) {
-  setTimeout(function () {
+Shiny.addCustomMessageHandler("map_markers_added", () => {
+  setTimeout(() => {
     $(".highlighed_icon").append(
       '<span class="notify-badge notify-badge-highlight">!!!</span>'
     );
@@ -10,5 +13,5 @@ Shiny.addCustomMessageHandler("map_markers_added", function (needs_one_arg) {
   }, 500);
 });
 
-console.log("window.location.href: " + window.location.href);
-console.log("window.location.origin: " + window.location.origin);
+console.log(`window.location.href: ${window.location.href}`);
+console.log(`window.location.origin: ${window.location.origin}`);

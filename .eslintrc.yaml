@@ -2,8 +2,6 @@ extends:
   - eslint:recommended
   - airbnb-base
   - prettier
-ignorePatterns:
-  - map/
 overrides: []
 parserOptions:
   ecmaVersion: latest
