@@ -21,10 +21,10 @@ jobs:
       - name: Check for changes
         id: git_status
         run: |
-          if [[ -n $(git status --porcelain) ]]; then
-            echo "::set-output name=has_changes::true"
+          if [[ -n $(git status --porcelain | grep -v 'scripts/city_detail_last_updated.txt') ]]; then
+            echo "has_changes=true" >> $GITHUB_STATE
           else
-            echo "::set-output name=has_changes::false"
+            echo "has_changes=false" >> $GITHUB_STATE
           fi
       - name: Create Pull Request
         if: steps.git_status.outputs.has_changes == 'true'
