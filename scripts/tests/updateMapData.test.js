@@ -1,9 +1,10 @@
-import {
+const { describe, expect, test } = require("@jest/globals");
+const {
   magnitudeToHighest,
   magnitudeToHighestOrAllUses,
   landUseToString,
   populationToBin,
-} from "../updateMapData";
+} = require("../updateMapData");
 
 describe("magnitudeToHighest", () => {
   const testCases = [
