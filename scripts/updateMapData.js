@@ -1,6 +1,7 @@
 /* eslint-disable import/no-extraneous-dependencies */
 /* eslint-disable no-console */
 /* eslint-disable no-unused-vars */
+import fs from "fs/promises";
 
 import fetch from "node-fetch";
 import Papa from "papaparse";
@@ -175,11 +176,74 @@ const readReportCsv = async () => {
   return reportTrimmed;
 };
 
+const readOldReportCsv = async () => {
+  const csvText = await fs.readFile("map/tidied_map_data.csv", "utf-8");
+  const { data } = Papa.parse(csvText, { header: true, dynamicTyping: true });
+
+  const mappedData = data.map((row) => ({
+    city: row.city,
+    state: row.state,
+    country: row.country,
+    lat: row.lat,
+    long: row.long,
+  }));
+
+  // We use a map to deduplicate. Note that a Set would not work properly
+  // due to JavaScript's strict equality checks for objects.
+  return [
+    ...new Map(
+      mappedData.map((item) => [
+        `${item.city}_${item.state}_${item.country}`,
+        item,
+      ])
+    ).values(),
+  ];
+};
+
+/**
+ * For each row in baseRows, find and join its matching row in newRows.
+ *
+ * If there are no matching newRows, still keep the base row. Assumes
+ * there is not more than one new row per base row.
+ */
+const leftJoin = (baseRows, newRows) =>
+  baseRows.map((baseRow) => {
+    const matchingRows = newRows.filter(
+      (newRow) =>
+        newRow.city === baseRow.city &&
+        newRow.state === baseRow.state &&
+        newRow.country === baseRow.country
+    );
+
+    return matchingRows.length > 0
+      ? { ...baseRow, ...matchingRows[0] }
+      : baseRow;
+  });
+
+// -------------------------------------------------------------
+// Main
+// -------------------------------------------------------------
+
+const main = async () => {
+  const [cityData, reportData, oldReportData] = await Promise.all([
+    readCityCsv(),
+    readReportCsv(),
+    readOldReportCsv(),
+  ]);
+
+  // This adds the population and citation_url to the report rows.
+  const mergedData = leftJoin(reportData, cityData);
+
+  // We merge the lat/lng of the previous saved report to avoid hitting the Geocoding API as much.
+  const initialResult = leftJoin(mergedData, oldReportData);
+};
+
 if (process.env.NODE_ENV !== "test") {
-  console.log(await readReportCsv());
+  main().catch((error) => console.error(error));
 }
 
 export {
+  leftJoin,
   magnitudeToHighest,
   magnitudeToHighestOrAllUses,
   landUseToString,

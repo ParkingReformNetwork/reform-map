@@ -141,7 +141,7 @@ const updateLastUpdatedFile = async () => {
   await fs.writeFile(GLOBAL_LAST_UPDATED_FP, formatted);
 };
 
-const updateCities = async () => {
+const main = async () => {
   const [rawGlobalLastUpdated, rawTemplate, data] = await Promise.all([
     fs.readFile(GLOBAL_LAST_UPDATED_FP, "utf-8"),
     fs.readFile("scripts/city_detail.html.handlebars", "utf-8"),
@@ -172,7 +172,7 @@ const updateCities = async () => {
 };
 
 if (process.env.NODE_ENV !== "test") {
-  await updateCities().catch((error) => console.error(error));
+  main().catch((error) => console.error(error));
 }
 
 export { needsUpdate, normalizeAttachments, parseDatetime };
