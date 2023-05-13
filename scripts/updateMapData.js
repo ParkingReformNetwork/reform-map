@@ -1,3 +1,9 @@
+/* eslint-disable import/no-extraneous-dependencies */
+/* eslint-disable no-console */
+
+import fetch from "node-fetch";
+import Papa from "papaparse";
+
 // -------------------------------------------------------------
 // Encoding logic
 // -------------------------------------------------------------
@@ -84,6 +90,46 @@ const populationToBin = (population) => {
   }
   return 0.2;
 };
+
+// -------------------------------------------------------------
+// Read/pre-process CSVs
+// -------------------------------------------------------------
+
+const readCityCsv = async () => {
+  const response = await fetch(
+    "https://area120tables.googleapis.com/link/aR_AWTAZ6WF8_ZB3HgfOvN/export?key=8-SifuDc4Fg7purFrntOa7bjE0ikjGAy28t36wUBIOJx9vFGZuSR89N1PkSTFXpOk6"
+  );
+  const csvText = await response.text();
+  const { data } = Papa.parse(csvText, { header: true, dynamicTyping: true });
+
+  const cityCleaned = data.map((row) => {
+    const cityState = `${row.City}_${row["State/Province"]}`.replace(
+      /\s+/g,
+      ""
+    );
+    return {
+      city: row.City,
+      state: row["State/Province"],
+      country: row.Country,
+      population:
+        typeof row.Population === "string"
+          ? Number(row.Population.replace(",", ""))
+          : row.Population || 0,
+      // TODO: row.Notable is not set in the CSV, so it always ends up being false. Remove
+      //  this logic once done porting.
+      is_notable: false,
+      // TODO: row.Recent is not set in the CSV, so it always ends up being false. Remove
+      //  this logic once done porting.
+      is_recent: false,
+      citation_url: `https://parkingreform.org/mandates-map/city_detail/${cityState}.html`,
+    };
+  });
+  return cityCleaned;
+};
+
+if (process.env.NODE_ENV !== "test") {
+  console.log(await readCityCsv());
+}
 
 export {
   magnitudeToHighest,

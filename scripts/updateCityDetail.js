@@ -172,7 +172,7 @@ const updateCities = async () => {
 };
 
 if (process.env.NODE_ENV !== "test") {
-  updateCities().catch((error) => console.error(error));
+  await updateCities().catch((error) => console.error(error));
 }
 
 export { needsUpdate, normalizeAttachments, parseDatetime };
