@@ -1,5 +1,6 @@
 /* eslint-disable import/no-extraneous-dependencies */
 /* eslint-disable no-console */
+/* eslint-disable no-unused-vars */
 
 import fetch from "node-fetch";
 import Papa from "papaparse";
@@ -127,8 +128,55 @@ const readCityCsv = async () => {
   return cityCleaned;
 };
 
+const readReportCsv = async () => {
+  const response = await fetch(
+    "https://area120tables.googleapis.com/link/bAc5xhhLJ2q4jYYGjaq_24/export?key=8_S1APcQHGN9zfTXEMz_Gz8sel3FCo3RUfEV4f-PBOqE8zy3vG3FpCQcSXQjRDXOqZ"
+  );
+  const csvText = await response.text();
+  const { data } = Papa.parse(csvText, { header: true, dynamicTyping: true });
+
+  const checkIncludes = (str, term) =>
+    typeof str === "string" && str.toLowerCase().includes(term) ? 1 : 0;
+
+  const reportTrimmed = data.map((row) => ({
+    city: row.city_id,
+    state: row.state,
+    country: row.country,
+    report_summary: row.Summary,
+    report_status: row.Status,
+    report_type: row.Type,
+    report_magnitude: row.Magnitude,
+    land_uses: row.Uses,
+    reporter_name: row.Reporter,
+    date_of_reform: row["Date of Reform"],
+    last_updated: row["Last updated"],
+    is_verified: row["Verified By"]?.split(",").length >= 2 ? 1 : 0,
+    is_magnitude_regional: checkIncludes(row.Magnitude, "regional"),
+    is_magnitude_citywide: checkIncludes(row.Magnitude, "citywide"),
+    is_magnitude_citycenter: checkIncludes(
+      row.Magnitude,
+      "city center/business district"
+    ),
+    is_magnitude_transit: checkIncludes(row.Magnitude, "transit oriented"),
+    is_magnitude_mainstreet: checkIncludes(
+      row.Magnitude,
+      "main street/special"
+    ),
+    is_type_eliminated: checkIncludes(row.Type, "eliminate parking minimums"),
+    is_type_reduced: checkIncludes(row.Type, "reduce parking minimums"),
+    is_type_maximums: checkIncludes(row.Type, "parking maximums"),
+    is_uses_alluses: checkIncludes(row.Uses, "all uses"),
+    is_uses_residential: checkIncludes(row.Uses, "residential"),
+    is_uses_commercial: checkIncludes(row.Uses, "commercial"),
+    is_uses_lowdensity: checkIncludes(row.Uses, "low density (sf) residential"),
+    is_uses_multifamily: checkIncludes(row.Uses, "multi-family residential"),
+    is_no_mandate_city: checkIncludes(row.Highlights, "no mandates"),
+  }));
+  return reportTrimmed;
+};
+
 if (process.env.NODE_ENV !== "test") {
-  console.log(await readCityCsv());
+  console.log(await readReportCsv());
 }
 
 export {
