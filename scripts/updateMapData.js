@@ -116,14 +116,10 @@ const readCityCsv = async () => {
       country: row.Country,
       population:
         typeof row.Population === "string"
-          ? Number(row.Population.replace(",", ""))
+          ? Number(row.Population.replace(/,/g, ""))
           : row.Population || 0,
-      // TODO: row.Notable is not set in the CSV, so it always ends up being false. Remove
-      //  this logic once done porting.
-      is_notable: false,
-      // TODO: row.Recent is not set in the CSV, so it always ends up being false. Remove
-      //  this logic once done porting.
-      is_recent: false,
+      is_notable: row.Notable === null ? "" : row.Notable,
+      is_recent: row.Recent === null ? "" : row.Recent,
       citation_url: `https://parkingreform.org/mandates-map/city_detail/${cityState}.html`,
     };
   });
@@ -141,46 +137,54 @@ const readReportCsv = async () => {
   const checkIncludes = (str, term) =>
     typeof str === "string" && str.toLowerCase().includes(term) ? 1 : 0;
 
-  const reportTrimmed = data.map((row) => ({
-    city: row.city_id,
-    state: row.state,
-    country: row.country,
-    report_summary: row.Summary,
-    report_status: row.Status,
-    report_type: row.Type,
-    report_magnitude: row.Magnitude || "",
-    land_uses: row.Uses || "",
-    reporter_name: row.Reporter,
-    date_of_reform: row["Date of Reform"],
-    last_updated: row["Last updated"],
-    is_verified: row["Verified By"]?.split(",").length >= 2 ? 1 : 0,
-    is_magnitude_regional: checkIncludes(row.Magnitude, "regional"),
-    is_magnitude_citywide: checkIncludes(row.Magnitude, "citywide"),
-    is_magnitude_citycenter: checkIncludes(
-      row.Magnitude,
-      "city center/business district"
-    ),
-    is_magnitude_transit: checkIncludes(row.Magnitude, "transit oriented"),
-    is_magnitude_mainstreet: checkIncludes(
-      row.Magnitude,
-      "main street/special"
-    ),
-    is_type_eliminated: checkIncludes(row.Type, "eliminate parking minimums"),
-    is_type_reduced: checkIncludes(row.Type, "reduce parking minimums"),
-    is_type_maximums: checkIncludes(row.Type, "parking maximums"),
-    is_uses_alluses: checkIncludes(row.Uses, "all uses"),
-    is_uses_residential: checkIncludes(row.Uses, "residential"),
-    is_uses_commercial: checkIncludes(row.Uses, "commercial"),
-    is_uses_lowdensity: checkIncludes(row.Uses, "low density (sf) residential"),
-    is_uses_multifamily: checkIncludes(row.Uses, "multi-family residential"),
-    is_no_mandate_city: checkIncludes(row.Highlights, "no mandates"),
-  }));
+  const reportTrimmed = data
+    .filter((row) => row.city_id)
+    .map((row) => ({
+      city: row.city_id,
+      state: row.state,
+      country: row.country,
+      report_summary: row.Summary || "",
+      report_status: row.Status || "",
+      report_type: row.Type || "",
+      report_magnitude: row.Magnitude || "",
+      land_uses: row.Uses || "",
+      reporter_name: row.Reporter || "",
+      date_of_reform: row["Date of Reform"] || "",
+      last_updated: row["Last updated"],
+      is_verified: row["Verified By"]?.split(",").length >= 2 ? 1 : 0,
+      is_magnitude_regional: checkIncludes(row.Magnitude, "regional"),
+      is_magnitude_citywide: checkIncludes(row.Magnitude, "citywide"),
+      is_magnitude_citycenter: checkIncludes(
+        row.Magnitude,
+        "city center/business district"
+      ),
+      is_magnitude_transit: checkIncludes(row.Magnitude, "transit oriented"),
+      is_magnitude_mainstreet: checkIncludes(
+        row.Magnitude,
+        "main street/special"
+      ),
+      is_type_eliminated: checkIncludes(row.Type, "eliminate parking minimums"),
+      is_type_reduced: checkIncludes(row.Type, "reduce parking minimums"),
+      is_type_maximums: checkIncludes(row.Type, "parking maximums"),
+      is_uses_alluses: checkIncludes(row.Uses, "all uses"),
+      is_uses_residential: checkIncludes(row.Uses, "residential"),
+      is_uses_commercial: checkIncludes(row.Uses, "commercial"),
+      is_uses_lowdensity: checkIncludes(
+        row.Uses,
+        "low density (sf) residential"
+      ),
+      is_uses_multifamily: checkIncludes(row.Uses, "multi-family residential"),
+      is_no_mandate_city: checkIncludes(row.Highlights, "no mandates"),
+    }));
   return reportTrimmed;
 };
 
 const readOldReportCsv = async () => {
   const csvText = await fs.readFile("map/tidied_map_data.csv", "utf-8");
-  const { data } = Papa.parse(csvText, { header: true, dynamicTyping: true });
+  const { data } = Papa.parse(csvText.trim(), {
+    header: true,
+    dynamicTyping: true,
+  });
 
   const mappedData = data.map((row) => ({
     city: row.city,
@@ -232,26 +236,43 @@ const addMissingLatLng = async (reportData) => reportData;
 // Final result
 // -------------------------------------------------------------
 
+/**
+ * Used to minimize diff with the original R result.
+ */
+const shouldCsvQuote = (val, columnIndex) =>
+  typeof val === "string" || typeof val === "boolean" || columnIndex === 0;
+
+const determineSpecialLabel = (row) => {
+  if (row.is_notable === true) {
+    return "highlighted_icon";
+  }
+  if (row.is_recent === true) {
+    return "new_icon";
+  }
+  return "not_special_icon";
+};
+
 const postProcessResult = (reportData) =>
   reportData
     .sort((a, b) => a.population - b.population)
-    .map((report) => ({
-      ...report,
-      id: report.city + report.state + report.country,
-      magnitude_encoded: magnitudeToHighest(report.report_magnitude),
+    .map((row, idx) => ({
+      index: idx + 1,
+      ...row,
+      id: row.city + row.state + row.country,
+      magnitude_encoded: magnitudeToHighest(row.report_magnitude),
       border_encoded: magnitudeToHighestOrAllUses(
-        report.report_magnitude,
-        report.land_uses
+        row.report_magnitude,
+        row.land_uses
       ),
-      land_use_encoded: landUseToString(report.land_uses),
-      population_encoded: populationToBin(report.population),
-      city_search: `${report.city}, ${report.state}`,
-      is_special: "not_special_icon",
+      land_use_encoded: landUseToString(row.land_uses),
+      population_encoded: populationToBin(row.population),
+      city_search: `${row.city}, ${row.state}`,
+      is_special: determineSpecialLabel(row),
     }));
 
 const writeResult = async (result) => {
-  const csv = Papa.unparse(result);
-  await fs.writeFile("map/tidied_map_data.csv", csv);
+  const csv = Papa.unparse(result, { quotes: shouldCsvQuote });
+  await fs.writeFile("map/tidied_map_data2.csv", csv);
 };
 
 // -------------------------------------------------------------
@@ -263,10 +284,6 @@ const writeResult = async (result) => {
  */
 const writeTrimmedReport = async (finalReport) => {
   const excludedKeys = [
-    "is_magnitude",
-    "is_type",
-    "is_uses",
-    "encoded",
     "is_notable",
     "is_recent",
     "is_special",
@@ -276,11 +293,20 @@ const writeTrimmedReport = async (finalReport) => {
   ];
   const trimmed = finalReport.map((row) =>
     Object.fromEntries(
-      Object.entries(row).filter(([key]) => !excludedKeys.includes(key))
+      Object.entries(row).filter(
+        ([key]) =>
+          !(
+            excludedKeys.includes(key) ||
+            key.includes("is_magnitude") ||
+            key.includes("is_type") ||
+            key.includes("is_uses") ||
+            key.includes("encoded")
+          )
+      )
     )
   );
-  const csv = Papa.unparse(finalReport);
-  await fs.writeFile("map/trimmed_map_data.csv", csv);
+  const csv = Papa.unparse(trimmed, { quotes: shouldCsvQuote });
+  await fs.writeFile("map/trimmed_map_data2.csv", csv);
 };
 
 // -------------------------------------------------------------
