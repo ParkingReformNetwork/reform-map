@@ -148,8 +148,8 @@ const readReportCsv = async () => {
     report_summary: row.Summary,
     report_status: row.Status,
     report_type: row.Type,
-    report_magnitude: row.Magnitude,
-    land_uses: row.Uses,
+    report_magnitude: row.Magnitude || "",
+    land_uses: row.Uses || "",
     reporter_name: row.Reporter,
     date_of_reform: row["Date of Reform"],
     last_updated: row["Last updated"],
@@ -226,56 +226,7 @@ const leftJoin = (baseRows, newRows) =>
 // Geocoding
 // -------------------------------------------------------------
 
-// const NodeGeocoder = require("node-geocoder");
-//
-// const geocoderOptions = {
-//  provider: "openstreetmap",
-// };
-//
-// const geocoder = NodeGeocoder(geocoderOptions);
-
-const addMissingLatLng = async (reportData) => {
-  //  const reportDataWithLatLng = [];
-  //
-  //  for (const report of reportData) {
-  //    if (!report.lat || !report.long) {
-  //      try {
-  //        const geocodeResults = await tryGeocode(report);
-  //        if (geocodeResults.length > 0) {
-  //          report.lat = geocodeResults[0].latitude;
-  //          report.long = geocodeResults[0].longitude;
-  //        }
-  //      } catch (error) {
-  //        console.error(`Failed to geocode: ${error}`);
-  //      }
-  //    }
-  //
-  //    reportDataWithLatLng.push(report);
-  //  }
-  //
-  //  return reportDataWithLatLng;
-  return reportData;
-};
-
-// const tryGeocode = async (report) => {
-//  const locationMethods = [
-//    () => `${report.city}, ${report.state}, ${report.country}`,
-//    () => `${report.city}, ${report.state}`,
-//    () => `${report.city}`,
-//    // Assuming here that report.county is available, replace with appropriate field if not
-//    () => `${report.county}, ${report.state}`,
-//  ];
-//
-//  for (const getLocationString of locationMethods) {
-//    const locationString = getLocationString();
-//    const geocodeResults = await geocoder.geocode(locationString);
-//    if (geocodeResults.length > 0) {
-//      return geocodeResults;
-//    }
-//  }
-//
-//  throw new Error(`Could not geocode report: ${JSON.stringify(report)}`);
-// };
+const addMissingLatLng = async (reportData) => reportData;
 
 // -------------------------------------------------------------
 // Final result
