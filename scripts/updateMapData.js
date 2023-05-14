@@ -98,10 +98,11 @@ const populationToBin = (population) => {
 // -------------------------------------------------------------
 
 const readCityCsv = async () => {
-  const response = await fetch(
-    "https://area120tables.googleapis.com/link/aR_AWTAZ6WF8_ZB3HgfOvN/export?key=8-SifuDc4Fg7purFrntOa7bjE0ikjGAy28t36wUBIOJx9vFGZuSR89N1PkSTFXpOk6"
-  );
-  const csvText = await response.text();
+  //  const response = await fetch(
+  //    "https://area120tables.googleapis.com/link/aR_AWTAZ6WF8_ZB3HgfOvN/export?key=8-SifuDc4Fg7purFrntOa7bjE0ikjGAy28t36wUBIOJx9vFGZuSR89N1PkSTFXpOk6"
+  //  );
+  //  const csvText = await response.text();
+  const csvText = await fs.readFile("city.csv", "utf-8");
   const { data } = Papa.parse(csvText, { header: true, dynamicTyping: true });
 
   const cityCleaned = data.map((row) => {
@@ -130,10 +131,11 @@ const readCityCsv = async () => {
 };
 
 const readReportCsv = async () => {
-  const response = await fetch(
-    "https://area120tables.googleapis.com/link/bAc5xhhLJ2q4jYYGjaq_24/export?key=8_S1APcQHGN9zfTXEMz_Gz8sel3FCo3RUfEV4f-PBOqE8zy3vG3FpCQcSXQjRDXOqZ"
-  );
-  const csvText = await response.text();
+  //  const response = await fetch(
+  //    "https://area120tables.googleapis.com/link/bAc5xhhLJ2q4jYYGjaq_24/export?key=8_S1APcQHGN9zfTXEMz_Gz8sel3FCo3RUfEV4f-PBOqE8zy3vG3FpCQcSXQjRDXOqZ"
+  //  );
+  //  const csvText = await response.text();
+  const csvText = await fs.readFile("report.csv", "utf-8");
   const { data } = Papa.parse(csvText, { header: true, dynamicTyping: true });
 
   const checkIncludes = (str, term) =>
@@ -252,6 +254,7 @@ const addMissingLatLng = async (reportData) => {
   //  }
   //
   //  return reportDataWithLatLng;
+  return reportData;
 };
 
 // const tryGeocode = async (report) => {
@@ -346,7 +349,7 @@ const main = async () => {
   // We merge the lat/lng of the previous saved report to avoid hitting the Geocoding API as much.
   const initialResult = leftJoin(mergedData, oldReportData);
 
-  const withLatLng = addMissingLatLng(initialResult);
+  const withLatLng = await addMissingLatLng(initialResult);
   const finalReport = postProcessResult(withLatLng);
   await Promise.all([
     writeResult(finalReport),
