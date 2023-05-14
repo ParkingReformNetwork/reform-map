@@ -224,13 +224,13 @@ const leftJoin = (baseRows, newRows) =>
 // Geocoding
 // -------------------------------------------------------------
 
-//const NodeGeocoder = require("node-geocoder");
+// const NodeGeocoder = require("node-geocoder");
 //
-//const geocoderOptions = {
+// const geocoderOptions = {
 //  provider: "openstreetmap",
-//};
+// };
 //
-//const geocoder = NodeGeocoder(geocoderOptions);
+// const geocoder = NodeGeocoder(geocoderOptions);
 
 const addMissingLatLng = async (reportData) => {
   //  const reportDataWithLatLng = [];
@@ -254,7 +254,7 @@ const addMissingLatLng = async (reportData) => {
   //  return reportDataWithLatLng;
 };
 
-//const tryGeocode = async (report) => {
+// const tryGeocode = async (report) => {
 //  const locationMethods = [
 //    () => `${report.city}, ${report.state}, ${report.country}`,
 //    () => `${report.city}, ${report.state}`,
@@ -272,7 +272,7 @@ const addMissingLatLng = async (reportData) => {
 //  }
 //
 //  throw new Error(`Could not geocode report: ${JSON.stringify(report)}`);
-//};
+// };
 
 // -------------------------------------------------------------
 // Final result
@@ -289,19 +289,44 @@ const postProcessResult = (reportData) =>
         report.report_magnitude,
         report.land_uses
       ),
-      land_use_encoded: landUseString(report.land_uses),
+      land_use_encoded: landUseToString(report.land_uses),
       population_encoded: populationToBin(report.population),
       city_search: `${report.city}, ${report.state}`,
-      is_special: report.is_notable
-        ? "highlighted_icon"
-        : report.is_recent
-        ? "new_icon"
-        : "not_special_icon",
+      is_special: "not_special_icon",
     }));
 
 const writeResult = async (result) => {
-  const csv = Papa.unparse(data);
+  const csv = Papa.unparse(result);
   await fs.writeFile("map/tidied_map_data.csv", csv);
+};
+
+// -------------------------------------------------------------
+// Trimmed report
+// -------------------------------------------------------------
+
+/**
+ * Write trimmed_map_data.csv, which we share for external consumption.
+ */
+const writeTrimmedReport = async (finalReport) => {
+  const excludedKeys = [
+    "is_magnitude",
+    "is_type",
+    "is_uses",
+    "encoded",
+    "is_notable",
+    "is_recent",
+    "is_special",
+    "id",
+    "is_verified",
+    "city_search",
+  ];
+  const trimmed = finalReport.map((row) =>
+    Object.fromEntries(
+      Object.entries(row).filter(([key]) => !excludedKeys.includes(key))
+    )
+  );
+  const csv = Papa.unparse(finalReport);
+  await fs.writeFile("map/trimmed_map_data.csv", csv);
 };
 
 // -------------------------------------------------------------
@@ -323,7 +348,10 @@ const main = async () => {
 
   const withLatLng = addMissingLatLng(initialResult);
   const finalReport = postProcessResult(withLatLng);
-  await writeResult(finalReport);
+  await Promise.all([
+    writeResult(finalReport),
+    writeTrimmedReport(finalReport),
+  ]);
 };
 
 if (process.env.NODE_ENV !== "test") {
