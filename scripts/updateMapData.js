@@ -221,6 +221,90 @@ const leftJoin = (baseRows, newRows) =>
   });
 
 // -------------------------------------------------------------
+// Geocoding
+// -------------------------------------------------------------
+
+//const NodeGeocoder = require("node-geocoder");
+//
+//const geocoderOptions = {
+//  provider: "openstreetmap",
+//};
+//
+//const geocoder = NodeGeocoder(geocoderOptions);
+
+const addMissingLatLng = async (reportData) => {
+  //  const reportDataWithLatLng = [];
+  //
+  //  for (const report of reportData) {
+  //    if (!report.lat || !report.long) {
+  //      try {
+  //        const geocodeResults = await tryGeocode(report);
+  //        if (geocodeResults.length > 0) {
+  //          report.lat = geocodeResults[0].latitude;
+  //          report.long = geocodeResults[0].longitude;
+  //        }
+  //      } catch (error) {
+  //        console.error(`Failed to geocode: ${error}`);
+  //      }
+  //    }
+  //
+  //    reportDataWithLatLng.push(report);
+  //  }
+  //
+  //  return reportDataWithLatLng;
+};
+
+//const tryGeocode = async (report) => {
+//  const locationMethods = [
+//    () => `${report.city}, ${report.state}, ${report.country}`,
+//    () => `${report.city}, ${report.state}`,
+//    () => `${report.city}`,
+//    // Assuming here that report.county is available, replace with appropriate field if not
+//    () => `${report.county}, ${report.state}`,
+//  ];
+//
+//  for (const getLocationString of locationMethods) {
+//    const locationString = getLocationString();
+//    const geocodeResults = await geocoder.geocode(locationString);
+//    if (geocodeResults.length > 0) {
+//      return geocodeResults;
+//    }
+//  }
+//
+//  throw new Error(`Could not geocode report: ${JSON.stringify(report)}`);
+//};
+
+// -------------------------------------------------------------
+// Final result
+// -------------------------------------------------------------
+
+const postProcessResult = (reportData) =>
+  reportData
+    .sort((a, b) => a.population - b.population)
+    .map((report) => ({
+      ...report,
+      id: report.city + report.state + report.country,
+      magnitude_encoded: magnitudeToHighest(report.report_magnitude),
+      border_encoded: magnitudeToHighestOrAllUses(
+        report.report_magnitude,
+        report.land_uses
+      ),
+      land_use_encoded: landUseString(report.land_uses),
+      population_encoded: populationToBin(report.population),
+      city_search: `${report.city}, ${report.state}`,
+      is_special: report.is_notable
+        ? "highlighted_icon"
+        : report.is_recent
+        ? "new_icon"
+        : "not_special_icon",
+    }));
+
+const writeResult = async (result) => {
+  const csv = Papa.unparse(data);
+  await fs.writeFile("map/tidied_map_data.csv", csv);
+};
+
+// -------------------------------------------------------------
 // Main
 // -------------------------------------------------------------
 
@@ -236,6 +320,10 @@ const main = async () => {
 
   // We merge the lat/lng of the previous saved report to avoid hitting the Geocoding API as much.
   const initialResult = leftJoin(mergedData, oldReportData);
+
+  const withLatLng = addMissingLatLng(initialResult);
+  const finalReport = postProcessResult(withLatLng);
+  await writeResult(finalReport);
 };
 
 if (process.env.NODE_ENV !== "test") {
