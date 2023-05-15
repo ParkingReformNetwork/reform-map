@@ -2,9 +2,9 @@
 
 This code runs the Mandates Map app for the Parking Reform Network: https://parkingreform.org/mandates-map/.
 
-It is written in R, but in the process of being converted to JavaScript.
+The scripts are written in JavaScript and the app in R. We want to rewrite the app to JavaScript.
 
-## Getting Started
+## Running the map app
 
 ### Dependencies
 
@@ -23,7 +23,6 @@ The app is built in [Shiny](https://shiny.rstudio.com/), so you need to install:
   - `shiny`
   - `shinyjs`
   - `stringr`
-  - `tidygeocoder`
 - R libraries for [shinyapps.io](shinyapps.io) deployment:
   - `anytime`
   - `BH`
@@ -31,19 +30,23 @@ The app is built in [Shiny](https://shiny.rstudio.com/), so you need to install:
 
 ### Executing program
 
-#### Map App
-
-- Copy the `initial_tidied_map_data.csv` in the same folder and call it `tidied_map_data.csv`. This is a snapshot of the Parking Reform Network data.
-- If you want the most up to date data, run the `generate_map_data.R` script.
-- The local path may need to be changed to work on your computer. The intent is to overwrite the `tidied_map_data.csv` file.
-- In the R console, run:
+In the R console, run:
 
 ```
 library(shiny)
 runApp('map')
 ```
 
-- Go to `localhost:[provided port]` in a browser
+Go to `localhost:[provided port]` in a browser
+
+## Updating the data
+
+You usually should not need to manually do this. We have a GitHub Action that runs every night to open a PR with any updates.
+
+First, `npm install`. Then, run either:
+
+- `npm run update-map-data`, or
+- `npm run update-city-detail`.
 
 ## Authors
 
@@ -54,17 +57,3 @@ runApp('map')
 - Aaron Snailwood
 - Justin Ross
 - complete acknowledgements for the project can be found [here](https://parkingreform.org/mandates-map/acknowledgments.html)
-
-## TODOs:
-
-### Map App:
-
-### Static Pages:
-
-### Shiny Server/app
-
-- figure out how to automate data update
-
-### Overall
-
-- develop simple standalone map in leaflet/similar

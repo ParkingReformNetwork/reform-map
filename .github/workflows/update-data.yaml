@@ -1,10 +1,10 @@
-name: Update City Details
+name: Update Data
 on:
   schedule:
     - cron: "0 8 * * *" # Runs every day at 12 midnight PT
   workflow_dispatch:
 jobs:
-  update-city-details:
+  update-data:
     if: github.repository_owner == 'ParkingReformNetwork'
     runs-on: ubuntu-latest
     steps:
@@ -16,8 +16,10 @@ jobs:
           node-version: 18
       - name: Install dependencies
         run: npm ci
-      - name: Run script
+      - name: Run update-city-detail
         run: npm run update-city-detail
+      - name: Run update-map-data
+        run: npm run update-map-data
       - name: Check for changes
         id: git_status
         run: |
@@ -31,7 +33,7 @@ jobs:
         uses: peter-evans/create-pull-request@v3
         with:
           token: ${{ secrets.UPDATE_DATA_GITHUB_TOKEN }}
-          commit-message: "Update city details"
-          title: "Update city details"
-          body: "This PR updates cities with the latest changes."
-          branch: "update-city-details"
+          commit-message: "Update data"
+          title: "Update data"
+          body: "This PR adds the latest data."
+          branch: "automated-data-update"
