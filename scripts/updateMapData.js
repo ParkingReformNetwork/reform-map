@@ -1,6 +1,5 @@
 /* eslint-disable import/no-extraneous-dependencies */
 /* eslint-disable no-console */
-/* eslint-disable no-unused-vars */
 /* eslint-disable no-restricted-syntax */
 
 import fs from "fs/promises";
@@ -101,11 +100,12 @@ const populationToBin = (population) => {
 // -------------------------------------------------------------
 
 const readCityCsv = async () => {
-  //  const response = await fetch(
-  //    "https://area120tables.googleapis.com/link/aR_AWTAZ6WF8_ZB3HgfOvN/export?key=8-SifuDc4Fg7purFrntOa7bjE0ikjGAy28t36wUBIOJx9vFGZuSR89N1PkSTFXpOk6"
-  //  );
-  //  const csvText = await response.text();
-  const csvText = await fs.readFile("city.csv", "utf-8");
+  const response = await fetch(
+    "https://area120tables.googleapis.com/link/aR_AWTAZ6WF8_ZB3HgfOvN/export?key=8-SifuDc4Fg7purFrntOa7bjE0ikjGAy28t36wUBIOJx9vFGZuSR89N1PkSTFXpOk6"
+  );
+  const csvText = await response.text();
+  // Uncomment this to read the file locally. Save the file to `city.csv` in the repo root.
+  //  const csvText = await fs.readFile("city.csv", "utf-8");
   const { data } = Papa.parse(csvText, { header: true, dynamicTyping: true });
 
   const cityCleaned = data.map((row) => {
@@ -130,11 +130,12 @@ const readCityCsv = async () => {
 };
 
 const readReportCsv = async () => {
-  //  const response = await fetch(
-  //    "https://area120tables.googleapis.com/link/bAc5xhhLJ2q4jYYGjaq_24/export?key=8_S1APcQHGN9zfTXEMz_Gz8sel3FCo3RUfEV4f-PBOqE8zy3vG3FpCQcSXQjRDXOqZ"
-  //  );
-  //  const csvText = await response.text();
-  const csvText = await fs.readFile("report.csv", "utf-8");
+  const response = await fetch(
+    "https://area120tables.googleapis.com/link/bAc5xhhLJ2q4jYYGjaq_24/export?key=8_S1APcQHGN9zfTXEMz_Gz8sel3FCo3RUfEV4f-PBOqE8zy3vG3FpCQcSXQjRDXOqZ"
+  );
+  const csvText = await response.text();
+  // Uncomment this to read the file locally. Save the file to `report.csv` in the repo root.
+  //  const csvText = await fs.readFile("report.csv", "utf-8");
   const { data } = Papa.parse(csvText, { header: true, dynamicTyping: true });
 
   const checkIncludes = (str, term) =>
@@ -283,7 +284,7 @@ const shouldCsvQuote = (val, columnIndex) =>
 
 const determineSpecialLabel = (row) => {
   if (row.is_notable === true) {
-    return "highlighted_icon";
+    return "highlighed_icon";
   }
   if (row.is_recent === true) {
     return "new_icon";
@@ -311,7 +312,7 @@ const postProcessResult = (reportData) =>
 
 const writeResult = async (result) => {
   const csv = Papa.unparse(result, { quotes: shouldCsvQuote });
-  await fs.writeFile("map/tidied_map_data2.csv", csv);
+  await fs.writeFile("map/tidied_map_data.csv", csv);
 };
 
 // -------------------------------------------------------------
@@ -345,7 +346,7 @@ const writeTrimmedReport = async (finalReport) => {
     )
   );
   const csv = Papa.unparse(trimmed, { quotes: shouldCsvQuote });
-  await fs.writeFile("map/trimmed_map_data2.csv", csv);
+  await fs.writeFile("map/trimmed_map_data.csv", csv);
 };
 
 // -------------------------------------------------------------
