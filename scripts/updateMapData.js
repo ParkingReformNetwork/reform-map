@@ -1,9 +1,12 @@
 /* eslint-disable import/no-extraneous-dependencies */
 /* eslint-disable no-console */
 /* eslint-disable no-unused-vars */
+/* eslint-disable no-restricted-syntax */
+
 import fs from "fs/promises";
 
 import fetch from "node-fetch";
+import NodeGeocoder from "node-geocoder";
 import Papa from "papaparse";
 
 // -------------------------------------------------------------
@@ -230,7 +233,43 @@ const leftJoin = (baseRows, newRows) =>
 // Geocoding
 // -------------------------------------------------------------
 
-const addMissingLatLng = async (reportData) => reportData;
+const ensureRowLatLng = async (row, geocoder) => {
+  if (row.lat && row.long) {
+    return row;
+  }
+
+  // We try the most precise query first, then fall back to less precise queries.
+  const locationMethods = [
+    () => `${row.city}, ${row.state}, ${row.country}`,
+    () => `${row.city}, ${row.state}`,
+    () => `${row.city}`,
+  ];
+  for (const getLocationString of locationMethods) {
+    const locationString = getLocationString();
+    // eslint-disable-next-line no-await-in-loop
+    const geocodeResults = await geocoder.geocode(locationString);
+    if (geocodeResults.length > 0) {
+      return {
+        ...row,
+        lat: geocodeResults[0].latitude,
+        long: geocodeResults[0].longitude,
+      };
+    }
+  }
+  return row;
+};
+
+const addMissingLatLng = async (reportData) => {
+  const geocoder = NodeGeocoder({ provider: "openstreetmap" });
+
+  // We use a for loop to avoid making too many network calls -> rate limiting.
+  const result = [];
+  for (const row of reportData) {
+    // eslint-disable-next-line no-await-in-loop
+    result.push(await ensureRowLatLng(row, geocoder));
+  }
+  return result;
+};
 
 // -------------------------------------------------------------
 // Final result
