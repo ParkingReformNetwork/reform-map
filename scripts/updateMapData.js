@@ -284,7 +284,7 @@ const shouldCsvQuote = (val, columnIndex) =>
 
 const determineSpecialLabel = (row) => {
   if (row.is_notable === true) {
-    return "highlighted_icon";
+    return "highlighed_icon";
   }
   if (row.is_recent === true) {
     return "new_icon";
