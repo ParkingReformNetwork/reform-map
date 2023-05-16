@@ -1,5 +1,7 @@
 /* eslint-disable import/no-extraneous-dependencies */
 /* eslint-disable no-console */
+/* eslint-disable no-await-in-loop */
+
 import fs from "fs/promises";
 
 import fetch from "node-fetch";
@@ -79,17 +81,19 @@ const normalizeAttachments = (cityEntries, cityStateNoSpace) => {
   });
 };
 
-const setupAttachmentDownloads = (cityEntries) =>
-  cityEntries.flatMap((entry) =>
-    entry.Attachments.map(async (attachment) => {
+const setupAttachmentDownloads = async (cityEntries) => {
+  // Use await in a for loop to avoid making too many calls -> rate limiting.
+  for (const entry of cityEntries) {
+    for (const attachment of entry.Attachments) {
       const response = await fetch(attachment.url);
       const buffer = await response.arrayBuffer();
-      return fs.writeFile(
+      await fs.writeFile(
         `city_detail/${attachment.outputPath}`,
         Buffer.from(buffer)
       );
-    })
-  );
+    }
+  }
+};
 
 const renderHandlebars = (cityEntries, template) => {
   const citations = cityEntries.map((entry, i) => ({
@@ -115,21 +119,21 @@ const renderHandlebars = (cityEntries, template) => {
   });
 };
 
-const processCity = (cityState, entries, template, globalLastUpdated) => {
+const processCity = async (cityState, entries, template, globalLastUpdated) => {
   if (!needsUpdate(entries, globalLastUpdated)) {
     console.log(`Skipping ${cityState}`);
-    return Promise.resolve(undefined);
+    return;
   }
 
   console.log(`Updating ${cityState}`);
 
   const cityStateNoSpace = cityState.replace(/ /g, "");
   normalizeAttachments(entries, cityStateNoSpace);
-  const writeHtmlPromise = fs.writeFile(
+  await setupAttachmentDownloads(entries);
+  await fs.writeFile(
     `city_detail/${cityStateNoSpace}.html`,
     renderHandlebars(entries, template)
   );
-  return [writeHtmlPromise, ...setupAttachmentDownloads(entries)];
 };
 
 const updateLastUpdatedFile = async () => {
@@ -162,12 +166,11 @@ const main = async () => {
     cityStateMap[cityState].push(row);
   });
 
-  const cityPromises = Object.entries(cityStateMap).flatMap(
-    ([cityState, entries]) =>
-      processCity(cityState, entries, template, globalLastUpdated)
-  );
+  // Use await in a for loop to avoid making too many calls -> rate limiting.
+  for (const [cityState, entries] of Object.entries(cityStateMap)) {
+    await processCity(cityState, entries, template, globalLastUpdated);
+  }
 
-  await Promise.all(cityPromises);
   await updateLastUpdatedFile();
 };
 
