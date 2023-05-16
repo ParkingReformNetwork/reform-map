@@ -6,3 +6,5 @@ overrides: []
 parserOptions:
   ecmaVersion: latest
   sourceType: module
+rules:
+  no-restricted-syntax: off

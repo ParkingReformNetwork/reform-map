@@ -1,6 +1,6 @@
 /* eslint-disable import/no-extraneous-dependencies */
 /* eslint-disable no-console */
-/* eslint-disable no-restricted-syntax */
+/* eslint-disable no-await-in-loop */
 
 import fs from "fs/promises";
 
@@ -247,7 +247,6 @@ const ensureRowLatLng = async (row, geocoder) => {
   ];
   for (const getLocationString of locationMethods) {
     const locationString = getLocationString();
-    // eslint-disable-next-line no-await-in-loop
     const geocodeResults = await geocoder.geocode(locationString);
     if (geocodeResults.length > 0) {
       return {
@@ -266,7 +265,6 @@ const addMissingLatLng = async (reportData) => {
   // We use a for loop to avoid making too many network calls -> rate limiting.
   const result = [];
   for (const row of reportData) {
-    // eslint-disable-next-line no-await-in-loop
     result.push(await ensureRowLatLng(row, geocoder));
   }
   return result;
