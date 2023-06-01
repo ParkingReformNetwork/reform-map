@@ -48,6 +48,12 @@ First, `npm install`. Then, run either:
 - `npm run update-map-data`, or
 - `npm run update-city-detail`.
 
+### Update latitude and longitude
+
+1. Save a CSV file called `update-lat-lng.csv` in the root of the repository. It should have five columns: the city, state code, country code, latitude, and longitude. The top row should be headers.
+2. `npm install`
+3. `npm run update-lat-lng`
+
 ## Authors
 
 - Brad Baker [@bradmbak](https://twitter.com/bradmbak)
