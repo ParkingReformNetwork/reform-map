@@ -17,8 +17,26 @@ const readCsv = async (filePath) => {
   return data;
 };
 
-const updateLatLng = (reportData, updateData) => reportData;
+const readUpdateCsv = async () => {
+  const data = await readCsv("update-lat-lng.csv");
+  return data.map((row) => Object.values(row));
+};
 
+/* Inspired by leftJoin from updateMapData.js */
+const updateLatLng = (reportData, updateData) =>
+  reportData.map((reportRow) => {
+    const matchingRows = updateData.filter(
+      (updateRow) =>
+        updateRow[0] === reportRow.city &&
+        updateRow[1] === reportRow.state &&
+        updateRow[2] === reportRow.country
+    );
+    return matchingRows.length > 0
+      ? { ...reportRow, lat: matchingRows[0][3], long: matchingRows[0][4] }
+      : reportRow;
+  });
+
+/* Copied from updateMapData.js */
 const shouldCsvQuote = (val, columnIndex) =>
   typeof val === "string" || typeof val === "boolean" || columnIndex === 0;
 
@@ -37,7 +55,7 @@ const writeResult = async (data, filePath) => {
 
 const main = async () => {
   const [updateData, trimmedData, tidiedData] = await Promise.all([
-    readCsv("update-lat-lng.csv"),
+    readUpdateCsv(),
     readCsv(TRIMMED_REPORT),
     readCsv(TIDIED_REPORT),
   ]);
@@ -52,5 +70,3 @@ const main = async () => {
 if (process.env.NODE_ENV !== "test") {
   main().catch((error) => console.error(error));
 }
-
-export { updateLatLng };
