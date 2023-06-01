@@ -8,7 +8,8 @@
     "fix": "prettier --write .; eslint --fix .",
     "lint": "prettier --check . && eslint .",
     "update-city-detail": "node scripts/updateCityDetail.js",
-    "update-map-data": "node scripts/updateMapData.js"
+    "update-map-data": "node scripts/updateMapData.js",
+    "update-lat-lng": "node scripts/updateLatLng.js"
   },
   "devDependencies": {
     "@babel/core": "^7.21.4",
