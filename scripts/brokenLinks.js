@@ -39,6 +39,10 @@ const mapCityUrlsToCitationLinks = async () => {
 const findDeadLinks = async (links) => {
   const results = await Promise.all(
     links.map(async (link) => {
+      // Don't fetch empty links, but still report them.
+      if (!link) {
+        return [link, -1];
+      }
       try {
         const response = await fetch(link, {
           headers: { "User-Agent": "prn-broken-links-finder" },
