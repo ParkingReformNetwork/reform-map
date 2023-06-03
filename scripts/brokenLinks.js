@@ -1,10 +1,12 @@
 /* eslint-disable import/no-extraneous-dependencies */
 /* eslint-disable no-console */
 /* eslint-disable import/prefer-default-export */
+/* eslint-disable no-await-in-loop */
 
 import fs from "fs/promises";
 import path from "path";
 
+import fetch from "node-fetch";
 import jsdom from "jsdom";
 
 const parseCityNameAndLinks = async (filePath) => {
@@ -35,11 +37,39 @@ const parseCitiesToLinks = async () => {
   }, {});
 };
 
-const findDeadLinks = async (links) => {};
+const findDeadLinks = async (links) => {
+  const results = await Promise.all(
+    links.map(async (link) => {
+      try {
+        const response = await fetch(link, {
+          headers: { "User-Agent": "prn-broken-links-finder" },
+        });
+        if (response.status >= 300) {
+          return [link, response.status];
+        }
+      } catch (error) {
+        throw new Error(`Failed to fetch ${link}: ${error.message}`);
+      }
+      return null;
+    })
+  );
+
+  return results.filter(Boolean);
+};
 
 const main = async () => {
   const citiesToLinks = await parseCitiesToLinks();
-  //  const citiesToDeadLinks
+
+  // We use a for loop to avoid making too many network calls -> rate limiting.
+  const result = {};
+  for (const [cityName, links] of Object.entries(citiesToLinks)) {
+    const deadLinks = await findDeadLinks(links);
+    if (deadLinks) {
+      result[cityName] = deadLinks;
+    }
+  }
+
+  console.log(result);
 };
 
 if (process.env.NODE_ENV !== "test") {

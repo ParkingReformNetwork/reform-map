@@ -34,7 +34,10 @@ const parseDatetime = (val, timeZoneAbbreviations = true) => {
 
 const fetchData = async () => {
   const response = await fetch(
-    "https://area120tables.googleapis.com/link/aUJhBkwwY9j1NpD-Enh4WU/export?key=aasll5u2e8Xf-jxNNGlk3vbnOYcDsJn-JbgeI3z6IkPk8z5CxpWOLEp5EXd8iMF_bc"
+    "https://area120tables.googleapis.com/link/aUJhBkwwY9j1NpD-Enh4WU/export?key=aasll5u2e8Xf-jxNNGlk3vbnOYcDsJn-JbgeI3z6IkPk8z5CxpWOLEp5EXd8iMF_bc",
+    {
+      headers: { "User-Agent": "prn-update-city-details" },
+    }
   );
   const rawData = await response.text();
   return Papa.parse(rawData, { header: true }).data;
@@ -85,7 +88,9 @@ const setupAttachmentDownloads = async (cityEntries) => {
   // Use await in a for loop to avoid making too many calls -> rate limiting.
   for (const entry of cityEntries) {
     for (const attachment of entry.Attachments) {
-      const response = await fetch(attachment.url);
+      const response = await fetch(attachment.url, {
+        headers: { "User-Agent": "prn-update-city-detail" },
+      });
       const buffer = await response.arrayBuffer();
       await fs.writeFile(
         `city_detail/${attachment.outputPath}`,
