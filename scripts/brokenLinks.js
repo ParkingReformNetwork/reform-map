@@ -9,18 +9,15 @@ import path from "path";
 import fetch from "node-fetch";
 import jsdom from "jsdom";
 
-const parseCityNameAndLinks = async (filePath) => {
+const parseCitationLinks = async (filePath) => {
   const html = await fs.readFile(filePath, "utf8");
   const dom = new jsdom.JSDOM(html);
-  const cityName =
-    dom.window.document.querySelector("h1.display-3").textContent;
-  const citationLinks = Array.from(
+  return Array.from(
     dom.window.document.querySelectorAll("dd.col-12.col-sm-8.col-lg-9 a")
   ).map((a) => a.href);
-  return [cityName, citationLinks];
 };
 
-const parseCitiesToLinks = async () => {
+const mapCityUrlsToCitationLinks = async () => {
   const folderEntries = await fs.readdir("city_detail");
   const fileNames = folderEntries.filter(
     (entry) => entry !== "attachment_images" && entry.includes(".html")
@@ -28,11 +25,13 @@ const parseCitiesToLinks = async () => {
   const results = await Promise.all(
     fileNames.map(async (fileName) => {
       const filePath = path.join("city_detail", fileName);
-      return parseCityNameAndLinks(filePath);
+      const cityUrl = `https://parkingreform.org/mandates-map/city_detail/${fileName}`;
+      const citationLinks = await parseCitationLinks(filePath);
+      return [cityUrl, citationLinks];
     })
   );
-  return results.reduce((acc, [cityName, links]) => {
-    acc[cityName] = links;
+  return results.reduce((acc, [cityUrl, links]) => {
+    acc[cityUrl] = links;
     return acc;
   }, {});
 };
@@ -58,14 +57,14 @@ const findDeadLinks = async (links) => {
 };
 
 const main = async () => {
-  const citiesToLinks = await parseCitiesToLinks();
+  const cityUrlsToCitationLinks = await mapCityUrlsToCitationLinks();
 
   // We use a for loop to avoid making too many network calls -> rate limiting.
   const result = {};
-  for (const [cityName, links] of Object.entries(citiesToLinks)) {
+  for (const [cityUrl, links] of Object.entries(cityUrlsToCitationLinks)) {
     const deadLinks = await findDeadLinks(links);
     if (deadLinks) {
-      result[cityName] = deadLinks;
+      result[cityUrl] = deadLinks;
     }
   }
 
@@ -76,4 +75,4 @@ if (process.env.NODE_ENV !== "test") {
   main().catch((error) => console.error(error));
 }
 
-export { parseCityNameAndLinks };
+export { parseCitationLinks };
