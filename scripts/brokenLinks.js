@@ -8,7 +8,6 @@ import path from "path";
 
 import fetch from "node-fetch";
 import jsdom from "jsdom";
-import { AbortController } from "node-abort-controller";
 
 const parseCitationLinks = async (filePath) => {
   const html = await fs.readFile(filePath, "utf8");
@@ -42,27 +41,18 @@ const findDeadLinks = async (links) => {
     links.map(async (link) => {
       // Don't fetch empty links, but still report them.
       if (!link) {
-        return [link, -1];
+        return [link, 0];
       }
-      const controller = new AbortController();
-      const timeout = setTimeout(() => {
-        controller.abort();
-      }, 5000);
       try {
         const response = await fetch(link, {
           headers: { "User-Agent": "prn-broken-links-finder" },
-          signal: controller.signal,
         });
         if (response.status >= 300) {
           return [link, response.status];
         }
       } catch (error) {
-        if (error.name === "AbortError") {
-          return [link, 408]; // 408 Request Timeout
-        }
-        throw new Error(`Failed to fetch ${link}: ${error.message}`);
-      } finally {
-        clearTimeout(timeout);
+        console.error(`Failed to fetch ${link}: ${error.message}`);
+        return [link, -1];
       }
       return null;
     })
