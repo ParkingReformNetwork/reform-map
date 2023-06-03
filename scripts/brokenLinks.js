@@ -3,6 +3,8 @@
 /* eslint-disable import/prefer-default-export */
 
 import fs from "fs/promises";
+import path from "path";
+
 import jsdom from "jsdom";
 
 const parseCityNameAndLinks = async (filePath) => {
@@ -15,5 +17,33 @@ const parseCityNameAndLinks = async (filePath) => {
   ).map((a) => a.href);
   return [cityName, citationLinks];
 };
+
+const parseCitiesToLinks = async () => {
+  const folderEntries = await fs.readdir("city_detail");
+  const fileNames = folderEntries.filter(
+    (entry) => entry !== "attachment_images" && entry.includes(".html")
+  );
+  const results = await Promise.all(
+    fileNames.map(async (fileName) => {
+      const filePath = path.join("city_detail", fileName);
+      return parseCityNameAndLinks(filePath);
+    })
+  );
+  return results.reduce((acc, [cityName, links]) => {
+    acc[cityName] = links;
+    return acc;
+  }, {});
+};
+
+const findDeadLinks = async (links) => {};
+
+const main = async () => {
+  const citiesToLinks = await parseCitiesToLinks();
+  //  const citiesToDeadLinks
+};
+
+if (process.env.NODE_ENV !== "test") {
+  main().catch((error) => console.error(error));
+}
 
 export { parseCityNameAndLinks };
