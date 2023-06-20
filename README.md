@@ -55,9 +55,10 @@ First, `npm install`. Then, run either:
 3. `npm run update-lat-lng`
 
 ## JavaScript Migration
-We are currently migrating from R to JavaScript. We are taking inspiration from the [Parking Lot Map](https://github.com/ParkingReformNetwork/parking-lot-map). 
 
-1. Install [Node Package Manager (npm)](https://nodejs.dev/en/download/). 
+We are currently migrating from R to JavaScript. We are taking inspiration from the [Parking Lot Map](https://github.com/ParkingReformNetwork/parking-lot-map).
+
+1. Install [Node Package Manager (npm)](https://nodejs.dev/en/download/).
 2. If you are using Windows OS, install [Windows Subsystem for Linux (WSL)](https://learn.microsoft.com/en-us/windows/wsl/install). Open a wsl terminal in this repositoy and use `npm i` to reconfigure npm for Linux.
 
 ### Start the server
@@ -75,6 +76,7 @@ When the server is running, you can make any changes you want to the project. Re
 ```bash
 ❯ npm test
 ```
+
 These tests are currently for the Shiny map.
 If the tests are taking a long time to start, run `rm -rf .parcel-cache` and try the tests again.
 
@@ -83,6 +85,10 @@ If the tests are taking a long time to start, run `rm -rf .parcel-cache` and try
 ```bash
 ❯ npm run fmt
 ```
+
+Uses prettier to nicely format code.
+
+Before pushing code, run this command and commit the changes. Otherwise, PR checks will not pass.
 
 ### Lint code
 
@@ -101,7 +107,6 @@ You can also run our integration tests on built dist folder with `npm run test-d
 ### Staging (to be implemented)
 
 ### Production (to be implemented)
-
 
 ## Authors
 
