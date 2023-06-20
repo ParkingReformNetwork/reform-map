@@ -54,6 +54,55 @@ First, `npm install`. Then, run either:
 2. `npm install`
 3. `npm run update-lat-lng`
 
+## JavaScript Migration
+We are currently migrating from R to JavaScript. We are taking inspiration from the [Parking Lot Map](https://github.com/ParkingReformNetwork/parking-lot-map). 
+
+1. Install [Node Package Manager (npm)](https://nodejs.dev/en/download/). 
+2. If you are using Windows OS, install [Windows Subsystem for Linux (WSL)](https://learn.microsoft.com/en-us/windows/wsl/install). Open a wsl terminal in this repositoy and use `npm i` to reconfigure npm for Linux.
+
+### Start the server
+
+```bash
+❯ npm start
+```
+
+Then open http://127.0.0.1:1234 in a browser. Hit `CTRL-C` to stop the server.
+
+When the server is running, you can make any changes you want to the project. Reload the page in the browser to see those changes. (You may need to force reload, e.g. hold the shift key while reloading on macOS.)
+
+### Run tests
+
+```bash
+❯ npm test
+```
+These tests are currently for the Shiny map.
+If the tests are taking a long time to start, run `rm -rf .parcel-cache` and try the tests again.
+
+### Autoformat code
+
+```bash
+❯ npm run fmt
+```
+
+### Lint code
+
+"Linting" means using tools that check for common issues that may be bugs or low code quality.
+
+```bash
+❯ npm run lint
+```
+
+### Try out a build locally
+
+You can preview what a build will look like by running `npm run build`. Then use `npm run serve-dist` to start the server.
+
+You can also run our integration tests on built dist folder with `npm run test-dist` (make sure the server is not already running).
+
+### Staging (to be implemented)
+
+### Production (to be implemented)
+
+
 ## Authors
 
 - Brad Baker [@bradmbak](https://twitter.com/bradmbak)
