@@ -4,7 +4,66 @@ This code runs the Mandates Map app for the Parking Reform Network: https://park
 
 The scripts are written in JavaScript and the app in R. We want to rewrite the app to JavaScript.
 
-## Running the map app
+# Running the map app
+
+## JavaScript Migration
+
+We are currently migrating from R to JavaScript. We are taking inspiration from the [Parking Lot Map](https://github.com/ParkingReformNetwork/parking-lot-map).
+
+1. Install [Node Package Manager (npm)](https://nodejs.dev/en/download/).
+2. If you are using Windows OS, install [Windows Subsystem for Linux (WSL)](https://learn.microsoft.com/en-us/windows/wsl/install). Open a wsl terminal in this repositoy and use `npm i` to reconfigure npm for Linux.
+
+### Start the development server
+
+```bash
+❯ npm start
+```
+
+Then open http://127.0.0.1:1234 in a browser. Hit `CTRL-C` to stop the development server.
+
+When the server is running, you can make any changes you want to the project. Reload the page in the browser to see those changes. (You may need to force reload, e.g. hold the shift key while reloading on macOS.)
+
+### Run tests
+
+```bash
+❯ npm test
+```
+
+Currently, our tests are for the data import scripts.
+
+Will be adding more tests.
+
+If the tests are taking a long time to start, run `rm -rf .parcel-cache` and try the tests again.
+
+### Autoformat code
+
+Using prettier to nicely format code.
+
+```bash
+❯ npm run fmt
+```
+
+Before pushing code, run this command and commit the changes. Otherwise, PR checks will not pass.
+
+### Lint code
+
+"Linting" means using tools that check for common issues that may be bugs or low code quality.
+
+```bash
+❯ npm run lint
+```
+
+### Try out a build locally
+
+You can preview what a build will look like by running `npm run build`. Then use `npm run serve-dist` to start the server. A 'build' are the files sent for production on the real site. This is slightly different from the development server run by `npm start`, which prioritizes a quick start for development.
+
+`npm run test-dist` will be implemented soon, while `npm test` is the development equivalent.
+
+### Staging (to be implemented)
+
+### Production (to be implemented)
+
+## Legacy R map
 
 ### Dependencies
 
