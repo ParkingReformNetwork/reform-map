@@ -1,11 +1,11 @@
-const { describe, expect, test } = require("@jest/globals");
-const {
+import { expect, test } from "@playwright/test";
+import {
   needsUpdate,
   normalizeAttachments,
   parseDatetime,
-} = require("../updateCityDetail");
+} from "../scripts/updateCityDetail";
 
-describe("needsUpdate()", () => {
+test.describe("needsUpdate()", () => {
   test("returns false if everything is older than globalLastUpdated", () => {
     const entryTime = "May 5, 2023, 8:00:00 AM PDT";
     const entries = [

@@ -1,13 +1,13 @@
-const { describe, expect, test } = require("@jest/globals");
-const {
+import { expect, test } from "@playwright/test";
+import {
   leftJoin,
   magnitudeToHighest,
   magnitudeToHighestOrAllUses,
   landUseToString,
   populationToBin,
-} = require("../updateMapData");
+} from "../scripts/updateMapData";
 
-describe("magnitudeToHighest", () => {
+test.describe("magnitudeToHighest", () => {
   const testCases = [
     ["Regional", "Regional"],
     ["Citywide", "Citywide"],
@@ -16,16 +16,14 @@ describe("magnitudeToHighest", () => {
     ["Main Street", "Main Street"],
     ["Unknown", "NA"],
   ];
-
-  test.each(testCases)(
-    'returns the highest magnitude for "%s"',
-    (magnitudeString, expected) => {
+  for (const [magnitudeString, expected] of testCases) {
+    test(`returns the highest magnitude for ${magnitudeString}`, () => {
       expect(magnitudeToHighest(magnitudeString)).toBe(expected);
-    }
-  );
+    });
+  }
 });
 
-describe("magnitudeToHighestOrAllUses", () => {
+test.describe("magnitudeToHighestOrAllUses", () => {
   const testCases = [
     ["Citywide", "all uses", "Citywide All"],
     ["Citywide", "residential commercial", "Citywide"],
@@ -37,18 +35,16 @@ describe("magnitudeToHighestOrAllUses", () => {
     ["Main Street", "commercial", "Main Street All"],
     ["Unknown", "unknown", "NA"],
   ];
-
-  test.each(testCases)(
-    'returns the highest or all uses magnitude for "%s" and "%s"',
-    (magnitudeString, landusesString, expected) => {
+  for (const [magnitudeString, landusesString, expected] of testCases) {
+    test(`returns the highest or all uses magnitude for ${magnitudeString} and ${landusesString}`, () => {
       expect(magnitudeToHighestOrAllUses(magnitudeString, landusesString)).toBe(
         expected
       );
-    }
-  );
+    });
+  }
 });
 
-describe("landUseToString", () => {
+test.describe("landUseToString", () => {
   const testCases = [
     ["All Uses", "city"],
     ["Residential, Commercial, Other", "laptop"],
@@ -57,15 +53,14 @@ describe("landUseToString", () => {
     ["blah blah unknown", "car"],
   ];
 
-  test.each(testCases)(
-    'returns the corresponding icon for land use "%s"',
-    (landUseString, expected) => {
+  for (const [landUseString, expected] of testCases) {
+    test(`returns the corresponding icon for land use ${landUseString}`, () => {
       expect(landUseToString(landUseString)).toBe(expected);
-    }
-  );
+    });
+  }
 });
 
-describe("populationToBin", () => {
+test.describe("populationToBin", () => {
   const testCases = [
     [600000, 1],
     [250000, 0.7],
@@ -74,16 +69,15 @@ describe("populationToBin", () => {
     [1, 0.2],
   ];
 
-  test.each(testCases)(
-    "returns the correct bin for population %d",
-    (population, expected) => {
+  for (const [population, expected] of testCases) {
+    test(`returns the correct bin for population ${population}`, () => {
       expect(populationToBin(population)).toBe(expected);
-    }
-  );
+    });
+  }
 });
 
-describe("leftJoin", () => {
-  test.each([
+test.describe("leftJoin", () => {
+  const testCases = [
     {
       baseRows: [
         { city: "City1", state: "State1", country: "Country1", someField: 10 },
@@ -140,8 +134,12 @@ describe("leftJoin", () => {
       ],
       name: "Empty city data",
     },
-  ])("Should left join correctly: $name", ({ baseRows, newRows, expected }) => {
-    const result = leftJoin(baseRows, newRows);
-    expect(result).toEqual(expected);
-  });
+  ];
+
+  for (const { baseRows, newRows, expected, name } of testCases) {
+    test(`Should left join correctly: ${name}`, () => {
+      const result = leftJoin(baseRows, newRows);
+      expect(result).toEqual(expected);
+    });
+  }
 });
