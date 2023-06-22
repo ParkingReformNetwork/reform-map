@@ -6,41 +6,34 @@
   "scripts": {
     "start": "parcel",
     "build": "rm -rf dist; parcel build --detailed-report",
-    "test": "jest",
+    "test": "playwright test",
     "fmt": "prettier --write .",
-    "fix": "prettier --write .; eslint --fix .",
-    "lint": "prettier --check . && eslint .",
+    "fix": "prettier --write scripts/ tests/; eslint --fix scripts/  tests/",
+    "lint": "prettier --check . && eslint scripts/ tests/",
     "update-city-detail": "node scripts/updateCityDetail.js",
     "update-map-data": "node scripts/updateMapData.js",
     "update-lat-lng": "node scripts/updateLatLng.js",
     "broken-links": "node scripts/brokenLinks.js",
-    "serve-dist": "cd dist; http-server"
+    "serve-dist": "cd dist; http-server",
+    "test-dist": "PORT=8080 playwright test"
   },
   "devDependencies": {
-    "@babel/core": "^7.21.4",
-    "@babel/preset-env": "^7.21.4",
-    "@jest/globals": "^29.5.0",
     "@parcel/compressor-brotli": "^2.9.2",
     "@parcel/compressor-gzip": "^2.9.2",
-    "babel-jest": "^29.5.0",
+    "@playwright/test": "^1.35.1",
     "eslint": "^8.37.0",
     "eslint-config-airbnb-base": "^15.0.0",
     "eslint-config-prettier": "^8.8.0",
     "handlebars": "^4.7.7",
     "http-server": "^14.1.1",
-    "jest": "^29.5.0",
     "jsdom": "^22.1.0",
     "luxon": "^3.3.0",
     "node-fetch": "^2.6.11",
     "node-geocoder": "^4.2.0",
     "papaparse": "^5.4.1",
     "parcel": "^2.9.2",
+    "playwright": "^1.35.1",
     "prettier": "^2.8.7"
-  },
-  "babel": {
-    "presets": [
-      "@babel/preset-env"
-    ]
   },
   "targets": {
     "default": {
