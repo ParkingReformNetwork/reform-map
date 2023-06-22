@@ -21,7 +21,6 @@ export default defineConfig({
   webServer: {
     command: `npm run ${webServerCommand}`,
     url: baseURL,
-    reuseExistingServer: !process.env.CI,
-    timeout: 5 * 60 * 1000,
+    reuseExistingServer: !process.env.CI
   },*/
 });
