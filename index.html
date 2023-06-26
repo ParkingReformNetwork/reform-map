@@ -2,8 +2,16 @@
 <html lang="en">
   <head>
     <title>Parking Mandates Map</title>
+    <link rel="stylesheet" href="./src/style.css" />
   </head>
   <body>
-    <h1>Hello Parking Mandates!</h1>
+    <div id="map"></div>
+    <script type="module">
+      import setUpSite from "./scripts/setUpSite";
+
+      window.onload = async () => {
+        await setUpSite();
+      };
+    </script>
   </body>
 </html>
