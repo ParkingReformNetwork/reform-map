@@ -61,7 +61,7 @@ You can preview what a build will look like by running `npm run build`. Then use
 
 ### Staging
 
-We use continuous deployment, meaning that we re-deploy the site every time we merge a pull request to staging at https://parkingreform.org/plm-staging/. You can check how the site renders about ~1-2 minutes after your change merges.
+We use continuous deployment, meaning that we re-deploy the site every time we merge a pull request to staging at https://parkingreform.org/mandates-map-staging/. You can check how the site renders about ~1-2 minutes after your change merges.
 
 ### Production (to be implemented)
 
