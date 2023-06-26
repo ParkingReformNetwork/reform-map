@@ -62,7 +62,9 @@ You can preview what a build will look like by running `npm run build`. Then use
 
 `npm run test-dist` will be implemented soon, while `npm test` is the development equivalent.
 
-### Staging (to be implemented)
+### Staging
+
+We use continuous deployment, meaning that we re-deploy the site every time we merge a pull request to staging at https://parkingreform.org/mandates-map-staging/. You can check how the site renders about ~1-2 minutes after your change merges.
 
 ### Production (to be implemented)
 
