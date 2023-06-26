@@ -16,7 +16,7 @@ jobs:
       - name: Install dependencies
         run: npm ci
       - name: Build
-        run: npm build
+        run: npm run build
       # un-comment once tests are made
       # - name: Run tests on dist
       # run: npm run test-dist
