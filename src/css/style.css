@@ -1,0 +1,76 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap");
+
+body,
+html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  overflow: hidden;
+}
+
+#map {
+  height: 100%;
+  width: 100%;
+}
+
+#content {
+  display: flex;
+  height: 100%;
+  flex-direction: column;
+}
+
+div.banner {
+  display: flex;
+  height: 50px;
+  flex-shrink: 0;
+  align-items: center;
+  padding: 0 10px;
+  background: #4d4d4d;
+  color: white;
+  font-family: Helvetica, Arial, sans-serif;
+  justify-content: space-between;
+}
+
+div.banner-icons {
+  display: flex;
+}
+
+.btn.banner__button {
+  align-items: center !important;
+  gap: 0.25rem;
+  height: 1.75rem !important;
+  padding: 0.1rem 0.5rem !important;
+  border-color: transparent !important;
+}
+
+.row.banner__actions {
+  /* TODO: remove !important after diagnosing why styles are not applying as expected in safari/iOS */
+  flex-wrap: nowrap !important;
+}
+
+div.about-text-popup {
+  position: absolute;
+  z-index: 2001;
+  background-color: #ffffff;
+  font-size: 18px;
+  border: 1px solid rgba(186, 186, 186, 0.7);
+  display: none;
+  left: 10%;
+  height: 60%;
+  width: 80%;
+  top: 120px;
+  overflow: auto;
+}
+
+div.about-text-popup svg.fa-circle-xmark {
+  color: #4d4d4d;
+}
+
+div.about-text-container {
+  padding: 20px;
+}
+
+.about-close {
+  float: right;
+  cursor: pointer;
+}

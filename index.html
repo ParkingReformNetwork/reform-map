@@ -1,13 +1,184 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>Parking Mandates Map</title>
-    <link rel="stylesheet" href="./src/style.css" />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>A Map of Progress Eliminating Costly Parking Mandates</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
+      integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="src/css/style.css" />
   </head>
   <body>
+    <div class="banner">
+      <span style="margin: 0; font-weight: bold; font-size: 1em"
+        >Progress on Parking Mandates</span
+      >
+
+      <div class="banner-icons">
+        <button
+          type="button"
+          class="btn btn-outline-light banner__button col"
+          id="about-btn"
+          data-bs-toggle="button"
+        >
+          <i class="fa-solid fa-circle-info" title="About"></i>
+        </button>
+
+        <button
+          class="btn btn-outline-light dropdown-toggle banner__button"
+          type="button"
+          id="share-btn"
+          data-bs-toggle="dropdown"
+          aria-haspopup="true"
+          aria-expanded="false"
+        >
+          <i class="fa-solid fa-share-alt" title="See sharing option"></i>
+        </button>
+        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+          <a
+            class="dropdown-item"
+            href="https://twitter.com/intent/tweet?text=Costly%20parking%20mandates%20make%20it%20harder%20to%20build%20homes%20and%20fight%20climate%20change!%20Lots%20of%20cities%20are%20reforming%20their%20rules.%20Find%20out%20who!%0A%0Ahttps://parkingreform.org/resources/mandates-map/"
+            target="_blank"
+            >Twitter</a
+          >
+          <a
+            class="dropdown-item"
+            href="https://www.facebook.com/sharer/sharer.php?u=https://parkingreform.org/resources/mandates-map/"
+            target="_blank"
+            >Facebook</a
+          >
+          <a
+            class="dropdown-item"
+            href="https://www.linkedin.com/sharing/share-offsite/?url=https%3A%2F%2Fparkingreform.org%2Fresources%2Fmandates-map%2F"
+            target="_blank"
+            >LinkedIn</a
+          >
+          <button
+            type="button"
+            class="dropdown-item"
+            data-bs-toggle="modal"
+            data-bs-target="#embedModal"
+          >
+            Embed
+          </button>
+        </div>
+
+        <a
+          class="btn btn-outline-light banner__button col"
+          href="https://parkingreform.org/mandates-map"
+          target="_blank"
+        >
+          <i
+            class="expand-icon fas fa-external-link-alt"
+            title="View fullscreen"
+          ></i>
+        </a>
+      </div>
+    </div>
+
+    <div
+      class="modal fade"
+      id="embedModal"
+      tabindex="-1"
+      aria-labelledby="embedModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="embedModalLabel">
+              Embed on your website
+            </h5>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <textarea class="col form-control" rows="6" cols="30" readonly>
+&lt;iframe
+  src="https://parkingreform.org/mandates-map/"
+  width="100%"
+  height="600"&gt;
+&lt;/iframe&gt;
+            </textarea>
+          </div>
+          <div class="modal-footer">
+            <button
+              type="button"
+              class="btn btn-secondary"
+              data-bs-dismiss="modal"
+            >
+              Close
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="about-text-popup" id="about-popup">
+      <div class="about-text-container">
+        <div class="about-close">
+          <i
+            class="close-icon fa-solid fa-circle-xmark"
+            title="Close fullscreen"
+          ></i>
+        </div>
+        <h1><strong>Map Information</strong></h1>
+        <hr />
+        <p>
+          <strong
+            >Built and hosted by the
+            <a href="https://parkingreform.org" target="_blank"
+              >Parking Reform Network</a
+            ></strong
+          >
+        </p>
+
+        <h3><strong>Concept and Initial Report Data</strong></h3>
+        <hr />
+        <p>
+          This project is based on "A Map of Cities That Got Rid of Parking
+          Minimums" initially published by
+          <a href="https://strongtowns.org" target="_blank">StrongTowns</a> in
+          November 2015. Reports have been submitted by many StrongTowns readers
+          over the years and reporters are, generally, credited on the city
+          detailed information pages.
+        </p>
+
+        <ul>
+          <li>
+            <a
+              href="https://parkingreform.org/mandates-map/acknowledgments.html"
+              >Acknowlegments</a
+            >
+          </li>
+          <li>
+            <a href="https://forms.gle/PaYXUP5J7YR1Zi6q6" target="_blank"
+              >Submit a report</a
+            >
+          </li>
+          <li>
+            <a href="https://parkingreform.org/mandates-map/faq.html">FAQ</a>
+          </li>
+        </ul>
+        <hr />
+        <p>
+          <i class="fas fa-lightbulb"></i> Tip: Click the city name in the
+          summary box for a detailed report.
+        </p>
+      </div>
+    </div>
+
     <div id="map"></div>
     <script type="module">
-      import setUpSite from "./scripts/setUpSite";
+      import setUpSite from "./src/js/setUpSite";
 
       window.onload = async () => {
         await setUpSite();
