@@ -34,7 +34,6 @@ const setUpAbout = () => {
 
   // closes window on clicks outside the info popup
   window.addEventListener("click", function (event) {
-    console.log(event.target);
     if (
       !infoButton.contains(event.target) &&
       aboutElement.style.display == "block" &&
