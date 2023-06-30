@@ -64,30 +64,3 @@ div.banner-title {
   text-align: left;
   float: left;
 }
-
-div.about-text-popup {
-  position: absolute;
-  z-index: 2001;
-  background-color: #ffffff;
-  font-size: 18px;
-  border: 1px solid rgba(186, 186, 186, 0.7);
-  display: none;
-  left: 10%;
-  height: 60%;
-  width: 80%;
-  top: 120px;
-  overflow: auto;
-}
-
-div.about-text-popup svg.fa-circle-xmark {
-  color: #4d4d4d;
-}
-
-div.about-text-container {
-  padding: 20px;
-}
-
-.about-close {
-  float: right;
-  cursor: pointer;
-}
