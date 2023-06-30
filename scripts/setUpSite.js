@@ -1,6 +1,8 @@
 import { Map, TileLayer } from "leaflet";
 import "leaflet/dist/leaflet.css";
 
+import setUpIcons from "../src/js/fontAwesome";
+
 const base = new TileLayer(
   "https://stamen-tiles-{s}.a.ssl.fastly.net/toner-lite/{z}/{x}/{y}{r}.{ext}",
   {
@@ -14,6 +16,8 @@ const base = new TileLayer(
 );
 
 const setUpSite = async () => {
+  setUpIcons();
+
   const map = new Map("map", {
     layers: [base],
   });

@@ -1,0 +1,93 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap");
+
+body {
+  padding: 0;
+  margin: 0;
+  overflow: hidden;
+}
+html,
+body,
+#map {
+  height: 100%;
+  width: 100%;
+}
+
+body,
+.leaflet-container {
+  font-family: Poppins, Helvetica, Arial, sans-serif;
+}
+
+/*styling the two banners */
+
+div.banner {
+  display: flex;
+  height: 50px;
+  flex-shrink: 0;
+  align-items: center;
+  padding: 0 10px;
+  background: #4d4d4d;
+  color: white;
+  justify-content: space-between;
+}
+div.banner-title {
+  font-weight: bold;
+  border: none;
+  font-size: 20px;
+  background-color: #4d4d4d;
+  color: #ffffff;
+  float: right;
+  right: 2px;
+}
+
+.info-icon {
+  display: inline;
+}
+
+div.banner-icons {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+#info-icon,
+#share-dropdown-icon,
+#fullscreen-icon {
+  padding: 0.1rem 0.5rem;
+}
+
+div.banner-icons svg {
+  color: #ffffff;
+}
+
+div.banner-title {
+  left: 4px;
+  text-align: left;
+  float: left;
+}
+
+div.about-text-popup {
+  position: absolute;
+  z-index: 2001;
+  background-color: #ffffff;
+  font-size: 18px;
+  border: 1px solid rgba(186, 186, 186, 0.7);
+  display: none;
+  left: 10%;
+  height: 60%;
+  width: 80%;
+  top: 120px;
+  overflow: auto;
+}
+
+div.about-text-popup svg.fa-circle-xmark {
+  color: #4d4d4d;
+}
+
+div.about-text-container {
+  padding: 20px;
+}
+
+.about-close {
+  float: right;
+  cursor: pointer;
+}
