@@ -16,7 +16,7 @@ const base = new TileLayer(
 );
 
 const setUpCityPointsLayer = async (map) => {
-  scope = {
+  const scope = {
     Regional: "#7b3294",
     "City Center": "#fdae61",
     Citywide: "#d7191c",
