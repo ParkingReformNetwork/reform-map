@@ -1,5 +1,7 @@
-import { Map, TileLayer } from "leaflet";
+import { Map, TileLayer, CircleMarker } from "leaflet";
 import "leaflet/dist/leaflet.css";
+
+import data from "../map/tidied_map_data.csv";
 
 const base = new TileLayer(
   "https://stamen-tiles-{s}.a.ssl.fastly.net/toner-lite/{z}/{x}/{y}{r}.{ext}",
@@ -13,15 +15,40 @@ const base = new TileLayer(
   }
 );
 
+const setUpCityPointsLayer = async (map) => {
+  scope = {
+    Regional: "#7b3294",
+    "City Center": "#fdae61",
+    Citywide: "#d7191c",
+    "Main Street": "#abdda4",
+    TOD: "#2b83ba",
+  };
+  data.forEach((mandate) => {
+    new CircleMarker([mandate.lat, mandate.long], {
+      // add layer id
+      radius: 7,
+      stroke: true,
+      weight: 0.9,
+      color: "#FFFFFF",
+      fillColor: scope[mandate.magnitude_encoded],
+      fillOpacity: 1,
+      // add label
+      // add options
+    }).addTo(map);
+  });
+};
+
 const setUpSite = async () => {
   const map = new Map("map", {
     layers: [base],
   });
-  map.setView([40.9437, -78.9709], 12); // latitude, longitude
+  map.setView([43.2796758, -96.7449732], 4); // latitude, longitude
 
   map.attributionControl.setPrefix(
     'created by <a style="padding: 0 3px 0 3px; color:#fafafa; background-color: #21ccb9;" href=http://www.geocadder.bg/en/>GEOCADDER</a>'
   );
+
+  await Promise.all([setUpCityPointsLayer(map)]);
 };
 
 export default setUpSite;
