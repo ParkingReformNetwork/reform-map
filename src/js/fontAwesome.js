@@ -9,13 +9,7 @@ import {
 import "@fortawesome/fontawesome-svg-core/styles.css";
 
 const setUpIcons = () => {
-  library.add(
-    faCircleInfo,
-    faLink,
-    faUpRightFromSquare,
-    faCaretDown,
-    fas
-  );
+  library.add(faCircleInfo, faLink, faUpRightFromSquare, faCaretDown, fas);
   dom.watch();
 };
 
