@@ -1,6 +1,6 @@
 import { Map, TileLayer, CircleMarker } from "leaflet";
 import "leaflet/dist/leaflet.css";
-
+import setUpIcons from "../src/js/fontAwesome";
 import data from "../map/tidied_map_data.csv";
 
 const base = new TileLayer(
@@ -39,6 +39,8 @@ const setUpCityPointsLayer = async (map) => {
 };
 
 const setUpSite = async () => {
+  setUpIcons();
+
   const map = new Map("map", {
     layers: [base],
   });
