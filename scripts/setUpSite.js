@@ -1,7 +1,6 @@
 import { Map, TileLayer, CircleMarker } from "leaflet";
 import "leaflet/dist/leaflet.css";
 import setUpIcons from "../src/js/fontAwesome";
-import data from "../map/tidied_map_data.csv";
 
 const base = new TileLayer(
   "https://stamen-tiles-{s}.a.ssl.fastly.net/toner-lite/{z}/{x}/{y}{r}.{ext}",
@@ -16,6 +15,7 @@ const base = new TileLayer(
 );
 
 const setUpCityPointsLayer = async (map) => {
+  const data = await import("../map/tidied_map_data.csv");
   const scope = {
     Regional: "#7b3294",
     "City Center": "#fdae61",
@@ -25,15 +25,12 @@ const setUpCityPointsLayer = async (map) => {
   };
   data.forEach((mandate) => {
     new CircleMarker([mandate.lat, mandate.long], {
-      // add layer id
       radius: 7,
       stroke: true,
       weight: 0.9,
       color: "#FFFFFF",
       fillColor: scope[mandate.magnitude_encoded],
       fillOpacity: 1,
-      // add label
-      // add options
     }).addTo(map);
   });
 };
@@ -44,7 +41,7 @@ const setUpSite = async () => {
   const map = new Map("map", {
     layers: [base],
   });
-  map.setView([43.2796758, -96.7449732], 4); // latitude, longitude
+  map.setView([43.2796758, -96.7449732], 4); // Set default view (lat, long) to United States
 
   map.attributionControl.setPrefix(
     'created by <a style="padding: 0 3px 0 3px; color:#fafafa; background-color: #21ccb9;" href=http://www.geocadder.bg/en/>GEOCADDER</a>'
