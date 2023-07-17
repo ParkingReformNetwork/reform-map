@@ -47,7 +47,7 @@ const setUpSite = async () => {
     'created by <a style="padding: 0 3px 0 3px; color:#fafafa; background-color: #21ccb9;" href=http://www.geocadder.bg/en/>GEOCADDER</a>'
   );
 
-  await Promise.all([setUpCityPointsLayer(map)]);
+  await setUpCityPointsLayer(map);
 };
 
 export default setUpSite;
