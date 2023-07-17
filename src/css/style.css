@@ -40,7 +40,7 @@ div.banner-title {
 }
 
 .info-icon {
-  display: inline;
+  display: inline-flex;
 }
 
 div.banner-icons {
@@ -49,7 +49,7 @@ div.banner-icons {
   cursor: pointer;
 }
 
-#info-icon,
+.info-icon,
 #share-dropdown-icon,
 #fullscreen-icon {
   padding: 0.1rem 0.5rem;
@@ -63,4 +63,31 @@ div.banner-title {
   left: 4px;
   text-align: left;
   float: left;
+}
+
+div.about-text-popup {
+  position: absolute;
+  z-index: 2001;
+  background-color: #ffffff;
+  font-size: 18px;
+  border: 1px solid rgba(186, 186, 186, 0.7);
+  display: none;
+  left: 10%;
+  height: 60%;
+  width: 80%;
+  top: 120px;
+  overflow: auto;
+}
+
+div.about-text-popup svg.fa-circle-xmark {
+  color: #4d4d4d;
+}
+
+div.about-text-container {
+  padding: 20px;
+}
+
+.about-close {
+  float: right;
+  cursor: pointer;
 }
