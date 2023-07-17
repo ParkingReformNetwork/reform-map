@@ -1,3 +1,4 @@
+/* global document, window */
 import { Map, TileLayer } from "leaflet";
 import "leaflet/dist/leaflet.css";
 
@@ -25,10 +26,10 @@ const setUpAbout = () => {
   });
 
   // closes window on clicks outside the info popup
-  window.addEventListener("click", function (event) {
+  window.addEventListener("click", (event) => {
     if (
       !infoButton.contains(event.target) &&
-      aboutElement.style.display == "block" &&
+      aboutElement.style.display === "block" &&
       !aboutElement.contains(event.target)
     ) {
       aboutElement.style.display = "none";
