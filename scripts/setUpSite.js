@@ -1,7 +1,6 @@
 /* global document, window */
-import { Map, TileLayer } from "leaflet";
+import { Map, TileLayer, CircleMarker } from "leaflet";
 import "leaflet/dist/leaflet.css";
-
 import setUpIcons from "../src/js/fontAwesome";
 
 const base = new TileLayer(
@@ -15,6 +14,7 @@ const base = new TileLayer(
     ext: "png",
   }
 );
+
 
 const setUpAbout = () => {
   const aboutElement = document.querySelector(".about-text-popup");
@@ -42,6 +42,25 @@ const setUpAbout = () => {
   document.querySelector(".about-close").addEventListener("click", () => {
     aboutElement.style.display = "none";
     infoButton.classList.toggle("active");
+
+const setUpCityPointsLayer = async (map) => {
+  const data = await import("../map/tidied_map_data.csv");
+  const scope = {
+    Regional: "#7b3294",
+    "City Center": "#fdae61",
+    Citywide: "#d7191c",
+    "Main Street": "#abdda4",
+    TOD: "#2b83ba",
+  };
+  data.forEach((mandate) => {
+    new CircleMarker([mandate.lat, mandate.long], {
+      radius: 7,
+      stroke: true,
+      weight: 0.9,
+      color: "#FFFFFF",
+      fillColor: scope[mandate.magnitude_encoded],
+      fillOpacity: 1,
+    }).addTo(map);
   });
 };
 
@@ -52,11 +71,13 @@ const setUpSite = async () => {
   const map = new Map("map", {
     layers: [base],
   });
-  map.setView([40.9437, -78.9709], 12); // latitude, longitude
+  map.setView([43.2796758, -96.7449732], 4); // Set default view (lat, long) to United States
 
   map.attributionControl.setPrefix(
     'created by <a style="padding: 0 3px 0 3px; color:#fafafa; background-color: #21ccb9;" href=http://www.geocadder.bg/en/>GEOCADDER</a>'
   );
+
+  await setUpCityPointsLayer(map);
 };
 
 export default setUpSite;

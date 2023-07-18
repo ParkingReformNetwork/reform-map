@@ -8,6 +8,7 @@
     ]
   },
   "transformers": {
-    "*.geojson": ["@parcel/transformer-json"]
+    "*.geojson": ["@parcel/transformer-json"],
+    "*.csv": ["parcel-transformer-csv"]
   }
 }
