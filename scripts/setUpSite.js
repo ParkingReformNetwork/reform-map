@@ -15,7 +15,6 @@ const base = new TileLayer(
   }
 );
 
-
 const setUpAbout = () => {
   const aboutElement = document.querySelector(".about-text-popup");
   const infoButton = document.querySelector(".info-icon");
@@ -42,6 +41,8 @@ const setUpAbout = () => {
   document.querySelector(".about-close").addEventListener("click", () => {
     aboutElement.style.display = "none";
     infoButton.classList.toggle("active");
+  });
+};
 
 const setUpCityPointsLayer = async (map) => {
   const data = await import("../map/tidied_map_data.csv");
