@@ -5,35 +5,37 @@
     <link rel="stylesheet" href="./src/css/style.css" />
   </head>
   <body>
-    <div class="banner">
-      <div class="banner-title">Progress on Parking Mandates</div>
+    <div class="page">
+      <div class="banner">
+        <div class="banner-title">Progress on Parking Mandates</div>
 
-      <div class="banner-icons">
-        <i
-          class="fa-solid fa-circle-info fa-lg"
-          id="info-icon"
-          title="About"
-        ></i>
-
-        <div id="share-dropdown-icon" title="See sharing options">
-          <i class="fa-solid fa-share-alt fa-lg"></i>
-          <i class="fa-solid fa-caret-down"></i>
-        </div>
-
-        <a
-          id="fullscreen-icon"
-          href="https://parkingreform.org/mandates-map"
-          target="_blank"
-        >
+        <div class="banner-icons">
           <i
-            class="fa-solid fa-up-right-from-square fa-lg"
-            title="View fullscreen"
+            class="fa-solid fa-circle-info fa-lg"
+            id="info-icon"
+            title="About"
           ></i>
-        </a>
-      </div>
-    </div>
 
-    <div id="map"></div>
+          <div id="share-dropdown-icon" title="See sharing options">
+            <i class="fa-solid fa-share-alt fa-lg"></i>
+            <i class="fa-solid fa-caret-down"></i>
+          </div>
+
+          <a
+            id="fullscreen-icon"
+            href="https://parkingreform.org/mandates-map"
+            target="_blank"
+          >
+            <i
+              class="fa-solid fa-up-right-from-square fa-lg"
+              title="View fullscreen"
+            ></i>
+          </a>
+        </div>
+      </div>
+
+      <div id="map"></div>
+    </div>
     <script type="module">
       import setUpSite from "./scripts/setUpSite";
 
