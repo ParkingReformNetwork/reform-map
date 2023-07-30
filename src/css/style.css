@@ -28,6 +28,7 @@ div.banner {
   display: flex;
   height: 3rem;
   align-items: center;
+  padding: 0 0.5rem; /* if too high, will create wrapping*/
   background: var(--gray);
   color: var(--white);
   justify-content: space-between;
@@ -37,19 +38,17 @@ div.banner-title {
   font-size: 1.25rem;
   background-color: var(--gray);
   color: var(--white);
-  padding: 0 0.75em;
 }
 
 div.banner-icons {
   display: flex;
   align-items: center;
   cursor: pointer;
-  padding: 0 0.5em;
 }
 
-#info-icon,
-#share-dropdown-icon,
-#fullscreen-icon {
+.info-icon,
+.share-dropdown-icon,
+.fullscreen-icon {
   padding: 0.1rem 0.5rem;
 }
 
