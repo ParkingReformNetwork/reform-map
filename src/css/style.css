@@ -1,13 +1,19 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap");
 
-body {
-  padding: 0;
-  margin: 0;
-  overflow: hidden;
+/* setting css variables */
+:root {
+  --gray: #4d4d4d;
+  --light-gray: #bababa;
+  --white: #ffffff;
+  --poppins-font: Poppins, Helvetica, Arial, sans-serif;
 }
+
 html,
 body,
 #map {
+  padding: 0;
+  margin: 0;
+  overflow: hidden;
   height: 100%;
   width: 100%;
 }
@@ -17,36 +23,28 @@ body,
   font-family: Poppins, Helvetica, Arial, sans-serif;
 }
 
-/*styling the two banners */
-
+/* styling the banner */
 div.banner {
   display: flex;
-  height: 50px;
-  flex-shrink: 0;
+  height: 3rem;
   align-items: center;
-  padding: 0 10px;
-  background: #4d4d4d;
-  color: white;
+  background: var(--gray);
+  color: var(--white);
   justify-content: space-between;
 }
 div.banner-title {
   font-weight: bold;
-  border: none;
-  font-size: 20px;
-  background-color: #4d4d4d;
-  color: #ffffff;
-  float: right;
-  right: 2px;
-}
-
-.info-icon {
-  display: inline;
+  font-size: 1.25rem;
+  background-color: var(--gray);
+  color: var(--white);
+  padding: 0 0.75em;
 }
 
 div.banner-icons {
   display: flex;
   align-items: center;
   cursor: pointer;
+  padding: 0 0.5em;
 }
 
 #info-icon,
@@ -56,11 +54,5 @@ div.banner-icons {
 }
 
 div.banner-icons svg {
-  color: #ffffff;
-}
-
-div.banner-title {
-  left: 4px;
-  text-align: left;
-  float: left;
+  color: var(--white);
 }
