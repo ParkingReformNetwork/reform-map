@@ -18,6 +18,11 @@ div.page,
   width: 100%;
 }
 
+div.page {
+  display: flex;
+  flex-direction: column;
+}
+
 body,
 .leaflet-container {
   font-family: Poppins, Helvetica, Arial, sans-serif;
