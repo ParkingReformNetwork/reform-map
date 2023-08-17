@@ -1,14 +1,14 @@
-# Parking Reform Network Map
+# Parking Reform Map
 
-This code runs the Mandates Map app for the Parking Reform Network: https://parkingreform.org/mandates-map/.
+This code runs the Reform Map app for the Parking Reform Network: https://parkingreform.org/mandates-map/.
 
-The scripts are written in JavaScript and the app in R. We want to rewrite the app to JavaScript.
+The scripts are written in JavaScript. We are migrating the app from R to JavaScript.
 
 # Running the map app
 
 ## JavaScript Migration
 
-We are currently migrating from R to JavaScript. We are taking inspiration from the [Parking Lot Map](https://github.com/ParkingReformNetwork/parking-lot-map).
+The migration takes inspiration from the [Parking Lot Map](https://github.com/ParkingReformNetwork/parking-lot-map).
 
 1. Install [Node Package Manager (npm)](https://nodejs.dev/en/download/).
 
@@ -40,7 +40,7 @@ If the tests are taking a long time to start, run `rm -rf .parcel-cache` and try
 
 ### Autoformat code
 
-Using prettier to nicely format code.
+We use Prettier to nicely format code.
 
 ```bash
 ❯ npm run fmt
