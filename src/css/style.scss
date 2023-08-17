@@ -1,6 +1,6 @@
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap");
+@use "header";
 
-$gray: #4d4d4d;
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap");
 
 html,
 body,
@@ -21,37 +21,4 @@ div.page {
 body,
 .leaflet-container {
   font-family: Poppins, Helvetica, Arial, sans-serif;
-}
-
-/* styling the banner */
-div.banner {
-  display: flex;
-  height: 3rem;
-  align-items: center;
-  padding: 0 0.5rem; /* if too high, will create wrapping*/
-  background: $gray;
-  color: white;
-  justify-content: space-between;
-}
-div.banner-title {
-  font-weight: bold;
-  font-size: 1.25rem;
-  background-color: $gray;
-  color: white;
-}
-
-div.banner-icons {
-  display: flex;
-  align-items: center;
-  cursor: pointer;
-}
-
-.info-icon,
-.share-dropdown-icon,
-.fullscreen-icon {
-  padding: 0.1rem 0.5rem;
-}
-
-div.banner-icons svg {
-  color: white;
 }
