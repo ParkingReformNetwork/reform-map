@@ -3,22 +3,26 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap");
 
 html,
-body,
-div.page,
-#map {
+body {
   padding: 0;
   margin: 0;
-  overflow: hidden;
-  height: 100%;
+  height: 100vh;
   width: 100%;
-}
-
-div.page {
   display: flex;
   flex-direction: column;
+  overflow: hidden;
+}
+
+#map {
+  flex: 1;
+  width: 100%;
 }
 
 body,
 .leaflet-container {
   font-family: Poppins, Helvetica, Arial, sans-serif;
+}
+
+.leaflet-grab {
+  cursor: unset;
 }
