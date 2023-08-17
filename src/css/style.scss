@@ -1,11 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap");
 
-/* setting css variables */
-:root {
-  --gray: #4d4d4d;
-  --light-gray: #bababa;
-  --white: #ffffff;
-}
+$gray: #4d4d4d;
 
 html,
 body,
@@ -34,15 +29,15 @@ div.banner {
   height: 3rem;
   align-items: center;
   padding: 0 0.5rem; /* if too high, will create wrapping*/
-  background: var(--gray);
-  color: var(--white);
+  background: $gray;
+  color: white;
   justify-content: space-between;
 }
 div.banner-title {
   font-weight: bold;
   font-size: 1.25rem;
-  background-color: var(--gray);
-  color: var(--white);
+  background-color: $gray;
+  color: white;
 }
 
 div.banner-icons {
@@ -58,5 +53,5 @@ div.banner-icons {
 }
 
 div.banner-icons svg {
-  color: var(--white);
+  color: white;
 }
