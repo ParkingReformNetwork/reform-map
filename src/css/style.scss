@@ -1,0 +1,24 @@
+@use "header";
+
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap");
+
+html,
+body,
+div.page,
+#map {
+  padding: 0;
+  margin: 0;
+  overflow: hidden;
+  height: 100%;
+  width: 100%;
+}
+
+div.page {
+  display: flex;
+  flex-direction: column;
+}
+
+body,
+.leaflet-container {
+  font-family: Poppins, Helvetica, Arial, sans-serif;
+}
