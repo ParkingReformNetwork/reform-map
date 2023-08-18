@@ -38,16 +38,24 @@ const addLegend = (map) => {
   const legend = new Control({ position: "bottomright" });
   legend.onAdd = () => {
     const div = DomUtil.create("div", "legend");
-    div.innerHTML += `
-    <h2>Scope of reform</h2>
-    <ul>
-      <li><i style="background:#7b3294;opacity:0.5;"></i>Regional</li>
-      <li><i style="background:#d7191c;opacity:0.5;"></i>Citywide</li>
-      <li><i style="background:#fdae61;opacity:0.5;"></i>City Center/District</li>
-      <li><i style="background:#2b83ba;opacity:0.5;"></i>Transit Oriented</li>
-      <li><i style="background:#abdda4;opacity:0.5;"></i>Main Street/Special</li>
-    </ul>
-    `;
+    const scopes = [
+      { key: "Regional", label: "Regional" },
+      { key: "Citywide", label: "Citywide" },
+      { key: "City Center", label: "City Center/District" },
+      { key: "TOD", label: "Transit Oriented" },
+      { key: "Main Street", label: "Main Street/Special" },
+    ];
+    const listItems = scopes
+      .map(
+        (scope) => `
+          <li>
+            <i style="background:${
+              SCOPE_TO_COLOR[scope.key]
+            };opacity:0.5;"></i>${scope.label}
+          </li>`
+      )
+      .join("");
+    div.innerHTML += `<h2>Scope of reform</h2><ul>${listItems}</ul>`;
     return div;
   };
   legend.addTo(map);
