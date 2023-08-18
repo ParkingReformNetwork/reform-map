@@ -1,4 +1,4 @@
-import { Map, TileLayer, CircleMarker } from "leaflet";
+import { Map, TileLayer, CircleMarker, Control, DomUtil } from "leaflet";
 import "leaflet/dist/leaflet.css";
 
 import setUpIcons from "./fontAwesome";
@@ -34,6 +34,33 @@ const createMap = () => {
   return map;
 };
 
+const addLegend = (map) => {
+  const legend = new Control({ position: "bottomright" });
+  legend.onAdd = () => {
+    const div = DomUtil.create("div", "legend");
+    const scopes = [
+      { key: "Regional", label: "Regional" },
+      { key: "Citywide", label: "Citywide" },
+      { key: "City Center", label: "City Center/District" },
+      { key: "TOD", label: "Transit Oriented" },
+      { key: "Main Street", label: "Main Street/Special" },
+    ];
+    const listItems = scopes
+      .map(
+        (scope) => `
+          <li>
+            <i style="background:${SCOPE_TO_COLOR[scope.key]};"></i>${
+          scope.label
+        }
+          </li>`
+      )
+      .join("");
+    div.innerHTML += `<h2>Scope of reform</h2><ul>${listItems}</ul>`;
+    return div;
+  };
+  legend.addTo(map);
+};
+
 const setUpCityPointsLayer = async (map) => {
   const data = await import("../../map/tidied_map_data.csv");
   data.forEach((mandate) => {
@@ -51,6 +78,7 @@ const setUpCityPointsLayer = async (map) => {
 const setUpSite = async () => {
   setUpIcons();
   const map = createMap();
+  addLegend(map);
   await setUpCityPointsLayer(map);
 };
 
