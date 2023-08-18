@@ -49,9 +49,9 @@ const addLegend = (map) => {
       .map(
         (scope) => `
           <li>
-            <i style="background:${
-              SCOPE_TO_COLOR[scope.key]
-            };opacity:0.5;"></i>${scope.label}
+            <i style="background:${SCOPE_TO_COLOR[scope.key]};"></i>${
+          scope.label
+        }
           </li>`
       )
       .join("");
