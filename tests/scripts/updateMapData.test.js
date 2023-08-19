@@ -5,7 +5,7 @@ import {
   magnitudeToHighestOrAllUses,
   landUseToString,
   populationToBin,
-} from "../scripts/updateMapData";
+} from "../../scripts/updateMapData";
 
 test.describe("magnitudeToHighest", () => {
   const testCases = [
