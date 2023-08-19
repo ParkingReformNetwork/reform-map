@@ -1,5 +1,5 @@
 import { expect, test } from "@playwright/test";
-import { parseCitationLinks } from "../scripts/brokenLinks";
+import { parseCitationLinks } from "../../scripts/brokenLinks";
 
 test("parseCitationLinks correctly extracts some example pages", async () => {
   // If the links get updated, then update the below tests.

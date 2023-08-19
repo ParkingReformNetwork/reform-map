@@ -3,7 +3,7 @@ import {
   needsUpdate,
   normalizeAttachments,
   parseDatetime,
-} from "../scripts/updateCityDetail";
+} from "../../scripts/updateCityDetail";
 
 test.describe("needsUpdate()", () => {
   test("returns false if everything is older than globalLastUpdated", () => {
