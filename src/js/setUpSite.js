@@ -63,15 +63,17 @@ const addLegend = (map) => {
 
 const setUpCityPointsLayer = async (map) => {
   const data = await import("../../map/tidied_map_data.csv");
-  data.forEach((mandate) => {
-    new CircleMarker([mandate.lat, mandate.long], {
+  data.forEach((entry) => {
+    const marker = new CircleMarker([entry.lat, entry.long], {
       radius: 7,
       stroke: true,
       weight: 0.9,
       color: "#FFFFFF",
-      fillColor: SCOPE_TO_COLOR[mandate.magnitude_encoded],
+      fillColor: SCOPE_TO_COLOR[entry.magnitude_encoded],
       fillOpacity: 1,
-    }).addTo(map);
+    });
+    marker.bindTooltip(`${entry.city}, ${entry.state}`);
+    marker.addTo(map);
   });
 };
 
