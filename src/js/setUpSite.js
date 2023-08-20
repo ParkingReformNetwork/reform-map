@@ -36,8 +36,7 @@ const createMap = () => {
   return map;
 };
 
-const setUpCityPointsLayer = async (map) => {
-  const data = await import("../../map/tidied_map_data.csv");
+const setUpCityPointsLayer = (map, data) => {
   data.forEach((entry) => {
     const marker = new CircleMarker([entry.lat, entry.long], {
       radius: 7,
@@ -56,8 +55,10 @@ const setUpSite = async () => {
   setUpIcons();
   const map = createMap();
   addLegend(map, SCOPE_TO_COLOR);
-  setUpSearch();
-  await setUpCityPointsLayer(map);
+
+  const data = await import("../../map/tidied_map_data.csv");
+  setUpSearch(data);
+  setUpCityPointsLayer(map, data);
 };
 
 export default setUpSite;

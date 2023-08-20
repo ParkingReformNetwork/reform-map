@@ -6,12 +6,13 @@ import "@selectize/selectize/dist/css/selectize.css";
 // https://stackoverflow.com/a/47984928.
 window.$ = window.jQuery = jquery;
 
-const setUpSearch = () => {
+const setUpSearch = (data) => {
+  const cities = data.map((entry) => {
+    const desc = `${entry.city}, ${entry.state}`;
+    return { value: desc, text: desc };
+  });
   $(".city-search").selectize({
-    options: [
-      { value: 1, text: "opt1" },
-      { value: 2, text: "opt2" },
-    ],
+    options: cities,
     placeholder: "City search",
   });
 };
