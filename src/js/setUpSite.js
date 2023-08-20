@@ -8,7 +8,7 @@ const BASE_LAYER = new TileLayer(
   "https://stamen-tiles-{s}.a.ssl.fastly.net/toner-lite/{z}/{x}/{y}{r}.{ext}",
   {
     attribution:
-      'Map tiles by <a href="http://stamen.com">Stamen Design</a>, <a href="http://creativecommons.org/licenses/by/3.0">CC BY 3.0</a> &mdash; Map data &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
+      'Map tiles: <a href="http://stamen.com">Stamen Design</a>, <a href="http://creativecommons.org/licenses/by/3.0">CC BY 3.0</a>',
     subdomains: "abcd",
     minZoom: 0,
     maxZoom: 20,
@@ -30,7 +30,7 @@ const createMap = () => {
   });
   map.setView([43.2796758, -96.7449732], 4); // Set default view (lat, long) to United States
   map.attributionControl.setPrefix(
-    'created by <a style="padding: 0 3px 0 3px; color:#fafafa; background-color: #21ccb9;" href=http://www.geocadder.bg/en/>GEOCADDER</a>'
+    'Map data: <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a>'
   );
   return map;
 };
