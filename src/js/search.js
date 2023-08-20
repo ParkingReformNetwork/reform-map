@@ -12,6 +12,7 @@ const setUpSearch = () => {
       { key: 1, title: "opt1" },
       { key: 2, title: "opt2" },
     ],
+    placeholder: "City search",
   });
 };
 

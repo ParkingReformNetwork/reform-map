@@ -1,0 +1,8 @@
+.city-search.selectize-control {
+  // TODO: try to make this not absolute by creating a new Control
+  position: absolute;
+  top: 70px;
+  left: 50px;
+  width: 200px;
+  z-index: 1000;
+}
