@@ -57,7 +57,7 @@ const setUpSite = async () => {
   addLegend(map, SCOPE_TO_COLOR);
 
   const data = await import("../../map/tidied_map_data.csv");
-  setUpSearch(data);
+  setUpSearch(map, data);
   setUpCityPointsLayer(map, data);
 };
 

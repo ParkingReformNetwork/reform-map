@@ -1,8 +1,10 @@
 .city-search.selectize-control {
-  // TODO: try to make this not absolute by creating a new Control
-  position: absolute;
-  top: 70px;
-  left: 50px;
+  top: -75px;
+  left: 40px;
   width: 200px;
-  z-index: 1000;
+}
+
+.city-search.selectize-dropdown.leaflet-control {
+  margin-left: 0px;
+  margin-right: 0px;
 }
