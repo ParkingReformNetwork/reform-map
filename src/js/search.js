@@ -22,17 +22,12 @@ const setUpSearch = (map, data) => {
     const desc = `${entry.city}, ${entry.state}`;
     return { value: desc, text: desc };
   });
-
-  // Convert `<select>` into selectize component.
   $(".city-search").selectize({
     options: cities,
     placeholder: "City search",
   });
 
-  // Turn off dragging of map with option dropdown.
-  const dropdown = document.querySelector(".city-search.selectize-dropdown");
-  DomEvent.on(dropdown, "mousedown", DomEvent.stopPropagation);
-  DomEvent.on(dropdown, "click", DomEvent.stopPropagation);
+  // TODO: turn off dragging with the dropdown.
 };
 
 export default setUpSearch;
