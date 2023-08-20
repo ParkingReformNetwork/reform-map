@@ -7,7 +7,7 @@ import "@selectize/selectize/dist/css/selectize.css";
 // https://stackoverflow.com/a/47984928.
 window.$ = window.jQuery = jquery;
 
-const addSearch = (map, data) => {
+const setUpSearch = (map, data) => {
   const search = new Control({ position: "topleft" });
   search.onAdd = () => {
     const select = DomUtil.create("select", "city-search");
@@ -29,10 +29,10 @@ const addSearch = (map, data) => {
     placeholder: "City search",
   });
 
-  // Turn off dragging of map with option dropdown. TODO: fix scrolling
+  // Turn off dragging of map with option dropdown.
   const dropdown = document.querySelector(".city-search.selectize-dropdown");
   DomEvent.on(dropdown, "mousedown", DomEvent.stopPropagation);
   DomEvent.on(dropdown, "click", DomEvent.stopPropagation);
 };
 
-export default addSearch;
+export default setUpSearch;
