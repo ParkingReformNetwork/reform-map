@@ -1,0 +1,11 @@
+.city-search.selectize-control {
+  position: absolute;
+  top: 3.2em;
+  left: 3em;
+  width: 200px;
+  z-index: 800;
+
+  @media only screen and (min-width: 48em) {
+    top: 3.85em;
+  }
+}

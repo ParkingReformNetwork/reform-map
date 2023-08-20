@@ -1,8 +1,9 @@
 import { Map, TileLayer, CircleMarker, Control, DomUtil } from "leaflet";
 import "leaflet/dist/leaflet.css";
 
-import addLegend from "./legend";
 import setUpIcons from "./fontAwesome";
+import addLegend from "./legend";
+import setUpSearch from "./search";
 
 const BASE_LAYER = new TileLayer(
   "https://stamen-tiles-{s}.a.ssl.fastly.net/toner-lite/{z}/{x}/{y}{r}.{ext}",
@@ -35,8 +36,7 @@ const createMap = () => {
   return map;
 };
 
-const setUpCityPointsLayer = async (map) => {
-  const data = await import("../../map/tidied_map_data.csv");
+const setUpCityPointsLayer = (map, data) => {
   data.forEach((entry) => {
     const marker = new CircleMarker([entry.lat, entry.long], {
       radius: 7,
@@ -55,7 +55,10 @@ const setUpSite = async () => {
   setUpIcons();
   const map = createMap();
   addLegend(map, SCOPE_TO_COLOR);
-  await setUpCityPointsLayer(map);
+
+  const data = await import("../../map/tidied_map_data.csv");
+  setUpSearch(data);
+  setUpCityPointsLayer(map, data);
 };
 
 export default setUpSite;
