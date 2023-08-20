@@ -1,0 +1,25 @@
+.about-popup {
+    // popup window
+    position: absolute;
+    z-index: 1001;
+    background-color: white;
+    border: 1px solid gray;
+    width: 80%;
+    height: 60%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);   
+    overflow: auto;
+    // display: none;
+
+    //content
+    font-size: 1rem;
+    padding: 1rem;
+}
+
+.close-about {
+    position: absolute;
+    margin-top: 1em;
+    right: 1em;
+    cursor: pointer;
+}
