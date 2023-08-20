@@ -11,7 +11,15 @@ import {
 import "@fortawesome/fontawesome-svg-core/styles.css";
 
 const setUpIcons = () => {
-  library.add(faCircleInfo, faLink, faUpRightFromSquare, faCaretDown, faLightbulb, faCircleXmark, fas);
+  library.add(
+    faCircleInfo,
+    faLink,
+    faUpRightFromSquare,
+    faCaretDown,
+    faLightbulb,
+    faCircleXmark,
+    fas
+  );
   dom.watch();
 };
 
