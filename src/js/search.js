@@ -9,8 +9,8 @@ window.$ = window.jQuery = jquery;
 const setUpSearch = () => {
   $(".city-search").selectize({
     options: [
-      { key: 1, title: "opt1" },
-      { key: 2, title: "opt2" },
+      { value: 1, text: "opt1" },
+      { value: 2, text: "opt2" },
     ],
     placeholder: "City search",
   });
