@@ -3,7 +3,7 @@ import "leaflet/dist/leaflet.css";
 
 import setUpIcons from "./fontAwesome";
 import addLegend from "./legend";
-import setUpSearch from "./search";
+import addSearch from "./search";
 
 const BASE_LAYER = new TileLayer(
   "https://stamen-tiles-{s}.a.ssl.fastly.net/toner-lite/{z}/{x}/{y}{r}.{ext}",
@@ -57,7 +57,7 @@ const setUpSite = async () => {
   addLegend(map, SCOPE_TO_COLOR);
 
   const data = await import("../../map/tidied_map_data.csv");
-  setUpSearch(map, data);
+  addSearch(map, data);
   setUpCityPointsLayer(map, data);
 };
 
