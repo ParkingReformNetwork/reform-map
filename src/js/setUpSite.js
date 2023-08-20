@@ -11,7 +11,7 @@ const BASE_LAYER = new TileLayer(
       'Map tiles: <a href="http://stamen.com">Stamen Design</a>, <a href="http://creativecommons.org/licenses/by/3.0">CC BY 3.0</a>',
     subdomains: "abcd",
     minZoom: 0,
-    maxZoom: 20,
+    maxZoom: 10,
     ext: "png",
   }
 );
