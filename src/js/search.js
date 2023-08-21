@@ -17,6 +17,7 @@ const setUpSearch = (citiesToMarkers) => {
     options: cities,
     placeholder: "City search",
     onChange,
+    maxOptions: 3000,
   });
 };
 
