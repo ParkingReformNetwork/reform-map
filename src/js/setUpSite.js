@@ -1,4 +1,4 @@
-import { Map, TileLayer, CircleMarker, Control, DomUtil } from "leaflet";
+import { Map, TileLayer, CircleMarker } from "leaflet";
 import "leaflet/dist/leaflet.css";
 
 import setUpIcons from "./fontAwesome";
@@ -48,8 +48,11 @@ const readData = async () => {
   }, {});
 };
 
-const setUpCityPointsLayer = (map, data) => {
-  Object.entries(data).forEach(([cityState, entry]) => {
+/**
+ * Returns an object mapping cityState to its CircleMarker.
+ */
+const createCityMarkers = (map, data) =>
+  Object.entries(data).reduce((acc, [cityState, entry]) => {
     const marker = new CircleMarker([entry.lat, entry.long], {
       radius: 7,
       stroke: true,
@@ -58,10 +61,12 @@ const setUpCityPointsLayer = (map, data) => {
       fillColor: SCOPE_TO_COLOR[entry.magnitude_encoded],
       fillOpacity: 1,
     });
+    acc[cityState] = marker;
+
     marker.bindTooltip(cityState);
     marker.addTo(map);
-  });
-};
+    return acc;
+  }, {});
 
 const setUpSite = async () => {
   setUpIcons();
@@ -69,8 +74,8 @@ const setUpSite = async () => {
   addLegend(map, SCOPE_TO_COLOR);
 
   const data = await readData();
-  setUpSearch(data);
-  setUpCityPointsLayer(map, data);
+  const citiesToMarkers = createCityMarkers(map, data);
+  setUpSearch(citiesToMarkers);
 };
 
 export default setUpSite;

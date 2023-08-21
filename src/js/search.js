@@ -8,8 +8,8 @@ window.$ = window.jQuery = jquery;
 
 const onChange = (currentlySelected) => console.log(currentlySelected);
 
-const setUpSearch = (data) => {
-  const cities = Object.keys(data).map((cityState) => ({
+const setUpSearch = (citiesToMarkers) => {
+  const cities = Object.keys(citiesToMarkers).map((cityState) => ({
     value: cityState,
     text: cityState,
   }));
