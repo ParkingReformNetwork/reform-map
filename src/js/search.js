@@ -6,14 +6,17 @@ import "@selectize/selectize/dist/css/selectize.css";
 // https://stackoverflow.com/a/47984928.
 window.$ = window.jQuery = jquery;
 
+const onChange = (currentlySelected) => console.log(currentlySelected);
+
 const setUpSearch = (data) => {
-  const cities = data.map((entry) => {
-    const desc = `${entry.city}, ${entry.state}`;
-    return { value: desc, text: desc };
-  });
+  const cities = Object.keys(data).map((cityState) => ({
+    value: cityState,
+    text: cityState,
+  }));
   $(".city-search").selectize({
     options: cities,
     placeholder: "City search",
+    onChange,
   });
 };
 

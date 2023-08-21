@@ -36,8 +36,20 @@ const createMap = () => {
   return map;
 };
 
+/**
+ * Read the CSV and return an object with `City, State` as the key and the original entry as the value.
+ */
+const readData = async () => {
+  const data = await import("../../map/tidied_map_data.csv");
+  return data.reduce((acc, entry) => {
+    const cityState = `${entry.city}, ${entry.state}`;
+    acc[cityState] = entry;
+    return acc;
+  }, {});
+};
+
 const setUpCityPointsLayer = (map, data) => {
-  data.forEach((entry) => {
+  Object.entries(data).forEach(([cityState, entry]) => {
     const marker = new CircleMarker([entry.lat, entry.long], {
       radius: 7,
       stroke: true,
@@ -46,7 +58,7 @@ const setUpCityPointsLayer = (map, data) => {
       fillColor: SCOPE_TO_COLOR[entry.magnitude_encoded],
       fillOpacity: 1,
     });
-    marker.bindTooltip(`${entry.city}, ${entry.state}`);
+    marker.bindTooltip(cityState);
     marker.addTo(map);
   });
 };
@@ -56,7 +68,7 @@ const setUpSite = async () => {
   const map = createMap();
   addLegend(map, SCOPE_TO_COLOR);
 
-  const data = await import("../../map/tidied_map_data.csv");
+  const data = await readData();
   setUpSearch(data);
   setUpCityPointsLayer(map, data);
 };
