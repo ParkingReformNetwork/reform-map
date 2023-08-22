@@ -41,10 +41,7 @@ const createMap = () => {
  */
 const readData = async () => {
   const data = await import("../../map/tidied_map_data.csv");
-  const sortedData = data.sort((a, b) =>
-    `${a.city}, ${a.state}`.localeCompare(`${b.city}, ${b.state}`)
-  );
-  return sortedData.reduce((acc, entry) => {
+  return data.reduce((acc, entry) => {
     const cityState = `${entry.city}, ${entry.state}`;
     acc[cityState] = entry;
     return acc;
