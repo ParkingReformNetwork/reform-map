@@ -6,6 +6,11 @@
   border: 1px solid gray;
   width: 80%;
   height: 60%;
+
+  @media only screen and (min-width: 85em) {
+    height: auto;
+  }
+
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
