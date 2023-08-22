@@ -4,12 +4,22 @@ import {
   faLink,
   faUpRightFromSquare,
   faCaretDown,
+  faLightbulb,
+  faCircleXmark,
   fas,
 } from "@fortawesome/free-solid-svg-icons";
 import "@fortawesome/fontawesome-svg-core/styles.css";
 
 const setUpIcons = () => {
-  library.add(faCircleInfo, faLink, faUpRightFromSquare, faCaretDown, fas);
+  library.add(
+    faCircleInfo,
+    faLink,
+    faUpRightFromSquare,
+    faCaretDown,
+    faLightbulb,
+    faCircleXmark,
+    fas
+  );
   dom.watch();
 };
 
