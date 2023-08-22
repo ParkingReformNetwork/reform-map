@@ -7,7 +7,7 @@ test("search changes what is shown", async ({ page }) => {
 
   await page.locator(".selectize-input").click();
   await page.locator(".selectize-dropdown-content > .option").first().click();
-  let cities = await getNumCities(page);
+  const cities = await getNumCities(page);
   expect(cities).toBe(1);
 
   // Removing the selected cities restores all.
