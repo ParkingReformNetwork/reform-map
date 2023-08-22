@@ -1,8 +1,7 @@
 import { defineConfig } from "@playwright/test";
 
-// jest automatically sets process.env.NODE_ENV = 'test'
-// playwright does not
-// NODE_ENV is used in updateCityDetail.js to prevent the main function from running when it's being imported for testing
+// We set this env var so our scripts can avoid running their `main`
+// functions during testing.
 process.env.NODE_ENV = "test";
 
 // Note that we may run tests by using Parcel (development) vs running on the `dist` folder.

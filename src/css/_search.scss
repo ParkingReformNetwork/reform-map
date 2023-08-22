@@ -1,11 +1,16 @@
-.city-search.selectize-control {
+div.choices {
   position: absolute;
   top: 3.2em;
   left: 3em;
-  width: 200px;
-  z-index: 800;
+  width: 250px;
+  z-index: 1100;
 
   @media only screen and (min-width: 48em) {
     top: 3.85em;
   }
+}
+
+div.choices__inner {
+  min-height: unset;
+  width: unset;
 }
