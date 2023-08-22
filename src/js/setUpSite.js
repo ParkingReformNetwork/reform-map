@@ -78,7 +78,7 @@ const setUpSite = async () => {
 
   const data = await readData();
   const citiesToMarkers = createCityMarkers(map, data);
-  setUpSearch(citiesToMarkers);
+  setUpSearch(map, citiesToMarkers);
 };
 
 export default setUpSite;
