@@ -4,7 +4,7 @@ import "leaflet/dist/leaflet.css";
 import setUpIcons from "./fontAwesome";
 import addLegend from "./legend";
 import setUpSearch from "./search";
-import setUpAbout from "./popup";
+import setUpAbout from "./about";
 
 const BASE_LAYER = new TileLayer(
   "https://stamen-tiles-{s}.a.ssl.fastly.net/toner-lite/{z}/{x}/{y}{r}.{ext}",

@@ -24,6 +24,14 @@ test("about popup can be opened and closed", async ({ page }) => {
   expect(await aboutIsVisible()).toBe(true);
 
   // click x icon in popup
-  await page.click(".close-about");
+  await page.click(".about-popup-close-icon");
+  expect(await aboutIsVisible()).toBe(false);
+
+  // click about icon (open popup)
+  await page.click(aboutIcon);
+  expect(await aboutIsVisible()).toBe(true);
+
+  // click header
+  await page.click("header");
   expect(await aboutIsVisible()).toBe(false);
 });
