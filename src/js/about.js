@@ -22,10 +22,12 @@ const setUpAbout = () => {
 
   // Note that the close element will only render when the about text popup is rendered.
   // So, it only ever makes sense for a click to close.
-  document.querySelector(".about-popup-close-icon").addEventListener("click", () => {
-    aboutElement.style.display = "none";
-    infoButton.classList.toggle("active");
-  });
+  document
+    .querySelector(".about-popup-close-icon")
+    .addEventListener("click", () => {
+      aboutElement.style.display = "none";
+      infoButton.classList.toggle("active");
+    });
 };
 
 export default setUpAbout;
