@@ -1,6 +1,8 @@
 /* global document */
 
-const setUpDetails = (map, markerGroup, data) => {
+const setUpDetails = (markerGroup, data) => {
+    const cityDetailsElement = document.querySelector(".city-details-popup");
+
     markerGroup.on("click", function(e){
         const cityState = e.sourceTarget.getTooltip().getContent();
         cityData = data[cityState];
@@ -18,7 +20,17 @@ const setUpDetails = (map, markerGroup, data) => {
         `;
 
         document.querySelector(".city-details-text").innerHTML = cityInfo;
+
+        cityDetailsElement.style.display = "block";
     });
+
+    // Note that the close element will only render when the about text popup is rendered.
+    // So, it only ever makes sense for a click to close.
+    document
+        .querySelector(".city-details-popup-close-icon")
+        .addEventListener("click", () => {
+            cityDetailsElement.style.display = "none";
+        });
 };
 
 export default setUpDetails;
