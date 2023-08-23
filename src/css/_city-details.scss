@@ -1,16 +1,16 @@
 .city-details-popup {
     // popup window
     position: absolute;
-    z-index: 1001;
+    z-index: 1000;
     background-color: white;
     border: 1px solid gray;
-    width: 30%;
+    width: 40%;
     height: auto;
   
     top: 4rem;
     right: 1rem;
     overflow: auto;
-    // display: none;
+    display: none;
   }
 
 a {
@@ -23,8 +23,8 @@ a:hover {
 
 .city-details-text{
     //content
-    font-size: 1rem;
-    padding: 0 1rem;
+    font-size: 0.9em;
+    padding: 1rem 2rem;
 }
 .city-details-popup-close-icon {
     position: absolute;
