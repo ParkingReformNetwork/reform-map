@@ -1,0 +1,27 @@
+.city-details-popup {
+    // popup window
+    position: absolute;
+    z-index: 1001;
+    background-color: white;
+    border: 1px solid gray;
+    width: 30%;
+    height: 60%;
+  
+    top: 10%;
+    left: 50%;
+    transform: translate( 50%, 0%);
+    overflow: auto;
+    // display: none;
+  
+    //content
+    font-size: 1rem;
+    padding: 1rem;
+  }
+
+  a {
+    text-decoration: none;
+  }
+
+  a:hover {
+    text-decoration: underline;
+  }

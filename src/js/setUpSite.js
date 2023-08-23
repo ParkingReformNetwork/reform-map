@@ -1,10 +1,11 @@
-import { Map, TileLayer, CircleMarker } from "leaflet";
+import { Map, TileLayer, CircleMarker, FeatureGroup } from "leaflet";
 import "leaflet/dist/leaflet.css";
 
 import setUpIcons from "./fontAwesome";
 import addLegend from "./legend";
 import setUpSearch from "./search";
 import setUpAbout from "./about";
+import setUpDetails from "./cityDetails";
 
 const BASE_LAYER = new TileLayer(
   "https://stamen-tiles-{s}.a.ssl.fastly.net/toner-lite/{z}/{x}/{y}{r}.{ext}",
@@ -37,6 +38,12 @@ const createMap = () => {
   return map;
 };
 
+const createMarkerGroup = (map) => {
+  const markerGroup = new FeatureGroup();
+  markerGroup.addTo(map);
+  return markerGroup;
+}
+
 /**
  * Read the CSV and return an object with `City, State` as the key and the original entry as the value.
  */
@@ -49,10 +56,11 @@ const readData = async () => {
   }, {});
 };
 
+
 /**
  * Returns an object mapping cityState to its CircleMarker.
  */
-const createCityMarkers = (map, data) =>
+const createCityMarkers = (data, markerGroup) => 
   Object.entries(data).reduce((acc, [cityState, entry]) => {
     const marker = new CircleMarker([entry.lat, entry.long], {
       radius: 7,
@@ -65,7 +73,7 @@ const createCityMarkers = (map, data) =>
     acc[cityState] = marker;
 
     marker.bindTooltip(cityState);
-    marker.addTo(map);
+    marker.addTo(markerGroup);
     return acc;
   }, {});
 
@@ -73,10 +81,12 @@ const setUpSite = async () => {
   setUpIcons();
   setUpAbout();
   const map = createMap();
+  const markerGroup = createMarkerGroup(map);
   addLegend(map, SCOPE_TO_COLOR);
 
   const data = await readData();
-  const citiesToMarkers = createCityMarkers(map, data);
+  const citiesToMarkers = createCityMarkers(data, markerGroup);
+  setUpDetails(map, markerGroup, data);
   setUpSearch(map, citiesToMarkers);
 };
 
