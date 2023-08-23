@@ -11,16 +11,25 @@
     right: 1rem;
     overflow: auto;
     // display: none;
-  
+  }
+
+a {
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+.city-details-text{
     //content
     font-size: 1rem;
-    padding: 1rem;
-  }
+    padding: 0 1rem;
+}
+.city-details-popup-close-icon {
+    position: absolute;
+    right: 1em;
+    top: 1em;
+    cursor: pointer;
+}
 
-  a {
-    text-decoration: none;
-  }
-
-  a:hover {
-    text-decoration: underline;
-  }

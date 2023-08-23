@@ -17,7 +17,7 @@ const setUpDetails = (map, markerGroup, data) => {
         <p>Land Uses: ${cityData["land_uses"]}</p>
         `;
 
-        document.querySelector(".city-details-popup").innerHTML = cityInfo;
+        document.querySelector(".city-details-text").innerHTML = cityInfo;
     });
 };
 
