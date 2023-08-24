@@ -38,6 +38,9 @@ const createMap = () => {
   return map;
 };
 
+/**
+ * Create a FeatureGroup for all city markers. Makes click detection easier and through one Group.
+ */
 const createMarkerGroup = (map) => {
   const markerGroup = new FeatureGroup();
   markerGroup.addTo(map);

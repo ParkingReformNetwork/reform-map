@@ -3,6 +3,7 @@
 const setUpDetails = (markerGroup, data) => {
   const cityDetailsElement = document.querySelector(".city-details-popup");
 
+  // Clicking any city marker, updates HTML and makes popup visible
   markerGroup.on("click", function (e) {
     const cityState = e.sourceTarget.getTooltip().getContent();
 
@@ -24,8 +25,7 @@ const setUpDetails = (markerGroup, data) => {
 
 const createCityDetailsText = (data, cityState) => {
   const cityData = data[cityState];
-
-  cityInfo = `<h2><a href="${cityData["citation_url"]}">${cityState}</h2>
+  return `<h2><a href="${cityData["citation_url"]}">${cityState}</h2>
     <p>Detailed Information and Citations</p></a>
     <p>${cityData["report_summary"]}</p>
     <p>Population: ${parseInt(cityData["population"]).toLocaleString()}</p>
@@ -34,7 +34,6 @@ const createCityDetailsText = (data, cityState) => {
     <p>Scope of Reform: ${cityData["report_magnitude"]}</p>
     <p>Land Uses: ${cityData["land_uses"]}</p>
     `;
-  return cityInfo;
 };
 
 export default setUpDetails;

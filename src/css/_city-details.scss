@@ -1,5 +1,4 @@
 .city-details-popup {
-  // popup window
   position: absolute;
   z-index: 1000;
   background-color: white;
@@ -26,7 +25,6 @@ a:hover {
 }
 
 .city-details-text {
-  //content
   font-size: 0.7em;
 
   @media only screen and (min-width: 48em) {
