@@ -9,6 +9,6 @@ const loadMap = async (page) => {
 const getNumCities = async (page) => page.locator(CITY_MARKER).count();
 
 const cityDetailsIsVisible = async (page) =>
-    page.$eval(".city-details-popup", (el) => el.style.display === "block");
+  page.$eval(".city-details-popup", (el) => el.style.display === "block");
 
 export { getNumCities, loadMap, cityDetailsIsVisible };

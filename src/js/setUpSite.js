@@ -42,7 +42,7 @@ const createMarkerGroup = (map) => {
   const markerGroup = new FeatureGroup();
   markerGroup.addTo(map);
   return markerGroup;
-}
+};
 
 /**
  * Read the CSV and return an object with `City, State` as the key and the original entry as the value.
@@ -56,11 +56,10 @@ const readData = async () => {
   }, {});
 };
 
-
 /**
  * Returns an object mapping cityState to its CircleMarker.
  */
-const createCityMarkers = (data, markerGroup) => 
+const createCityMarkers = (data, markerGroup) =>
   Object.entries(data).reduce((acc, [cityState, entry]) => {
     const marker = new CircleMarker([entry.lat, entry.long], {
       radius: 7,
