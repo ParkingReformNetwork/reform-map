@@ -1,0 +1,40 @@
+.city-details-popup {
+  position: absolute;
+  z-index: 1100;
+  background-color: white;
+  border: 1px solid gray;
+  width: 40%;
+  height: 60%;
+
+  @media only screen and (min-width: 90em) {
+    height: auto;
+  }
+
+  top: 4rem;
+  right: 1rem;
+  overflow: auto;
+  display: none;
+}
+
+a {
+  text-decoration: none;
+
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+.city-details-text {
+  font-size: 0.7em;
+
+  @media only screen and (min-width: 48em) {
+    font-size: 0.9rem;
+  }
+  padding: 1rem 2rem;
+}
+.city-details-popup-close-icon {
+  position: absolute;
+  right: 1em;
+  top: 1em;
+  cursor: pointer;
+}

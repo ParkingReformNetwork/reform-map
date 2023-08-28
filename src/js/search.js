@@ -1,21 +1,21 @@
 import Choices from "choices.js";
 import "choices.js/public/assets/styles/choices.css";
 
-// Using `=>` twice allows for partial application. The caller can pre-set the `map`,
+// Using `=>` twice allows for partial application. The caller can pre-set the `markerGroup`,
 // `citiesToMarkers`, and `choices` arguments. That results in a function that works with
 // the event listener.
-const onChange = (map, citiesToMarkers, choices) => () => {
+const onChange = (markerGroup, citiesToMarkers, choices) => () => {
   const selectedSet = new Set(choices.getValue(true));
   Object.entries(citiesToMarkers).forEach(([cityState, marker]) => {
     if (selectedSet.size === 0 || selectedSet.has(cityState)) {
-      marker.addTo(map);
+      marker.addTo(markerGroup);
     } else {
-      marker.remove();
+      marker.removeFrom(markerGroup);
     }
   });
 };
 
-const setUpSearch = (map, citiesToMarkers) => {
+const setUpSearch = (markerGroup, citiesToMarkers) => {
   const cities = Object.keys(citiesToMarkers).map((cityState) => ({
     value: cityState,
     label: cityState,
@@ -28,7 +28,10 @@ const setUpSearch = (map, citiesToMarkers) => {
     allowHTML: false,
     itemSelectText: "Select",
   });
-  element.addEventListener("change", onChange(map, citiesToMarkers, choices));
+  element.addEventListener(
+    "change",
+    onChange(markerGroup, citiesToMarkers, choices)
+  );
 };
 
 export default setUpSearch;
