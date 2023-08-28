@@ -4,13 +4,10 @@ const setUpDetails = (markerGroup, data) => {
   const cityDetailsElement = document.querySelector(".city-details-popup");
 
   // Clicking any city marker, updates HTML and makes popup visible
-  markerGroup.on("click", function (e) {
+  markerGroup.on("click", (e) => {
     const cityState = e.sourceTarget.getTooltip().getContent();
-
-    cityInfo = createCityDetailsText(data, cityState);
-
+    const cityInfo = createCityDetailsText(data, cityState);
     document.querySelector(".city-details-text").innerHTML = cityInfo;
-
     cityDetailsElement.style.display = "block";
   });
 

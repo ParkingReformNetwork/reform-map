@@ -1,6 +1,6 @@
 .city-details-popup {
   position: absolute;
-  z-index: 1002;
+  z-index: 1100;
   background-color: white;
   border: 1px solid gray;
   width: 40%;
@@ -18,10 +18,10 @@
 
 a {
   text-decoration: none;
-}
 
-a:hover {
-  text-decoration: underline;
+  &:hover {
+    text-decoration: underline;
+  }
 }
 
 .city-details-text {
