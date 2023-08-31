@@ -1,25 +1,29 @@
 /* global document, window */
 
+import { marker } from "leaflet";
+
 // can set default to certain filters
 const onFilterChange = (markerGroup, citiesToMarkers, data) => () => {
-  const checked = document.querySelectorAll(".scope-filter :checked");
-  const selected = [...checked].map((option) => option.value)[0];
-  console.log(selected);
+  const checked = document.querySelectorAll(".filter--scope :checked");
+  const selected = [...checked].map((option) => option.value);
+  console.log(checked);
+  console.log([...checked])
   Object.entries(citiesToMarkers).forEach(([cityState, marker]) => {
-    console.log("in here");
-    if (data[cityState]["report_magnitude"].includes(selected)) {
+    if (selected.some(scope => data[cityState]["report_magnitude"].includes(scope))) {
       marker.addTo(markerGroup);
     } else {
       marker.removeFrom(markerGroup);
     }
   });
+
+  console.log(markerGroup.getLayers())
 };
 
 const setUpFilter = (markerGroup, citiesToMarkers, data) => {
-  filter = document.querySelector(".scope-filter");
+  filter = document.querySelector(".filter--scope");
 
   filter.addEventListener(
-    "click",
+    "change",
     onFilterChange(markerGroup, citiesToMarkers, data)
   );
 };
