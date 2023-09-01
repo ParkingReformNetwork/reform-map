@@ -1,30 +1,38 @@
 /* global document, window */
 
-import { marker } from "leaflet";
-
-// can set default to certain filters
-const onFilterChange = (markerGroup, citiesToMarkers, data) => () => {
-  const checked = document.querySelectorAll(".filter--scope :checked");
-  const selected = [...checked].map((option) => option.value);
-  console.log(checked);
-  console.log([...checked])
-  Object.entries(citiesToMarkers).forEach(([cityState, marker]) => {
-    if (selected.some(scope => data[cityState]["report_magnitude"].includes(scope))) {
-      marker.addTo(markerGroup);
-    } else {
-      marker.removeFrom(markerGroup);
-    }
-  });
-
-  console.log(markerGroup.getLayers())
-};
-
 const setUpFilter = (markerGroup, citiesToMarkers, data) => {
-  filter = document.querySelector(".filter--scope");
+  const filter = document.querySelector(".filter--scope");
+  let priorSelection = [
+    "Regional",
+    "Citywide",
+    "City Center",
+    "Transit Oriented",
+    "Main Street",
+  ];
+
+  const onScopeFilterChange = (markerGroup, citiesToMarkers, data) => () => {
+    const checked = document.querySelectorAll(".filter--scope :checked");
+    const selected = [...checked].map((option) => option.value);
+    Object.entries(citiesToMarkers).forEach(([cityState, marker]) => {
+      if (
+        selected.some((scope) =>
+          data[cityState]["report_magnitude"].includes(scope)
+        )
+      ) {
+        marker.addTo(markerGroup);
+      } else {
+        marker.removeFrom(markerGroup);
+      }
+    });
+  };
+
+  filter.querySelectorAll("option").forEach((option) => {
+    option.selected = priorSelection.includes(option.value);
+  });
 
   filter.addEventListener(
     "change",
-    onFilterChange(markerGroup, citiesToMarkers, data)
+    onScopeFilterChange(markerGroup, citiesToMarkers, data)
   );
 };
 
