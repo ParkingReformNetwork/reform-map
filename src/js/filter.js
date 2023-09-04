@@ -2,7 +2,7 @@
 
 const setUpFilter = (markerGroup, citiesToMarkers, data) => {
   const filter = document.querySelector(".filter--scope");
-  let priorSelection = [
+  const priorSelection = [
     "Regional",
     "Citywide",
     "City Center",
@@ -11,13 +11,16 @@ const setUpFilter = (markerGroup, citiesToMarkers, data) => {
   ];
 
   const onScopeFilterChange = (markerGroup, citiesToMarkers, data) => () => {
-    const checked = document.querySelectorAll(".filter--scope :checked");
-    const selected = [...checked].map((option) => option.value);
+    const selected = new Set(
+      [...document.querySelectorAll(".filter--scope :checked")].map(
+        (option) => option.value
+      )
+    );
     Object.entries(citiesToMarkers).forEach(([cityState, marker]) => {
       if (
-        selected.some((scope) =>
-          data[cityState]["report_magnitude"].includes(scope)
-        )
+        data[cityState]["report_magnitude"]
+          .split(",")
+          .some((scope) => selected.has(scope))
       ) {
         marker.addTo(markerGroup);
       } else {
@@ -26,6 +29,7 @@ const setUpFilter = (markerGroup, citiesToMarkers, data) => {
     });
   };
 
+  // makes all options selected
   filter.querySelectorAll("option").forEach((option) => {
     option.selected = priorSelection.includes(option.value);
   });
