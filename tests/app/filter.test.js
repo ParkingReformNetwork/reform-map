@@ -4,31 +4,30 @@ import { loadMap, getNumCities } from "./utils";
 test("scope filter updates markers", async ({ page }) => {
   await loadMap(page);
 
-  const all = await getNumCities(page);
-
-  const checkMarkers = async () => {
-    const cities = await getNumCities(page);
-    return cities > 0 && cities < all;
+  // min updated on 9/3/23
+  const scopeMin = {
+    Regional: 5,
+    Citywide: 257,
+    "City Center": 1430,
+    "Transit Oriented": 18,
+    "Main Street": 33,
   };
 
-  await page.selectOption(".filter--scope", "Regional");
-  expect(await checkMarkers()).toBe(true);
+  const checkScope = async (scopeType) => {
+    await page.selectOption(".filter--scope", scopeType);
 
-  await page.selectOption(".filter--scope", "Citywide");
-  expect(await checkMarkers()).toBe(true);
+    const min = Array.isArray(scopeType)
+      ? scopeType.reduce((sum, key) => sum + (scopeMin[key] || 0), 0)
+      : scopeMin[scopeType] || 0;
+    const cities = await getNumCities(page);
 
-  await page.selectOption(".filter--scope", "City Center");
-  expect(await checkMarkers()).toBe(true);
+    return cities >= min && cities < min * 1.5;
+  };
 
-  await page.selectOption(".filter--scope", "Transit Oriented");
-  expect(await checkMarkers()).toBe(true);
-
-  await page.selectOption(".filter--scope", "Main Street");
-  expect(await checkMarkers()).toBe(true);
-
-  await page.selectOption(".filter--scope", [
-    "Transit Oriented",
-    "City Center",
-  ]);
-  expect(await checkMarkers()).toBe(true);
+  expect(await checkScope("Regional")).toBe(true);
+  expect(await checkScope("Citywide")).toBe(true);
+  expect(await checkScope("City Center")).toBe(true);
+  expect(await checkScope("Transit Oriented")).toBe(true);
+  expect(await checkScope("Main Street")).toBe(true);
+  expect(await checkScope(["Transit Oriented", "City Center"])).toBe(true);
 });
