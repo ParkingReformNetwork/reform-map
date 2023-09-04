@@ -1,5 +1,4 @@
 .about-popup {
-  // popup window
   position: absolute;
   z-index: 1001;
   background-color: white;
@@ -7,19 +6,19 @@
   width: 80%;
   height: 60%;
 
-  @media only screen and (min-width: 85em) {
-    height: auto;
-  }
-
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+
   overflow: auto;
   display: none;
 
-  //content
   font-size: 1rem;
   padding: 1rem;
+
+  @media only screen and (min-width: 48em) {
+    height: auto;
+  }
 }
 
 .about-popup-close-icon {
