@@ -1,0 +1,18 @@
+.donate-button {
+  width: 5rem;
+  position: absolute;
+  left: 0.5rem;
+  bottom: 2.25rem;
+  z-index: 800;
+
+  img {
+    width: 100%;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+
+  @media only screen and (min-width: 48em) {
+    left: 1rem;
+    bottom: 0.75rem;
+  }
+}
