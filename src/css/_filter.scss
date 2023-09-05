@@ -1,0 +1,11 @@
+.filter--scope {
+  position: absolute;
+  top: 4em;
+  left: 15em;
+  width: auto;
+  z-index: 1100;
+
+  @media only screen and (min-width: 48em) {
+    top: 4.7em;
+  }
+}
