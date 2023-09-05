@@ -8,9 +8,9 @@ test("scope filter updates markers", async ({ page }) => {
   const scopeMin = {
     Regional: 5,
     Citywide: 257,
-    "City Center": 1430,
+    "City Center/Business District": 1430,
     "Transit Oriented": 18,
-    "Main Street": 33,
+    "Main Street/Special": 33,
   };
 
   const checkScope = async (scopeType) => {
@@ -21,13 +21,13 @@ test("scope filter updates markers", async ({ page }) => {
       : scopeMin[scopeType] || 0;
     const cities = await getNumCities(page);
 
-    return cities >= min && cities < min * 1.5;
+    expect(cities >= min && cities < min * 1.5).toBe(true);
   };
 
-  expect(await checkScope("Regional")).toBe(true);
-  expect(await checkScope("Citywide")).toBe(true);
-  expect(await checkScope("City Center")).toBe(true);
-  expect(await checkScope("Transit Oriented")).toBe(true);
-  expect(await checkScope("Main Street")).toBe(true);
-  expect(await checkScope(["Transit Oriented", "City Center"])).toBe(true);
+  await checkScope("Regional");
+  await checkScope("Citywide");
+  await checkScope("City Center/Business District");
+  await checkScope("Transit Oriented");
+  await checkScope("Main Street/Special");
+  await checkScope(["Transit Oriented", "City Center/Business District"]);
 });
