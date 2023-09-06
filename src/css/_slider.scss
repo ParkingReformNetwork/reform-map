@@ -1,16 +1,16 @@
 // uncomment to visualize slider mechanism
-// input {
-//     border: solid;
-// }
+input {
+    border: solid;
+}
 
 .min-max-slider {
   position: absolute;
-  width: 216px;
+  width: 360px;
   text-align: center;
   margin-bottom: 50px;
   top: 10em;
   z-index: 1200;
-  left: 12em;
+  left: 1rem;
 }
 .min-max-slider > label {
   display: none;
@@ -35,8 +35,9 @@ span.value.upper::before {
 }
 .min-max-slider > .legend > * {
   font-size: 0.5em;
-  opacity: 0.25;
-  margin-left: 0.6em;
+  opacity: 1;
+  border: solid;
+  flex: 1;
 }
 .min-max-slider > input {
   cursor: pointer;
