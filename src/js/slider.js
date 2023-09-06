@@ -16,86 +16,79 @@ const stringIntervals = [
 ];
 
 function draw(slider, low, high) {
-  // set vars from top to bottom
+  // Setting vars from top to bottom.
   var lower = slider.querySelector(".lower");
   var upper = slider.querySelector(".upper");
-  var min = slider.querySelector(".left-slider"); // left slider
-  var max = slider.querySelector(".right-slider"); // right slider
+  var leftSlider = slider.querySelector(".left-slider"); // left slider
+  var rightSlider = slider.querySelector(".right-slider"); // right slider
   var legend = slider.querySelector(".legend"); // number below sliders
   var thumbsize = parseInt(slider.getAttribute("data-thumbsize"));
   var rangewidth = parseInt(slider.getAttribute("data-rangewidth"));
-  var rangemin = parseInt(slider.getAttribute("data-rangemin"));    // total min
-  var rangemax = parseInt(slider.getAttribute("data-rangemax"));    // total max
-  var intervalSize = rangewidth / (rangemax - rangemin + 1);        // how far the slider moves for each interval (px)
-  var minValue = parseInt(min.value);
-  var maxValue = parseInt(max.value);
+  var rangemin = parseInt(slider.getAttribute("data-rangemin")); // total min
+  var rangemax = parseInt(slider.getAttribute("data-rangemax")); // total max
+  var intervalSize = rangewidth / (rangemax - rangemin + 1); // how far the slider moves for each interval (px)
+  var leftValue = parseInt(leftSlider.value);
+  var rightValue = parseInt(rightSlider.value);
 
-  // set min and max attributes for left and right sliders
-  // cross: a single interval that min and max sliders overlap
+  // Setting min and max attributes for left and right sliders.
+  var cross = rightValue - 0.5 >= leftValue ? rightValue - 0.5 : rightValue; // a single interval that min and max sliders overlap
+  var extend = leftValue + 1 == rightValue; // (boolean): if sliders are close and within 1 step can overlap
+  leftSlider.setAttribute("max", extend ? cross + 0.5 : cross);
+  rightSlider.setAttribute("min", cross);
 
-  var cross = maxValue - 0.5 >= minValue ? maxValue - 0.5 : maxValue;
-  console.log("cross: " +cross+ "\nmaxValue: " +maxValue+ "\nminValue: " +minValue)
-  // extend (boolean): if sliders are close and within 1 step can overlap
-  var extend = minValue + 1 == maxValue;
-  min.setAttribute("max", extend ? cross + 0.5 : cross);
-  max.setAttribute("min", cross);
-
-  /* set css */
+  // Setting CSS.
   // To prevent the two sliders from crossing, this sets the max and min for the left and right sliders respectively.
-  minWidth = min.getAttribute("max") * intervalSize;
-  maxWidth = (rangemax - max.getAttribute("min")) * intervalSize;
-  // Note: cannot set maxWidth to rangewidth - minWidth due to the overlaping interval
-  min.style.width = minWidth + thumbsize + "px";
-  max.style.width = maxWidth + thumbsize + "px";
+  leftWidth = leftSlider.getAttribute("max") * intervalSize;
+  rightWidth = (rangemax - rightSlider.getAttribute("min")) * intervalSize;
+  // Note: cannot set maxWidth to (rangewidth - minWidth) due to the overlaping interval
+  leftSlider.style.width = leftWidth + thumbsize + "px";
+  rightSlider.style.width = rightWidth + thumbsize + "px";
 
   // The left slider has a fixed anchor. However the right slider has to move everytime the range of the slider changes.
-  min.style.left = "0px";
-  max.style.left = extend
-    ? parseInt(min.style.width) - intervalSize/2 - thumbsize + "px"
-    : parseInt(min.style.width) - thumbsize + "px";
-  min.style.top = lower.offsetHeight + "px";
-  max.style.top = lower.offsetHeight + "px";
-  legend.style.marginTop = min.offsetHeight + "px";
+  leftSlider.style.left = "0px";
+  rightSlider.style.left = extend
+    ? parseInt(leftSlider.style.width) - intervalSize / 2 - thumbsize + "px"
+    : parseInt(leftSlider.style.width) - thumbsize + "px";
+  leftSlider.style.top = lower.offsetHeight + "px";
+  rightSlider.style.top = lower.offsetHeight + "px";
+  legend.style.marginTop = leftSlider.offsetHeight + "px";
   slider.style.height =
-    lower.offsetHeight + min.offsetHeight + legend.offsetHeight + "px";
+    lower.offsetHeight + leftSlider.offsetHeight + legend.offsetHeight + "px";
 
-  /* write value and labels */
-//   max.value = max.getAttribute("data-value");
-//   min.value = min.getAttribute("data-value");
+  // There is a separate attribute "data-value" to ensure the slider resets when page is refreshed.
+  rightSlider.value = rightSlider.getAttribute("data-value");
+  leftSlider.value = leftSlider.getAttribute("data-value");
   lower.innerHTML = low;
   upper.innerHTML = high;
 }
 
 function init(slider) {
-  /* set function vars */
-  var min = slider.querySelector(".left-slider");
-  var max = slider.querySelector(".right-slider");
-  var rangemin = parseInt(min.getAttribute("min"));
-  var rangemax = parseInt(max.getAttribute("max"));
-  var avgvalue = (rangemin + rangemax) / 2;
+  // Setting variables.
+  var leftSlider = slider.querySelector(".left-slider");
+  var rightSlider = slider.querySelector(".right-slider");
+  var rangemin = parseInt(leftSlider.getAttribute("min"));
+  var rangemax = parseInt(rightSlider.getAttribute("max"));
   var legendnum = slider.getAttribute("data-legendnum");
 
-  /* set data-values */
-//   min.setAttribute("data-value", rangemin);
-//   max.setAttribute("data-value", rangemax);
-
-  /* set data vars */
+  // Setting data attributes
+  leftSlider.setAttribute("data-value", rangemin);
+  rightSlider.setAttribute("data-value", rangemax);
   slider.setAttribute("data-rangemin", rangemin);
   slider.setAttribute("data-rangemax", rangemax);
   slider.setAttribute("data-thumbsize", thumbsize);
   slider.setAttribute("data-rangewidth", slider.offsetWidth);
 
-  /* write labels */
+  // Writing and inserting header
   var lower = document.createElement("span");
   var upper = document.createElement("span");
   lower.classList.add("lower", "value");
   upper.classList.add("upper", "value");
   lower.appendChild(document.createTextNode(rangemin));
   upper.appendChild(document.createTextNode(rangemax));
-  slider.insertBefore(lower, min.previousElementSibling);
-  slider.insertBefore(upper, min.previousElementSibling);
+  slider.insertBefore(lower, leftSlider.previousElementSibling);
+  slider.insertBefore(upper, leftSlider.previousElementSibling);
 
-  /* write legend */
+  // Writing and inserting interval legend
   var legend = document.createElement("div");
   legend.classList.add("legend");
   var legendvalues = [];
@@ -107,40 +100,31 @@ function init(slider) {
   }
   slider.appendChild(legend);
 
-  /* draw */
   draw(slider, "100", "50M");
 
-  /* events */
-  min.addEventListener("input", function () {
-    updateExponential(min);
+  leftSlider.addEventListener("input", function () {
+    updateExponential(leftSlider);
   });
-  max.addEventListener("input", function () {
-    updateExponential(max);
+  rightSlider.addEventListener("input", function () {
+    updateExponential(rightSlider);
   });
 }
 
 function updateExponential(el) {
-  // Define the intervals in an array
-  const intervals = [
-    100, 500, 1000, 5000, 10000, 50000, 100000, 500000, 1000000, 5000000,
-    10000000, 50000000,
-  ];
-  /* set function vars */
+  // Set variables.
   var slider = el.parentElement;
-  var min = slider.querySelector("#left-slider");
-  var max = slider.querySelector("#right-slider");
-  var minvalue = Math.floor(min.value);
-  var maxvalue = Math.floor(max.value);
+  var leftSlider = slider.querySelector("#left-slider");
+  var rightSlider = slider.querySelector("#right-slider");
+  var leftValue = Math.floor(leftSlider.value);
+  var rightValue = Math.floor(rightSlider.value);
 
-  /* set inactive values before draw */
-//   min.setAttribute("data-value", minvalue);
-//   max.setAttribute("data-value", maxvalue);
-  min.value = minvalue;
-  max.value = maxvalue;
+  // Set attributes before drawing
+  leftSlider.setAttribute("data-value", leftValue);
+  rightSlider.setAttribute("data-value", rightValue);
+  leftSlider.value = leftValue;
+  rightSlider.value = rightValue;
 
-  var avgvalue = (minvalue + maxvalue) / 2;
-  /* draw */
-  draw(slider, stringIntervals[minvalue], stringIntervals[maxvalue]);
+  draw(slider, stringIntervals[leftValue], stringIntervals[rightValue]);
 }
 
 var sliders = document.querySelectorAll(".min-max-slider");
