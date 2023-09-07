@@ -21,14 +21,12 @@ const numInterval = [
   10000000, 50000000,
 ];
 
-function draw(slider, low, high) {
+const draw = (slider, low, high) => {
   // Setting vars from top to bottom.
-  var lower = slider.querySelector(".lower");
-  var upper = slider.querySelector(".upper");
+  var lower = document.querySelector(".lower");
+  var upper = document.querySelector(".upper");
   var leftSlider = slider.querySelector(".left-slider"); // left slider
   var rightSlider = slider.querySelector(".right-slider"); // right slider
-  var legend = slider.querySelector(".legend"); // number below sliders
-  var thumbsize = parseInt(slider.getAttribute("data-thumbsize"));
   var rangewidth = parseInt(slider.getAttribute("data-rangewidth"));
   var rangemin = parseInt(slider.getAttribute("data-rangemin")); // total min
   var rangemax = parseInt(slider.getAttribute("data-rangemax")); // total max
@@ -51,24 +49,24 @@ function draw(slider, low, high) {
   rightSlider.style.width = rightWidth + thumbsize + "px";
 
   // The left slider has a fixed anchor. However the right slider has to move everytime the range of the slider changes.
-  leftSlider.style.left = "0px";
+  const offset = 5;
+  leftSlider.style.left = offset + "px";
   rightSlider.style.left = extend
-    ? parseInt(leftSlider.style.width) - intervalSize / 2 - thumbsize + "px"
-    : parseInt(leftSlider.style.width) - thumbsize + "px";
-  leftSlider.style.top = lower.offsetHeight + "px";
-  rightSlider.style.top = lower.offsetHeight + "px";
-  legend.style.marginTop = leftSlider.offsetHeight + "px";
-  slider.style.height =
-    lower.offsetHeight + leftSlider.offsetHeight + legend.offsetHeight + "px";
+    ? parseInt(leftSlider.style.width) -
+      intervalSize / 2 -
+      thumbsize +
+      offset +
+      "px"
+    : parseInt(leftSlider.style.width) - thumbsize + offset + "px";
 
   // There is a separate attribute "data-value" to ensure the slider resets when page is refreshed.
   rightSlider.value = rightSlider.getAttribute("data-value");
   leftSlider.value = leftSlider.getAttribute("data-value");
   lower.innerHTML = low;
   upper.innerHTML = high;
-}
+};
 
-function init(slider, markerGroup, citiesToMarkers, data) {
+const init = (slider, markerGroup, citiesToMarkers, data) => {
   // Setting variables.
   var leftSlider = slider.querySelector(".left-slider");
   var rightSlider = slider.querySelector(".right-slider");
@@ -85,26 +83,24 @@ function init(slider, markerGroup, citiesToMarkers, data) {
   slider.setAttribute("data-rangewidth", slider.offsetWidth);
 
   // Writing and inserting header label
-  var lower = document.createElement("span");
-  var upper = document.createElement("span");
-  lower.classList.add("lower", "value");
-  upper.classList.add("upper", "value");
+  var lower = document.querySelector(".lower");
+  var upper = document.querySelector(".upper");
+  //   lower.classList.add("lower", "value");
+  //   upper.classList.add("upper", "value");
   lower.appendChild(document.createTextNode(rangemin));
   upper.appendChild(document.createTextNode(rangemax));
-  slider.insertBefore(lower, leftSlider.previousElementSibling);
-  slider.insertBefore(upper, leftSlider.previousElementSibling);
+  //   slider.insertBefore(lower, leftSlider.previousElementSibling);
+  //   slider.insertBefore(upper, leftSlider.previousElementSibling);
 
   // Writing and inserting interval legend
-  var legend = document.createElement("div");
-  legend.classList.add("legend");
+  var legend = document.querySelector(".slider-legend");
   var legendvalues = [];
   for (var i = 0; i < legendnum; i++) {
-    legendvalues[i] = document.createElement("div");
+    legendvalues[i] = document.createElement("span");
     var val = stringIntervals[i];
     legendvalues[i].appendChild(document.createTextNode(val));
     legend.appendChild(legendvalues[i]);
   }
-  slider.appendChild(legend);
 
   draw(slider, "100", "50M");
 
@@ -114,9 +110,9 @@ function init(slider, markerGroup, citiesToMarkers, data) {
   rightSlider.addEventListener("input", function () {
     updateExponential(rightSlider, markerGroup, citiesToMarkers, data);
   });
-}
+};
 
-function updateExponential(el, markerGroup, citiesToMarkers, data) {
+const updateExponential = (el, markerGroup, citiesToMarkers, data) => {
   // Set variables.
   var slider = el.parentElement;
   var leftSlider = slider.querySelector("#left-slider");
@@ -142,7 +138,7 @@ function updateExponential(el, markerGroup, citiesToMarkers, data) {
   );
 
   draw(slider, stringIntervals[leftValue], stringIntervals[rightValue]);
-}
+};
 
 const setUpSlider = (markerGroup, citiesToMarkers, data) => {
   var sliders = document.querySelectorAll(".min-max-slider");

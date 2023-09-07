@@ -1,16 +1,26 @@
 // uncomment to visualize slider mechanism
-input {
-  border: solid;
-}
+// input {
+//   border: solid;
+// }
 
-.min-max-slider {
+.population-slider {
   position: absolute;
-  width: 360px;
-  text-align: center;
-  margin-bottom: 50px;
+  z-index: 1100;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   top: 10em;
-  z-index: 1200;
-  left: 1rem;
+  left: 1em;
+}
+.min-max-slider {
+  width: 360px;
+  //   text-align: center;
+  height: 2em;
+  display: flex;
+  justify-content: space-between;
+  // margin-bottom: 50px;
+  // top: 10em;
+  // left: 1rem;
 }
 .min-max-slider > label {
   display: none;
@@ -20,24 +30,17 @@ span.value {
   font-weight: bold;
   display: inline-block;
 }
-span.value.lower::before {
-  content: "€";
-  display: inline-block;
-}
-span.value.upper::before {
-  content: "- €";
-  display: inline-block;
-  margin-left: 0.4em;
-}
-.min-max-slider > .legend {
+.slider-legend {
   display: flex;
   justify-content: space-between;
+  width: 100%;
+  padding: 0;
 }
-.min-max-slider > .legend > * {
+.slider-legend span {
   font-size: 0.5em;
   opacity: 1;
-  border: solid;
   flex: 1;
+  text-align: center;
 }
 .min-max-slider > input {
   cursor: pointer;
