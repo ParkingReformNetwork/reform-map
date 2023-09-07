@@ -1,0 +1,74 @@
+// uncomment to visualize slider mechanism
+input {
+  border: solid;
+}
+
+.min-max-slider {
+  position: absolute;
+  width: 360px;
+  text-align: center;
+  margin-bottom: 50px;
+  top: 10em;
+  z-index: 1200;
+  left: 1rem;
+}
+.min-max-slider > label {
+  display: none;
+}
+span.value {
+  height: 1.7em;
+  font-weight: bold;
+  display: inline-block;
+}
+span.value.lower::before {
+  content: "€";
+  display: inline-block;
+}
+span.value.upper::before {
+  content: "- €";
+  display: inline-block;
+  margin-left: 0.4em;
+}
+.min-max-slider > .legend {
+  display: flex;
+  justify-content: space-between;
+}
+.min-max-slider > .legend > * {
+  font-size: 0.5em;
+  opacity: 1;
+  border: solid;
+  flex: 1;
+}
+.min-max-slider > input {
+  cursor: pointer;
+  position: absolute;
+}
+
+/* webkit specific styling */
+.min-max-slider > input {
+  -webkit-appearance: none;
+  outline: none !important;
+  background: transparent;
+  background-image: linear-gradient(
+    to bottom,
+    transparent 0%,
+    transparent 30%,
+    silver 30%,
+    silver 60%,
+    transparent 60%,
+    transparent 100%
+  );
+}
+.min-max-slider > input::-webkit-slider-thumb {
+  -webkit-appearance: none; /* Override default look */
+  appearance: none;
+  width: 14px; /* Set a specific slider handle width */
+  height: 14px; /* Slider handle height */
+  background: #eee; /* Green background */
+  cursor: pointer; /* Cursor on hover */
+  border: 1px solid gray;
+  border-radius: 100%;
+}
+.min-max-slider > input::-webkit-slider-runnable-track {
+  cursor: pointer;
+}

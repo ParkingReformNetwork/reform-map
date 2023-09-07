@@ -7,6 +7,7 @@ import setUpSearch from "./search";
 import setUpAbout from "./about";
 import setUpDetails from "./cityDetails";
 import { setUpFilter } from "./filter";
+import setUpSlider from "./slider";
 
 const BASE_LAYER = new TileLayer(
   "https://stamen-tiles-{s}.a.ssl.fastly.net/toner-lite/{z}/{x}/{y}{r}.{ext}",
@@ -92,6 +93,7 @@ const setUpSite = async () => {
   setUpDetails(markerGroup, data);
   setUpSearch(markerGroup, citiesToMarkers);
   setUpFilter(markerGroup, citiesToMarkers, data);
+  setUpSlider(markerGroup, citiesToMarkers, data);
 };
 
 export default setUpSite;
