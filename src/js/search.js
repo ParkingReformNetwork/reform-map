@@ -1,18 +1,16 @@
 import Choices from "choices.js";
 import "choices.js/public/assets/styles/choices.css";
 
-// Using `=>` twice allows for partial application. The caller can pre-set the `markerGroup`,
-// `citiesToMarkers`, and `choices` arguments. That results in a function that works with
-// the event listener.
+import { changeSelectedMarkers } from "./filter";
+
+// The double => is "partial application".
 const onChange = (markerGroup, citiesToMarkers, choices) => () => {
   const selectedSet = new Set(choices.getValue(true));
-  Object.entries(citiesToMarkers).forEach(([cityState, marker]) => {
-    if (selectedSet.size === 0 || selectedSet.has(cityState)) {
-      marker.addTo(markerGroup);
-    } else {
-      marker.removeFrom(markerGroup);
-    }
-  });
+  changeSelectedMarkers(
+    markerGroup,
+    citiesToMarkers,
+    (cityState) => selectedSet.size === 0 || selectedSet.has(cityState)
+  );
 };
 
 const setUpSearch = (markerGroup, citiesToMarkers) => {
