@@ -34,8 +34,8 @@ test("scope filter updates markers", async ({ page }) => {
 
 test("population filter updates markers", async ({ page }) => {
   await loadMap(page);
-  const left = await page.$('.left-slider');
-  const right = await page.$('.right-slider');
+  const left = await page.$(".left-slider");
+  const right = await page.$(".right-slider");
 
   const testSlider = async (slider, moveTo) => {
     const before = await getNumCities(page);
@@ -44,7 +44,7 @@ test("population filter updates markers", async ({ page }) => {
     expect(before > after).toBe(true);
   };
 
-  await testSlider(left, '5');
-  await testSlider(right, '10.5');  
+  await testSlider(left, "5");
+  await testSlider(right, "10.5");
   // NOTE: Due to the way the double slider is coded, the right slider only extends 0.5 step from where the slider head is.
 });
