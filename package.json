@@ -7,6 +7,7 @@
     "start": "parcel",
     "build": "rm -rf dist; parcel build --detailed-report",
     "test": "playwright test",
+    "check": "tsc --noEmit",
     "fmt": "prettier --write .",
     "fix": "prettier --write scripts/ tests/; eslint --fix scripts/  tests/",
     "lint": "prettier --check . && eslint scripts/ tests/",
@@ -22,6 +23,8 @@
     "@parcel/compressor-gzip": "^2.9.3",
     "@parcel/transformer-sass": "^2.9.3",
     "@playwright/test": "^1.35.1",
+    "@typescript-eslint/eslint-plugin": "^6.6.0",
+    "@typescript-eslint/parser": "^6.6.0",
     "eslint": "^8.37.0",
     "eslint-config-airbnb-base": "^15.0.0",
     "eslint-config-prettier": "^8.8.0",
@@ -35,7 +38,8 @@
     "parcel": "^2.9.2",
     "parcel-transformer-csv": "^0.0.3",
     "playwright": "^1.35.1",
-    "prettier": "^2.8.7"
+    "prettier": "^2.8.7",
+    "typescript": "^5.2.2"
   },
   "targets": {
     "default": {
