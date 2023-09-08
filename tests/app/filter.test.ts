@@ -13,7 +13,9 @@ test("scope filter updates markers", async ({ page }) => {
     "Main Street/Special": 33,
   };
 
-  const checkScope = async (scopeType) => {
+  const checkScope = async (
+    scopeType: string | Array<string>
+  ): Promise<void> => {
     await page.selectOption(".filter--scope", scopeType);
 
     const min = Array.isArray(scopeType)
