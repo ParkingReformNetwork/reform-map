@@ -85,12 +85,8 @@ const init = (slider, markerGroup, citiesToMarkers, data) => {
   // Writing and inserting header label
   var lower = document.querySelector(".lower");
   var upper = document.querySelector(".upper");
-  //   lower.classList.add("lower", "value");
-  //   upper.classList.add("upper", "value");
   lower.appendChild(document.createTextNode(rangemin));
   upper.appendChild(document.createTextNode(rangemax));
-  //   slider.insertBefore(lower, leftSlider.previousElementSibling);
-  //   slider.insertBefore(upper, leftSlider.previousElementSibling);
 
   // Writing and inserting interval legend
   var legend = document.querySelector(".slider-legend");
