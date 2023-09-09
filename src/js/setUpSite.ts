@@ -70,17 +70,16 @@ const createCityMarkers = (
   markerGroup: FeatureGroup
 ): Record<string, CircleMarker> =>
   Object.entries(data).reduce((acc, [cityState, entry]) => {
-    const marker = new CircleMarker(
-      [parseInt(entry.lat), parseInt(entry.long)],
-      {
-        radius: 7,
-        stroke: true,
-        weight: 0.9,
-        color: "#FFFFFF",
-        fillColor: SCOPE_TO_COLOR[entry.magnitude_encoded],
-        fillOpacity: 1,
-      }
-    );
+    // @ts-ignore: passing strings to CircleMarker for lat/lng is valid, and
+    // parsing to ints would lose precision.
+    const marker = new CircleMarker([entry.lat, entry.long], {
+      radius: 7,
+      stroke: true,
+      weight: 0.9,
+      color: "#FFFFFF",
+      fillColor: SCOPE_TO_COLOR[entry.magnitude_encoded],
+      fillOpacity: 1,
+    });
     acc[cityState] = marker;
 
     marker.bindTooltip(cityState);
