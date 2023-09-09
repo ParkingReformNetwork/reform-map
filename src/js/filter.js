@@ -38,10 +38,17 @@ const setUpFilter = (markerGroup, citiesToMarkers, data) => {
   filter.querySelectorAll("option").forEach((option) => {
     option.selected = true;
   });
-  filter.addEventListener(
-    "change",
-    onScopeFilterChange(markerGroup, citiesToMarkers, data)
-  );
+
+  filter.addEventListener("mousedown", (e) => {
+    // For each option, do not exhibit normal behavior. Instead, change the option to the opposite state.
+    if (e.target.tagName === "OPTION") {
+      e.preventDefault();
+      e.target.parentElement.focus();
+      e.target.selected = !e.target.selected;
+    }
+    const onChange = onScopeFilterChange(markerGroup, citiesToMarkers, data);
+    onChange();
+  });
 };
 
 export { changeSelectedMarkers, setUpFilter };
