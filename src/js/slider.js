@@ -25,8 +25,8 @@ const draw = (slider, low, high) => {
   // Setting vars from top to bottom.
   var lower = document.querySelector(".lower");
   var upper = document.querySelector(".upper");
-  var leftSlider = slider.querySelector(".left-slider"); // left slider
-  var rightSlider = slider.querySelector(".right-slider"); // right slider
+  var leftSlider = slider.querySelector(".left-slider"); 
+  var rightSlider = slider.querySelector(".right-slider"); 
   var rangewidth = parseInt(slider.getAttribute("data-rangewidth"));
   var rangemin = parseInt(slider.getAttribute("data-rangemin")); // total min
   var rangemax = parseInt(slider.getAttribute("data-rangemax")); // total max
@@ -137,7 +137,7 @@ const updateExponential = (el, markerGroup, citiesToMarkers, data) => {
 };
 
 const setUpSlider = (markerGroup, citiesToMarkers, data) => {
-  var sliders = document.querySelectorAll(".min-max-slider");
+  var sliders = document.querySelectorAll(".population-slider");
   sliders.forEach((slider) => {
     init(slider, markerGroup, citiesToMarkers, data);
   });

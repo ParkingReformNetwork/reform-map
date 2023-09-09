@@ -3,7 +3,7 @@
 //   border: solid;
 // }
 
-.population-slider {
+.population-slider-container {
   position: absolute;
   z-index: 1100;
   display: flex;
@@ -12,13 +12,13 @@
   top: 10em;
   left: 1em;
 }
-.min-max-slider {
+.population-slider {
   width: 360px;
   height: 2em;
   display: flex;
   justify-content: space-between;
 }
-.min-max-slider > label {
+.population-slider > label {
   display: none;
 }
 span.value {
@@ -38,13 +38,13 @@ span.value {
   flex: 1;
   text-align: center;
 }
-.min-max-slider > input {
+.population-slider > input {
   cursor: pointer;
   position: absolute;
 }
 
 /* webkit specific styling */
-.min-max-slider > input {
+.population-slider > input {
   -webkit-appearance: none;
   outline: none !important;
   background: transparent;
@@ -58,7 +58,7 @@ span.value {
     transparent 100%
   );
 }
-.min-max-slider > input::-webkit-slider-thumb {
+.population-slider > input::-webkit-slider-thumb {
   -webkit-appearance: none; /* Override default look */
   appearance: none;
   width: 14px; /* Set a specific slider handle width */
@@ -68,6 +68,6 @@ span.value {
   border: 1px solid gray;
   border-radius: 100%;
 }
-.min-max-slider > input::-webkit-slider-runnable-track {
+.population-slider > input::-webkit-slider-runnable-track {
   cursor: pointer;
 }
