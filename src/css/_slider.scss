@@ -18,10 +18,7 @@
   display: flex;
   justify-content: space-between;
 }
-.population-slider > label {
-  display: none;
-}
-span.value {
+.population-slider-label {
   height: 1.7em;
   font-weight: bold;
   display: inline-block;
@@ -31,22 +28,22 @@ span.value {
   justify-content: space-between;
   width: 100%;
   padding: 0;
-}
-.slider-legend span {
-  font-size: 0.5em;
-  opacity: 1;
-  flex: 1;
-  text-align: center;
+  span {
+    font-size: 0.5em;
+    opacity: 1;
+    flex: 1;
+    text-align: center;
+
+  }
 }
 .population-slider > input {
   cursor: pointer;
   position: absolute;
 }
 
-/* webkit specific styling */
 .population-slider > input {
   -webkit-appearance: none;
-  outline: none !important;
+  outline: none;
   background: transparent;
   background-image: linear-gradient(
     to bottom,
@@ -59,12 +56,12 @@ span.value {
   );
 }
 .population-slider > input::-webkit-slider-thumb {
-  -webkit-appearance: none; /* Override default look */
+  -webkit-appearance: none; // Override default look 
   appearance: none;
-  width: 14px; /* Set a specific slider handle width */
-  height: 14px; /* Slider handle height */
-  background: #eee; /* Green background */
-  cursor: pointer; /* Cursor on hover */
+  width: 14px; // Set a specific slider handle width 
+  height: 14px; // Slider handle height
+  background: white; // white, solid background
+  cursor: pointer;
   border: 1px solid gray;
   border-radius: 100%;
 }
