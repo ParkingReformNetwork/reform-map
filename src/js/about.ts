@@ -1,11 +1,7 @@
 /* global document, window */
 const setUpAbout = () => {
-  const aboutElement = document.querySelector(".about-popup");
+  const aboutElement = document.querySelector(".about-popup") as HTMLElement;
   const infoButton = document.querySelector(".info-icon");
-  if (!(aboutElement instanceof HTMLElement)) {
-    console.error("Invalid .about-popup element");
-    return;
-  }
 
   infoButton.addEventListener("click", () => {
     aboutElement.style.display =

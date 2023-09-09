@@ -1,0 +1,43 @@
+export type CityId = string;
+
+export interface CityEntry {
+  city: string;
+  state: string;
+  country: string;
+  report_summary: string;
+  report_status: string;
+  report_type: string;
+  report_magnitude: string;
+  land_uses: string;
+  reporter_name: string;
+  date_of_reform: string;
+  last_updated: string;
+  is_verified: number;
+  is_magnitude_regional: number;
+  is_magnitude_citywide: number;
+  is_magnitude_citycenter: number;
+  is_magnitude_transit: number;
+  is_magnitude_mainstreet: number;
+  is_type_eliminated: number;
+  is_type_reduced: number;
+  is_type_maximums: number;
+  is_uses_alluses: number;
+  is_uses_residential: number;
+  is_uses_commercial: number;
+  is_uses_lowdensity: number;
+  is_uses_multifamily: number;
+  is_no_mandate_city: number;
+  population: number;
+  is_notable: number;
+  is_recent: number;
+  citation_url: string;
+  lat: number;
+  long: number;
+  id: string;
+  magnitude_encoded: string;
+  border_encoded: string;
+  land_use_encoded: string;
+  population_encoded: string;
+  city_search: string;
+  is_special: number;
+}

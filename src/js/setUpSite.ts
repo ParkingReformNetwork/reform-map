@@ -1,6 +1,7 @@
 import { Map, TileLayer, CircleMarker, FeatureGroup } from "leaflet";
 import "leaflet/dist/leaflet.css";
 
+import type { CityId, CityEntry } from "./types";
 import setUpIcons from "./fontAwesome";
 import addLegend from "./legend";
 import setUpSearch from "./search";
@@ -17,7 +18,6 @@ const BASE_LAYER = new TileLayer(
     subdomains: "abcd",
     minZoom: 0,
     maxZoom: 10,
-    ext: "png",
   }
 );
 
@@ -29,7 +29,7 @@ const SCOPE_TO_COLOR = {
   TOD: "#2b83ba",
 };
 
-const createMap = () => {
+const createMap = (): Map => {
   const map = new Map("map", {
     layers: [BASE_LAYER],
   });
@@ -43,7 +43,7 @@ const createMap = () => {
 /**
  * Create a FeatureGroup for all city markers. Makes click detection easier and through one Group.
  */
-const createMarkerGroup = (map) => {
+const createMarkerGroup = (map: Map): FeatureGroup => {
   const markerGroup = new FeatureGroup();
   markerGroup.addTo(map);
   return markerGroup;
@@ -52,9 +52,10 @@ const createMarkerGroup = (map) => {
 /**
  * Read the CSV and return an object with `City, State` as the key and the original entry as the value.
  */
-const readData = async () => {
+const readData = async (): Promise<Record<CityId, CityEntry>> => {
+  // @ts-ignore
   const data = await import("../../map/tidied_map_data.csv");
-  return data.reduce((acc, entry) => {
+  return data.reduce((acc: Record<string, CityEntry>, entry: CityEntry) => {
     const cityState = `${entry.city}, ${entry.state}`;
     acc[cityState] = entry;
     return acc;
@@ -64,7 +65,10 @@ const readData = async () => {
 /**
  * Returns an object mapping cityState to its CircleMarker.
  */
-const createCityMarkers = (data, markerGroup) =>
+const createCityMarkers = (
+  data: Record<CityId, CityEntry>,
+  markerGroup: FeatureGroup
+): Record<string, CircleMarker> =>
   Object.entries(data).reduce((acc, [cityState, entry]) => {
     const marker = new CircleMarker([entry.lat, entry.long], {
       radius: 7,
@@ -81,7 +85,7 @@ const createCityMarkers = (data, markerGroup) =>
     return acc;
   }, {});
 
-const setUpSite = async () => {
+const setUpSite = async (): Promise<void> => {
   setUpIcons();
   setUpAbout();
   const map = createMap();
