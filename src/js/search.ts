@@ -1,19 +1,30 @@
+import type { FeatureGroup, CircleMarker } from "leaflet";
 import Choices from "choices.js";
 import "choices.js/public/assets/styles/choices.css";
 
+import type { CityId } from "./types";
 import { changeSelectedMarkers } from "./filter";
 
 // The double => is "partial application".
-const onChange = (markerGroup, citiesToMarkers, choices) => () => {
-  const selectedSet = new Set(choices.getValue(true));
-  changeSelectedMarkers(
-    markerGroup,
-    citiesToMarkers,
-    (cityState) => selectedSet.size === 0 || selectedSet.has(cityState)
-  );
-};
+const onChange =
+  (
+    markerGroup: FeatureGroup,
+    citiesToMarkers: Record<CityId, CircleMarker>,
+    choices: Choices
+  ) =>
+  (): void => {
+    const selectedSet = new Set(choices.getValue(true) as string[]);
+    changeSelectedMarkers(
+      markerGroup,
+      citiesToMarkers,
+      (cityState) => selectedSet.size === 0 || selectedSet.has(cityState)
+    );
+  };
 
-const setUpSearch = (markerGroup, citiesToMarkers) => {
+const setUpSearch = (
+  markerGroup: FeatureGroup,
+  citiesToMarkers: Record<CityId, CircleMarker>
+): void => {
   const cities = Object.keys(citiesToMarkers).map((cityState) => ({
     value: cityState,
     label: cityState,

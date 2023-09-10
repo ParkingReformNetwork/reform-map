@@ -1,7 +1,15 @@
 /* global document */
 
-const setUpDetails = (markerGroup, data) => {
-  const cityDetailsElement = document.querySelector(".city-details-popup");
+import type { FeatureGroup } from "leaflet";
+import type { CityEntry, CityId } from "./types";
+
+const setUpDetails = (
+  markerGroup: FeatureGroup,
+  data: Record<CityId, CityEntry>
+): void => {
+  const cityDetailsElement = document.querySelector(
+    ".city-details-popup"
+  ) as HTMLElement;
 
   // Clicking any city marker, updates HTML and makes popup visible
   markerGroup.on("click", (e) => {
@@ -20,7 +28,10 @@ const setUpDetails = (markerGroup, data) => {
     });
 };
 
-const createCityDetailsText = (data, cityState) => {
+const createCityDetailsText = (
+  data: Record<CityId, CityEntry>,
+  cityState: CityId
+): string => {
   const cityData = data[cityState];
   return `<h2><a href="${cityData["citation_url"]}">${cityState}</h2>
     <p>Detailed Information and Citations</p></a>
