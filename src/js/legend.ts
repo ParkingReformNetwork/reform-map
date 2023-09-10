@@ -1,6 +1,7 @@
 import { Control, DomUtil } from "leaflet";
+import type { Map } from "leaflet";
 
-const addLegend = (map, scopeToColor) => {
+const addLegend = (map: Map, scopeToColor: Record<string, string>): void => {
   const legend = new Control({ position: "bottomright" });
   legend.onAdd = () => {
     const div = DomUtil.create("div", "legend");

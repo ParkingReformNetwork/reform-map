@@ -2,9 +2,15 @@ extends:
   - eslint:recommended
   - airbnb-base
   - prettier
-overrides: []
+  - plugin:@typescript-eslint/recommended
+parser: "@typescript-eslint/parser"
+plugins:
+  - "@typescript-eslint"
 parserOptions:
   ecmaVersion: latest
   sourceType: module
+overrides: []
 rules:
   no-restricted-syntax: off
+  import/no-unresolved: off
+  import/extensions: off

@@ -10,7 +10,7 @@ import {
 } from "@fortawesome/free-solid-svg-icons";
 import "@fortawesome/fontawesome-svg-core/styles.css";
 
-const setUpIcons = () => {
+const setUpIcons = (): void => {
   library.add(
     faCircleInfo,
     faLink,
