@@ -33,7 +33,6 @@
     opacity: 1;
     flex: 1;
     text-align: center;
-
   }
 }
 .population-slider > input {
@@ -56,9 +55,9 @@
   );
 }
 .population-slider > input::-webkit-slider-thumb {
-  -webkit-appearance: none; // Override default look 
+  -webkit-appearance: none; // Override default look
   appearance: none;
-  width: 14px; // Set a specific slider handle width 
+  width: 14px; // Set a specific slider handle width
   height: 14px; // Slider handle height
   background: white; // white, solid background
   cursor: pointer;

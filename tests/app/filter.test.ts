@@ -1,3 +1,4 @@
+import type { ElementHandle } from "@playwright/test";
 import { expect, test } from "@playwright/test";
 import { loadMap, getNumCities } from "./utils";
 
@@ -39,7 +40,10 @@ test("population filter updates markers", async ({ page }) => {
   const left = await page.$(".left-slider");
   const right = await page.$(".right-slider");
 
-  const testSlider = async (slider, moveTo) => {
+  const testSlider = async (
+    slider: ElementHandle,
+    moveTo: string
+  ): Promise<void> => {
     const before = await getNumCities(page);
     await slider.fill(moveTo);
     const after = await getNumCities(page);
