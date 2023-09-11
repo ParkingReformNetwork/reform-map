@@ -4,7 +4,7 @@ import "leaflet/dist/leaflet.css";
 import type { CityId, CityEntry } from "./types";
 import setUpIcons from "./fontAwesome";
 import addLegend from "./legend";
-import setUpSearch from "./search";
+import { createSearchElement, setUpSearch } from "./search";
 import setUpAbout from "./about";
 import setUpDetails from "./cityDetails";
 import { setUpFilter } from "./filter";
@@ -95,10 +95,12 @@ const setUpSite = async (): Promise<void> => {
   addLegend(map, SCOPE_TO_COLOR);
 
   const data = await readData();
+  const searchElement = createSearchElement(Object.keys(data));
   const citiesToMarkers = createCityMarkers(data, markerGroup);
+
   setUpDetails(markerGroup, data);
-  setUpSearch(markerGroup, citiesToMarkers);
-  setUpFilter(markerGroup, citiesToMarkers, data);
+  setUpSearch(markerGroup, citiesToMarkers, data, searchElement);
+  setUpFilter(markerGroup, citiesToMarkers, data, searchElement);
 };
 
 export default setUpSite;
