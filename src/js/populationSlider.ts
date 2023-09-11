@@ -3,6 +3,7 @@ import type { CircleMarker, FeatureGroup } from "leaflet";
 import type { CityId, CityEntry } from "./types";
 
 const thumbsize = 14;
+// change interval by updating both stringIntervals and numInterval (slider will automatically adjust)
 const stringIntervals = [
   "100",
   "500",
@@ -81,6 +82,8 @@ const init = (
   // Setting variables.
   const leftSlider = slider.querySelector(".left-slider") as HTMLInputElement;
   const rightSlider = slider.querySelector(".right-slider") as HTMLInputElement;
+  leftSlider.setAttribute("max", (stringIntervals.length - 1).toString()); // will auto-adjust sliders if more options are added to the stringInterval list
+  rightSlider.setAttribute("max", (stringIntervals.length - 1).toString());
   const rangemin = parseInt(leftSlider.getAttribute("min"));
   const rangemax = parseInt(rightSlider.getAttribute("max"));
   const legendnum = slider.getAttribute("data-legendnum");
