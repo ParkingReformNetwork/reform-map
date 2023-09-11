@@ -10,7 +10,7 @@ import type { CityId, CityEntry } from "./types";
  * Note that search takes priority. If certain cities are selected via
  * search, they should be shown regardless of the filters.
  */
-const shouldBeSelected = (
+const shouldBeRendered = (
   cityState: CityId,
   entry: CityEntry,
   searchElement: Choices
@@ -50,7 +50,7 @@ const changeSelectedMarkers = (
   searchElement: Choices
 ) => {
   Object.entries(citiesToMarkers).forEach(([cityState, marker]) => {
-    if (shouldBeSelected(cityState, data[cityState], searchElement)) {
+    if (shouldBeRendered(cityState, data[cityState], searchElement)) {
       marker.addTo(markerGroup);
     } else {
       // @ts-ignore the API allows passing a LayerGroup, but the type hint doesn't show this.
@@ -72,4 +72,4 @@ const setUpFilter = (
     );
 };
 
-export { changeSelectedMarkers, setUpFilter, shouldBeSelected };
+export { changeSelectedMarkers, setUpFilter, shouldBeRendered };
