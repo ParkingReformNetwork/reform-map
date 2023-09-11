@@ -127,7 +127,7 @@ const updateExponential = (
   markerGroup: FeatureGroup,
   citiesToMarkers: Record<CityId, CircleMarker>,
   data: Record<CityId, CityEntry>
-) => {
+): void => {
   // Set variables.
   const slider = el.parentElement as HTMLInputElement;
   const leftSlider = slider.querySelector("#left-slider") as HTMLInputElement;
@@ -135,7 +135,7 @@ const updateExponential = (
   const leftValue = Math.floor(parseFloat(leftSlider.value)).toString();
   const rightValue = Math.floor(parseFloat(rightSlider.value)).toString();
 
-  // Set attributes before drawing
+  // Set attributes before drawing.
   leftSlider.setAttribute("data-value", leftValue);
   rightSlider.setAttribute("data-value", rightValue);
   leftSlider.value = leftValue;
@@ -144,7 +144,8 @@ const updateExponential = (
   const min = numInterval[leftValue];
   const max = numInterval[rightValue];
 
-  const inBetween = (x, low, high) => {
+  // Checks if x is in between the integer value of low and high.
+  const inBetween = (x: number, low: number, high: number): boolean => {
     return x >= low && x <= high;
   };
 
@@ -155,7 +156,12 @@ const updateExponential = (
   draw(slider, stringIntervals[leftValue], stringIntervals[rightValue]);
 };
 
-const setUpSlider = (markerGroup, citiesToMarkers, data) => {
+// Finds a specified div and initializes the two sliders that creates the double headed slider.
+const setUpSlider = (
+  markerGroup: FeatureGroup,
+  citiesToMarkers: Record<CityId, CircleMarker>,
+  data: Record<CityId, CityEntry>
+): void => {
   const sliders = document.querySelectorAll(".population-slider");
   sliders.forEach((slider: HTMLInputElement) => {
     init(slider, markerGroup, citiesToMarkers, data);
