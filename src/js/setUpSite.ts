@@ -8,6 +8,7 @@ import setUpSearch from "./search";
 import setUpAbout from "./about";
 import setUpDetails from "./cityDetails";
 import { setUpFilter } from "./filter";
+import setUpSlider from "./populationSlider";
 
 const BASE_LAYER = new TileLayer(
   "https://tiles.stadiamaps.com/tiles/stamen_toner_lite/{z}/{x}/{y}{r}.png",
@@ -99,6 +100,7 @@ const setUpSite = async (): Promise<void> => {
   setUpDetails(markerGroup, data);
   setUpSearch(markerGroup, citiesToMarkers);
   setUpFilter(markerGroup, citiesToMarkers, data);
+  setUpSlider(markerGroup, citiesToMarkers, data);
 };
 
 export default setUpSite;
