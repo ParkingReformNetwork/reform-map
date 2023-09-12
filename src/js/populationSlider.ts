@@ -17,9 +17,9 @@ const changeSelectedMarkers = (
   });
 };
 
-const thumbsize = 14;
+const THUMBSIZE = 14;
 // change interval by updating both stringIntervals and numInterval (slider will automatically adjust)
-const stringIntervals = [
+const STRING_INTERVALS = [
   "100",
   "500",
   "1k",
@@ -34,7 +34,7 @@ const stringIntervals = [
   "50M",
 ];
 
-const numInterval = [
+const NUM_INTERVALS = [
   100, 500, 1000, 5000, 10000, 50000, 100000, 500000, 1000000, 5000000,
   10000000, 50000000,
 ];
@@ -67,8 +67,8 @@ const draw = (slider: HTMLInputElement, low: string, high: string): void => {
   const rightWidth =
     (rangemax - parseFloat(rightSlider.getAttribute("min"))) * intervalSize;
   // Note: cannot set maxWidth to (rangewidth - minWidth) due to the overlaping interval
-  leftSlider.style.width = leftWidth + thumbsize + "px";
-  rightSlider.style.width = rightWidth + thumbsize + "px";
+  leftSlider.style.width = leftWidth + THUMBSIZE + "px";
+  rightSlider.style.width = rightWidth + THUMBSIZE + "px";
 
   // The left slider has a fixed anchor. However the right slider has to move everytime the range of the slider changes.
   const offset = 5;
@@ -76,10 +76,10 @@ const draw = (slider: HTMLInputElement, low: string, high: string): void => {
   rightSlider.style.left = extend
     ? parseInt(leftSlider.style.width) -
       intervalSize / 2 -
-      thumbsize +
+      THUMBSIZE +
       offset +
       "px"
-    : parseInt(leftSlider.style.width) - thumbsize + offset + "px";
+    : parseInt(leftSlider.style.width) - THUMBSIZE + offset + "px";
 
   // There is a separate attribute "data-value" to ensure the slider resets when page is refreshed.
   rightSlider.value = rightSlider.getAttribute("data-value");
@@ -97,8 +97,8 @@ const init = (
   // Setting variables.
   const leftSlider = slider.querySelector(".left-slider") as HTMLInputElement;
   const rightSlider = slider.querySelector(".right-slider") as HTMLInputElement;
-  leftSlider.setAttribute("max", (stringIntervals.length - 1).toString()); // will auto-adjust sliders if more options are added to the stringInterval list
-  rightSlider.setAttribute("max", (stringIntervals.length - 1).toString());
+  leftSlider.setAttribute("max", (STRING_INTERVALS.length - 1).toString()); // will auto-adjust sliders if more options are added to the stringInterval list
+  rightSlider.setAttribute("max", (STRING_INTERVALS.length - 1).toString());
   const rangemin = parseInt(leftSlider.getAttribute("min"));
   const rangemax = parseInt(rightSlider.getAttribute("max"));
   const legendnum = slider.getAttribute("data-legendnum");
@@ -108,7 +108,7 @@ const init = (
   rightSlider.setAttribute("data-value", rangemax.toString());
   slider.setAttribute("data-rangemin", rangemin.toString());
   slider.setAttribute("data-rangemax", rangemax.toString());
-  slider.setAttribute("data-thumbsize", thumbsize.toString());
+  slider.setAttribute("data-thumbsize", THUMBSIZE.toString());
   slider.setAttribute("data-rangewidth", slider.offsetWidth.toString());
 
   // Writing and inserting header label
@@ -122,7 +122,7 @@ const init = (
   const legendvalues = [];
   for (let i = 0; i < parseInt(legendnum); i++) {
     legendvalues[i] = document.createElement("span");
-    const val = stringIntervals[i];
+    const val = STRING_INTERVALS[i];
     legendvalues[i].appendChild(document.createTextNode(val));
     legend.appendChild(legendvalues[i]);
   }
@@ -156,8 +156,8 @@ const updateExponential = (
   leftSlider.value = leftValue;
   rightSlider.value = rightValue;
 
-  const min = numInterval[leftValue];
-  const max = numInterval[rightValue];
+  const min = NUM_INTERVALS[leftValue];
+  const max = NUM_INTERVALS[rightValue];
 
   // Checks if x is in between the integer value of low and high.
   const inBetween = (x: number, low: number, high: number): boolean => {
@@ -168,7 +168,7 @@ const updateExponential = (
     inBetween(parseInt(data[cityState]["population"]), min, max)
   );
 
-  draw(slider, stringIntervals[leftValue], stringIntervals[rightValue]);
+  draw(slider, STRING_INTERVALS[leftValue], STRING_INTERVALS[rightValue]);
 };
 
 // Finds a specified div and initializes the two sliders that creates the double headed slider.
