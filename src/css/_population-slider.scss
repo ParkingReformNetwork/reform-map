@@ -1,0 +1,73 @@
+// uncomment to visualize slider mechanism
+// input {
+//   border: solid;
+// }
+
+.population-slider-container {
+  position: absolute;
+  z-index: 1100;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  top: 10em;
+  left: 1em;
+}
+
+.population-slider {
+  width: 360px;
+  height: 2em;
+  display: flex;
+  justify-content: space-between;
+}
+
+.population-slider-label {
+  height: 1.7em;
+  font-weight: bold;
+  display: inline-block;
+}
+
+.slider-legend {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  padding: 0;
+
+  span {
+    font-size: 0.5em;
+    opacity: 1;
+    flex: 1;
+    text-align: center;
+  }
+}
+
+.population-slider > input {
+  cursor: pointer;
+  position: absolute;
+  -webkit-appearance: none;
+  outline: none;
+  background: transparent;
+  background-image: linear-gradient(
+    to bottom,
+    transparent 0%,
+    transparent 30%,
+    silver 30%,
+    silver 60%,
+    transparent 60%,
+    transparent 100%
+  );
+}
+
+.population-slider > input::-webkit-slider-thumb {
+  -webkit-appearance: none; // Override default look
+  appearance: none;
+  width: 14px;
+  height: 14px;
+  background: white;
+  cursor: pointer;
+  border: 1px solid gray;
+  border-radius: 100%;
+}
+
+.population-slider > input::-webkit-slider-runnable-track {
+  cursor: pointer;
+}

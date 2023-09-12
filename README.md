@@ -26,6 +26,14 @@ Then open http://127.0.0.1:1234 in a browser. Hit `CTRL-C` to stop the developme
 
 When the server is running, you can make any changes you want to the project. Reload the page in the browser to see those changes. (You may need to force reload, e.g. hold the shift key while reloading on macOS.)
 
+### Check type compilation
+
+We write our code in TypeScript. The types are ignored when starting the server and running tests, but it's useful to manually check for any errors caught by TypeScript:
+
+```bash
+❯ npm run check
+```
+
 ### Run tests
 
 ```bash

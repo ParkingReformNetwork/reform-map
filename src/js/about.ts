@@ -1,6 +1,6 @@
 /* global document, window */
 const setUpAbout = () => {
-  const aboutElement = document.querySelector(".about-popup");
+  const aboutElement = document.querySelector(".about-popup") as HTMLElement;
   const infoButton = document.querySelector(".info-icon");
 
   infoButton.addEventListener("click", () => {
@@ -11,6 +11,7 @@ const setUpAbout = () => {
   // closes window on clicks outside the info popup
   window.addEventListener("click", (event) => {
     if (
+      event.target instanceof Node &&
       !infoButton.contains(event.target) &&
       aboutElement.style.display === "block" &&
       !aboutElement.contains(event.target)
