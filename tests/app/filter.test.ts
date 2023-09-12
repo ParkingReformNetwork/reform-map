@@ -14,9 +14,7 @@ test("scope filter updates markers", async ({ page }) => {
     "Main Street/Special": 33,
   };
 
-  const checkScope = async (
-    scopeType: string | Array<string>
-  ): Promise<void> => {
+  const checkScope = async (scopeType: string): Promise<void> => {
     const citiesBefore = await getNumCities(page);
     const optionElement = await page.$(
       `.filter--scope option:has-text("${scopeType}")`
