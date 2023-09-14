@@ -1,6 +1,21 @@
-import { changeSelectedMarkers } from "./filter";
 import type { CircleMarker, FeatureGroup } from "leaflet";
 import type { CityId, CityEntry } from "./types";
+
+// TODO: replace with changeSelectedMarkers from ./filter.ts.
+const changeSelectedMarkers = (
+  markerGroup: FeatureGroup,
+  citiesToMarkers: Record<CityId, CircleMarker>,
+  filterFn: (cityState: CityId) => boolean
+) => {
+  Object.entries(citiesToMarkers).forEach(([cityState, marker]) => {
+    if (filterFn(cityState)) {
+      marker.addTo(markerGroup);
+    } else {
+      // @ts-ignore the API allows passing a LayerGroup, but the type hint doesn't show this.
+      marker.removeFrom(markerGroup);
+    }
+  });
+};
 
 const thumbsize = 14;
 // change interval by updating both stringIntervals and numInterval (slider will automatically adjust)
