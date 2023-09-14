@@ -9,3 +9,13 @@
     top: 4.7em;
   }
 }
+
+.filter--scope option::before {
+  content: "\2610";
+  width: 1.3em;
+  text-align: center;
+  display: inline-block;
+}
+.filter--scope option:checked::before {
+  content: "\2611";
+}

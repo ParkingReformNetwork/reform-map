@@ -48,10 +48,6 @@ const setUpFilter = (
   data: Record<CityId, CityEntry>
 ): void => {
   const filter = document.querySelector(".filter--scope") as HTMLInputElement;
-  // Pre-select all options.
-  filter.querySelectorAll("option").forEach((option) => {
-    option.selected = true;
-  });
 
   filter.addEventListener("mousedown", (e: MouseEvent): void => {
     // For each option, do not exhibit normal behavior. Instead, change the option to the opposite state.
@@ -63,6 +59,7 @@ const setUpFilter = (
     }
     const onChange = onScopeFilterChange(markerGroup, citiesToMarkers, data);
     onChange();
+    input.parentElement.blur(); // Removes the default blue selection over element.
   });
 };
 
