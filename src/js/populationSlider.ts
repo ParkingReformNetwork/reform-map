@@ -127,13 +127,6 @@ const init = (
     sliderControls.offsetWidth.toString()
   );
 
-  const setUpLabel = (cls: string, val: number): void => {
-    const node = document.createTextNode(val.toString());
-    document.querySelector(cls).appendChild(node);
-  };
-  setUpLabel(".population-slider-label-min", rangemin);
-  setUpLabel(".population-slider-label-max", rangemax);
-
   // Writing and inserting interval legend
   const legend = document.querySelector(".population-slider-legend");
   const legendvalues = [];
