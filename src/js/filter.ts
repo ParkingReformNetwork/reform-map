@@ -78,12 +78,6 @@ const setUpFilter = (
     changeSelectedMarkers(markerGroup, citiesToMarkers, data, searchElement);
     input.parentElement.blur(); // Removes the default blue selection over element.
   });
-
-  // document
-  //     .querySelector(".filter--scope")
-  //     .addEventListener("change", () =>
-  //       changeSelectedMarkers(markerGroup, citiesToMarkers, data, searchElement)
-  //     );
 };
 
 export { changeSelectedMarkers, setUpFilter, shouldBeRendered };
