@@ -45,10 +45,10 @@ const draw = (
   high: string
 ): void => {
   const leftSlider = sliderControls.querySelector(
-    ".population-slider-min"
+    ".population-slider-left"
   ) as HTMLInputElement;
   const rightSlider = sliderControls.querySelector(
-    ".population-slider-max"
+    ".population-slider-right"
   ) as HTMLInputElement;
   const rangewidth = parseInt(sliderControls.getAttribute("data-rangewidth"));
   const rangemin = parseInt(sliderControls.getAttribute("data-rangemin")); // total min
@@ -105,10 +105,10 @@ const init = (
 ): void => {
   // Setting variables.
   const leftSlider = sliderControls.querySelector(
-    ".population-slider-min"
+    ".population-slider-left"
   ) as HTMLInputElement;
   const rightSlider = sliderControls.querySelector(
-    ".population-slider-max"
+    ".population-slider-right"
   ) as HTMLInputElement;
   leftSlider.setAttribute("max", (STRING_INTERVALS.length - 1).toString()); // will auto-adjust sliders if more options are added to the stringInterval list
   rightSlider.setAttribute("max", (STRING_INTERVALS.length - 1).toString());
@@ -156,10 +156,10 @@ const updateExponential = (
   // Set variables.
   const slider = el.parentElement as HTMLInputElement;
   const leftSlider = slider.querySelector(
-    ".population-slider-min"
+    ".population-slider-left"
   ) as HTMLInputElement;
   const rightSlider = slider.querySelector(
-    ".population-slider-max"
+    ".population-slider-right"
   ) as HTMLInputElement;
   const leftValue = Math.floor(parseFloat(leftSlider.value)).toString();
   const rightValue = Math.floor(parseFloat(rightSlider.value)).toString();
