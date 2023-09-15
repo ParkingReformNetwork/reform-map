@@ -105,20 +105,19 @@ const init = (
   citiesToMarkers: Record<CityId, CircleMarker>,
   data: Record<CityId, CityEntry>
 ): void => {
-  // Setting variables.
   const leftSlider = document.querySelector(
     ".population-slider-left"
   ) as HTMLInputElement;
   const rightSlider = document.querySelector(
     ".population-slider-right"
   ) as HTMLInputElement;
-  leftSlider.setAttribute("max", (STRING_INTERVALS.length - 1).toString()); // will auto-adjust sliders if more options are added to the stringInterval list
-  rightSlider.setAttribute("max", (STRING_INTERVALS.length - 1).toString());
-  const rangemax = parseInt(rightSlider.getAttribute("max"));
 
-  // Setting data attributes
-  rightSlider.setAttribute("data-value", rangemax.toString());
-  sliderControls.setAttribute("data-rangemax", rangemax.toString());
+  const rangeMax = (STRING_INTERVALS.length - 1).toString();
+  leftSlider.setAttribute("max", rangeMax);
+  rightSlider.setAttribute("max", rangeMax);
+  rightSlider.setAttribute("data-value", rangeMax);
+  sliderControls.setAttribute("data-rangemax", rangeMax);
+
   sliderControls.setAttribute(
     "data-rangewidth",
     sliderControls.offsetWidth.toString()
