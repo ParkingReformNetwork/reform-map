@@ -44,10 +44,10 @@ const draw = (
   low: string,
   high: string
 ): void => {
-  const leftSlider = sliderControls.querySelector(
+  const leftSlider = document.querySelector(
     ".population-slider-left"
   ) as HTMLInputElement;
-  const rightSlider = sliderControls.querySelector(
+  const rightSlider = document.querySelector(
     ".population-slider-right"
   ) as HTMLInputElement;
   const rangewidth = parseInt(sliderControls.getAttribute("data-rangewidth"));
@@ -104,10 +104,10 @@ const init = (
   data: Record<CityId, CityEntry>
 ): void => {
   // Setting variables.
-  const leftSlider = sliderControls.querySelector(
+  const leftSlider = document.querySelector(
     ".population-slider-left"
   ) as HTMLInputElement;
-  const rightSlider = sliderControls.querySelector(
+  const rightSlider = document.querySelector(
     ".population-slider-right"
   ) as HTMLInputElement;
   leftSlider.setAttribute("max", (STRING_INTERVALS.length - 1).toString()); // will auto-adjust sliders if more options are added to the stringInterval list
