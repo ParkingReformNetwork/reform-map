@@ -124,15 +124,12 @@ const init = (
     sliderControls.offsetWidth.toString()
   );
 
-  // Writing and inserting interval legend
   const legend = document.querySelector(".population-slider-legend");
-  const legendvalues = [];
-  for (let i = 0; i < STRING_INTERVALS.length; i++) {
-    legendvalues[i] = document.createElement("span");
-    const val = STRING_INTERVALS[i];
-    legendvalues[i].appendChild(document.createTextNode(val));
-    legend.appendChild(legendvalues[i]);
-  }
+  STRING_INTERVALS.forEach((val) => {
+    const span = document.createElement("span");
+    span.appendChild(document.createTextNode(val));
+    legend.appendChild(span);
+  });
 
   draw(sliderControls, "100", "50M");
 
