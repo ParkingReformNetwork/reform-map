@@ -39,16 +39,20 @@ const NUM_INTERVALS = [
   10000000, 50000000,
 ];
 
-const draw = (slider: HTMLInputElement, low: string, high: string): void => {
-  const leftSlider = slider.querySelector(
+const draw = (
+  sliderControls: HTMLDivElement,
+  low: string,
+  high: string
+): void => {
+  const leftSlider = sliderControls.querySelector(
     ".population-slider-min"
   ) as HTMLInputElement;
-  const rightSlider = slider.querySelector(
+  const rightSlider = sliderControls.querySelector(
     ".population-slider-max"
   ) as HTMLInputElement;
-  const rangewidth = parseInt(slider.getAttribute("data-rangewidth"));
-  const rangemin = parseInt(slider.getAttribute("data-rangemin")); // total min
-  const rangemax = parseInt(slider.getAttribute("data-rangemax")); // total max
+  const rangewidth = parseInt(sliderControls.getAttribute("data-rangewidth"));
+  const rangemin = parseInt(sliderControls.getAttribute("data-rangemin")); // total min
+  const rangemax = parseInt(sliderControls.getAttribute("data-rangemax")); // total max
   const intervalSize = rangewidth / (rangemax - rangemin + 1); // how far the slider moves for each interval (px)
   const leftValue = parseInt(leftSlider.value);
   const rightValue = parseInt(rightSlider.value);
@@ -94,31 +98,34 @@ const draw = (slider: HTMLInputElement, low: string, high: string): void => {
 };
 
 const init = (
-  slider: HTMLInputElement,
+  sliderControls: HTMLDivElement,
   markerGroup: FeatureGroup,
   citiesToMarkers: Record<CityId, CircleMarker>,
   data: Record<CityId, CityEntry>
 ): void => {
   // Setting variables.
-  const leftSlider = slider.querySelector(
+  const leftSlider = sliderControls.querySelector(
     ".population-slider-min"
   ) as HTMLInputElement;
-  const rightSlider = slider.querySelector(
+  const rightSlider = sliderControls.querySelector(
     ".population-slider-max"
   ) as HTMLInputElement;
   leftSlider.setAttribute("max", (STRING_INTERVALS.length - 1).toString()); // will auto-adjust sliders if more options are added to the stringInterval list
   rightSlider.setAttribute("max", (STRING_INTERVALS.length - 1).toString());
   const rangemin = parseInt(leftSlider.getAttribute("min"));
   const rangemax = parseInt(rightSlider.getAttribute("max"));
-  const legendnum = slider.getAttribute("data-legendnum");
+  const legendnum = sliderControls.getAttribute("data-legendnum");
 
   // Setting data attributes
   leftSlider.setAttribute("data-value", rangemin.toString());
   rightSlider.setAttribute("data-value", rangemax.toString());
-  slider.setAttribute("data-rangemin", rangemin.toString());
-  slider.setAttribute("data-rangemax", rangemax.toString());
-  slider.setAttribute("data-thumbsize", THUMBSIZE.toString());
-  slider.setAttribute("data-rangewidth", slider.offsetWidth.toString());
+  sliderControls.setAttribute("data-rangemin", rangemin.toString());
+  sliderControls.setAttribute("data-rangemax", rangemax.toString());
+  sliderControls.setAttribute("data-thumbsize", THUMBSIZE.toString());
+  sliderControls.setAttribute(
+    "data-rangewidth",
+    sliderControls.offsetWidth.toString()
+  );
 
   const setUpLabel = (cls: string, val: number): void => {
     const node = document.createTextNode(val.toString());
@@ -137,7 +144,7 @@ const init = (
     legend.appendChild(legendvalues[i]);
   }
 
-  draw(slider, "100", "50M");
+  draw(sliderControls, "100", "50M");
 
   leftSlider.addEventListener("input", (): void => {
     updateExponential(leftSlider, markerGroup, citiesToMarkers, data);
@@ -187,10 +194,10 @@ const setUpSlider = (
   citiesToMarkers: Record<CityId, CircleMarker>,
   data: Record<CityId, CityEntry>
 ): void => {
-  const sliders = document.querySelectorAll(".population-slider-controls");
-  sliders.forEach((slider: HTMLInputElement) => {
-    init(slider, markerGroup, citiesToMarkers, data);
-  });
+  const sliderControls = document.querySelector(
+    ".population-slider-controls"
+  ) as HTMLDivElement;
+  init(sliderControls, markerGroup, citiesToMarkers, data);
 };
 
 export default setUpSlider;
