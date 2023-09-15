@@ -37,8 +37,8 @@ test("scope filter updates markers", async ({ page }) => {
 
 test("population filter updates markers", async ({ page }) => {
   await loadMap(page);
-  const left = await page.$(".left-slider");
-  const right = await page.$(".right-slider");
+  const left = await page.$(".population-slider-min");
+  const right = await page.$(".population-slider-max");
 
   // min updated on 9/10/23
   const populationDiff = [61, 115, 538, 247, 512, 131, 128, 29, 16, 3, 1];
