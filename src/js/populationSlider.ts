@@ -90,33 +90,6 @@ const draw = (sliders: Sliders, low: string, high: string): void => {
   updateLabel(".population-slider-label-max", high);
 };
 
-const init = (
-  sliders: Sliders,
-  markerGroup: FeatureGroup,
-  citiesToMarkers: Record<CityId, CircleMarker>,
-  data: Record<CityId, CityEntry>
-): void => {
-  sliders.left.setAttribute("max", RANGE_MAX.toString());
-  sliders.right.setAttribute("max", RANGE_MAX.toString());
-  sliders.right.value = RANGE_MAX.toString();
-
-  const legend = document.querySelector(".population-slider-legend");
-  STRING_INTERVALS.forEach((val) => {
-    const span = document.createElement("span");
-    span.appendChild(document.createTextNode(val));
-    legend.appendChild(span);
-  });
-
-  draw(sliders, "100", "50M");
-
-  sliders.left.addEventListener("input", (): void => {
-    updateExponential(sliders, markerGroup, citiesToMarkers, data);
-  });
-  sliders.right.addEventListener("input", (): void => {
-    updateExponential(sliders, markerGroup, citiesToMarkers, data);
-  });
-};
-
 const updateExponential = (
   sliders: Sliders,
   markerGroup: FeatureGroup,
@@ -141,7 +114,6 @@ const updateExponential = (
   draw(sliders, STRING_INTERVALS[leftValue], STRING_INTERVALS[rightValue]);
 };
 
-// Finds a specified div and initializes the two sliders that creates the double headed slider.
 const setUpSlider = (
   markerGroup: FeatureGroup,
   citiesToMarkers: Record<CityId, CircleMarker>,
@@ -156,7 +128,33 @@ const setUpSlider = (
       ".population-slider-right"
     ) as HTMLInputElement,
   };
-  init(sliders, markerGroup, citiesToMarkers, data);
+
+  const rangeMax = (STRING_INTERVALS.length - 1).toString();
+  sliders.left.setAttribute("max", rangeMax);
+  sliders.right.setAttribute("max", rangeMax);
+  sliders.right.setAttribute("data-value", rangeMax);
+  sliders.controls.setAttribute("data-rangemax", rangeMax);
+
+  sliders.controls.setAttribute(
+    "data-rangewidth",
+    sliders.controls.offsetWidth.toString()
+  );
+
+  const legend = document.querySelector(".population-slider-legend");
+  STRING_INTERVALS.forEach((val) => {
+    const span = document.createElement("span");
+    span.appendChild(document.createTextNode(val));
+    legend.appendChild(span);
+  });
+
+  draw(sliders, "100", "50M");
+
+  sliders.left.addEventListener("input", (): void => {
+    updateExponential(sliders, markerGroup, citiesToMarkers, data);
+  });
+  sliders.right.addEventListener("input", (): void => {
+    updateExponential(sliders, markerGroup, citiesToMarkers, data);
+  });
 };
 
 export default setUpSlider;
