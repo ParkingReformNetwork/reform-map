@@ -170,17 +170,13 @@ const updateExponential = (
   leftSlider.value = leftValue;
   rightSlider.value = rightValue;
 
-  const min = NUM_INTERVALS[leftValue];
-  const max = NUM_INTERVALS[rightValue];
-
-  // Checks if x is in between the integer value of low and high.
-  const inBetween = (x: number, low: number, high: number): boolean => {
-    return x >= low && x <= high;
-  };
-
-  changeSelectedMarkers(markerGroup, citiesToMarkers, (cityState) =>
-    inBetween(parseInt(data[cityState]["population"]), min, max)
-  );
+  changeSelectedMarkers(markerGroup, citiesToMarkers, (cityState) => {
+    const population = parseInt(data[cityState]["population"]);
+    return (
+      population >= NUM_INTERVALS[leftValue] &&
+      population <= NUM_INTERVALS[rightValue]
+    );
+  });
 
   draw(slider, STRING_INTERVALS[leftValue], STRING_INTERVALS[rightValue]);
 };
