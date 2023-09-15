@@ -115,12 +115,10 @@ const init = (
   leftSlider.setAttribute("max", (STRING_INTERVALS.length - 1).toString()); // will auto-adjust sliders if more options are added to the stringInterval list
   rightSlider.setAttribute("max", (STRING_INTERVALS.length - 1).toString());
   const rangemax = parseInt(rightSlider.getAttribute("max"));
-  const legendnum = sliderControls.getAttribute("data-legendnum");
 
   // Setting data attributes
   rightSlider.setAttribute("data-value", rangemax.toString());
   sliderControls.setAttribute("data-rangemax", rangemax.toString());
-  sliderControls.setAttribute("data-thumbsize", THUMBSIZE.toString());
   sliderControls.setAttribute(
     "data-rangewidth",
     sliderControls.offsetWidth.toString()
@@ -129,7 +127,7 @@ const init = (
   // Writing and inserting interval legend
   const legend = document.querySelector(".population-slider-legend");
   const legendvalues = [];
-  for (let i = 0; i < parseInt(legendnum); i++) {
+  for (let i = 0; i < STRING_INTERVALS.length; i++) {
     legendvalues[i] = document.createElement("span");
     const val = STRING_INTERVALS[i];
     legendvalues[i].appendChild(document.createTextNode(val));
