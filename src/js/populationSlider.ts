@@ -147,7 +147,7 @@ const setUpSlider = (
     legend.appendChild(span);
   });
 
-  draw(sliders, "100", "50M");
+  draw(sliders, STRING_INTERVALS.at(0), STRING_INTERVALS.at(-1));
 
   sliders.left.addEventListener("input", (): void => {
     updateExponential(sliders, markerGroup, citiesToMarkers, data);
