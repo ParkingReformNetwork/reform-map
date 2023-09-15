@@ -40,9 +40,6 @@ const NUM_INTERVALS = [
 ];
 
 const draw = (slider: HTMLInputElement, low: string, high: string): void => {
-  // Setting vars from top to bottom.
-  const lower = document.querySelector(".population-slider-label-min");
-  const upper = document.querySelector(".population-slider-label-max");
   const leftSlider = slider.querySelector(
     ".population-slider-min"
   ) as HTMLInputElement;
@@ -88,8 +85,12 @@ const draw = (slider: HTMLInputElement, low: string, high: string): void => {
   // There is a separate attribute "data-value" to ensure the slider resets when page is refreshed.
   rightSlider.value = rightSlider.getAttribute("data-value");
   leftSlider.value = leftSlider.getAttribute("data-value");
-  lower.innerHTML = low;
-  upper.innerHTML = high;
+
+  const updateLabel = (cls: string, val: string): void => {
+    document.querySelector(cls).innerHTML = val;
+  };
+  updateLabel(".population-slider-label-min", low);
+  updateLabel(".population-slider-label-max", high);
 };
 
 const init = (
@@ -119,11 +120,12 @@ const init = (
   slider.setAttribute("data-thumbsize", THUMBSIZE.toString());
   slider.setAttribute("data-rangewidth", slider.offsetWidth.toString());
 
-  // Writing and inserting header label
-  const lower = document.querySelector(".population-slider-label-min");
-  const upper = document.querySelector(".population-slider-label-max");
-  lower.appendChild(document.createTextNode(rangemin.toString()));
-  upper.appendChild(document.createTextNode(rangemax.toString()));
+  const setUpLabel = (cls: string, val: number): void => {
+    const node = document.createTextNode(val.toString());
+    document.querySelector(cls).appendChild(node);
+  };
+  setUpLabel(".population-slider-label-min", rangemin);
+  setUpLabel(".population-slider-label-max", rangemax);
 
   // Writing and inserting interval legend
   const legend = document.querySelector(".population-slider-legend");
