@@ -41,10 +41,14 @@ const NUM_INTERVALS = [
 
 const draw = (slider: HTMLInputElement, low: string, high: string): void => {
   // Setting vars from top to bottom.
-  const lower = document.querySelector(".lower");
-  const upper = document.querySelector(".upper");
-  const leftSlider = slider.querySelector(".left-slider") as HTMLInputElement;
-  const rightSlider = slider.querySelector(".right-slider") as HTMLInputElement;
+  const lower = document.querySelector(".population-slider-label-min");
+  const upper = document.querySelector(".population-slider-label-max");
+  const leftSlider = slider.querySelector(
+    ".population-slider-min"
+  ) as HTMLInputElement;
+  const rightSlider = slider.querySelector(
+    ".population-slider-max"
+  ) as HTMLInputElement;
   const rangewidth = parseInt(slider.getAttribute("data-rangewidth"));
   const rangemin = parseInt(slider.getAttribute("data-rangemin")); // total min
   const rangemax = parseInt(slider.getAttribute("data-rangemax")); // total max
@@ -95,8 +99,12 @@ const init = (
   data: Record<CityId, CityEntry>
 ): void => {
   // Setting variables.
-  const leftSlider = slider.querySelector(".left-slider") as HTMLInputElement;
-  const rightSlider = slider.querySelector(".right-slider") as HTMLInputElement;
+  const leftSlider = slider.querySelector(
+    ".population-slider-min"
+  ) as HTMLInputElement;
+  const rightSlider = slider.querySelector(
+    ".population-slider-max"
+  ) as HTMLInputElement;
   leftSlider.setAttribute("max", (STRING_INTERVALS.length - 1).toString()); // will auto-adjust sliders if more options are added to the stringInterval list
   rightSlider.setAttribute("max", (STRING_INTERVALS.length - 1).toString());
   const rangemin = parseInt(leftSlider.getAttribute("min"));
@@ -112,13 +120,13 @@ const init = (
   slider.setAttribute("data-rangewidth", slider.offsetWidth.toString());
 
   // Writing and inserting header label
-  const lower = document.querySelector(".lower");
-  const upper = document.querySelector(".upper");
+  const lower = document.querySelector(".population-slider-label-min");
+  const upper = document.querySelector(".population-slider-label-max");
   lower.appendChild(document.createTextNode(rangemin.toString()));
   upper.appendChild(document.createTextNode(rangemax.toString()));
 
   // Writing and inserting interval legend
-  const legend = document.querySelector(".slider-legend");
+  const legend = document.querySelector(".population-slider-legend");
   const legendvalues = [];
   for (let i = 0; i < parseInt(legendnum); i++) {
     legendvalues[i] = document.createElement("span");
@@ -145,8 +153,12 @@ const updateExponential = (
 ): void => {
   // Set variables.
   const slider = el.parentElement as HTMLInputElement;
-  const leftSlider = slider.querySelector("#left-slider") as HTMLInputElement;
-  const rightSlider = slider.querySelector("#right-slider") as HTMLInputElement;
+  const leftSlider = slider.querySelector(
+    ".population-slider-min"
+  ) as HTMLInputElement;
+  const rightSlider = slider.querySelector(
+    ".population-slider-max"
+  ) as HTMLInputElement;
   const leftValue = Math.floor(parseFloat(leftSlider.value)).toString();
   const rightValue = Math.floor(parseFloat(rightSlider.value)).toString();
 
@@ -177,7 +189,7 @@ const setUpSlider = (
   citiesToMarkers: Record<CityId, CircleMarker>,
   data: Record<CityId, CityEntry>
 ): void => {
-  const sliders = document.querySelectorAll(".population-slider");
+  const sliders = document.querySelectorAll(".population-slider-controls");
   sliders.forEach((slider: HTMLInputElement) => {
     init(slider, markerGroup, citiesToMarkers, data);
   });
