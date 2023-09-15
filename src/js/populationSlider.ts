@@ -17,7 +17,11 @@ const changeSelectedMarkers = (
   });
 };
 
+// Corresponds to setting `min="0"` on the two `input` elements.
+const RANGE_MIN = 0;
+
 const THUMBSIZE = 14;
+
 // change interval by updating both stringIntervals and numInterval (slider will automatically adjust)
 const STRING_INTERVALS = [
   "100",
@@ -33,7 +37,6 @@ const STRING_INTERVALS = [
   "10M",
   "50M",
 ];
-
 const NUM_INTERVALS = [
   100, 500, 1000, 5000, 10000, 50000, 100000, 500000, 1000000, 5000000,
   10000000, 50000000,
@@ -51,9 +54,8 @@ const draw = (
     ".population-slider-right"
   ) as HTMLInputElement;
   const rangewidth = parseInt(sliderControls.getAttribute("data-rangewidth"));
-  const rangemin = parseInt(sliderControls.getAttribute("data-rangemin")); // total min
   const rangemax = parseInt(sliderControls.getAttribute("data-rangemax")); // total max
-  const intervalSize = rangewidth / (rangemax - rangemin + 1); // how far the slider moves for each interval (px)
+  const intervalSize = rangewidth / (rangemax - RANGE_MIN + 1); // how far the slider moves for each interval (px)
   const leftValue = parseInt(leftSlider.value);
   const rightValue = parseInt(rightSlider.value);
 
@@ -112,14 +114,11 @@ const init = (
   ) as HTMLInputElement;
   leftSlider.setAttribute("max", (STRING_INTERVALS.length - 1).toString()); // will auto-adjust sliders if more options are added to the stringInterval list
   rightSlider.setAttribute("max", (STRING_INTERVALS.length - 1).toString());
-  const rangemin = parseInt(leftSlider.getAttribute("min"));
   const rangemax = parseInt(rightSlider.getAttribute("max"));
   const legendnum = sliderControls.getAttribute("data-legendnum");
 
   // Setting data attributes
-  leftSlider.setAttribute("data-value", rangemin.toString());
   rightSlider.setAttribute("data-value", rangemax.toString());
-  sliderControls.setAttribute("data-rangemin", rangemin.toString());
   sliderControls.setAttribute("data-rangemax", rangemax.toString());
   sliderControls.setAttribute("data-thumbsize", THUMBSIZE.toString());
   sliderControls.setAttribute(
