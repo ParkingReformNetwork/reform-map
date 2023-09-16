@@ -129,7 +129,7 @@ const updateExponential = (
   draw(sliders, STRING_INTERVALS[leftIndex], STRING_INTERVALS[rightIndex]);
 };
 
-const setUpSlider = (
+const setUpPopulationSlider = (
   markerGroup: FeatureGroup,
   citiesToMarkers: Record<CityId, CircleMarker>,
   data: Record<CityId, CityEntry>
@@ -161,4 +161,4 @@ const setUpSlider = (
   });
 };
 
-export default setUpSlider;
+export default setUpPopulationSlider;
