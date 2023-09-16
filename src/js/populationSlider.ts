@@ -18,6 +18,7 @@ const changeSelectedMarkers = (
 };
 
 const THUMBSIZE = 14;
+
 // change interval by updating both stringIntervals and numInterval (slider will automatically adjust)
 const STRING_INTERVALS = [
   "100",
@@ -33,27 +34,25 @@ const STRING_INTERVALS = [
   "10M",
   "50M",
 ];
-
 const NUM_INTERVALS = [
   100, 500, 1000, 5000, 10000, 50000, 100000, 500000, 1000000, 5000000,
   10000000, 50000000,
 ];
+
+const RANGE_MAX = STRING_INTERVALS.length - 1;
 
 const draw = (
   sliderControls: HTMLDivElement,
   low: string,
   high: string
 ): void => {
-  const leftSlider = sliderControls.querySelector(
+  const leftSlider = document.querySelector(
     ".population-slider-left"
   ) as HTMLInputElement;
-  const rightSlider = sliderControls.querySelector(
+  const rightSlider = document.querySelector(
     ".population-slider-right"
   ) as HTMLInputElement;
-  const rangewidth = parseInt(sliderControls.getAttribute("data-rangewidth"));
-  const rangemin = parseInt(sliderControls.getAttribute("data-rangemin")); // total min
-  const rangemax = parseInt(sliderControls.getAttribute("data-rangemax")); // total max
-  const intervalSize = rangewidth / (rangemax - rangemin + 1); // how far the slider moves for each interval (px)
+  const intervalSizePx = sliderControls.offsetWidth / STRING_INTERVALS.length;
   const leftValue = parseInt(leftSlider.value);
   const rightValue = parseInt(rightSlider.value);
 
@@ -68,9 +67,9 @@ const draw = (
 
   // Setting CSS.
   // To prevent the two sliders from crossing, this sets the max and min for the left and right sliders respectively.
-  const leftWidth = parseFloat(leftSlider.getAttribute("max")) * intervalSize;
+  const leftWidth = parseFloat(leftSlider.getAttribute("max")) * intervalSizePx;
   const rightWidth =
-    (rangemax - parseFloat(rightSlider.getAttribute("min"))) * intervalSize;
+    (RANGE_MAX - parseFloat(rightSlider.getAttribute("min"))) * intervalSizePx;
   // Note: cannot set maxWidth to (rangewidth - minWidth) due to the overlaping interval
   leftSlider.style.width = leftWidth + THUMBSIZE + "px";
   rightSlider.style.width = rightWidth + THUMBSIZE + "px";
@@ -80,15 +79,11 @@ const draw = (
   leftSlider.style.left = offset + "px";
   rightSlider.style.left = extend
     ? parseInt(leftSlider.style.width) -
-      intervalSize / 2 -
+      intervalSizePx / 2 -
       THUMBSIZE +
       offset +
       "px"
     : parseInt(leftSlider.style.width) - THUMBSIZE + offset + "px";
-
-  // There is a separate attribute "data-value" to ensure the slider resets when page is refreshed.
-  rightSlider.value = rightSlider.getAttribute("data-value");
-  leftSlider.value = leftSlider.getAttribute("data-value");
 
   const updateLabel = (cls: string, val: string): void => {
     document.querySelector(cls).innerHTML = val;
@@ -103,39 +98,23 @@ const init = (
   citiesToMarkers: Record<CityId, CircleMarker>,
   data: Record<CityId, CityEntry>
 ): void => {
-  // Setting variables.
-  const leftSlider = sliderControls.querySelector(
+  const leftSlider = document.querySelector(
     ".population-slider-left"
   ) as HTMLInputElement;
-  const rightSlider = sliderControls.querySelector(
+  const rightSlider = document.querySelector(
     ".population-slider-right"
   ) as HTMLInputElement;
-  leftSlider.setAttribute("max", (STRING_INTERVALS.length - 1).toString()); // will auto-adjust sliders if more options are added to the stringInterval list
-  rightSlider.setAttribute("max", (STRING_INTERVALS.length - 1).toString());
-  const rangemin = parseInt(leftSlider.getAttribute("min"));
-  const rangemax = parseInt(rightSlider.getAttribute("max"));
-  const legendnum = sliderControls.getAttribute("data-legendnum");
 
-  // Setting data attributes
-  leftSlider.setAttribute("data-value", rangemin.toString());
-  rightSlider.setAttribute("data-value", rangemax.toString());
-  sliderControls.setAttribute("data-rangemin", rangemin.toString());
-  sliderControls.setAttribute("data-rangemax", rangemax.toString());
-  sliderControls.setAttribute("data-thumbsize", THUMBSIZE.toString());
-  sliderControls.setAttribute(
-    "data-rangewidth",
-    sliderControls.offsetWidth.toString()
-  );
+  leftSlider.setAttribute("max", RANGE_MAX.toString());
+  rightSlider.setAttribute("max", RANGE_MAX.toString());
+  rightSlider.value = RANGE_MAX.toString();
 
-  // Writing and inserting interval legend
   const legend = document.querySelector(".population-slider-legend");
-  const legendvalues = [];
-  for (let i = 0; i < parseInt(legendnum); i++) {
-    legendvalues[i] = document.createElement("span");
-    const val = STRING_INTERVALS[i];
-    legendvalues[i].appendChild(document.createTextNode(val));
-    legend.appendChild(legendvalues[i]);
-  }
+  STRING_INTERVALS.forEach((val) => {
+    const span = document.createElement("span");
+    span.appendChild(document.createTextNode(val));
+    legend.appendChild(span);
+  });
 
   draw(sliderControls, "100", "50M");
 
@@ -164,9 +143,6 @@ const updateExponential = (
   const leftValue = Math.floor(parseFloat(leftSlider.value)).toString();
   const rightValue = Math.floor(parseFloat(rightSlider.value)).toString();
 
-  // Set attributes before drawing.
-  leftSlider.setAttribute("data-value", leftValue);
-  rightSlider.setAttribute("data-value", rightValue);
   leftSlider.value = leftValue;
   rightSlider.value = rightValue;
 
