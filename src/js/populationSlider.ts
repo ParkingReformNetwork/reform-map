@@ -1,3 +1,4 @@
+import { PopulationSliders } from "./types";
 import type { CircleMarker, FeatureGroup } from "leaflet";
 import type { CityId, CityEntry } from "./types";
 
@@ -33,29 +34,6 @@ const POPULATION_INTERVALS: Array<[string, number]> = [
   ["50M", 50000000],
 ];
 const RANGE_MAX = POPULATION_INTERVALS.length - 1;
-
-class PopulationSliders {
-  readonly controls: HTMLDivElement;
-  readonly left: HTMLInputElement;
-  readonly right: HTMLInputElement;
-
-  constructor(
-    controls: HTMLDivElement,
-    left: HTMLInputElement,
-    right: HTMLInputElement
-  ) {
-    this.controls = controls;
-    this.left = left;
-    this.right = right;
-  }
-
-  /** Return the [leftIndex, rightIndex] of the sliders. */
-  getCurrentIndexes(): [number, number] {
-    const get = (slider: HTMLInputElement): number =>
-      Math.floor(parseFloat(slider.value));
-    return [get(this.left), get(this.right)];
-  }
-}
 
 const draw = (
   sliders: PopulationSliders,
