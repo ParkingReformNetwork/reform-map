@@ -129,16 +129,9 @@ const setUpSlider = (
     ) as HTMLInputElement,
   };
 
-  const rangeMax = (STRING_INTERVALS.length - 1).toString();
-  sliders.left.setAttribute("max", rangeMax);
-  sliders.right.setAttribute("max", rangeMax);
-  sliders.right.setAttribute("data-value", rangeMax);
-  sliders.controls.setAttribute("data-rangemax", rangeMax);
-
-  sliders.controls.setAttribute(
-    "data-rangewidth",
-    sliders.controls.offsetWidth.toString()
-  );
+  sliders.left.setAttribute("max", RANGE_MAX.toString());
+  sliders.right.setAttribute("max", RANGE_MAX.toString());
+  sliders.right.value = RANGE_MAX.toString();
 
   const legend = document.querySelector(".population-slider-legend");
   STRING_INTERVALS.forEach((val) => {
