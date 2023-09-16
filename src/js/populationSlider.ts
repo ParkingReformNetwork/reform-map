@@ -1,23 +1,8 @@
-import { POPULATION_INTERVALS } from "./filter";
+import { POPULATION_INTERVALS, changeSelectedMarkers } from "./filter";
 import { PopulationSliders } from "./types";
+import type Choices from "choices.js";
 import type { CircleMarker, FeatureGroup } from "leaflet";
 import type { CityId, CityEntry } from "./types";
-
-// TODO: replace with changeSelectedMarkers from ./filter.ts.
-const changeSelectedMarkers = (
-  markerGroup: FeatureGroup,
-  citiesToMarkers: Record<CityId, CircleMarker>,
-  filterFn: (cityState: CityId) => boolean
-) => {
-  Object.entries(citiesToMarkers).forEach(([cityState, marker]) => {
-    if (filterFn(cityState)) {
-      marker.addTo(markerGroup);
-    } else {
-      // @ts-ignore the API allows passing a LayerGroup, but the type hint doesn't show this.
-      marker.removeFrom(markerGroup);
-    }
-  });
-};
 
 const THUMBSIZE = 14;
 const RANGE_MAX = POPULATION_INTERVALS.length - 1;
@@ -58,11 +43,7 @@ const draw = (
   updateLabel(".population-slider-label-max", rightIndex);
 };
 
-const setUpPopulationSlider = (
-  markerGroup: FeatureGroup,
-  citiesToMarkers: Record<CityId, CircleMarker>,
-  data: Record<CityId, CityEntry>
-): void => {
+const createPopulationSlider = (): PopulationSliders => {
   const sliders = new PopulationSliders(
     document.querySelector(".population-slider-controls"),
     document.querySelector(".population-slider-left"),
@@ -81,22 +62,32 @@ const setUpPopulationSlider = (
     legend.appendChild(span);
   });
 
+  return sliders;
+};
+
+const setUpPopulationSlider = (
+  markerGroup: FeatureGroup,
+  citiesToMarkers: Record<CityId, CircleMarker>,
+  data: Record<CityId, CityEntry>,
+  searchElement: Choices,
+  sliders: PopulationSliders
+): void => {
   const onChange = (): void => {
     const [leftIndex, rightIndex] = sliders.getCurrentIndexes();
     sliders.left.value = leftIndex.toString();
     sliders.right.value = rightIndex.toString();
     draw(sliders, leftIndex, rightIndex);
-    changeSelectedMarkers(markerGroup, citiesToMarkers, (cityState) => {
-      const population = parseInt(data[cityState]["population"]);
-      return (
-        population >= POPULATION_INTERVALS[leftIndex][1] &&
-        population <= POPULATION_INTERVALS[rightIndex][1]
-      );
-    });
+    changeSelectedMarkers(
+      markerGroup,
+      citiesToMarkers,
+      data,
+      searchElement,
+      sliders
+    );
   };
 
   sliders.left.addEventListener("input", onChange);
   sliders.right.addEventListener("input", onChange);
 };
 
-export default setUpPopulationSlider;
+export { createPopulationSlider, setUpPopulationSlider };

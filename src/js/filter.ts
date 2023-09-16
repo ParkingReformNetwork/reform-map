@@ -2,7 +2,7 @@
 
 import type Choices from "choices.js";
 import type { CircleMarker, FeatureGroup } from "leaflet";
-import type { CityId, CityEntry } from "./types";
+import type { CityId, CityEntry, PopulationSliders } from "./types";
 
 const POPULATION_INTERVALS: Array<[string, number]> = [
   ["100", 100],
@@ -28,7 +28,8 @@ const POPULATION_INTERVALS: Array<[string, number]> = [
 const shouldBeRendered = (
   cityState: CityId,
   entry: CityEntry,
-  searchElement: Choices
+  searchElement: Choices,
+  sliders: PopulationSliders
 ): boolean => {
   const searchChosen = new Set(searchElement.getValue(true) as string[]);
   if (searchChosen.size > 0) {
@@ -48,7 +49,13 @@ const shouldBeRendered = (
     .split(",")
     .some((scope) => scopeSelected.has(scope));
 
-  return isScope;
+  const population = parseInt(entry["population"]);
+  const [sliderLeftIndex, sliderRightIndex] = sliders.getCurrentIndexes();
+  const isPopulation =
+    population >= POPULATION_INTERVALS[sliderLeftIndex][1] &&
+    population <= POPULATION_INTERVALS[sliderRightIndex][1];
+
+  return isScope && isPopulation;
 };
 
 /**
@@ -62,10 +69,11 @@ const changeSelectedMarkers = (
   markerGroup: FeatureGroup,
   citiesToMarkers: Record<CityId, CircleMarker>,
   data: Record<CityId, CityEntry>,
-  searchElement: Choices
+  searchElement: Choices,
+  sliders: PopulationSliders
 ) => {
   Object.entries(citiesToMarkers).forEach(([cityState, marker]) => {
-    if (shouldBeRendered(cityState, data[cityState], searchElement)) {
+    if (shouldBeRendered(cityState, data[cityState], searchElement, sliders)) {
       marker.addTo(markerGroup);
     } else {
       // @ts-ignore the API allows passing a LayerGroup, but the type hint doesn't show this.
@@ -78,7 +86,8 @@ const setUpFilter = (
   markerGroup: FeatureGroup,
   citiesToMarkers: Record<CityId, CircleMarker>,
   data: Record<CityId, CityEntry>,
-  searchElement: Choices
+  searchElement: Choices,
+  sliders: PopulationSliders
 ): void => {
   // We don't want each click to reset the selection. Instead, each click updates the selection by adding or removing a single selection.
   // As a result, the user won't have to use shift, ctrl/cmd to make complicated selections.
@@ -92,7 +101,13 @@ const setUpFilter = (
         input.parentElement.focus();
         input.selected = !input.selected;
       }
-      changeSelectedMarkers(markerGroup, citiesToMarkers, data, searchElement);
+      changeSelectedMarkers(
+        markerGroup,
+        citiesToMarkers,
+        data,
+        searchElement,
+        sliders
+      );
       input.parentElement.blur(); // Removes the default blue selection over element.
     });
 };
