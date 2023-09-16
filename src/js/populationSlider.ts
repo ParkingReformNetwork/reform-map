@@ -17,9 +17,6 @@ const changeSelectedMarkers = (
   });
 };
 
-// Corresponds to setting `min="0"` on the two `input` elements.
-const RANGE_MIN = 0;
-
 const THUMBSIZE = 14;
 
 // change interval by updating both stringIntervals and numInterval (slider will automatically adjust)
@@ -42,6 +39,8 @@ const NUM_INTERVALS = [
   10000000, 50000000,
 ];
 
+const RANGE_MAX = STRING_INTERVALS.length - 1;
+
 const draw = (
   sliderControls: HTMLDivElement,
   low: string,
@@ -53,9 +52,7 @@ const draw = (
   const rightSlider = document.querySelector(
     ".population-slider-right"
   ) as HTMLInputElement;
-  const rangewidth = parseInt(sliderControls.getAttribute("data-rangewidth"));
-  const rangemax = parseInt(sliderControls.getAttribute("data-rangemax")); // total max
-  const intervalSize = rangewidth / (rangemax - RANGE_MIN + 1); // how far the slider moves for each interval (px)
+  const intervalSizePx = sliderControls.offsetWidth / STRING_INTERVALS.length;
   const leftValue = parseInt(leftSlider.value);
   const rightValue = parseInt(rightSlider.value);
 
@@ -70,9 +67,9 @@ const draw = (
 
   // Setting CSS.
   // To prevent the two sliders from crossing, this sets the max and min for the left and right sliders respectively.
-  const leftWidth = parseFloat(leftSlider.getAttribute("max")) * intervalSize;
+  const leftWidth = parseFloat(leftSlider.getAttribute("max")) * intervalSizePx;
   const rightWidth =
-    (rangemax - parseFloat(rightSlider.getAttribute("min"))) * intervalSize;
+    (RANGE_MAX - parseFloat(rightSlider.getAttribute("min"))) * intervalSizePx;
   // Note: cannot set maxWidth to (rangewidth - minWidth) due to the overlaping interval
   leftSlider.style.width = leftWidth + THUMBSIZE + "px";
   rightSlider.style.width = rightWidth + THUMBSIZE + "px";
@@ -82,15 +79,11 @@ const draw = (
   leftSlider.style.left = offset + "px";
   rightSlider.style.left = extend
     ? parseInt(leftSlider.style.width) -
-      intervalSize / 2 -
+      intervalSizePx / 2 -
       THUMBSIZE +
       offset +
       "px"
     : parseInt(leftSlider.style.width) - THUMBSIZE + offset + "px";
-
-  // There is a separate attribute "data-value" to ensure the slider resets when page is refreshed.
-  rightSlider.value = rightSlider.getAttribute("data-value");
-  leftSlider.value = leftSlider.getAttribute("data-value");
 
   const updateLabel = (cls: string, val: string): void => {
     document.querySelector(cls).innerHTML = val;
@@ -112,16 +105,9 @@ const init = (
     ".population-slider-right"
   ) as HTMLInputElement;
 
-  const rangeMax = (STRING_INTERVALS.length - 1).toString();
-  leftSlider.setAttribute("max", rangeMax);
-  rightSlider.setAttribute("max", rangeMax);
-  rightSlider.setAttribute("data-value", rangeMax);
-  sliderControls.setAttribute("data-rangemax", rangeMax);
-
-  sliderControls.setAttribute(
-    "data-rangewidth",
-    sliderControls.offsetWidth.toString()
-  );
+  leftSlider.setAttribute("max", RANGE_MAX.toString());
+  rightSlider.setAttribute("max", RANGE_MAX.toString());
+  rightSlider.value = RANGE_MAX.toString();
 
   const legend = document.querySelector(".population-slider-legend");
   STRING_INTERVALS.forEach((val) => {
@@ -157,9 +143,6 @@ const updateExponential = (
   const leftValue = Math.floor(parseFloat(leftSlider.value)).toString();
   const rightValue = Math.floor(parseFloat(rightSlider.value)).toString();
 
-  // Set attributes before drawing.
-  leftSlider.setAttribute("data-value", leftValue);
-  rightSlider.setAttribute("data-value", rightValue);
   leftSlider.value = leftValue;
   rightSlider.value = rightValue;
 
