@@ -1,3 +1,4 @@
+import { POPULATION_INTERVALS } from "./filter";
 import { PopulationSliders } from "./types";
 import type { CircleMarker, FeatureGroup } from "leaflet";
 import type { CityId, CityEntry } from "./types";
@@ -19,20 +20,6 @@ const changeSelectedMarkers = (
 };
 
 const THUMBSIZE = 14;
-const POPULATION_INTERVALS: Array<[string, number]> = [
-  ["100", 100],
-  ["500", 500],
-  ["1k", 1000],
-  ["5k", 5000],
-  ["10k", 10000],
-  ["50k", 50000],
-  ["100k", 100000],
-  ["500k", 500000],
-  ["1M", 1000000],
-  ["5M", 5000000],
-  ["10M", 10000000],
-  ["50M", 50000000],
-];
 const RANGE_MAX = POPULATION_INTERVALS.length - 1;
 
 const draw = (

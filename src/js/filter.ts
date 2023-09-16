@@ -4,6 +4,21 @@ import type Choices from "choices.js";
 import type { CircleMarker, FeatureGroup } from "leaflet";
 import type { CityId, CityEntry } from "./types";
 
+const POPULATION_INTERVALS: Array<[string, number]> = [
+  ["100", 100],
+  ["500", 500],
+  ["1k", 1000],
+  ["5k", 5000],
+  ["10k", 10000],
+  ["50k", 50000],
+  ["100k", 100000],
+  ["500k", 500000],
+  ["1M", 1000000],
+  ["5M", 5000000],
+  ["10M", 10000000],
+  ["50M", 50000000],
+];
+
 /**
  * Return true if the city should be rendered on the map.
  *
@@ -82,4 +97,9 @@ const setUpFilter = (
     });
 };
 
-export { changeSelectedMarkers, setUpFilter, shouldBeRendered };
+export {
+  changeSelectedMarkers,
+  POPULATION_INTERVALS,
+  setUpFilter,
+  shouldBeRendered,
+};
