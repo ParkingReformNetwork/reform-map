@@ -41,7 +41,7 @@ const NUM_INTERVALS = [
 
 const RANGE_MAX = STRING_INTERVALS.length - 1;
 
-class Sliders {
+class PopulationSliders {
   readonly controls: HTMLDivElement;
   readonly left: HTMLInputElement;
   readonly right: HTMLInputElement;
@@ -64,7 +64,7 @@ class Sliders {
   }
 }
 
-const draw = (sliders: Sliders, low: string, high: string): void => {
+const draw = (sliders: PopulationSliders, low: string, high: string): void => {
   const intervalSizePx = sliders.controls.offsetWidth / STRING_INTERVALS.length;
   const leftValue = parseInt(sliders.left.value);
   const rightValue = parseInt(sliders.right.value);
@@ -108,7 +108,7 @@ const draw = (sliders: Sliders, low: string, high: string): void => {
 };
 
 const updateExponential = (
-  sliders: Sliders,
+  sliders: PopulationSliders,
   markerGroup: FeatureGroup,
   citiesToMarkers: Record<CityId, CircleMarker>,
   data: Record<CityId, CityEntry>
@@ -134,7 +134,7 @@ const setUpSlider = (
   citiesToMarkers: Record<CityId, CircleMarker>,
   data: Record<CityId, CityEntry>
 ): void => {
-  const sliders = new Sliders(
+  const sliders = new PopulationSliders(
     document.querySelector(".population-slider-controls"),
     document.querySelector(".population-slider-left"),
     document.querySelector(".population-slider-right")
