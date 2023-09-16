@@ -93,27 +93,6 @@ const draw = (
   updateLabel(".population-slider-label-max", rightIndex);
 };
 
-const updateExponential = (
-  sliders: PopulationSliders,
-  markerGroup: FeatureGroup,
-  citiesToMarkers: Record<CityId, CircleMarker>,
-  data: Record<CityId, CityEntry>
-): void => {
-  const [leftIndex, rightIndex] = sliders.getCurrentIndexes();
-
-  sliders.left.value = leftIndex.toString();
-  sliders.right.value = rightIndex.toString();
-  draw(sliders, leftIndex, rightIndex);
-
-  changeSelectedMarkers(markerGroup, citiesToMarkers, (cityState) => {
-    const population = parseInt(data[cityState]["population"]);
-    return (
-      population >= POPULATION_INTERVALS[leftIndex][1] &&
-      population <= POPULATION_INTERVALS[rightIndex][1]
-    );
-  });
-};
-
 const setUpPopulationSlider = (
   markerGroup: FeatureGroup,
   citiesToMarkers: Record<CityId, CircleMarker>,
@@ -128,6 +107,7 @@ const setUpPopulationSlider = (
   sliders.left.setAttribute("max", RANGE_MAX.toString());
   sliders.right.setAttribute("max", RANGE_MAX.toString());
   sliders.right.value = RANGE_MAX.toString();
+  draw(sliders, 0, RANGE_MAX);
 
   const legend = document.querySelector(".population-slider-legend");
   POPULATION_INTERVALS.forEach(([intervalText]) => {
@@ -136,14 +116,22 @@ const setUpPopulationSlider = (
     legend.appendChild(span);
   });
 
-  draw(sliders, 0, RANGE_MAX);
+  const onChange = (): void => {
+    const [leftIndex, rightIndex] = sliders.getCurrentIndexes();
+    sliders.left.value = leftIndex.toString();
+    sliders.right.value = rightIndex.toString();
+    draw(sliders, leftIndex, rightIndex);
+    changeSelectedMarkers(markerGroup, citiesToMarkers, (cityState) => {
+      const population = parseInt(data[cityState]["population"]);
+      return (
+        population >= POPULATION_INTERVALS[leftIndex][1] &&
+        population <= POPULATION_INTERVALS[rightIndex][1]
+      );
+    });
+  };
 
-  sliders.left.addEventListener("input", (): void => {
-    updateExponential(sliders, markerGroup, citiesToMarkers, data);
-  });
-  sliders.right.addEventListener("input", (): void => {
-    updateExponential(sliders, markerGroup, citiesToMarkers, data);
-  });
+  sliders.left.addEventListener("input", onChange);
+  sliders.right.addEventListener("input", onChange);
 };
 
 export default setUpPopulationSlider;
