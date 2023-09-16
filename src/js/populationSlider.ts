@@ -41,10 +41,27 @@ const NUM_INTERVALS = [
 
 const RANGE_MAX = STRING_INTERVALS.length - 1;
 
-interface Sliders {
-  controls: HTMLDivElement;
-  left: HTMLInputElement;
-  right: HTMLInputElement;
+class Sliders {
+  readonly controls: HTMLDivElement;
+  readonly left: HTMLInputElement;
+  readonly right: HTMLInputElement;
+
+  constructor(
+    controls: HTMLDivElement,
+    left: HTMLInputElement,
+    right: HTMLInputElement
+  ) {
+    this.controls = controls;
+    this.left = left;
+    this.right = right;
+  }
+
+  /** Return the [leftIndex, rightIndex] of the sliders. */
+  getCurrentIndexes(): [number, number] {
+    const get = (slider: HTMLInputElement): number =>
+      Math.floor(parseFloat(slider.value));
+    return [get(this.left), get(this.right)];
+  }
 }
 
 const draw = (sliders: Sliders, low: string, high: string): void => {
@@ -96,22 +113,20 @@ const updateExponential = (
   citiesToMarkers: Record<CityId, CircleMarker>,
   data: Record<CityId, CityEntry>
 ): void => {
-  // Set variables.
-  const leftValue = Math.floor(parseFloat(sliders.left.value)).toString();
-  const rightValue = Math.floor(parseFloat(sliders.right.value)).toString();
+  const [leftIndex, rightIndex] = sliders.getCurrentIndexes();
 
-  sliders.left.value = leftValue;
-  sliders.right.value = rightValue;
+  sliders.left.value = leftIndex.toString();
+  sliders.right.value = rightIndex.toString();
 
   changeSelectedMarkers(markerGroup, citiesToMarkers, (cityState) => {
     const population = parseInt(data[cityState]["population"]);
     return (
-      population >= NUM_INTERVALS[leftValue] &&
-      population <= NUM_INTERVALS[rightValue]
+      population >= NUM_INTERVALS[leftIndex] &&
+      population <= NUM_INTERVALS[rightIndex]
     );
   });
 
-  draw(sliders, STRING_INTERVALS[leftValue], STRING_INTERVALS[rightValue]);
+  draw(sliders, STRING_INTERVALS[leftIndex], STRING_INTERVALS[rightIndex]);
 };
 
 const setUpSlider = (
@@ -119,15 +134,11 @@ const setUpSlider = (
   citiesToMarkers: Record<CityId, CircleMarker>,
   data: Record<CityId, CityEntry>
 ): void => {
-  const sliders = {
-    controls: document.querySelector(
-      ".population-slider-controls"
-    ) as HTMLDivElement,
-    left: document.querySelector(".population-slider-left") as HTMLInputElement,
-    right: document.querySelector(
-      ".population-slider-right"
-    ) as HTMLInputElement,
-  };
+  const sliders = new Sliders(
+    document.querySelector(".population-slider-controls"),
+    document.querySelector(".population-slider-left"),
+    document.querySelector(".population-slider-right")
+  );
 
   sliders.left.setAttribute("max", RANGE_MAX.toString());
   sliders.right.setAttribute("max", RANGE_MAX.toString());
