@@ -1,3 +1,6 @@
+$unchecked: "\2610";
+$checked: "\2611";
+
 .filter--scope {
   position: absolute;
   top: 4em;
@@ -11,7 +14,7 @@
 }
 
 .filter--scope option::before {
-  content: "\2610";
+  content: $unchecked;
   width: 1.3em;
   text-align: center;
   display: inline-block;
