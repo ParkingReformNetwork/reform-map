@@ -5,7 +5,7 @@ $gray: #737272;
 .filters-popup-container {
   position: absolute;
   top: 3.8em;
-  left: 20em;
+  left: 30em;
 }
 
 .filters-popup-container > * {
@@ -22,22 +22,17 @@ $gray: #737272;
 }
 
 .filters-popup-window {
+  display: flex;
+  flex-direction: column;
+
   top: 3em;
   right: 0;
-  width: 10em;
-  padding: 1em;
+  width: 15em;
+  // cannot use padding (population-slider-controls misaligns)
 }
 
-.filter--scope {
-  position: absolute;
-  top: 4em;
-  left: 15em;
-  width: auto;
-  z-index: 1100;
-
-  @media only screen and (min-width: 48em) {
-    top: 4.7em;
-  }
+.filters-popup-window > * {
+  margin: 0.5em 1em;
 }
 
 .filter--scope option::before {
