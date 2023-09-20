@@ -2,8 +2,13 @@ import type { ElementHandle } from "@playwright/test";
 import { expect, test } from "@playwright/test";
 import { loadMap, getNumCities } from "./utils";
 
+const openFilterPopup = async (page): Promise<void> => {
+  page.locator(".filters-popup-icon").click();
+};
+
 test("scope filter updates markers", async ({ page }) => {
   await loadMap(page);
+  await openFilterPopup(page);
 
   // min updated on 9/3/23
   const scopeMin = {
@@ -73,6 +78,7 @@ test("scope filter updates markers", async ({ page }) => {
 
 test("population filter updates markers", async ({ page }) => {
   await loadMap(page);
+  await openFilterPopup(page);
   const left = await page.$(".population-slider-left");
   const right = await page.$(".population-slider-right");
 
