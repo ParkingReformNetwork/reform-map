@@ -8,20 +8,27 @@ $gray: #737272;
   left: 30em;
 }
 
-.filters-popup-container > * {
+.filters-popup-icon {
   position: absolute;
   background-color: white;
   border: solid $gray 3px;
   z-index: 1200;
-}
-
-.filters-popup-icon {
   right: 0;
   padding: 0.5em;
   border-radius: 0.25em;
+  cursor: pointer;
 }
 
 .filters-popup-window {
+  display: none;
+}
+
+.filters-popup-flex {
+  position: absolute;
+  background-color: white;
+  border: solid $gray 3px;
+  z-index: 1200;
+
   display: flex;
   flex-direction: column;
 
@@ -31,7 +38,7 @@ $gray: #737272;
   // cannot use padding (population-slider-controls misaligns)
 }
 
-.filters-popup-window > * {
+.filters-popup-flex > * {
   margin: 0.5em 1em;
 }
 
