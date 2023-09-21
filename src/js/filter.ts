@@ -65,11 +65,21 @@ const setUpFilter = (
   data: Record<CityId, CityEntry>,
   searchElement: Choices
 ): void => {
+  // We don't want each click to reset the selection. Instead, each click updates the selection by adding or removing a single selection.
+  // As a result, the user won't have to use shift, ctrl/cmd to make complicated selections.
   document
     .querySelector(".filter--scope")
-    .addEventListener("change", () =>
-      changeSelectedMarkers(markerGroup, citiesToMarkers, data, searchElement)
-    );
+    .addEventListener("mousedown", (e: MouseEvent): void => {
+      // For each option, do not exhibit normal behavior. Instead, change the option to the opposite state.
+      const input = e.target as HTMLOptionElement;
+      if (input.tagName === "OPTION") {
+        e.preventDefault();
+        input.parentElement.focus();
+        input.selected = !input.selected;
+      }
+      changeSelectedMarkers(markerGroup, citiesToMarkers, data, searchElement);
+      input.parentElement.blur(); // Removes the default blue selection over element.
+    });
 };
 
 export { changeSelectedMarkers, setUpFilter, shouldBeRendered };

@@ -1,3 +1,6 @@
+$unchecked: "\2610";
+$checked: "\2611";
+
 .filter--scope {
   position: absolute;
   top: 4em;
@@ -8,4 +11,14 @@
   @media only screen and (min-width: 48em) {
     top: 4.7em;
   }
+}
+
+.filter--scope option::before {
+  content: $unchecked;
+  width: 1.3em;
+  text-align: center;
+  display: inline-block;
+}
+.filter--scope option:checked::before {
+  content: "\2611";
 }
