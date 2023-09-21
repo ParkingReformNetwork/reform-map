@@ -1,5 +1,13 @@
 /* global document, window */
-const setUpFilterPopup = () => {
+import setUpPopulationSlider from "./populationSlider";
+import { setUpFilter } from "./filter";
+
+const setUpFilterPopup = (
+  markerGroup,
+  citiesToMarkers,
+  data,
+  searchElement
+) => {
   const popupElement = document.querySelector(
     ".filters-popup-window"
   ) as HTMLElement;
@@ -11,6 +19,15 @@ const setUpFilterPopup = () => {
     popupElement.style.display =
       popupElement.style.display !== "block" ? "block" : "none";
   });
+
+  filterIcon.addEventListener(
+    "click",
+    () => {
+      setUpPopulationSlider(markerGroup, citiesToMarkers, data);
+      setUpFilter(markerGroup, citiesToMarkers, data, searchElement);
+    },
+    { once: true }
+  );
 
   // closes window on clicks outside the info popup
   window.addEventListener("click", (event) => {

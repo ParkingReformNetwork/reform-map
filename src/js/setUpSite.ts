@@ -102,9 +102,7 @@ const setUpSite = async (): Promise<void> => {
 
   setUpDetails(markerGroup, data);
   setUpSearch(markerGroup, citiesToMarkers, data, searchElement);
-  setUpFilterPopup();
-  setUpFilter(markerGroup, citiesToMarkers, data, searchElement);
-  setUpPopulationSlider(markerGroup, citiesToMarkers, data);
+  setUpFilterPopup(markerGroup, citiesToMarkers, data, searchElement);
 };
 
 export default setUpSite;
