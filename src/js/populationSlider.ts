@@ -18,28 +18,21 @@ const changeSelectedMarkers = (
 };
 
 const THUMBSIZE = 14;
-
-// change interval by updating both stringIntervals and numInterval (slider will automatically adjust)
-const STRING_INTERVALS = [
-  "100",
-  "500",
-  "1k",
-  "5k",
-  "10k",
-  "50k",
-  "100k",
-  "500k",
-  "1M",
-  "5M",
-  "10M",
-  "50M",
+const POPULATION_INTERVALS: Array<[string, number]> = [
+  ["100", 100],
+  ["500", 500],
+  ["1k", 1000],
+  ["5k", 5000],
+  ["10k", 10000],
+  ["50k", 50000],
+  ["100k", 100000],
+  ["500k", 500000],
+  ["1M", 1000000],
+  ["5M", 5000000],
+  ["10M", 10000000],
+  ["50M", 50000000],
 ];
-const NUM_INTERVALS = [
-  100, 500, 1000, 5000, 10000, 50000, 100000, 500000, 1000000, 5000000,
-  10000000, 50000000,
-];
-
-const RANGE_MAX = STRING_INTERVALS.length - 1;
+const RANGE_MAX = POPULATION_INTERVALS.length - 1;
 
 class PopulationSliders {
   readonly controls: HTMLDivElement;
@@ -64,69 +57,40 @@ class PopulationSliders {
   }
 }
 
-const draw = (sliders: PopulationSliders, low: string, high: string): void => {
-  const intervalSizePx = sliders.controls.offsetWidth / STRING_INTERVALS.length;
-  const leftValue = parseInt(sliders.left.value);
-  const rightValue = parseInt(sliders.right.value);
-
-  // Setting min and max attributes for left and right sliders.
-  const cross = rightValue - 0.5 >= leftValue ? rightValue - 0.5 : rightValue; // a single interval that min and max sliders overlap
-  const extend = leftValue + 1 == rightValue; // (boolean): if sliders are close and within 1 step can overlap
-  sliders.left.setAttribute(
-    "max",
-    extend ? (cross + 0.5).toString() : cross.toString()
-  );
-  sliders.right.setAttribute("min", cross.toString());
-
-  // Setting CSS.
-  // To prevent the two sliders from crossing, this sets the max and min for the left and right sliders respectively.
-  const leftWidth =
-    parseFloat(sliders.left.getAttribute("max")) * intervalSizePx;
-  const rightWidth =
-    (RANGE_MAX - parseFloat(sliders.right.getAttribute("min"))) *
-    intervalSizePx;
-  // Note: cannot set maxWidth to (rangewidth - minWidth) due to the overlaping interval
-  sliders.left.style.width = leftWidth + THUMBSIZE + "px";
-  sliders.right.style.width = rightWidth + THUMBSIZE + "px";
-
-  // The left slider has a fixed anchor. However the right slider has to move everytime the range of the slider changes.
-  const offset = 5;
-  sliders.left.style.left = offset + "px";
-  sliders.right.style.left = extend
-    ? parseInt(sliders.left.style.width) -
-      intervalSizePx / 2 -
-      THUMBSIZE +
-      offset +
-      "px"
-    : parseInt(sliders.left.style.width) - THUMBSIZE + offset + "px";
-
-  const updateLabel = (cls: string, val: string): void => {
-    document.querySelector(cls).innerHTML = val;
-  };
-  updateLabel(".population-slider-label-min", low);
-  updateLabel(".population-slider-label-max", high);
-};
-
-const updateExponential = (
+const draw = (
   sliders: PopulationSliders,
-  markerGroup: FeatureGroup,
-  citiesToMarkers: Record<CityId, CircleMarker>,
-  data: Record<CityId, CityEntry>
+  leftIndex: number,
+  rightIndex: number
 ): void => {
-  const [leftIndex, rightIndex] = sliders.getCurrentIndexes();
+  // We dynamically change the sliders so that they cannot extend past each other.
+  const cross = rightIndex - 0.5 >= leftIndex ? rightIndex - 0.5 : rightIndex; // a single interval that min and max sliders overlap
+  const extend = leftIndex + 1 == rightIndex; // if sliders are close and within 1 step can overlap
+  const newLeftMax = extend ? cross + 0.5 : cross;
+  const newRightMin = cross;
 
-  sliders.left.value = leftIndex.toString();
-  sliders.right.value = rightIndex.toString();
+  sliders.left.setAttribute("max", newLeftMax.toString());
+  sliders.right.setAttribute("min", newRightMin.toString());
 
-  changeSelectedMarkers(markerGroup, citiesToMarkers, (cityState) => {
-    const population = parseInt(data[cityState]["population"]);
-    return (
-      population >= NUM_INTERVALS[leftIndex] &&
-      population <= NUM_INTERVALS[rightIndex]
-    );
-  });
+  const intervalSizePx =
+    sliders.controls.offsetWidth / POPULATION_INTERVALS.length;
+  const leftWidth = newLeftMax * intervalSizePx;
+  const rightWidth = (RANGE_MAX - newRightMin) * intervalSizePx;
+  sliders.left.style.width = `${leftWidth + THUMBSIZE}px`;
+  sliders.right.style.width = `${rightWidth + THUMBSIZE}px`;
 
-  draw(sliders, STRING_INTERVALS[leftIndex], STRING_INTERVALS[rightIndex]);
+  // The left slider has a fixed anchor. However, the right slider has to move
+  // everytime the range of the slider changes.
+  const offset = 5;
+  sliders.left.style.left = `${offset}px`;
+  sliders.right.style.left = extend
+    ? `${leftWidth - intervalSizePx / 2 + offset}px`
+    : `${leftWidth + offset}px`;
+
+  const updateLabel = (cls: string, index: number): void => {
+    document.querySelector(cls).innerHTML = POPULATION_INTERVALS[index][0];
+  };
+  updateLabel(".population-slider-label-min", leftIndex);
+  updateLabel(".population-slider-label-max", rightIndex);
 };
 
 const setUpPopulationSlider = (
@@ -143,22 +107,31 @@ const setUpPopulationSlider = (
   sliders.left.setAttribute("max", RANGE_MAX.toString());
   sliders.right.setAttribute("max", RANGE_MAX.toString());
   sliders.right.value = RANGE_MAX.toString();
+  draw(sliders, 0, RANGE_MAX);
 
   const legend = document.querySelector(".population-slider-legend");
-  STRING_INTERVALS.forEach((val) => {
+  POPULATION_INTERVALS.forEach(([intervalText]) => {
     const span = document.createElement("span");
-    span.appendChild(document.createTextNode(val));
+    span.appendChild(document.createTextNode(intervalText));
     legend.appendChild(span);
   });
 
-  draw(sliders, STRING_INTERVALS.at(0), STRING_INTERVALS.at(-1));
+  const onChange = (): void => {
+    const [leftIndex, rightIndex] = sliders.getCurrentIndexes();
+    sliders.left.value = leftIndex.toString();
+    sliders.right.value = rightIndex.toString();
+    draw(sliders, leftIndex, rightIndex);
+    changeSelectedMarkers(markerGroup, citiesToMarkers, (cityState) => {
+      const population = parseInt(data[cityState]["population"]);
+      return (
+        population >= POPULATION_INTERVALS[leftIndex][1] &&
+        population <= POPULATION_INTERVALS[rightIndex][1]
+      );
+    });
+  };
 
-  sliders.left.addEventListener("input", (): void => {
-    updateExponential(sliders, markerGroup, citiesToMarkers, data);
-  });
-  sliders.right.addEventListener("input", (): void => {
-    updateExponential(sliders, markerGroup, citiesToMarkers, data);
-  });
+  sliders.left.addEventListener("input", onChange);
+  sliders.right.addEventListener("input", onChange);
 };
 
 export default setUpPopulationSlider;
