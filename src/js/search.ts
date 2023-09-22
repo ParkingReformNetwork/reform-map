@@ -2,7 +2,7 @@ import type { FeatureGroup, CircleMarker } from "leaflet";
 import Choices from "choices.js";
 import "choices.js/public/assets/styles/choices.css";
 
-import type { CityId, CityEntry } from "./types";
+import type { CityId, CityEntry, PopulationSliders } from "./types";
 import { changeSelectedMarkers } from "./filter";
 
 const createSearchElement = (cityStates: Array<CityId>): Choices => {
@@ -24,12 +24,19 @@ const setUpSearch = (
   markerGroup: FeatureGroup,
   citiesToMarkers: Record<CityId, CircleMarker>,
   data: Record<CityId, CityEntry>,
-  searchElement: Choices
+  searchElement: Choices,
+  sliders: PopulationSliders
 ): void => {
   document
     .querySelector(".city-search")
     .addEventListener("change", () =>
-      changeSelectedMarkers(markerGroup, citiesToMarkers, data, searchElement)
+      changeSelectedMarkers(
+        markerGroup,
+        citiesToMarkers,
+        data,
+        searchElement,
+        sliders
+      )
     );
 };
 

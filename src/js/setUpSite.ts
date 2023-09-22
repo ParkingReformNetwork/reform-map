@@ -8,7 +8,10 @@ import { createSearchElement, setUpSearch } from "./search";
 import setUpAbout from "./about";
 import setUpDetails from "./cityDetails";
 import { setUpFilter } from "./filter";
-import setUpPopulationSlider from "./populationSlider";
+import {
+  createPopulationSlider,
+  setUpPopulationSlider,
+} from "./populationSlider";
 
 const BASE_LAYER = new TileLayer(
   "https://tiles.stadiamaps.com/tiles/stamen_toner_lite/{z}/{x}/{y}{r}.png",
@@ -93,6 +96,7 @@ const setUpSite = async (): Promise<void> => {
   setUpAbout();
   const map = createMap();
   const markerGroup = createMarkerGroup(map);
+  const sliders = createPopulationSlider();
   addLegend(map, SCOPE_TO_COLOR);
 
   const data = await readData();
@@ -100,9 +104,15 @@ const setUpSite = async (): Promise<void> => {
   const citiesToMarkers = createCityMarkers(data, markerGroup);
 
   setUpDetails(markerGroup, data);
-  setUpSearch(markerGroup, citiesToMarkers, data, searchElement);
-  setUpFilter(markerGroup, citiesToMarkers, data, searchElement);
-  setUpPopulationSlider(markerGroup, citiesToMarkers, data);
+  setUpSearch(markerGroup, citiesToMarkers, data, searchElement, sliders);
+  setUpFilter(markerGroup, citiesToMarkers, data, searchElement, sliders);
+  setUpPopulationSlider(
+    markerGroup,
+    citiesToMarkers,
+    data,
+    searchElement,
+    sliders
+  );
 };
 
 export default setUpSite;
