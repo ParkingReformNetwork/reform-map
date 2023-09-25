@@ -59,8 +59,9 @@ export class PopulationSliders {
 
   /** Return the [leftIndex, rightIndex] of the sliders. */
   getCurrentIndexes(): [number, number] {
-    const get = (slider: HTMLInputElement): number =>
-      Math.floor(parseFloat(slider.value));
-    return [get(this.left), get(this.right)];
+    return [
+      Math.floor(parseFloat(this.left.value)),
+      Math.ceil(parseFloat(this.right.value)),
+    ];
   }
 }
