@@ -20,6 +20,8 @@ const draw = (
 
   sliders.left.setAttribute("max", newLeftMax.toString());
   sliders.right.setAttribute("min", newRightMin.toString());
+  sliders.left.setAttribute("value", leftIndex.toString());
+  sliders.right.setAttribute("value", rightIndex.toString());
 
   const intervalSizePx =
     sliders.controls.offsetWidth / POPULATION_INTERVALS.length;
@@ -52,7 +54,6 @@ const createPopulationSlider = (): PopulationSliders => {
 
   sliders.left.setAttribute("max", RANGE_MAX.toString());
   sliders.right.setAttribute("max", RANGE_MAX.toString());
-  sliders.right.value = RANGE_MAX.toString();
   draw(sliders, 0, RANGE_MAX);
 
   const legend = document.querySelector(".population-slider-legend");
