@@ -13,16 +13,18 @@ const draw = (
   rightIndex: number
 ): void => {
   // We dynamically change the sliders so that they cannot extend past each other.
-  const cross = rightIndex - 0.5 >= leftIndex ? rightIndex - 0.5 : rightIndex; // a single interval that min and max sliders overlap
-  const extend = leftIndex + 1 == rightIndex; // if sliders are close and within 1 step can overlap
-  const newLeftMax = extend ? cross + 0.5 : cross;
-  const newRightMin = cross;
+  const inBetween = (rightIndex - leftIndex) / 2;
+  const newLeftMax = leftIndex + inBetween;
+  const newRightMin = rightIndex - inBetween;
 
   sliders.left.setAttribute("max", newLeftMax.toString());
   sliders.right.setAttribute("min", newRightMin.toString());
+  sliders.left.setAttribute("value", leftIndex.toString());
+  sliders.right.setAttribute("value", rightIndex.toString());
 
   const intervalSizePx =
-    sliders.controls.offsetWidth / POPULATION_INTERVALS.length;
+    (sliders.controls.offsetWidth + THUMBSIZE / 2) /
+    POPULATION_INTERVALS.length;
   const leftWidth = newLeftMax * intervalSizePx;
   const rightWidth = (RANGE_MAX - newRightMin) * intervalSizePx;
   sliders.left.style.width = `${leftWidth + THUMBSIZE}px`;
@@ -30,11 +32,7 @@ const draw = (
 
   // The left slider has a fixed anchor. However, the right slider has to move
   // everytime the range of the slider changes.
-  const offset = 5;
-  sliders.left.style.left = `${offset}px`;
-  sliders.right.style.left = extend
-    ? `${leftWidth - intervalSizePx / 2 + offset}px`
-    : `${leftWidth + offset}px`;
+  sliders.right.style.left = `${leftWidth}px`;
 
   const updateLabel = (cls: string, index: number): void => {
     document.querySelector(cls).innerHTML = POPULATION_INTERVALS[index][0];
@@ -52,7 +50,6 @@ const createPopulationSlider = (): PopulationSliders => {
 
   sliders.left.setAttribute("max", RANGE_MAX.toString());
   sliders.right.setAttribute("max", RANGE_MAX.toString());
-  sliders.right.value = RANGE_MAX.toString();
   draw(sliders, 0, RANGE_MAX);
 
   const legend = document.querySelector(".population-slider-legend");
