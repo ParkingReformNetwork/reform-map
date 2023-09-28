@@ -8,7 +8,10 @@ import { createSearchElement, setUpSearch } from "./search";
 import setUpAbout from "./about";
 import setUpDetails from "./cityDetails";
 import { setUpFilter } from "./filter";
-import setUpPopulationSlider from "./populationSlider";
+import {
+  createPopulationSlider,
+  setUpPopulationSlider,
+} from "./populationSlider";
 import setUpFilterPopup from "./filterPopup";
 
 const BASE_LAYER = new TileLayer(
@@ -94,6 +97,7 @@ const setUpSite = async (): Promise<void> => {
   setUpAbout();
   const map = createMap();
   const markerGroup = createMarkerGroup(map);
+  const sliders = createPopulationSlider();
   addLegend(map, SCOPE_TO_COLOR);
 
   const data = await readData();
@@ -102,7 +106,8 @@ const setUpSite = async (): Promise<void> => {
 
   setUpDetails(markerGroup, data);
   setUpSearch(markerGroup, citiesToMarkers, data, searchElement);
-  setUpFilterPopup(markerGroup, citiesToMarkers, data, searchElement);
+  setUpFilter(markerGroup, citiesToMarkers, data, searchElement);
+  setUpPopulationSlider(markerGroup, citiesToMarkers, data);
 };
 
 export default setUpSite;

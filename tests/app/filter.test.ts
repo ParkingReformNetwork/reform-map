@@ -126,11 +126,19 @@ test("population filter updates markers", async ({ page }) => {
     }
   };
 
-  await testSlider(left, 5, false); // The slider interval is between 0 - 11
-  await testSlider(right, 10.5, false);
-  // NOTE: Due to the way the double slider is coded, the right slider only extends 0.5 step left from where the slider head is.
-  await testSlider(left, 9, false);
-  await testSlider(right, 9.5, false);
+  // The slider interval is between 0 - 11
+  // However, the each slider only renders a certain range.
+
+  // L: 0 - 5.5   R: 5.5 - 11
+  await testSlider(left, 5, false);
+  // L: 0 - 8   R: 8 - 11
+  await testSlider(right, 8, false);
+  // L: 0 - 6.5   R: 6.5 - 11
+  await testSlider(left, 6, false);
+  // L: 0 - 7   R: 7 - 11
+  await testSlider(right, 7, false);
+  // L: 0 - 7.5   R: 7.5 - 11
   await testSlider(right, 11, true);
+  // L: 0 - 8.5   R: 8.5 - 11
   await testSlider(left, 2, true);
 });

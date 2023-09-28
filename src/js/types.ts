@@ -41,3 +41,27 @@ export interface CityEntry {
   city_search: string;
   is_special: string;
 }
+
+export class PopulationSliders {
+  readonly controls: HTMLDivElement;
+  readonly left: HTMLInputElement;
+  readonly right: HTMLInputElement;
+
+  constructor(
+    controls: HTMLDivElement,
+    left: HTMLInputElement,
+    right: HTMLInputElement
+  ) {
+    this.controls = controls;
+    this.left = left;
+    this.right = right;
+  }
+
+  /** Return the [leftIndex, rightIndex] of the sliders. */
+  getCurrentIndexes(): [number, number] {
+    return [
+      Math.floor(parseFloat(this.left.value)),
+      Math.ceil(parseFloat(this.right.value)),
+    ];
+  }
+}
