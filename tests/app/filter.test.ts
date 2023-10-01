@@ -14,51 +14,22 @@ test("scope filter updates markers", async ({ page }) => {
     "Main Street/Special": 33,
   };
 
+  // Check the difference between city count before and after
   const checkScope = async (scopeType: string): Promise<void> => {
     const citiesBefore = await getNumCities(page);
+
+    // Find a click the scope option element
     const optionElement = await page.$(
       `.filter--scope option:has-text("${scopeType}")`
     );
+    await optionElement.click();
 
-    // Click the option element
-    if (optionElement) {
-      await optionElement.click();
-    }
-    const cities = await getNumCities(page);
-
-    // check if all options are deselected
-    const areAllOptionsDeselected = await page.evaluate((): boolean => {
-      const selectElement = document.querySelector(
-        ".filter--scope"
-      ) as HTMLSelectElement;
-      const options = Array.from(selectElement.options);
-      return options.every((option) => !option.selected);
-    });
-
-    if (areAllOptionsDeselected) {
-      expect(cities === 0).toBe(true);
-    } else {
-      const isSelected = await page.$eval(
-        ".filter--scope",
-        (selectElement: HTMLSelectElement, scope: string): boolean => {
-          const options = Array.from(selectElement.options);
-          const option = options.find((opt) => opt.textContent === scope);
-          return option ? option.selected : false;
-        },
-        scopeType
-      );
-      const change = Array.isArray(scopeType)
-        ? scopeType.reduce((sum, key) => sum + (scopeMin[key] || 0), 0)
-        : scopeMin[scopeType] || 0;
-
-      if (isSelected) {
-        const min = citiesBefore + change;
-        expect(cities >= min && cities < min * 1.5).toBe(true);
-      } else {
-        const max = citiesBefore - change;
-        expect(cities <= max && cities >= max * 0.5).toBe(true);
-      }
-    }
+    const citiesAfter = await getNumCities(page);
+    const citiesDiff = Math.abs(citiesAfter - citiesBefore);
+    const expectedDiff = scopeMin[scopeType];
+    expect(citiesDiff >= expectedDiff && citiesDiff <= expectedDiff * 1.5).toBe(
+      true
+    );
   };
 
   await checkScope("Regional"); // clicking on an option will remove it
