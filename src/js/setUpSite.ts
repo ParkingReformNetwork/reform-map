@@ -9,8 +9,7 @@ import setUpAbout from "./about";
 import setUpDetails from "./cityDetails";
 import { setUpFilter } from "./filter";
 import {
-  createPopulationSlider,
-  setUpPopulationSlider,
+  createPopulationSlider
 } from "./populationSlider";
 import setUpFilterPopup from "./filterPopup";
 
@@ -106,8 +105,7 @@ const setUpSite = async (): Promise<void> => {
 
   setUpDetails(markerGroup, data);
   setUpSearch(markerGroup, citiesToMarkers, data, searchElement, sliders);
-  setUpFilter(markerGroup, citiesToMarkers, data, searchElement, sliders);
-  setUpPopulationSlider(markerGroup, citiesToMarkers, data, searchElement, sliders);
+  setUpFilterPopup(markerGroup, citiesToMarkers, data, searchElement, sliders);
 };
 
 export default setUpSite;

@@ -1,12 +1,13 @@
 /* global document, window */
-import setUpPopulationSlider from "./populationSlider";
+import { setUpPopulationSlider } from "./populationSlider";
 import { setUpFilter } from "./filter";
 
 const setUpFilterPopup = (
   markerGroup,
   citiesToMarkers,
   data,
-  searchElement
+  searchElement,
+  sliders
 ) => {
   const popupElement = document.querySelector(
     ".filters-popup-window"
@@ -23,8 +24,8 @@ const setUpFilterPopup = (
   filterIcon.addEventListener(
     "click",
     () => {
-      setUpPopulationSlider(markerGroup, citiesToMarkers, data);
-      setUpFilter(markerGroup, citiesToMarkers, data, searchElement);
+      setUpPopulationSlider(markerGroup, citiesToMarkers, data, searchElement, sliders);
+      setUpFilter(markerGroup, citiesToMarkers, data, searchElement, sliders);
     },
     { once: true }
   );
