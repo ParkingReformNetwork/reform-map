@@ -11,7 +11,7 @@ $gray: #737272;
 .filters-popup-icon {
   position: absolute;
   background-color: white;
-  border: solid $gray 3px;
+  border: solid $gray 1px;
   z-index: 1200;
   right: 0;
   padding: 0.5em;
@@ -26,7 +26,7 @@ $gray: #737272;
 .filters-popup-flex {
   position: absolute;
   background-color: white;
-  border: solid $gray 3px;
+  border: solid $gray 1px;
   z-index: 1200;
 
   display: flex;
@@ -34,7 +34,7 @@ $gray: #737272;
 
   top: 3em;
   right: 0;
-  width: 15em;
+  width: 20em;
   // cannot use padding (population-slider-controls misaligns)
 }
 

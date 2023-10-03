@@ -22,17 +22,17 @@ const draw = (
   sliders.left.setAttribute("value", leftIndex.toString());
   sliders.right.setAttribute("value", rightIndex.toString());
 
-  const intervalSizePx =
+  const intervalSizePx = Math.round(
     (sliders.controls.offsetWidth + THUMBSIZE / 2) /
-    POPULATION_INTERVALS.length;
+    POPULATION_INTERVALS.length);
   const leftWidth = newLeftMax * intervalSizePx;
   const rightWidth = (RANGE_MAX - newRightMin) * intervalSizePx;
-  sliders.left.style.width = `${leftWidth + THUMBSIZE}px`;
-  sliders.right.style.width = `${rightWidth + THUMBSIZE}px`;
+  sliders.left.style.width = `${leftWidth + THUMBSIZE/2}px`;
+  sliders.right.style.width = `${rightWidth + THUMBSIZE/2}px`;
 
   // The left slider has a fixed anchor. However, the right slider has to move
   // everytime the range of the slider changes.
-  sliders.right.style.left = `${leftWidth}px`;
+  sliders.right.style.left = `${leftWidth + THUMBSIZE}px`;
 
   const updateLabel = (cls: string, index: number): void => {
     document.querySelector(cls).innerHTML = POPULATION_INTERVALS[index][0];
