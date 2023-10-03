@@ -8,9 +8,7 @@ import { createSearchElement, setUpSearch } from "./search";
 import setUpAbout from "./about";
 import setUpDetails from "./cityDetails";
 import { setUpFilter } from "./filter";
-import {
-  createPopulationSlider
-} from "./populationSlider";
+import { createPopulationSlider } from "./populationSlider";
 import setUpFilterPopup from "./filterPopup";
 
 const BASE_LAYER = new TileLayer(

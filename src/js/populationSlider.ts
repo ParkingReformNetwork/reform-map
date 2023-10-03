@@ -23,12 +23,12 @@ const draw = (
   sliders.right.setAttribute("value", rightIndex.toString());
 
   const intervalSizePx = Math.round(
-    (sliders.controls.offsetWidth + THUMBSIZE / 2) /
-    POPULATION_INTERVALS.length);
+    (sliders.controls.offsetWidth + THUMBSIZE / 2) / POPULATION_INTERVALS.length
+  );
   const leftWidth = newLeftMax * intervalSizePx;
   const rightWidth = (RANGE_MAX - newRightMin) * intervalSizePx;
-  sliders.left.style.width = `${leftWidth + THUMBSIZE/2}px`;
-  sliders.right.style.width = `${rightWidth + THUMBSIZE/2}px`;
+  sliders.left.style.width = `${leftWidth + THUMBSIZE / 2}px`;
+  sliders.right.style.width = `${rightWidth + THUMBSIZE / 2}px`;
 
   // The left slider has a fixed anchor. However, the right slider has to move
   // everytime the range of the slider changes.

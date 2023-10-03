@@ -24,7 +24,13 @@ const setUpFilterPopup = (
   filterIcon.addEventListener(
     "click",
     () => {
-      setUpPopulationSlider(markerGroup, citiesToMarkers, data, searchElement, sliders);
+      setUpPopulationSlider(
+        markerGroup,
+        citiesToMarkers,
+        data,
+        searchElement,
+        sliders
+      );
       setUpFilter(markerGroup, citiesToMarkers, data, searchElement, sliders);
     },
     { once: true }
