@@ -108,37 +108,53 @@
       <div class="city-details-text"></div>
     </div>
 
-    <select multiple class="filter--scope">
-      <option value="Regional" selected>Regional</option>
-      <option value="Citywide" selected>Citywide</option>
-      <!-- prettier-ignore -->
-      <option value="City Center/Business District" selected>City Center/Business District</option>
-      <option value="Transit Oriented" selected>Transit Oriented</option>
-      <option value="Main Street/Special" selected>Main Street/Special</option>
-    </select>
-    <div class="population-slider-container">
-      <div class="population-slider-label">
-        <span class="population-slider-label-min"></span>
-        <span> - </span>
-        <span class="population-slider-label-max"></span>
+    <div class="filters-popup-container">
+      <div class="filters-popup-icon">
+        <i class="fa-solid fa-gear"></i>
       </div>
-      <div class="population-slider-controls">
-        <input
-          class="population-slider-left"
-          name="min"
-          type="range"
-          step="0.5"
-          min="0"
-        />
-        <input
-          class="population-slider-right"
-          name="max"
-          type="range"
-          step="0.5"
-          min="0"
-        />
+      <div class="filters-popup-window">
+        <div class="filters-popup-flex">
+          <span>Scope of Reform</span>
+          <div>
+            <select multiple class="filter--scope" size="5">
+              <option value="Regional" selected>Regional</option>
+              <option value="Citywide" selected>Citywide</option>
+              <!-- prettier-ignore -->
+              <option value="City Center/Business District" selected>City Center/Business District</option>
+              <!-- prettier-ignore -->
+              <option value="Transit Oriented" selected>Transit Oriented</option>
+              <!-- prettier-ignore -->
+              <option value="Main Street/Special" selected>Main Street/Special</option>
+            </select>
+          </div>
+          <span>Population</span>
+          <div class="population-slider-container">
+            <div class="population-slider-label">
+              <span class="population-slider-label-min"></span>
+              <span> - </span>
+              <span class="population-slider-label-max"></span>
+            </div>
+            <div class="population-slider-controls">
+              <input
+                class="population-slider-left"
+                name="min"
+                type="range"
+                step="0.5"
+                min="0"
+                value="0"
+              />
+              <input
+                class="population-slider-right"
+                name="max"
+                type="range"
+                step="0.5"
+                min="0"
+              />
+            </div>
+            <div class="population-slider-legend"></div>
+          </div>
+        </div>
       </div>
-      <div class="population-slider-legend"></div>
     </div>
 
     <select multiple class="city-search"></select>

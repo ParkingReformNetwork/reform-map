@@ -4,20 +4,19 @@
 // }
 
 .population-slider-container {
-  position: absolute;
   z-index: 1100;
   display: flex;
   flex-direction: column;
   align-items: center;
-  top: 10em;
-  left: 1em;
+  width: 18em;
 }
 
 .population-slider-controls {
-  width: 20em;
+  width: 100%;
   height: 2em;
   display: flex;
   justify-content: space-between;
+  align-items: center;
 }
 
 .population-slider-label {
