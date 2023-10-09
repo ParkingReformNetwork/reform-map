@@ -1,4 +1,5 @@
 import { expect, test } from "@playwright/test";
+import fs from "fs/promises";
 import {
   needsUpdate,
   normalizeAttachments,
@@ -142,4 +143,12 @@ test("normalizeAttachments() converts string entries into objects", () => {
       ],
     },
   ]);
+});
+
+test("city_detail_last_updated.txt is formatted correctly", async () => {
+  const lastUpdated = await fs.readFile(
+    "scripts/city_detail_last_updated.txt",
+    "utf-8"
+  );
+  parseDatetime(lastUpdated, false); // will throw an error if incorrectly formatted
 });
