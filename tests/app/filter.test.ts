@@ -25,7 +25,7 @@ test("scope filter updates markers", async ({ page }) => {
 
     // Find a click the scope option element
     const optionElement = await page.$(
-      `.filter--scope option:has-text("${scopeType}")`
+      `.scope option:has-text("${scopeType}")`
     );
     await optionElement.click();
 

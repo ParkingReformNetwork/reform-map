@@ -44,7 +44,7 @@ const shouldBeRendered = (
       )
     );
 
-  const scopeSelected = getSelected(".filter--scope :checked");
+  const scopeSelected = getSelected(".scope :checked");
   const isScope = entry["report_magnitude"]
     .split(",")
     .some((scope) => scopeSelected.has(scope));
@@ -92,7 +92,7 @@ const setUpFilter = (
   // We don't want each click to reset the selection. Instead, each click updates the selection by adding or removing a single selection.
   // As a result, the user won't have to use shift, ctrl/cmd to make complicated selections.
   document
-    .querySelector(".filter--scope")
+    .querySelector(".scope")
     .addEventListener("mousedown", (e: MouseEvent): void => {
       // For each option, do not exhibit normal behavior. Instead, change the option to the opposite state.
       const input = e.target as HTMLOptionElement;

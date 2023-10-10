@@ -42,12 +42,17 @@ $gray: #737272;
   margin: 0.5em 1em;
 }
 
-.filter--scope option::before {
+.filter {
+  overflow: hidden;
+  height: 100%;
+}
+
+.filter option::before {
   content: $unchecked;
   width: 1.3em;
   text-align: center;
   display: inline-block;
 }
-.filter--scope option:checked::before {
+.filter option:checked::before {
   content: "\2611";
 }
