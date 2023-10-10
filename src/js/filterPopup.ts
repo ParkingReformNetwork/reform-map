@@ -1,6 +1,6 @@
 /* global document, window */
 import { setUpPopulationSlider } from "./populationSlider";
-import { setUpFilter } from "./filter";
+import { setUpAllFilters } from "./filter";
 
 const setUpFilterPopup = (
   markerGroup,
@@ -31,7 +31,13 @@ const setUpFilterPopup = (
         searchElement,
         sliders
       );
-      setUpFilter(markerGroup, citiesToMarkers, data, searchElement, sliders);
+      setUpAllFilters(
+        markerGroup,
+        citiesToMarkers,
+        data,
+        searchElement,
+        sliders
+      );
     },
     { once: true }
   );

@@ -7,7 +7,6 @@ import addLegend from "./legend";
 import { createSearchElement, setUpSearch } from "./search";
 import setUpAbout from "./about";
 import setUpDetails from "./cityDetails";
-import { setUpFilter } from "./filter";
 import { createPopulationSlider } from "./populationSlider";
 import setUpFilterPopup from "./filterPopup";
 
