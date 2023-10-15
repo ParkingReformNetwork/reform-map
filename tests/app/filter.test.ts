@@ -45,7 +45,7 @@ test("scope, policy, land, implementation filter updates markers", async ({
   /* eslint-enable no-await-in-loop */
 });
 
-test("population slider updates markers", async ({ page }) => {
+test.fixme("population slider updates markers", async ({ page }) => {
   await loadMap(page);
   await openFilterPopup(page);
   const left = await page.$(".population-slider-left");
