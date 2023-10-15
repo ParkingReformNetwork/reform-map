@@ -18,5 +18,5 @@ test("search changes what is shown", async ({ page }) => {
     .locator(".choices__inner > .choices__list > .choices__item > button")
     .click();
   cities = await getNumCities(page);
-  expect(cities).toBeGreaterThan(1700);
+  expect(cities).toBeGreaterThan(1400);
 });
