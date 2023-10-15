@@ -4,15 +4,19 @@ $gray: #737272;
 
 .filters-popup-container {
   position: absolute;
-  top: 3.8em;
+  top: 5.4em;
   left: 21em;
+
+  @media only screen and (min-width: 48em) {
+    top: 7em;
+  }
 }
 
 .filters-popup-icon {
   position: absolute;
   background-color: white;
   border: solid $gray 1px;
-  z-index: 1200;
+  z-index: 1000;
   right: 0;
   padding: 0.5em;
   border-radius: 0.25em;
