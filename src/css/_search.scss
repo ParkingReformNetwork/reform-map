@@ -1,20 +1,24 @@
+$width: 250px;
+
 div.choices {
   position: absolute;
   top: 5.4em;
   left: 3em;
-  max-width: 250px;
+  max-width: $width;
   z-index: 1000;
 
   @media only screen and (min-width: 48em) {
     top: 7em;
   }
 
+  // Changes the search list.
   &.is-open {
-    width: 250px;
+    width: $width;
   }
 }
 
+// Changes the search box.
 div.choices__inner {
   min-height: unset;
-  width: unset;
+  width: $width - 20px;
 }
