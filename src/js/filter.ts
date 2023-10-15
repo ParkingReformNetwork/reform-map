@@ -111,8 +111,4 @@ const setUpAllFilters = (
   );
 };
 
-export {
-  changeSelectedMarkers,
-  POPULATION_INTERVALS,
-  setUpAllFilters,
-};
+export { changeSelectedMarkers, POPULATION_INTERVALS, setUpAllFilters };
