@@ -2,9 +2,6 @@ $gray: #4d4d4d;
 
 header {
   padding: 0.5rem 1rem;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
 
   font-size: 1rem;
   background: $gray;
@@ -19,6 +16,12 @@ header {
   }
 }
 
+.header-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
 .header-icons {
   display: flex;
   align-items: center;
@@ -29,4 +32,9 @@ header {
   svg {
     padding: 0 0.5rem;
   }
+}
+
+.header-disclaimer {
+  margin-top: 0.3em;
+  font-size: 0.65em;
 }
