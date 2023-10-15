@@ -8,6 +8,7 @@ import { createSearchElement, setUpSearch } from "./search";
 import setUpAbout from "./about";
 import setUpDetails from "./cityDetails";
 import { createPopulationSlider } from "./populationSlider";
+import { changeSelectedMarkers } from "./filter";
 import setUpFilterPopup from "./filterPopup";
 
 const BASE_LAYER = new TileLayer(
@@ -39,15 +40,6 @@ const createMap = (): Map => {
     'Map data: &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a>'
   );
   return map;
-};
-
-/**
- * Create a FeatureGroup for all city markers. Makes click detection easier and through one Group.
- */
-const createMarkerGroup = (map: Map): FeatureGroup => {
-  const markerGroup = new FeatureGroup();
-  markerGroup.addTo(map);
-  return markerGroup;
 };
 
 /**
@@ -92,7 +84,7 @@ const setUpSite = async (): Promise<void> => {
   setUpIcons();
   setUpAbout();
   const map = createMap();
-  const markerGroup = createMarkerGroup(map);
+  const markerGroup = new FeatureGroup();
   const sliders = createPopulationSlider();
   addLegend(map, SCOPE_TO_COLOR);
 
@@ -103,6 +95,17 @@ const setUpSite = async (): Promise<void> => {
   setUpDetails(markerGroup, data);
   setUpSearch(markerGroup, citiesToMarkers, data, searchElement, sliders);
   setUpFilterPopup(markerGroup, citiesToMarkers, data, searchElement, sliders);
+
+  // Finally, apply our default filters to change what is pre-selected,
+  // then render the cities.
+  changeSelectedMarkers(
+    markerGroup,
+    citiesToMarkers,
+    data,
+    searchElement,
+    sliders
+  );
+  markerGroup.addTo(map);
 };
 
 export default setUpSite;
