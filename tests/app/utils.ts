@@ -1,6 +1,8 @@
+import { expect } from "@playwright/test";
 import type { Page } from "@playwright/test";
 
 const CITY_MARKER = "path.leaflet-interactive";
+const DEFAULT_CITY_RANGE: [number, number] = [1430, 1600];
 
 const loadMap = async (page: Page): Promise<void> => {
   await page.goto("");
@@ -8,7 +10,13 @@ const loadMap = async (page: Page): Promise<void> => {
   await page.waitForSelector(CITY_MARKER);
 };
 
-const getNumCities = async (page: Page): Promise<number> =>
-  page.locator(CITY_MARKER).count();
+const assertNumCities = async (
+  page: Page,
+  range: [number, number]
+): Promise<void> => {
+  const numCities = await page.locator(CITY_MARKER).count();
+  expect(numCities).toBeGreaterThanOrEqual(range[0]);
+  expect(numCities).toBeLessThanOrEqual(range[1]);
+};
 
-export { getNumCities, loadMap };
+export { assertNumCities, loadMap, DEFAULT_CITY_RANGE };
