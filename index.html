@@ -114,9 +114,9 @@
       </div>
       <div class="filters-popup-window">
         <div class="filters-popup-flex">
-          <span>Scope of Reform</span>
           <div>
-            <select multiple class="filter--scope" size="5">
+            <span>Scope of Reform</span>
+            <select multiple class="filter scope" size="5">
               <option value="Regional" selected>Regional</option>
               <option value="Citywide" selected>Citywide</option>
               <!-- prettier-ignore -->
@@ -127,6 +127,47 @@
               <option value="Main Street/Special" selected>Main Street/Special</option>
             </select>
           </div>
+
+          <div>
+            <span>Policy Change</span>
+            <select multiple class="filter policy-change" size="3">
+              <!-- prettier-ignore -->
+              <option value="Reduce Parking Minimums" selected>Reduce Parking Minimums</option>
+              <!-- prettier-ignore -->
+              <option value="Eliminate Parking Minimums" selected>Eliminate Parking Minimums</option>
+              <!-- prettier-ignore -->
+              <option value="Parking Maximums" selected>Parking Maximums</option>
+            </select>
+          </div>
+
+          <div>
+            <span>Affected Land Use</span>
+            <select multiple class="filter land-use" size="3">
+              <!-- prettier-ignore -->
+              <option value="All Uses" selected>All Uses</option>
+              <!-- prettier-ignore -->
+              <option value="Commercial" selected>Commercial</option>
+              <!-- prettier-ignore -->
+              <option value="Residential" selected>Residential</option>
+            </select>
+          </div>
+
+          <div>
+            <span>Implementation Stage</span>
+            <select multiple class="filter implementation-stage" size="5">
+              <!-- prettier-ignore -->
+              <option value="Implemented" selected>Implemented</option>
+              <!-- prettier-ignore -->
+              <option value="Passed" selected>Passed</option>
+              <!-- prettier-ignore -->
+              <option value="Planned" selected>Planned</option>
+              <!-- prettier-ignore -->
+              <option value="Proposed" selected>Proposed</option>
+              <!-- prettier-ignore -->
+              <option value="Repealed" selected>Repealed</option>
+            </select>
+          </div>
+
           <span>Population</span>
           <div class="population-slider-container">
             <div class="population-slider-label">

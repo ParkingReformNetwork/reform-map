@@ -31,23 +31,35 @@ $gray: #737272;
 
   display: flex;
   flex-direction: column;
+  align-items: center;
 
   top: 3em;
   right: 0;
   width: 20em;
+  height: 80vh;
+  overflow-y: scroll;
+  overflow-x: hidden;
   // cannot use padding (population-slider-controls misaligns)
 }
 
 .filters-popup-flex > * {
+  display: flex;
+  flex-direction: column;
   margin: 0.5em 1em;
+  width: 90%;
 }
 
-.filter--scope option::before {
+.filter {
+  overflow: hidden;
+  height: 100%;
+}
+
+.filter option::before {
   content: $unchecked;
   width: 1.3em;
   text-align: center;
   display: inline-block;
 }
-.filter--scope option:checked::before {
+.filter option:checked::before {
   content: "\2611";
 }

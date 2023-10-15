@@ -44,10 +44,22 @@ const shouldBeRendered = (
       )
     );
 
-  const scopeSelected = getSelected(".filter--scope :checked");
+  const scopeSelected = getSelected(".scope :checked");
   const isScope = entry["report_magnitude"]
     .split(",")
     .some((scope) => scopeSelected.has(scope));
+  const policySelected = getSelected(".policy-change :checked");
+  const isPolicy = entry["report_type"]
+    .split(",")
+    .some((policy) => policySelected.has(policy));
+  const landSelected = getSelected(".land-use :checked");
+  const isLand = entry["land_uses"]
+    .split(",")
+    .some((land) => landSelected.has(land));
+  const stageSelected = getSelected(".implementation-stage :checked");
+  const isStage = entry["report_status"]
+    .split(",")
+    .some((stage) => stageSelected.has(stage));
 
   const population = parseInt(entry["population"]);
   const [sliderLeftIndex, sliderRightIndex] = sliders.getCurrentIndexes();
@@ -55,7 +67,7 @@ const shouldBeRendered = (
     population >= POPULATION_INTERVALS[sliderLeftIndex][1] &&
     population <= POPULATION_INTERVALS[sliderRightIndex][1];
 
-  return isScope && isPopulation;
+  return isScope && isPolicy && isLand && isStage && isPopulation;
 };
 
 /**
@@ -82,7 +94,7 @@ const changeSelectedMarkers = (
   });
 };
 
-const setUpFilter = (
+const setUpAllFilters = (
   markerGroup: FeatureGroup,
   citiesToMarkers: Record<CityId, CircleMarker>,
   data: Record<CityId, CityEntry>,
@@ -91,30 +103,39 @@ const setUpFilter = (
 ): void => {
   // We don't want each click to reset the selection. Instead, each click updates the selection by adding or removing a single selection.
   // As a result, the user won't have to use shift, ctrl/cmd to make complicated selections.
-  document
-    .querySelector(".filter--scope")
-    .addEventListener("mousedown", (e: MouseEvent): void => {
-      // For each option, do not exhibit normal behavior. Instead, change the option to the opposite state.
-      const input = e.target as HTMLOptionElement;
-      if (input.tagName === "OPTION") {
-        e.preventDefault();
-        input.parentElement.focus();
-        input.selected = !input.selected;
-      }
-      changeSelectedMarkers(
-        markerGroup,
-        citiesToMarkers,
-        data,
-        searchElement,
-        sliders
-      );
-      input.parentElement.blur(); // Removes the default blue selection over element.
-    });
+  const FILTER_TYPE = [
+    "scope",
+    "policy-change",
+    "land-use",
+    "implementation-stage",
+  ];
+
+  FILTER_TYPE.forEach((filterType: string): void => {
+    document
+      .querySelector("." + filterType)
+      .addEventListener("mousedown", (e: MouseEvent): void => {
+        // For each option, do not exhibit normal behavior. Instead, change the option to the opposite state.
+        const input = e.target as HTMLOptionElement;
+        if (input.tagName === "OPTION") {
+          e.preventDefault();
+          input.parentElement.focus();
+          input.selected = !input.selected;
+        }
+        changeSelectedMarkers(
+          markerGroup,
+          citiesToMarkers,
+          data,
+          searchElement,
+          sliders
+        );
+        input.parentElement.blur(); // Removes the default blue selection over element.
+      });
+  });
 };
 
 export {
   changeSelectedMarkers,
   POPULATION_INTERVALS,
-  setUpFilter,
+  setUpAllFilters,
   shouldBeRendered,
 };

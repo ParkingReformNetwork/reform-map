@@ -6,55 +6,53 @@ const openFilterPopup = async (page): Promise<void> => {
   page.locator(".filters-popup-icon").click();
 };
 
-test("scope filter updates markers", async ({ page }) => {
+const findDiff = async (
+  page,
+  filterType: string,
+  optionText: string
+): Promise<number> => {
+  const citiesBefore = await getNumCities(page);
+
+  // Find and click the scope option element
+  const optionElement = await page.$(
+    `.${filterType} option:has-text("${optionText}")`
+  );
+  await optionElement.click();
+
+  const citiesAfter = await getNumCities(page);
+  const citiesDiff = Math.abs(citiesAfter - citiesBefore);
+  return citiesDiff;
+};
+
+test("scope, policy, land, implementation filter updates markers", async ({
+  page,
+}) => {
   await loadMap(page);
   await openFilterPopup(page);
-
-  // min updated on 9/3/23
-  const scopeMin = {
-    Regional: 5,
-    Citywide: 257,
-    "City Center/Business District": 1430,
-    "Transit Oriented": 18,
-    "Main Street/Special": 33,
+  const FILTER_OPTIONS = {
+    scope: { Regional: 41 },
+    "policy-change": { "Reduce Parking Minimums": 294 },
+    "land-use": { "All Uses": 1113 },
+    "implementation-stage": { Implemented: 433 },
   };
-
-  // Check the difference between city count before and after
-  const checkScope = async (scopeType: string): Promise<void> => {
-    const citiesBefore = await getNumCities(page);
-
-    // Find a click the scope option element
-    const optionElement = await page.$(
-      `.filter--scope option:has-text("${scopeType}")`
-    );
-    await optionElement.click();
-
-    const citiesAfter = await getNumCities(page);
-    const citiesDiff = Math.abs(citiesAfter - citiesBefore);
-    const expectedDiff = scopeMin[scopeType];
-    expect(citiesDiff >= expectedDiff && citiesDiff <= expectedDiff * 1.5).toBe(
-      true
-    );
-  };
-
-  await checkScope("Regional"); // clicking on an option will remove it
-  await checkScope("Citywide");
-  await checkScope("City Center/Business District");
-  await checkScope("Transit Oriented");
-  await checkScope("Transit Oriented");
-  await checkScope("Main Street/Special");
-  await checkScope("Transit Oriented");
-  await checkScope("Citywide");
+  /* eslint-disable no-await-in-loop */
+  for (const filterType of Object.keys(FILTER_OPTIONS)) {
+    const optionDict = FILTER_OPTIONS[filterType];
+    const option = Object.keys(optionDict)[0];
+    const diff = await findDiff(page, filterType, option);
+    expect(diff >= optionDict[option]).toBe(true);
+  }
+  /* eslint-enable no-await-in-loop */
 });
 
-test("population filter updates markers", async ({ page }) => {
+test("population slider updates markers", async ({ page }) => {
   await loadMap(page);
   await openFilterPopup(page);
   const left = await page.$(".population-slider-left");
   const right = await page.$(".population-slider-right");
 
-  // min updated on 9/10/23
-  const populationDiff = [61, 115, 538, 247, 512, 131, 128, 29, 16, 3, 1];
+  // min updated on 10/10/23
+  const populationDiff = [63, 119, 565, 253, 537, 142, 124, 28, 16, 4, 0];
 
   /*
     Moves slider to interval and checks to make sure the number of cities on the map is reasonable.
@@ -80,19 +78,19 @@ test("population filter updates markers", async ({ page }) => {
     const upper = Math.max(fullInterval, sliderBefore);
 
     // Using true data, calculate threshold for difference.
-    let calculatedDiff = 0;
+    let expectedDiff = 0;
     for (let i = lower; i < upper; i += 1) {
-      calculatedDiff += populationDiff[i];
+      expectedDiff += populationDiff[i];
     }
 
-    // We cannot use absolute value. For example, the edge case actuallDiff = 100 and calculatedDiff = -100.
+    // We cannot use absolute value. For example, the edge case actuallDiff = 100 and expectedDiff = -100.
     if (willIncrease) {
       expect(
-        actualDiff >= calculatedDiff && actualDiff <= calculatedDiff * 1.5
+        actualDiff >= expectedDiff && actualDiff <= expectedDiff * 1.5
       ).toBe(true);
     } else {
       expect(
-        actualDiff <= -calculatedDiff && actualDiff >= -calculatedDiff * 1.5
+        actualDiff <= -expectedDiff && actualDiff >= -expectedDiff * 1.5
       ).toBe(true);
     }
   };
