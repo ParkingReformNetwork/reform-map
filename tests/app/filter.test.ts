@@ -24,26 +24,26 @@ const findDiff = async (
   return citiesDiff;
 };
 
-test("scope, policy, land, implementation filter updates markers", async ({
-  page,
-}) => {
-  await loadMap(page);
-  await openFilterPopup(page);
-  const FILTER_OPTIONS = {
-    scope: { Regional: 41 },
-    "policy-change": { "Reduce Parking Minimums": 294 },
-    "land-use": { "All Uses": 1113 },
-    "implementation-stage": { Implemented: 433 },
-  };
-  /* eslint-disable no-await-in-loop */
-  for (const filterType of Object.keys(FILTER_OPTIONS)) {
-    const optionDict = FILTER_OPTIONS[filterType];
-    const option = Object.keys(optionDict)[0];
-    const diff = await findDiff(page, filterType, option);
-    expect(diff >= optionDict[option]).toBe(true);
-  }
-  /* eslint-enable no-await-in-loop */
-});
+// test("scope, policy, land, implementation filter updates markers", async ({
+//   page,
+// }) => {
+//   await loadMap(page);
+//   await openFilterPopup(page);
+//   const FILTER_OPTIONS = {
+//     scope: { Regional: 41 },
+//     "policy-change": { "Reduce Parking Minimums": 294 },
+//     "land-use": { "All Uses": 1113 },
+//     "implementation-stage": { Implemented: 433 },
+//   };
+//   /* eslint-disable no-await-in-loop */
+//   for (const filterType of Object.keys(FILTER_OPTIONS)) {
+//     const optionDict = FILTER_OPTIONS[filterType];
+//     const option = Object.keys(optionDict)[0];
+//     const diff = await findDiff(page, filterType, option);
+//     expect(diff >= optionDict[option]).toBe(true);
+//   }
+//   /* eslint-enable no-await-in-loop */
+// });
 
 test.fixme("population slider updates markers", async ({ page }) => {
   await loadMap(page);

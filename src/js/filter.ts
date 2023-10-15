@@ -113,14 +113,7 @@ const setUpAllFilters = (
   FILTER_TYPE.forEach((filterType: string): void => {
     document
       .querySelector("." + filterType)
-      .addEventListener("mousedown", (e: MouseEvent): void => {
-        // For each option, do not exhibit normal behavior. Instead, change the option to the opposite state.
-        const input = e.target as HTMLOptionElement;
-        if (input.tagName === "OPTION") {
-          e.preventDefault();
-          input.parentElement.focus();
-          input.selected = !input.selected;
-        }
+      .addEventListener("click", (e: MouseEvent): void => {
         changeSelectedMarkers(
           markerGroup,
           citiesToMarkers,
@@ -128,7 +121,6 @@ const setUpAllFilters = (
           searchElement,
           sliders
         );
-        input.parentElement.blur(); // Removes the default blue selection over element.
       });
   });
 };
