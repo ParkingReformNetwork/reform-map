@@ -6,44 +6,45 @@ const openFilterPopup = async (page): Promise<void> => {
   page.locator(".filters-popup-icon").click();
 };
 
-// const findDiff = async (
-//   page,
-//   filterType: string,
-//   optionText: string
-// ): Promise<number> => {
-//   const citiesBefore = await getNumCities(page);
+const findDiff = async (
+  page,
+  filterType: string,
+  optionText: string
+): Promise<number> => {
+  const citiesBefore = await getNumCities(page);
 
-//   // Find and click the scope option element
-//   const optionElement = await page.$(
-//     `.${filterType} option:has-text("${optionText}")`
-//   );
-//   await optionElement.click();
+  // Find and click the scope option element
+  const optionElement = await page.$(
+    `.${filterType} option:has-text("${optionText}")`
+  );
+  await optionElement.click();
 
-//   const citiesAfter = await getNumCities(page);
-//   const citiesDiff = Math.abs(citiesAfter - citiesBefore);
-//   return citiesDiff;
-// };
+  const citiesAfter = await getNumCities(page);
+  const citiesDiff = Math.abs(citiesAfter - citiesBefore);
+  return citiesDiff;
+};
 
-// test("scope, policy, land, implementation filter updates markers", async ({
-//   page,
-// }) => {
-//   await loadMap(page);
-//   await openFilterPopup(page);
-//   const FILTER_OPTIONS = {
-//     scope: { Regional: 41 },
-//     "policy-change": { "Reduce Parking Minimums": 294 },
-//     "land-use": { "All Uses": 1113 },
-//     "implementation-stage": { Implemented: 433 },
-//   };
-//   /* eslint-disable no-await-in-loop */
-//   for (const filterType of Object.keys(FILTER_OPTIONS)) {
-//     const optionDict = FILTER_OPTIONS[filterType];
-//     const option = Object.keys(optionDict)[0];
-//     const diff = await findDiff(page, filterType, option);
-//     expect(diff >= optionDict[option]).toBe(true);
-//   }
-//   /* eslint-enable no-await-in-loop */
-// });
+test.fixme(
+  "scope, policy, land, implementation filter updates markers",
+  async ({ page }) => {
+    await loadMap(page);
+    await openFilterPopup(page);
+    const FILTER_OPTIONS = {
+      scope: { Regional: 41 },
+      "policy-change": { "Reduce Parking Minimums": 294 },
+      "land-use": { "All Uses": 1113 },
+      "implementation-stage": { Implemented: 433 },
+    };
+    /* eslint-disable no-await-in-loop */
+    for (const filterType of Object.keys(FILTER_OPTIONS)) {
+      const optionDict = FILTER_OPTIONS[filterType];
+      const option = Object.keys(optionDict)[0];
+      const diff = await findDiff(page, filterType, option);
+      expect(diff >= optionDict[option]).toBe(true);
+    }
+    /* eslint-enable no-await-in-loop */
+  }
+);
 
 test.fixme("population slider updates markers", async ({ page }) => {
   await loadMap(page);

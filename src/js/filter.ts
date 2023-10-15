@@ -111,17 +111,15 @@ const setUpAllFilters = (
   ];
 
   FILTER_TYPE.forEach((filterType: string): void => {
-    document
-      .querySelector("." + filterType)
-      .addEventListener("click", (e: MouseEvent): void => {
-        changeSelectedMarkers(
-          markerGroup,
-          citiesToMarkers,
-          data,
-          searchElement,
-          sliders
-        );
-      });
+    document.querySelector(`.${filterType}`).addEventListener("change", () => {
+      changeSelectedMarkers(
+        markerGroup,
+        citiesToMarkers,
+        data,
+        searchElement,
+        sliders
+      );
+    });
   });
 };
 
