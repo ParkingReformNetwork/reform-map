@@ -1,13 +1,16 @@
 /* global document, window */
 import { setUpPopulationSlider } from "./populationSlider";
 import { setUpAllFilters } from "./filter";
+import type Choices from "choices.js";
+import type { FeatureGroup, CircleMarker } from "leaflet";
+import type { CityId, CityEntry, PopulationSliders } from "./types";
 
 const setUpFilterPopup = (
-  markerGroup,
-  citiesToMarkers,
-  data,
-  searchElement,
-  sliders
+  markerGroup: FeatureGroup,
+  citiesToMarkers: Record<CityId, CircleMarker>,
+  data: Record<CityId, CityEntry>,
+  searchElement: Choices,
+  sliders: PopulationSliders
 ) => {
   const popupElement = document.querySelector(
     ".filters-popup-window"
