@@ -6,23 +6,23 @@ const openFilterPopup = async (page): Promise<void> => {
   page.locator(".filters-popup-icon").click();
 };
 
-const findDiff = async (
-  page,
-  filterType: string,
-  optionText: string
-): Promise<number> => {
-  const citiesBefore = await getNumCities(page);
+// const findDiff = async (
+//   page,
+//   filterType: string,
+//   optionText: string
+// ): Promise<number> => {
+//   const citiesBefore = await getNumCities(page);
 
-  // Find and click the scope option element
-  const optionElement = await page.$(
-    `.${filterType} option:has-text("${optionText}")`
-  );
-  await optionElement.click();
+//   // Find and click the scope option element
+//   const optionElement = await page.$(
+//     `.${filterType} option:has-text("${optionText}")`
+//   );
+//   await optionElement.click();
 
-  const citiesAfter = await getNumCities(page);
-  const citiesDiff = Math.abs(citiesAfter - citiesBefore);
-  return citiesDiff;
-};
+//   const citiesAfter = await getNumCities(page);
+//   const citiesDiff = Math.abs(citiesAfter - citiesBefore);
+//   return citiesDiff;
+// };
 
 // test("scope, policy, land, implementation filter updates markers", async ({
 //   page,
