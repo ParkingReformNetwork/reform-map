@@ -115,5 +115,4 @@ export {
   changeSelectedMarkers,
   POPULATION_INTERVALS,
   setUpAllFilters,
-  shouldBeRendered,
 };
