@@ -56,13 +56,26 @@ const shouldBeRendered = (
     "report_status"
   );
 
+  const noRequirementsToggleElement = document.getElementById(
+    "no-requirements-toggle"
+  ) as HTMLInputElement;
+  const isNoRequirementsToggle =
+    !noRequirementsToggleElement.checked || entry.is_no_mandate_city === "1";
+
   const population = parseInt(entry["population"]);
   const [sliderLeftIndex, sliderRightIndex] = sliders.getCurrentIndexes();
   const isPopulation =
     population >= POPULATION_INTERVALS[sliderLeftIndex][1] &&
     population <= POPULATION_INTERVALS[sliderRightIndex][1];
 
-  return isScope && isPolicy && isLand && isStage && isPopulation;
+  return (
+    isScope &&
+    isPolicy &&
+    isLand &&
+    isStage &&
+    isNoRequirementsToggle &&
+    isPopulation
+  );
 };
 
 /**
@@ -96,19 +109,23 @@ const setUpAllFilters = (
   searchElement: Choices,
   sliders: PopulationSliders
 ): void => {
-  [".scope", ".policy-change", ".land-use", ".implementation-stage"].forEach(
-    (filter) => {
-      document.querySelector(filter).addEventListener("change", () => {
-        changeSelectedMarkers(
-          markerGroup,
-          citiesToMarkers,
-          data,
-          searchElement,
-          sliders
-        );
-      });
-    }
-  );
+  [
+    ".scope",
+    ".policy-change",
+    ".land-use",
+    ".implementation-stage",
+    "#no-requirements-toggle",
+  ].forEach((selector) => {
+    document.querySelector(selector).addEventListener("change", () => {
+      changeSelectedMarkers(
+        markerGroup,
+        citiesToMarkers,
+        data,
+        searchElement,
+        sliders
+      );
+    });
+  });
 };
 
 export { changeSelectedMarkers, POPULATION_INTERVALS, setUpAllFilters };

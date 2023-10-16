@@ -1,6 +1,6 @@
 $unchecked: "\2610";
 $checked: "\2611";
-$gray: #737272;
+$gray: rgb(204, 204, 204);
 
 .filters-popup-container {
   position: absolute;
@@ -19,7 +19,7 @@ $gray: #737272;
   z-index: 1000;
   right: 0;
   padding: 0.5em;
-  border-radius: 0.25em;
+  border-radius: 2px;
   cursor: pointer;
 }
 

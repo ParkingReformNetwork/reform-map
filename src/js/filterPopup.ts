@@ -27,14 +27,9 @@ const setUpFilterPopup = (
   filterIcon.addEventListener(
     "click",
     () => {
+      // This happens here because the filter popup must be displayed for
+      // the offsetWidth calculation to work properly.
       setUpPopulationSlider(
-        markerGroup,
-        citiesToMarkers,
-        data,
-        searchElement,
-        sliders
-      );
-      setUpAllFilters(
         markerGroup,
         citiesToMarkers,
         data,

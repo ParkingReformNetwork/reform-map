@@ -8,7 +8,7 @@ import { createSearchElement, setUpSearch } from "./search";
 import setUpAbout from "./about";
 import setUpDetails from "./cityDetails";
 import { createPopulationSlider } from "./populationSlider";
-import { changeSelectedMarkers } from "./filter";
+import { changeSelectedMarkers, setUpAllFilters } from "./filter";
 import setUpFilterPopup from "./filterPopup";
 
 const BASE_LAYER = new TileLayer(
@@ -94,6 +94,7 @@ const setUpSite = async (): Promise<void> => {
 
   setUpDetails(markerGroup, data);
   setUpSearch(markerGroup, citiesToMarkers, data, searchElement, sliders);
+  setUpAllFilters(markerGroup, citiesToMarkers, data, searchElement, sliders);
   setUpFilterPopup(markerGroup, citiesToMarkers, data, searchElement, sliders);
 
   // Finally, apply our default filters to change what is pre-selected,
