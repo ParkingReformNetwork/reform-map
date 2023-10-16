@@ -64,15 +64,20 @@ const selectIfSet = async (
 ): Promise<void> => {
   if (values !== undefined) {
     // Reset filters by unchecking all
-    const checkboxes = await page.$$(`input[type="checkbox"][name="${selector}"]`);
+    const checkboxes = await page.$$(
+      `input[type="checkbox"][name="${selector}"]`
+    );
+    /* eslint-disable */
     for (const checkbox of checkboxes) {
       await checkbox.uncheck();
     }
+
     for (const value of values) {
       const label = await page.$(`label:has-text("${value}")`);
       const checkbox = await label.$('input[type="checkbox"]');
       await checkbox.check();
     }
+    /* eslint-enable */
   }
 };
 
@@ -85,7 +90,7 @@ for (const edgeCase of TESTS) {
     if (edgeCase.noRequirements !== undefined) {
       await page.locator("#no-requirements-toggle").check();
     }
-    
+
     await page.locator(".filters-popup-icon").click();
 
     await selectIfSet(page, "scope", edgeCase.scope);
