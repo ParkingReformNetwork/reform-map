@@ -63,7 +63,16 @@ const selectIfSet = async (
   values?: string[]
 ): Promise<void> => {
   if (values !== undefined) {
-    await page.locator(selector).selectOption(values);
+    // Reset filters by unchecking all
+    const checkboxes = await page.$$(`input[type="checkbox"][name="${selector}"]`);
+    for (const checkbox of checkboxes) {
+      await checkbox.uncheck();
+    }
+    for (const value of values) {
+      const label = await page.$(`label:has-text("${value}")`);
+      const checkbox = await label.$('input[type="checkbox"]');
+      await checkbox.check();
+    }
   }
 };
 
@@ -76,13 +85,13 @@ for (const edgeCase of TESTS) {
     if (edgeCase.noRequirements !== undefined) {
       await page.locator("#no-requirements-toggle").check();
     }
-
+    
     await page.locator(".filters-popup-icon").click();
 
-    await selectIfSet(page, ".scope", edgeCase.scope);
-    await selectIfSet(page, ".policy-change", edgeCase.policy);
-    await selectIfSet(page, ".land-use", edgeCase.land);
-    await selectIfSet(page, ".implementation-stage", edgeCase.implementation);
+    await selectIfSet(page, "scope", edgeCase.scope);
+    await selectIfSet(page, "policy-change", edgeCase.policy);
+    await selectIfSet(page, "land-use", edgeCase.land);
+    await selectIfSet(page, "implementation-stage", edgeCase.implementation);
 
     if (edgeCase.populationIntervals !== undefined) {
       const [leftInterval, rightInterval] = edgeCase.populationIntervals;
