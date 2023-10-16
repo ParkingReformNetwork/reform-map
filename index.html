@@ -124,49 +124,67 @@
       </div>
       <div class="filters-popup-window">
         <div class="filters-popup-flex">
-          <div>
-            <span>Scope of Reform</span>
-            <select multiple class="filter scope" size="5">
-              <option value="Regional" selected>Regional</option>
-              <option value="Citywide" selected>Citywide</option>
-              <!-- prettier-ignore -->
-              <option value="City Center/Business District" selected>City Center/Business District</option>
-              <!-- prettier-ignore -->
-              <option value="Transit Oriented" selected>Transit Oriented</option>
-              <!-- prettier-ignore -->
-              <option value="Main Street/Special" selected>Main Street/Special</option>
-            </select>
+          <div class="filter scope">
+            <fieldset>
+              <legend>Scope of Reform</legend>
+              <label for="regional"
+                ><input id="regional" type="checkbox" />Regional</label
+              >
+              <label for="citywide"
+                ><input id="citywide" type="checkbox" />Citywide</label
+              >
+              <label for="citycenter"
+                ><input id="citycenter" type="checkbox" />City Center/Business
+                District</label
+              >
+              <label for="transit"
+                ><input id="transit" type="checkbox" />Transit Oriented</label
+              >
+              <label for="main"
+                ><input id="main" type="checkbox" />Main Street/Special</label
+              >
+            </fieldset>
           </div>
 
-          <div>
-            <span>Policy Change</span>
-            <select multiple class="filter policy-change" size="3">
-              <!-- prettier-ignore -->
-              <option value="Reduce Parking Minimums">Reduce Parking Minimums</option>
-              <!-- prettier-ignore -->
-              <option value="Eliminate Parking Minimums" selected>Eliminate Parking Minimums</option>
-              <option value="Parking Maximums">Parking Maximums</option>
-            </select>
+          <div class="filter policy-change">
+            <fieldset>
+              <legend>Policy Change</legend>
+              <label value="Reduce Parking Minimums"
+                ><input type="checkbox" />Reduce Parking Minimums</label
+              >
+              <label value="Eliminate Parking Minimums"
+                ><input type="checkbox" />Eliminate Parking Minimums</label
+              >
+              <label value="Parking Maximums"
+                ><input type="checkbox" />Parking Maximums</label
+              >
+            </fieldset>
           </div>
 
-          <div>
-            <span>Affected Land Use</span>
-            <select multiple class="filter land-use" size="3">
-              <option value="All Uses" selected>All Uses</option>
-              <option value="Commercial" selected>Commercial</option>
-              <option value="Residential" selected>Residential</option>
-            </select>
+          <div class="filter land-use">
+            <fieldset>
+              <legend>Affected Land Use</legend>
+              <label value="All Uses"><input type="checkbox" />All Uses</label>
+              <label value="Commercial"
+                ><input type="checkbox" />Commercial</label
+              >
+              <label value="Residential"
+                ><input type="checkbox" />Residential</label
+              >
+            </fieldset>
           </div>
 
-          <div>
-            <span>Implementation Stage</span>
-            <select multiple class="filter implementation-stage" size="5">
-              <option value="Implemented" selected>Implemented</option>
-              <option value="Passed" selected>Passed</option>
-              <option value="Planned">Planned</option>
-              <option value="Proposed">Proposed</option>
-              <option value="Repealed">Repealed</option>
-            </select>
+          <div class="filter implementation-stage">
+            <fieldset>
+              <span>Implementation Stage</span>
+              <label value="Implemented"
+                ><input type="checkbox" />Implemented</label
+              >
+              <label value="Passed"><input type="checkbox" />Passed</label>
+              <label value="Planned"><input type="checkbox" />Planned</label>
+              <label value="Proposed"><input type="checkbox" />Proposed</label>
+              <label value="Repealed"><input type="checkbox" />Repealed</label>
+            </fieldset>
           </div>
           <div>
             <span>Population</span>

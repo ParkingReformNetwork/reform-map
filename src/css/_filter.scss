@@ -54,8 +54,9 @@ $gray: rgb(204, 204, 204);
 }
 
 .filter {
-  overflow: hidden;
-  height: 100%;
+  label {
+    display: block;
+  }
 }
 
 .filter option::before {
