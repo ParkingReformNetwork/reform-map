@@ -39,22 +39,23 @@ const shouldBeRendered = (
   // Else, search is not used and the filters should apply.
   const matchesSelected = (selector: string, entryKey: string): boolean => {
     const selectedValues = new Set(
-      Array.from(document.querySelectorAll(selector)).map(
-        (option: HTMLInputElement) => option.value
+      Array.from(
+        document.querySelectorAll(`input[type=checkbox][name=${selector}]`)
       )
+        .filter((option: HTMLInputElement) => option.checked)
+        .map((option: HTMLInputElement) =>
+          option.parentElement.textContent.trim()
+        )
     );
     return entry[entryKey]
       .split(",")
       .some((value: string) => selectedValues.has(value));
   };
 
-  const isScope = matchesSelected(".scope :checked", "report_magnitude");
-  const isPolicy = matchesSelected(".policy-change :checked", "report_type");
-  const isLand = matchesSelected(".land-use :checked", "land_uses");
-  const isStage = matchesSelected(
-    ".implementation-stage :checked",
-    "report_status"
-  );
+  const isScope = matchesSelected("scope", "report_magnitude");
+  const isPolicy = matchesSelected("policy-change", "report_type");
+  const isLand = matchesSelected("land-use", "land_uses");
+  const isStage = matchesSelected("implementation-stage", "report_status");
 
   const noRequirementsToggleElement = document.getElementById(
     "no-requirements-toggle"
@@ -109,14 +110,9 @@ const setUpAllFilters = (
   searchElement: Choices,
   sliders: PopulationSliders
 ): void => {
-  [
-    ".scope",
-    ".policy-change",
-    ".land-use",
-    ".implementation-stage",
-    "#no-requirements-toggle",
-  ].forEach((selector) => {
-    document.querySelector(selector).addEventListener("change", () => {
+  // "input" covers all checkboxes and sliders
+  document.querySelectorAll("input").forEach((option: HTMLInputElement) => {
+    option.addEventListener("change", () => {
       changeSelectedMarkers(
         markerGroup,
         citiesToMarkers,

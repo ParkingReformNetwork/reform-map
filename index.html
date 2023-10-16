@@ -127,49 +127,52 @@
           <div class="filter scope">
             <fieldset>
               <legend>Scope of Reform</legend>
-              <label for="regional"
-                ><input id="regional" type="checkbox" />Regional</label
+              <label
+                ><input type="checkbox" name="scope" checked />Regional</label
               >
-              <label for="citywide"
-                ><input id="citywide" type="checkbox" />Citywide</label
+              <label
+                ><input type="checkbox" name="scope" checked />Citywide</label
               >
-              <label for="citycenter"
-                ><input id="citycenter" type="checkbox" />City Center/Business
-                District</label
-              >
-              <label for="transit"
-                ><input id="transit" type="checkbox" />Transit Oriented</label
-              >
-              <label for="main"
-                ><input id="main" type="checkbox" />Main Street/Special</label
-              >
+              <!-- ignore lines in which the text may be split up into multiple lines -->
+              <!-- prettier-ignore -->
+              <label><input type="checkbox" name="scope" checked />City Center/Business District</label>
+              <!-- prettier-ignore -->
+              <label><input type="checkbox" name="scope" checked />Transit Oriented</label>
+              <!-- prettier-ignore -->
+              <label><input type="checkbox" name="scope" checked />Main Street/Special</label>
             </fieldset>
           </div>
 
           <div class="filter policy-change">
             <fieldset>
               <legend>Policy Change</legend>
-              <label value="Reduce Parking Minimums"
-                ><input type="checkbox" />Reduce Parking Minimums</label
-              >
-              <label value="Eliminate Parking Minimums"
-                ><input type="checkbox" />Eliminate Parking Minimums</label
-              >
-              <label value="Parking Maximums"
-                ><input type="checkbox" />Parking Maximums</label
-              >
+              <!-- prettier-ignore -->
+              <label><input type="checkbox" name="policy-change" checked />Reduce Parking Minimums</label>
+              <!-- prettier-ignore -->
+              <label><input type="checkbox" name="policy-change" checked />Eliminate Parking Minimums</label>
+              <!-- prettier-ignore -->
+              <label><input type="checkbox" name="policy-change" checked />Parking Maximums</label>
             </fieldset>
           </div>
 
           <div class="filter land-use">
             <fieldset>
               <legend>Affected Land Use</legend>
-              <label value="All Uses"><input type="checkbox" />All Uses</label>
-              <label value="Commercial"
-                ><input type="checkbox" />Commercial</label
+              <!-- prettier-ignore -->
+              <label><input type="checkbox" name="land-use" checked />All Uses</label>
+              <label
+                ><input
+                  type="checkbox"
+                  name="land-use"
+                  checked
+                />Commercial</label
               >
-              <label value="Residential"
-                ><input type="checkbox" />Residential</label
+              <label
+                ><input
+                  type="checkbox"
+                  name="land-use"
+                  checked
+                />Residential</label
               >
             </fieldset>
           </div>
@@ -177,13 +180,39 @@
           <div class="filter implementation-stage">
             <fieldset>
               <span>Implementation Stage</span>
-              <label value="Implemented"
-                ><input type="checkbox" />Implemented</label
+              <label
+                ><input
+                  type="checkbox"
+                  name="implementation-stage"
+                  checked
+                />Implemented</label
               >
-              <label value="Passed"><input type="checkbox" />Passed</label>
-              <label value="Planned"><input type="checkbox" />Planned</label>
-              <label value="Proposed"><input type="checkbox" />Proposed</label>
-              <label value="Repealed"><input type="checkbox" />Repealed</label>
+              <label
+                ><input
+                  type="checkbox"
+                  name="implementation-stage"
+                  checked
+                />Passed</label
+              >
+              <label
+                ><input
+                  type="checkbox"
+                  name="implementation-stage"
+                  checked
+                />Planned</label
+              >
+              <label
+                ><input
+                  type="checkbox"
+                  name="implementation-stage"
+                />Proposed</label
+              >
+              <label
+                ><input
+                  type="checkbox"
+                  name="implementation-stage"
+                />Repealed</label
+              >
             </fieldset>
           </div>
           <div>
