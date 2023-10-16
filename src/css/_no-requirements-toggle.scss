@@ -1,0 +1,17 @@
+$gray: rgb(204, 204, 204);
+
+.no-requirements-toggle-container {
+  position: absolute;
+  background-color: white;
+  top: 8.4em;
+  left: 3em;
+  z-index: 900;
+  padding: 0.2em 0.4em;
+
+  border: solid $gray 1px;
+  border-radius: 2px;
+
+  @media only screen and (min-width: 48em) {
+    top: 11em;
+  }
+}

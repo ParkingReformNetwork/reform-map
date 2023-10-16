@@ -8,6 +8,7 @@ interface EdgeCase {
   land?: string[];
   implementation?: string[];
   populationIntervals?: [number, number];
+  noRequirements?: boolean;
   expectedRange: [number, number];
 }
 
@@ -31,6 +32,11 @@ const TESTS: EdgeCase[] = [
     desc: "population slider",
     populationIntervals: [4, 8],
     expectedRange: [580, 700],
+  },
+  {
+    desc: "no requirements",
+    noRequirements: true,
+    expectedRange: [45, 55],
   },
   {
     desc: "all cities",
@@ -64,6 +70,13 @@ const selectIfSet = async (
 for (const edgeCase of TESTS) {
   test(`${edgeCase.desc}`, async ({ page }) => {
     await loadMap(page);
+
+    // Deal with the requirements toggle before the filter popup, since the
+    // filter popup covers it.
+    if (edgeCase.noRequirements !== undefined) {
+      await page.locator("#no-requirements-toggle").check();
+    }
+
     await page.locator(".filters-popup-icon").click();
 
     await selectIfSet(page, ".scope", edgeCase.scope);
