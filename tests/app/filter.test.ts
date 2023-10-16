@@ -1,4 +1,4 @@
-import { test } from "@playwright/test";
+import { Page, test } from "@playwright/test";
 import { loadMap, assertNumCities, DEFAULT_CITY_RANGE } from "./utils";
 
 interface EdgeCase {
@@ -51,24 +51,25 @@ const TESTS: EdgeCase[] = [
   },
 ];
 
+const selectIfSet = async (
+  page: Page,
+  selector: string,
+  values?: string[]
+): Promise<void> => {
+  if (values !== undefined) {
+    await page.locator(selector).selectOption(values);
+  }
+};
+
 for (const edgeCase of TESTS) {
   test(`${edgeCase.desc}`, async ({ page }) => {
     await loadMap(page);
     await page.locator(".filters-popup-icon").click();
 
-    const selectIfSet = async (
-      selector: string,
-      values?: string[]
-    ): Promise<void> => {
-      if (values !== undefined) {
-        await page.locator(selector).selectOption(values);
-      }
-    };
-
-    await selectIfSet(".scope", edgeCase.scope);
-    await selectIfSet(".policy-change", edgeCase.policy);
-    await selectIfSet(".land-use", edgeCase.land);
-    await selectIfSet(".implementation-stage", edgeCase.implementation);
+    await selectIfSet(page, ".scope", edgeCase.scope);
+    await selectIfSet(page, ".policy-change", edgeCase.policy);
+    await selectIfSet(page, ".land-use", edgeCase.land);
+    await selectIfSet(page, ".implementation-stage", edgeCase.implementation);
 
     if (edgeCase.populationIntervals !== undefined) {
       const [leftInterval, rightInterval] = edgeCase.populationIntervals;
