@@ -1,5 +1,5 @@
 $gray: rgb(204, 204, 204);
-$light-green: rgb(86, 192, 128);
+$toggle-checked-color: rgb(33, 153, 243);
 $toggle-size: 0.5em;
 $toggle-circle: calc(2.4 * $toggle-size);
 
@@ -56,7 +56,7 @@ $toggle-circle: calc(2.4 * $toggle-size);
   background: white;
 }
 .toggle-checkbox:checked + .toggle-switch {
-  background: $light-green;
+  background: $toggle-checked-color;
 }
 .toggle-checkbox:checked + .toggle-switch::before {
   left: calc(3 * $toggle-size);
