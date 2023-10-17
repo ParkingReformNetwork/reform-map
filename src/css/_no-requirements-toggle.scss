@@ -1,4 +1,6 @@
 $gray: rgb(204, 204, 204);
+$toggle-size: 10px;
+$toggle-circle: calc(1.625 * $toggle-size);
 
 .no-requirements-toggle-container {
   position: absolute;
@@ -8,10 +10,68 @@ $gray: rgb(204, 204, 204);
   z-index: 900;
   padding: 0.2em 0.4em;
 
+  display: flex;
+  align-items: center;
+  gap: 1em;
+
   border: solid $gray 1px;
   border-radius: 2px;
 
   @media only screen and (min-width: 48em) {
     top: 11em;
   }
+}
+
+/* The switch - the box around the slider */
+.switch {
+  position: relative;
+  display: inline-block;
+  width: calc(3.75 * $toggle-size);
+  height: calc(2.125 * $toggle-size);
+}
+
+/* Hide default HTML checkbox */
+.switch input {
+  opacity: 0;
+}
+
+/* The toggle */
+.toggle {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+  border-radius: 34px;
+}
+
+.toggle:before {
+  position: absolute;
+  content: "";
+  height: $toggle-circle;
+  width: $toggle-circle;
+  left: calc(0.25 * $toggle-size);
+  bottom: calc(0.25 * $toggle-size);
+  background-color: white;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+  border-radius: 50%;
+}
+
+input:checked + .toggle {
+  background-color: #2196f3;
+}
+
+input:focus + .toggle {
+  box-shadow: 0 0 1px #2196f3;
+}
+
+input:checked + .toggle:before {
+  -webkit-transform: translateX($toggle-circle);
+  -ms-transform: translateX($toggle-circle);
+  transform: translateX($toggle-circle);
 }
