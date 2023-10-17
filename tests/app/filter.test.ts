@@ -30,8 +30,8 @@ const TESTS: EdgeCase[] = [
   },
   {
     desc: "population slider",
-    populationIntervals: [4, 8],
-    expectedRange: [580, 700],
+    populationIntervals: [3, 6],
+    expectedRange: [210, 300],
   },
   {
     desc: "no requirements",

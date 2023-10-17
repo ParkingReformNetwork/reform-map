@@ -33,7 +33,9 @@ const createCityDetailsText = (
   cityState: CityId
 ): string => {
   const cityData = data[cityState];
-  return `<h2><a href="${cityData["citation_url"]}">${cityState}</h2>
+  return `<h2><a href="${
+    cityData["citation_url"]
+  }" target="_blank">${cityState}</h2>
     <p>Detailed Information and Citations</p></a>
     <p>${cityData["report_summary"]}</p>
     <p>Population: ${parseInt(cityData["population"]).toLocaleString()}</p>
