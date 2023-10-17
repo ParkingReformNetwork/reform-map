@@ -5,6 +5,7 @@ import type { CityId, CityEntry } from "./types";
 import setUpIcons from "./fontAwesome";
 import addLegend from "./legend";
 import { createSearchElement, setUpSearch } from "./search";
+import { setUpShareIcon } from "./share";
 import setUpAbout from "./about";
 import setUpDetails from "./cityDetails";
 import { createPopulationSlider } from "./populationSlider";
@@ -83,6 +84,7 @@ const createCityMarkers = (
 const setUpSite = async (): Promise<void> => {
   setUpIcons();
   setUpAbout();
+  setUpShareIcon();
   const map = createMap();
   const markerGroup = new FeatureGroup();
   const sliders = createPopulationSlider();
