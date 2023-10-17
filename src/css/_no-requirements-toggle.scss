@@ -1,6 +1,7 @@
 $gray: rgb(204, 204, 204);
-$toggle-size: 10px;
-$toggle-circle: calc(1.625 * $toggle-size);
+$light-green: rgb(86, 192, 128);
+$toggle-size: 0.5em;
+$toggle-circle: calc(2.4 * $toggle-size);
 
 .no-requirements-toggle-container {
   position: absolute;
@@ -10,10 +11,6 @@ $toggle-circle: calc(1.625 * $toggle-size);
   z-index: 900;
   padding: 0.2em 0.4em;
 
-  display: flex;
-  align-items: center;
-  gap: 1em;
-
   border: solid $gray 1px;
   border-radius: 2px;
 
@@ -22,56 +19,54 @@ $toggle-circle: calc(1.625 * $toggle-size);
   }
 }
 
-/* The switch - the box around the slider */
-.switch {
-  position: relative;
-  display: inline-block;
-  width: calc(3.75 * $toggle-size);
-  height: calc(2.125 * $toggle-size);
-}
-
-/* Hide default HTML checkbox */
-.switch input {
-  opacity: 0;
-}
-
-/* The toggle */
 .toggle {
-  position: absolute;
   cursor: pointer;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background-color: #ccc;
-  -webkit-transition: 0.4s;
-  transition: 0.4s;
-  border-radius: 34px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 17em;
 }
 
-.toggle:before {
-  position: absolute;
+.toggle-switch {
+  display: inline-block;
+  background: $gray;
+  border-radius: 1em;
+  width: calc(5.8 * $toggle-size);
+  height: calc(3.2 * $toggle-size);
+  position: relative;
+  vertical-align: middle;
+  transition: 0.25s;
+}
+.toggle-switch::before,
+.toggle-switch::after {
   content: "";
-  height: $toggle-circle;
-  width: $toggle-circle;
-  left: calc(0.25 * $toggle-size);
-  bottom: calc(0.25 * $toggle-size);
-  background-color: white;
-  -webkit-transition: 0.4s;
-  transition: 0.4s;
+}
+.toggle-switch::before {
+  display: block;
+  background: white;
   border-radius: 50%;
+  width: $toggle-circle;
+  height: $toggle-circle;
+  position: absolute;
+  top: calc(0.4 * $toggle-size);
+  left: calc(0.4 * $toggle-size);
+  transition: left 0.25s;
+}
+.toggle:hover .toggle-switch::before {
+  background: white;
+}
+.toggle-checkbox:checked + .toggle-switch {
+  background: $light-green;
+}
+.toggle-checkbox:checked + .toggle-switch::before {
+  left: calc(3 * $toggle-size);
 }
 
-input:checked + .toggle {
-  background-color: #2196f3;
+.toggle-checkbox {
+  position: absolute;
+  visibility: hidden;
 }
 
-input:focus + .toggle {
-  box-shadow: 0 0 1px #2196f3;
-}
-
-input:checked + .toggle:before {
-  -webkit-transform: translateX($toggle-circle);
-  -ms-transform: translateX($toggle-circle);
-  transform: translateX($toggle-circle);
+.toggle-label {
+  margin-right: 1em;
 }
