@@ -64,20 +64,44 @@ const selectIfSet = async (
 ): Promise<void> => {
   if (values !== undefined) {
     // Reset filters by unchecking all
-    const checkboxes = await page.$$(
+    const checkboxesUncheck = await page.$$(
       `input[type="checkbox"][name="${selector}"]`
     );
-    /* eslint-disable */
-    for (const checkbox of checkboxes) {
+    // Unable to use Promise.all() because unchecking needs to be sequential
+    await checkboxesUncheck.reduce(async (previousPromise, checkbox) => {
+      await previousPromise;
       await checkbox.uncheck();
-    }
+    }, Promise.resolve());
 
-    for (const value of values) {
-      const label = await page.$(`label:has-text("${value}")`);
-      const checkbox = await label.$('input[type="checkbox"]');
+    const checkboxesCheck = await Promise.all(
+      values.map(async (value) => {
+        const parentElement = await page.$(`label:has-text("${value}")`);
+        const checkbox = await parentElement.$('input[type="checkbox"]');
+        return checkbox;
+      })
+    );
+    await checkboxesCheck.reduce(async (previousPromise, checkbox) => {
+      await previousPromise;
       await checkbox.check();
-    }
-    /* eslint-enable */
+    }, Promise.resolve());
+
+    // await values.reduce(
+    //   async (previousPromise, value) => {
+    //     const checkboxes = await previousPromise;
+    //     const label = await page.$(`label:has-text("${value}")`);
+    //     const checkbox = await label.$('input[type="checkbox"]');
+    //     await checkbox.check();
+    //     checkboxes.push(checkbox);
+    //     return checkboxes;
+    //   },
+    //   Promise.resolve([])
+    // );
+
+    // for (const value of values) {
+    //   const label = await page.$(`label:has-text("${value}")`);
+    //   const checkbox = await label.$('input[type="checkbox"]');
+    //   await checkbox.check();
+    // }
   }
 };
 

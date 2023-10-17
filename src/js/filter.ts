@@ -110,18 +110,19 @@ const setUpAllFilters = (
   searchElement: Choices,
   sliders: PopulationSliders
 ): void => {
-  // "input" covers all checkboxes and sliders
-  document.querySelectorAll("input").forEach((option: HTMLInputElement) => {
-    option.addEventListener("change", () => {
-      changeSelectedMarkers(
-        markerGroup,
-        citiesToMarkers,
-        data,
-        searchElement,
-        sliders
-      );
+  document
+    .querySelectorAll("input[type=checkbox]")
+    .forEach((option: HTMLInputElement) => {
+      option.addEventListener("change", () => {
+        changeSelectedMarkers(
+          markerGroup,
+          citiesToMarkers,
+          data,
+          searchElement,
+          sliders
+        );
+      });
     });
-  });
 };
 
 export { changeSelectedMarkers, POPULATION_INTERVALS, setUpAllFilters };
