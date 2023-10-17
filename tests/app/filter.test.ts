@@ -84,24 +84,6 @@ const selectIfSet = async (
       await previousPromise;
       await checkbox.check();
     }, Promise.resolve());
-
-    // await values.reduce(
-    //   async (previousPromise, value) => {
-    //     const checkboxes = await previousPromise;
-    //     const label = await page.$(`label:has-text("${value}")`);
-    //     const checkbox = await label.$('input[type="checkbox"]');
-    //     await checkbox.check();
-    //     checkboxes.push(checkbox);
-    //     return checkboxes;
-    //   },
-    //   Promise.resolve([])
-    // );
-
-    // for (const value of values) {
-    //   const label = await page.$(`label:has-text("${value}")`);
-    //   const checkbox = await label.$('input[type="checkbox"]');
-    //   await checkbox.check();
-    // }
   }
 };
 
