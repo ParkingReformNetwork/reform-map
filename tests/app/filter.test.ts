@@ -94,7 +94,8 @@ for (const edgeCase of TESTS) {
     // Deal with the requirements toggle before the filter popup, since the
     // filter popup covers it.
     if (edgeCase.noRequirements !== undefined) {
-      await page.locator("#no-requirements-toggle").check();
+      // Force clicking because the checkbox is hidden (opacity: 0)
+      await page.locator("#no-requirements-toggle").click({ force: true });
     }
 
     await page.locator(".filters-popup-icon").click();
