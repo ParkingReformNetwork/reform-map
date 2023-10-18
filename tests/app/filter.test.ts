@@ -63,7 +63,27 @@ const selectIfSet = async (
   values?: string[]
 ): Promise<void> => {
   if (values !== undefined) {
-    await page.locator(selector).selectOption(values);
+    // Reset filters by unchecking all
+    const checkboxesUncheck = await page.$$(
+      `input[type="checkbox"][name="${selector}"]`
+    );
+    // Unable to use Promise.all() because unchecking needs to be sequential
+    await checkboxesUncheck.reduce(async (previousPromise, checkbox) => {
+      await previousPromise;
+      await checkbox.uncheck();
+    }, Promise.resolve());
+
+    const checkboxesCheck = await Promise.all(
+      values.map(async (value) => {
+        const parentElement = await page.$(`label:has-text("${value}")`);
+        const checkbox = await parentElement.$('input[type="checkbox"]');
+        return checkbox;
+      })
+    );
+    await checkboxesCheck.reduce(async (previousPromise, checkbox) => {
+      await previousPromise;
+      await checkbox.check();
+    }, Promise.resolve());
   }
 };
 
@@ -80,10 +100,10 @@ for (const edgeCase of TESTS) {
 
     await page.locator(".filters-popup-icon").click();
 
-    await selectIfSet(page, ".scope", edgeCase.scope);
-    await selectIfSet(page, ".policy-change", edgeCase.policy);
-    await selectIfSet(page, ".land-use", edgeCase.land);
-    await selectIfSet(page, ".implementation-stage", edgeCase.implementation);
+    await selectIfSet(page, "scope", edgeCase.scope);
+    await selectIfSet(page, "policy-change", edgeCase.policy);
+    await selectIfSet(page, "land-use", edgeCase.land);
+    await selectIfSet(page, "implementation-stage", edgeCase.implementation);
 
     if (edgeCase.populationIntervals !== undefined) {
       const [leftInterval, rightInterval] = edgeCase.populationIntervals;
