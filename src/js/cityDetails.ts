@@ -18,6 +18,17 @@ const setUpDetails = (
     document.querySelector(".city-details-text").innerHTML = cityInfo;
     cityDetailsElement.style.display = "block";
   });
+  // closes window on clicks outside the info popup
+  window.addEventListener("click", (event) => {
+    if (
+      event.target instanceof Node &&
+      !(event.target instanceof SVGPathElement) &&
+      cityDetailsElement.style.display === "block" &&
+      !cityDetailsElement.contains(event.target)
+    ) {
+      cityDetailsElement.style.display = "none";
+    }
+  });
 
   // Note that the close element will only render when the about text popup is rendered.
   // So, it only ever makes sense for a click to close.
