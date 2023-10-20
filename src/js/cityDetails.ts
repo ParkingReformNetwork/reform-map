@@ -21,7 +21,8 @@ const setUpDetails = (
   // closes window on clicks outside the info popup
   window.addEventListener("click", (event) => {
     if (
-      event.target instanceof Node && !(event.target instanceof SVGPathElement) &&
+      event.target instanceof Node &&
+      !(event.target instanceof SVGPathElement) &&
       cityDetailsElement.style.display === "block" &&
       !cityDetailsElement.contains(event.target)
     ) {
