@@ -22,7 +22,7 @@ $gray: rgb(60, 60, 60);
 }
 
 /* The close button */
-.closebtn {
+.alert-close-button {
   color: $gray;
   font-weight: bold;
   float: right;
@@ -32,7 +32,6 @@ $gray: rgb(60, 60, 60);
   transition: 0.3s;
 }
 
-/* When moving the mouse over the close button */
-.closebtn:hover {
+.alert-close-button:hover {
   color: black;
 }

@@ -11,6 +11,7 @@ import setUpDetails from "./cityDetails";
 import { createPopulationSlider } from "./populationSlider";
 import { changeSelectedMarkers, setUpAllFilters } from "./filter";
 import setUpFilterPopup from "./filterPopup";
+import setUpAlerts from "./alert";
 
 const BASE_LAYER = new TileLayer(
   "https://tiles.stadiamaps.com/tiles/stamen_toner_lite/{z}/{x}/{y}{r}.png",
@@ -98,6 +99,7 @@ const setUpSite = async (): Promise<void> => {
   setUpSearch(markerGroup, citiesToMarkers, data, searchElement, sliders);
   setUpAllFilters(markerGroup, citiesToMarkers, data, searchElement, sliders);
   setUpFilterPopup(markerGroup, citiesToMarkers, data, searchElement, sliders);
+  setUpAlerts();
 
   // Finally, apply our default filters to change what is pre-selected,
   // then render the cities.

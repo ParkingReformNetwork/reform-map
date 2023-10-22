@@ -110,19 +110,6 @@ const setUpAllFilters = (
   document
     .querySelectorAll("input[type=checkbox]")
     .forEach((option: HTMLInputElement) => {
-      if (option.id == "no-requirements-toggle") {
-        option.addEventListener("change", (e: Event) => {
-          const noRequirementsToggleElement = e.target as HTMLInputElement;
-          const noRequirementsAlert = document.getElementById(
-            "no-requirements-alert"
-          ) as HTMLInputElement;
-          if (noRequirementsToggleElement.checked) {
-            noRequirementsAlert.style.display = "block";
-          } else {
-            noRequirementsAlert.style.display = "none";
-          }
-        });
-      }
       option.addEventListener("change", () => {
         changeSelectedMarkers(
           markerGroup,
