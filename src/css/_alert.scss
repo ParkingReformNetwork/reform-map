@@ -1,3 +1,6 @@
+$opaque-yellow: #fae678e2;
+$gray: rgb(60, 60, 60);
+
 /* The alert message box */
 .alert {
   display: none;
@@ -13,14 +16,14 @@
   }
 
   padding: 0.5em 1em;
-  background-color: #fae678e2;
-  color: rgb(60, 60, 60);
+  background-color: $opaque-yellow;
+  color: $gray;
   font-size: 0.9em;
 }
 
 /* The close button */
 .closebtn {
-  color: rgb(60, 60, 60);
+  color: $gray;
   font-weight: bold;
   float: right;
   font-size: 1.5em;
