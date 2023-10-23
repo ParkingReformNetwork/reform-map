@@ -1,0 +1,37 @@
+$opaque-yellow: #fae678e2;
+$gray: rgb(60, 60, 60);
+
+/* The alert message box */
+.alert {
+  display: none;
+  position: absolute;
+  top: 7.4em;
+  left: 50%;
+  transform: translate(-50%, 0);
+  z-index: 1100;
+
+  width: 40%;
+  @media only screen and (max-width: 48em) {
+    width: 90%;
+  }
+
+  padding: 0.5em 1em;
+  background-color: $opaque-yellow;
+  color: $gray;
+  font-size: 0.9em;
+}
+
+/* The close button */
+.alert-close-button {
+  color: $gray;
+  font-weight: bold;
+  float: right;
+  font-size: 1.5em;
+  line-height: 1em;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.alert-close-button:hover {
+  color: black;
+}
