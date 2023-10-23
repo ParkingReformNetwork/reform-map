@@ -86,6 +86,7 @@ const setUpSite = async (): Promise<void> => {
   setUpIcons();
   setUpAbout();
   setUpShareIcon();
+  setUpAlerts();
   const map = createMap();
   const markerGroup = new FeatureGroup();
   const sliders = createPopulationSlider();
@@ -99,7 +100,6 @@ const setUpSite = async (): Promise<void> => {
   setUpSearch(markerGroup, citiesToMarkers, data, searchElement, sliders);
   setUpAllFilters(markerGroup, citiesToMarkers, data, searchElement, sliders);
   setUpFilterPopup(markerGroup, citiesToMarkers, data, searchElement, sliders);
-  setUpAlerts();
 
   // Finally, apply our default filters to change what is pre-selected,
   // then render the cities.
