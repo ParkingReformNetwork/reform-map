@@ -35,6 +35,9 @@ const shouldBeRendered = (
 
   // Else, search is not used and the filters should apply.
   const matchesSelected = (selector: string, entryKey: string): boolean => {
+    const cityValues: string[] = entry[entryKey]
+      .split(",")
+      .map((x: string) => x.trim());
     const selectedValues = new Set(
       Array.from(
         document.querySelectorAll(`input[type=checkbox][name=${selector}]`)
@@ -44,9 +47,7 @@ const shouldBeRendered = (
           option.parentElement.textContent.trim()
         )
     );
-    return entry[entryKey]
-      .split(",")
-      .some((value: string) => selectedValues.has(value));
+    return cityValues.some((val) => selectedValues.has(val));
   };
 
   const isScope = matchesSelected("scope", "report_magnitude");
