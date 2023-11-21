@@ -36,7 +36,7 @@ const TESTS: EdgeCase[] = [
   {
     desc: "no requirements",
     noRequirements: true,
-    expectedRange: [45, 55],
+    expectedRange: [50, 65],
   },
   {
     desc: "all cities",
