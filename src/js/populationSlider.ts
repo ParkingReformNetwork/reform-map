@@ -50,6 +50,7 @@ const createPopulationSlider = (): PopulationSliders => {
 
   sliders.left.setAttribute("max", RANGE_MAX.toString());
   sliders.right.setAttribute("max", RANGE_MAX.toString());
+  sliders.right.setAttribute("value", RANGE_MAX.toString());
 
   const legend = document.querySelector(".population-slider-legend");
   POPULATION_INTERVALS.forEach(([intervalText]) => {
