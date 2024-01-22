@@ -1,7 +1,14 @@
 $gray: rgb(204, 204, 204);
 $toggle-checked-color: rgb(33, 153, 243);
-$toggle-size: 0.5em;
+$toggle-size: 0.4em;
 $toggle-circle: calc(2.4 * $toggle-size);
+
+.no-requirements {
+  border: solid $gray 1px;
+  border-radius: 2px;
+  padding: 0.2em 0.4em;
+  width: 15em;
+}
 
 .no-requirements-toggle-container {
   position: absolute;
@@ -69,4 +76,5 @@ $toggle-circle: calc(2.4 * $toggle-size);
 
 .toggle-label {
   margin-right: 1em;
+  margin-left: 0.5em;
 }

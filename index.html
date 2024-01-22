@@ -141,6 +141,18 @@
       </div>
       <div class="filters-popup-window">
         <div class="filters-popup-flex">
+          <div class="filter no-requirements">
+            <label class="toggle">
+              <span class="toggle-label">No Parking Requirements</span>
+              <input
+                type="checkbox"
+                class="toggle-checkbox"
+                id="no-requirements-toggle"
+                checked
+              />
+              <div class="toggle-switch"></div>
+            </label>
+          </div>
           <div class="filter scope">
             <form>
               <fieldset>
@@ -273,18 +285,7 @@
 
     <select multiple class="city-search"></select>
 
-    <div class="no-requirements-toggle-container">
-      <label class="toggle">
-        <span class="toggle-label">No Parking Requirements</span>
-        <input
-          type="checkbox"
-          class="toggle-checkbox"
-          id="no-requirements-toggle"
-          checked
-        />
-        <div class="toggle-switch"></div>
-      </label>
-    </div>
+    <div class="city-counter-container">City Counter</div>
 
     <div class="donate-button">
       <a href="https://parkingreform.org/support/"
