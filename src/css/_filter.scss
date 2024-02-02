@@ -68,3 +68,7 @@ $gray: rgb(204, 204, 204);
 .filter option:checked::before {
   content: "\2611";
 }
+
+fieldset {
+  border: solid $gray 2px;
+}
