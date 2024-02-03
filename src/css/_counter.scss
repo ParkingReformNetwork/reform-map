@@ -11,6 +11,9 @@ $gray: rgb(204, 204, 204);
   border: solid $gray 1px;
   border-radius: 2px;
 
+  width: 17em;
+  text-align: center;
+
   @media only screen and (min-width: 48em) {
     top: 7.5em;
   }
