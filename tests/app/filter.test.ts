@@ -91,14 +91,14 @@ for (const edgeCase of TESTS) {
   test(`${edgeCase.desc}`, async ({ page }) => {
     await loadMap(page);
 
-    // Deal with the requirements toggle before the filter popup, since the
-    // filter popup covers it.
+    // Default has requirement toggle on, so first de-select it, but opening filter pop-up and clicking toggle.
+    await page.locator(".filters-popup-icon").click();
+    await page.locator("#no-requirements-toggle").click({ force: true });
+
     if (edgeCase.noRequirements !== undefined) {
       // Force clicking because the checkbox is hidden (opacity: 0)
       await page.locator("#no-requirements-toggle").click({ force: true });
     }
-
-    await page.locator(".filters-popup-icon").click();
 
     await selectIfSet(page, "scope", edgeCase.scope);
     await selectIfSet(page, "policy-change", edgeCase.policy);
