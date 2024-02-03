@@ -19,7 +19,7 @@ const assertNumCities = async (
   expect(numCities).toBeLessThanOrEqual(range[1]);
   // Checks for accurate city counter
   const numCounter = await page.locator("#counter-numerator").innerText();
-  expect(numCities).toEqual(parseInt(numCounter.replace(/^\D+/g, "")));
+  expect(numCities).toEqual(parseInt(numCounter.replace(/^\D+/g, ""), 10));
 };
 
 export { assertNumCities, loadMap, DEFAULT_CITY_RANGE };
