@@ -1,9 +1,10 @@
 $gray: rgb(204, 204, 204);
+$top-offset: 3.5em;
 
 .city-counter-container {
   position: absolute;
   background-color: white;
-  top: 7em;
+  top: $top-offset;
   left: 3em;
   z-index: 900;
   padding: 0.2em 0.4em;
@@ -15,6 +16,6 @@ $gray: rgb(204, 204, 204);
   text-align: center;
 
   @media only screen and (min-width: 48em) {
-    top: 7.5em;
+    top: $top-offset + 0.5em;
   }
 }
