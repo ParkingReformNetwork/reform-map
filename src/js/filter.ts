@@ -91,11 +91,11 @@ const changeSelectedMarkers = (
   searchElement: Choices,
   sliders: PopulationSliders
 ) => {
-  let updatedCounter = 0;
+  let cityCount = 0;
   Object.entries(citiesToMarkers).forEach(([cityState, marker]) => {
     if (shouldBeRendered(cityState, data[cityState], searchElement, sliders)) {
       marker.addTo(markerGroup);
-      updatedCounter++;
+      cityCount++;
     } else {
       // @ts-ignore the API allows passing a LayerGroup, but the type hint doesn't show this.
       marker.removeFrom(markerGroup);
@@ -103,8 +103,7 @@ const changeSelectedMarkers = (
   });
 
   // Update counter
-  document.getElementById("counter-numerator").innerText =
-    "Showing " + updatedCounter + " out of ";
+  document.getElementById("counter-numerator").innerText = cityCount.toString();
 };
 
 /**
@@ -119,9 +118,8 @@ const setUpFiltersAndCounter = (
 ): void => {
   // Set counter denominator
   const totalCities = Object.keys(citiesToMarkers).length;
-
   document.getElementById("counter-denominator").innerText =
-    totalCities + " cities.";
+    totalCities.toString();
 
   document
     .querySelectorAll("input[type=checkbox]")
