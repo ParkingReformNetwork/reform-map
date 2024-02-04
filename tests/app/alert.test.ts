@@ -7,18 +7,24 @@ test("alerts appear and close", async ({ page }) => {
   const isAlertVisible = async (): Promise<boolean> =>
     page.locator("#no-requirements-alert").isVisible();
 
+  // Default toggle is ON, but alert should not be visible.
   // Before toggle is clicked
   expect(await isAlertVisible()).toBe(false);
 
-  // Click toggle
-  await page.locator("#no-requirements-toggle").click({ force: true });
-  expect(await isAlertVisible()).toBe(true);
-
-  // Click toggle again (closes alert)
+  // Click toggle OFF
+  await page.locator(".filters-popup-icon").click();
   await page.locator("#no-requirements-toggle").click({ force: true });
   expect(await isAlertVisible()).toBe(false);
 
-  // Click toggle
+  // Click toggle ON
+  await page.locator("#no-requirements-toggle").click({ force: true });
+  expect(await isAlertVisible()).toBe(true);
+
+  // Click toggle OFF
+  await page.locator("#no-requirements-toggle").click({ force: true });
+  expect(await isAlertVisible()).toBe(false);
+
+  // Click toggle ON
   await page.locator("#no-requirements-toggle").click({ force: true });
   expect(await isAlertVisible()).toBe(true);
 

@@ -79,7 +79,7 @@ const shouldBeRendered = (
 
 /**
  * Helper function to iterate over every city and either remove it or add it,
- * based on the search and filter values.
+ * based on the search and filter values. At the same time, it will update city counter.
  *
  * This should be used with an event listener for each filter and search, whenever
  * their values change.
@@ -91,23 +91,36 @@ const changeSelectedMarkers = (
   searchElement: Choices,
   sliders: PopulationSliders
 ) => {
+  let cityCount = 0;
   Object.entries(citiesToMarkers).forEach(([cityState, marker]) => {
     if (shouldBeRendered(cityState, data[cityState], searchElement, sliders)) {
       marker.addTo(markerGroup);
+      cityCount++;
     } else {
       // @ts-ignore the API allows passing a LayerGroup, but the type hint doesn't show this.
       marker.removeFrom(markerGroup);
     }
   });
+
+  // Update counter
+  document.getElementById("counter-numerator").innerText = cityCount.toString();
 };
 
-const setUpAllFilters = (
+/**
+ * Set up all filters and counter update.
+ */
+const setUpFiltersAndCounter = (
   markerGroup: FeatureGroup,
   citiesToMarkers: Record<CityId, CircleMarker>,
   data: Record<CityId, CityEntry>,
   searchElement: Choices,
   sliders: PopulationSliders
 ): void => {
+  // Set counter denominator
+  const totalCities = Object.keys(citiesToMarkers).length;
+  document.getElementById("counter-denominator").innerText =
+    totalCities.toString();
+
   document
     .querySelectorAll("input[type=checkbox]")
     .forEach((option: HTMLInputElement) => {
@@ -123,4 +136,4 @@ const setUpAllFilters = (
     });
 };
 
-export { changeSelectedMarkers, POPULATION_INTERVALS, setUpAllFilters };
+export { changeSelectedMarkers, POPULATION_INTERVALS, setUpFiltersAndCounter };

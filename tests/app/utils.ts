@@ -17,6 +17,15 @@ const assertNumCities = async (
   const numCities = await page.locator(CITY_MARKER).count();
   expect(numCities).toBeGreaterThanOrEqual(range[0]);
   expect(numCities).toBeLessThanOrEqual(range[1]);
+  // Checks for accurate city counter
+  const numCounter = await page.locator("#counter-numerator").innerText();
+  expect(numCities).toEqual(parseInt(numCounter.replace(/^\D+/g, ""), 10));
 };
 
-export { assertNumCities, loadMap, DEFAULT_CITY_RANGE };
+const deselectToggle = async (page: Page): Promise<void> => {
+  // Default has requirement toggle on, so first de-select it, by opening filter pop-up and clicking toggle.
+  await page.locator(".filters-popup-icon").click();
+  await page.locator("#no-requirements-toggle").click({ force: true });
+};
+
+export { assertNumCities, loadMap, deselectToggle, DEFAULT_CITY_RANGE };

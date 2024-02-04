@@ -141,6 +141,20 @@
       </div>
       <div class="filters-popup-window">
         <div class="filters-popup-flex">
+          <div class="filter no-requirements">
+            <div class="no-requirements-container">
+              <label class="toggle">
+                <span class="toggle-label">No Parking Requirements</span>
+                <input
+                  type="checkbox"
+                  class="toggle-checkbox"
+                  id="no-requirements-toggle"
+                  checked
+                />
+                <div class="toggle-switch"></div>
+              </label>
+            </div>
+          </div>
           <div class="filter scope">
             <form>
               <fieldset>
@@ -273,16 +287,9 @@
 
     <select multiple class="city-search"></select>
 
-    <div class="no-requirements-toggle-container">
-      <label class="toggle">
-        <span class="toggle-label">No Parking Requirements</span>
-        <input
-          type="checkbox"
-          class="toggle-checkbox"
-          id="no-requirements-toggle"
-        />
-        <div class="toggle-switch"></div>
-      </label>
+    <div class="city-counter-container">
+      Showing <span id="counter-numerator">0</span> out of
+      <span id="counter-denominator">0</span> cities.
     </div>
 
     <div class="donate-button">

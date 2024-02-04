@@ -9,7 +9,7 @@ import { setUpShareIcon } from "./share";
 import setUpAbout from "./about";
 import setUpDetails from "./cityDetails";
 import { createPopulationSlider } from "./populationSlider";
-import { changeSelectedMarkers, setUpAllFilters } from "./filter";
+import { changeSelectedMarkers, setUpFiltersAndCounter } from "./filter";
 import setUpFilterPopup from "./filterPopup";
 import setUpAlerts from "./alert";
 
@@ -98,7 +98,14 @@ const setUpSite = async (): Promise<void> => {
 
   setUpDetails(markerGroup, data);
   setUpSearch(markerGroup, citiesToMarkers, data, searchElement, sliders);
-  setUpAllFilters(markerGroup, citiesToMarkers, data, searchElement, sliders);
+  // Set up filter and counter
+  setUpFiltersAndCounter(
+    markerGroup,
+    citiesToMarkers,
+    data,
+    searchElement,
+    sliders
+  );
   setUpFilterPopup(markerGroup, citiesToMarkers, data, searchElement, sliders);
 
   // Finally, apply our default filters to change what is pre-selected,

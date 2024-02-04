@@ -1,14 +1,15 @@
 $width: 250px;
+$top-offset: 5.8em;
 
 div.choices {
   position: absolute;
-  top: 3.2em;
+  top: $top-offset;
   left: 3em;
   max-width: $width;
   z-index: 1000;
 
   @media only screen and (min-width: 48em) {
-    top: 3.85em;
+    top: $top-offset + 0.65em;
   }
 
   // Changes the search list.
