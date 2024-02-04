@@ -1,5 +1,10 @@
 import { Page, test } from "@playwright/test";
-import { loadMap, assertNumCities, DEFAULT_CITY_RANGE } from "./utils";
+import {
+  loadMap,
+  assertNumCities,
+  deselectToggle,
+  DEFAULT_CITY_RANGE,
+} from "./utils";
 
 interface EdgeCase {
   desc: string;
@@ -91,9 +96,7 @@ for (const edgeCase of TESTS) {
   test(`${edgeCase.desc}`, async ({ page }) => {
     await loadMap(page);
 
-    // Default has requirement toggle on, so first de-select it, but opening filter pop-up and clicking toggle.
-    await page.locator(".filters-popup-icon").click();
-    await page.locator("#no-requirements-toggle").click({ force: true });
+    await deselectToggle(page);
 
     if (edgeCase.noRequirements !== undefined) {
       // Force clicking because the checkbox is hidden (opacity: 0)

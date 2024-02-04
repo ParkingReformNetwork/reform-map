@@ -22,4 +22,10 @@ const assertNumCities = async (
   expect(numCities).toEqual(parseInt(numCounter.replace(/^\D+/g, ""), 10));
 };
 
-export { assertNumCities, loadMap, DEFAULT_CITY_RANGE };
+const deselectToggle = async (page: Page): Promise<void> => {
+  // Default has requirement toggle on, so first de-select it, by opening filter pop-up and clicking toggle.
+  await page.locator(".filters-popup-icon").click();
+  await page.locator("#no-requirements-toggle").click({ force: true });
+};
+
+export { assertNumCities, loadMap, deselectToggle, DEFAULT_CITY_RANGE };

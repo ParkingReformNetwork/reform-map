@@ -1,13 +1,16 @@
 import { test } from "@playwright/test";
 
-import { assertNumCities, loadMap, DEFAULT_CITY_RANGE } from "./utils";
+import {
+  assertNumCities,
+  loadMap,
+  deselectToggle,
+  DEFAULT_CITY_RANGE,
+} from "./utils";
 
 test("search changes what is shown", async ({ page }) => {
   await loadMap(page);
 
-  // Default has requirement toggle on, so first de-select it, but opening filter pop-up and clicking toggle.
-  await page.locator(".filters-popup-icon").click();
-  await page.locator("#no-requirements-toggle").click({ force: true });
+  await deselectToggle(page);
 
   await page.locator(".choices").click();
   await page
