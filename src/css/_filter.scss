@@ -15,13 +15,17 @@ $top-offset: 5.6em;
 
 .filters-popup-icon {
   position: absolute;
+  top: $top-offset + 0.2em;
   background-color: white;
   border: solid $gray 1px;
   z-index: 1000;
-  right: 0;
+  left: 18.8em;
   padding: 0.5em;
   border-radius: 2px;
   cursor: pointer;
+  @media only screen and (min-width: 48em) {
+    top: $top-offset + 0.9em;
+  }
 }
 
 .filters-popup-window {

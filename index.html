@@ -134,11 +134,16 @@
       </div>
       <div class="city-details-text"></div>
     </div>
-
-    <div class="filters-popup-container">
+    <div class="open-filter">
       <div class="filters-popup-icon">
         <i class="fa-solid fa-gear"></i>
       </div>
+      <div class="city-counter-container">
+        Showing <span id="counter-numerator">0</span> out of
+        <span id="counter-denominator">0</span> cities.
+      </div>
+    </div>
+    <div class="filters-popup-container">
       <div class="filters-popup-window">
         <div class="filters-popup-flex">
           <div class="filter no-requirements">
@@ -286,11 +291,6 @@
     </div>
 
     <select multiple class="city-search"></select>
-
-    <div class="city-counter-container">
-      Showing <span id="counter-numerator">0</span> out of
-      <span id="counter-denominator">0</span> cities.
-    </div>
 
     <div class="donate-button">
       <a href="https://parkingreform.org/support/"

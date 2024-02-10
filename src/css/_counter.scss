@@ -14,8 +14,13 @@ $top-offset: 3.5em;
 
   width: 17em;
   text-align: center;
+  cursor: pointer;
 
   @media only screen and (min-width: 48em) {
     top: $top-offset + 0.5em;
   }
+}
+
+.city-counter-container:hover {
+  text-decoration: underline;
 }
