@@ -14,16 +14,14 @@ const setUpFilterPopup = (
   const popupElement = document.querySelector(
     ".filters-popup-window"
   ) as HTMLElement;
-  const filterIcon = document.querySelector(
-    ".filters-popup-icon"
-  ) as HTMLElement;
+  const openFilter = document.querySelector(".open-filter") as HTMLElement;
 
-  filterIcon.addEventListener("click", () => {
+  openFilter.addEventListener("click", () => {
     popupElement.style.display =
       popupElement.style.display !== "block" ? "block" : "none";
   });
 
-  filterIcon.addEventListener(
+  openFilter.addEventListener(
     "click",
     () => {
       // This happens here because the filter popup must be displayed for
@@ -43,12 +41,12 @@ const setUpFilterPopup = (
   window.addEventListener("click", (event) => {
     if (
       event.target instanceof Node &&
-      !filterIcon.contains(event.target) &&
+      !openFilter.contains(event.target) &&
       popupElement.style.display === "block" &&
       !popupElement.contains(event.target)
     ) {
       popupElement.style.display = "none";
-      filterIcon.classList.toggle("active");
+      openFilter.classList.toggle("active");
     }
   });
 };
