@@ -25,9 +25,9 @@ const TESTS: EdgeCase[] = [
   {
     desc: "policy change filter",
     policy: ["Parking Maximums"],
-    expectedRange: [365, 420],
+    expectedRange: [420, 500],
   },
-  { desc: "land use filter", land: ["Residential"], expectedRange: [66, 90] },
+  { desc: "land use filter", land: ["Residential"], expectedRange: [90, 150] },
   {
     desc: "implementation filter",
     implementation: ["Repealed"],
@@ -41,7 +41,7 @@ const TESTS: EdgeCase[] = [
   {
     desc: "no requirements",
     noRequirements: true,
-    expectedRange: [50, 65],
+    expectedRange: [65, 100],
   },
   {
     desc: "all cities",
