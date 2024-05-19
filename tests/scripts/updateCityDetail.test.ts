@@ -166,6 +166,6 @@ test.skip("every city in CSV has a corresponding HTML page", async () => {
     )
   );
   mapData.forEach((row) => {
-    expect(validUrls).toContain(row["citation_url"]);
+    expect(validUrls).toContain(row.citation_url);
   });
 });
