@@ -16,7 +16,7 @@ const parseCsv = (rawText) =>
     dynamicTyping: true,
   }).data;
 
-const readCsv = async (filePath) => {
+export const readCsv = async (filePath) => {
   const rawText = await fs.readFile(filePath, "utf-8");
   return parseCsv(rawText);
 };
