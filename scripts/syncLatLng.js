@@ -10,13 +10,13 @@ const TIDIED_REPORT = "map/tidied_map_data.csv";
 const GSHEET =
   "https://docs.google.com/spreadsheets/d/15L8hwNEi13Bov81EulgC8Xwt9_wCgofwcH49xHoNlKI/export?gid=0&format=csv";
 
-const parseCsv = (rawText) =>
+export const parseCsv = (rawText) =>
   Papa.parse(rawText.trim(), {
     header: true,
     dynamicTyping: true,
   }).data;
 
-const readCsv = async (filePath) => {
+export const readCsv = async (filePath) => {
   const rawText = await fs.readFile(filePath, "utf-8");
   return parseCsv(rawText);
 };

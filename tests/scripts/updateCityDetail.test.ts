@@ -1,10 +1,13 @@
-import { expect, test } from "@playwright/test";
 import fs from "fs/promises";
+
+import { expect, test } from "@playwright/test";
+
 import {
   needsUpdate,
   normalizeAttachments,
   parseDatetime,
 } from "../../scripts/updateCityDetail";
+import { readCsv } from "../../scripts/syncLatLng";
 
 test.describe("needsUpdate()", () => {
   test("returns false if everything is older than globalLastUpdated", () => {
@@ -151,4 +154,18 @@ test("city_detail_last_updated.txt is formatted correctly", async () => {
     "utf-8"
   );
   parseDatetime(lastUpdated, false); // will throw an error if incorrectly formatted
+});
+
+test.skip("every city in CSV has a corresponding HTML page", async () => {
+  const mapData = await readCsv("map/tidied_map_data.csv", "utf-8");
+  const htmlPages = await fs.readdir("city_detail/");
+  const validUrls = new Set(
+    htmlPages.map(
+      (fileName) =>
+        `https://parkingreform.org/mandates-map/city_detail/${fileName}`
+    )
+  );
+  mapData.forEach((row) => {
+    expect(validUrls).toContain(row.citation_url);
+  });
 });

@@ -112,10 +112,10 @@ const readCityCsv = async () => {
   const { data } = Papa.parse(csvText, { header: true, dynamicTyping: true });
 
   const cityCleaned = data.map((row) => {
-    const cityState = `${row.City}_${row["State/Province"]}`.replace(
-      /\s+/g,
-      ""
-    );
+    let cityState = row["State/Province"]
+      ? `${row.City}_${row["State/Province"]}`
+      : row.City;
+    cityState = cityState.replace(/\s+/g, "");
     return {
       city: row.City,
       state: row["State/Province"],
