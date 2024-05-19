@@ -7,19 +7,24 @@ import Papa from "papaparse";
 
 const TRIMMED_REPORT = "map/trimmed_map_data.csv";
 const TIDIED_REPORT = "map/tidied_map_data.csv";
+const GSHEET =
+  "https://docs.google.com/spreadsheets/d/15L8hwNEi13Bov81EulgC8Xwt9_wCgofwcH49xHoNlKI/export?gid=0&format=csv";
 
-const readCsv = async (filePath) => {
-  const csvText = await fs.readFile(filePath, "utf-8");
-  const { data } = Papa.parse(csvText.trim(), {
+const parseCsv = (rawText) =>
+  Papa.parse(rawText.trim(), {
     header: true,
     dynamicTyping: true,
-  });
-  return data;
+  }).data;
+
+const readCsv = async (filePath) => {
+  const rawText = await fs.readFile(filePath, "utf-8");
+  return parseCsv(rawText);
 };
 
-const readUpdateCsv = async () => {
-  const data = await readCsv("update-lat-lng.csv");
-  return data.map((row) => Object.values(row));
+const fetchUpdateCsv = async () => {
+  const response = await fetch(GSHEET);
+  const rawText = await response.text();
+  return parseCsv(rawText).map((row) => Object.values(row));
 };
 
 /* Inspired by leftJoin from updateMapData.js */
@@ -55,7 +60,7 @@ const writeResult = async (data, filePath) => {
 
 const main = async () => {
   const [updateData, trimmedData, tidiedData] = await Promise.all([
-    readUpdateCsv(),
+    fetchUpdateCsv(),
     readCsv(TRIMMED_REPORT),
     readCsv(TIDIED_REPORT),
   ]);

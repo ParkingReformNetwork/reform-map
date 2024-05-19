@@ -13,7 +13,7 @@
     "lint": "prettier --check . && eslint scripts/ tests/",
     "update-city-detail": "node scripts/updateCityDetail.js",
     "update-map-data": "node scripts/updateMapData.js",
-    "update-lat-lng": "node scripts/updateLatLng.js",
+    "sync-lat-lng": "node scripts/syncLatLng.js",
     "broken-links": "node scripts/brokenLinks.js",
     "serve-dist": "cd dist; http-server",
     "test-dist": "PORT=8080 playwright test"
