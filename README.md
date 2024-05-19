@@ -85,6 +85,4 @@ To instead manually update the data, first run `npm install`. Then, run either:
 
 ## Update latitude and longitude
 
-1. Save a CSV file called `update-lat-lng.csv` in the root of the repository. It should have five columns: the city, state code, country code, latitude, and longitude. The top row should be headers.
-2. `npm install`
-3. `npm run update-lat-lng`
+Update https://docs.google.com/spreadsheets/d/15L8hwNEi13Bov81EulgC8Xwt9_wCgofwcH49xHoNlKI/edit#gid=0. Our nightly cron job will open a PR to sync the updates.
