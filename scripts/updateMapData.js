@@ -300,7 +300,7 @@ const determineSpecialLabel = (row) => {
 
 const postProcessResult = (reportData) =>
   reportData
-    .sort((a, b) => a.population - b.population)
+    .sort((a, b) => a.city.localeCompare(b.city))
     .map((row) => ({
       ...row,
       id: row.city + row.state + row.country,
