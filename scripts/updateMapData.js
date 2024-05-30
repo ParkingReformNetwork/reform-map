@@ -111,24 +111,26 @@ const readCityCsv = async () => {
   //  const csvText = await fs.readFile("city.csv", "utf-8");
   const { data } = Papa.parse(csvText, { header: true, dynamicTyping: true });
 
-  const cityCleaned = data.map((row) => {
-    const cityState = `${row.City}_${row["State/Province"]}`.replace(
-      /\s+/g,
-      ""
-    );
-    return {
-      city: row.City,
-      state: row["State/Province"],
-      country: row.Country,
-      population:
-        typeof row.Population === "string"
-          ? Number(row.Population.replace(/,/g, ""))
-          : row.Population || 0,
-      is_notable: row.Notable === null ? "" : row.Notable,
-      is_recent: row.Recent === null ? "" : row.Recent,
-      citation_url: `https://parkingreform.org/mandates-map/city_detail/${cityState}.html`,
-    };
-  });
+  const cityCleaned = data
+    .filter((row) => row.City)
+    .map((row) => {
+      let cityState = row["State/Province"]
+        ? `${row.City}_${row["State/Province"]}`
+        : row.City;
+      cityState = cityState.replace(/\s+/g, "");
+      return {
+        city: row.City,
+        state: row["State/Province"],
+        country: row.Country,
+        population:
+          typeof row.Population === "string"
+            ? Number(row.Population.replace(/,/g, ""))
+            : row.Population || 0,
+        is_notable: row.Notable === null ? "" : row.Notable,
+        is_recent: row.Recent === null ? "" : row.Recent,
+        citation_url: `https://parkingreform.org/mandates-map/city_detail/${cityState}.html`,
+      };
+    });
   return cityCleaned;
 };
 
@@ -298,9 +300,8 @@ const determineSpecialLabel = (row) => {
 
 const postProcessResult = (reportData) =>
   reportData
-    .sort((a, b) => a.population - b.population)
-    .map((row, idx) => ({
-      index: idx + 1,
+    .sort((a, b) => a.city.localeCompare(b.city))
+    .map((row) => ({
       ...row,
       id: row.city + row.state + row.country,
       magnitude_encoded: magnitudeToHighest(row.report_magnitude),

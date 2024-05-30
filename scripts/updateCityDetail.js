@@ -112,7 +112,7 @@ const renderHandlebars = (cityEntries, template) => {
   const entry0 = cityEntries[0];
   return template({
     city: entry0.City,
-    state: entry0.State,
+    state: entry0.State ? `, ${entry0.State}` : "",
     summary: entry0.Summary,
     status: entry0.Status,
     reformType: entry0["Reform Type"],
@@ -161,10 +161,8 @@ const main = async () => {
 
   const cityStateMap = {};
   data.forEach((row) => {
-    if (!row.City || !row.State) {
-      return;
-    }
-    const cityState = `${row.City}_${row.State}`;
+    if (!row.City) return;
+    const cityState = row.State ? `${row.City}_${row.State}` : row.City;
     if (!cityStateMap[cityState]) {
       cityStateMap[cityState] = [];
     }

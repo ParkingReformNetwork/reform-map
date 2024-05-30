@@ -21,27 +21,27 @@ interface EdgeCase {
 const TESTS: EdgeCase[] = [
   { desc: "default filters", expectedRange: DEFAULT_CITY_RANGE },
   { desc: "disabled filter", scope: [], expectedRange: [0, 0] },
-  { desc: "scope filter", scope: ["Regional"], expectedRange: [3, 8] },
+  { desc: "scope filter", scope: ["Regional"], expectedRange: [4, 15] },
   {
     desc: "policy change filter",
     policy: ["Parking Maximums"],
-    expectedRange: [420, 500],
+    expectedRange: [420, 800],
   },
-  { desc: "land use filter", land: ["Residential"], expectedRange: [90, 150] },
+  { desc: "land use filter", land: ["Residential"], expectedRange: [90, 250] },
   {
     desc: "implementation filter",
     implementation: ["Repealed"],
-    expectedRange: [1, 4],
+    expectedRange: [1, 10],
   },
   {
     desc: "population slider",
     populationIntervals: [3, 6],
-    expectedRange: [295, 450],
+    expectedRange: [295, 800],
   },
   {
     desc: "no requirements",
     noRequirements: true,
-    expectedRange: [65, 100],
+    expectedRange: [65, 250],
   },
   {
     desc: "all cities",
@@ -58,7 +58,7 @@ const TESTS: EdgeCase[] = [
       "Proposed",
       "Repealed",
     ],
-    expectedRange: [2150, 2800],
+    expectedRange: [2150, 4000],
   },
 ];
 
