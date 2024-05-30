@@ -36,6 +36,7 @@ const SCOPE_TO_COLOR = {
 const createMap = (): Map => {
   const map = new Map("map", {
     layers: [BASE_LAYER],
+    worldCopyJump: true,
   });
   map.setView([43.2796758, -96.7449732], 4); // Set default view (lat, long) to United States
   map.attributionControl.setPrefix(
