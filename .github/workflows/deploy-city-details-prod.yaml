@@ -17,7 +17,7 @@ jobs:
       - name: Copy city_detail/ to server
         uses: appleboy/scp-action@master
         with:
-          host: ${{ secrets.PRN_SERVER_HOST }}
+          host: ${{ secrets.PRN_FTP_HOST }}
           username: ${{ secrets.PRN_SERVER_USERNAME }}
           key: ${{ secrets.PRN_SERVER_PRIVATE_KEY }}
           source: city_details.tar.gz
@@ -25,7 +25,7 @@ jobs:
       - name: Extract on server
         uses: appleboy/ssh-action@master
         with:
-          host: ${{ secrets.PRN_SERVER_HOST }}
+          host: ${{ secrets.PRN_FTP_HOST }}
           username: ${{ secrets.PRN_SERVER_USERNAME }}
           key: ${{ secrets.PRN_SERVER_PRIVATE_KEY }}
           script: |
