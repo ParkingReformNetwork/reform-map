@@ -8,7 +8,7 @@ jobs:
       - name: Copy from staging to production
         uses: appleboy/ssh-action@master
         with:
-          host: ${{ secrets.PRN_SERVER_HOST }}
+          host: ${{ secrets.PRN_FTP_HOST }}
           username: ${{ secrets.PRN_SERVER_USERNAME }}
           key: ${{ secrets.PRN_SERVER_PRIVATE_KEY }}
           script: |
