@@ -7,9 +7,9 @@ test("alerts appear and close", async ({ page }) => {
   const isAlertVisible = async (): Promise<boolean> =>
     page.locator("#no-requirements-alert").isVisible();
 
-  // Default toggle is ON, but alert should not be visible.
+  // Default toggle is ON, and alert should be visible.
   // Before toggle is clicked
-  expect(await isAlertVisible()).toBe(false);
+  expect(await isAlertVisible()).toBe(true);
 
   // Click toggle OFF
   await page.locator(".filters-popup-icon").click();
