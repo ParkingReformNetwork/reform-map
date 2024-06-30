@@ -1,5 +1,7 @@
+@use "colors";
+
 .legend.leaflet-control {
-  background: white;
+  background: colors.$white;
   opacity: 0.9;
   border-radius: 5px;
   // Make clear that moving the legend will move the map itself.

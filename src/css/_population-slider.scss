@@ -3,6 +3,8 @@
 //   border: solid;
 // }
 
+@use "colors";
+
 .population-slider-container {
   z-index: 1100;
   display: flex;
@@ -49,8 +51,8 @@
     to bottom,
     transparent 0%,
     transparent 30%,
-    silver 30%,
-    silver 60%,
+    colors.$silver 30%,
+    colors.$silver 60%,
     transparent 60%,
     transparent 100%
   );
@@ -61,9 +63,9 @@
   appearance: none;
   width: 14px;
   height: 14px;
-  background: white;
+  background: colors.$white;
   cursor: pointer;
-  border: 1px solid gray;
+  border: 1px solid colors.$gray-neutral;
   border-radius: 100%;
 }
 

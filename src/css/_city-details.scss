@@ -1,7 +1,9 @@
+@use "colors";
+
 .city-details-popup {
   display: none;
-  background-color: white;
-  border: 1px solid gray;
+  background-color: colors.$white;
+  border: 1px solid colors.$gray-neutral;
 
   width: 80%;
   max-height: 60%;
