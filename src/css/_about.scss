@@ -1,8 +1,10 @@
+@use "colors";
+
 .about-popup {
   position: absolute;
   z-index: 1001;
-  background-color: white;
-  border: 1px solid gray;
+  background-color: colors.$white;
+  border: 1px solid colors.$gray-neutral;
   width: 80%;
   height: 60%;
 

@@ -1,5 +1,4 @@
-$opaque-yellow: #fae678e2;
-$gray: rgb(60, 60, 60);
+@use "colors";
 
 /* The alert message box */
 .alert {
@@ -16,14 +15,14 @@ $gray: rgb(60, 60, 60);
   }
 
   padding: 0.5em 1em;
-  background-color: $opaque-yellow;
-  color: $gray;
+  background-color: colors.$yellow;
+  color: colors.$gray-dark;
   font-size: 0.9em;
 }
 
 /* The close button */
 .alert-close-button {
-  color: $gray;
+  color: colors.$gray-dark;
   font-weight: bold;
   float: right;
   font-size: 1.5em;
@@ -33,5 +32,5 @@ $gray: rgb(60, 60, 60);
 }
 
 .alert-close-button:hover {
-  color: black;
+  color: colors.$black;
 }

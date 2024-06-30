@@ -1,23 +1,22 @@
-$gray: rgb(204, 204, 204);
-$toggle-checked-color: rgb(33, 153, 243);
+@use "colors";
+
 $toggle-size: 0.4em;
 $toggle-circle: calc(2.4 * $toggle-size);
 
 .no-requirements-container {
-  border: solid $gray 2px;
-  // border-radius: 2px;
+  border: solid colors.$gray-light 2px;
   padding: 0.2em;
 }
 
 .no-requirements-toggle-container {
   position: absolute;
-  background-color: white;
+  background-color: colors.$white;
   top: 7em;
   left: 3em;
   z-index: 900;
   padding: 0.2em 0.4em;
 
-  border: solid $gray 1px;
+  border: solid colors.$gray-light 1px;
   border-radius: 2px;
 
   @media only screen and (min-width: 48em) {
@@ -35,7 +34,7 @@ $toggle-circle: calc(2.4 * $toggle-size);
 
 .toggle-switch {
   display: inline-block;
-  background: $gray;
+  background: colors.$gray-light;
   border-radius: 1em;
   width: calc(5.8 * $toggle-size);
   height: calc(3.2 * $toggle-size);
@@ -49,7 +48,7 @@ $toggle-circle: calc(2.4 * $toggle-size);
 }
 .toggle-switch::before {
   display: block;
-  background: white;
+  background: colors.$white;
   border-radius: 50%;
   width: $toggle-circle;
   height: $toggle-circle;
@@ -59,10 +58,10 @@ $toggle-circle: calc(2.4 * $toggle-size);
   transition: left 0.25s;
 }
 .toggle:hover .toggle-switch::before {
-  background: white;
+  background: colors.$white;
 }
 .toggle-checkbox:checked + .toggle-switch {
-  background: $toggle-checked-color;
+  background: colors.$blue;
 }
 .toggle-checkbox:checked + .toggle-switch::before {
   left: calc(3 * $toggle-size);

@@ -1,15 +1,16 @@
-$gray: rgb(204, 204, 204);
+@use "colors";
+
 $top-offset: 3.5em;
 
 .city-counter-container {
   position: absolute;
-  background-color: white;
+  background-color: colors.$white;
   top: $top-offset;
   left: 3em;
   z-index: 900;
   padding: 0.2em 0.4em;
 
-  border: solid $gray 1px;
+  border: solid colors.$gray-light 1px;
   border-radius: 2px;
 
   width: 17em;
