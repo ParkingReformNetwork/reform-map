@@ -178,7 +178,10 @@ const main = async () => {
 };
 
 if (process.env.NODE_ENV !== "test") {
-  main().catch((error) => console.error(error));
+  main().catch((error) => {
+    console.error(error);
+    process.exit(1);
+  });
 }
 
 export { needsUpdate, normalizeAttachments, parseDatetime };
