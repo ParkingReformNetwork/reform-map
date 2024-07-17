@@ -4,9 +4,16 @@
 
 import fs from "fs/promises";
 
-import fetch from "node-fetch";
+import nodeFetch from "node-fetch";
 import NodeGeocoder from "node-geocoder";
 import Papa from "papaparse";
+
+async function fetch(url, options) {
+  return nodeFetch(url, {
+    ...options,
+    headers: { "User-Agent": "prn-update-map-data" },
+  });
+}
 
 // -------------------------------------------------------------
 // Encoding logic
@@ -101,10 +108,7 @@ const populationToBin = (population) => {
 
 const readCityCsv = async () => {
   const response = await fetch(
-    "https://area120tables.googleapis.com/link/aR_AWTAZ6WF8_ZB3HgfOvN/export?key=8-SifuDc4Fg7purFrntOa7bjE0ikjGAy28t36wUBIOJx9vFGZuSR89N1PkSTFXpOk6",
-    {
-      headers: { "User-Agent": "prn-update-map-data" },
-    }
+    "https://area120tables.googleapis.com/link/aR_AWTAZ6WF8_ZB3HgfOvN/export?key=8-SifuDc4Fg7purFrntOa7bjE0ikjGAy28t36wUBIOJx9vFGZuSR89N1PkSTFXpOk6"
   );
   const csvText = await response.text();
   // Uncomment this to read the file locally. Save the file to `city.csv` in the repo root.
@@ -136,10 +140,7 @@ const readCityCsv = async () => {
 
 const readReportCsv = async () => {
   const response = await fetch(
-    "https://area120tables.googleapis.com/link/bAc5xhhLJ2q4jYYGjaq_24/export?key=8_S1APcQHGN9zfTXEMz_Gz8sel3FCo3RUfEV4f-PBOqE8zy3vG3FpCQcSXQjRDXOqZ",
-    {
-      headers: { "User-Agent": "prn-update-map-data" },
-    }
+    "https://area120tables.googleapis.com/link/bAc5xhhLJ2q4jYYGjaq_24/export?key=8_S1APcQHGN9zfTXEMz_Gz8sel3FCo3RUfEV4f-PBOqE8zy3vG3FpCQcSXQjRDXOqZ"
   );
   const csvText = await response.text();
   // Uncomment this to read the file locally. Save the file to `report.csv` in the repo root.
@@ -268,7 +269,7 @@ const ensureRowLatLng = async (row, geocoder) => {
 };
 
 const addMissingLatLng = async (reportData) => {
-  const geocoder = NodeGeocoder({ provider: "openstreetmap" });
+  const geocoder = NodeGeocoder({ provider: "openstreetmap", fetch });
 
   // We use a for loop to avoid making too many network calls -> rate limiting.
   const result = [];
