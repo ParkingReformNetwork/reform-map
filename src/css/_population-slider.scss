@@ -1,9 +1,9 @@
+@use "theme/colors-original";
+
 // uncomment to visualize slider mechanism
 // input {
 //   border: solid;
 // }
-
-@use "colors";
 
 .population-slider-container {
   z-index: 1100;
@@ -51,8 +51,8 @@
     to bottom,
     transparent 0%,
     transparent 30%,
-    colors.$silver 30%,
-    colors.$silver 60%,
+    colors-original.$silver 30%,
+    colors-original.$silver 60%,
     transparent 60%,
     transparent 100%
   );
@@ -63,9 +63,9 @@
   appearance: none;
   width: 14px;
   height: 14px;
-  background: colors.$white;
+  background: colors-original.$white;
   cursor: pointer;
-  border: 1px solid colors.$gray-neutral;
+  border: 1px solid colors-original.$gray-neutral;
   border-radius: 100%;
 }
 

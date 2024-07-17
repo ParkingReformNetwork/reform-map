@@ -1,14 +1,14 @@
-@use "colors";
+@use "theme/colors-original";
 
 header {
   padding: 0.5rem 1rem;
 
   font-size: 1rem;
-  background: colors.$gray-dark-medium;
-  color: colors.$white;
+  background: colors-original.$gray-dark-medium;
+  color: colors-original.$white;
 
   svg {
-    color: colors.$white;
+    color: colors-original.$white;
   }
 
   @media only screen and (min-width: 48em) {

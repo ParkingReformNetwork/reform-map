@@ -1,16 +1,16 @@
-@use "colors";
+@use "theme/colors-original";
 
 $top-offset: 3.5em;
 
 .city-counter-container {
   position: absolute;
-  background-color: colors.$white;
+  background-color: colors-original.$white;
   top: $top-offset;
   left: 3em;
   z-index: 900;
   padding: 0.2em 0.4em;
 
-  border: solid colors.$gray-light 1px;
+  border: solid colors-original.$gray-light 1px;
   border-radius: 2px;
 
   width: 17em;

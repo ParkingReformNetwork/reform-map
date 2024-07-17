@@ -1,4 +1,4 @@
-@use "colors";
+@use "theme/colors-original";
 
 /* The alert message box */
 .alert {
@@ -15,14 +15,14 @@
   }
 
   padding: 0.5em 1em;
-  background-color: colors.$yellow;
-  color: colors.$gray-dark;
+  background-color: colors-original.$yellow;
+  color: colors-original.$gray-dark;
   font-size: 0.9em;
 }
 
 /* The close button */
 .alert-close-button {
-  color: colors.$gray-dark;
+  color: colors-original.$gray-dark;
   font-weight: bold;
   float: right;
   font-size: 1.5em;
@@ -32,5 +32,5 @@
 }
 
 .alert-close-button:hover {
-  color: colors.$black;
+  color: colors-original.$black;
 }
