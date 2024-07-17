@@ -1,4 +1,4 @@
-@use "colors";
+@use "theme/colors-original";
 
 $unchecked: "\2610";
 $checked: "\2611";
@@ -17,8 +17,8 @@ $top-offset: 5.6em;
 .filters-popup-icon {
   position: absolute;
   top: $top-offset + 0.2em;
-  background-color: colors.$white;
-  border: solid colors.$gray-light 1px;
+  background-color: colors-original.$white;
+  border: solid colors-original.$gray-light 1px;
   z-index: 1000;
   left: 18.8em;
   padding: 0.5em;
@@ -35,8 +35,8 @@ $top-offset: 5.6em;
 
 .filters-popup-flex {
   position: absolute;
-  background-color: colors.$white;
-  border: solid colors.$gray-light 1px;
+  background-color: colors-original.$white;
+  border: solid colors-original.$gray-light 1px;
   z-index: 1200;
 
   display: flex;
@@ -76,5 +76,5 @@ $top-offset: 5.6em;
 }
 
 fieldset {
-  border: solid colors.$gray-light 2px;
+  border: solid colors-original.$gray-light 2px;
 }
