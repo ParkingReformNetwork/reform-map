@@ -1,0 +1,32 @@
+@use "theme/breakpoints";
+@use "theme/colors";
+@use "theme/spacing";
+
+.prn-logo {
+  position: absolute;
+  left: spacing.$map-controls-margin-x;
+  z-index: 1002;
+
+  // `bottom` is set so high to avoid covering the attribution
+  // on small screens, since it wraps to two lines.
+  bottom: 35px;
+  @include breakpoints.gt-xs {
+    bottom: 20px;
+  }
+  @include breakpoints.gt-md {
+    bottom: 10px;
+  }
+
+  width: 80px;
+  @include breakpoints.gt-xxs {
+    width: 110px;
+  }
+  @include breakpoints.gt-sm {
+    width: 130px;
+  }
+
+  img {
+    background-color: colors.$white;
+    width: 100%;
+  }
+}

@@ -1,0 +1,19 @@
+@use "theme/borders";
+@use "theme/breakpoints";
+@use "theme/colors";
+@use "theme/typography";
+
+.leaflet-container div.leaflet-control-attribution {
+  font-size: typography.$font-size-xs;
+  background-color: colors.$white;
+  border-top: borders.$component-border;
+
+  @include breakpoints.gt-xs {
+    border-top-left-radius: borders.$border-radius;
+    border-left: borders.$component-border;
+  }
+
+  @include breakpoints.gt-sm {
+    font-size: typography.$font-size-sm;
+  }
+}
