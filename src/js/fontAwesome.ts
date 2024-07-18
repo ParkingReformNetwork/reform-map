@@ -1,8 +1,6 @@
 import { library, dom } from "@fortawesome/fontawesome-svg-core";
 import {
-  faCheck,
   faCircleInfo,
-  faLink,
   faUpRightFromSquare,
   faCaretDown,
   faLightbulb,
@@ -14,9 +12,7 @@ import "@fortawesome/fontawesome-svg-core/styles.css";
 
 const setUpIcons = (): void => {
   library.add(
-    faCheck,
     faCircleInfo,
-    faLink,
     faUpRightFromSquare,
     faCaretDown,
     faLightbulb,
