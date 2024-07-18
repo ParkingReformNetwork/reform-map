@@ -38,7 +38,10 @@ const createMap = (): Map => {
     layers: [BASE_LAYER],
     worldCopyJump: true,
   });
-  map.setView([43.2796758, -96.7449732], 4); // Set default view (lat, long) to United States
+  // Set default view to Lexington, KY, to fit the most dots by
+  // default. On desktop, the whole US fits. But on mobile, the
+  // screen is too small so we center around the eastern US.
+  map.setView([38.0406, -84.5037], 4);
   map.attributionControl.setPrefix(
     '<a href="https://parkingreform.org/support/">Parking Reform Network</a>'
   );
