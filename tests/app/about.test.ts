@@ -3,7 +3,7 @@ import { expect, test } from "@playwright/test";
 test("about popup can be opened and closed", async ({ page }) => {
   await page.goto("");
 
-  const aboutIcon = ".info-icon";
+  const aboutIcon = ".header-about-icon-container";
 
   const aboutIsVisible = async () =>
     page.$eval(".about-popup", (el) => el.style.display === "block");
@@ -24,7 +24,7 @@ test("about popup can be opened and closed", async ({ page }) => {
   expect(await aboutIsVisible()).toBe(true);
 
   // click x icon in popup
-  await page.click(".about-popup-close-icon");
+  await page.click(".about-popup-close-icon-container");
   expect(await aboutIsVisible()).toBe(false);
 
   // click about icon (open popup)
