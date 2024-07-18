@@ -16,9 +16,10 @@ import setUpAlerts from "./alert";
 const BASE_LAYER = new TileLayer(
   "https://tiles.stadiamaps.com/tiles/stamen_toner_lite/{z}/{x}/{y}{r}.png",
   {
-    attribution: `Map tiles: &copy; <a href="https://www.stadiamaps.com/" target="_blank">Stadia Maps</a>
-      &copy; <a href="https://www.stamen.com/" target="_blank">Stamen Design</a>
-      &copy; <a href="https://openmaptiles.org/" target="_blank">OpenMapTiles</a>`,
+    attribution: `&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a>
+        &copy; <a href="https://openmaptiles.org/" target="_blank">OpenMapTiles</a>
+        &copy; <a href="https://www.stadiamaps.com/" target="_blank">Stadia Maps</a>
+        &copy; <a href="https://www.stamen.com/" target="_blank">Stamen Design</a>`,
     subdomains: "abcd",
     minZoom: 0,
     maxZoom: 10,
@@ -40,7 +41,7 @@ const createMap = (): Map => {
   });
   map.setView([43.2796758, -96.7449732], 4); // Set default view (lat, long) to United States
   map.attributionControl.setPrefix(
-    'Map data: &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a>'
+    '<a href="https://parkingreform.org/support/">Parking Reform Network</a>'
   );
   return map;
 };
