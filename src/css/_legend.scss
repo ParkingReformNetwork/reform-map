@@ -1,61 +1,44 @@
-@use "theme/colors-original";
+@use "theme/borders";
+@use "theme/colors";
+@use "theme/icons";
+@use "theme/spacing";
+@use "theme/typography";
 
 .legend.leaflet-control {
-  background: colors-original.$white;
-  opacity: 0.9;
-  border-radius: 5px;
+  background: colors.$white;
+  border: borders.$component-border;
+  border-radius: borders.$border-radius;
+
   // Make clear that moving the legend will move the map itself.
   cursor: grab;
-  height: 10.5em;
-}
 
-.legend h2 {
-  margin: 0.5em 0.5em 0.1em 0.5em;
-  padding: 0;
-  font-weight: normal;
-  text-align: center;
-  font-size: 1.25em;
-}
-
-.legend ul {
-  padding: 0 0.5em;
-  margin-top: 0;
-}
-
-.legend li {
-  list-style: none;
-  font-size: 1em;
-}
-
-.legend i {
-  width: 1.2em;
-  height: 1.2em;
-  margin-right: 0.5em;
-  display: inline-block;
-  vertical-align: top;
-}
-
-// For larger screens
-@media screen and (min-width: 48em) {
-  .legend.leaflet-control {
-    height: 13.5em;
+  h2 {
+    font-weight: normal;
+    font-size: typography.$font-size-md;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    margin-top: spacing.$element-gap;
   }
 
-  .legend h2 {
-    font-size: 1.5em;
+  ul {
+    padding: 0 spacing.$container-edge-spacing;
+    margin-top: spacing.$element-gap;
+    margin-bottom: spacing.$element-gap;
   }
 
-  .legend ul {
-    padding: 0 1em;
-    margin-top: 0;
+  li {
+    height: calc(icons.$icon-size-xs + 5px);
+    list-style: none;
+    font-size: typography.$font-size-base;
+    line-height: 1;
   }
 
-  .legend li {
-    font-size: 1.25em;
-  }
-
-  .legend i {
-    width: 1.2em;
-    height: 1.2em;
+  i {
+    height: icons.$icon-size-xs;
+    width: icons.$icon-size-xs;
+    margin-right: 5px;
+    display: inline-block;
+    vertical-align: top;
   }
 }
