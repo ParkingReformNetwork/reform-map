@@ -54,4 +54,16 @@ $header-height: calc(
     height: icons.$icon-size-md;
     width: icons.$icon-size-md;
   }
+
+  .header-full-screen-icon-container {
+    // We don't show the icon on small screens because it takes up
+    // too much screen real estate, and it's not very useful to see
+    // the map in full-screen vs iframe if you're on such a small screen.
+    //
+    // iframe.ts also disables the icon when the site is not in an iframe.
+    display: none;
+    @include breakpoints.gt-xxs {
+      display: inline-flex;
+    }
+  }
 }
