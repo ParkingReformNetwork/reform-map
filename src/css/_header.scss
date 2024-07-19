@@ -1,35 +1,57 @@
-@use "theme/colors-original";
+@use "theme/borders";
+@use "theme/breakpoints";
+@use "theme/colors";
+@use "theme/spacing";
+@use "theme/icons";
+@use "theme/typography";
 
-header {
-  padding: 0.5rem 1rem;
+$header-y-padding: 0px;
+$header-border-bottom-size: 4px;
+$header-height: calc(
+  spacing.$min-touch-target + ($header-y-padding * 2) +
+    $header-border-bottom-size
+);
 
-  font-size: 1rem;
-  background: colors-original.$gray-dark-medium;
-  color: colors-original.$white;
-
-  svg {
-    color: colors-original.$white;
-  }
-
-  @media only screen and (min-width: 48em) {
-    font-size: 1.5rem;
-  }
-}
-
-.header-top {
+.top-header {
+  width: 100%;
   display: flex;
   align-items: center;
-  justify-content: space-between;
+
+  padding: $header-y-padding spacing.$element-gap;
+
+  background-color: colors.$gray;
+  border-bottom: $header-border-bottom-size solid colors.$teal;
+}
+
+.header-title {
+  font-weight: normal;
+  color: colors.$white;
+  margin: 0px;
+
+  font-size: typography.$font-size-md;
+  @include breakpoints.gt-xs {
+    font-size: typography.$font-size-lg;
+  }
 }
 
 .header-icons {
   display: flex;
-  align-items: center;
-
+  margin-left: auto;
   cursor: pointer;
-  font-size: 1rem;
+
+  .header-about-icon-container,
+  .header-full-screen-icon-container {
+    height: spacing.$min-touch-target;
+    width: spacing.$min-touch-target;
+
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+  }
 
   svg {
-    padding: 0 0.5rem;
+    color: colors.$white;
+    height: icons.$icon-size-md;
+    width: icons.$icon-size-md;
   }
 }
