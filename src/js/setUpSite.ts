@@ -3,7 +3,6 @@ import "leaflet/dist/leaflet.css";
 
 import type { CityId, CityEntry } from "./types";
 import setUpIcons from "./fontAwesome";
-import addLegend from "./legend";
 import { createSearchElement, setUpSearch } from "./search";
 import maybeDisableFullScreenIcon from "./iframe";
 import setUpAbout from "./about";
@@ -25,14 +24,6 @@ const BASE_LAYER = new TileLayer(
     maxZoom: 10,
   }
 );
-
-const SCOPE_TO_COLOR = {
-  Regional: "#7b3294",
-  "City Center": "#fdae61",
-  Citywide: "#d7191c",
-  "Main Street": "#abdda4",
-  TOD: "#2b83ba",
-};
 
 const createMap = (): Map => {
   const map = new Map("map", {
@@ -77,7 +68,7 @@ const createCityMarkers = (
       stroke: true,
       weight: 0.9,
       color: "#FFFFFF",
-      fillColor: SCOPE_TO_COLOR[entry.magnitude_encoded],
+      fillColor: "#d7191c",
       fillOpacity: 1,
     });
     acc[cityState] = marker;
@@ -96,7 +87,6 @@ const setUpSite = async (): Promise<void> => {
   const map = createMap();
   const markerGroup = new FeatureGroup();
   const sliders = createPopulationSlider();
-  addLegend(map, SCOPE_TO_COLOR);
 
   const data = await readData();
   const searchElement = createSearchElement(Object.keys(data));
