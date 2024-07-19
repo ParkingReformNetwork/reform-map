@@ -22,4 +22,7 @@ div.choices {
 div.choices__inner {
   min-height: unset;
   width: $width - 20px;
+
+  // TODO: Figure out why this is unnecessary when revamping the component.
+  box-sizing: unset;
 }
