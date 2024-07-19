@@ -5,3 +5,8 @@ $font-size-md: 18px;
 $font-size-lg: 20px;
 $font-size-xl: 24px;
 $font-size-2xl: 30px;
+
+body,
+div.leaflet-container {
+  font-family: Poppins, Helvetica, Arial, sans-serif;
+}
