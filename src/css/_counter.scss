@@ -17,6 +17,9 @@ $top-offset: 3.5em;
   text-align: center;
   cursor: pointer;
 
+  // TODO: Figure out why this is unnecessary when revamping the component.
+  box-sizing: unset;
+
   @media only screen and (min-width: 48em) {
     top: $top-offset + 0.5em;
   }
