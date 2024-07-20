@@ -7,8 +7,8 @@ import {
   faUpRightFromSquare,
   faCaretDown,
   faLightbulb,
+  faSliders,
   fas,
-  faGear,
 } from "@fortawesome/free-solid-svg-icons";
 import "@fortawesome/fontawesome-svg-core/styles.css";
 
@@ -19,8 +19,8 @@ const setUpIcons = (): void => {
     faCaretDown,
     faLightbulb,
     faCircleXmark,
+    faSliders,
     fas,
-    faGear
   );
   dom.watch();
 };
