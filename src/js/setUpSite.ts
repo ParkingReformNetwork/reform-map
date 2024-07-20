@@ -10,7 +10,6 @@ import setUpDetails from "./cityDetails";
 import { createPopulationSlider } from "./populationSlider";
 import { changeSelectedMarkers, setUpFiltersAndCounter } from "./filter";
 import setUpFilterPopup from "./filterPopup";
-import setUpAlerts from "./alert";
 
 const BASE_LAYER = new TileLayer(
   "https://tiles.stadiamaps.com/tiles/stamen_toner_lite/{z}/{x}/{y}{r}.png",
@@ -82,7 +81,6 @@ const setUpSite = async (): Promise<void> => {
   setUpIcons();
   maybeDisableFullScreenIcon();
   setUpAbout();
-  setUpAlerts();
 
   const map = createMap();
   const markerGroup = new FeatureGroup();
