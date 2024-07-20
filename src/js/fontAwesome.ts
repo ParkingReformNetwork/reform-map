@@ -20,7 +20,7 @@ const setUpIcons = (): void => {
     faLightbulb,
     faCircleXmark,
     faSliders,
-    fas,
+    fas
   );
   dom.watch();
 };
