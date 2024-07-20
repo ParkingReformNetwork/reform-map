@@ -5,7 +5,7 @@
 @use "theme/icons";
 @use "theme/typography";
 
-$header-y-padding: 0px;
+$header-y-padding: 4px;
 $header-border-bottom-size: 4px;
 $header-height: calc(
   spacing.$min-touch-target + ($header-y-padding * 2) +
@@ -24,15 +24,20 @@ $header-height: calc(
 }
 
 .header-title {
-  font-weight: normal;
-  color: colors.$white;
-  margin: 0px;
+    height: spacing.$min-touch-target;
+    width: spacing.$min-touch-target;
 
-  font-size: typography.$font-size-md;
-  @include breakpoints.gt-xs {
-    font-size: typography.$font-size-lg;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    svg {
+      color: colors.$white;
+      height: icons.$icon-size-md;
+      width: icons.$icon-size-md;
+    }
   }
-}
+
 
 .header-icons {
   display: flex;
@@ -40,6 +45,8 @@ $header-height: calc(
   cursor: pointer;
 
   .header-about-icon-container,
+  .header-filter-icon-container,
+  .header-search-icon-container,
   .header-full-screen-icon-container {
     height: spacing.$min-touch-target;
     width: spacing.$min-touch-target;

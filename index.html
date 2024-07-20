@@ -36,8 +36,14 @@
 
   <body>
     <header class="top-header">
-      <h1 class="header-title">Parking Reform Map</h1>
+      <div class="header-title"><i class="fa-solid fa-table"></i></div>
       <nav class="header-icons">
+        <div class="header-filter-icon-container">
+          <i class="fa-solid fa-sliders"></i>
+        </div>
+        <div class="header-search-icon-container">
+          <i class="fa-solid fa-magnifying-glass"></i>
+        </div>
         <div class="header-about-icon-container">
           <i class="fa-regular fa-circle-question" title="about the map"></i>
         </div>
@@ -125,12 +131,9 @@
       <div class="city-details-text"></div>
     </div>
     <div class="open-filter">
-      <div class="filters-popup-icon">
-        <i class="fa-solid fa-gear"></i>
-      </div>
       <div class="city-counter-container">
-        Showing <span id="counter-numerator">0</span> out of
-        <span id="counter-denominator">0</span> cities.
+        Showing <span id="counter-numerator">0</span>/84 cities without parking requirements (from
+        <span id="counter-denominator">0</span> total)
       </div>
     </div>
     <div class="filters-popup-container">

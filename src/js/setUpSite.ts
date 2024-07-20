@@ -68,7 +68,7 @@ const createCityMarkers = (
       stroke: true,
       weight: 0.9,
       color: "#FFFFFF",
-      fillColor: "hsl(173, 72%, 46%)",
+      fillColor: "#d7191c",
       fillOpacity: 1,
     });
     acc[cityState] = marker;

@@ -1,30 +1,24 @@
+@use "theme/borders";
+@use "theme/colors";
 @use "theme/colors-original";
-
-$top-offset: 3.5em;
+@use "theme/spacing";
+@use "theme/typography";
+@use "header";
 
 .city-counter-container {
   position: absolute;
   background-color: colors-original.$white;
-  top: $top-offset;
-  left: 3em;
+  font-size: typography.$font-size-md;
+  top: calc(header.$header-height + 10px);
+
   z-index: 900;
-  padding: 0.2em 0.4em;
+  padding: spacing.$element-gap spacing.$container-edge-spacing;
+  margin-left: spacing.$map-controls-margin-x;
+  right: spacing.$map-controls-margin-x;
 
-  border: solid colors-original.$gray-light 1px;
-  border-radius: 2px;
+  border: borders.$component-border;
+  border-radius: borders.$border-radius;
 
-  width: 17em;
-  text-align: center;
-  cursor: pointer;
-
-  // TODO: Figure out why this is unnecessary when revamping the component.
-  box-sizing: unset;
-
-  @media only screen and (min-width: 48em) {
-    top: $top-offset + 0.5em;
-  }
-}
-
-.city-counter-container:hover {
-  text-decoration: underline;
+  max-width: 235px;
+  line-height: 1.3;
 }

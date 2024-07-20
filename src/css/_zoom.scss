@@ -1,0 +1,41 @@
+@use "theme/borders";
+@use "theme/colors";
+@use "theme/spacing";
+@use "theme/typography";
+@use "header";
+
+$label-font-size: typography.$font-size-md;
+
+div.leaflet-left .leaflet-control {
+  margin-left: spacing.$map-controls-margin-x;
+  border: borders.$component-border;
+  border-radius: borders.$border-radius;
+}
+
+div.leaflet-control-zoom.leaflet-bar {
+  top: calc(
+    50px + spacing.$map-controls-margin-top - header.$header-height
+  );
+
+  a {
+    width: spacing.$min-touch-target;
+    height: spacing.$min-touch-target;
+    font-size: $label-font-size;
+    font-weight: normal;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    &:first-child {
+      border-bottom: borders.$component-inner-divider;
+      border-top-left-radius: borders.$border-radius;
+      border-top-right-radius: borders.$border-radius;
+    }
+
+    &:last-child {
+      border-bottom-left-radius: borders.$border-radius;
+      border-bottom-right-radius: borders.$border-radius;
+    }
+  }
+}

@@ -2,6 +2,7 @@ $width: 250px;
 $top-offset: 5.8em;
 
 div.choices {
+  display: none;
   position: absolute;
   top: $top-offset;
   left: 3em;
