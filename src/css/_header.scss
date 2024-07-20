@@ -37,33 +37,32 @@ $header-height: calc(
 .header-icons {
   display: flex;
   margin-left: auto;
+}
+
+.header-icon-container {
+  height: spacing.$min-touch-target;
+  width: spacing.$min-touch-target;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
   cursor: pointer;
-
-  .header-about-icon-container,
-  .header-full-screen-icon-container {
-    height: spacing.$min-touch-target;
-    width: spacing.$min-touch-target;
-
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-  }
 
   svg {
     color: colors.$white;
     height: icons.$icon-size-md;
     width: icons.$icon-size-md;
   }
+}
 
-  .header-full-screen-icon-container {
-    // We don't show the icon on small screens because it takes up
-    // too much screen real estate, and it's not very useful to see
-    // the map in full-screen vs iframe if you're on such a small screen.
-    //
-    // iframe.ts also disables the icon when the site is not in an iframe.
-    display: none;
-    @include breakpoints.gt-xxs {
-      display: inline-flex;
-    }
+.header-full-screen-icon-container {
+  // We don't show the icon on small screens because it takes up
+  // too much screen real estate, and it's not very useful to see
+  // the map in full-screen vs iframe if you're on such a small screen.
+  //
+  // iframe.ts also disables the icon when the site is not in an iframe.
+  display: none;
+  @include breakpoints.gt-xxs {
+    display: inline-flex;
   }
 }
