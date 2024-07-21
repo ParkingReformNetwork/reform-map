@@ -38,18 +38,21 @@
     <header class="top-header">
       <h1 class="header-title">Parking Reform Map</h1>
       <nav class="header-icons">
-        <div class="header-icon-container header-about-icon-container">
-          <i class="fa-regular fa-circle-question" title="about the map"></i>
-        </div>
+        <button
+          class="header-icon-container header-about-icon-container"
+          title="about the map"
+        >
+          <i class="fa-regular fa-circle-question" aria-hidden="true"></i>
+          <span class="sr-only">toggle a popup describing the map</span>
+        </button>
         <a
           class="header-icon-container header-full-screen-icon-container"
           href="https://parkingreform.org/mandates-map"
+          title="view fullscreen"
           target="_blank"
         >
-          <i
-            class="fa-solid fa-up-right-from-square"
-            title="view fullscreen"
-          ></i>
+          <i class="fa-solid fa-up-right-from-square" aria-hidden="true"></i>
+          <span class="sr-only">view fullscreen (opens in new tab)</span>
         </a>
       </nav>
     </header>
