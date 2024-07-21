@@ -1,8 +1,9 @@
 @use "theme/colors-original";
+@use "theme/zindex";
 
 .about-popup {
   position: absolute;
-  z-index: 1001;
+  z-index: zindex.$about;
   background-color: colors-original.$white;
   border: 1px solid colors-original.$gray-neutral;
   width: 80%;

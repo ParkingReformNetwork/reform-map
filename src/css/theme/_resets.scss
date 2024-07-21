@@ -14,3 +14,12 @@ body {
   flex-direction: column;
   overflow: hidden;
 }
+
+button {
+  background-color: transparent;
+  border: none;
+  padding: 0;
+  font: inherit;
+  color: inherit;
+  cursor: pointer;
+}
