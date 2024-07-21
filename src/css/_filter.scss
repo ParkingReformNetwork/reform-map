@@ -1,4 +1,5 @@
 @use "theme/colors-original";
+@use "theme/zindex";
 
 $unchecked: "\2610";
 $checked: "\2611";
@@ -19,7 +20,7 @@ $top-offset: 5.6em;
   top: $top-offset + 0.2em;
   background-color: colors-original.$white;
   border: solid colors-original.$gray-light 1px;
-  z-index: 1000;
+  z-index: zindex.$filter-icon;
   left: 18.8em;
   padding: 0.5em;
   border-radius: 2px;
@@ -37,7 +38,7 @@ $top-offset: 5.6em;
   position: absolute;
   background-color: colors-original.$white;
   border: solid colors-original.$gray-light 1px;
-  z-index: 1200;
+  z-index: zindex.$filter-popup;
 
   display: flex;
   flex-direction: column;

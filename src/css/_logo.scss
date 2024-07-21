@@ -1,28 +1,26 @@
 @use "theme/breakpoints";
 @use "theme/colors";
 @use "theme/spacing";
+@use "theme/zindex";
 
 .prn-logo {
   position: absolute;
   left: spacing.$map-controls-margin-x;
-  z-index: 1002;
+  z-index: zindex.$logo;
 
   // `bottom` is set so high to avoid covering the attribution
   // on small screens, since it wraps to two lines.
-  bottom: 35px;
+  bottom: 30px;
   @include breakpoints.gt-xs {
-    bottom: 20px;
+    bottom: 15px;
   }
-  @include breakpoints.gt-md {
-    bottom: 10px;
+  @include breakpoints.gt-sm {
+    bottom: 0px;
   }
 
   width: 80px;
   @include breakpoints.gt-xxs {
-    width: 110px;
-  }
-  @include breakpoints.gt-sm {
-    width: 130px;
+    width: 100px;
   }
 
   img {

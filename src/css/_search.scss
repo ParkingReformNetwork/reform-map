@@ -1,3 +1,5 @@
+@use "theme/zindex";
+
 $width: 250px;
 $top-offset: 5.8em;
 
@@ -6,7 +8,7 @@ div.choices {
   top: $top-offset;
   left: 3em;
   max-width: $width;
-  z-index: 1000;
+  z-index: zindex.$search;
 
   @media only screen and (min-width: 48em) {
     top: $top-offset + 0.65em;
