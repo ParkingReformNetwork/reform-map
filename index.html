@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>Parking Reform Map</title>
+    <title>Parking mandates map | Parking Reform Network</title>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta
@@ -36,11 +36,13 @@
 
   <body>
     <header class="top-header">
-      <h1 class="header-title">Parking Reform Map</h1>
+      <h1 class="header-title">Parking Mandates Map</h1>
       <nav class="header-icons">
         <button
           class="header-icon-container header-about-icon-container"
           title="about the map"
+          aria-expanded="false"
+          aria-controls="about-popup"
         >
           <i class="fa-regular fa-circle-question" aria-hidden="true"></i>
           <span class="sr-only">toggle a popup describing the map</span>
@@ -57,55 +59,94 @@
       </nav>
     </header>
 
-    <div class="about-popup">
-      <div class="about-popup-close-icon-container">
-        <i
-          class="fa-regular fa-circle-xmark fa-lg"
+    <section
+      id="about-popup"
+      class="about-popup"
+      aria-label="about the map"
+      hidden
+    >
+      <header class="about-popup-header">
+        <h2>About the Parking Mandates Map</h2>
+        <button
+          class="about-popup-close-icon-container"
           title="close the about popup"
-        ></i>
+          aria-label="close the about popup"
+        >
+          <i class="fa-regular fa-circle-xmark" aria-hidden="true"></i>
+        </button>
+      </header>
+
+      <h3>Instructions</h3>
+      <p>
+        The map shows places that have enacted parking reforms. Click on one of
+        the red dots for additional information about that place's reforms.
+      </p>
+      <p>
+        Click the filter icon in the top-left to change which places are shown,
+        such as to filter by population size. By default, the map only shows
+        places with all parking requirements removed, which you can toggle with
+        the "No parking requirements" toggle in the filter options.
+      </p>
+
+      <div role="region" aria-labelledby="about-popup-links-heading">
+        <h3 id="about-popup-links-heading">Relevant links</h3>
+        <ul class="about-popup-links-list">
+          <li>
+            <a
+              class="external-link"
+              href="https://parkingreform.org/resources/mandates-map/"
+              >Methodology and key takeaways
+              <i aria-hidden="true" class="fa-solid fa-arrow-right"></i
+            ></a>
+          </li>
+          <li>
+            <a class="external-link" href="https://forms.gle/PaYXUP5J7YR1Zi6q6"
+              >Submit a report
+              <i aria-hidden="true" class="fa-solid fa-arrow-right"></i
+            ></a>
+          </li>
+          <li>
+            <a
+              class="external-link"
+              href="https://raw.githubusercontent.com/ParkingReformNetwork/mandates-map/main/map/trimmed_map_data.csv"
+              >Download the data set (CSV file)
+              <i aria-hidden="true" class="fa-solid fa-arrow-right"></i
+            ></a>
+          </li>
+          <li>
+            <a
+              class="external-link"
+              href="https://parkingreform.org/resources/parking-lot-map"
+              >PRN's Parking Lot Map
+              <i aria-hidden="true" class="fa-solid fa-arrow-right"></i
+            ></a>
+          </li>
+          <li>
+            <a class="external-link" href="https://parkingreform.org/support/"
+              >Support this project with a donation
+              <i aria-hidden="true" class="fa-solid fa-arrow-right"></i
+            ></a>
+          </li>
+        </ul>
       </div>
 
-      <h2>Map Information</h2>
-      <hr />
+      <h3>Acknowledgments</h3>
       <p>
-        Built and hosted by the
-        <a href="https://parkingreform.org" target="_blank"
-          >Parking Reform Network</a
-        >
-      </p>
-
-      <h3>Concept and Initial Report</h3>
-      <hr />
-      <p>
-        This project is based on "A Map of Cities That Got Rid of Parking
-        Minimums" initially published by
+        This project is built and hosted by the
+        <a href="https://parkingreform.org/support/">Parking Reform Network</a>.
+        It is based on "A Map of Cities That Got Rid of Parking Minimums",
+        initially published by
         <a href="https://strongtowns.org" target="_blank">StrongTowns</a> in
         November 2015. Reports have been submitted by many StrongTowns readers
-        over the years and reporters are, generally, credited on the city
-        detailed information pages.
+        and Parking Reform Network members over the years; reporters are
+        credited on the detailed information pages for each place.
       </p>
-
-      <ul>
-        <li>
-          <a href="https://parkingreform.org/mandates-map/acknowledgments.html"
-            >Acknowlegments</a
-          >
-        </li>
-        <li>
-          <a href="https://forms.gle/PaYXUP5J7YR1Zi6q6" target="_blank"
-            >Submit a report</a
-          >
-        </li>
-        <li>
-          <a href="https://parkingreform.org/mandates-map/faq.html">FAQ</a>
-        </li>
-      </ul>
-      <hr />
       <p>
-        <i class="fas fa-lightbulb"></i> Tip: Click the city name in the summary
-        box for a detailed report.
+        The source code is maintained at
+        <a href="https://github.com/ParkingReformNetwork/reform-map">GitHub</a>,
+        where you can see the code contributors under the "Insights" tab.
       </p>
-    </div>
+    </section>
 
     <div class="city-details-popup">
       <div class="city-details-popup-close-icon">
