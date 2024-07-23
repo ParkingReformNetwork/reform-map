@@ -1,7 +1,7 @@
 <!doctype html>
 <html lang="en">
   <head>
-    <title>Parking mandates map | Parking Reform Network</title>
+    <title>Parking Mandates Map | Parking Reform Network</title>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta
@@ -36,8 +36,27 @@
 
   <body>
     <header class="top-header">
-      <h1 class="header-title">Parking Mandates Map</h1>
-      <nav class="header-icons">
+      <nav class="header-control-icons">
+        <button
+          class="header-icon-container header-filter-icon-container"
+          title="open up filter options"
+          aria-expanded="false"
+          aria-controls="filter-popup"
+        >
+          <i class="fa-solid fa-sliders" aria-hidden="true"></i>
+          <span class="sr-only">open a popup to control filter options</span>
+        </button>
+        <button
+          class="header-icon-container header-search-icon-container"
+          title="search for a place"
+          aria-expanded="false"
+          aria-controls="search-popup"
+        >
+          <i class="fa-solid fa-magnifying-glass" aria-hidden="true"></i>
+          <span class="sr-only"
+            >open a popup to search for a specific place</span
+          >
+        </button>
         <button
           class="header-icon-container header-about-icon-container"
           title="about the map"
