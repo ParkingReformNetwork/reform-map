@@ -69,8 +69,13 @@
   justify-content: center;
 
   svg {
-    height: icons.$icon-size-lg;
-    width: icons.$icon-size-lg;
+    height: icons.$icon-size-md;
+    width: icons.$icon-size-md;
+
+    @include breakpoints.gt-sm {
+      height: icons.$icon-size-lg;
+      width: icons.$icon-size-lg;
+    }
   }
 }
 

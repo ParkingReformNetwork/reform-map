@@ -6,7 +6,7 @@ import setUpIcons from "./fontAwesome";
 import { createSearchElement, setUpSearch } from "./search";
 import maybeDisableFullScreenIcon from "./iframe";
 import setUpAbout from "./about";
-import setUpDetails from "./cityDetails";
+import setUpScorecard from "./scorecard";
 import { createPopulationSlider } from "./populationSlider";
 import { changeSelectedMarkers, setUpFiltersAndCounter } from "./filter";
 import setUpFilterPopup from "./filterPopup";
@@ -90,9 +90,8 @@ const setUpSite = async (): Promise<void> => {
   const searchElement = createSearchElement(Object.keys(data));
   const citiesToMarkers = createCityMarkers(data, markerGroup);
 
-  setUpDetails(markerGroup, data);
+  setUpScorecard(markerGroup, data);
   setUpSearch(markerGroup, citiesToMarkers, data, searchElement, sliders);
-  // Set up filter and counter
   setUpFiltersAndCounter(
     markerGroup,
     citiesToMarkers,
