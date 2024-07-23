@@ -5,8 +5,6 @@ import {
 } from "@fortawesome/free-regular-svg-icons";
 import {
   faUpRightFromSquare,
-  faCaretDown,
-  faLightbulb,
   faSliders,
   fas,
 } from "@fortawesome/free-solid-svg-icons";
@@ -16,8 +14,6 @@ const setUpIcons = (): void => {
   library.add(
     faCircleQuestion,
     faUpRightFromSquare,
-    faCaretDown,
-    faLightbulb,
     faCircleXmark,
     faSliders,
     fas

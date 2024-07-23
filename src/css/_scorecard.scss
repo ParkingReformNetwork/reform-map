@@ -1,0 +1,82 @@
+@use "theme/borders";
+@use "theme/breakpoints";
+@use "theme/colors";
+@use "theme/spacing";
+@use "theme/icons";
+@use "theme/typography";
+@use "theme/zindex";
+@use "header";
+
+.scorecard-container {
+  z-index: zindex.$scorecard;
+  position: fixed;
+  right: spacing.$map-controls-margin-x;
+  top: calc(header.$header-height + spacing.$map-controls-margin-top);
+
+  max-height: min(500px, 75vh);
+  overflow-y: auto;
+
+  padding: spacing.$container-edge-spacing;
+  width: 280px;
+  @include breakpoints.gt-xxs {
+    width: 320px;
+  }
+  @include breakpoints.gt-xs {
+    width: 360px;
+  }
+
+  background-color: colors.$white;
+  border: borders.$component-border;
+  border-radius: borders.$border-radius;
+  color: colors.$black;
+
+  p,
+  li {
+    font-size: typography.$font-size-base;
+  }
+
+  p {
+    margin: 0;
+  }
+
+  ul {
+    margin: spacing.$element-gap 0;
+  }
+}
+
+.scorecard-header {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+
+.scorecard-title {
+  flex: 1;
+  margin: 0;
+  line-height: 1.1;
+
+  font-weight: normal;
+  font-size: typography.$font-size-xl;
+}
+
+.scorecard-close-icon-container {
+  cursor: pointer;
+  height: spacing.$min-touch-target;
+  width: spacing.$min-touch-target;
+  margin-left: auto;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  svg {
+    height: icons.$icon-size-md;
+    width: icons.$icon-size-md;
+
+    @include breakpoints.gt-sm {
+      height: icons.$icon-size-lg;
+      width: icons.$icon-size-lg;
+    }
+  }
+}

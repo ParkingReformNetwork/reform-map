@@ -4,7 +4,6 @@
 
 @use "about";
 @use "attribution";
-@use "city-details";
 @use "counter";
 @use "filter";
 @use "header";
@@ -12,6 +11,7 @@
 @use "map";
 @use "no-requirements-toggle";
 @use "population-slider";
+@use "scorecard";
 @use "search";
 
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap");

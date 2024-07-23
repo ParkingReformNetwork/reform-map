@@ -32,4 +32,13 @@ ul,
 ol {
   margin-top: 0;
   margin-bottom: 10px;
+  padding: 0;
+  padding-inline-start: 20px; // Default is 40px
+}
+
+p,
+li,
+dd,
+a {
+  line-height: 1.3;
 }
