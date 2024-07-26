@@ -86,3 +86,97 @@ To instead manually update the data, first run `npm install`. Then, run either:
 ## Update latitude and longitude
 
 Update https://docs.google.com/spreadsheets/d/15L8hwNEi13Bov81EulgC8Xwt9_wCgofwcH49xHoNlKI/edit#gid=0. Our nightly cron job will open a PR to sync the updates.
+
+## State diagram
+
+```mermaid
+graph TD
+    subgraph Nodes
+        A[about icon]
+        B[about popup]
+        C[about popup close icon]
+        D[click outside popup]
+
+        E[zoom buttons]
+        F[zoom level]
+
+        G[map position]
+        H[user scrolling]
+
+        K[filter popup]
+        L[filter icon]
+        M[click outside popup]
+
+        N[search popup]
+        O[search icon]
+        P[click outside popup]
+
+        Q[table entries]
+
+        R[table sorting]
+        S[user interaction]
+
+        T[counter text]
+        AE[AND]
+
+        U[filter value]
+        V[user interaction]
+
+        X[search value]
+        Y[user input]
+
+        Z[view icon]
+        AA[view: map-table]
+
+        AB[selected cities]
+        AC[AND]
+
+        AD[shown cities]
+
+        AF[scorecard]
+        AG[clicking city dot]
+        AH[clicking outside popup]
+    end
+
+    %% Relationships
+    Z -->|toggles| AA
+
+    S -->|controls| R
+
+    A -->|toggles| B
+    C -->|closes| B
+    D -->|closes| B
+
+    L -->|toggles| K
+    M -->|closes| K
+
+    O -->|toggles| N
+    P -->|closes| N
+
+    E -->|controls| F
+    X -->|resets| F
+
+    H -->|controls| G
+    X -->|resets| G
+
+    Y -->|controls| X
+
+    V -->|controls| U
+
+    X --> AC
+    U --> AC
+    AC -->|controls| AB
+
+    AB -->|controls| Q
+    AB -->|controls| AD
+
+    X --> AE
+    U --> AE
+    AB --> AE
+    AE -->|controls| T
+
+    AG -->|opens up| AF
+    AH -->|closes| AF
+    X -->|opens up| AF
+    AF -->|resets on close| X
+```
