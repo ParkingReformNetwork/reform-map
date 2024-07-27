@@ -1,10 +1,8 @@
-/* global document, window */
-
 import type Choices from "choices.js";
 import type { CircleMarker, FeatureGroup } from "leaflet";
 import type { CityId, CityEntry, PopulationSliders } from "./types";
 
-const POPULATION_INTERVALS: Array<[string, number]> = [
+export const POPULATION_INTERVALS: Array<[string, number]> = [
   ["100", 100],
   ["5k", 5000],
   ["25k", 25000],
@@ -22,12 +20,12 @@ const POPULATION_INTERVALS: Array<[string, number]> = [
  * Note that search takes priority. If certain cities are selected via
  * search, they should be shown regardless of the filters.
  */
-const shouldBeRendered = (
+function shouldBeRendered(
   cityState: CityId,
   entry: CityEntry,
   searchElement: Choices,
   sliders: PopulationSliders
-): boolean => {
+): boolean {
   const searchChosen = new Set(searchElement.getValue(true) as string[]);
   if (searchChosen.size > 0) {
     return searchChosen.has(cityState);
@@ -75,7 +73,7 @@ const shouldBeRendered = (
     isNoRequirementsToggle &&
     isPopulation
   );
-};
+}
 
 /**
  * Helper function to iterate over every city and either remove it or add it,
@@ -84,13 +82,13 @@ const shouldBeRendered = (
  * This should be used with an event listener for each filter and search, whenever
  * their values change.
  */
-const changeSelectedMarkers = (
+export function changeSelectedMarkers(
   markerGroup: FeatureGroup,
   citiesToMarkers: Record<CityId, CircleMarker>,
   data: Record<CityId, CityEntry>,
   searchElement: Choices,
   sliders: PopulationSliders
-) => {
+) {
   let cityCount = 0;
   Object.entries(citiesToMarkers).forEach(([cityState, marker]) => {
     if (shouldBeRendered(cityState, data[cityState], searchElement, sliders)) {
@@ -104,18 +102,18 @@ const changeSelectedMarkers = (
 
   // Update counter
   document.getElementById("counter-numerator").innerText = cityCount.toString();
-};
+}
 
 /**
  * Set up all filters and counter update.
  */
-const setUpFiltersAndCounter = (
+export function setUpFiltersAndCounter(
   markerGroup: FeatureGroup,
   citiesToMarkers: Record<CityId, CircleMarker>,
   data: Record<CityId, CityEntry>,
   searchElement: Choices,
   sliders: PopulationSliders
-): void => {
+): void {
   // Set counter denominator
   const totalCities = Object.keys(citiesToMarkers).length;
   document.getElementById("counter-denominator").innerText =
@@ -134,6 +132,4 @@ const setUpFiltersAndCounter = (
         );
       });
     });
-};
-
-export { changeSelectedMarkers, POPULATION_INTERVALS, setUpFiltersAndCounter };
+}

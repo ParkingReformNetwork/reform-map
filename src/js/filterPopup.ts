@@ -4,13 +4,13 @@ import type Choices from "choices.js";
 import type { FeatureGroup, CircleMarker } from "leaflet";
 import type { CityId, CityEntry, PopulationSliders } from "./types";
 
-const setUpFilterPopup = (
+export default function setUpFilterPopup(
   markerGroup: FeatureGroup,
   citiesToMarkers: Record<CityId, CircleMarker>,
   data: Record<CityId, CityEntry>,
   searchElement: Choices,
   sliders: PopulationSliders
-) => {
+) {
   const popupElement = document.querySelector(
     ".filters-popup-window"
   ) as HTMLElement;
@@ -49,6 +49,4 @@ const setUpFilterPopup = (
       openFilter.classList.toggle("active");
     }
   });
-};
-
-export default setUpFilterPopup;
+}

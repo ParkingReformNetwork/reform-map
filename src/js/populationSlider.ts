@@ -7,11 +7,11 @@ import type { CityId, CityEntry } from "./types";
 const THUMBSIZE = 14;
 const RANGE_MAX = POPULATION_INTERVALS.length - 1;
 
-const draw = (
+function draw(
   sliders: PopulationSliders,
   leftIndex: number,
   rightIndex: number
-): void => {
+): void {
   // We dynamically change the sliders so that they cannot extend past each other.
   const inBetween = (rightIndex - leftIndex) / 2;
   const newLeftMax = leftIndex + inBetween;
@@ -39,9 +39,9 @@ const draw = (
   };
   updateLabel(".population-slider-label-min", leftIndex);
   updateLabel(".population-slider-label-max", rightIndex);
-};
+}
 
-const createPopulationSlider = (): PopulationSliders => {
+export function createPopulationSlider(): PopulationSliders {
   const sliders = new PopulationSliders(
     document.querySelector(".population-slider-controls"),
     document.querySelector(".population-slider-left"),
@@ -60,15 +60,15 @@ const createPopulationSlider = (): PopulationSliders => {
   });
 
   return sliders;
-};
+}
 
-const setUpPopulationSlider = (
+export function setUpPopulationSlider(
   markerGroup: FeatureGroup,
   citiesToMarkers: Record<CityId, CircleMarker>,
   data: Record<CityId, CityEntry>,
   searchElement: Choices,
   sliders: PopulationSliders
-): void => {
+): void {
   draw(sliders, 0, RANGE_MAX);
   const onChange = (): void => {
     const [leftIndex, rightIndex] = sliders.getCurrentIndexes();
@@ -86,6 +86,4 @@ const setUpPopulationSlider = (
 
   sliders.left.addEventListener("input", onChange);
   sliders.right.addEventListener("input", onChange);
-};
-
-export { createPopulationSlider, setUpPopulationSlider };
+}
