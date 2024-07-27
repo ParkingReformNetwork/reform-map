@@ -1,7 +1,15 @@
-import { initPopulationSlider } from "./populationSlider";
 import type Choices from "choices.js";
 import type { FeatureGroup, CircleMarker } from "leaflet";
+
+import { initPopulationSlider } from "./populationSlider";
+import Observable from "./Observable";
 import type { CityId, CityEntry, PopulationSliders } from "./types";
+
+function updateFilterPopupUI(isVisible: boolean): void {
+  const popup = document.querySelector<HTMLElement>(".filters-popup-window");
+  if (!popup) return;
+  popup.style.display = isVisible ? "block" : "none";
+}
 
 export default function initFilterPopup(
   markerGroup: FeatureGroup,
@@ -10,21 +18,14 @@ export default function initFilterPopup(
   searchElement: Choices,
   sliders: PopulationSliders,
 ) {
-  const popupElement = document.querySelector(
-    ".filters-popup-window",
-  ) as HTMLElement;
-  const openFilter = document.querySelector(".open-filter") as HTMLElement;
+  const isVisible = new Observable<boolean>(false);
+  isVisible.subscribe(updateFilterPopupUI);
 
-  openFilter.addEventListener("click", () => {
-    popupElement.style.display =
-      popupElement.style.display !== "block" ? "block" : "none";
-  });
-
-  openFilter.addEventListener(
-    "click",
-    () => {
-      // This happens here because the filter popup must be displayed for
-      // the offsetWidth calculation to work properly.
+  // We init the population slider on the first slide because it requires the popup
+  // to be displayed to compute offsetWidth.
+  let hasInitedPopulation = false;
+  isVisible.subscribe((visible) => {
+    if (!hasInitedPopulation && visible) {
       initPopulationSlider(
         markerGroup,
         citiesToMarkers,
@@ -32,20 +33,28 @@ export default function initFilterPopup(
         searchElement,
         sliders,
       );
-    },
-    { once: true },
-  );
-
-  // closes window on clicks outside the info popup
-  window.addEventListener("click", (event) => {
-    if (
-      event.target instanceof Node &&
-      !openFilter.contains(event.target) &&
-      popupElement.style.display === "block" &&
-      !popupElement.contains(event.target)
-    ) {
-      popupElement.style.display = "none";
-      openFilter.classList.toggle("active");
+      hasInitedPopulation = true;
     }
   });
+
+  const popup = document.querySelector(".filters-popup-window");
+  const openFilter = document.querySelector(".open-filter");
+
+  openFilter.addEventListener("click", () => {
+    isVisible.setValue(!isVisible.getValue());
+  });
+
+  // Clicks outside the popup close it.
+  window.addEventListener("click", (event) => {
+    if (
+      isVisible.getValue() === true &&
+      event.target instanceof Element &&
+      !openFilter?.contains(event.target) &&
+      !popup?.contains(event.target)
+    ) {
+      isVisible.setValue(false);
+    }
+  });
+
+  isVisible.initialize();
 }

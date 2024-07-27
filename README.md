@@ -8,7 +8,7 @@ We do not use frameworks like React or Svelte to keep things simple. However, we
 - Sass and the folder `src/css/theme`, which should stay aligned with https://github.com/ParkingReformNetwork/parking-lot-map
 - Reactive state management - see [State diagram](#state-diagram)
 
-The main files are `index.html`, `src/js/main.ts`, and `data/*.csv`. `main.ts` will load the CSV data to load all our data.
+The main files are `index.html`, `src/js/main.ts`, and `map/*.csv`. `main.ts` will load the CSV data to load all our data.
 
 ## Developing the map app
 
