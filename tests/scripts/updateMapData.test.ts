@@ -38,7 +38,7 @@ test.describe("magnitudeToHighestOrAllUses", () => {
   for (const [magnitudeString, landusesString, expected] of testCases) {
     test(`returns the highest or all uses magnitude for ${magnitudeString} and ${landusesString}`, () => {
       expect(magnitudeToHighestOrAllUses(magnitudeString, landusesString)).toBe(
-        expected
+        expected,
       );
     });
   }

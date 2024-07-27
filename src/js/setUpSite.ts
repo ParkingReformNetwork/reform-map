@@ -21,7 +21,7 @@ const BASE_LAYER = new TileLayer(
     subdomains: "abcd",
     minZoom: 0,
     maxZoom: 10,
-  }
+  },
 );
 
 function createMap(): Map {
@@ -34,7 +34,7 @@ function createMap(): Map {
   // screen is too small so we center around the eastern US.
   map.setView([38.0406, -84.5037], 4);
   map.attributionControl.setPrefix(
-    '<a href="https://parkingreform.org/support/">Parking Reform Network</a>'
+    '<a href="https://parkingreform.org/support/">Parking Reform Network</a>',
   );
   return map;
 }
@@ -57,7 +57,7 @@ async function readData(): Promise<Record<CityId, CityEntry>> {
  */
 function createCityMarkers(
   data: Record<CityId, CityEntry>,
-  markerGroup: FeatureGroup
+  markerGroup: FeatureGroup,
 ): Record<string, CircleMarker> {
   return Object.entries(data).reduce((acc, [cityState, entry]) => {
     // @ts-ignore: passing strings to CircleMarker for lat/lng is valid, and
@@ -98,7 +98,7 @@ export default async function setUpSite(): Promise<void> {
     citiesToMarkers,
     data,
     searchElement,
-    sliders
+    sliders,
   );
   setUpFilterPopup(markerGroup, citiesToMarkers, data, searchElement, sliders);
 
@@ -109,7 +109,7 @@ export default async function setUpSite(): Promise<void> {
     citiesToMarkers,
     data,
     searchElement,
-    sliders
+    sliders,
   );
   markerGroup.addTo(map);
 }

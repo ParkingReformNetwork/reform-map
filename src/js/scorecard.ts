@@ -5,7 +5,7 @@ import type { CityEntry, CityId } from "./types";
 
 function setUpScorecard(
   markerGroup: FeatureGroup,
-  data: Record<CityId, CityEntry>
+  data: Record<CityId, CityEntry>,
 ): void {
   const scorecardContainer = document.querySelector("#scorecard-container");
   if (!(scorecardContainer instanceof HTMLElement)) return;
@@ -15,7 +15,7 @@ function setUpScorecard(
     const cityState = e.sourceTarget.getTooltip().getContent();
     scorecardContainer.innerHTML = generateScorecard(
       data[cityState],
-      cityState
+      cityState,
     );
     scorecardContainer.hidden = false;
   });
@@ -39,7 +39,7 @@ function setUpScorecard(
     const clicked = event.target;
     if (!(clicked instanceof Element)) return;
     const closeIconContainer = clicked.closest(
-      ".scorecard-close-icon-container"
+      ".scorecard-close-icon-container",
     );
     if (!(closeIconContainer instanceof HTMLButtonElement)) return;
     scorecardContainer.hidden = true;

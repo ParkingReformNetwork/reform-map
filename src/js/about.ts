@@ -1,7 +1,7 @@
 export default function setUpAbout() {
   const aboutPopup = document.querySelector(".about-popup");
   const aboutHeaderIcon = document.querySelector(
-    ".header-about-icon-container"
+    ".header-about-icon-container",
   );
   const closeIcon = document.querySelector(".about-popup-close-icon-container");
   if (

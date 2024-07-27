@@ -37,7 +37,7 @@ const fetchData = async () => {
     "https://area120tables.googleapis.com/link/aUJhBkwwY9j1NpD-Enh4WU/export?key=aasll5u2e8Xf-jxNNGlk3vbnOYcDsJn-JbgeI3z6IkPk8z5CxpWOLEp5EXd8iMF_bc",
     {
       headers: { "User-Agent": "prn-update-city-details" },
-    }
+    },
   );
   const rawData = await response.text();
   return Papa.parse(rawData, { header: true }).data;
@@ -45,16 +45,16 @@ const fetchData = async () => {
 
 const needsUpdate = (cityEntries, globalLastUpdated) => {
   const lastUpdatedDates = cityEntries.map((row) =>
-    parseDatetime(row["Last updated"])
+    parseDatetime(row["Last updated"]),
   );
   const reportLastUpdated = parseDatetime(
-    cityEntries[0]["Report Last updated"]
+    cityEntries[0]["Report Last updated"],
   );
   const cityLastUpdated = parseDatetime(cityEntries[0]["City Last Updated"]);
   const maxLastUpdated = DateTime.max(
     ...lastUpdatedDates,
     reportLastUpdated,
-    cityLastUpdated
+    cityLastUpdated,
   );
   return maxLastUpdated >= globalLastUpdated;
 };
@@ -94,7 +94,7 @@ const setupAttachmentDownloads = async (cityEntries) => {
       const buffer = await response.arrayBuffer();
       await fs.writeFile(
         `city_detail/${attachment.outputPath}`,
-        Buffer.from(buffer)
+        Buffer.from(buffer),
       );
     }
   }
@@ -137,13 +137,13 @@ const processCity = async (cityState, entries, template, globalLastUpdated) => {
   await setupAttachmentDownloads(entries);
   await fs.writeFile(
     `city_detail/${cityStateNoSpace}.html`,
-    renderHandlebars(entries, template)
+    renderHandlebars(entries, template),
   );
 };
 
 const updateLastUpdatedFile = async () => {
   console.log(
-    `Updating ${GLOBAL_LAST_UPDATED_FP} with today's date and time zone`
+    `Updating ${GLOBAL_LAST_UPDATED_FP} with today's date and time zone`,
   );
   const currentDatetime = DateTime.local().setZone("local");
   const formatted = currentDatetime.toFormat(TIME_FORMAT);

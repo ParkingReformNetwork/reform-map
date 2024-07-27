@@ -26,7 +26,7 @@ export function setUpSearch(
   citiesToMarkers: Record<CityId, CircleMarker>,
   data: Record<CityId, CityEntry>,
   searchElement: Choices,
-  sliders: PopulationSliders
+  sliders: PopulationSliders,
 ): void {
   document
     .querySelector(".city-search")
@@ -36,7 +36,7 @@ export function setUpSearch(
         citiesToMarkers,
         data,
         searchElement,
-        sliders
-      )
+        sliders,
+      ),
     );
 }
