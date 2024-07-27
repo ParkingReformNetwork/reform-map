@@ -3,10 +3,10 @@
 import type { FeatureGroup } from "leaflet";
 import type { CityEntry, CityId } from "./types";
 
-const setUpScorecard = (
+function setUpScorecard(
   markerGroup: FeatureGroup,
   data: Record<CityId, CityEntry>
-): void => {
+): void {
   const scorecardContainer = document.querySelector("#scorecard-container");
   if (!(scorecardContainer instanceof HTMLElement)) return;
 
@@ -44,9 +44,9 @@ const setUpScorecard = (
     if (!(closeIconContainer instanceof HTMLButtonElement)) return;
     scorecardContainer.hidden = true;
   });
-};
+}
 
-const generateScorecard = (entry: CityEntry, cityState: CityId): string => {
+function generateScorecard(entry: CityEntry, cityState: CityId): string {
   return `
     <header class="scorecard-header">
       <h2 class="scorecard-title">${cityState}</h2>
@@ -66,6 +66,6 @@ const generateScorecard = (entry: CityEntry, cityState: CityId): string => {
     </ul>
     <p>${entry["report_summary"]}</p>
     `;
-};
+}
 
 export default setUpScorecard;

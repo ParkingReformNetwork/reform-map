@@ -1,6 +1,4 @@
-/* global document, window */
-
-const setUpAbout = () => {
+export default function setUpAbout() {
   const aboutPopup = document.querySelector(".about-popup");
   const aboutHeaderIcon = document.querySelector(
     ".header-about-icon-container"
@@ -46,6 +44,4 @@ const setUpAbout = () => {
   closeIcon.addEventListener("click", () => {
     closePopup();
   });
-};
-
-export default setUpAbout;
+}

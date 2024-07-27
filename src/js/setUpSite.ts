@@ -24,7 +24,7 @@ const BASE_LAYER = new TileLayer(
   }
 );
 
-const createMap = (): Map => {
+function createMap(): Map {
   const map = new Map("map", {
     layers: [BASE_LAYER],
     worldCopyJump: true,
@@ -37,12 +37,12 @@ const createMap = (): Map => {
     '<a href="https://parkingreform.org/support/">Parking Reform Network</a>'
   );
   return map;
-};
+}
 
 /**
  * Read the CSV and return an object with `City, State` as the key and the original entry as the value.
  */
-const readData = async (): Promise<Record<CityId, CityEntry>> => {
+async function readData(): Promise<Record<CityId, CityEntry>> {
   // @ts-ignore
   const data = await import("../../map/tidied_map_data.csv");
   return data.reduce((acc: Record<string, CityEntry>, entry: CityEntry) => {
@@ -50,16 +50,16 @@ const readData = async (): Promise<Record<CityId, CityEntry>> => {
     acc[cityState] = entry;
     return acc;
   }, {});
-};
+}
 
 /**
  * Returns an object mapping cityState to its CircleMarker.
  */
-const createCityMarkers = (
+function createCityMarkers(
   data: Record<CityId, CityEntry>,
   markerGroup: FeatureGroup
-): Record<string, CircleMarker> =>
-  Object.entries(data).reduce((acc, [cityState, entry]) => {
+): Record<string, CircleMarker> {
+  return Object.entries(data).reduce((acc, [cityState, entry]) => {
     // @ts-ignore: passing strings to CircleMarker for lat/lng is valid, and
     // parsing to ints would lose precision.
     const marker = new CircleMarker([entry.lat, entry.long], {
@@ -76,8 +76,9 @@ const createCityMarkers = (
     marker.addTo(markerGroup);
     return acc;
   }, {});
+}
 
-const setUpSite = async (): Promise<void> => {
+export default async function setUpSite(): Promise<void> {
   setUpIcons();
   maybeDisableFullScreenIcon();
   setUpAbout();
@@ -111,6 +112,4 @@ const setUpSite = async (): Promise<void> => {
     sliders
   );
   markerGroup.addTo(map);
-};
-
-export default setUpSite;
+}

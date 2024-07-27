@@ -5,28 +5,29 @@ import "choices.js/public/assets/styles/choices.css";
 import type { CityId, CityEntry, PopulationSliders } from "./types";
 import { changeSelectedMarkers } from "./filter";
 
-const createSearchElement = (cityStates: Array<CityId>): Choices => {
+export function createSearchElement(cityStates: Array<CityId>): Choices {
   const cities = cityStates.map((cityState) => ({
     value: cityState,
     label: cityState,
   }));
   const element = document.querySelector(".city-search");
   return new Choices(element, {
+    position: "bottom",
     choices: cities,
     placeholderValue: "City search",
     removeItemButton: true,
     allowHTML: false,
     itemSelectText: "Select",
   });
-};
+}
 
-const setUpSearch = (
+export function setUpSearch(
   markerGroup: FeatureGroup,
   citiesToMarkers: Record<CityId, CircleMarker>,
   data: Record<CityId, CityEntry>,
   searchElement: Choices,
   sliders: PopulationSliders
-): void => {
+): void {
   document
     .querySelector(".city-search")
     .addEventListener("change", () =>
@@ -38,6 +39,4 @@ const setUpSearch = (
         sliders
       )
     );
-};
-
-export { createSearchElement, setUpSearch };
+}
