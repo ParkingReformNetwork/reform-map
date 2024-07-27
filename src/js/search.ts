@@ -21,7 +21,7 @@ export function createSearchElement(cityStates: Array<CityId>): Choices {
   });
 }
 
-export function setUpSearch(
+export function initSearch(
   markerGroup: FeatureGroup,
   citiesToMarkers: Record<CityId, CircleMarker>,
   data: Record<CityId, CityEntry>,

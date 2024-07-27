@@ -3,7 +3,7 @@
 import type { FeatureGroup } from "leaflet";
 import type { CityEntry, CityId } from "./types";
 
-function setUpScorecard(
+function initScorecard(
   markerGroup: FeatureGroup,
   data: Record<CityId, CityEntry>,
 ): void {
@@ -68,4 +68,4 @@ function generateScorecard(entry: CityEntry, cityState: CityId): string {
     `;
 }
 
-export default setUpScorecard;
+export default initScorecard;

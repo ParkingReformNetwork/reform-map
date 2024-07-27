@@ -63,7 +63,7 @@ export function createPopulationSlider(): PopulationSliders {
   return sliders;
 }
 
-export function setUpPopulationSlider(
+export function initPopulationSlider(
   markerGroup: FeatureGroup,
   citiesToMarkers: Record<CityId, CircleMarker>,
   data: Record<CityId, CityEntry>,

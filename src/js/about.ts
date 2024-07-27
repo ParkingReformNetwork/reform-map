@@ -1,4 +1,4 @@
-export default function setUpAbout() {
+export default function initAbout() {
   const aboutPopup = document.querySelector(".about-popup");
   const aboutHeaderIcon = document.querySelector(
     ".header-about-icon-container",
