@@ -10,7 +10,7 @@ const RANGE_MAX = POPULATION_INTERVALS.length - 1;
 function draw(
   sliders: PopulationSliders,
   leftIndex: number,
-  rightIndex: number
+  rightIndex: number,
 ): void {
   // We dynamically change the sliders so that they cannot extend past each other.
   const inBetween = (rightIndex - leftIndex) / 2;
@@ -23,7 +23,8 @@ function draw(
   sliders.right.setAttribute("value", rightIndex.toString());
 
   const intervalSizePx = Math.round(
-    (sliders.controls.offsetWidth + THUMBSIZE / 2) / POPULATION_INTERVALS.length
+    (sliders.controls.offsetWidth + THUMBSIZE / 2) /
+      POPULATION_INTERVALS.length,
   );
   const leftWidth = newLeftMax * intervalSizePx;
   const rightWidth = (RANGE_MAX - newRightMin) * intervalSizePx;
@@ -45,7 +46,7 @@ export function createPopulationSlider(): PopulationSliders {
   const sliders = new PopulationSliders(
     document.querySelector(".population-slider-controls"),
     document.querySelector(".population-slider-left"),
-    document.querySelector(".population-slider-right")
+    document.querySelector(".population-slider-right"),
   );
 
   sliders.left.setAttribute("max", RANGE_MAX.toString());
@@ -67,7 +68,7 @@ export function setUpPopulationSlider(
   citiesToMarkers: Record<CityId, CircleMarker>,
   data: Record<CityId, CityEntry>,
   searchElement: Choices,
-  sliders: PopulationSliders
+  sliders: PopulationSliders,
 ): void {
   draw(sliders, 0, RANGE_MAX);
   const onChange = (): void => {
@@ -80,7 +81,7 @@ export function setUpPopulationSlider(
       citiesToMarkers,
       data,
       searchElement,
-      sliders
+      sliders,
     );
   };
 

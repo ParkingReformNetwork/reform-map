@@ -24,7 +24,7 @@ function shouldBeRendered(
   cityState: CityId,
   entry: CityEntry,
   searchElement: Choices,
-  sliders: PopulationSliders
+  sliders: PopulationSliders,
 ): boolean {
   const searchChosen = new Set(searchElement.getValue(true) as string[]);
   if (searchChosen.size > 0) {
@@ -38,12 +38,12 @@ function shouldBeRendered(
       .map((x: string) => x.trim());
     const selectedValues = new Set(
       Array.from(
-        document.querySelectorAll(`input[type=checkbox][name=${selector}]`)
+        document.querySelectorAll(`input[type=checkbox][name=${selector}]`),
       )
         .filter((option: HTMLInputElement) => option.checked)
         .map((option: HTMLInputElement) =>
-          option.parentElement.textContent.trim()
-        )
+          option.parentElement.textContent.trim(),
+        ),
     );
     return cityValues.some((val) => selectedValues.has(val));
   };
@@ -54,7 +54,7 @@ function shouldBeRendered(
   const isStage = matchesSelected("implementation-stage", "report_status");
 
   const noRequirementsToggleElement = document.getElementById(
-    "no-requirements-toggle"
+    "no-requirements-toggle",
   ) as HTMLInputElement;
   const isNoRequirementsToggle =
     !noRequirementsToggleElement.checked || entry.is_no_mandate_city === "1";
@@ -87,7 +87,7 @@ export function changeSelectedMarkers(
   citiesToMarkers: Record<CityId, CircleMarker>,
   data: Record<CityId, CityEntry>,
   searchElement: Choices,
-  sliders: PopulationSliders
+  sliders: PopulationSliders,
 ) {
   let cityCount = 0;
   Object.entries(citiesToMarkers).forEach(([cityState, marker]) => {
@@ -112,7 +112,7 @@ export function setUpFiltersAndCounter(
   citiesToMarkers: Record<CityId, CircleMarker>,
   data: Record<CityId, CityEntry>,
   searchElement: Choices,
-  sliders: PopulationSliders
+  sliders: PopulationSliders,
 ): void {
   // Set counter denominator
   const totalCities = Object.keys(citiesToMarkers).length;
@@ -128,7 +128,7 @@ export function setUpFiltersAndCounter(
           citiesToMarkers,
           data,
           searchElement,
-          sliders
+          sliders,
         );
       });
     });

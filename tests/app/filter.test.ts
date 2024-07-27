@@ -65,12 +65,12 @@ const TESTS: EdgeCase[] = [
 const selectIfSet = async (
   page: Page,
   selector: string,
-  values?: string[]
+  values?: string[],
 ): Promise<void> => {
   if (values !== undefined) {
     // Reset filters by unchecking all
     const checkboxesUncheck = await page.$$(
-      `input[type="checkbox"][name="${selector}"]`
+      `input[type="checkbox"][name="${selector}"]`,
     );
     // Unable to use Promise.all() because unchecking needs to be sequential
     await checkboxesUncheck.reduce(async (previousPromise, checkbox) => {
@@ -83,7 +83,7 @@ const selectIfSet = async (
         const parentElement = await page.$(`label:has-text("${value}")`);
         const checkbox = await parentElement.$('input[type="checkbox"]');
         return checkbox;
-      })
+      }),
     );
     await checkboxesCheck.reduce(async (previousPromise, checkbox) => {
       await previousPromise;

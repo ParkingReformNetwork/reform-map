@@ -50,7 +50,7 @@ export class PopulationSliders {
   constructor(
     controls: HTMLDivElement,
     left: HTMLInputElement,
-    right: HTMLInputElement
+    right: HTMLInputElement,
   ) {
     this.controls = controls;
     this.left = left;

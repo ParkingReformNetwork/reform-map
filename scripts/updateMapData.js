@@ -108,7 +108,7 @@ const populationToBin = (population) => {
 
 const readCityCsv = async () => {
   const response = await fetch(
-    "https://area120tables.googleapis.com/link/aR_AWTAZ6WF8_ZB3HgfOvN/export?key=8-SifuDc4Fg7purFrntOa7bjE0ikjGAy28t36wUBIOJx9vFGZuSR89N1PkSTFXpOk6"
+    "https://area120tables.googleapis.com/link/aR_AWTAZ6WF8_ZB3HgfOvN/export?key=8-SifuDc4Fg7purFrntOa7bjE0ikjGAy28t36wUBIOJx9vFGZuSR89N1PkSTFXpOk6",
   );
   const csvText = await response.text();
   // Uncomment this to read the file locally. Save the file to `city.csv` in the repo root.
@@ -140,7 +140,7 @@ const readCityCsv = async () => {
 
 const readReportCsv = async () => {
   const response = await fetch(
-    "https://area120tables.googleapis.com/link/bAc5xhhLJ2q4jYYGjaq_24/export?key=8_S1APcQHGN9zfTXEMz_Gz8sel3FCo3RUfEV4f-PBOqE8zy3vG3FpCQcSXQjRDXOqZ"
+    "https://area120tables.googleapis.com/link/bAc5xhhLJ2q4jYYGjaq_24/export?key=8_S1APcQHGN9zfTXEMz_Gz8sel3FCo3RUfEV4f-PBOqE8zy3vG3FpCQcSXQjRDXOqZ",
   );
   const csvText = await response.text();
   // Uncomment this to read the file locally. Save the file to `report.csv` in the repo root.
@@ -169,12 +169,12 @@ const readReportCsv = async () => {
       is_magnitude_citywide: checkIncludes(row.Magnitude, "citywide"),
       is_magnitude_citycenter: checkIncludes(
         row.Magnitude,
-        "city center/business district"
+        "city center/business district",
       ),
       is_magnitude_transit: checkIncludes(row.Magnitude, "transit oriented"),
       is_magnitude_mainstreet: checkIncludes(
         row.Magnitude,
-        "main street/special"
+        "main street/special",
       ),
       is_type_eliminated: checkIncludes(row.Type, "eliminate parking minimums"),
       is_type_reduced: checkIncludes(row.Type, "reduce parking minimums"),
@@ -184,7 +184,7 @@ const readReportCsv = async () => {
       is_uses_commercial: checkIncludes(row.Uses, "commercial"),
       is_uses_lowdensity: checkIncludes(
         row.Uses,
-        "low density (sf) residential"
+        "low density (sf) residential",
       ),
       is_uses_multifamily: checkIncludes(row.Uses, "multi-family residential"),
       is_no_mandate_city: checkIncludes(row.Highlights, "no mandates"),
@@ -214,7 +214,7 @@ const readOldReportCsv = async () => {
       mappedData.map((item) => [
         `${item.city}_${item.state}_${item.country}`,
         item,
-      ])
+      ]),
     ).values(),
   ];
 };
@@ -231,7 +231,7 @@ const leftJoin = (baseRows, newRows) =>
       (newRow) =>
         newRow.city === baseRow.city &&
         newRow.state === baseRow.state &&
-        newRow.country === baseRow.country
+        newRow.country === baseRow.country,
     );
 
     return matchingRows.length > 0
@@ -308,7 +308,7 @@ const postProcessResult = (reportData) =>
       magnitude_encoded: magnitudeToHighest(row.report_magnitude),
       border_encoded: magnitudeToHighestOrAllUses(
         row.report_magnitude,
-        row.land_uses
+        row.land_uses,
       ),
       land_use_encoded: landUseToString(row.land_uses),
       population_encoded: populationToBin(row.population),
@@ -347,9 +347,9 @@ const writeTrimmedReport = async (finalReport) => {
             key.includes("is_type") ||
             key.includes("is_uses") ||
             key.includes("encoded")
-          )
-      )
-    )
+          ),
+      ),
+    ),
   );
   const csv = Papa.unparse(trimmed, { quotes: shouldCsvQuote });
   await fs.writeFile("map/trimmed_map_data.csv", csv);

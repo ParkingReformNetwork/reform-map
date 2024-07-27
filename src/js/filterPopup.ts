@@ -9,10 +9,10 @@ export default function setUpFilterPopup(
   citiesToMarkers: Record<CityId, CircleMarker>,
   data: Record<CityId, CityEntry>,
   searchElement: Choices,
-  sliders: PopulationSliders
+  sliders: PopulationSliders,
 ) {
   const popupElement = document.querySelector(
-    ".filters-popup-window"
+    ".filters-popup-window",
   ) as HTMLElement;
   const openFilter = document.querySelector(".open-filter") as HTMLElement;
 
@@ -31,10 +31,10 @@ export default function setUpFilterPopup(
         citiesToMarkers,
         data,
         searchElement,
-        sliders
+        sliders,
       );
     },
-    { once: true }
+    { once: true },
   );
 
   // closes window on clicks outside the info popup

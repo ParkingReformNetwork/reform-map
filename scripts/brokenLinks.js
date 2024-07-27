@@ -13,14 +13,14 @@ const parseCitationLinks = async (filePath) => {
   const html = await fs.readFile(filePath, "utf8");
   const dom = new jsdom.JSDOM(html);
   return Array.from(
-    dom.window.document.querySelectorAll("dd.col-12.col-sm-8.col-lg-9 a")
+    dom.window.document.querySelectorAll("dd.col-12.col-sm-8.col-lg-9 a"),
   ).map((a) => a.href);
 };
 
 const mapCityUrlsToCitationLinks = async () => {
   const folderEntries = await fs.readdir("city_detail");
   const fileNames = folderEntries.filter(
-    (entry) => entry !== "attachment_images" && entry.includes(".html")
+    (entry) => entry !== "attachment_images" && entry.includes(".html"),
   );
   const results = await Promise.all(
     fileNames.map(async (fileName) => {
@@ -28,7 +28,7 @@ const mapCityUrlsToCitationLinks = async () => {
       const cityUrl = `https://parkingreform.org/mandates-map/city_detail/${fileName}`;
       const citationLinks = await parseCitationLinks(filePath);
       return [cityUrl, citationLinks];
-    })
+    }),
   );
   return results.reduce((acc, [cityUrl, links]) => {
     acc[cityUrl] = links;
@@ -55,7 +55,7 @@ const findDeadLinks = async (links) => {
         return [link, -1];
       }
       return null;
-    })
+    }),
   );
 
   return results.filter(Boolean);

@@ -100,7 +100,7 @@ test.describe("needsUpdate()", () => {
     // happens after any of the city updates.
     let globalLastUpdated = parseDatetime(
       "May 6, 2023, 11:00:00 AM Pacific/Honolulu",
-      false
+      false,
     );
     expect(needsUpdate(entries, globalLastUpdated)).toBe(false);
 
@@ -151,7 +151,7 @@ test("normalizeAttachments() converts string entries into objects", () => {
 test("city_detail_last_updated.txt is formatted correctly", async () => {
   const lastUpdated = await fs.readFile(
     "scripts/city_detail_last_updated.txt",
-    "utf-8"
+    "utf-8",
   );
   parseDatetime(lastUpdated, false); // will throw an error if incorrectly formatted
 });
@@ -162,8 +162,8 @@ test("every city in CSV has a corresponding HTML page", async () => {
   const validUrls = new Set(
     htmlPages.map(
       (fileName) =>
-        `https://parkingreform.org/mandates-map/city_detail/${fileName}`
-    )
+        `https://parkingreform.org/mandates-map/city_detail/${fileName}`,
+    ),
   );
   mapData.forEach((row) => {
     expect(validUrls).toContain(row.citation_url);

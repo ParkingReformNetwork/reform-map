@@ -8,7 +8,7 @@ test("scorecard pops up and closes", async ({ page }) => {
   const cityDetailsIsVisible = async () =>
     page.$eval(
       ".scorecard-container",
-      (el) => el instanceof HTMLElement && !el.hidden
+      (el) => el instanceof HTMLElement && !el.hidden,
     );
 
   // click on marker

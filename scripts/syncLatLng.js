@@ -34,7 +34,7 @@ const updateLatLng = (reportData, updateData) =>
       (updateRow) =>
         updateRow[0] === reportRow.city &&
         updateRow[1] === reportRow.state &&
-        updateRow[2] === reportRow.country
+        updateRow[2] === reportRow.country,
     );
     return matchingRows.length > 0
       ? { ...reportRow, lat: matchingRows[0][3], long: matchingRows[0][4] }
@@ -52,7 +52,7 @@ const writeResult = async (data, filePath) => {
       // eslint-disable-next-line no-param-reassign
       newRow[key] = row[key] === undefined || row[key] === null ? "" : row[key];
       return newRow;
-    }, {})
+    }, {}),
   );
   const csv = Papa.unparse(quotedData, { quotes: shouldCsvQuote });
   await fs.writeFile(filePath, csv);

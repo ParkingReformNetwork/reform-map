@@ -16,7 +16,7 @@ export default function setUpIcons(): void {
     faUpRightFromSquare,
     faCircleXmark,
     faSliders,
-    fas
+    fas,
   );
   dom.watch();
 }

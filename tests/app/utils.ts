@@ -12,7 +12,7 @@ const loadMap = async (page: Page): Promise<void> => {
 
 const assertNumCities = async (
   page: Page,
-  range: [number, number]
+  range: [number, number],
 ): Promise<void> => {
   const numCities = await page.locator(CITY_MARKER).count();
   expect(numCities).toBeGreaterThanOrEqual(range[0]);
