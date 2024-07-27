@@ -1,50 +1,7 @@
-/* global document */
-
 import type { FeatureGroup } from "leaflet";
+
 import type { CityEntry, CityId } from "./types";
-
-function initScorecard(
-  markerGroup: FeatureGroup,
-  data: Record<CityId, CityEntry>,
-): void {
-  const scorecardContainer = document.querySelector("#scorecard-container");
-  if (!(scorecardContainer instanceof HTMLElement)) return;
-
-  // Clicking a city marker opens up the scorecard.
-  markerGroup.on("click", (e) => {
-    const cityState = e.sourceTarget.getTooltip().getContent();
-    scorecardContainer.innerHTML = generateScorecard(
-      data[cityState],
-      cityState,
-    );
-    scorecardContainer.hidden = false;
-  });
-
-  // Close window on clicks outside the scorecard.
-  window.addEventListener("click", (event) => {
-    if (
-      event.target instanceof Node &&
-      !(event.target instanceof SVGPathElement) &&
-      !scorecardContainer.hidden &&
-      !scorecardContainer.contains(event.target)
-    ) {
-      scorecardContainer.hidden = true;
-    }
-  });
-
-  // The event listener is on `#scorecard-container` because it is never erased,
-  // unlike the scorecard contents being recreated every time the city changes.
-  // This is called "event delegation".
-  scorecardContainer.addEventListener("click", async (event) => {
-    const clicked = event.target;
-    if (!(clicked instanceof Element)) return;
-    const closeIconContainer = clicked.closest(
-      ".scorecard-close-icon-container",
-    );
-    if (!(closeIconContainer instanceof HTMLButtonElement)) return;
-    scorecardContainer.hidden = true;
-  });
-}
+import Observable from "./Observable";
 
 function generateScorecard(entry: CityEntry, cityState: CityId): string {
   return `
@@ -68,4 +25,76 @@ function generateScorecard(entry: CityEntry, cityState: CityId): string {
     `;
 }
 
-export default initScorecard;
+type ScorecardState =
+  | { type: "hidden" }
+  | { type: "visible"; entry: CityEntry; placeId: CityId };
+
+function updateScorecardUI(state: ScorecardState): void {
+  const scorecardContainer = document.querySelector<HTMLElement>(
+    "#scorecard-container",
+  );
+  if (!scorecardContainer) return;
+
+  switch (state.type) {
+    case "hidden": {
+      scorecardContainer.hidden = true;
+      break;
+    }
+    case "visible": {
+      scorecardContainer.innerHTML = generateScorecard(
+        state.entry,
+        state.placeId,
+      );
+      scorecardContainer.hidden = false;
+      break;
+    }
+  }
+}
+
+export default function initScorecard(
+  markerGroup: FeatureGroup,
+  data: Record<CityId, CityEntry>,
+): void {
+  const scorecardState = new Observable<ScorecardState>({ type: "hidden" });
+  scorecardState.subscribe(updateScorecardUI);
+
+  const scorecardContainer = document.querySelector("#scorecard-container");
+
+  // Clicking a city marker opens up the scorecard.
+  markerGroup.on("click", (e) => {
+    const cityState = e.sourceTarget.getTooltip().getContent();
+    scorecardState.setValue({
+      type: "visible",
+      placeId: cityState,
+      entry: data[cityState],
+    });
+  });
+
+  // Clicks outside the popup close it.
+  window.addEventListener("click", (event) => {
+    if (
+      scorecardState.getValue().type === "visible" &&
+      event.target instanceof Element &&
+      // Clicks on map dots should not trigger this event.
+      !(event.target instanceof SVGPathElement) &&
+      !scorecardContainer?.contains(event.target)
+    ) {
+      scorecardState.setValue({ type: "hidden" });
+    }
+  });
+
+  // The event listener is on `#scorecard-container` because it is never erased,
+  // unlike the scorecard contents being recreated every time the city changes.
+  // This is called "event delegation".
+  scorecardContainer?.addEventListener("click", (event) => {
+    const clicked = event.target;
+    if (!(clicked instanceof Element)) return;
+    const closeIcon = clicked.closest<HTMLElement>(
+      ".scorecard-close-icon-container",
+    );
+    if (!closeIcon) return;
+    scorecardState.setValue({ type: "hidden" });
+  });
+
+  scorecardState.initialize();
+}
