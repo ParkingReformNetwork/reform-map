@@ -107,7 +107,7 @@ export function changeSelectedMarkers(
 /**
  * Set up all filters and counter update.
  */
-export function setUpFiltersAndCounter(
+export function initFiltersAndCounter(
   markerGroup: FeatureGroup,
   citiesToMarkers: Record<CityId, CircleMarker>,
   data: Record<CityId, CityEntry>,

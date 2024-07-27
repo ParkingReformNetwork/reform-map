@@ -1,10 +1,9 @@
-/* global document, window */
-import { setUpPopulationSlider } from "./populationSlider";
+import { initPopulationSlider } from "./populationSlider";
 import type Choices from "choices.js";
 import type { FeatureGroup, CircleMarker } from "leaflet";
 import type { CityId, CityEntry, PopulationSliders } from "./types";
 
-export default function setUpFilterPopup(
+export default function initFilterPopup(
   markerGroup: FeatureGroup,
   citiesToMarkers: Record<CityId, CircleMarker>,
   data: Record<CityId, CityEntry>,
@@ -26,7 +25,7 @@ export default function setUpFilterPopup(
     () => {
       // This happens here because the filter popup must be displayed for
       // the offsetWidth calculation to work properly.
-      setUpPopulationSlider(
+      initPopulationSlider(
         markerGroup,
         citiesToMarkers,
         data,

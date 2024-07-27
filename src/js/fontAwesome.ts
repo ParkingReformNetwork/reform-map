@@ -10,7 +10,7 @@ import {
 } from "@fortawesome/free-solid-svg-icons";
 import "@fortawesome/fontawesome-svg-core/styles.css";
 
-export default function setUpIcons(): void {
+export default function initIcons(): void {
   library.add(
     faCircleQuestion,
     faUpRightFromSquare,
