@@ -1,33 +1,48 @@
-import { POPULATION_INTERVALS, changeSelectedMarkers } from "./filter";
-import { PopulationSliders } from "./types";
-import type Choices from "choices.js";
-import type { CircleMarker, FeatureGroup } from "leaflet";
-import type { CityId, CityEntry } from "./types";
+import {
+  FilterState,
+  PlaceFilterManager,
+  POPULATION_INTERVALS,
+} from "./FilterState";
 
 const THUMBSIZE = 14;
-const RANGE_MAX = POPULATION_INTERVALS.length - 1;
+export const POPULATION_MAX_INDEX = POPULATION_INTERVALS.length - 1;
 
-function draw(
-  sliders: PopulationSliders,
-  leftIndex: number,
-  rightIndex: number,
-): void {
+interface Sliders {
+  readonly controls: HTMLDivElement;
+  readonly left: HTMLInputElement;
+  readonly right: HTMLInputElement;
+}
+
+function getSliders(): Sliders {
+  return {
+    controls: document.querySelector(".population-slider-controls"),
+    left: document.querySelector(".population-slider-left"),
+    right: document.querySelector(".population-slider-right"),
+  };
+}
+
+export function updateSlidersUI(state: FilterState): void {
+  const [leftIndex, rightIndex] = state.populationSliderIndexes;
+  const sliders = getSliders();
+
+  sliders.left.value = leftIndex.toString();
+  sliders.right.value = rightIndex.toString();
+  sliders.left.setAttribute("value", leftIndex.toString());
+  sliders.right.setAttribute("value", rightIndex.toString());
+
   // We dynamically change the sliders so that they cannot extend past each other.
   const inBetween = (rightIndex - leftIndex) / 2;
   const newLeftMax = leftIndex + inBetween;
   const newRightMin = rightIndex - inBetween;
-
   sliders.left.setAttribute("max", newLeftMax.toString());
   sliders.right.setAttribute("min", newRightMin.toString());
-  sliders.left.setAttribute("value", leftIndex.toString());
-  sliders.right.setAttribute("value", rightIndex.toString());
 
   const intervalSizePx = Math.round(
     (sliders.controls.offsetWidth + THUMBSIZE / 2) /
       POPULATION_INTERVALS.length,
   );
   const leftWidth = newLeftMax * intervalSizePx;
-  const rightWidth = (RANGE_MAX - newRightMin) * intervalSizePx;
+  const rightWidth = (POPULATION_MAX_INDEX - newRightMin) * intervalSizePx;
   sliders.left.style.width = `${leftWidth + THUMBSIZE / 2}px`;
   sliders.right.style.width = `${rightWidth + THUMBSIZE / 2}px`;
 
@@ -42,17 +57,11 @@ function draw(
   updateLabel(".population-slider-label-max", rightIndex);
 }
 
-export function createPopulationSlider(): PopulationSliders {
-  const sliders = new PopulationSliders(
-    document.querySelector(".population-slider-controls"),
-    document.querySelector(".population-slider-left"),
-    document.querySelector(".population-slider-right"),
-  );
+export function initPopulationSlider(filterManager: PlaceFilterManager): void {
+  filterManager.subscribe(updateSlidersUI);
+  const sliders = getSliders();
 
-  sliders.left.setAttribute("max", RANGE_MAX.toString());
-  sliders.right.setAttribute("max", RANGE_MAX.toString());
-  sliders.right.setAttribute("value", RANGE_MAX.toString());
-
+  // Create legend
   const legend = document.querySelector(".population-slider-legend");
   POPULATION_INTERVALS.forEach(([intervalText]) => {
     const span = document.createElement("span");
@@ -60,31 +69,19 @@ export function createPopulationSlider(): PopulationSliders {
     legend.appendChild(span);
   });
 
-  return sliders;
-}
+  // Set initial state.
+  const maxIndex = filterManager
+    .getState()
+    .populationSliderIndexes[1].toString();
+  sliders.left.setAttribute("max", maxIndex);
+  sliders.right.setAttribute("max", maxIndex);
+  sliders.right.setAttribute("value", maxIndex);
 
-export function initPopulationSlider(
-  markerGroup: FeatureGroup,
-  citiesToMarkers: Record<CityId, CircleMarker>,
-  data: Record<CityId, CityEntry>,
-  searchElement: Choices,
-  sliders: PopulationSliders,
-): void {
-  draw(sliders, 0, RANGE_MAX);
   const onChange = (): void => {
-    const [leftIndex, rightIndex] = sliders.getCurrentIndexes();
-    sliders.left.value = leftIndex.toString();
-    sliders.right.value = rightIndex.toString();
-    draw(sliders, leftIndex, rightIndex);
-    changeSelectedMarkers(
-      markerGroup,
-      citiesToMarkers,
-      data,
-      searchElement,
-      sliders,
-    );
+    const leftIndex = Math.floor(parseFloat(sliders.left.value));
+    const rightIndex = Math.ceil(parseFloat(sliders.right.value));
+    filterManager.update({ populationSliderIndexes: [leftIndex, rightIndex] });
   };
-
   sliders.left.addEventListener("input", onChange);
   sliders.right.addEventListener("input", onChange);
 }

@@ -1,9 +1,6 @@
-import type Choices from "choices.js";
-import type { FeatureGroup, CircleMarker } from "leaflet";
-
-import { initPopulationSlider } from "./populationSlider";
+import { updateSlidersUI } from "./populationSlider";
 import Observable from "./Observable";
-import type { CityId, CityEntry, PopulationSliders } from "./types";
+import { PlaceFilterManager } from "./FilterState";
 
 function updateFilterPopupUI(isVisible: boolean): void {
   const popup = document.querySelector<HTMLElement>(".filters-popup-window");
@@ -11,28 +8,16 @@ function updateFilterPopupUI(isVisible: boolean): void {
   popup.style.display = isVisible ? "block" : "none";
 }
 
-export default function initFilterPopup(
-  markerGroup: FeatureGroup,
-  citiesToMarkers: Record<CityId, CircleMarker>,
-  data: Record<CityId, CityEntry>,
-  searchElement: Choices,
-  sliders: PopulationSliders,
-) {
+export default function initFilterPopup(filterManager: PlaceFilterManager) {
   const isVisible = new Observable<boolean>(false);
   isVisible.subscribe(updateFilterPopupUI);
 
-  // We init the population slider on the first slide because it requires the popup
+  // We redraw the population slider on the first load because it requires the popup
   // to be displayed to compute offsetWidth.
   let hasInitedPopulation = false;
   isVisible.subscribe((visible) => {
     if (!hasInitedPopulation && visible) {
-      initPopulationSlider(
-        markerGroup,
-        citiesToMarkers,
-        data,
-        searchElement,
-        sliders,
-      );
+      updateSlidersUI(filterManager.getState());
       hasInitedPopulation = true;
     }
   });

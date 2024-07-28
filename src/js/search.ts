@@ -1,17 +1,15 @@
-import type { FeatureGroup, CircleMarker } from "leaflet";
 import Choices from "choices.js";
 import "choices.js/public/assets/styles/choices.css";
 
-import type { CityId, CityEntry, PopulationSliders } from "./types";
-import { changeSelectedMarkers } from "./filter";
+import { PlaceFilterManager } from "./FilterState";
 
-export function createSearchElement(cityStates: Array<CityId>): Choices {
-  const cities = cityStates.map((cityState) => ({
-    value: cityState,
-    label: cityState,
+export default function initSearch(filterManager: PlaceFilterManager): void {
+  const cities = Object.keys(filterManager.entries).map((placeId) => ({
+    value: placeId,
+    label: placeId,
   }));
-  const element = document.querySelector(".city-search");
-  return new Choices(element, {
+  const htmlElement = document.querySelector(".city-search");
+  const choices = new Choices(htmlElement, {
     position: "bottom",
     choices: cities,
     placeholderValue: "City search",
@@ -19,24 +17,11 @@ export function createSearchElement(cityStates: Array<CityId>): Choices {
     allowHTML: false,
     itemSelectText: "Select",
   });
-}
 
-export function initSearch(
-  markerGroup: FeatureGroup,
-  citiesToMarkers: Record<CityId, CircleMarker>,
-  data: Record<CityId, CityEntry>,
-  searchElement: Choices,
-  sliders: PopulationSliders,
-): void {
-  document
-    .querySelector(".city-search")
-    .addEventListener("change", () =>
-      changeSelectedMarkers(
-        markerGroup,
-        citiesToMarkers,
-        data,
-        searchElement,
-        sliders,
-      ),
-    );
+  // Set initial state.
+  choices.setChoiceByValue(filterManager.getState().searchInput);
+
+  htmlElement.addEventListener("change", () => {
+    filterManager.update({ searchInput: choices.getValue(true) as string[] });
+  });
 }
