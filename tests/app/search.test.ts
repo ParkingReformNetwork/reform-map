@@ -1,10 +1,10 @@
 import { test } from "@playwright/test";
 
 import {
-  assertNumCities,
+  assertNumPlaces,
   loadMap,
   deselectToggle,
-  DEFAULT_CITY_RANGE,
+  DEFAULT_PLACE_RANGE,
 } from "./utils";
 
 test("search changes what is shown", async ({ page }) => {
@@ -17,12 +17,12 @@ test("search changes what is shown", async ({ page }) => {
     .locator(".choices__list--dropdown > .choices__list > .choices__item")
     .first()
     .click();
-  await assertNumCities(page, [1, 1]);
+  await assertNumPlaces(page, [1, 1]);
 
-  // Removing the selected cities restores all.
+  // Removing the selected places restores all.
   await page
     .locator(".choices__inner > .choices__list > .choices__item > button")
     .click();
 
-  await assertNumCities(page, DEFAULT_CITY_RANGE);
+  await assertNumPlaces(page, DEFAULT_PLACE_RANGE);
 });

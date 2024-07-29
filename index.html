@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta
       name="description"
-      content="See which cities have enacted parking reform to get rid of parking mininums."
+      content="See which places have enacted parking reform to get rid of parking mininums."
     />
     <meta property="og:locale" content="en_US" />
     <meta property="og:type" content="website" />
@@ -16,7 +16,7 @@
     />
     <meta
       property="og:description"
-      content="See which cities have enacted parking reform to get rid of parking mininums."
+      content="See which places have enacted parking reform to get rid of parking mininums."
     />
     <meta
       property="og:url"
@@ -29,7 +29,7 @@
     />
     <meta
       name="twitter:description"
-      content="See which cities have enacted parking reform to get rid of parking mininums."
+      content="See which places have enacted parking reform to get rid of parking mininums."
     />
     <link rel="stylesheet" href="./src/css/style.scss" />
   </head>
@@ -159,9 +159,9 @@
       <div class="filters-popup-icon">
         <i class="fa-solid fa-sliders"></i>
       </div>
-      <div class="city-counter-container">
+      <div class="counter-container">
         Showing <span id="counter-numerator">0</span> out of
-        <span id="counter-denominator">0</span> cities.
+        <span id="counter-denominator">0</span> places
       </div>
     </div>
     <div class="filters-popup-container">
@@ -298,7 +298,7 @@
       </div>
     </div>
 
-    <select multiple class="city-search"></select>
+    <select multiple class="search"></select>
 
     <div class="prn-logo">
       <a
@@ -311,7 +311,7 @@
     <div
       id="map"
       role="application"
-      aria-label="interactive map showing cities with parking reforms as clickable dots"
+      aria-label="interactive map showing places with parking reforms as clickable dots"
     ></div>
     <script type="module">
       import initApp from "./src/js/main";
