@@ -1,10 +1,7 @@
-@use "theme/colors-original";
-
 @use "theme/borders";
 @use "theme/breakpoints";
 @use "theme/colors";
 @use "theme/spacing";
-@use "theme/icons";
 @use "theme/typography";
 @use "theme/zindex";
 @use "header";
@@ -22,7 +19,10 @@ $font-size: typography.$font-size-md;
 
   padding: spacing.$element-gap spacing.$container-edge-spacing;
   min-height: calc($font-size * 2 + spacing.$element-gap * 2);
-  width: 280px;
+  width: 260px;
+  @include breakpoints.gt-xxs {
+    width: 280px;
+  }
 
   background-color: colors.$white;
   color: colors.$black;
