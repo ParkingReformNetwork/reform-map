@@ -12,6 +12,7 @@ test("search changes what is shown", async ({ page }) => {
 
   await deselectToggle(page);
 
+  await page.locator(".header-search-icon-container").click();
   await page.locator(".choices").click();
   await page
     .locator(".choices__list--dropdown > .choices__list > .choices__item")
