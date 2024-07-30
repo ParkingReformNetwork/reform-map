@@ -3,7 +3,7 @@
 
 $top-offset: 3.5em;
 
-.city-counter-container {
+.counter-container {
   position: absolute;
   background-color: colors-original.$white;
   top: $top-offset;
@@ -26,6 +26,6 @@ $top-offset: 3.5em;
   }
 }
 
-.city-counter-container:hover {
+.counter-container:hover {
   text-decoration: underline;
 }

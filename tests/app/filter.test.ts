@@ -1,9 +1,9 @@
 import { Page, test } from "@playwright/test";
 import {
   loadMap,
-  assertNumCities,
+  assertNumPlaces,
   deselectToggle,
-  DEFAULT_CITY_RANGE,
+  DEFAULT_PLACE_RANGE,
 } from "./utils";
 
 interface EdgeCase {
@@ -19,7 +19,7 @@ interface EdgeCase {
 
 // The expected ranges can be updated as the data is updated!
 const TESTS: EdgeCase[] = [
-  { desc: "default filters", expectedRange: DEFAULT_CITY_RANGE },
+  { desc: "default filters", expectedRange: DEFAULT_PLACE_RANGE },
   { desc: "disabled filter", scope: [], expectedRange: [0, 0] },
   { desc: "scope filter", scope: ["Regional"], expectedRange: [4, 15] },
   {
@@ -44,7 +44,7 @@ const TESTS: EdgeCase[] = [
     expectedRange: [65, 250],
   },
   {
-    desc: "all cities",
+    desc: "all places",
     // The other filters already enable all options by default.
     policy: [
       "Reduce Parking Minimums",
@@ -118,6 +118,6 @@ for (const edgeCase of TESTS) {
         .fill(rightInterval.toString());
     }
 
-    await assertNumCities(page, edgeCase.expectedRange);
+    await assertNumPlaces(page, edgeCase.expectedRange);
   });
 }

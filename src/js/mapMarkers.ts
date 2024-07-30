@@ -11,7 +11,7 @@ const MARKER_STYLE = {
   fillOpacity: 1,
 } as const;
 
-export default function initCityMarkers(
+export default function initPlaceMarkers(
   filterManager: PlaceFilterManager,
   map: Map,
 ): FeatureGroup {
@@ -19,13 +19,13 @@ export default function initCityMarkers(
 
   const placesToMarkers: Record<string, CircleMarker> = Object.entries(
     filterManager.entries,
-  ).reduce((acc, [cityState, entry]) => {
+  ).reduce((acc, [placeId, entry]) => {
     // @ts-ignore: passing strings to CircleMarker for lat/lng is valid, and
     // parsing to ints would lose precision.
     const marker = new CircleMarker([entry.lat, entry.long], MARKER_STYLE);
-    acc[cityState] = marker;
+    acc[placeId] = marker;
 
-    marker.bindTooltip(cityState);
+    marker.bindTooltip(placeId);
     marker.addTo(markerGroup);
     return acc;
   }, {});

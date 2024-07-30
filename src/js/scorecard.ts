@@ -1,9 +1,9 @@
 import type { FeatureGroup } from "leaflet";
 
-import type { CityEntry, CityId } from "./types";
+import type { PlaceEntry, PlaceId } from "./types";
 import Observable from "./Observable";
 
-function generateScorecard(entry: CityEntry, cityState: CityId): string {
+function generateScorecard(entry: PlaceEntry, cityState: PlaceId): string {
   return `
     <header class="scorecard-header">
       <h2 class="scorecard-title">${cityState}</h2>
@@ -27,7 +27,7 @@ function generateScorecard(entry: CityEntry, cityState: CityId): string {
 
 type ScorecardState =
   | { type: "hidden" }
-  | { type: "visible"; entry: CityEntry; placeId: CityId };
+  | { type: "visible"; entry: PlaceEntry; placeId: PlaceId };
 
 function updateScorecardUI(state: ScorecardState): void {
   const scorecardContainer = document.querySelector<HTMLElement>(
@@ -53,7 +53,7 @@ function updateScorecardUI(state: ScorecardState): void {
 
 export default function initScorecard(
   markerGroup: FeatureGroup,
-  data: Record<CityId, CityEntry>,
+  data: Record<PlaceId, PlaceEntry>,
 ): void {
   const scorecardState = new Observable<ScorecardState>({ type: "hidden" });
   scorecardState.subscribe(updateScorecardUI);

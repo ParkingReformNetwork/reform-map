@@ -1,5 +1,5 @@
 import { isEqual } from "lodash-es";
-import { CityId, CityEntry } from "./types";
+import { PlaceId, PlaceEntry } from "./types";
 import Observable from "./Observable";
 
 export const POPULATION_INTERVALS: Array<[string, number]> = [
@@ -32,11 +32,11 @@ interface CacheEntry {
 export class PlaceFilterManager {
   private readonly state: Observable<FilterState>;
 
-  readonly entries: Record<CityId, CityEntry>;
+  readonly entries: Record<PlaceId, PlaceEntry>;
 
   private cache: CacheEntry | null = null;
 
-  constructor(entries: Record<CityId, CityEntry>, initialState: FilterState) {
+  constructor(entries: Record<PlaceId, PlaceEntry>, initialState: FilterState) {
     this.entries = entries;
     this.state = new Observable(initialState);
   }
@@ -45,7 +45,7 @@ export class PlaceFilterManager {
     return Object.keys(this.entries).length;
   }
 
-  get placeIds(): Set<CityId> {
+  get placeIds(): Set<PlaceId> {
     const currentState = this.state.getValue();
     if (this.cache && isEqual(currentState, this.cache.state)) {
       return this.cache.placeIds;
@@ -80,7 +80,7 @@ export class PlaceFilterManager {
     this.state.initialize();
   }
 
-  private shouldBeRendered(placeId: CityId): boolean {
+  private shouldBeRendered(placeId: PlaceId): boolean {
     const state = this.state.getValue();
     const entry = this.entries[placeId];
 

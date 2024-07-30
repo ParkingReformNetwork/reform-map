@@ -1,7 +1,7 @@
-import type { CityId, CityEntry } from "./types";
+import type { PlaceId, PlaceEntry } from "./types";
 import initIcons from "./fontAwesome";
 import createMap from "./map";
-import initCityMarkers from "./mapMarkers";
+import initPlaceMarkers from "./mapMarkers";
 import initSearch from "./search";
 import maybeDisableFullScreenIcon from "./iframe";
 import initAbout from "./about";
@@ -12,12 +12,12 @@ import initFilterPopup from "./filterPopup";
 import { PlaceFilterManager } from "./FilterState";
 import subscribeCounter from "./counter";
 
-async function readData(): Promise<Record<CityId, CityEntry>> {
+async function readData(): Promise<Record<PlaceId, PlaceEntry>> {
   // @ts-ignore
   const data = await import("../../map/tidied_map_data.csv");
-  return data.reduce((acc: Record<string, CityEntry>, entry: CityEntry) => {
-    const cityState = `${entry.city}, ${entry.state}`;
-    acc[cityState] = entry;
+  return data.reduce((acc: Record<string, PlaceEntry>, entry: PlaceEntry) => {
+    const placeId = `${entry.city}, ${entry.state}`;
+    acc[placeId] = entry;
     return acc;
   }, {});
 }
@@ -46,7 +46,7 @@ export default async function initApp(): Promise<void> {
     populationSliderIndexes: [0, POPULATION_MAX_INDEX],
   });
 
-  const markerGroup = initCityMarkers(filterManager, map);
+  const markerGroup = initPlaceMarkers(filterManager, map);
   subscribeCounter(filterManager);
   initScorecard(markerGroup, data);
   initSearch(filterManager);

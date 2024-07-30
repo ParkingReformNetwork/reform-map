@@ -1,6 +1,6 @@
-export type CityId = string;
+export type PlaceId = string;
 
-export interface CityEntry {
+export interface PlaceEntry {
   city: string;
   state: string;
   country: string;
