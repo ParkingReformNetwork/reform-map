@@ -3,10 +3,10 @@ import Observable from "./Observable";
 import { PlaceFilterManager } from "./FilterState";
 
 function updateFilterPopupUI(isVisible: boolean): void {
-  const popup = document.querySelector<HTMLElement>(".filters-popup-window");
+  const popup = document.querySelector<HTMLElement>(".filter-popup");
   const icon = document.querySelector(".header-filter-icon-container");
   if (!popup || !icon) return;
-  popup.style.display = isVisible ? "block" : "none";
+  popup.hidden = !isVisible;
   icon.ariaExpanded = isVisible.toString();
 }
 
@@ -24,7 +24,7 @@ export default function initFilterPopup(filterManager: PlaceFilterManager) {
     }
   });
 
-  const popup = document.querySelector(".filters-popup-window");
+  const popup = document.querySelector(".filter-popup");
   const icon = document.querySelector(".header-filter-icon-container");
 
   icon.addEventListener("click", () => {

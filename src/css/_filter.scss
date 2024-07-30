@@ -1,44 +1,25 @@
+@use "theme/borders";
+@use "theme/colors";
 @use "theme/colors-original";
+@use "theme/spacing";
 @use "theme/zindex";
+@use "header";
 
-$unchecked: "\2610";
-$checked: "\2611";
-$top-offset: 5.6em;
-
-.filters-popup-container {
-  position: absolute;
-  top: $top-offset + 0.2em;
-  left: 21em;
-
-  @media only screen and (min-width: 48em) {
-    top: $top-offset + 0.9em;
-  }
-}
-
-.filters-popup-window {
-  display: none;
-}
-
-.filters-popup-flex {
-  position: absolute;
-  background-color: colors-original.$white;
-  border: solid colors-original.$gray-light 1px;
+.filter-popup {
+  position: fixed;
+  right: spacing.$map-controls-margin-x;
+  top: calc(header.$header-height + spacing.$map-controls-margin-top);
   z-index: zindex.$filter-popup;
 
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  max-height: min(600px, 75vh);
+  overflow-y: auto;
 
-  top: $top-offset - 2.6em;
-  right: 0;
-  width: 20em;
-  height: 50vh;
-  overflow-y: scroll;
-  overflow-x: hidden;
-  // cannot use padding (population-slider-controls misaligns)
+  background-color: colors.$white;
+  border: borders.$component-border;
+  border-radius: borders.$border-radius;
 }
 
-.filters-popup-flex > * {
+.filter-popup > * {
   display: flex;
   flex-direction: column;
   margin: 0.5em 1em;
@@ -49,18 +30,8 @@ $top-offset: 5.6em;
   label {
     display: block;
   }
-}
 
-.filter option::before {
-  content: $unchecked;
-  width: 1.3em;
-  text-align: center;
-  display: inline-block;
-}
-.filter option:checked::before {
-  content: $checked;
-}
-
-fieldset {
-  border: solid colors-original.$gray-light 2px;
+  fieldset {
+    border: solid colors-original.$gray-light 1px;
+  }
 }
