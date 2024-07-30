@@ -4,8 +4,10 @@ import { PlaceFilterManager } from "./FilterState";
 
 function updateFilterPopupUI(isVisible: boolean): void {
   const popup = document.querySelector<HTMLElement>(".filters-popup-window");
-  if (!popup) return;
+  const icon = document.querySelector(".header-filter-icon-container");
+  if (!popup || !icon) return;
   popup.style.display = isVisible ? "block" : "none";
+  icon.ariaExpanded = isVisible.toString();
 }
 
 export default function initFilterPopup(filterManager: PlaceFilterManager) {
@@ -23,9 +25,9 @@ export default function initFilterPopup(filterManager: PlaceFilterManager) {
   });
 
   const popup = document.querySelector(".filters-popup-window");
-  const openFilter = document.querySelector(".open-filter");
+  const icon = document.querySelector(".header-filter-icon-container");
 
-  openFilter.addEventListener("click", () => {
+  icon.addEventListener("click", () => {
     isVisible.setValue(!isVisible.getValue());
   });
 
@@ -34,7 +36,7 @@ export default function initFilterPopup(filterManager: PlaceFilterManager) {
     if (
       isVisible.getValue() === true &&
       event.target instanceof Element &&
-      !openFilter?.contains(event.target) &&
+      !icon?.contains(event.target) &&
       !popup?.contains(event.target)
     ) {
       isVisible.setValue(false);
