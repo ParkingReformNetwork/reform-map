@@ -1,31 +1,31 @@
 @use "theme/colors-original";
+
+@use "theme/borders";
+@use "theme/breakpoints";
+@use "theme/colors";
+@use "theme/spacing";
+@use "theme/icons";
+@use "theme/typography";
 @use "theme/zindex";
+@use "header";
 
-$top-offset: 3.5em;
+$font-size: typography.$font-size-md;
 
-.counter-container {
-  position: absolute;
-  background-color: colors-original.$white;
-  top: $top-offset;
-  left: 3em;
+.counter {
   z-index: zindex.$counter;
-  padding: 0.2em 0.4em;
+  position: fixed;
+  right: spacing.$map-controls-margin-x;
+  top: calc(header.$header-height + spacing.$map-controls-margin-top);
 
-  border: solid colors-original.$gray-light 1px;
-  border-radius: 2px;
+  font-size: $font-size;
+  line-height: 1.3;
 
-  width: 17em;
-  text-align: center;
-  cursor: pointer;
+  padding: spacing.$element-gap spacing.$container-edge-spacing;
+  min-height: calc($font-size * 2 + spacing.$element-gap * 2);
+  width: 280px;
 
-  // TODO: Figure out why this is unnecessary when revamping the component.
-  box-sizing: unset;
-
-  @media only screen and (min-width: 48em) {
-    top: $top-offset + 0.5em;
-  }
-}
-
-.counter-container:hover {
-  text-decoration: underline;
+  background-color: colors.$white;
+  color: colors.$black;
+  border: borders.$component-border;
+  border-radius: borders.$border-radius;
 }
