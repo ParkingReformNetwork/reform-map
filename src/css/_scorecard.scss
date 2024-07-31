@@ -17,9 +17,9 @@
   overflow-y: auto;
 
   padding: spacing.$container-edge-spacing;
-  width: 260px;
+  width: 300px;
   @include breakpoints.gt-xxs {
-    width: 320px;
+    width: 340px;
   }
   @include breakpoints.gt-xs {
     width: 400px;
