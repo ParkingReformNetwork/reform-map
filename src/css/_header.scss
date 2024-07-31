@@ -5,7 +5,7 @@
 @use "theme/icons";
 @use "theme/typography";
 
-$header-y-padding: 0px;
+$header-y-padding: 4px;
 $header-border-bottom-size: 4px;
 $header-height: calc(
   spacing.$min-touch-target + ($header-y-padding * 2) +
@@ -23,18 +23,7 @@ $header-height: calc(
   border-bottom: $header-border-bottom-size solid colors.$teal;
 }
 
-.header-title {
-  font-weight: normal;
-  color: colors.$white;
-  margin: 0px;
-
-  font-size: typography.$font-size-md;
-  @include breakpoints.gt-xs {
-    font-size: typography.$font-size-lg;
-  }
-}
-
-.header-icons {
+.header-control-icons {
   display: flex;
   margin-left: auto;
 }

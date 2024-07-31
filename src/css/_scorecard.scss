@@ -13,16 +13,16 @@
   right: spacing.$map-controls-margin-x;
   top: calc(header.$header-height + spacing.$map-controls-margin-top);
 
-  max-height: min(500px, 75vh);
+  max-height: min(600px, 75vh);
   overflow-y: auto;
 
   padding: spacing.$container-edge-spacing;
-  width: 280px;
+  width: 260px;
   @include breakpoints.gt-xxs {
     width: 320px;
   }
   @include breakpoints.gt-xs {
-    width: 360px;
+    width: 400px;
   }
 
   background-color: colors.$white;

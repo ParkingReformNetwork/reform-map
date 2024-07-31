@@ -5,6 +5,7 @@ import {
 } from "@fortawesome/free-regular-svg-icons";
 import {
   faUpRightFromSquare,
+  faMagnifyingGlass,
   faSliders,
   fas,
 } from "@fortawesome/free-solid-svg-icons";
@@ -15,6 +16,7 @@ export default function initIcons(): void {
     faCircleQuestion,
     faUpRightFromSquare,
     faCircleXmark,
+    faMagnifyingGlass,
     faSliders,
     fas,
   );

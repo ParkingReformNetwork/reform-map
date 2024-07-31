@@ -1,30 +1,55 @@
+@use "theme/borders";
+@use "theme/breakpoints";
+@use "theme/colors";
+@use "theme/spacing";
+@use "theme/typography";
 @use "theme/zindex";
+@use "header";
 
-$width: 250px;
-$top-offset: 5.8em;
-
-div.choices {
-  position: absolute;
-  top: $top-offset;
-  left: 3em;
-  max-width: $width;
+div.choices[data-type*="select-multiple"] {
+  margin-bottom: 0;
   z-index: zindex.$search;
+  position: fixed;
+  right: spacing.$map-controls-margin-x;
+  top: calc(header.$header-height + spacing.$map-controls-margin-top);
 
-  @media only screen and (min-width: 48em) {
-    top: $top-offset + 0.65em;
+  div.choices__inner {
+    color: colors.$black;
+    font-size: typography.$font-size-base;
+    line-height: 1.2; // To vertically center the text.
+
+    min-height: spacing.$min-touch-target;
+    width: 260px;
+    @include breakpoints.gt-xxs {
+      width: 280px;
+    }
+
+    border-top-left-radius: borders.$border-radius;
+    border-top-right-radius: borders.$border-radius;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
   }
 
-  // Changes the search list.
-  &.is-open {
-    width: $width;
+  input.choices__input {
+    // Cannot be less than 16px due to iOS autozoom:
+    //   https://weblog.west-wind.com/posts/2023/Apr/17/Preventing-iOS-Safari-Textbox-Zooming
+    font-size: typography.$font-size-base;
   }
 }
 
-// Changes the search box.
-div.choices__inner {
-  min-height: unset;
-  width: $width - 20px;
+div.choices__item.choices__item--choice.choices__item--selectable {
+  font-size: typography.$font-size-base;
+  min-height: spacing.$min-touch-target;
+}
 
-  // TODO: Figure out why this is unnecessary when revamping the component.
-  box-sizing: unset;
+div.choices__list--dropdown,
+div.choices__list[aria-expanded] {
+  color: colors.$black;
+}
+
+div.choices__list--dropdown .choices__item--selectable,
+div.choices__list[aria-expanded] .choices__item--selectable {
+  // Choices.js sets this to 100px to account for itemSelectText. But we disable that,
+  // so we want to use the normal padding it would otherwise use of 10px.
+  padding-right: 10px;
 }

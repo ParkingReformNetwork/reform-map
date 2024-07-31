@@ -1,7 +1,7 @@
 <!doctype html>
 <html lang="en">
   <head>
-    <title>Parking mandates map | Parking Reform Network</title>
+    <title>Parking Mandates Map | Parking Reform Network</title>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta
@@ -36,8 +36,27 @@
 
   <body>
     <header class="top-header">
-      <h1 class="header-title">Parking Mandates Map</h1>
-      <nav class="header-icons">
+      <nav class="header-control-icons">
+        <button
+          class="header-icon-container header-filter-icon-container"
+          title="open up filter options"
+          aria-expanded="false"
+          aria-controls="filter-popup"
+        >
+          <i class="fa-solid fa-sliders" aria-hidden="true"></i>
+          <span class="sr-only">open a popup to control filter options</span>
+        </button>
+        <button
+          class="header-icon-container header-search-icon-container"
+          title="search for a place"
+          aria-expanded="false"
+          aria-controls="search-popup"
+        >
+          <i class="fa-solid fa-magnifying-glass" aria-hidden="true"></i>
+          <span class="sr-only"
+            >open a popup to search for a specific place</span
+          >
+        </button>
         <button
           class="header-icon-container header-about-icon-container"
           title="about the map"
@@ -155,150 +174,137 @@
       hidden
     ></section>
 
-    <div class="open-filter">
-      <div class="filters-popup-icon">
-        <i class="fa-solid fa-sliders"></i>
-      </div>
-      <div class="counter-container">
-        Showing <span id="counter-numerator">0</span> out of
-        <span id="counter-denominator">0</span> places
-      </div>
-    </div>
-    <div class="filters-popup-container">
-      <div class="filters-popup-window">
-        <div class="filters-popup-flex">
-          <div class="filter no-requirements">
-            <div class="no-requirements-container">
-              <label class="toggle">
-                <span class="toggle-label">No parking requirements</span>
-                <input
-                  type="checkbox"
-                  class="toggle-checkbox"
-                  id="no-requirements-toggle"
-                />
-                <div class="toggle-switch"></div>
-              </label>
-            </div>
-          </div>
+    <section id="counter" class="counter" role="region"></section>
 
-          <div class="filter policy-change">
-            <form>
-              <fieldset>
-                <legend>Policy Change</legend>
-                <!-- prettier-ignore -->
-                <label><input type="checkbox" name="policy-change"  />Reduce Parking Minimums</label>
-                <!-- prettier-ignore -->
-                <label><input type="checkbox" name="policy-change" />Eliminate Parking Minimums</label>
-                <!-- prettier-ignore -->
-                <label><input type="checkbox" name="policy-change"  />Parking Maximums</label>
-              </fieldset>
-            </form>
-          </div>
-
-          <div>
-            <span>Population</span>
-            <div class="population-slider-container">
-              <div class="population-slider-label">
-                <span class="population-slider-label-min"></span>
-                <span> - </span>
-                <span class="population-slider-label-max"></span>
-              </div>
-              <div class="population-slider-controls">
-                <input
-                  class="population-slider-left"
-                  name="min"
-                  type="range"
-                  step="0.5"
-                  min="0"
-                  value="0"
-                />
-                <input
-                  class="population-slider-right"
-                  name="max"
-                  type="range"
-                  step="0.5"
-                  min="0"
-                />
-              </div>
-              <div class="population-slider-legend"></div>
-            </div>
-          </div>
-
-          <div class="filter scope">
-            <form>
-              <fieldset>
-                <legend>Scope of Reform</legend>
-                <label><input type="checkbox" name="scope" />Regional</label>
-                <label><input type="checkbox" name="scope" />Citywide</label>
-                <!-- ignore lines in which the text may be split up into multiple lines -->
-                <!-- prettier-ignore -->
-                <label><input type="checkbox" name="scope" />City Center/Business District</label>
-                <!-- prettier-ignore -->
-                <label><input type="checkbox" name="scope" />Transit Oriented</label>
-                <!-- prettier-ignore -->
-                <label><input type="checkbox" name="scope" />Main Street/Special</label>
-              </fieldset>
-            </form>
-          </div>
-
-          <div class="filter land-use">
-            <form>
-              <fieldset>
-                <legend>Affected Land Use</legend>
-                <!-- prettier-ignore -->
-                <label><input type="checkbox" name="land-use" />All Uses</label>
-                <label
-                  ><input type="checkbox" name="land-use" />Commercial</label
-                >
-                <label
-                  ><input type="checkbox" name="land-use" />Residential</label
-                >
-              </fieldset>
-            </form>
-          </div>
-
-          <div class="filter implementation-stage">
-            <form>
-              <fieldset>
-                <legend>Implementation Stage</legend>
-                <label
-                  ><input
-                    type="checkbox"
-                    name="implementation-stage"
-                  />Implemented</label
-                >
-                <label
-                  ><input
-                    type="checkbox"
-                    name="implementation-stage"
-                  />Passed</label
-                >
-                <label
-                  ><input
-                    type="checkbox"
-                    name="implementation-stage"
-                  />Planned</label
-                >
-                <label
-                  ><input
-                    type="checkbox"
-                    name="implementation-stage"
-                  />Proposed</label
-                >
-                <label
-                  ><input
-                    type="checkbox"
-                    name="implementation-stage"
-                  />Repealed</label
-                >
-              </fieldset>
-            </form>
-          </div>
+    <div class="filter-popup" hidden>
+      <div class="filter no-requirements">
+        <div class="no-requirements-container">
+          <label class="toggle">
+            <span class="toggle-label">No parking requirements</span>
+            <input
+              type="checkbox"
+              class="toggle-checkbox"
+              id="no-requirements-toggle"
+            />
+            <div class="toggle-switch"></div>
+          </label>
         </div>
       </div>
+
+      <div class="filter policy-change">
+        <form>
+          <fieldset>
+            <legend>Policy Change</legend>
+            <!-- prettier-ignore -->
+            <label><input type="checkbox" name="policy-change"  />Reduce Parking Minimums</label>
+            <!-- prettier-ignore -->
+            <label><input type="checkbox" name="policy-change" />Eliminate Parking Minimums</label>
+            <!-- prettier-ignore -->
+            <label><input type="checkbox" name="policy-change"  />Parking Maximums</label>
+          </fieldset>
+        </form>
+      </div>
+
+      <div>
+        <span>Population</span>
+        <div class="population-slider-container">
+          <div class="population-slider-label">
+            <span class="population-slider-label-min"></span>
+            <span> - </span>
+            <span class="population-slider-label-max"></span>
+          </div>
+          <div class="population-slider-controls">
+            <input
+              class="population-slider-left"
+              name="min"
+              type="range"
+              step="0.5"
+              min="0"
+              value="0"
+            />
+            <input
+              class="population-slider-right"
+              name="max"
+              type="range"
+              step="0.5"
+              min="0"
+            />
+          </div>
+          <div class="population-slider-legend"></div>
+        </div>
+      </div>
+
+      <div class="filter scope">
+        <form>
+          <fieldset>
+            <legend>Scope of Reform</legend>
+            <label><input type="checkbox" name="scope" />Regional</label>
+            <label><input type="checkbox" name="scope" />Citywide</label>
+            <!-- ignore lines in which the text may be split up into multiple lines -->
+            <!-- prettier-ignore -->
+            <label><input type="checkbox" name="scope" />City Center/Business District</label>
+            <!-- prettier-ignore -->
+            <label><input type="checkbox" name="scope" />Transit Oriented</label>
+            <!-- prettier-ignore -->
+            <label><input type="checkbox" name="scope" />Main Street/Special</label>
+          </fieldset>
+        </form>
+      </div>
+
+      <div class="filter land-use">
+        <form>
+          <fieldset>
+            <legend>Affected Land Use</legend>
+            <!-- prettier-ignore -->
+            <label><input type="checkbox" name="land-use" />All Uses</label>
+            <label><input type="checkbox" name="land-use" />Commercial</label>
+            <label><input type="checkbox" name="land-use" />Residential</label>
+          </fieldset>
+        </form>
+      </div>
+
+      <div class="filter implementation-stage">
+        <form>
+          <fieldset>
+            <legend>Implementation Stage</legend>
+            <label
+              ><input
+                type="checkbox"
+                name="implementation-stage"
+              />Implemented</label
+            >
+            <label
+              ><input
+                type="checkbox"
+                name="implementation-stage"
+              />Passed</label
+            >
+            <label
+              ><input
+                type="checkbox"
+                name="implementation-stage"
+              />Planned</label
+            >
+            <label
+              ><input
+                type="checkbox"
+                name="implementation-stage"
+              />Proposed</label
+            >
+            <label
+              ><input
+                type="checkbox"
+                name="implementation-stage"
+              />Repealed</label
+            >
+          </fieldset>
+        </form>
+      </div>
     </div>
 
-    <select multiple class="search"></select>
+    <div id="search-popup" class="search-popup" hidden>
+      <select multiple class="search"></select>
+    </div>
 
     <div class="prn-logo">
       <a

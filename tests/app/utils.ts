@@ -14,17 +14,18 @@ const assertNumPlaces = async (
   page: Page,
   range: [number, number],
 ): Promise<void> => {
-  const numPlaces = await page.locator(PLACE_MARKER).count();
-  expect(numPlaces).toBeGreaterThanOrEqual(range[0]);
-  expect(numPlaces).toBeLessThanOrEqual(range[1]);
-  // Checks for accurate counter
-  const numCounter = await page.locator("#counter-numerator").innerText();
-  expect(numPlaces).toEqual(parseInt(numCounter.replace(/^\D+/g, ""), 10));
+  const mapNumPlaces = await page.locator(PLACE_MARKER).count();
+  expect(mapNumPlaces).toBeGreaterThanOrEqual(range[0]);
+  expect(mapNumPlaces).toBeLessThanOrEqual(range[1]);
+
+  const counter = await page.locator("#counter").innerText();
+  const counterNumSpaces = parseInt(counter.match(/\d+/)[0], 10);
+  expect(mapNumPlaces).toEqual(counterNumSpaces);
 };
 
 const deselectToggle = async (page: Page): Promise<void> => {
-  // Default has requirement toggle on, so first de-select it, by opening filter pop-up and clicking toggle.
-  await page.locator(".filters-popup-icon").click();
+  // Default has requirement toggle on, so first de-select it by opening filter pop-up and clicking toggle.
+  await page.locator(".header-filter-icon-container").click();
   await page.locator("#no-requirements-toggle").click({ force: true });
 };
 
