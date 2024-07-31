@@ -17,10 +17,14 @@ function initSearchPopup(): void {
   isVisible.subscribe(updateSearchPopupUI);
 
   const popup = document.querySelector("#search-popup");
+  const searchBox = document.querySelector<HTMLInputElement>(
+    "input.choices__input",
+  );
   const icon = document.querySelector(".header-search-icon-container");
 
   icon.addEventListener("click", () => {
     isVisible.setValue(!isVisible.getValue());
+    setTimeout(() => searchBox.focus(), 100);
   });
 
   // Clicks outside the popup close it.
@@ -50,7 +54,7 @@ export default function initSearch(filterManager: PlaceFilterManager): void {
     placeholderValue: "Search",
     removeItemButton: true,
     allowHTML: false,
-    itemSelectText: "Select",
+    itemSelectText: "",
   });
 
   // Set initial state.
