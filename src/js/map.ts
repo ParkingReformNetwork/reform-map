@@ -19,10 +19,11 @@ export default function createMap(): Map {
     layers: [BASE_LAYER],
     worldCopyJump: true,
   });
-  // Set default view to Lexington, KY, to fit the most dots by
-  // default. On desktop, the whole US fits. But on mobile, the
-  // screen is too small so we center around the eastern US.
-  map.setView([38.0406, -84.5037], 4);
+  // Set default view show all the US on mobile. While this is fairly zoomed out,
+  // the main purpose of the map on initial load is to tell the narrative that parking
+  // reform is popular, i.e. there are a lot of dots. Search, filter, and table view are
+  // meant for power users doing actual research.
+  map.setView([40, -96], 3);
   map.attributionControl.setPrefix(
     '<a href="https://parkingreform.org/support/">Parking Reform Network</a>',
   );
