@@ -10,25 +10,25 @@ const TIDIED_REPORT = "map/tidied_map_data.csv";
 const GSHEET =
   "https://docs.google.com/spreadsheets/d/15L8hwNEi13Bov81EulgC8Xwt9_wCgofwcH49xHoNlKI/export?gid=0&format=csv";
 
-export const parseCsv = (rawText) =>
+export const parseCsv = (rawText: string): Array<Record<string, any>> =>
   Papa.parse(rawText.trim(), {
     header: true,
     dynamicTyping: true,
-  }).data;
+  }).data as Record<string, string>[];
 
-export const readCsv = async (filePath) => {
+export const readCsv = async (filePath: string): Promise<Array<Record<string, any>>> => {
   const rawText = await fs.readFile(filePath, "utf-8");
   return parseCsv(rawText);
 };
 
-const fetchUpdateCsv = async () => {
+const fetchUpdateCsv = async (): Promise<Array<any[]>> => {
   const response = await fetch(GSHEET);
   const rawText = await response.text();
   return parseCsv(rawText).map((row) => Object.values(row));
 };
 
 /* Inspired by leftJoin from updateMapData.js */
-const updateLatLng = (reportData, updateData) =>
+const updateLatLng = (reportData: Array<Record<string, any>>, updateData: Array<any[]>) =>
   reportData.map((reportRow) => {
     const matchingRows = updateData.filter(
       (updateRow) =>
@@ -42,10 +42,10 @@ const updateLatLng = (reportData, updateData) =>
   });
 
 /* Copied from updateMapData.js */
-const shouldCsvQuote = (val, columnIndex) =>
+const shouldCsvQuote = (val: any, columnIndex: number): boolean =>
   typeof val === "string" || typeof val === "boolean" || columnIndex === 0;
 
-const writeResult = async (data, filePath) => {
+const writeResult = async (data: Array<Record<string, any>>, filePath: string): Promise<void> => {
   // Papa doesn't quote null/undefined cells, so we have to manually set them to strings.
   const quotedData = data.map((row) =>
     Object.keys(row).reduce((newRow, key) => {
@@ -58,7 +58,7 @@ const writeResult = async (data, filePath) => {
   await fs.writeFile(filePath, csv);
 };
 
-const main = async () => {
+const main = async (): Promise<void> => {
   const [updateData, trimmedData, tidiedData] = await Promise.all([
     fetchUpdateCsv(),
     readCsv(TRIMMED_REPORT),

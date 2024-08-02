@@ -9,21 +9,25 @@ import path from "path";
 import fetch from "node-fetch";
 import jsdom from "jsdom";
 
-const parseCitationLinks = async (filePath) => {
+const parseCitationLinks = async (filePath: string): Promise<string[]> => {
   const html = await fs.readFile(filePath, "utf8");
   const dom = new jsdom.JSDOM(html);
   return Array.from(
-    dom.window.document.querySelectorAll("dd.col-12.col-sm-8.col-lg-9 a"),
-  ).map((a) => a.href);
+    dom.window.document.querySelectorAll<HTMLAnchorElement>(
+      "dd.col-12.col-sm-8.col-lg-9 a",
+    ),
+  ).map((a: HTMLAnchorElement) => a.href);
 };
 
-const mapCityUrlsToCitationLinks = async () => {
+const mapCityUrlsToCitationLinks = async (): Promise<
+  Record<string, string[]>
+> => {
   const folderEntries = await fs.readdir("city_detail");
   const fileNames = folderEntries.filter(
     (entry) => entry !== "attachment_images" && entry.includes(".html"),
   );
   const results = await Promise.all(
-    fileNames.map(async (fileName) => {
+    fileNames.map(async (fileName): Promise<[string, string[]]> => {
       const filePath = path.join("city_detail", fileName);
       const cityUrl = `https://parkingreform.org/mandates-map/city_detail/${fileName}`;
       const citationLinks = await parseCitationLinks(filePath);
@@ -36,9 +40,11 @@ const mapCityUrlsToCitationLinks = async () => {
   }, {});
 };
 
-const findDeadLinks = async (links) => {
+const findDeadLinks = async (
+  links: string[],
+): Promise<Array<[string, number]>> => {
   const results = await Promise.all(
-    links.map(async (link) => {
+    links.map(async (link): Promise<[string, number]> => {
       // Don't fetch empty links, but still report them.
       if (!link) {
         return [link, 0];
@@ -61,7 +67,7 @@ const findDeadLinks = async (links) => {
   return results.filter(Boolean);
 };
 
-const main = async () => {
+const main = async (): Promise<void> => {
   const cityUrlsToCitationLinks = await mapCityUrlsToCitationLinks();
 
   // We use a for loop to avoid making too many network calls -> rate limiting.
