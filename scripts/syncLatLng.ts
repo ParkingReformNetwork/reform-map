@@ -14,7 +14,7 @@ export const parseCsv = (rawText: string): Array<Record<string, any>> =>
   Papa.parse(rawText.trim(), {
     header: true,
     dynamicTyping: true,
-  }).data as Record<string, string>[];
+  }).data as Record<string, any>[];
 
 export const readCsv = async (filePath: string): Promise<Array<Record<string, any>>> => {
   const rawText = await fs.readFile(filePath, "utf-8");
