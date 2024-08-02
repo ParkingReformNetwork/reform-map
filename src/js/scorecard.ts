@@ -16,7 +16,7 @@ function generateScorecard(entry: PlaceEntry, cityState: PlaceId): string {
       </button>
     </header>
     <ul>
-      <li><a class="external-link" href=${
+      <li><a class="external-link" target="_blank" href=${
         entry["citation_url"]
       }>Details and citations <i aria-hidden="true" class="fa-solid fa-arrow-right"></i></a></li>
       <li>${parseInt(entry["population"]).toLocaleString()} residents</li>
