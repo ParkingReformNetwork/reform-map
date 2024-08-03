@@ -14,7 +14,7 @@ function updateUI(table: Tabulator, state: ViewState): void {
   );
   const tableView = document.querySelector<HTMLElement>("#table-view");
   const mapView = document.querySelector<HTMLElement>("#map");
-  const mapCounter = document.querySelector<HTMLElement>("#counter");
+  const mapCounter = document.querySelector<HTMLElement>("#map-counter");
   if (state === "map") {
     tableIcon.style.display = "inline-flex";
     mapIcon.style.display = "none";
