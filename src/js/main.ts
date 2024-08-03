@@ -10,7 +10,7 @@ import { initPopulationSlider, POPULATION_MAX_INDEX } from "./populationSlider";
 import initFilterOptions from "./filterOptions";
 import initFilterPopup from "./filterPopup";
 import { PlaceFilterManager } from "./FilterState";
-import subscribeMapCounter from "./mapCounter";
+import subscribeCounters from "./counters";
 import initViewToggle from "./viewToggle";
 import initTable from "./table";
 
@@ -53,7 +53,7 @@ export default async function initApp(): Promise<void> {
   });
 
   const markerGroup = initPlaceMarkers(filterManager, map);
-  subscribeMapCounter(filterManager);
+  subscribeCounters(filterManager);
   initScorecard(markerGroup, data);
   initSearch(filterManager);
   initFilterOptions(filterManager);

@@ -1,0 +1,28 @@
+@use "theme/colors";
+@use "theme/typography";
+
+#table-view {
+  // This is the default - it gets set to `flex` in viewToggle.ts
+  display: none;
+  flex-direction: column;
+}
+
+#table-counter {
+  flex-shrink: 0;
+}
+
+#table-container {
+  flex-grow: 1;
+  // This must be set to px or vh for Tabulator to correctly compute the table size.
+  // It doesn't seem to actually matter what we set here, so set it to 0px.
+  height: 0;
+}
+
+div.tabulator {
+  font-size: typography.$font-size-base;
+  max-height: 100%;
+  background-color: colors.$white;
+
+  border-left-width: 0px;
+  border-right-width: 0px;
+}

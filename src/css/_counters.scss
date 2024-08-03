@@ -6,9 +6,9 @@
 @use "theme/zindex";
 @use "header";
 
-$font-size: typography.$font-size-md;
-
 .map-counter {
+  $font-size: typography.$font-size-md;
+
   z-index: zindex.$map-counter;
   position: fixed;
   right: spacing.$map-controls-margin-x;
@@ -28,4 +28,10 @@ $font-size: typography.$font-size-md;
   color: colors.$black;
   border: borders.$component-border;
   border-radius: borders.$border-radius;
+}
+
+.table-counter {
+  $font-size: typography.$font-size-base;
+  padding: spacing.$element-gap spacing.$container-edge-spacing;
+  line-height: 1.3;
 }

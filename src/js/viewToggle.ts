@@ -15,18 +15,21 @@ function updateUI(table: Tabulator, state: ViewState): void {
   const tableView = document.querySelector<HTMLElement>("#table-view");
   const mapView = document.querySelector<HTMLElement>("#map");
   const mapCounter = document.querySelector<HTMLElement>("#map-counter");
+  const prnLogo = document.querySelector<HTMLElement>(".prn-logo");
   if (state === "map") {
     tableIcon.style.display = "inline-flex";
     mapIcon.style.display = "none";
-    tableView.hidden = true;
+    tableView.style.display = "none";
     mapView.hidden = false;
     mapCounter.hidden = false;
+    prnLogo.hidden = false;
   } else {
     tableIcon.style.display = "none";
     mapIcon.style.display = "inline-flex";
-    tableView.hidden = false;
+    tableView.style.display = "flex";
     mapView.hidden = true;
     mapCounter.hidden = true;
+    prnLogo.hidden = true;
     table.redraw();
   }
 }
