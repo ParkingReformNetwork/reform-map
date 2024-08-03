@@ -1,10 +1,11 @@
+import { Tabulator } from "tabulator-tables";
 import Observable from "./Observable";
 
 type ViewState = "map" | "table";
 
 type ViewStateObservable = Observable<ViewState>;
 
-function updateUI(state: ViewState): void {
+function updateUI(table: Tabulator, state: ViewState): void {
   const tableIcon = document.querySelector<HTMLButtonElement>(
     ".header-table-icon-container",
   );
@@ -26,6 +27,7 @@ function updateUI(state: ViewState): void {
     tableView.hidden = false;
     mapView.hidden = true;
     mapCounter.hidden = true;
+    table.redraw();
   }
 }
 
@@ -41,9 +43,9 @@ function updateOnIconClick(observable: ViewStateObservable): void {
   mapIcon.addEventListener("click", () => observable.setValue("map"));
 }
 
-export default function initViewToggle(): void {
+export default function initViewToggle(table: Tabulator): void {
   const viewToggle = new Observable<ViewState>("map");
-  viewToggle.subscribe(updateUI);
+  viewToggle.subscribe((state) => updateUI(table, state));
   updateOnIconClick(viewToggle);
   viewToggle.initialize();
 }

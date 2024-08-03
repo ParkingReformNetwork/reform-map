@@ -11,8 +11,8 @@ import initFilterOptions from "./filterOptions";
 import initFilterPopup from "./filterPopup";
 import { PlaceFilterManager } from "./FilterState";
 import subscribeCounter from "./counter";
-import viewToggle from "./viewToggle";
 import initViewToggle from "./viewToggle";
+import initTable from "./table";
 
 async function readData(): Promise<Record<PlaceId, PlaceEntry>> {
   // @ts-ignore
@@ -28,7 +28,6 @@ export default async function initApp(): Promise<void> {
   initIcons();
   maybeDisableFullScreenIcon();
   initAbout();
-  initViewToggle();
 
   const map = createMap();
   const data = await readData();
@@ -56,6 +55,9 @@ export default async function initApp(): Promise<void> {
   initFilterOptions(filterManager);
   initPopulationSlider(filterManager);
   initFilterPopup(filterManager);
+
+  const table = initTable();
+  initViewToggle(table);
 
   filterManager.initialize();
 }
