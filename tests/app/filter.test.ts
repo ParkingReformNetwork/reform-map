@@ -21,13 +21,13 @@ interface EdgeCase {
 const TESTS: EdgeCase[] = [
   { desc: "default filters", expectedRange: DEFAULT_PLACE_RANGE },
   { desc: "disabled filter", scope: [], expectedRange: [0, 0] },
-  { desc: "scope filter", scope: ["Regional"], expectedRange: [4, 15] },
+  { desc: "scope filter", scope: ["Regional"], expectedRange: [8, 20] },
   {
     desc: "policy change filter",
     policy: ["Parking Maximums"],
-    expectedRange: [420, 800],
+    expectedRange: [700, 1100],
   },
-  { desc: "land use filter", land: ["Residential"], expectedRange: [90, 250] },
+  { desc: "land use filter", land: ["Residential"], expectedRange: [320, 550] },
   {
     desc: "implementation filter",
     implementation: ["Repealed"],
@@ -36,21 +36,16 @@ const TESTS: EdgeCase[] = [
   {
     desc: "population slider",
     populationIntervals: [3, 6],
-    expectedRange: [295, 800],
+    expectedRange: [480, 700],
   },
   {
     desc: "no requirements",
     noRequirements: true,
-    expectedRange: [65, 250],
+    expectedRange: [80, 250],
   },
   {
     desc: "all places",
     // The other filters already enable all options by default.
-    policy: [
-      "Reduce Parking Minimums",
-      "Eliminate Parking Minimums",
-      "Parking Maximums",
-    ],
     implementation: [
       "Implemented",
       "Passed",
@@ -58,7 +53,7 @@ const TESTS: EdgeCase[] = [
       "Proposed",
       "Repealed",
     ],
-    expectedRange: [2150, 4000],
+    expectedRange: [2900, 4000],
   },
 ];
 

@@ -2,7 +2,7 @@ import { expect } from "@playwright/test";
 import type { Page } from "@playwright/test";
 
 const PLACE_MARKER = "path.leaflet-interactive";
-const DEFAULT_PLACE_RANGE: [number, number] = [1600, 2600];
+const DEFAULT_PLACE_RANGE: [number, number] = [2930, 4000];
 
 const loadMap = async (page: Page): Promise<void> => {
   await page.goto("");
