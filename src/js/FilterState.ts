@@ -72,7 +72,7 @@ export class PlaceFilterManager {
     this.state.setValue({ ...priorState, ...changes });
   }
 
-  subscribe(observer: (manager: FilterState) => void): void {
+  subscribe(observer: (state: FilterState) => void): void {
     this.state.subscribe(observer);
   }
 
