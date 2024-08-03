@@ -38,8 +38,15 @@ export default function initTable(
     layout: "fitColumns",
   });
 
-  table.setFilter((row) => filterManager.placeIds.has(row.id));
-  filterManager.subscribe(() => table.refreshFilter());
+  let tableBuilt = false;
+  table.on("tableBuilt", () => {
+    tableBuilt = true;
+    table.setFilter((row) => filterManager.placeIds.has(row.id));
+  });
+  filterManager.subscribe(() => {
+    if (!tableBuilt) return;
+    table.refreshFilter();
+  });
 
   return table;
 }
