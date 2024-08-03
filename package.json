@@ -19,9 +19,9 @@
     "test-dist": "PORT=8080 playwright test"
   },
   "devDependencies": {
-    "@parcel/compressor-brotli": "^2.9.3",
-    "@parcel/compressor-gzip": "^2.9.3",
-    "@parcel/transformer-sass": "^2.9.3",
+    "@parcel/compressor-brotli": "~2.11.0",
+    "@parcel/compressor-gzip": "~2.11.0",
+    "@parcel/transformer-sass": "~2.11.0",
     "@playwright/test": "^1.35.1",
     "@types/jsdom": "^21.1.7",
     "@types/leaflet": "^1.9.4",
@@ -41,7 +41,7 @@
     "node-fetch": "^2.6.11",
     "node-geocoder": "^4.2.0",
     "papaparse": "^5.4.1",
-    "parcel": "^2.9.2",
+    "parcel": "~2.11.0",
     "parcel-transformer-csv": "^0.0.3",
     "playwright": "^1.35.1",
     "prettier": "^3.3.3",
