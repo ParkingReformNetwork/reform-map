@@ -56,7 +56,7 @@ export default async function initApp(): Promise<void> {
   initPopulationSlider(filterManager);
   initFilterPopup(filterManager);
 
-  const table = initTable();
+  const table = initTable(filterManager);
   initViewToggle(table);
 
   filterManager.initialize();
