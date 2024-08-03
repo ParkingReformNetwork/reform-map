@@ -8,8 +8,8 @@
 
 $font-size: typography.$font-size-md;
 
-.counter {
-  z-index: zindex.$counter;
+.map-counter {
+  z-index: zindex.$map-counter;
   position: fixed;
   right: spacing.$map-controls-margin-x;
   top: calc(header.$header-height + spacing.$map-controls-margin-top);

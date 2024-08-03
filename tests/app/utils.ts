@@ -18,7 +18,7 @@ const assertNumPlaces = async (
   expect(mapNumPlaces).toBeGreaterThanOrEqual(range[0]);
   expect(mapNumPlaces).toBeLessThanOrEqual(range[1]);
 
-  const counter = await page.locator("#counter").innerText();
+  const counter = await page.locator("#map-counter").innerText();
   const counterNumSpaces = parseInt(counter.match(/\d+/)[0], 10);
   expect(mapNumPlaces).toEqual(counterNumSpaces);
 };
