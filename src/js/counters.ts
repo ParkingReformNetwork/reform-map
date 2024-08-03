@@ -1,6 +1,6 @@
 import { PlaceFilterManager } from "./FilterState";
 
-export default function subscribeMapCounter(manager: PlaceFilterManager): void {
+export default function subscribeCounters(manager: PlaceFilterManager): void {
   manager.subscribe((state) => {
     let text: string;
     const numPlaces = manager.placeIds.size;
@@ -20,5 +20,6 @@ export default function subscribeMapCounter(manager: PlaceFilterManager): void {
     }
 
     document.getElementById("map-counter").innerText = text;
+    document.getElementById("table-counter").innerText = text;
   });
 }
