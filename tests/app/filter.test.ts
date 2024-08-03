@@ -36,7 +36,7 @@ const TESTS: EdgeCase[] = [
   {
     desc: "population slider",
     populationIntervals: [3, 6],
-    expectedRange: [750, 1400],
+    expectedRange: [480, 700],
   },
   {
     desc: "no requirements",
