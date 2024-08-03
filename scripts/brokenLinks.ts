@@ -9,7 +9,7 @@ import path from "path";
 import fetch from "node-fetch";
 import jsdom from "jsdom";
 
-const parseCitationLinks = async (filePath: string): Promise<string[]> => {
+async function parseCitationLinks(filePath: string): Promise<string[]> {
   const html = await fs.readFile(filePath, "utf8");
   const dom = new jsdom.JSDOM(html);
   return Array.from(
@@ -17,11 +17,9 @@ const parseCitationLinks = async (filePath: string): Promise<string[]> => {
       "dd.col-12.col-sm-8.col-lg-9 a",
     ),
   ).map((a: HTMLAnchorElement) => a.href);
-};
+}
 
-const mapCityUrlsToCitationLinks = async (): Promise<
-  Record<string, string[]>
-> => {
+async function mapCityUrlsToCitationLinks(): Promise<Record<string, string[]>> {
   const folderEntries = await fs.readdir("city_detail");
   const fileNames = folderEntries.filter(
     (entry) => entry !== "attachment_images" && entry.includes(".html"),
@@ -38,11 +36,11 @@ const mapCityUrlsToCitationLinks = async (): Promise<
     acc[cityUrl] = links;
     return acc;
   }, {});
-};
+}
 
-const findDeadLinks = async (
+async function findDeadLinks(
   links: string[],
-): Promise<Array<[string, number]>> => {
+): Promise<Array<[string, number]>> {
   const results = await Promise.all(
     links.map(async (link): Promise<[string, number]> => {
       // Don't fetch empty links, but still report them.
@@ -65,9 +63,9 @@ const findDeadLinks = async (
   );
 
   return results.filter(Boolean);
-};
+}
 
-const main = async (): Promise<void> => {
+async function main(): Promise<void> {
   const cityUrlsToCitationLinks = await mapCityUrlsToCitationLinks();
 
   // We use a for loop to avoid making too many network calls -> rate limiting.
@@ -80,7 +78,7 @@ const main = async (): Promise<void> => {
   }
 
   console.log(result);
-};
+}
 
 if (process.env.NODE_ENV !== "test") {
   main().catch((error) => {
