@@ -19,8 +19,11 @@ const assertNumPlaces = async (
   expect(mapNumPlaces).toBeLessThanOrEqual(range[1]);
 
   const counter = await page.locator("#map-counter").innerText();
-  const counterNumSpaces = parseInt(counter.match(/\d+/)[0], 10);
-  expect(mapNumPlaces).toEqual(counterNumSpaces);
+  const counterNumMatch = counter.match(/\d+/);
+  const counterNumPlaces = counterNumMatch
+    ? parseInt(counterNumMatch[0], 10)
+    : 0;
+  expect(mapNumPlaces).toEqual(counterNumPlaces);
 };
 
 const deselectToggle = async (page: Page): Promise<void> => {

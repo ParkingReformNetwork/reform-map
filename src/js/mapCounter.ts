@@ -16,7 +16,7 @@ export default function subscribeMapCounter(manager: PlaceFilterManager): void {
       const placesWord = numPlaces === 1 ? "place" : "places";
       text = `Showing ${numPlaces} ${placesWord} ${suffix}`;
     } else {
-      text = `No places selected. Use the filter and search icons.`;
+      text = `No places selected — use the filter and search icons`;
     }
 
     document.getElementById("map-counter").innerText = text;
