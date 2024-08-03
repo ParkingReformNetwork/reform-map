@@ -7,6 +7,8 @@ import {
   faUpRightFromSquare,
   faMagnifyingGlass,
   faSliders,
+  faTable,
+  faEarthAmericas,
   fas,
 } from "@fortawesome/free-solid-svg-icons";
 import "@fortawesome/fontawesome-svg-core/styles.css";
@@ -18,6 +20,8 @@ export default function initIcons(): void {
     faCircleXmark,
     faMagnifyingGlass,
     faSliders,
+    faTable,
+    faEarthAmericas,
     fas,
   );
   dom.watch();

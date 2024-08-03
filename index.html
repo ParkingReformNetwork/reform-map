@@ -36,6 +36,23 @@
 
   <body>
     <header class="top-header">
+      <nav class="header-view-toggle" hidden>
+        <button
+          class="header-icon-container header-table-icon-container"
+          title="switch to table view"
+          aria-label="switch to table view from map view"
+        >
+          <i class="fa-solid fa-table" aria-hidden="true"></i>
+        </button>
+        <button
+          class="header-icon-container header-map-icon-container"
+          title="switch to map view"
+          aria-label="switch to map view from table view"
+          style="display: none"
+        >
+          <i class="fa-solid fa-earth-americas" aria-hidden="true"></i>
+        </button>
+      </nav>
       <nav class="header-control-icons">
         <button
           class="header-icon-container header-filter-icon-container"
@@ -344,6 +361,16 @@
       role="application"
       aria-label="interactive map showing places with parking reforms as clickable dots"
     ></div>
+
+    <div
+      id="table-view"
+      role="application"
+      aria-label="sortable table showing places selected by the filter and search controls"
+      hidden
+    >
+      Table view!
+    </div>
+
     <script type="module">
       import initApp from "./src/js/main";
 
