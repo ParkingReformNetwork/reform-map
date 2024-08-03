@@ -4,6 +4,9 @@ import type { PlaceEntry, PlaceId } from "./types";
 import Observable from "./Observable";
 
 function generateScorecard(entry: PlaceEntry, cityState: PlaceId): string {
+  const dateOfReform = entry.date_of_reform
+    ? `<li>Reformed on ${entry.date_of_reform}</li>`
+    : "";
   return `
     <header class="scorecard-header">
       <h2 class="scorecard-title">${cityState}</h2>
@@ -19,6 +22,7 @@ function generateScorecard(entry: PlaceEntry, cityState: PlaceId): string {
       <li><a class="external-link" target="_blank" href=${
         entry["citation_url"]
       }>Details and citations <i aria-hidden="true" class="fa-solid fa-arrow-right"></i></a></li>
+      ${dateOfReform}
       <li>${parseInt(entry["population"]).toLocaleString()} residents</li>
     </ul>
     <p>${entry["report_summary"]}</p>
