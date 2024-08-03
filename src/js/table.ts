@@ -1,31 +1,45 @@
-import { Tabulator } from "tabulator-tables";
+import { Tabulator, FilterModule, SortModule } from "tabulator-tables";
 import "tabulator-tables/dist/css/tabulator.min.css";
 
-export default function initTable(): Tabulator {
-  // TODO: load data from PlaceFilterManager.
+import { PlaceFilterManager } from "./FilterState";
+
+export default function initTable(
+  filterManager: PlaceFilterManager,
+): Tabulator {
+  // TODO: counter
+  // TODO: styling, including y scrolling
+  // TODO: figure out how to display details
+  // TODO: placeholder value
+
+  // TODO: freeze columns? https://tabulator.info/docs/6.2/layout#frozen-column
+  // TODO: allow resizing columns? https://tabulator.info/docs/6.2/modules#module-resizeColumns
+  // TODO: moveable columns? https://tabulator.info/docs/6.2/modules#module-moveColumn
+  // TODO: responsive layout https://tabulator.info/docs/6.2/modules#module-responsiveLayout
+  // TODO: downloads?
+  Tabulator.registerModule([FilterModule, SortModule]);
+
+  const data = Object.entries(filterManager.entries).map(
+    ([placeId, entry]) => ({
+      id: placeId,
+      city: entry.city,
+      state: entry.state,
+      country: entry.country,
+    }),
+  );
+  const columns = [
+    { title: "City", field: "city" },
+    { title: "State", field: "state" },
+    { title: "Country", field: "country" },
+  ];
+
   const table = new Tabulator("#table", {
-    data: [
-      {
-        id: 1,
-        name: "Billy Bob",
-        age: "12",
-      },
-      {
-        id: 2,
-        name: "Mary May",
-        age: "1",
-      },
-    ],
+    data,
+    columns,
     layout: "fitColumns",
-    columns: [
-      { title: "Name", field: "name" },
-      { title: "Age", field: "age" },
-    ],
   });
 
-  // TODO: subscribe to updates to the selected cities. Figure out
-  // how to ensure the table is already initialized. Also consider using
-  // https://tabulator.info/docs/6.2/reactivity
+  table.setFilter((row) => filterManager.placeIds.has(row.id));
+  filterManager.subscribe(() => table.refreshFilter());
 
   return table;
 }
