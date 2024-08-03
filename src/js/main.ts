@@ -35,7 +35,11 @@ export default async function initApp(): Promise<void> {
   const filterManager = new PlaceFilterManager(data, {
     searchInput: [],
     noRequirementsToggle: true,
-    policyChange: ["Eliminate Parking Minimums"],
+    policyChange: [
+      "Reduce Parking Minimums",
+      "Eliminate Parking Minimums",
+      "Parking Maximums",
+    ],
     scope: [
       "Regional",
       "Citywide",
