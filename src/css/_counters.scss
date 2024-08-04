@@ -1,6 +1,7 @@
 @use "theme/borders";
 @use "theme/breakpoints";
 @use "theme/colors";
+@use "theme/icons";
 @use "theme/spacing";
 @use "theme/typography";
 @use "theme/zindex";
@@ -30,8 +31,30 @@
   border-radius: borders.$border-radius;
 }
 
-.table-counter {
-  $font-size: typography.$font-size-base;
+.table-counter-container {
   padding: spacing.$element-gap spacing.$container-edge-spacing;
   line-height: 1.3;
+  width: 100%;
+
+  font-size: typography.$font-size-base;
+  @include breakpoints.gt-xs {
+    font-size: typography.$font-size-md;
+  }
+
+  display: flex;
+  align-items: center;
+  justify-content: space-betwen;
+
+  #table-counter {
+    margin: 0;
+    flex: 1 1 auto;
+    margin-right: spacing.$element-gap;
+  }
+
+  #table-logo {
+    flex: 0 0 auto;
+    display: inline-flex;
+    width: icons.$icon-size-lg;
+    height: icons.$icon-size-lg;
+  }
 }
