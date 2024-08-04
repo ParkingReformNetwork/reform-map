@@ -4,8 +4,6 @@ import "choices.js/public/assets/styles/choices.css";
 import Observable from "./Observable";
 import { PlaceFilterManager } from "./FilterState";
 
-// TODO: Reset link in counter should reset searchInput to be null. Maybe improve style?
-
 function updateSearchPopupUI(isVisible: boolean) {
   const popup = document.querySelector<HTMLElement>("#search-popup");
   const icon = document.querySelector(".header-search-icon-container");

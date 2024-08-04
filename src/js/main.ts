@@ -10,7 +10,7 @@ import { initPopulationSlider, POPULATION_MAX_INDEX } from "./populationSlider";
 import initFilterOptions from "./filterOptions";
 import initFilterPopup from "./filterPopup";
 import { PlaceFilterManager } from "./FilterState";
-import subscribeCounters from "./counters";
+import initCounters from "./counters";
 import initViewToggle from "./viewToggle";
 import initTable from "./table";
 import subscribeSnapToPlace from "./mapPosition";
@@ -55,7 +55,7 @@ export default async function initApp(): Promise<void> {
 
   const markerGroup = initPlaceMarkers(filterManager, map);
   subscribeSnapToPlace(filterManager, map);
-  subscribeCounters(filterManager);
+  initCounters(filterManager);
   initSearch(filterManager);
   initFilterOptions(filterManager);
   initPopulationSlider(filterManager);

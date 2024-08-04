@@ -5,7 +5,7 @@ function determineHtml(state: FilterState, numPlaces: number): string {
     return "No places selected — use the filter and search icons";
   }
   if (state.searchInput) {
-    return `Showing ${state.searchInput} from search — <a>reset</a>`;
+    return `Showing ${state.searchInput} from search — <a class="counter-search-reset" role="button" aria-label="reset search">reset</a>`;
   }
   const suffix = state.noRequirementsToggle
     ? "without parking requirements"
@@ -14,10 +14,30 @@ function determineHtml(state: FilterState, numPlaces: number): string {
   return `Showing ${numPlaces} ${placesWord} ${suffix}`;
 }
 
-export default function subscribeCounters(manager: PlaceFilterManager): void {
+function setUpResetButton(
+  counterContainer: HTMLElement,
+  manager: PlaceFilterManager,
+): void {
+  counterContainer.addEventListener("click", (event) => {
+    if (
+      event.target instanceof Element &&
+      event.target.matches(".counter-search-reset")
+    ) {
+      manager.update({ searchInput: null });
+    }
+  });
+}
+
+export default function initCounters(manager: PlaceFilterManager): void {
+  const mapCounter = document.getElementById("map-counter");
+  const tableCounter = document.getElementById("table-counter");
+
+  setUpResetButton(mapCounter, manager);
+  setUpResetButton(tableCounter, manager);
+
   manager.subscribe((state) => {
     const html = determineHtml(state, manager.placeIds.size);
-    document.getElementById("map-counter").innerHTML = html;
-    document.getElementById("table-counter").innerHTML = html;
+    mapCounter.innerHTML = html;
+    tableCounter.innerHTML = html;
   });
 }
