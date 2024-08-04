@@ -32,6 +32,6 @@ test("scorecard pops up and closes", async ({ page }) => {
   await page.locator(".leaflet-interactive").first().click({ force: true });
   expect(await scorecardIsVisible()).toBe(true);
   // click outside of popup (not a marker either)
-  await page.click("header");
+  await page.click("#map");
   expect(await scorecardIsVisible()).toBe(false);
 });
