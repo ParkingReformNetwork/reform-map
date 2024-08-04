@@ -5,7 +5,7 @@ import Observable from "./Observable";
 import { PlaceFilterManager } from "./FilterState";
 
 // TODO: choosing a place snaps map location
-// TODO: Improve UI for table view. We should always close the search popup and have a Reset link in the counter
+// TODO: Reset link in counter should reset searchInput to be null. Maybe improve style?
 
 function updateSearchPopupUI(isVisible: boolean) {
   const popup = document.querySelector<HTMLElement>("#search-popup");
@@ -15,7 +15,9 @@ function updateSearchPopupUI(isVisible: boolean) {
   icon.ariaExpanded = isVisible.toString();
 }
 
-function initSearchPopup(): void {
+type SearchPopupObservable = Observable<boolean>;
+
+function initSearchPopup(): SearchPopupObservable {
   const isVisible = new Observable<boolean>(false);
   isVisible.subscribe(updateSearchPopupUI);
 
@@ -41,6 +43,7 @@ function initSearchPopup(): void {
   });
 
   isVisible.initialize();
+  return isVisible;
 }
 
 export default function initSearch(filterManager: PlaceFilterManager): void {
@@ -62,6 +65,9 @@ export default function initSearch(filterManager: PlaceFilterManager): void {
   // Set initial state.
   choices.setChoiceByValue(filterManager.getState().searchInput);
 
+  // Also set up the popup.
+  const popupIsVisible = initSearchPopup();
+
   // Ensure that programmatic changes that set FilterState.searchInput to null
   // update the UI element too.
   filterManager.subscribe((state) => {
@@ -69,12 +75,10 @@ export default function initSearch(filterManager: PlaceFilterManager): void {
   });
 
   // User-driven inputs to search should update the FilterState.
-  htmlElement.addEventListener("change", () =>
+  htmlElement.addEventListener("change", () => {
     filterManager.update({
       searchInput: (choices.getValue(true) as string) || null,
-    }),
-  );
-
-  // Also set up the popup.
-  initSearchPopup();
+    });
+    popupIsVisible.setValue(false);
+  });
 }
