@@ -67,6 +67,7 @@ export default function initScorecard(
   scorecardState.subscribe(updateScorecardUI);
 
   const scorecardContainer = document.querySelector("#scorecard-container");
+  const header = document.querySelector(".top-header");
 
   // Clicking a city marker opens up the scorecard.
   markerGroup.on("click", (e) => {
@@ -97,6 +98,8 @@ export default function initScorecard(
       event.target instanceof Element &&
       // Clicks on map dots should not trigger this event.
       !(event.target instanceof SVGPathElement) &&
+      // Clicks on the header also should not trigger the event.
+      !header?.contains(event.target) &&
       !scorecardContainer?.contains(event.target)
     ) {
       scorecardState.setValue({ type: "hidden" });

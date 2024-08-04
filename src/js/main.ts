@@ -13,6 +13,7 @@ import { PlaceFilterManager } from "./FilterState";
 import subscribeCounters from "./counters";
 import initViewToggle from "./viewToggle";
 import initTable from "./table";
+import subscribeSnapToPlace from "./mapPosition";
 
 async function readData(): Promise<Record<PlaceId, PlaceEntry>> {
   // @ts-ignore
@@ -53,6 +54,7 @@ export default async function initApp(): Promise<void> {
   });
 
   const markerGroup = initPlaceMarkers(filterManager, map);
+  subscribeSnapToPlace(filterManager, map);
   subscribeCounters(filterManager);
   initSearch(filterManager);
   initFilterOptions(filterManager);

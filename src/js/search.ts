@@ -4,7 +4,6 @@ import "choices.js/public/assets/styles/choices.css";
 import Observable from "./Observable";
 import { PlaceFilterManager } from "./FilterState";
 
-// TODO: choosing a place snaps map location
 // TODO: Reset link in counter should reset searchInput to be null. Maybe improve style?
 
 function updateSearchPopupUI(isVisible: boolean) {
