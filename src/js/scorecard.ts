@@ -2,6 +2,8 @@ import type { FeatureGroup } from "leaflet";
 
 import type { PlaceEntry, PlaceId } from "./types";
 import Observable from "./Observable";
+import { PlaceFilterManager } from "./FilterState";
+import { ViewStateObservable } from "./viewToggle";
 
 function generateScorecard(entry: PlaceEntry, cityState: PlaceId): string {
   const dateOfReform = entry.date_of_reform
@@ -56,6 +58,8 @@ function updateScorecardUI(state: ScorecardState): void {
 }
 
 export default function initScorecard(
+  filterManager: PlaceFilterManager,
+  viewToggle: ViewStateObservable,
   markerGroup: FeatureGroup,
   data: Record<PlaceId, PlaceEntry>,
 ): void {
@@ -63,6 +67,7 @@ export default function initScorecard(
   scorecardState.subscribe(updateScorecardUI);
 
   const scorecardContainer = document.querySelector("#scorecard-container");
+  const header = document.querySelector(".top-header");
 
   // Clicking a city marker opens up the scorecard.
   markerGroup.on("click", (e) => {
@@ -74,6 +79,18 @@ export default function initScorecard(
     });
   });
 
+  // Searching for a city opens up the scorecard if in map view.
+  filterManager.subscribe((state) => {
+    const search = state.searchInput;
+    if (search && viewToggle.getValue() === "map") {
+      scorecardState.setValue({
+        type: "visible",
+        placeId: search,
+        entry: data[search],
+      });
+    }
+  });
+
   // Clicks outside the popup close it.
   window.addEventListener("click", (event) => {
     if (
@@ -81,12 +98,16 @@ export default function initScorecard(
       event.target instanceof Element &&
       // Clicks on map dots should not trigger this event.
       !(event.target instanceof SVGPathElement) &&
+      // Clicks on the header also should not trigger the event.
+      !header?.contains(event.target) &&
       !scorecardContainer?.contains(event.target)
     ) {
       scorecardState.setValue({ type: "hidden" });
     }
   });
 
+  // The scorecard close button closes the popup.
+  //
   // The event listener is on `#scorecard-container` because it is never erased,
   // unlike the scorecard contents being recreated every time the city changes.
   // This is called "event delegation".
@@ -98,6 +119,11 @@ export default function initScorecard(
     );
     if (!closeIcon) return;
     scorecardState.setValue({ type: "hidden" });
+  });
+
+  // Closing the scorecard resets search.
+  scorecardState.subscribe(({ type }) => {
+    if (type === "hidden") filterManager.update({ searchInput: null });
   });
 
   scorecardState.initialize();

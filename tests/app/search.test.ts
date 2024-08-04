@@ -13,17 +13,13 @@ test("search changes what is shown", async ({ page }) => {
   await deselectToggle(page);
 
   await page.locator(".header-search-icon-container").click();
-  await page.locator(".choices").click();
   await page
     .locator(".choices__list--dropdown > .choices__list > .choices__item")
-    .first()
+    .nth(2)
     .click();
   await assertNumPlaces(page, [1, 1]);
 
-  // Removing the selected places restores all.
-  await page
-    .locator(".choices__inner > .choices__list > .choices__item > button")
-    .click();
-
+  // Removing the selected place, by closing scorecard, restores all.
+  await page.locator(".scorecard-close-icon-container").click();
   await assertNumPlaces(page, DEFAULT_PLACE_RANGE);
 });

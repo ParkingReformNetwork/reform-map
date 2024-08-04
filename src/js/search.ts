@@ -12,19 +12,19 @@ function updateSearchPopupUI(isVisible: boolean) {
   icon.ariaExpanded = isVisible.toString();
 }
 
-function initSearchPopup(): void {
+type SearchPopupObservable = Observable<boolean>;
+
+function initSearchPopup(): SearchPopupObservable {
   const isVisible = new Observable<boolean>(false);
   isVisible.subscribe(updateSearchPopupUI);
 
   const popup = document.querySelector("#search-popup");
-  const searchBox = document.querySelector<HTMLInputElement>(
-    "input.choices__input",
-  );
+  const selectElement = document.querySelector<HTMLInputElement>("div.choices");
   const icon = document.querySelector(".header-search-icon-container");
 
   icon.addEventListener("click", () => {
     isVisible.setValue(!isVisible.getValue());
-    setTimeout(() => searchBox.focus(), 100);
+    setTimeout(() => selectElement.click(), 100);
   });
 
   // Clicks outside the popup close it.
@@ -40,6 +40,7 @@ function initSearchPopup(): void {
   });
 
   isVisible.initialize();
+  return isVisible;
 }
 
 export default function initSearch(filterManager: PlaceFilterManager): void {
@@ -55,15 +56,26 @@ export default function initSearch(filterManager: PlaceFilterManager): void {
     removeItemButton: true,
     allowHTML: false,
     itemSelectText: "",
+    searchEnabled: true,
   });
 
   // Set initial state.
   choices.setChoiceByValue(filterManager.getState().searchInput);
 
-  htmlElement.addEventListener("change", () => {
-    filterManager.update({ searchInput: choices.getValue(true) as string[] });
+  // Also set up the popup.
+  const popupIsVisible = initSearchPopup();
+
+  // Ensure that programmatic changes that set FilterState.searchInput to null
+  // update the UI element too.
+  filterManager.subscribe((state) => {
+    if (state.searchInput === null) choices.setChoiceByValue("");
   });
 
-  // Also set up the popup.
-  initSearchPopup();
+  // User-driven inputs to search should update the FilterState.
+  htmlElement.addEventListener("change", () => {
+    filterManager.update({
+      searchInput: (choices.getValue(true) as string) || null,
+    });
+    popupIsVisible.setValue(false);
+  });
 }

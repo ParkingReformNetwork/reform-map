@@ -1,9 +1,9 @@
 import { Tabulator } from "tabulator-tables";
 import Observable from "./Observable";
 
-type ViewState = "map" | "table";
+export type ViewState = "map" | "table";
 
-type ViewStateObservable = Observable<ViewState>;
+export type ViewStateObservable = Observable<ViewState>;
 
 function updateUI(table: Tabulator, state: ViewState): void {
   const tableIcon = document.querySelector<HTMLButtonElement>(
@@ -46,9 +46,10 @@ function updateOnIconClick(observable: ViewStateObservable): void {
   mapIcon.addEventListener("click", () => observable.setValue("map"));
 }
 
-export default function initViewToggle(table: Tabulator): void {
+export default function initViewToggle(table: Tabulator): ViewStateObservable {
   const viewToggle = new Observable<ViewState>("map");
   viewToggle.subscribe((state) => updateUI(table, state));
   updateOnIconClick(viewToggle);
   viewToggle.initialize();
+  return viewToggle;
 }

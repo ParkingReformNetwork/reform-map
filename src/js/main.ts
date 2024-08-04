@@ -10,9 +10,10 @@ import { initPopulationSlider, POPULATION_MAX_INDEX } from "./populationSlider";
 import initFilterOptions from "./filterOptions";
 import initFilterPopup from "./filterPopup";
 import { PlaceFilterManager } from "./FilterState";
-import subscribeCounters from "./counters";
+import initCounters from "./counters";
 import initViewToggle from "./viewToggle";
 import initTable from "./table";
+import subscribeSnapToPlace from "./mapPosition";
 
 async function readData(): Promise<Record<PlaceId, PlaceEntry>> {
   // @ts-ignore
@@ -33,7 +34,7 @@ export default async function initApp(): Promise<void> {
   const data = await readData();
 
   const filterManager = new PlaceFilterManager(data, {
-    searchInput: [],
+    searchInput: null,
     noRequirementsToggle: true,
     policyChange: [
       "Reduce Parking Minimums",
@@ -53,15 +54,17 @@ export default async function initApp(): Promise<void> {
   });
 
   const markerGroup = initPlaceMarkers(filterManager, map);
-  subscribeCounters(filterManager);
-  initScorecard(markerGroup, data);
+  subscribeSnapToPlace(filterManager, map);
+  initCounters(filterManager);
   initSearch(filterManager);
   initFilterOptions(filterManager);
   initPopulationSlider(filterManager);
   initFilterPopup(filterManager);
 
   const table = initTable(filterManager);
-  initViewToggle(table);
+  const viewToggle = initViewToggle(table);
+
+  initScorecard(filterManager, viewToggle, markerGroup, data);
 
   filterManager.initialize();
 }
