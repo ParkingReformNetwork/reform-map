@@ -1,24 +1,22 @@
-import { PlaceFilterManager } from "./FilterState";
+import { FilterState, PlaceFilterManager } from "./FilterState";
+
+function determineText(state: FilterState, numPlaces: number): string {
+  if (!numPlaces) {
+    return "No places selected — use the filter and search icons";
+  }
+  if (state.searchInput) {
+    return `Showing ${state.searchInput} from search`;
+  }
+  const suffix = state.noRequirementsToggle
+    ? "without parking requirements"
+    : "with parking reforms";
+  const placesWord = numPlaces === 1 ? "place" : "places";
+  return `Showing ${numPlaces} ${placesWord} ${suffix}`;
+}
 
 export default function subscribeCounters(manager: PlaceFilterManager): void {
   manager.subscribe((state) => {
-    let text: string;
-    const numPlaces = manager.placeIds.size;
-    if (numPlaces) {
-      let suffix: string;
-      if (state.searchInput) {
-        suffix = "from search";
-      } else if (state.noRequirementsToggle) {
-        suffix = "without parking requirements";
-      } else {
-        suffix = "with parking reforms";
-      }
-      const placesWord = numPlaces === 1 ? "place" : "places";
-      text = `Showing ${numPlaces} ${placesWord} ${suffix}`;
-    } else {
-      text = `No places selected — use the filter and search icons`;
-    }
-
+    const text = determineText(state, manager.placeIds.size);
     document.getElementById("map-counter").innerText = text;
     document.getElementById("table-counter").innerText = text;
   });

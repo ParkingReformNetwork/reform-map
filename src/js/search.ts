@@ -4,9 +4,8 @@ import "choices.js/public/assets/styles/choices.css";
 import Observable from "./Observable";
 import { PlaceFilterManager } from "./FilterState";
 
-// TODO: choosing a city pulls up scorecard and snaps map location
-// TODO: closing a scorecard resets search
-// TODO: better styling of remove option, somehow -- necessary?
+// TODO: choosing a place snaps map location
+// TODO: Improve UI for table view. We should always close the search popup and have a Reset link in the counter
 
 function updateSearchPopupUI(isVisible: boolean) {
   const popup = document.querySelector<HTMLElement>("#search-popup");
@@ -63,6 +62,13 @@ export default function initSearch(filterManager: PlaceFilterManager): void {
   // Set initial state.
   choices.setChoiceByValue(filterManager.getState().searchInput);
 
+  // Ensure that programmatic changes that set FilterState.searchInput to null
+  // update the UI element too.
+  filterManager.subscribe((state) => {
+    if (state.searchInput === null) choices.setChoiceByValue("");
+  });
+
+  // User-driven inputs to search should update the FilterState.
   htmlElement.addEventListener("change", () =>
     filterManager.update({
       searchInput: (choices.getValue(true) as string) || null,

@@ -54,14 +54,15 @@ export default async function initApp(): Promise<void> {
 
   const markerGroup = initPlaceMarkers(filterManager, map);
   subscribeCounters(filterManager);
-  initScorecard(filterManager, markerGroup, data);
   initSearch(filterManager);
   initFilterOptions(filterManager);
   initPopulationSlider(filterManager);
   initFilterPopup(filterManager);
 
   const table = initTable(filterManager);
-  initViewToggle(table);
+  const viewToggle = initViewToggle(table);
+
+  initScorecard(filterManager, viewToggle, markerGroup, data);
 
   filterManager.initialize();
 }
