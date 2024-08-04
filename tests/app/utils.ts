@@ -19,10 +19,13 @@ const assertNumPlaces = async (
   expect(mapNumPlaces).toBeLessThanOrEqual(range[1]);
 
   const counter = await page.locator("#map-counter").innerText();
-  const counterNumMatch = counter.match(/\d+/);
-  const counterNumPlaces = counterNumMatch
-    ? parseInt(counterNumMatch[0], 10)
-    : 0;
+  let counterNumPlaces: number;
+  if (counter.includes("from search")) {
+    counterNumPlaces = 1;
+  } else {
+    const counterNumMatch = counter.match(/\d+/);
+    counterNumPlaces = counterNumMatch ? parseInt(counterNumMatch[0], 10) : 0;
+  }
   expect(mapNumPlaces).toEqual(counterNumPlaces);
 };
 
