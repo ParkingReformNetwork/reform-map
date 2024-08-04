@@ -7,6 +7,7 @@ import {
   MoveColumnsModule,
   ColumnDefinition,
   FrozenColumnsModule,
+  PageModule,
 } from "tabulator-tables";
 import "tabulator-tables/dist/css/tabulator.min.css";
 import { DateTime } from "luxon";
@@ -31,6 +32,7 @@ export default function initTable(
     SortModule,
     ResizeColumnsModule,
     MoveColumnsModule,
+    PageModule,
   ]);
 
   const data = Object.entries(filterManager.entries).map(
@@ -106,6 +108,16 @@ export default function initTable(
     columns,
     layout: "fitColumns",
     movableColumns: true,
+    // We use pagination to avoid performance issues.
+    pagination: true,
+    paginationSize: 100,
+    paginationCounter: (
+      _pageSize,
+      _currentRow,
+      currentPage,
+      _totalRows,
+      totalPages,
+    ) => `Page ${currentPage} of ${totalPages}`,
   });
 
   let tableBuilt = false;
