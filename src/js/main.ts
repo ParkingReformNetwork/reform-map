@@ -54,7 +54,7 @@ export default async function initApp(): Promise<void> {
 
   const markerGroup = initPlaceMarkers(filterManager, map);
   subscribeCounters(filterManager);
-  initScorecard(markerGroup, data);
+  initScorecard(filterManager, markerGroup, data);
   initSearch(filterManager);
   initFilterOptions(filterManager);
   initPopulationSlider(filterManager);

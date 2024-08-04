@@ -4,9 +4,9 @@ import "choices.js/public/assets/styles/choices.css";
 import Observable from "./Observable";
 import { PlaceFilterManager } from "./FilterState";
 
-// TODO: choosing a city 1) closes search, 2) pulls up scorecard, and 3) snaps map location
+// TODO: choosing a city pulls up scorecard and snaps map location
 // TODO: closing a scorecard resets search
-// TODO: better styling of remove option, somehow
+// TODO: better styling of remove option, somehow -- necessary?
 
 function updateSearchPopupUI(isVisible: boolean) {
   const popup = document.querySelector<HTMLElement>("#search-popup");

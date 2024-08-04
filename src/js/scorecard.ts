@@ -2,6 +2,7 @@ import type { FeatureGroup } from "leaflet";
 
 import type { PlaceEntry, PlaceId } from "./types";
 import Observable from "./Observable";
+import { PlaceFilterManager } from "./FilterState";
 
 function generateScorecard(entry: PlaceEntry, cityState: PlaceId): string {
   const dateOfReform = entry.date_of_reform
@@ -56,6 +57,7 @@ function updateScorecardUI(state: ScorecardState): void {
 }
 
 export default function initScorecard(
+  filterManager: PlaceFilterManager,
   markerGroup: FeatureGroup,
   data: Record<PlaceId, PlaceEntry>,
 ): void {
@@ -72,6 +74,18 @@ export default function initScorecard(
       placeId: cityState,
       entry: data[cityState],
     });
+  });
+
+  // Searching for a city opens up the scorecard.
+  filterManager.subscribe((state) => {
+    const search = state.searchInput;
+    if (search) {
+      scorecardState.setValue({
+        type: "visible",
+        placeId: search,
+        entry: data[search],
+      });
+    }
   });
 
   // Clicks outside the popup close it.
