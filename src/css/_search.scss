@@ -6,7 +6,7 @@
 @use "theme/zindex";
 @use "header";
 
-div.choices[data-type*="select-multiple"] {
+div.choices[data-type*="select-one"] {
   margin-bottom: 0;
   z-index: zindex.$search;
   position: fixed;

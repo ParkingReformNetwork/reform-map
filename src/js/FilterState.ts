@@ -15,7 +15,7 @@ export const POPULATION_INTERVALS: Array<[string, number]> = [
 ];
 
 export interface FilterState {
-  searchInput: string[];
+  searchInput: string | null;
   noRequirementsToggle: boolean;
   policyChange: string[];
   scope: string[];
@@ -85,8 +85,8 @@ export class PlaceFilterManager {
     const entry = this.entries[placeId];
 
     // Search overrides filter config.
-    if (state.searchInput.length) {
-      return state.searchInput.includes(placeId);
+    if (state.searchInput) {
+      return state.searchInput === placeId;
     }
 
     const isCompatibleWith = (

@@ -4,6 +4,10 @@ import "choices.js/public/assets/styles/choices.css";
 import Observable from "./Observable";
 import { PlaceFilterManager } from "./FilterState";
 
+// TODO: choosing a city 1) closes search, 2) pulls up scorecard, and 3) snaps map location
+// TODO: closing a scorecard resets search
+// TODO: better styling of remove option, somehow
+
 function updateSearchPopupUI(isVisible: boolean) {
   const popup = document.querySelector<HTMLElement>("#search-popup");
   const icon = document.querySelector(".header-search-icon-container");
@@ -17,14 +21,12 @@ function initSearchPopup(): void {
   isVisible.subscribe(updateSearchPopupUI);
 
   const popup = document.querySelector("#search-popup");
-  const searchBox = document.querySelector<HTMLInputElement>(
-    "input.choices__input",
-  );
+  const selectElement = document.querySelector<HTMLInputElement>("div.choices");
   const icon = document.querySelector(".header-search-icon-container");
 
   icon.addEventListener("click", () => {
     isVisible.setValue(!isVisible.getValue());
-    setTimeout(() => searchBox.focus(), 100);
+    setTimeout(() => selectElement.click(), 100);
   });
 
   // Clicks outside the popup close it.
@@ -55,14 +57,17 @@ export default function initSearch(filterManager: PlaceFilterManager): void {
     removeItemButton: true,
     allowHTML: false,
     itemSelectText: "",
+    searchEnabled: true,
   });
 
   // Set initial state.
   choices.setChoiceByValue(filterManager.getState().searchInput);
 
-  htmlElement.addEventListener("change", () => {
-    filterManager.update({ searchInput: choices.getValue(true) as string[] });
-  });
+  htmlElement.addEventListener("change", () =>
+    filterManager.update({
+      searchInput: (choices.getValue(true) as string) || null,
+    }),
+  );
 
   // Also set up the popup.
   initSearchPopup();

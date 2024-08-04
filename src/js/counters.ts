@@ -6,7 +6,7 @@ export default function subscribeCounters(manager: PlaceFilterManager): void {
     const numPlaces = manager.placeIds.size;
     if (numPlaces) {
       let suffix: string;
-      if (state.searchInput.length) {
+      if (state.searchInput) {
         suffix = "from search";
       } else if (state.noRequirementsToggle) {
         suffix = "without parking requirements";

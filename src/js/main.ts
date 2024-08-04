@@ -33,7 +33,7 @@ export default async function initApp(): Promise<void> {
   const data = await readData();
 
   const filterManager = new PlaceFilterManager(data, {
-    searchInput: [],
+    searchInput: null,
     noRequirementsToggle: true,
     policyChange: [
       "Reduce Parking Minimums",
