@@ -36,7 +36,7 @@
 
   <body>
     <header class="top-header">
-      <nav class="header-view-toggle" hidden>
+      <nav class="header-view-toggle">
         <button
           class="header-icon-container header-table-icon-container"
           title="switch to table view"
@@ -347,12 +347,14 @@
       <select multiple class="search"></select>
     </div>
 
-    <div class="prn-logo">
+    <div class="prn-logo-map">
       <a
         href="https://parkingreform.org/support/"
         target="_blank"
         aria-label="Support Parking Reform Network"
-        ><img src="./assets/prn-logo.png" alt="Parking Reform Network logo"
+        ><img
+          src="./assets/prn-logo-wide.png"
+          alt="Parking Reform Network logo"
       /></a>
     </div>
 
@@ -368,7 +370,18 @@
       aria-label="sortable table showing places selected by the filter and search controls"
       hidden
     >
-      <section id="table-counter" class="table-counter" role="region"></section>
+      <section class="table-counter-container" role="region">
+        <p id="table-counter"></p>
+        <a
+          id="table-logo"
+          href="https://parkingreform.org/support/"
+          target="_blank"
+          aria-label="Support Parking Reform Network"
+          ><img
+            src="./assets/prn-logo-square.png"
+            alt="Parking Reform Network logo"
+        /></a>
+      </section>
       <div id="table-container">
         <div id="table"></div>
       </div>

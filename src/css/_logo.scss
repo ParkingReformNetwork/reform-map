@@ -3,7 +3,7 @@
 @use "theme/spacing";
 @use "theme/zindex";
 
-.prn-logo {
+.prn-logo-map {
   position: absolute;
   left: spacing.$map-controls-margin-x;
   z-index: zindex.$logo;
