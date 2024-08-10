@@ -1,4 +1,5 @@
 @use "theme/colors-original";
+@use "theme/typography";
 
 // uncomment to visualize slider mechanism
 // input {
@@ -20,12 +21,6 @@
   align-items: center;
 }
 
-.population-slider-label {
-  height: 1.7em;
-  font-weight: bold;
-  display: inline-block;
-}
-
 .population-slider-legend {
   display: flex;
   justify-content: space-between;
@@ -33,7 +28,7 @@
   padding: 0;
 
   span {
-    font-size: 0.5em;
+    font-size: 10px;
     opacity: 1;
     flex: 1;
     text-align: left;

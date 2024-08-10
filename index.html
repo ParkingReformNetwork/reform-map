@@ -230,33 +230,28 @@
         </label>
       </div>
 
-      <div>
-        <span>Population</span>
-        <div class="population-slider-container">
-          <div class="population-slider-label">
-            <span class="population-slider-label-min"></span>
-            <span> - </span>
-            <span class="population-slider-label-max"></span>
-          </div>
-          <div class="population-slider-controls">
-            <input
-              class="population-slider-left"
-              name="min"
-              type="range"
-              step="0.5"
-              min="0"
-              value="0"
-            />
-            <input
-              class="population-slider-right"
-              name="max"
-              type="range"
-              step="0.5"
-              min="0"
-            />
-          </div>
-          <div class="population-slider-legend"></div>
+      <div class="population-slider-container">
+        <div id="population-slider-label"></div>
+        <div class="population-slider-controls">
+          <input
+            aria-labelledby="population-slider-label"
+            class="population-slider-left"
+            name="min"
+            type="range"
+            step="0.5"
+            min="0"
+            value="0"
+          />
+          <input
+            aria-labelledby="population-slider-label"
+            class="population-slider-right"
+            name="max"
+            type="range"
+            step="0.5"
+            min="0"
+          />
         </div>
+        <div class="population-slider-legend"></div>
       </div>
 
       <fieldset class="filter filter-policy-change">
