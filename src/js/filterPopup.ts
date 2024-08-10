@@ -14,13 +14,13 @@ export default function initFilterPopup(filterManager: PlaceFilterManager) {
   const isVisible = new Observable<boolean>(false);
   isVisible.subscribe(updateFilterPopupUI);
 
-  // We redraw the population slider on the first load because it requires the popup
-  // to be displayed to compute offsetWidth.
-  let hasInitedPopulation = false;
+  // We redraw the population slider every time the filter popup opens up
+  // because it requires the popup to be displayed to compute offsetWidth.
+  // Otherwise, it can become borked when the FilterState changes and the filter
+  // popup is not open.
   isVisible.subscribe((visible) => {
-    if (!hasInitedPopulation && visible) {
+    if (visible) {
       updateSlidersUI(filterManager.getState());
-      hasInitedPopulation = true;
     }
   });
 
