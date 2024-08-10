@@ -27,10 +27,10 @@ function initFilterGroup(
 export default function initFilterOptions(
   filterManager: PlaceFilterManager,
 ): void {
-  initFilterGroup(filterManager, "filter-scope", "scope");
-  initFilterGroup(filterManager, "filter-land-use", "landUse");
-  initFilterGroup(filterManager, "filter-policy-change", "policyChange");
-  initFilterGroup(filterManager, "filter-stage", "implementationStage");
+  // initFilterGroup(filterManager, "filter-scope", "scope");
+  // initFilterGroup(filterManager, "filter-land-use", "landUse");
+  // initFilterGroup(filterManager, "filter-policy-change", "policyChange");
+  // initFilterGroup(filterManager, "filter-stage", "implementationStage");
 
   const noRequirementsToggle = document.querySelector<HTMLInputElement>(
     "#no-requirements-toggle",

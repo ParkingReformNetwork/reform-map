@@ -4,6 +4,8 @@ import {
   faCircleXmark,
 } from "@fortawesome/free-regular-svg-icons";
 import {
+  faChevronUp,
+  faChevronDown,
   faUpRightFromSquare,
   faMagnifyingGlass,
   faSliders,
@@ -15,6 +17,8 @@ import "@fortawesome/fontawesome-svg-core/styles.css";
 
 export default function initIcons(): void {
   library.add(
+    faChevronDown,
+    faChevronUp,
     faCircleQuestion,
     faUpRightFromSquare,
     faCircleXmark,

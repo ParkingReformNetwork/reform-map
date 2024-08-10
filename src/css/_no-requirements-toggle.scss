@@ -4,8 +4,8 @@ $toggle-size: 0.4em;
 $toggle-circle: calc(2.4 * $toggle-size);
 
 .filter-no-requirements-container {
-  border: solid colors-original.$gray-light 1px;
-  padding: 0.2em;
+  // border: solid colors-original.$gray-light 1px;
+  padding: 0.5em;
 }
 
 .toggle {

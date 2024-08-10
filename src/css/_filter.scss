@@ -1,7 +1,9 @@
 @use "theme/borders";
 @use "theme/colors";
 @use "theme/colors-original";
+@use "theme/icons";
 @use "theme/spacing";
+@use "theme/typography";
 @use "theme/zindex";
 @use "header";
 
@@ -20,13 +22,53 @@
 }
 
 .filter-popup > * {
-  margin: 0.5em 1em;
+  // margin: 0.5em 1em;
 }
 
 .filter {
-  border: solid colors-original.$gray-light 1px;
+  // border: solid colors-original.$gray-light 1px;
 
   label {
     display: block;
+  }
+}
+
+.filter-accordion-toggle {
+  height: spacing.$min-touch-target;
+  width: 100%;
+  padding: 0;
+  // margin-top: spacing.$element-gap;
+
+  font-size: typography.$font-size-base;
+  cursor: pointer;
+  text-align: left;
+  padding-left: spacing.$container-edge-spacing;
+  padding-right: 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  border-left: 0;
+  border-right: 0;
+  border-top: borders.$component-inner-divider;
+  border-bottom: 0;
+  border-bottom-left-radius: borders.$border-radius;
+  border-bottom-right-radius: borders.$border-radius;
+
+  .filter-accordion-title {
+    flex: 1;
+  }
+
+  .filter-accordion-icon-container {
+    height: spacing.$min-touch-target;
+    width: spacing.$min-touch-target;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    svg {
+      height: icons.$icon-size-sm;
+    }
   }
 }

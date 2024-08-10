@@ -230,7 +230,7 @@
         </label>
       </div>
 
-      <div>
+      <div class="population-slider-outer-container">
         <span>Population</span>
         <div class="population-slider-container">
           <div class="population-slider-label">
@@ -259,55 +259,95 @@
         </div>
       </div>
 
-      <fieldset class="filter filter-policy-change">
-        <legend>Policy Change</legend>
-        <!-- prettier-ignore -->
-        <label><input type="checkbox" name="policy-change" />Reduce Parking Minimums</label>
-        <!-- prettier-ignore -->
-        <label><input type="checkbox" name="policy-change" />Eliminate Parking Minimums</label>
-        <label
-          ><input type="checkbox" name="policy-change" />Parking Maximums</label
-        >
-      </fieldset>
+      <button class="filter-accordion-toggle">
+        <span class="filter-accordion-title">Policy change (3/3)</span>
+        <div class="filter-accordion-icon-container" aria-hidden="true">
+          <i
+            class="fa-solid fa-chevron-down"
+            title="expand additional details"
+          ></i>
+          <i
+            class="fa-solid fa-chevron-up"
+            title="collapse additional details"
+            style="display: none"
+          ></i>
+        </div>
+      </button>
 
-      <fieldset class="filter filter-scope">
-        <legend>Scope of Reform</legend>
-        <label><input type="checkbox" name="scope" />Regional</label>
-        <label><input type="checkbox" name="scope" />Citywide</label>
-        <!-- prettier-ignore -->
-        <label><input type="checkbox" name="scope" />City Center/Business District</label>
-        <label><input type="checkbox" name="scope" />Transit Oriented</label>
-        <label><input type="checkbox" name="scope" />Main Street/Special</label>
-      </fieldset>
+      <button class="filter-accordion-toggle">
+        <span class="filter-accordion-title">Reform scope (5/5)</span>
+        <div class="filter-accordion-icon-container" aria-hidden="true">
+          <i
+            class="fa-solid fa-chevron-down"
+            title="expand additional details"
+          ></i>
+          <i
+            class="fa-solid fa-chevron-up"
+            title="collapse additional details"
+            style="display: none"
+          ></i>
+        </div>
+      </button>
 
-      <fieldset class="filter filter-land-use">
-        <legend>Affected Land Use</legend>
-        <label><input type="checkbox" name="land-use" />All Uses</label>
-        <label><input type="checkbox" name="land-use" />Commercial</label>
-        <label><input type="checkbox" name="land-use" />Residential</label>
-      </fieldset>
+      <button class="filter-accordion-toggle">
+        <span class="filter-accordion-title">Affected land use (4/6)</span>
+        <div class="filter-accordion-icon-container" aria-hidden="true">
+          <i
+            class="fa-solid fa-chevron-down"
+            title="expand additional details"
+          ></i>
+          <i
+            class="fa-solid fa-chevron-up"
+            title="collapse additional details"
+            style="display: none"
+          ></i>
+        </div>
+      </button>
 
-      <fieldset class="filter filter-stage">
-        <legend>Implementation Stage</legend>
-        <label
-          ><input
-            type="checkbox"
-            name="implementation-stage"
-          />Implemented</label
-        >
-        <label
-          ><input type="checkbox" name="implementation-stage" />Passed</label
-        >
-        <label
-          ><input type="checkbox" name="implementation-stage" />Planned</label
-        >
-        <label
-          ><input type="checkbox" name="implementation-stage" />Proposed</label
-        >
-        <label
-          ><input type="checkbox" name="implementation-stage" />Repealed</label
-        >
-      </fieldset>
+      <button class="filter-accordion-toggle">
+        <span class="filter-accordion-title">Implementation stage (1/3)</span>
+        <div class="filter-accordion-icon-container" aria-hidden="true">
+          <i
+            class="fa-solid fa-chevron-down"
+            title="expand additional details"
+          ></i>
+          <i
+            class="fa-solid fa-chevron-up"
+            title="collapse additional details"
+            style="display: none"
+          ></i>
+        </div>
+      </button>
+
+      <button class="filter-accordion-toggle">
+        <span class="filter-accordion-title">Country (9/9)</span>
+        <div class="filter-accordion-icon-container" aria-hidden="true">
+          <i
+            class="fa-solid fa-chevron-down"
+            title="expand additional details"
+          ></i>
+          <i
+            class="fa-solid fa-chevron-up"
+            title="collapse additional details"
+            style="display: none"
+          ></i>
+        </div>
+      </button>
+
+      <button class="filter-accordion-toggle">
+        <span class="filter-accordion-title">Year (11/11)</span>
+        <div class="filter-accordion-icon-container" aria-hidden="true">
+          <i
+            class="fa-solid fa-chevron-down"
+            title="expand additional details"
+          ></i>
+          <i
+            class="fa-solid fa-chevron-up"
+            title="collapse additional details"
+            style="display: none"
+          ></i>
+        </div>
+      </button>
     </form>
 
     <div id="search-popup" class="search-popup" hidden>
