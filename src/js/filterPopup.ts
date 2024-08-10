@@ -1,6 +1,7 @@
-import { updateSlidersUI } from "./populationSlider";
 import Observable from "./Observable";
 import { PlaceFilterManager } from "./FilterState";
+
+export type FilterPopupVisibleObservable = Observable<boolean>;
 
 function updateFilterPopupUI(isVisible: boolean): void {
   const popup = document.querySelector<HTMLElement>(".filter-popup");
@@ -10,19 +11,9 @@ function updateFilterPopupUI(isVisible: boolean): void {
   icon.ariaExpanded = isVisible.toString();
 }
 
-export default function initFilterPopup(filterManager: PlaceFilterManager) {
+export default function initFilterPopup(): FilterPopupVisibleObservable {
   const isVisible = new Observable<boolean>(false);
   isVisible.subscribe(updateFilterPopupUI);
-
-  // We redraw the population slider on the first load because it requires the popup
-  // to be displayed to compute offsetWidth.
-  let hasInitedPopulation = false;
-  isVisible.subscribe((visible) => {
-    if (!hasInitedPopulation && visible) {
-      updateSlidersUI(filterManager.getState());
-      hasInitedPopulation = true;
-    }
-  });
 
   const popup = document.querySelector(".filter-popup");
   const icon = document.querySelector(".header-filter-icon-container");
@@ -43,5 +34,5 @@ export default function initFilterPopup(filterManager: PlaceFilterManager) {
     }
   });
 
-  isVisible.initialize();
+  return isVisible;
 }

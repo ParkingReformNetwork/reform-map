@@ -29,6 +29,7 @@ export default async function initApp(): Promise<void> {
   initIcons();
   maybeDisableFullScreenIcon();
   initAbout();
+  const filterPopupIsVisible = initFilterPopup();
 
   const map = createMap();
   const data = await readData();
@@ -58,13 +59,14 @@ export default async function initApp(): Promise<void> {
   initCounters(filterManager);
   initSearch(filterManager);
   initFilterOptions(filterManager);
-  initPopulationSlider(filterManager);
-  initFilterPopup(filterManager);
+  initPopulationSlider(filterManager, filterPopupIsVisible);
 
   const table = initTable(filterManager);
   const viewToggle = initViewToggle(table);
 
   initScorecard(filterManager, viewToggle, markerGroup, data);
 
+  viewToggle.initialize();
+  filterPopupIsVisible.initialize();
   filterManager.initialize();
 }
