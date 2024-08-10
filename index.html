@@ -217,34 +217,29 @@
 
     <section id="map-counter" class="map-counter" role="region"></section>
 
-    <div class="filter-popup" hidden>
-      <div class="filter no-requirements">
-        <div class="no-requirements-container">
-          <label class="toggle">
-            <span class="toggle-label">No parking requirements</span>
-            <input
-              type="checkbox"
-              class="toggle-checkbox"
-              id="no-requirements-toggle"
-            />
-            <div class="toggle-switch"></div>
-          </label>
-        </div>
+    <form class="filter-popup" aria-label="filter options" hidden>
+      <div class="filter filter-no-requirements-container">
+        <label class="toggle">
+          <span class="toggle-label">No parking requirements</span>
+          <input
+            type="checkbox"
+            class="toggle-checkbox"
+            id="no-requirements-toggle"
+          />
+          <div class="toggle-switch"></div>
+        </label>
       </div>
 
-      <div class="filter policy-change">
-        <form>
-          <fieldset>
-            <legend>Policy Change</legend>
-            <!-- prettier-ignore -->
-            <label><input type="checkbox" name="policy-change"  />Reduce Parking Minimums</label>
-            <!-- prettier-ignore -->
-            <label><input type="checkbox" name="policy-change" />Eliminate Parking Minimums</label>
-            <!-- prettier-ignore -->
-            <label><input type="checkbox" name="policy-change"  />Parking Maximums</label>
-          </fieldset>
-        </form>
-      </div>
+      <fieldset class="filter filter-policy-change">
+        <legend>Policy Change</legend>
+        <!-- prettier-ignore -->
+        <label><input type="checkbox" name="policy-change" />Reduce Parking Minimums</label>
+        <!-- prettier-ignore -->
+        <label><input type="checkbox" name="policy-change" />Eliminate Parking Minimums</label>
+        <label
+          ><input type="checkbox" name="policy-change" />Parking Maximums</label
+        >
+      </fieldset>
 
       <div>
         <span>Population</span>
@@ -275,73 +270,45 @@
         </div>
       </div>
 
-      <div class="filter scope">
-        <form>
-          <fieldset>
-            <legend>Scope of Reform</legend>
-            <label><input type="checkbox" name="scope" />Regional</label>
-            <label><input type="checkbox" name="scope" />Citywide</label>
-            <!-- ignore lines in which the text may be split up into multiple lines -->
-            <!-- prettier-ignore -->
-            <label><input type="checkbox" name="scope" />City Center/Business District</label>
-            <!-- prettier-ignore -->
-            <label><input type="checkbox" name="scope" />Transit Oriented</label>
-            <!-- prettier-ignore -->
-            <label><input type="checkbox" name="scope" />Main Street/Special</label>
-          </fieldset>
-        </form>
-      </div>
+      <fieldset class="filter filter-scope">
+        <legend>Scope of Reform</legend>
+        <label><input type="checkbox" name="scope" />Regional</label>
+        <label><input type="checkbox" name="scope" />Citywide</label>
+        <!-- prettier-ignore -->
+        <label><input type="checkbox" name="scope" />City Center/Business District</label>
+        <label><input type="checkbox" name="scope" />Transit Oriented</label>
+        <label><input type="checkbox" name="scope" />Main Street/Special</label>
+      </fieldset>
 
-      <div class="filter land-use">
-        <form>
-          <fieldset>
-            <legend>Affected Land Use</legend>
-            <!-- prettier-ignore -->
-            <label><input type="checkbox" name="land-use" />All Uses</label>
-            <label><input type="checkbox" name="land-use" />Commercial</label>
-            <label><input type="checkbox" name="land-use" />Residential</label>
-          </fieldset>
-        </form>
-      </div>
+      <fieldset class="filter filter-land-use">
+        <legend>Affected Land Use</legend>
+        <label><input type="checkbox" name="land-use" />All Uses</label>
+        <label><input type="checkbox" name="land-use" />Commercial</label>
+        <label><input type="checkbox" name="land-use" />Residential</label>
+      </fieldset>
 
-      <div class="filter implementation-stage">
-        <form>
-          <fieldset>
-            <legend>Implementation Stage</legend>
-            <label
-              ><input
-                type="checkbox"
-                name="implementation-stage"
-              />Implemented</label
-            >
-            <label
-              ><input
-                type="checkbox"
-                name="implementation-stage"
-              />Passed</label
-            >
-            <label
-              ><input
-                type="checkbox"
-                name="implementation-stage"
-              />Planned</label
-            >
-            <label
-              ><input
-                type="checkbox"
-                name="implementation-stage"
-              />Proposed</label
-            >
-            <label
-              ><input
-                type="checkbox"
-                name="implementation-stage"
-              />Repealed</label
-            >
-          </fieldset>
-        </form>
-      </div>
-    </div>
+      <fieldset class="filter filter-stage">
+        <legend>Implementation Stage</legend>
+        <label
+          ><input
+            type="checkbox"
+            name="implementation-stage"
+          />Implemented</label
+        >
+        <label
+          ><input type="checkbox" name="implementation-stage" />Passed</label
+        >
+        <label
+          ><input type="checkbox" name="implementation-stage" />Planned</label
+        >
+        <label
+          ><input type="checkbox" name="implementation-stage" />Proposed</label
+        >
+        <label
+          ><input type="checkbox" name="implementation-stage" />Repealed</label
+        >
+      </fieldset>
+    </form>
 
     <div id="search-popup" class="search-popup" hidden>
       <select single class="search" aria-label="search for a place">

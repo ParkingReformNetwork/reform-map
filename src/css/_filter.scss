@@ -20,18 +20,13 @@
 }
 
 .filter-popup > * {
-  display: flex;
-  flex-direction: column;
   margin: 0.5em 1em;
-  width: 90%;
 }
 
 .filter {
+  border: solid colors-original.$gray-light 1px;
+
   label {
     display: block;
-  }
-
-  fieldset {
-    border: solid colors-original.$gray-light 1px;
   }
 }

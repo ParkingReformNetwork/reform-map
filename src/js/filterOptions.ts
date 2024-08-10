@@ -5,7 +5,7 @@ function initFilterGroup(
   filterClass: string,
   filterStateKey: string,
 ): void {
-  const container = document.querySelector(`.filter.${filterClass} fieldset`);
+  const container = document.querySelector(`.${filterClass}`);
 
   // Set initial state.
   const initialState = filterManager.getState()[filterStateKey] as string[];
@@ -27,10 +27,10 @@ function initFilterGroup(
 export default function initFilterOptions(
   filterManager: PlaceFilterManager,
 ): void {
-  initFilterGroup(filterManager, "scope", "scope");
-  initFilterGroup(filterManager, "land-use", "landUse");
-  initFilterGroup(filterManager, "policy-change", "policyChange");
-  initFilterGroup(filterManager, "implementation-stage", "implementationStage");
+  initFilterGroup(filterManager, "filter-scope", "scope");
+  initFilterGroup(filterManager, "filter-land-use", "landUse");
+  initFilterGroup(filterManager, "filter-policy-change", "policyChange");
+  initFilterGroup(filterManager, "filter-stage", "implementationStage");
 
   const noRequirementsToggle = document.querySelector<HTMLInputElement>(
     "#no-requirements-toggle",
