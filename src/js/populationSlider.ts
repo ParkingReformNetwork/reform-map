@@ -1,3 +1,4 @@
+import { FilterPopupVisibleObservable } from "./filterPopup";
 import {
   FilterState,
   PlaceFilterManager,
@@ -21,7 +22,7 @@ function getSliders(): Sliders {
   };
 }
 
-export function updateSlidersUI(state: FilterState): void {
+function updateSlidersUI(state: FilterState): void {
   const [leftIndex, rightIndex] = state.populationSliderIndexes;
   const sliders = getSliders();
 
@@ -56,8 +57,10 @@ export function updateSlidersUI(state: FilterState): void {
     `${leftLabel} - ${rightLabel} residents`;
 }
 
-export function initPopulationSlider(filterManager: PlaceFilterManager): void {
-  filterManager.subscribe(updateSlidersUI);
+export function initPopulationSlider(
+  filterManager: PlaceFilterManager,
+  filterPopupIsVisible: FilterPopupVisibleObservable,
+): void {
   const sliders = getSliders();
 
   // Create legend
@@ -76,6 +79,7 @@ export function initPopulationSlider(filterManager: PlaceFilterManager): void {
   sliders.right.setAttribute("max", maxIndex);
   sliders.right.setAttribute("value", maxIndex);
 
+  // Add event listeners.
   const onChange = (): void => {
     const leftIndex = Math.floor(parseFloat(sliders.left.value));
     const rightIndex = Math.ceil(parseFloat(sliders.right.value));
@@ -83,4 +87,12 @@ export function initPopulationSlider(filterManager: PlaceFilterManager): void {
   };
   sliders.left.addEventListener("input", onChange);
   sliders.right.addEventListener("input", onChange);
+
+  // Update UI whenever filter popup is visible. Note that
+  // the popup must be visible for the width calculations to work.
+  filterPopupIsVisible.subscribe((isVisible) => {
+    if (isVisible) {
+      updateSlidersUI(filterManager.getState());
+    }
+  });
 }
