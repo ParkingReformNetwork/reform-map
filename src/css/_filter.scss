@@ -10,6 +10,7 @@
   right: spacing.$map-controls-margin-x;
   top: calc(header.$header-height + spacing.$map-controls-margin-top);
   z-index: zindex.$filter-popup;
+  width: 310px;
 
   max-height: min(600px, 75vh);
   overflow-y: auto;
@@ -20,7 +21,7 @@
 }
 
 .filter-popup > * {
-  margin: 0.5em 1em;
+  margin: 0.5em;
 }
 
 .filter {

@@ -50,11 +50,10 @@ export function updateSlidersUI(state: FilterState): void {
   // everytime the range of the slider changes.
   sliders.right.style.left = `${leftWidth + THUMBSIZE}px`;
 
-  const updateLabel = (cls: string, index: number): void => {
-    document.querySelector(cls).innerHTML = POPULATION_INTERVALS[index][0];
-  };
-  updateLabel(".population-slider-label-min", leftIndex);
-  updateLabel(".population-slider-label-max", rightIndex);
+  const leftLabel = POPULATION_INTERVALS[leftIndex][0];
+  const rightLabel = POPULATION_INTERVALS[rightIndex][0];
+  document.querySelector("#population-slider-label").innerHTML =
+    `${leftLabel} - ${rightLabel} residents`;
 }
 
 export function initPopulationSlider(filterManager: PlaceFilterManager): void {
