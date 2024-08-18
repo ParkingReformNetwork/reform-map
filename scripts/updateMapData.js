@@ -1,4 +1,5 @@
 /* eslint-disable import/no-extraneous-dependencies */
+/* eslint-disable import/prefer-default-export */
 /* eslint-disable no-console */
 /* eslint-disable no-await-in-loop */
 
@@ -16,97 +17,10 @@ async function fetch(url, options) {
 }
 
 // -------------------------------------------------------------
-// Encoding logic
-// -------------------------------------------------------------
-
-const magnitudeToHighest = (magnitudeString) => {
-  const lowerCaseString = magnitudeString.toLowerCase();
-  if (lowerCaseString.includes("regional")) {
-    return "Regional";
-  }
-  if (lowerCaseString.includes("citywide")) {
-    return "Citywide";
-  }
-  if (lowerCaseString.includes("city center")) {
-    return "City Center";
-  }
-  if (lowerCaseString.includes("transit oriented")) {
-    return "TOD";
-  }
-  if (lowerCaseString.includes("main street")) {
-    return "Main Street";
-  }
-  return "NA";
-};
-
-const magnitudeToHighestOrAllUses = (magnitudeString, landusesString) => {
-  const isAllUse = landusesString.toLowerCase().includes("all uses");
-  const lowerCaseMagnitude = magnitudeString.toLowerCase();
-  if (lowerCaseMagnitude.includes("citywide") && isAllUse) {
-    return "Citywide All";
-  }
-  if (lowerCaseMagnitude.includes("citywide")) {
-    return "Citywide";
-  }
-  if (lowerCaseMagnitude.includes("city center") && isAllUse) {
-    return "City Center All";
-  }
-  if (lowerCaseMagnitude.includes("city center")) {
-    return "City Center";
-  }
-  if (lowerCaseMagnitude.includes("transit oriented") && isAllUse) {
-    return "TOD";
-  }
-  if (lowerCaseMagnitude.includes("transit oriented")) {
-    return "TOD All";
-  }
-  if (lowerCaseMagnitude.includes("main street") && isAllUse) {
-    return "Main Street";
-  }
-  if (lowerCaseMagnitude.includes("main street")) {
-    return "Main Street All";
-  }
-  return "NA";
-};
-
-const landUseToString = (landUseString) => {
-  const lowerCaseLandUse = landUseString.toLowerCase();
-  if (lowerCaseLandUse.includes("all uses")) {
-    return "city";
-  }
-  if (
-    lowerCaseLandUse.includes("residential") &&
-    lowerCaseLandUse.includes("commercial")
-  ) {
-    return "laptop";
-  }
-  if (lowerCaseLandUse.includes("commercial")) {
-    return "building";
-  }
-  if (lowerCaseLandUse.includes("residential")) {
-    return "home";
-  }
-  return "car";
-};
-
-const populationToBin = (population) => {
-  if (population > 500000) {
-    return 1;
-  }
-  if (population > 200000) {
-    return 0.7;
-  }
-  if (population > 100000) {
-    return 0.4;
-  }
-  return 0.2;
-};
-
-// -------------------------------------------------------------
 // Read/pre-process CSVs
 // -------------------------------------------------------------
 
-const readCityCsv = async () => {
+const readCityTable = async () => {
   const response = await fetch(
     "https://area120tables.googleapis.com/link/aR_AWTAZ6WF8_ZB3HgfOvN/export?key=8-SifuDc4Fg7purFrntOa7bjE0ikjGAy28t36wUBIOJx9vFGZuSR89N1PkSTFXpOk6",
   );
@@ -136,7 +50,7 @@ const readCityCsv = async () => {
   return cityCleaned;
 };
 
-const readReportCsv = async () => {
+const readReportTable = async () => {
   const response = await fetch(
     "https://area120tables.googleapis.com/link/bAc5xhhLJ2q4jYYGjaq_24/export?key=8_S1APcQHGN9zfTXEMz_Gz8sel3FCo3RUfEV4f-PBOqE8zy3vG3FpCQcSXQjRDXOqZ",
   );
@@ -148,7 +62,7 @@ const readReportCsv = async () => {
   const checkIncludes = (str, term) =>
     typeof str === "string" && str.toLowerCase().includes(term) ? 1 : 0;
 
-  const reportTrimmed = data
+  return data
     .filter((row) => row.city_id)
     .map((row) => ({
       city: row.city_id,
@@ -164,10 +78,9 @@ const readReportCsv = async () => {
       last_updated: row["Last updated"],
       is_no_mandate_city: checkIncludes(row.Highlights, "no mandates"),
     }));
-  return reportTrimmed;
 };
 
-const readOldReportCsv = async () => {
+const readOldCsv = async () => {
   const csvText = await fs.readFile("map/data.csv", "utf-8");
   const { data } = Papa.parse(csvText.trim(), {
     header: true,
@@ -277,17 +190,17 @@ const writeResult = async (result) => {
 // -------------------------------------------------------------
 
 const main = async () => {
-  const [cityData, reportData, oldReportData] = await Promise.all([
-    readCityCsv(),
-    readReportCsv(),
-    readOldReportCsv(),
+  const [cityData, reportData, oldCsvData] = await Promise.all([
+    readCityTable(),
+    readReportTable(),
+    readOldCsv(),
   ]);
 
   // This adds the population and citation_url to the report rows.
   const mergedData = leftJoin(reportData, cityData);
 
   // We merge the lat/lng of the previous saved report to avoid hitting the Geocoding API as much.
-  const initialResult = leftJoin(mergedData, oldReportData);
+  const initialResult = leftJoin(mergedData, oldCsvData);
 
   const withLatLng = await addMissingLatLng(initialResult);
   const finalReport = postProcessResult(withLatLng);
