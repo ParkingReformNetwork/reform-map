@@ -8,18 +8,23 @@ import {
   ColumnDefinition,
   FrozenColumnsModule,
   PageModule,
+  CellComponent,
 } from "tabulator-tables";
 import "tabulator-tables/dist/css/tabulator.min.css";
 import { DateTime } from "luxon";
 
 import { PlaceFilterManager } from "./FilterState";
+import { DATE_REPR } from "./data";
 
-function compareDates(a: string, b: string): number {
-  const dateA = DateTime.fromFormat(a, "LLL d, yyyy");
-  const dateB = DateTime.fromFormat(b, "LLL d, yyyy");
-  if (!dateA.isValid) return 1;
-  if (!dateB.isValid) return -1;
-  return dateA.valueOf() - dateB.valueOf();
+function formatDate(cell: CellComponent): string {
+  const v = cell.getValue() as DateTime | null;
+  return v ? v.toFormat(DATE_REPR) : "";
+}
+
+function compareDates(a: DateTime | null, b: DateTime | null): number {
+  if (!a) return 1;
+  if (!b) return -1;
+  return a.valueOf() - b.valueOf();
 }
 
 function compareStringArrays(a: string[], b: string[]): number {
@@ -83,6 +88,7 @@ export default function initTable(
       title: "Date",
       field: "date",
       width: 110,
+      formatter: formatDate,
       sorter: compareDates,
     },
     {
