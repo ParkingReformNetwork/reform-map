@@ -1,5 +1,47 @@
 import { PlaceFilterManager } from "./FilterState";
 
+// The boolean next to each option is for whether it's selected by default.
+const FILTER_CONFIG = {
+  policyChange: [
+    ["Reduce Parking Minimums", true],
+    ["Eliminate Parking Minimums", true],
+    ["Parking Maximums", true],
+  ],
+  scope: [
+    ["Regional", true],
+    ["Citywide", true],
+    ["City Center/Business District", true],
+    ["Transit Oriented", true],
+    ["Main Street/Special", true],
+  ],
+  landUse: [
+    ["All Uses", true],
+    ["Commercial", true],
+    ["Residential", true],
+  ],
+  implementationStage: [
+    ["Implemented", true],
+    ["Passed", true],
+    ["Planned", false],
+    ["Proposed", false],
+    ["Repealed", false],
+  ],
+} as const;
+
+type FilterGroupKey = keyof typeof FILTER_CONFIG;
+
+export const FilterOptions = {
+  getAllOptions(fieldset: FilterGroupKey): string[] {
+    return FILTER_CONFIG[fieldset].map((option) => option[0]);
+  },
+
+  getDefaultSelected(fieldset: FilterGroupKey): string[] {
+    return FILTER_CONFIG[fieldset]
+      .filter(([, isDefaultSelected]) => isDefaultSelected)
+      .map(([name]) => name);
+  },
+};
+
 function generateAccordionOptions(
   name: string,
   legend: string,
@@ -31,13 +73,13 @@ function generateAccordionOptions(
 function initFilterGroup(
   filterManager: PlaceFilterManager,
   htmlName: string,
-  filterStateKey: string,
+  filterStateKey: FilterGroupKey,
   legend: string,
-  filterOptions: string[],
 ): void {
   const outerContainer = document.getElementById("filter-accordion-options");
+  const options = FilterOptions.getAllOptions(filterStateKey);
   outerContainer.appendChild(
-    generateAccordionOptions(htmlName, legend, filterOptions),
+    generateAccordionOptions(htmlName, legend, options),
   );
 
   const container = document.querySelector(`.filter-${htmlName}`);
@@ -59,38 +101,20 @@ function initFilterGroup(
   });
 }
 
-export default function initFilterOptions(
-  filterManager: PlaceFilterManager,
-): void {
+export function initFilterOptions(filterManager: PlaceFilterManager): void {
   initFilterGroup(
     filterManager,
     "policy-change",
     "policyChange",
     "Policy change",
-    [
-      "Reduce Parking Minimums",
-      "Eliminate Parking Minimums",
-      "Parking Maximums",
-    ],
   );
-  initFilterGroup(filterManager, "scope", "scope", "Reform scope", [
-    "Regional",
-    "Citywide",
-    "City Center/Business District",
-    "Transit Oriented",
-    "Main Street/Special",
-  ]);
-  initFilterGroup(filterManager, "land-use", "landUse", "Affected land use", [
-    "All Uses",
-    "Commercial",
-    "Residential",
-  ]);
+  initFilterGroup(filterManager, "scope", "scope", "Reform scope");
+  initFilterGroup(filterManager, "land-use", "landUse", "Affected land use");
   initFilterGroup(
     filterManager,
     "stage",
     "implementationStage",
     "Implementation stage",
-    ["Implemented", "Passed", "Planned", "Proposed", "Repealed"],
   );
 
   const noRequirementsToggle = document.querySelector<HTMLInputElement>(

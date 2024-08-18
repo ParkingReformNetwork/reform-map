@@ -7,7 +7,7 @@ import maybeDisableFullScreenIcon from "./iframe";
 import initAbout from "./about";
 import initScorecard from "./scorecard";
 import { initPopulationSlider, POPULATION_MAX_INDEX } from "./populationSlider";
-import initFilterOptions from "./filterOptions";
+import { FilterOptions, initFilterOptions } from "./filterOptions";
 import initFilterPopup from "./filterPopup";
 import { PlaceFilterManager } from "./FilterState";
 import initCounters from "./counters";
@@ -37,20 +37,12 @@ export default async function initApp(): Promise<void> {
   const filterManager = new PlaceFilterManager(data, {
     searchInput: null,
     noRequirementsToggle: true,
-    policyChange: [
-      "Reduce Parking Minimums",
-      "Eliminate Parking Minimums",
-      "Parking Maximums",
-    ],
-    scope: [
-      "Regional",
-      "Citywide",
-      "City Center/Business District",
-      "Transit Oriented",
-      "Main Street/Special",
-    ],
-    landUse: ["All Uses", "Commercial", "Residential"],
-    implementationStage: ["Implemented", "Passed"],
+    policyChange: FilterOptions.getDefaultSelected("policyChange"),
+    scope: FilterOptions.getDefaultSelected("scope"),
+    landUse: FilterOptions.getDefaultSelected("landUse"),
+    implementationStage: FilterOptions.getDefaultSelected(
+      "implementationStage",
+    ),
     populationSliderIndexes: [0, POPULATION_MAX_INDEX],
   });
 
