@@ -12,7 +12,7 @@ export interface PlaceEntry {
   scope: string[];
   landUse: string[];
   reformDate: DateTime | null;
-  allMinimumsRepealed: boolean;
+  allMinimumsRemoved: boolean;
   population: number;
   url: string;
   lat: string;

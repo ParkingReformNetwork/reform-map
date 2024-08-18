@@ -113,7 +113,7 @@ for (const edgeCase of TESTS) {
 
     if (edgeCase.noRequirements !== undefined) {
       // Force clicking because the checkbox is hidden (opacity: 0)
-      await page.locator("#no-requirements-toggle").click({ force: true });
+      await page.locator("#all-minimums-removed-toggle").click({ force: true });
     }
 
     await selectIfSet(page, "scope", edgeCase.scope);

@@ -16,7 +16,7 @@ export const POPULATION_INTERVALS: Array<[string, number]> = [
 
 export interface FilterState {
   searchInput: string | null;
-  allMinimumsRepealedToggle: boolean;
+  allMinimumsRemovedToggle: boolean;
   policyChange: string[];
   scope: string[];
   landUse: string[];
@@ -103,7 +103,7 @@ export class PlaceFilterManager {
     );
 
     const isAllMinimumsRepealed =
-      !state.allMinimumsRepealedToggle || entry.allMinimumsRepealed;
+      !state.allMinimumsRemovedToggle || entry.allMinimumsRemoved;
 
     const [sliderLeftIndex, sliderRightIndex] = state.populationSliderIndexes;
     const isPopulation =

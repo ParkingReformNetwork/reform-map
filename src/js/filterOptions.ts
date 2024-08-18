@@ -272,12 +272,12 @@ export function initFilterOptions(
   initFilterGroup(filterManager, "year", "year", filterOptions, "Year");
 
   const minimumsToggle = document.querySelector<HTMLInputElement>(
-    "#no-requirements-toggle",
+    "#all-minimums-removed-toggle",
   );
-  minimumsToggle.checked = filterManager.getState().allMinimumsRepealedToggle;
+  minimumsToggle.checked = filterManager.getState().allMinimumsRemovedToggle;
   minimumsToggle.addEventListener("change", () => {
     filterManager.update({
-      allMinimumsRepealedToggle: minimumsToggle.checked,
+      allMinimumsRemovedToggle: minimumsToggle.checked,
     });
   });
 }

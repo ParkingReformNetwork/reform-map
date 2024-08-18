@@ -28,7 +28,7 @@ export default async function initApp(): Promise<void> {
 
   const filterManager = new PlaceFilterManager(data, {
     searchInput: null,
-    allMinimumsRepealedToggle: true,
+    allMinimumsRemovedToggle: true,
     policyChange: filterOptions.default("policyChange"),
     scope: filterOptions.default("scope"),
     landUse: filterOptions.default("landUse"),
