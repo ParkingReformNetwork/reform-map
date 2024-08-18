@@ -20,6 +20,7 @@ export interface FilterState {
   scope: string[];
   landUse: string[];
   status: string[];
+  country: string[];
   populationSliderIndexes: [number, number];
 }
 
@@ -94,6 +95,7 @@ export class PlaceFilterManager {
     );
     const isLand = entry.landUse.some((v) => state.landUse.includes(v));
     const isStatus = state.status.includes(entry.status);
+    const isCountry = state.country.includes(entry.country);
 
     const isAllMinimumsRepealed =
       !state.allMinimumsRepealedToggle || entry.allMinimumsRepealed;
@@ -108,6 +110,7 @@ export class PlaceFilterManager {
       isPolicy &&
       isLand &&
       isStatus &&
+      isCountry &&
       isAllMinimumsRepealed &&
       isPopulation
     );

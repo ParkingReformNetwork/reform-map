@@ -34,6 +34,7 @@ export default async function initApp(): Promise<void> {
     scope: filterOptions.default("scope"),
     landUse: filterOptions.default("landUse"),
     status: filterOptions.default("status"),
+    country: filterOptions.default("country"),
     populationSliderIndexes: [0, POPULATION_MAX_INDEX],
   });
 
