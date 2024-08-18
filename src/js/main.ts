@@ -1,4 +1,3 @@
-import type { PlaceId, PlaceEntry } from "./types";
 import initIcons from "./fontAwesome";
 import createMap from "./map";
 import initPlaceMarkers from "./mapMarkers";
@@ -35,6 +34,7 @@ export default async function initApp(): Promise<void> {
     landUse: filterOptions.default("landUse"),
     status: filterOptions.default("status"),
     country: filterOptions.default("country"),
+    year: filterOptions.default("year"),
     populationSliderIndexes: [0, POPULATION_MAX_INDEX],
   });
 
