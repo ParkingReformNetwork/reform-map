@@ -1,36 +1,108 @@
 import { PlaceFilterManager } from "./FilterState";
 
-function initFilterGroup(
-  filterManager: PlaceFilterManager,
-  filterClass: string,
-  filterStateKey: string,
-): void {
-  const container = document.querySelector(`.${filterClass}`);
+// The boolean next to each option is for whether it's selected by default.
+const FILTER_CONFIG = {
+  policyChange: [
+    ["Reduce Parking Minimums", true],
+    ["Eliminate Parking Minimums", true],
+    ["Parking Maximums", true],
+  ],
+  scope: [
+    ["Regional", true],
+    ["Citywide", true],
+    ["City Center/Business District", true],
+    ["Transit Oriented", true],
+    ["Main Street/Special", true],
+  ],
+  landUse: [
+    ["All Uses", true],
+    ["Commercial", true],
+    ["Residential", true],
+  ],
+  implementationStage: [
+    ["Implemented", true],
+    ["Passed", true],
+    ["Planned", false],
+    ["Proposed", false],
+    ["Repealed", false],
+  ],
+} as const;
 
-  // Set initial state.
-  const initialState = filterManager.getState()[filterStateKey] as string[];
-  Array.from(
-    container.querySelectorAll<HTMLInputElement>('input[type="checkbox"]'),
-  ).forEach((input) => {
-    const label = input.parentElement.textContent.trim();
-    input.checked = initialState.includes(label);
+type FilterGroupKey = keyof typeof FILTER_CONFIG;
+
+export function getDefaultFilterOptions(groupKey: FilterGroupKey): string[] {
+  return FILTER_CONFIG[groupKey]
+    .filter(([, isDefaultSelected]) => isDefaultSelected)
+    .map(([name]) => name);
+}
+
+function generateAccordionOptions(
+  name: string,
+  legend: string,
+  filterStateKey: FilterGroupKey,
+): HTMLFieldSetElement {
+  const fieldset = document.createElement("fieldset");
+  fieldset.className = `filter filter-${name}`;
+
+  const legendElement = document.createElement("legend");
+  legendElement.textContent = legend;
+  fieldset.appendChild(legendElement);
+
+  FILTER_CONFIG[filterStateKey].forEach(([val, isDefaultSelected]) => {
+    const label = document.createElement("label");
+
+    const input = document.createElement("input");
+    input.type = "checkbox";
+    input.name = name;
+    input.checked = isDefaultSelected;
+
+    label.appendChild(input);
+    label.appendChild(document.createTextNode(val));
+
+    fieldset.appendChild(label);
   });
 
-  container.addEventListener("change", () => {
+  return fieldset;
+}
+
+function initFilterGroup(
+  filterManager: PlaceFilterManager,
+  htmlName: string,
+  filterStateKey: FilterGroupKey,
+  legend: string,
+): void {
+  const groupContainer = generateAccordionOptions(
+    htmlName,
+    legend,
+    filterStateKey,
+  );
+
+  const outerContainer = document.getElementById("filter-accordion-options");
+  outerContainer.appendChild(groupContainer);
+
+  groupContainer.addEventListener("change", () => {
     const checkedLabels = Array.from(
-      container.querySelectorAll('input[type="checkbox"]:checked'),
+      groupContainer.querySelectorAll('input[type="checkbox"]:checked'),
     ).map((input) => input.parentElement.textContent.trim());
     filterManager.update({ [filterStateKey]: checkedLabels });
   });
 }
 
-export default function initFilterOptions(
-  filterManager: PlaceFilterManager,
-): void {
-  initFilterGroup(filterManager, "filter-scope", "scope");
-  initFilterGroup(filterManager, "filter-land-use", "landUse");
-  initFilterGroup(filterManager, "filter-policy-change", "policyChange");
-  initFilterGroup(filterManager, "filter-stage", "implementationStage");
+export function initFilterOptions(filterManager: PlaceFilterManager): void {
+  initFilterGroup(
+    filterManager,
+    "policy-change",
+    "policyChange",
+    "Policy change",
+  );
+  initFilterGroup(filterManager, "scope", "scope", "Reform scope");
+  initFilterGroup(filterManager, "land-use", "landUse", "Affected land use");
+  initFilterGroup(
+    filterManager,
+    "implementation-stage",
+    "implementationStage",
+    "Implementation stage",
+  );
 
   const noRequirementsToggle = document.querySelector<HTMLInputElement>(
     "#no-requirements-toggle",
