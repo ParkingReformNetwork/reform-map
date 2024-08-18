@@ -22,6 +22,10 @@ function compareDates(a: string, b: string): number {
   return dateA.valueOf() - dateB.valueOf();
 }
 
+function compareStringArrays(a: string[], b: string[]): number {
+  return a.join(",").localeCompare(b.join(","));
+}
+
 export default function initTable(
   filterManager: PlaceFilterManager,
 ): Tabulator {
@@ -85,19 +89,19 @@ export default function initTable(
       title: "Policy change",
       field: "policyChange",
       width: 260,
-      sorter: "array",
+      sorter: compareStringArrays,
     },
     {
       title: "Scope",
       field: "scope",
       width: 260,
-      sorter: "array",
+      sorter: compareStringArrays,
     },
     {
       title: "Land use",
       field: "landUse",
       width: 160,
-      sorter: "array",
+      sorter: compareStringArrays,
     },
     {
       title: "Status",
