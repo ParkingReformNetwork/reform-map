@@ -14,6 +14,7 @@ interface EdgeCase {
   policy?: string[];
   land?: string[];
   status?: string[];
+  country?: string[];
   populationIntervals?: [number, number];
   noRequirements?: boolean;
   expectedRange: [number, number] | "all";
@@ -34,6 +35,11 @@ const TESTS: EdgeCase[] = [
     desc: "status filter",
     status: ["Repealed"],
     expectedRange: [1, 10],
+  },
+  {
+    desc: "country filter",
+    country: ["MX"],
+    expectedRange: [2, 7],
   },
   {
     desc: "population slider",
@@ -108,6 +114,7 @@ for (const edgeCase of TESTS) {
     await selectIfSet(page, "policy-change", edgeCase.policy);
     await selectIfSet(page, "land-use", edgeCase.land);
     await selectIfSet(page, "status", edgeCase.status);
+    await selectIfSet(page, "country", edgeCase.country);
 
     if (edgeCase.populationIntervals !== undefined) {
       const [leftInterval, rightInterval] = edgeCase.populationIntervals;

@@ -2,13 +2,19 @@ import { PlaceEntry } from "./types";
 import { PlaceFilterManager } from "./FilterState";
 import Observable from "./Observable";
 
-type FilterGroupKey = "policyChange" | "scope" | "landUse" | "status";
+type FilterGroupKey =
+  | "policyChange"
+  | "scope"
+  | "landUse"
+  | "status"
+  | "country";
 
 const DESELECTED_BY_DEFAULT: Record<FilterGroupKey, Set<string>> = {
   policyChange: new Set(),
   scope: new Set(),
   landUse: new Set(),
   status: new Set(["Planned", "Proposed", "Repealed", "Unverified"]),
+  country: new Set(),
 };
 
 export class FilterOptions {
@@ -19,8 +25,10 @@ export class FilterOptions {
     const scope = new Set<string>();
     const landUse = new Set<string>();
     const status = new Set<string>();
+    const country = new Set<string>();
     entries.forEach((entry) => {
       status.add(entry.status);
+      country.add(entry.country);
       entry.policyChange.forEach((v) => policy.add(v));
       entry.scope.forEach((v) => scope.add(v));
       entry.landUse.forEach((v) => landUse.add(v));
@@ -30,6 +38,7 @@ export class FilterOptions {
       scope: Array.from(scope).sort(),
       landUse: Array.from(landUse).sort(),
       status: Array.from(status).sort(),
+      country: Array.from(country).sort(),
     };
   }
 
@@ -246,6 +255,13 @@ export function initFilterOptions(
     "Affected land use",
   );
   initFilterGroup(filterManager, "status", "status", filterOptions, "Status");
+  initFilterGroup(
+    filterManager,
+    "country",
+    "country",
+    filterOptions,
+    "Country",
+  );
 
   const minimumsToggle = document.querySelector<HTMLInputElement>(
     "#no-requirements-toggle",
