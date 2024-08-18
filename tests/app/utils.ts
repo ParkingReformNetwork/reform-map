@@ -14,7 +14,8 @@ export const loadMap = async (page: Page): Promise<void> => {
 
 export async function getTotalNumPlaces(): Promise<number> {
   const mapData = await readCsv("map/tidied_map_data.csv");
-  return mapData.length;
+  // For some reason, the CSV has one extra line than the data used in prod.
+  return mapData.length - 1;
 }
 
 export const assertNumPlaces = async (

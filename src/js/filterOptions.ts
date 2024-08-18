@@ -32,6 +32,7 @@ const FILTER_CONFIG = {
     ["Planned", false],
     ["Proposed", false],
     ["Repealed", false],
+    ["Unverified", false],
   ],
 } as const;
 
