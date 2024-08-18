@@ -1,6 +1,7 @@
 import { isEqual } from "lodash-es";
 import { PlaceId, PlaceEntry } from "./types";
 import Observable from "./Observable";
+import { OPTION_NOT_SET } from "./filterOptions";
 
 export const POPULATION_INTERVALS: Array<[string, number]> = [
   ["100", 100],
@@ -21,6 +22,7 @@ export interface FilterState {
   landUse: string[];
   status: string[];
   country: string[];
+  year: string[];
   populationSliderIndexes: [number, number];
 }
 
@@ -96,6 +98,9 @@ export class PlaceFilterManager {
     const isLand = entry.landUse.some((v) => state.landUse.includes(v));
     const isStatus = state.status.includes(entry.status);
     const isCountry = state.country.includes(entry.country);
+    const isYear = state.year.includes(
+      entry.reformDate?.year.toString() || OPTION_NOT_SET,
+    );
 
     const isAllMinimumsRepealed =
       !state.allMinimumsRepealedToggle || entry.allMinimumsRepealed;
@@ -110,6 +115,7 @@ export class PlaceFilterManager {
       isPolicy &&
       isLand &&
       isStatus &&
+      isYear &&
       isCountry &&
       isAllMinimumsRepealed &&
       isPopulation
