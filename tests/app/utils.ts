@@ -1,16 +1,23 @@
 import { expect } from "@playwright/test";
 import type { Page } from "@playwright/test";
 
-const PLACE_MARKER = "path.leaflet-interactive";
-const DEFAULT_PLACE_RANGE: [number, number] = [2930, 4000];
+import { readCsv } from "../../scripts/syncLatLng";
 
-const loadMap = async (page: Page): Promise<void> => {
+const PLACE_MARKER = "path.leaflet-interactive";
+export const DEFAULT_PLACE_RANGE: [number, number] = [3000, 4000];
+
+export const loadMap = async (page: Page): Promise<void> => {
   await page.goto("");
   // Wait for data to load.
   await page.waitForSelector(PLACE_MARKER);
 };
 
-const assertNumPlaces = async (
+export async function getTotalNumPlaces(): Promise<number> {
+  const mapData = await readCsv("map/tidied_map_data.csv");
+  return mapData.length;
+}
+
+export const assertNumPlaces = async (
   page: Page,
   range: [number, number],
 ): Promise<void> => {
@@ -29,10 +36,8 @@ const assertNumPlaces = async (
   expect(mapNumPlaces).toEqual(counterNumPlaces);
 };
 
-const deselectToggle = async (page: Page): Promise<void> => {
+export const deselectToggle = async (page: Page): Promise<void> => {
   // Default has requirement toggle on, so first de-select it by opening filter pop-up and clicking toggle.
   await page.locator(".header-filter-icon-container").click();
   await page.locator("#no-requirements-toggle").click({ force: true });
 };
-
-export { assertNumPlaces, loadMap, deselectToggle, DEFAULT_PLACE_RANGE };
