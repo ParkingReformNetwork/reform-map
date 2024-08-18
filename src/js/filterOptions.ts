@@ -96,12 +96,14 @@ function generateAccordion(
   const outerContainer = document.createElement("div");
   outerContainer.className = "filter-accordion";
 
+  const buttonId = `filter-accordion-toggle-${name}`;
   const contentId = `filter-accordion-content-${name}`;
   const titleId = `filter-accordion-title-${name}`;
 
   const accordionButton = document.createElement("button");
   // Turn off clicking "submitting" the form, which reloads the page.
   accordionButton.type = "button";
+  accordionButton.id = buttonId;
   accordionButton.className = "filter-accordion-toggle";
   accordionButton.ariaExpanded = "false";
   accordionButton.setAttribute("aria-controls", contentId);
