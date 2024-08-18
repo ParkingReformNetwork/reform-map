@@ -1,17 +1,12 @@
-*.csv
-*.RData
-*.Rhistory
-map/rsconnect/
-.Rproj.user
-map/map.Rproj
 .DS_Store
 .idea
 
+/update-lat-lng.csv
+/city.csv
+/report.csv
+
 /node_modules
 tsconfig.tsbuildinfo
-
-/update-lat-lng.csv
-
 /dist/
 /.parcel-cache/
 /test-results/
