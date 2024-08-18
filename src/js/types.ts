@@ -11,7 +11,7 @@ export interface PlaceEntry {
   landUse: string[];
   reformDate: string;
   allMinimumsRepealed: boolean;
-  population: string;
+  population: number;
   url: string;
   lat: string;
   long: string;

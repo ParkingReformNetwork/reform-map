@@ -98,11 +98,10 @@ export class PlaceFilterManager {
     const isAllMinimumsRepealed =
       !state.allMinimumsRepealedToggle || entry.allMinimumsRepealed;
 
-    const population = parseInt(entry["population"]);
     const [sliderLeftIndex, sliderRightIndex] = state.populationSliderIndexes;
     const isPopulation =
-      population >= POPULATION_INTERVALS[sliderLeftIndex][1] &&
-      population <= POPULATION_INTERVALS[sliderRightIndex][1];
+      entry["population"] >= POPULATION_INTERVALS[sliderLeftIndex][1] &&
+      entry["population"] <= POPULATION_INTERVALS[sliderRightIndex][1];
 
     return (
       isScope &&

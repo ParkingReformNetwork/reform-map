@@ -45,7 +45,7 @@ export default function initTable(
       place: entry.place,
       state: entry.state,
       country: entry.country,
-      population: parseInt(entry.population).toLocaleString("en-us"),
+      population: entry.population.toLocaleString("en-us"),
       date: entry.reformDate,
       url: entry.url,
       status: entry.status,

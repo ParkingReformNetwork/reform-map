@@ -14,7 +14,7 @@ export default async function readData(): Promise<Record<PlaceId, PlaceEntry>> {
         lat: rawEntry.lat,
         long: rawEntry.long,
         url: rawEntry.citation_url,
-        population: rawEntry.population,
+        population: parseInt(rawEntry.population),
         scope: rawEntry.scope.split(", "),
         policyChange: rawEntry.policy_change.split(", "),
         landUse: rawEntry.land_use.split(", "),

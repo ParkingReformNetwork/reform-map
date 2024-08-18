@@ -25,7 +25,7 @@ function generateScorecard(entry: PlaceEntry, placeId: PlaceId): string {
         entry["url"]
       }>Details and citations <i aria-hidden="true" class="fa-solid fa-arrow-right"></i></a></li>
       ${dateOfReform}
-      <li>${parseInt(entry["population"]).toLocaleString()} residents</li>
+      <li>${entry["population"].toLocaleString()} residents</li>
     </ul>
     <p>${entry["summary"]}</p>
     `;
