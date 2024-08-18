@@ -45,7 +45,7 @@ export class FilterOptions {
       landUse: Array.from(landUse).sort(),
       status: Array.from(status).sort(),
       country: Array.from(country).sort(),
-      year: Array.from(year).sort(),
+      year: Array.from(year).sort((a, b) => b.localeCompare(a)),
     };
   }
 
