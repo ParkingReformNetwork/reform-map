@@ -27,7 +27,7 @@ const TESTS: EdgeCase[] = [
   { desc: "scope filter", scope: ["Regional"], expectedRange: [8, 20] },
   {
     desc: "policy change filter",
-    policy: ["Parking Maximums"],
+    policy: ["Parking maximums"],
     expectedRange: [700, 1100],
   },
   { desc: "land use filter", land: ["Residential"], expectedRange: [320, 550] },

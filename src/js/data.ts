@@ -1,8 +1,21 @@
 import { DateTime } from "luxon";
+import { capitalize } from "lodash-es";
 
 import { PlaceId, PlaceEntry } from "./types";
 
 export const DATE_REPR = "LLL d, yyyy";
+
+function splitStringArray(
+  val: string,
+  transform: Record<string, string> = {},
+): string[] {
+  // We should directly fix the CSV data once we do the data migration, rather than
+  // patching here.
+  return val.split(", ").map((v) => {
+    const lowercase = capitalize(v.toLowerCase());
+    return transform[lowercase] ?? lowercase;
+  });
+}
 
 export default async function readData(): Promise<Record<PlaceId, PlaceEntry>> {
   // @ts-ignore
@@ -20,9 +33,15 @@ export default async function readData(): Promise<Record<PlaceId, PlaceEntry>> {
         long: rawEntry.long,
         url: rawEntry.citation_url,
         population: parseInt(rawEntry.population),
-        scope: rawEntry.scope.split(", "),
-        policyChange: rawEntry.policy_change.split(", "),
-        landUse: rawEntry.land_use.split(", "),
+        scope: splitStringArray(rawEntry.scope, {
+          "City center/business district": "City center / business district",
+          "Main street/special": "Main street / special",
+        }),
+        policyChange: splitStringArray(rawEntry.policy_change, {
+          "Low density (sf) residential": "Low-density residential",
+          "High density residential": "High-density residential",
+        }),
+        landUse: splitStringArray(rawEntry.land_use),
         allMinimumsRepealed: rawEntry.all_minimums_repealed === "1",
         reformDate: date.isValid ? date : null,
       };
