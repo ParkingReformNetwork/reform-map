@@ -7,7 +7,7 @@ import maybeDisableFullScreenIcon from "./iframe";
 import initAbout from "./about";
 import initScorecard from "./scorecard";
 import { initPopulationSlider, POPULATION_MAX_INDEX } from "./populationSlider";
-import { FilterOptions, initFilterOptions } from "./filterOptions";
+import { getDefaultFilterOptions, initFilterOptions } from "./filterOptions";
 import initFilterPopup from "./filterPopup";
 import { PlaceFilterManager } from "./FilterState";
 import initCounters from "./counters";
@@ -37,12 +37,10 @@ export default async function initApp(): Promise<void> {
   const filterManager = new PlaceFilterManager(data, {
     searchInput: null,
     noRequirementsToggle: true,
-    policyChange: FilterOptions.getDefaultSelected("policyChange"),
-    scope: FilterOptions.getDefaultSelected("scope"),
-    landUse: FilterOptions.getDefaultSelected("landUse"),
-    implementationStage: FilterOptions.getDefaultSelected(
-      "implementationStage",
-    ),
+    policyChange: getDefaultFilterOptions("policyChange"),
+    scope: getDefaultFilterOptions("scope"),
+    landUse: getDefaultFilterOptions("landUse"),
+    implementationStage: getDefaultFilterOptions("implementationStage"),
     populationSliderIndexes: [0, POPULATION_MAX_INDEX],
   });
 

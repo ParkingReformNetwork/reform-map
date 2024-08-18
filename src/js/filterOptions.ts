@@ -30,22 +30,16 @@ const FILTER_CONFIG = {
 
 type FilterGroupKey = keyof typeof FILTER_CONFIG;
 
-export const FilterOptions = {
-  getAllOptions(fieldset: FilterGroupKey): string[] {
-    return FILTER_CONFIG[fieldset].map((option) => option[0]);
-  },
-
-  getDefaultSelected(fieldset: FilterGroupKey): string[] {
-    return FILTER_CONFIG[fieldset]
-      .filter(([, isDefaultSelected]) => isDefaultSelected)
-      .map(([name]) => name);
-  },
-};
+export function getDefaultFilterOptions(groupKey: FilterGroupKey): string[] {
+  return FILTER_CONFIG[groupKey]
+    .filter(([, isDefaultSelected]) => isDefaultSelected)
+    .map(([name]) => name);
+}
 
 function generateAccordionOptions(
   name: string,
   legend: string,
-  options: string[],
+  filterStateKey: FilterGroupKey,
 ): HTMLFieldSetElement {
   const fieldset = document.createElement("fieldset");
   fieldset.className = `filter filter-${name}`;
@@ -54,12 +48,13 @@ function generateAccordionOptions(
   legendElement.textContent = legend;
   fieldset.appendChild(legendElement);
 
-  options.forEach((val) => {
+  FILTER_CONFIG[filterStateKey].forEach(([val, isDefaultSelected]) => {
     const label = document.createElement("label");
 
     const input = document.createElement("input");
     input.type = "checkbox";
     input.name = name;
+    input.checked = isDefaultSelected;
 
     label.appendChild(input);
     label.appendChild(document.createTextNode(val));
@@ -76,26 +71,18 @@ function initFilterGroup(
   filterStateKey: FilterGroupKey,
   legend: string,
 ): void {
-  const outerContainer = document.getElementById("filter-accordion-options");
-  const options = FilterOptions.getAllOptions(filterStateKey);
-  outerContainer.appendChild(
-    generateAccordionOptions(htmlName, legend, options),
+  const groupContainer = generateAccordionOptions(
+    htmlName,
+    legend,
+    filterStateKey,
   );
 
-  const container = document.querySelector(`.filter-${htmlName}`);
+  const outerContainer = document.getElementById("filter-accordion-options");
+  outerContainer.appendChild(groupContainer);
 
-  // Set initial state.
-  const initialState = filterManager.getState()[filterStateKey] as string[];
-  Array.from(
-    container.querySelectorAll<HTMLInputElement>('input[type="checkbox"]'),
-  ).forEach((input) => {
-    const label = input.parentElement.textContent.trim();
-    input.checked = initialState.includes(label);
-  });
-
-  container.addEventListener("change", () => {
+  groupContainer.addEventListener("change", () => {
     const checkedLabels = Array.from(
-      container.querySelectorAll('input[type="checkbox"]:checked'),
+      groupContainer.querySelectorAll('input[type="checkbox"]:checked'),
     ).map((input) => input.parentElement.textContent.trim());
     filterManager.update({ [filterStateKey]: checkedLabels });
   });
