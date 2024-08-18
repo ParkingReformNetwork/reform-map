@@ -22,8 +22,7 @@ function getSliders(): Sliders {
   };
 }
 
-function updateSlidersUI(state: FilterState): void {
-  const [leftIndex, rightIndex] = state.populationSliderIndexes;
+function updateSlidersUI(leftIndex: number, rightIndex: number): void {
   const sliders = getSliders();
 
   sliders.left.value = leftIndex.toString();
@@ -91,8 +90,9 @@ export function initPopulationSlider(
   // Update UI whenever filter popup is visible. Note that
   // the popup must be visible for the width calculations to work.
   filterPopupIsVisible.subscribe((isVisible) => {
-    if (isVisible) {
-      updateSlidersUI(filterManager.getState());
-    }
+    if (!isVisible) return;
+    const [leftIndex, rightIndex] =
+      filterManager.getState().populationSliderIndexes;
+    updateSlidersUI(leftIndex, rightIndex);
   });
 }
