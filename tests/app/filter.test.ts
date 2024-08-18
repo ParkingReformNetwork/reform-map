@@ -49,7 +49,7 @@ const TESTS: EdgeCase[] = [
   {
     desc: "all places",
     // The other filters already enable all options by default.
-    implementation: getAllFilterOptions("implementationStage"),
+    implementation: getAllFilterOptions("status"),
     expectedRange: "all",
   },
 ];

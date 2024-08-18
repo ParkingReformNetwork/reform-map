@@ -19,7 +19,7 @@ async function readData(): Promise<Record<PlaceId, PlaceEntry>> {
   // @ts-ignore
   const data = await import("../../map/data.csv");
   return data.reduce((acc: Record<string, PlaceEntry>, entry: PlaceEntry) => {
-    const placeId = `${entry.city}, ${entry.state}`;
+    const placeId = `${entry.place}, ${entry.state}`;
     acc[placeId] = entry;
     return acc;
   }, {});
@@ -40,7 +40,7 @@ export default async function initApp(): Promise<void> {
     policyChange: getDefaultFilterOptions("policyChange"),
     scope: getDefaultFilterOptions("scope"),
     landUse: getDefaultFilterOptions("landUse"),
-    implementationStage: getDefaultFilterOptions("implementationStage"),
+    status: getDefaultFilterOptions("status"),
     populationSliderIndexes: [0, POPULATION_MAX_INDEX],
   });
 

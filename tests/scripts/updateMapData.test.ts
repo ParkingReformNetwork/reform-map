@@ -5,12 +5,12 @@ test.describe("leftJoin", () => {
   const testCases = [
     {
       baseRows: [
-        { city: "City1", state: "State1", country: "Country1", someField: 10 },
-        { city: "City2", state: "State2", country: "Country2", someField: 20 },
+        { place: "City1", state: "State1", country: "Country1", someField: 10 },
+        { place: "City2", state: "State2", country: "Country2", someField: 20 },
       ],
       newRows: [
         {
-          city: "City1",
+          place: "City1",
           state: "State1",
           country: "Country1",
           population: 1000,
@@ -18,44 +18,44 @@ test.describe("leftJoin", () => {
       ],
       expected: [
         {
-          city: "City1",
+          place: "City1",
           state: "State1",
           country: "Country1",
           someField: 10,
           population: 1000,
         },
-        { city: "City2", state: "State2", country: "Country2", someField: 20 },
+        { place: "City2", state: "State2", country: "Country2", someField: 20 },
       ],
       name: "One matching city",
     },
     {
       baseRows: [
-        { city: "City1", state: "State1", country: "Country1", someField: 30 },
-        { city: "City2", state: "State2", country: "Country2", someField: 40 },
+        { place: "City1", state: "State1", country: "Country1", someField: 30 },
+        { place: "City2", state: "State2", country: "Country2", someField: 40 },
       ],
       newRows: [
         {
-          city: "City3",
+          place: "City3",
           state: "State3",
           country: "Country3",
           population: 2000,
         },
       ],
       expected: [
-        { city: "City1", state: "State1", country: "Country1", someField: 30 },
-        { city: "City2", state: "State2", country: "Country2", someField: 40 },
+        { place: "City1", state: "State1", country: "Country1", someField: 30 },
+        { place: "City2", state: "State2", country: "Country2", someField: 40 },
       ],
       name: "No matching cities",
     },
     {
       baseRows: [
-        { city: "City1", state: "State1", country: "Country1", someField: 50 },
-        { city: "City2", state: "State2", country: "Country2", someField: 60 },
+        { place: "City1", state: "State1", country: "Country1", someField: 50 },
+        { place: "City2", state: "State2", country: "Country2", someField: 60 },
       ],
       newRows: [],
       expected: [
-        { city: "City1", state: "State1", country: "Country1", someField: 50 },
-        { city: "City2", state: "State2", country: "Country2", someField: 60 },
+        { place: "City1", state: "State1", country: "Country1", someField: 50 },
+        { place: "City2", state: "State2", country: "Country2", someField: 60 },
       ],
       name: "Empty city data",
     },
