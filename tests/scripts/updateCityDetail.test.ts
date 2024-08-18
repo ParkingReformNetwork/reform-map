@@ -157,7 +157,7 @@ test("city_detail_last_updated.txt is formatted correctly", async () => {
 });
 
 test("every city in CSV has a corresponding HTML page", async () => {
-  const mapData = await readCsv("map/tidied_map_data.csv");
+  const mapData = await readCsv("map/data.csv");
   const htmlPages = await fs.readdir("city_detail/");
   const validUrls = new Set(
     htmlPages.map(

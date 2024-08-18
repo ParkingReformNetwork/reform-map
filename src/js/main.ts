@@ -17,7 +17,7 @@ import subscribeSnapToPlace from "./mapPosition";
 
 async function readData(): Promise<Record<PlaceId, PlaceEntry>> {
   // @ts-ignore
-  const data = await import("../../map/tidied_map_data.csv");
+  const data = await import("../../map/data.csv");
   return data.reduce((acc: Record<string, PlaceEntry>, entry: PlaceEntry) => {
     const placeId = `${entry.city}, ${entry.state}`;
     acc[placeId] = entry;

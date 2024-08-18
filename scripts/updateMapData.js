@@ -130,8 +130,6 @@ const readCityCsv = async () => {
           typeof row.Population === "string"
             ? Number(row.Population.replace(/,/g, ""))
             : row.Population || 0,
-        is_notable: row.Notable === null ? "" : row.Notable,
-        is_recent: row.Recent === null ? "" : row.Recent,
         citation_url: `https://parkingreform.org/mandates-map/city_detail/${cityState}.html`,
       };
     });
@@ -193,7 +191,7 @@ const readReportCsv = async () => {
 };
 
 const readOldReportCsv = async () => {
-  const csvText = await fs.readFile("map/tidied_map_data.csv", "utf-8");
+  const csvText = await fs.readFile("map/data.csv", "utf-8");
   const { data } = Papa.parse(csvText.trim(), {
     header: true,
     dynamicTyping: true,
@@ -225,7 +223,7 @@ const readOldReportCsv = async () => {
  * If there are no matching newRows, still keep the base row. Assumes
  * there is not more than one new row per base row.
  */
-const leftJoin = (baseRows, newRows) =>
+export const leftJoin = (baseRows, newRows) =>
   baseRows.map((baseRow) => {
     const matchingRows = newRows.filter(
       (newRow) =>
@@ -289,70 +287,12 @@ const addMissingLatLng = async (reportData) => {
 const shouldCsvQuote = (val, columnIndex) =>
   typeof val === "string" || typeof val === "boolean" || columnIndex === 0;
 
-const determineSpecialLabel = (row) => {
-  if (row.is_notable === true) {
-    return "highlighed_icon";
-  }
-  if (row.is_recent === true) {
-    return "new_icon";
-  }
-  return "not_special_icon";
-};
-
 const postProcessResult = (reportData) =>
-  reportData
-    .sort((a, b) => a.city.localeCompare(b.city))
-    .map((row) => ({
-      ...row,
-      id: row.city + row.state + row.country,
-      magnitude_encoded: magnitudeToHighest(row.report_magnitude),
-      border_encoded: magnitudeToHighestOrAllUses(
-        row.report_magnitude,
-        row.land_uses,
-      ),
-      land_use_encoded: landUseToString(row.land_uses),
-      population_encoded: populationToBin(row.population),
-      city_search: `${row.city}, ${row.state}`,
-      is_special: determineSpecialLabel(row),
-    }));
+  reportData.sort((a, b) => a.city.localeCompare(b.city));
 
 const writeResult = async (result) => {
   const csv = Papa.unparse(result, { quotes: shouldCsvQuote });
-  await fs.writeFile("map/tidied_map_data.csv", csv);
-};
-
-// -------------------------------------------------------------
-// Trimmed report
-// -------------------------------------------------------------
-
-/**
- * Write trimmed_map_data.csv, which we share for external consumption.
- */
-const writeTrimmedReport = async (finalReport) => {
-  const excludedKeys = [
-    "is_notable",
-    "is_recent",
-    "is_special",
-    "id",
-    "is_verified",
-    "city_search",
-  ];
-  const trimmed = finalReport.map((row) =>
-    Object.fromEntries(
-      Object.entries(row).filter(
-        ([key]) =>
-          !(
-            excludedKeys.includes(key) ||
-            key.includes("is_magnitude") ||
-            key.includes("is_type") ||
-            key.includes("is_uses") ||
-            key.includes("encoded")
-          ),
-      ),
-    ),
-  );
-  const csv = Papa.unparse(trimmed, { quotes: shouldCsvQuote });
-  await fs.writeFile("map/trimmed_map_data.csv", csv);
+  await fs.writeFile("map/data.csv", csv);
 };
 
 // -------------------------------------------------------------
@@ -374,10 +314,7 @@ const main = async () => {
 
   const withLatLng = await addMissingLatLng(initialResult);
   const finalReport = postProcessResult(withLatLng);
-  await Promise.all([
-    writeResult(finalReport),
-    writeTrimmedReport(finalReport),
-  ]);
+  await writeResult(finalReport);
 };
 
 if (process.env.NODE_ENV !== "test") {
@@ -386,11 +323,3 @@ if (process.env.NODE_ENV !== "test") {
     process.exit(1);
   });
 }
-
-export {
-  leftJoin,
-  magnitudeToHighest,
-  magnitudeToHighestOrAllUses,
-  landUseToString,
-  populationToBin,
-};
