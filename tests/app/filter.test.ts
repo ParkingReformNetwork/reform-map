@@ -44,7 +44,7 @@ const TESTS: EdgeCase[] = [
   },
   {
     desc: "year filter",
-    country: ["1952"],
+    year: ["1952"],
     expectedRange: [1, 1],
   },
   {
