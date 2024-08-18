@@ -1,5 +1,4 @@
 import Observable from "./Observable";
-import { PlaceFilterManager } from "./FilterState";
 
 export type FilterPopupVisibleObservable = Observable<boolean>;
 

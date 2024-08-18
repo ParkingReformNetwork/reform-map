@@ -1,11 +1,46 @@
 import { PlaceFilterManager } from "./FilterState";
 
+function generateAccordionOptions(
+  name: string,
+  legend: string,
+  options: string[],
+): HTMLFieldSetElement {
+  const fieldset = document.createElement("fieldset");
+  fieldset.className = `filter filter-${name}`;
+
+  const legendElement = document.createElement("legend");
+  legendElement.textContent = legend;
+  fieldset.appendChild(legendElement);
+
+  options.forEach((val) => {
+    const label = document.createElement("label");
+
+    const input = document.createElement("input");
+    input.type = "checkbox";
+    input.name = name;
+
+    label.appendChild(input);
+    label.appendChild(document.createTextNode(val));
+
+    fieldset.appendChild(label);
+  });
+
+  return fieldset;
+}
+
 function initFilterGroup(
   filterManager: PlaceFilterManager,
-  filterClass: string,
+  htmlName: string,
   filterStateKey: string,
+  legend: string,
+  filterOptions: string[],
 ): void {
-  const container = document.querySelector(`.${filterClass}`);
+  const outerContainer = document.getElementById("filter-accordion-options");
+  outerContainer.appendChild(
+    generateAccordionOptions(htmlName, legend, filterOptions),
+  );
+
+  const container = document.querySelector(`.filter-${htmlName}`);
 
   // Set initial state.
   const initialState = filterManager.getState()[filterStateKey] as string[];
@@ -27,10 +62,36 @@ function initFilterGroup(
 export default function initFilterOptions(
   filterManager: PlaceFilterManager,
 ): void {
-  initFilterGroup(filterManager, "filter-scope", "scope");
-  initFilterGroup(filterManager, "filter-land-use", "landUse");
-  initFilterGroup(filterManager, "filter-policy-change", "policyChange");
-  initFilterGroup(filterManager, "filter-stage", "implementationStage");
+  initFilterGroup(
+    filterManager,
+    "policy-change",
+    "policyChange",
+    "Policy change",
+    [
+      "Reduce Parking Minimums",
+      "Eliminate Parking Minimums",
+      "Parking Maximums",
+    ],
+  );
+  initFilterGroup(filterManager, "scope", "scope", "Reform scope", [
+    "Regional",
+    "Citywide",
+    "City Center/Business District",
+    "Transit Oriented",
+    "Main Street/Special",
+  ]);
+  initFilterGroup(filterManager, "land-use", "landUse", "Affected land use", [
+    "All Uses",
+    "Commercial",
+    "Residential",
+  ]);
+  initFilterGroup(
+    filterManager,
+    "stage",
+    "implementationStage",
+    "Implementation stage",
+    ["Implemented", "Passed", "Planned", "Proposed", "Repealed"],
+  );
 
   const noRequirementsToggle = document.querySelector<HTMLInputElement>(
     "#no-requirements-toggle",
