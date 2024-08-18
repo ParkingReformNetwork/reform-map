@@ -1,5 +1,8 @@
 @use "theme/colors-original";
+@use "theme/spacing";
 @use "theme/typography";
+
+@use "filter";
 
 // uncomment to visualize slider mechanism
 // input {
@@ -10,8 +13,8 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 18em;
-  margin: 0.5em 1em;
+  width: calc(filter.$filter-width - (spacing.$container-edge-spacing * 2) - 5px);
+  margin: spacing.$element-gap spacing.$container-edge-spacing;
 }
 
 .population-slider-controls {
