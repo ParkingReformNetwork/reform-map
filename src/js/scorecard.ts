@@ -4,10 +4,11 @@ import type { PlaceEntry, PlaceId } from "./types";
 import Observable from "./Observable";
 import { PlaceFilterManager } from "./FilterState";
 import { ViewStateObservable } from "./viewToggle";
+import { DATE_REPR } from "./data";
 
 function generateScorecard(entry: PlaceEntry, placeId: PlaceId): string {
   const dateOfReform = entry.reformDate
-    ? `<li>Reformed on ${entry.reformDate}</li>`
+    ? `<li>Reformed on ${entry.reformDate.toFormat(DATE_REPR)}</li>`
     : "";
   return `
     <header class="scorecard-header">
@@ -25,7 +26,7 @@ function generateScorecard(entry: PlaceEntry, placeId: PlaceId): string {
         entry["url"]
       }>Details and citations <i aria-hidden="true" class="fa-solid fa-arrow-right"></i></a></li>
       ${dateOfReform}
-      <li>${parseInt(entry["population"]).toLocaleString()} residents</li>
+      <li>${entry["population"].toLocaleString()} residents</li>
     </ul>
     <p>${entry["summary"]}</p>
     `;

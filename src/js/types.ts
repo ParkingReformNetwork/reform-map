@@ -1,3 +1,5 @@
+import type { DateTime } from "luxon";
+
 export type PlaceId = string;
 
 export interface PlaceEntry {
@@ -9,9 +11,9 @@ export interface PlaceEntry {
   policyChange: string[];
   scope: string[];
   landUse: string[];
-  reformDate: string;
+  reformDate: DateTime | null;
   allMinimumsRepealed: boolean;
-  population: string;
+  population: number;
   url: string;
   lat: string;
   long: string;
