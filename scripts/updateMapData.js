@@ -162,29 +162,6 @@ const readReportCsv = async () => {
       reporter_name: row.Reporter || "",
       date_of_reform: row["Date of Reform"] || "",
       last_updated: row["Last updated"],
-      is_verified: row["Verified By"]?.split(",").length >= 2 ? 1 : 0,
-      is_magnitude_regional: checkIncludes(row.Magnitude, "regional"),
-      is_magnitude_citywide: checkIncludes(row.Magnitude, "citywide"),
-      is_magnitude_citycenter: checkIncludes(
-        row.Magnitude,
-        "city center/business district",
-      ),
-      is_magnitude_transit: checkIncludes(row.Magnitude, "transit oriented"),
-      is_magnitude_mainstreet: checkIncludes(
-        row.Magnitude,
-        "main street/special",
-      ),
-      is_type_eliminated: checkIncludes(row.Type, "eliminate parking minimums"),
-      is_type_reduced: checkIncludes(row.Type, "reduce parking minimums"),
-      is_type_maximums: checkIncludes(row.Type, "parking maximums"),
-      is_uses_alluses: checkIncludes(row.Uses, "all uses"),
-      is_uses_residential: checkIncludes(row.Uses, "residential"),
-      is_uses_commercial: checkIncludes(row.Uses, "commercial"),
-      is_uses_lowdensity: checkIncludes(
-        row.Uses,
-        "low density (sf) residential",
-      ),
-      is_uses_multifamily: checkIncludes(row.Uses, "multi-family residential"),
       is_no_mandate_city: checkIncludes(row.Highlights, "no mandates"),
     }));
   return reportTrimmed;
