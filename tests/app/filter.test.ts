@@ -7,7 +7,6 @@ import {
   DEFAULT_PLACE_RANGE,
   getTotalNumPlaces,
 } from "./utils";
-import { getAllFilterOptions } from "../../src/js/filterOptions";
 
 interface EdgeCase {
   desc: string;
@@ -49,7 +48,14 @@ const TESTS: EdgeCase[] = [
   {
     desc: "all places",
     // The other filters already enable all options by default.
-    status: getAllFilterOptions("status"),
+    status: [
+      "Implemented",
+      "Passed",
+      "Planned",
+      "Proposed",
+      "Repealed",
+      "Unverified",
+    ],
     expectedRange: "all",
   },
 ];

@@ -1,51 +1,47 @@
+import { PlaceEntry } from "./types";
 import { PlaceFilterManager } from "./FilterState";
 import Observable from "./Observable";
 
-// The boolean next to each option is for whether it's selected by default.
-const FILTER_CONFIG = {
-  policyChange: [
-    ["Reduce parking minimums", true],
-    ["Eliminate parking minimums", true],
-    ["Parking maximums", true],
-  ],
-  scope: [
-    ["Regional", true],
-    ["Citywide", true],
-    ["City center / business district", true],
-    ["Transit oriented", true],
-    ["Main street / special", true],
-  ],
-  landUse: [
-    ["All uses", true],
-    ["Commercial", true],
-    ["Residential", true],
-    ["Multi-family residential", true],
-    ["Low-density residential", true],
-    ["High-density residential", true],
-    ["Industrial", true],
-    ["Medical", true],
-    ["Other", true],
-  ],
-  status: [
-    ["Implemented", true],
-    ["Passed", true],
-    ["Planned", false],
-    ["Proposed", false],
-    ["Repealed", false],
-    ["Unverified", false],
-  ],
-} as const;
+type FilterGroupKey = "policyChange" | "scope" | "landUse" | "status";
 
-type FilterGroupKey = keyof typeof FILTER_CONFIG;
+const DESELECTED_BY_DEFAULT: Record<FilterGroupKey, Set<string>> = {
+  policyChange: new Set(),
+  scope: new Set(),
+  landUse: new Set(),
+  status: new Set(["Planned", "Proposed", "Repealed", "Unverified"]),
+};
 
-export function getAllFilterOptions(groupKey: FilterGroupKey): string[] {
-  return FILTER_CONFIG[groupKey].map((option) => option[0]);
-}
+export class FilterOptions {
+  readonly options: Record<FilterGroupKey, string[]>;
 
-export function getDefaultFilterOptions(groupKey: FilterGroupKey): string[] {
-  return FILTER_CONFIG[groupKey]
-    .filter(([, isDefaultSelected]) => isDefaultSelected)
-    .map(([name]) => name);
+  constructor(entries: PlaceEntry[]) {
+    const policy = new Set<string>();
+    const scope = new Set<string>();
+    const landUse = new Set<string>();
+    const status = new Set<string>();
+    entries.forEach((entry) => {
+      status.add(entry.status);
+      entry.policyChange.forEach((v) => policy.add(v));
+      entry.scope.forEach((v) => scope.add(v));
+      entry.landUse.forEach((v) => landUse.add(v));
+    });
+    this.options = {
+      policyChange: Array.from(policy).sort(),
+      scope: Array.from(scope).sort(),
+      landUse: Array.from(landUse).sort(),
+      status: Array.from(status).sort(),
+    };
+  }
+
+  default(groupKey: FilterGroupKey): string[] {
+    return this.options[groupKey].filter(
+      (opt) => !DESELECTED_BY_DEFAULT[groupKey].has(opt),
+    );
+  }
+
+  all(groupKey: FilterGroupKey): string[] {
+    return this.options[groupKey];
+  }
 }
 
 type CheckboxStats = {
@@ -103,6 +99,7 @@ function generateAccordion(
   name: string,
   title: string,
   filterStateKey: FilterGroupKey,
+  filterOptions: FilterOptions,
 ): [AccordionElements, Observable<AccordionState>] {
   const outerContainer = document.createElement("div");
   outerContainer.className = "filter-accordion";
@@ -146,13 +143,13 @@ function generateAccordion(
 
   const fieldSet = document.createElement("fieldset");
   fieldSet.className = `filter-${name}`;
-  FILTER_CONFIG[filterStateKey].forEach(([val, isDefaultSelected]) => {
+  filterOptions.all(filterStateKey).forEach((val) => {
     const label = document.createElement("label");
 
     const input = document.createElement("input");
     input.type = "checkbox";
     input.name = name;
-    input.checked = isDefaultSelected;
+    input.checked = !DESELECTED_BY_DEFAULT[filterStateKey].has(val);
 
     label.appendChild(input);
     label.appendChild(document.createTextNode(val));
@@ -194,12 +191,14 @@ function initFilterGroup(
   filterManager: PlaceFilterManager,
   htmlName: string,
   filterStateKey: FilterGroupKey,
+  filterOptions: FilterOptions,
   legend: string,
 ): void {
   const [accordionElements, accordionState] = generateAccordion(
     htmlName,
     legend,
     filterStateKey,
+    filterOptions,
   );
 
   const outerContainer = document.getElementById("filter-accordion-options");
@@ -221,16 +220,32 @@ function initFilterGroup(
   });
 }
 
-export function initFilterOptions(filterManager: PlaceFilterManager): void {
+export function initFilterOptions(
+  filterManager: PlaceFilterManager,
+  filterOptions: FilterOptions,
+): void {
   initFilterGroup(
     filterManager,
     "policy-change",
     "policyChange",
+    filterOptions,
     "Policy change",
   );
-  initFilterGroup(filterManager, "scope", "scope", "Reform scope");
-  initFilterGroup(filterManager, "land-use", "landUse", "Affected land use");
-  initFilterGroup(filterManager, "status", "status", "Status");
+  initFilterGroup(
+    filterManager,
+    "scope",
+    "scope",
+    filterOptions,
+    "Reform scope",
+  );
+  initFilterGroup(
+    filterManager,
+    "land-use",
+    "landUse",
+    filterOptions,
+    "Affected land use",
+  );
+  initFilterGroup(filterManager, "status", "status", filterOptions, "Status");
 
   const minimumsToggle = document.querySelector<HTMLInputElement>(
     "#no-requirements-toggle",
