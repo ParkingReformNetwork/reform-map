@@ -37,7 +37,7 @@ const readCityTable = async () => {
         : row.City;
       cityState = cityState.replace(/\s+/g, "");
       return {
-        city: row.City,
+        place: row.City,
         state: row["State/Province"],
         country: row.Country,
         population:
@@ -65,18 +65,18 @@ const readReportTable = async () => {
   return data
     .filter((row) => row.city_id)
     .map((row) => ({
-      city: row.city_id,
+      place: row.city_id,
       state: row.state,
       country: row.country,
-      report_summary: row.Summary || "",
-      report_status: row.Status || "",
-      report_type: row.Type || "",
-      report_magnitude: row.Magnitude || "",
-      land_uses: row.Uses || "",
-      reporter_name: row.Reporter || "",
-      date_of_reform: row["Date of Reform"] || "",
+      summary: row.Summary || "",
+      status: row.Status || "",
+      policy_change: row.Type || "",
+      scope: row.Magnitude || "",
+      land_use: row.Uses || "",
+      reporter: row.Reporter || "",
+      reform_date: row["Date of Reform"] || "",
       last_updated: row["Last updated"],
-      is_no_mandate_city: checkIncludes(row.Highlights, "no mandates"),
+      all_minimums_repealed: checkIncludes(row.Highlights, "no mandates"),
     }));
 };
 
@@ -88,7 +88,7 @@ const readOldCsv = async () => {
   });
 
   const mappedData = data.map((row) => ({
-    city: row.city,
+    place: row.place,
     state: row.state,
     country: row.country,
     lat: row.lat,
@@ -100,7 +100,7 @@ const readOldCsv = async () => {
   return [
     ...new Map(
       mappedData.map((item) => [
-        `${item.city}_${item.state}_${item.country}`,
+        `${item.place}_${item.state}_${item.country}`,
         item,
       ]),
     ).values(),
@@ -117,7 +117,7 @@ export const leftJoin = (baseRows, newRows) =>
   baseRows.map((baseRow) => {
     const matchingRows = newRows.filter(
       (newRow) =>
-        newRow.city === baseRow.city &&
+        newRow.place === baseRow.place &&
         newRow.state === baseRow.state &&
         newRow.country === baseRow.country,
     );
@@ -138,9 +138,9 @@ const ensureRowLatLng = async (row, geocoder) => {
 
   // We try the most precise query first, then fall back to less precise queries.
   const locationMethods = [
-    () => `${row.city}, ${row.state}, ${row.country}`,
-    () => `${row.city}, ${row.state}`,
-    () => `${row.city}`,
+    () => `${row.place}, ${row.state}, ${row.country}`,
+    () => `${row.place}, ${row.state}`,
+    () => `${row.place}`,
   ];
   for (const getLocationString of locationMethods) {
     const locationString = getLocationString();
@@ -178,7 +178,7 @@ const shouldCsvQuote = (val, columnIndex) =>
   typeof val === "string" || typeof val === "boolean" || columnIndex === 0;
 
 const postProcessResult = (reportData) =>
-  reportData.sort((a, b) => a.city.localeCompare(b.city));
+  reportData.sort((a, b) => a.place.localeCompare(b.place));
 
 const writeResult = async (result) => {
   const csv = Papa.unparse(result, { quotes: shouldCsvQuote });

@@ -19,7 +19,7 @@ export interface FilterState {
   policyChange: string[];
   scope: string[];
   landUse: string[];
-  implementationStage: string[];
+  status: string[];
   populationSliderIndexes: [number, number];
 }
 
@@ -98,16 +98,13 @@ export class PlaceFilterManager {
       return entryValues.some((val) => stateValue.includes(val));
     };
 
-    const isScope = isCompatibleWith(state.scope, "report_magnitude");
-    const isPolicy = isCompatibleWith(state.policyChange, "report_type");
-    const isLand = isCompatibleWith(state.landUse, "land_uses");
-    const isStage = isCompatibleWith(
-      state.implementationStage,
-      "report_status",
-    );
+    const isScope = isCompatibleWith(state.scope, "scope");
+    const isPolicy = isCompatibleWith(state.policyChange, "policy_change");
+    const isLand = isCompatibleWith(state.landUse, "land_use");
+    const isStatus = isCompatibleWith(state.status, "status");
 
     const isNoRequirementsToggle =
-      !state.noRequirementsToggle || entry.is_no_mandate_city === "1";
+      !state.noRequirementsToggle || entry.all_minimums_repealed === "1";
 
     const population = parseInt(entry["population"]);
     const [sliderLeftIndex, sliderRightIndex] = state.populationSliderIndexes;
@@ -119,7 +116,7 @@ export class PlaceFilterManager {
       isScope &&
       isPolicy &&
       isLand &&
-      isStage &&
+      isStatus &&
       isNoRequirementsToggle &&
       isPopulation
     );

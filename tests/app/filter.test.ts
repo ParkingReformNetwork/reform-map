@@ -14,7 +14,7 @@ interface EdgeCase {
   scope?: string[];
   policy?: string[];
   land?: string[];
-  implementation?: string[];
+  status?: string[];
   populationIntervals?: [number, number];
   noRequirements?: boolean;
   expectedRange: [number, number] | "all";
@@ -32,8 +32,8 @@ const TESTS: EdgeCase[] = [
   },
   { desc: "land use filter", land: ["Residential"], expectedRange: [320, 550] },
   {
-    desc: "implementation filter",
-    implementation: ["Repealed"],
+    desc: "status filter",
+    status: ["Repealed"],
     expectedRange: [1, 10],
   },
   {
@@ -49,7 +49,7 @@ const TESTS: EdgeCase[] = [
   {
     desc: "all places",
     // The other filters already enable all options by default.
-    implementation: getAllFilterOptions("implementationStage"),
+    status: getAllFilterOptions("status"),
     expectedRange: "all",
   },
 ];
@@ -101,7 +101,7 @@ for (const edgeCase of TESTS) {
     await selectIfSet(page, "scope", edgeCase.scope);
     await selectIfSet(page, "policy-change", edgeCase.policy);
     await selectIfSet(page, "land-use", edgeCase.land);
-    await selectIfSet(page, "implementation-stage", edgeCase.implementation);
+    await selectIfSet(page, "status", edgeCase.status);
 
     if (edgeCase.populationIntervals !== undefined) {
       const [leftInterval, rightInterval] = edgeCase.populationIntervals;

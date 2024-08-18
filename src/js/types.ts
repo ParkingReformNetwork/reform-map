@@ -1,18 +1,18 @@
 export type PlaceId = string;
 
 export interface PlaceEntry {
-  city: string;
+  place: string;
   state: string;
   country: string;
-  report_summary: string;
-  report_status: string;
-  report_type: string;
-  report_magnitude: string;
-  land_uses: string;
-  reporter_name: string;
-  date_of_reform: string;
+  summary: string;
+  status: string;
+  policy_change: string;
+  scope: string;
+  land_use: string;
+  reporter: string;
+  reform_date: string;
   last_updated: string;
-  is_no_mandate_city: string;
+  all_minimums_repealed: string;
   population: string;
   citation_url: string;
   lat: string;

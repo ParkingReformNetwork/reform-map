@@ -26,7 +26,7 @@ const FILTER_CONFIG = {
     ["Medical", true],
     ["Other", true],
   ],
-  implementationStage: [
+  status: [
     ["Implemented", true],
     ["Passed", true],
     ["Planned", false],
@@ -230,12 +230,7 @@ export function initFilterOptions(filterManager: PlaceFilterManager): void {
   );
   initFilterGroup(filterManager, "scope", "scope", "Reform scope");
   initFilterGroup(filterManager, "land-use", "landUse", "Affected land use");
-  initFilterGroup(
-    filterManager,
-    "implementation-stage",
-    "implementationStage",
-    "Implementation stage",
-  );
+  initFilterGroup(filterManager, "status", "status", "Status");
 
   const noRequirementsToggle = document.querySelector<HTMLInputElement>(
     "#no-requirements-toggle",

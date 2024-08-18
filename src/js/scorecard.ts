@@ -5,13 +5,13 @@ import Observable from "./Observable";
 import { PlaceFilterManager } from "./FilterState";
 import { ViewStateObservable } from "./viewToggle";
 
-function generateScorecard(entry: PlaceEntry, cityState: PlaceId): string {
-  const dateOfReform = entry.date_of_reform
-    ? `<li>Reformed on ${entry.date_of_reform}</li>`
+function generateScorecard(entry: PlaceEntry, placeId: PlaceId): string {
+  const dateOfReform = entry.reform_date
+    ? `<li>Reformed on ${entry.reform_date}</li>`
     : "";
   return `
     <header class="scorecard-header">
-      <h2 class="scorecard-title">${cityState}</h2>
+      <h2 class="scorecard-title">${placeId}</h2>
       <button
         class="scorecard-close-icon-container"
         title="close the place details popup"
@@ -27,7 +27,7 @@ function generateScorecard(entry: PlaceEntry, cityState: PlaceId): string {
       ${dateOfReform}
       <li>${parseInt(entry["population"]).toLocaleString()} residents</li>
     </ul>
-    <p>${entry["report_summary"]}</p>
+    <p>${entry["summary"]}</p>
     `;
 }
 
