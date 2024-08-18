@@ -7,7 +7,7 @@ import maybeDisableFullScreenIcon from "./iframe";
 import initAbout from "./about";
 import initScorecard from "./scorecard";
 import { initPopulationSlider, POPULATION_MAX_INDEX } from "./populationSlider";
-import { getDefaultFilterOptions, initFilterOptions } from "./filterOptions";
+import { FilterOptions, initFilterOptions } from "./filterOptions";
 import initFilterPopup from "./filterPopup";
 import { PlaceFilterManager } from "./FilterState";
 import initCounters from "./counters";
@@ -25,13 +25,15 @@ export default async function initApp(): Promise<void> {
   const map = createMap();
   const data = await readData();
 
+  const filterOptions = new FilterOptions(Object.values(data));
+
   const filterManager = new PlaceFilterManager(data, {
     searchInput: null,
     allMinimumsRepealedToggle: true,
-    policyChange: getDefaultFilterOptions("policyChange"),
-    scope: getDefaultFilterOptions("scope"),
-    landUse: getDefaultFilterOptions("landUse"),
-    status: getDefaultFilterOptions("status"),
+    policyChange: filterOptions.default("policyChange"),
+    scope: filterOptions.default("scope"),
+    landUse: filterOptions.default("landUse"),
+    status: filterOptions.default("status"),
     populationSliderIndexes: [0, POPULATION_MAX_INDEX],
   });
 
@@ -39,7 +41,7 @@ export default async function initApp(): Promise<void> {
   subscribeSnapToPlace(filterManager, map);
   initCounters(filterManager);
   initSearch(filterManager);
-  initFilterOptions(filterManager);
+  initFilterOptions(filterManager, filterOptions);
   initPopulationSlider(filterManager, filterPopupIsVisible);
 
   const table = initTable(filterManager);

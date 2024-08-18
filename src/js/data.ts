@@ -33,15 +33,18 @@ export default async function readData(): Promise<Record<PlaceId, PlaceEntry>> {
         long: rawEntry.long,
         url: rawEntry.citation_url,
         population: parseInt(rawEntry.population),
+        policyChange: splitStringArray(rawEntry.policy_change, {
+          "Parking maximums": "Add parking maximums",
+        }),
         scope: splitStringArray(rawEntry.scope, {
           "City center/business district": "City center / business district",
           "Main street/special": "Main street / special",
         }),
-        policyChange: splitStringArray(rawEntry.policy_change, {
-          "Low density (sf) residential": "Low-density residential",
-          "High density residential": "High-density residential",
+        landUse: splitStringArray(rawEntry.land_use, {
+          "Low density (sf) residential": "Residential, low-density",
+          "High density residential": "Residential, high-density",
+          "Multi-family residential": "Residential, multi-family",
         }),
-        landUse: splitStringArray(rawEntry.land_use),
         allMinimumsRepealed: rawEntry.all_minimums_repealed === "1",
         reformDate: date.isValid ? date : null,
       };
