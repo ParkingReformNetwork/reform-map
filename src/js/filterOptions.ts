@@ -19,6 +19,12 @@ const FILTER_CONFIG = {
     ["All Uses", true],
     ["Commercial", true],
     ["Residential", true],
+    ["Multi-Family Residential", true],
+    ["Low Density (SF) Residential", true],
+    ["High Density Residential", true],
+    ["Industrial", true],
+    ["Medical", true],
+    ["Other", true],
   ],
   implementationStage: [
     ["Implemented", true],
@@ -26,10 +32,15 @@ const FILTER_CONFIG = {
     ["Planned", false],
     ["Proposed", false],
     ["Repealed", false],
+    ["Unverified", false],
   ],
 } as const;
 
 type FilterGroupKey = keyof typeof FILTER_CONFIG;
+
+export function getAllFilterOptions(groupKey: FilterGroupKey): string[] {
+  return FILTER_CONFIG[groupKey].map((option) => option[0]);
+}
 
 export function getDefaultFilterOptions(groupKey: FilterGroupKey): string[] {
   return FILTER_CONFIG[groupKey]

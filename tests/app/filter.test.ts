@@ -1,10 +1,13 @@
 import { Page, test } from "@playwright/test";
+
 import {
   loadMap,
   assertNumPlaces,
   deselectToggle,
   DEFAULT_PLACE_RANGE,
+  getTotalNumPlaces,
 } from "./utils";
+import { getAllFilterOptions } from "../../src/js/filterOptions";
 
 interface EdgeCase {
   desc: string;
@@ -14,7 +17,7 @@ interface EdgeCase {
   implementation?: string[];
   populationIntervals?: [number, number];
   noRequirements?: boolean;
-  expectedRange: [number, number];
+  expectedRange: [number, number] | "all";
 }
 
 // The expected ranges can be updated as the data is updated!
@@ -46,14 +49,8 @@ const TESTS: EdgeCase[] = [
   {
     desc: "all places",
     // The other filters already enable all options by default.
-    implementation: [
-      "Implemented",
-      "Passed",
-      "Planned",
-      "Proposed",
-      "Repealed",
-    ],
-    expectedRange: [2900, 4000],
+    implementation: getAllFilterOptions("implementationStage"),
+    expectedRange: "all",
   },
 ];
 
@@ -116,6 +113,11 @@ for (const edgeCase of TESTS) {
         .fill(rightInterval.toString());
     }
 
-    await assertNumPlaces(page, edgeCase.expectedRange);
+    if (edgeCase.expectedRange === "all") {
+      const expected = await getTotalNumPlaces();
+      await assertNumPlaces(page, [expected, expected]);
+    } else {
+      await assertNumPlaces(page, edgeCase.expectedRange);
+    }
   });
 }
