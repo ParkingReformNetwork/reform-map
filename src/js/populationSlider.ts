@@ -95,4 +95,10 @@ export function initPopulationSlider(
       updateSlidersUI(filterManager.getState());
     }
   });
+
+  // Also update UI when values change, but only if the filter popup is open.
+  filterManager.subscribe((state) => {
+    if (!filterPopupIsVisible.getValue()) return;
+    updateSlidersUI(state);
+  });
 }
