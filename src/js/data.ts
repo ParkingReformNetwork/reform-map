@@ -45,7 +45,7 @@ export default async function readData(): Promise<Record<PlaceId, PlaceEntry>> {
           "High density residential": "Residential, high-density",
           "Multi-family residential": "Residential, multi-family",
         }),
-        allMinimumsRepealed: rawEntry.all_minimums_repealed === "1",
+        allMinimumsRemoved: rawEntry.all_minimums_repealed === "1",
         reformDate: date.isValid ? date : null,
       };
       const placeId = `${entry.place}, ${entry.state}`;

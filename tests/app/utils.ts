@@ -40,5 +40,5 @@ export const assertNumPlaces = async (
 export const deselectToggle = async (page: Page): Promise<void> => {
   // Default has requirement toggle on, so first de-select it by opening filter pop-up and clicking toggle.
   await page.locator(".header-filter-icon-container").click();
-  await page.locator("#no-requirements-toggle").click({ force: true });
+  await page.locator("#all-minimums-removed-toggle").click({ force: true });
 };

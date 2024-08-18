@@ -17,7 +17,7 @@ interface EdgeCase {
   country?: string[];
   year?: string[];
   populationIntervals?: [number, number];
-  noRequirements?: boolean;
+  allMinimumsRemoved?: boolean;
   expectedRange: [number, number] | "all";
 }
 
@@ -53,8 +53,8 @@ const TESTS: EdgeCase[] = [
     expectedRange: [480, 700],
   },
   {
-    desc: "no requirements",
-    noRequirements: true,
+    desc: "all minimums removed",
+    allMinimumsRemoved: true,
     expectedRange: [80, 250],
   },
   {
@@ -111,9 +111,9 @@ for (const edgeCase of TESTS) {
 
     await deselectToggle(page);
 
-    if (edgeCase.noRequirements !== undefined) {
+    if (edgeCase.allMinimumsRemoved !== undefined) {
       // Force clicking because the checkbox is hidden (opacity: 0)
-      await page.locator("#no-requirements-toggle").click({ force: true });
+      await page.locator("#all-minimums-removed-toggle").click({ force: true });
     }
 
     await selectIfSet(page, "scope", edgeCase.scope);

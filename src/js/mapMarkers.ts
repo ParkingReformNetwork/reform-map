@@ -42,7 +42,7 @@ export default function initPlaceMarkers(
   const placesToMarkers: Record<string, CircleMarker> = Object.entries(
     filterManager.entries,
   ).reduce((acc, [placeId, entry]) => {
-    const isPrimary = entry.allMinimumsRepealed;
+    const isPrimary = entry.allMinimumsRemoved;
     const style = isPrimary ? PRIMARY_MARKER_STYLE : SECONDARY_MARKER_STYLE;
 
     // @ts-ignore: passing strings to CircleMarker for lat/lng is valid, and
@@ -74,7 +74,7 @@ export default function initPlaceMarkers(
   map.addEventListener("zoomend", () => {
     const zoom = map.getZoom();
     Object.entries(placesToMarkers).forEach(([placeId, marker]) => {
-      const isPrimary = filterManager.entries[placeId].allMinimumsRepealed;
+      const isPrimary = filterManager.entries[placeId].allMinimumsRemoved;
       const newRadius = radiusGivenZoom({ zoom, isPrimary });
       marker.setRadius(newRadius);
     });
