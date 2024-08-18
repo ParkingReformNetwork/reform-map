@@ -63,6 +63,9 @@ const selectIfSet = async (
   values?: string[],
 ): Promise<void> => {
   if (values !== undefined) {
+    // First, expand the accordion
+    await page.locator(`#filter-accordion-toggle-${selector}`).click();
+
     // Reset filters by unchecking all
     const checkboxesUncheck = await page.$$(
       `input[type="checkbox"][name="${selector}"]`,
