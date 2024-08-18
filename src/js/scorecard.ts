@@ -6,8 +6,8 @@ import { PlaceFilterManager } from "./FilterState";
 import { ViewStateObservable } from "./viewToggle";
 
 function generateScorecard(entry: PlaceEntry, placeId: PlaceId): string {
-  const dateOfReform = entry.reform_date
-    ? `<li>Reformed on ${entry.reform_date}</li>`
+  const dateOfReform = entry.reformDate
+    ? `<li>Reformed on ${entry.reformDate}</li>`
     : "";
   return `
     <header class="scorecard-header">
@@ -22,7 +22,7 @@ function generateScorecard(entry: PlaceEntry, placeId: PlaceId): string {
     </header>
     <ul>
       <li><a class="external-link" target="_blank" href=${
-        entry["citation_url"]
+        entry["url"]
       }>Details and citations <i aria-hidden="true" class="fa-solid fa-arrow-right"></i></a></li>
       ${dateOfReform}
       <li>${parseInt(entry["population"]).toLocaleString()} residents</li>

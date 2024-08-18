@@ -232,13 +232,13 @@ export function initFilterOptions(filterManager: PlaceFilterManager): void {
   initFilterGroup(filterManager, "land-use", "landUse", "Affected land use");
   initFilterGroup(filterManager, "status", "status", "Status");
 
-  const noRequirementsToggle = document.querySelector<HTMLInputElement>(
+  const minimumsToggle = document.querySelector<HTMLInputElement>(
     "#no-requirements-toggle",
   );
-  noRequirementsToggle.checked = filterManager.getState().noRequirementsToggle;
-  noRequirementsToggle.addEventListener("change", () => {
+  minimumsToggle.checked = filterManager.getState().allMinimumsRepealedToggle;
+  minimumsToggle.addEventListener("change", () => {
     filterManager.update({
-      noRequirementsToggle: noRequirementsToggle.checked,
+      allMinimumsRepealedToggle: minimumsToggle.checked,
     });
   });
 }

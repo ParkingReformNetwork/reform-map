@@ -7,7 +7,7 @@ function determineHtml(state: FilterState, numPlaces: number): string {
   if (state.searchInput) {
     return `Showing ${state.searchInput} from search — <a class="counter-search-reset" role="button" aria-label="reset search">reset</a>`;
   }
-  const suffix = state.noRequirementsToggle
+  const suffix = state.allMinimumsRepealedToggle
     ? "without parking requirements"
     : "with parking reforms";
   const placesWord = numPlaces === 1 ? "place" : "places";
