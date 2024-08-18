@@ -99,7 +99,7 @@ export function initFilterOptions(filterManager: PlaceFilterManager): void {
   initFilterGroup(filterManager, "land-use", "landUse", "Affected land use");
   initFilterGroup(
     filterManager,
-    "stage",
+    "implementation-stage",
     "implementationStage",
     "Implementation stage",
   );
