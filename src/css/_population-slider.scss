@@ -13,8 +13,10 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: calc(filter.$filter-width - (spacing.$container-edge-spacing * 2) - 5px);
-  margin: spacing.$element-gap spacing.$container-edge-spacing;
+  width: calc(filter.$filter-width - spacing.$container-edge-spacing - 5px);
+  margin-top: spacing.$element-gap;
+  margin-bottom: spacing.$element-gap;
+  margin-left: spacing.$container-edge-spacing;
 }
 
 .population-slider-controls {
