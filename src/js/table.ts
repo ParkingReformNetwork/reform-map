@@ -22,6 +22,10 @@ function compareDates(a: string, b: string): number {
   return dateA.valueOf() - dateB.valueOf();
 }
 
+function compareStringArrays(a: string[], b: string[]): number {
+  return a.join(",").localeCompare(b.join(","));
+}
+
 export default function initTable(
   filterManager: PlaceFilterManager,
 ): Tabulator {
@@ -42,11 +46,11 @@ export default function initTable(
       state: entry.state,
       country: entry.country,
       population: parseInt(entry.population).toLocaleString("en-us"),
-      date: entry.reform_date,
-      citationUrl: entry.citation_url,
+      date: entry.reformDate,
+      url: entry.url,
       status: entry.status,
-      landUse: entry.land_use,
-      policyChange: entry.policy_change,
+      landUse: entry.landUse,
+      policyChange: entry.policyChange,
       scope: entry.scope,
     }),
   );
@@ -58,7 +62,7 @@ export default function initTable(
       frozen: true,
       formatter: "link",
       formatterParams: {
-        urlField: "citationUrl",
+        urlField: "url",
         labelField: "place",
         target: "_blank",
       },
@@ -85,16 +89,19 @@ export default function initTable(
       title: "Policy change",
       field: "policyChange",
       width: 260,
+      sorter: compareStringArrays,
     },
     {
       title: "Scope",
       field: "scope",
       width: 260,
+      sorter: compareStringArrays,
     },
     {
       title: "Land use",
       field: "landUse",
       width: 160,
+      sorter: compareStringArrays,
     },
     {
       title: "Status",

@@ -15,7 +15,7 @@ export const POPULATION_INTERVALS: Array<[string, number]> = [
 
 export interface FilterState {
   searchInput: string | null;
-  noRequirementsToggle: boolean;
+  allMinimumsRepealedToggle: boolean;
   policyChange: string[];
   scope: string[];
   landUse: string[];
@@ -88,23 +88,15 @@ export class PlaceFilterManager {
       return state.searchInput === placeId;
     }
 
-    const isCompatibleWith = (
-      stateValue: string[],
-      entryKey: string,
-    ): boolean => {
-      const entryValues: string[] = entry[entryKey]
-        .split(",")
-        .map((x: string) => x.trim());
-      return entryValues.some((val) => stateValue.includes(val));
-    };
+    const isScope = entry.scope.some((v) => state.scope.includes(v));
+    const isPolicy = entry.policyChange.some((v) =>
+      state.policyChange.includes(v),
+    );
+    const isLand = entry.landUse.some((v) => state.landUse.includes(v));
+    const isStatus = state.status.includes(entry.status);
 
-    const isScope = isCompatibleWith(state.scope, "scope");
-    const isPolicy = isCompatibleWith(state.policyChange, "policy_change");
-    const isLand = isCompatibleWith(state.landUse, "land_use");
-    const isStatus = isCompatibleWith(state.status, "status");
-
-    const isNoRequirementsToggle =
-      !state.noRequirementsToggle || entry.all_minimums_repealed === "1";
+    const isAllMinimumsRepealed =
+      !state.allMinimumsRepealedToggle || entry.allMinimumsRepealed;
 
     const population = parseInt(entry["population"]);
     const [sliderLeftIndex, sliderRightIndex] = state.populationSliderIndexes;
@@ -117,7 +109,7 @@ export class PlaceFilterManager {
       isPolicy &&
       isLand &&
       isStatus &&
-      isNoRequirementsToggle &&
+      isAllMinimumsRepealed &&
       isPopulation
     );
   }

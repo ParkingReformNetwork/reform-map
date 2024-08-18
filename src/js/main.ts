@@ -14,16 +14,7 @@ import initCounters from "./counters";
 import initViewToggle from "./viewToggle";
 import initTable from "./table";
 import subscribeSnapToPlace from "./mapPosition";
-
-async function readData(): Promise<Record<PlaceId, PlaceEntry>> {
-  // @ts-ignore
-  const data = await import("../../map/data.csv");
-  return data.reduce((acc: Record<string, PlaceEntry>, entry: PlaceEntry) => {
-    const placeId = `${entry.place}, ${entry.state}`;
-    acc[placeId] = entry;
-    return acc;
-  }, {});
-}
+import readData from "./data";
 
 export default async function initApp(): Promise<void> {
   initIcons();
@@ -36,7 +27,7 @@ export default async function initApp(): Promise<void> {
 
   const filterManager = new PlaceFilterManager(data, {
     searchInput: null,
-    noRequirementsToggle: true,
+    allMinimumsRepealedToggle: true,
     policyChange: getDefaultFilterOptions("policyChange"),
     scope: getDefaultFilterOptions("scope"),
     landUse: getDefaultFilterOptions("landUse"),
