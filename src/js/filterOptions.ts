@@ -159,13 +159,17 @@ function generateAccordion(
 
   const fieldSet = document.createElement("fieldset");
   fieldSet.className = `filter-${name}`;
-  filterOptions.all(filterStateKey).forEach((val) => {
+  filterOptions.all(filterStateKey).forEach((val, i) => {
+    const inputId = `filter-${name}-option-${i}`;
+
     const label = document.createElement("label");
     label.className = "filter-checkbox";
+    label.htmlFor = inputId;
 
     const input = document.createElement("input");
     input.type = "checkbox";
     input.name = name;
+    input.id = inputId;
     input.checked = !DESELECTED_BY_DEFAULT[filterStateKey].has(val);
 
     const squareIcon = document.createElement("i");
