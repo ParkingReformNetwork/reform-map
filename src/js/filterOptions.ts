@@ -83,7 +83,7 @@ type AccordionElements = {
   contentContainer: HTMLDivElement;
   fieldSet: HTMLFieldSetElement;
   checkAllButton: HTMLButtonElement;
-  clearAllButton: HTMLButtonElement;
+  uncheckAllButton: HTMLButtonElement;
 };
 
 type AccordionState = {
@@ -171,10 +171,10 @@ function generateAccordion(
   checkAllButton.textContent = "Check all";
   groupSelectorButtons.appendChild(checkAllButton);
 
-  const clearAllButton = document.createElement("button");
-  clearAllButton.type = "button";
-  clearAllButton.textContent = "Clear all";
-  groupSelectorButtons.appendChild(clearAllButton);
+  const uncheckAllButton = document.createElement("button");
+  uncheckAllButton.type = "button";
+  uncheckAllButton.textContent = "Uncheck all";
+  groupSelectorButtons.appendChild(uncheckAllButton);
 
   filterOptions.all(filterStateKey).forEach((val, i) => {
     const inputId = `filter-${name}-option-${i}`;
@@ -215,7 +215,7 @@ function generateAccordion(
     contentContainer,
     fieldSet,
     checkAllButton,
-    clearAllButton,
+    uncheckAllButton,
   };
 
   const accordionState = new Observable<AccordionState>({
@@ -290,7 +290,7 @@ function initFilterGroup(
     });
   });
 
-  accordionElements.clearAllButton.addEventListener("click", () => {
+  accordionElements.uncheckAllButton.addEventListener("click", () => {
     allCheckboxes.forEach((input) => (input.checked = false));
     updateCheckboxStats(accordionState, accordionElements.fieldSet);
     filterManager.update({
