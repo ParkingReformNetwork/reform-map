@@ -1,3 +1,6 @@
+/* eslint-disable import/no-extraneous-dependencies */
+/* eslint-disable no-await-in-loop */
+
 import { Page, test } from "@playwright/test";
 
 import {
@@ -85,18 +88,15 @@ const selectIfSet = async (
   const labels = page.locator(`.filter-${selector} label`);
   const count = await labels.count();
 
-  for (let i = 0; i < count; i++) {
+  for (let i = 0; i < count; i += 1) {
     const label = labels.nth(i);
     const text = await label.locator("span").innerText();
     const isChecked = await label.locator('input[type="checkbox"]').isChecked();
-    if (values.includes(text)) {
-      if (!isChecked) {
-        await label.click();
-      }
-    } else {
-      if (isChecked) {
-        await label.click();
-      }
+    if (
+      (isChecked && !values.includes(text)) ||
+      (!isChecked && values.includes(text))
+    ) {
+      await label.click();
     }
   }
 };
