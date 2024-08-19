@@ -2,6 +2,7 @@ import { library, dom } from "@fortawesome/fontawesome-svg-core";
 import {
   faCircleQuestion,
   faCircleXmark,
+  faSquare,
 } from "@fortawesome/free-regular-svg-icons";
 import {
   faArrowRight,
@@ -9,6 +10,7 @@ import {
   faChevronUp,
   faUpRightFromSquare,
   faMagnifyingGlass,
+  faSquareCheck,
   faSliders,
   faTable,
   faEarthAmericas,
@@ -24,6 +26,8 @@ export default function initIcons(): void {
     faUpRightFromSquare,
     faCircleXmark,
     faMagnifyingGlass,
+    faSquare,
+    faSquareCheck,
     faSliders,
     faTable,
     faEarthAmericas,

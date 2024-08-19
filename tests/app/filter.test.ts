@@ -1,3 +1,6 @@
+/* eslint-disable import/no-extraneous-dependencies */
+/* eslint-disable no-await-in-loop */
+
 import { Page, test } from "@playwright/test";
 
 import {
@@ -28,7 +31,7 @@ const TESTS: EdgeCase[] = [
   { desc: "scope filter", scope: ["Regional"], expectedRange: [8, 20] },
   {
     desc: "policy change filter",
-    policy: ["Parking maximums"],
+    policy: ["Add parking maximums"],
     expectedRange: [700, 1100],
   },
   { desc: "land use filter", land: ["Residential"], expectedRange: [320, 550] },
@@ -77,31 +80,24 @@ const selectIfSet = async (
   selector: string,
   values?: string[],
 ): Promise<void> => {
-  if (values !== undefined) {
-    // First, expand the accordion
-    await page.locator(`#filter-accordion-toggle-${selector}`).click();
+  if (!values) return;
 
-    // Reset filters by unchecking all
-    const checkboxesUncheck = await page.$$(
-      `input[type="checkbox"][name="${selector}"]`,
-    );
-    // Unable to use Promise.all() because unchecking needs to be sequential
-    await checkboxesUncheck.reduce(async (previousPromise, checkbox) => {
-      await previousPromise;
-      await checkbox.uncheck();
-    }, Promise.resolve());
+  // First, expand the accordion
+  await page.locator(`#filter-accordion-toggle-${selector}`).click();
 
-    const checkboxesCheck = await Promise.all(
-      values.map(async (value) => {
-        const parentElement = await page.$(`label:has-text("${value}")`);
-        const checkbox = await parentElement.$('input[type="checkbox"]');
-        return checkbox;
-      }),
-    );
-    await checkboxesCheck.reduce(async (previousPromise, checkbox) => {
-      await previousPromise;
-      await checkbox.check();
-    }, Promise.resolve());
+  const labels = page.locator(`.filter-${selector} label`);
+  const count = await labels.count();
+
+  for (let i = 0; i < count; i += 1) {
+    const label = labels.nth(i);
+    const text = await label.locator("span").innerText();
+    const isChecked = await label.locator('input[type="checkbox"]').isChecked();
+    if (
+      (isChecked && !values.includes(text)) ||
+      (!isChecked && values.includes(text))
+    ) {
+      await label.click();
+    }
   }
 };
 

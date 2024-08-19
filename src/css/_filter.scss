@@ -23,12 +23,10 @@ $filter-width: 310px;
   border: borders.$component-border;
   border-radius: borders.$border-radius;
 
-  label {
-    display: block;
-  }
-
   fieldset {
     border: none;
+    padding: 0;
+    margin: 0;
   }
 }
 
@@ -68,5 +66,58 @@ $filter-width: 310px;
 
 .filter-accordion-content {
   border-top: borders.$component-inner-divider;
-  padding-top: spacing.$element-gap;
+}
+
+.filter-checkbox {
+  cursor: pointer;
+  font-size: typography.$font-size-base;
+
+  border: borders.$component-border;
+  border-radius: borders.$border-radius;
+
+  height: spacing.$min-touch-target;
+  margin: spacing.$element-gap;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  input {
+    position: absolute;
+    opacity: 0;
+    height: 0;
+    width: 0;
+    margin: 0;
+  }
+
+  svg {
+    height: icons.$icon-size-md;
+    width: icons.$icon-size-md;
+    margin-left: spacing.$element-gap;
+    color: colors.$gray;
+  }
+
+  .fa-square {
+    display: block;
+  }
+
+  .fa-square-check {
+    display: none;
+  }
+
+  input[type="checkbox"]:checked {
+    & ~ .fa-square {
+      display: none;
+    }
+
+    & ~ .fa-square-check {
+      display: block;
+    }
+  }
+
+  span {
+    flex: 1;
+    margin-left: spacing.$element-gap;
+    line-height: 1.1;
+  }
 }
