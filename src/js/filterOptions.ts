@@ -2,7 +2,7 @@ import { PlaceEntry } from "./types";
 import { PlaceFilterManager } from "./FilterState";
 import Observable from "./Observable";
 
-export const OPTION_NOT_SET = "Not available";
+export const UNKNOWN_DATE = "Unknown date";
 
 type FilterGroupKey =
   | "policyChange"
@@ -34,7 +34,7 @@ export class FilterOptions {
     entries.forEach((entry) => {
       status.add(entry.status);
       country.add(entry.country);
-      year.add(entry.reformDate?.year.toString() || OPTION_NOT_SET);
+      year.add(entry.reformDate?.year.toString() || UNKNOWN_DATE);
       entry.policyChange.forEach((v) => policy.add(v));
       entry.scope.forEach((v) => scope.add(v));
       entry.landUse.forEach((v) => landUse.add(v));
