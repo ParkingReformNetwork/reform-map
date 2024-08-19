@@ -191,8 +191,10 @@ function generateAccordion(
 
     const squareIcon = document.createElement("i");
     squareIcon.className = "fa-regular fa-square";
+    squareIcon.ariaHidden = "true";
     const checkedIcon = document.createElement("i");
     checkedIcon.className = "fa-solid fa-square-check";
+    checkedIcon.ariaHidden = "true";
 
     const description = document.createElement("span");
     description.textContent = val;

@@ -79,7 +79,7 @@ $filter-width: 310px;
   border: borders.$component-border;
   border-radius: borders.$border-radius;
 
-  height: spacing.$min-touch-target;
+  min-height: spacing.$min-touch-target;
   margin: spacing.$element-gap;
 
   display: flex;
@@ -126,6 +126,8 @@ $filter-width: 310px;
   span {
     flex: 1;
     margin-left: spacing.$element-gap;
+    margin-top: spacing.$element-gap;
+    margin-bottom: spacing.$element-gap;
     line-height: 1.1;
   }
 }
