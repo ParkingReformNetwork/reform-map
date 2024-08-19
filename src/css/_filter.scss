@@ -133,7 +133,6 @@ $filter-width: 310px;
 .filter-group-selectors-container {
   display: flex;
   width: 100%;
-  border-bottom: borders.$component-inner-divider;
 
   button {
     flex: 1;
@@ -141,8 +140,17 @@ $filter-width: 310px;
     padding: spacing.$element-gap;
     cursor: pointer;
 
+    border: borders.$component-border;
+    border-radius: borders.$border-radius;
+    margin-top: spacing.$element-gap;
+
     &:first-child {
-      border-right: borders.$component-inner-divider;
+      margin-left: spacing.$element-gap;
+      margin-right: spacing.$element-gap;
+    }
+
+    &:last-child {
+      margin-right: spacing.$element-gap;
     }
 
     &:hover {
