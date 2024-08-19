@@ -82,6 +82,8 @@ type AccordionElements = {
   accordionButton: HTMLButtonElement;
   contentContainer: HTMLDivElement;
   fieldSet: HTMLFieldSetElement;
+  checkAllButton: HTMLButtonElement;
+  clearAllButton: HTMLButtonElement;
 };
 
 type AccordionState = {
@@ -159,6 +161,21 @@ function generateAccordion(
 
   const fieldSet = document.createElement("fieldset");
   fieldSet.className = `filter-${name}`;
+
+  const groupSelectorButtons = document.createElement("div");
+  groupSelectorButtons.className = "filter-group-selectors-container";
+  fieldSet.appendChild(groupSelectorButtons);
+
+  const checkAllButton = document.createElement("button");
+  checkAllButton.type = "button";
+  checkAllButton.textContent = "Check all";
+  groupSelectorButtons.appendChild(checkAllButton);
+
+  const clearAllButton = document.createElement("button");
+  clearAllButton.type = "button";
+  clearAllButton.textContent = "Clear all";
+  groupSelectorButtons.appendChild(clearAllButton);
+
   filterOptions.all(filterStateKey).forEach((val, i) => {
     const inputId = `filter-${name}-option-${i}`;
 
@@ -197,6 +214,8 @@ function generateAccordion(
     accordionButton,
     contentContainer,
     fieldSet,
+    checkAllButton,
+    clearAllButton,
   };
 
   const accordionState = new Observable<AccordionState>({
@@ -218,6 +237,17 @@ function generateAccordion(
   return [elements, accordionState];
 }
 
+function updateCheckboxStats(
+  observable: Observable<AccordionState>,
+  fieldSet: HTMLFieldSetElement,
+): void {
+  const accordionPriorState = observable.getValue();
+  observable.setValue({
+    expanded: accordionPriorState.expanded,
+    checkboxStats: getCheckboxStats(fieldSet),
+  });
+}
+
 function initFilterGroup(
   filterManager: PlaceFilterManager,
   htmlName: string,
@@ -236,11 +266,7 @@ function initFilterGroup(
   outerContainer.appendChild(accordionElements.outerContainer);
 
   accordionElements.fieldSet.addEventListener("change", () => {
-    const accordionPriorState = accordionState.getValue();
-    accordionState.setValue({
-      expanded: accordionPriorState.expanded,
-      checkboxStats: getCheckboxStats(accordionElements.fieldSet),
-    });
+    updateCheckboxStats(accordionState, accordionElements.fieldSet);
 
     const checkedLabels = Array.from(
       accordionElements.fieldSet.querySelectorAll(
@@ -248,6 +274,28 @@ function initFilterGroup(
       ),
     ).map((input) => input.parentElement.textContent.trim());
     filterManager.update({ [filterStateKey]: checkedLabels });
+  });
+
+  const allCheckboxes = Array.from(
+    accordionElements.fieldSet.querySelectorAll<HTMLInputElement>(
+      'input[type="checkbox"]',
+    ),
+  );
+
+  accordionElements.checkAllButton.addEventListener("click", () => {
+    allCheckboxes.forEach((input) => (input.checked = true));
+    updateCheckboxStats(accordionState, accordionElements.fieldSet);
+    filterManager.update({
+      [filterStateKey]: filterOptions.all(filterStateKey),
+    });
+  });
+
+  accordionElements.clearAllButton.addEventListener("click", () => {
+    allCheckboxes.forEach((input) => (input.checked = false));
+    updateCheckboxStats(accordionState, accordionElements.fieldSet);
+    filterManager.update({
+      [filterStateKey]: [],
+    });
   });
 }
 
