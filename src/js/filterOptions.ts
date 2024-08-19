@@ -161,14 +161,25 @@ function generateAccordion(
   fieldSet.className = `filter-${name}`;
   filterOptions.all(filterStateKey).forEach((val) => {
     const label = document.createElement("label");
+    label.className = "filter-checkbox";
 
     const input = document.createElement("input");
     input.type = "checkbox";
     input.name = name;
     input.checked = !DESELECTED_BY_DEFAULT[filterStateKey].has(val);
 
+    const squareIcon = document.createElement("i");
+    squareIcon.className = "fa-regular fa-square";
+    const checkedIcon = document.createElement("i");
+    checkedIcon.className = "fa-solid fa-square-check";
+
+    const description = document.createElement("span");
+    description.textContent = val;
+
     label.appendChild(input);
-    label.appendChild(document.createTextNode(val));
+    label.appendChild(squareIcon);
+    label.appendChild(checkedIcon);
+    label.appendChild(description);
 
     fieldSet.appendChild(label);
   });
