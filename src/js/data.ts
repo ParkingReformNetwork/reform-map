@@ -42,6 +42,7 @@ export default async function readData(): Promise<Record<PlaceId, PlaceEntry>> {
           "Main street/special": "Main street / special",
         }),
         landUse: splitStringArray(rawEntry.land_use, {
+          "Residential": "Residential, all uses",
           "Low density (sf) residential": "Residential, low-density",
           "High density residential": "Residential, high-density",
           "Multi-family residential": "Residential, multi-family",
