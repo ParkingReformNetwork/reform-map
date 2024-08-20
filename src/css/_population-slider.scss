@@ -40,14 +40,14 @@ $thumbsize: icons.$icon-size-md;
   -webkit-appearance: none;
   outline: none;
 
-  // Only set the background from 30%-60%.
+  // Only set the background in the middle third.
   background: transparent;
   background-image: linear-gradient(
     to bottom,
     transparent 0%,
     transparent 30%,
-    colors.$gray-light 30%,
-    colors.$gray-light 60%,
+    colors.$gray-light 33%,
+    colors.$gray-light 66%,
     transparent 60%,
     transparent 100%
   );
