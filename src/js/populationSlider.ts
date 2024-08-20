@@ -5,7 +5,7 @@ import {
   POPULATION_INTERVALS,
 } from "./FilterState";
 
-const THUMBSIZE = 14;
+const THUMBSIZE = 24;
 export const POPULATION_MAX_INDEX = POPULATION_INTERVALS.length - 1;
 
 interface Sliders {
@@ -62,14 +62,6 @@ export function initPopulationSlider(
   filterPopupIsVisible: FilterPopupVisibleObservable,
 ): void {
   const sliders = getSliders();
-
-  // Create legend
-  const legend = document.querySelector(".population-slider-legend");
-  POPULATION_INTERVALS.forEach(([intervalText]) => {
-    const span = document.createElement("span");
-    span.appendChild(document.createTextNode(intervalText));
-    legend.appendChild(span);
-  });
 
   // Set initial state.
   const maxIndex = filterManager

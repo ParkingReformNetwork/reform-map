@@ -1,4 +1,5 @@
-@use "theme/colors-original";
+@use "theme/colors";
+@use "theme/icons";
 @use "theme/spacing";
 @use "theme/typography";
 
@@ -9,66 +10,64 @@
 //   border: solid;
 // }
 
+$thumbsize: icons.$icon-size-md;
+
 .population-slider-container {
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: calc(filter.$filter-width - spacing.$container-edge-spacing - 5px);
-  margin-top: spacing.$element-gap;
-  margin-bottom: spacing.$element-gap;
-  margin-left: spacing.$container-edge-spacing;
+
+  // `width` must be hardcoded for the calculations in populationSlider.tss to work.
+  width: calc(filter.$filter-width - (spacing.$container-edge-spacing * 2));
+  margin: spacing.$element-gap spacing.$container-edge-spacing;
 }
 
 .population-slider-controls {
   width: 100%;
-  height: 2em;
+  margin-top: spacing.$container-edge-spacing;
+  margin-bottom: calc(spacing.$container-edge-spacing + 5px);
+
   display: flex;
   justify-content: space-between;
   align-items: center;
-}
-
-.population-slider-legend {
-  display: flex;
-  justify-content: space-between;
-  width: 100%;
-  padding: 0;
-
-  span {
-    font-size: typography.$font-size-xs;
-    opacity: 1;
-    flex: 1;
-    text-align: left;
-  }
 }
 
 .population-slider-controls > input {
   cursor: pointer;
   position: absolute;
+  margin: 0;
+
   -webkit-appearance: none;
   outline: none;
+
+  // Only set the background in the middle third.
   background: transparent;
   background-image: linear-gradient(
     to bottom,
     transparent 0%,
     transparent 30%,
-    colors-original.$silver 30%,
-    colors-original.$silver 60%,
+    colors.$gray-light 33%,
+    colors.$gray-light 66%,
     transparent 60%,
     transparent 100%
   );
-}
 
-.population-slider-controls > input::-webkit-slider-thumb {
-  -webkit-appearance: none; // Override default look
-  appearance: none;
-  width: 14px;
-  height: 14px;
-  background: colors-original.$white;
-  cursor: pointer;
-  border: 1px solid colors-original.$gray-neutral;
-  border-radius: 100%;
-}
+  &::-webkit-slider-thumb,
+  &::-moz-range-thumb,
+  &::-ms-thumb {
+    width: $thumbsize;
+    height: $thumbsize;
 
-.population-slider-controls > input::-webkit-slider-runnable-track {
-  cursor: pointer;
+    -webkit-appearance: none; // Override default look
+    appearance: none;
+    cursor: pointer;
+
+    background: colors.$white;
+    border: 1px solid colors.$gray;
+    border-radius: 100%;
+  }
+
+  &::-webkit-slider-runnable-track {
+    cursor: pointer;
+  }
 }
