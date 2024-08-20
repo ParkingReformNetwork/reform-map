@@ -70,6 +70,10 @@
   align-items: center;
   justify-content: center;
 
+  &:hover {
+    background-color: colors.$hover-white;
+  }
+
   svg {
     height: icons.$icon-size-md;
     width: icons.$icon-size-md;
