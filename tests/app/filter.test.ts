@@ -108,8 +108,9 @@ for (const edgeCase of TESTS) {
     await deselectToggle(page);
 
     if (edgeCase.allMinimumsRemoved !== undefined) {
-      // Force clicking because the checkbox is hidden (opacity: 0)
-      await page.locator("#all-minimums-removed-toggle").click({ force: true });
+      await page
+        .locator("#all-minimums-toggle-checkbox")
+        .click({ force: true });
     }
 
     await selectIfSet(page, "scope", edgeCase.scope);

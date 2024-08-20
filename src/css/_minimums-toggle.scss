@@ -1,65 +1,87 @@
-@use "theme/colors-original";
+@use "theme/borders";
+@use "theme/colors";
+@use "theme/icons";
+@use "theme/spacing";
+@use "theme/typography";
 
-$toggle-size: 0.4em;
+$toggle-size: 8px;
 $toggle-circle: calc(2.4 * $toggle-size);
 
-.filter-all-minimums-removed-container {
-  padding: 0.5em;
+.all-minimums-toggle {
+  cursor: pointer;
+  font-size: typography.$font-size-base;
 
-  label {
-    display: block;
+  border: borders.$component-border;
+  border-radius: borders.$border-radius;
+
+  min-height: spacing.$min-touch-target;
+  margin: spacing.$container-edge-spacing;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  &:hover {
+    background-color: colors.$hover;
+  }
+
+  input {
+    position: absolute;
+    opacity: 0;
+    height: 0;
+    width: 0;
+    margin: 0;
+  }
+
+  svg {
+    height: icons.$icon-size-md;
+    width: icons.$icon-size-md;
+    margin-left: spacing.$element-gap;
+    color: colors.$gray;
+  }
+
+  span {
+    flex: 1;
+    margin-left: spacing.$container-edge-spacing;
+    margin-top: spacing.$element-gap;
+    margin-bottom: spacing.$element-gap;
+    line-height: 1.2;
   }
 }
 
-.toggle {
-  cursor: pointer;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 17em;
-}
-
-.toggle-switch {
+.all-minimums-toggle-switch {
   display: inline-block;
-  background: colors-original.$gray-light;
-  border-radius: 1em;
+  position: relative;
   width: calc(5.8 * $toggle-size);
   height: calc(3.2 * $toggle-size);
-  position: relative;
-  vertical-align: middle;
+
+  margin-left: spacing.$element-gap;
+  margin-right: spacing.$container-edge-spacing;
+
+  background: colors.$gray-light;
+  border-radius: 16px;
   transition: 0.25s;
-}
-.toggle-switch::before,
-.toggle-switch::after {
-  content: "";
-}
-.toggle-switch::before {
-  display: block;
-  background: colors-original.$white;
-  border-radius: 50%;
-  width: $toggle-circle;
-  height: $toggle-circle;
-  position: absolute;
-  top: calc(0.4 * $toggle-size);
-  left: calc(0.4 * $toggle-size);
-  transition: left 0.25s;
-}
-.toggle:hover .toggle-switch::before {
-  background: colors-original.$white;
-}
-.toggle-checkbox:checked + .toggle-switch {
-  background: colors-original.$blue;
-}
-.toggle-checkbox:checked + .toggle-switch::before {
-  left: calc(3 * $toggle-size);
+
+  &::before {
+    content: "";
+    display: block;
+    width: $toggle-circle;
+    height: $toggle-circle;
+
+    position: absolute;
+    top: calc(0.4 * $toggle-size);
+    left: calc(0.4 * $toggle-size);
+
+    background: colors.$white;
+    border-radius: 50%;
+    transition: left 0.25s;
+  }
 }
 
-.toggle-checkbox {
-  position: absolute;
-  visibility: hidden;
-}
+#all-minimums-toggle-checkbox:checked ~ .all-minimums-toggle-switch {
+  background: colors.$gray;
 
-.toggle-label {
-  margin-right: 0.5em;
-  margin-left: 0.5em;
+  &::before {
+    left: calc(3 * $toggle-size);
+  }
 }

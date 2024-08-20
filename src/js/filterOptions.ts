@@ -337,7 +337,7 @@ export function initFilterOptions(
   initFilterGroup(filterManager, "year", "year", filterOptions, "Year");
 
   const minimumsToggle = document.querySelector<HTMLInputElement>(
-    "#all-minimums-removed-toggle",
+    "#all-minimums-toggle-checkbox",
   );
   minimumsToggle.checked = filterManager.getState().allMinimumsRemovedToggle;
   minimumsToggle.addEventListener("change", () => {
