@@ -108,9 +108,7 @@ for (const edgeCase of TESTS) {
     await deselectToggle(page);
 
     if (edgeCase.allMinimumsRemoved !== undefined) {
-      await page
-        .locator("#all-minimums-toggle-checkbox")
-        .click({ force: true });
+      await page.locator(".all-minimums-toggle").click();
     }
 
     await selectIfSet(page, "scope", edgeCase.scope);
