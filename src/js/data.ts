@@ -35,6 +35,7 @@ export default async function readData(): Promise<Record<PlaceId, PlaceEntry>> {
         population: parseInt(rawEntry.population),
         policyChange: splitStringArray(rawEntry.policy_change, {
           "Parking maximums": "Add parking maximums",
+          "Eliminate parking minimums": "Remove parking minimums",
         }),
         scope: splitStringArray(rawEntry.scope, {
           "City center/business district": "City center / business district",
