@@ -191,8 +191,10 @@ function generateAccordion(
 
     const squareIcon = document.createElement("i");
     squareIcon.className = "fa-regular fa-square";
+    squareIcon.ariaHidden = "true";
     const checkedIcon = document.createElement("i");
     checkedIcon.className = "fa-solid fa-square-check";
+    checkedIcon.ariaHidden = "true";
 
     const description = document.createElement("span");
     description.textContent = val;
@@ -335,7 +337,7 @@ export function initFilterOptions(
   initFilterGroup(filterManager, "year", "year", filterOptions, "Year");
 
   const minimumsToggle = document.querySelector<HTMLInputElement>(
-    "#all-minimums-removed-toggle",
+    "#all-minimums-toggle-checkbox",
   );
   minimumsToggle.checked = filterManager.getState().allMinimumsRemovedToggle;
   minimumsToggle.addEventListener("change", () => {

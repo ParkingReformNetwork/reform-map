@@ -70,6 +70,10 @@ $filter-width: 310px;
 
 .filter-accordion-content {
   border-top: borders.$component-inner-divider;
+
+  .filter-checkbox:last-child {
+    margin-bottom: spacing.$container-edge-spacing;
+  }
 }
 
 .filter-checkbox {
@@ -79,8 +83,8 @@ $filter-width: 310px;
   border: borders.$component-border;
   border-radius: borders.$border-radius;
 
-  height: spacing.$min-touch-target;
-  margin: spacing.$element-gap;
+  min-height: spacing.$min-touch-target;
+  margin: spacing.$element-gap spacing.$container-edge-spacing;
 
   display: flex;
   align-items: center;
@@ -125,7 +129,7 @@ $filter-width: 310px;
 
   span {
     flex: 1;
-    margin-left: spacing.$element-gap;
+    margin: spacing.$element-gap;
     line-height: 1.1;
   }
 }
@@ -141,15 +145,15 @@ $filter-width: 310px;
 
     border: borders.$component-border;
     border-radius: borders.$border-radius;
-    margin-top: spacing.$element-gap;
+    margin-top: spacing.$container-edge-spacing;
 
     &:first-child {
-      margin-left: spacing.$element-gap;
+      margin-left: spacing.$container-edge-spacing;
       margin-right: spacing.$element-gap;
     }
 
     &:last-child {
-      margin-right: spacing.$element-gap;
+      margin-right: spacing.$container-edge-spacing;
     }
 
     &:hover {
