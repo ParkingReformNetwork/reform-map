@@ -48,7 +48,7 @@ $filter-width: 310px;
   border-top: borders.$component-inner-divider;
 
   &:hover {
-    background-color: colors.$hover;
+    background-color: colors.$hover-white;
   }
 
   .filter-accordion-title {
@@ -91,7 +91,7 @@ $filter-width: 310px;
   justify-content: space-between;
 
   &:hover {
-    background-color: colors.$hover;
+    background-color: colors.$hover-white;
   }
 
   input {
@@ -157,7 +157,7 @@ $filter-width: 310px;
     }
 
     &:hover {
-      background-color: colors.$hover;
+      background-color: colors.$hover-white;
     }
   }
 }

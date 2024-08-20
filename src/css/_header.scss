@@ -42,6 +42,10 @@ $header-height: calc(
     height: icons.$icon-size-md;
     width: icons.$icon-size-md;
   }
+
+  &:hover {
+    background-color: colors.$hover-gray;
+  }
 }
 
 .header-full-screen-icon-container {
