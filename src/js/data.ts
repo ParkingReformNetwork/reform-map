@@ -5,6 +5,22 @@ import { PlaceId, PlaceEntry } from "./types";
 
 export const DATE_REPR = "LLL d, yyyy";
 
+const countryMapping = {
+  AU: "Australia",
+  BR: "Brazil",
+  CA: "Canada",
+  CN: "China",
+  DE: "Germany",
+  FR: "France",
+  IE: "Ireland",
+  IL: "Israel",
+  MX: "Mexico",
+  NZ: "New Zealand",
+  SE: "Sweden",
+  UK: "United Kingdom",
+  US: "United States",
+};
+
 function splitStringArray(
   val: string,
   transform: Record<string, string> = {},
@@ -26,7 +42,7 @@ export default async function readData(): Promise<Record<PlaceId, PlaceEntry>> {
       const entry = {
         place: rawEntry.place,
         state: rawEntry.state,
-        country: rawEntry.country,
+        country: countryMapping[rawEntry.country] ?? rawEntry.country,
         summary: rawEntry.summary,
         status: rawEntry.status,
         lat: rawEntry.lat,

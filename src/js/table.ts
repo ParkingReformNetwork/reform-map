@@ -73,7 +73,7 @@ export default function initTable(
       },
     },
     { title: "State", field: "state", width: 70 },
-    { title: "Country", field: "country", width: 70 },
+    { title: "Country", field: "country", width: 110 },
     {
       title: "Population",
       field: "population",
