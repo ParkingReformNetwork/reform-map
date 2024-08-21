@@ -46,7 +46,7 @@ const TESTS: EdgeCase[] = [
   },
   {
     desc: "country filter",
-    country: ["MX"],
+    country: ["Mexico"],
     expectedRange: [2, 7],
   },
   {
