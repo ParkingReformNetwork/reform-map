@@ -2,7 +2,7 @@ import { PlaceEntry } from "./types";
 import { PlaceFilterManager } from "./FilterState";
 import Observable from "./Observable";
 
-export const UNKNOWN_DATE = "Unknown date";
+export const UNKNOWN_YEAR = "Unknown";
 
 type FilterGroupKey =
   | "policyChange"
@@ -34,7 +34,7 @@ export class FilterOptions {
     entries.forEach((entry) => {
       status.add(entry.status);
       country.add(entry.country);
-      year.add(entry.reformDate?.year.toString() || UNKNOWN_DATE);
+      year.add(entry.reformDate?.year.toString() || UNKNOWN_YEAR);
       entry.policyChange.forEach((v) => policy.add(v));
       entry.scope.forEach((v) => scope.add(v));
       entry.landUse.forEach((v) => landUse.add(v));
@@ -113,18 +113,23 @@ function updateAccordionUI(
   downIcon.style.display = state.expanded ? "none" : "block";
 }
 
+type FilterGroupParams = {
+  htmlName: string;
+  filterStateKey: FilterGroupKey;
+  legend: string;
+  useTwoColumns?: boolean;
+};
+
 function generateAccordion(
-  name: string,
-  title: string,
-  filterStateKey: FilterGroupKey,
+  params: FilterGroupParams,
   filterOptions: FilterOptions,
 ): [AccordionElements, Observable<AccordionState>] {
   const outerContainer = document.createElement("div");
   outerContainer.className = "filter-accordion";
 
-  const buttonId = `filter-accordion-toggle-${name}`;
-  const contentId = `filter-accordion-content-${name}`;
-  const titleId = `filter-accordion-title-${name}`;
+  const buttonId = `filter-accordion-toggle-${params.htmlName}`;
+  const contentId = `filter-accordion-content-${params.htmlName}`;
+  const titleId = `filter-accordion-title-${params.htmlName}`;
 
   const accordionButton = document.createElement("button");
   // Turn off clicking "submitting" the form, which reloads the page.
@@ -160,7 +165,7 @@ function generateAccordion(
   contentContainer.setAttribute("aria-describedby", titleId);
 
   const fieldSet = document.createElement("fieldset");
-  fieldSet.className = `filter-${name}`;
+  fieldSet.className = `filter-${params.htmlName}`;
 
   const groupSelectorButtons = document.createElement("div");
   groupSelectorButtons.className = "filter-group-selectors-container";
@@ -176,8 +181,8 @@ function generateAccordion(
   uncheckAllButton.textContent = "Uncheck all";
   groupSelectorButtons.appendChild(uncheckAllButton);
 
-  filterOptions.all(filterStateKey).forEach((val, i) => {
-    const inputId = `filter-${name}-option-${i}`;
+  filterOptions.all(params.filterStateKey).forEach((val, i) => {
+    const inputId = `filter-${params.htmlName}-option-${i}`;
 
     const label = document.createElement("label");
     label.className = "filter-checkbox";
@@ -185,9 +190,9 @@ function generateAccordion(
 
     const input = document.createElement("input");
     input.type = "checkbox";
-    input.name = name;
+    input.name = params.htmlName;
     input.id = inputId;
-    input.checked = !DESELECTED_BY_DEFAULT[filterStateKey].has(val);
+    input.checked = !DESELECTED_BY_DEFAULT[params.filterStateKey].has(val);
 
     const squareIcon = document.createElement("i");
     squareIcon.className = "fa-regular fa-square";
@@ -225,7 +230,7 @@ function generateAccordion(
     checkboxStats: getCheckboxStats(fieldSet),
   });
   accordionState.subscribe((state) =>
-    updateAccordionUI(elements, title, state),
+    updateAccordionUI(elements, params.legend, state),
   );
   accordionButton.addEventListener("click", () => {
     const priorState = accordionState.getValue();
@@ -252,15 +257,11 @@ function updateCheckboxStats(
 
 function initFilterGroup(
   filterManager: PlaceFilterManager,
-  htmlName: string,
-  filterStateKey: FilterGroupKey,
   filterOptions: FilterOptions,
-  legend: string,
+  params: FilterGroupParams,
 ): void {
   const [accordionElements, accordionState] = generateAccordion(
-    htmlName,
-    legend,
-    filterStateKey,
+    params,
     filterOptions,
   );
 
@@ -275,7 +276,7 @@ function initFilterGroup(
         'input[type="checkbox"]:checked',
       ),
     ).map((input) => input.parentElement.textContent.trim());
-    filterManager.update({ [filterStateKey]: checkedLabels });
+    filterManager.update({ [params.filterStateKey]: checkedLabels });
   });
 
   const allCheckboxes = Array.from(
@@ -288,7 +289,7 @@ function initFilterGroup(
     allCheckboxes.forEach((input) => (input.checked = true));
     updateCheckboxStats(accordionState, accordionElements.fieldSet);
     filterManager.update({
-      [filterStateKey]: filterOptions.all(filterStateKey),
+      [params.filterStateKey]: filterOptions.all(params.filterStateKey),
     });
   });
 
@@ -296,7 +297,7 @@ function initFilterGroup(
     allCheckboxes.forEach((input) => (input.checked = false));
     updateCheckboxStats(accordionState, accordionElements.fieldSet);
     filterManager.update({
-      [filterStateKey]: [],
+      [params.filterStateKey]: [],
     });
   });
 }
@@ -305,36 +306,37 @@ export function initFilterOptions(
   filterManager: PlaceFilterManager,
   filterOptions: FilterOptions,
 ): void {
-  initFilterGroup(
-    filterManager,
-    "policy-change",
-    "policyChange",
-    filterOptions,
-    "Policy change",
-  );
-  initFilterGroup(
-    filterManager,
-    "scope",
-    "scope",
-    filterOptions,
-    "Reform scope",
-  );
-  initFilterGroup(
-    filterManager,
-    "land-use",
-    "landUse",
-    filterOptions,
-    "Affected land use",
-  );
-  initFilterGroup(filterManager, "status", "status", filterOptions, "Status");
-  initFilterGroup(
-    filterManager,
-    "country",
-    "country",
-    filterOptions,
-    "Country",
-  );
-  initFilterGroup(filterManager, "year", "year", filterOptions, "Year");
+  initFilterGroup(filterManager, filterOptions, {
+    htmlName: "policy-change",
+    filterStateKey: "policyChange",
+    legend: "Policy change",
+  });
+  initFilterGroup(filterManager, filterOptions, {
+    htmlName: "scope",
+    filterStateKey: "scope",
+    legend: "Reform scope",
+  });
+  initFilterGroup(filterManager, filterOptions, {
+    htmlName: "land-use",
+    filterStateKey: "landUse",
+    legend: "Affected land use",
+  });
+  initFilterGroup(filterManager, filterOptions, {
+    htmlName: "status",
+    filterStateKey: "status",
+    legend: "Status",
+  });
+  initFilterGroup(filterManager, filterOptions, {
+    htmlName: "country",
+    filterStateKey: "country",
+    legend: "Country",
+  });
+  initFilterGroup(filterManager, filterOptions, {
+    htmlName: "year",
+    filterStateKey: "year",
+    legend: "Year",
+    useTwoColumns: true,
+  });
 
   const minimumsToggle = document.querySelector<HTMLInputElement>(
     "#all-minimums-toggle-checkbox",
