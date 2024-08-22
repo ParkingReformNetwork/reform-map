@@ -160,3 +160,18 @@ $filter-width: 310px;
     }
   }
 }
+
+.filter-checkbox-options-two-columns {
+  display: flex;
+  flex-wrap: wrap;
+  gap: spacing.$element-gap;
+
+  margin-top: spacing.$element-gap;
+  margin-left: spacing.$container-edge-spacing;
+  margin-right: spacing.$container-edge-spacing;
+
+  .filter-checkbox {
+    min-width: calc(50% - spacing.$element-gap / 2);
+    margin: 0;
+  }
+}

@@ -181,6 +181,13 @@ function generateAccordion(
   uncheckAllButton.textContent = "Uncheck all";
   groupSelectorButtons.appendChild(uncheckAllButton);
 
+  const filterOptionsContainer = document.createElement("div");
+  filterOptionsContainer.className = "filter-checkbox-options-container";
+  if (params.useTwoColumns) {
+    filterOptionsContainer.className = "filter-checkbox-options-two-columns";
+  }
+  fieldSet.appendChild(filterOptionsContainer);
+
   filterOptions.all(params.filterStateKey).forEach((val, i) => {
     const inputId = `filter-${params.htmlName}-option-${i}`;
 
@@ -209,7 +216,7 @@ function generateAccordion(
     label.appendChild(checkedIcon);
     label.appendChild(description);
 
-    fieldSet.appendChild(label);
+    filterOptionsContainer.appendChild(label);
   });
 
   contentContainer.appendChild(fieldSet);
