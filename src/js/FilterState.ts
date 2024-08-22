@@ -1,7 +1,7 @@
 import { isEqual } from "lodash-es";
 import { PlaceId, PlaceEntry } from "./types";
 import Observable from "./Observable";
-import { UNKNOWN_DATE } from "./filterOptions";
+import { UNKNOWN_YEAR } from "./filterOptions";
 
 export const POPULATION_INTERVALS: Array<[string, number]> = [
   ["100", 100],
@@ -99,7 +99,7 @@ export class PlaceFilterManager {
     const isStatus = state.status.includes(entry.status);
     const isCountry = state.country.includes(entry.country);
     const isYear = state.year.includes(
-      entry.reformDate?.year.toString() || UNKNOWN_DATE,
+      entry.reformDate?.year.toString() || UNKNOWN_YEAR,
     );
 
     const isAllMinimumsRepealed =
