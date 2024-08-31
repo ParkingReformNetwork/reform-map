@@ -1,6 +1,7 @@
 /* eslint-disable import/no-extraneous-dependencies */
 /* eslint-disable no-console */
 /* eslint-disable no-await-in-loop */
+/* eslint-disable @typescript-eslint/no-explicit-any */
 
 import fs from "fs/promises";
 
@@ -9,17 +10,11 @@ import Papa from "papaparse";
 import Handlebars from "handlebars";
 import { DateTime } from "luxon";
 
-export type PlaceEntry = {
-  summary: string;
-  status: string;
-  policyChange: string;
-  landUse: string;
-  scope: string;
-  requirements: string;
-  reporter: string;
-  reportLastUpdated: DateTime<true>;
-  cityLastUpdated: DateTime<true>;
-  citations: Citation[];
+type Attachment = {
+  url: string;
+  fileName: string;
+  isDoc: boolean;
+  outputPath: string;
 };
 
 type Citation = {
@@ -32,11 +27,17 @@ type Citation = {
   attachments: Attachment[];
 };
 
-type Attachment = {
-  url: string;
-  fileName: string;
-  isDoc: boolean;
-  outputPath: string;
+export type PlaceEntry = {
+  summary: string;
+  status: string;
+  policyChange: string;
+  landUse: string;
+  scope: string;
+  requirements: string;
+  reporter: string;
+  reportLastUpdated: DateTime<true>;
+  cityLastUpdated: DateTime<true>;
+  citations: Citation[];
 };
 
 const GLOBAL_LAST_UPDATED_FP = "scripts/city_detail_last_updated.txt";
@@ -80,6 +81,31 @@ async function fetchGTablesData(): Promise<Record<string, any>[]> {
   );
   const rawData = await response.text();
   return Papa.parse(rawData, { header: true }).data as Record<string, any>[];
+}
+
+/**
+ Rewrite the entries' attachments field to a normalized object.
+ */
+export function normalizeAttachments(
+  attachments: string,
+  citationIdx: number,
+  placeId: string,
+): Attachment[] {
+  if (!attachments) {
+    return [];
+  }
+  return attachments.split(/\s+/).map((val, j) => {
+    const fileTypeMatch = val.match(/\.[a-zA-Z_]+$/);
+    const fileType = fileTypeMatch ? fileTypeMatch[0] : null;
+    return {
+      url: val,
+      fileName: new URL(val).pathname.split("/").pop()!,
+      isDoc: fileType === ".docx" || fileType === ".pdf",
+      outputPath: `attachment_images/${escapePlaceId(placeId)}_${citationIdx}_${
+        j + 1
+      }${fileType}`,
+    };
+  });
 }
 
 async function loadData(): Promise<Record<string, PlaceEntry>> {
@@ -138,31 +164,6 @@ export function needsUpdate(
     entry.cityLastUpdated,
   );
   return maxLastUpdated >= globalLastUpdated;
-}
-
-/**
- Rewrite the entries' attachments field to a normalized object.
- */
-export function normalizeAttachments(
-  attachments: string,
-  citationIdx: number,
-  placeId: string,
-): Attachment[] {
-  if (!attachments) {
-    return [];
-  }
-  return attachments.split(/\s+/).map((val, j) => {
-    const fileTypeMatch = val.match(/\.[a-zA-Z_]+$/);
-    const fileType = fileTypeMatch ? fileTypeMatch[0] : null;
-    return {
-      url: val,
-      fileName: new URL(val).pathname.split("/").pop()!,
-      isDoc: fileType === ".docx" || fileType === ".pdf",
-      outputPath: `attachment_images/${escapePlaceId(placeId)}_${citationIdx}_${
-        j + 1
-      }${fileType}`,
-    };
-  });
 }
 
 async function setupAttachmentDownloads(
