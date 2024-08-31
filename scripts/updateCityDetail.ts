@@ -9,6 +9,8 @@ import Papa from "papaparse";
 import Handlebars from "handlebars";
 import { DateTime } from "luxon";
 
+type PlaceEntry = Record<string, any>;
+
 const GLOBAL_LAST_UPDATED_FP = "scripts/city_detail_last_updated.txt";
 const TIME_FORMAT = "MMMM d, yyyy, h:mm:ss a z";
 // Luxon does not support abbreviations like EST because they are not standardized:
@@ -18,7 +20,10 @@ const TIME_ZONE_MAPPING = {
   PST: "America/Los_Angeles",
 };
 
-const parseDatetime = (val, timeZoneAbbreviations = true) => {
+export function parseDatetime(
+  val: string,
+  timeZoneAbbreviations: boolean = true,
+): DateTime<true> {
   let cleanedVal = val.replace(/\u202F/g, " ");
   if (timeZoneAbbreviations) {
     const tzAbbreviation = cleanedVal.split(" ").pop();
@@ -26,13 +31,13 @@ const parseDatetime = (val, timeZoneAbbreviations = true) => {
     cleanedVal = cleanedVal.replace(tzAbbreviation, tz);
   }
   const result = DateTime.fromFormat(cleanedVal, TIME_FORMAT);
-  if (result.invalid) {
+  if (!result.isValid) {
     throw new Error(`Could not parse ${val}: ${result.invalidExplanation}`);
   }
   return result;
-};
+}
 
-const fetchData = async () => {
+async function fetchData(): Promise<PlaceEntry[]> {
   const response = await fetch(
     "https://area120tables.googleapis.com/link/aUJhBkwwY9j1NpD-Enh4WU/export?key=aasll5u2e8Xf-jxNNGlk3vbnOYcDsJn-JbgeI3z6IkPk8z5CxpWOLEp5EXd8iMF_bc",
     {
@@ -40,10 +45,13 @@ const fetchData = async () => {
     },
   );
   const rawData = await response.text();
-  return Papa.parse(rawData, { header: true }).data;
-};
+  return Papa.parse(rawData, { header: true }).data as PlaceEntry[];
+}
 
-const needsUpdate = (cityEntries, globalLastUpdated) => {
+export function needsUpdate(
+  cityEntries: PlaceEntry[],
+  globalLastUpdated: DateTime<true>,
+): boolean {
   const lastUpdatedDates = cityEntries.map((row) =>
     parseDatetime(row["Last updated"]),
   );
@@ -57,12 +65,15 @@ const needsUpdate = (cityEntries, globalLastUpdated) => {
     cityLastUpdated,
   );
   return maxLastUpdated >= globalLastUpdated;
-};
+}
 
 /**
  Rewrite the entries' attachments field to a normalized object.
  */
-const normalizeAttachments = (cityEntries, cityStateNoSpace) => {
+export function normalizeAttachments(
+  cityEntries: PlaceEntry[],
+  cityStateNoSpace: string,
+): void {
   cityEntries.forEach((entry, i) => {
     if (!entry.Attachments) {
       entry.Attachments = []; // eslint-disable-line no-param-reassign
@@ -82,9 +93,11 @@ const normalizeAttachments = (cityEntries, cityStateNoSpace) => {
       };
     });
   });
-};
+}
 
-const setupAttachmentDownloads = async (cityEntries) => {
+async function setupAttachmentDownloads(
+  cityEntries: PlaceEntry[],
+): Promise<void> {
   // Use await in a for loop to avoid making too many calls -> rate limiting.
   for (const entry of cityEntries) {
     for (const attachment of entry.Attachments) {
@@ -98,9 +111,12 @@ const setupAttachmentDownloads = async (cityEntries) => {
       );
     }
   }
-};
+}
 
-const renderHandlebars = (cityEntries, template) => {
+function renderHandlebars(
+  cityEntries: PlaceEntry[],
+  template: HandlebarsTemplateDelegate,
+): string {
   const citations = cityEntries.map((entry, i) => ({
     idx: i + 1,
     sourceDescription: entry["Source Description"],
@@ -122,9 +138,14 @@ const renderHandlebars = (cityEntries, template) => {
     reporter: entry0.Reporter,
     citations,
   });
-};
+}
 
-const processCity = async (cityState, entries, template, globalLastUpdated) => {
+async function processCity(
+  cityState: string,
+  entries: PlaceEntry[],
+  template: HandlebarsTemplateDelegate,
+  globalLastUpdated: DateTime<true>,
+): Promise<void> {
   if (!needsUpdate(entries, globalLastUpdated)) {
     console.log(`Skipping ${cityState}`);
     return;
@@ -139,18 +160,18 @@ const processCity = async (cityState, entries, template, globalLastUpdated) => {
     `city_detail/${cityStateNoSpace}.html`,
     renderHandlebars(entries, template),
   );
-};
+}
 
-const updateLastUpdatedFile = async () => {
+async function updateLastUpdatedFile(): Promise<void> {
   console.log(
     `Updating ${GLOBAL_LAST_UPDATED_FP} with today's date and time zone`,
   );
   const currentDatetime = DateTime.local().setZone("local");
   const formatted = currentDatetime.toFormat(TIME_FORMAT);
   await fs.writeFile(GLOBAL_LAST_UPDATED_FP, formatted);
-};
+}
 
-const main = async () => {
+async function main(): Promise<void> {
   const [rawGlobalLastUpdated, rawTemplate, data] = await Promise.all([
     fs.readFile(GLOBAL_LAST_UPDATED_FP, "utf-8"),
     fs.readFile("scripts/city_detail.html.handlebars", "utf-8"),
@@ -159,7 +180,7 @@ const main = async () => {
   const template = Handlebars.compile(rawTemplate);
   const globalLastUpdated = parseDatetime(rawGlobalLastUpdated, false);
 
-  const cityStateMap = {};
+  const cityStateMap: Record<string, PlaceEntry[]> = {};
   data.forEach((row) => {
     if (!row.City) return;
     const cityState = row.State ? `${row.City}_${row.State}` : row.City;
@@ -175,7 +196,7 @@ const main = async () => {
   }
 
   await updateLastUpdatedFile();
-};
+}
 
 if (process.env.NODE_ENV !== "test") {
   main().catch((error) => {
@@ -183,5 +204,3 @@ if (process.env.NODE_ENV !== "test") {
     process.exit(1);
   });
 }
-
-export { needsUpdate, normalizeAttachments, parseDatetime };
