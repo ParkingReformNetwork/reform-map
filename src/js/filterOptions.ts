@@ -273,6 +273,7 @@ function initFilterGroup(
   );
 
   const outerContainer = document.getElementById("filter-accordion-options");
+  if (!outerContainer) return;
   outerContainer.appendChild(accordionElements.outerContainer);
 
   accordionElements.fieldSet.addEventListener("change", () => {
@@ -282,7 +283,9 @@ function initFilterGroup(
       accordionElements.fieldSet.querySelectorAll(
         'input[type="checkbox"]:checked',
       ),
-    ).map((input) => input.parentElement.textContent.trim());
+    )
+      .map((input) => input.parentElement?.textContent?.trim())
+      .filter((x) => x !== undefined);
     filterManager.update({ [params.filterStateKey]: checkedLabels });
   });
 
@@ -348,6 +351,7 @@ export function initFilterOptions(
   const minimumsToggle = document.querySelector<HTMLInputElement>(
     "#all-minimums-toggle-checkbox",
   );
+  if (!minimumsToggle) return;
   minimumsToggle.checked = filterManager.getState().allMinimumsRemovedToggle;
   minimumsToggle.addEventListener("change", () => {
     filterManager.update({

@@ -16,6 +16,7 @@ export default function initFilterPopup(): FilterPopupVisibleObservable {
 
   const popup = document.querySelector(".filter-popup");
   const icon = document.querySelector(".header-filter-icon-container");
+  if (!icon) throw new Error("icon not found");
 
   icon.addEventListener("click", () => {
     isVisible.setValue(!isVisible.getValue());

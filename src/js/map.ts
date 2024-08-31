@@ -36,6 +36,6 @@ export default function createMap(): Map {
   // Workaround for no mandates markers appearing at the top of the map
   // https://stackoverflow.com/a/49501320
   map.createPane(NO_MANDATES_MARKERS_PANE);
-  map.getPane(NO_MANDATES_MARKERS_PANE).style.zIndex = "900";
+  map.getPane(NO_MANDATES_MARKERS_PANE)!.style.zIndex = "900";
   return map;
 }

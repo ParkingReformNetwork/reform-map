@@ -16,6 +16,16 @@ function updateUI(table: Tabulator, state: ViewState): void {
   const mapView = document.querySelector<HTMLElement>("#map");
   const mapCounter = document.querySelector<HTMLElement>("#map-counter");
   const prnLogo = document.querySelector<HTMLElement>(".prn-logo-map");
+  if (
+    !mapIcon ||
+    !tableIcon ||
+    !tableView ||
+    !mapView ||
+    !mapCounter ||
+    !prnLogo
+  )
+    return;
+
   if (state === "map") {
     tableIcon.style.display = "inline-flex";
     mapIcon.style.display = "none";
@@ -38,11 +48,12 @@ function updateOnIconClick(observable: ViewStateObservable): void {
   const tableIcon = document.querySelector<HTMLButtonElement>(
     ".header-table-icon-container",
   );
-  tableIcon.addEventListener("click", () => observable.setValue("table"));
-
   const mapIcon = document.querySelector<HTMLButtonElement>(
     ".header-map-icon-container",
   );
+  if (!mapIcon || !tableIcon) return;
+
+  tableIcon.addEventListener("click", () => observable.setValue("table"));
   mapIcon.addEventListener("click", () => observable.setValue("map"));
 }
 

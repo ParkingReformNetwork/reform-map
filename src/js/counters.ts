@@ -31,6 +31,7 @@ function setUpResetButton(
 export default function initCounters(manager: PlaceFilterManager): void {
   const mapCounter = document.getElementById("map-counter");
   const tableCounter = document.getElementById("table-counter");
+  if (!mapCounter || !tableCounter) return;
 
   setUpResetButton(mapCounter, manager);
   setUpResetButton(tableCounter, manager);

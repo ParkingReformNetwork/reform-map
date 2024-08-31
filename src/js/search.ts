@@ -21,10 +21,11 @@ function initSearchPopup(): SearchPopupObservable {
   const popup = document.querySelector("#search-popup");
   const selectElement = document.querySelector<HTMLInputElement>("div.choices");
   const icon = document.querySelector(".header-search-icon-container");
+  if (!icon) throw new Error("icon not found");
 
   icon.addEventListener("click", () => {
     isVisible.setValue(!isVisible.getValue());
-    setTimeout(() => selectElement.click(), 100);
+    setTimeout(() => selectElement?.click(), 100);
   });
 
   // Clicks outside the popup close it.
@@ -49,6 +50,8 @@ export default function initSearch(filterManager: PlaceFilterManager): void {
     label: placeId,
   }));
   const htmlElement = document.querySelector(".search");
+  if (!htmlElement) return;
+
   const choices = new Choices(htmlElement, {
     position: "bottom",
     choices: places,
@@ -60,7 +63,7 @@ export default function initSearch(filterManager: PlaceFilterManager): void {
   });
 
   // Set initial state.
-  choices.setChoiceByValue(filterManager.getState().searchInput);
+  choices.setChoiceByValue(filterManager.getState().searchInput || "");
 
   // Also set up the popup.
   const popupIsVisible = initSearchPopup();

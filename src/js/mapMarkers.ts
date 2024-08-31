@@ -41,7 +41,7 @@ export default function initPlaceMarkers(
 
   const placesToMarkers: Record<string, CircleMarker> = Object.entries(
     filterManager.entries,
-  ).reduce((acc, [placeId, entry]) => {
+  ).reduce((acc: Record<string, CircleMarker>, [placeId, entry]) => {
     const isPrimary = entry.allMinimumsRemoved;
     const style = isPrimary ? PRIMARY_MARKER_STYLE : SECONDARY_MARKER_STYLE;
 
