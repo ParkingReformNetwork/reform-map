@@ -49,6 +49,7 @@ async function findDeadLinks(
       }
       try {
         const response = await fetch(link, {
+          method: "HEAD",
           headers: { "User-Agent": "prn-broken-links-finder" },
         });
         if (response.status >= 300) {
