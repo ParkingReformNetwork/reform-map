@@ -100,10 +100,10 @@ test.describe("needsUpdate()", () => {
 });
 
 test("normalizeAttachments() converts string entries into objects", () => {
-  expect(normalizeAttachments("", 1, "My City_AZ")).toEqual([]);
+  expect(normalizeAttachments("", 1, "My City, AZ")).toEqual([]);
 
   expect(
-    normalizeAttachments("https://prn.org/photo1.png", 1, "My City_AZ"),
+    normalizeAttachments("https://prn.org/photo1.png", 1, "My City, AZ"),
   ).toEqual([
     {
       url: "https://prn.org/photo1.png",
@@ -117,7 +117,7 @@ test("normalizeAttachments() converts string entries into objects", () => {
     normalizeAttachments(
       "https://prn.org/doc1.pdf https://prn.org/img2.jpg",
       2,
-      "My City_AZ",
+      "My City, AZ",
     ),
   ).toEqual([
     {

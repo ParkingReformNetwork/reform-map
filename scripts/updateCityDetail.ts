@@ -48,8 +48,8 @@ const TIME_ZONE_MAPPING: Partial<Record<string, string>> = {
   PST: "America/Los_Angeles",
 };
 
-function rmSpace(v: string): string {
-  return v.replace(/ /g, "");
+function escapePlaceId(v: string): string {
+  return v.replace(/ /g, "").replace(",", "_");
 }
 
 export function parseDatetime(
@@ -91,7 +91,7 @@ async function loadData(): Promise<Record<string, PlaceEntry>> {
   gTablesData.forEach((row) => {
     if (!row.City) return;
 
-    const placeId = row.State ? `${row.City}_${row.State}` : row.City;
+    const placeId = row.State ? `${row.City}, ${row.State}` : row.City;
     const citationIdx = result[placeId]
       ? result[placeId].citations.length + 1
       : 1;
@@ -158,7 +158,7 @@ export function normalizeAttachments(
       url: val,
       fileName: new URL(val).pathname.split("/").pop()!,
       isDoc: fileType === ".docx" || fileType === ".pdf",
-      outputPath: `attachment_images/${rmSpace(placeId)}_${citationIdx}_${
+      outputPath: `attachment_images/${escapePlaceId(placeId)}_${citationIdx}_${
         j + 1
       }${fileType}`,
     };
@@ -216,7 +216,7 @@ async function processPlace(
     entry.citations.flatMap((citation) => citation.attachments),
   );
   await fs.writeFile(
-    `city_detail/${rmSpace(placeId)}.html`,
+    `city_detail/${escapePlaceId(placeId)}.html`,
     renderHandlebars(placeId, entry, template),
   );
 }
