@@ -9,7 +9,35 @@ import Papa from "papaparse";
 import Handlebars from "handlebars";
 import { DateTime } from "luxon";
 
-type PlaceEntry = Record<string, any>;
+type PlaceEntry = {
+  City: string;
+  State: string;
+  Summary: string;
+  "Verified By": string;
+  "Source Description": string;
+  Type: string;
+  URL: string;
+  Notes: string;
+  Attachments: string;
+  "Last updated": string;
+  "Create Time": string;
+  Status: string;
+  Uses: string;
+  "Reform Type": string;
+  Magnitude: string;
+  Requirements: string;
+  Reporter: string;
+  "Report Last updated": string;
+  "City Last Updated": string;
+  CitationID: string;
+};
+
+type NormalizedAttachment = {
+  url: string;
+  fileName: string;
+  isDoc: boolean;
+  outputPath: string;
+};
 
 const GLOBAL_LAST_UPDATED_FP = "scripts/city_detail_last_updated.txt";
 const TIME_FORMAT = "MMMM d, yyyy, h:mm:ss a z";
@@ -49,16 +77,16 @@ async function fetchData(): Promise<PlaceEntry[]> {
 }
 
 export function needsUpdate(
-  cityEntries: PlaceEntry[],
+  placeEntries: PlaceEntry[],
   globalLastUpdated: DateTime<true>,
 ): boolean {
-  const lastUpdatedDates = cityEntries.map((row) =>
+  const lastUpdatedDates = placeEntries.map((row) =>
     parseDatetime(row["Last updated"]),
   );
   const reportLastUpdated = parseDatetime(
-    cityEntries[0]["Report Last updated"],
+    placeEntries[0]["Report Last updated"],
   );
-  const cityLastUpdated = parseDatetime(cityEntries[0]["City Last Updated"]);
+  const cityLastUpdated = parseDatetime(placeEntries[0]["City Last Updated"]);
   const maxLastUpdated = DateTime.max(
     ...lastUpdatedDates,
     reportLastUpdated,
@@ -71,53 +99,49 @@ export function needsUpdate(
  Rewrite the entries' attachments field to a normalized object.
  */
 export function normalizeAttachments(
-  cityEntries: PlaceEntry[],
-  cityStateNoSpace: string,
-): void {
-  cityEntries.forEach((entry, i) => {
+  placeEntries: PlaceEntry[],
+  placeIdNoSpace: string,
+): NormalizedAttachment[] {
+  return placeEntries.reduce((result, entry, i) => {
     if (!entry.Attachments) {
-      entry.Attachments = []; // eslint-disable-line no-param-reassign
-      return;
+      return result;
     }
-    const attachments = entry.Attachments.split(/\s+/);
-    // eslint-disable-next-line no-param-reassign
-    entry.Attachments = attachments.map((val, j) => {
+    const attachments = entry.Attachments.split(/\s+/).map((val, j) => {
       const fileType = val.match(/\.[a-zA-Z_]+$/)[0];
       return {
         url: val,
         fileName: new URL(val).pathname.split("/").pop(),
         isDoc: fileType === ".docx" || fileType === ".pdf",
-        outputPath: `attachment_images/${cityStateNoSpace}_${i + 1}_${
+        outputPath: `attachment_images/${placeIdNoSpace}_${i + 1}_${
           j + 1
         }${fileType}`,
       };
     });
-  });
+    return [...result, ...attachments];
+  }, []);
 }
 
 async function setupAttachmentDownloads(
-  cityEntries: PlaceEntry[],
+  attachments: NormalizedAttachment[],
 ): Promise<void> {
   // Use await in a for loop to avoid making too many calls -> rate limiting.
-  for (const entry of cityEntries) {
-    for (const attachment of entry.Attachments) {
-      const response = await fetch(attachment.url, {
-        headers: { "User-Agent": "prn-update-city-detail" },
-      });
-      const buffer = await response.arrayBuffer();
-      await fs.writeFile(
-        `city_detail/${attachment.outputPath}`,
-        Buffer.from(buffer),
-      );
-    }
+  for (const attachment of attachments) {
+    const response = await fetch(attachment.url, {
+      headers: { "User-Agent": "prn-update-city-detail" },
+    });
+    const buffer = await response.arrayBuffer();
+    await fs.writeFile(
+      `city_detail/${attachment.outputPath}`,
+      Buffer.from(buffer),
+    );
   }
 }
 
 function renderHandlebars(
-  cityEntries: PlaceEntry[],
+  placeEntries: PlaceEntry[],
   template: HandlebarsTemplateDelegate,
 ): string {
-  const citations = cityEntries.map((entry, i) => ({
+  const citations = placeEntries.map((entry, i) => ({
     idx: i + 1,
     sourceDescription: entry["Source Description"],
     type: entry.Type,
@@ -125,7 +149,9 @@ function renderHandlebars(
     url: entry.URL,
     attachments: entry.Attachments,
   }));
-  const entry0 = cityEntries[0];
+  // The entries duplicate a lot of cells, so it's safe to simply look at the first
+  // entry to get the following information.
+  const entry0 = placeEntries[0];
   return template({
     city: entry0.City,
     state: entry0.State ? `, ${entry0.State}` : "",
@@ -140,25 +166,25 @@ function renderHandlebars(
   });
 }
 
-async function processCity(
-  cityState: string,
-  entries: PlaceEntry[],
+async function processPlace(
+  placeId: string,
+  placeEntries: PlaceEntry[],
   template: HandlebarsTemplateDelegate,
   globalLastUpdated: DateTime<true>,
 ): Promise<void> {
-  if (!needsUpdate(entries, globalLastUpdated)) {
-    console.log(`Skipping ${cityState}`);
+  if (!needsUpdate(placeEntries, globalLastUpdated)) {
+    console.log(`Skipping ${placeId}`);
     return;
   }
 
-  console.log(`Updating ${cityState}`);
+  console.log(`Updating ${placeId}`);
 
-  const cityStateNoSpace = cityState.replace(/ /g, "");
-  normalizeAttachments(entries, cityStateNoSpace);
-  await setupAttachmentDownloads(entries);
+  const placeIdNoSpace = placeId.replace(/ /g, "");
+  const attachments = normalizeAttachments(placeEntries, placeIdNoSpace);
+  await setupAttachmentDownloads(attachments);
   await fs.writeFile(
-    `city_detail/${cityStateNoSpace}.html`,
-    renderHandlebars(entries, template),
+    `city_detail/${placeIdNoSpace}.html`,
+    renderHandlebars(placeEntries, template),
   );
 }
 
@@ -180,19 +206,20 @@ async function main(): Promise<void> {
   const template = Handlebars.compile(rawTemplate);
   const globalLastUpdated = parseDatetime(rawGlobalLastUpdated, false);
 
-  const cityStateMap: Record<string, PlaceEntry[]> = {};
+  // A place will have one entry per citation.
+  const entriesByPlaceId: Record<string, PlaceEntry[]> = {};
   data.forEach((row) => {
     if (!row.City) return;
-    const cityState = row.State ? `${row.City}_${row.State}` : row.City;
-    if (!cityStateMap[cityState]) {
-      cityStateMap[cityState] = [];
+    const placeId = row.State ? `${row.City}_${row.State}` : row.City;
+    if (!entriesByPlaceId[placeId]) {
+      entriesByPlaceId[placeId] = [];
     }
-    cityStateMap[cityState].push(row);
+    entriesByPlaceId[placeId].push(row);
   });
 
   // Use await in a for loop to avoid making too many calls -> rate limiting.
-  for (const [cityState, entries] of Object.entries(cityStateMap)) {
-    await processCity(cityState, entries, template, globalLastUpdated);
+  for (const [placeId, placeEntries] of Object.entries(entriesByPlaceId)) {
+    await processPlace(placeId, placeEntries, template, globalLastUpdated);
   }
 
   await updateLastUpdatedFile();
