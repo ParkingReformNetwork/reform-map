@@ -15,10 +15,21 @@ interface Sliders {
 }
 
 function getSliders(): Sliders {
+  const controls = document.querySelector<HTMLDivElement>(
+    ".population-slider-controls",
+  );
+  const left = document.querySelector<HTMLInputElement>(
+    ".population-slider-left",
+  );
+  const right = document.querySelector<HTMLInputElement>(
+    ".population-slider-right",
+  );
+  if (!controls || !left || !right)
+    throw new Error("Could not init population slider");
   return {
-    controls: document.querySelector(".population-slider-controls"),
-    left: document.querySelector(".population-slider-left"),
-    right: document.querySelector(".population-slider-right"),
+    controls,
+    left,
+    right,
   };
 }
 
@@ -53,8 +64,9 @@ function updateSlidersUI(state: FilterState): void {
 
   const leftLabel = POPULATION_INTERVALS[leftIndex][0];
   const rightLabel = POPULATION_INTERVALS[rightIndex][0];
-  document.querySelector("#population-slider-label").innerHTML =
-    `${leftLabel} - ${rightLabel} residents`;
+  const labelElement = document.querySelector("#population-slider-label");
+  if (!labelElement) return;
+  labelElement.innerHTML = `${leftLabel} - ${rightLabel} residents`;
 }
 
 export function initPopulationSlider(

@@ -5,7 +5,7 @@ import { PlaceId, PlaceEntry } from "./types";
 
 export const DATE_REPR = "LLL d, yyyy";
 
-const countryMapping = {
+const countryMapping: Partial<Record<string, string>> = {
   AU: "Australia",
   BR: "Brazil",
   CA: "Canada",

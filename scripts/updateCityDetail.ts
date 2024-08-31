@@ -43,7 +43,7 @@ const GLOBAL_LAST_UPDATED_FP = "scripts/city_detail_last_updated.txt";
 const TIME_FORMAT = "MMMM d, yyyy, h:mm:ss a z";
 // Luxon does not support abbreviations like EST because they are not standardized:
 //   https://moment.github.io/luxon/#/zones?id=luxon-works-with-time-zones
-const TIME_ZONE_MAPPING = {
+const TIME_ZONE_MAPPING: Partial<Record<string, string>> = {
   PDT: "America/Los_Angeles",
   PST: "America/Los_Angeles",
 };
@@ -55,7 +55,9 @@ export function parseDatetime(
   let cleanedVal = val.replace(/\u202F/g, " ");
   if (timeZoneAbbreviations) {
     const tzAbbreviation = cleanedVal.split(" ").pop();
+    if (!tzAbbreviation) throw new Error(`Missing time zone: ${val}`);
     const tz = TIME_ZONE_MAPPING[tzAbbreviation];
+    if (!tz) throw new Error(`Unrecognized time zone: ${tzAbbreviation}`);
     cleanedVal = cleanedVal.replace(tzAbbreviation, tz);
   }
   const result = DateTime.fromFormat(cleanedVal, TIME_FORMAT);
@@ -102,23 +104,27 @@ export function normalizeAttachments(
   placeEntries: PlaceEntry[],
   placeIdNoSpace: string,
 ): NormalizedAttachment[] {
-  return placeEntries.reduce((result, entry, i) => {
-    if (!entry.Attachments) {
-      return result;
-    }
-    const attachments = entry.Attachments.split(/\s+/).map((val, j) => {
-      const fileType = val.match(/\.[a-zA-Z_]+$/)[0];
-      return {
-        url: val,
-        fileName: new URL(val).pathname.split("/").pop(),
-        isDoc: fileType === ".docx" || fileType === ".pdf",
-        outputPath: `attachment_images/${placeIdNoSpace}_${i + 1}_${
-          j + 1
-        }${fileType}`,
-      };
-    });
-    return [...result, ...attachments];
-  }, []);
+  return placeEntries.reduce(
+    (result: NormalizedAttachment[], entry: PlaceEntry, i: number) => {
+      if (!entry.Attachments) {
+        return result;
+      }
+      const attachments = entry.Attachments.split(/\s+/).map((val, j) => {
+        const fileTypeMatch = val.match(/\.[a-zA-Z_]+$/);
+        const fileType = fileTypeMatch ? fileTypeMatch[0] : null;
+        return {
+          url: val,
+          fileName: new URL(val).pathname.split("/").pop()!,
+          isDoc: fileType === ".docx" || fileType === ".pdf",
+          outputPath: `attachment_images/${placeIdNoSpace}_${i + 1}_${
+            j + 1
+          }${fileType}`,
+        };
+      });
+      return [...result, ...attachments];
+    },
+    [],
+  );
 }
 
 async function setupAttachmentDownloads(

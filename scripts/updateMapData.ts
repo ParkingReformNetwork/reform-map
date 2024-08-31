@@ -13,7 +13,7 @@ import Papa from "papaparse";
 type Entry = Record<string, any>;
 
 async function fetch(
-  url: string,
+  url: nodeFetch.RequestInfo,
   options: nodeFetch.RequestInit = {},
 ): Promise<nodeFetch.Response> {
   return nodeFetch(url, {
@@ -63,7 +63,7 @@ async function readReportTable(): Promise<Entry[]> {
   const data = Papa.parse(csvText, { header: true, dynamicTyping: true })
     .data as Entry[];
 
-  const checkIncludes = (str, term) =>
+  const checkIncludes = (str: any, term: string): 1 | 0 =>
     typeof str === "string" && str.toLowerCase().includes(term) ? 1 : 0;
 
   return data

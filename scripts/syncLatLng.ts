@@ -62,7 +62,7 @@ async function writeResult(
 ): Promise<void> {
   // Papa doesn't quote null/undefined cells, so we have to manually set them to strings.
   const quotedData = data.map((row) =>
-    Object.keys(row).reduce((newRow, key) => {
+    Object.keys(row).reduce((newRow: Record<string, any>, key) => {
       // eslint-disable-next-line no-param-reassign
       newRow[key] = row[key] === undefined || row[key] === null ? "" : row[key];
       return newRow;

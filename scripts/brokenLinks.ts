@@ -32,7 +32,7 @@ async function mapCityUrlsToCitationLinks(): Promise<Record<string, string[]>> {
       return [cityUrl, citationLinks];
     }),
   );
-  return results.reduce((acc, [cityUrl, links]) => {
+  return results.reduce((acc: Record<string, string[]>, [cityUrl, links]) => {
     acc[cityUrl] = links;
     return acc;
   }, {});
@@ -42,7 +42,7 @@ async function findDeadLinks(
   links: string[],
 ): Promise<Array<[string, number]>> {
   const results = await Promise.all(
-    links.map(async (link): Promise<[string, number]> => {
+    links.map(async (link): Promise<[string, number] | null> => {
       // Don't fetch empty links, but still report them.
       if (!link) {
         return [link, 0];
@@ -55,21 +55,21 @@ async function findDeadLinks(
           return [link, response.status];
         }
       } catch (error) {
-        console.error(`Failed to fetch ${link}: ${error.message}`);
+        console.error(`Failed to fetch ${link}: ${(error as Error).message}`);
         return [link, -1];
       }
       return null;
     }),
   );
 
-  return results.filter(Boolean);
+  return results.filter((x): x is [string, number] => x !== null);
 }
 
 async function main(): Promise<void> {
   const cityUrlsToCitationLinks = await mapCityUrlsToCitationLinks();
 
   // We use a for loop to avoid making too many network calls -> rate limiting.
-  const result = {};
+  const result: Record<string, Array<[string, number]>> = {};
   for (const [cityUrl, links] of Object.entries(cityUrlsToCitationLinks)) {
     const deadLinks = await findDeadLinks(links);
     if (deadLinks) {
