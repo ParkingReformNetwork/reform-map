@@ -9,7 +9,7 @@ import Papa from "papaparse";
 import Handlebars from "handlebars";
 import { DateTime } from "luxon";
 
-type PlaceEntry = {
+export type PlaceEntry = {
   City: string;
   State: string;
   Summary: string;

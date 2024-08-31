@@ -6,6 +6,7 @@ import {
   needsUpdate,
   normalizeAttachments,
   parseDatetime,
+  PlaceEntry,
 } from "../../scripts/updateCityDetail";
 import { readCsv } from "../../scripts/syncLatLng";
 
@@ -23,7 +24,7 @@ test.describe("needsUpdate()", () => {
         "Report Last updated": entryTime,
         "City Last Updated": entryTime,
       },
-    ];
+    ] as PlaceEntry[];
     const globalLastUpdated = parseDatetime("May 8, 2023, 8:00:00 AM PDT");
     expect(needsUpdate(entries, globalLastUpdated)).toBe(false);
   });
@@ -41,7 +42,7 @@ test.describe("needsUpdate()", () => {
         "Report Last updated": "May 10, 2023, 8:00:00 AM PDT",
         "City Last Updated": entryTime,
       },
-    ];
+    ] as PlaceEntry[];
     const globalLastUpdated = parseDatetime("May 6, 2023, 8:00:00 AM PDT");
     expect(needsUpdate(entries, globalLastUpdated)).toBe(true);
   });
@@ -59,7 +60,7 @@ test.describe("needsUpdate()", () => {
         "Report Last updated": entryTime,
         "City Last Updated": "May 10, 2023, 8:00:00 AM PDT",
       },
-    ];
+    ] as PlaceEntry[];
     const globalLastUpdated = parseDatetime("May 6, 2023, 8:00:00 AM PDT");
     expect(needsUpdate(entries, globalLastUpdated)).toBe(true);
   });
@@ -77,7 +78,7 @@ test.describe("needsUpdate()", () => {
         "Report Last updated": entryTime,
         "City Last Updated": entryTime,
       },
-    ];
+    ] as PlaceEntry[];
     const globalLastUpdated = parseDatetime("May 6, 2023, 8:00:00 AM PDT");
     expect(needsUpdate(entries, globalLastUpdated)).toBe(true);
   });
@@ -95,7 +96,7 @@ test.describe("needsUpdate()", () => {
         "Report Last updated": entryTime,
         "City Last Updated": entryTime,
       },
-    ];
+    ] as PlaceEntry[];
     // Even though 11 AM is naively earlier than 12 PM, due to time zones, the globalLastUpdated
     // happens after any of the city updates.
     let globalLastUpdated = parseDatetime(
@@ -115,7 +116,7 @@ test("normalizeAttachments() converts string entries into objects", () => {
     { Attachments: "" },
     { Attachments: "https://prn.org/photo1.png" },
     { Attachments: "https://prn.org/doc1.pdf https://prn.org/img2.jpg" },
-  ];
+  ] as PlaceEntry[];
   normalizeAttachments(input, "MyCity_AZ");
   expect(input).toEqual([
     { Attachments: [] },
