@@ -117,34 +117,25 @@ test("normalizeAttachments() converts string entries into objects", () => {
     { Attachments: "https://prn.org/photo1.png" },
     { Attachments: "https://prn.org/doc1.pdf https://prn.org/img2.jpg" },
   ] as PlaceEntry[];
-  normalizeAttachments(input, "MyCity_AZ");
-  expect(input).toEqual([
-    { Attachments: [] },
+  const result = normalizeAttachments(input, "MyCity_AZ");
+  expect(result).toEqual([
     {
-      Attachments: [
-        {
-          url: "https://prn.org/photo1.png",
-          fileName: "photo1.png",
-          isDoc: false,
-          outputPath: "attachment_images/MyCity_AZ_2_1.png",
-        },
-      ],
+      url: "https://prn.org/photo1.png",
+      fileName: "photo1.png",
+      isDoc: false,
+      outputPath: "attachment_images/MyCity_AZ_2_1.png",
     },
     {
-      Attachments: [
-        {
-          url: "https://prn.org/doc1.pdf",
-          fileName: "doc1.pdf",
-          isDoc: true,
-          outputPath: "attachment_images/MyCity_AZ_3_1.pdf",
-        },
-        {
-          url: "https://prn.org/img2.jpg",
-          fileName: "img2.jpg",
-          isDoc: false,
-          outputPath: "attachment_images/MyCity_AZ_3_2.jpg",
-        },
-      ],
+      url: "https://prn.org/doc1.pdf",
+      fileName: "doc1.pdf",
+      isDoc: true,
+      outputPath: "attachment_images/MyCity_AZ_3_1.pdf",
+    },
+    {
+      url: "https://prn.org/img2.jpg",
+      fileName: "img2.jpg",
+      isDoc: false,
+      outputPath: "attachment_images/MyCity_AZ_3_2.jpg",
     },
   ]);
 });
