@@ -41,7 +41,7 @@ export default async function readData(): Promise<Record<PlaceId, PlaceEntry>> {
       const date = DateTime.fromFormat(rawEntry.reform_date, DATE_REPR);
       const entry = {
         place: rawEntry.place,
-        state: rawEntry.state,
+        state: rawEntry.state || null,
         country: countryMapping[rawEntry.country] ?? rawEntry.country,
         summary: rawEntry.summary,
         status: rawEntry.status,
@@ -66,7 +66,9 @@ export default async function readData(): Promise<Record<PlaceId, PlaceEntry>> {
         allMinimumsRemoved: rawEntry.all_minimums_repealed === "1",
         reformDate: date.isValid ? date : null,
       };
-      const placeId = `${entry.place}, ${entry.state}`;
+      const placeId = entry.state
+        ? `${entry.place}, ${entry.state}`
+        : entry.place;
       acc[placeId] = entry;
       return acc;
     },
