@@ -11,7 +11,7 @@
     "fmt": "prettier --write .",
     "fix": "prettier --write .; eslint --fix scripts/  tests/",
     "lint": "prettier --check . && eslint scripts/ tests/",
-    "update-city-detail": "node scripts/updateCityDetail.js",
+    "update-city-detail": "tsx scripts/updateCityDetail.ts",
     "update-map-data": "node scripts/updateMapData.js",
     "sync-lat-lng": "tsx scripts/syncLatLng.ts",
     "broken-links": "tsx scripts/brokenLinks.ts",
