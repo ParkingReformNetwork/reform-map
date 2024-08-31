@@ -21,7 +21,7 @@
       border: none; color: white; padding: 7px 16px; text-align: center;
       text-decoration: none; display: inline-block; font-size: 16px; }
     </style>
-    <title>Parking Reform Network - Reforms in {{city}}{{state}}</title>
+    <title>Parking Reform Network - Reforms in {{placeId}}</title>
     <script
       async
       src="https://www.googletagmanager.com/gtag/js?id=G-5MFS4ZVMY3"
@@ -45,7 +45,7 @@
         <div class="row">
           <div class="col-sm-8">
             <header>
-              <h1 class="display-3">{{city}}{{state}}</h1>
+              <h1 class="display-3">{{placeId}}</h1>
             </header>
           </div>
           <div class="col-sm-4" align="center">
@@ -66,11 +66,11 @@
         <dt class="col-12 col-sm-4 col-lg-3">Implementation Status</dt>
         <dd class="col-12 col-sm-8 col-lg-9">{{status}}</dd>
         <dt class="col-12 col-sm-4 col-lg-3">Reform Type</dt>
-        <dd class="col-12 col-sm-8 col-lg-9">{{reformType}}</dd>
+        <dd class="col-12 col-sm-8 col-lg-9">{{policyChange}}</dd>
         <dt class="col-12 col-sm-4 col-lg-3">Land Uses</dt>
-        <dd class="col-12 col-sm-8 col-lg-9">{{uses}}</dd>
+        <dd class="col-12 col-sm-8 col-lg-9">{{landUse}}</dd>
         <dt class="col-12 col-sm-4 col-lg-3">Scope of Reform</dt>
-        <dd class="col-12 col-sm-8 col-lg-9">{{magnitude}}</dd>
+        <dd class="col-12 col-sm-8 col-lg-9">{{scope}}</dd>
         <dt class="col-12 col-sm-4 col-lg-3">Requirements</dt>
         <dd class="col-12 col-sm-8 col-lg-9">{{requirements}}</dd>
         <dt class="col-12 col-sm-4 col-lg-3">Reporter</dt>
@@ -83,7 +83,7 @@
           </header>
           <dl class="row">
             <dt class="col-12 col-sm-4 col-lg-3">Source Description</dt>
-            <dd class="col-12 col-sm-8 col-lg-9">{{sourceDescription}}</dd>
+            <dd class="col-12 col-sm-8 col-lg-9">{{description}}</dd>
             <dt class="col-12 col-sm-4 col-lg-3">Type</dt>
             <dd class="col-12 col-sm-8 col-lg-9">{{type}}</dd>
             <dt class="col-12 col-sm-4 col-lg-3">URL</dt>
