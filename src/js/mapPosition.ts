@@ -11,7 +11,7 @@ export default function subscribeSnapToPlace(
       const entry = manager.entries[searchInput];
       map.setView(
         // @ts-ignore
-        [entry.lat, entry.long],
+        entry.coord,
         6,
       );
     }

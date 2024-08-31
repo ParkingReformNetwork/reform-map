@@ -6,9 +6,5 @@
       "@parcel/compressor-gzip",
       "@parcel/compressor-brotli"
     ]
-  },
-  "transformers": {
-    "*.geojson": ["@parcel/transformer-json"],
-    "*.csv": ["parcel-transformer-csv"]
   }
 }
