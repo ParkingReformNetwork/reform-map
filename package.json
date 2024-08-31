@@ -12,7 +12,7 @@
     "fix": "prettier --write .; eslint --fix scripts/  tests/",
     "lint": "prettier --check . && eslint scripts/ tests/",
     "update-city-detail": "tsx scripts/updateCityDetail.ts",
-    "update-map-data": "node scripts/updateMapData.js",
+    "update-map-data": "tsx scripts/updateMapData.ts",
     "sync-lat-lng": "tsx scripts/syncLatLng.ts",
     "broken-links": "tsx scripts/brokenLinks.ts",
     "serve-dist": "cd dist; http-server",

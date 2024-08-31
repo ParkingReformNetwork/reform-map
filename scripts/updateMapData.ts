@@ -2,6 +2,7 @@
 /* eslint-disable import/prefer-default-export */
 /* eslint-disable no-console */
 /* eslint-disable no-await-in-loop */
+/* eslint-disable @typescript-eslint/no-explicit-any */
 
 import fs from "fs/promises";
 
@@ -9,7 +10,12 @@ import nodeFetch from "node-fetch";
 import NodeGeocoder from "node-geocoder";
 import Papa from "papaparse";
 
-async function fetch(url, options) {
+type Entry = Record<string, any>;
+
+async function fetch(
+  url: string,
+  options: nodeFetch.RequestInit = {},
+): Promise<nodeFetch.Response> {
   return nodeFetch(url, {
     ...options,
     headers: { "User-Agent": "prn-update-map-data" },
@@ -20,14 +26,13 @@ async function fetch(url, options) {
 // Read/pre-process CSVs
 // -------------------------------------------------------------
 
-const readCityTable = async () => {
+async function readCityTable(): Promise<Entry[]> {
   const response = await fetch(
     "https://area120tables.googleapis.com/link/aR_AWTAZ6WF8_ZB3HgfOvN/export?key=8-SifuDc4Fg7purFrntOa7bjE0ikjGAy28t36wUBIOJx9vFGZuSR89N1PkSTFXpOk6",
   );
   const csvText = await response.text();
-  // Uncomment this to read the file locally. Save the file to `city.csv` in the repo root.
-  //  const csvText = await fs.readFile("city.csv", "utf-8");
-  const { data } = Papa.parse(csvText, { header: true, dynamicTyping: true });
+  const data = Papa.parse(csvText, { header: true, dynamicTyping: true })
+    .data as Entry[];
 
   const cityCleaned = data
     .filter((row) => row.City)
@@ -48,16 +53,15 @@ const readCityTable = async () => {
       };
     });
   return cityCleaned;
-};
+}
 
-const readReportTable = async () => {
+async function readReportTable(): Promise<Entry[]> {
   const response = await fetch(
     "https://area120tables.googleapis.com/link/bAc5xhhLJ2q4jYYGjaq_24/export?key=8_S1APcQHGN9zfTXEMz_Gz8sel3FCo3RUfEV4f-PBOqE8zy3vG3FpCQcSXQjRDXOqZ",
   );
   const csvText = await response.text();
-  // Uncomment this to read the file locally. Save the file to `report.csv` in the repo root.
-  //  const csvText = await fs.readFile("report.csv", "utf-8");
-  const { data } = Papa.parse(csvText, { header: true, dynamicTyping: true });
+  const data = Papa.parse(csvText, { header: true, dynamicTyping: true })
+    .data as Entry[];
 
   const checkIncludes = (str, term) =>
     typeof str === "string" && str.toLowerCase().includes(term) ? 1 : 0;
@@ -78,14 +82,14 @@ const readReportTable = async () => {
       last_updated: row["Last updated"],
       all_minimums_repealed: checkIncludes(row.Highlights, "no mandates"),
     }));
-};
+}
 
-const readOldCsv = async () => {
+async function readOldCsv(): Promise<Entry[]> {
   const csvText = await fs.readFile("map/data.csv", "utf-8");
-  const { data } = Papa.parse(csvText.trim(), {
+  const data = Papa.parse(csvText.trim(), {
     header: true,
     dynamicTyping: true,
-  });
+  }).data as Entry[];
 
   const mappedData = data.map((row) => ({
     place: row.place,
@@ -105,7 +109,7 @@ const readOldCsv = async () => {
       ]),
     ).values(),
   ];
-};
+}
 
 /**
  * For each row in baseRows, find and join its matching row in newRows.
@@ -113,8 +117,8 @@ const readOldCsv = async () => {
  * If there are no matching newRows, still keep the base row. Assumes
  * there is not more than one new row per base row.
  */
-export const leftJoin = (baseRows, newRows) =>
-  baseRows.map((baseRow) => {
+export function leftJoin(baseRows: Entry[], newRows: Entry[]): Entry[] {
+  return baseRows.map((baseRow) => {
     const matchingRows = newRows.filter(
       (newRow) =>
         newRow.place === baseRow.place &&
@@ -126,12 +130,16 @@ export const leftJoin = (baseRows, newRows) =>
       ? { ...baseRow, ...matchingRows[0] }
       : baseRow;
   });
+}
 
 // -------------------------------------------------------------
 // Geocoding
 // -------------------------------------------------------------
 
-const ensureRowLatLng = async (row, geocoder) => {
+async function ensureRowLatLng(
+  row: Entry,
+  geocoder: NodeGeocoder.Geocoder,
+): Promise<Entry> {
   if (row.lat && row.long) {
     return row;
   }
@@ -154,9 +162,9 @@ const ensureRowLatLng = async (row, geocoder) => {
     }
   }
   return row;
-};
+}
 
-const addMissingLatLng = async (reportData) => {
+async function addMissingLatLng(reportData: Entry[]): Promise<Entry[]> {
   const geocoder = NodeGeocoder({ provider: "openstreetmap", fetch });
 
   // We use a for loop to avoid making too many network calls -> rate limiting.
@@ -165,7 +173,7 @@ const addMissingLatLng = async (reportData) => {
     result.push(await ensureRowLatLng(row, geocoder));
   }
   return result;
-};
+}
 
 // -------------------------------------------------------------
 // Final result
@@ -174,22 +182,26 @@ const addMissingLatLng = async (reportData) => {
 /**
  * Used to minimize diff with the original R result.
  */
-const shouldCsvQuote = (val, columnIndex) =>
-  typeof val === "string" || typeof val === "boolean" || columnIndex === 0;
+function shouldCsvQuote(val: any, columnIndex: number): boolean {
+  return (
+    typeof val === "string" || typeof val === "boolean" || columnIndex === 0
+  );
+}
 
-const postProcessResult = (reportData) =>
-  reportData.sort((a, b) => a.place.localeCompare(b.place));
+function postProcessResult(reportData: Entry[]): Entry[] {
+  return reportData.sort((a, b) => a.place.localeCompare(b.place));
+}
 
-const writeResult = async (result) => {
+async function writeResult(result: Entry[]): Promise<void> {
   const csv = Papa.unparse(result, { quotes: shouldCsvQuote });
   await fs.writeFile("map/data.csv", csv);
-};
+}
 
 // -------------------------------------------------------------
 // Main
 // -------------------------------------------------------------
 
-const main = async () => {
+async function main(): Promise<void> {
   const [cityData, reportData, oldCsvData] = await Promise.all([
     readCityTable(),
     readReportTable(),
@@ -205,7 +217,7 @@ const main = async () => {
   const withLatLng = await addMissingLatLng(initialResult);
   const finalReport = postProcessResult(withLatLng);
   await writeResult(finalReport);
-};
+}
 
 if (process.env.NODE_ENV !== "test") {
   main().catch((error) => {
