@@ -6,8 +6,6 @@ import fs from "fs/promises";
 
 import Papa from "papaparse";
 
-const TRIMMED_REPORT = "map/trimmed_map_data.csv";
-const TIDIED_REPORT = "map/tidied_map_data.csv";
 const GSHEET =
   "https://docs.google.com/spreadsheets/d/15L8hwNEi13Bov81EulgC8Xwt9_wCgofwcH49xHoNlKI/export?gid=0&format=csv";
 
@@ -18,10 +16,8 @@ export function parseCsv(rawText: string): Array<Record<string, any>> {
   }).data as Record<string, any>[];
 }
 
-export async function readCsv(
-  filePath: string,
-): Promise<Array<Record<string, any>>> {
-  const rawText = await fs.readFile(filePath, "utf-8");
+export async function readDataCsv(): Promise<Array<Record<string, any>>> {
+  const rawText = await fs.readFile("map/data.csv", "utf-8");
   return parseCsv(rawText);
 }
 
@@ -56,10 +52,7 @@ function shouldCsvQuote(val: any, columnIndex: number): boolean {
   );
 }
 
-async function writeResult(
-  data: Array<Record<string, any>>,
-  filePath: string,
-): Promise<void> {
+async function writeResult(data: Array<Record<string, any>>): Promise<void> {
   // Papa doesn't quote null/undefined cells, so we have to manually set them to strings.
   const quotedData = data.map((row) =>
     Object.keys(row).reduce((newRow: Record<string, any>, key) => {
@@ -69,21 +62,16 @@ async function writeResult(
     }, {}),
   );
   const csv = Papa.unparse(quotedData, { quotes: shouldCsvQuote });
-  await fs.writeFile(filePath, csv);
+  await fs.writeFile("map/data.csv", csv);
 }
 
 async function main(): Promise<void> {
-  const [updateData, trimmedData, tidiedData] = await Promise.all([
+  const [updateData, originalData] = await Promise.all([
     fetchUpdateCsv(),
-    readCsv(TRIMMED_REPORT),
-    readCsv(TIDIED_REPORT),
+    readDataCsv(),
   ]);
-  const updatedTidied = updateLatLng(tidiedData, updateData);
-  const updatedTrimmed = updateLatLng(trimmedData, updateData);
-  await Promise.all([
-    writeResult(updatedTidied, TIDIED_REPORT),
-    writeResult(updatedTrimmed, TRIMMED_REPORT),
-  ]);
+  const updatedData = updateLatLng(originalData, updateData);
+  await writeResult(updatedData);
 }
 
 if (process.env.NODE_ENV !== "test") {

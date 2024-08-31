@@ -8,7 +8,7 @@ import {
   parseDatetime,
   PlaceEntry,
 } from "../../scripts/updateCityDetail";
-import { readCsv } from "../../scripts/syncLatLng";
+import { readDataCsv } from "../../scripts/syncLatLng";
 
 test.describe("needsUpdate()", () => {
   test("returns false if everything is older than globalLastUpdated", () => {
@@ -149,7 +149,7 @@ test("city_detail_last_updated.txt is formatted correctly", async () => {
 });
 
 test("every city in CSV has a corresponding HTML page", async () => {
-  const mapData = await readCsv("map/data.csv");
+  const mapData = await readDataCsv();
   const htmlPages = await fs.readdir("city_detail/");
   const validUrls = new Set(
     htmlPages.map(

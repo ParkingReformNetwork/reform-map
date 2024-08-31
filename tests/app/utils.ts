@@ -1,7 +1,7 @@
 import { expect } from "@playwright/test";
 import type { Page } from "@playwright/test";
 
-import { readCsv } from "../../scripts/syncLatLng";
+import { readDataCsv } from "../../scripts/syncLatLng";
 
 const PLACE_MARKER = "path.leaflet-interactive";
 export const DEFAULT_PLACE_RANGE: [number, number] = [3000, 4000];
@@ -13,7 +13,7 @@ export const loadMap = async (page: Page): Promise<void> => {
 };
 
 export async function getTotalNumPlaces(): Promise<number> {
-  const mapData = await readCsv("map/data.csv");
+  const mapData = await readDataCsv();
   // For some reason, the CSV has one extra line than the data used in prod.
   return mapData.length - 1;
 }
