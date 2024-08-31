@@ -72,11 +72,11 @@ export default function initScorecard(
 
   // Clicking a city marker opens up the scorecard.
   markerGroup.on("click", (e) => {
-    const cityState = e.sourceTarget.getTooltip().getContent();
+    const placeId = e.sourceTarget.getTooltip().getContent();
     scorecardState.setValue({
       type: "visible",
-      placeId: cityState,
-      entry: data[cityState],
+      placeId,
+      entry: data[placeId],
     });
   });
 

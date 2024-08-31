@@ -34,13 +34,13 @@ async function readCityTable(): Promise<Entry[]> {
   const data = Papa.parse(csvText, { header: true, dynamicTyping: true })
     .data as Entry[];
 
-  const cityCleaned = data
+  const placeCleaned = data
     .filter((row) => row.City)
     .map((row) => {
-      let cityState = row["State/Province"]
+      let placeId = row["State/Province"]
         ? `${row.City}_${row["State/Province"]}`
         : row.City;
-      cityState = cityState.replace(/\s+/g, "");
+      placeId = placeId.replace(/\s+/g, "");
       return {
         place: row.City,
         state: row["State/Province"],
@@ -49,10 +49,10 @@ async function readCityTable(): Promise<Entry[]> {
           typeof row.Population === "string"
             ? Number(row.Population.replace(/,/g, ""))
             : row.Population || 0,
-        citation_url: `https://parkingreform.org/mandates-map/city_detail/${cityState}.html`,
+        citation_url: `https://parkingreform.org/mandates-map/city_detail/${placeId}.html`,
       };
     });
-  return cityCleaned;
+  return placeCleaned;
 }
 
 async function readReportTable(): Promise<Entry[]> {
@@ -144,12 +144,16 @@ async function ensureRowLatLng(
     return row;
   }
 
+  const stateQuery = row.state ? `${row.state}, ` : "";
   // We try the most precise query first, then fall back to less precise queries.
   const locationMethods = [
-    () => `${row.place}, ${row.state}, ${row.country}`,
-    () => `${row.place}, ${row.state}`,
-    () => `${row.place}`,
+    () => `${row.place}, ${stateQuery}, ${row.country}`,
+    () => `${row.place}, ${stateQuery}`,
   ];
+  if (stateQuery) {
+    locationMethods.push(() => `${row.place}`);
+  }
+
   for (const getLocationString of locationMethods) {
     const locationString = getLocationString();
     const geocodeResults = await geocoder.geocode(locationString);

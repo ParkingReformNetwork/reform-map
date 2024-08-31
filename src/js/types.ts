@@ -4,7 +4,7 @@ export type PlaceId = string;
 
 export interface PlaceEntry {
   place: string;
-  state: string;
+  state: string | null;
   country: string;
   summary: string;
   status: string;
