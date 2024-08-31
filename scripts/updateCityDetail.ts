@@ -191,7 +191,7 @@ function renderHandlebars(
     placeId,
     summary: entry.summary,
     status: entry.status,
-    reformType: entry.policyChange,
+    policyChange: entry.policyChange,
     landUse: entry.landUse,
     scope: entry.scope,
     requirements: entry.requirements,
