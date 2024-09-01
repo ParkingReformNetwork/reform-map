@@ -7,12 +7,12 @@ import fs from "fs/promises";
 
 import fetch from "node-fetch";
 import Papa from "papaparse";
-import Handlebars from "handlebars";
 import { DateTime } from "luxon";
 
 import {
   Attachment as AttachmentBase,
   Citation as CitationBase,
+  escapePlaceId,
 } from "./lib/data";
 
 type Attachment = AttachmentBase & { url: string };
@@ -23,11 +23,6 @@ export type Citation = CitationBase & {
 };
 
 type PlaceEntry = {
-  summary: string;
-  status: string;
-  policyChange: string;
-  landUse: string;
-  scope: string;
   requirements: string;
   reporter: string;
   citations: Citation[];
@@ -41,10 +36,6 @@ const TIME_ZONE_MAPPING: Partial<Record<string, string>> = {
   PDT: "America/Los_Angeles",
   PST: "America/Los_Angeles",
 };
-
-function escapePlaceId(v: string): string {
-  return v.replace(/ /g, "").replace(",", "_");
-}
 
 export function parseDatetime(
   val: string,
@@ -131,11 +122,6 @@ async function loadData(): Promise<Record<string, PlaceEntry>> {
     }
 
     result[placeId] = {
-      summary: row.Summary,
-      status: row.Status,
-      policyChange: row["Reform Type"],
-      landUse: row.Uses,
-      scope: row.Magnitude,
       requirements: row.Requirements,
       reporter: row.Reporter,
       citations: [citation],
@@ -169,40 +155,15 @@ async function setupAttachmentDownloads(
   }
 }
 
-function renderHandlebars(
+async function ensureDownloads(
   placeId: string,
   entry: PlaceEntry,
-  template: HandlebarsTemplateDelegate,
-): string {
-  return template({
-    placeId,
-    summary: entry.summary,
-    status: entry.status,
-    policyChange: entry.policyChange,
-    landUse: entry.landUse,
-    scope: entry.scope,
-    requirements: entry.requirements,
-    reporter: entry.reporter,
-    citations: entry.citations,
-  });
-}
-
-async function processPlace(
-  placeId: string,
-  entry: PlaceEntry,
-  template: HandlebarsTemplateDelegate,
   globalLastUpdated: DateTime<true>,
 ): Promise<void> {
-  if (citationsUpdated(entry.citations, globalLastUpdated)) {
-    console.log(`Updating citation downloads: ${placeId}`);
-    await setupAttachmentDownloads(
-      entry.citations.flatMap((citation) => citation.attachments),
-    );
-  }
-
-  await fs.writeFile(
-    `city_detail/${escapePlaceId(placeId)}.html`,
-    renderHandlebars(placeId, entry, template),
+  if (!citationsUpdated(entry.citations, globalLastUpdated)) return;
+  console.log(`Updating citation downloads: ${placeId}`);
+  await setupAttachmentDownloads(
+    entry.citations.flatMap((citation) => citation.attachments),
   );
 }
 
@@ -250,17 +211,15 @@ async function saveExtendedDataFile(
 }
 
 async function main(): Promise<void> {
-  const [rawGlobalLastUpdated, rawTemplate, data] = await Promise.all([
+  const [rawGlobalLastUpdated, data] = await Promise.all([
     fs.readFile(GLOBAL_LAST_UPDATED_FP, "utf-8"),
-    fs.readFile("scripts/city_detail.html.handlebars", "utf-8"),
     loadData(),
   ]);
-  const template = Handlebars.compile(rawTemplate);
   const globalLastUpdated = parseDatetime(rawGlobalLastUpdated, false);
 
   // Use await in a for loop to avoid making too many calls -> rate limiting.
   for (const [placeId, entry] of Object.entries(data)) {
-    await processPlace(placeId, entry, template, globalLastUpdated);
+    await ensureDownloads(placeId, entry, globalLastUpdated);
   }
 
   await saveExtendedDataFile(data);
