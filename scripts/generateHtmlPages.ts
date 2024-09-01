@@ -7,7 +7,12 @@ import Handlebars from "handlebars";
 
 import { escapePlaceId, readCompleteData, CompleteEntry } from "./lib/data";
 
-function renderHandlebars(
+export async function loadTemplate(): Promise<HandlebarsTemplateDelegate> {
+  const raw = await fs.readFile("scripts/city_detail.html.handlebars", "utf-8");
+  return Handlebars.compile(raw);
+}
+
+export function renderHandlebars(
   placeId: string,
   entry: CompleteEntry,
   template: HandlebarsTemplateDelegate,
@@ -40,11 +45,10 @@ async function generatePage(
 }
 
 async function main(): Promise<void> {
-  const [rawTemplate, completeData] = await Promise.all([
-    fs.readFile("scripts/city_detail.html.handlebars", "utf-8"),
+  const [template, completeData] = await Promise.all([
+    loadTemplate(),
     readCompleteData(),
   ]);
-  const template = Handlebars.compile(rawTemplate);
   await Promise.all(
     Object.entries(completeData).map(([placeId, entry]) =>
       generatePage(placeId, entry, template),

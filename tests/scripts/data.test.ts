@@ -3,10 +3,16 @@ import fs from "fs/promises";
 import { expect, test } from "@playwright/test";
 
 import {
+  escapePlaceId,
   readCompleteData,
   readCoreData,
   readExtendedData,
 } from "../../scripts/lib/data";
+
+test("escapePlaceID", () => {
+  expect(escapePlaceId("Tucson, AZ")).toEqual("Tucson_AZ");
+  expect(escapePlaceId("St. Lucia, AZ")).toEqual("St.Lucia_AZ");
+});
 
 test("JSON files have enough entries", async () => {
   const core = await readCoreData();
