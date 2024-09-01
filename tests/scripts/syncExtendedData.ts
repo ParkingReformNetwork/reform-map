@@ -7,7 +7,7 @@ import {
   normalizeAttachments,
   parseDatetime,
   Citation,
-} from "../../scripts/updateCityDetail";
+} from "../../scripts/syncExtendedData";
 import { readCoreData } from "../../scripts/lib/data";
 
 test.describe("citationsUpdated()", () => {
