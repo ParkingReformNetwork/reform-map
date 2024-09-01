@@ -7,6 +7,14 @@ import Papa from "papaparse";
 
 import { readCompleteData } from "./lib/data";
 
+function assertExpectedNumEntries(jsonKeys: string[], csv: string): void {
+  const numJson = jsonKeys.length;
+  const numCsv = csv.split("\r\n").length - 1;
+  if (numJson !== numCsv) {
+    throw new Error(`CSV has unequal entries to JSON: ${numCsv} vs ${numJson}`);
+  }
+}
+
 async function main(): Promise<void> {
   const completeData = await readCompleteData();
   const data = Object.values(completeData).map((row) => ({
@@ -27,7 +35,9 @@ async function main(): Promise<void> {
     summary: row.summary,
   }));
   const csv = Papa.unparse(Object.values(data));
+  assertExpectedNumEntries(Object.keys(completeData), csv);
   await fs.writeFile("data/data.csv", csv);
+  console.log("Generated CSV at data/data.csv");
 }
 
 if (process.env.NODE_ENV !== "test") {

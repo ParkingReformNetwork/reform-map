@@ -8,7 +8,6 @@ import {
   parseDatetime,
   Citation,
 } from "../../scripts/syncExtendedData";
-import { readCoreData } from "../../scripts/lib/data";
 
 test.describe("citationsUpdated()", () => {
   test("returns false if every citation is older than globalLastUpdated", () => {
@@ -99,17 +98,4 @@ test("city_detail_last_updated.txt is formatted correctly", async () => {
     "utf-8",
   );
   parseDatetime(lastUpdated, false); // will throw an error if incorrectly formatted
-});
-
-test("every place has a corresponding HTML page", async () => {
-  const htmlPages = await fs.readdir("city_detail/");
-  const validUrls = new Set(
-    htmlPages.map(
-      (fileName) =>
-        `https://parkingreform.org/mandates-map/city_detail/${fileName}`,
-    ),
-  );
-
-  const data = await readCoreData();
-  Object.values(data).forEach((row) => expect(validUrls).toContain(row.url));
 });

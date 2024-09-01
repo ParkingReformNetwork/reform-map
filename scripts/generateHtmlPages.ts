@@ -7,7 +7,12 @@ import Handlebars from "handlebars";
 
 import { escapePlaceId, readCompleteData, CompleteEntry } from "./lib/data";
 
-function renderHandlebars(
+export async function loadTemplate(): Promise<HandlebarsTemplateDelegate> {
+  const raw = await fs.readFile("scripts/city_detail.html.handlebars", "utf-8");
+  return Handlebars.compile(raw);
+}
+
+export function renderHandlebars(
   placeId: string,
   entry: CompleteEntry,
   template: HandlebarsTemplateDelegate,
@@ -39,17 +44,31 @@ async function generatePage(
   );
 }
 
+async function assertEveryPlaceGenerated(data: CompleteEntry[]) {
+  const htmlPages = await fs.readdir("city_detail/");
+  const validUrls = new Set(
+    htmlPages.map(
+      (fileName) =>
+        `https://parkingreform.org/mandates-map/city_detail/${fileName}`,
+    ),
+  );
+  const invalidPlaces = data.filter((entry) => !validUrls.has(entry.url));
+  if (invalidPlaces.length) {
+    throw new Error(`Some places do not have HTML pages: ${invalidPlaces}`);
+  }
+}
+
 async function main(): Promise<void> {
-  const [rawTemplate, completeData] = await Promise.all([
-    fs.readFile("scripts/city_detail.html.handlebars", "utf-8"),
+  const [template, data] = await Promise.all([
+    loadTemplate(),
     readCompleteData(),
   ]);
-  const template = Handlebars.compile(rawTemplate);
   await Promise.all(
-    Object.entries(completeData).map(([placeId, entry]) =>
+    Object.entries(data).map(([placeId, entry]) =>
       generatePage(placeId, entry, template),
     ),
   );
+  await assertEveryPlaceGenerated(Object.values(data));
 }
 
 if (process.env.NODE_ENV !== "test") {

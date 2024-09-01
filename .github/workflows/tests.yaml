@@ -20,3 +20,8 @@ jobs:
         run: npm run lint
       - name: Run tests
         run: npm test
+
+      - name: Check static generation works
+        run: |
+          npm run gen-html
+          npm run gen-csv
