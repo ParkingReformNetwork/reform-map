@@ -44,16 +44,31 @@ async function generatePage(
   );
 }
 
+async function assertEveryPlaceGenerated(data: CompleteEntry[]) {
+  const htmlPages = await fs.readdir("city_detail/");
+  const validUrls = new Set(
+    htmlPages.map(
+      (fileName) =>
+        `https://parkingreform.org/mandates-map/city_detail/${fileName}`,
+    ),
+  );
+  const invalidPlaces = data.filter((entry) => !validUrls.has(entry.url));
+  if (invalidPlaces.length) {
+    throw new Error(`Some places do not have HTML pages: ${invalidPlaces}`);
+  }
+}
+
 async function main(): Promise<void> {
-  const [template, completeData] = await Promise.all([
+  const [template, data] = await Promise.all([
     loadTemplate(),
     readCompleteData(),
   ]);
   await Promise.all(
-    Object.entries(completeData).map(([placeId, entry]) =>
+    Object.entries(data).map(([placeId, entry]) =>
       generatePage(placeId, entry, template),
     ),
   );
+  await assertEveryPlaceGenerated(Object.values(data));
 }
 
 if (process.env.NODE_ENV !== "test") {
