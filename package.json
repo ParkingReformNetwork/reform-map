@@ -11,6 +11,7 @@
     "fmt": "prettier --write .",
     "fix": "prettier --write .; eslint --fix scripts/  tests/",
     "lint": "prettier --check . && eslint scripts/ tests/",
+    "gen-csv": "tsx scripts/generateCsv.ts",
     "update-city-detail": "tsx scripts/updateCityDetail.ts",
     "update-map-data": "tsx scripts/updateMapData.ts",
     "sync-lat-lng": "tsx scripts/syncLatLng.ts",
