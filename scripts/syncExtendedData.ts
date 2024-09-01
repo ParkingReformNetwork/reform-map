@@ -6,9 +6,9 @@
 import fs from "fs/promises";
 
 import fetch from "node-fetch";
-import Papa from "papaparse";
 import { DateTime } from "luxon";
 
+import { parseCsv } from "./lib/csv";
 import {
   Attachment as AttachmentBase,
   Citation as CitationBase,
@@ -64,7 +64,7 @@ async function fetchGTablesData(): Promise<Record<string, any>[]> {
     },
   );
   const rawData = await response.text();
-  return Papa.parse(rawData, { header: true }).data as Record<string, any>[];
+  return parseCsv(rawData);
 }
 
 /**
