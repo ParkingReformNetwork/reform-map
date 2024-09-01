@@ -204,9 +204,52 @@ async function updateLastUpdatedFile(): Promise<void> {
   console.log(
     `Updating ${GLOBAL_LAST_UPDATED_FP} with today's date and time zone`,
   );
-  const currentDatetime = DateTime.local().setZone("local");
+  const currentDatetime = DateTime.local().setZone("UTC");
   const formatted = currentDatetime.toFormat(TIME_FORMAT);
   await fs.writeFile(GLOBAL_LAST_UPDATED_FP, formatted);
+}
+
+async function saveExtendedDataFile(
+  data: Record<string, PlaceEntry>,
+): Promise<void> {
+  const prunedData = Object.fromEntries(
+    Object.entries(data)
+      .map(([placeId, entry]) => {
+        const lastUpdated = DateTime.max(
+          ...entry.citations.map((x) => x.lastUpdated),
+          entry.cityLastUpdated,
+          entry.reportLastUpdated,
+        )
+          .setZone("UTC")
+          .toFormat(TIME_FORMAT);
+
+        const citations = entry.citations.map((citation) => ({
+          description: citation.description,
+          type: citation.type,
+          url: citation.url,
+          notes: citation.notes,
+          attachments: citation.attachments.map((attachment) => ({
+            fileName: attachment.fileName,
+            isDoc: attachment.isDoc,
+            outputPath: attachment.outputPath,
+          })),
+        }));
+        return [
+          placeId,
+          {
+            reporter: entry.reporter,
+            updated: lastUpdated,
+            requirements: entry.requirements.split(", "),
+            citations,
+          },
+        ];
+      })
+      .sort(),
+  );
+  const json = JSON.stringify(prunedData, null, 2);
+
+  console.log(`Updating data/extended.json`);
+  await fs.writeFile("data/extended.json", json);
 }
 
 async function main(): Promise<void> {
@@ -223,6 +266,7 @@ async function main(): Promise<void> {
     await processPlace(placeId, entry, template, globalLastUpdated);
   }
 
+  await saveExtendedDataFile(data);
   await updateLastUpdatedFile();
 }
 
