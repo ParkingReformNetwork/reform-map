@@ -1,4 +1,4 @@
-name: Deploy city details to prod
+name: Deploy static pages to prod
 on:
   push:
     branches: [main]
@@ -9,7 +9,25 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Check out repository code
-        uses: actions/checkout@v2
+        uses: actions/checkout@v4
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Generate CSV
+        run: npm run gen-csv
+      - name: Copy CSV to server
+        uses: appleboy/scp-action@master
+        with:
+          host: ${{ secrets.PRN_FTP_HOST }}
+          username: ${{ secrets.PRN_SERVER_USERNAME }}
+          key: ${{ secrets.PRN_SERVER_PRIVATE_KEY }}
+          source: data/data.csv
+          target: /var/www/${{ secrets.PRN_SERVER_HOST }}/mandates-map/data.csv
+
       - name: Archive city_detail/ contents
         run: |
           cd city_detail
