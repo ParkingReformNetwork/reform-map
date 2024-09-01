@@ -1,5 +1,5 @@
 import { expect, test } from "@playwright/test";
-import { leftJoin } from "../../scripts/updateMapData";
+import { leftJoin } from "../../scripts/syncCoreData";
 
 test.describe("leftJoin", () => {
   const testCases = [
