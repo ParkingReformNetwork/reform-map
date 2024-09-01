@@ -10,7 +10,16 @@ import Papa from "papaparse";
 import Handlebars from "handlebars";
 import { DateTime } from "luxon";
 
-import { Attachment, Citation } from "./lib/data";
+import {
+  Attachment as AttachmentBase,
+  Citation as CitationBase,
+} from "./lib/data";
+
+type Attachment = AttachmentBase & { url: string };
+export type Citation = CitationBase & {
+  lastUpdated: DateTime<true>;
+  attachments: Attachment[];
+};
 
 type PlaceEntry = {
   summary: string;
@@ -108,7 +117,6 @@ async function loadData(): Promise<Record<string, PlaceEntry>> {
       : 1;
 
     const citation = {
-      idx: citationIdx,
       description: row["Source Description"],
       type: row.Type,
       url: row.URL,
