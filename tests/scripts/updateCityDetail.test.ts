@@ -3,99 +3,56 @@ import fs from "fs/promises";
 import { expect, test } from "@playwright/test";
 
 import {
-  needsUpdate,
+  citationsUpdated,
   normalizeAttachments,
   parseDatetime,
-  PlaceEntry,
 } from "../../scripts/updateCityDetail";
-import { readCoreData } from "../../scripts/lib/data";
+import { readCoreData, Citation } from "../../scripts/lib/data";
 
-test.describe("needsUpdate()", () => {
-  test("returns false if everything is older than globalLastUpdated", () => {
-    const entryTime = parseDatetime("May 5, 2023, 8:00:00 AM PDT");
-    const entry = {
-      reportLastUpdated: entryTime,
-      cityLastUpdated: entryTime,
-      citations: [
-        {
-          lastUpdated: entryTime,
-        },
-      ],
-    } as PlaceEntry;
+test.describe("citationsUpdated()", () => {
+  test("returns false if every citation is older than globalLastUpdated", () => {
+    const citations = [
+      {
+        lastUpdated: parseDatetime("May 5, 2023, 8:00:00 AM PDT"),
+      },
+      {
+        lastUpdated: parseDatetime("May 6, 2023, 8:00:00 AM PDT"),
+      },
+    ] as Citation[];
     const globalLastUpdated = parseDatetime("May 8, 2023, 8:00:00 AM PDT");
-    expect(needsUpdate(entry, globalLastUpdated)).toBe(false);
-  });
-
-  test("returns true if the report has been updated recently", () => {
-    const entryTime = parseDatetime("May 5, 2023, 8:00:00 AM PDT");
-    const entry = {
-      reportLastUpdated: parseDatetime("May 10, 2023, 8:00:00 AM PDT"),
-      cityLastUpdated: entryTime,
-      citations: [
-        {
-          lastUpdated: entryTime,
-        },
-      ],
-    } as PlaceEntry;
-    const globalLastUpdated = parseDatetime("May 6, 2023, 8:00:00 AM PDT");
-    expect(needsUpdate(entry, globalLastUpdated)).toBe(true);
-  });
-
-  test("returns true if the city has been updated recently", () => {
-    const entryTime = parseDatetime("May 5, 2023, 8:00:00 AM PDT");
-    const entry = {
-      reportLastUpdated: entryTime,
-      cityLastUpdated: parseDatetime("May 10, 2023, 8:00:00 AM PDT"),
-      citations: [
-        {
-          lastUpdated: entryTime,
-        },
-      ],
-    } as PlaceEntry;
-    const globalLastUpdated = parseDatetime("May 6, 2023, 8:00:00 AM PDT");
-    expect(needsUpdate(entry, globalLastUpdated)).toBe(true);
+    expect(citationsUpdated(citations, globalLastUpdated)).toBe(false);
   });
 
   test("returns true if at least one of the citations has been updated recently", () => {
-    const entryTime = parseDatetime("May 5, 2023, 8:00:00 AM PDT");
-    const entry = {
-      reportLastUpdated: entryTime,
-      cityLastUpdated: entryTime,
-      citations: [
-        {
-          lastUpdated: entryTime,
-        },
-        {
-          lastUpdated: parseDatetime("May 10, 2023, 8:00:00 AM PDT"),
-        },
-      ],
-    } as PlaceEntry;
+    const citations = [
+      {
+        lastUpdated: parseDatetime("May 5, 2023, 8:00:00 AM PDT"),
+      },
+      {
+        lastUpdated: parseDatetime("May 10, 2023, 8:00:00 AM PDT"),
+      },
+    ] as Citation[];
     const globalLastUpdated = parseDatetime("May 6, 2023, 8:00:00 AM PDT");
-    expect(needsUpdate(entry, globalLastUpdated)).toBe(true);
+    expect(citationsUpdated(citations, globalLastUpdated)).toBe(true);
   });
 
   test("can handle different time zones", () => {
-    const entryTime = parseDatetime("May 5, 2023, 8:00:00 AM PDT");
-    const entry = {
-      reportLastUpdated: entryTime,
-      cityLastUpdated: parseDatetime("May 6, 2023, 12:00:00 PM PDT"),
-      citations: [
-        {
-          lastUpdated: entryTime,
-        },
-      ],
-    } as PlaceEntry;
+    const citations = [
+      {
+        lastUpdated: parseDatetime("May 6, 2023, 12:00:00 PM PDT"),
+      },
+    ] as Citation[];
     // Even though 11 AM is naively earlier than 12 PM, due to time zones, the globalLastUpdated
     // happens after any of the city updates.
     let globalLastUpdated = parseDatetime(
       "May 6, 2023, 11:00:00 AM Pacific/Honolulu",
       false,
     );
-    expect(needsUpdate(entry, globalLastUpdated)).toBe(false);
+    expect(citationsUpdated(citations, globalLastUpdated)).toBe(false);
 
     // To be extra sure, we ensure that the same time zone would return true.
     globalLastUpdated = parseDatetime("May 6, 2023, 11:00:00 AM PDT");
-    expect(needsUpdate(entry, globalLastUpdated)).toBe(true);
+    expect(citationsUpdated(citations, globalLastUpdated)).toBe(true);
   });
 });
 

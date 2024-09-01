@@ -10,24 +10,9 @@ import Papa from "papaparse";
 import Handlebars from "handlebars";
 import { DateTime } from "luxon";
 
-type Attachment = {
-  url: string;
-  fileName: string;
-  isDoc: boolean;
-  outputPath: string;
-};
+import { Attachment, Citation } from "./lib/data";
 
-type Citation = {
-  idx: number;
-  description: string;
-  type: string;
-  url: string;
-  notes: string;
-  lastUpdated: DateTime<true>;
-  attachments: Attachment[];
-};
-
-export type PlaceEntry = {
+type PlaceEntry = {
   summary: string;
   status: string;
   policyChange: string;
@@ -154,15 +139,11 @@ async function loadData(): Promise<Record<string, PlaceEntry>> {
   return result;
 }
 
-export function needsUpdate(
-  entry: PlaceEntry,
+export function citationsUpdated(
+  citations: Citation[],
   globalLastUpdated: DateTime<true>,
 ): boolean {
-  const maxLastUpdated = DateTime.max(
-    ...entry.citations.map((x) => x.lastUpdated),
-    entry.reportLastUpdated,
-    entry.cityLastUpdated,
-  );
+  const maxLastUpdated = DateTime.max(...citations.map((x) => x.lastUpdated));
   return maxLastUpdated >= globalLastUpdated;
 }
 
@@ -206,16 +187,13 @@ async function processPlace(
   template: HandlebarsTemplateDelegate,
   globalLastUpdated: DateTime<true>,
 ): Promise<void> {
-  if (!needsUpdate(entry, globalLastUpdated)) {
-    console.log(`Skipping ${placeId}`);
-    return;
+  if (citationsUpdated(entry.citations, globalLastUpdated)) {
+    console.log(`Updating citation downloads: ${placeId}`);
+    await setupAttachmentDownloads(
+      entry.citations.flatMap((citation) => citation.attachments),
+    );
   }
 
-  console.log(`Updating ${placeId}`);
-
-  await setupAttachmentDownloads(
-    entry.citations.flatMap((citation) => citation.attachments),
-  );
   await fs.writeFile(
     `city_detail/${escapePlaceId(placeId)}.html`,
     renderHandlebars(placeId, entry, template),
