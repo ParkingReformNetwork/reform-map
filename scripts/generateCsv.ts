@@ -38,6 +38,10 @@ async function main(): Promise<void> {
   assertExpectedNumEntries(Object.keys(completeData), csv);
   await fs.writeFile("data/data.csv", csv);
   console.log("Generated CSV at data/data.csv");
+
+  // Also save to map/data.csv for now, until data/data.csv can be deployed to the PRN site.
+  await fs.writeFile("map/data.csv", csv);
+  console.log("Generated CSV at map/data.csv");
 }
 
 if (process.env.NODE_ENV !== "test") {

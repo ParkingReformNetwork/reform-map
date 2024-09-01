@@ -40,7 +40,31 @@ test.describe("join()", () => {
     ]);
   });
 
-  test("errors if no match", () => {});
+  test("errors if no match", () => {
+    const baseRows = [
+      { place: "City1", state: "State1", country: "Country1", someField: 10 },
+    ];
+    expect(() => join(baseRows, [])).toThrow();
+  });
 
-  test("errors if >1 match", () => {});
+  test("errors if >1 match", () => {
+    const baseRows = [
+      { place: "City1", state: "State1", country: "Country1", someField: 10 },
+    ];
+    const newRows = [
+      {
+        place: "City1",
+        state: "State1",
+        country: "Country1",
+        population: 1000,
+      },
+      {
+        place: "City1",
+        state: "State1",
+        country: "Country1",
+        population: 2000,
+      },
+    ];
+    expect(() => join(baseRows, newRows)).toThrow();
+  });
 });
