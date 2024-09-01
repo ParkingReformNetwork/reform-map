@@ -2,23 +2,30 @@ import type { DateTime } from "luxon";
 
 export type PlaceId = string;
 
-export interface PlaceEntry {
+interface BaseEntry {
   // Full name of the town, city, county, province, state, or country.
-  // Must always be set.
   place: string;
   // State or province abbreviation. Not set for countries.
   state: string | null;
-  // Country abbreviation. Must always be set.
-  country: string;
   summary: string;
   status: string;
-  policyChange: string[];
+  policy: string[];
   scope: string[];
-  landUse: string[];
-  reformDate: DateTime | null;
-  allMinimumsRemoved: boolean;
-  population: number;
+  land: string[];
+  repeal: boolean;
+  pop: number;
   url: string;
-  lat: string;
-  long: string;
+  coord: [string, string];
 }
+
+export type RawEntry = BaseEntry & {
+  // Country abbreviation.
+  country: string;
+  date: string | null;
+};
+
+export type PlaceEntry = BaseEntry & {
+  // Full country name.
+  country: string;
+  date: DateTime<true> | null;
+};

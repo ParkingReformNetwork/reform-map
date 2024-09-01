@@ -34,10 +34,10 @@ export class FilterOptions {
     entries.forEach((entry) => {
       status.add(entry.status);
       country.add(entry.country);
-      year.add(entry.reformDate?.year.toString() || UNKNOWN_YEAR);
-      entry.policyChange.forEach((v) => policy.add(v));
+      year.add(entry.date?.year.toString() || UNKNOWN_YEAR);
+      entry.policy.forEach((v) => policy.add(v));
       entry.scope.forEach((v) => scope.add(v));
-      entry.landUse.forEach((v) => landUse.add(v));
+      entry.land.forEach((v) => landUse.add(v));
     });
     this.options = {
       policyChange: Array.from(policy).sort(),

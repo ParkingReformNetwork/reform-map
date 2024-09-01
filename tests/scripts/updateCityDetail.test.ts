@@ -8,7 +8,7 @@ import {
   parseDatetime,
   PlaceEntry,
 } from "../../scripts/updateCityDetail";
-import { readDataCsv } from "../../scripts/syncLatLng";
+import { readCoreData } from "../../scripts/lib/data";
 
 test.describe("needsUpdate()", () => {
   test("returns false if everything is older than globalLastUpdated", () => {
@@ -143,8 +143,7 @@ test("city_detail_last_updated.txt is formatted correctly", async () => {
   parseDatetime(lastUpdated, false); // will throw an error if incorrectly formatted
 });
 
-test("every city in CSV has a corresponding HTML page", async () => {
-  const mapData = await readDataCsv();
+test("every place has a corresponding HTML page", async () => {
   const htmlPages = await fs.readdir("city_detail/");
   const validUrls = new Set(
     htmlPages.map(
@@ -152,7 +151,7 @@ test("every city in CSV has a corresponding HTML page", async () => {
         `https://parkingreform.org/mandates-map/city_detail/${fileName}`,
     ),
   );
-  mapData.forEach((row) => {
-    expect(validUrls).toContain(row.citation_url);
-  });
+
+  const data = await readCoreData();
+  Object.values(data).forEach((row) => expect(validUrls).toContain(row.url));
 });

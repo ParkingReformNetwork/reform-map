@@ -1,5 +1,4 @@
 /* eslint-disable import/no-extraneous-dependencies */
-/* eslint-disable import/prefer-default-export */
 /* eslint-disable no-console */
 /* eslint-disable no-await-in-loop */
 /* eslint-disable @typescript-eslint/no-explicit-any */

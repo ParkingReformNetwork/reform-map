@@ -92,23 +92,21 @@ export class PlaceFilterManager {
     }
 
     const isScope = entry.scope.some((v) => state.scope.includes(v));
-    const isPolicy = entry.policyChange.some((v) =>
-      state.policyChange.includes(v),
-    );
-    const isLand = entry.landUse.some((v) => state.landUse.includes(v));
+    const isPolicy = entry.policy.some((v) => state.policyChange.includes(v));
+    const isLand = entry.land.some((v) => state.landUse.includes(v));
     const isStatus = state.status.includes(entry.status);
     const isCountry = state.country.includes(entry.country);
     const isYear = state.year.includes(
-      entry.reformDate?.year.toString() || UNKNOWN_YEAR,
+      entry.date?.year.toString() || UNKNOWN_YEAR,
     );
 
     const isAllMinimumsRepealed =
-      !state.allMinimumsRemovedToggle || entry.allMinimumsRemoved;
+      !state.allMinimumsRemovedToggle || entry.repeal;
 
     const [sliderLeftIndex, sliderRightIndex] = state.populationSliderIndexes;
     const isPopulation =
-      entry["population"] >= POPULATION_INTERVALS[sliderLeftIndex][1] &&
-      entry["population"] <= POPULATION_INTERVALS[sliderRightIndex][1];
+      entry.pop >= POPULATION_INTERVALS[sliderLeftIndex][1] &&
+      entry.pop <= POPULATION_INTERVALS[sliderRightIndex][1];
 
     return (
       isScope &&
