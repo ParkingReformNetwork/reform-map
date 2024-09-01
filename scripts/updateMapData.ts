@@ -9,6 +9,8 @@ import nodeFetch from "node-fetch";
 import NodeGeocoder from "node-geocoder";
 import Papa from "papaparse";
 
+import { escapePlaceId } from "./lib/data";
+
 type Entry = Record<string, any>;
 
 async function fetch(
@@ -36,19 +38,19 @@ async function readCityTable(): Promise<Entry[]> {
   const placeCleaned = data
     .filter((row) => row.City)
     .map((row) => {
-      let placeId = row["State/Province"]
+      const placeId = row["State/Province"]
         ? `${row.City}_${row["State/Province"]}`
         : row.City;
-      placeId = placeId.replace(/\s+/g, "");
+      const population =
+        typeof row.Population === "string"
+          ? Number(row.Population.replace(/,/g, ""))
+          : row.Population || 0;
       return {
         place: row.City,
         state: row["State/Province"],
         country: row.Country,
-        population:
-          typeof row.Population === "string"
-            ? Number(row.Population.replace(/,/g, ""))
-            : row.Population || 0,
-        citation_url: `https://parkingreform.org/mandates-map/city_detail/${placeId}.html`,
+        population,
+        citation_url: `https://parkingreform.org/mandates-map/city_detail/${escapePlaceId(placeId)}.html`,
       };
     });
   return placeCleaned;
@@ -89,31 +91,19 @@ async function readOldCsv(): Promise<Entry[]> {
     header: true,
     dynamicTyping: true,
   }).data as Entry[];
-
-  const mappedData = data.map((row) => ({
+  return data.map((row) => ({
     place: row.place,
     state: row.state,
     country: row.country,
     lat: row.lat,
     long: row.long,
   }));
-
-  // We use a map to deduplicate. Note that a Set would not work properly
-  // due to JavaScript's strict equality checks for objects.
-  return [
-    ...new Map(
-      mappedData.map((item) => [
-        `${item.place}_${item.state}_${item.country}`,
-        item,
-      ]),
-    ).values(),
-  ];
 }
 
 /**
  * For each row in baseRows, find and join its matching row in newRows.
  *
- * If there are no matching newRows, still keep the base row. Assumes
+ * If there are no matching newRows, still keep the base row. Validates
  * there is not more than one new row per base row.
  */
 export function leftJoin(baseRows: Entry[], newRows: Entry[]): Entry[] {
@@ -124,7 +114,9 @@ export function leftJoin(baseRows: Entry[], newRows: Entry[]): Entry[] {
         newRow.state === baseRow.state &&
         newRow.country === baseRow.country,
     );
-
+    if (matchingRows.length > 1) {
+      throw new Error(`>1 row matched for ${baseRow.place} ${baseRow.state}`);
+    }
     return matchingRows.length > 0
       ? { ...baseRow, ...matchingRows[0] }
       : baseRow;
