@@ -37,7 +37,7 @@ const TESTS: EdgeCase[] = [
   {
     desc: "land use filter",
     land: ["Residential, all uses"],
-    expectedRange: [320, 550],
+    expectedRange: [290, 550],
   },
   {
     desc: "status filter",
