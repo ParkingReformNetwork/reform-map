@@ -18,7 +18,6 @@ export type Citation = {
 
 export type ExtendedEntry = {
   reporter: string | null;
-  updated: string;
   requirements: string[];
   citations: Citation[];
 };
