@@ -47,12 +47,6 @@ export async function readCompleteData(): Promise<
     readCoreData(),
     readExtendedData(),
   ]);
-
-  if (Object.keys(coreData).length !== Object.keys(extendedData).length) {
-    // TODO: convert to error
-    console.warn("core.json and extended.json have unequal # of entries");
-  }
-
   return Object.fromEntries(
     Object.entries(coreData).map(([placeId, core]) => [
       placeId,
