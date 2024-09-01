@@ -1,29 +1,25 @@
 import fs from "fs/promises";
 
-import { DateTime } from "luxon";
-
 import { RawEntry, PlaceId } from "../../src/js/types";
 
 export type Attachment = {
-  url: string;
   fileName: string;
   isDoc: boolean;
   outputPath: string;
 };
 
 export type Citation = {
-  idx: number;
   description: string;
   type: string;
   url: string;
   notes: string;
-  lastUpdated: DateTime<true>;
   attachments: Attachment[];
 };
 
 export type ExtendedEntry = {
   reporter: string | null;
-  updated: string;
+  requirements: string[];
+  citations: Citation[];
 };
 
 export type CompleteEntry = RawEntry & ExtendedEntry;

@@ -10,7 +10,17 @@ import Papa from "papaparse";
 import Handlebars from "handlebars";
 import { DateTime } from "luxon";
 
-import { Attachment, Citation } from "./lib/data";
+import {
+  Attachment as AttachmentBase,
+  Citation as CitationBase,
+} from "./lib/data";
+
+type Attachment = AttachmentBase & { url: string };
+export type Citation = CitationBase & {
+  idx: number;
+  lastUpdated: DateTime<true>;
+  attachments: Attachment[];
+};
 
 type PlaceEntry = {
   summary: string;
@@ -20,8 +30,6 @@ type PlaceEntry = {
   scope: string;
   requirements: string;
   reporter: string;
-  reportLastUpdated: DateTime<true>;
-  cityLastUpdated: DateTime<true>;
   citations: Citation[];
 };
 
@@ -130,8 +138,6 @@ async function loadData(): Promise<Record<string, PlaceEntry>> {
       scope: row.Magnitude,
       requirements: row.Requirements,
       reporter: row.Reporter,
-      reportLastUpdated: parseDatetime(row["Report Last updated"]),
-      cityLastUpdated: parseDatetime(row["City Last Updated"]),
       citations: [citation],
     };
   });
@@ -215,14 +221,6 @@ async function saveExtendedDataFile(
   const prunedData = Object.fromEntries(
     Object.entries(data)
       .map(([placeId, entry]) => {
-        const lastUpdated = DateTime.max(
-          ...entry.citations.map((x) => x.lastUpdated),
-          entry.cityLastUpdated,
-          entry.reportLastUpdated,
-        )
-          .setZone("UTC")
-          .toFormat(TIME_FORMAT);
-
         const citations = entry.citations.map((citation) => ({
           description: citation.description,
           type: citation.type,
@@ -238,7 +236,6 @@ async function saveExtendedDataFile(
           placeId,
           {
             reporter: entry.reporter,
-            updated: lastUpdated,
             requirements: entry.requirements.split(", "),
             citations,
           },

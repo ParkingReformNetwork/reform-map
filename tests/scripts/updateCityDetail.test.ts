@@ -6,8 +6,9 @@ import {
   citationsUpdated,
   normalizeAttachments,
   parseDatetime,
+  Citation,
 } from "../../scripts/updateCityDetail";
-import { readCoreData, Citation } from "../../scripts/lib/data";
+import { readCoreData } from "../../scripts/lib/data";
 
 test.describe("citationsUpdated()", () => {
   test("returns false if every citation is older than globalLastUpdated", () => {
