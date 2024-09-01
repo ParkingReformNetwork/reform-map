@@ -1,19 +1,16 @@
 import { expect, test } from "@playwright/test";
-import { parseCitationLinks } from "../../scripts/brokenLinks";
+import { mapPageToCitationLinks } from "../../scripts/brokenLinks";
 
-test("parseCitationLinks correctly extracts some example pages", async () => {
+test("mapPageToCitationLinks correctly determines some example pages", async () => {
   // If the links get updated, then update the below tests.
-
-  const abilene = await parseCitationLinks("city_detail/Abilene_KS.html");
-  expect(abilene).toEqual([
+  const result = await mapPageToCitationLinks();
+  expect(result["Abilene_KS.html"]).toEqual([
     "http://abileneks.citycode.net/index.html#!artiOffStreParkLoadAndUnloRegu",
   ]);
-  const albion = await parseCitationLinks("city_detail/Albion_NE.html");
-  expect(albion).toEqual([
+  expect(result["Albion_NE.html"]).toEqual([
     "https://albionnebraska.wpengine.com/wp-content/uploads/2021/01/CHAPTER-9-ZONING-REGULATIONS.pdf",
   ]);
-  const petaluma = await parseCitationLinks("city_detail/Petaluma_CA.html");
-  expect(petaluma).toEqual([
+  expect(result["Petaluma_CA.html"]).toEqual([
     "https://petaluma.municipal.codes/SmartCode/6.10.030",
     "https://petaluma.municipal.codes/ZoningOrds/11.035",
   ]);

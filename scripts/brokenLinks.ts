@@ -2,39 +2,20 @@
 /* eslint-disable no-console */
 /* eslint-disable no-await-in-loop */
 
-import fs from "fs/promises";
-import path from "path";
-
 import fetch from "node-fetch";
-import jsdom from "jsdom";
 
-async function parseCitationLinks(filePath: string): Promise<string[]> {
-  const html = await fs.readFile(filePath, "utf8");
-  const dom = new jsdom.JSDOM(html);
-  return Array.from(
-    dom.window.document.querySelectorAll<HTMLAnchorElement>(
-      "dd.col-12.col-sm-8.col-lg-9 a",
-    ),
-  ).map((a: HTMLAnchorElement) => a.href);
-}
+import { readCompleteData } from "./lib/data";
 
-async function mapCityUrlsToCitationLinks(): Promise<Record<string, string[]>> {
-  const folderEntries = await fs.readdir("city_detail");
-  const fileNames = folderEntries.filter(
-    (entry) => entry !== "attachment_images" && entry.includes(".html"),
+export async function mapPageToCitationLinks(): Promise<
+  Record<string, string[]>
+> {
+  const data = await readCompleteData();
+  return Object.fromEntries(
+    Object.values(data).map((entry) => [
+      entry.url.split("/").pop(),
+      entry.citations.map((citation) => citation.url),
+    ]),
   );
-  const results = await Promise.all(
-    fileNames.map(async (fileName): Promise<[string, string[]]> => {
-      const filePath = path.join("city_detail", fileName);
-      const cityUrl = `https://parkingreform.org/mandates-map/city_detail/${fileName}`;
-      const citationLinks = await parseCitationLinks(filePath);
-      return [cityUrl, citationLinks];
-    }),
-  );
-  return results.reduce((acc: Record<string, string[]>, [cityUrl, links]) => {
-    acc[cityUrl] = links;
-    return acc;
-  }, {});
 }
 
 async function findDeadLinks(
@@ -48,6 +29,7 @@ async function findDeadLinks(
       }
       try {
         const response = await fetch(link, {
+          method: "HEAD",
           headers: { "User-Agent": "prn-broken-links-finder" },
         });
         if (response.status >= 300) {
@@ -65,14 +47,14 @@ async function findDeadLinks(
 }
 
 async function main(): Promise<void> {
-  const cityUrlsToCitationLinks = await mapCityUrlsToCitationLinks();
+  const pageToCitationLinks = await mapPageToCitationLinks();
 
   // We use a for loop to avoid making too many network calls -> rate limiting.
   const result: Record<string, Array<[string, number]>> = {};
-  for (const [cityUrl, links] of Object.entries(cityUrlsToCitationLinks)) {
+  for (const [page, links] of Object.entries(pageToCitationLinks)) {
     const deadLinks = await findDeadLinks(links);
     if (deadLinks) {
-      result[cityUrl] = deadLinks;
+      result[page] = deadLinks;
     }
   }
 
@@ -85,5 +67,3 @@ if (process.env.NODE_ENV !== "test") {
     process.exit(1);
   });
 }
-
-export { parseCitationLinks };
