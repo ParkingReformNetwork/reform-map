@@ -54,3 +54,10 @@ export async function readCompleteData(): Promise<
     ]),
   );
 }
+
+export async function saveCoreData(
+  data: Record<PlaceId, RawEntry>,
+): Promise<void> {
+  const json = JSON.stringify(data, null, 2);
+  await fs.writeFile("data/core.json", json);
+}

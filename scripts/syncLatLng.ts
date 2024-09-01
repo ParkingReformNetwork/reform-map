@@ -2,10 +2,8 @@
 /* eslint-disable no-console */
 /* eslint-disable @typescript-eslint/no-explicit-any */
 
-import fs from "fs/promises";
-
 import { parseCsv } from "./lib/csv";
-import { readCoreData } from "./lib/data";
+import { readCoreData, saveCoreData } from "./lib/data";
 import { RawEntry, PlaceId } from "../src/js/types";
 
 const GSHEET =
@@ -17,7 +15,7 @@ async function fetchUpdateCsv(): Promise<Array<any[]>> {
   return parseCsv(rawText).map((row) => Object.values(row));
 }
 
-/* Inspired by leftJoin from updateMapData.ts */
+/* Inspired by join() from updateMapData.ts */
 function updateLatLng(
   coreData: Record<PlaceId, RawEntry>,
   updateData: Array<any[]>,
@@ -44,18 +42,13 @@ function updateLatLng(
   );
 }
 
-async function writeResult(data: Record<PlaceId, RawEntry>): Promise<void> {
-  const json = JSON.stringify(data, null, 2);
-  await fs.writeFile("data/core.json", json);
-}
-
 async function main(): Promise<void> {
   const [updateData, coreData] = await Promise.all([
     fetchUpdateCsv(),
     readCoreData(),
   ]);
   const updatedData = updateLatLng(coreData, updateData);
-  await writeResult(updatedData);
+  await saveCoreData(updatedData);
 }
 
 if (process.env.NODE_ENV !== "test") {

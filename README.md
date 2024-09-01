@@ -88,7 +88,7 @@ You can trigger the GitHub Action to run early by clicking "Run workflow" at htt
 
 To instead manually update the data, first run `npm install`. Then, run either:
 
-- `npm run update-map-data`, or
+- `npm run sync-core-data`, or
 - `npm run sync-extended-data`.
 
 ### Update latitude and longitude
