@@ -9,10 +9,10 @@ export type Attachment = {
 };
 
 export type Citation = {
-  description: string;
-  type: string;
-  url: string;
-  notes: string;
+  description: string | null;
+  type: string | null;
+  url: string | null;
+  notes: string | null;
   attachments: Attachment[];
 };
 
