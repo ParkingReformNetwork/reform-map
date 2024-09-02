@@ -6,7 +6,7 @@ import fs from "fs/promises";
 import Papa from "papaparse";
 
 import { readCompleteData } from "./lib/data";
-import { escapePlaceId } from "../src/js/data";
+import { placeIdToUrl } from "../src/js/data";
 
 function assertExpectedNumEntries(jsonKeys: string[], csv: string): void {
   const numJson = jsonKeys.length;
@@ -31,7 +31,7 @@ async function main(): Promise<void> {
     population: entry.pop,
     lat: entry.coord[0],
     long: entry.coord[1],
-    url: `https://parkingreform.org/mandates-map/city_detail/${escapePlaceId(placeId)}.html`,
+    url: placeIdToUrl(placeId),
     reporter: entry.reporter,
     summary: entry.summary,
   }));
