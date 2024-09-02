@@ -24,10 +24,6 @@ export type ExtendedEntry = {
 
 export type CompleteEntry = RawEntry & ExtendedEntry;
 
-export function escapePlaceId(v: string): string {
-  return v.replace(/ /g, "").replace(",", "_");
-}
-
 export async function readCoreData(): Promise<Record<PlaceId, RawEntry>> {
   const raw = await fs.readFile("data/core.json", "utf8");
   return JSON.parse(raw);

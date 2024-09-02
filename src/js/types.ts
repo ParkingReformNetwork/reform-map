@@ -14,7 +14,6 @@ interface BaseEntry {
   land: string[];
   repeal: boolean;
   pop: number;
-  url: string;
   coord: [string, string];
 }
 
@@ -25,6 +24,8 @@ export type RawEntry = BaseEntry & {
 };
 
 export type PlaceEntry = BaseEntry & {
+  // URL for the dedicated place page.
+  url: string;
   // Full country name.
   country: string;
   date: DateTime<true> | null;

@@ -8,7 +8,7 @@ import NodeGeocoder from "node-geocoder";
 import Papa from "papaparse";
 import { capitalize } from "lodash-es";
 
-import { escapePlaceId, readCoreData, saveCoreData } from "./lib/data";
+import { readCoreData, saveCoreData } from "./lib/data";
 import { PlaceId, RawEntry } from "../src/js/types";
 
 type Row = Record<string, any>;
@@ -48,9 +48,6 @@ async function readCityTable(): Promise<Row[]> {
   const placeCleaned = data
     .filter((row) => row.City)
     .map((row) => {
-      const placeId = row["State/Province"]
-        ? `${row.City}_${row["State/Province"]}`
-        : row.City;
       const population =
         typeof row.Population === "string"
           ? Number(row.Population.replace(/,/g, ""))
@@ -60,7 +57,6 @@ async function readCityTable(): Promise<Row[]> {
         state: row["State/Province"] || null,
         country: row.Country,
         pop: population,
-        url: `https://parkingreform.org/mandates-map/city_detail/${escapePlaceId(placeId)}.html`,
       };
     });
   return placeCleaned;
