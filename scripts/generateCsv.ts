@@ -30,7 +30,7 @@ async function main(): Promise<void> {
     population: row.pop,
     lat: row.coord[0],
     long: row.coord[1],
-    url: row.url,
+    url: `https://parkingreform.org/mandates-map/city_detail/${row.page}.html`,
     reporter: row.reporter,
     summary: row.summary,
   }));

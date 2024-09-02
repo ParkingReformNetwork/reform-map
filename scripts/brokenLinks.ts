@@ -12,8 +12,10 @@ export async function mapPageToCitationLinks(): Promise<
   const data = await readCompleteData();
   return Object.fromEntries(
     Object.values(data).map((entry) => [
-      entry.url.split("/").pop(),
-      entry.citations.map((citation) => citation.url),
+      entry.page,
+      entry.citations
+        .map((citation) => citation.url)
+        .filter((url) => url !== null),
     ]),
   );
 }
@@ -23,10 +25,6 @@ async function findDeadLinks(
 ): Promise<Array<[string, number]>> {
   const results = await Promise.all(
     links.map(async (link): Promise<[string, number] | null> => {
-      // Don't fetch empty links, but still report them.
-      if (!link) {
-        return [link, 0];
-      }
       try {
         const response = await fetch(link, {
           method: "HEAD",

@@ -60,7 +60,7 @@ async function readCityTable(): Promise<Row[]> {
         state: row["State/Province"] || null,
         country: row.Country,
         pop: population,
-        url: `https://parkingreform.org/mandates-map/city_detail/${escapePlaceId(placeId)}.html`,
+        page: `${escapePlaceId(placeId)}`,
       };
     });
   return placeCleaned;

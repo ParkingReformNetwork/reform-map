@@ -30,10 +30,12 @@ export default async function readData(): Promise<Record<PlaceId, PlaceEntry>> {
       const date = entry.date
         ? DateTime.fromFormat(entry.date, DATE_REPR)
         : null;
+      const { page, ...rest } = entry;
       const updated = {
-        ...entry,
+        ...rest,
         country: countryMapping[entry.country] ?? entry.country,
         date: date && date.isValid ? date : null,
+        url: `https://parkingreform.org/mandates-map/city_detail/${page}.html`,
       };
       return [placeId, updated];
     }),

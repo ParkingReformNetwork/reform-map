@@ -29,7 +29,7 @@ test("generate html page", async ({}, testInfo) => {
       land: ["Commercial", "Other"],
       repeal: true,
       pop: 24104,
-      url: "https://parkingreform.org/mandates-map/city_detail/MyCity_NY.html",
+      page: "MyCity_NY",
       coord: ["14.23", "44.23"],
       date: "Mar 27, 2018",
       reporter: "Parking God",

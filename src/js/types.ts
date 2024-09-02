@@ -14,17 +14,19 @@ interface BaseEntry {
   land: string[];
   repeal: boolean;
   pop: number;
-  url: string;
   coord: [string, string];
 }
 
 export type RawEntry = BaseEntry & {
+  // The page name for the URL.
+  page: string;
   // Country abbreviation.
   country: string;
   date: string | null;
 };
 
 export type PlaceEntry = BaseEntry & {
+  url: string;
   // Full country name.
   country: string;
   date: DateTime<true> | null;

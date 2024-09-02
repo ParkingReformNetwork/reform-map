@@ -46,13 +46,10 @@ async function generatePage(
 
 async function assertEveryPlaceGenerated(data: CompleteEntry[]) {
   const htmlPages = await fs.readdir("city_detail/");
-  const validUrls = new Set(
-    htmlPages.map(
-      (fileName) =>
-        `https://parkingreform.org/mandates-map/city_detail/${fileName}`,
-    ),
-  );
-  const invalidPlaces = data.filter((entry) => !validUrls.has(entry.url));
+  const validPages = new Set(htmlPages);
+  const invalidPlaces = data
+    .filter((entry) => !validPages.has(`${entry.page}.html`))
+    .map((entry) => `${entry.place} ${entry.state} ${entry.country}`);
   if (invalidPlaces.length) {
     throw new Error(`Some places do not have HTML pages: ${invalidPlaces}`);
   }
