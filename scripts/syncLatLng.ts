@@ -35,7 +35,6 @@ function updateLatLng(
         {
           ...entry,
           coord: [update[3].toString(), update[4].toString()],
-          url: entry.url,
         },
       ];
     }),

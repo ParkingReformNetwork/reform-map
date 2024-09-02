@@ -140,8 +140,7 @@ function addCachedLatLng(
       .map((row) => {
         const placeId = row.state ? `${row.place}, ${row.state}` : row.place;
         const coord = coreData[placeId]?.coord ?? null;
-        const { url, ...rest } = row;
-        return [placeId, { ...rest, coord, url }];
+        return [placeId, { ...row, coord }];
       })
       .sort(),
   );
@@ -176,11 +175,9 @@ async function ensureRowLatLng(
       const lat = geocodeResults[0].latitude;
       const long = geocodeResults[0].longitude;
       if (!lat || !long) continue;
-      const { url, ...rest } = entry;
       return {
-        ...rest,
+        ...entry,
         coord: [lat.toString(), long.toString()],
-        url,
       };
     }
   }
