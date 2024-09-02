@@ -23,8 +23,8 @@ export type Citation = CitationBase & {
 };
 
 type PlaceEntry = {
-  requirements: string;
-  reporter: string;
+  requirements: string | null;
+  reporter: string | null;
   citations: Citation[];
 };
 
@@ -186,7 +186,7 @@ async function saveExtendedDataFile(
           description: citation.description,
           type: citation.type,
           url: citation.url,
-          notes: citation.notes,
+          notes: citation.notes ? citation.notes.toString() : citation.notes,
           attachments: citation.attachments.map((attachment) => ({
             fileName: attachment.fileName,
             isDoc: attachment.isDoc,
@@ -197,7 +197,7 @@ async function saveExtendedDataFile(
           placeId,
           {
             reporter: entry.reporter,
-            requirements: entry.requirements.split(", "),
+            requirements: entry.requirements?.split(", ") || [],
             citations,
           },
         ];
