@@ -1,9 +1,9 @@
 import { expect, test } from "@playwright/test";
-import { mapPageToCitationLinks } from "../../scripts/brokenLinks";
+import { mapPlaceToCitationLinks } from "../../scripts/brokenLinks";
 
 test("mapPageToCitationLinks correctly determines some example pages", async () => {
   // If the links get updated, then update the below tests.
-  const result = await mapPageToCitationLinks();
+  const result = await mapPlaceToCitationLinks();
   expect(result["Abilene_KS.html"]).toEqual([
     "http://abileneks.citycode.net/index.html#!artiOffStreParkLoadAndUnloRegu",
   ]);

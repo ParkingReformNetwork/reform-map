@@ -12,8 +12,8 @@ import { parseCsv } from "./lib/csv";
 import {
   Attachment as AttachmentBase,
   Citation as CitationBase,
-  escapePlaceId,
 } from "./lib/data";
+import { escapePlaceId } from "../src/js/data";
 
 type Attachment = AttachmentBase & { url: string };
 export type Citation = CitationBase & {

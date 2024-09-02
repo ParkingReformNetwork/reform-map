@@ -18,14 +18,13 @@ interface BaseEntry {
 }
 
 export type RawEntry = BaseEntry & {
-  // The page name for the URL.
-  page: string;
   // Country abbreviation.
   country: string;
   date: string | null;
 };
 
 export type PlaceEntry = BaseEntry & {
+  // URL for the dedicated place page.
   url: string;
   // Full country name.
   country: string;

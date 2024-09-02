@@ -6,6 +6,7 @@ import fs from "fs/promises";
 import Papa from "papaparse";
 
 import { readCompleteData } from "./lib/data";
+import { escapePlaceId } from "../src/js/data";
 
 function assertExpectedNumEntries(jsonKeys: string[], csv: string): void {
   const numJson = jsonKeys.length;
@@ -17,22 +18,22 @@ function assertExpectedNumEntries(jsonKeys: string[], csv: string): void {
 
 async function main(): Promise<void> {
   const completeData = await readCompleteData();
-  const data = Object.values(completeData).map((row) => ({
-    place: row.place,
-    state: row.state,
-    country: row.country,
-    all_minimums_repealed: row.repeal ? "TRUE" : "FALSE",
-    status: row.status,
-    policy_change: row.policy,
-    scope: row.scope,
-    land_uses: row.land,
-    reform_date: row.date,
-    population: row.pop,
-    lat: row.coord[0],
-    long: row.coord[1],
-    url: `https://parkingreform.org/mandates-map/city_detail/${row.page}.html`,
-    reporter: row.reporter,
-    summary: row.summary,
+  const data = Object.entries(completeData).map(([placeId, entry]) => ({
+    place: entry.place,
+    state: entry.state,
+    country: entry.country,
+    all_minimums_repealed: entry.repeal ? "TRUE" : "FALSE",
+    status: entry.status,
+    policy_change: entry.policy,
+    scope: entry.scope,
+    land_uses: entry.land,
+    reform_date: entry.date,
+    population: entry.pop,
+    lat: entry.coord[0],
+    long: entry.coord[1],
+    url: `https://parkingreform.org/mandates-map/city_detail/${escapePlaceId(placeId)}.html`,
+    reporter: entry.reporter,
+    summary: entry.summary,
   }));
   const csv = Papa.unparse(Object.values(data));
   assertExpectedNumEntries(Object.keys(completeData), csv);

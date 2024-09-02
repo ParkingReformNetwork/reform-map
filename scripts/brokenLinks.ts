@@ -6,13 +6,13 @@ import fetch from "node-fetch";
 
 import { readCompleteData } from "./lib/data";
 
-export async function mapPageToCitationLinks(): Promise<
+export async function mapPlaceToCitationLinks(): Promise<
   Record<string, string[]>
 > {
   const data = await readCompleteData();
   return Object.fromEntries(
-    Object.values(data).map((entry) => [
-      entry.page,
+    Object.entries(data).map(([placeId, entry]) => [
+      placeId,
       entry.citations
         .map((citation) => citation.url)
         .filter((url) => url !== null),
@@ -45,14 +45,14 @@ async function findDeadLinks(
 }
 
 async function main(): Promise<void> {
-  const pageToCitationLinks = await mapPageToCitationLinks();
+  const placeToCitationLinks = await mapPlaceToCitationLinks();
 
   // We use a for loop to avoid making too many network calls -> rate limiting.
   const result: Record<string, Array<[string, number]>> = {};
-  for (const [page, links] of Object.entries(pageToCitationLinks)) {
+  for (const [place, links] of Object.entries(placeToCitationLinks)) {
     const deadLinks = await findDeadLinks(links);
     if (deadLinks) {
-      result[page] = deadLinks;
+      result[place] = deadLinks;
     }
   }
 

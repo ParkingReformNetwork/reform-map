@@ -29,7 +29,6 @@ test("generate html page", async ({}, testInfo) => {
       land: ["Commercial", "Other"],
       repeal: true,
       pop: 24104,
-      page: "MyCity_NY",
       coord: ["14.23", "44.23"],
       date: "Mar 27, 2018",
       reporter: "Parking God",
