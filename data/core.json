@@ -7817,6 +7817,21 @@
     "url": "https://parkingreform.org/mandates-map/city_detail/Chico_CA.html",
     "coord": ["39.7284945", "-121.8374777"]
   },
+  "Chillicothe, IL": {
+    "place": "Chillicothe",
+    "state": "IL",
+    "country": "US",
+    "summary": "The CB-1 central business district is exempt from parking mandates.",
+    "status": "Implemented",
+    "policy": ["Remove parking minimums"],
+    "scope": ["City center / business district"],
+    "land": ["All uses"],
+    "date": null,
+    "repeal": false,
+    "pop": 6128,
+    "url": "https://parkingreform.org/mandates-map/city_detail/Chillicothe_IL.html",
+    "coord": ["40.9161637", "-89.4884384"]
+  },
   "Chillicothe, OH": {
     "place": "Chillicothe",
     "state": "OH",
@@ -13907,6 +13922,21 @@
     "pop": 34620,
     "url": "https://parkingreform.org/mandates-map/city_detail/Fairborn_OH.html",
     "coord": ["39.8208998", "-84.0193858"]
+  },
+  "Fairbury, IL": {
+    "place": "Fairbury",
+    "state": "IL",
+    "country": "US",
+    "summary": "Uses located in the Commercial District, bounded by Walnut and Maple Streets, are exempt from parking mandates.",
+    "status": "Implemented",
+    "policy": ["Remove parking minimums"],
+    "scope": ["City center / business district"],
+    "land": ["All uses"],
+    "date": null,
+    "repeal": false,
+    "pop": 3633,
+    "url": "https://parkingreform.org/mandates-map/city_detail/Fairbury_IL.html",
+    "coord": ["40.7472566", "-88.5147789"]
   },
   "Fairbury, NE": {
     "place": "Fairbury",
@@ -32669,6 +32699,21 @@
     "url": "https://parkingreform.org/mandates-map/city_detail/Paterson_NJ.html",
     "coord": ["40.9167654", "-74.171811"]
   },
+  "Paw Paw, IL": {
+    "place": "Paw Paw",
+    "state": "IL",
+    "country": "US",
+    "summary": "Retail and office uses in the C-1 Central Business District are exempt from parking mandates.",
+    "status": "Implemented",
+    "policy": ["Remove parking minimums"],
+    "scope": ["City center / business district"],
+    "land": ["Commercial"],
+    "date": null,
+    "repeal": false,
+    "pop": 830,
+    "url": "https://parkingreform.org/mandates-map/city_detail/PawPaw_IL.html",
+    "coord": ["41.688919", "-88.9811987"]
+  },
   "Paw Paw, MI": {
     "place": "Paw Paw",
     "state": "MI",
@@ -32961,6 +33006,21 @@
     "pop": 890,
     "url": "https://parkingreform.org/mandates-map/city_detail/Pentwater_MI.html",
     "coord": ["43.7817341", "-86.4331053"]
+  },
+  "Peoria County, IL": {
+    "place": "Peoria County",
+    "state": "IL",
+    "country": "US",
+    "summary": "When parking regulations would result in a requirement of not more than three (3) parking spaces for a nonresidential use in a RCC Rural Community Conservation District, no off-street parking spaces need be provided.",
+    "status": "Implemented",
+    "policy": ["Remove parking minimums"],
+    "scope": ["City center / business district"],
+    "land": ["Commercial", "Other"],
+    "date": null,
+    "repeal": false,
+    "pop": 181830,
+    "url": "https://parkingreform.org/mandates-map/city_detail/PeoriaCounty_IL.html",
+    "coord": ["40.8021278", "-89.7713762"]
   },
   "Peoria, AZ": {
     "place": "Peoria",
@@ -35946,9 +36006,9 @@
     "place": "Rock Island",
     "state": "IL",
     "country": "US",
-    "summary": "The B-2 Central Business District is exempt from minimum parking regulations.",
+    "summary": "The B-2 Central Business District is exempt from minimum parking regulations. Parking maximums are set at 120% of the minimums.",
     "status": "Implemented",
-    "policy": ["Remove parking minimums"],
+    "policy": ["Remove parking minimums", "Add parking maximums"],
     "scope": ["City center / business district"],
     "land": ["All uses"],
     "date": null,
