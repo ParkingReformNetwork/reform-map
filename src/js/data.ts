@@ -6,8 +6,10 @@ export const DATE_REPR = "LLL d, yyyy";
 
 const countryMapping: Partial<Record<string, string>> = {
   AU: "Australia",
+  AT: "Austria",
   BR: "Brazil",
   CA: "Canada",
+  CH: "Switzerland",
   CN: "China",
   DE: "Germany",
   FR: "France",
@@ -18,6 +20,7 @@ const countryMapping: Partial<Record<string, string>> = {
   SE: "Sweden",
   UK: "United Kingdom",
   US: "United States",
+  ZA: "South Africa",
 };
 
 export default async function readData(): Promise<Record<PlaceId, PlaceEntry>> {
