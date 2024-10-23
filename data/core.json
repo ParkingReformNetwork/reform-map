@@ -741,11 +741,11 @@
     "place": "Alpha",
     "state": "IL",
     "country": "US",
-    "summary": "Single-family dwellings are exempt from minimum parking requirements.",
+    "summary": "Single-family dwellings are exempt from minimum parking requirements. The D Public and Semi-Public, the E Light Industrial, and the F Agricultural districts are also exempt.",
     "status": "Implemented",
     "policy": ["Remove parking minimums"],
     "scope": ["Citywide"],
-    "land": ["Residential, low-density"],
+    "land": ["Residential, low-density", "Industrial", "Other"],
     "date": null,
     "repeal": false,
     "pop": 675,
@@ -9090,7 +9090,7 @@
     "repeal": false,
     "pop": 10222,
     "url": "https://parkingreform.org/mandates-map/city_detail/Columbia_PA.html",
-    "coord": ["41.0389186", "-76.4191791"]
+    "coord": ["40.031916", "-76.502584"]
   },
   "Columbia, SC": {
     "place": "Columbia",
@@ -15630,6 +15630,21 @@
     "url": "https://parkingreform.org/mandates-map/city_detail/Fredonia_WI.html",
     "coord": ["43.4705105", "-87.9470232"]
   },
+  "Freeland, PA": {
+    "place": "Freeland",
+    "state": "PA",
+    "country": "US",
+    "summary": "The DBOD Downtown Business Overlay District is exempt from parking mandates.",
+    "status": "Implemented",
+    "policy": ["Remove parking minimums"],
+    "scope": ["City center / business district"],
+    "land": ["All uses"],
+    "date": null,
+    "repeal": false,
+    "pop": 3833,
+    "url": "https://parkingreform.org/mandates-map/city_detail/Freeland_PA.html",
+    "coord": ["41.0167508", "-75.8971431"]
+  },
   "Freeport, IL": {
     "place": "Freeport",
     "state": "IL",
@@ -22121,6 +22136,21 @@
     "url": "https://parkingreform.org/mandates-map/city_detail/Kiowa_KS.html",
     "coord": ["37.0172493", "-98.4853539"]
   },
+  "Kirkland, IL": {
+    "place": "Kirkland",
+    "state": "IL",
+    "country": "US",
+    "summary": "Retail stores and banks may count on-street parking within one block towards parking requirements.",
+    "status": "Implemented",
+    "policy": ["Reduce parking minimums"],
+    "scope": ["Citywide"],
+    "land": ["Commercial"],
+    "date": null,
+    "repeal": false,
+    "pop": 1650,
+    "url": "https://parkingreform.org/mandates-map/city_detail/Kirkland_IL.html",
+    "coord": ["42.0925258", "-88.8512063"]
+  },
   "Kirksville, MO": {
     "place": "Kirksville",
     "state": "MO",
@@ -23669,7 +23699,7 @@
     "repeal": false,
     "pop": 26814,
     "url": "https://parkingreform.org/mandates-map/city_detail/Lebanon_PA.html",
-    "coord": ["40.375713", "-76.4626118"]
+    "coord": ["40.339178", "-76.426219"]
   },
   "Leduc, AB": {
     "place": "Leduc",
@@ -25854,6 +25884,21 @@
     "pop": 1001,
     "url": "https://parkingreform.org/mandates-map/city_detail/Mantua_OH.html",
     "coord": ["41.283944", "-81.223991"]
+  },
+  "Maple Park, IL": {
+    "place": "Maple Park",
+    "state": "IL",
+    "country": "US",
+    "summary": "Properties in the B-1 Central Business District on Main Street between County Line Road and Liberty Street are exempt from parking mandates.",
+    "status": "Implemented",
+    "policy": ["Remove parking minimums"],
+    "scope": ["Main street / special"],
+    "land": ["All uses"],
+    "date": null,
+    "repeal": false,
+    "pop": 1433,
+    "url": "https://parkingreform.org/mandates-map/city_detail/MaplePark_IL.html",
+    "coord": ["41.9075282", "-88.5992494"]
   },
   "Mapleton, IA": {
     "place": "Mapleton",
@@ -28291,7 +28336,7 @@
     "repeal": false,
     "pop": 1084225,
     "url": "https://parkingreform.org/mandates-map/city_detail/Montana_MT.html",
-    "coord": ["44.3413533", "-91.6648773"]
+    "coord": ["46.892258", "-109.522173"]
   },
   "Monte Vista, CO": {
     "place": "Monte Vista",
@@ -39685,11 +39730,11 @@
     "place": "South Pekin",
     "state": "IL",
     "country": "US",
-    "summary": "The B-1a Business and Commercial District is exempt from minimum parking requirements.",
+    "summary": "The B-1a Business and Commercial District and the R-1 Single-Family Dwelling District are exempt from minimum parking requirements.",
     "status": "Implemented",
     "policy": ["Remove parking minimums"],
     "scope": ["City center / business district"],
-    "land": ["All uses"],
+    "land": ["All uses", "Residential, low-density"],
     "date": null,
     "repeal": false,
     "pop": 996,
@@ -40983,9 +41028,13 @@
     "place": "Sterling",
     "state": "IL",
     "country": "US",
-    "summary": "Parking is not required for non-residential uses in the DB, downtown business district.",
+    "summary": "Parking is not required for non-residential uses in the DB, downtown business district. Parking requirements for nonresidential uses may be reduced through the provision of bike parking. Parking maximums are set at 110% of the minimums.",
     "status": "Implemented",
-    "policy": ["Remove parking minimums"],
+    "policy": [
+      "Remove parking minimums",
+      "Reduce parking minimums",
+      "Add parking maximums"
+    ],
     "scope": ["City center / business district"],
     "land": ["Commercial"],
     "date": null,
@@ -43463,7 +43512,7 @@
     "repeal": false,
     "pop": 105995,
     "url": "https://parkingreform.org/mandates-map/city_detail/Tyler_TX.html",
-    "coord": ["30.7563939", "-94.3984613"]
+    "coord": ["32.351691", "-95.300661"]
   },
   "Tyrone, PA": {
     "place": "Tyrone",
@@ -44811,6 +44860,21 @@
     "pop": 13761,
     "url": "https://parkingreform.org/mandates-map/city_detail/WashingtonCounty_IL.html",
     "coord": ["38.3662806", "-89.4201902"]
+  },
+  "Washington County, OR": {
+    "place": "Washington County",
+    "state": "OR",
+    "country": "US",
+    "summary": "Parking mandates were removed from the area within the Urban Growth Boundary on October 15, 2024.",
+    "status": "Implemented",
+    "policy": ["Remove parking minimums"],
+    "scope": ["Main street / special"],
+    "land": ["All uses"],
+    "date": "Oct 15, 2024",
+    "repeal": false,
+    "pop": 600372,
+    "url": "https://parkingreform.org/mandates-map/city_detail/WashingtonCounty_OR.html",
+    "coord": ["45.5601883", "-123.0587907"]
   },
   "Washington Court House, OH": {
     "place": "Washington Court House",
@@ -46684,6 +46748,21 @@
     "pop": 171730,
     "url": "https://parkingreform.org/mandates-map/city_detail/WinnebagoCounty_WI.html",
     "coord": ["44.0697014", "-88.6516527"]
+  },
+  "Winnebago, IL": {
+    "place": "Winnebago",
+    "state": "IL",
+    "country": "US",
+    "summary": "Parking requirements are reduced where parking is shared.",
+    "status": "Implemented",
+    "policy": ["Reduce parking minimums"],
+    "scope": ["Citywide"],
+    "land": ["Commercial", "Other", "Residential, all uses"],
+    "date": null,
+    "repeal": false,
+    "pop": 2940,
+    "url": "https://parkingreform.org/mandates-map/city_detail/Winnebago_IL.html",
+    "coord": ["42.3255276", "-89.1496574"]
   },
   "Winneconne, WI": {
     "place": "Winneconne",
