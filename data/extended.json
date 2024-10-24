@@ -2038,7 +2038,7 @@
       {
         "description": "Arkansas City Zoning Code",
         "type": "City Code",
-        "url": "https://www.arkcity.org/sites/default/files/fileattachments/neighborhood_services/page/3334/article_22.pdf",
+        "url": "https://www.arkcity.org/sites/default/files/fileattachments/neighborhood_services/page/3334/article_22_11-7-23.pdf",
         "notes": "ARTICLE 22 OFF-STREET PARKING, LOADING AND UNLOADING REGULATIONS\nSECTION 22-2 GENERAL PROVISIONS\n22-201. Applicability. \nPage 1",
         "attachments": [
           {
@@ -22698,6 +22698,25 @@
       }
     ]
   },
+  "Freeland, PA": {
+    "reporter": "Samuel Deetz",
+    "requirements": ["By Right"],
+    "citations": [
+      {
+        "description": "Freeland Zoning Code",
+        "type": "City Code",
+        "url": "https://freelandborough.org/wp-content/uploads/2024/03/20160204-Freeland-Zoning-Ordinance.pdf",
+        "notes": "SECTION 801.3.\nPage 116 of pdf, page 110 of original document",
+        "attachments": [
+          {
+            "fileName": "Zoning%20Freeland.png",
+            "isDoc": false,
+            "outputPath": "attachment_images/Freeland_PA_1_1.png"
+          }
+        ]
+      }
+    ]
+  },
   "Freeport, IL": {
     "reporter": "Samuel Deetz",
     "requirements": [],
@@ -31911,6 +31930,25 @@
       }
     ]
   },
+  "Kirkland, IL": {
+    "reporter": "Samuel Deetz",
+    "requirements": ["Other"],
+    "citations": [
+      {
+        "description": "Kirkland Zoning Code",
+        "type": "City Code",
+        "url": "https://codelibrary.amlegal.com/codes/kirkland/latest/kirkland_il/0-0-0-16054",
+        "notes": "§ 154.130 SCHEDULE OF PARKING REQUIREMENTS.",
+        "attachments": [
+          {
+            "fileName": "Zoning%20Kirkland.png",
+            "isDoc": false,
+            "outputPath": "attachment_images/Kirkland_IL_1_1.png"
+          }
+        ]
+      }
+    ]
+  },
   "Kirksville, MO": {
     "reporter": "Samuel Deetz",
     "requirements": ["By Right"],
@@ -37187,6 +37225,25 @@
             "fileName": "Zoning%20Mantua1.png",
             "isDoc": false,
             "outputPath": "attachment_images/Mantua_OH_1_2.png"
+          }
+        ]
+      }
+    ]
+  },
+  "Maple Park, IL": {
+    "reporter": "Samuel Deetz",
+    "requirements": ["By Right"],
+    "citations": [
+      {
+        "description": "Maple Park Zoning Code",
+        "type": "City Code",
+        "url": "https://library.municode.com/il/maple_park/codes/code_of_ordinances?nodeId=TIT11ZORE_CH7BUDI_S11-7-1CEBUDI",
+        "notes": "Sec. 11-7-1. - B-1 Central Business District.\nG.",
+        "attachments": [
+          {
+            "fileName": "Zoning%20Maple%20Park.png",
+            "isDoc": false,
+            "outputPath": "attachment_images/MaplePark_IL_1_1.png"
           }
         ]
       }
@@ -58958,18 +59015,28 @@
   },
   "Sterling, IL": {
     "reporter": "Samuel Deetz",
-    "requirements": ["By Right"],
+    "requirements": ["By Right", "Bike Parking"],
     "citations": [
       {
         "description": "Sterling City Code",
         "type": "City Code",
         "url": "https://library.municode.com/il/sterling/codes/code_of_ordinances?nodeId=CICO_CH102ZO_ARTIIGERE_S102-227OREPAST",
-        "notes": "Sec. 102-227.A.(1)(c)",
+        "notes": "Sec. 102-227.A.(1)(c)\nSec. 102-227.B.(2)(o)\nSec. 102-227.C.",
         "attachments": [
           {
             "fileName": "Sterling.jpg",
             "isDoc": false,
             "outputPath": "attachment_images/Sterling_IL_1_1.jpg"
+          },
+          {
+            "fileName": "Zoning%20Sterling.png",
+            "isDoc": false,
+            "outputPath": "attachment_images/Sterling_IL_1_2.png"
+          },
+          {
+            "fileName": "Zoning%20Sterling1.png",
+            "isDoc": false,
+            "outputPath": "attachment_images/Sterling_IL_1_3.png"
           }
         ]
       }
@@ -64483,6 +64550,30 @@
       }
     ]
   },
+  "Washington County, OR": {
+    "reporter": "Samuel Deetz",
+    "requirements": ["By Right"],
+    "citations": [
+      {
+        "description": "Washington County Oct 15, 2024 Agenda",
+        "type": "Other",
+        "url": "https://washingtoncounty.civicweb.net/document/299729/Consider%20Proposed%20Ordinance%20No.%20903%20%e2%80%93%20An%20Ordina.pdf?handle=8B054FA5B3B4489B8EA50F03B426E314",
+        "notes": "413-6.1\nPages 8, 84",
+        "attachments": [
+          {
+            "fileName": "Zoning%20Washington%20County.png",
+            "isDoc": false,
+            "outputPath": "attachment_images/WashingtonCounty_OR_1_1.png"
+          },
+          {
+            "fileName": "Zoning%20Washington%20County1.png",
+            "isDoc": false,
+            "outputPath": "attachment_images/WashingtonCounty_OR_1_2.png"
+          }
+        ]
+      }
+    ]
+  },
   "Washington Court House, OH": {
     "reporter": "Samuel Deetz",
     "requirements": ["By Right"],
@@ -67103,6 +67194,25 @@
             "fileName": "Zoning%20Winnebago%20County.png",
             "isDoc": false,
             "outputPath": "attachment_images/WinnebagoCounty_WI_1_1.png"
+          }
+        ]
+      }
+    ]
+  },
+  "Winnebago, IL": {
+    "reporter": "Samuel Deetz",
+    "requirements": ["Other"],
+    "citations": [
+      {
+        "description": "Winnebago Unified Development Code",
+        "type": "City Code",
+        "url": "https://www.villageofwinnebago.com/media/5496",
+        "notes": "12.06 Joint Parking Facilities\nPage 245",
+        "attachments": [
+          {
+            "fileName": "Zoning%20Winnebago.png",
+            "isDoc": false,
+            "outputPath": "attachment_images/Winnebago_IL_1_1.png"
           }
         ]
       }
