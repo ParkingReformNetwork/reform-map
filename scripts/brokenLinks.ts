@@ -15,7 +15,7 @@ export async function mapPlaceToCitationLinks(): Promise<
       placeId,
       entry.citations
         .map((citation) => citation.url)
-        .filter((url) => url !== null),
+        .filter((url): url is string => url !== null),
     ]),
   );
 }
