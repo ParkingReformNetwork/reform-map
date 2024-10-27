@@ -247,6 +247,20 @@
     "pop": 197597,
     "coord": ["41.083064", "-81.518485"]
   },
+  "Akron, PA": {
+    "place": "Akron",
+    "state": "PA",
+    "country": "US",
+    "summary": "Parking requirements may be reduced through the provision of motorcycle parking.",
+    "status": "Implemented",
+    "policy": ["Reduce parking minimums"],
+    "scope": ["Citywide"],
+    "land": ["All uses"],
+    "date": null,
+    "repeal": false,
+    "pop": 4169,
+    "coord": ["40.1567616", "-76.2021742"]
+  },
   "Alameda County, CA": {
     "place": "Alameda County",
     "state": "CA",
@@ -432,6 +446,20 @@
     "repeal": false,
     "pop": 560513,
     "coord": ["35.0841034", "-106.650985"]
+  },
+  "Alburtis, PA": {
+    "place": "Alburtis",
+    "state": "PA",
+    "country": "US",
+    "summary": "Uses in the Commercial District, except for residential and lodging uses, may count on-street parking towards parking requirements.",
+    "status": "Implemented",
+    "policy": ["Reduce parking minimums"],
+    "scope": ["City center / business district"],
+    "land": ["Commercial"],
+    "date": null,
+    "repeal": false,
+    "pop": 2596,
+    "coord": ["40.5114787", "-75.6036993"]
   },
   "Aledo, IL": {
     "place": "Aledo",
@@ -665,11 +693,11 @@
     "place": "Alpha",
     "state": "IL",
     "country": "US",
-    "summary": "Single-family dwellings are exempt from minimum parking requirements.",
+    "summary": "Single-family dwellings are exempt from minimum parking requirements. The D Public and Semi-Public, the E Light Industrial, and the F Agricultural districts are also exempt.",
     "status": "Implemented",
     "policy": ["Remove parking minimums"],
     "scope": ["Citywide"],
-    "land": ["Residential, low-density"],
+    "land": ["Residential, low-density", "Industrial", "Other"],
     "date": null,
     "repeal": false,
     "pop": 675,
@@ -4491,6 +4519,20 @@
     "pop": 148654,
     "coord": ["41.1670412", "-73.2048348"]
   },
+  "Bridgeport, PA": {
+    "place": "Bridgeport",
+    "state": "PA",
+    "country": "US",
+    "summary": "Within the NC Neighborhood Commercial District on 4th Street, nonresidential uses in existing buildings are exempt from parking mandates. A fee in lieu of required parking may be provided for commercial uses in the district along 4th Street or DeKalb St.",
+    "status": "Implemented",
+    "policy": ["Reduce parking minimums"],
+    "scope": ["Main street / special"],
+    "land": ["Commercial", "Other"],
+    "date": null,
+    "repeal": false,
+    "pop": 5015,
+    "coord": ["40.1043042", "-75.3429522"]
+  },
   "Bridgman, MI": {
     "place": "Bridgman",
     "state": "MI",
@@ -5781,6 +5823,20 @@
     "pop": 39540,
     "coord": ["37.3034933", "-89.5230357"]
   },
+  "Cape Town, WC": {
+    "place": "Cape Town",
+    "state": "WC",
+    "country": "ZA",
+    "summary": "Parking requirements may be reduced through the provision of motorcycle parking or bike parking. Main dwelling homes in the PT2 areas are exempt from parking mandates.",
+    "status": "Implemented",
+    "policy": ["Reduce parking minimums", "Remove parking minimums"],
+    "scope": ["Main street / special"],
+    "land": ["Residential, all uses"],
+    "date": null,
+    "repeal": false,
+    "pop": 4772846,
+    "coord": ["-33.9224221", "18.4263523"]
+  },
   "Carbondale, CO": {
     "place": "Carbondale",
     "state": "CO",
@@ -6324,6 +6380,20 @@
     "repeal": false,
     "pop": 8249,
     "coord": ["40.3647917", "-80.0222753"]
+  },
+  "Catasauqua, PA": {
+    "place": "Catasauqua",
+    "state": "PA",
+    "country": "US",
+    "summary": "Within the W Waterfront and WOD Waterfront Overlay District, on-street parking may be counted towards parking minimums.",
+    "status": "Implemented",
+    "policy": ["Reduce parking minimums"],
+    "scope": ["Main street / special"],
+    "land": ["All uses"],
+    "date": null,
+    "repeal": false,
+    "pop": 6518,
+    "coord": ["40.6533565", "-75.4744827"]
   },
   "Catawissa, PA": {
     "place": "Catawissa",
@@ -7093,6 +7163,20 @@
     "pop": 5467,
     "coord": ["42.3180163", "-84.020224"]
   },
+  "Cheltenham Township, PA": {
+    "place": "Cheltenham Township",
+    "state": "PA",
+    "country": "US",
+    "summary": "Small business and office uses in the CDEP Commercial Enhancement Districts are exempt from parking mandates. Parking maximums are set at 120% of the minimums citywide.",
+    "status": "Implemented",
+    "policy": ["Add parking maximums", "Remove parking minimums"],
+    "scope": ["City center / business district"],
+    "land": ["Commercial"],
+    "date": null,
+    "repeal": false,
+    "pop": 37452,
+    "coord": ["40.07795585", "-75.13853756577605"]
+  },
   "Cherokee, IA": {
     "place": "Cherokee",
     "state": "IA",
@@ -7302,6 +7386,20 @@
     "repeal": false,
     "pop": 94529,
     "coord": ["39.7284945", "-121.8374777"]
+  },
+  "Chillicothe, IL": {
+    "place": "Chillicothe",
+    "state": "IL",
+    "country": "US",
+    "summary": "The CB-1 central business district is exempt from parking mandates.",
+    "status": "Implemented",
+    "policy": ["Remove parking minimums"],
+    "scope": ["City center / business district"],
+    "land": ["All uses"],
+    "date": null,
+    "repeal": false,
+    "pop": 6128,
+    "coord": ["40.9161637", "-89.4884384"]
   },
   "Chillicothe, OH": {
     "place": "Chillicothe",
@@ -8171,6 +8269,20 @@
     "pop": 117911,
     "coord": ["30.5955289", "-96.3071042"]
   },
+  "Collegeville, PA": {
+    "place": "Collegeville",
+    "state": "PA",
+    "country": "US",
+    "summary": "Nonresidential uses citywide may count public off-street parking towards parking requirements and all uses in the MSC Main Street Commercial District within 250 feet of a public parking lot are exempt from parking mandates.",
+    "status": "Implemented",
+    "policy": ["Remove parking minimums", "Reduce parking minimums"],
+    "scope": ["City center / business district"],
+    "land": ["All uses"],
+    "date": null,
+    "repeal": false,
+    "pop": 5043,
+    "coord": ["40.1856597", "-75.451571"]
+  },
   "Collierville, TN": {
     "place": "Collierville",
     "state": "TN",
@@ -8408,6 +8520,20 @@
     "repeal": false,
     "pop": 126254,
     "coord": ["38.951883", "-92.3337366"]
+  },
+  "Columbia, PA": {
+    "place": "Columbia",
+    "state": "PA",
+    "country": "US",
+    "summary": "Within the DC Downtown Commercial District, nonresidential uses in existing buildings are exempt from parking mandates. Residential uses and new buildings in the district may pay a fee in lieu of required parking.",
+    "status": "Implemented",
+    "policy": ["Reduce parking minimums"],
+    "scope": ["City center / business district"],
+    "land": ["Commercial", "Other", "Residential, all uses"],
+    "date": null,
+    "repeal": false,
+    "pop": 10222,
+    "coord": ["40.031916", "-76.502584"]
   },
   "Columbia, SC": {
     "place": "Columbia",
@@ -8760,6 +8886,20 @@
     "repeal": false,
     "pop": 758,
     "coord": ["43.7021922", "-91.0131863"]
+  },
+  "Coopersburg, PA": {
+    "place": "Coopersburg",
+    "state": "PA",
+    "country": "US",
+    "summary": "Parking requirements may be reduced through the provision of motorcycle parking.",
+    "status": "Implemented",
+    "policy": ["Reduce parking minimums"],
+    "scope": ["Citywide"],
+    "land": ["All uses"],
+    "date": null,
+    "repeal": false,
+    "pop": 2447,
+    "coord": ["40.51146", "-75.3903376"]
   },
   "Cooperstown, ND": {
     "place": "Cooperstown",
@@ -9598,6 +9738,20 @@
     "pop": 1901,
     "coord": ["41.6844045", "-93.9622388"]
   },
+  "Dallas, PA": {
+    "place": "Dallas",
+    "state": "PA",
+    "country": "US",
+    "summary": "The Downtown Commercial Subarea is exempt from parking mandates.",
+    "status": "Implemented",
+    "policy": ["Remove parking minimums"],
+    "scope": ["City center / business district"],
+    "land": ["All uses"],
+    "date": null,
+    "repeal": false,
+    "pop": 2692,
+    "coord": ["41.33617", "-75.9632636"]
+  },
   "Dallas, TX": {
     "place": "Dallas",
     "state": "TX",
@@ -10288,6 +10442,20 @@
     "pop": 8505,
     "coord": ["42.6330703", "-88.6437138"]
   },
+  "Delaware Water Gap, PA": {
+    "place": "Delaware Water Gap",
+    "state": "PA",
+    "country": "US",
+    "summary": "The VC-2 Village Center Business District is exempt from parking mandates. Parking maximums are set at 100% of the minimums citywide.",
+    "status": "Implemented",
+    "policy": ["Remove parking minimums", "Add parking maximums"],
+    "scope": ["City center / business district"],
+    "land": ["All uses"],
+    "date": null,
+    "repeal": false,
+    "pop": 675,
+    "coord": ["40.9677508", "-75.1199241"]
+  },
   "Delaware, OH": {
     "place": "Delaware",
     "state": "OH",
@@ -10477,6 +10645,20 @@
     "repeal": false,
     "pop": 715522,
     "coord": ["39.7392364", "-104.984862"]
+  },
+  "Denver, PA": {
+    "place": "Denver",
+    "state": "PA",
+    "country": "US",
+    "summary": "Nonresidential uses in the Business District from the railroad crossing west to the intersection of Main Street and Fourth Street are exempt from parking mandates.",
+    "status": "Implemented",
+    "policy": ["Remove parking minimums"],
+    "scope": ["Main street / special"],
+    "land": ["Commercial", "Other"],
+    "date": null,
+    "repeal": false,
+    "pop": 3794,
+    "coord": ["40.2331483", "-76.1371684"]
   },
   "Derby, KS": {
     "place": "Derby",
@@ -11427,6 +11609,20 @@
     "pop": 11371,
     "coord": ["42.9412024", "-85.6097309"]
   },
+  "East Greenville, PA": {
+    "place": "East Greenville",
+    "state": "PA",
+    "country": "US",
+    "summary": "Nonresidential uses in an existing building along Main Street are exempt from parking requirements. Nonresidential uses citywide may count on-street parking towards parking requirements and when in an existing building, may discount the first 1000 square feet. Parking maximums are set at 125% of the minimums.",
+    "status": "Implemented",
+    "policy": ["Add parking maximums", "Reduce parking minimums"],
+    "scope": ["Main street / special", "Citywide"],
+    "land": ["Commercial", "Other"],
+    "date": null,
+    "repeal": false,
+    "pop": 3166,
+    "coord": ["40.4064882", "-75.5018479"]
+  },
   "East Greenwich, RI": {
     "place": "East Greenwich",
     "state": "RI",
@@ -11598,6 +11794,20 @@
     "repeal": false,
     "pop": 18469,
     "coord": ["38.6133731", "-90.14629"]
+  },
+  "East Stroudsburg, PA": {
+    "place": "East Stroudsburg",
+    "state": "PA",
+    "country": "US",
+    "summary": "Commercial uses in the Central Business District (C-1A) are exempt from parking mandates. Parking maximums apply to single-family dwellings.",
+    "status": "Implemented",
+    "policy": ["Remove parking minimums", "Add parking maximums"],
+    "scope": ["City center / business district"],
+    "land": ["Commercial"],
+    "date": null,
+    "repeal": false,
+    "pop": 9847,
+    "coord": ["40.9995386", "-75.1812913"]
   },
   "East Tawas, MI": {
     "place": "East Tawas",
@@ -12093,6 +12303,20 @@
     "pop": 31394,
     "coord": ["37.693952", "-85.8591285"]
   },
+  "Elizabethtown, PA": {
+    "place": "Elizabethtown",
+    "state": "PA",
+    "country": "US",
+    "summary": "Nonresidential uses in the CBD Central Business District are exempt from parking mandates.",
+    "status": "Implemented",
+    "policy": ["Remove parking minimums"],
+    "scope": ["City center / business district"],
+    "land": ["Other", "Commercial"],
+    "date": null,
+    "repeal": false,
+    "pop": 11639,
+    "coord": ["40.153364", "-76.6042521"]
+  },
   "Elk Grove, CA": {
     "place": "Elk Grove",
     "state": "CA",
@@ -12531,6 +12755,20 @@
     "pop": 843,
     "coord": ["46.7310714", "-93.9580296"]
   },
+  "Emmaus, PA": {
+    "place": "Emmaus",
+    "state": "PA",
+    "country": "US",
+    "summary": "Within the B-C Downtown District, nonresidential uses under 4,000 square feet are exempt from parking mandates. Within the B-C or R-HO districts, a fee in lieu of parking may be provided.",
+    "status": "Implemented",
+    "policy": ["Reduce parking minimums", "Remove parking minimums"],
+    "scope": ["City center / business district"],
+    "land": ["Commercial", "Other"],
+    "date": null,
+    "repeal": false,
+    "pop": 11652,
+    "coord": ["40.5395421", "-75.4968502"]
+  },
   "Emmitsburg, MD": {
     "place": "Emmitsburg",
     "state": "MD",
@@ -12618,6 +12856,20 @@
     "repeal": false,
     "pop": 28711,
     "coord": ["31.3151708", "-85.8552161"]
+  },
+  "Ephrata, PA": {
+    "place": "Ephrata",
+    "state": "PA",
+    "country": "US",
+    "summary": "Uses within the CBD Central Business District, except for residential or hotel uses, are exempt from parking mandates. Parking requirements may be reduced through the provision of motorcycle parking.",
+    "status": "Implemented",
+    "policy": ["Remove parking minimums", "Reduce parking minimums"],
+    "scope": ["City center / business district"],
+    "land": ["Commercial", "Other"],
+    "date": null,
+    "repeal": false,
+    "pop": 13818,
+    "coord": ["40.1799111", "-76.1789242"]
   },
   "Epworth, IA": {
     "place": "Epworth",
@@ -12993,6 +13245,20 @@
     "repeal": false,
     "pop": 34620,
     "coord": ["39.8208998", "-84.0193858"]
+  },
+  "Fairbury, IL": {
+    "place": "Fairbury",
+    "state": "IL",
+    "country": "US",
+    "summary": "Uses located in the Commercial District, bounded by Walnut and Maple Streets, are exempt from parking mandates.",
+    "status": "Implemented",
+    "policy": ["Remove parking minimums"],
+    "scope": ["City center / business district"],
+    "land": ["All uses"],
+    "date": null,
+    "repeal": false,
+    "pop": 3633,
+    "coord": ["40.7472566", "-88.5147789"]
   },
   "Fairbury, NE": {
     "place": "Fairbury",
@@ -14420,6 +14686,20 @@
     "repeal": false,
     "pop": 2280,
     "coord": ["43.4705105", "-87.9470232"]
+  },
+  "Freeland, PA": {
+    "place": "Freeland",
+    "state": "PA",
+    "country": "US",
+    "summary": "The DBOD Downtown Business Overlay District is exempt from parking mandates.",
+    "status": "Implemented",
+    "policy": ["Remove parking minimums"],
+    "scope": ["City center / business district"],
+    "land": ["All uses"],
+    "date": null,
+    "repeal": false,
+    "pop": 3833,
+    "coord": ["41.0167508", "-75.8971431"]
   },
   "Freeport, IL": {
     "place": "Freeport",
@@ -16561,6 +16841,20 @@
     "pop": 12786,
     "coord": ["40.1023909", "-84.6332986"]
   },
+  "Greenville, PA": {
+    "place": "Greenville",
+    "state": "PA",
+    "country": "US",
+    "summary": "Within the Mixed-Use Overlay District, parking requirements may be reduced through on-street parking and bike parking.",
+    "status": "Implemented",
+    "policy": ["Reduce parking minimums"],
+    "scope": ["Main street / special"],
+    "land": ["All uses"],
+    "date": null,
+    "repeal": false,
+    "pop": 5541,
+    "coord": ["41.4042616", "-80.3910015"]
+  },
   "Greenville, SC": {
     "place": "Greenville",
     "state": "SC",
@@ -17497,6 +17791,20 @@
     "pop": 25152,
     "coord": ["40.5861322", "-98.3898883"]
   },
+  "Hatfield, PA": {
+    "place": "Hatfield",
+    "state": "PA",
+    "country": "US",
+    "summary": "Within the Core Commercial District, a fee in lieu of required parking may be provided.",
+    "status": "Implemented",
+    "policy": ["Reduce parking minimums"],
+    "scope": ["City center / business district"],
+    "land": ["All uses"],
+    "date": null,
+    "repeal": false,
+    "pop": 3496,
+    "coord": ["40.2796371", "-75.2995777"]
+  },
   "Hattiesburg, MS": {
     "place": "Hattiesburg",
     "state": "MS",
@@ -17650,6 +17958,20 @@
     "repeal": false,
     "pop": 1481,
     "coord": ["34.7813665", "-91.5789815"]
+  },
+  "Hazleton, PA": {
+    "place": "Hazleton",
+    "state": "PA",
+    "country": "US",
+    "summary": "The Downtown Overlay District is exempt from parking mandates. Parking maximums apply to all uses except single-family homes.",
+    "status": "Implemented",
+    "policy": ["Remove parking minimums", "Add parking maximums"],
+    "scope": ["City center / business district"],
+    "land": ["All uses"],
+    "date": null,
+    "repeal": false,
+    "pop": 29963,
+    "coord": ["40.9646867", "-75.9852789"]
   },
   "Healdsburg, CA": {
     "place": "Healdsburg",
@@ -17818,6 +18140,20 @@
     "repeal": false,
     "pop": 2185,
     "coord": ["38.7042119", "-91.4373845"]
+  },
+  "Hermitage, PA": {
+    "place": "Hermitage",
+    "state": "PA",
+    "country": "US",
+    "summary": "Parking maximums are set at 110% of the minimums.",
+    "status": "Implemented",
+    "policy": ["Add parking maximums"],
+    "scope": ["Citywide"],
+    "land": ["All uses"],
+    "date": null,
+    "repeal": false,
+    "pop": 16230,
+    "coord": ["41.2333897", "-80.44868"]
   },
   "Hermosa, SD": {
     "place": "Hermosa",
@@ -19683,6 +20019,20 @@
     "pop": 8289,
     "coord": ["39.1200471", "-90.3284479"]
   },
+  "Jessup, PA": {
+    "place": "Jessup",
+    "state": "PA",
+    "country": "US",
+    "summary": "Parking requirements may be reduced through the provision of motorcycle parking.",
+    "status": "Implemented",
+    "policy": ["Reduce parking minimums"],
+    "scope": ["Citywide"],
+    "land": ["All uses"],
+    "date": null,
+    "repeal": false,
+    "pop": 4532,
+    "coord": ["41.4686924", "-75.5621309"]
+  },
   "Jim Thorpe, PA": {
     "place": "Jim Thorpe",
     "state": "PA",
@@ -19696,6 +20046,20 @@
     "repeal": false,
     "pop": 4507,
     "coord": ["40.8701902", "-75.7192387169002"]
+  },
+  "Johannesburg, GP": {
+    "place": "Johannesburg",
+    "state": "GP",
+    "country": "ZA",
+    "summary": "Parking Zone A (the inner city) is exempt from parking mandates. Parking requirements are reduced in Parking Zone B which encompasses areas in proximity to transit.",
+    "status": "Implemented",
+    "policy": ["Reduce parking minimums", "Remove parking minimums"],
+    "scope": ["City center / business district"],
+    "land": ["All uses"],
+    "date": null,
+    "repeal": false,
+    "pop": 4803262,
+    "coord": ["-26.205", "28.049722"]
   },
   "Johnson City, TN": {
     "place": "Johnson City",
@@ -19985,6 +20349,20 @@
     "pop": 2132,
     "coord": ["44.731332", "-85.177927"]
   },
+  "Kane, PA": {
+    "place": "Kane",
+    "state": "PA",
+    "country": "US",
+    "summary": "The Central Business District (C-B) is exempt from parking mandates.",
+    "status": "Implemented",
+    "policy": ["Remove parking minimums"],
+    "scope": ["City center / business district"],
+    "land": ["All uses"],
+    "date": null,
+    "repeal": false,
+    "pop": 3612,
+    "coord": ["41.6628394", "-78.8111427"]
+  },
   "Kankakee County, IL": {
     "place": "Kankakee County",
     "state": "IL",
@@ -20096,6 +20474,20 @@
     "repeal": false,
     "pop": 2415,
     "coord": ["41.7924606", "-110.537711"]
+  },
+  "Kempten, BY": {
+    "place": "Kempten",
+    "state": "BY",
+    "country": "DE",
+    "summary": "A fee in lieu of required parking may be provided citywide.",
+    "status": "Implemented",
+    "policy": ["Reduce parking minimums"],
+    "scope": ["Citywide"],
+    "land": ["All uses"],
+    "date": null,
+    "repeal": false,
+    "pop": 70713,
+    "coord": ["47.7267063", "10.3168835"]
   },
   "Kenilworth, IL": {
     "place": "Kenilworth",
@@ -20431,6 +20823,20 @@
     "pop": 136685,
     "coord": ["44.230687", "-76.481323"]
   },
+  "Kingston, PA": {
+    "place": "Kingston",
+    "state": "PA",
+    "country": "US",
+    "summary": "The C-2 Community Commercial District is exempt from parking mandates.",
+    "status": "Implemented",
+    "policy": ["Remove parking minimums"],
+    "scope": ["City center / business district"],
+    "land": ["All uses"],
+    "date": null,
+    "repeal": false,
+    "pop": 13349,
+    "coord": ["41.2620137", "-75.897197"]
+  },
   "Kiowa, KS": {
     "place": "Kiowa",
     "state": "KS",
@@ -20444,6 +20850,20 @@
     "repeal": false,
     "pop": 902,
     "coord": ["37.0172493", "-98.4853539"]
+  },
+  "Kirkland, IL": {
+    "place": "Kirkland",
+    "state": "IL",
+    "country": "US",
+    "summary": "Retail stores and banks may count on-street parking within one block towards parking requirements.",
+    "status": "Implemented",
+    "policy": ["Reduce parking minimums"],
+    "scope": ["Citywide"],
+    "land": ["Commercial"],
+    "date": null,
+    "repeal": false,
+    "pop": 1650,
+    "coord": ["42.0925258", "-88.8512063"]
   },
   "Kirksville, MO": {
     "place": "Kirksville",
@@ -20500,6 +20920,20 @@
     "repeal": false,
     "pop": 242368,
     "coord": ["43.451291", "-80.4927815"]
+  },
+  "Klagenfurt, Kärnten": {
+    "place": "Klagenfurt",
+    "state": "Kärnten",
+    "country": "AT",
+    "summary": "Multi-family residential parking minimums vary based on distance to the city center. Parking requirements may be reduced through the provision of an E-Carsharing space.",
+    "status": "Implemented",
+    "policy": ["Reduce parking minimums"],
+    "scope": ["City center / business district", "Citywide"],
+    "land": ["Residential, multi-family", "All uses"],
+    "date": null,
+    "repeal": false,
+    "pop": 101403,
+    "coord": ["46.623943", "14.3075976"]
   },
   "Klamath Falls, OR": {
     "place": "Klamath Falls",
@@ -21866,6 +22300,20 @@
     "pop": 20841,
     "coord": ["39.4353373", "-84.2029922"]
   },
+  "Lebanon, PA": {
+    "place": "Lebanon",
+    "state": "PA",
+    "country": "US",
+    "summary": "There are no parking mandates within the CBD Central Business District except for three of more dwelling units or a hotel. Parking requirements may be reduced through the provision of motorcycle parking.",
+    "status": "Implemented",
+    "policy": ["Reduce parking minimums", "Remove parking minimums"],
+    "scope": ["City center / business district"],
+    "land": ["Commercial", "Other", "Residential, all uses"],
+    "date": null,
+    "repeal": false,
+    "pop": 26814,
+    "coord": ["40.339178", "-76.426219"]
+  },
   "Leduc, AB": {
     "place": "Leduc",
     "state": "AB",
@@ -22445,6 +22893,20 @@
     "repeal": false,
     "pop": 6624,
     "coord": ["45.1271847", "-94.5280474"]
+  },
+  "Lititz, PA": {
+    "place": "Lititz",
+    "state": "PA",
+    "country": "US",
+    "summary": "Within the Downtown Overlay District, parking requirements are reduced by 70 to 90 percent. Citywide, on-street parking may count towards parking requirements. ",
+    "status": "Implemented",
+    "policy": ["Reduce parking minimums"],
+    "scope": ["City center / business district", "Citywide"],
+    "land": ["All uses"],
+    "date": null,
+    "repeal": false,
+    "pop": 9370,
+    "coord": ["40.1571324", "-76.307162"]
   },
   "Little Falls, MN": {
     "place": "Little Falls",
@@ -23360,6 +23822,20 @@
     "pop": 157346,
     "coord": ["32.8406946", "-83.6324022"]
   },
+  "Macungie, PA": {
+    "place": "Macungie",
+    "state": "PA",
+    "country": "US",
+    "summary": "A fee in lieu of parking may be provided in the TC Town Center District.",
+    "status": "Implemented",
+    "policy": ["Reduce parking minimums"],
+    "scope": ["City center / business district"],
+    "land": ["All uses"],
+    "date": null,
+    "repeal": false,
+    "pop": 3257,
+    "coord": ["40.5159304", "-75.5551858"]
+  },
   "Madeira, OH": {
     "place": "Madeira",
     "state": "OH",
@@ -23696,6 +24172,20 @@
     "pop": 43977,
     "coord": ["40.0896562", "-76.2950901541993"]
   },
+  "Manheim, PA": {
+    "place": "Manheim",
+    "state": "PA",
+    "country": "US",
+    "summary": "No off-street parking spaces are required for nonresidential uses within the CBD Central Business District.",
+    "status": "Implemented",
+    "policy": ["Remove parking minimums"],
+    "scope": ["City center / business district"],
+    "land": ["Other", "Commercial"],
+    "date": null,
+    "repeal": false,
+    "pop": 5064,
+    "coord": ["40.1637359", "-76.3952429"]
+  },
   "Manistee, MI": {
     "place": "Manistee",
     "state": "MI",
@@ -23864,6 +24354,20 @@
     "pop": 1001,
     "coord": ["41.283944", "-81.223991"]
   },
+  "Maple Park, IL": {
+    "place": "Maple Park",
+    "state": "IL",
+    "country": "US",
+    "summary": "Properties in the B-1 Central Business District on Main Street between County Line Road and Liberty Street are exempt from parking mandates.",
+    "status": "Implemented",
+    "policy": ["Remove parking minimums"],
+    "scope": ["Main street / special"],
+    "land": ["All uses"],
+    "date": null,
+    "repeal": false,
+    "pop": 1433,
+    "coord": ["41.9075282", "-88.5992494"]
+  },
   "Mapleton, IA": {
     "place": "Mapleton",
     "state": "IA",
@@ -23989,6 +24493,20 @@
     "repeal": false,
     "pop": 2435,
     "coord": ["41.8001041", "-92.069382"]
+  },
+  "Marietta, PA": {
+    "place": "Marietta",
+    "state": "PA",
+    "country": "US",
+    "summary": "Parking requirements may be reduced for nonresidential uses through the provision of bike parking, or for adaptive reuse projects in the Trail/Rail/River and Market Zoning Districts.",
+    "status": "Implemented",
+    "policy": ["Reduce parking minimums"],
+    "scope": ["Citywide", "City center / business district"],
+    "land": ["Commercial", "Industrial", "Other"],
+    "date": "Jul 10, 2018",
+    "repeal": false,
+    "pop": 2633,
+    "coord": ["40.0573456", "-76.55311563959538"]
   },
   "Marine City, MI": {
     "place": "Marine City",
@@ -25016,6 +25534,20 @@
     "pop": 47450,
     "coord": ["41.6664781", "-81.3399769"]
   },
+  "Mercer, PA": {
+    "place": "Mercer",
+    "state": "PA",
+    "country": "US",
+    "summary": "Within the C-1 Commercial Town Center District, a change of use in an existing building is exempt from parking mandates. Residential parking requirements in the district are reduced when part of a mixed-use development.",
+    "status": "Implemented",
+    "policy": ["Reduce parking minimums"],
+    "scope": ["City center / business district"],
+    "land": ["All uses", "Commercial", "Residential, all uses"],
+    "date": null,
+    "repeal": false,
+    "pop": 1982,
+    "coord": ["41.3334542", "-80.3014412"]
+  },
   "Mercersburg, PA": {
     "place": "Mercersburg",
     "state": "PA",
@@ -25523,6 +26055,20 @@
     "repeal": false,
     "pop": 2541,
     "coord": ["40.5417153", "-76.9614003"]
+  },
+  "Millersville, PA": {
+    "place": "Millersville",
+    "state": "PA",
+    "country": "US",
+    "summary": "Within the TND Traditional Neighborhood Development District and the Downtown District, on-street parking may count towards parking requirements.",
+    "status": "Implemented",
+    "policy": ["Reduce parking minimums"],
+    "scope": ["Main street / special", "City center / business district"],
+    "land": ["Commercial", "Other"],
+    "date": null,
+    "repeal": false,
+    "pop": 7629,
+    "coord": ["39.997998", "-76.3545372"]
   },
   "Milltown, WI": {
     "place": "Milltown",
@@ -26098,6 +26644,20 @@
     "pop": 2417,
     "coord": ["43.416677", "-86.357013"]
   },
+  "Montana, MT": {
+    "place": "Montana",
+    "state": "MT",
+    "country": "US",
+    "summary": "The Montana Governor's Housing Task Force recommends introducing legislation prohibiting municipalities within a metropolitan planning organization from enforcing minimum parking requirements.",
+    "status": "Proposed",
+    "policy": ["Remove parking minimums"],
+    "scope": ["Regional"],
+    "land": ["All uses"],
+    "date": null,
+    "repeal": false,
+    "pop": 1084225,
+    "coord": ["46.892258", "-109.522173"]
+  },
   "Monte Vista, CO": {
     "place": "Monte Vista",
     "state": "CO",
@@ -26251,6 +26811,20 @@
     "repeal": false,
     "pop": 1191,
     "coord": ["42.7456573", "-89.5945254"]
+  },
+  "Montoursville, PA": {
+    "place": "Montoursville",
+    "state": "PA",
+    "country": "US",
+    "summary": "Nonresidential uses in the Downtown Commercial District are exempt from parking mandates.",
+    "status": "Implemented",
+    "policy": ["Remove parking minimums"],
+    "scope": ["City center / business district"],
+    "land": ["Commercial", "Other"],
+    "date": null,
+    "repeal": false,
+    "pop": 4745,
+    "coord": ["41.2495431", "-76.9267035"]
   },
   "Montpelier, VT": {
     "place": "Montpelier",
@@ -26560,6 +27134,20 @@
     "pop": 335,
     "coord": ["34.8640437", "-80.0011724"]
   },
+  "Moscow, PA": {
+    "place": "Moscow",
+    "state": "PA",
+    "country": "US",
+    "summary": "Permitted commercial uses in the C-1 district within the Central Business District Overlay Zone are exempt from parking mandates.",
+    "status": "Implemented",
+    "policy": ["Remove parking minimums"],
+    "scope": ["City center / business district"],
+    "land": ["Commercial"],
+    "date": null,
+    "repeal": false,
+    "pop": 2039,
+    "coord": ["41.3367497", "-75.5185191"]
+  },
   "Mosinee, WI": {
     "place": "Mosinee",
     "state": "WI",
@@ -26685,6 +27273,20 @@
     "repeal": true,
     "pop": 21688,
     "coord": ["43.597646", "-84.7668495"]
+  },
+  "Mount Pocono, PA": {
+    "place": "Mount Pocono",
+    "state": "PA",
+    "country": "US",
+    "summary": "Nonresidential uses in the C-1 Commercial Downtown District are exempt from parking mandates.",
+    "status": "Implemented",
+    "policy": ["Remove parking minimums"],
+    "scope": ["City center / business district"],
+    "land": ["All uses"],
+    "date": null,
+    "repeal": false,
+    "pop": 3083,
+    "coord": ["41.1220987", "-75.3646997"]
   },
   "Mount Prospect, IL": {
     "place": "Mount Prospect",
@@ -26871,6 +27473,20 @@
     "repeal": false,
     "pop": 17703,
     "coord": ["35.2976298", "-81.0161686"]
+  },
+  "Mt. Joy, PA": {
+    "place": "Mt. Joy",
+    "state": "PA",
+    "country": "US",
+    "summary": "Within the CBD Downtown Commercial District, nonresidential uses in existing buildings are exempt from parking mandates. A fee in lieu of parking may be provided for other uses in the district.",
+    "status": "Implemented",
+    "policy": ["Reduce parking minimums"],
+    "scope": ["City center / business district"],
+    "land": ["Commercial", "Other", "All uses"],
+    "date": null,
+    "repeal": false,
+    "pop": 8346,
+    "coord": ["40.1098561", "-76.5033406"]
   },
   "Mt. Olive, MS": {
     "place": "Mt. Olive",
@@ -27249,6 +27865,20 @@
     "repeal": false,
     "pop": 36878,
     "coord": ["35.74945", "-95.371061"]
+  },
+  "Myerstown, PA": {
+    "place": "Myerstown",
+    "state": "PA",
+    "country": "US",
+    "summary": "In the TC Zoning District, off-street parking is not required, except for three or more new dwelling units or a hotel or rooming house. Parking requirements may be reduced through the provision of motorcycle parking.",
+    "status": "Implemented",
+    "policy": ["Reduce parking minimums", "Remove parking minimums"],
+    "scope": ["City center / business district"],
+    "land": ["Commercial", "Other", "Residential, all uses"],
+    "date": null,
+    "repeal": false,
+    "pop": 3103,
+    "coord": ["40.3724045", "-76.30675872915134"]
   },
   "München, BY": {
     "place": "München",
@@ -27734,6 +28364,20 @@
     "pop": 17396,
     "coord": ["39.9289351", "-85.3702477"]
   },
+  "New Castle, PA": {
+    "place": "New Castle",
+    "state": "PA",
+    "country": "US",
+    "summary": "The C-2 Central Business District is exempt from parking mandates.",
+    "status": "Implemented",
+    "policy": ["Remove parking minimums"],
+    "scope": ["City center / business district"],
+    "land": ["All uses"],
+    "date": null,
+    "repeal": false,
+    "pop": 21926,
+    "coord": ["40.9999202", "-80.3471856"]
+  },
   "New Cumberland, PA": {
     "place": "New Cumberland",
     "state": "PA",
@@ -28040,6 +28684,20 @@
     "pop": 14120,
     "coord": ["44.3140261", "-94.4614177"]
   },
+  "New Wilmington, PA": {
+    "place": "New Wilmington",
+    "state": "PA",
+    "country": "US",
+    "summary": "Nonresidential uses in the C-Commercial District are exempt from parking mandates.",
+    "status": "Implemented",
+    "policy": ["Remove parking minimums"],
+    "scope": ["City center / business district"],
+    "land": ["Commercial", "Other"],
+    "date": null,
+    "repeal": false,
+    "pop": 2097,
+    "coord": ["41.1222812", "-80.3328428"]
+  },
   "New York City, NY": {
     "place": "New York City",
     "state": "NY",
@@ -28156,13 +28814,13 @@
     "place": "Newport News",
     "state": "VA",
     "country": "US",
-    "summary": "No minimum parking is required for residential uses in the C3 Regional Business District.",
+    "summary": "Newport News repealed all parking mandates on October 22, 2024. Previously, no minimum parking was required for residential uses in the C3 Regional Business District.",
     "status": "Implemented",
     "policy": ["Remove parking minimums"],
-    "scope": ["City center / business district"],
-    "land": ["Residential, all uses"],
-    "date": null,
-    "repeal": false,
+    "scope": ["Citywide"],
+    "land": ["All uses"],
+    "date": "Oct 22, 2024",
+    "repeal": true,
     "pop": 186247,
     "coord": ["36.9775016", "-76.42977"]
   },
@@ -28393,6 +29051,20 @@
     "repeal": false,
     "pop": 122837,
     "coord": ["35.2225717", "-97.4394816"]
+  },
+  "Norristown, PA": {
+    "place": "Norristown",
+    "state": "PA",
+    "country": "US",
+    "summary": "The TC Town Center and TCII Town Center II districts are exempt from parking mandates. Parking requirements may be reduced for mixed-use developments and for uses located near transit.",
+    "status": "Implemented",
+    "policy": ["Reduce parking minimums", "Remove parking minimums"],
+    "scope": ["City center / business district"],
+    "land": ["All uses"],
+    "date": null,
+    "repeal": false,
+    "pop": 35748,
+    "coord": ["40.1148787", "-75.3433705"]
   },
   "North Baltimore, OH": {
     "place": "North Baltimore",
@@ -29392,6 +30064,20 @@
     "pop": 52882,
     "coord": ["47.0451022", "-122.8950075"]
   },
+  "Olyphant, PA": {
+    "place": "Olyphant",
+    "state": "PA",
+    "country": "US",
+    "summary": "Permitted uses in the C-2 Central Business District are exempt from parking mandates.",
+    "status": "Implemented",
+    "policy": ["Remove parking minimums"],
+    "scope": ["City center / business district"],
+    "land": ["Commercial", "Other", "Residential, all uses"],
+    "date": null,
+    "repeal": false,
+    "pop": 5395,
+    "coord": ["41.4688301", "-75.602387"]
+  },
   "Omaha, NE": {
     "place": "Omaha",
     "state": "NE",
@@ -30144,6 +30830,20 @@
     "pop": 5593,
     "coord": ["40.8014826", "-75.6101868"]
   },
+  "Palmyra, PA": {
+    "place": "Palmyra",
+    "state": "PA",
+    "country": "US",
+    "summary": "Parking maximums are set at 120% of the minimums for commercial and industrial uses.",
+    "status": "Implemented",
+    "policy": ["Add parking maximums"],
+    "scope": ["Citywide"],
+    "land": ["Commercial", "Industrial"],
+    "date": null,
+    "repeal": false,
+    "pop": 7807,
+    "coord": ["40.3088578", "-76.5932369"]
+  },
   "Palmyra, WI": {
     "place": "Palmyra",
     "state": "WI",
@@ -30524,6 +31224,20 @@
     "pop": 159732,
     "coord": ["40.9167654", "-74.171811"]
   },
+  "Paw Paw, IL": {
+    "place": "Paw Paw",
+    "state": "IL",
+    "country": "US",
+    "summary": "Retail and office uses in the C-1 Central Business District are exempt from parking mandates.",
+    "status": "Implemented",
+    "policy": ["Remove parking minimums"],
+    "scope": ["City center / business district"],
+    "land": ["Commercial"],
+    "date": null,
+    "repeal": false,
+    "pop": 830,
+    "coord": ["41.688919", "-88.9811987"]
+  },
   "Paw Paw, MI": {
     "place": "Paw Paw",
     "state": "MI",
@@ -30797,6 +31511,20 @@
     "repeal": false,
     "pop": 890,
     "coord": ["43.7817341", "-86.4331053"]
+  },
+  "Peoria County, IL": {
+    "place": "Peoria County",
+    "state": "IL",
+    "country": "US",
+    "summary": "When parking regulations would result in a requirement of not more than three (3) parking spaces for a nonresidential use in a RCC Rural Community Conservation District, no off-street parking spaces need be provided.",
+    "status": "Implemented",
+    "policy": ["Remove parking minimums"],
+    "scope": ["City center / business district"],
+    "land": ["Commercial", "Other"],
+    "date": null,
+    "repeal": false,
+    "pop": 181830,
+    "coord": ["40.8021278", "-89.7713762"]
   },
   "Peoria, AZ": {
     "place": "Peoria",
@@ -31344,7 +32072,7 @@
     "place": "Pittsburgh",
     "state": "PA",
     "country": "US",
-    "summary": "In designated \"Parking Exempt Areas\", minimum parking requirements have been reduced by percentages ranging from 50% - 100% specified in the Pittsburgh zoning code. \n\nLand uses within these boundaries may not exceed the minimum parking requirements otherwise stated in the zoning code.  ",
+    "summary": "In designated \"Parking Exempt Areas\", minimum parking requirements have been reduced by percentages ranging from 50% - 100% specified in the Pittsburgh zoning code. Land uses within these boundaries may not exceed the minimum parking requirements otherwise stated in the zoning code. As of September 2024, the city is proposing a repeal of parking mandates to boost housing affordability.",
     "status": "Implemented",
     "policy": ["Reduce parking minimums", "Add parking maximums"],
     "scope": ["City center / business district"],
@@ -31395,6 +32123,20 @@
     "repeal": false,
     "pop": 43927,
     "coord": ["42.451302", "-73.260018"]
+  },
+  "Pittston, PA": {
+    "place": "Pittston",
+    "state": "PA",
+    "country": "US",
+    "summary": "The  Central Business District is exempt from parking mandates.",
+    "status": "Implemented",
+    "policy": ["Remove parking minimums"],
+    "scope": ["City center / business district"],
+    "land": ["All uses"],
+    "date": null,
+    "repeal": false,
+    "pop": 7591,
+    "coord": ["41.3259134", "-75.7893604"]
   },
   "Plain City, OH": {
     "place": "Plain City",
@@ -31557,6 +32299,20 @@
     "repeal": false,
     "pop": 1676,
     "coord": ["41.3867741", "-93.2694768"]
+  },
+  "Plymouth Township, PA": {
+    "place": "Plymouth Township",
+    "state": "PA",
+    "country": "US",
+    "summary": "Residential uses in the MUV Mixed-Use Village Residential District may count on-street parking towards parking requirements.",
+    "status": "Implemented",
+    "policy": ["Reduce parking minimums"],
+    "scope": ["Main street / special"],
+    "land": ["Residential, all uses"],
+    "date": null,
+    "repeal": false,
+    "pop": 18256,
+    "coord": ["40.109412750000004", "-75.29834666183419"]
   },
   "Plymouth, MI": {
     "place": "Plymouth",
@@ -31768,6 +32524,20 @@
     "pop": 5049,
     "coord": ["42.3683522", "-88.822047"]
   },
+  "Port Allegany, PA": {
+    "place": "Port Allegany",
+    "state": "PA",
+    "country": "US",
+    "summary": "Parking requirements are reduced by 25% for mixed-use developments.",
+    "status": "Implemented",
+    "policy": ["Reduce parking minimums"],
+    "scope": ["Citywide"],
+    "land": ["Commercial", "Other", "Residential, all uses"],
+    "date": null,
+    "repeal": false,
+    "pop": 2116,
+    "coord": ["41.810898", "-78.2797352"]
+  },
   "Port Allen, LA": {
     "place": "Port Allen",
     "state": "LA",
@@ -31884,7 +32654,7 @@
     "place": "Port Townsend",
     "state": "WA",
     "country": "US",
-    "summary": "All uses located on floors above the ground floor within the C-I, C-II, C-II(H), C-I/MU and C-II/MU zoning districts are exempt from off-street parking and loading requirements. In addition, maximum parking requirements exist citywide. On March 4, 2024, the city adopted an interim zoning ordinance of 180 days over which parking requirements are instead recommendations while the city studies a permanent ordinance.",
+    "summary": "Maximum parking requirements exist citywide. Previously, all uses located on floors above the ground floor within the C-I, C-II, C-II(H), C-I/MU and C-II/MU zoning districts were exempt from parking mandates. On March 4, 2024, the city adopted an interim zoning ordinance over which parking requirements are instead recommendations while the city studies a permanent ordinance. This interim ordinance was extended until March 15, 2025.",
     "status": "Implemented",
     "policy": [
       "Reduce parking minimums",
@@ -33060,6 +33830,20 @@
     "pop": 946,
     "coord": ["42.3761504", "-85.4550054"]
   },
+  "Richland, PA": {
+    "place": "Richland",
+    "state": "PA",
+    "country": "US",
+    "summary": "Parking requirements are reduced by 50% in the CD District for commercial uses in existing buildings and may be reduced citywide through the provision of motorcycle parking.",
+    "status": "Implemented",
+    "policy": ["Reduce parking minimums"],
+    "scope": ["Citywide", "City center / business district"],
+    "land": ["Commercial", "All uses"],
+    "date": null,
+    "repeal": false,
+    "pop": 1490,
+    "coord": ["40.3592589", "-76.2582849"]
+  },
   "Richmond, IL": {
     "place": "Richmond",
     "state": "IL",
@@ -33586,9 +34370,9 @@
     "place": "Rock Island",
     "state": "IL",
     "country": "US",
-    "summary": "The B-2 Central Business District is exempt from minimum parking regulations.",
+    "summary": "The B-2 Central Business District is exempt from minimum parking regulations. Parking maximums are set at 120% of the minimums.",
     "status": "Implemented",
-    "policy": ["Remove parking minimums"],
+    "policy": ["Remove parking minimums", "Add parking maximums"],
     "scope": ["City center / business district"],
     "land": ["All uses"],
     "date": null,
@@ -35519,6 +36303,24 @@
     "pop": 43698,
     "coord": ["44.7980186", "-93.5268986"]
   },
+  "Sharon, PA": {
+    "place": "Sharon",
+    "state": "PA",
+    "country": "US",
+    "summary": "Nonresidential uses in the C-1 and C-1A Downtown Commercial Districts are exempt from parking mandates. Parking requirements may be reduced through bike parking, transit proximity or counting on-street parking. Parking maximums range from 120% to 135% of the minimums depending on parking lot size.",
+    "status": "Implemented",
+    "policy": [
+      "Reduce parking minimums",
+      "Remove parking minimums",
+      "Add parking maximums"
+    ],
+    "scope": ["City center / business district"],
+    "land": ["Commercial", "Other"],
+    "date": null,
+    "repeal": false,
+    "pop": 13147,
+    "coord": ["41.2331116", "-80.4934035"]
+  },
   "Sharon, WI": {
     "place": "Sharon",
     "state": "WI",
@@ -36589,11 +37391,11 @@
     "place": "South Pekin",
     "state": "IL",
     "country": "US",
-    "summary": "The B-1a Business and Commercial District is exempt from minimum parking requirements.",
+    "summary": "The B-1a Business and Commercial District and the R-1 Single-Family Dwelling District are exempt from minimum parking requirements.",
     "status": "Implemented",
     "policy": ["Remove parking minimums"],
     "scope": ["City center / business district"],
-    "land": ["All uses"],
+    "land": ["All uses", "Residential, low-density"],
     "date": null,
     "repeal": false,
     "pop": 996,
@@ -37801,9 +38603,13 @@
     "place": "Sterling",
     "state": "IL",
     "country": "US",
-    "summary": "Parking is not required for non-residential uses in the DB, downtown business district.",
+    "summary": "Parking is not required for non-residential uses in the DB, downtown business district. Parking requirements for nonresidential uses may be reduced through the provision of bike parking. Parking maximums are set at 110% of the minimums.",
     "status": "Implemented",
-    "policy": ["Remove parking minimums"],
+    "policy": [
+      "Remove parking minimums",
+      "Reduce parking minimums",
+      "Add parking maximums"
+    ],
     "scope": ["City center / business district"],
     "land": ["Commercial"],
     "date": null,
@@ -38090,6 +38896,20 @@
     "repeal": false,
     "pop": 12500,
     "coord": ["41.1210234", "-88.8357361"]
+  },
+  "Stroudsburg, PA": {
+    "place": "Stroudsburg",
+    "state": "PA",
+    "country": "US",
+    "summary": "The C-2 Central Business Commercial District is exempt from parking mandates.",
+    "status": "Implemented",
+    "policy": ["Remove parking minimums"],
+    "scope": ["City center / business district"],
+    "land": ["All uses"],
+    "date": null,
+    "repeal": false,
+    "pop": 5927,
+    "coord": ["40.9864261", "-75.1946649"]
   },
   "Stuart, FL": {
     "place": "Stuart",
@@ -38772,6 +39592,20 @@
     "repeal": false,
     "pop": 63409,
     "coord": ["42.240872", "-83.2696509"]
+  },
+  "Taylor, PA": {
+    "place": "Taylor",
+    "state": "PA",
+    "country": "US",
+    "summary": "The C-2 Community Commercial/CBD District is exempt from parking mandates.",
+    "status": "Implemented",
+    "policy": ["Remove parking minimums"],
+    "scope": ["City center / business district"],
+    "land": ["All uses"],
+    "date": null,
+    "repeal": false,
+    "pop": 6302,
+    "coord": ["41.3840712", "-75.709405"]
   },
   "Taylor, TX": {
     "place": "Taylor",
@@ -39811,6 +40645,20 @@
     "pop": 43359,
     "coord": ["55.37592", "13.1461522"]
   },
+  "Tremont, IL": {
+    "place": "Tremont",
+    "state": "IL",
+    "country": "US",
+    "summary": "A change of use in an existing building in the B-1 and B-2 business districts is exempt from parking mandates.",
+    "status": "Implemented",
+    "policy": ["Reduce parking minimums"],
+    "scope": ["City center / business district"],
+    "land": ["All uses"],
+    "date": null,
+    "repeal": false,
+    "pop": 2277,
+    "coord": ["40.5275392", "-89.4925979"]
+  },
   "Trempealeau, WI": {
     "place": "Trempealeau",
     "state": "WI",
@@ -40076,6 +40924,20 @@
     "repeal": false,
     "pop": 11271,
     "coord": ["44.1538845", "-87.5692479"]
+  },
+  "Tyler, TX": {
+    "place": "Tyler",
+    "state": "TX",
+    "country": "US",
+    "summary": "The DBAC Downtown Business, Arts, and Culture District is exempt from parking mandates.",
+    "status": "Implemented",
+    "policy": ["Remove parking minimums"],
+    "scope": ["City center / business district"],
+    "land": ["All uses"],
+    "date": null,
+    "repeal": false,
+    "pop": 105995,
+    "coord": ["32.351691", "-95.300661"]
   },
   "Tyrone, PA": {
     "place": "Tyrone",
@@ -41335,6 +42197,20 @@
     "pop": 13761,
     "coord": ["38.3662806", "-89.4201902"]
   },
+  "Washington County, OR": {
+    "place": "Washington County",
+    "state": "OR",
+    "country": "US",
+    "summary": "Parking mandates were removed from the area within the Urban Growth Boundary on October 15, 2024.",
+    "status": "Implemented",
+    "policy": ["Remove parking minimums"],
+    "scope": ["Main street / special"],
+    "land": ["All uses"],
+    "date": "Oct 15, 2024",
+    "repeal": false,
+    "pop": 600372,
+    "coord": ["45.5601883", "-123.0587907"]
+  },
   "Washington Court House, OH": {
     "place": "Washington Court House",
     "state": "OH",
@@ -42583,6 +43459,20 @@
     "pop": 1479,
     "coord": ["43.550297", "-85.771997"]
   },
+  "White Haven, PA": {
+    "place": "White Haven",
+    "state": "PA",
+    "country": "US",
+    "summary": "Mixed-use developments need only provide parking for one of the uses.",
+    "status": "Implemented",
+    "policy": ["Reduce parking minimums"],
+    "scope": ["City center / business district"],
+    "land": ["Residential, all uses", "Commercial", "Other"],
+    "date": null,
+    "repeal": false,
+    "pop": 1163,
+    "coord": ["41.06064", "-75.774082"]
+  },
   "Whitefish, MT": {
     "place": "Whitefish",
     "state": "MT",
@@ -42624,6 +43514,20 @@
     "repeal": false,
     "pop": 28201,
     "coord": ["60.721571", "-135.054932"]
+  },
+  "Whitemarsh Township, PA": {
+    "place": "Whitemarsh Township",
+    "state": "PA",
+    "country": "US",
+    "summary": "Parking maximums are set at 110% of the minimums for nonresidential uses.",
+    "status": "Implemented",
+    "policy": ["Add parking maximums"],
+    "scope": ["Citywide"],
+    "land": ["Commercial", "Industrial", "Other"],
+    "date": null,
+    "repeal": false,
+    "pop": 19707,
+    "coord": ["40.1220543", "-75.2165658"]
   },
   "Whitewater, WI": {
     "place": "Whitewater",
@@ -43085,6 +43989,20 @@
     "pop": 171730,
     "coord": ["44.0697014", "-88.6516527"]
   },
+  "Winnebago, IL": {
+    "place": "Winnebago",
+    "state": "IL",
+    "country": "US",
+    "summary": "Parking requirements are reduced where parking is shared.",
+    "status": "Implemented",
+    "policy": ["Reduce parking minimums"],
+    "scope": ["Citywide"],
+    "land": ["Commercial", "Other", "Residential, all uses"],
+    "date": null,
+    "repeal": false,
+    "pop": 2940,
+    "coord": ["42.266244", "-89.242852"]
+  },
   "Winneconne, WI": {
     "place": "Winneconne",
     "state": "WI",
@@ -43210,6 +44128,24 @@
     "repeal": false,
     "pop": 5353,
     "coord": ["41.3347631", "-94.0135687"]
+  },
+  "Winterthur, ZH": {
+    "place": "Winterthur",
+    "state": "ZH",
+    "country": "CH",
+    "summary": "No private off-street parking is allowed in the city center. Parking minimums and maximums vary in the other five zones depending on location and transit availability.",
+    "status": "Implemented",
+    "policy": [
+      "Reduce parking minimums",
+      "Remove parking minimums",
+      "Add parking maximums"
+    ],
+    "scope": ["City center / business district"],
+    "land": ["All uses"],
+    "date": null,
+    "repeal": false,
+    "pop": 111840,
+    "coord": ["47.4991723", "8.7291498"]
   },
   "Winthrop Harbor, IL": {
     "place": "Winthrop Harbor",
