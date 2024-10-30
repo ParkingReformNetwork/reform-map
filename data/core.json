@@ -2121,6 +2121,20 @@
     "pop": 31753,
     "coord": ["44.8016255", "-68.7713289"]
   },
+  "Bangor, PA": {
+    "place": "Bangor",
+    "state": "PA",
+    "country": "US",
+    "summary": "A fee in lieu of required parking may be provided in the  Town Center, Neighborhood Commercial Residential and Gateway Commercial Districts. Within the Town Center District and Neighborhood Commercial Residential District, parking requirements are reduced. Parking maximums are set at 120% of the minimums.",
+    "status": "Implemented",
+    "policy": ["Add parking maximums", "Reduce parking minimums"],
+    "scope": ["City center / business district"],
+    "land": ["Commercial", "All uses"],
+    "date": null,
+    "repeal": false,
+    "pop": 5187,
+    "coord": ["40.86577", "-75.2064003"]
+  },
   "Baraboo, WI": {
     "place": "Baraboo",
     "state": "WI",
@@ -2418,6 +2432,20 @@
     "repeal": false,
     "pop": 8338,
     "coord": ["43.910755", "-69.820862"]
+  },
+  "Bath, PA": {
+    "place": "Bath",
+    "state": "PA",
+    "country": "US",
+    "summary": "The Parking Overlay District which encompasses downtown Bath is exempt from parking mandates.",
+    "status": "Implemented",
+    "policy": ["Remove parking minimums"],
+    "scope": ["City center / business district"],
+    "land": ["All uses"],
+    "date": null,
+    "repeal": false,
+    "pop": 2808,
+    "coord": ["40.726519", "-75.3934911"]
   },
   "Baton Rouge, LA": {
     "place": "Baton Rouge",
@@ -11851,6 +11879,20 @@
     "pop": 17101,
     "coord": ["38.7744952", "-76.0763065"]
   },
+  "Easton, PA": {
+    "place": "Easton",
+    "state": "PA",
+    "country": "US",
+    "summary": "Within the DD Downtown District, nonresidential uses requiring fewer than 7 spaces or residential uses with less than 4 dwelling units are exempt from parking mandates. Mixed-use developments within the Downtown District (DD) and Business and Entertainment District (BE) have reduced parking requirements.",
+    "status": "Implemented",
+    "policy": ["Remove parking minimums", "Reduce parking minimums"],
+    "scope": ["City center / business district"],
+    "land": ["Commercial", "Residential, all uses", "Other"],
+    "date": null,
+    "repeal": false,
+    "pop": 28127,
+    "coord": ["40.6916081", "-75.2099866"]
+  },
   "Eastpointe, MI": {
     "place": "Eastpointe",
     "state": "MI",
@@ -19931,6 +19973,20 @@
     "pop": 49447,
     "coord": ["38.2770227", "-85.7371604"]
   },
+  "Jenkintown, PA": {
+    "place": "Jenkintown",
+    "state": "PA",
+    "country": "US",
+    "summary": "The first two residential units in a mixed-use building in the TC Town Center District are exempt from parking mandates. A fee in lieu of required parking may be provided in the TC, NCR and G Districts. Parking maximums are set at 120% of the minimums.",
+    "status": "Implemented",
+    "policy": ["Reduce parking minimums", "Add parking maximums"],
+    "scope": ["City center / business district"],
+    "land": ["Residential, all uses", "All uses"],
+    "date": null,
+    "repeal": false,
+    "pop": 4719,
+    "coord": ["40.0959385", "-75.1256812"]
+  },
   "Jenks, OK": {
     "place": "Jenks",
     "state": "OK",
@@ -21899,6 +21955,20 @@
     "repeal": false,
     "pop": 1643,
     "coord": ["40.1745538", "-74.9226665"]
+  },
+  "Lansdale, PA": {
+    "place": "Lansdale",
+    "state": "PA",
+    "country": "US",
+    "summary": "Within the TOD Transit Oriented Design Overlay District, parking requirements are reduced by 10% and on-street parking may be counted towards the minimums. Within the Professional Office and Specialty Restaurant Conservation Overlay District, the first 400 feet of certain commercial uses are exempt from parking mandates. Within the Downtown Business Overlay District, there are no parking mandates for buildings under 20,000 square feet. Retail and restaurant uses within 500 feet of a public parking lot are exempt from parking mandates.",
+    "status": "Implemented",
+    "policy": ["Reduce parking minimums", "Remove parking minimums"],
+    "scope": ["City center / business district", "Citywide"],
+    "land": ["All uses", "Commercial"],
+    "date": null,
+    "repeal": false,
+    "pop": 18773,
+    "coord": ["40.2414952", "-75.2837862"]
   },
   "Lansdowne, PA": {
     "place": "Lansdowne",
@@ -27968,6 +28038,24 @@
     "pop": 6913,
     "coord": ["41.4427856", "-86.0013699"]
   },
+  "Narberth, PA": {
+    "place": "Narberth",
+    "state": "PA",
+    "country": "US",
+    "summary": "Up to 5,000 square feet of nonresidential floor area and one dwelling unit in the 5a Downtown District is exempt from parking mandates. On-street parking in the 3b, 3c, 4a, 4b, and 5b Zoning Districts may be counted towards parking requirements. Parking maximums are set at 120% of the minimums in the 5a Downtown District and 5b Montgomery Avenue District.",
+    "status": "Implemented",
+    "policy": [
+      "Add parking maximums",
+      "Remove parking minimums",
+      "Reduce parking minimums"
+    ],
+    "scope": ["City center / business district"],
+    "land": ["Commercial", "Residential, all uses", "Other"],
+    "date": null,
+    "repeal": false,
+    "pop": 4492,
+    "coord": ["40.0047478", "-75.2616109"]
+  },
   "Nashville, AR": {
     "place": "Nashville",
     "state": "AR",
@@ -29405,6 +29493,20 @@
     "repeal": false,
     "pop": 1323,
     "coord": ["41.3405897", "-89.010081"]
+  },
+  "North Wales, PA": {
+    "place": "North Wales",
+    "state": "PA",
+    "country": "US",
+    "summary": "Parking requirements may be reduced for nonresidential uses through on-street parking or the use of an existing building. Nonresidential uses in an existing building fronting Main or Walnut streets in the CBD are exempt from parking mandates.",
+    "status": "Implemented",
+    "policy": ["Reduce parking minimums"],
+    "scope": ["City center / business district", "Citywide"],
+    "land": ["Commercial", "Other"],
+    "date": null,
+    "repeal": false,
+    "pop": 3426,
+    "coord": ["40.2143282", "-75.2774194"]
   },
   "Northfield, IL": {
     "place": "Northfield",
@@ -32808,6 +32910,20 @@
     "pop": 8807,
     "coord": ["35.0568053", "-94.6199966"]
   },
+  "Pottstown, PA": {
+    "place": "Pottstown",
+    "state": "PA",
+    "country": "US",
+    "summary": "Nonresidential uses in the Downtown District are exempt from parking mandates as well as existing residential uses.",
+    "status": "Implemented",
+    "policy": ["Remove parking minimums"],
+    "scope": ["City center / business district"],
+    "land": ["Commercial", "Other"],
+    "date": "Apr 13, 2020",
+    "repeal": false,
+    "pop": 23433,
+    "coord": ["40.2452976", "-75.6496424"]
+  },
   "Pottsville, AR": {
     "place": "Pottsville",
     "state": "AR",
@@ -34930,6 +35046,20 @@
     "pop": 1281,
     "coord": ["45.8299124", "-94.293702"]
   },
+  "Royersford, PA": {
+    "place": "Royersford",
+    "state": "PA",
+    "country": "US",
+    "summary": "Within the CB Central Business District, commercial uses and up to two dwelling units in existing buildings near public parking lots are exempt from parking mandates. Parking requirements are reduced in the ARU Adaptive Reuse Overlay District.",
+    "status": "Implemented",
+    "policy": ["Reduce parking minimums"],
+    "scope": ["City center / business district"],
+    "land": ["Commercial", "Residential, all uses", "All uses"],
+    "date": null,
+    "repeal": false,
+    "pop": 4940,
+    "coord": ["40.1842688", "-75.5379639"]
+  },
   "Rudolph, WI": {
     "place": "Rudolph",
     "state": "WI",
@@ -35939,6 +36069,20 @@
     "repeal": false,
     "pop": 6547,
     "coord": ["41.4473547", "-97.0572541"]
+  },
+  "Schwenksville, PA": {
+    "place": "Schwenksville",
+    "state": "PA",
+    "country": "US",
+    "summary": "Within the Main Street Business District, the first 500 square feet of a commercial use is exempt from parking mandates. Parking requirements for all uses in the district may be reduced through on-street parking or bike parking.",
+    "status": "Implemented",
+    "policy": ["Reduce parking minimums", "Remove parking minimums"],
+    "scope": ["City center / business district"],
+    "land": ["Commercial"],
+    "date": "Jan 6, 2022",
+    "repeal": false,
+    "pop": 1431,
+    "coord": ["40.256213", "-75.4637876"]
   },
   "Scio Township, MI": {
     "place": "Scio Township",
@@ -37228,6 +37372,20 @@
     "repeal": false,
     "pop": 1786,
     "coord": ["41.6336413", "-88.6811883"]
+  },
+  "Souderton, PA": {
+    "place": "Souderton",
+    "state": "PA",
+    "country": "US",
+    "summary": "Restaurants, retail and office uses in the C-3 Commercial-Downtown Core District have reduced parking requirements. Parking maximums are set at 120% of the minimums.",
+    "status": "Implemented",
+    "policy": ["Reduce parking minimums", "Add parking maximums"],
+    "scope": ["City center / business district"],
+    "land": ["Commercial"],
+    "date": null,
+    "repeal": false,
+    "pop": 7191,
+    "coord": ["40.3117707", "-75.3251759"]
   },
   "South Bend, IN": {
     "place": "South Bend",
