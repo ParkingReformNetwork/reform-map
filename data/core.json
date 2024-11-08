@@ -24928,6 +24928,20 @@
     "pop": 32146,
     "coord": ["40.7965119", "-81.5231597"]
   },
+  "Matamoras, PA": {
+    "place": "Matamoras",
+    "state": "PA",
+    "country": "US",
+    "summary": "Nonresidential uses in the General Commercial District are exempt from parking mandates.",
+    "status": "Implemented",
+    "policy": ["Remove parking minimums"],
+    "scope": ["City center / business district"],
+    "land": ["Commercial", "Other"],
+    "date": null,
+    "repeal": false,
+    "pop": 2362,
+    "coord": ["41.3687049", "-74.7001632"]
+  },
   "Matteson, IL": {
     "place": "Matteson",
     "state": "IL",
@@ -28139,6 +28153,20 @@
     "repeal": false,
     "pop": 950,
     "coord": ["40.550042", "-91.3848749"]
+  },
+  "Nazareth, PA": {
+    "place": "Nazareth",
+    "state": "PA",
+    "country": "US",
+    "summary": "Permitted uses within the GC (General Commercial) District are exempt from parking mandates except for uses with three or more dwelling units.",
+    "status": "Implemented",
+    "policy": ["Remove parking minimums"],
+    "scope": ["City center / business district"],
+    "land": ["Commercial", "Residential, all uses", "Other"],
+    "date": null,
+    "repeal": false,
+    "pop": 6053,
+    "coord": ["40.7423309", "-75.3112095"]
   },
   "Nebraska City, NE": {
     "place": "Nebraska City",
@@ -31530,6 +31558,20 @@
     "pop": 774,
     "coord": ["45.552789", "-84.783936"]
   },
+  "Pen Argyl, PA": {
+    "place": "Pen Argyl",
+    "state": "PA",
+    "country": "US",
+    "summary": "A change of use in an existing building is exempt from parking mandates.",
+    "status": "Implemented",
+    "policy": ["Reduce parking minimums"],
+    "scope": ["Citywide"],
+    "land": ["All uses"],
+    "date": null,
+    "repeal": false,
+    "pop": 3510,
+    "coord": ["40.8687064", "-75.2549025"]
+  },
   "Pender, NE": {
     "place": "Pender",
     "state": "NE",
@@ -32830,13 +32872,13 @@
     "place": "Portland",
     "state": "ME",
     "country": "US",
-    "summary": "Portland, Maine allows up to 3 homes without parking in low-density residential zones. The city also exempts projects within 1/4 mile of fixed route transit from parking mandates. ADUs are allowed without parking. As part of a zoning code rewrite known as the Second Wave ReCode, the city is proposing to eliminate all parking minimums.",
+    "summary": "Portland eliminated all parking mandates and implemented parking maximums on November 4, 2024. Previously, the city had exemptions for projects within 1/4 mile of fixed route transit, ADUs, or 3 or fewer homes in low-density residential zones.",
     "status": "Implemented",
-    "policy": ["Remove parking minimums"],
-    "scope": ["Transit oriented"],
-    "land": ["All uses", "Residential, low-density"],
-    "date": null,
-    "repeal": false,
+    "policy": ["Remove parking minimums", "Add parking maximums"],
+    "scope": ["Citywide"],
+    "land": ["All uses"],
+    "date": "Nov 4, 2024",
+    "repeal": true,
     "pop": 68408,
     "coord": ["43.6610277", "-70.2548596"]
   },
@@ -32867,6 +32909,20 @@
     "repeal": true,
     "pop": 654741,
     "coord": ["45.5202471", "-122.6741949"]
+  },
+  "Portland, PA": {
+    "place": "Portland",
+    "state": "PA",
+    "country": "US",
+    "summary": "Uses north of Jacoby Creek and fronting on Route 611 in the B District or RS District are exempt from parking mandates.",
+    "status": "Implemented",
+    "policy": ["Remove parking minimums"],
+    "scope": ["Main street / special"],
+    "land": ["All uses"],
+    "date": null,
+    "repeal": false,
+    "pop": 494,
+    "coord": ["40.9221629", "-75.0979793"]
   },
   "Portsmouth, OH": {
     "place": "Portsmouth",
@@ -39313,6 +39369,20 @@
     "pop": 35967,
     "coord": ["43.1834579", "-89.2134359"]
   },
+  "Sunbury, PA": {
+    "place": "Sunbury",
+    "state": "PA",
+    "country": "US",
+    "summary": "The CB Central Business District is exempt from parking mandates, except for residential and lodging uses.",
+    "status": "Implemented",
+    "policy": ["Remove parking minimums"],
+    "scope": ["City center / business district"],
+    "land": ["Commercial", "Other"],
+    "date": null,
+    "repeal": false,
+    "pop": 9719,
+    "coord": ["40.8619754", "-76.7936252"]
+  },
   "Sundance, WY": {
     "place": "Sundance",
     "state": "WY",
@@ -39708,6 +39778,20 @@
     "repeal": false,
     "pop": 4352,
     "coord": ["40.6021328", "-79.7545147"]
+  },
+  "Tatamy, PA": {
+    "place": "Tatamy",
+    "state": "PA",
+    "country": "US",
+    "summary": "Parking requirements are reduced where two adjacent businesses develop a shared driveway and parking lot layout.",
+    "status": "Implemented",
+    "policy": ["Reduce parking minimums"],
+    "scope": ["Citywide"],
+    "land": ["Commercial"],
+    "date": null,
+    "repeal": false,
+    "pop": 1203,
+    "coord": ["40.7417816", "-75.2560449"]
   },
   "Tawas City, MI": {
     "place": "Tawas City",
