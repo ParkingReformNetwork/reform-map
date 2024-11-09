@@ -11,7 +11,16 @@ function determineHtml(state: FilterState, numPlaces: number): string {
     ? "with all parking minimums removed"
     : "with parking reforms";
   const placesWord = numPlaces === 1 ? "place" : "places";
-  return `Showing ${numPlaces} ${placesWord} ${suffix}`;
+
+  let country =
+    state.country.length === 1
+      ? state.country[0]
+      : `${state.country.length} countries`;
+  if (country === "United States" || country === "United Kingdom") {
+    country = `the ${country}`;
+  }
+
+  return `Showing ${numPlaces} ${placesWord} in ${country} ${suffix}`;
 }
 
 function setUpResetButton(
