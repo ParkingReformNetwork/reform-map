@@ -7,9 +7,7 @@ test("mapPlaceToCitationLinks correctly determines some example pages", async ()
   expect(result["Abilene, KS"]).toEqual([
     "http://abileneks.citycode.net/index.html#!artiOffStreParkLoadAndUnloRegu",
   ]);
-  expect(result["Albion, NE"]).toEqual([
-    "https://www.albionne.com/media/686",
-  ]);
+  expect(result["Albion, NE"]).toEqual(["https://www.albionne.com/media/686"]);
   expect(result["Petaluma, CA"]).toEqual([
     "https://petaluma.municipal.codes/SmartCode/6.10.030",
     "https://petaluma.municipal.codes/ZoningOrds/11.035",
