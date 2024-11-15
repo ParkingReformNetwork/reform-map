@@ -3619,9 +3619,13 @@
     "place": "Billings",
     "state": "MT",
     "country": "US",
-    "summary": "There are no minimum parking requirements in the Central Business District or the East Billings Parking Overlay. ",
+    "summary": "There are no minimum parking requirements in the Central Business District or the East Billings Parking Overlay. Parking maximums apply to all surface parking. On-street parking may be counted towards parking requirements.",
     "status": "Implemented",
-    "policy": ["Remove parking minimums"],
+    "policy": [
+      "Remove parking minimums",
+      "Reduce parking minimums",
+      "Add parking maximums"
+    ],
     "scope": ["City center / business district", "Main street / special"],
     "land": ["All uses"],
     "date": null,
@@ -11566,6 +11570,20 @@
     "repeal": false,
     "pop": 2071,
     "coord": ["42.8794563", "-88.474265"]
+  },
+  "Eagles Mere, PA": {
+    "place": "Eagles Mere",
+    "state": "PA",
+    "country": "US",
+    "summary": "Nonresidential uses and single-family dwellings are exempt from parking mandates.",
+    "status": "Implemented",
+    "policy": ["Remove parking minimums"],
+    "scope": ["Citywide"],
+    "land": ["Commercial", "Industrial", "Other", "Residential, low-density"],
+    "date": null,
+    "repeal": false,
+    "pop": 151,
+    "coord": ["41.4109919", "-76.5842439"]
   },
   "Early, IA": {
     "place": "Early",
@@ -22698,6 +22716,20 @@
     "pop": 4652,
     "coord": ["39.1851824", "-93.8828515"]
   },
+  "Libby, MT": {
+    "place": "Libby",
+    "state": "MT",
+    "country": "US",
+    "summary": "Prior to June 19, 2023, Libby had no residential parking mandates.",
+    "status": "Repealed",
+    "policy": ["Remove parking minimums"],
+    "scope": ["Citywide"],
+    "land": ["Residential, all uses"],
+    "date": "Jun 19, 2023",
+    "repeal": false,
+    "pop": 2775,
+    "coord": ["48.3883645", "-115.5558612"]
+  },
   "Liberal, KS": {
     "place": "Liberal",
     "state": "KS",
@@ -24185,6 +24217,20 @@
     "repeal": false,
     "pop": 1196,
     "coord": ["37.3440947", "-108.2925568"]
+  },
+  "Mandan, ND": {
+    "place": "Mandan",
+    "state": "ND",
+    "country": "US",
+    "summary": "A portion of the CB Commercial District is exempt from parking mandates, however properties may be assessed for municipal parking.",
+    "status": "Implemented",
+    "policy": ["Remove parking minimums"],
+    "scope": ["City center / business district"],
+    "land": ["All uses"],
+    "date": null,
+    "repeal": false,
+    "pop": 24206,
+    "coord": ["46.826415", "-100.889704"]
   },
   "Mandeville, LA": {
     "place": "Mandeville",
@@ -25855,6 +25901,20 @@
     "repeal": false,
     "pop": 16004,
     "coord": ["41.3614401", "-81.812912"]
+  },
+  "Middleburg, PA": {
+    "place": "Middleburg",
+    "state": "PA",
+    "country": "US",
+    "summary": "Parking requirements are reduced where contiguous lots share parking.",
+    "status": "Implemented",
+    "policy": ["Reduce parking minimums"],
+    "scope": ["Citywide"],
+    "land": ["Commercial", "Industrial", "Other", "Residential, all uses"],
+    "date": null,
+    "repeal": false,
+    "pop": 1325,
+    "coord": ["40.7859166", "-77.0472028"]
   },
   "Middletown, OH": {
     "place": "Middletown",
@@ -32994,6 +33054,20 @@
     "pop": 3140,
     "coord": ["35.2481394", "-93.049061"]
   },
+  "Pottsville, PA": {
+    "place": "Pottsville",
+    "state": "PA",
+    "country": "US",
+    "summary": "The C-3 Central Business District is exempt from parking mandates.",
+    "status": "Implemented",
+    "policy": ["Remove parking minimums"],
+    "scope": ["City center / business district"],
+    "land": ["All uses"],
+    "date": null,
+    "repeal": false,
+    "pop": 13346,
+    "coord": ["40.6851324", "-76.1953701"]
+  },
   "Poynette, WI": {
     "place": "Poynette",
     "state": "WI",
@@ -36126,6 +36200,20 @@
     "pop": 6547,
     "coord": ["41.4473547", "-97.0572541"]
   },
+  "Schuylkill Haven, PA": {
+    "place": "Schuylkill Haven",
+    "state": "PA",
+    "country": "US",
+    "summary": "The C-1 District is exempt from parking mandates.",
+    "status": "Implemented",
+    "policy": ["Remove parking minimums"],
+    "scope": ["City center / business district"],
+    "land": ["All uses"],
+    "date": null,
+    "repeal": false,
+    "pop": 5253,
+    "coord": ["40.6306464", "-76.171054"]
+  },
   "Schwenksville, PA": {
     "place": "Schwenksville",
     "state": "PA",
@@ -36302,6 +36390,20 @@
     "repeal": false,
     "pop": 813,
     "coord": ["36.5208001", "-93.9390651"]
+  },
+  "Selinsgrove, PA": {
+    "place": "Selinsgrove",
+    "state": "PA",
+    "country": "US",
+    "summary": "The Central Business District is exempt from parking mandates.",
+    "status": "Implemented",
+    "policy": ["Remove parking minimums"],
+    "scope": ["City center / business district"],
+    "land": ["All uses"],
+    "date": null,
+    "repeal": false,
+    "pop": 5761,
+    "coord": ["40.8062437", "-76.8607084"]
   },
   "Sellersville, PA": {
     "place": "Sellersville",
@@ -36581,12 +36683,12 @@
     "place": "Shawnee",
     "state": "OK",
     "country": "US",
-    "summary": "Minimum parking requirements do not apply to the C-4 central business district.",
+    "summary": "The DT-C Downtown Core District is exempt from parking mandates. Parking requirements are reduced by 50% in the MU Mixed-Use District, the DT-E Downtown Edge and DT-T Downtown Transition District. Parking requirements may be reduced citywide through on-street parking, public parking, structured parking, infill development, increased landscaping, pervious paving, EV chargers. Prior to 2024, the C-4 central business district was exempted.",
     "status": "Implemented",
-    "policy": ["Remove parking minimums"],
+    "policy": ["Remove parking minimums", "Reduce parking minimums"],
     "scope": ["City center / business district"],
     "land": ["All uses"],
-    "date": null,
+    "date": "Aug 19, 2024",
     "repeal": false,
     "pop": 31377,
     "coord": ["35.3272928", "-96.9253004"]
@@ -37372,6 +37474,20 @@
     "repeal": false,
     "pop": 3096,
     "coord": ["39.2130418", "-106.9378207"]
+  },
+  "Somerset, PA": {
+    "place": "Somerset",
+    "state": "PA",
+    "country": "US",
+    "summary": "Nonresidential uses in the C-2 Central Commercial District are exempt from parking mandates. Parking requirements are reduced for large mixed-use projects.",
+    "status": "Implemented",
+    "policy": ["Reduce parking minimums", "Remove parking minimums"],
+    "scope": ["City center / business district"],
+    "land": ["Commercial", "Other"],
+    "date": null,
+    "repeal": false,
+    "pop": 6046,
+    "coord": ["39.9980022", "-79.0415528"]
   },
   "Somerset, WI": {
     "place": "Somerset",
@@ -43314,6 +43430,20 @@
     "repeal": false,
     "pop": 1770,
     "coord": ["40.2522771", "-83.7557663"]
+  },
+  "West Linn, OR": {
+    "place": "West Linn",
+    "state": "OR",
+    "country": "US",
+    "summary": "West Linn removed all parking mandates on November 12, 2024. Parking maximums apply to most uses.",
+    "status": "Implemented",
+    "policy": ["Remove parking minimums", "Add parking maximums"],
+    "scope": ["Citywide"],
+    "land": ["All uses"],
+    "date": "Nov 12, 2024",
+    "repeal": true,
+    "pop": 27373,
+    "coord": ["45.3656761", "-122.612314"]
   },
   "West Memphis, AR": {
     "place": "West Memphis",

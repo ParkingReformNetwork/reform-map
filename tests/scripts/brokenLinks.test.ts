@@ -8,7 +8,7 @@ test("mapPlaceToCitationLinks correctly determines some example pages", async ()
     "http://abileneks.citycode.net/index.html#!artiOffStreParkLoadAndUnloRegu",
   ]);
   expect(result["Albion, NE"]).toEqual([
-    "https://albionnebraska.wpengine.com/wp-content/uploads/2021/01/CHAPTER-9-ZONING-REGULATIONS.pdf",
+    "https://www.albionne.com/media/686",
   ]);
   expect(result["Petaluma, CA"]).toEqual([
     "https://petaluma.municipal.codes/SmartCode/6.10.030",
