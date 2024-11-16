@@ -1,3 +1,5 @@
+import { capitalize } from "lodash-es";
+
 import { PlaceEntry } from "./types";
 import { PlaceFilterManager } from "./FilterState";
 import Observable from "./Observable";
@@ -16,7 +18,7 @@ const DESELECTED_BY_DEFAULT: Record<FilterGroupKey, Set<string>> = {
   policyChange: new Set(),
   scope: new Set(),
   landUse: new Set(),
-  status: new Set(["Planned", "Proposed", "Repealed", "Unverified"]),
+  status: new Set(["planned", "proposed", "repealed", "unverified"]),
   country: new Set(),
   year: new Set(),
 };
@@ -209,7 +211,7 @@ function generateAccordion(
     checkedIcon.ariaHidden = "true";
 
     const description = document.createElement("span");
-    description.textContent = val;
+    description.textContent = capitalize(val);
 
     label.appendChild(input);
     label.appendChild(squareIcon);
@@ -284,7 +286,7 @@ function initFilterGroup(
         'input[type="checkbox"]:checked',
       ),
     )
-      .map((input) => input.parentElement?.textContent?.trim())
+      .map((input) => input.parentElement?.textContent?.trim().toLowerCase())
       .filter((x) => x !== undefined);
     filterManager.update({ [params.filterStateKey]: checkedLabels });
   });

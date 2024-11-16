@@ -12,6 +12,7 @@ import { parseCsv } from "./lib/csv";
 import {
   Attachment as AttachmentBase,
   Citation as CitationBase,
+  splitStringArray,
 } from "./lib/data";
 import { escapePlaceId } from "../src/js/data";
 
@@ -184,7 +185,7 @@ async function saveExtendedDataFile(
       .map(([placeId, entry]) => {
         const citations = entry.citations.map((citation) => ({
           description: citation.description,
-          type: citation.type,
+          type: citation.type?.toLowerCase(),
           url: citation.url,
           notes: citation.notes ? citation.notes.toString() : citation.notes,
           attachments: citation.attachments.map((attachment) => ({
@@ -193,11 +194,17 @@ async function saveExtendedDataFile(
             outputPath: attachment.outputPath,
           })),
         }));
+        const requirements = splitStringArray(entry.requirements || "", {
+          adu: "accessory dwelling units",
+          tdm: "transportation demand management",
+          "in lieu fees": "in-lieu fees",
+          "car share": "carshare",
+        });
         return [
           placeId,
           {
             reporter: entry.reporter,
-            requirements: entry.requirements?.split(", ") || [],
+            requirements,
             citations,
           },
         ];
