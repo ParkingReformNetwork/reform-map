@@ -38,7 +38,7 @@ Dropped fields from Google Tables `cities` table:
 | requirements             | enum[]      | `requirements`                                            |                                     |
 | status                   | enum        | `status`                                                  |                                     |
 | reform_date              | string?     | `date of reform`                                          | `yyyy` or `yyyy-mm` or `yyyy-mm-dd` |
-| reporter                 | string      | the person's name; full Contacts table not used in Tables |
+| reporter                 | string?     | the person's name; full Contacts table not used in Tables |
 | complete_minimums_repeal | boolean     | `highlights`                                              |                                     |
 | summary                  | string      | `summary`                                                 |                                     |
 | citations                | citation[]  | set in migration script                                   |                                     |
