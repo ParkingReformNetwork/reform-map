@@ -36,7 +36,7 @@ test("generate html page", async ({}, testInfo) => {
       citations: [
         {
           description: "Zoning Code",
-          type: "City Code",
+          type: "city code",
           url: "https://parkingreform.org/some-url.pdf",
           notes: "Here's a note",
           attachments: [
