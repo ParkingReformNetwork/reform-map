@@ -14,7 +14,8 @@ interface BaseEntry {
   land: string[];
   repeal: boolean;
   pop: number;
-  coord: [string, string];
+  // [long, lat]
+  coord: [number, number];
 }
 
 export type RawEntry = BaseEntry & {

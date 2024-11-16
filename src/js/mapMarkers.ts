@@ -45,8 +45,8 @@ export default function initPlaceMarkers(
     const isPrimary = entry.repeal;
     const style = isPrimary ? PRIMARY_MARKER_STYLE : SECONDARY_MARKER_STYLE;
 
-    // @ts-ignore: passing strings to CircleMarker for lat/lng is valid.
-    const marker = new CircleMarker(entry.coord, {
+    const [long, lat] = entry.coord;
+    const marker = new CircleMarker([lat, long], {
       ...style,
       radius: radiusGivenZoom({ zoom: map.getZoom(), isPrimary }),
     });

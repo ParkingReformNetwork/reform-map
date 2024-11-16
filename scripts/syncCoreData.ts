@@ -173,7 +173,7 @@ async function ensureRowLatLng(
       if (!lat || !long) continue;
       return {
         ...entry,
-        coord: [lat.toString(), long.toString()],
+        coord: [long, lat],
       };
     }
   }
