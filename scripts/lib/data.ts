@@ -11,8 +11,8 @@ export type Attachment = {
 export type CitationType = "city code" | "media report" | "other";
 
 export type Citation = {
-  description: string | null;
-  type: string | null;
+  description: string;
+  type: string;
   url: string | null;
   notes: string | null;
   attachments: Attachment[];
