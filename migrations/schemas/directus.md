@@ -35,7 +35,7 @@ Dropped fields from Google Tables `cities` table:
 | policy_changes           | enum[]      | `type`                                                    |                                     |
 | land_uses                | enum[]      | `uses`                                                    |                                     |
 | reform_scope             | enum[]      | `magnitude`                                               |                                     |
-| requirements             | enum[]?     | `requirements`                                            |                                     |
+| requirements             | enum[]      | `requirements`                                            |                                     |
 | status                   | enum        | `status`                                                  |                                     |
 | reform_date              | string?     | `date of reform`                                          | `yyyy` or `yyyy-mm` or `yyyy-mm-dd` |
 | reporter                 | string      | the person's name; full Contacts table not used in Tables |

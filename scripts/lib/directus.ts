@@ -63,7 +63,7 @@ type LegacyReform = {
   policy_changes: string[];
   land_uses: string[];
   reform_scope: string[];
-  requirements: string[] | null;
+  requirements: string[];
   status: ReformStatus;
   summary: string;
   reporter: string;
