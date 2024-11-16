@@ -6,9 +6,8 @@
 import nodeFetch from "node-fetch";
 import NodeGeocoder from "node-geocoder";
 import Papa from "papaparse";
-import { capitalize } from "lodash-es";
 
-import { readCoreData, saveCoreData } from "./lib/data";
+import { readCoreData, saveCoreData, splitStringArray } from "./lib/data";
 import { PlaceId, RawEntry } from "../src/js/types";
 
 type Row = Record<string, any>;
@@ -20,16 +19,6 @@ async function fetch(
   return nodeFetch(url, {
     ...options,
     headers: { "User-Agent": "prn-update-map-data" },
-  });
-}
-
-function splitStringArray(
-  val: string,
-  transform: Record<string, string> = {},
-): string[] {
-  return val.split(", ").map((v) => {
-    const lowercase = capitalize(v.toLowerCase());
-    return transform[lowercase] ?? lowercase;
   });
 }
 
@@ -80,20 +69,20 @@ async function readReportTable(): Promise<Row[]> {
       state: row.state || null,
       country: row.country,
       summary: row.Summary,
-      status: row.Status,
+      status: row.Status.toLowerCase(),
       policy: splitStringArray(row.Type, {
-        "Parking maximums": "Add parking maximums",
-        "Eliminate parking minimums": "Remove parking minimums",
+        "parking maximums": "add parking maximums",
+        "eliminate parking minimums": "remove parking minimums",
       }),
       scope: splitStringArray(row.Magnitude, {
-        "City center/business district": "City center / business district",
-        "Main street/special": "Main street / special",
+        "city center/business district": "city center / business district",
+        "main street/special": "main street / special",
       }),
       land: splitStringArray(row.Uses, {
-        Residential: "Residential, all uses",
-        "Low density (sf) residential": "Residential, low-density",
-        "High density residential": "Residential, high-density",
-        "Multi-family residential": "Residential, multi-family",
+        residential: "residential, all uses",
+        "low density (sf) residential": "residential, low-density",
+        "high density residential": "residential, high-density",
+        "multi-family residential": "residential, multi-family",
       }),
       date: row["Date of Reform"] || null,
       repeal: checkIncludes(row.Highlights, "no mandates"),

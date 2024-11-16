@@ -23,16 +23,16 @@ test("generate html page", async ({}, testInfo) => {
       state: "NY",
       country: "US",
       summary: "No parking mandates for the win!",
-      status: "Passed",
-      policy: ["Reduce parking minimums", "Add parking maximums"],
-      scope: ["Citywide"],
-      land: ["Commercial", "Other"],
+      status: "passed",
+      policy: ["reduce parking minimums", "add parking maximums"],
+      scope: ["citywide"],
+      land: ["commercial", "other"],
       repeal: true,
       pop: 24104,
       coord: [44.23, 14.23],
       date: "Mar 27, 2018",
       reporter: "Parking God",
-      requirements: ["By Right"],
+      requirements: ["by right"],
       citations: [
         {
           description: "Zoning Code",
@@ -49,7 +49,7 @@ test("generate html page", async ({}, testInfo) => {
         },
         {
           description: "News article",
-          type: "Media Report",
+          type: "media report",
           url: "https://parkingreform.org/some-other-url.pdf",
           notes: "",
           attachments: [

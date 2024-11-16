@@ -8,6 +8,8 @@ export type Attachment = {
   outputPath: string;
 };
 
+export type CitationType = "city code" | "media report" | "other";
+
 export type Citation = {
   description: string | null;
   type: string | null;
@@ -56,4 +58,14 @@ export async function saveCoreData(
 ): Promise<void> {
   const json = JSON.stringify(data, null, 2);
   await fs.writeFile("data/core.json", json);
+}
+
+export function splitStringArray(
+  val: string,
+  transform: Record<string, string> = {},
+): string[] {
+  return val.split(", ").map((v) => {
+    const lowercase = v.toLowerCase();
+    return transform[lowercase] ?? lowercase;
+  });
 }

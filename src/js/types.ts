@@ -2,13 +2,20 @@ import type { DateTime } from "luxon";
 
 export type PlaceId = string;
 
+export type ReformStatus =
+  | "implemented"
+  | "passed"
+  | "planned"
+  | "proposed"
+  | "repealed";
+
 interface BaseEntry {
   // Full name of the town, city, county, province, state, or country.
   place: string;
   // State or province abbreviation. Not set for countries.
   state: string | null;
   summary: string;
-  status: string;
+  status: ReformStatus;
   policy: string[];
   scope: string[];
   land: string[];

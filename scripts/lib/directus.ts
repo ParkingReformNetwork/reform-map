@@ -8,6 +8,9 @@ import {
   RestClient,
 } from "@directus/sdk";
 
+import { ReformStatus } from "../../src/js/types.js";
+import { CitationType } from "../../scripts/lib/data.js";
+
 // ------------------------------------------------------------------------------
 // Generic types
 // ------------------------------------------------------------------------------
@@ -47,7 +50,7 @@ type Place = {
 } & Metadata;
 
 type Citation = {
-  type: "city code" | "media report" | "other";
+  type: CitationType;
   source_description: string;
   notes: string | null;
   url: string | null;
@@ -61,7 +64,7 @@ type LegacyReform = {
   land_uses: string[];
   reform_scope: string[];
   requirements: string[] | null;
-  status: "implemented" | "passed" | "planned" | "proposed" | "repealed";
+  status: ReformStatus;
   summary: string;
   reporter: string;
   reform_date: string | null;
