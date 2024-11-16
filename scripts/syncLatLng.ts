@@ -30,11 +30,13 @@ function updateLatLng(
       );
       if (!matchingRows.length) return [placeId, entry];
       const update = matchingRows[0];
+      const lat = update[3];
+      const long = update[4];
       return [
         placeId,
         {
           ...entry,
-          coord: [update[3].toString(), update[4].toString()],
+          coord: [long, lat],
         },
       ];
     }),

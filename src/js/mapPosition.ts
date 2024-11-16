@@ -9,11 +9,8 @@ export default function subscribeSnapToPlace(
   manager.subscribe(({ searchInput }) => {
     if (searchInput) {
       const entry = manager.entries[searchInput];
-      map.setView(
-        // @ts-ignore
-        entry.coord,
-        6,
-      );
+      const [long, lat] = entry.coord;
+      map.setView([lat, long], 6);
     }
   });
 }
