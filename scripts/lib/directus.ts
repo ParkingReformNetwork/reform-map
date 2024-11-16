@@ -4,7 +4,7 @@ import {
   createDirectus,
   rest,
   authentication,
-  DirectusClient,
+  DirectusClient as DirectusClientUntyped,
   RestClient,
 } from "@directus/sdk";
 
@@ -32,7 +32,7 @@ interface Coordinates {
 // Schema
 // ------------------------------------------------------------------------------
 
-interface Schema {
+export interface Schema {
   places: Place[];
   citations: Citation[];
   legacy_reforms: LegacyReform[];
@@ -40,16 +40,18 @@ interface Schema {
   legacy_reforms_citations: LegacyReformCitationJunction[];
 }
 
-type Place = {
+export type PlaceType = "city" | "county" | "state" | "country";
+
+export type Place = {
   name: string;
   state: string | null;
   country_code: string;
-  type: "city" | "county" | "state" | "country";
+  type: PlaceType;
   population: number;
   coordinates: Coordinates | null;
 } & Metadata;
 
-type Citation = {
+export type Citation = {
   type: CitationType;
   source_description: string;
   notes: string | null;
@@ -57,7 +59,7 @@ type Citation = {
   attachments: number[] | CitationsFileJunction[];
 } & Metadata;
 
-type LegacyReform = {
+export type LegacyReform = {
   place: number | Place;
   last_verified_at: "datetime" | null;
   policy_changes: string[];
@@ -66,19 +68,19 @@ type LegacyReform = {
   requirements: string[];
   status: ReformStatus;
   summary: string;
-  reporter: string;
+  reporter: string | null;
   reform_date: string | null;
   complete_minimums_repeal: boolean;
   citations: number[] | LegacyReformCitationJunction[];
 } & Metadata;
 
-interface CitationsFileJunction {
+export interface CitationsFileJunction {
   id: number;
   citations_id: number | Citation;
   directus_files_id: string;
 }
 
-interface LegacyReformCitationJunction {
+export interface LegacyReformCitationJunction {
   id: number;
   legacy_reforms_id: number | LegacyReform;
   citations_id: number | Citation;
@@ -88,9 +90,9 @@ interface LegacyReformCitationJunction {
 // Client
 // ------------------------------------------------------------------------------
 
-export async function initDirectus(): Promise<
-  DirectusClient<Schema> & RestClient<Schema>
-> {
+export type DirectusClient = DirectusClientUntyped<Schema> & RestClient<Schema>;
+
+export async function initDirectus(): Promise<DirectusClient> {
   const email = process.env.DIRECTUS_EMAIL;
   if (!email) throw new Error("Must set the env var DIRECTUS_EMAIL");
   delete process.env.DIRECTUS_EMAIL;
