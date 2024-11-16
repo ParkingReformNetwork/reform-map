@@ -64,6 +64,7 @@ export function splitStringArray(
   val: string,
   transform: Record<string, string> = {},
 ): string[] {
+  if (!val) return [];
   return val.split(", ").map((v) => {
     const lowercase = v.toLowerCase();
     return transform[lowercase] ?? lowercase;
