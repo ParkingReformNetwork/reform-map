@@ -45,14 +45,14 @@ https://tables.area120.google.com/u/2/workspace/8NG_95pXoTN4sXMROi9k1b/table/8-3
 
 ## Citation table
 
-| column             | type                             | notes                    |
-| ------------------ | -------------------------------- | ------------------------ |
-| CitationId         | int                              | automatic                |
-| source description | string?                          | only 2 records are blank |
-| type               | \{Media Report,City Code,Other\} |                          |
-| notes              | string?                          |                          |
-| url                | string?                          |                          |
-| attachments        | file[]?                          |                          |
+| column             | type                             | notes     |
+| ------------------ | -------------------------------- | --------- |
+| CitationId         | int                              | automatic |
+| source description | string                           |           |
+| type               | \{Media Report,City Code,Other\} |           |
+| notes              | string?                          |           |
+| url                | string?                          |           |
+| attachments        | file[]?                          |           |
 
 ## Contact table
 
