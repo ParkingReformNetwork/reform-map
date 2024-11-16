@@ -119,6 +119,9 @@ type FilterGroupParams = {
   htmlName: string;
   filterStateKey: FilterGroupKey;
   legend: string;
+  /// If not set to true, the option will use Lodash's `capitalize()`. This
+  /// only impacts the UI and not the underlying data.
+  preserveCapitalization?: boolean;
   useTwoColumns?: boolean;
 };
 
@@ -211,7 +214,9 @@ function generateAccordion(
     checkedIcon.ariaHidden = "true";
 
     const description = document.createElement("span");
-    description.textContent = capitalize(val);
+    description.textContent = params.preserveCapitalization
+      ? val
+      : capitalize(val);
 
     label.appendChild(input);
     label.appendChild(squareIcon);
@@ -286,7 +291,10 @@ function initFilterGroup(
         'input[type="checkbox"]:checked',
       ),
     )
-      .map((input) => input.parentElement?.textContent?.trim().toLowerCase())
+      .map((input) => {
+        const text = input.parentElement?.textContent?.trim();
+        return params.preserveCapitalization ? text : text?.toLowerCase();
+      })
       .filter((x) => x !== undefined);
     filterManager.update({ [params.filterStateKey]: checkedLabels });
   });
@@ -342,6 +350,7 @@ export function initFilterOptions(
     htmlName: "country",
     filterStateKey: "country",
     legend: "Country",
+    preserveCapitalization: true,
   });
   initFilterGroup(filterManager, filterOptions, {
     htmlName: "year",
