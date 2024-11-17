@@ -58,7 +58,7 @@ test("generate html page", async ({}, testInfo) => {
             },
             {
               fileName: "MyCity_NY_2_2.pdf",
-              isDoc: false,
+              isDoc: true,
             },
           ],
         },
