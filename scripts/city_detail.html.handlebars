@@ -100,9 +100,9 @@
               {{#each attachments}}
                 <li class="attachment">
                   {{#if isDoc}}
-                    <a target="_blank" download="{{fileName}}" href="attachment_images/{{fileName}}">{{fileName}}</a>
+                    <a target="_blank" download="{{fileName}}" href="https://mandates-map.directus.app/assets/{{directusId}}/{{fileName}}?download">{{fileName}}</a>
                   {{else}}
-                    <img class="img-fluid" border="1" src="attachment_images/{{fileName}}" />
+                    <img class="img-fluid" border="1" src="https://mandates-map.directus.app/assets/{{directusId}}/{{fileName}}" />
                   {{/if}}
                 </li>
               {{/each}}

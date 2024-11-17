@@ -42,6 +42,7 @@ test("generate html page", async ({}, testInfo) => {
           attachments: [
             {
               fileName: "MyCity_NY_1_1.png",
+              directusId: "abc-af-ac",
               isDoc: false,
             },
           ],
@@ -54,10 +55,12 @@ test("generate html page", async ({}, testInfo) => {
           attachments: [
             {
               fileName: "MyCity_NY_2_1.png",
+              directusId: "abc-af-ac",
               isDoc: false,
             },
             {
               fileName: "MyCity_NY_2_2.pdf",
+              directusId: "abc-af-ac",
               isDoc: true,
             },
           ],
