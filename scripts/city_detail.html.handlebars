@@ -100,9 +100,9 @@
               {{#each attachments}}
                 <li class="attachment">
                   {{#if isDoc}}
-                    <a target="_blank" href="{{outputPath}}">{{fileName}}</a>
+                    <a target="_blank" download="{{fileName}}" href="attachment_images/{{fileName}}">{{fileName}}</a>
                   {{else}}
-                    <img class="img-fluid" border="1" src="{{outputPath}}" />
+                    <img class="img-fluid" border="1" src="attachment_images/{{fileName}}" />
                   {{/if}}
                 </li>
               {{/each}}

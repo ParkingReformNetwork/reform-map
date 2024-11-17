@@ -64,9 +64,8 @@ test("normalizeAttachments() converts string entries into objects", () => {
   ).toEqual([
     {
       url: "https://prn.org/photo1.png",
-      fileName: "photo1.png",
+      fileName: "MyCity_AZ_1_1.png",
       isDoc: false,
-      outputPath: "attachment_images/MyCity_AZ_1_1.png",
     },
   ]);
 
@@ -79,15 +78,13 @@ test("normalizeAttachments() converts string entries into objects", () => {
   ).toEqual([
     {
       url: "https://prn.org/doc1.pdf",
-      fileName: "doc1.pdf",
+      fileName: "MyCity_AZ_2_1.pdf",
       isDoc: true,
-      outputPath: "attachment_images/MyCity_AZ_2_1.pdf",
     },
     {
       url: "https://prn.org/img2.jpg",
-      fileName: "img2.jpg",
+      fileName: "MyCity_AZ_2_2.jpg",
       isDoc: false,
-      outputPath: "attachment_images/MyCity_AZ_2_2.jpg",
     },
   ]);
 });

@@ -41,9 +41,8 @@ test("generate html page", async ({}, testInfo) => {
           notes: "Here's a note",
           attachments: [
             {
-              fileName: "Zoning%20Img.png",
+              fileName: "MyCity_NY_1_1.png",
               isDoc: false,
-              outputPath: "attachment_images/MyCity_NY_1_1.png",
             },
           ],
         },
@@ -54,14 +53,12 @@ test("generate html page", async ({}, testInfo) => {
           notes: "",
           attachments: [
             {
-              fileName: "Headline.png",
+              fileName: "MyCity_NY_2_1.png",
               isDoc: false,
-              outputPath: "attachment_images/MyCity_NY_2_1.png",
             },
             {
-              fileName: "article.pdf",
+              fileName: "MyCity_NY_2_2.pdf",
               isDoc: false,
-              outputPath: "attachment_images/MyCity_NY_2_2.pdf",
             },
           ],
         },

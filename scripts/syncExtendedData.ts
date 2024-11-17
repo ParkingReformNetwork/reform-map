@@ -81,14 +81,15 @@ export function normalizeAttachments(
   }
   return attachments.split(/\s+/).map((val, j) => {
     const fileTypeMatch = val.match(/\.[a-zA-Z_]+$/);
-    const fileType = fileTypeMatch ? fileTypeMatch[0] : null;
+    if (!fileTypeMatch) throw new Error(`Missing file extension in ${val}`);
+    const fileType = fileTypeMatch[0];
+    const fileName = `${escapePlaceId(placeId)}_${citationIdx}_${
+      j + 1
+    }${fileType}`;
     return {
       url: val,
-      fileName: new URL(val).pathname.split("/").pop()!,
+      fileName,
       isDoc: fileType === ".docx" || fileType === ".pdf",
-      outputPath: `attachment_images/${escapePlaceId(placeId)}_${citationIdx}_${
-        j + 1
-      }${fileType}`,
     };
   });
 }
@@ -150,7 +151,7 @@ async function setupAttachmentDownloads(
     });
     const buffer = await response.arrayBuffer();
     await fs.writeFile(
-      `city_detail/${attachment.outputPath}`,
+      `city_detail/attachment_images/${attachment.fileName}`,
       Buffer.from(buffer),
     );
   }
@@ -191,7 +192,6 @@ async function saveExtendedDataFile(
           attachments: citation.attachments.map((attachment) => ({
             fileName: attachment.fileName,
             isDoc: attachment.isDoc,
-            outputPath: attachment.outputPath,
           })),
         }));
         const requirements = splitStringArray(entry.requirements || "", {
