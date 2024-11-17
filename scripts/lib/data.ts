@@ -5,7 +5,6 @@ import { RawEntry, PlaceId } from "../../src/js/types";
 export type Attachment = {
   fileName: string;
   isDoc: boolean;
-  outputPath: string;
 };
 
 export type CitationType = "city code" | "media report" | "other";
