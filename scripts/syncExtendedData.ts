@@ -172,7 +172,7 @@ async function ensureDownloads(
   entry: PlaceEntry,
   globalLastUpdated: DateTime<true>,
 ): Promise<void> {
-  if (!citationsUpdated(entry.citations, globalLastUpdated)) return;
+  // if (!citationsUpdated(entry.citations, globalLastUpdated)) return;
   console.log(`Updating citation downloads: ${placeId}`);
   await setupAttachmentDownloads(
     entry.citations.flatMap((citation) => citation.attachments),
