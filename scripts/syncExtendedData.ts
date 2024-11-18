@@ -80,12 +80,22 @@ export function normalizeAttachments(
     return [];
   }
   return attachments.split(/\s+/).map((val, j) => {
-    const fileTypeMatch = val.match(/\.[a-zA-Z_]+$/);
-    if (!fileTypeMatch) throw new Error(`Missing file extension in ${val}`);
-    const fileType = fileTypeMatch[0];
+    const fileType = val
+      .split(".")
+      .at(-1)
+      ?.toLowerCase()
+      ?.replace("jpg_medium", "jpg");
+    if (!fileType) throw new Error(`Missing file extension in ${val}`);
+    const expectedFileTypes = new Set(["jpg", "png", "docx", "pdf"]);
+    if (!expectedFileTypes.has(fileType)) {
+      throw new Error(
+        `Unexpected file type for ${placeId} attachment ${val}: ${fileType}`,
+      );
+    }
+
     const fileName = `${escapePlaceId(placeId)}_${citationIdx}_${
       j + 1
-    }${fileType}`;
+    }.${fileType}`;
     return {
       url: val,
       fileName,
