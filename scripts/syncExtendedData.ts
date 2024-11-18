@@ -99,7 +99,7 @@ export function normalizeAttachments(
     return {
       url: val,
       fileName,
-      isDoc: fileType === ".docx" || fileType === ".pdf",
+      isDoc: fileType === "docx" || fileType === "pdf",
     };
   });
 }

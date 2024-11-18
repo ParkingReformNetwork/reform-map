@@ -107,8 +107,8 @@ test("every attachment file exists", async () => {
   );
   const dirEntries = await fs.readdir("city_detail/attachment_images");
   const dirEntriesSet = new Set(dirEntries);
-  const missingFiles = attachmentFileNames.filter((fp) =>
-    !dirEntriesSet.has(fp),
+  const missingFiles = attachmentFileNames.filter(
+    (fp) => !dirEntriesSet.has(fp),
   );
   expect(missingFiles).toEqual([]);
 });
