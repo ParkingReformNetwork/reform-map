@@ -8,6 +8,7 @@ import {
   parseDatetime,
   Citation,
 } from "../../scripts/syncExtendedData";
+import { readExtendedData } from "../../scripts/lib/data";
 
 test.describe("citationsUpdated()", () => {
   test("returns false if every citation is older than globalLastUpdated", () => {
@@ -95,4 +96,19 @@ test("city_detail_last_updated.txt is formatted correctly", async () => {
     "utf-8",
   );
   parseDatetime(lastUpdated, false); // will throw an error if incorrectly formatted
+});
+
+test("every attachment file exists", async () => {
+  const extendedData = await readExtendedData();
+  const attachmentFileNames = Object.values(extendedData).flatMap((entry) =>
+    entry.citations.flatMap((citation) =>
+      citation.attachments.map((attachment) => attachment.fileName),
+    ),
+  );
+  const dirEntries = await fs.readdir("city_detail/attachment_images");
+  const dirEntriesSet = new Set(dirEntries);
+  const missingFiles = attachmentFileNames.filter(
+    (fp) => !dirEntriesSet.has(fp),
+  );
+  expect(missingFiles).toEqual([]);
 });
