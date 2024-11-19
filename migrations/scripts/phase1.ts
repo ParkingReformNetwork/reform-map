@@ -13,6 +13,7 @@ import {
   PlaceType,
   LegacyReform,
   LegacyReformCitationJunction,
+  CitationsFileJunction,
 } from "../../scripts/lib/directus";
 import { CompleteEntry, readCompleteData } from "../../scripts/lib/data";
 import { PlaceId as PlaceStringId } from "../../src/js/types";
@@ -32,7 +33,6 @@ async function main(): Promise<void> {
   await purgeDatabase(client);
 
   // Then, migrate the data.
-  // TODO: upload files
   const placesToDirectusIds = await populatePlaces(client, jsonData);
   const citationsDirectusIds = await populateCitations(client, jsonData);
   const reformDirectusIds = await populateLegacyReforms(
@@ -45,8 +45,14 @@ async function main(): Promise<void> {
     reformDirectusIds,
     citationsDirectusIds,
   );
+  await asssociateCitationFiles(client, citationsDirectusIds);
 
   process.exit(0);
+}
+
+interface CitationDirectusIds {
+  id: number;
+  attachmentFileIds: string[];
 }
 
 /** Delete all records so that this script is idempotent. */
@@ -63,7 +69,6 @@ async function purgeDatabase(client: DirectusClient): Promise<void> {
   };
 
   // The order matters due to relations between the tables.
-  // TODO: delete files
   await purge("citations_files");
   await purge("legacy_reforms_citations");
   await purge("legacy_reforms");
@@ -102,7 +107,7 @@ async function populatePlaces(
 async function populateCitations(
   client: DirectusClient,
   jsonData: Record<PlaceStringId, CompleteEntry>,
-): Promise<Record<PlaceStringId, number[]>> {
+): Promise<Record<PlaceStringId, CitationDirectusIds[]>> {
   const toCreate: Array<Partial<DirectusCitation>> = Object.values(
     jsonData,
   ).flatMap((entry) =>
@@ -120,16 +125,30 @@ async function populateCitations(
 
   // We now need to group every citation belonging to a single place. We do this
   // by creating two parallel arrays, `directusIds` and `placeStringIds`, where each
-  // index corresponds to the other. We can then `zip()` to build the final result.
+  // index corresponds to the other. We can then `zip()` to build the result.
   const directusIds = apiResult.map((citation) => citation.id);
   const placeStringIds = Object.entries(jsonData).flatMap(([placeId, entry]) =>
     entry.citations.map(() => placeId),
   );
-  const result: Record<PlaceStringId, number[]> = {};
+  const result: Record<PlaceStringId, CitationDirectusIds[]> = {};
   for (const [placeId, citationId] of zip(placeStringIds, directusIds)) {
     if (!placeId || !citationId) throw new Error("zip() failed");
-    result[placeId] = [...(result[placeId] || []), citationId];
+    result[placeId] = [
+      ...(result[placeId] || []),
+      { id: citationId, attachmentFileIds: [] },
+    ];
   }
+
+  // Finally, we need to add the attachment file IDs stored in the JSON.
+  for (const [placeId, entry] of Object.entries(jsonData)) {
+    entry.citations.forEach((citation, i) => {
+      const attachmentIds = citation.attachments.flatMap(
+        (attachment) => attachment.directusId,
+      );
+      result[placeId][i].attachmentFileIds = attachmentIds;
+    });
+  }
+
   return result;
 }
 
@@ -170,18 +189,37 @@ async function populateLegacyReforms(
 async function associateReformsToCitations(
   client: DirectusClient,
   reformDirectusIds: Record<PlaceStringId, number>,
-  citationDirectusIds: Record<PlaceStringId, number[]>,
+  citationDirectusIds: Record<PlaceStringId, CitationDirectusIds[]>,
 ): Promise<void> {
   const toCreate: Array<Partial<LegacyReformCitationJunction>> = Object.entries(
     reformDirectusIds,
   ).flatMap(([placeId, reformId]) =>
-    citationDirectusIds[placeId].map((citationId) => ({
-      citations_id: citationId,
+    citationDirectusIds[placeId].map((citation) => ({
+      citations_id: citation.id,
       legacy_reforms_id: reformId,
     })),
   );
   await client.request(
     createItems("legacy_reforms_citations", toCreate, { fields: [] }),
+  );
+}
+
+async function asssociateCitationFiles(
+  client: DirectusClient,
+  citationDirectusIds: Record<PlaceStringId, CitationDirectusIds[]>,
+): Promise<void> {
+  const toCreate: Array<Partial<CitationsFileJunction>> = Object.values(
+    citationDirectusIds,
+  ).flatMap((entry) =>
+    entry.flatMap((citation) =>
+      citation.attachmentFileIds.map((fileId) => ({
+        citations_id: citation.id,
+        directus_files_id: fileId,
+      })),
+    ),
+  );
+  await client.request(
+    createItems("citations_files", toCreate, { fields: [] }),
   );
 }
 
