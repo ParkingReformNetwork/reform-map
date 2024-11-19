@@ -6,8 +6,8 @@
 import fs from "fs/promises";
 
 import fetch from "node-fetch";
-import { DateTime } from "luxon";
 
+import { PlaceId } from "../src/js/types";
 import { parseCsv } from "./lib/csv";
 import {
   Attachment as AttachmentBase,
@@ -15,11 +15,16 @@ import {
   splitStringArray,
 } from "./lib/data";
 import { escapePlaceId } from "../src/js/data";
+import {
+  DirectusClient,
+  getUploadedFiles,
+  initDirectus,
+  uploadFile,
+} from "./lib/directus";
 
 type Attachment = AttachmentBase & { url: string };
 export type Citation = CitationBase & {
   idx: number;
-  lastUpdated: DateTime<true>;
   attachments: Attachment[];
 };
 
@@ -28,34 +33,6 @@ type PlaceEntry = {
   reporter: string | null;
   citations: Citation[];
 };
-
-const GLOBAL_LAST_UPDATED_FP = "scripts/city_detail_last_updated.txt";
-const TIME_FORMAT = "MMMM d, yyyy, h:mm:ss a z";
-// Luxon does not support abbreviations like EST because they are not standardized:
-//   https://moment.github.io/luxon/#/zones?id=luxon-works-with-time-zones
-const TIME_ZONE_MAPPING: Partial<Record<string, string>> = {
-  PDT: "America/Los_Angeles",
-  PST: "America/Los_Angeles",
-};
-
-export function parseDatetime(
-  val: string,
-  timeZoneAbbreviations: boolean = true,
-): DateTime<true> {
-  let cleanedVal = val.replace(/\u202F/g, " ");
-  if (timeZoneAbbreviations) {
-    const tzAbbreviation = cleanedVal.split(" ").pop();
-    if (!tzAbbreviation) throw new Error(`Missing time zone: ${val}`);
-    const tz = TIME_ZONE_MAPPING[tzAbbreviation];
-    if (!tz) throw new Error(`Unrecognized time zone: ${tzAbbreviation}`);
-    cleanedVal = cleanedVal.replace(tzAbbreviation, tz);
-  }
-  const result = DateTime.fromFormat(cleanedVal, TIME_FORMAT);
-  if (!result.isValid) {
-    throw new Error(`Could not parse ${val}: ${result.invalidExplanation}`);
-  }
-  return result;
-}
 
 async function fetchGTablesData(): Promise<Record<string, any>[]> {
   const response = await fetch(
@@ -100,11 +77,12 @@ export function normalizeAttachments(
       url: val,
       fileName,
       isDoc: fileType === "docx" || fileType === "pdf",
+      directusId: "TODO",
     };
   });
 }
 
-async function loadData(): Promise<Record<string, PlaceEntry>> {
+async function loadData(): Promise<Record<PlaceId, PlaceEntry>> {
   // Google Tables stores one row per citation. A place may have >1 citation,
   // but they share the same PlaceEntry data otherwise.
   const gTablesData = await fetchGTablesData();
@@ -124,7 +102,6 @@ async function loadData(): Promise<Record<string, PlaceEntry>> {
       type: row.Type,
       url: row.URL,
       notes: row.Notes,
-      lastUpdated: parseDatetime(row["Last updated"]),
       attachments: normalizeAttachments(row.Attachments, citationIdx, placeId),
     };
 
@@ -143,53 +120,35 @@ async function loadData(): Promise<Record<string, PlaceEntry>> {
   return result;
 }
 
-export function citationsUpdated(
-  citations: Citation[],
-  globalLastUpdated: DateTime<true>,
-): boolean {
-  const maxLastUpdated = DateTime.max(...citations.map((x) => x.lastUpdated));
-  return maxLastUpdated >= globalLastUpdated;
-}
-
-async function setupAttachmentDownloads(
-  attachments: Attachment[],
-): Promise<void> {
-  // Use await in a for loop to avoid making too many calls -> rate limiting.
-  for (const attachment of attachments) {
-    const response = await fetch(attachment.url, {
-      headers: { "User-Agent": "prn-update-city-detail" },
-    });
-    const buffer = await response.arrayBuffer();
-    await fs.writeFile(
-      `city_detail/attachment_images/${attachment.fileName}`,
-      Buffer.from(buffer),
-    );
-  }
-}
-
 async function ensureDownloads(
-  placeId: string,
   entry: PlaceEntry,
-  globalLastUpdated: DateTime<true>,
+  directusClient: DirectusClient,
+  fileNameToDirectusIds: Record<string, string>,
 ): Promise<void> {
-  if (!citationsUpdated(entry.citations, globalLastUpdated)) return;
-  console.log(`Updating citation downloads: ${placeId}`);
-  await setupAttachmentDownloads(
-    entry.citations.flatMap((citation) => citation.attachments),
-  );
-}
+  // Use a for loop to avoid making too many calls -> rate limiting.
+  for (const citation of entry.citations) {
+    for (const attachment of citation.attachments) {
+      if (attachment.fileName in fileNameToDirectusIds) continue;
 
-async function updateLastUpdatedFile(): Promise<void> {
-  console.log(
-    `Updating ${GLOBAL_LAST_UPDATED_FP} with today's date and time zone`,
-  );
-  const currentDatetime = DateTime.local().setZone("UTC");
-  const formatted = currentDatetime.toFormat(TIME_FORMAT);
-  await fs.writeFile(GLOBAL_LAST_UPDATED_FP, formatted);
+      console.log(`Uploading to Directus: ${attachment.fileName}`);
+      const response = await fetch(attachment.url, {
+        headers: { "User-Agent": "prn-update-city-detail" },
+      });
+      const blob = await response.buffer();
+      const directusId = await uploadFile(
+        directusClient,
+        attachment.fileName,
+        blob,
+      );
+      // eslint-disable-next-line no-param-reassign
+      fileNameToDirectusIds[attachment.fileName] = directusId;
+    }
+  }
 }
 
 async function saveExtendedDataFile(
   data: Record<string, PlaceEntry>,
+  fileNameToDirectusIds: Record<string, string>,
 ): Promise<void> {
   const prunedData = Object.fromEntries(
     Object.entries(data)
@@ -202,6 +161,7 @@ async function saveExtendedDataFile(
           attachments: citation.attachments.map((attachment) => ({
             fileName: attachment.fileName,
             isDoc: attachment.isDoc,
+            directusId: fileNameToDirectusIds[attachment.fileName],
           })),
         }));
         const requirements = splitStringArray(entry.requirements || "", {
@@ -228,19 +188,18 @@ async function saveExtendedDataFile(
 }
 
 async function main(): Promise<void> {
-  const [rawGlobalLastUpdated, data] = await Promise.all([
-    fs.readFile(GLOBAL_LAST_UPDATED_FP, "utf-8"),
-    loadData(),
-  ]);
-  const globalLastUpdated = parseDatetime(rawGlobalLastUpdated, false);
+  const data = await loadData();
 
-  // Use await in a for loop to avoid making too many calls -> rate limiting.
-  for (const [placeId, entry] of Object.entries(data)) {
-    await ensureDownloads(placeId, entry, globalLastUpdated);
+  const directusClient = await initDirectus();
+  const fileNameToDirectusIds = await getUploadedFiles(directusClient);
+
+  // Use a for loop to avoid making too many calls -> rate limiting.
+  for (const entry of Object.values(data)) {
+    await ensureDownloads(entry, directusClient, fileNameToDirectusIds);
   }
 
-  await saveExtendedDataFile(data);
-  await updateLastUpdatedFile();
+  await saveExtendedDataFile(data, fileNameToDirectusIds);
+  process.exit(0);
 }
 
 if (process.env.NODE_ENV !== "test") {

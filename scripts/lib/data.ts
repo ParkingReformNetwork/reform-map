@@ -4,6 +4,7 @@ import { RawEntry, PlaceId } from "../../src/js/types";
 
 export type Attachment = {
   fileName: string;
+  directusId: string;
   isDoc: boolean;
 };
 
