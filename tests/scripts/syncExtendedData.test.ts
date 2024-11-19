@@ -1,5 +1,3 @@
-import fs from "fs/promises";
-
 import { expect, test } from "@playwright/test";
 
 import { normalizeAttachments } from "../../scripts/syncExtendedData";
@@ -41,17 +39,14 @@ test("normalizeAttachments() converts string entries into objects", () => {
   ]);
 });
 
-test("every attachment file exists", async () => {
+test("every attachment has a Directus ID", async () => {
   const extendedData = await readExtendedData();
-  const attachmentFileNames = Object.values(extendedData).flatMap((entry) =>
+  const missingFileNames = Object.values(extendedData).flatMap((entry) =>
     entry.citations.flatMap((citation) =>
-      citation.attachments.map((attachment) => attachment.fileName),
+      citation.attachments
+        .filter((attachment) => !attachment.directusId)
+        .map((attachment) => attachment.fileName),
     ),
   );
-  const dirEntries = await fs.readdir("city_detail/attachment_images");
-  const dirEntriesSet = new Set(dirEntries);
-  const missingFiles = attachmentFileNames.filter(
-    (fp) => !dirEntriesSet.has(fp),
-  );
-  expect(missingFiles).toEqual([]);
+  expect(missingFileNames).toEqual([]);
 });
