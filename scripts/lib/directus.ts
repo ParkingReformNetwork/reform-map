@@ -62,7 +62,7 @@ export type Citation = {
 } & Metadata;
 
 export type LegacyReform = {
-  place: number | Place;
+  place: number;
   last_verified_at: "datetime" | null;
   policy_changes: string[];
   land_uses: string[];
@@ -78,14 +78,14 @@ export type LegacyReform = {
 
 export interface CitationsFileJunction {
   id: number;
-  citations_id: number | Citation;
+  citations_id: number;
   directus_files_id: string;
 }
 
 export interface LegacyReformCitationJunction {
   id: number;
-  legacy_reforms_id: number | LegacyReform;
-  citations_id: number | Citation;
+  legacy_reforms_id: number;
+  citations_id: number;
 }
 
 // ------------------------------------------------------------------------------
