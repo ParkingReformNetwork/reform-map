@@ -58,7 +58,7 @@ export type Citation = {
   source_description: string;
   notes: string | null;
   url: string | null;
-  attachments: number[] | CitationsFileJunction[];
+  attachments: number[];
 } & Metadata;
 
 export type LegacyReform = {
@@ -73,7 +73,7 @@ export type LegacyReform = {
   reporter: string | null;
   reform_date: string | null;
   complete_minimums_repeal: boolean;
-  citations: number[] | LegacyReformCitationJunction[];
+  citations: number[];
 } & Metadata;
 
 export interface CitationsFileJunction {

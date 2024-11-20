@@ -16,6 +16,7 @@
     "sync-core-data": "tsx scripts/syncCoreData.ts",
     "sync-extended-data": "tsx scripts/syncExtendedData.ts",
     "sync-lat-lng": "tsx scripts/syncLatLng.ts",
+    "sync-directus": "tsx scripts/syncDirectus.ts",
     "broken-links": "tsx scripts/brokenLinks.ts",
     "serve-dist": "cd dist; http-server",
     "test-dist": "PORT=8080 playwright test"
