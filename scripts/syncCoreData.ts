@@ -5,6 +5,7 @@
 
 import nodeFetch from "node-fetch";
 import Papa from "papaparse";
+import { DateTime } from "luxon";
 
 import { initGeocoder, getLongLat } from "./lib/geocoder";
 import { readCoreData, saveCoreData, splitStringArray } from "./lib/data";
@@ -51,6 +52,12 @@ async function readCityTable(): Promise<Row[]> {
   return placeCleaned;
 }
 
+function normalizeReformDate(v: string | null): string | null {
+  return v
+    ? DateTime.fromFormat(v, "LLL d, yyyy").toFormat("yyyy-MM-dd")
+    : null;
+}
+
 async function readReportTable(): Promise<Row[]> {
   const response = await fetch(
     "https://area120tables.googleapis.com/link/bAc5xhhLJ2q4jYYGjaq_24/export?key=8_S1APcQHGN9zfTXEMz_Gz8sel3FCo3RUfEV4f-PBOqE8zy3vG3FpCQcSXQjRDXOqZ",
@@ -84,7 +91,7 @@ async function readReportTable(): Promise<Row[]> {
         "high density residential": "residential, high-density",
         "multi-family residential": "residential, multi-family",
       }),
-      date: row["Date of Reform"] || null,
+      date: normalizeReformDate(row["Date of Reform"] || null),
       repeal: checkIncludes(row.Highlights, "no mandates"),
     }));
 }
@@ -143,7 +150,10 @@ async function addMissingLatLng(
   // We use a for loop to avoid making too many network calls -> rate limiting.
   const result: Record<PlaceId, RawEntry> = {};
   for (const [placeId, entry] of Object.entries(data)) {
-    if (entry.coord) continue;
+    if (entry.coord) {
+      result[placeId] = entry;
+      continue;
+    }
     const longLat = await getLongLat(
       entry.place,
       entry.state,

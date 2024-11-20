@@ -169,7 +169,7 @@ async function populateLegacyReforms(
         status: entry.status,
         summary: entry.summary,
         reporter: entry.reporter,
-        reform_date: normalizeReformDate(entry.date),
+        reform_date: entry.date,
         complete_minimums_repeal: entry.repeal,
         citations: [],
       };
@@ -239,12 +239,6 @@ function determinePlaceType(name: string, state: string | null): PlaceType {
   if (states.has(`${name}|${state}`)) return "state";
   if (name.endsWith("County") || name.endsWith("Parish")) return "county";
   return "city";
-}
-
-function normalizeReformDate(v: string | null): string | null {
-  return v
-    ? DateTime.fromFormat(v, "LLL d, yyyy").toFormat("yyyy-MM-dd")
-    : null;
 }
 
 main().catch((error) => {
