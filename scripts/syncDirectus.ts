@@ -15,12 +15,12 @@ async function main(): Promise<void> {
   const client = await initDirectus();
   const geocoder = initGeocoder();
 
-  const places = await readPlaces(client, geocoder);
+  const places = await readPlacesAndEnsureCoordinates(client, geocoder);
   console.log(JSON.stringify(places));
   process.exit(0);
 }
 
-async function readPlaces(
+async function readPlacesAndEnsureCoordinates(
   client: DirectusClient,
   geocoder: NodeGeocoder.Geocoder,
 ): Promise<{

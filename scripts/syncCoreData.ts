@@ -4,7 +4,6 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 
 import nodeFetch from "node-fetch";
-import NodeGeocoder from "node-geocoder";
 import Papa from "papaparse";
 
 import { initGeocoder, getLongLat } from "./lib/geocoder";
