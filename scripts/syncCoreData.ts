@@ -4,9 +4,9 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 
 import nodeFetch from "node-fetch";
-import NodeGeocoder from "node-geocoder";
 import Papa from "papaparse";
 
+import { initGeocoder, getLongLat } from "./lib/geocoder";
 import { readCoreData, saveCoreData, splitStringArray } from "./lib/data";
 import { PlaceId, RawEntry } from "../src/js/types";
 
@@ -135,49 +135,23 @@ function addCachedLatLng(
 // Geocoding
 // -------------------------------------------------------------
 
-async function ensureRowLatLng(
-  entry: RawEntry,
-  geocoder: NodeGeocoder.Geocoder,
-): Promise<RawEntry> {
-  if (entry.coord !== null) {
-    return entry;
-  }
-
-  const stateQuery = entry.state ? `${entry.state}, ` : "";
-  // We try the most precise query first, then fall back to less precise queries.
-  const locationMethods = [
-    () => `${entry.place}, ${stateQuery}, ${entry.country}`,
-    () => `${entry.place}, ${stateQuery}`,
-  ];
-  if (stateQuery) {
-    locationMethods.push(() => `${entry.place}`);
-  }
-
-  for (const getLocationString of locationMethods) {
-    const locationString = getLocationString();
-    const geocodeResults = await geocoder.geocode(locationString);
-    if (geocodeResults.length > 0) {
-      const lat = geocodeResults[0].latitude;
-      const long = geocodeResults[0].longitude;
-      if (!lat || !long) continue;
-      return {
-        ...entry,
-        coord: [long, lat],
-      };
-    }
-  }
-  return entry;
-}
-
 async function addMissingLatLng(
   data: Record<PlaceId, RawEntry>,
 ): Promise<Record<PlaceId, RawEntry>> {
-  const geocoder = NodeGeocoder({ provider: "openstreetmap", fetch });
+  const geocoder = initGeocoder();
 
   // We use a for loop to avoid making too many network calls -> rate limiting.
   const result: Record<PlaceId, RawEntry> = {};
   for (const [placeId, entry] of Object.entries(data)) {
-    result[placeId] = await ensureRowLatLng(entry, geocoder);
+    if (entry.coord) continue;
+    const longLat = await getLongLat(
+      entry.place,
+      entry.state,
+      entry.country,
+      geocoder,
+    );
+    if (!longLat) throw new Error(`Could not get lat long for ${placeId}`);
+    result[placeId] = { ...entry, coord: longLat };
   }
   return result;
 }
