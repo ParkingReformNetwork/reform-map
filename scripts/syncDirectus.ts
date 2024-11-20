@@ -1,4 +1,6 @@
 /* eslint-disable no-console */
+/* eslint-disable import/no-extraneous-dependencies */
+/* eslint-disable no-await-in-loop */
 
 import { readItems, updateItem } from "@directus/sdk";
 import NodeGeocoder from "node-geocoder";
@@ -10,15 +12,6 @@ import {
 } from "./lib/directus";
 import { PlaceId as PlaceStringId } from "../src/js/types";
 import { getLongLat, initGeocoder } from "./lib/geocoder";
-
-async function main(): Promise<void> {
-  const client = await initDirectus();
-  const geocoder = initGeocoder();
-
-  const places = await readPlacesAndEnsureCoordinates(client, geocoder);
-  console.log(JSON.stringify(places));
-  process.exit(0);
-}
 
 async function readPlacesAndEnsureCoordinates(
   client: DirectusClient,
@@ -76,6 +69,15 @@ async function readPlacesAndEnsureCoordinates(
     directusIdToStringId,
     stringIdToPlace,
   };
+}
+
+async function main(): Promise<void> {
+  const client = await initDirectus();
+  const geocoder = initGeocoder();
+
+  const places = await readPlacesAndEnsureCoordinates(client, geocoder);
+  console.log(JSON.stringify(places));
+  process.exit(0);
 }
 
 main().catch((error) => {

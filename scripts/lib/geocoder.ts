@@ -1,3 +1,6 @@
+/* eslint-disable import/no-extraneous-dependencies */
+/* eslint-disable no-await-in-loop */
+
 import nodeFetch from "node-fetch";
 import NodeGeocoder from "node-geocoder";
 
@@ -18,14 +21,12 @@ export function initGeocoder(): NodeGeocoder.Geocoder {
 export async function getLongLat(
   placeName: string,
   state: string | null,
-  country_code: string,
+  countryCode: string,
   geocoder: NodeGeocoder.Geocoder,
 ): Promise<[number, number] | null> {
   const stateQuery = state ? `${state}, ` : "";
   // We try the most precise query first, then fall back to less precise queries.
-  const locationMethods = [
-    () => `${placeName}, ${stateQuery}, ${country_code}`,
-  ];
+  const locationMethods = [() => `${placeName}, ${stateQuery}, ${countryCode}`];
   if (stateQuery) {
     locationMethods.push(() => `${placeName}, ${stateQuery}`);
   }
