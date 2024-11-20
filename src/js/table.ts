@@ -11,20 +11,19 @@ import {
   CellComponent,
 } from "tabulator-tables";
 import "tabulator-tables/dist/css/tabulator.min.css";
-import { DateTime } from "luxon";
 
 import { PlaceFilterManager } from "./FilterState";
-import { DATE_REPR } from "./data";
+import { Date } from "./types";
 
 function formatDate(cell: CellComponent): string {
-  const v = cell.getValue() as DateTime | null;
-  return v ? v.toFormat(DATE_REPR) : "";
+  const v = cell.getValue() as Date | null;
+  return v ? v.format() : "";
 }
 
-function compareDates(a: DateTime | null, b: DateTime | null): number {
+function compareDates(a: Date | null, b: Date | null): number {
   if (!a) return 1;
   if (!b) return -1;
-  return a.valueOf() - b.valueOf();
+  return a.parsed.valueOf() - b.parsed.valueOf();
 }
 
 function compareStringArrays(a: string[], b: string[]): number {

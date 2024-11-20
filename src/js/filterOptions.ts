@@ -36,7 +36,7 @@ export class FilterOptions {
     entries.forEach((entry) => {
       status.add(entry.status);
       country.add(entry.country);
-      year.add(entry.date?.year.toString() || UNKNOWN_YEAR);
+      year.add(entry.date?.parsed.year.toString() || UNKNOWN_YEAR);
       entry.policy.forEach((v) => policy.add(v));
       entry.scope.forEach((v) => scope.add(v));
       entry.land.forEach((v) => landUse.add(v));
