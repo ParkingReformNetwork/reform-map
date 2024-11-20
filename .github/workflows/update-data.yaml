@@ -21,6 +21,9 @@ jobs:
         run: npm run sync-core-data
       - name: Run sync-extended-data
         run: npm run sync-extended-data
+        env:
+          DIRECTUS_EMAIL: ${{ secrets.DIRECTUS_EMAIL }}
+          DIRECTUS_PASSWORD: ${{ secrets.DIRECTUS_PASSWORD }}
       - name: Run sync-lat-lng
         run: npm run sync-lat-lng
       - name: Gen CSV
