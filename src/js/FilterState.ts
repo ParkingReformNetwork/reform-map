@@ -97,7 +97,7 @@ export class PlaceFilterManager {
     const isStatus = state.status.includes(entry.status);
     const isCountry = state.country.includes(entry.country);
     const isYear = state.year.includes(
-      entry.date?.year.toString() || UNKNOWN_YEAR,
+      entry.date?.parsed.year.toString() || UNKNOWN_YEAR,
     );
 
     const isAllMinimumsRepealed =

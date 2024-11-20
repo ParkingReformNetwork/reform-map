@@ -1,8 +1,4 @@
-import { DateTime } from "luxon";
-
-import { PlaceId, PlaceEntry, RawEntry } from "./types";
-
-export const DATE_REPR = "LLL d, yyyy";
+import { PlaceId, PlaceEntry, RawEntry, Date } from "./types";
 
 const countryMapping: Partial<Record<string, string>> = {
   AU: "Australia",
@@ -38,13 +34,11 @@ export default async function readData(): Promise<Record<PlaceId, PlaceEntry>> {
   >;
   return Object.fromEntries(
     Object.entries(rawData).map(([placeId, entry]) => {
-      const date = entry.date
-        ? DateTime.fromFormat(entry.date, DATE_REPR)
-        : null;
+      const date = entry.date ? new Date(entry.date) : null;
       const updated = {
         ...entry,
         country: countryMapping[entry.country] ?? entry.country,
-        date: date && date.isValid ? date : null,
+        date,
         url: placeIdToUrl(placeId),
       };
       return [placeId, updated];

@@ -4,11 +4,10 @@ import type { PlaceEntry, PlaceId } from "./types";
 import Observable from "./Observable";
 import { PlaceFilterManager } from "./FilterState";
 import { ViewStateObservable } from "./viewToggle";
-import { DATE_REPR } from "./data";
 
 function generateScorecard(entry: PlaceEntry, placeId: PlaceId): string {
   const dateOfReform = entry.date
-    ? `<li>Reformed on ${entry.date.toFormat(DATE_REPR)}</li>`
+    ? `<li>Reformed ${entry.date.preposition()} ${entry.date.format()}</li>`
     : "";
   return `
     <header class="scorecard-header">
