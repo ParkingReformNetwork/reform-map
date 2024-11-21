@@ -20,7 +20,7 @@
   },
   "Abbottstown, PA": {
     "reporter": "Samuel Deetz",
-    "requirements": ["other", "frequent transit"],
+    "requirements": ["frequent transit", "other"],
     "citations": [
       {
         "description": "Abbottstown Zoning Code",
@@ -198,8 +198,8 @@
     "reporter": "Samuel Deetz",
     "requirements": [
       "by right",
-      "size of project",
       "other",
+      "size of project",
       "supportive housing",
       "transportation demand management"
     ],
@@ -480,12 +480,12 @@
   "Albany, NY": {
     "reporter": "Samuel Deetz",
     "requirements": [
-      "size of project",
       "by right",
       "frequent transit",
+      "in-lieu fees",
       "other",
-      "transportation demand management",
-      "in-lieu fees"
+      "size of project",
+      "transportation demand management"
     ],
     "citations": [
       {
@@ -832,7 +832,7 @@
   },
   "Alexandria, VA": {
     "reporter": null,
-    "requirements": ["affordable housing", "frequent transit", "by right"],
+    "requirements": ["affordable housing", "by right", "frequent transit"],
     "citations": [
       {
         "description": "Alexandria Zoning Code",
@@ -953,7 +953,7 @@
   },
   "Allentown, PA": {
     "reporter": "Craig Beavers",
-    "requirements": ["size of project", "by right", "bike parking"],
+    "requirements": ["bike parking", "by right", "size of project"],
     "citations": [
       {
         "description": "Allentown Zoning Code",
@@ -1101,7 +1101,7 @@
   },
   "Alpena, MI": {
     "reporter": "Samuel Deetz",
-    "requirements": ["by right", "size of project", "bike parking", "other"],
+    "requirements": ["bike parking", "by right", "other", "size of project"],
     "citations": [
       {
         "description": "Alpena Zoning Code",
@@ -1197,7 +1197,7 @@
   },
   "Altoona, IA": {
     "reporter": "Samuel Deetz",
-    "requirements": ["other", "by right"],
+    "requirements": ["by right", "other"],
     "citations": [
       {
         "description": "Altoona Zoning Code",
@@ -1479,13 +1479,13 @@
   "Anaheim, CA": {
     "reporter": "Samuel Deetz",
     "requirements": [
-      "by right",
       "accessory dwelling units",
-      "frequent transit",
-      "size of project",
+      "by right",
       "carshare",
+      "frequent transit",
       "historic preservation",
-      "other"
+      "other",
+      "size of project"
     ],
     "citations": [
       {
@@ -1555,7 +1555,7 @@
   },
   "Anchorage, KY": {
     "reporter": "Samuel Deetz",
-    "requirements": ["by right", "size of project", "historic preservation"],
+    "requirements": ["by right", "historic preservation", "size of project"],
     "citations": [
       {
         "description": "Anchorage Land Development Code",
@@ -1721,7 +1721,7 @@
   },
   "Annapolis, MD": {
     "reporter": "Ted J Sheils",
-    "requirements": ["other", "size of project", "by right"],
+    "requirements": ["by right", "other", "size of project"],
     "citations": [
       {
         "description": "Ordinance Reducing Requirements",
@@ -1776,7 +1776,7 @@
   },
   "Anne Arundel County, MD": {
     "reporter": "Samuel Deetz",
-    "requirements": ["by right", "frequent transit", "bike parking"],
+    "requirements": ["bike parking", "by right", "frequent transit"],
     "citations": [
       {
         "description": "Anne Arundel County",
@@ -1838,7 +1838,7 @@
   },
   "Antioch, IL": {
     "reporter": "Samuel Deetz",
-    "requirements": ["by right", "size of project", "other"],
+    "requirements": ["by right", "other", "size of project"],
     "citations": [
       {
         "description": "Antioch Zoning Code",
@@ -2229,11 +2229,11 @@
   "Arvada, CO": {
     "reporter": "Samuel Deetz",
     "requirements": [
-      "frequent transit",
       "bike parking",
-      "transportation demand management",
+      "by right",
+      "frequent transit",
       "other",
-      "by right"
+      "transportation demand management"
     ],
     "citations": [
       {
@@ -2451,7 +2451,7 @@
   },
   "Ashwaubenon, WI": {
     "reporter": "Samuel Deetz",
-    "requirements": ["other", "by right"],
+    "requirements": ["by right", "other"],
     "citations": [
       {
         "description": "Ashwaubenon Zoning Code",
@@ -2558,11 +2558,11 @@
   "Athens, OH": {
     "reporter": null,
     "requirements": [
-      "by right",
-      "other",
+      "affordable housing",
       "bike parking",
+      "by right",
       "frequent transit",
-      "affordable housing"
+      "other"
     ],
     "citations": [
       {
@@ -2649,7 +2649,7 @@
   },
   "Atlanta, GA": {
     "reporter": "Caleb Racicot",
-    "requirements": ["by right", "affordable housing", "historic preservation"],
+    "requirements": ["affordable housing", "by right", "historic preservation"],
     "citations": [
       {
         "description": "Atlanta Zoning Code",
@@ -2910,7 +2910,7 @@
   },
   "Augusta, GA": {
     "reporter": "Samuel Deetz",
-    "requirements": ["other", "by right", "bike parking"],
+    "requirements": ["bike parking", "by right", "other"],
     "citations": [
       {
         "description": "Augusta Zoning Code",
@@ -2973,11 +2973,11 @@
   "Aurora, CO": {
     "reporter": "Samuel Deetz",
     "requirements": [
-      "by right",
-      "other",
-      "frequent transit",
       "bike parking",
-      "carshare"
+      "by right",
+      "carshare",
+      "frequent transit",
+      "other"
     ],
     "citations": [
       {
@@ -3304,7 +3304,7 @@
   },
   "Bakersfield, CA": {
     "reporter": "Samuel Deetz",
-    "requirements": ["frequent transit", "other", "affordable housing"],
+    "requirements": ["affordable housing", "frequent transit", "other"],
     "citations": [
       {
         "description": "Bakersfield Zoning Code",
@@ -3501,10 +3501,10 @@
   "Bangor, ME": {
     "reporter": "Samuel Deetz",
     "requirements": [
-      "by right",
       "accessory dwelling units",
-      "size of project",
-      "other"
+      "by right",
+      "other",
+      "size of project"
     ],
     "citations": [
       {
@@ -3524,7 +3524,7 @@
   },
   "Bangor, PA": {
     "reporter": "Samuel Deetz",
-    "requirements": ["in-lieu fees", "by right", "size of project"],
+    "requirements": ["by right", "in-lieu fees", "size of project"],
     "citations": [
       {
         "description": "Bangor Zoning Code",
@@ -3634,7 +3634,7 @@
   },
   "Barneveld, WI": {
     "reporter": "Samuel Deetz",
-    "requirements": ["other", "by right"],
+    "requirements": ["by right", "other"],
     "citations": [
       {
         "description": "Barneveld Zoning Code",
@@ -3749,10 +3749,10 @@
   "Basalt, CO": {
     "reporter": "Samuel Deetz",
     "requirements": [
-      "in-lieu fees",
-      "other",
       "by right",
-      "historic preservation"
+      "historic preservation",
+      "in-lieu fees",
+      "other"
     ],
     "citations": [
       {
@@ -3787,7 +3787,7 @@
   },
   "Basin, WY": {
     "reporter": "Samuel Deetz",
-    "requirements": ["size of project", "by right"],
+    "requirements": ["by right", "size of project"],
     "citations": [
       {
         "description": "Basin Zoning Code",
@@ -3806,7 +3806,7 @@
   },
   "Bastrop, LA": {
     "reporter": "Samuel Deetz",
-    "requirements": ["by right", "carshare", "tree preservation", "other"],
+    "requirements": ["by right", "carshare", "other", "tree preservation"],
     "citations": [
       {
         "description": "Bastrop Zoning Code",
@@ -3849,7 +3849,7 @@
   },
   "Batavia, IL": {
     "reporter": "Samuel Deetz",
-    "requirements": ["other", "in-lieu fees"],
+    "requirements": ["in-lieu fees", "other"],
     "citations": [
       {
         "description": "Batavia Zoning Code",
@@ -4019,9 +4019,9 @@
     "reporter": "Samuel Deetz",
     "requirements": [
       "by right",
-      "tree preservation",
       "frequent transit",
-      "other"
+      "other",
+      "tree preservation"
     ],
     "citations": [
       {
@@ -4061,7 +4061,7 @@
   },
   "Battle Creek, MI": {
     "reporter": "Samuel Deetz",
-    "requirements": ["by right", "bike parking"],
+    "requirements": ["bike parking", "by right"],
     "citations": [
       {
         "description": "Battle Creek Zoning Code",
@@ -4303,7 +4303,7 @@
   },
   "Bedford Township, MI": {
     "reporter": "Samuel Deetz",
-    "requirements": ["other", "by right"],
+    "requirements": ["by right", "other"],
     "citations": [
       {
         "description": "Bedford Township Zoning Code",
@@ -4370,7 +4370,7 @@
   },
   "Bel Air, MD": {
     "reporter": "Samuel Deetz",
-    "requirements": ["by right", "size of project", "in-lieu fees"],
+    "requirements": ["by right", "in-lieu fees", "size of project"],
     "citations": [
       {
         "description": "Bel Air Zoning Code",
@@ -4394,7 +4394,7 @@
   },
   "Belding, MI": {
     "reporter": "Samuel Deetz",
-    "requirements": ["size of project", "by right"],
+    "requirements": ["by right", "size of project"],
     "citations": [
       {
         "description": "Belding Zoning Code",
@@ -4761,7 +4761,7 @@
   },
   "Bellevue, WA": {
     "reporter": "Samuel Deetz",
-    "requirements": ["frequent transit", "by right"],
+    "requirements": ["by right", "frequent transit"],
     "citations": [
       {
         "description": "Bellevue Land Use Code",
@@ -4895,7 +4895,7 @@
   },
   "Belmont, NC": {
     "reporter": "Samuel Deetz",
-    "requirements": ["size of project", "by right", "other"],
+    "requirements": ["by right", "other", "size of project"],
     "citations": [
       {
         "description": "Belmont Land Development Code",
@@ -5046,7 +5046,7 @@
   },
   "Bensenville, IL": {
     "reporter": "Samuel Deetz",
-    "requirements": ["other", "frequent transit", "carshare", "in-lieu fees"],
+    "requirements": ["carshare", "frequent transit", "in-lieu fees", "other"],
     "citations": [
       {
         "description": "Bensenville Zoning Code",
@@ -5175,7 +5175,7 @@
   },
   "Bentonville, AR": {
     "reporter": "Samuel Deetz",
-    "requirements": ["size of project", "by right"],
+    "requirements": ["by right", "size of project"],
     "citations": [
       {
         "description": "Bentonville Zoning Code",
@@ -5199,7 +5199,7 @@
   },
   "Benzonia, MI": {
     "reporter": "Samuel Deetz",
-    "requirements": ["bike parking", "other", "by right"],
+    "requirements": ["bike parking", "by right", "other"],
     "citations": [
       {
         "description": "Benzonia Zoning Code",
@@ -5393,7 +5393,7 @@
   },
   "Berthold, ND": {
     "reporter": "Samuel Deetz",
-    "requirements": ["other", "by right"],
+    "requirements": ["by right", "other"],
     "citations": [
       {
         "description": "Berthold Zoning Code",
@@ -5479,7 +5479,7 @@
   },
   "Berwyn, IL": {
     "reporter": "Samuel Deetz",
-    "requirements": ["other", "frequent transit", "by right", "in-lieu fees"],
+    "requirements": ["by right", "frequent transit", "in-lieu fees", "other"],
     "citations": [
       {
         "description": "Berwyn Zoning Code",
@@ -5732,7 +5732,7 @@
   },
   "Big Timber, MT": {
     "reporter": "Samuel Deetz",
-    "requirements": ["other", "by right"],
+    "requirements": ["by right", "other"],
     "citations": [
       {
         "description": "Big Timber Zoning Code",
@@ -5929,7 +5929,7 @@
   },
   "Birmingham, MI": {
     "reporter": "Samuel Deetz",
-    "requirements": ["historic preservation", "other", "in-lieu fees"],
+    "requirements": ["historic preservation", "in-lieu fees", "other"],
     "citations": [
       {
         "description": "Birmingham Zoning Code",
@@ -6341,7 +6341,7 @@
   },
   "Blue Springs, MO": {
     "reporter": "Samuel Deetz",
-    "requirements": ["other", "bike parking"],
+    "requirements": ["bike parking", "other"],
     "citations": [
       {
         "description": "Blue Springs Unified Development Code",
@@ -6414,12 +6414,12 @@
   "Boise, ID": {
     "reporter": "Matthew Pabich",
     "requirements": [
-      "by right",
-      "tree preservation",
+      "affordable housing",
       "bike parking",
+      "by right",
       "other",
       "transportation demand management",
-      "affordable housing"
+      "tree preservation"
     ],
     "citations": [
       {
@@ -6511,7 +6511,7 @@
   },
   "Bonn, NW": {
     "reporter": "Samuel Deetz",
-    "requirements": ["by right", "in-lieu fees", "other", "carshare"],
+    "requirements": ["by right", "carshare", "in-lieu fees", "other"],
     "citations": [
       {
         "description": "Bonn Stellplatzsatzung",
@@ -6833,7 +6833,7 @@
   },
   "Boyertown, PA": {
     "reporter": "Samuel Deetz",
-    "requirements": ["in-lieu fees", "by right", "other"],
+    "requirements": ["by right", "in-lieu fees", "other"],
     "citations": [
       {
         "description": "Boyertown Zoning Code",
@@ -6971,7 +6971,7 @@
   },
   "Brainerd, MN": {
     "reporter": "Mark Ostgarden",
-    "requirements": ["by right", "bike parking"],
+    "requirements": ["bike parking", "by right"],
     "citations": [
       {
         "description": "Old City Code",
@@ -7222,7 +7222,7 @@
   },
   "Brentwood, PA": {
     "reporter": "Samuel Deetz",
-    "requirements": ["size of project", "by right", "other"],
+    "requirements": ["by right", "other", "size of project"],
     "citations": [
       {
         "description": "Brentwood Zoning Code",
@@ -7298,7 +7298,7 @@
   },
   "Bridgeport, PA": {
     "reporter": "Samuel Deetz",
-    "requirements": ["other", "in-lieu fees"],
+    "requirements": ["in-lieu fees", "other"],
     "citations": [
       {
         "description": "Bridgeport Zoning Code",
@@ -7365,7 +7365,7 @@
   },
   "Brighton, CO": {
     "reporter": "Samuel Deetz",
-    "requirements": ["by right", "size of project", "other", "bike parking"],
+    "requirements": ["bike parking", "by right", "other", "size of project"],
     "citations": [
       {
         "description": "Brighton Land Use & Development Code",
@@ -7389,7 +7389,7 @@
   },
   "Brighton, MI": {
     "reporter": "Samuel Deetz",
-    "requirements": ["size of project", "by right"],
+    "requirements": ["by right", "size of project"],
     "citations": [
       {
         "description": "Brighton Zoning Code",
@@ -7446,7 +7446,7 @@
   },
   "Bristol, RI": {
     "reporter": "Samuel Deetz",
-    "requirements": ["other", "by right"],
+    "requirements": ["by right", "other"],
     "citations": [
       {
         "description": "Bristol Zoning Code",
@@ -7735,7 +7735,7 @@
   },
   "Brooklyn, MI": {
     "reporter": "Samuel Deetz",
-    "requirements": ["by right", "bike parking"],
+    "requirements": ["bike parking", "by right"],
     "citations": [
       {
         "description": "Brooklyn Zoning Code",
@@ -7891,7 +7891,7 @@
   },
   "Brownsville, TX": {
     "reporter": "Samuel Deetz",
-    "requirements": ["by right", "bike parking", "other"],
+    "requirements": ["bike parking", "by right", "other"],
     "citations": [
       {
         "description": "Brownsville Zoning Code",
@@ -8375,7 +8375,7 @@
   },
   "Butte-Silver Bow County, MT": {
     "reporter": "Samuel Deetz",
-    "requirements": ["other", "in-lieu fees"],
+    "requirements": ["in-lieu fees", "other"],
     "citations": [
       {
         "description": "Butte-Silver Bow County Zoning Code",
@@ -8576,9 +8576,9 @@
   "California, CA": {
     "reporter": "Patrick Siegman",
     "requirements": [
-      "size of project",
+      "affordable housing",
       "frequent transit",
-      "affordable housing"
+      "size of project"
     ],
     "citations": [
       {
@@ -8656,7 +8656,7 @@
   },
   "Calumet City, IL": {
     "reporter": "Samuel Deetz",
-    "requirements": ["by right", "size of project", "other"],
+    "requirements": ["by right", "other", "size of project"],
     "citations": [
       {
         "description": "Calumet City Zoning Code",
@@ -8675,7 +8675,7 @@
   },
   "Calumet Park, IL": {
     "reporter": "Samuel Deetz",
-    "requirements": ["other", "frequent transit"],
+    "requirements": ["frequent transit", "other"],
     "citations": [
       {
         "description": "Calumet Park Zoning Code",
@@ -8913,7 +8913,7 @@
   },
   "Camp Hill, PA": {
     "reporter": "Samuel Deetz",
-    "requirements": ["other", "by right", "bike parking"],
+    "requirements": ["bike parking", "by right", "other"],
     "citations": [
       {
         "description": "Camp Hill Zoning Code",
@@ -9104,7 +9104,7 @@
   },
   "Canton, IL": {
     "reporter": "Samuel Deetz",
-    "requirements": ["size of project", "by right"],
+    "requirements": ["by right", "size of project"],
     "citations": [
       {
         "description": "Canton Zoning Code",
@@ -9167,11 +9167,11 @@
   "Canyon Lake, CA": {
     "reporter": "Maya Luong",
     "requirements": [
-      "frequent transit",
       "accessory dwelling units",
       "carshare",
-      "other",
-      "historic preservation"
+      "frequent transit",
+      "historic preservation",
+      "other"
     ],
     "citations": [
       {
@@ -9309,7 +9309,7 @@
   },
   "Carbondale, CO": {
     "reporter": "Samuel Deetz",
-    "requirements": ["by right", "in-lieu fees", "frequent transit"],
+    "requirements": ["by right", "frequent transit", "in-lieu fees"],
     "citations": [
       {
         "description": "Carbondale UDC",
@@ -9415,7 +9415,7 @@
   },
   "Cardington, OH": {
     "reporter": "Samuel Deetz",
-    "requirements": ["size of project", "by right"],
+    "requirements": ["by right", "size of project"],
     "citations": [
       {
         "description": "Cardington Zoning Code",
@@ -10071,7 +10071,7 @@
   },
   "Castle Rock, CO": {
     "reporter": "Samuel Deetz",
-    "requirements": ["size of project", "by right"],
+    "requirements": ["by right", "size of project"],
     "citations": [
       {
         "description": "Castle Rock Zoning Code",
@@ -10157,7 +10157,7 @@
   },
   "Catoosa, OK": {
     "reporter": "Samuel Deetz",
-    "requirements": ["size of project", "by right"],
+    "requirements": ["by right", "size of project"],
     "citations": [
       {
         "description": "Catoosa Zoning Code",
@@ -10196,12 +10196,12 @@
   "Cañon City, CO": {
     "reporter": "Samuel Deetz",
     "requirements": [
-      "by right",
-      "historic preservation",
-      "carshare",
-      "bike parking",
-      "in-lieu fees",
       "affordable housing",
+      "bike parking",
+      "by right",
+      "carshare",
+      "historic preservation",
+      "in-lieu fees",
       "other"
     ],
     "citations": [
@@ -11210,7 +11210,7 @@
   },
   "Chaska, MN": {
     "reporter": "Samuel Deetz",
-    "requirements": ["by right", "size of project", "other"],
+    "requirements": ["by right", "other", "size of project"],
     "citations": [
       {
         "description": "Chaska Zoning Code",
@@ -11561,7 +11561,7 @@
   },
   "Chesterville, OH": {
     "reporter": "Samuel Deetz",
-    "requirements": ["size of project", "by right"],
+    "requirements": ["by right", "size of project"],
     "citations": [
       {
         "description": "Chesterville Zoning Code",
@@ -12022,7 +12022,7 @@
   },
   "Clarendon Hills, IL": {
     "reporter": "Samuel Deetz",
-    "requirements": ["by right", "bike parking", "in-lieu fees"],
+    "requirements": ["bike parking", "by right", "in-lieu fees"],
     "citations": [
       {
         "description": "Clarendon Hills Zoning Code",
@@ -12294,7 +12294,7 @@
   },
   "Clear Lake, IA": {
     "reporter": "Samuel Deetz",
-    "requirements": ["by right", "other", "historic preservation"],
+    "requirements": ["by right", "historic preservation", "other"],
     "citations": [
       {
         "description": "Clear Lake Zoning Code",
@@ -12622,7 +12622,7 @@
   },
   "Clinton, IL": {
     "reporter": "Samuel Deetz",
-    "requirements": ["in-lieu fees", "by right"],
+    "requirements": ["by right", "in-lieu fees"],
     "citations": [
       {
         "description": "Clinton Zoning Code",
@@ -12875,7 +12875,7 @@
   },
   "Coatesville, PA": {
     "reporter": "Samuel Deetz",
-    "requirements": ["in-lieu fees", "by right", "other"],
+    "requirements": ["by right", "in-lieu fees", "other"],
     "citations": [
       {
         "description": "Coatesville Zoning Code",
@@ -13466,11 +13466,11 @@
   "Columbia, SC": {
     "reporter": "Samuel Deetz",
     "requirements": [
-      "by right",
       "bike parking",
-      "transportation demand management",
+      "by right",
       "frequent transit",
-      "size of project"
+      "size of project",
+      "transportation demand management"
     ],
     "citations": [
       {
@@ -13510,7 +13510,7 @@
   },
   "Columbus, GA": {
     "reporter": "Samuel Deetz",
-    "requirements": ["by right", "bike parking"],
+    "requirements": ["bike parking", "by right"],
     "citations": [
       {
         "description": "Columbus Unified Development Ordinance",
@@ -13759,9 +13759,9 @@
   "Concord, CA": {
     "reporter": "Samuel Deetz",
     "requirements": [
+      "accessory dwelling units",
       "frequent transit",
-      "in-lieu fees",
-      "accessory dwelling units"
+      "in-lieu fees"
     ],
     "citations": [
       {
@@ -14055,7 +14055,7 @@
   },
   "Coos Bay, OR": {
     "reporter": "Samuel Deetz",
-    "requirements": ["by right", "accessory dwelling units"],
+    "requirements": ["accessory dwelling units", "by right"],
     "citations": [
       {
         "description": "Coos Bay Development Code",
@@ -14103,7 +14103,7 @@
   },
   "Coraopolis, PA": {
     "reporter": "Samuel Deetz",
-    "requirements": ["other", "bike parking"],
+    "requirements": ["bike parking", "other"],
     "citations": [
       {
         "description": "Coraopolis Zoning Code",
@@ -14188,7 +14188,7 @@
   },
   "Cornelius, NC": {
     "reporter": "Samuel Deetz",
-    "requirements": ["other", "by right"],
+    "requirements": ["by right", "other"],
     "citations": [
       {
         "description": "Cornelius Land Development Code",
@@ -14228,11 +14228,11 @@
     "reporter": "Samuel Deetz",
     "requirements": [
       "accessory dwelling units",
-      "in-lieu fees",
       "carshare",
-      "other",
+      "frequent transit",
       "historic preservation",
-      "frequent transit"
+      "in-lieu fees",
+      "other"
     ],
     "citations": [
       {
@@ -14550,13 +14550,13 @@
   "Covington, KY": {
     "reporter": "Samuel Deetz",
     "requirements": [
-      "by right",
-      "bike parking",
-      "frequent transit",
-      "size of project",
       "accessory dwelling units",
+      "bike parking",
+      "by right",
+      "frequent transit",
       "historic preservation",
-      "other"
+      "other",
+      "size of project"
     ],
     "citations": [
       {
@@ -14844,7 +14844,7 @@
   },
   "Creston, IL": {
     "reporter": "Samuel Deetz",
-    "requirements": ["by right", "other", "in-lieu fees"],
+    "requirements": ["by right", "in-lieu fees", "other"],
     "citations": [
       {
         "description": "Creston Zoning Code",
@@ -14889,8 +14889,8 @@
     "reporter": "Samuel Deetz",
     "requirements": [
       "bike parking",
-      "other",
       "frequent transit",
+      "other",
       "transportation demand management"
     ],
     "citations": [
@@ -15295,7 +15295,7 @@
   },
   "Cuyahoga Falls, OH": {
     "reporter": "Samuel Deetz",
-    "requirements": ["by right", "bike parking", "other"],
+    "requirements": ["bike parking", "by right", "other"],
     "citations": [
       {
         "description": "Cuyahoga Falls Zoning Code",
@@ -15737,7 +15737,7 @@
   },
   "Davidson, NC": {
     "reporter": "Samuel Deetz",
-    "requirements": ["other", "by right", "in-lieu fees"],
+    "requirements": ["by right", "in-lieu fees", "other"],
     "citations": [
       {
         "description": "Davidson Zoning Code",
@@ -16047,7 +16047,7 @@
   },
   "DeWitt Charter Township, MI": {
     "reporter": "Samuel Deetz",
-    "requirements": ["size of project", "by right"],
+    "requirements": ["by right", "size of project"],
     "citations": [
       {
         "description": "DeWitt Charter Township Zoning Code",
@@ -16648,12 +16648,12 @@
   "Denton, TX": {
     "reporter": "Samuel Deetz",
     "requirements": [
-      "by right",
-      "size of project",
-      "frequent transit",
-      "bike parking",
       "affordable housing",
-      "other"
+      "bike parking",
+      "by right",
+      "frequent transit",
+      "other",
+      "size of project"
     ],
     "citations": [
       {
@@ -16694,10 +16694,10 @@
   "Denver, CO": {
     "reporter": "Samuel Deetz",
     "requirements": [
-      "size of project",
-      "frequent transit",
       "affordable housing",
-      "other"
+      "frequent transit",
+      "other",
+      "size of project"
     ],
     "citations": [
       {
@@ -16813,7 +16813,7 @@
   },
   "Des Moines, IA": {
     "reporter": "Samuel Deetz",
-    "requirements": ["by right", "carshare", "bike parking", "other"],
+    "requirements": ["bike parking", "by right", "carshare", "other"],
     "citations": [
       {
         "description": "Des Moines Planning and Design Ordinance",
@@ -17142,7 +17142,7 @@
   },
   "Dolores, CO": {
     "reporter": "Samuel Deetz",
-    "requirements": ["by right", "size of project", "other"],
+    "requirements": ["by right", "other", "size of project"],
     "citations": [
       {
         "description": "Dolores Zoning Code",
@@ -17325,10 +17325,10 @@
     "reporter": "Samuel Deetz",
     "requirements": [
       "by right",
-      "size of project",
-      "other",
+      "frequent transit",
       "historic preservation",
-      "frequent transit"
+      "other",
+      "size of project"
     ],
     "citations": [
       {
@@ -17415,7 +17415,7 @@
   },
   "Downers Grove, IL": {
     "reporter": "Samuel Deetz",
-    "requirements": ["by right", "other", "carshare"],
+    "requirements": ["by right", "carshare", "other"],
     "citations": [
       {
         "description": "Downers Grove Zoning Code",
@@ -17483,11 +17483,11 @@
   "Dresden, SN": {
     "reporter": "Samuel Deetz",
     "requirements": [
-      "frequent transit",
-      "transportation demand management",
-      "carshare",
       "bike parking",
-      "in-lieu fees"
+      "carshare",
+      "frequent transit",
+      "in-lieu fees",
+      "transportation demand management"
     ],
     "citations": [
       {
@@ -17594,10 +17594,10 @@
   "Dublin, OH": {
     "reporter": "Samuel Deetz",
     "requirements": [
-      "frequent transit",
       "carshare",
-      "transportation demand management",
-      "other"
+      "frequent transit",
+      "other",
+      "transportation demand management"
     ],
     "citations": [
       {
@@ -17893,12 +17893,12 @@
   "Durango, CO": {
     "reporter": "Samuel Deetz",
     "requirements": [
-      "size of project",
-      "in-lieu fees",
       "bike parking",
       "carshare",
-      "transportation demand management",
-      "other"
+      "in-lieu fees",
+      "other",
+      "size of project",
+      "transportation demand management"
     ],
     "citations": [
       {
@@ -18094,12 +18094,12 @@
   "Eagle, CO": {
     "reporter": "Samuel Deetz",
     "requirements": [
+      "bike parking",
+      "frequent transit",
       "in-lieu fees",
       "other",
-      "frequent transit",
-      "bike parking",
-      "transportation demand management",
-      "supportive housing"
+      "supportive housing",
+      "transportation demand management"
     ],
     "citations": [
       {
@@ -18210,7 +18210,7 @@
   },
   "East Dundee, IL": {
     "reporter": "Samuel Deetz",
-    "requirements": ["by right", "size of project", "in-lieu fees"],
+    "requirements": ["by right", "in-lieu fees", "size of project"],
     "citations": [
       {
         "description": "East Dundee Zoning Code",
@@ -18229,7 +18229,7 @@
   },
   "East Grand Forks, MN": {
     "reporter": "Samuel Deetz",
-    "requirements": ["in-lieu fees", "bike parking", "other"],
+    "requirements": ["bike parking", "in-lieu fees", "other"],
     "citations": [
       {
         "description": "East Grand Forks Zoning Code",
@@ -18482,7 +18482,7 @@
   },
   "East Providence, RI": {
     "reporter": "Samuel Deetz",
-    "requirements": ["other", "by right"],
+    "requirements": ["by right", "other"],
     "citations": [
       {
         "description": "East Providence Zoning Code",
@@ -18630,7 +18630,7 @@
   },
   "Easton, PA": {
     "reporter": "Samuel Deetz",
-    "requirements": ["other", "size of project", "by right"],
+    "requirements": ["by right", "other", "size of project"],
     "citations": [
       {
         "description": "Easton Zoning Code",
@@ -18655,13 +18655,13 @@
   "Eastpointe, MI": {
     "reporter": "Samuel Deetz",
     "requirements": [
-      "by right",
-      "size of project",
       "accessory dwelling units",
       "affordable housing",
-      "other",
       "bike parking",
-      "frequent transit"
+      "by right",
+      "frequent transit",
+      "other",
+      "size of project"
     ],
     "citations": [
       {
@@ -18710,7 +18710,7 @@
   },
   "Eau Claire, WI": {
     "reporter": "Samuel Deetz",
-    "requirements": ["bike parking", "other", "frequent transit"],
+    "requirements": ["bike parking", "frequent transit", "other"],
     "citations": [
       {
         "description": "Eau Claire Zoning Code",
@@ -18887,7 +18887,7 @@
   },
   "Edina, MN": {
     "reporter": "Samuel Deetz",
-    "requirements": ["frequent transit", "carshare", "bike parking"],
+    "requirements": ["bike parking", "carshare", "frequent transit"],
     "citations": [
       {
         "description": "Edina Zoning Code",
@@ -18940,7 +18940,7 @@
   },
   "Edison, OH": {
     "reporter": "Samuel Deetz",
-    "requirements": ["size of project", "by right"],
+    "requirements": ["by right", "size of project"],
     "citations": [
       {
         "description": "Edison Zoning Code",
@@ -19262,7 +19262,7 @@
   },
   "Elgin, OR": {
     "reporter": "Samuel Deetz",
-    "requirements": ["size of project", "by right"],
+    "requirements": ["by right", "size of project"],
     "citations": [
       {
         "description": "Elgin Zoning Code",
@@ -19383,11 +19383,11 @@
     "reporter": "Samuel Deetz",
     "requirements": [
       "accessory dwelling units",
-      "frequent transit",
+      "bike parking",
       "carshare",
+      "frequent transit",
       "historic preservation",
-      "other",
-      "bike parking"
+      "other"
     ],
     "citations": [
       {
@@ -19498,7 +19498,7 @@
   },
   "Elkhart, IN": {
     "reporter": "Samuel Deetz",
-    "requirements": ["by right", "size of project", "other", "bike parking"],
+    "requirements": ["bike parking", "by right", "other", "size of project"],
     "citations": [
       {
         "description": "Elkhart Zoning Code",
@@ -19603,7 +19603,7 @@
   },
   "Elkton, MI": {
     "reporter": "Samuel Deetz",
-    "requirements": ["size of project", "other", "bike parking"],
+    "requirements": ["bike parking", "other", "size of project"],
     "citations": [
       {
         "description": "Elkton Zoning Code",
@@ -19679,7 +19679,7 @@
   },
   "Ellisville, MO": {
     "reporter": "Samuel Deetz",
-    "requirements": ["other", "by right"],
+    "requirements": ["by right", "other"],
     "citations": [
       {
         "description": "Ellisville Zoning Code",
@@ -19841,7 +19841,7 @@
   },
   "Eloy, AZ": {
     "reporter": "Samuel Deetz",
-    "requirements": ["other", "by right"],
+    "requirements": ["by right", "other"],
     "citations": [
       {
         "description": "Eloy Zoning Code",
@@ -19884,7 +19884,7 @@
   },
   "Elsmere, KY": {
     "reporter": "Samuel Deetz",
-    "requirements": ["bike parking", "other", "carshare"],
+    "requirements": ["bike parking", "carshare", "other"],
     "citations": [
       {
         "description": "Elsmere Zoning Code",
@@ -20037,7 +20037,7 @@
   },
   "Emmaus, PA": {
     "reporter": "Samuel Deetz",
-    "requirements": ["by right", "size of project", "in-lieu fees"],
+    "requirements": ["by right", "in-lieu fees", "size of project"],
     "citations": [
       {
         "description": "Emmaus Zoning Code",
@@ -20056,7 +20056,7 @@
   },
   "Emmitsburg, MD": {
     "reporter": "Samuel Deetz",
-    "requirements": ["other", "by right"],
+    "requirements": ["by right", "other"],
     "citations": [
       {
         "description": "Emmitsburg Zoning Code",
@@ -20285,7 +20285,7 @@
   },
   "Erlanger, KY": {
     "reporter": "Samuel Deetz",
-    "requirements": ["other", "bike parking", "carshare"],
+    "requirements": ["bike parking", "carshare", "other"],
     "citations": [
       {
         "description": "Erlanger Zoning Code",
@@ -20323,7 +20323,7 @@
   },
   "Escondido, CA": {
     "reporter": "Samuel Deetz",
-    "requirements": ["by right", "accessory dwelling units"],
+    "requirements": ["accessory dwelling units", "by right"],
     "citations": [
       {
         "description": "Escondido Zoning Code",
@@ -20380,7 +20380,7 @@
   },
   "Etna, PA": {
     "reporter": "Samuel Deetz",
-    "requirements": ["size of project", "by right"],
+    "requirements": ["by right", "size of project"],
     "citations": [
       {
         "description": "Etna Zoning Code",
@@ -20507,15 +20507,15 @@
   "Eureka, CA": {
     "reporter": "Samuel Deetz",
     "requirements": [
-      "by right",
-      "size of project",
       "accessory dwelling units",
       "affordable housing",
-      "in-lieu fees",
-      "frequent transit",
       "bike parking",
+      "by right",
       "carshare",
-      "other"
+      "frequent transit",
+      "in-lieu fees",
+      "other",
+      "size of project"
     ],
     "citations": [
       {
@@ -20598,7 +20598,7 @@
   },
   "Evansville, IN": {
     "reporter": "Samuel Deetz",
-    "requirements": ["by right", "other", "bike parking"],
+    "requirements": ["bike parking", "by right", "other"],
     "citations": [
       {
         "description": "Evansville Zoning Code",
@@ -21160,7 +21160,7 @@
   },
   "Fayetteville, AR": {
     "reporter": "Bobby Siemiaszko",
-    "requirements": ["by right", "bike parking", "frequent transit", "other"],
+    "requirements": ["bike parking", "by right", "frequent transit", "other"],
     "citations": [
       {
         "description": "Newsletter",
@@ -21283,7 +21283,7 @@
   },
   "Ferguson Township, PA": {
     "reporter": "Samuel Deetz",
-    "requirements": ["other", "bike parking"],
+    "requirements": ["bike parking", "other"],
     "citations": [
       {
         "description": "Ferguson Township Zoning Code",
@@ -21575,12 +21575,12 @@
   "Flensburg, SH": {
     "reporter": "Samuel Deetz",
     "requirements": [
-      "historic preservation",
+      "by right",
       "carshare",
-      "transportation demand management",
-      "in-lieu fees",
       "frequent transit",
-      "by right"
+      "historic preservation",
+      "in-lieu fees",
+      "transportation demand management"
     ],
     "citations": [
       {
@@ -21710,7 +21710,7 @@
   },
   "Florida, FL": {
     "reporter": null,
-    "requirements": ["other", "frequent transit"],
+    "requirements": ["frequent transit", "other"],
     "citations": [
       {
         "description": "Florida CS/CS/SB 328 Bill",
@@ -21830,11 +21830,11 @@
   "Fontana, CA": {
     "reporter": "Samuel Deetz",
     "requirements": [
-      "other",
-      "frequent transit",
-      "carshare",
       "accessory dwelling units",
-      "historic preservation"
+      "carshare",
+      "frequent transit",
+      "historic preservation",
+      "other"
     ],
     "citations": [
       {
@@ -21921,7 +21921,7 @@
   },
   "Forest Hills, PA": {
     "reporter": "Samuel Deetz",
-    "requirements": ["by right", "size of project", "other"],
+    "requirements": ["by right", "other", "size of project"],
     "citations": [
       {
         "description": "Forest Hills Zoning Code",
@@ -22103,12 +22103,12 @@
   "Fort Collins, CO": {
     "reporter": "Samuel Deetz",
     "requirements": [
-      "by right",
-      "frequent transit",
-      "size of project",
-      "carshare",
       "affordable housing",
-      "other"
+      "by right",
+      "carshare",
+      "frequent transit",
+      "other",
+      "size of project"
     ],
     "citations": [
       {
@@ -22186,7 +22186,7 @@
   },
   "Fort Lupton, CO": {
     "reporter": "Samuel Deetz",
-    "requirements": ["by right", "size of project", "bike parking", "other"],
+    "requirements": ["bike parking", "by right", "other", "size of project"],
     "citations": [
       {
         "description": "Fort Lupton Development Code",
@@ -22377,7 +22377,7 @@
   },
   "Fort Wayne, IN": {
     "reporter": "Samuel Deetz",
-    "requirements": ["by right", "other", "bike parking", "frequent transit"],
+    "requirements": ["bike parking", "by right", "frequent transit", "other"],
     "citations": [
       {
         "description": "Fort Wayne Zoning Ordinance",
@@ -22552,7 +22552,7 @@
   },
   "Fox River Grove, IL": {
     "reporter": "Samuel Deetz",
-    "requirements": ["size of project", "by right"],
+    "requirements": ["by right", "size of project"],
     "citations": [
       {
         "description": "Fox River Grove Zoning Code",
@@ -22595,7 +22595,7 @@
   },
   "Frankenmuth, MI": {
     "reporter": "Samuel Deetz",
-    "requirements": ["size of project", "tree preservation", "other"],
+    "requirements": ["other", "size of project", "tree preservation"],
     "citations": [
       {
         "description": "Frankenmuth Zoning Code",
@@ -22694,7 +22694,7 @@
   },
   "Franklin Park, IL": {
     "reporter": "Samuel Deetz",
-    "requirements": ["frequent transit", "other", "in-lieu fees", "by right"],
+    "requirements": ["by right", "frequent transit", "in-lieu fees", "other"],
     "citations": [
       {
         "description": "Franklin Park Zoning Code",
@@ -22832,7 +22832,7 @@
   },
   "Frederica, DE": {
     "reporter": "Samuel Deetz",
-    "requirements": ["size of project", "by right"],
+    "requirements": ["by right", "size of project"],
     "citations": [
       {
         "description": "Frederica Land Development Ordinance",
@@ -22853,9 +22853,9 @@
     "reporter": "Samuel Deetz",
     "requirements": [
       "by right",
-      "size of project",
+      "frequent transit",
       "in-lieu fees",
-      "frequent transit"
+      "size of project"
     ],
     "citations": [
       {
@@ -23671,10 +23671,10 @@
     "reporter": "Samuel Deetz",
     "requirements": [
       "accessory dwelling units",
-      "historic preservation",
       "carshare",
-      "other",
-      "frequent transit"
+      "frequent transit",
+      "historic preservation",
+      "other"
     ],
     "citations": [
       {
@@ -23713,7 +23713,7 @@
   },
   "Gardner, KS": {
     "reporter": "Samuel Deetz",
-    "requirements": ["by right", "size of project", "bike parking", "other"],
+    "requirements": ["bike parking", "by right", "other", "size of project"],
     "citations": [
       {
         "description": "Gardner Zoning Code",
@@ -23961,7 +23961,7 @@
   },
   "Geneva, IL": {
     "reporter": "Samuel Deetz",
-    "requirements": ["in-lieu fees", "by right"],
+    "requirements": ["by right", "in-lieu fees"],
     "citations": [
       {
         "description": "Geneva Zoning Code",
@@ -23985,7 +23985,7 @@
   },
   "Geneva, NY": {
     "reporter": "Samuel Deetz",
-    "requirements": ["other", "in-lieu fees"],
+    "requirements": ["in-lieu fees", "other"],
     "citations": [
       {
         "description": "Geneva Zoning Code",
@@ -24185,7 +24185,7 @@
   },
   "Gering, NE": {
     "reporter": "Samuel Deetz",
-    "requirements": ["by right", "size of project", "bike parking", "other"],
+    "requirements": ["bike parking", "by right", "other", "size of project"],
     "citations": [
       {
         "description": "Gering Zoning Code",
@@ -24234,10 +24234,10 @@
   "Gettysburg, PA": {
     "reporter": "Samuel Deetz",
     "requirements": [
-      "by right",
-      "frequent transit",
       "bike parking",
+      "by right",
       "carshare",
+      "frequent transit",
       "other"
     ],
     "citations": [
@@ -24344,7 +24344,7 @@
   },
   "Gladwin, MI": {
     "reporter": "Samuel Deetz",
-    "requirements": ["by right", "bike parking"],
+    "requirements": ["bike parking", "by right"],
     "citations": [
       {
         "description": "Gladwin Zoning Code",
@@ -24489,11 +24489,11 @@
     "reporter": "Samuel Deetz",
     "requirements": [
       "accessory dwelling units",
-      "frequent transit",
-      "other",
-      "historic preservation",
       "bike parking",
-      "in-lieu fees"
+      "frequent transit",
+      "historic preservation",
+      "in-lieu fees",
+      "other"
     ],
     "citations": [
       {
@@ -24580,7 +24580,7 @@
   },
   "Glenfield, PA": {
     "reporter": "Samuel Deetz",
-    "requirements": ["size of project", "by right"],
+    "requirements": ["by right", "size of project"],
     "citations": [
       {
         "description": "Glenfield Haysville Joint Zoning Code",
@@ -24637,7 +24637,7 @@
   },
   "Glenwood Springs, CO": {
     "reporter": "Samuel Deetz",
-    "requirements": ["in-lieu fees", "size of project", "by right"],
+    "requirements": ["by right", "in-lieu fees", "size of project"],
     "citations": [
       {
         "description": "Glenwood Springs Development Code",
@@ -24680,7 +24680,7 @@
   },
   "Glenwood, IL": {
     "reporter": "Samuel Deetz",
-    "requirements": ["size of project", "by right"],
+    "requirements": ["by right", "size of project"],
     "citations": [
       {
         "description": "Glenwood Zoning Code",
@@ -24854,8 +24854,8 @@
     "reporter": "Samuel Deetz",
     "requirements": [
       "by right",
-      "frequent transit",
       "carshare",
+      "frequent transit",
       "other",
       "tree preservation"
     ],
@@ -25135,7 +25135,7 @@
   },
   "Granby, CO": {
     "reporter": "Samuel Deetz",
-    "requirements": ["in-lieu fees", "other", "by right"],
+    "requirements": ["by right", "in-lieu fees", "other"],
     "citations": [
       {
         "description": "Granby Zoning and Development Code",
@@ -25193,7 +25193,7 @@
   },
   "Grand Forks, ND": {
     "reporter": "Samuel Deetz",
-    "requirements": ["in-lieu fees", "bike parking", "other"],
+    "requirements": ["bike parking", "in-lieu fees", "other"],
     "citations": [
       {
         "description": "Grand Forks Land Development Code",
@@ -25236,7 +25236,7 @@
   },
   "Grand Haven, MI": {
     "reporter": "Samuel Deetz",
-    "requirements": ["other", "bike parking"],
+    "requirements": ["bike parking", "other"],
     "citations": [
       {
         "description": "Grand Haven Zoning Code",
@@ -25284,7 +25284,7 @@
   },
   "Grand Junction, CO": {
     "reporter": "Samuel Deetz",
-    "requirements": ["by right", "bike parking", "other", "frequent transit"],
+    "requirements": ["bike parking", "by right", "frequent transit", "other"],
     "citations": [
       {
         "description": "Grand Junction Zoning & Development Code",
@@ -25318,7 +25318,7 @@
   },
   "Grand Lake, CO": {
     "reporter": "Samuel Deetz",
-    "requirements": ["other", "in-lieu fees"],
+    "requirements": ["in-lieu fees", "other"],
     "citations": [
       {
         "description": "Grand Lake Zoning Code",
@@ -25337,7 +25337,7 @@
   },
   "Grand Ledge, MI": {
     "reporter": "Samuel Deetz",
-    "requirements": ["by right", "bike parking"],
+    "requirements": ["bike parking", "by right"],
     "citations": [
       {
         "description": "Grand Ledge Zoning Code",
@@ -25380,7 +25380,7 @@
   },
   "Grand Prairie, TX": {
     "reporter": "Samuel Deetz",
-    "requirements": ["other", "by right"],
+    "requirements": ["by right", "other"],
     "citations": [
       {
         "description": "Grand Prairie Unified Development Code",
@@ -25405,11 +25405,11 @@
   "Grand Rapids, MI": {
     "reporter": "Suzanne Schulz",
     "requirements": [
+      "accessory dwelling units",
       "frequent transit",
       "in-lieu fees",
       "size of project",
-      "transportation demand management",
-      "accessory dwelling units"
+      "transportation demand management"
     ],
     "citations": [
       {
@@ -25576,7 +25576,7 @@
   },
   "Granite Quarry, NC": {
     "reporter": "Samuel Deetz",
-    "requirements": ["other", "by right"],
+    "requirements": ["by right", "other"],
     "citations": [
       {
         "description": "Granite Quarry Unified Development Ordinance",
@@ -25684,7 +25684,7 @@
   },
   "Grass Lake Charter Township, MI": {
     "reporter": "Samuel Deetz",
-    "requirements": ["size of project", "by right"],
+    "requirements": ["by right", "size of project"],
     "citations": [
       {
         "description": "Grass Lake Charter Township Zoning Code",
@@ -25741,7 +25741,7 @@
   },
   "Grayling, MI": {
     "reporter": "Samuel Deetz",
-    "requirements": ["by right", "bike parking"],
+    "requirements": ["bike parking", "by right"],
     "citations": [
       {
         "description": "Grayling Zoning Code",
@@ -25767,10 +25767,10 @@
     "reporter": "Samuel Deetz",
     "requirements": [
       "by right",
-      "size of project",
       "frequent transit",
+      "historic preservation",
       "other",
-      "historic preservation"
+      "size of project"
     ],
     "citations": [
       {
@@ -25867,7 +25867,7 @@
   },
   "Greeley, CO": {
     "reporter": "Samuel Deetz",
-    "requirements": ["by right", "bike parking", "other", "size of project"],
+    "requirements": ["bike parking", "by right", "other", "size of project"],
     "citations": [
       {
         "description": "Greeley Development Code",
@@ -26072,7 +26072,7 @@
   },
   "Greenfield, OH": {
     "reporter": "Samuel Deetz",
-    "requirements": ["other", "in-lieu fees", "by right"],
+    "requirements": ["by right", "in-lieu fees", "other"],
     "citations": [
       {
         "description": "Greenfield Zoning Code",
@@ -26109,8 +26109,8 @@
     "requirements": [
       "by right",
       "historic preservation",
-      "size of project",
-      "other"
+      "other",
+      "size of project"
     ],
     "citations": [
       {
@@ -26220,7 +26220,7 @@
   },
   "Greenville, IL": {
     "reporter": "Samuel Deetz",
-    "requirements": ["by right", "other", "in-lieu fees"],
+    "requirements": ["by right", "in-lieu fees", "other"],
     "citations": [
       {
         "description": "Greenville Zoning Code",
@@ -26583,7 +26583,7 @@
   },
   "Gunnison, CO": {
     "reporter": "Samuel Deetz",
-    "requirements": ["by right", "accessory dwelling units"],
+    "requirements": ["accessory dwelling units", "by right"],
     "citations": [
       {
         "description": "Gunnison Land Use Code",
@@ -26753,7 +26753,7 @@
   },
   "Halifax, PA": {
     "reporter": "Samuel Deetz",
-    "requirements": ["other", "size of project", "by right"],
+    "requirements": ["by right", "other", "size of project"],
     "citations": [
       {
         "description": "Halifax Zoning Code",
@@ -26820,7 +26820,7 @@
   },
   "Hamilton, MT": {
     "reporter": "Samuel Deetz",
-    "requirements": ["other", "by right"],
+    "requirements": ["by right", "other"],
     "citations": [
       {
         "description": "Hamilton Zoning Code",
@@ -26849,7 +26849,7 @@
   },
   "Hamilton, OH": {
     "reporter": "Samuel Deetz",
-    "requirements": ["other", "bike parking", "historic preservation"],
+    "requirements": ["bike parking", "historic preservation", "other"],
     "citations": [
       {
         "description": "Hamilton Zoning Code",
@@ -26897,7 +26897,7 @@
   },
   "Hammond, LA": {
     "reporter": "Samuel Deetz",
-    "requirements": ["by right", "bike parking", "frequent transit", "other"],
+    "requirements": ["bike parking", "by right", "frequent transit", "other"],
     "citations": [
       {
         "description": "Hammond Unified Development Code",
@@ -26950,7 +26950,7 @@
   },
   "Hampshire, IL": {
     "reporter": "Samuel Deetz",
-    "requirements": ["by right", "size of project", "in-lieu fees"],
+    "requirements": ["by right", "in-lieu fees", "size of project"],
     "citations": [
       {
         "description": "Hampshire Zoning Code",
@@ -26988,7 +26988,7 @@
   },
   "Hampton, VA": {
     "reporter": "Samuel Deetz",
-    "requirements": ["by right", "size of project", "other"],
+    "requirements": ["by right", "other", "size of project"],
     "citations": [
       {
         "description": "Hampton Zoning Code",
@@ -27284,7 +27284,7 @@
   },
   "Harrison, AR": {
     "reporter": "Samuel Deetz",
-    "requirements": ["size of project", "by right"],
+    "requirements": ["by right", "size of project"],
     "citations": [
       {
         "description": "Harrison Zoning Code",
@@ -27590,10 +27590,10 @@
   "Harvey, IL": {
     "reporter": "Samuel Deetz",
     "requirements": [
-      "tree preservation",
       "bike parking",
+      "historic preservation",
       "other",
-      "historic preservation"
+      "tree preservation"
     ],
     "citations": [
       {
@@ -27632,7 +27632,7 @@
   },
   "Harwood Heights, IL": {
     "reporter": "Samuel Deetz",
-    "requirements": ["other", "in-lieu fees"],
+    "requirements": ["in-lieu fees", "other"],
     "citations": [
       {
         "description": "Harwood Heights Zoning Code",
@@ -27732,7 +27732,7 @@
   },
   "Hattiesburg, MS": {
     "reporter": "Samuel Deetz",
-    "requirements": ["other", "by right"],
+    "requirements": ["by right", "other"],
     "citations": [
       {
         "description": "Hattiesburg Zoning Code",
@@ -28436,12 +28436,12 @@
   "Highland Park, IL": {
     "reporter": "Samuel Deetz",
     "requirements": [
-      "by right",
-      "frequent transit",
-      "carshare",
-      "other",
       "bike parking",
-      "in-lieu fees"
+      "by right",
+      "carshare",
+      "frequent transit",
+      "in-lieu fees",
+      "other"
     ],
     "citations": [
       {
@@ -28472,11 +28472,11 @@
   "Highland Park, MI": {
     "reporter": "Samuel Deetz",
     "requirements": [
-      "in-lieu fees",
-      "other",
+      "bike parking",
       "carshare",
       "frequent transit",
-      "bike parking"
+      "in-lieu fees",
+      "other"
     ],
     "citations": [
       {
@@ -28525,7 +28525,7 @@
   },
   "Highland, IN": {
     "reporter": "Samuel Deetz",
-    "requirements": ["other", "bike parking"],
+    "requirements": ["bike parking", "other"],
     "citations": [
       {
         "description": "Highland Zoning Code",
@@ -28554,7 +28554,7 @@
   },
   "Highland, WI": {
     "reporter": "Samuel Deetz",
-    "requirements": ["other", "by right"],
+    "requirements": ["by right", "other"],
     "citations": [
       {
         "description": "Highland Zoning Code",
@@ -28893,7 +28893,7 @@
   },
   "Hollywood, FL": {
     "reporter": "Samuel Deetz",
-    "requirements": ["in-lieu fees", "size of project", "by right"],
+    "requirements": ["by right", "in-lieu fees", "size of project"],
     "citations": [
       {
         "description": "Hollywood Zoning Code",
@@ -29018,12 +29018,12 @@
   "Hopkins, MN": {
     "reporter": "Samuel Deetz",
     "requirements": [
-      "by right",
       "affordable housing",
-      "other",
-      "tree preservation",
+      "bike parking",
+      "by right",
       "carshare",
-      "bike parking"
+      "other",
+      "tree preservation"
     ],
     "citations": [
       {
@@ -29216,7 +29216,7 @@
   },
   "Howard County, MD": {
     "reporter": "Samuel Deetz",
-    "requirements": ["transportation demand management", "size of project"],
+    "requirements": ["size of project", "transportation demand management"],
     "citations": [
       {
         "description": "Howard County Zoning Code",
@@ -29369,7 +29369,7 @@
   },
   "Hudson, WI": {
     "reporter": "Samuel Deetz",
-    "requirements": ["by right", "size of project", "in-lieu fees"],
+    "requirements": ["by right", "in-lieu fees", "size of project"],
     "citations": [
       {
         "description": "Hudson Zoning Code",
@@ -29393,7 +29393,7 @@
   },
   "Hudsonville, MI": {
     "reporter": "Samuel Deetz",
-    "requirements": ["other", "by right"],
+    "requirements": ["by right", "other"],
     "citations": [
       {
         "description": "Hudsonville Zoning Code",
@@ -29522,7 +29522,7 @@
   },
   "Huntertown, IN": {
     "reporter": "Samuel Deetz",
-    "requirements": ["by right", "other", "bike parking", "frequent transit"],
+    "requirements": ["bike parking", "by right", "frequent transit", "other"],
     "citations": [
       {
         "description": "Huntertown Zoning Code",
@@ -29748,10 +29748,10 @@
     "reporter": "Samuel Deetz",
     "requirements": [
       "by right",
-      "size of project",
       "frequent transit",
+      "historic preservation",
       "other",
-      "historic preservation"
+      "size of project"
     ],
     "citations": [
       {
@@ -29957,7 +29957,7 @@
   },
   "Independence, KY": {
     "reporter": "Samuel Deetz",
-    "requirements": ["by right", "carshare", "bike parking", "other"],
+    "requirements": ["bike parking", "by right", "carshare", "other"],
     "citations": [
       {
         "description": "Independence Zoning Code",
@@ -30135,8 +30135,8 @@
   "Ingolstadt, BY": {
     "reporter": "Samuel Deetz",
     "requirements": [
-      "in-lieu fees",
       "bike parking",
+      "in-lieu fees",
       "transportation demand management"
     ],
     "citations": [
@@ -30448,7 +30448,7 @@
   },
   "Israel": {
     "reporter": "Erel Herzog",
-    "requirements": ["frequent transit", "by right"],
+    "requirements": ["by right", "frequent transit"],
     "citations": [
       {
         "description": "תקנות התכנון והבניה (התקנת מקומות חניה), תשמ\"ג-1983 (The planning and construction regulations (installation of parking spaces), 5733-1983)",
@@ -30893,8 +30893,8 @@
     "requirements": [
       "by right",
       "frequent transit",
-      "other",
-      "historic preservation"
+      "historic preservation",
+      "other"
     ],
     "citations": [
       {
@@ -30925,11 +30925,11 @@
   "Jeffersonville, IN": {
     "reporter": "Samuel Deetz",
     "requirements": [
-      "frequent transit",
       "bike parking",
+      "by right",
+      "frequent transit",
       "other",
-      "size of project",
-      "by right"
+      "size of project"
     ],
     "citations": [
       {
@@ -30959,7 +30959,7 @@
   },
   "Jenkintown, PA": {
     "reporter": "Samuel Deetz",
-    "requirements": ["in-lieu fees", "size of project", "by right"],
+    "requirements": ["by right", "in-lieu fees", "size of project"],
     "citations": [
       {
         "description": "Jenkintown Zoning Code",
@@ -31212,7 +31212,7 @@
   },
   "Johnson, AR": {
     "reporter": "Samuel Deetz",
-    "requirements": ["by right", "other", "bike parking", "frequent transit"],
+    "requirements": ["bike parking", "by right", "frequent transit", "other"],
     "citations": [
       {
         "description": "Johnson Zoning Code",
@@ -31374,7 +31374,7 @@
   },
   "Joplin, MO": {
     "reporter": "Sam Anselm",
-    "requirements": ["by right", "bike parking", "other"],
+    "requirements": ["bike parking", "by right", "other"],
     "citations": [
       {
         "description": "Joplin Development Code",
@@ -31508,7 +31508,7 @@
   },
   "Kalamazoo, MI": {
     "reporter": "Samuel Deetz",
-    "requirements": ["by right", "other", "bike parking", "size of project"],
+    "requirements": ["bike parking", "by right", "other", "size of project"],
     "citations": [
       {
         "description": "Kalamazoo Zoning Code",
@@ -31561,7 +31561,7 @@
   },
   "Kalispell, MT": {
     "reporter": "Samuel Deetz",
-    "requirements": ["by right", "bike parking"],
+    "requirements": ["bike parking", "by right"],
     "citations": [
       {
         "description": "Kalispell Zoning Code",
@@ -32281,8 +32281,8 @@
     "reporter": "Laura Flaherty",
     "requirements": [
       "affordable housing",
-      "in-lieu fees",
-      "historic preservation"
+      "historic preservation",
+      "in-lieu fees"
     ],
     "citations": [
       {
@@ -32388,7 +32388,7 @@
   },
   "Kirkwood, MO": {
     "reporter": "Samuel Deetz",
-    "requirements": ["size of project", "by right"],
+    "requirements": ["by right", "size of project"],
     "citations": [
       {
         "description": "Kirkwood Zoning and Subdivision Code",
@@ -32450,7 +32450,7 @@
   },
   "Klagenfurt, Kärnten": {
     "reporter": "Samuel Deetz",
-    "requirements": ["carshare", "by right"],
+    "requirements": ["by right", "carshare"],
     "citations": [
       {
         "description": "Klagenfurt Stellplatzrichtlinie",
@@ -32728,7 +32728,7 @@
   },
   "La Crosse, WI": {
     "reporter": "Patrick Siegman",
-    "requirements": ["by right", "accessory dwelling units"],
+    "requirements": ["accessory dwelling units", "by right"],
     "citations": [
       {
         "description": "Resolution to eliminate commercial parking requirements.",
@@ -32831,7 +32831,7 @@
   },
   "La Grange Park, IL": {
     "reporter": "Samuel Deetz",
-    "requirements": ["by right", "size of project", "other"],
+    "requirements": ["by right", "other", "size of project"],
     "citations": [
       {
         "description": "La Grange Park Zoning Code",
@@ -32931,7 +32931,7 @@
   },
   "La Porte, IN": {
     "reporter": "Samuel Deetz",
-    "requirements": ["in-lieu fees", "size of project", "by right"],
+    "requirements": ["by right", "in-lieu fees", "size of project"],
     "citations": [
       {
         "description": "La Porte Zoning Code",
@@ -33036,7 +33036,7 @@
   },
   "Lafayette, CO": {
     "reporter": "Samuel Deetz",
-    "requirements": ["other", "in-lieu fees"],
+    "requirements": ["in-lieu fees", "other"],
     "citations": [
       {
         "description": "Lafayette Development and Zoning Code",
@@ -33080,10 +33080,10 @@
   "Lafayette, LA": {
     "reporter": "Samuel Deetz",
     "requirements": [
-      "size of project",
+      "bike parking",
       "by right",
       "frequent transit",
-      "bike parking"
+      "size of project"
     ],
     "citations": [
       {
@@ -33113,7 +33113,7 @@
   },
   "Laingsburg, MI": {
     "reporter": "Samuel Deetz",
-    "requirements": ["other", "bike parking"],
+    "requirements": ["bike parking", "other"],
     "citations": [
       {
         "description": "Laingsburg Zoning Code",
@@ -33299,7 +33299,7 @@
   },
   "Lake Havasu City, AZ": {
     "reporter": "Samuel Deetz",
-    "requirements": ["other", "by right", "size of project", "bike parking"],
+    "requirements": ["bike parking", "by right", "other", "size of project"],
     "citations": [
       {
         "description": "Lake Havasu City Zoning Code",
@@ -33361,7 +33361,7 @@
   },
   "Lake Mills, WI": {
     "reporter": "Samuel Deetz",
-    "requirements": ["by right", "other", "bike parking"],
+    "requirements": ["bike parking", "by right", "other"],
     "citations": [
       {
         "description": "Lake Mills Zoning Code",
@@ -33509,7 +33509,7 @@
   },
   "Lake St. Louis, MO": {
     "reporter": "Samuel Deetz",
-    "requirements": ["by right", "bike parking", "other"],
+    "requirements": ["bike parking", "by right", "other"],
     "citations": [
       {
         "description": "Lake St. Louis Zoning Code",
@@ -33793,9 +33793,9 @@
     "requirements": [
       "accessory dwelling units",
       "carshare",
-      "other",
+      "frequent transit",
       "historic preservation",
-      "frequent transit"
+      "other"
     ],
     "citations": [
       {
@@ -33876,7 +33876,7 @@
   },
   "Lancaster, SC": {
     "reporter": "Samuel Deetz",
-    "requirements": ["size of project", "historic preservation"],
+    "requirements": ["historic preservation", "size of project"],
     "citations": [
       {
         "description": "Lancaster Zoning Code",
@@ -33895,7 +33895,7 @@
   },
   "Landis, NC": {
     "reporter": "Samuel Deetz",
-    "requirements": ["other", "bike parking", "in-lieu fees"],
+    "requirements": ["bike parking", "in-lieu fees", "other"],
     "citations": [
       {
         "description": "Landis Zoning Code",
@@ -33978,10 +33978,10 @@
   "Lansdale, PA": {
     "reporter": "Samuel Deetz",
     "requirements": [
-      "other",
+      "by right",
       "frequent transit",
-      "size of project",
-      "by right"
+      "other",
+      "size of project"
     ],
     "citations": [
       {
@@ -34225,7 +34225,7 @@
   },
   "Las Cruces, NM": {
     "reporter": null,
-    "requirements": ["bike parking", "tree preservation", "other"],
+    "requirements": ["bike parking", "other", "tree preservation"],
     "citations": [
       {
         "description": "Sec. 38-58. - Off-street parking. G 3-4",
@@ -34311,7 +34311,7 @@
   },
   "Laurel, MT": {
     "reporter": "Samuel Deetz",
-    "requirements": ["in-lieu fees", "by right"],
+    "requirements": ["by right", "in-lieu fees"],
     "citations": [
       {
         "description": "Laurel Zoning Code",
@@ -34468,7 +34468,7 @@
   },
   "Lawton, OK": {
     "reporter": "Samuel Deetz",
-    "requirements": ["by right", "bike parking", "other"],
+    "requirements": ["bike parking", "by right", "other"],
     "citations": [
       {
         "description": "Lawton Zoning Code",
@@ -34530,7 +34530,7 @@
   },
   "Leadville, CO": {
     "reporter": "Samuel Deetz",
-    "requirements": ["other", "by right", "accessory dwelling units"],
+    "requirements": ["accessory dwelling units", "by right", "other"],
     "citations": [
       {
         "description": "Leadville Zoning Code",
@@ -34621,7 +34621,7 @@
   },
   "Lebanon, PA": {
     "reporter": "Samuel Deetz",
-    "requirements": ["other", "by right", "size of project"],
+    "requirements": ["by right", "other", "size of project"],
     "citations": [
       {
         "description": "Lebanon Zoning Code",
@@ -34969,7 +34969,7 @@
   },
   "Lewisburg, PA": {
     "reporter": "Joe Beattie",
-    "requirements": ["by right", "bike parking"],
+    "requirements": ["bike parking", "by right"],
     "citations": [
       {
         "description": "Lewisburg Zoning Code (Former)",
@@ -35187,7 +35187,7 @@
   },
   "Libertyville, IL": {
     "reporter": "Samuel Deetz",
-    "requirements": ["by right", "size of project", "in-lieu fees"],
+    "requirements": ["by right", "in-lieu fees", "size of project"],
     "citations": [
       {
         "description": "Libertyville Zoning Code",
@@ -35268,7 +35268,7 @@
   },
   "Lincoln Heights, OH": {
     "reporter": "Samuel Deetz",
-    "requirements": ["size of project", "by right"],
+    "requirements": ["by right", "size of project"],
     "citations": [
       {
         "description": "Lincoln Heights Zoning Code",
@@ -35514,7 +35514,7 @@
   },
   "Lititz, PA": {
     "reporter": "Samuel Deetz",
-    "requirements": ["other", "by right", "size of project"],
+    "requirements": ["by right", "other", "size of project"],
     "citations": [
       {
         "description": "Lititz Zoning Code",
@@ -35611,11 +35611,11 @@
   "Littleton, CO": {
     "reporter": "Samuel Deetz",
     "requirements": [
-      "frequent transit",
       "bike parking",
+      "by right",
+      "frequent transit",
       "other",
-      "transportation demand management",
-      "by right"
+      "transportation demand management"
     ],
     "citations": [
       {
@@ -35960,7 +35960,7 @@
   },
   "Long Beach, CA": {
     "reporter": "Bobby Siemiaszko",
-    "requirements": ["by right", "accessory dwelling units"],
+    "requirements": ["accessory dwelling units", "by right"],
     "citations": [
       {
         "description": "Development Standards",
@@ -36230,7 +36230,7 @@
   },
   "Los Lunas, NM": {
     "reporter": "Samuel Deetz",
-    "requirements": ["other", "by right"],
+    "requirements": ["by right", "other"],
     "citations": [
       {
         "description": "Los Lunas Zoning Code",
@@ -36292,7 +36292,7 @@
   },
   "Louisville, CO": {
     "reporter": "Samuel Deetz",
-    "requirements": ["other", "by right", "size of project", "in-lieu fees"],
+    "requirements": ["by right", "in-lieu fees", "other", "size of project"],
     "citations": [
       {
         "description": "Louisville Zoning Code",
@@ -36379,10 +36379,10 @@
   "Loveland, CO": {
     "reporter": "Samuel Deetz",
     "requirements": [
-      "other",
       "affordable housing",
-      "supportive housing",
-      "by right"
+      "by right",
+      "other",
+      "supportive housing"
     ],
     "citations": [
       {
@@ -36507,7 +36507,7 @@
   },
   "Lowell, MI": {
     "reporter": "Samuel Deetz",
-    "requirements": ["bike parking", "size of project", "other"],
+    "requirements": ["bike parking", "other", "size of project"],
     "citations": [
       {
         "description": "Lowell Zoning Code",
@@ -36531,7 +36531,7 @@
   },
   "Lowell, NC": {
     "reporter": "Samuel Deetz",
-    "requirements": ["other", "bike parking", "in-lieu fees"],
+    "requirements": ["bike parking", "in-lieu fees", "other"],
     "citations": [
       {
         "description": "Lowell Development Ordinance",
@@ -36866,7 +36866,7 @@
   },
   "Macomb Township, MI": {
     "reporter": "Samuel Deetz",
-    "requirements": ["other", "by right"],
+    "requirements": ["by right", "other"],
     "citations": [
       {
         "description": "Macomb Township Zoning Code",
@@ -37124,7 +37124,7 @@
   },
   "Mahtomedi, MN": {
     "reporter": "Samuel Deetz",
-    "requirements": ["other", "by right", "tree preservation"],
+    "requirements": ["by right", "other", "tree preservation"],
     "citations": [
       {
         "description": "Mahtomedi Zoning Code",
@@ -37162,7 +37162,7 @@
   },
   "Maine, ME": {
     "reporter": "Jeff Levine",
-    "requirements": ["by right", "accessory dwelling units"],
+    "requirements": ["accessory dwelling units", "by right"],
     "citations": [
       {
         "description": "State Legislation",
@@ -37394,7 +37394,7 @@
   },
   "Mandeville, LA": {
     "reporter": "Samuel Deetz",
-    "requirements": ["other", "in-lieu fees"],
+    "requirements": ["in-lieu fees", "other"],
     "citations": [
       {
         "description": "Mandeville Comprehensive Land Use Regulation Ordinance",
@@ -37922,7 +37922,7 @@
   },
   "Marietta, PA": {
     "reporter": "Samuel Deetz",
-    "requirements": ["other", "bike parking"],
+    "requirements": ["bike parking", "other"],
     "citations": [
       {
         "description": "Marietta Zoning Code",
@@ -38136,7 +38136,7 @@
   },
   "Marshall, IL": {
     "reporter": "Samuel Deetz",
-    "requirements": ["by right", "accessory dwelling units"],
+    "requirements": ["accessory dwelling units", "by right"],
     "citations": [
       {
         "description": "Marshall Zoning Code",
@@ -38255,7 +38255,7 @@
   },
   "Marshville, NC": {
     "reporter": "Samuel Deetz",
-    "requirements": ["other", "bike parking", "in-lieu fees"],
+    "requirements": ["bike parking", "in-lieu fees", "other"],
     "citations": [
       {
         "description": "Marshville Zoning Code",
@@ -38573,7 +38573,7 @@
   },
   "Mayfield, KY": {
     "reporter": "Samuel Deetz",
-    "requirements": ["by right", "other", "in-lieu fees"],
+    "requirements": ["by right", "in-lieu fees", "other"],
     "citations": [
       {
         "description": "Mayfield Zoning Code",
@@ -38649,7 +38649,7 @@
   },
   "Maywood, IL": {
     "reporter": "Samuel Deetz",
-    "requirements": ["by right", "size of project", "other", "in-lieu fees"],
+    "requirements": ["by right", "in-lieu fees", "other", "size of project"],
     "citations": [
       {
         "description": "Maywood Zoning Code",
@@ -39011,7 +39011,7 @@
   },
   "McKinney, TX": {
     "reporter": "Samuel Deetz",
-    "requirements": ["tree preservation", "by right"],
+    "requirements": ["by right", "tree preservation"],
     "citations": [
       {
         "description": "McKinney Unified Development Code",
@@ -39266,10 +39266,10 @@
   "Memphis, TN": {
     "reporter": "Samuel Deetz",
     "requirements": [
+      "bike parking",
       "by right",
       "frequent transit",
       "other",
-      "bike parking",
       "tree preservation"
     ],
     "citations": [
@@ -39414,7 +39414,7 @@
   },
   "Menominee, MI": {
     "reporter": "Samuel Deetz",
-    "requirements": ["size of project", "by right"],
+    "requirements": ["by right", "size of project"],
     "citations": [
       {
         "description": "Menominee Zoning Code",
@@ -39433,7 +39433,7 @@
   },
   "Menomonie, WI": {
     "reporter": "Samuel Deetz",
-    "requirements": ["by right", "bike parking"],
+    "requirements": ["bike parking", "by right"],
     "citations": [
       {
         "description": "Menomonie Zoning Code",
@@ -39476,7 +39476,7 @@
   },
   "Mercer, PA": {
     "reporter": "Samuel Deetz",
-    "requirements": ["other", "by right"],
+    "requirements": ["by right", "other"],
     "citations": [
       {
         "description": "Mercer Zoning Code",
@@ -39638,7 +39638,7 @@
   },
   "Mesa, AZ": {
     "reporter": "Samuel Deetz",
-    "requirements": ["by right", "frequent transit", "bike parking", "other"],
+    "requirements": ["bike parking", "by right", "frequent transit", "other"],
     "citations": [
       {
         "description": "Mesa Zoning Code",
@@ -39720,7 +39720,7 @@
   },
   "Metuchen, NJ": {
     "reporter": null,
-    "requirements": ["in-lieu fees", "by right"],
+    "requirements": ["by right", "in-lieu fees"],
     "citations": [
       {
         "description": " 110-154. Parking regulations. F",
@@ -39778,11 +39778,11 @@
   "Miami, FL": {
     "reporter": "Maggie Kochman",
     "requirements": [
+      "bike parking",
       "by right",
       "frequent transit",
-      "planned frequent transit",
       "in-lieu fees",
-      "bike parking"
+      "planned frequent transit"
     ],
     "citations": [
       {
@@ -39816,7 +39816,7 @@
   },
   "Michigan City, IN": {
     "reporter": "Samuel Deetz",
-    "requirements": ["size of project", "by right"],
+    "requirements": ["by right", "size of project"],
     "citations": [
       {
         "description": "Michigan City Zoning Code",
@@ -39840,7 +39840,7 @@
   },
   "Middleburg Heights, OH": {
     "reporter": "Samuel Deetz",
-    "requirements": ["size of project", "other"],
+    "requirements": ["other", "size of project"],
     "citations": [
       {
         "description": "Middleburg Heights Zoning Code",
@@ -39897,7 +39897,7 @@
   },
   "Middletown, PA": {
     "reporter": "Samuel Deetz",
-    "requirements": ["other", "by right"],
+    "requirements": ["by right", "other"],
     "citations": [
       {
         "description": "Middletown Zoning Code",
@@ -39998,7 +39998,7 @@
   },
   "Midland, NC": {
     "reporter": "Samuel Deetz",
-    "requirements": ["bike parking", "other", "by right", "in-lieu fees"],
+    "requirements": ["bike parking", "by right", "in-lieu fees", "other"],
     "citations": [
       {
         "description": "Midland Zoning Code",
@@ -40279,7 +40279,7 @@
   },
   "Millersburg, PA": {
     "reporter": "Samuel Deetz",
-    "requirements": ["by right", "size of project", "other"],
+    "requirements": ["by right", "other", "size of project"],
     "citations": [
       {
         "description": "Millersburg Zoning Code",
@@ -40346,7 +40346,7 @@
   },
   "Millvale, PA": {
     "reporter": "Samuel Deetz",
-    "requirements": ["size of project", "by right", "other"],
+    "requirements": ["by right", "other", "size of project"],
     "citations": [
       {
         "description": "Millvale Zoning Code",
@@ -41333,7 +41333,7 @@
   },
   "Montgomery County, MD": {
     "reporter": "Ben Ross",
-    "requirements": ["in-lieu fees", "by right"],
+    "requirements": ["by right", "in-lieu fees"],
     "citations": [
       {
         "description": "Montgomery County Zoning Code",
@@ -41950,7 +41950,7 @@
   },
   "Morven, NC": {
     "reporter": "Samuel Deetz",
-    "requirements": ["other", "bike parking", "in-lieu fees"],
+    "requirements": ["bike parking", "in-lieu fees", "other"],
     "citations": [
       {
         "description": "Morven Zoning Code",
@@ -42678,7 +42678,7 @@
   },
   "Mt. Washington, KY": {
     "reporter": "Samuel Deetz",
-    "requirements": ["size of project", "by right"],
+    "requirements": ["by right", "size of project"],
     "citations": [
       {
         "description": "Mt. Washington Zoning Code",
@@ -43049,7 +43049,7 @@
   },
   "Myerstown, PA": {
     "reporter": "Samuel Deetz",
-    "requirements": ["other", "by right"],
+    "requirements": ["by right", "other"],
     "citations": [
       {
         "description": "Myerstown Zoning Code",
@@ -43106,12 +43106,12 @@
   "Münster, NW": {
     "reporter": "Samuel Deetz",
     "requirements": [
-      "frequent transit",
-      "by right",
-      "transportation demand management",
       "bike parking",
+      "by right",
+      "frequent transit",
+      "in-lieu fees",
       "other",
-      "in-lieu fees"
+      "transportation demand management"
     ],
     "citations": [
       {
@@ -43160,7 +43160,7 @@
   },
   "Naperville, IL": {
     "reporter": "Samuel Deetz",
-    "requirements": ["in-lieu fees", "by right"],
+    "requirements": ["by right", "in-lieu fees"],
     "citations": [
       {
         "description": "Naperville Zoning Code",
@@ -43179,7 +43179,7 @@
   },
   "Napoleon, OH": {
     "reporter": "Samuel Deetz",
-    "requirements": ["size of project", "by right"],
+    "requirements": ["by right", "size of project"],
     "citations": [
       {
         "description": "Napoleon Zoning Code",
@@ -43217,7 +43217,7 @@
   },
   "Narberth, PA": {
     "reporter": "Samuel Deetz",
-    "requirements": ["size of project", "by right", "other"],
+    "requirements": ["by right", "other", "size of project"],
     "citations": [
       {
         "description": "Narberth Zoning Code",
@@ -43327,7 +43327,7 @@
   },
   "Natick, MA": {
     "reporter": "James Freas",
-    "requirements": ["other", "in-lieu fees"],
+    "requirements": ["in-lieu fees", "other"],
     "citations": [
       {
         "description": "city code PDF",
@@ -43784,7 +43784,7 @@
   },
   "New Castle, DE": {
     "reporter": "Samuel Deetz",
-    "requirements": ["size of project", "by right"],
+    "requirements": ["by right", "size of project"],
     "citations": [
       {
         "description": "New Castle Zoning Code",
@@ -43851,7 +43851,7 @@
   },
   "New Cumberland, PA": {
     "reporter": "Samuel Deetz",
-    "requirements": ["in-lieu fees", "size of project", "by right", "other"],
+    "requirements": ["by right", "in-lieu fees", "other", "size of project"],
     "citations": [
       {
         "description": "New Cumberland Zoning Code",
@@ -43899,7 +43899,7 @@
   },
   "New Haven, CT": {
     "reporter": "Bobby Siemiaszko",
-    "requirements": ["by right", "size of project", "carshare"],
+    "requirements": ["by right", "carshare", "size of project"],
     "citations": [
       {
         "description": "New Haven Independent",
@@ -43946,7 +43946,7 @@
   },
   "New Haven, IN": {
     "reporter": "Samuel Deetz",
-    "requirements": ["by right", "other", "bike parking", "frequent transit"],
+    "requirements": ["bike parking", "by right", "frequent transit", "other"],
     "citations": [
       {
         "description": "New Haven Unified Development Ordinance",
@@ -43994,7 +43994,7 @@
   },
   "New Hope, MN": {
     "reporter": "Samuel Deetz",
-    "requirements": ["other", "in-lieu fees"],
+    "requirements": ["in-lieu fees", "other"],
     "citations": [
       {
         "description": "New Hope Zoning Code",
@@ -44314,7 +44314,7 @@
   },
   "New Ulm, MN": {
     "reporter": "Samuel Deetz",
-    "requirements": ["other", "in-lieu fees"],
+    "requirements": ["in-lieu fees", "other"],
     "citations": [
       {
         "description": "New Ulm Zoning Code",
@@ -44459,7 +44459,7 @@
   },
   "Newark, NJ": {
     "reporter": null,
-    "requirements": ["frequent transit", "by right"],
+    "requirements": ["by right", "frequent transit"],
     "citations": [
       {
         "description": "41:7-2-6 using the table notes",
@@ -44685,7 +44685,7 @@
   },
   "Newton, KS": {
     "reporter": "Samuel Deetz",
-    "requirements": ["by right", "bike parking", "other"],
+    "requirements": ["bike parking", "by right", "other"],
     "citations": [
       {
         "description": "Newton Zoning Code",
@@ -44873,7 +44873,7 @@
   },
   "Norcross, GA": {
     "reporter": "Samuel Deetz",
-    "requirements": ["other", "frequent transit", "carshare"],
+    "requirements": ["carshare", "frequent transit", "other"],
     "citations": [
       {
         "description": "Norcross Unified Development Ordinance",
@@ -44995,7 +44995,7 @@
   },
   "Norristown, PA": {
     "reporter": "Samuel Deetz",
-    "requirements": ["frequent transit", "other", "by right"],
+    "requirements": ["by right", "frequent transit", "other"],
     "citations": [
       {
         "description": "Norristown Zoning Code",
@@ -45142,7 +45142,7 @@
   },
   "North East, MD": {
     "reporter": "Samuel Deetz",
-    "requirements": ["in-lieu fees", "by right", "frequent transit", "other"],
+    "requirements": ["by right", "frequent transit", "in-lieu fees", "other"],
     "citations": [
       {
         "description": "North East Zoning Code",
@@ -45243,7 +45243,7 @@
   },
   "North Kansas City, MO": {
     "reporter": "Samuel Deetz",
-    "requirements": ["by right", "bike parking"],
+    "requirements": ["bike parking", "by right"],
     "citations": [
       {
         "description": "North Kansas City Zoning Code",
@@ -45563,11 +45563,11 @@
   "Northfield, IL": {
     "reporter": "Samuel Deetz",
     "requirements": [
-      "frequent transit",
-      "planned frequent transit",
       "bike parking",
       "carshare",
-      "other"
+      "frequent transit",
+      "other",
+      "planned frequent transit"
     ],
     "citations": [
       {
@@ -45623,9 +45623,9 @@
     "reporter": "Samuel Deetz",
     "requirements": [
       "by right",
-      "size of project",
+      "frequent transit",
       "other",
-      "frequent transit"
+      "size of project"
     ],
     "citations": [
       {
@@ -45679,7 +45679,7 @@
   },
   "Northville, MI": {
     "reporter": "Samuel Deetz",
-    "requirements": ["in-lieu fees", "by right", "other"],
+    "requirements": ["by right", "in-lieu fees", "other"],
     "citations": [
       {
         "description": "Northville Zoning Code",
@@ -46002,12 +46002,12 @@
   "Oak Park, IL": {
     "reporter": "Samuel Deetz",
     "requirements": [
-      "size of project",
       "by right",
       "frequent transit",
-      "transportation demand management",
+      "in-lieu fees",
       "other",
-      "in-lieu fees"
+      "size of project",
+      "transportation demand management"
     ],
     "citations": [
       {
@@ -46293,12 +46293,12 @@
   "Oceanside, CA": {
     "reporter": "Samuel Deetz",
     "requirements": [
-      "other",
+      "accessory dwelling units",
       "carshare",
       "frequent transit",
-      "accessory dwelling units",
       "historic preservation",
-      "in-lieu fees"
+      "in-lieu fees",
+      "other"
     ],
     "citations": [
       {
@@ -46323,7 +46323,7 @@
   },
   "Ochtrup, NW": {
     "reporter": "Samuel Deetz",
-    "requirements": ["bike parking", "other", "in-lieu fees"],
+    "requirements": ["bike parking", "in-lieu fees", "other"],
     "citations": [
       {
         "description": "Ochtrup Stellplatzsatzung",
@@ -46701,12 +46701,12 @@
   "Ontario, CA": {
     "reporter": "Samuel Deetz",
     "requirements": [
+      "accessory dwelling units",
       "by right",
-      "size of project",
-      "frequent transit",
       "carshare",
+      "frequent transit",
       "historic preservation",
-      "accessory dwelling units"
+      "size of project"
     ],
     "citations": [
       {
@@ -46774,7 +46774,7 @@
   },
   "Opelousas, LA": {
     "reporter": "Samuel Deetz",
-    "requirements": ["by right", "size of project", "in-lieu fees"],
+    "requirements": ["by right", "in-lieu fees", "size of project"],
     "citations": [
       {
         "description": "Opelousas Zoning Code",
@@ -46817,7 +46817,7 @@
   },
   "Orange, CA": {
     "reporter": "Samuel Deetz",
-    "requirements": ["accessory dwelling units", "in-lieu fees", "by right"],
+    "requirements": ["accessory dwelling units", "by right", "in-lieu fees"],
     "citations": [
       {
         "description": "Orange Zoning Code",
@@ -46846,7 +46846,7 @@
   },
   "Oregon, IL": {
     "reporter": "Samuel Deetz",
-    "requirements": ["by right", "other", "in-lieu fees"],
+    "requirements": ["by right", "in-lieu fees", "other"],
     "citations": [
       {
         "description": "Oregon Zoning Code",
@@ -46865,7 +46865,7 @@
   },
   "Oregon, OR": {
     "reporter": "Patrick Siegman",
-    "requirements": ["size of project", "by right"],
+    "requirements": ["by right", "size of project"],
     "citations": [
       {
         "description": "Sightline Article: OREGON JUST ENDED EXCESSIVE PARKING MANDATES ON MOST URBAN LOTS",
@@ -47532,7 +47532,7 @@
   },
   "Oxford, OH": {
     "reporter": "Samuel Deetz",
-    "requirements": ["by right", "frequent transit", "bike parking", "other"],
+    "requirements": ["bike parking", "by right", "frequent transit", "other"],
     "citations": [
       {
         "description": "Oxford Zoning Code",
@@ -47677,10 +47677,10 @@
     "reporter": "Samuel Deetz",
     "requirements": [
       "accessory dwelling units",
-      "historic preservation",
-      "other",
       "carshare",
-      "frequent transit"
+      "frequent transit",
+      "historic preservation",
+      "other"
     ],
     "citations": [
       {
@@ -47808,7 +47808,7 @@
   },
   "Paola, KS": {
     "reporter": "Samuel Deetz",
-    "requirements": ["other", "by right"],
+    "requirements": ["by right", "other"],
     "citations": [
       {
         "description": "Paola Zoning Code",
@@ -47958,10 +47958,10 @@
     "reporter": "Samuel Deetz",
     "requirements": [
       "by right",
+      "carshare",
       "frequent transit",
-      "other",
       "in-lieu fees",
-      "carshare"
+      "other"
     ],
     "citations": [
       {
@@ -48095,7 +48095,7 @@
   },
   "Parkville, MO": {
     "reporter": "Samuel Deetz",
-    "requirements": ["by right", "size of project", "bike parking", "other"],
+    "requirements": ["bike parking", "by right", "other", "size of project"],
     "citations": [
       {
         "description": "Parkville Zoning Code",
@@ -48173,8 +48173,8 @@
     "reporter": "Samuel Deetz",
     "requirements": [
       "accessory dwelling units",
-      "frequent transit",
       "carshare",
+      "frequent transit",
       "other"
     ],
     "citations": [
@@ -48435,7 +48435,7 @@
   },
   "Pawtucket, RI": {
     "reporter": "Samuel Deetz",
-    "requirements": ["other", "by right", "size of project"],
+    "requirements": ["by right", "other", "size of project"],
     "citations": [
       {
         "description": "Pawtucket Zoning Code",
@@ -49630,7 +49630,7 @@
   },
   "Pineville, NC": {
     "reporter": "Samuel Deetz",
-    "requirements": ["other", "by right", "historic preservation"],
+    "requirements": ["by right", "historic preservation", "other"],
     "citations": [
       {
         "description": "Pineville Zoning Code",
@@ -50268,7 +50268,7 @@
   },
   "Pomona, CA": {
     "reporter": "Patrick Siegman",
-    "requirements": ["size of project", "accessory dwelling units"],
+    "requirements": ["accessory dwelling units", "size of project"],
     "citations": [
       {
         "description": "Downtown Pomona Specific Plan.",
@@ -50433,7 +50433,7 @@
   },
   "Port Allen, LA": {
     "reporter": "Samuel Deetz",
-    "requirements": ["other", "by right"],
+    "requirements": ["by right", "other"],
     "citations": [
       {
         "description": "Port Allen Zoning Code",
@@ -50809,10 +50809,10 @@
   "Portland, OR": {
     "reporter": "Tony Jordan",
     "requirements": [
-      "frequent transit",
-      "inclusionary housing",
+      "affordable housing",
       "by right",
-      "affordable housing"
+      "frequent transit",
+      "inclusionary housing"
     ],
     "citations": [
       {
@@ -51239,10 +51239,10 @@
     "reporter": "Samuel Deetz",
     "requirements": [
       "by right",
-      "size of project",
       "frequent transit",
+      "historic preservation",
       "other",
-      "historic preservation"
+      "size of project"
     ],
     "citations": [
       {
@@ -51272,7 +51272,7 @@
   },
   "Providence, RI": {
     "reporter": null,
-    "requirements": ["bike parking", "frequent transit", "by right", "other"],
+    "requirements": ["bike parking", "by right", "frequent transit", "other"],
     "citations": [
       {
         "description": "Section 1410. A-B and Section 1402. A-D",
@@ -51326,9 +51326,9 @@
   "Provo, UT": {
     "reporter": "Austin Taylor",
     "requirements": [
-      "transportation demand management",
       "bike parking",
-      "carshare"
+      "carshare",
+      "transportation demand management"
     ],
     "citations": [
       {
@@ -51404,7 +51404,7 @@
   },
   "Punxsutawney, PA": {
     "reporter": "Samuel Deetz",
-    "requirements": ["size of project", "by right"],
+    "requirements": ["by right", "size of project"],
     "citations": [
       {
         "description": "Punxsutawney Zoning Code",
@@ -51673,8 +51673,8 @@
   "Rancho Cucamonga, CA": {
     "reporter": "Samuel Deetz",
     "requirements": [
-      "frequent transit",
       "carshare",
+      "frequent transit",
       "historic preservation",
       "other"
     ],
@@ -51753,7 +51753,7 @@
   },
   "Ranlo, NC": {
     "reporter": "Samuel Deetz",
-    "requirements": ["in-lieu fees", "bike parking", "other"],
+    "requirements": ["bike parking", "in-lieu fees", "other"],
     "citations": [
       {
         "description": "Ranlo Zoning Code",
@@ -51977,7 +51977,7 @@
   },
   "Red Cross, NC": {
     "reporter": "Samuel Deetz",
-    "requirements": ["other", "by right"],
+    "requirements": ["by right", "other"],
     "citations": [
       {
         "description": "Red Cross Zoning Code",
@@ -52072,7 +52072,7 @@
   },
   "Redding, CA": {
     "reporter": null,
-    "requirements": ["by right", "frequent transit", "bike parking"],
+    "requirements": ["bike parking", "by right", "frequent transit"],
     "citations": [
       {
         "description": "Chapter 6-8",
@@ -52110,7 +52110,7 @@
   },
   "Redford Charter Township, MI": {
     "reporter": "Samuel Deetz",
-    "requirements": ["by right", "other", "in-lieu fees"],
+    "requirements": ["by right", "in-lieu fees", "other"],
     "citations": [
       {
         "description": "Redford Charter Township Zoning Code",
@@ -52187,11 +52187,11 @@
   "Regensburg, BY": {
     "reporter": "Samuel Deetz",
     "requirements": [
-      "frequent transit",
       "bike parking",
-      "other",
       "carshare",
-      "in-lieu fees"
+      "frequent transit",
+      "in-lieu fees",
+      "other"
     ],
     "citations": [
       {
@@ -52368,7 +52368,7 @@
   },
   "Reynoldsburg, OH": {
     "reporter": "Samuel Deetz",
-    "requirements": ["other", "frequent transit", "carshare", "bike parking"],
+    "requirements": ["bike parking", "carshare", "frequent transit", "other"],
     "citations": [
       {
         "description": "Reynoldsburg Zoning Code",
@@ -52449,7 +52449,7 @@
   },
   "Richfield, MN": {
     "reporter": "Samuel Deetz",
-    "requirements": ["other", "bike parking", "frequent transit"],
+    "requirements": ["bike parking", "frequent transit", "other"],
     "citations": [
       {
         "description": "Richfield Zoning Code",
@@ -52686,7 +52686,7 @@
   },
   "Ridgefield, WA": {
     "reporter": "Daniel Robinson",
-    "requirements": ["by right", "frequent transit", "bike parking"],
+    "requirements": ["bike parking", "by right", "frequent transit"],
     "citations": [
       {
         "description": "Ridgefield City Code",
@@ -52762,7 +52762,7 @@
   },
   "Ridgway, CO": {
     "reporter": "Samuel Deetz",
-    "requirements": ["by right", "other", "in-lieu fees"],
+    "requirements": ["by right", "in-lieu fees", "other"],
     "citations": [
       {
         "description": "Ridgway Zoning Code",
@@ -52781,7 +52781,7 @@
   },
   "Ridley Park, PA": {
     "reporter": "Samuel Deetz",
-    "requirements": ["other", "by right"],
+    "requirements": ["by right", "other"],
     "citations": [
       {
         "description": "Ridley Park Zoning Code",
@@ -52805,7 +52805,7 @@
   },
   "Rifle, CO": {
     "reporter": "Samuel Deetz",
-    "requirements": ["size of project", "by right"],
+    "requirements": ["by right", "size of project"],
     "citations": [
       {
         "description": "Rifle Land Use and Development Code",
@@ -52919,7 +52919,7 @@
   },
   "River Grove, IL": {
     "reporter": "Samuel Deetz",
-    "requirements": ["by right", "size of project", "other"],
+    "requirements": ["by right", "other", "size of project"],
     "citations": [
       {
         "description": "River Grove Zoning Code",
@@ -52988,9 +52988,9 @@
     "reporter": "Samuel Deetz",
     "requirements": [
       "accessory dwelling units",
-      "transportation demand management",
+      "by right",
       "other",
-      "by right"
+      "transportation demand management"
     ],
     "citations": [
       {
@@ -53041,9 +53041,9 @@
     "reporter": "Samuel Deetz",
     "requirements": [
       "by right",
-      "size of project",
       "frequent transit",
-      "in-lieu fees"
+      "in-lieu fees",
+      "size of project"
     ],
     "citations": [
       {
@@ -53341,7 +53341,7 @@
   },
   "Rock Hill, SC": {
     "reporter": "Samuel Deetz",
-    "requirements": ["other", "by right"],
+    "requirements": ["by right", "other"],
     "citations": [
       {
         "description": "Rock Hill Zoning Code",
@@ -53661,7 +53661,7 @@
   },
   "Rogers, MN": {
     "reporter": "Samuel Deetz",
-    "requirements": ["other", "by right"],
+    "requirements": ["by right", "other"],
     "citations": [
       {
         "description": "Rogers Zoning Code",
@@ -53737,7 +53737,7 @@
   },
   "Romeo, MI": {
     "reporter": "Samuel Deetz",
-    "requirements": ["other", "by right"],
+    "requirements": ["by right", "other"],
     "citations": [
       {
         "description": "Romeo Zoning Code",
@@ -53813,7 +53813,7 @@
   },
   "Roscommon, MI": {
     "reporter": "Samuel Deetz",
-    "requirements": ["by right", "bike parking"],
+    "requirements": ["bike parking", "by right"],
     "citations": [
       {
         "description": "Roscommon Zoning Code",
@@ -53935,8 +53935,8 @@
     "requirements": [
       "accessory dwelling units",
       "by right",
-      "frequent transit",
       "carshare",
+      "frequent transit",
       "other"
     ],
     "citations": [
@@ -54048,12 +54048,12 @@
   "Rostock, MV": {
     "reporter": "Samuel Deetz",
     "requirements": [
-      "by right",
-      "in-lieu fees",
       "bike parking",
+      "by right",
       "carshare",
-      "transportation demand management",
-      "other"
+      "in-lieu fees",
+      "other",
+      "transportation demand management"
     ],
     "citations": [
       {
@@ -54145,7 +54145,7 @@
   },
   "Round Lake, IL": {
     "reporter": "Samuel Deetz",
-    "requirements": ["size of project", "by right"],
+    "requirements": ["by right", "size of project"],
     "citations": [
       {
         "description": "Round Lake Zoning Code",
@@ -54226,7 +54226,7 @@
   },
   "Royersford, PA": {
     "reporter": "Samuel Deetz",
-    "requirements": ["other", "by right"],
+    "requirements": ["by right", "other"],
     "citations": [
       {
         "description": "Royersford Zoning Code",
@@ -54708,11 +54708,11 @@
   "Salinas, CA": {
     "reporter": "Samuel Deetz",
     "requirements": [
+      "accessory dwelling units",
       "carshare",
       "frequent transit",
-      "other",
       "historic preservation",
-      "accessory dwelling units"
+      "other"
     ],
     "citations": [
       {
@@ -54742,7 +54742,7 @@
   },
   "Saline, MI": {
     "reporter": "Samuel Deetz",
-    "requirements": ["by right", "size of project", "in-lieu fees"],
+    "requirements": ["by right", "in-lieu fees", "size of project"],
     "citations": [
       {
         "description": "Saline Zoning Code",
@@ -54842,7 +54842,7 @@
   },
   "Salt Lake City, UT": {
     "reporter": "Brittain Corbett",
-    "requirements": ["other", "by right"],
+    "requirements": ["by right", "other"],
     "citations": [
       {
         "description": "City Code",
@@ -54931,10 +54931,10 @@
   "San Bernardino, CA": {
     "reporter": "Maggie Kochman",
     "requirements": [
+      "accessory dwelling units",
       "frequent transit",
       "in-lieu fees",
-      "other",
-      "accessory dwelling units"
+      "other"
     ],
     "citations": [
       {
@@ -55065,7 +55065,7 @@
   },
   "San Luis Obispo, CA": {
     "reporter": "Ryan Hartzell",
-    "requirements": ["other", "by right"],
+    "requirements": ["by right", "other"],
     "citations": [
       {
         "description": "San Luis Obispo Zoning Code",
@@ -55137,7 +55137,7 @@
   },
   "Sandpoint, ID": {
     "reporter": "Steve Lockwood",
-    "requirements": ["inclusionary housing", "affordable housing"],
+    "requirements": ["affordable housing", "inclusionary housing"],
     "citations": [
       {
         "description": "Sandpoint Code of Ordinances",
@@ -55232,8 +55232,8 @@
   "Sandy Springs, GA": {
     "reporter": "Derrick Arndt",
     "requirements": [
-      "by right",
       "affordable housing",
+      "by right",
       "carshare",
       "frequent transit",
       "other"
@@ -55286,11 +55286,11 @@
   "Santa Barbara, CA": {
     "reporter": "Jessica Metzger",
     "requirements": [
-      "by right",
+      "affordable housing",
       "bike parking",
+      "by right",
       "carshare",
       "size of project",
-      "affordable housing",
       "supportive housing"
     ],
     "citations": [
@@ -55464,7 +55464,7 @@
   },
   "Sarasota, FL": {
     "reporter": "Samuel Deetz",
-    "requirements": ["accessory dwelling units", "other", "by right"],
+    "requirements": ["accessory dwelling units", "by right", "other"],
     "citations": [
       {
         "description": "Sarasota Zoning Code",
@@ -55750,7 +55750,7 @@
   },
   "Savannah, GA": {
     "reporter": "Samuel Deetz",
-    "requirements": ["by right", "bike parking", "other"],
+    "requirements": ["bike parking", "by right", "other"],
     "citations": [
       {
         "description": "Savannah Zoning Code",
@@ -55895,7 +55895,7 @@
   },
   "Schiller Park, IL": {
     "reporter": "Samuel Deetz",
-    "requirements": ["by right", "size of project", "other"],
+    "requirements": ["by right", "other", "size of project"],
     "citations": [
       {
         "description": "Schiller Park Zoning Code",
@@ -56057,7 +56057,7 @@
   },
   "Scottsdale, AZ": {
     "reporter": "Samuel Deetz",
-    "requirements": ["by right", "other", "in-lieu fees", "size of project"],
+    "requirements": ["by right", "in-lieu fees", "other", "size of project"],
     "citations": [
       {
         "description": "Scottsdale Zoning Code",
@@ -56266,7 +56266,7 @@
   },
   "Sellersville, PA": {
     "reporter": "Samuel Deetz",
-    "requirements": ["other", "in-lieu fees"],
+    "requirements": ["in-lieu fees", "other"],
     "citations": [
       {
         "description": "Sellersville Zoning Code",
@@ -56328,7 +56328,7 @@
   },
   "Seneca, IL": {
     "reporter": "Samuel Deetz",
-    "requirements": ["by right", "size of project", "other"],
+    "requirements": ["by right", "other", "size of project"],
     "citations": [
       {
         "description": "Seneca Zoning Code",
@@ -56409,7 +56409,7 @@
   },
   "Severance, CO": {
     "reporter": "Samuel Deetz",
-    "requirements": ["other", "by right"],
+    "requirements": ["by right", "other"],
     "citations": [
       {
         "description": "Severance Land Use Code",
@@ -56547,7 +56547,7 @@
   },
   "Sharon, PA": {
     "reporter": "Samuel Deetz",
-    "requirements": ["by right", "frequent transit", "bike parking", "other"],
+    "requirements": ["bike parking", "by right", "frequent transit", "other"],
     "citations": [
       {
         "description": "Sharon Zoning Code",
@@ -56770,7 +56770,7 @@
   },
   "Shelby, MI": {
     "reporter": "Samuel Deetz",
-    "requirements": ["bike parking", "size of project", "other"],
+    "requirements": ["bike parking", "other", "size of project"],
     "citations": [
       {
         "description": "Shelby Zoning Code",
@@ -57063,9 +57063,9 @@
     "requirements": [
       "by right",
       "frequent transit",
+      "historic preservation",
       "other",
-      "size of project",
-      "historic preservation"
+      "size of project"
     ],
     "citations": [
       {
@@ -57097,8 +57097,8 @@
     "reporter": "Samuel Deetz",
     "requirements": [
       "frequent transit",
-      "transportation demand management",
-      "other"
+      "other",
+      "transportation demand management"
     ],
     "citations": [
       {
@@ -57157,9 +57157,9 @@
   "Shreveport, LA": {
     "reporter": "Samuel Deetz",
     "requirements": [
-      "other",
-      "historic preservation",
       "by right",
+      "historic preservation",
+      "other",
       "size of project"
     ],
     "citations": [
@@ -57309,7 +57309,7 @@
   },
   "Silver City, NM": {
     "reporter": "Samuel Deetz",
-    "requirements": ["by right", "bike parking"],
+    "requirements": ["bike parking", "by right"],
     "citations": [
       {
         "description": "Silver City Zoning Code",
@@ -57354,10 +57354,10 @@
     "reporter": "Samuel Deetz",
     "requirements": [
       "bike parking",
+      "by right",
       "frequent transit",
       "in-lieu fees",
-      "other",
-      "by right"
+      "other"
     ],
     "citations": [
       {
@@ -57460,8 +57460,8 @@
     "reporter": "Samuel Deetz",
     "requirements": [
       "bike parking",
-      "transportation demand management",
-      "other"
+      "other",
+      "transportation demand management"
     ],
     "citations": [
       {
@@ -57542,9 +57542,9 @@
     "requirements": [
       "by right",
       "frequent transit",
-      "size of project",
+      "in-lieu fees",
       "other",
-      "in-lieu fees"
+      "size of project"
     ],
     "citations": [
       {
@@ -57788,7 +57788,7 @@
   },
   "Snellville, GA": {
     "reporter": "Samuel Deetz",
-    "requirements": ["by right", "size of project", "other"],
+    "requirements": ["by right", "other", "size of project"],
     "citations": [
       {
         "description": "Snellville Unified Development Ordinance",
@@ -57917,7 +57917,7 @@
   },
   "Somerville, MA": {
     "reporter": null,
-    "requirements": ["frequent transit", "by right"],
+    "requirements": ["by right", "frequent transit"],
     "citations": [
       {
         "description": " 1.3.3 for definition of \"Transit Area\" and the \"Parking & Mobility\" section of each zoning district for the maximums for each use within a Transit Area",
@@ -57936,7 +57936,7 @@
   },
   "Somonauk, IL": {
     "reporter": "Samuel Deetz",
-    "requirements": ["other", "by right", "in-lieu fees"],
+    "requirements": ["by right", "in-lieu fees", "other"],
     "citations": [
       {
         "description": "Somonauk Unified Development Ordinance",
@@ -57960,7 +57960,7 @@
   },
   "Souderton, PA": {
     "reporter": "Samuel Deetz",
-    "requirements": ["size of project", "by right"],
+    "requirements": ["by right", "size of project"],
     "citations": [
       {
         "description": "Souderton Zoning Code",
@@ -58078,7 +58078,7 @@
   },
   "South Coatesville, PA": {
     "reporter": "Samuel Deetz",
-    "requirements": ["other", "by right"],
+    "requirements": ["by right", "other"],
     "citations": [
       {
         "description": "South Coatesville Zoning Code",
@@ -58103,12 +58103,12 @@
   "South Elgin, IL": {
     "reporter": "Samuel Deetz",
     "requirements": [
-      "by right",
-      "frequent transit",
-      "other",
-      "in-lieu fees",
       "bike parking",
-      "carshare"
+      "by right",
+      "carshare",
+      "frequent transit",
+      "in-lieu fees",
+      "other"
     ],
     "citations": [
       {
@@ -58385,7 +58385,7 @@
   },
   "Sparta, MI": {
     "reporter": "Samuel Deetz",
-    "requirements": ["size of project", "by right"],
+    "requirements": ["by right", "size of project"],
     "citations": [
       {
         "description": "Sparta Zoning Code",
@@ -58697,7 +58697,7 @@
   },
   "Springdale, AR": {
     "reporter": "Samuel Deetz",
-    "requirements": ["size of project", "by right"],
+    "requirements": ["by right", "size of project"],
     "citations": [
       {
         "description": "Springdale Zoning Code",
@@ -59044,7 +59044,7 @@
   },
   "St. Charles, MO": {
     "reporter": "Samuel Deetz",
-    "requirements": ["by right", "bike parking", "other"],
+    "requirements": ["bike parking", "by right", "other"],
     "citations": [
       {
         "description": "St. Charles Zoning Code",
@@ -59101,7 +59101,7 @@
   },
   "St. Cloud, MN": {
     "reporter": "Samuel Deetz",
-    "requirements": ["in-lieu fees", "by right", "other"],
+    "requirements": ["by right", "in-lieu fees", "other"],
     "citations": [
       {
         "description": "St. Cloud Land Development Code",
@@ -59724,7 +59724,7 @@
   },
   "Stallings, NC": {
     "reporter": "Samuel Deetz",
-    "requirements": ["other", "bike parking", "in-lieu fees"],
+    "requirements": ["bike parking", "in-lieu fees", "other"],
     "citations": [
       {
         "description": "Stallings Development Ordinance",
@@ -59753,7 +59753,7 @@
   },
   "Stamford, CT": {
     "reporter": "Samuel Deetz",
-    "requirements": ["carshare", "by right"],
+    "requirements": ["by right", "carshare"],
     "citations": [
       {
         "description": "Stamford Zoning Code",
@@ -59782,7 +59782,7 @@
   },
   "Stanfield, NC": {
     "reporter": "Samuel Deetz",
-    "requirements": ["other", "by right"],
+    "requirements": ["by right", "other"],
     "citations": [
       {
         "description": "Stanfield Zoning Code",
@@ -59939,7 +59939,7 @@
   },
   "Starkville, MS": {
     "reporter": "Samuel Deetz",
-    "requirements": ["frequent transit", "bike parking"],
+    "requirements": ["bike parking", "frequent transit"],
     "citations": [
       {
         "description": "Starkville Unified Development Code",
@@ -59978,11 +59978,11 @@
   "State College, PA": {
     "reporter": "Samuel Deetz",
     "requirements": [
+      "affordable housing",
       "by right",
-      "size of project",
-      "other",
       "frequent transit",
-      "affordable housing"
+      "other",
+      "size of project"
     ],
     "citations": [
       {
@@ -60055,7 +60055,7 @@
   },
   "Steamboat Springs, CO": {
     "reporter": "Samuel Deetz",
-    "requirements": ["frequent transit", "other", "in-lieu fees"],
+    "requirements": ["frequent transit", "in-lieu fees", "other"],
     "citations": [
       {
         "description": "Steamboat Springs Community Development Code",
@@ -60122,7 +60122,7 @@
   },
   "Sterling, IL": {
     "reporter": "Samuel Deetz",
-    "requirements": ["by right", "bike parking"],
+    "requirements": ["bike parking", "by right"],
     "citations": [
       {
         "description": "Sterling City Code",
@@ -60210,8 +60210,8 @@
     "reporter": "Trevor Roark",
     "requirements": [
       "by right",
-      "frequent transit",
       "carshare",
+      "frequent transit",
       "tree preservation"
     ],
     "citations": [
@@ -60242,7 +60242,7 @@
   },
   "Stevensville, MI": {
     "reporter": "Samuel Deetz",
-    "requirements": ["other", "bike parking", "size of project"],
+    "requirements": ["bike parking", "other", "size of project"],
     "citations": [
       {
         "description": "Stevensville Zoning Code",
@@ -60304,7 +60304,7 @@
   },
   "Stillwater, OK": {
     "reporter": "Samuel Deetz",
-    "requirements": ["other", "frequent transit", "by right"],
+    "requirements": ["by right", "frequent transit", "other"],
     "citations": [
       {
         "description": "Stillwater Zoning Code",
@@ -60334,11 +60334,11 @@
   "Stirling, WA": {
     "reporter": "Samuel Deetz",
     "requirements": [
-      "in-lieu fees",
-      "frequent transit",
       "bike parking",
-      "historic preservation",
       "by right",
+      "frequent transit",
+      "historic preservation",
+      "in-lieu fees",
       "other"
     ],
     "citations": [
@@ -60448,12 +60448,12 @@
   "Stockton, CA": {
     "reporter": "Samuel Deetz",
     "requirements": [
+      "bike parking",
       "by right",
       "frequent transit",
+      "in-lieu fees",
       "other",
-      "size of project",
-      "bike parking",
-      "in-lieu fees"
+      "size of project"
     ],
     "citations": [
       {
@@ -60683,7 +60683,7 @@
   },
   "Stuart, FL": {
     "reporter": null,
-    "requirements": ["in-lieu fees", "historic preservation"],
+    "requirements": ["historic preservation", "in-lieu fees"],
     "citations": [
       {
         "description": "Chapter III. Ord. No. 1978-04, § 1, 6-28-04. F Additional regulations and requirements ",
@@ -60755,7 +60755,7 @@
   },
   "Sturgis, MI": {
     "reporter": "Samuel Deetz",
-    "requirements": ["other", "by right", "size of project"],
+    "requirements": ["by right", "other", "size of project"],
     "citations": [
       {
         "description": "Sturgis Zoning Code",
@@ -60827,7 +60827,7 @@
   },
   "Subiaco, WA": {
     "reporter": "Samuel Deetz",
-    "requirements": ["frequent transit", "bike parking", "other", "by right"],
+    "requirements": ["bike parking", "by right", "frequent transit", "other"],
     "citations": [
       {
         "description": "Subiaco Local Planning Scheme No. 5",
@@ -61095,10 +61095,10 @@
   "Sunnyvale, CA": {
     "reporter": "Samuel Deetz",
     "requirements": [
-      "frequent transit",
+      "accessory dwelling units",
       "by right",
-      "other",
-      "accessory dwelling units"
+      "frequent transit",
+      "other"
     ],
     "citations": [
       {
@@ -61216,7 +61216,7 @@
   },
   "Surprise, AZ": {
     "reporter": "Samuel Deetz",
-    "requirements": ["other", "in-lieu fees"],
+    "requirements": ["in-lieu fees", "other"],
     "citations": [
       {
         "description": "Surprise Zoning Code",
@@ -61604,7 +61604,7 @@
   },
   "Tampa, FL": {
     "reporter": "Samuel Deetz",
-    "requirements": ["by right", "bike parking", "carshare", "in-lieu fees"],
+    "requirements": ["bike parking", "by right", "carshare", "in-lieu fees"],
     "citations": [
       {
         "description": "Tampa Zoning & Land Development Code",
@@ -61714,7 +61714,7 @@
   },
   "Tawas City, MI": {
     "reporter": "Samuel Deetz",
-    "requirements": ["size of project", "bike parking"],
+    "requirements": ["bike parking", "size of project"],
     "citations": [
       {
         "description": "Tawas City Zoning Code",
@@ -61733,7 +61733,7 @@
   },
   "Taylor Mill, KY": {
     "reporter": "Samuel Deetz",
-    "requirements": ["other", "bike parking", "carshare"],
+    "requirements": ["bike parking", "carshare", "other"],
     "citations": [
       {
         "description": "Taylor Mill Zoning Code",
@@ -62005,7 +62005,7 @@
   },
   "Tempe, AZ": {
     "reporter": "Samuel Deetz",
-    "requirements": ["size of project", "by right"],
+    "requirements": ["by right", "size of project"],
     "citations": [
       {
         "description": "Tempe Zoning Code",
@@ -62379,11 +62379,11 @@
   "Thousand Oaks, CA": {
     "reporter": "Samuel Deetz",
     "requirements": [
-      "other",
-      "historic preservation",
       "accessory dwelling units",
       "carshare",
-      "frequent transit"
+      "frequent transit",
+      "historic preservation",
+      "other"
     ],
     "citations": [
       {
@@ -62771,7 +62771,7 @@
   },
   "Toledo, OH": {
     "reporter": "Samuel Deetz",
-    "requirements": ["by right", "size of project", "historic preservation"],
+    "requirements": ["by right", "historic preservation", "size of project"],
     "citations": [
       {
         "description": "Toledo Planning and Zoning Code",
@@ -62951,9 +62951,9 @@
     "reporter": "Samuel Deetz",
     "requirements": [
       "accessory dwelling units",
-      "historic preservation",
-      "frequent transit",
       "carshare",
+      "frequent transit",
+      "historic preservation",
       "other"
     ],
     "citations": [
@@ -63088,7 +63088,7 @@
   },
   "Town of Ledgeview, WI": {
     "reporter": "Samuel Deetz",
-    "requirements": ["other", "in-lieu fees"],
+    "requirements": ["in-lieu fees", "other"],
     "citations": [
       {
         "description": "Town of Ledgeview Zoning Code",
@@ -63564,12 +63564,12 @@
   "Tucson, AZ": {
     "reporter": "Samuel Deetz",
     "requirements": [
-      "other",
-      "in-lieu fees",
+      "bike parking",
       "by right",
       "historic preservation",
+      "in-lieu fees",
+      "other",
       "size of project",
-      "bike parking",
       "tree preservation"
     ],
     "citations": [
@@ -63621,9 +63621,9 @@
   "Tulsa, OK": {
     "reporter": "Stephen Lassiter",
     "requirements": [
-      "by right",
-      "bike parking",
       "accessory dwelling units",
+      "bike parking",
+      "by right",
       "carshare",
       "historic preservation"
     ],
@@ -63728,7 +63728,7 @@
   },
   "Tuscola, IL": {
     "reporter": "Samuel Deetz",
-    "requirements": ["other", "by right"],
+    "requirements": ["by right", "other"],
     "citations": [
       {
         "description": "Tuscola Zoning Code",
@@ -63871,7 +63871,7 @@
   },
   "Tyrone, PA": {
     "reporter": "Samuel Deetz",
-    "requirements": ["size of project", "by right"],
+    "requirements": ["by right", "size of project"],
     "citations": [
       {
         "description": "Tyrone Zoning Code",
@@ -64209,7 +64209,7 @@
   },
   "Vail, CO": {
     "reporter": "Samuel Deetz",
-    "requirements": ["other", "in-lieu fees"],
+    "requirements": ["in-lieu fees", "other"],
     "citations": [
       {
         "description": "Vail Zoning Code",
@@ -64239,13 +64239,13 @@
   "Vallejo, CA": {
     "reporter": "Samuel Deetz",
     "requirements": [
+      "accessory dwelling units",
       "by right",
-      "size of project",
       "carshare",
       "frequent transit",
-      "other",
       "historic preservation",
-      "accessory dwelling units"
+      "other",
+      "size of project"
     ],
     "citations": [
       {
@@ -64498,8 +64498,8 @@
     "requirements": [
       "by right",
       "frequent transit",
-      "size of project",
-      "other"
+      "other",
+      "size of project"
     ],
     "citations": [
       {
@@ -64987,12 +64987,12 @@
   "Visalia, CA": {
     "reporter": "Samuel Deetz",
     "requirements": [
-      "in-lieu fees",
-      "frequent transit",
-      "carshare",
-      "other",
       "accessory dwelling units",
-      "historic preservation"
+      "carshare",
+      "frequent transit",
+      "historic preservation",
+      "in-lieu fees",
+      "other"
     ],
     "citations": [
       {
@@ -65596,7 +65596,7 @@
   },
   "Warsaw, MO": {
     "reporter": "Samuel Deetz",
-    "requirements": ["by right", "size of project", "other"],
+    "requirements": ["by right", "other", "size of project"],
     "citations": [
       {
         "description": "Warsaw Unified Development Code",
@@ -66288,7 +66288,7 @@
   },
   "Waxhaw, NC": {
     "reporter": "Samuel Deetz",
-    "requirements": ["other", "by right"],
+    "requirements": ["by right", "other"],
     "citations": [
       {
         "description": "Waxhaw Land Development Code",
@@ -66740,7 +66740,7 @@
   },
   "West Branch, MI": {
     "reporter": "Samuel Deetz",
-    "requirements": ["by right", "bike parking"],
+    "requirements": ["bike parking", "by right"],
     "citations": [
       {
         "description": "West Branch Zoning Code",
@@ -67347,7 +67347,7 @@
   },
   "Westminster, MD": {
     "reporter": "Samuel Deetz",
-    "requirements": ["in-lieu fees", "by right"],
+    "requirements": ["by right", "in-lieu fees"],
     "citations": [
       {
         "description": "Westminster Zoning Code",
@@ -67511,9 +67511,9 @@
     "reporter": "Samuel Deetz",
     "requirements": [
       "affordable housing",
-      "other",
       "bike parking",
-      "frequent transit"
+      "frequent transit",
+      "other"
     ],
     "citations": [
       {
@@ -67858,7 +67858,7 @@
   },
   "Wilkinsburg, PA": {
     "reporter": "Samuel Deetz",
-    "requirements": ["other", "by right"],
+    "requirements": ["by right", "other"],
     "citations": [
       {
         "description": "Wilkinsburg Zoning Code",
@@ -68108,7 +68108,7 @@
   },
   "Wilmette, IL": {
     "reporter": "Samuel Deetz",
-    "requirements": ["by right", "size of project", "in-lieu fees", "other"],
+    "requirements": ["by right", "in-lieu fees", "other", "size of project"],
     "citations": [
       {
         "description": "Wilmette Zoning Code",
@@ -68207,7 +68207,7 @@
   },
   "Wilmington, OH": {
     "reporter": "Samuel Deetz",
-    "requirements": ["other", "in-lieu fees"],
+    "requirements": ["in-lieu fees", "other"],
     "citations": [
       {
         "description": "Wilmington Zoning Code",
@@ -68236,7 +68236,7 @@
   },
   "Wilson, NC": {
     "reporter": null,
-    "requirements": ["bike parking", "tree preservation", "by right"],
+    "requirements": ["bike parking", "by right", "tree preservation"],
     "citations": [
       {
         "description": "City Code",
@@ -68469,7 +68469,7 @@
   },
   "Winnetka, IL": {
     "reporter": "Samuel Deetz",
-    "requirements": ["by right", "size of project", "other"],
+    "requirements": ["by right", "other", "size of project"],
     "citations": [
       {
         "description": "Winnetka Zoning Code",
@@ -68737,7 +68737,7 @@
   },
   "Wisconsin Rapids, WI": {
     "reporter": "Samuel Deetz",
-    "requirements": ["by right", "bike parking"],
+    "requirements": ["bike parking", "by right"],
     "citations": [
       {
         "description": "Wisconsin Rapids Zoning Code",
@@ -68813,7 +68813,7 @@
   },
   "Wonder Lake, IL": {
     "reporter": "Samuel Deetz",
-    "requirements": ["other", "by right"],
+    "requirements": ["by right", "other"],
     "citations": [
       {
         "description": "Wonder Lake Zoning Code",
@@ -68856,7 +68856,7 @@
   },
   "Wood River, IL": {
     "reporter": "Samuel Deetz",
-    "requirements": ["other", "by right"],
+    "requirements": ["by right", "other"],
     "citations": [
       {
         "description": "Wood River Zoning Code",
@@ -68875,7 +68875,7 @@
   },
   "Woodburn, IN": {
     "reporter": "Samuel Deetz",
-    "requirements": ["by right", "frequent transit", "bike parking", "other"],
+    "requirements": ["bike parking", "by right", "frequent transit", "other"],
     "citations": [
       {
         "description": "Woodburn Zoning Code",
@@ -69132,7 +69132,7 @@
   },
   "Wormleysburg, PA": {
     "reporter": "Samuel Deetz",
-    "requirements": ["other", "bike parking"],
+    "requirements": ["bike parking", "other"],
     "citations": [
       {
         "description": "Wormleysburg Zoning Code",
@@ -69485,11 +69485,11 @@
   "Yonkers, NY": {
     "reporter": "Samuel Deetz",
     "requirements": [
-      "historic preservation",
-      "size of project",
       "by right",
       "frequent transit",
-      "in-lieu fees"
+      "historic preservation",
+      "in-lieu fees",
+      "size of project"
     ],
     "citations": [
       {
@@ -69577,7 +69577,7 @@
   },
   "Yorkton, SK": {
     "reporter": "Barbara Dupuis",
-    "requirements": ["size of project", "in-lieu fees"],
+    "requirements": ["in-lieu fees", "size of project"],
     "citations": [
       {
         "description": "Yorkton Zoning Bylaw",
@@ -69620,7 +69620,7 @@
   },
   "Youngstown, OH": {
     "reporter": "Samuel Deetz",
-    "requirements": ["by right", "size of project", "other"],
+    "requirements": ["by right", "other", "size of project"],
     "citations": [
       {
         "description": "Youngstown Zoning Code",
@@ -69669,13 +69669,13 @@
   "Ypsilanti, MI": {
     "reporter": "Samuel Deetz",
     "requirements": [
+      "accessory dwelling units",
+      "bike parking",
       "by right",
+      "carshare",
       "frequent transit",
       "in-lieu fees",
-      "bike parking",
-      "carshare",
-      "other",
-      "accessory dwelling units"
+      "other"
     ],
     "citations": [
       {
@@ -69838,7 +69838,7 @@
   },
   "Zelienople, PA": {
     "reporter": "Samuel Deetz",
-    "requirements": ["other", "by right", "size of project", "in-lieu fees"],
+    "requirements": ["by right", "in-lieu fees", "other", "size of project"],
     "citations": [
       {
         "description": "Zelienople Zoning Code",

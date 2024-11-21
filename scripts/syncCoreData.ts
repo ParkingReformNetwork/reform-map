@@ -80,17 +80,17 @@ async function readReportTable(): Promise<Row[]> {
       policy: splitStringArray(row.Type, {
         "parking maximums": "add parking maximums",
         "eliminate parking minimums": "remove parking minimums",
-      }),
+      }).sort(),
       scope: splitStringArray(row.Magnitude, {
         "city center/business district": "city center / business district",
         "main street/special": "main street / special",
-      }),
+      }).sort(),
       land: splitStringArray(row.Uses, {
         residential: "residential, all uses",
         "low density (sf) residential": "residential, low-density",
         "high density residential": "residential, high-density",
         "multi-family residential": "residential, multi-family",
-      }),
+      }).sort(),
       date: normalizeReformDate(row["Date of Reform"] || null),
       repeal: checkIncludes(row.Highlights, "no mandates"),
     }));
