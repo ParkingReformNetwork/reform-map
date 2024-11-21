@@ -87,6 +87,7 @@ async function populatePlaces(
       country_code: entry.country,
       type: determinePlaceType(entry.place, entry.state),
       population: entry.pop,
+      complete_minimums_repeal: entry.repeal,
       coordinates: {
         type: "Point",
         coordinates: entry.coord,
@@ -170,7 +171,6 @@ async function populateLegacyReforms(
         summary: entry.summary,
         reporter: entry.reporter,
         reform_date: entry.date,
-        complete_minimums_repeal: entry.repeal,
         citations: [],
       };
     },

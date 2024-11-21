@@ -50,6 +50,7 @@ export type Place = {
   country_code: string;
   type: PlaceType;
   population: number;
+  complete_minimums_repeal: boolean;
   coordinates: Coordinates | null;
 } & Metadata;
 
@@ -72,7 +73,6 @@ export type LegacyReform = {
   summary: string;
   reporter: string | null;
   reform_date: string | null;
-  complete_minimums_repeal: boolean;
   citations: number[];
 } & Metadata;
 
