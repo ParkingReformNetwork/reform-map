@@ -169,7 +169,7 @@ async function saveExtendedDataFile(
           tdm: "transportation demand management",
           "in lieu fees": "in-lieu fees",
           "car share": "carshare",
-        });
+        }).sort();
         return [
           placeId,
           {
