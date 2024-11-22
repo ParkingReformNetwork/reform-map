@@ -92,6 +92,7 @@ async function readLegacyReforms(
       fields: [
         "id",
         "place",
+        "last_verified_at",
         "policy_changes",
         "land_uses",
         "reform_scope",
@@ -235,6 +236,8 @@ function combineData(
 ): Record<PlaceStringId, CompleteEntry> {
   return Object.fromEntries(
     Object.entries(places)
+      // Skip unverified reforms.
+      .filter(([placeId]) => legacyReforms[placeId].last_verified_at !== null)
       .map(([placeId, place]) => {
         const reform = legacyReforms[placeId];
         const citations = reform.citations!.map(

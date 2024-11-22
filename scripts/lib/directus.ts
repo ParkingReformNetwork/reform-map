@@ -65,7 +65,7 @@ export type Citation = {
 
 export type LegacyReform = {
   place: number;
-  last_verified_at: "datetime" | null;
+  last_verified_at: string | null;
   policy_changes: string[];
   land_uses: string[];
   reform_scope: string[];
