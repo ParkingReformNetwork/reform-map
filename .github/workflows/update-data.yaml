@@ -17,25 +17,22 @@ jobs:
       - name: Install dependencies
         run: npm ci
 
-      - name: Run sync-core-data
-        run: npm run sync-core-data
-      - name: Run sync-extended-data
-        run: npm run sync-extended-data
+      - name: Run sync-directus
+        run: npm run sync-directus
         env:
           DIRECTUS_EMAIL: ${{ secrets.DIRECTUS_EMAIL }}
           DIRECTUS_PASSWORD: ${{ secrets.DIRECTUS_PASSWORD }}
-      - name: Run sync-lat-lng
-        run: npm run sync-lat-lng
       - name: Gen CSV
         run: npm run gen-csv
       - name: Gen HTML pages
         run: npm run gen-html
       - name: Format JSON
         run: npm run fmt
+
       - name: Check for changes
         id: git_status
         run: |
-          if [[ -n $(git status --porcelain | grep -v 'scripts/city_detail_last_updated.txt') ]]; then
+          if [[ -n $(git status --porcelain ]]; then
             echo "has_changes=true" >> $GITHUB_OUTPUT
           else
             echo "has_changes=false" >> $GITHUB_OUTPUT

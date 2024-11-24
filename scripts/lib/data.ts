@@ -52,21 +52,3 @@ export async function readCompleteData(): Promise<
     ]),
   );
 }
-
-export async function saveCoreData(
-  data: Record<PlaceId, RawEntry>,
-): Promise<void> {
-  const json = JSON.stringify(data, null, 2);
-  await fs.writeFile("data/core.json", json);
-}
-
-export function splitStringArray(
-  val: string,
-  transform: Record<string, string> = {},
-): string[] {
-  if (!val) return [];
-  return val.split(", ").map((v) => {
-    const lowercase = v.toLowerCase();
-    return transform[lowercase] ?? lowercase;
-  });
-}
