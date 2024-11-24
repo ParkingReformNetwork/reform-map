@@ -70,7 +70,7 @@ No fields dropped from Google Tables.
 
 We'll incrementally migrate from `legacy_reforms` to a `policies` table.
 
-For now, the expectation is that a place only has up to one of each reform type. That means we cannot yet track pending reforms, for example. This is to simplify the implementation in the app.
+A place may have >1 of a specific `policy`, which is necessary to reflect reality accurately. See https://github.com/ParkingReformNetwork/reform-map/issues/552 for how this impacts the web app.
 
 ### `policies` table
 
@@ -82,15 +82,11 @@ We use a single table for the three land use reform types to keep things simple.
 
 2400/3200 of our records can be cleanly migrated from `legacy_reforms` to `policies`.
 
-The other 800 have multiple reforms, so they will need to have a distinct `policies` record for each reform type. We will automatically create these records, but set their `last_reviewed_at` as `null`. Then, someone will manually clean up each record and set its `last_reviewed_at`.
+The other 800 have multiple reform types, so they will need to have a distinct `policies` record for each reform type. We will automatically create these records, but set their `last_reviewed_at` as `null`. Then, someone will manually clean up each record and set its `last_reviewed_at`.
 
 During the migration, the app & details pages will only show the places with a single policy or otherwise use the `legacy_reforms`, so that we can still have the assumption that one place == one policy. This means for the 800 places with multiple reforms, their information will be duplicated across `legacy_reforms` and `policies`.
 
-## Phase 3: multiple of the same reform types per place
-
-It's now possible to have multiple of each reform type corresponding to a specific place. For example, there may be an existing minimum removals record along with a pending one. We need to track the status of the policy, like `historical | current | proposed`. We should probably reuse the `status` field.
-
-This phase can begin before phase 2 is entirely complete. The main blocker is updating the Mandates Map and Places Details pages.
+Technically, our 2400/3200 single-policy-type places may actually need >1 `policies` record because there may be >1 of the same reform type, such as two minimum reduction policies. This data should be cleaned up after completely finishing the migration from `legacy_reforms` and the web app can properly support >1 reform per place.
 
 ## Post-migration: parking lot map
 
