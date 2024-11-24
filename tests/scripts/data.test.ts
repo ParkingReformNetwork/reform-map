@@ -19,3 +19,15 @@ test("JSON files have enough entries", async () => {
 
   expect(numCore).toBeGreaterThan(3000);
 });
+
+test("every attachment has a Directus ID", async () => {
+  const extendedData = await readExtendedData();
+  const missingFileNames = Object.values(extendedData).flatMap((entry) =>
+    entry.citations.flatMap((citation) =>
+      citation.attachments
+        .filter((attachment) => !attachment.directusId)
+        .map((attachment) => attachment.fileName),
+    ),
+  );
+  expect(missingFileNames).toEqual([]);
+});

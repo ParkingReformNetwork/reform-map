@@ -10,6 +10,8 @@ We do not use frameworks like React or Svelte to keep things simple. However, we
 
 The main files are `index.html`, `src/js/main.ts`, and `data/*.json`. `main.ts` will load the JSON data to load all our data.
 
+The database is stored in Directus and synced nightly to JSON to simplify how the app consumes the data.
+
 ## Developing the map app
 
 Prerequisites:
@@ -86,14 +88,7 @@ You usually should not need to manually do this. We have a GitHub Action that ru
 
 You can trigger the GitHub Action to run early by clicking "Run workflow" at https://github.com/ParkingReformNetwork/reform-map/actions/workflows/update-data.yaml with the default option, if you're an admin. This will create a pull request that you then need to merge.
 
-To instead manually update the data, first run `npm install`. Then, run either:
-
-- `npm run sync-core-data`, or
-- `npm run sync-extended-data`.
-
-### Update latitude and longitude
-
-Update https://docs.google.com/spreadsheets/d/15L8hwNEi13Bov81EulgC8Xwt9_wCgofwcH49xHoNlKI/edit#gid=0. Our nightly cron job will open a PR to sync the updates.
+To instead manually update the data, first run `npm install`. Then, run `npm run sync-directus`.
 
 ## State diagram
 

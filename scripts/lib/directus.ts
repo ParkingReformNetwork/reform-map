@@ -7,12 +7,12 @@ import {
   authentication,
   DirectusClient as DirectusClientUntyped,
   RestClient,
-  readFiles,
-  uploadFiles,
 } from "@directus/sdk";
 
 import { ReformStatus } from "../../src/js/types.js";
 import { CitationType } from "../../scripts/lib/data.js";
+
+export const CITATIONS_FILES_FOLDER = "f085de08-b747-4251-973d-1752ccc29649";
 
 // ------------------------------------------------------------------------------
 // Generic types
@@ -109,49 +109,4 @@ export async function initDirectus(): Promise<DirectusClient> {
     .with(authentication());
   await client.login(email, password);
   return client;
-}
-
-// ------------------------------------------------------------------------------
-// Files migration
-// ------------------------------------------------------------------------------
-
-export const CITATIONS_FILES_FOLDER = "f085de08-b747-4251-973d-1752ccc29649";
-
-/** Return mapping of filename -> Directus ID. */
-export async function getUploadedFiles(
-  client: DirectusClient,
-): Promise<Record<string, string>> {
-  const result = await client.request(
-    readFiles({
-      filter: { folder: { _eq: CITATIONS_FILES_FOLDER } },
-      fields: ["id", "title"],
-      limit: -1,
-    }),
-  );
-  return Object.fromEntries(result.map((entry) => [entry.title, entry.id]));
-}
-
-export async function uploadFile(
-  client: DirectusClient,
-  fileName: string,
-  blob: Buffer,
-): Promise<string> {
-  const formData = new FormData();
-  const fileExtension = fileName.split(".").at(-1)!;
-  const mime = {
-    jpg: "image/jpeg",
-    png: "image/png",
-    docx: "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
-    pdf: "application/pdf",
-  }[fileExtension];
-  if (!mime)
-    throw new Error(`The file ${fileName} had an unexpected file extension`);
-  formData.append("title", fileName);
-  formData.append("filename_download", fileName);
-  formData.append("folder", CITATIONS_FILES_FOLDER);
-  formData.append("file", new Blob([blob], { type: mime }));
-  const result = await client.request(
-    uploadFiles(formData, { fields: ["id"] }),
-  );
-  return result.id;
 }
