@@ -5,7 +5,7 @@ test("mapPlaceToCitationLinks correctly determines some example pages", async ()
   // If the links get updated, then update the below tests.
   const result = await mapPlaceToCitationLinks();
   expect(result["Abilene, KS"]).toEqual([
-    "http://abileneks.citycode.net/index.html#!artiOffStreParkLoadAndUnloRegu",
+    "https://abileneks.citycode.net/index.html#!artiOffStreParkLoadAndUnloRegu",
   ]);
   expect(result["Albion, NE"]).toEqual(["https://www.albionne.com/media/686"]);
   expect(result["Petaluma, CA"]).toEqual([
