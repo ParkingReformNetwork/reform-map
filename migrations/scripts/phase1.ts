@@ -66,6 +66,7 @@ async function purgeDatabase(client: DirectusClient): Promise<void> {
         ids.map((entry) => entry.id),
       ),
     );
+    console.log(`purged the table '${table}'`);
   };
 
   // The order matters due to relations between the tables.
@@ -97,6 +98,7 @@ async function populatePlaces(
   const result = await client.request(
     createItems("places", toCreate, { fields: ["id"] }),
   );
+  console.log("populated places");
   return Object.fromEntries(
     zip(
       Object.keys(jsonData),
@@ -123,6 +125,7 @@ async function populateCitations(
   const apiResult = await client.request(
     createItems("citations", toCreate, { fields: ["id"] }),
   );
+  console.log("populated citations");
 
   // We now need to group every citation belonging to a single place. We do this
   // by creating two parallel arrays, `directusIds` and `placeStringIds`, where each
@@ -178,6 +181,7 @@ async function populateLegacyReforms(
   const result = await client.request(
     createItems("legacy_reforms", toCreate, { fields: ["id"] }),
   );
+  console.log("populated legacy_reforms");
   return Object.fromEntries(
     zip(
       Object.keys(jsonData),
@@ -202,6 +206,7 @@ async function associateReformsToCitations(
   await client.request(
     createItems("legacy_reforms_citations", toCreate, { fields: [] }),
   );
+  console.log("populated legacy_reforms_citations");
 }
 
 async function asssociateCitationFiles(
@@ -221,6 +226,7 @@ async function asssociateCitationFiles(
   await client.request(
     createItems("citations_files", toCreate, { fields: [] }),
   );
+  console.log("populated citations_files");
 }
 
 function determinePlaceType(name: string, state: string | null): PlaceType {
