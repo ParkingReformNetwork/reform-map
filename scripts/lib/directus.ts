@@ -1,5 +1,7 @@
 /* eslint-disable no-use-before-define */
 /* eslint-disable import/no-extraneous-dependencies */
+/* eslint-disable no-console */
+/* eslint-disable no-await-in-loop */
 
 import {
   createDirectus,
@@ -7,6 +9,13 @@ import {
   authentication,
   DirectusClient as DirectusClientUntyped,
   RestClient,
+  RegularCollections,
+  CollectionType,
+  ReadItemOutput,
+  readItems,
+  readFiles,
+  ReadFileOutput,
+  DirectusFile,
 } from "@directus/sdk";
 
 import { ReformStatus } from "../../src/js/types.js";
@@ -109,4 +118,69 @@ export async function initDirectus(): Promise<DirectusClient> {
     .with(authentication());
   await client.login(email, password);
   return client;
+}
+
+export async function readItemsBatched<
+  Collection extends RegularCollections<Schema>,
+  Fields extends (keyof CollectionType<Schema, Collection> & string)[],
+>(
+  client: DirectusClient,
+  collection: Collection,
+  fields: Fields,
+  batchSize: number = 100,
+): Promise<ReadItemOutput<Schema, Collection, { fields: Fields }>[]> {
+  const allItems = [];
+  let offset = 0;
+  while (true) {
+    console.log(
+      `Getting '${collection}' records ${offset}-${offset + batchSize}`,
+    );
+    const batch = await client.request(
+      readItems(collection, {
+        fields,
+        limit: batchSize,
+        offset,
+      }),
+    );
+
+    allItems.push(...batch);
+    if (batch.length < batchSize) {
+      break;
+    } else {
+      offset += batchSize;
+    }
+  }
+  return allItems;
+}
+
+export async function readCitationsFilesBatched<
+  Fields extends (keyof DirectusFile<Schema> & string)[],
+>(
+  client: DirectusClient,
+  fields: Fields,
+  batchSize: number = 100,
+): Promise<ReadFileOutput<Schema, { fields: Fields }>[]> {
+  const allItems = [];
+  let offset = 0;
+  while (true) {
+    console.log(
+      `Getting 'directus_files' records ${offset}-${offset + batchSize}`,
+    );
+    const batch = await client.request(
+      readFiles({
+        fields,
+        filter: { folder: { _eq: CITATIONS_FILES_FOLDER } },
+        limit: batchSize,
+        offset,
+      }),
+    );
+
+    allItems.push(...batch);
+    if (batch.length < batchSize) {
+      break;
+    } else {
+      offset += batchSize;
+    }
+  }
+  return allItems;
 }
