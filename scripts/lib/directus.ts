@@ -131,8 +131,7 @@ export async function readItemsBatched<
 ): Promise<ReadItemOutput<Schema, Collection, { fields: Fields }>[]> {
   const allItems = [];
   let offset = 0;
-  let hasMore = true;
-  while (hasMore) {
+  while (true) {
     console.log(
       `Getting '${collection}' records ${offset}-${offset + batchSize}`,
     );
@@ -144,15 +143,11 @@ export async function readItemsBatched<
       }),
     );
 
-    if (Array.isArray(batch)) {
-      allItems.push(...batch);
-      if (batch.length < batchSize) {
-        hasMore = false;
-      } else {
-        offset += batchSize;
-      }
+    allItems.push(...batch);
+    if (batch.length < batchSize) {
+      break;
     } else {
-      hasMore = false;
+      offset += batchSize;
     }
   }
   return allItems;
@@ -167,8 +162,7 @@ export async function readCitationsFilesBatched<
 ): Promise<ReadFileOutput<Schema, { fields: Fields }>[]> {
   const allItems = [];
   let offset = 0;
-  let hasMore = true;
-  while (hasMore) {
+  while (true) {
     console.log(
       `Getting 'directus_files' records ${offset}-${offset + batchSize}`,
     );
@@ -181,15 +175,11 @@ export async function readCitationsFilesBatched<
       }),
     );
 
-    if (Array.isArray(batch)) {
-      allItems.push(...batch);
-      if (batch.length < batchSize) {
-        hasMore = false;
-      } else {
-        offset += batchSize;
-      }
+    allItems.push(...batch);
+    if (batch.length < batchSize) {
+      break;
     } else {
-      hasMore = false;
+      offset += batchSize;
     }
   }
   return allItems;
