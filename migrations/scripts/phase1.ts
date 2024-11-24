@@ -18,7 +18,7 @@ import {
 import { CompleteEntry, readCompleteData } from "../../scripts/lib/data";
 import { PlaceId as PlaceStringId } from "../../src/js/types";
 
-const NUM_PLACES_LIMIT = 1;
+const NUM_PLACES_LIMIT = 0;
 
 async function main(): Promise<void> {
   let jsonData = await readCompleteData();
