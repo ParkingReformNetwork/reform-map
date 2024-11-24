@@ -18,6 +18,10 @@ import {
 import { CompleteEntry, readCompleteData } from "../../scripts/lib/data";
 import { PlaceId as PlaceStringId } from "../../src/js/types";
 
+// -------------------------------------------------------------------------------------
+// Main
+// -------------------------------------------------------------------------------------
+
 const NUM_PLACES_LIMIT = 0;
 
 async function main(): Promise<void> {
@@ -55,6 +59,10 @@ interface CitationDirectusIds {
   attachmentFileIds: string[];
 }
 
+// -------------------------------------------------------------------------------------
+// Cleanup
+// -------------------------------------------------------------------------------------
+
 /** Delete all records so that this script is idempotent. */
 async function purgeDatabase(client: DirectusClient): Promise<void> {
   const purge = async (table: keyof Schema) => {
@@ -78,6 +86,10 @@ async function purgeDatabase(client: DirectusClient): Promise<void> {
   await purge("citations");
   await purge("places");
 }
+
+// -------------------------------------------------------------------------------------
+// Add new records
+// -------------------------------------------------------------------------------------
 
 async function populatePlaces(
   client: DirectusClient,
