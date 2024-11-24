@@ -34,12 +34,14 @@ export class FilterOptions {
     const country = new Set<string>();
     const year = new Set<string>();
     entries.forEach((entry) => {
-      status.add(entry.status);
-      country.add(entry.country);
-      year.add(entry.date?.parsed.year.toString() || UNKNOWN_YEAR);
-      entry.policy.forEach((v) => policy.add(v));
-      entry.scope.forEach((v) => scope.add(v));
-      entry.land.forEach((v) => landUse.add(v));
+      status.add(entry.unifiedPolicy.status);
+      country.add(entry.place.country);
+      year.add(
+        entry.unifiedPolicy.date?.parsed.year.toString() || UNKNOWN_YEAR,
+      );
+      entry.unifiedPolicy.policy.forEach((v) => policy.add(v));
+      entry.unifiedPolicy.scope.forEach((v) => scope.add(v));
+      entry.unifiedPolicy.land.forEach((v) => landUse.add(v));
     });
     this.options = {
       policyChange: Array.from(policy).sort(),

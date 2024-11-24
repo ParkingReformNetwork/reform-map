@@ -46,16 +46,16 @@ export default function initTable(
   const data = Object.entries(filterManager.entries).map(
     ([placeId, entry]) => ({
       id: placeId,
-      place: entry.place,
-      state: entry.state,
-      country: entry.country,
-      population: entry.pop.toLocaleString("en-us"),
-      date: entry.date,
-      url: entry.url,
-      status: entry.status,
-      landUse: entry.land,
-      policyChange: entry.policy,
-      scope: entry.scope,
+      place: entry.place.name,
+      state: entry.place.state,
+      country: entry.place.country,
+      population: entry.place.pop.toLocaleString("en-us"),
+      date: entry.unifiedPolicy.date,
+      url: entry.place.url,
+      status: entry.unifiedPolicy.status,
+      landUse: entry.unifiedPolicy.land,
+      policyChange: entry.unifiedPolicy.policy,
+      scope: entry.unifiedPolicy.scope,
     }),
   );
   const columns: ColumnDefinition[] = [

@@ -13,7 +13,7 @@ export async function mapPlaceToCitationLinks(): Promise<
   return Object.fromEntries(
     Object.entries(data).map(([placeId, entry]) => [
       placeId,
-      entry.citations
+      entry.legacy.citations
         .map((citation) => citation.url)
         .filter((url): url is string => url !== null),
     ]),

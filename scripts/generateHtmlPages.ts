@@ -21,14 +21,14 @@ export function renderHandlebars(
 ): string {
   return template({
     placeId,
-    summary: entry.summary,
-    status: entry.status,
-    policyChange: entry.policy.join("; "),
-    landUse: entry.land.join("; "),
-    scope: entry.scope.join("; "),
-    requirements: entry.requirements.join("; "),
-    reporter: entry.reporter,
-    citations: entry.citations.map((citation, i) => ({
+    summary: entry.legacy.summary,
+    status: entry.legacy.status,
+    policyChange: entry.legacy.policy.join("; "),
+    landUse: entry.legacy.land.join("; "),
+    scope: entry.legacy.scope.join("; "),
+    requirements: entry.legacy.requirements.join("; "),
+    reporter: entry.legacy.reporter,
+    citations: entry.legacy.citations.map((citation, i) => ({
       idx: i + 1,
       ...citation,
     })),
@@ -51,7 +51,10 @@ async function assertEveryPlaceGenerated(data: Record<PlaceId, CompleteEntry>) {
   const validPages = new Set(htmlPages);
   const invalidPlaces = Object.entries(data)
     .filter(([placeId]) => !validPages.has(`${escapePlaceId(placeId)}.html`))
-    .map(([, entry]) => `${entry.place} ${entry.state} ${entry.country}`);
+    .map(
+      ([, entry]) =>
+        `${entry.place.name} ${entry.place.state} ${entry.place.country}`,
+    );
   if (invalidPlaces.length) {
     throw new Error(`Some places do not have HTML pages: ${invalidPlaces}`);
   }

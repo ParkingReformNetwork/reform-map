@@ -19,9 +19,11 @@ export type Citation = {
 };
 
 export type ExtendedEntry = {
-  reporter: string | null;
-  requirements: string[];
-  citations: Citation[];
+  legacy: {
+    reporter: string | null;
+    requirements: string[];
+    citations: Citation[];
+  };
 };
 
 export type CompleteEntry = RawEntry & ExtendedEntry;
@@ -48,7 +50,10 @@ export async function readCompleteData(): Promise<
   return Object.fromEntries(
     Object.entries(coreData).map(([placeId, core]) => [
       placeId,
-      { ...core, ...extendedData[placeId] },
+      {
+        place: core.place,
+        legacy: { ...core.legacy, ...extendedData[placeId].legacy },
+      },
     ]),
   );
 }
