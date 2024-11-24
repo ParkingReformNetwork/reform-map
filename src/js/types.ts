@@ -1,36 +1,5 @@
 import { DateTime } from "luxon";
 
-export type PlaceId = string;
-
-export type ReformStatus =
-  | "implemented"
-  | "passed"
-  | "planned"
-  | "proposed"
-  | "repealed";
-
-interface BaseEntry {
-  // Full name of the town, city, county, province, state, or country.
-  place: string;
-  // State or province abbreviation. Not set for countries.
-  state: string | null;
-  summary: string;
-  status: ReformStatus;
-  policy: string[];
-  scope: string[];
-  land: string[];
-  repeal: boolean;
-  pop: number;
-  // [long, lat]
-  coord: [number, number];
-}
-
-export type RawEntry = BaseEntry & {
-  // Country abbreviation.
-  country: string;
-  date: string | null;
-};
-
 export class Date {
   readonly raw: string;
   readonly parsed: DateTime<true>;
@@ -55,10 +24,41 @@ export class Date {
   }
 }
 
-export type PlaceEntry = BaseEntry & {
-  // URL for the dedicated place page.
-  url: string;
-  // Full country name.
+export type PlaceId = string;
+
+export type ReformStatus =
+  | "implemented"
+  | "passed"
+  | "planned"
+  | "proposed"
+  | "repealed";
+
+export interface Place {
+  // Full name of the town, city, county, province, state, or country.
+  name: string;
+  // State or province abbreviation. Not set for countries.
+  state: string | null;
   country: string;
-  date: Date | null;
-};
+  pop: number;
+  // [long, lat]
+  coord: [number, number];
+  repeal: boolean;
+}
+
+interface BaseLegacyReform {
+  summary: string;
+  status: ReformStatus;
+  policy: string[];
+  scope: string[];
+  land: string[];
+}
+
+export interface RawEntry {
+  place: Place;
+  legacy: BaseLegacyReform & { date: string | null };
+}
+
+export interface PlaceEntry {
+  place: Place & { url: string };
+  unifiedPolicy: BaseLegacyReform & { date: Date | null };
+}

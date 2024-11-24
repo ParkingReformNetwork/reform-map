@@ -91,22 +91,28 @@ export class PlaceFilterManager {
       return state.searchInput === placeId;
     }
 
-    const isScope = entry.scope.some((v) => state.scope.includes(v));
-    const isPolicy = entry.policy.some((v) => state.policyChange.includes(v));
-    const isLand = entry.land.some((v) => state.landUse.includes(v));
-    const isStatus = state.status.includes(entry.status);
-    const isCountry = state.country.includes(entry.country);
+    const isScope = entry.unifiedPolicy.scope.some((v) =>
+      state.scope.includes(v),
+    );
+    const isPolicy = entry.unifiedPolicy.policy.some((v) =>
+      state.policyChange.includes(v),
+    );
+    const isLand = entry.unifiedPolicy.land.some((v) =>
+      state.landUse.includes(v),
+    );
+    const isStatus = state.status.includes(entry.unifiedPolicy.status);
+    const isCountry = state.country.includes(entry.place.country);
     const isYear = state.year.includes(
-      entry.date?.parsed.year.toString() || UNKNOWN_YEAR,
+      entry.unifiedPolicy.date?.parsed.year.toString() || UNKNOWN_YEAR,
     );
 
     const isAllMinimumsRepealed =
-      !state.allMinimumsRemovedToggle || entry.repeal;
+      !state.allMinimumsRemovedToggle || entry.place.repeal;
 
     const [sliderLeftIndex, sliderRightIndex] = state.populationSliderIndexes;
     const isPopulation =
-      entry.pop >= POPULATION_INTERVALS[sliderLeftIndex][1] &&
-      entry.pop <= POPULATION_INTERVALS[sliderRightIndex][1];
+      entry.place.pop >= POPULATION_INTERVALS[sliderLeftIndex][1] &&
+      entry.place.pop <= POPULATION_INTERVALS[sliderRightIndex][1];
 
     return (
       isScope &&

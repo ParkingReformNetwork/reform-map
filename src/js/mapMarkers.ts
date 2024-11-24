@@ -42,10 +42,10 @@ export default function initPlaceMarkers(
   const placesToMarkers: Record<string, CircleMarker> = Object.entries(
     filterManager.entries,
   ).reduce((acc: Record<string, CircleMarker>, [placeId, entry]) => {
-    const isPrimary = entry.repeal;
+    const isPrimary = entry.place.repeal;
     const style = isPrimary ? PRIMARY_MARKER_STYLE : SECONDARY_MARKER_STYLE;
 
-    const [long, lat] = entry.coord;
+    const [long, lat] = entry.place.coord;
     const marker = new CircleMarker([lat, long], {
       ...style,
       radius: radiusGivenZoom({ zoom: map.getZoom(), isPrimary }),
@@ -73,7 +73,7 @@ export default function initPlaceMarkers(
   map.addEventListener("zoomend", () => {
     const zoom = map.getZoom();
     Object.entries(placesToMarkers).forEach(([placeId, marker]) => {
-      const isPrimary = filterManager.entries[placeId].repeal;
+      const isPrimary = filterManager.entries[placeId].place.repeal;
       const newRadius = radiusGivenZoom({ zoom, isPrimary });
       marker.setRadius(newRadius);
     });

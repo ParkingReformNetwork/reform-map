@@ -239,22 +239,26 @@ function combineData(
             };
           },
         );
-        const result = {
-          place: place.name!,
-          state: place.state!,
-          country: place.country_code!,
-          pop: place.population!,
-          repeal: place.complete_minimums_repeal!,
-          coord: place.coordinates!.coordinates,
-          summary: reform.summary!,
-          status: reform.status!,
-          policy: reform.policy_changes!,
-          scope: reform.reform_scope!,
-          land: reform.land_uses!,
-          date: reform.reform_date!,
-          reporter: reform.reporter!,
-          requirements: reform.requirements!,
-          citations,
+        const result: CompleteEntry = {
+          place: {
+            name: place.name!,
+            state: place.state!,
+            country: place.country_code!,
+            pop: place.population!,
+            repeal: place.complete_minimums_repeal!,
+            coord: place.coordinates!.coordinates,
+          },
+          legacy: {
+            summary: reform.summary!,
+            status: reform.status!,
+            policy: reform.policy_changes!,
+            scope: reform.reform_scope!,
+            land: reform.land_uses!,
+            date: reform.reform_date!,
+            reporter: reform.reporter!,
+            requirements: reform.requirements!,
+            citations,
+          },
         };
         return [placeId, result];
       })
@@ -273,18 +277,22 @@ async function saveCoreData(
     Object.entries(result).map(([placeId, entry]) => [
       placeId,
       {
-        place: entry.place,
-        state: entry.state,
-        country: entry.country,
-        summary: entry.summary,
-        status: entry.status,
-        policy: entry.policy.sort(),
-        scope: entry.scope.sort(),
-        land: entry.land.sort(),
-        date: entry.date,
-        repeal: entry.repeal,
-        pop: entry.pop,
-        coord: entry.coord,
+        place: {
+          name: entry.place.name,
+          state: entry.place.state,
+          country: entry.place.country,
+          pop: entry.place.pop,
+          coord: entry.place.coord,
+          repeal: entry.place.repeal,
+        },
+        legacy: {
+          summary: entry.legacy.summary,
+          status: entry.legacy.status,
+          policy: entry.legacy.policy.sort(),
+          scope: entry.legacy.scope.sort(),
+          land: entry.legacy.land.sort(),
+          date: entry.legacy.date,
+        },
       },
     ]),
   );
@@ -300,9 +308,11 @@ async function saveExtendedData(
     Object.entries(result).map(([placeId, entry]) => [
       placeId,
       {
-        reporter: entry.reporter,
-        requirements: entry.requirements.sort(),
-        citations: entry.citations,
+        legacy: {
+          reporter: entry.legacy.reporter,
+          requirements: entry.legacy.requirements.sort(),
+          citations: entry.legacy.citations,
+        },
       },
     ]),
   );

@@ -34,12 +34,14 @@ export default async function readData(): Promise<Record<PlaceId, PlaceEntry>> {
   >;
   return Object.fromEntries(
     Object.entries(rawData).map(([placeId, entry]) => {
-      const date = entry.date ? new Date(entry.date) : null;
+      const date = entry.legacy.date ? new Date(entry.legacy.date) : null;
       const updated = {
-        ...entry,
-        country: countryMapping[entry.country] ?? entry.country,
-        date,
-        url: placeIdToUrl(placeId),
+        place: {
+          ...entry.place,
+          country: countryMapping[entry.place.country] ?? entry.place.country,
+          url: placeIdToUrl(placeId),
+        },
+        unifiedPolicy: { ...entry.legacy, date },
       };
       return [placeId, updated];
     }),

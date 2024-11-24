@@ -19,21 +19,21 @@ function assertExpectedNumEntries(jsonKeys: string[], csv: string): void {
 async function main(): Promise<void> {
   const completeData = await readCompleteData();
   const data = Object.entries(completeData).map(([placeId, entry]) => ({
-    place: entry.place,
-    state: entry.state,
-    country: entry.country,
-    all_minimums_repealed: entry.repeal ? "TRUE" : "FALSE",
-    status: entry.status,
-    policy_change: entry.policy,
-    scope: entry.scope,
-    land_uses: entry.land,
-    reform_date: entry.date,
-    population: entry.pop,
-    lat: entry.coord[1],
-    long: entry.coord[0],
+    place: entry.place.name,
+    state: entry.place.state,
+    country: entry.place.country,
+    all_minimums_repealed: entry.place.repeal ? "TRUE" : "FALSE",
+    status: entry.legacy.status,
+    policy_change: entry.legacy.policy,
+    scope: entry.legacy.scope,
+    land_uses: entry.legacy.land,
+    reform_date: entry.legacy.date,
+    population: entry.place.pop,
+    lat: entry.place.coord[1],
+    long: entry.place.coord[0],
     url: placeIdToUrl(placeId),
-    reporter: entry.reporter,
-    summary: entry.summary,
+    reporter: entry.legacy.reporter,
+    summary: entry.legacy.summary,
   }));
   const csv = Papa.unparse(Object.values(data));
   assertExpectedNumEntries(Object.keys(completeData), csv);
