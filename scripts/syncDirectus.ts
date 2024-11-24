@@ -4,7 +4,7 @@
 
 import fs from "fs/promises";
 
-import { readItems, readFiles, updateItem } from "@directus/sdk";
+import { updateItem } from "@directus/sdk";
 import NodeGeocoder from "node-geocoder";
 
 import {
@@ -13,7 +13,8 @@ import {
   Place as DirectusPlace,
   LegacyReform,
   Citation as DirectusCitation,
-  CITATIONS_FILES_FOLDER,
+  readItemsBatched,
+  readCitationsFilesBatched,
 } from "./lib/directus";
 import { PlaceId as PlaceStringId } from "../src/js/types";
 import { getLongLat, initGeocoder } from "./lib/geocoder";
@@ -31,20 +32,15 @@ async function readPlacesAndEnsureCoordinates(
   directusIdToStringId: Record<number, PlaceStringId>;
   stringIdToPlace: Record<PlaceStringId, Partial<DirectusPlace>>;
 }> {
-  const records = await client.request(
-    readItems("places", {
-      fields: [
-        "id",
-        "name",
-        "state",
-        "country_code",
-        "population",
-        "complete_minimums_repeal",
-        "coordinates",
-      ],
-      limit: -1,
-    }),
-  );
+  const records = await readItemsBatched(client, "places", [
+    "id",
+    "name",
+    "state",
+    "country_code",
+    "population",
+    "complete_minimums_repeal",
+    "coordinates",
+  ]);
   const directusIdToStringId: Record<number, PlaceStringId> = {};
   const stringIdToPlace: Record<PlaceStringId, Partial<DirectusPlace>> = {};
   for (const record of records) {
@@ -87,25 +83,20 @@ async function readLegacyReforms(
   client: DirectusClient,
   placeDirectusIdToStringId: Record<number, PlaceStringId>,
 ): Promise<Record<PlaceStringId, Partial<LegacyReform>>> {
-  const records = await client.request(
-    readItems("legacy_reforms", {
-      fields: [
-        "id",
-        "place",
-        "last_verified_at",
-        "policy_changes",
-        "land_uses",
-        "reform_scope",
-        "requirements",
-        "status",
-        "summary",
-        "reporter",
-        "reform_date",
-        "citations",
-      ],
-      limit: -1,
-    }),
-  );
+  const records = await readItemsBatched(client, "legacy_reforms", [
+    "id",
+    "place",
+    "last_verified_at",
+    "policy_changes",
+    "land_uses",
+    "reform_scope",
+    "requirements",
+    "status",
+    "summary",
+    "reporter",
+    "reform_date",
+    "citations",
+  ]);
   return Object.fromEntries(
     records.map((record) => [placeDirectusIdToStringId[record.place], record]),
   );
@@ -114,27 +105,22 @@ async function readLegacyReforms(
 async function readCitationsByLegacyReformJunctionId(
   client: DirectusClient,
 ): Promise<Record<number, Partial<DirectusCitation>>> {
-  const rawCitations = await client.request(
-    readItems("citations", {
-      fields: [
-        "id",
-        "type",
-        "source_description",
-        "notes",
-        "url",
-        "attachments",
-      ],
-      limit: -1,
-    }),
-  );
+  const rawCitations = await readItemsBatched(client, "citations", [
+    "id",
+    "type",
+    "source_description",
+    "notes",
+    "url",
+    "attachments",
+  ]);
   const citations = Object.fromEntries(
     rawCitations.map((record) => [record.id, record]),
   );
-  const junctionRecords = await client.request(
-    readItems("legacy_reforms_citations", {
-      fields: ["id", "citations_id"],
-      limit: -1,
-    }),
+  const junctionRecords = await readItemsBatched(
+    client,
+    "legacy_reforms_citations",
+    ["id", "citations_id"],
+    300,
   );
   const citationIdsByJunctionIds = Object.fromEntries(
     junctionRecords.map((record) => [record.id, record.citations_id]),
@@ -155,22 +141,16 @@ interface FileMetadata {
 async function readFilesByAttachmentJunctionId(
   client: DirectusClient,
 ): Promise<Record<number, FileMetadata>> {
-  const rawFiles = await client.request(
-    readFiles({
-      filter: { folder: { _eq: CITATIONS_FILES_FOLDER } },
-      fields: ["id", "type"],
-      limit: -1,
-    }),
-  );
+  const rawFiles = await readCitationsFilesBatched(client, ["id", "type"], 300);
   const fileTypesById = Object.fromEntries(
     rawFiles.map((record) => [record.id, record.type]),
   );
 
-  const rawCitationFileJunctions = await client.request(
-    readItems("citations_files", {
-      fields: ["id", "directus_files_id"],
-      limit: -1,
-    }),
+  const rawCitationFileJunctions = await readItemsBatched(
+    client,
+    "citations_files",
+    ["id", "directus_files_id"],
+    300,
   );
   const fileIdsByCitationJunctionId = Object.fromEntries(
     rawCitationFileJunctions.map((record) => [
