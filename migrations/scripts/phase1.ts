@@ -58,7 +58,9 @@ interface CitationDirectusIds {
 /** Delete all records so that this script is idempotent. */
 async function purgeDatabase(client: DirectusClient): Promise<void> {
   const purge = async (table: keyof Schema) => {
-    const ids = await client.request(readItems(table, { fields: ["id"] }));
+    const ids = await client.request(
+      readItems(table, { fields: ["id"], limit: -1 }),
+    );
     if (!ids.length) return;
     await client.request(
       deleteItems(
