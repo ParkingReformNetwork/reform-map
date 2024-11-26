@@ -7364,6 +7364,24 @@
       "date": "2006-05-04"
     }
   },
+  "Canonsburg, PA": {
+    "place": {
+      "name": "Canonsburg",
+      "state": "PA",
+      "country": "US",
+      "pop": 9735,
+      "coord": [-80.186732, 40.2588431],
+      "repeal": false
+    },
+    "legacy": {
+      "summary": "The Central Business District (CBD) is exempt from parking mandates.",
+      "status": "implemented",
+      "policy": ["remove parking minimums"],
+      "scope": ["city center / business district"],
+      "land": ["all uses"],
+      "date": null
+    }
+  },
   "Canton, IL": {
     "place": {
       "name": "Canton",
@@ -8916,6 +8934,24 @@
       "policy": ["add parking maximums"],
       "scope": ["city center / business district"],
       "land": ["commercial", "other"],
+      "date": null
+    }
+  },
+  "Charleroi, PA": {
+    "place": {
+      "name": "Charleroi",
+      "state": "PA",
+      "country": "US",
+      "pop": 4210,
+      "coord": [-79.8981035, 40.1378499],
+      "repeal": false
+    },
+    "legacy": {
+      "summary": "Commercial uses in the CBD and MU  Districts are exempt from parking mandates when there is adjacent on-street parking, or when other public parking is nearby. All uses may count on-street parking towards the minimums.",
+      "status": "implemented",
+      "policy": ["reduce parking minimums", "remove parking minimums"],
+      "scope": ["city center / business district"],
+      "land": ["commercial"],
       "date": null
     }
   },
@@ -15252,6 +15288,24 @@
       "date": null
     }
   },
+  "East Washington, PA": {
+    "place": {
+      "name": "East Washington",
+      "state": "PA",
+      "country": "US",
+      "pop": 1858,
+      "coord": [-80.23756, 40.1736822],
+      "repeal": false
+    },
+    "legacy": {
+      "summary": "The Central Business District (CBD) is exempt from parking mandates.",
+      "status": "implemented",
+      "policy": ["remove parking minimums"],
+      "scope": ["city center / business district"],
+      "land": ["all uses"],
+      "date": null
+    }
+  },
   "Easton, MD": {
     "place": {
       "name": "Easton",
@@ -18756,6 +18810,24 @@
       "policy": ["remove parking minimums"],
       "scope": ["city center / business district"],
       "land": ["all uses"],
+      "date": null
+    }
+  },
+  "Franklin, PA": {
+    "place": {
+      "name": "Franklin",
+      "state": "PA",
+      "country": "US",
+      "pop": 6097,
+      "coord": [-79.829305, 41.397661],
+      "repeal": false
+    },
+    "legacy": {
+      "summary": "Nonresidential uses in the CBD Central Business District, unless there is sufficient area to accommodate parking.",
+      "status": "implemented",
+      "policy": ["remove parking minimums"],
+      "scope": ["city center / business district"],
+      "land": ["commercial", "other"],
       "date": null
     }
   },
@@ -23014,6 +23086,24 @@
       "date": null
     }
   },
+  "Hawley, PA": {
+    "place": {
+      "name": "Hawley",
+      "state": "PA",
+      "country": "US",
+      "pop": 1229,
+      "coord": [-75.1821189, 41.4759224],
+      "repeal": false
+    },
+    "legacy": {
+      "summary": "Nonresidential uses adjacent to metered on-street parking are exempt from parking mandates.",
+      "status": "implemented",
+      "policy": ["remove parking minimums"],
+      "scope": ["main street / special"],
+      "land": ["commercial", "industrial", "medical", "other"],
+      "date": null
+    }
+  },
   "Hays, KS": {
     "place": {
       "name": "Hays",
@@ -24013,6 +24103,24 @@
       "status": "implemented",
       "policy": ["add parking maximums"],
       "scope": ["citywide"],
+      "land": ["all uses"],
+      "date": null
+    }
+  },
+  "Honesdale, PA": {
+    "place": {
+      "name": "Honesdale",
+      "state": "PA",
+      "country": "US",
+      "pop": 4458,
+      "coord": [-75.2580212, 41.5771005],
+      "repeal": false
+    },
+    "legacy": {
+      "summary": "The C-1 Central Commercial District is exempt from parking mandates.",
+      "status": "implemented",
+      "policy": ["remove parking minimums"],
+      "scope": ["city center / business district"],
       "land": ["all uses"],
       "date": null
     }
@@ -25533,6 +25641,34 @@
       "scope": ["city center / business district"],
       "land": ["all uses"],
       "date": null
+    }
+  },
+  "Jeannette, PA": {
+    "place": {
+      "name": "Jeannette",
+      "state": "PA",
+      "country": "US",
+      "pop": 8780,
+      "coord": [-79.6153198, 40.3281247],
+      "repeal": false
+    },
+    "legacy": {
+      "summary": "The Downtown District (D) is exempt from parking mandates, except for standalone multifamily dwelling buildings. Accessory Dwelling Units are exempt from mandates citywide. Within the Urban Center District (UC), on-street parking may be counted towards parking minimums and parking maximums are set at 125% of the minimums excluding dedicated residential spaces and parking structures.",
+      "status": "implemented",
+      "policy": [
+        "add parking maximums",
+        "reduce parking minimums",
+        "remove parking minimums"
+      ],
+      "scope": ["city center / business district", "citywide"],
+      "land": [
+        "commercial",
+        "medical",
+        "other",
+        "residential, low-density",
+        "residential, multi-family"
+      ],
+      "date": "2017-11-17"
     }
   },
   "Jefferson City, MO": {
@@ -28425,6 +28561,24 @@
       "date": null
     }
   },
+  "Latrobe, PA": {
+    "place": {
+      "name": "Latrobe",
+      "state": "PA",
+      "country": "US",
+      "pop": 8060,
+      "coord": [-79.3840301, 40.317287],
+      "repeal": false
+    },
+    "legacy": {
+      "summary": "On-street parking or public parking within 500 feet of a religious, hospital, educational, charitable, commercial, or professional building use may be counted towards the parking minimums.",
+      "status": "implemented",
+      "policy": ["reduce parking minimums"],
+      "scope": ["citywide"],
+      "land": ["commercial", "medical", "other"],
+      "date": null
+    }
+  },
   "Laurel, MD": {
     "place": {
       "name": "Laurel",
@@ -29211,7 +29365,7 @@
       "state": "PA",
       "country": "US",
       "pop": 232,
-      "coord": [-79.8561591, 40.3253474],
+      "coord": [-79.856689, 40.325261],
       "repeal": false
     },
     "legacy": {
@@ -30377,6 +30531,24 @@
       "policy": ["add parking maximums", "reduce parking minimums"],
       "scope": ["citywide"],
       "land": ["commercial", "industrial", "other", "residential, all uses"],
+      "date": null
+    }
+  },
+  "Lower Burrell, PA": {
+    "place": {
+      "name": "Lower Burrell",
+      "state": "PA",
+      "country": "US",
+      "pop": 11758,
+      "coord": [-79.7298187, 40.5882821],
+      "repeal": false
+    },
+    "legacy": {
+      "summary": "Nearby community parking spaces or garages may be counted towards required parking spaces.",
+      "status": "implemented",
+      "policy": ["reduce parking minimums"],
+      "scope": ["citywide"],
+      "land": ["all uses"],
       "date": null
     }
   },
@@ -38741,6 +38913,24 @@
       "date": null
     }
   },
+  "Oil City, PA": {
+    "place": {
+      "name": "Oil City",
+      "state": "PA",
+      "country": "US",
+      "pop": 9608,
+      "coord": [-79.708511, 41.434113],
+      "repeal": false
+    },
+    "legacy": {
+      "summary": "The C-2 Downtown Commercial District is exempt from parking mandates, except for conditional uses.",
+      "status": "implemented",
+      "policy": ["remove parking minimums"],
+      "scope": ["city center / business district"],
+      "land": ["commercial", "other", "residential, multi-family"],
+      "date": null
+    }
+  },
   "Okemah, OK": {
     "place": {
       "name": "Okemah",
@@ -42699,6 +42889,24 @@
       "status": "implemented",
       "policy": ["remove parking minimums"],
       "scope": ["city center / business district"],
+      "land": ["all uses"],
+      "date": null
+    }
+  },
+  "Prompton, PA": {
+    "place": {
+      "name": "Prompton",
+      "state": "PA",
+      "country": "US",
+      "pop": 237,
+      "coord": [-75.3251782, 41.5828646],
+      "repeal": false
+    },
+    "legacy": {
+      "summary": "Prompton has no zoning and therefore has no parking mandates.",
+      "status": "implemented",
+      "policy": ["remove parking minimums"],
+      "scope": ["citywide"],
       "land": ["all uses"],
       "date": null
     }
@@ -50290,7 +50498,7 @@
       "policy": ["add parking maximums", "remove parking minimums"],
       "scope": ["citywide"],
       "land": ["all uses"],
-      "date": null
+      "date": "2006-02"
     }
   },
   "Stoughton, WI": {
@@ -54774,6 +54982,24 @@
       "date": null
     }
   },
+  "Washington, PA": {
+    "place": {
+      "name": "Washington",
+      "state": "PA",
+      "country": "US",
+      "pop": 13176,
+      "coord": [-80.245011, 40.169332],
+      "repeal": false
+    },
+    "legacy": {
+      "summary": "The Central Business District (CBD) is exempt from parking mandates.",
+      "status": "implemented",
+      "policy": ["remove parking minimums"],
+      "scope": ["city center / business district"],
+      "land": ["all uses"],
+      "date": null
+    }
+  },
   "Washington, UT": {
     "place": {
       "name": "Washington",
@@ -55859,6 +56085,24 @@
       "policy": ["add parking maximums", "remove parking minimums"],
       "scope": ["city center / business district"],
       "land": ["all uses", "residential, low-density"],
+      "date": null
+    }
+  },
+  "West Middletown, PA": {
+    "place": {
+      "name": "West Middletown",
+      "state": "PA",
+      "country": "US",
+      "pop": 109,
+      "coord": [-80.4272882, 40.2428487],
+      "repeal": false
+    },
+    "legacy": {
+      "summary": "Nonresidential uses are exempt from parking mandates and instead have parking maximums.",
+      "status": "implemented",
+      "policy": ["add parking maximums", "remove parking minimums"],
+      "scope": ["citywide"],
+      "land": ["commercial", "industrial", "medical", "other"],
       "date": null
     }
   },
