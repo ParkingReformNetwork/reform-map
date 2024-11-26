@@ -4228,7 +4228,7 @@
       "policy": ["remove parking minimums"],
       "scope": ["citywide"],
       "land": ["all uses"],
-      "date": null
+      "date": "1997"
     }
   },
   "Berlin, MD": {
@@ -29205,6 +29205,24 @@
       "date": null
     }
   },
+  "Liberty, PA": {
+    "place": {
+      "name": "Liberty",
+      "state": "PA",
+      "country": "US",
+      "pop": 232,
+      "coord": [-79.8561591, 40.3253474],
+      "repeal": false
+    },
+    "legacy": {
+      "summary": "The first 2,400 square feet of a restaurant, retail use, bank or wholesale business are exempt from parking mandates.",
+      "status": "implemented",
+      "policy": ["reduce parking minimums", "remove parking minimums"],
+      "scope": ["citywide"],
+      "land": ["commercial"],
+      "date": "1957-04-15"
+    }
+  },
   "Liberty, SC": {
     "place": {
       "name": "Liberty",
@@ -31352,6 +31370,24 @@
       "date": null
     }
   },
+  "Mansfield, PA": {
+    "place": {
+      "name": "Mansfield",
+      "state": "PA",
+      "country": "US",
+      "pop": 2852,
+      "coord": [-77.0792881, 41.805687],
+      "repeal": false
+    },
+    "legacy": {
+      "summary": "Within the Central Business District, nonresidential new construction has reduced parking requirements and a nonresidential change of use in an existing building is exempt from parking mandates.",
+      "status": "implemented",
+      "policy": ["reduce parking minimums"],
+      "scope": ["city center / business district"],
+      "land": ["commercial", "other"],
+      "date": "2011-01-12"
+    }
+  },
   "Manteno, IL": {
     "place": {
       "name": "Manteno",
@@ -33405,6 +33441,24 @@
       "policy": ["reduce parking minimums"],
       "scope": ["transit oriented"],
       "land": ["all uses"],
+      "date": null
+    }
+  },
+  "Mifflinburg, PA": {
+    "place": {
+      "name": "Mifflinburg",
+      "state": "PA",
+      "country": "US",
+      "pop": 3424,
+      "coord": [-77.0477501, 40.917582],
+      "repeal": false
+    },
+    "legacy": {
+      "summary": "Nonresidential uses in the DD Downtown District are exempt from parking mandates.",
+      "status": "implemented",
+      "policy": ["remove parking minimums"],
+      "scope": ["city center / business district"],
+      "land": ["commercial", "other"],
       "date": null
     }
   },
@@ -44632,15 +44686,15 @@
       "country": "US",
       "pop": 69913,
       "coord": [-94.1166283, 36.3330154],
-      "repeal": false
+      "repeal": true
     },
     "legacy": {
-      "summary": "There are no minimum parking requirements for non-residential uses in the C-3 Neighborhood Commercial District, the COR, COM, IA downtown Rogers zones, and the U-COR, U-COM, U-ENT uptown Rogers zones.",
+      "summary": "On July 23, 2024, Rogers eliminated all parking mandates. Previously, there were no minimum parking requirements for non-residential uses in the C-3 Neighborhood Commercial District, the COR, COM, IA downtown Rogers zones, and the U-COR, U-COM, U-ENT uptown Rogers zones.",
       "status": "implemented",
       "policy": ["remove parking minimums"],
-      "scope": ["city center / business district"],
-      "land": ["commercial"],
-      "date": null
+      "scope": ["citywide"],
+      "land": ["all uses"],
+      "date": "2024-07-23"
     }
   },
   "Rogers, MN": {
@@ -50825,6 +50879,24 @@
       "date": null
     }
   },
+  "Susquehanna, PA": {
+    "place": {
+      "name": "Susquehanna",
+      "state": "PA",
+      "country": "US",
+      "pop": 1365,
+      "coord": [-75.6041902, 41.9439867],
+      "repeal": false
+    },
+    "legacy": {
+      "summary": "Nonresidential uses in the C-N Neighborhood Commercial and C-CBD Central Business Commercial districts are exempt from parking mandates.",
+      "status": "implemented",
+      "policy": ["remove parking minimums"],
+      "scope": ["city center / business district"],
+      "land": ["commercial", "other"],
+      "date": null
+    }
+  },
   "Suwanee, GA": {
     "place": {
       "name": "Suwanee",
@@ -55388,6 +55460,24 @@
       "scope": ["city center / business district"],
       "land": ["all uses"],
       "date": null
+    }
+  },
+  "Wellsboro, PA": {
+    "place": {
+      "name": "Wellsboro",
+      "state": "PA",
+      "country": "US",
+      "pop": 3472,
+      "coord": [-77.3005305, 41.7486838],
+      "repeal": false
+    },
+    "legacy": {
+      "summary": "The Central Business District is exempt from parking mandates.",
+      "status": "implemented",
+      "policy": ["remove parking minimums"],
+      "scope": ["city center / business district"],
+      "land": ["all uses"],
+      "date": "2018-06-04"
     }
   },
   "Wellston, OH": {
