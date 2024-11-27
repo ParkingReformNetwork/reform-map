@@ -4,6 +4,7 @@ import {
   readRawCompleteData,
   readRawCoreData,
   readRawExtendedData,
+  getCitations,
 } from "../../scripts/lib/data";
 
 test("JSON files have enough entries", async () => {
@@ -23,7 +24,7 @@ test("JSON files have enough entries", async () => {
 test("every attachment has a Directus ID", async () => {
   const extendedData = await readRawExtendedData();
   const missingFileNames = Object.values(extendedData).flatMap((entry) =>
-    entry.legacy.citations.flatMap((citation) =>
+    getCitations(entry).flatMap((citation) =>
       citation.attachments
         .filter((attachment) => !attachment.directusId)
         .map((attachment) => attachment.fileName),

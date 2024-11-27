@@ -285,14 +285,16 @@ async function saveCoreData(
           coord: entry.place.coord,
           repeal: entry.place.repeal,
         },
-        legacy: {
-          summary: entry.legacy.summary,
-          status: entry.legacy.status,
-          policy: entry.legacy.policy.sort(),
-          scope: entry.legacy.scope.sort(),
-          land: entry.legacy.land.sort(),
-          date: entry.legacy.date,
-        },
+        ...(entry.legacy && {
+          legacy: {
+            summary: entry.legacy.summary,
+            status: entry.legacy.status,
+            policy: entry.legacy.policy.sort(),
+            scope: entry.legacy.scope.sort(),
+            land: entry.legacy.land.sort(),
+            date: entry.legacy.date,
+          },
+        }),
       },
     ]),
   );
@@ -307,13 +309,15 @@ async function saveExtendedData(
   const pruned = Object.fromEntries(
     Object.entries(result).map(([placeId, entry]) => [
       placeId,
-      {
-        legacy: {
-          reporter: entry.legacy.reporter,
-          requirements: entry.legacy.requirements.sort(),
-          citations: entry.legacy.citations,
-        },
-      },
+      entry.legacy
+        ? {
+            legacy: {
+              reporter: entry.legacy.reporter,
+              requirements: entry.legacy.requirements.sort(),
+              citations: entry.legacy.citations,
+            },
+          }
+        : {},
     ]),
   );
   const json = JSON.stringify(pruned, null, 2);
