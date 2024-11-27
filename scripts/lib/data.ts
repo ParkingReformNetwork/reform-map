@@ -83,17 +83,15 @@ export async function readProcessedCompleteData(): Promise<
 > {
   const raw = await readRawCompleteData();
   return Object.fromEntries(
-    Object.entries(raw).map(([placeId, entry]) => {
-      return [
-        placeId,
-        {
-          place: { ...entry.place, url: placeIdToUrl(placeId) },
-          unifiedPolicy: {
-            ...entry.legacy,
-            date: Date.fromNullable(entry.legacy.date),
-          },
+    Object.entries(raw).map(([placeId, entry]) => [
+      placeId,
+      {
+        place: { ...entry.place, url: placeIdToUrl(placeId) },
+        unifiedPolicy: {
+          ...entry.legacy,
+          date: Date.fromNullable(entry.legacy.date),
         },
-      ];
-    }),
+      },
+    ]),
   );
 }
