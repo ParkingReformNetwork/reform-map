@@ -78,6 +78,8 @@ This is the same as `legacy_reforms`, other than `policy_changes: enum[]` now be
 
 We use a single table for the three land use reform types to keep things simple. The metadata about each reform is the same, so it's not necessary to have distinct tables. If we need to make major divergences, we can migrate to new tables.
 
+We also add `archived: boolean` so that we can track historical policy records that are no longer active. `sync-directus` ignores these records for now because we don't have a useful way to integrate them in the app; we only want to preserve the metadata so we can possibly do something later with it.
+
 ### Migration plan
 
 2400/3200 of our records can be cleanly migrated from `legacy_reforms` to `policies`.
