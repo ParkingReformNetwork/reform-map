@@ -4,6 +4,7 @@ import {
   loadTemplate,
   renderHandlebars,
 } from "../../scripts/generateHtmlPages";
+import { Date } from "../../src/js/types";
 
 // This test uses snapshot testing (https://jestjs.io/docs/snapshot-testing#updating-snapshots). If the tests fail and the changes
 // are valid, run `npm test -- --updateSnapshot`.
@@ -26,14 +27,15 @@ test("generate html page", async ({}, testInfo) => {
         repeal: true,
         pop: 24104,
         coord: [44.23, 14.23],
+        url: "https://parkingreform.org/my-city-details.html",
       },
-      legacy: {
+      unifiedPolicy: {
         summary: "No parking mandates for the win!",
         status: "passed",
         policy: ["reduce parking minimums", "add parking maximums"],
         scope: ["citywide"],
         land: ["commercial", "other"],
-        date: "Mar 27, 2018",
+        date: new Date("2018-03-27"),
         reporter: "Parking God",
         requirements: ["by right"],
         citations: [

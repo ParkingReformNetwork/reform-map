@@ -13,6 +13,10 @@ export class Date {
     this.parsed = parsed;
   }
 
+  static fromNullable(dateStr?: string | null): Date | null {
+    return dateStr ? new this(dateStr) : null;
+  }
+
   format(): string {
     if (this.raw.length === 4) return this.raw;
     if (this.raw.length === 7) return this.parsed.toFormat("LLL yyyy");
@@ -26,13 +30,6 @@ export class Date {
 
 export type PlaceId = string;
 
-export type ReformStatus =
-  | "implemented"
-  | "passed"
-  | "planned"
-  | "proposed"
-  | "repealed";
-
 export interface Place {
   // Full name of the town, city, county, province, state, or country.
   name: string;
@@ -45,20 +42,34 @@ export interface Place {
   repeal: boolean;
 }
 
+export type PolicyType =
+  | "reduce parking minimums"
+  | "remove parking minimums"
+  | "add parking maximums";
+
+export type ReformStatus =
+  | "implemented"
+  | "passed"
+  | "planned"
+  | "proposed"
+  | "repealed";
+
 interface BaseLegacyReform {
   summary: string;
   status: ReformStatus;
-  policy: string[];
+  policy: PolicyType[];
   scope: string[];
   land: string[];
 }
+export type RawLegacyReform = BaseLegacyReform & { date: string | null };
+export type ProcessedLegacyReform = BaseLegacyReform & { date: Date | null };
 
-export interface RawEntry {
+export interface RawCoreEntry {
   place: Place;
-  legacy: BaseLegacyReform & { date: string | null };
+  legacy: RawLegacyReform;
 }
 
-export interface PlaceEntry {
+export interface ProcessedCoreEntry {
   place: Place & { url: string };
-  unifiedPolicy: BaseLegacyReform & { date: Date | null };
+  unifiedPolicy: ProcessedLegacyReform;
 }

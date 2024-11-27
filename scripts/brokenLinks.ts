@@ -4,12 +4,12 @@
 
 import fetch from "node-fetch";
 
-import { readCompleteData } from "./lib/data";
+import { readRawExtendedData } from "./lib/data";
 
 export async function mapPlaceToCitationLinks(): Promise<
   Record<string, string[]>
 > {
-  const data = await readCompleteData();
+  const data = await readRawExtendedData();
   return Object.fromEntries(
     Object.entries(data).map(([placeId, entry]) => [
       placeId,

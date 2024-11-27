@@ -1,11 +1,14 @@
 import type { FeatureGroup } from "leaflet";
 
-import type { PlaceEntry, PlaceId } from "./types";
+import type { ProcessedCoreEntry, PlaceId } from "./types";
 import Observable from "./Observable";
 import { PlaceFilterManager } from "./FilterState";
 import { ViewStateObservable } from "./viewToggle";
 
-function generateScorecard(entry: PlaceEntry, placeId: PlaceId): string {
+function generateScorecard(
+  entry: ProcessedCoreEntry,
+  placeId: PlaceId,
+): string {
   const dateOfReform = entry.unifiedPolicy.date
     ? `<li>Reformed ${entry.unifiedPolicy.date.preposition()} ${entry.unifiedPolicy.date.format()}</li>`
     : "";
@@ -33,7 +36,7 @@ function generateScorecard(entry: PlaceEntry, placeId: PlaceId): string {
 
 type ScorecardState =
   | { type: "hidden" }
-  | { type: "visible"; entry: PlaceEntry; placeId: PlaceId };
+  | { type: "visible"; entry: ProcessedCoreEntry; placeId: PlaceId };
 
 function updateScorecardUI(state: ScorecardState): void {
   const scorecardContainer = document.querySelector<HTMLElement>(
@@ -61,7 +64,7 @@ export default function initScorecard(
   filterManager: PlaceFilterManager,
   viewToggle: ViewStateObservable,
   markerGroup: FeatureGroup,
-  data: Record<PlaceId, PlaceEntry>,
+  data: Record<PlaceId, ProcessedCoreEntry>,
 ): void {
   const scorecardState = new Observable<ScorecardState>({ type: "hidden" });
   scorecardState.subscribe(updateScorecardUI);

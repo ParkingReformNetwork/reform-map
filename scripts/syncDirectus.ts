@@ -18,7 +18,7 @@ import {
 } from "./lib/directus";
 import { PlaceId as PlaceStringId } from "../src/js/types";
 import { getLongLat, initGeocoder } from "./lib/geocoder";
-import { Attachment, Citation, CompleteEntry } from "./lib/data";
+import { Attachment, Citation, RawCompleteEntry } from "./lib/data";
 import { escapePlaceId } from "../src/js/data";
 
 // --------------------------------------------------------------------------
@@ -213,7 +213,7 @@ function combineData(
   legacyReforms: Record<PlaceStringId, Partial<LegacyReform>>,
   citationsByLegacyReformJunctionId: Record<number, Partial<DirectusCitation>>,
   filesByAttachmentJunctionId: Record<number, FileMetadata>,
-): Record<PlaceStringId, CompleteEntry> {
+): Record<PlaceStringId, RawCompleteEntry> {
   return Object.fromEntries(
     Object.entries(places)
       // Skip unverified reforms.
@@ -239,7 +239,7 @@ function combineData(
             };
           },
         );
-        const result: CompleteEntry = {
+        const result: RawCompleteEntry = {
           place: {
             name: place.name!,
             state: place.state!,
@@ -271,7 +271,7 @@ function combineData(
 // --------------------------------------------------------------------------
 
 async function saveCoreData(
-  result: Record<PlaceStringId, CompleteEntry>,
+  result: Record<PlaceStringId, RawCompleteEntry>,
 ): Promise<void> {
   const pruned = Object.fromEntries(
     Object.entries(result).map(([placeId, entry]) => [
@@ -302,7 +302,7 @@ async function saveCoreData(
 }
 
 async function saveExtendedData(
-  result: Record<PlaceStringId, CompleteEntry>,
+  result: Record<PlaceStringId, RawCompleteEntry>,
 ): Promise<void> {
   const pruned = Object.fromEntries(
     Object.entries(result).map(([placeId, entry]) => [

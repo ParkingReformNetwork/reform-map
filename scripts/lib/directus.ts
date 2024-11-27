@@ -18,7 +18,7 @@ import {
   DirectusFile,
 } from "@directus/sdk";
 
-import { ReformStatus } from "../../src/js/types.js";
+import { PolicyType, ReformStatus } from "../../src/js/types.js";
 import { CitationType } from "../../scripts/lib/data.js";
 
 export const CITATIONS_FILES_FOLDER = "f085de08-b747-4251-973d-1752ccc29649";
@@ -75,7 +75,7 @@ export type Citation = {
 export type LegacyReform = {
   place: number;
   last_verified_at: string | null;
-  policy_changes: string[];
+  policy_changes: PolicyType[];
   land_uses: string[];
   reform_scope: string[];
   requirements: string[];
