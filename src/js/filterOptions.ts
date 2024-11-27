@@ -1,6 +1,6 @@
 import { capitalize } from "lodash-es";
 
-import { PlaceEntry } from "./types";
+import { ProcessedCoreEntry } from "./types";
 import { PlaceFilterManager } from "./FilterState";
 import Observable from "./Observable";
 
@@ -26,7 +26,7 @@ const DESELECTED_BY_DEFAULT: Record<FilterGroupKey, Set<string>> = {
 export class FilterOptions {
   readonly options: Record<FilterGroupKey, string[]>;
 
-  constructor(entries: PlaceEntry[]) {
+  constructor(entries: ProcessedCoreEntry[]) {
     const policy = new Set<string>();
     const scope = new Set<string>();
     const landUse = new Set<string>();

@@ -1,7 +1,7 @@
 import { expect } from "@playwright/test";
 import type { Page } from "@playwright/test";
 
-import { readCoreData } from "../../scripts/lib/data";
+import { readRawCoreData } from "../../scripts/lib/data";
 
 const PLACE_MARKER = "path.leaflet-interactive";
 export const DEFAULT_PLACE_RANGE: [number, number] = [3000, 4000];
@@ -13,7 +13,7 @@ export const loadMap = async (page: Page): Promise<void> => {
 };
 
 export async function getTotalNumPlaces(): Promise<number> {
-  const data = await readCoreData();
+  const data = await readRawCoreData();
   return Object.keys(data).length;
 }
 

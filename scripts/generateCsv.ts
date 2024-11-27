@@ -5,8 +5,7 @@ import fs from "fs/promises";
 
 import Papa from "papaparse";
 
-import { readCompleteData } from "./lib/data";
-import { placeIdToUrl } from "../src/js/data";
+import { readProcessedCompleteData } from "./lib/data";
 
 function assertExpectedNumEntries(jsonKeys: string[], csv: string): void {
   const numJson = jsonKeys.length;
@@ -17,23 +16,23 @@ function assertExpectedNumEntries(jsonKeys: string[], csv: string): void {
 }
 
 async function main(): Promise<void> {
-  const completeData = await readCompleteData();
-  const data = Object.entries(completeData).map(([placeId, entry]) => ({
+  const completeData = await readProcessedCompleteData();
+  const data = Object.values(completeData).map((entry) => ({
     place: entry.place.name,
     state: entry.place.state,
     country: entry.place.country,
     all_minimums_repealed: entry.place.repeal ? "TRUE" : "FALSE",
-    status: entry.legacy.status,
-    policy_change: entry.legacy.policy,
-    scope: entry.legacy.scope,
-    land_uses: entry.legacy.land,
-    reform_date: entry.legacy.date,
+    status: entry.unifiedPolicy.status,
+    policy_change: entry.unifiedPolicy.policy,
+    scope: entry.unifiedPolicy.scope,
+    land_uses: entry.unifiedPolicy.land,
+    reform_date: entry.unifiedPolicy.date,
     population: entry.place.pop,
     lat: entry.place.coord[1],
     long: entry.place.coord[0],
-    url: placeIdToUrl(placeId),
-    reporter: entry.legacy.reporter,
-    summary: entry.legacy.summary,
+    url: entry.place.url,
+    reporter: entry.unifiedPolicy.reporter,
+    summary: entry.unifiedPolicy.summary,
   }));
   const csv = Papa.unparse(Object.values(data));
   assertExpectedNumEntries(Object.keys(completeData), csv);

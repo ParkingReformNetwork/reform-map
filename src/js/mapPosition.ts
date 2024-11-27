@@ -8,8 +8,7 @@ export default function subscribeSnapToPlace(
 ): void {
   manager.subscribe(({ searchInput }) => {
     if (searchInput) {
-      const entry = manager.entries[searchInput];
-      const [long, lat] = entry.place.coord;
+      const [long, lat] = manager.entries[searchInput].place.coord;
       map.setView([lat, long], 6);
     }
   });

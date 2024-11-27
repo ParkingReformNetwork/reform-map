@@ -1,5 +1,5 @@
 import { isEqual } from "lodash-es";
-import { PlaceId, PlaceEntry } from "./types";
+import { PlaceId, ProcessedCoreEntry } from "./types";
 import Observable from "./Observable";
 import { UNKNOWN_YEAR } from "./filterOptions";
 
@@ -34,11 +34,14 @@ interface CacheEntry {
 export class PlaceFilterManager {
   private readonly state: Observable<FilterState>;
 
-  readonly entries: Record<PlaceId, PlaceEntry>;
+  readonly entries: Record<PlaceId, ProcessedCoreEntry>;
 
   private cache: CacheEntry | null = null;
 
-  constructor(entries: Record<PlaceId, PlaceEntry>, initialState: FilterState) {
+  constructor(
+    entries: Record<PlaceId, ProcessedCoreEntry>,
+    initialState: FilterState,
+  ) {
     this.entries = entries;
     this.state = new Observable(initialState);
   }

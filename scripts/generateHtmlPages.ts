@@ -7,7 +7,7 @@ import Handlebars from "handlebars";
 
 import { escapePlaceId } from "../src/js/data";
 import { PlaceId } from "../src/js/types";
-import { readCompleteData, CompleteEntry } from "./lib/data";
+import { readProcessedCompleteData, ProcessedCompleteEntry } from "./lib/data";
 
 export async function loadTemplate(): Promise<HandlebarsTemplateDelegate> {
   const raw = await fs.readFile("scripts/city_detail.html.handlebars", "utf-8");
@@ -16,19 +16,19 @@ export async function loadTemplate(): Promise<HandlebarsTemplateDelegate> {
 
 export function renderHandlebars(
   placeId: string,
-  entry: CompleteEntry,
+  entry: ProcessedCompleteEntry,
   template: HandlebarsTemplateDelegate,
 ): string {
   return template({
     placeId,
-    summary: entry.legacy.summary,
-    status: entry.legacy.status,
-    policyChange: entry.legacy.policy.join("; "),
-    landUse: entry.legacy.land.join("; "),
-    scope: entry.legacy.scope.join("; "),
-    requirements: entry.legacy.requirements.join("; "),
-    reporter: entry.legacy.reporter,
-    citations: entry.legacy.citations.map((citation, i) => ({
+    summary: entry.unifiedPolicy.summary,
+    status: entry.unifiedPolicy.status,
+    policyChange: entry.unifiedPolicy.policy.join("; "),
+    landUse: entry.unifiedPolicy.land.join("; "),
+    scope: entry.unifiedPolicy.scope.join("; "),
+    requirements: entry.unifiedPolicy.requirements.join("; "),
+    reporter: entry.unifiedPolicy.reporter,
+    citations: entry.unifiedPolicy.citations.map((citation, i) => ({
       idx: i + 1,
       ...citation,
     })),
@@ -37,7 +37,7 @@ export function renderHandlebars(
 
 async function generatePage(
   placeId: string,
-  entry: CompleteEntry,
+  entry: ProcessedCompleteEntry,
   template: HandlebarsTemplateDelegate,
 ): Promise<void> {
   await fs.writeFile(
@@ -46,7 +46,9 @@ async function generatePage(
   );
 }
 
-async function assertEveryPlaceGenerated(data: Record<PlaceId, CompleteEntry>) {
+async function assertEveryPlaceGenerated(
+  data: Record<PlaceId, ProcessedCompleteEntry>,
+) {
   const htmlPages = await fs.readdir("city_detail/");
   const validPages = new Set(htmlPages);
   const invalidPlaces = Object.entries(data)
@@ -63,7 +65,7 @@ async function assertEveryPlaceGenerated(data: Record<PlaceId, CompleteEntry>) {
 async function main(): Promise<void> {
   const [template, data] = await Promise.all([
     loadTemplate(),
-    readCompleteData(),
+    readProcessedCompleteData(),
   ]);
   await Promise.all(
     Object.entries(data).map(([placeId, entry]) =>
