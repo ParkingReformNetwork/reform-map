@@ -30,7 +30,7 @@ export class Date {
 
 export type PlaceId = string;
 
-export interface Place {
+export interface RawPlace {
   // Full name of the town, city, county, province, state, or country.
   name: string;
   // State or province abbreviation. Not set for countries.
@@ -41,6 +41,7 @@ export interface Place {
   coord: [number, number];
   repeal: boolean;
 }
+export type ProcessedPlace = RawPlace & { url: string };
 
 export type PolicyType =
   | "reduce parking minimums"
@@ -54,22 +55,32 @@ export type ReformStatus =
   | "proposed"
   | "repealed";
 
-interface BaseLegacyReform {
+/// Every policy has these values, new-style and legacy. It is missing some fields like `date`.
+export interface BasePolicy {
   summary: string;
   status: ReformStatus;
-  policy: PolicyType[];
   scope: string[];
   land: string[];
 }
+
+type BaseLegacyReform = BasePolicy & {
+  policy: PolicyType[];
+};
 export type RawLegacyReform = BaseLegacyReform & { date: string | null };
 export type ProcessedLegacyReform = BaseLegacyReform & { date: Date | null };
 
+export type RawCorePolicy = BasePolicy & { date: string | null };
+export type ProcessedCorePolicy = BasePolicy & { date: Date | null };
+
 export interface RawCoreEntry {
-  place: Place;
-  legacy: RawLegacyReform;
+  place: RawPlace;
+  legacy?: RawLegacyReform;
+  reduce_min?: RawCorePolicy[];
+  rm_min?: RawCorePolicy[];
+  add_max?: RawCorePolicy[];
 }
 
 export interface ProcessedCoreEntry {
-  place: Place & { url: string };
+  place: ProcessedPlace;
   unifiedPolicy: ProcessedLegacyReform;
 }

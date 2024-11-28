@@ -4,7 +4,7 @@
 
 import fetch from "node-fetch";
 
-import { readRawExtendedData } from "./lib/data";
+import { readRawExtendedData, getCitations } from "./lib/data";
 
 export async function mapPlaceToCitationLinks(): Promise<
   Record<string, string[]>
@@ -13,7 +13,7 @@ export async function mapPlaceToCitationLinks(): Promise<
   return Object.fromEntries(
     Object.entries(data).map(([placeId, entry]) => [
       placeId,
-      entry.legacy.citations
+      getCitations(entry)
         .map((citation) => citation.url)
         .filter((url): url is string => url !== null),
     ]),
