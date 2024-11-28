@@ -17,6 +17,8 @@ import {
   readFiles,
   ReadFileOutput,
   DirectusFile,
+  IfAny,
+  QueryFilter,
 } from "@directus/sdk";
 
 import { PolicyType, ReformStatus } from "../../src/js/types.js";
@@ -129,6 +131,13 @@ export async function readItemsBatched<
   collection: Collection,
   fields: Fields,
   batchSize: number = 100,
+  filter:
+    | IfAny<
+        Schema,
+        Record<string, any>, // eslint-disable-line @typescript-eslint/no-explicit-any
+        QueryFilter<Schema, CollectionType<Schema, Collection>>
+      >
+    | undefined = undefined,
 ): Promise<ReadItemOutput<Schema, Collection, { fields: Fields }>[]> {
   const allItems = [];
   let offset = 0;
@@ -141,6 +150,7 @@ export async function readItemsBatched<
         fields,
         limit: batchSize,
         offset,
+        filter,
       }),
     );
 

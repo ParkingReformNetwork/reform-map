@@ -83,20 +83,26 @@ async function readLegacyReforms(
   client: DirectusClient,
   placeDirectusIdToStringId: Record<number, PlaceStringId>,
 ): Promise<Record<PlaceStringId, Partial<LegacyReform>>> {
-  const records = await readItemsBatched(client, "legacy_reforms", [
-    "id",
-    "place",
-    "last_verified_at",
-    "policy_changes",
-    "land_uses",
-    "reform_scope",
-    "requirements",
-    "status",
-    "summary",
-    "reporter",
-    "reform_date",
-    "citations",
-  ]);
+  const records = await readItemsBatched(
+    client,
+    "legacy_reforms",
+    [
+      "id",
+      "place",
+      "last_verified_at",
+      "policy_changes",
+      "land_uses",
+      "reform_scope",
+      "requirements",
+      "status",
+      "summary",
+      "reporter",
+      "reform_date",
+      "citations",
+    ],
+    100,
+    { last_verified_at: { _nnull: true } },
+  );
   return Object.fromEntries(
     records.map((record) => [placeDirectusIdToStringId[record.place], record]),
   );
@@ -216,8 +222,7 @@ function combineData(
 ): Record<PlaceStringId, RawCompleteEntry> {
   return Object.fromEntries(
     Object.entries(places)
-      // Skip unverified reforms.
-      .filter(([placeId]) => legacyReforms[placeId].last_verified_at !== null)
+      .filter(([placeId]) => legacyReforms[placeId] !== undefined)
       .map(([placeId, place]) => {
         const reform = legacyReforms[placeId];
         const citations = reform.citations!.map(
