@@ -51,8 +51,10 @@ export interface Schema {
   places: Place[];
   citations: Citation[];
   legacy_reforms: LegacyReform[];
+  policy_records: PolicyRecord[];
   citations_files: CitationsFileJunction[];
   legacy_reforms_citations: LegacyReformCitationJunction[];
+  policy_records_citations: PolicyRecordCitationJunction[];
 }
 
 export type PlaceType = "city" | "county" | "state" | "country";
@@ -75,10 +77,9 @@ export type Citation = {
   attachments: number[];
 } & Metadata;
 
-export type LegacyReform = {
+type _BasePolicy = {
   place: number;
   last_verified_at: string | null;
-  policy_changes: PolicyType[];
   land_uses: string[];
   reform_scope: string[];
   requirements: string[];
@@ -89,6 +90,14 @@ export type LegacyReform = {
   citations: number[];
 } & Metadata;
 
+export type LegacyReform = _BasePolicy & {
+  policy_changes: PolicyType[];
+};
+
+export type PolicyRecord = _BasePolicy & {
+  type: PolicyType;
+};
+
 export interface CitationsFileJunction {
   id: number;
   citations_id: number;
@@ -98,6 +107,12 @@ export interface CitationsFileJunction {
 export interface LegacyReformCitationJunction {
   id: number;
   legacy_reforms_id: number;
+  citations_id: number;
+}
+
+export interface PolicyRecordCitationJunction {
+  id: number;
+  policy_records_id: number;
   citations_id: number;
 }
 
@@ -150,7 +165,7 @@ export async function readItemsBatched<
         fields,
         limit: batchSize,
         offset,
-        filter,
+        ...(filter && { filter }),
       }),
     );
 
