@@ -11459,6 +11459,24 @@
       "date": null
     }
   },
+  "Cook Islands": {
+    "place": {
+      "name": "Cook Islands",
+      "state": null,
+      "country": "CK",
+      "pop": 15040,
+      "coord": [-157.78587140620786, -19.99697155],
+      "repeal": false
+    },
+    "legacy": {
+      "summary": "In 2024, Infrastructure Cook Islands proposed updating the building code to provide flexibility to the existing parking mandates when there is ample public parking.",
+      "status": "proposed",
+      "policy": ["reduce parking minimums"],
+      "scope": ["regional"],
+      "land": ["all uses"],
+      "date": null
+    }
+  },
   "Coon Valley, WI": {
     "place": {
       "name": "Coon Valley",
@@ -13590,6 +13608,24 @@
       "date": null
     }
   },
+  "Delmont, PA": {
+    "place": {
+      "name": "Delmont",
+      "state": "PA",
+      "country": "US",
+      "pop": 2592,
+      "coord": [-79.5703201, 40.4131233],
+      "repeal": false
+    },
+    "legacy": {
+      "summary": "Commercial uses in the CBDO Central Business District Overlay are exempt from parking mandates where there is adjacent on-street parking, or when other public parking is nearby. No parking is required for the residential portions of mixed-use buildings in the CBDO district where there are 2 or less residential units in the building.",
+      "status": "implemented",
+      "policy": ["remove parking minimums"],
+      "scope": ["city center / business district"],
+      "land": ["commercial", "residential, multi-family"],
+      "date": null
+    }
+  },
   "Delta Charter Township, MI": {
     "place": {
       "name": "Delta Charter Township",
@@ -13775,6 +13811,29 @@
       "policy": ["reduce parking minimums", "remove parking minimums"],
       "scope": ["city center / business district"],
       "land": ["all uses"],
+      "date": null
+    }
+  },
+  "Derry, PA": {
+    "place": {
+      "name": "Derry",
+      "state": "PA",
+      "country": "US",
+      "pop": 2637,
+      "coord": [-79.2997573, 40.3339589],
+      "repeal": false
+    },
+    "legacy": {
+      "summary": "Parking maximums apply to certain uses depending on district.",
+      "status": "implemented",
+      "policy": ["add parking maximums"],
+      "scope": ["citywide"],
+      "land": [
+        "commercial",
+        "industrial",
+        "other",
+        "residential, multi-family"
+      ],
       "date": null
     }
   },
@@ -25311,6 +25370,24 @@
       "date": null
     }
   },
+  "Irwin, PA": {
+    "place": {
+      "name": "Irwin",
+      "state": "PA",
+      "country": "US",
+      "pop": 3902,
+      "coord": [-79.7093339, 40.3301738],
+      "repeal": false
+    },
+    "legacy": {
+      "summary": "Developments located on vacant parcels on Main Street are exempt from parking mandates.",
+      "status": "implemented",
+      "policy": ["remove parking minimums"],
+      "scope": ["main street / special"],
+      "land": ["all uses"],
+      "date": null
+    }
+  },
   "Ishpeming, MI": {
     "place": {
       "name": "Ishpeming",
@@ -29431,6 +29508,24 @@
       "date": null
     }
   },
+  "Ligonier, PA": {
+    "place": {
+      "name": "Ligonier",
+      "state": "PA",
+      "country": "US",
+      "pop": 1513,
+      "coord": [-79.2376363, 40.2430966],
+      "repeal": false
+    },
+    "legacy": {
+      "summary": "The first 2,000 square feet of a commercial use in exempt from parking mandates. On-street parking may be counted towards parking requirements for nonresidential uses.",
+      "status": "implemented",
+      "policy": ["reduce parking minimums", "remove parking minimums"],
+      "scope": ["citywide"],
+      "land": ["commercial"],
+      "date": null
+    }
+  },
   "Lilburn, GA": {
     "place": {
       "name": "Lilburn",
@@ -29608,6 +29703,28 @@
       "policy": ["reduce parking minimums"],
       "scope": ["citywide"],
       "land": ["all uses"],
+      "date": null
+    }
+  },
+  "Lindau, BY": {
+    "place": {
+      "name": "Lindau",
+      "state": "BY",
+      "country": "DE",
+      "pop": 26155,
+      "coord": [9.6926624, 47.550753],
+      "repeal": false
+    },
+    "legacy": {
+      "summary": "Parking requirements are reduced in the city center, along bus routes, and for public housing projects. A fee in lieu of required parking may also be provided.",
+      "status": "implemented",
+      "policy": ["reduce parking minimums"],
+      "scope": [
+        "city center / business district",
+        "citywide",
+        "transit-oriented"
+      ],
+      "land": ["all uses", "residential, multi-family"],
       "date": null
     }
   },
@@ -35420,6 +35537,24 @@
       "date": "2018-01-22"
     }
   },
+  "Mount Pleasant, PA": {
+    "place": {
+      "name": "Mount Pleasant",
+      "state": "PA",
+      "country": "US",
+      "pop": 4245,
+      "coord": [-79.5421368, 40.1487475],
+      "repeal": false
+    },
+    "legacy": {
+      "summary": "The B-1 Business District is exempt from parking mandates.",
+      "status": "implemented",
+      "policy": ["remove parking minimums"],
+      "scope": ["city center / business district"],
+      "land": ["all uses"],
+      "date": null
+    }
+  },
   "Mount Pocono, PA": {
     "place": {
       "name": "Mount Pocono",
@@ -36898,6 +37033,24 @@
       "date": null
     }
   },
+  "New Florence, PA": {
+    "place": {
+      "name": "New Florence",
+      "state": "PA",
+      "country": "US",
+      "pop": 671,
+      "coord": [-79.075308, 40.3803492],
+      "repeal": false
+    },
+    "legacy": {
+      "summary": "New Florence does not have zoning or parking mandates.",
+      "status": "implemented",
+      "policy": ["remove parking minimums"],
+      "scope": ["citywide"],
+      "land": ["all uses"],
+      "date": null
+    }
+  },
   "New Franklin, MO": {
     "place": {
       "name": "New Franklin",
@@ -37025,6 +37178,24 @@
     },
     "legacy": {
       "summary": "The C-2 Central Business District is exempt from parking mandates.",
+      "status": "implemented",
+      "policy": ["remove parking minimums"],
+      "scope": ["city center / business district"],
+      "land": ["all uses"],
+      "date": null
+    }
+  },
+  "New Kensington, PA": {
+    "place": {
+      "name": "New Kensington",
+      "state": "PA",
+      "country": "US",
+      "pop": 12170,
+      "coord": [-79.7647705, 40.5697893],
+      "repeal": false
+    },
+    "legacy": {
+      "summary": "The C-3 Central Business District is exempt from parking mandates.",
       "status": "implemented",
       "policy": ["remove parking minimums"],
       "scope": ["city center / business district"],
@@ -46437,6 +46608,24 @@
       "date": "2024-07-31"
     }
   },
+  "Sassnitz, MV": {
+    "place": {
+      "name": "Sassnitz",
+      "state": "MV",
+      "country": "DE",
+      "pop": 9169,
+      "coord": [13.644119, 54.516728],
+      "repeal": false
+    },
+    "legacy": {
+      "summary": "A fee in lieu of required parking may be provided. The fee amount varies by location.",
+      "status": "implemented",
+      "policy": ["reduce parking minimums"],
+      "scope": ["citywide"],
+      "land": ["all uses"],
+      "date": "1998-02-13"
+    }
+  },
   "Saugatuck Township, MI": {
     "place": {
       "name": "Saugatuck Township",
@@ -47962,6 +48151,28 @@
       "policy": ["remove parking minimums"],
       "scope": ["citywide", "transit oriented"],
       "land": ["residential, low-density"],
+      "date": null
+    }
+  },
+  "Singapore": {
+    "place": {
+      "name": "Singapore",
+      "state": null,
+      "country": "SG",
+      "pop": 6040000,
+      "coord": [103.8519072, 1.2899175],
+      "repeal": false
+    },
+    "legacy": {
+      "summary": "Zone 4 is exempt from parking mandates while requirements vary across zones 1-3 which are based on location and transit availability. Parking maximums apply to most uses.",
+      "status": "implemented",
+      "policy": [
+        "add parking maximums",
+        "reduce parking minimums",
+        "remove parking minimums"
+      ],
+      "scope": ["city center / business district", "transit-oriented"],
+      "land": ["commercial", "industrial", "other", "residential, all uses"],
       "date": null
     }
   },
@@ -58516,6 +58727,24 @@
       "policy": ["reduce parking minimums", "remove parking minimums"],
       "scope": ["city center / business district"],
       "land": ["commercial", "other"],
+      "date": null
+    }
+  },
+  "Zingst, MV": {
+    "place": {
+      "name": "Zingst",
+      "state": "MV",
+      "country": "DE",
+      "pop": 3098,
+      "coord": [12.6821366, 54.4387302],
+      "repeal": false
+    },
+    "legacy": {
+      "summary": "Parking requirements are reduced within the city center for commercial uses. A fee in lieu of parking may be provided citywide for all uses.",
+      "status": "implemented",
+      "policy": ["reduce parking minimums"],
+      "scope": ["city center / business district", "citywide"],
+      "land": ["all uses", "commercial"],
       "date": null
     }
   },
