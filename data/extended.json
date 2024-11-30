@@ -46,7 +46,54 @@
           ]
         }
       ]
-    }
+    },
+    "add_max": [
+      {
+        "reporter": "Samuel Deetz",
+        "requirements": ["by right"],
+        "citations": [
+          {
+            "description": "Abbottstown Zoning Code",
+            "type": "city code",
+            "url": "https://ecode360.com/33754474#33754521",
+            "notes": "§ 204-49Maximum number of parking spaces.\nA.",
+            "attachments": [
+              {
+                "fileName": "Abbottstown_PA_1_1.png",
+                "isDoc": false,
+                "directusId": "dcbf3e80-9927-4ef0-b46a-6b0a0fe6ec07"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "reduce_min": [
+      {
+        "reporter": "Samuel Deetz",
+        "requirements": ["frequent transit", "other"],
+        "citations": [
+          {
+            "description": "Abbottstown Zoning Code",
+            "type": "city code",
+            "url": "https://ecode360.com/33754474#33754521",
+            "notes": "§ 204-49.B.\n§ 204-50.",
+            "attachments": [
+              {
+                "fileName": "Abbottstown_PA_1_1.png",
+                "isDoc": false,
+                "directusId": "4b1526ac-03cb-4854-b3a5-4267461e8081"
+              },
+              {
+                "fileName": "Abbottstown_PA_1_2.png",
+                "isDoc": false,
+                "directusId": "0255803b-9ca1-409a-93e5-cd7666ac6222"
+              }
+            ]
+          }
+        ]
+      }
+    ]
   },
   "Aberdeen, MS": {
     "rm_min": [
@@ -277,7 +324,99 @@
           ]
         }
       ]
-    }
+    },
+    "add_max": [
+      {
+        "reporter": "Samuel Deetz",
+        "requirements": ["by right"],
+        "citations": [
+          {
+            "description": "Adams County Unified Development Code",
+            "type": "city code",
+            "url": "https://adamscounty.municipalcodeonline.com/book?type=temp#name=3-28-06-03_PARKING",
+            "notes": "3-28-06-03-02 REQUIRED PARKING\n3-28-06-03-03 MAXIMUM PARKING SPACES ALLOWED",
+            "attachments": [
+              {
+                "fileName": "AdamsCounty_CO_1_1.png",
+                "isDoc": false,
+                "directusId": "2830afe2-274d-41b6-9bd3-d6b1634d3bd2"
+              },
+              {
+                "fileName": "AdamsCounty_CO_1_2.png",
+                "isDoc": false,
+                "directusId": "a14ea728-51e4-4eb1-a9cf-1ef2208be10c"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "reduce_min": [
+      {
+        "reporter": "Samuel Deetz",
+        "requirements": [
+          "other",
+          "supportive housing",
+          "transportation demand management"
+        ],
+        "citations": [
+          {
+            "description": "Adams County Unified Development Code",
+            "type": "city code",
+            "url": "https://adamscounty.municipalcodeonline.com/book?type=temp#name=3-28-06-03_PARKING",
+            "notes": "3-28-06-03-01-03 On-Street Parking\n3-28-06-03-04-02 Reduced Need Populations\n4-15-04-04 PARKING LOT LAYOUT\n   4.\n4-15-04-06-01 PARKING FLEXIBILITY\n   3.\n4-15-04-06-02 PARKING ADJUSTMENTS\n   1.",
+            "attachments": [
+              {
+                "fileName": "AdamsCounty_CO_1_1.png",
+                "isDoc": false,
+                "directusId": "fe42dc48-c369-4f0c-8dce-96ff5e5a4bc1"
+              },
+              {
+                "fileName": "AdamsCounty_CO_1_2.png",
+                "isDoc": false,
+                "directusId": "7470a63b-a084-42df-8cf9-73056b3bfb62"
+              },
+              {
+                "fileName": "AdamsCounty_CO_1_3.png",
+                "isDoc": false,
+                "directusId": "a052cdcd-62d2-47ad-b76f-1835a92414db"
+              },
+              {
+                "fileName": "AdamsCounty_CO_1_4.png",
+                "isDoc": false,
+                "directusId": "4524feb2-8b4e-4c73-ab6d-0849000f489f"
+              },
+              {
+                "fileName": "AdamsCounty_CO_1_5.png",
+                "isDoc": false,
+                "directusId": "f22a1fe9-573a-47b5-9808-866eb53ab3c4"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "rm_min": [
+      {
+        "reporter": "Samuel Deetz",
+        "requirements": ["by right", "size of project"],
+        "citations": [
+          {
+            "description": "Adams County Unified Development Code",
+            "type": "city code",
+            "url": "https://adamscounty.municipalcodeonline.com/book?type=temp#name=3-28-06-03-01-02_Small_Use_Exception",
+            "notes": "3-28-06-03-01-02 Small Use Exception",
+            "attachments": [
+              {
+                "fileName": "AdamsCounty_CO_1_1.png",
+                "isDoc": false,
+                "directusId": "7503368c-12bd-41f4-948c-e910e2038568"
+              }
+            ]
+          }
+        ]
+      }
+    ]
   },
   "Adrian, MI": {
     "legacy": {
@@ -298,7 +437,49 @@
           ]
         }
       ]
-    }
+    },
+    "add_max": [
+      {
+        "reporter": "Samuel Deetz",
+        "requirements": ["by right"],
+        "citations": [
+          {
+            "description": "Adrian Zoning Code",
+            "type": "city code",
+            "url": "https://cms8.revize.com/revize/adrianmi/Document%20Center/Government/City%20of%20Adrian%20Zoning%20Ordinance/City-of-Adrian-Zoning-Ordinance-compiled.pdf",
+            "notes": "SECTION 4.3.7.H.\nPage 42",
+            "attachments": [
+              {
+                "fileName": "Adrian_MI_1_1.png",
+                "isDoc": false,
+                "directusId": "c4d783a7-34aa-461c-aa07-d431b06f6cf6"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "rm_min": [
+      {
+        "reporter": "Samuel Deetz",
+        "requirements": ["by right"],
+        "citations": [
+          {
+            "description": "Adrian Zoning Code",
+            "type": "city code",
+            "url": "https://cms8.revize.com/revize/adrianmi/Document%20Center/Government/City%20of%20Adrian%20Zoning%20Ordinance/City-of-Adrian-Zoning-Ordinance-compiled.pdf",
+            "notes": "SECTION 4.3.7.H.\nPage 42",
+            "attachments": [
+              {
+                "fileName": "Adrian_MI_1_1.png",
+                "isDoc": false,
+                "directusId": "55a26733-a9fb-4825-b426-0dd893a1296f"
+              }
+            ]
+          }
+        ]
+      }
+    ]
   },
   "Aiken, SC": {
     "rm_min": [
@@ -347,7 +528,49 @@
           ]
         }
       ]
-    }
+    },
+    "add_max": [
+      {
+        "reporter": "Samuel Deetz",
+        "requirements": ["by right"],
+        "citations": [
+          {
+            "description": "Aitkin Zoning Code",
+            "type": "city code",
+            "url": "https://codelibrary.amlegal.com/codes/aitkin/latest/aitkin_mn/0-0-0-3370",
+            "notes": "§ 152.037(D)(1)(c)",
+            "attachments": [
+              {
+                "fileName": "Aitkin_MN_1_1.png",
+                "isDoc": false,
+                "directusId": "c06d177d-1c40-4997-b598-e02db543670b"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "rm_min": [
+      {
+        "reporter": "Samuel Deetz",
+        "requirements": ["by right"],
+        "citations": [
+          {
+            "description": "Aitkin Zoning Code",
+            "type": "city code",
+            "url": "https://codelibrary.amlegal.com/codes/aitkin/latest/aitkin_mn/0-0-0-3370",
+            "notes": "§ 152.037(D)(1)",
+            "attachments": [
+              {
+                "fileName": "Aitkin_MN_1_1.png",
+                "isDoc": false,
+                "directusId": "455db8c4-6b4f-4ee8-9758-d07ee72c237d"
+              }
+            ]
+          }
+        ]
+      }
+    ]
   },
   "Akron, CO": {
     "rm_min": [
@@ -424,7 +647,54 @@
           ]
         }
       ]
-    }
+    },
+    "add_max": [
+      {
+        "reporter": "Jason Segedy",
+        "requirements": ["by right"],
+        "citations": [
+          {
+            "description": "Akron Zoning Code",
+            "type": "city code",
+            "url": "https://library.municode.com/oh/akron/codes/code_of_ordinances?nodeId=TIT15LAUS_CH153ZOCO_ART6DEARDIRE_153.305RERE",
+            "notes": "153.305 - Residence requirements.\nF.3.c.",
+            "attachments": [
+              {
+                "fileName": "Akron_OH_1_1.png",
+                "isDoc": false,
+                "directusId": "f241235e-ee7a-4ee1-94b5-ddea180104b9"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "rm_min": [
+      {
+        "reporter": "Jason Segedy",
+        "requirements": ["by right"],
+        "citations": [
+          {
+            "description": "Akron Zoning Code",
+            "type": "city code",
+            "url": "https://library.municode.com/oh/akron/codes/code_of_ordinances?nodeId=TIT15LAUS_CH153ZOCO_ART6DEARDIRE_153.305RERE",
+            "notes": "153.305.F.3.c.\n153.310.D.1.",
+            "attachments": [
+              {
+                "fileName": "Akron_OH_1_1.png",
+                "isDoc": false,
+                "directusId": "0ef93522-9994-4150-bf1c-e95e1de07b18"
+              },
+              {
+                "fileName": "Akron_OH_1_2.png",
+                "isDoc": false,
+                "directusId": "e69c8048-a11b-449b-883e-1067357ae81d"
+              }
+            ]
+          }
+        ]
+      }
+    ]
   },
   "Akron, PA": {
     "reduce_min": [
@@ -632,7 +902,62 @@
           ]
         }
       ]
-    }
+    },
+    "add_max": [
+      {
+        "reporter": "Tony Jordan",
+        "requirements": ["by right"],
+        "citations": [
+          {
+            "description": "Albany Development Code",
+            "type": "city code",
+            "url": "https://www.albanyoregon.gov/images/stories/cd/planning/development_code/09-Article%209-On-Site%20Development%20and%20Environmental%20Standards.pdf",
+            "notes": "9.020(8)\nPages 1-4",
+            "attachments": [
+              {
+                "fileName": "Albany_OR_1_1.png",
+                "isDoc": false,
+                "directusId": "96cf8e9f-0b04-4021-a01d-f66103e9f7c4"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "rm_min": [
+      {
+        "reporter": "Tony Jordan",
+        "requirements": ["by right"],
+        "citations": [
+          {
+            "description": "City Council Agenda",
+            "type": "other",
+            "url": "https://www.cityofalbany.net/images/stories/citycouncil/archive/2023/cc_20230614_agd.pdf",
+            "notes": "Page 407",
+            "attachments": [
+              {
+                "fileName": "Albany_OR_1_1.png",
+                "isDoc": false,
+                "directusId": "7de39832-60b3-4b2f-90e3-c5b224fa9b83"
+              }
+            ]
+          },
+          {
+            "description": "Albany Development Code",
+            "type": "city code",
+            "url": "https://www.albanyoregon.gov/images/stories/cd/planning/development_code/09-Article%209-On-Site%20Development%20and%20Environmental%20Standards.pdf",
+            "notes": "(9) Maximum Parking.\nPage 2",
+            "attachments": [
+              {
+                "fileName": "Albany_OR_2_1.png",
+                "isDoc": false,
+                "directusId": "534613fc-aba1-4e2e-ae07-c60ec180c8f7"
+              }
+            ]
+          }
+        ]
+      }
+    ]
   },
   "Albany, WI": {
     "rm_min": [
@@ -722,7 +1047,49 @@
           ]
         }
       ]
-    }
+    },
+    "reduce_min": [
+      {
+        "reporter": "Samuel Deetz",
+        "requirements": ["by right", "other"],
+        "citations": [
+          {
+            "description": "Alberton Zoning Code",
+            "type": "city code",
+            "url": "https://www.albertonmontana.com/Title%2013%20Zoning.pdf",
+            "notes": "13.406.2.b.\nPage 24 of pdf, page 20 of original document",
+            "attachments": [
+              {
+                "fileName": "Alberton_MT_1_1.png",
+                "isDoc": false,
+                "directusId": "b3e837bf-7782-4d72-8402-e74e5569f86b"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "rm_min": [
+      {
+        "reporter": "Samuel Deetz",
+        "requirements": ["by right"],
+        "citations": [
+          {
+            "description": "Alberton Zoning Code",
+            "type": "city code",
+            "url": "https://www.albertonmontana.com/Title%2013%20Zoning.pdf",
+            "notes": "13.406.2.a.\nPage 23 of pdf, page 19 of original document",
+            "attachments": [
+              {
+                "fileName": "Alberton_MT_1_1.png",
+                "isDoc": false,
+                "directusId": "1ea6c117-3353-4839-80d1-789300c11f49"
+              }
+            ]
+          }
+        ]
+      }
+    ]
   },
   "Albion, MI": {
     "reduce_min": [
@@ -927,7 +1294,54 @@
           ]
         }
       ]
-    }
+    },
+    "add_max": [
+      {
+        "reporter": "Samuel Deetz",
+        "requirements": ["by right"],
+        "citations": [
+          {
+            "description": "Alexandria Land Development Code",
+            "type": "city code",
+            "url": "https://www.cityofalexandriala.com/sites/default/files/2015%20COA%20Land%20Development%20Code_3.pdf",
+            "notes": "§7.2.6. Maximum\nPage 122",
+            "attachments": [
+              {
+                "fileName": "Alexandria_LA_1_1.png",
+                "isDoc": false,
+                "directusId": "47b8462c-b0dc-4159-8bc3-1e8cdfa052e2"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "rm_min": [
+      {
+        "reporter": "Samuel Deetz",
+        "requirements": ["by right"],
+        "citations": [
+          {
+            "description": "Alexandria Land Development Code",
+            "type": "city code",
+            "url": "https://www.cityofalexandriala.com/sites/default/files/2015%20COA%20Land%20Development%20Code_3.pdf",
+            "notes": "§4.3.2.D.\n§7.2.2.C.\nPages 46, 118",
+            "attachments": [
+              {
+                "fileName": "Alexandria_LA_1_1.png",
+                "isDoc": false,
+                "directusId": "0035a762-1b9e-438a-924f-c5d2b45f4cc4"
+              },
+              {
+                "fileName": "Alexandria_LA_1_2.png",
+                "isDoc": false,
+                "directusId": "d53248a1-9543-47e1-a9e0-7ac95a03c91d"
+              }
+            ]
+          }
+        ]
+      }
+    ]
   },
   "Alexandria, MN": {
     "reduce_min": [
@@ -1158,7 +1572,49 @@
           ]
         }
       ]
-    }
+    },
+    "add_max": [
+      {
+        "reporter": "Samuel Deetz",
+        "requirements": ["by right"],
+        "citations": [
+          {
+            "description": "Allouez Zoning Code",
+            "type": "city code",
+            "url": "https://ecode360.com/30161498#30161348",
+            "notes": "§ 475-802Parking ratios.\nB.",
+            "attachments": [
+              {
+                "fileName": "Allouez_WI_1_1.png",
+                "isDoc": false,
+                "directusId": "117fe31f-d7f6-4c5a-a880-141f0214b040"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "reduce_min": [
+      {
+        "reporter": "Samuel Deetz",
+        "requirements": ["bike parking", "other"],
+        "citations": [
+          {
+            "description": "Allouez Zoning Code",
+            "type": "city code",
+            "url": "https://ecode360.com/30161498#30161349",
+            "notes": "§ 475-803Parking reductions and credits.",
+            "attachments": [
+              {
+                "fileName": "Allouez_WI_1_1.png",
+                "isDoc": false,
+                "directusId": "ac8905aa-5d43-4689-bdc0-50724165b056"
+              }
+            ]
+          }
+        ]
+      }
+    ]
   },
   "Alma, MI": {
     "rm_min": [
@@ -1253,7 +1709,49 @@
           ]
         }
       ]
-    }
+    },
+    "add_max": [
+      {
+        "reporter": "Samuel Deetz",
+        "requirements": ["by right"],
+        "citations": [
+          {
+            "description": "Alpena Charter Township Zoning Code",
+            "type": "city code",
+            "url": "https://cms7files.revize.com/alpenatwpmi/Charter%20Township%20of%20Alpena%20Zoning%20Ordinance%20Amended%20April%202023.pdf",
+            "notes": "Section 325.A.8.\nPage 74",
+            "attachments": [
+              {
+                "fileName": "AlpenaCharterTownship_MI_1_1.png",
+                "isDoc": false,
+                "directusId": "e41ade44-885e-43c0-8f1b-5312402a1427"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "reduce_min": [
+      {
+        "reporter": "Samuel Deetz",
+        "requirements": ["bike parking"],
+        "citations": [
+          {
+            "description": "Alpena Charter Township Zoning Code",
+            "type": "city code",
+            "url": "https://cms7files.revize.com/alpenatwpmi/Charter%20Township%20of%20Alpena%20Zoning%20Ordinance%20Amended%20April%202023.pdf",
+            "notes": "Section 325.A.10.e.\nPage 75",
+            "attachments": [
+              {
+                "fileName": "AlpenaCharterTownship_MI_1_1.png",
+                "isDoc": false,
+                "directusId": "e79f61b2-d7ca-4cc1-bd9c-e65c6ed91443"
+              }
+            ]
+          }
+        ]
+      }
+    ]
   },
   "Alpena, MI": {
     "legacy": {
@@ -1294,7 +1792,28 @@
           ]
         }
       ]
-    }
+    },
+    "add_max": [
+      {
+        "reporter": "Samuel Deetz",
+        "requirements": ["by right"],
+        "citations": [
+          {
+            "description": "Alpena Zoning Code",
+            "type": "city code",
+            "url": "https://cms3.revize.com/revize/alpenami/document_center/residents/Transparency/City%20of%20Alpena%20Zoning%20Ordinance%202010%20Interactive%20amended%20July%202021.pdf",
+            "notes": "SECTION 3.30.E.7.\nPage 92 of pdf, page 83 of original document",
+            "attachments": [
+              {
+                "fileName": "Alpena_MI_1_1.png",
+                "isDoc": false,
+                "directusId": "664e5f8a-855d-430b-a1a1-1b2186a3e682"
+              }
+            ]
+          }
+        ]
+      }
+    ]
   },
   "Alpha, IL": {
     "rm_min": [
@@ -1384,7 +1903,49 @@
           ]
         }
       ]
-    }
+    },
+    "add_max": [
+      {
+        "reporter": "Samuel Deetz",
+        "requirements": ["by right"],
+        "citations": [
+          {
+            "description": "Altoona Zoning Code",
+            "type": "city code",
+            "url": "https://codelibrary.amlegal.com/codes/altoonaia/latest/altoona_ia/0-0-0-7829",
+            "notes": "CHAPTER 168 ZONING CODE — DISTRICT REGULATIONS\n168.10   C-4 VILLAGE COMMERCIAL.\n5.   Performance Standards.\nF.   Off-street parking:\n(2) ",
+            "attachments": [
+              {
+                "fileName": "Altoona_IA_1_1.png",
+                "isDoc": false,
+                "directusId": "4b961706-8d9f-436f-ac31-0b366a1d9e51"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "reduce_min": [
+      {
+        "reporter": "Samuel Deetz",
+        "requirements": ["by right", "other"],
+        "citations": [
+          {
+            "description": "Altoona Zoning Code",
+            "type": "city code",
+            "url": "https://codelibrary.amlegal.com/codes/altoonaia/latest/altoona_ia/0-0-0-7829",
+            "notes": "CHAPTER 168 ZONING CODE — DISTRICT REGULATIONS\n168.10   C-4 VILLAGE COMMERCIAL.\n5.   Performance Standards.\nF.   Off-street parking:\n(2) ",
+            "attachments": [
+              {
+                "fileName": "Altoona_IA_1_1.png",
+                "isDoc": false,
+                "directusId": "4b961706-8d9f-436f-ac31-0b366a1d9e51"
+              }
+            ]
+          }
+        ]
+      }
+    ]
   },
   "Altoona, PA": {
     "add_max": [
@@ -1433,7 +1994,49 @@
           ]
         }
       ]
-    }
+    },
+    "add_max": [
+      {
+        "reporter": "Samuel Deetz",
+        "requirements": ["by right"],
+        "citations": [
+          {
+            "description": "Altoona Zoning Code",
+            "type": "city code",
+            "url": "https://www.ci.altoona.wi.us/webfiles/fnitools/documents/municipal_code_title_19.pdf",
+            "notes": "19.52.030.A.\nPages 115-117",
+            "attachments": [
+              {
+                "fileName": "Altoona_WI_1_1.png",
+                "isDoc": false,
+                "directusId": "b219f06b-43aa-4d59-8827-ed0e93c7ec7b"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "reduce_min": [
+      {
+        "reporter": "Samuel Deetz",
+        "requirements": ["by right"],
+        "citations": [
+          {
+            "description": "Altoona Zoning Code",
+            "type": "city code",
+            "url": "https://www.ci.altoona.wi.us/webfiles/fnitools/documents/municipal_code_title_19.pdf",
+            "notes": "19.52.040.E.\nPage 118",
+            "attachments": [
+              {
+                "fileName": "Altoona_WI_1_1.png",
+                "isDoc": false,
+                "directusId": "8d5efe3c-b0af-4b0d-8130-366fe1dc51e1"
+              }
+            ]
+          }
+        ]
+      }
+    ]
   },
   "Altus, OK": {
     "reduce_min": [
@@ -1556,7 +2159,69 @@
           ]
         }
       ]
-    }
+    },
+    "add_max": [
+      {
+        "reporter": "Samuel Deetz",
+        "requirements": ["by right"],
+        "citations": [
+          {
+            "description": "Ambridge Zoning Code",
+            "type": "city code",
+            "url": "https://ecode360.com/32434584#32434791",
+            "notes": "§ 310-138Parking minimums.\nA.(4)",
+            "attachments": [
+              {
+                "fileName": "Ambridge_PA_1_1.png",
+                "isDoc": false,
+                "directusId": "b697e43c-642b-44e7-8ca1-9268f272fea9"
+              },
+              {
+                "fileName": "Ambridge_PA_1_2.png",
+                "isDoc": false,
+                "directusId": "28bf34a2-87b6-4acb-8923-7ffa289bbdd1"
+              },
+              {
+                "fileName": "Ambridge_PA_1_3.png",
+                "isDoc": false,
+                "directusId": "b05d0fb1-db11-46b6-a57d-806cffcab66a"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "rm_min": [
+      {
+        "reporter": "Samuel Deetz",
+        "requirements": ["by right"],
+        "citations": [
+          {
+            "description": "Ambridge Zoning Code",
+            "type": "city code",
+            "url": "https://ecode360.com/32434584#32434791",
+            "notes": "§ 310-138Parking minimums.\nA.(4)",
+            "attachments": [
+              {
+                "fileName": "Ambridge_PA_1_1.png",
+                "isDoc": false,
+                "directusId": "b697e43c-642b-44e7-8ca1-9268f272fea9"
+              },
+              {
+                "fileName": "Ambridge_PA_1_2.png",
+                "isDoc": false,
+                "directusId": "28bf34a2-87b6-4acb-8923-7ffa289bbdd1"
+              },
+              {
+                "fileName": "Ambridge_PA_1_3.png",
+                "isDoc": false,
+                "directusId": "b05d0fb1-db11-46b6-a57d-806cffcab66a"
+              }
+            ]
+          }
+        ]
+      }
+    ]
   },
   "Ames, IA": {
     "rm_min": [
@@ -1643,7 +2308,54 @@
           ]
         }
       ]
-    }
+    },
+    "add_max": [
+      {
+        "reporter": "Samuel Deetz",
+        "requirements": ["by right"],
+        "citations": [
+          {
+            "description": "Anaconda-Deer Lodge County Development Permit System",
+            "type": "city code",
+            "url": "https://library.municode.com/mt/anaconda-deer_lodge_county/codes/code_of_ordinances?nodeId=PTIICOOR_CH24DEPESY_APXASURE_DIV4OREPALOST",
+            "notes": "Division 4.F.1.",
+            "attachments": [
+              {
+                "fileName": "Anaconda-DeerLodgeCounty_MT_1_1.png",
+                "isDoc": false,
+                "directusId": "ff645aa1-5f55-4062-8938-174d19bee523"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "rm_min": [
+      {
+        "reporter": "Samuel Deetz",
+        "requirements": ["by right"],
+        "citations": [
+          {
+            "description": "Anaconda-Deer Lodge County Development Permit System",
+            "type": "city code",
+            "url": "https://library.municode.com/mt/anaconda-deer_lodge_county/codes/code_of_ordinances?nodeId=PTIICOOR_CH24DEPESY_APXASURE_DIV4OREPALOST",
+            "notes": "Sec. 24-126.\nAppendix A.Division 4.C.",
+            "attachments": [
+              {
+                "fileName": "Anaconda-DeerLodgeCounty_MT_1_1.png",
+                "isDoc": false,
+                "directusId": "eb38ce31-c1d5-4b71-b2e7-4e29af62b58b"
+              },
+              {
+                "fileName": "Anaconda-DeerLodgeCounty_MT_1_2.png",
+                "isDoc": false,
+                "directusId": "2428c0c2-6ed5-4994-acf1-33fb6d778fb3"
+              }
+            ]
+          }
+        ]
+      }
+    ]
   },
   "Anacortes, WA": {
     "reduce_min": [
@@ -2092,7 +2804,49 @@
           ]
         }
       ]
-    }
+    },
+    "add_max": [
+      {
+        "reporter": "Samuel Deetz",
+        "requirements": ["by right"],
+        "citations": [
+          {
+            "description": "Antigo Zoning Code",
+            "type": "city code",
+            "url": "https://library.municode.com/wi/antigo/codes/code_of_ordinances?nodeId=COOR_CH14LAUSRE_ARTIIZO_DIV5SURE_SDIVTRVILOPAAC_S14-779OREPASTREDI",
+            "notes": "Sec. 14-779.(8)",
+            "attachments": [
+              {
+                "fileName": "Antigo_WI_1_1.png",
+                "isDoc": false,
+                "directusId": "d1e62dea-dcff-473e-9b79-8d36c14cf364"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "rm_min": [
+      {
+        "reporter": "Samuel Deetz",
+        "requirements": ["by right", "size of project"],
+        "citations": [
+          {
+            "description": "Antigo Zoning Code",
+            "type": "city code",
+            "url": "https://library.municode.com/wi/antigo/codes/code_of_ordinances?nodeId=COOR_CH14LAUSRE_ARTIIZO_DIV5SURE_SDIVTRVILOPAAC_S14-781OREPASTBUDI",
+            "notes": "Sec. 14-781.(2)",
+            "attachments": [
+              {
+                "fileName": "Antigo_WI_1_1.png",
+                "isDoc": false,
+                "directusId": "3db1ec2a-7ecf-4cef-97a9-5584844b94b7"
+              }
+            ]
+          }
+        ]
+      }
+    ]
   },
   "Antioch, IL": {
     "legacy": {
@@ -2477,7 +3231,49 @@
           ]
         }
       ]
-    }
+    },
+    "add_max": [
+      {
+        "reporter": "Samuel Deetz",
+        "requirements": ["by right"],
+        "citations": [
+          {
+            "description": "Armada Zoning Code",
+            "type": "city code",
+            "url": "https://cms5.revize.com/revize/villageofarmada/departments/planning_commisson_dda/docs/UPDATED%202024%20Zoning%20Ordinance_FULL.pdf",
+            "notes": "Section 9.05\nPages 81-88",
+            "attachments": [
+              {
+                "fileName": "Armada_MI_1_1.png",
+                "isDoc": false,
+                "directusId": "69c8d40b-fa72-4645-a9ec-44f0175eb8c6"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "rm_min": [
+      {
+        "reporter": "Samuel Deetz",
+        "requirements": ["other"],
+        "citations": [
+          {
+            "description": "Armada Zoning Code",
+            "type": "city code",
+            "url": "https://cms5.revize.com/revize/villageofarmada/departments/planning_commisson_dda/docs/UPDATED%202024%20Zoning%20Ordinance_FULL.pdf",
+            "notes": "Section 9.04 \nPage 81",
+            "attachments": [
+              {
+                "fileName": "Armada_MI_1_1.png",
+                "isDoc": false,
+                "directusId": "64c01776-2933-4763-a587-112b9e6bc2b8"
+              }
+            ]
+          }
+        ]
+      }
+    ]
   },
   "Armadale, WA": {
     "reduce_min": [
@@ -2753,7 +3549,49 @@
           ]
         }
       ]
-    }
+    },
+    "add_max": [
+      {
+        "reporter": "Samuel Deetz",
+        "requirements": ["by right"],
+        "citations": [
+          {
+            "description": "Ashland UDO",
+            "type": "city code",
+            "url": "https://ashland-wi.municipalcodeonline.com/book?type=development#name=6.3_Parking_And_Loading",
+            "notes": "6.3 Parking And Loading\nC.1.",
+            "attachments": [
+              {
+                "fileName": "Ashland_WI_1_1.png",
+                "isDoc": false,
+                "directusId": "b03ee85d-368b-4284-9857-87e1fd1056aa"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "rm_min": [
+      {
+        "reporter": "Samuel Deetz",
+        "requirements": ["by right"],
+        "citations": [
+          {
+            "description": "Ashland UDO",
+            "type": "city code",
+            "url": "https://ashland-wi.municipalcodeonline.com/book?type=development#name=6.3_Parking_And_Loading",
+            "notes": "6.3 Parking And Loading\nC.1.",
+            "attachments": [
+              {
+                "fileName": "Ashland_WI_1_1.png",
+                "isDoc": false,
+                "directusId": "b03ee85d-368b-4284-9857-87e1fd1056aa"
+              }
+            ]
+          }
+        ]
+      }
+    ]
   },
   "Ashtabula, OH": {
     "rm_min": [
@@ -68470,6 +69308,29 @@
       }
     ]
   },
+  "Southwest Greensburg, PA": {
+    "reduce_min": [
+      {
+        "reporter": "Samuel Deetz",
+        "requirements": ["other"],
+        "citations": [
+          {
+            "description": "Southwest Greensburg Zoning Code",
+            "type": "city code",
+            "url": "https://drive.google.com/file/d/1cHy8LfN-mbKwtqy9rGE8VzISy3HJQFOo/view",
+            "notes": "12.53.A.\nPage 37",
+            "attachments": [
+              {
+                "fileName": "SouthwestGreensburg_PA_1_1.png",
+                "isDoc": false,
+                "directusId": "59886f07-cec4-47e9-9d29-cbfb248e01b7"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
   "Sparta, IL": {
     "rm_min": [
       {
@@ -75676,6 +76537,29 @@
                 "fileName": "Vandalia_IL_1_1.jpg",
                 "isDoc": false,
                 "directusId": "442ede8a-1c7d-43c0-82ae-2eb524ce6eff"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "Vandergrift, PA": {
+    "reduce_min": [
+      {
+        "reporter": "Samuel Deetz",
+        "requirements": ["other"],
+        "citations": [
+          {
+            "description": "Vandergrift Zoning Code",
+            "type": "city code",
+            "url": "https://ecode360.com/31592832#31592832",
+            "notes": "§ 500-19Off-street parking standards.\nB.(6)",
+            "attachments": [
+              {
+                "fileName": "Vandergrift_PA_1_1.png",
+                "isDoc": false,
+                "directusId": "579dbc9b-8fc1-47b9-bd65-10f353660ccb"
               }
             ]
           }
