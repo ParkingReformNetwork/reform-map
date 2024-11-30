@@ -1,7 +1,14 @@
 import { isEqual } from "lodash-es";
-import { PlaceId, ProcessedCoreEntry } from "./types";
+import {
+  PlaceId,
+  PolicyType,
+  ProcessedCoreEntry,
+  ProcessedCorePolicy,
+  ProcessedPlace,
+} from "./types";
 import Observable from "./Observable";
 import { UNKNOWN_YEAR } from "./filterOptions";
+import { determinePolicyTypes } from "./data";
 
 export const POPULATION_INTERVALS: Array<[string, number]> = [
   ["100", 100],
@@ -14,12 +21,24 @@ export const POPULATION_INTERVALS: Array<[string, number]> = [
   ["50M", 50000000],
 ];
 
+export type PolicyTypeFilter =
+  | PolicyType
+  | "legacy reform"
+  | "any parking reform";
+
 // Note that this only tracks state set by the user.
 // Computed values are handled elsewhere.
+//
+// Some of the values are not relevant to certain policy types.
+// For example, "any parking reform" will ignore `scope`. Still,
+// we preserve the state so it persists when changing the policy type.
+//
+// Keep key names in alignment with FilterGroupKey in filterOptions.ts
 export interface FilterState {
   searchInput: string | null;
+  policyTypeFilter: PolicyTypeFilter;
   allMinimumsRemovedToggle: boolean;
-  policyChange: string[];
+  includedPolicyChanges: string[];
   scope: string[];
   landUse: string[];
   status: string[];
@@ -28,11 +47,33 @@ export interface FilterState {
   populationSliderIndexes: [number, number];
 }
 
+/// The policy record indexes matching the current FilterState.
+///
+/// Only one of the policy types will be set at a time. If the PolicyTypeFilter
+/// is set to 'any parking reform', none of the indexes will be set.
+export interface MatchedPolicyRecords {
+  rmMinIdx: number[];
+  reduceMinIdx: number[];
+  addMaxIdx: number[];
+}
+
 // This allows us to avoid recomputing computed state when the FilterState has not changed.
 interface CacheEntry {
   state: FilterState;
-  placeIds: Set<string>;
+  matchedPlaces: Record<PlaceId, MatchedPolicyRecords>;
   matchedCountries: Set<string>;
+}
+
+function getFilteredIndexes<T>(
+  array: T[],
+  predicate: (value: T) => boolean,
+): number[] {
+  return array.reduce((indexes: number[], currentValue, currentIndex) => {
+    if (predicate(currentValue)) {
+      indexes.push(currentIndex);
+    }
+    return indexes;
+  }, []);
 }
 
 export class PlaceFilterManager {
@@ -55,7 +96,8 @@ export class PlaceFilterManager {
   }
 
   get placeIds(): Set<PlaceId> {
-    return this.ensureCache().placeIds;
+    const places = this.ensureCache().matchedPlaces;
+    return new Set(Object.keys(places));
   }
 
   get matchedCountries(): Set<string> {
@@ -86,64 +128,141 @@ export class PlaceFilterManager {
       return this.cache;
     }
 
-    const placeIds = new Set<string>();
+    const matchedPlaces: Record<PlaceId, MatchedPolicyRecords> = {};
     const matchedCountries = new Set<string>();
     for (const placeId in this.entries) {
-      if (this.shouldBeRendered(placeId)) {
-        placeIds.add(placeId);
+      const matchedRecords = this.getMatchingPolicyRecords(placeId);
+      if (matchedRecords) {
+        matchedPlaces[placeId] = matchedRecords;
         matchedCountries.add(this.entries[placeId].place.country);
       }
     }
 
     this.cache = {
       state: currentState,
-      placeIds,
+      matchedPlaces,
       matchedCountries,
     };
     return this.cache;
   }
 
-  private shouldBeRendered(placeId: PlaceId): boolean {
-    const state = this.state.getValue();
-    const entry = this.entries[placeId];
-
-    // Search overrides filter config.
-    if (state.searchInput) {
-      return state.searchInput === placeId;
-    }
-
-    const isScope = entry.unifiedPolicy.scope.some((v) =>
-      state.scope.includes(v),
-    );
-    const isPolicy = entry.unifiedPolicy.policy.some((v) =>
-      state.policyChange.includes(v),
-    );
-    const isLand = entry.unifiedPolicy.land.some((v) =>
-      state.landUse.includes(v),
-    );
-    const isStatus = state.status.includes(entry.unifiedPolicy.status);
-    const isCountry = state.country.includes(entry.place.country);
-    const isYear = state.year.includes(
-      entry.unifiedPolicy.date?.parsed.year.toString() || UNKNOWN_YEAR,
-    );
+  private matchesPlace(place: ProcessedPlace): boolean {
+    const filterState = this.state.getValue();
+    const isCountry = filterState.country.includes(place.country);
 
     const isAllMinimumsRepealed =
-      !state.allMinimumsRemovedToggle || entry.place.repeal;
+      // If the toggle is false, we don't care.
+      !filterState.allMinimumsRemovedToggle ||
+      // If the policy type is "reduce parking minimums", we don't care about
+      // `allMinimumsRemovedToggle` because no places have that toggle set &
+      // also have parking minimum reductions.
+      filterState.policyTypeFilter === "reduce parking minimums" ||
+      place.repeal;
 
-    const [sliderLeftIndex, sliderRightIndex] = state.populationSliderIndexes;
+    const [sliderLeftIndex, sliderRightIndex] =
+      filterState.populationSliderIndexes;
     const isPopulation =
-      entry.place.pop >= POPULATION_INTERVALS[sliderLeftIndex][1] &&
-      entry.place.pop <= POPULATION_INTERVALS[sliderRightIndex][1];
+      place.pop >= POPULATION_INTERVALS[sliderLeftIndex][1] &&
+      place.pop <= POPULATION_INTERVALS[sliderRightIndex][1];
 
-    return (
-      isScope &&
-      isPolicy &&
-      isLand &&
-      isStatus &&
-      isYear &&
-      isCountry &&
-      isAllMinimumsRepealed &&
-      isPopulation
+    return isCountry && isAllMinimumsRepealed && isPopulation;
+  }
+
+  private matchesPolicyRecord(policyRecord: ProcessedCorePolicy): boolean {
+    const filterState = this.state.getValue();
+
+    const isScope = policyRecord.scope.some((v) =>
+      filterState.scope.includes(v),
     );
+    const isLand = policyRecord.land.some((v) =>
+      filterState.landUse.includes(v),
+    );
+    const isStatus = filterState.status.includes(policyRecord.status);
+    const isYear = filterState.year.includes(
+      policyRecord.date?.parsed.year.toString() || UNKNOWN_YEAR,
+    );
+    return isScope && isLand && isStatus && isYear;
+  }
+
+  private getMatchingPolicyRecords(
+    placeId: PlaceId,
+  ): MatchedPolicyRecords | null {
+    const filterState = this.state.getValue();
+    const entry = this.entries[placeId];
+
+    // Search overrides filter config. It acts like 'any parking reform', so
+    // return empty policy records if it's a match.
+    if (filterState.searchInput) {
+      return filterState.searchInput === placeId
+        ? {
+            rmMinIdx: [],
+            reduceMinIdx: [],
+            addMaxIdx: [],
+          }
+        : null;
+    }
+
+    const isPlace = this.matchesPlace(entry.place);
+
+    if (filterState.policyTypeFilter === "legacy reform") {
+      const isPolicyType = entry.unifiedPolicy.policy.some((v) =>
+        filterState.includedPolicyChanges.includes(v),
+      );
+      return isPlace &&
+        isPolicyType &&
+        this.matchesPolicyRecord(entry.unifiedPolicy)
+        ? {
+            rmMinIdx: [],
+            reduceMinIdx: [],
+            addMaxIdx: [],
+          }
+        : null;
+    }
+
+    if (filterState.policyTypeFilter === "any parking reform") {
+      const policyTypes = determinePolicyTypes(entry);
+      const isPolicyType = policyTypes.some((v) =>
+        filterState.includedPolicyChanges.includes(v),
+      );
+      return isPlace && isPolicyType
+        ? {
+            rmMinIdx: [],
+            reduceMinIdx: [],
+            addMaxIdx: [],
+          }
+        : null;
+    }
+
+    if (filterState.policyTypeFilter === "add parking maximums") {
+      const matchingPolicies = getFilteredIndexes(
+        entry.add_max ?? [],
+        this.matchesPolicyRecord,
+      );
+      return isPlace && matchingPolicies.length
+        ? { addMaxIdx: matchingPolicies, reduceMinIdx: [], rmMinIdx: [] }
+        : null;
+    }
+
+    if (filterState.policyTypeFilter === "reduce parking minimums") {
+      const matchingPolicies = getFilteredIndexes(
+        entry.reduce_min ?? [],
+        this.matchesPolicyRecord,
+      );
+      return isPlace && matchingPolicies.length
+        ? { addMaxIdx: [], reduceMinIdx: matchingPolicies, rmMinIdx: [] }
+        : null;
+    }
+
+    if (filterState.policyTypeFilter === "remove parking minimums") {
+      const matchingPolicies = getFilteredIndexes(
+        entry.rm_min ?? [],
+        this.matchesPolicyRecord,
+      );
+      return isPlace && matchingPolicies.length
+        ? { addMaxIdx: [], reduceMinIdx: [], rmMinIdx: matchingPolicies }
+        : null;
+    }
+
+    throw new Error(`Unreachable code`);
   }
 }

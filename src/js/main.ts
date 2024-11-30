@@ -8,12 +8,16 @@ import initScorecard from "./scorecard";
 import { initPopulationSlider, POPULATION_MAX_INDEX } from "./populationSlider";
 import { FilterOptions, initFilterOptions } from "./filterOptions";
 import initFilterPopup from "./filterPopup";
-import { PlaceFilterManager } from "./FilterState";
+import { PlaceFilterManager, PolicyTypeFilter } from "./FilterState";
 import initCounters from "./counters";
 import initViewToggle from "./viewToggle";
 import initTable from "./table";
 import subscribeSnapToPlace from "./mapPosition";
 import readData from "./data";
+
+// This should always be "legacy reform" in production during the database migration.
+// However, it can be changed locally to experiment with other reform types.
+const POLICY_TYPE_FILTER: PolicyTypeFilter = "legacy reform";
 
 export default async function initApp(): Promise<void> {
   initIcons();
@@ -28,8 +32,9 @@ export default async function initApp(): Promise<void> {
 
   const filterManager = new PlaceFilterManager(data, {
     searchInput: null,
+    policyTypeFilter: POLICY_TYPE_FILTER,
     allMinimumsRemovedToggle: true,
-    policyChange: filterOptions.default("policyChange"),
+    includedPolicyChanges: filterOptions.default("includedPolicyChanges"),
     scope: filterOptions.default("scope"),
     landUse: filterOptions.default("landUse"),
     status: filterOptions.default("status"),

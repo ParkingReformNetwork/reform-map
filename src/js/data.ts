@@ -58,6 +58,16 @@ export function numberOfPolicyRecords(
   );
 }
 
+export function determinePolicyTypes(
+  entry: RawCoreEntry | ProcessedCoreEntry,
+): PolicyType[] {
+  const result: PolicyType[] = [];
+  if (entry.add_max?.length) result.push("add parking maximums");
+  if (entry.reduce_min?.length) result.push("reduce parking minimums");
+  if (entry.rm_min?.length) result.push("remove parking minimums");
+  return result;
+}
+
 function processPolicy(raw: RawCorePolicy): ProcessedCorePolicy {
   return {
     ...raw,
