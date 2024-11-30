@@ -44,12 +44,14 @@ export type RawExtendedEntry = {
   add_max?: ExtendedPolicy[];
 };
 
+export type RawCompletePolicy = RawCorePolicy & ExtendedPolicy;
+
 export interface RawCompleteEntry {
   place: RawPlace;
   legacy?: RawLegacyReform & ExtendedPolicy;
-  reduce_min?: Array<RawCorePolicy & ExtendedPolicy>;
-  rm_min?: Array<RawCorePolicy & ExtendedPolicy>;
-  add_max?: Array<RawCorePolicy & ExtendedPolicy>;
+  reduce_min?: Array<RawCompletePolicy>;
+  rm_min?: Array<RawCompletePolicy>;
+  add_max?: Array<RawCompletePolicy>;
 }
 
 export interface ProcessedExtendedEntry {
@@ -58,12 +60,15 @@ export interface ProcessedExtendedEntry {
   rm_min?: ExtendedPolicy[];
   add_max?: ExtendedPolicy[];
 }
+
+export type ProcessedCompletePolicy = ProcessedCorePolicy & ExtendedPolicy;
+
 export interface ProcessedCompleteEntry {
   place: ProcessedPlace;
   unifiedPolicy: ProcessedLegacyReform & ExtendedPolicy;
-  reduce_min?: Array<ProcessedCorePolicy & ExtendedPolicy>;
-  rm_min?: Array<ProcessedCorePolicy & ExtendedPolicy>;
-  add_max?: Array<ProcessedCorePolicy & ExtendedPolicy>;
+  reduce_min?: Array<ProcessedCompletePolicy>;
+  rm_min?: Array<ProcessedCompletePolicy>;
+  add_max?: Array<ProcessedCompletePolicy>;
 }
 
 export async function readRawCoreData(): Promise<
@@ -85,7 +90,7 @@ function mergeRawPolicies(
   extendedPolicies: ExtendedPolicy[],
   placeId: PlaceId,
   policyKeyName: string,
-): Array<RawCorePolicy & ExtendedPolicy> {
+): RawCompletePolicy[] {
   return zipWith(
     corePolicies,
     extendedPolicies,
@@ -132,7 +137,7 @@ export async function readRawCompleteData(): Promise<
             }),
           ...(coreEntry.rm_min &&
             extendedEntry.rm_min && {
-              reduce_min: mergeRawPolicies(
+              rm_min: mergeRawPolicies(
                 coreEntry.rm_min,
                 extendedEntry.rm_min,
                 placeId,
@@ -141,7 +146,7 @@ export async function readRawCompleteData(): Promise<
             }),
           ...(coreEntry.add_max &&
             extendedEntry.add_max && {
-              reduce_min: mergeRawPolicies(
+              add_max: mergeRawPolicies(
                 coreEntry.add_max,
                 extendedEntry.add_max,
                 placeId,
@@ -155,8 +160,8 @@ export async function readRawCompleteData(): Promise<
 }
 
 function processCompletePolicy(
-  policy: RawCorePolicy & ExtendedPolicy,
-): ProcessedCorePolicy & ExtendedPolicy {
+  policy: RawCompletePolicy,
+): ProcessedCompletePolicy {
   return {
     ...policy,
     date: Date.fromNullable(policy.date),
@@ -185,18 +190,18 @@ export async function readProcessedCompleteData(): Promise<
         // ExtendedEntry in `entry`, since processed.unifiedPolicy will be missing an ExtendedEntry otherwise.
         if (processed.unifiedPolicy.policy.length !== 1) {
           throw new Error(
-            `Expected exactly one new-style policy in ${placeId}`,
+            `Expected exactly one new-style policy in ${placeId}: ${processed.unifiedPolicy.policy}`,
           );
         }
         const policyType = processed.unifiedPolicy.policy[0];
         const policyCollection = {
           "reduce parking minimums": entry.reduce_min,
           "remove parking minimums": entry.rm_min,
-          "add parking maximums": entry.rm_min,
+          "add parking maximums": entry.add_max,
         }[policyType];
         if (!policyCollection || policyCollection.length !== 1) {
           throw new Error(
-            `Expected exactly one new-style policy in ${placeId}`,
+            `Expected exactly one new-style policy in ${placeId}: ${processed.unifiedPolicy.policy}`,
           );
         }
         const policyRecord = policyCollection[0];
