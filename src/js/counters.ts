@@ -1,6 +1,10 @@
 import { FilterState, PlaceFilterManager } from "./FilterState";
 
-function determineHtml(state: FilterState, numPlaces: number): string {
+function determineHtml(
+  state: FilterState,
+  numPlaces: number,
+  matchedCountries: Set<string>,
+): string {
   if (!numPlaces) {
     return "No places selected — use the filter and search icons";
   }
@@ -13,9 +17,9 @@ function determineHtml(state: FilterState, numPlaces: number): string {
   const placesWord = numPlaces === 1 ? "place" : "places";
 
   let country =
-    state.country.length === 1
-      ? state.country[0]
-      : `${state.country.length} countries`;
+    matchedCountries.size === 1
+      ? Array.from(matchedCountries)[0]
+      : `${matchedCountries.size} countries`;
   if (country === "United States" || country === "United Kingdom") {
     country = `the ${country}`;
   }
@@ -46,7 +50,11 @@ export default function initCounters(manager: PlaceFilterManager): void {
   setUpResetButton(tableCounter, manager);
 
   manager.subscribe((state) => {
-    const html = determineHtml(state, manager.placeIds.size);
+    const html = determineHtml(
+      state,
+      manager.placeIds.size,
+      manager.matchedCountries,
+    );
     mapCounter.innerHTML = html;
     tableCounter.innerHTML = html;
   });
