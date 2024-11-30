@@ -83,4 +83,7 @@ export interface RawCoreEntry {
 export interface ProcessedCoreEntry {
   place: ProcessedPlace;
   unifiedPolicy: ProcessedLegacyReform;
+  reduce_min?: ProcessedCorePolicy[];
+  rm_min?: ProcessedCorePolicy[];
+  add_max?: ProcessedCorePolicy[];
 }

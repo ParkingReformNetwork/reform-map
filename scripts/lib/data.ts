@@ -3,12 +3,15 @@ import fs from "fs/promises";
 import { zipWith } from "lodash-es";
 
 import {
+  Date,
   RawCoreEntry,
   PlaceId,
-  ProcessedCoreEntry,
   RawPlace,
   RawLegacyReform,
   RawCorePolicy,
+  ProcessedPlace,
+  ProcessedLegacyReform,
+  ProcessedCorePolicy,
 } from "../../src/js/types";
 import { processRawCoreEntry } from "../../src/js/data";
 
@@ -51,9 +54,17 @@ export interface RawCompleteEntry {
 
 export interface ProcessedExtendedEntry {
   unifiedPolicy: ExtendedPolicy;
+  reduce_min?: ExtendedPolicy[];
+  rm_min?: ExtendedPolicy[];
+  add_max?: ExtendedPolicy[];
 }
-export type ProcessedCompleteEntry = ProcessedCoreEntry &
-  ProcessedExtendedEntry;
+export interface ProcessedCompleteEntry {
+  place: ProcessedPlace;
+  unifiedPolicy: ProcessedLegacyReform & ExtendedPolicy;
+  reduce_min?: Array<ProcessedCorePolicy & ExtendedPolicy>;
+  rm_min?: Array<ProcessedCorePolicy & ExtendedPolicy>;
+  add_max?: Array<ProcessedCorePolicy & ExtendedPolicy>;
+}
 
 export async function readRawCoreData(): Promise<
   Record<PlaceId, RawCoreEntry>
@@ -143,54 +154,73 @@ export async function readRawCompleteData(): Promise<
   );
 }
 
+function processCompletePolicy(
+  policy: RawCorePolicy & ExtendedPolicy,
+): ProcessedCorePolicy & ExtendedPolicy {
+  return {
+    ...policy,
+    date: Date.fromNullable(policy.date),
+  };
+}
+
 export async function readProcessedCompleteData(): Promise<
   Record<PlaceId, ProcessedCompleteEntry>
 > {
   const raw = await readRawCompleteData();
   return Object.fromEntries(
     Object.entries(raw).map(([placeId, entry]) => {
-      const processed = processRawCoreEntry(placeId, entry);
+      const processed = processRawCoreEntry(placeId, entry, {
+        includeMultipleReforms: true,
+      });
+
+      let unifiedPolicy: ProcessedLegacyReform & ExtendedPolicy;
       if (entry.legacy) {
-        return [
-          placeId,
-          {
-            place: processed.place,
-            unifiedPolicy: {
-              ...entry.legacy,
-              date: processed.unifiedPolicy.date,
-            },
-          },
-        ];
+        unifiedPolicy = {
+          ...entry.legacy,
+          date: processed.unifiedPolicy.date,
+        };
+      } else {
+        // If legacy is missing, we will have already validated through processRawCoreEntry
+        // that there is exactly one new-style reform. We can use that to look up the
+        // ExtendedEntry in `entry`, since processed.unifiedPolicy will be missing an ExtendedEntry otherwise.
+        if (processed.unifiedPolicy.policy.length !== 1) {
+          throw new Error(
+            `Expected exactly one new-style policy in ${placeId}`,
+          );
+        }
+        const policyType = processed.unifiedPolicy.policy[0];
+        const policyCollection = {
+          "reduce parking minimums": entry.reduce_min,
+          "remove parking minimums": entry.rm_min,
+          "add parking maximums": entry.rm_min,
+        }[policyType];
+        if (!policyCollection || policyCollection.length !== 1) {
+          throw new Error(
+            `Expected exactly one new-style policy in ${placeId}`,
+          );
+        }
+        const policyRecord = policyCollection[0];
+        unifiedPolicy = {
+          ...policyRecord,
+          policy: processed.unifiedPolicy.policy,
+          date: processed.unifiedPolicy.date,
+        };
       }
 
-      // If legacy is missing, we will have already validated through processRawCoreEntry
-      // that there is exactly one new-style reform. We can use that to look up the
-      // ExtendedEntry in `entry`, since processed.unifiedPolicy will be missing an ExtendedEntry otherwise.
-      if (processed.unifiedPolicy.policy.length !== 1) {
-        throw new Error(`Expected exactly one new-style policy in ${placeId}`);
+      const result: ProcessedCompleteEntry = {
+        place: processed.place,
+        unifiedPolicy,
+      };
+      if (entry.add_max) {
+        result.add_max = entry.add_max.map(processCompletePolicy);
       }
-      const policyType = processed.unifiedPolicy.policy[0];
-      const policyCollection = {
-        "reduce parking minimums": entry.reduce_min,
-        "remove parking minimums": entry.rm_min,
-        "add parking maximums": entry.rm_min,
-      }[policyType];
-      if (!policyCollection || policyCollection.length !== 1) {
-        throw new Error(`Expected exactly one new-style policy in ${placeId}`);
+      if (entry.reduce_min) {
+        result.reduce_min = entry.reduce_min.map(processCompletePolicy);
       }
-      const policyRecord = policyCollection[0];
-
-      return [
-        placeId,
-        {
-          place: processed.place,
-          unifiedPolicy: {
-            ...policyRecord,
-            policy: processed.unifiedPolicy.policy,
-            date: processed.unifiedPolicy.date,
-          },
-        },
-      ];
+      if (entry.rm_min) {
+        result.rm_min = entry.rm_min.map(processCompletePolicy);
+      }
+      return [placeId, result];
     }),
   );
 }
