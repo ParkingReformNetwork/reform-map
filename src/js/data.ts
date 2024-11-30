@@ -48,6 +48,16 @@ export function processPlace(placeId: PlaceId, raw: RawPlace): ProcessedPlace {
   };
 }
 
+export function numberOfPolicyRecords(
+  entry: RawCoreEntry | ProcessedCoreEntry,
+): number {
+  return (
+    (entry.add_max?.length ?? 0) +
+    (entry.reduce_min?.length ?? 0) +
+    (entry.rm_min?.length ?? 0)
+  );
+}
+
 function processPolicy(raw: RawCorePolicy): ProcessedCorePolicy {
   return {
     ...raw,
@@ -69,10 +79,7 @@ export function processRawCoreEntry(
   } else {
     // Else, if `legacy` is missing, it's a new-style entry but should have exactly
     // one new-style policy record.
-    const numNonLegacy =
-      (raw.add_max?.length || 0) +
-      (raw.reduce_min?.length || 0) +
-      (raw.rm_min?.length || 0);
+    const numNonLegacy = numberOfPolicyRecords(raw);
     if (numNonLegacy > 1) {
       throw new Error(
         `${placeId} has ${numNonLegacy} new-style policy records, but is missing a legacy reform. ` +
