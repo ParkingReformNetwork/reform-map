@@ -26,7 +26,7 @@ async function main(): Promise<void> {
     policy_change: entry.unifiedPolicy.policy,
     scope: entry.unifiedPolicy.scope,
     land_uses: entry.unifiedPolicy.land,
-    reform_date: entry.unifiedPolicy.date,
+    reform_date: entry.unifiedPolicy.date?.raw,
     population: entry.place.pop,
     lat: entry.place.coord[1],
     long: entry.place.coord[0],
