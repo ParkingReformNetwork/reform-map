@@ -172,55 +172,55 @@ export async function readProcessedCompleteData(): Promise<
       const processed = processRawCoreEntry(placeId, entry, {
         includeMultipleReforms: true,
       });
+
+      let unifiedPolicy: ProcessedLegacyReform & ExtendedPolicy;
       if (entry.legacy) {
-        const result: ProcessedCompleteEntry = {
-          place: processed.place,
-          unifiedPolicy: {
-            ...entry.legacy,
-            date: processed.unifiedPolicy.date,
-          },
+        unifiedPolicy = {
+          ...entry.legacy,
+          date: processed.unifiedPolicy.date,
         };
-
-        if (entry.add_max) {
-          result.add_max = entry.add_max.map(processCompletePolicy);
+      } else {
+        // If legacy is missing, we will have already validated through processRawCoreEntry
+        // that there is exactly one new-style reform. We can use that to look up the
+        // ExtendedEntry in `entry`, since processed.unifiedPolicy will be missing an ExtendedEntry otherwise.
+        if (processed.unifiedPolicy.policy.length !== 1) {
+          throw new Error(
+            `Expected exactly one new-style policy in ${placeId}`,
+          );
         }
-        if (entry.reduce_min) {
-          result.reduce_min = entry.reduce_min.map(processCompletePolicy);
+        const policyType = processed.unifiedPolicy.policy[0];
+        const policyCollection = {
+          "reduce parking minimums": entry.reduce_min,
+          "remove parking minimums": entry.rm_min,
+          "add parking maximums": entry.rm_min,
+        }[policyType];
+        if (!policyCollection || policyCollection.length !== 1) {
+          throw new Error(
+            `Expected exactly one new-style policy in ${placeId}`,
+          );
         }
-        if (entry.rm_min) {
-          result.rm_min = entry.rm_min.map(processCompletePolicy);
-        }
-        return [placeId, result];
+        const policyRecord = policyCollection[0];
+        unifiedPolicy = {
+          ...policyRecord,
+          policy: processed.unifiedPolicy.policy,
+          date: processed.unifiedPolicy.date,
+        };
       }
 
-      // If legacy is missing, we will have already validated through processRawCoreEntry
-      // that there is exactly one new-style reform. We can use that to look up the
-      // ExtendedEntry in `entry`, since processed.unifiedPolicy will be missing an ExtendedEntry otherwise.
-      if (processed.unifiedPolicy.policy.length !== 1) {
-        throw new Error(`Expected exactly one new-style policy in ${placeId}`);
+      const result: ProcessedCompleteEntry = {
+        place: processed.place,
+        unifiedPolicy,
+      };
+      if (entry.add_max) {
+        result.add_max = entry.add_max.map(processCompletePolicy);
       }
-      const policyType = processed.unifiedPolicy.policy[0];
-      const policyCollection = {
-        "reduce parking minimums": entry.reduce_min,
-        "remove parking minimums": entry.rm_min,
-        "add parking maximums": entry.rm_min,
-      }[policyType];
-      if (!policyCollection || policyCollection.length !== 1) {
-        throw new Error(`Expected exactly one new-style policy in ${placeId}`);
+      if (entry.reduce_min) {
+        result.reduce_min = entry.reduce_min.map(processCompletePolicy);
       }
-      const policyRecord = policyCollection[0];
-
-      return [
-        placeId,
-        {
-          place: processed.place,
-          unifiedPolicy: {
-            ...policyRecord,
-            policy: processed.unifiedPolicy.policy,
-            date: processed.unifiedPolicy.date,
-          },
-        },
-      ];
+      if (entry.rm_min) {
+        result.rm_min = entry.rm_min.map(processCompletePolicy);
+      }
+      return [placeId, result];
     }),
   );
 }
