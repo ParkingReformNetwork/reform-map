@@ -99,9 +99,12 @@ test("generate CSVs", async ({}, testInfo) => {
       ],
     },
   ];
-  const anyPolicy = createAnyPolicyCsv(entries);
+  const anyPolicy = createAnyPolicyCsv(entries).replace(/\r\n/g, "\n");
   expect(anyPolicy).toMatchSnapshot("any-reform.csv");
 
-  const maximums = createReformCsv(entries, (entry) => entry.add_max);
+  const maximums = createReformCsv(entries, (entry) => entry.add_max).replace(
+    /\r\n/g,
+    "\n",
+  );
   expect(maximums).toMatchSnapshot("maximums.csv");
 });
