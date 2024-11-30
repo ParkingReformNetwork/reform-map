@@ -14,6 +14,8 @@ export const POPULATION_INTERVALS: Array<[string, number]> = [
   ["50M", 50000000],
 ];
 
+// Note that this only tracks state set by the user.
+// Computed values are handled elsewhere.
 export interface FilterState {
   searchInput: string | null;
   allMinimumsRemovedToggle: boolean;
@@ -26,9 +28,11 @@ export interface FilterState {
   populationSliderIndexes: [number, number];
 }
 
+// This allows us to avoid recomputing computed state when the FilterState has not changed.
 interface CacheEntry {
-  placeIds: Set<string>;
   state: FilterState;
+  placeIds: Set<string>;
+  matchedCountries: Set<string>;
 }
 
 export class PlaceFilterManager {
@@ -51,21 +55,11 @@ export class PlaceFilterManager {
   }
 
   get placeIds(): Set<PlaceId> {
-    const currentState = this.state.getValue();
-    if (this.cache && isEqual(currentState, this.cache.state)) {
-      return this.cache.placeIds;
-    }
+    return this.ensureCache().placeIds;
+  }
 
-    const newPlaceIds = new Set(
-      Object.keys(this.entries).filter((placeId) =>
-        this.shouldBeRendered(placeId),
-      ),
-    );
-    this.cache = {
-      placeIds: newPlaceIds,
-      state: currentState,
-    };
-    return newPlaceIds;
+  get matchedCountries(): Set<string> {
+    return this.ensureCache().matchedCountries;
   }
 
   getState(): FilterState {
@@ -83,6 +77,30 @@ export class PlaceFilterManager {
 
   initialize(): void {
     this.state.initialize();
+  }
+
+  /// Recompute the CacheEntry if FilterState has changed.
+  private ensureCache(): CacheEntry {
+    const currentState = this.state.getValue();
+    if (this.cache && isEqual(currentState, this.cache.state)) {
+      return this.cache;
+    }
+
+    const placeIds = new Set<string>();
+    const matchedCountries = new Set<string>();
+    for (const placeId in this.entries) {
+      if (this.shouldBeRendered(placeId)) {
+        placeIds.add(placeId);
+        matchedCountries.add(this.entries[placeId].place.country);
+      }
+    }
+
+    this.cache = {
+      state: currentState,
+      placeIds,
+      matchedCountries,
+    };
+    return this.cache;
   }
 
   private shouldBeRendered(placeId: PlaceId): boolean {
