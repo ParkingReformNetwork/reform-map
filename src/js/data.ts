@@ -7,6 +7,7 @@ import {
   Date,
   RawPlace,
   ProcessedPlace,
+  ProcessedCorePolicy,
 } from "./types";
 
 const countryMapping: Partial<Record<string, string>> = {
@@ -46,28 +47,50 @@ export function processPlace(placeId: PlaceId, raw: RawPlace): ProcessedPlace {
   };
 }
 
+function processPolicy(raw: RawCorePolicy): ProcessedCorePolicy {
+  return {
+    ...raw,
+    date: Date.fromNullable(raw.date),
+  };
+}
+
 export function processRawCoreEntry(
   placeId: PlaceId,
   raw: RawCoreEntry,
+  options: { includeMultipleReforms: boolean },
 ): ProcessedCoreEntry {
   if (raw.legacy) {
-    return {
+    const result: ProcessedCoreEntry = {
       place: processPlace(placeId, raw.place),
       unifiedPolicy: {
         ...raw.legacy,
         date: Date.fromNullable(raw.legacy.date),
       },
     };
+    if (!options.includeMultipleReforms) return result;
+
+    // Else, add the new-style policy records in addition to the legacy reform.
+    if (raw.add_max) {
+      result.add_max = raw.add_max.map(processPolicy);
+    }
+    if (raw.reduce_min) {
+      result.reduce_min = raw.reduce_min.map(processPolicy);
+    }
+    if (raw.rm_min) {
+      result.rm_min = raw.rm_min.map(processPolicy);
+    }
+    return result;
   }
 
+  // Else, if `legacy` is missing, it's a new-style entry but should have exactly one new-style policy record.
   const numNonLegacy =
     (raw.add_max?.length || 0) +
     (raw.reduce_min?.length || 0) +
     (raw.rm_min?.length || 0);
   if (numNonLegacy > 1) {
     throw new Error(
-      `${placeId} has ${numNonLegacy} new-style policies, but is missing a legacy reform. ` +
-        "It must either have exactly one new-style policy or set a legacy reform",
+      `${placeId} has ${numNonLegacy} new-style policy records, but is missing a legacy reform. ` +
+        "It must either have exactly one new-style policy record or set a legacy reform",
     );
   }
 
@@ -106,7 +129,7 @@ export default async function readData(): Promise<
   return Object.fromEntries(
     Object.entries(rawData).map(([placeId, entry]) => [
       placeId,
-      processRawCoreEntry(placeId, entry),
+      processRawCoreEntry(placeId, entry, { includeMultipleReforms: false }),
     ]),
   );
 }
