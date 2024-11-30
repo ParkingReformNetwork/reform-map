@@ -48,7 +48,7 @@ function createLegacyCsv(data: ProcessedCompleteEntry[]): string {
   return csv;
 }
 
-function createAnyPolicyCsv(data: ProcessedCompleteEntry[]): string {
+export function createAnyPolicyCsv(data: ProcessedCompleteEntry[]): string {
   const entries = data.map((entry) => ({
     place: entry.place.name,
     state: entry.place.state,
@@ -74,7 +74,7 @@ function createAnyPolicyCsv(data: ProcessedCompleteEntry[]): string {
   return csv;
 }
 
-function createReformCsv(
+export function createReformCsv(
   data: ProcessedCompleteEntry[],
   getter: (
     entry: ProcessedCompleteEntry,
