@@ -45,10 +45,11 @@ export type RawExtendedEntry = {
 };
 
 export type RawCompletePolicy = RawCorePolicy & ExtendedPolicy;
+export type RawCompleteLegacyReform = RawLegacyReform & ExtendedPolicy;
 
 export interface RawCompleteEntry {
   place: RawPlace;
-  legacy?: RawLegacyReform & ExtendedPolicy;
+  legacy?: RawCompleteLegacyReform;
   reduce_min?: Array<RawCompletePolicy>;
   rm_min?: Array<RawCompletePolicy>;
   add_max?: Array<RawCompletePolicy>;
@@ -62,10 +63,12 @@ export interface ProcessedExtendedEntry {
 }
 
 export type ProcessedCompletePolicy = ProcessedCorePolicy & ExtendedPolicy;
+export type ProcessedCompleteLegacyReform = ProcessedLegacyReform &
+  ExtendedPolicy;
 
 export interface ProcessedCompleteEntry {
   place: ProcessedPlace;
-  unifiedPolicy: ProcessedLegacyReform & ExtendedPolicy;
+  unifiedPolicy: ProcessedCompleteLegacyReform;
   reduce_min?: Array<ProcessedCompletePolicy>;
   rm_min?: Array<ProcessedCompletePolicy>;
   add_max?: Array<ProcessedCompletePolicy>;
@@ -178,7 +181,7 @@ export async function readProcessedCompleteData(): Promise<
         includeMultipleReforms: true,
       });
 
-      let unifiedPolicy: ProcessedLegacyReform & ExtendedPolicy;
+      let unifiedPolicy: ProcessedCompleteLegacyReform;
       if (entry.legacy) {
         unifiedPolicy = {
           ...entry.legacy,
