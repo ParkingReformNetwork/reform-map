@@ -132,9 +132,9 @@ export function processRawCoreEntry(
   return result;
 }
 
-export default async function readData(): Promise<
-  Record<PlaceId, ProcessedCoreEntry>
-> {
+export default async function readData(options: {
+  includeMultipleReforms: boolean;
+}): Promise<Record<PlaceId, ProcessedCoreEntry>> {
   const rawData = (await import("../../data/core.json")) as unknown as Record<
     PlaceId,
     RawCoreEntry
@@ -142,7 +142,7 @@ export default async function readData(): Promise<
   return Object.fromEntries(
     Object.entries(rawData).map(([placeId, entry]) => [
       placeId,
-      processRawCoreEntry(placeId, entry, { includeMultipleReforms: false }),
+      processRawCoreEntry(placeId, entry, options),
     ]),
   );
 }

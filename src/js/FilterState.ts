@@ -62,6 +62,7 @@ interface CacheEntry {
   state: FilterState;
   matchedPolicyRecords: Record<PlaceId, MatchedPolicyRecords>;
   matchedCountries: Set<string>;
+  numMatchedPolicyRecords: number;
 }
 
 export class PlaceFilterManager {
@@ -85,6 +86,14 @@ export class PlaceFilterManager {
 
   get matchedPolicyRecords(): Record<PlaceId, MatchedPolicyRecords> {
     return this.ensureCache().matchedPolicyRecords;
+  }
+
+  /// The number of matching policy records, given that a place may have >1 policy record.
+  ///
+  /// Note that this will be zero with 'any parking reform' since only the place
+  /// matches and not individual policy records.
+  get numMatchedPolicyRecords(): number {
+    return this.ensureCache().numMatchedPolicyRecords;
   }
 
   get placeIds(): Set<PlaceId> {
@@ -121,18 +130,23 @@ export class PlaceFilterManager {
 
     const matchedPolicyRecords: Record<PlaceId, MatchedPolicyRecords> = {};
     const matchedCountries = new Set<string>();
+    let numMatchedPolicyRecords = 0;
     for (const placeId in this.entries) {
       const matchedRecords = this.getMatchingPolicyRecords(placeId);
-      if (matchedRecords) {
-        matchedPolicyRecords[placeId] = matchedRecords;
-        matchedCountries.add(this.entries[placeId].place.country);
-      }
+      if (!matchedRecords) continue;
+      matchedPolicyRecords[placeId] = matchedRecords;
+      matchedCountries.add(this.entries[placeId].place.country);
+      numMatchedPolicyRecords +=
+        matchedRecords.addMaxIdx.length +
+        matchedRecords.reduceMinIdx.length +
+        matchedRecords.rmMinIdx.length;
     }
 
     this.cache = {
       state: currentState,
       matchedPolicyRecords,
       matchedCountries,
+      numMatchedPolicyRecords,
     };
     return this.cache;
   }
