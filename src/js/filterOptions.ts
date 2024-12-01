@@ -181,11 +181,13 @@ function generateAccordion(
   const checkAllButton = document.createElement("button");
   checkAllButton.type = "button";
   checkAllButton.textContent = "Check all";
+  checkAllButton.id = `filter-${params.htmlName}-check-all`;
   groupSelectorButtons.appendChild(checkAllButton);
 
   const uncheckAllButton = document.createElement("button");
   uncheckAllButton.type = "button";
   uncheckAllButton.textContent = "Uncheck all";
+  uncheckAllButton.id = `filter-${params.htmlName}-uncheck-all`;
   groupSelectorButtons.appendChild(uncheckAllButton);
 
   const filterOptionsContainer = document.createElement("div");
