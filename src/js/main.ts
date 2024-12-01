@@ -26,7 +26,9 @@ export default async function initApp(): Promise<void> {
   const filterPopupIsVisible = initFilterPopup();
 
   const map = createMap();
-  const data = await readData();
+  const data = await readData({
+    includeMultipleReforms: POLICY_TYPE_FILTER !== "legacy reform",
+  });
 
   const filterOptions = new FilterOptions(Object.values(data));
 

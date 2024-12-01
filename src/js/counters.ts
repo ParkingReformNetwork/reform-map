@@ -1,8 +1,9 @@
 import { FilterState, PlaceFilterManager } from "./FilterState";
 
-function determineHtml(
+export function determineHtml(
   state: FilterState,
   numPlaces: number,
+  numPolicyRecords: number,
   matchedCountries: Set<string>,
 ): string {
   if (!numPlaces) {
@@ -11,10 +12,6 @@ function determineHtml(
   if (state.searchInput) {
     return `Showing ${state.searchInput} from search — <a class="counter-search-reset" role="button" aria-label="reset search">reset</a>`;
   }
-  const suffix = state.allMinimumsRemovedToggle
-    ? "with all parking minimums removed"
-    : "with parking reforms";
-  const placesWord = numPlaces === 1 ? "place" : "places";
 
   let country =
     matchedCountries.size === 1
@@ -24,7 +21,42 @@ function determineHtml(
     country = `the ${country}`;
   }
 
-  return `Showing ${numPlaces} ${placesWord} in ${country} ${suffix}`;
+  const placesWord = numPlaces === 1 ? "place" : "places";
+  const recordsWord = numPolicyRecords === 1 ? "record" : "records";
+
+  const prefix = `Showing ${numPlaces} ${placesWord} in ${country}`;
+
+  if (
+    state.policyTypeFilter === "any parking reform" ||
+    state.policyTypeFilter === "legacy reform"
+  ) {
+    const suffix = state.allMinimumsRemovedToggle
+      ? "with all parking minimums removed."
+      : "with parking reforms.";
+    return `${prefix} ${suffix}`;
+  }
+
+  if (state.policyTypeFilter === "reduce parking minimums") {
+    return `${prefix} with parking minimum reductions. Matched ${numPolicyRecords} total policy ${recordsWord}.`;
+  }
+
+  if (state.policyTypeFilter === "add parking maximums") {
+    const suffix = state.allMinimumsRemovedToggle
+      ? `with both all parking minimums removed and parking maximums added. Matched ${numPolicyRecords} total parking maximum policy ${recordsWord}.`
+      : `with parking maximums added. Matched ${numPolicyRecords} total policy ${recordsWord}.`;
+    return `${prefix} ${suffix}`;
+  }
+
+  if (state.policyTypeFilter === "remove parking minimums") {
+    const suffix = state.allMinimumsRemovedToggle
+      ? // It's not necessary to say the # of policy records when allMinimumsRemovedToggle is true because the place should have
+        // only one removal policy record that is citywide & all land uses.
+        `with all parking minimums removed.`
+      : `with parking minimum removals. Matched ${numPolicyRecords} total policy ${recordsWord}.`;
+    return `${prefix} ${suffix}`;
+  }
+
+  throw new Error("unreachable");
 }
 
 function setUpResetButton(
@@ -53,6 +85,7 @@ export default function initCounters(manager: PlaceFilterManager): void {
     const html = determineHtml(
       state,
       manager.placeIds.size,
+      manager.numMatchedPolicyRecords,
       manager.matchedCountries,
     );
     mapCounter.innerHTML = html;
