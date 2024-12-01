@@ -88,7 +88,7 @@ export class PlaceFilterManager {
     return this.ensureCache().matchedPolicyRecords;
   }
 
-  /// The number of matching policy records.
+  /// The number of matching policy records, given that a place may have >1 policy record.
   ///
   /// Note that this will be zero with 'any parking reform' since only the place
   /// matches and not individual policy records.
