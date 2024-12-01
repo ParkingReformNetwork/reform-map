@@ -97,6 +97,7 @@ const selectIfSet = async (
   // Then, get the checkboxes we need to check.
   const toClick = await page.evaluate(
     (data) => {
+      // eslint-disable-next-line no-shadow
       const { labelSelector, values } = data;
       const indices: number[] = [];
       document.querySelectorAll(labelSelector).forEach((label, index) => {
