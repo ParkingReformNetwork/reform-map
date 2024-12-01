@@ -11,14 +11,16 @@ import {
   getTotalNumPlaces,
 } from "./utils";
 
+type StringArrayOption = string[] | "all";
+
 interface EdgeCase {
   desc: string;
-  scope?: string[];
-  policy?: string[];
-  land?: string[];
-  status?: string[];
-  country?: string[];
-  year?: string[];
+  scope?: StringArrayOption;
+  policy?: StringArrayOption;
+  land?: StringArrayOption;
+  status?: StringArrayOption;
+  country?: StringArrayOption;
+  year?: StringArrayOption;
   populationIntervals?: [number, number];
   allMinimumsRemoved?: boolean;
   expectedRange: [number, number] | "all";
@@ -67,14 +69,7 @@ const TESTS: EdgeCase[] = [
   {
     desc: "all places",
     // The other filters already enable all options by default.
-    status: [
-      "Implemented",
-      "Passed",
-      "Planned",
-      "Proposed",
-      "Repealed",
-      "Unverified",
-    ],
+    status: "all",
     expectedRange: "all",
   },
 ];
@@ -82,26 +77,46 @@ const TESTS: EdgeCase[] = [
 const selectIfSet = async (
   page: Page,
   selector: string,
-  values?: string[],
+  values?: StringArrayOption,
 ): Promise<void> => {
   if (!values) return;
 
   // First, expand the accordion
   await page.locator(`#filter-accordion-toggle-${selector}`).click();
 
-  const labels = page.locator(`.filter-${selector} label`);
-  const count = await labels.count();
+  if (values === "all") {
+    await page.locator(`#filter-${selector}-check-all`).click();
+    return;
+  }
 
-  for (let i = 0; i < count; i += 1) {
-    const label = labels.nth(i);
-    const text = await label.locator("span").innerText();
-    const isChecked = await label.locator('input[type="checkbox"]').isChecked();
-    if (
-      (isChecked && !values.includes(text)) ||
-      (!isChecked && values.includes(text))
-    ) {
-      await label.click();
-    }
+  // Else, uncheck all options to reset the state.
+  await page.locator(`#filter-${selector}-uncheck-all`).click();
+
+  const labelSelector = `.filter-${selector} label`;
+
+  // Then, get the checkboxes we need to check.
+  const toClick = await page.evaluate(
+    (data) => {
+      // eslint-disable-next-line no-shadow
+      const { labelSelector, values } = data;
+      const indices: number[] = [];
+      document.querySelectorAll(labelSelector).forEach((label, index) => {
+        const text = label.querySelector("span")?.textContent || "";
+        if (values.includes(text)) {
+          indices.push(index);
+        }
+      });
+      return indices;
+    },
+    {
+      labelSelector,
+      values,
+    },
+  );
+
+  // Finally, click only the checkboxes we need
+  for (const index of toClick) {
+    await page.locator(labelSelector).nth(index).click();
   }
 };
 
