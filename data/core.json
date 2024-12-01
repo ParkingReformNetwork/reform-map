@@ -9667,7 +9667,25 @@
       "scope": ["city center / business district"],
       "land": ["commercial"],
       "date": null
-    }
+    },
+    "reduce_min": [
+      {
+        "summary": "All uses may count on-street parking towards the minimums.",
+        "status": "implemented",
+        "scope": ["citywide"],
+        "land": ["all uses"],
+        "date": null
+      }
+    ],
+    "rm_min": [
+      {
+        "summary": "Commercial uses in the CBD and MU  Districts are exempt from parking mandates when there is adjacent on-street parking, or when other public parking is nearby.",
+        "status": "implemented",
+        "scope": ["city center / business district"],
+        "land": ["commercial"],
+        "date": null
+      }
+    ]
   },
   "Charles City, IA": {
     "place": {
@@ -14993,6 +15011,25 @@
       }
     ]
   },
+  "Dillsburg, PA": {
+    "place": {
+      "name": "Dillsburg",
+      "state": "PA",
+      "country": "US",
+      "pop": 2643,
+      "coord": [-77.0358059, 40.1109413],
+      "repeal": false
+    },
+    "reduce_min": [
+      {
+        "summary": "On-street parking may be counted towards parking requirements in the MU-C Mixed Use Center District. Only employee parking is required in the TC Town Center District.",
+        "status": "implemented",
+        "scope": ["city center / business district"],
+        "land": ["all uses"],
+        "date": null
+      }
+    ]
+  },
   "Dixon, IL": {
     "place": {
       "name": "Dixon",
@@ -18221,6 +18258,25 @@
       }
     ]
   },
+  "Factoryville, PA": {
+    "place": {
+      "name": "Factoryville",
+      "state": "PA",
+      "country": "US",
+      "pop": 1146,
+      "coord": [-75.7826932, 41.5631327],
+      "repeal": false
+    },
+    "reduce_min": [
+      {
+        "summary": "Parking requirements are reduced by 40% in the VIL District.",
+        "status": "implemented",
+        "scope": ["city center / business district"],
+        "land": ["all uses"],
+        "date": "2016-03-09"
+      }
+    ]
+  },
   "Fair Grove, MO": {
     "place": {
       "name": "Fair Grove",
@@ -19931,7 +19987,25 @@
       "scope": ["city center / business district", "transit oriented"],
       "land": ["residential, all uses"],
       "date": null
-    }
+    },
+    "reduce_min": [
+      {
+        "summary": "Parking requirements are reduced by increasing amounts from Zones I through IV, which correspond to a greater access to transit. A fee in lieu of required parking may be provided in these zones.",
+        "status": "implemented",
+        "scope": ["transit oriented", "transit-oriented"],
+        "land": ["all uses"],
+        "date": null
+      }
+    ],
+    "rm_min": [
+      {
+        "summary": "Within Zone IV (city center), multifamily housing has no parking mandates.",
+        "status": "implemented",
+        "scope": ["city center / business district", "transit oriented"],
+        "land": ["residential, all uses"],
+        "date": null
+      }
+    ]
   },
   "Franklin Park, IL": {
     "place": {
@@ -21374,7 +21448,7 @@
       "repeal": false
     },
     "legacy": {
-      "summary": "The OT Old Town District and ES Elm Street Overlay District are exempt from parking mandates except for residential uses. Parking requirements may be reduced for on-street parking, pubic parking, proximity to transit, bike parking, carshare, or providing right-of-way to a trail.",
+      "summary": "The OT Old Town District and ES Elm Street Overlay District are exempt from parking mandates except for residential uses. Parking requirements may be reduced for on-street parking, public parking, proximity to transit, bike parking, carshare, or providing right-of-way to a trail.",
       "status": "implemented",
       "policy": ["reduce parking minimums", "remove parking minimums"],
       "scope": ["city center / business district"],
@@ -23817,6 +23891,25 @@
         "status": "implemented",
         "scope": ["city center / business district"],
         "land": ["commercial"],
+        "date": null
+      }
+    ]
+  },
+  "Hanover, PA": {
+    "place": {
+      "name": "Hanover",
+      "state": "PA",
+      "country": "US",
+      "pop": 16429,
+      "coord": [-76.9832568, 39.8005316],
+      "repeal": false
+    },
+    "reduce_min": [
+      {
+        "summary": "Parking requirements are reduced by 40% in the  Downtown (D) and Mixed-Use (MU) districts, or within a shopping center use. All uses in the Downtown and commercial uses in the Mixed-Use districts may also count on-street parking towards parking requirements.",
+        "status": "implemented",
+        "scope": ["city center / business district"],
+        "land": ["all uses", "commercial"],
         "date": null
       }
     ]
@@ -27015,6 +27108,25 @@
       }
     ]
   },
+  "Jacobus, PA": {
+    "place": {
+      "name": "Jacobus",
+      "state": "PA",
+      "country": "US",
+      "pop": 1829,
+      "coord": [-76.7105245, 39.8831558],
+      "repeal": false
+    },
+    "reduce_min": [
+      {
+        "summary": "Parking requirements are reduced by 50% for commercial uses within the C-N District within a building that existed prior to January 1, 1960. Additionally, a fee in lieu of required parking may be provided in the district.",
+        "status": "implemented",
+        "scope": ["city center / business district"],
+        "land": ["all uses", "commercial"],
+        "date": null
+      }
+    ]
+  },
   "Jamestown, IN": {
     "place": {
       "name": "Jamestown",
@@ -28756,7 +28868,34 @@
       "scope": ["main street / special"],
       "land": ["commercial", "residential, all uses"],
       "date": null
-    }
+    },
+    "add_max": [
+      {
+        "summary": "Parking maximums apply in the old town district.",
+        "status": "implemented",
+        "scope": ["city center / business district"],
+        "land": ["all uses"],
+        "date": null
+      }
+    ],
+    "reduce_min": [
+      {
+        "summary": "Parking requirements are reduced by 10-30% based on a zonal proximity to transit and the city center. Parking requirements may be reduced citywide through provision of extra bike parking, the implementation of a mobility concept, or a fee in lieu of parking.",
+        "status": "implemented",
+        "scope": ["citywide", "transit-oriented"],
+        "land": ["all uses"],
+        "date": null
+      }
+    ],
+    "rm_min": [
+      {
+        "summary": "Within the pedestrianized zone, parking mandates may be waived for residential and retail uses.",
+        "status": "implemented",
+        "scope": ["main street / special"],
+        "land": ["commercial", "residential, all uses"],
+        "date": null
+      }
+    ]
   },
   "Kochville Township, MI": {
     "place": {
@@ -29121,6 +29260,25 @@
         "summary": "The C-3 Central Business District is exempt from minimum parking requirements.",
         "status": "implemented",
         "scope": ["city center / business district"],
+        "land": ["all uses"],
+        "date": null
+      }
+    ]
+  },
+  "Laceyville, PA": {
+    "place": {
+      "name": "Laceyville",
+      "state": "PA",
+      "country": "US",
+      "pop": 363,
+      "coord": [-76.1613189, 41.6459089],
+      "repeal": false
+    },
+    "rm_min": [
+      {
+        "summary": "There is no zoning in Laceyville and hence no parking mandates.",
+        "status": "implemented",
+        "scope": ["citywide"],
         "land": ["all uses"],
         "date": null
       }
@@ -31044,7 +31202,25 @@
       "scope": ["citywide"],
       "land": ["commercial"],
       "date": "1957-04-15"
-    }
+    },
+    "reduce_min": [
+      {
+        "summary": "The first 2,400 square feet of a restaurant, retail use, bank or wholesale business are exempt from parking mandates.",
+        "status": "implemented",
+        "scope": ["citywide"],
+        "land": ["commercial"],
+        "date": "1957-04-15"
+      }
+    ],
+    "rm_min": [
+      {
+        "summary": "The first 2,400 square feet of a restaurant, retail use, bank or wholesale business are exempt from parking mandates.",
+        "status": "implemented",
+        "scope": ["citywide"],
+        "land": ["commercial"],
+        "date": "1957-04-15"
+      }
+    ]
   },
   "Liberty, SC": {
     "place": {
@@ -31118,7 +31294,25 @@
       "scope": ["citywide"],
       "land": ["commercial"],
       "date": null
-    }
+    },
+    "reduce_min": [
+      {
+        "summary": "On-street parking may be counted towards parking requirements for nonresidential uses.",
+        "status": "implemented",
+        "scope": ["citywide"],
+        "land": ["commercial", "industrial", "medical", "other"],
+        "date": null
+      }
+    ],
+    "rm_min": [
+      {
+        "summary": "The first 2,000 square feet of a commercial use in exempt from parking mandates.",
+        "status": "implemented",
+        "scope": ["citywide"],
+        "land": ["commercial"],
+        "date": null
+      }
+    ]
   },
   "Lilburn, GA": {
     "place": {
@@ -35200,6 +35394,25 @@
       "land": ["commercial", "other", "residential, all uses"],
       "date": null
     }
+  },
+  "Meshoppen, PA": {
+    "place": {
+      "name": "Meshoppen",
+      "state": "PA",
+      "country": "US",
+      "pop": 326,
+      "coord": [-76.0465462, 41.6141652],
+      "repeal": false
+    },
+    "rm_min": [
+      {
+        "summary": "There are no parking mandates or zoning ordinances in Meshoppen.",
+        "status": "implemented",
+        "scope": ["citywide"],
+        "land": ["all uses"],
+        "date": null
+      }
+    ]
   },
   "Mesquite, TX": {
     "place": {
@@ -45979,6 +46192,25 @@
       }
     ]
   },
+  "Red Lion, PA": {
+    "place": {
+      "name": "Red Lion",
+      "state": "PA",
+      "country": "US",
+      "pop": 6506,
+      "coord": [-76.6058001, 39.9009334],
+      "repeal": false
+    },
+    "rm_min": [
+      {
+        "summary": "Uses in the Borough Center or Commercial Zone not containing  dwelling units and which are located in a metered area or within 300 feet of public parking are exempt from parking mandates.",
+        "status": "implemented",
+        "scope": ["city center / business district"],
+        "land": ["commercial", "other"],
+        "date": null
+      }
+    ]
+  },
   "Red Lodge, MT": {
     "place": {
       "name": "Red Lodge",
@@ -50430,6 +50662,25 @@
       "date": null
     }
   },
+  "Shrewsbury, PA": {
+    "place": {
+      "name": "Shrewsbury",
+      "state": "PA",
+      "country": "US",
+      "pop": 3848,
+      "coord": [-76.6796518, 39.7687574],
+      "repeal": false
+    },
+    "rm_min": [
+      {
+        "summary": "The Village (V) District is exempt from parking mandates except for short term rentals.",
+        "status": "implemented",
+        "scope": ["city center / business district"],
+        "land": ["commercial", "other", "residential, all uses"],
+        "date": null
+      }
+    ]
+  },
   "Sidney, IA": {
     "place": {
       "name": "Sidney",
@@ -53538,7 +53789,25 @@
       "scope": ["city center / business district"],
       "land": ["commercial", "other"],
       "date": "2023-01-26"
-    }
+    },
+    "reduce_min": [
+      {
+        "summary": "Parking reductions are available citywide for uses near transit.",
+        "status": "implemented",
+        "scope": ["transit-oriented"],
+        "land": ["all uses"],
+        "date": "2023-01-26"
+      }
+    ],
+    "rm_min": [
+      {
+        "summary": "Nonresidential uses in the city center are exempted from parking mandates since January 2023.",
+        "status": "implemented",
+        "scope": ["city center / business district"],
+        "land": ["commercial", "other"],
+        "date": "2023-01-26"
+      }
+    ]
   },
   "Subiaco, WA": {
     "place": {
@@ -56016,6 +56285,25 @@
       "land": ["all uses"],
       "date": null
     }
+  },
+  "Tunkhannock, PA": {
+    "place": {
+      "name": "Tunkhannock",
+      "state": "PA",
+      "country": "US",
+      "pop": 1766,
+      "coord": [-75.946844, 41.5385159],
+      "repeal": false
+    },
+    "rm_min": [
+      {
+        "summary": "Nonresidential uses that front on Tioga Street between Warren Street and Pine Street are exempt from parking mandates unless Subdivision or Land Development approval is also required by an Ordinance of Tunkhannock or Wyoming County.",
+        "status": "implemented",
+        "scope": ["city center / business district"],
+        "land": ["commercial", "other"],
+        "date": null
+      }
+    ]
   },
   "Tupelo, MS": {
     "place": {
@@ -59182,7 +59470,25 @@
       "scope": ["citywide"],
       "land": ["commercial", "industrial", "medical", "other"],
       "date": null
-    }
+    },
+    "add_max": [
+      {
+        "summary": "Nonresidential uses are exempt from parking mandates and instead have parking maximums.",
+        "status": "implemented",
+        "scope": ["citywide"],
+        "land": ["commercial", "industrial", "medical", "other"],
+        "date": null
+      }
+    ],
+    "rm_min": [
+      {
+        "summary": "Nonresidential uses are exempt from parking mandates and instead have parking maximums.",
+        "status": "implemented",
+        "scope": ["citywide"],
+        "land": ["commercial", "industrial", "medical", "other"],
+        "date": null
+      }
+    ]
   },
   "West Milton, OH": {
     "place": {
@@ -59196,6 +59502,25 @@
     "rm_min": [
       {
         "summary": "The Central Business District is exempt from parking mandates.",
+        "status": "implemented",
+        "scope": ["city center / business district"],
+        "land": ["all uses"],
+        "date": null
+      }
+    ]
+  },
+  "West Newton, PA": {
+    "place": {
+      "name": "West Newton",
+      "state": "PA",
+      "country": "US",
+      "pop": 2665,
+      "coord": [-79.766983, 40.2098343],
+      "repeal": false
+    },
+    "rm_min": [
+      {
+        "summary": "The downtown commercial district is exempt from parking mandates.",
         "status": "implemented",
         "scope": ["city center / business district"],
         "land": ["all uses"],
@@ -60603,7 +60928,34 @@
       "scope": ["city center / business district"],
       "land": ["all uses"],
       "date": null
-    }
+    },
+    "add_max": [
+      {
+        "summary": "No private off-street parking is allowed in the city center. Parking minimums and maximums vary in the other five zones depending on location and transit availability.",
+        "status": "implemented",
+        "scope": ["city center / business district", "citywide"],
+        "land": ["all uses"],
+        "date": null
+      }
+    ],
+    "reduce_min": [
+      {
+        "summary": "Parking minimums and maximums vary depending on location and transit availability.",
+        "status": "implemented",
+        "scope": ["citywide", "transit-oriented"],
+        "land": ["all uses"],
+        "date": null
+      }
+    ],
+    "rm_min": [
+      {
+        "summary": "No private off-street parking is allowed in the city center.",
+        "status": "implemented",
+        "scope": ["city center / business district"],
+        "land": ["all uses"],
+        "date": null
+      }
+    ]
   },
   "Winthrop Harbor, IL": {
     "place": {
@@ -61389,6 +61741,25 @@
       }
     ]
   },
+  "Yoe, PA": {
+    "place": {
+      "name": "Yoe",
+      "state": "PA",
+      "country": "US",
+      "pop": 1058,
+      "coord": [-76.6369116, 39.9089887],
+      "repeal": false
+    },
+    "reduce_min": [
+      {
+        "summary": "In the Town Center Zoning District, adjacent on-street parking may be counted towards parking requirements.",
+        "status": "implemented",
+        "scope": ["city center / business district"],
+        "land": ["all uses"],
+        "date": null
+      }
+    ]
+  },
   "Yonkers, NY": {
     "place": {
       "name": "Yonkers",
@@ -61423,7 +61794,25 @@
       "scope": ["citywide"],
       "land": ["all uses"],
       "date": null
-    }
+    },
+    "add_max": [
+      {
+        "summary": "Parking maximums apply to all uses.",
+        "status": "implemented",
+        "scope": ["citywide"],
+        "land": ["all uses"],
+        "date": null
+      }
+    ],
+    "rm_min": [
+      {
+        "summary": "There are no parking mandates in the city.",
+        "status": "implemented",
+        "scope": ["citywide"],
+        "land": ["all uses"],
+        "date": null
+      }
+    ]
   },
   "York, PA": {
     "place": {
@@ -61754,7 +62143,25 @@
       "scope": ["city center / business district"],
       "land": ["all uses"],
       "date": null
-    }
+    },
+    "add_max": [
+      {
+        "summary": "The Historic Commercial Land Use District is exempt from parking mandates. No private parking may be built in the district.",
+        "status": "implemented",
+        "scope": ["city center / business district"],
+        "land": ["all uses"],
+        "date": null
+      }
+    ],
+    "rm_min": [
+      {
+        "summary": "The Historic Commercial Land Use District is exempt from parking mandates. No private parking may be built in the district.",
+        "status": "implemented",
+        "scope": ["city center / business district"],
+        "land": ["all uses"],
+        "date": null
+      }
+    ]
   },
   "Zumbro Falls, MN": {
     "place": {
