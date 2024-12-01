@@ -8,7 +8,7 @@ import {
 } from "./types";
 import Observable from "./Observable";
 import { UNKNOWN_YEAR } from "./filterOptions";
-import { determinePolicyTypes } from "./data";
+import { determinePolicyTypes, getFilteredIndexes } from "./data";
 
 export const POPULATION_INTERVALS: Array<[string, number]> = [
   ["100", 100],
@@ -60,20 +60,8 @@ export interface MatchedPolicyRecords {
 // This allows us to avoid recomputing computed state when the FilterState has not changed.
 interface CacheEntry {
   state: FilterState;
-  matchedPlaces: Record<PlaceId, MatchedPolicyRecords>;
+  matchedPolicyRecords: Record<PlaceId, MatchedPolicyRecords>;
   matchedCountries: Set<string>;
-}
-
-function getFilteredIndexes<T>(
-  array: T[],
-  predicate: (value: T) => boolean,
-): number[] {
-  return array.reduce((indexes: number[], currentValue, currentIndex) => {
-    if (predicate(currentValue)) {
-      indexes.push(currentIndex);
-    }
-    return indexes;
-  }, []);
 }
 
 export class PlaceFilterManager {
@@ -95,9 +83,12 @@ export class PlaceFilterManager {
     return Object.keys(this.entries).length;
   }
 
+  get matchedPolicyRecords(): Record<PlaceId, MatchedPolicyRecords> {
+    return this.ensureCache().matchedPolicyRecords;
+  }
+
   get placeIds(): Set<PlaceId> {
-    const places = this.ensureCache().matchedPlaces;
-    return new Set(Object.keys(places));
+    return new Set(Object.keys(this.matchedPolicyRecords));
   }
 
   get matchedCountries(): Set<string> {
@@ -140,7 +131,7 @@ export class PlaceFilterManager {
 
     this.cache = {
       state: currentState,
-      matchedPlaces,
+      matchedPolicyRecords: matchedPlaces,
       matchedCountries,
     };
     return this.cache;
@@ -236,7 +227,7 @@ export class PlaceFilterManager {
     if (filterState.policyTypeFilter === "add parking maximums") {
       const matchingPolicies = getFilteredIndexes(
         entry.add_max ?? [],
-        this.matchesPolicyRecord,
+        (policyRecord) => this.matchesPolicyRecord(policyRecord),
       );
       return isPlace && matchingPolicies.length
         ? { addMaxIdx: matchingPolicies, reduceMinIdx: [], rmMinIdx: [] }
@@ -246,7 +237,7 @@ export class PlaceFilterManager {
     if (filterState.policyTypeFilter === "reduce parking minimums") {
       const matchingPolicies = getFilteredIndexes(
         entry.reduce_min ?? [],
-        this.matchesPolicyRecord,
+        (policyRecord) => this.matchesPolicyRecord(policyRecord),
       );
       return isPlace && matchingPolicies.length
         ? { addMaxIdx: [], reduceMinIdx: matchingPolicies, rmMinIdx: [] }
@@ -256,7 +247,7 @@ export class PlaceFilterManager {
     if (filterState.policyTypeFilter === "remove parking minimums") {
       const matchingPolicies = getFilteredIndexes(
         entry.rm_min ?? [],
-        this.matchesPolicyRecord,
+        (policyRecord) => this.matchesPolicyRecord(policyRecord),
       );
       return isPlace && matchingPolicies.length
         ? { addMaxIdx: [], reduceMinIdx: [], rmMinIdx: matchingPolicies }

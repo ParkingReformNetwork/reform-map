@@ -146,3 +146,15 @@ export default async function readData(): Promise<
     ]),
   );
 }
+
+export function getFilteredIndexes<T>(
+  array: T[],
+  predicate: (value: T) => boolean,
+): number[] {
+  return array.reduce((indexes: number[], currentValue, currentIndex) => {
+    if (predicate(currentValue)) {
+      indexes.push(currentIndex);
+    }
+    return indexes;
+  }, []);
+}
