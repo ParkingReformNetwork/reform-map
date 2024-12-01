@@ -119,19 +119,19 @@ export class PlaceFilterManager {
       return this.cache;
     }
 
-    const matchedPlaces: Record<PlaceId, MatchedPolicyRecords> = {};
+    const matchedPolicyRecords: Record<PlaceId, MatchedPolicyRecords> = {};
     const matchedCountries = new Set<string>();
     for (const placeId in this.entries) {
       const matchedRecords = this.getMatchingPolicyRecords(placeId);
       if (matchedRecords) {
-        matchedPlaces[placeId] = matchedRecords;
+        matchedPolicyRecords[placeId] = matchedRecords;
         matchedCountries.add(this.entries[placeId].place.country);
       }
     }
 
     this.cache = {
       state: currentState,
-      matchedPolicyRecords: matchedPlaces,
+      matchedPolicyRecords,
       matchedCountries,
     };
     return this.cache;
@@ -182,7 +182,7 @@ export class PlaceFilterManager {
     const entry = this.entries[placeId];
 
     // Search overrides filter config. It acts like 'any parking reform', so
-    // return empty policy records if it's a match.
+    // return empty policy record indexes if it's a match.
     if (filterState.searchInput) {
       return filterState.searchInput === placeId
         ? {
