@@ -13562,7 +13562,49 @@
           ]
         }
       ]
-    }
+    },
+    "reduce_min": [
+      {
+        "reporter": "Samuel Deetz",
+        "requirements": ["other"],
+        "citations": [
+          {
+            "description": "Charleroi Zoning Code",
+            "type": "city code",
+            "url": "https://ecode360.com/32071381#32071381",
+            "notes": "§ 338-311.4Parking and loading standards.\nD.",
+            "attachments": [
+              {
+                "fileName": "Charleroi_PA_1_1.png",
+                "isDoc": false,
+                "directusId": "e55079f8-dcff-40cf-affe-c60de4e8394c"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "rm_min": [
+      {
+        "reporter": "Samuel Deetz",
+        "requirements": ["by right", "other"],
+        "citations": [
+          {
+            "description": "Charleroi Zoning Code",
+            "type": "city code",
+            "url": "https://ecode360.com/32071852#32071852",
+            "notes": "§ 338-603Minimum parking ratios.\nA.(2)",
+            "attachments": [
+              {
+                "fileName": "Charleroi_PA_1_1.png",
+                "isDoc": false,
+                "directusId": "87ffce11-91fd-47cc-9039-b3919f5c0654"
+              }
+            ]
+          }
+        ]
+      }
+    ]
   },
   "Charles City, IA": {
     "rm_min": [
@@ -20721,6 +20763,34 @@
       }
     ]
   },
+  "Dillsburg, PA": {
+    "reduce_min": [
+      {
+        "reporter": "Samuel Deetz",
+        "requirements": ["by right", "other"],
+        "citations": [
+          {
+            "description": "Dillsburg Zoning Code",
+            "type": "city code",
+            "url": "https://codelibrary.amlegal.com/codes/dillsburgboroughpa/latest/dillsburg_pa/0-0-0-5194",
+            "notes": "§ 27-474(E)(2)(e)\n§ 27-507(B)(2)",
+            "attachments": [
+              {
+                "fileName": "Dillsburg_PA_1_1.png",
+                "isDoc": false,
+                "directusId": "d9a1ffb9-7e27-4833-bb3c-35cfc4482099"
+              },
+              {
+                "fileName": "Dillsburg_PA_1_2.png",
+                "isDoc": false,
+                "directusId": "98393d4d-6f8b-4182-8d3c-fe031b070987"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
   "Dixon, IL": {
     "reduce_min": [
       {
@@ -25017,6 +25087,29 @@
       }
     ]
   },
+  "Factoryville, PA": {
+    "reduce_min": [
+      {
+        "reporter": "Samuel Deetz",
+        "requirements": ["by right"],
+        "citations": [
+          {
+            "description": "Factoryville Ordinance 558",
+            "type": "other",
+            "url": "https://acrobat.adobe.com/link/track?uri=urn%3Aaaid%3Ascds%3AUS%3A775bac9f-9aef-4154-b098-8219427d4af3&viewer%21megaVerb=group-discover",
+            "notes": "Item 7\nPage 7",
+            "attachments": [
+              {
+                "fileName": "Factoryville_PA_1_1.png",
+                "isDoc": false,
+                "directusId": "5df3a2b3-d80d-4e95-886c-3c833764e809"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
   "Fair Grove, MO": {
     "rm_min": [
       {
@@ -27256,7 +27349,80 @@
           ]
         }
       ]
-    }
+    },
+    "reduce_min": [
+      {
+        "reporter": "Samuel Deetz",
+        "requirements": ["by right", "frequent transit", "in-lieu fees"],
+        "citations": [
+          {
+            "description": "Frankfurt Stellplatzsatzung Map",
+            "type": "other",
+            "url": "https://planas.frankfurt.de/?t=bau_planungsrecht&l=bplan_rv%21%2Cbplan_iv%21%2Cv_rv%21%2Cv_iv%21%2Cvk_rv%21%2Cvk_iv%21%2Cssm_rv%21%2Cssm_iv%21%2Csem_rv%21%2Csem_iv%21%2Ce_rv%21%2Ce_iv%21%2Cgs_rv%21%2Cgs_iv%21%2Cstellplatzsatzung%2Cfr_rv%21%2Cvg_rv%21%2Cberatung_61_63%21%2Csgk_rot%21%2Cg_gemarkung%21%2Cg_stadtbezirk%21%2Cg_stadtteil%21%2Cg_ortsbezirk%21%2Cg_stadtgrenze%21&bl=bplan_raster_auf_stadtkarte&c=476551%2C5553358&s=126202",
+            "notes": null,
+            "attachments": [
+              {
+                "fileName": "Frankfurt_HE_1_1.png",
+                "isDoc": false,
+                "directusId": "198b0149-04c6-4310-8491-3c7358dfad96"
+              }
+            ]
+          },
+          {
+            "description": "Frankfurt Stellplatzsatzung",
+            "type": "city code",
+            "url": "https://www.bauaufsicht-frankfurt.de/fileadmin/Downloads__alle/Rechtsgrundlagen_und_Satzungen/2017_02_01_Stellplatzsatzung_und_Stellplatzzahlen.pdf",
+            "notes": "§ 3 Einschränkung nach Zonen\n§ 6 Ablösung \nPages 2-3",
+            "attachments": [
+              {
+                "fileName": "Frankfurt_HE_2_1.png",
+                "isDoc": false,
+                "directusId": "69441088-5387-4791-9842-c5bceaa3451c"
+              },
+              {
+                "fileName": "Frankfurt_HE_2_2.png",
+                "isDoc": false,
+                "directusId": "f930ffbd-667d-446a-8c4b-f45c4bc8e948"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "rm_min": [
+      {
+        "reporter": "Samuel Deetz",
+        "requirements": ["by right"],
+        "citations": [
+          {
+            "description": "Frankfurt Stellplatzsatzung Map",
+            "type": "other",
+            "url": "https://planas.frankfurt.de/?t=bau_planungsrecht&l=bplan_rv%21%2Cbplan_iv%21%2Cv_rv%21%2Cv_iv%21%2Cvk_rv%21%2Cvk_iv%21%2Cssm_rv%21%2Cssm_iv%21%2Csem_rv%21%2Csem_iv%21%2Ce_rv%21%2Ce_iv%21%2Cgs_rv%21%2Cgs_iv%21%2Cstellplatzsatzung%2Cfr_rv%21%2Cvg_rv%21%2Cberatung_61_63%21%2Csgk_rot%21%2Cg_gemarkung%21%2Cg_stadtbezirk%21%2Cg_stadtteil%21%2Cg_ortsbezirk%21%2Cg_stadtgrenze%21&bl=bplan_raster_auf_stadtkarte&c=476551%2C5553358&s=126202",
+            "notes": null,
+            "attachments": [
+              {
+                "fileName": "Frankfurt_HE_1_1.png",
+                "isDoc": false,
+                "directusId": "198b0149-04c6-4310-8491-3c7358dfad96"
+              }
+            ]
+          },
+          {
+            "description": "Frankfurt Stellplatzsatzung",
+            "type": "city code",
+            "url": "https://www.bauaufsicht-frankfurt.de/fileadmin/Downloads__alle/Rechtsgrundlagen_und_Satzungen/2017_02_01_Stellplatzsatzung_und_Stellplatzzahlen.pdf",
+            "notes": "Anlage 1 - Stellplatzzahlen\nPage 5",
+            "attachments": [
+              {
+                "fileName": "Frankfurt_HE_2_1.png",
+                "isDoc": false,
+                "directusId": "4d1bff8c-7140-4481-a9ee-733e20266d69"
+              }
+            ]
+          }
+        ]
+      }
+    ]
   },
   "Franklin Park, IL": {
     "legacy": {
@@ -32410,6 +32576,34 @@
       }
     ]
   },
+  "Hanover, PA": {
+    "reduce_min": [
+      {
+        "reporter": "Samuel Deetz",
+        "requirements": ["by right", "other"],
+        "citations": [
+          {
+            "description": "Hanover Zoning Code",
+            "type": "city code",
+            "url": "https://www.hanoverboroughpa.gov/DocumentCenter/View/1429/Hanover-Borough-York-County-PA-Zoning-Ordinance-ADOPTED-10-26-2022",
+            "notes": "§ 140-511.B.2.e)\n§ 140-511.C.2.c)\nPages 87, 90",
+            "attachments": [
+              {
+                "fileName": "Hanover_PA_1_1.png",
+                "isDoc": false,
+                "directusId": "90985579-e740-43d0-9065-57537328526c"
+              },
+              {
+                "fileName": "Hanover_PA_1_2.png",
+                "isDoc": false,
+                "directusId": "64a13d6d-9ace-4f1d-b6b7-568cad3e730c"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
   "Harford County, MD": {
     "add_max": [
       {
@@ -36601,6 +36795,29 @@
       }
     ]
   },
+  "Jacobus, PA": {
+    "reduce_min": [
+      {
+        "reporter": "Samuel Deetz",
+        "requirements": ["in-lieu fees", "other"],
+        "citations": [
+          {
+            "description": "Jacobus Zoning Code",
+            "type": "city code",
+            "url": "https://ecode360.com/15023008#15023009",
+            "notes": "§ 250-43Required number of spaces.\nB.(2)",
+            "attachments": [
+              {
+                "fileName": "Jacobus_PA_1_1.png",
+                "isDoc": false,
+                "directusId": "9b82e819-a84f-4802-9a83-896d47c4bb41"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
   "Jamestown, IN": {
     "rm_min": [
       {
@@ -38877,7 +39094,90 @@
           ]
         }
       ]
-    }
+    },
+    "add_max": [
+      {
+        "reporter": "Samuel Deetz",
+        "requirements": ["by right"],
+        "citations": [
+          {
+            "description": "Koblenz 02 NEU Fahrrad und KFZ Stellplatzsatzung (Stand n. HuFA 21.9.20)",
+            "type": "city code",
+            "url": "https://buergerinfo.koblenz.de/vo0050.php?__kvonr=32887",
+            "notes": "§ 5 Einschränkung und Untersagung von Kfz-Stellplätzen\nPage 3",
+            "attachments": [
+              {
+                "fileName": "Koblenz_RP_1_1.png",
+                "isDoc": false,
+                "directusId": "05de1e3b-8f55-4a0b-b075-b7c64f3b67fd"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "reduce_min": [
+      {
+        "reporter": "Samuel Deetz",
+        "requirements": [
+          "bike parking",
+          "frequent transit",
+          "in-lieu fees",
+          "transportation demand management"
+        ],
+        "citations": [
+          {
+            "description": "Koblenz 02 NEU Fahrrad und KFZ Stellplatzsatzung (Stand n. HuFA 21.9.20)",
+            "type": "city code",
+            "url": " https://buergerinfo.koblenz.de/vo0050.php?__kvonr=32887",
+            "notes": "§2(5) \n§3 \n§8\nPages 2-3, 6-7",
+            "attachments": [
+              {
+                "fileName": "Koblenz_RP_1_1.png",
+                "isDoc": false,
+                "directusId": "d2e37b8c-8a3e-414b-a348-a10824df9737"
+              },
+              {
+                "fileName": "Koblenz_RP_1_2.png",
+                "isDoc": false,
+                "directusId": "198660ec-8619-4fe5-afcf-9269f6f1875d"
+              },
+              {
+                "fileName": "Koblenz_RP_1_3.png",
+                "isDoc": false,
+                "directusId": "7b18115d-bc8c-47b3-9d15-468281f84f93"
+              },
+              {
+                "fileName": "Koblenz_RP_1_4.png",
+                "isDoc": false,
+                "directusId": "dd819544-b2c7-46fa-ba07-44aad4143111"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "rm_min": [
+      {
+        "reporter": "Samuel Deetz",
+        "requirements": ["other"],
+        "citations": [
+          {
+            "description": "Koblenz 02 NEU Fahrrad und KFZ Stellplatzsatzung (Stand n. HuFA 21.9.20)",
+            "type": "city code",
+            "url": "https://buergerinfo.koblenz.de/vo0050.php?__kvonr=32887",
+            "notes": "§ 4 Verzicht auf notwendige Kfz-Stellplätze\nPage 3",
+            "attachments": [
+              {
+                "fileName": "Koblenz_RP_1_1.png",
+                "isDoc": false,
+                "directusId": "3558d056-9c5f-4a46-a657-cbf32b71efdd"
+              }
+            ]
+          }
+        ]
+      }
+    ]
   },
   "Kochville Township, MI": {
     "add_max": [
@@ -39374,6 +39674,29 @@
                 "fileName": "LaSalle_IL_1_1.jpg",
                 "isDoc": false,
                 "directusId": "cb056597-c25a-45fe-b918-7a9479fe253f"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "Laceyville, PA": {
+    "rm_min": [
+      {
+        "reporter": "Samuel Deetz",
+        "requirements": ["by right"],
+        "citations": [
+          {
+            "description": "Wyoming County Zoning List",
+            "type": "other",
+            "url": "https://wyomingcountypa.gov/wp-content/uploads/List-of-Municipalities-With-and-Without-Zoning-Regulations.pdf",
+            "notes": null,
+            "attachments": [
+              {
+                "fileName": "Laceyville_PA_1_1.png",
+                "isDoc": false,
+                "directusId": "ab59c17d-b8ff-4b62-9ca8-a47d680fefdb"
               }
             ]
           }
@@ -41918,7 +42241,49 @@
           ]
         }
       ]
-    }
+    },
+    "reduce_min": [
+      {
+        "reporter": "Samuel Deetz",
+        "requirements": ["by right", "size of project"],
+        "citations": [
+          {
+            "description": "Liberty Zoning Code",
+            "type": "city code",
+            "url": "https://ecode360.com/32198185#32198186",
+            "notes": "§ 27-701Automobile Parking Space.\n1.",
+            "attachments": [
+              {
+                "fileName": "Liberty_PA_1_1.png",
+                "isDoc": false,
+                "directusId": "edf1a79f-85c3-46aa-b7a1-45a6b0a149ee"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "rm_min": [
+      {
+        "reporter": "Samuel Deetz",
+        "requirements": ["by right", "size of project"],
+        "citations": [
+          {
+            "description": "Liberty Zoning Code",
+            "type": "city code",
+            "url": "https://ecode360.com/32198185#32198186",
+            "notes": "§ 27-701Automobile Parking Space.\n1.",
+            "attachments": [
+              {
+                "fileName": "Liberty_PA_1_1.png",
+                "isDoc": false,
+                "directusId": "edf1a79f-85c3-46aa-b7a1-45a6b0a149ee"
+              }
+            ]
+          }
+        ]
+      }
+    ]
   },
   "Liberty, SC": {
     "rm_min": [
@@ -42016,7 +42381,49 @@
           ]
         }
       ]
-    }
+    },
+    "reduce_min": [
+      {
+        "reporter": "Samuel Deetz",
+        "requirements": ["other"],
+        "citations": [
+          {
+            "description": "Ligonier Zoning Code",
+            "type": "city code",
+            "url": "https://ligonierborough.com/ordinances/LigonierZoningOrdinance-7-8-10.pdf",
+            "notes": "§2009-400.B.3. \nPage 53",
+            "attachments": [
+              {
+                "fileName": "Ligonier_PA_1_1.png",
+                "isDoc": false,
+                "directusId": "453cbbdf-fccf-4235-bbce-d8eaab86e0cb"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "rm_min": [
+      {
+        "reporter": "Samuel Deetz",
+        "requirements": ["by right", "size of project"],
+        "citations": [
+          {
+            "description": "Ligonier Zoning Code",
+            "type": "city code",
+            "url": "https://ligonierborough.com/ordinances/LigonierZoningOrdinance-7-8-10.pdf",
+            "notes": "Table VII Pages 56-58",
+            "attachments": [
+              {
+                "fileName": "Ligonier_PA_1_1.png",
+                "isDoc": false,
+                "directusId": "78967794-3554-4d04-9792-83421c8e93af"
+              }
+            ]
+          }
+        ]
+      }
+    ]
   },
   "Lilburn, GA": {
     "add_max": [
@@ -47321,6 +47728,29 @@
         }
       ]
     }
+  },
+  "Meshoppen, PA": {
+    "rm_min": [
+      {
+        "reporter": "Samuel Deetz",
+        "requirements": ["by right"],
+        "citations": [
+          {
+            "description": "Wyoming County Zoning List",
+            "type": "other",
+            "url": "https://wyomingcountypa.gov/wp-content/uploads/List-of-Municipalities-With-and-Without-Zoning-Regulations.pdf",
+            "notes": null,
+            "attachments": [
+              {
+                "fileName": "Meshoppen_PA_1_1.png",
+                "isDoc": false,
+                "directusId": "ab59c17d-b8ff-4b62-9ca8-a47d680fefdb"
+              }
+            ]
+          }
+        ]
+      }
+    ]
   },
   "Mesquite, TX": {
     "add_max": [
@@ -61840,6 +62270,29 @@
       }
     ]
   },
+  "Red Lion, PA": {
+    "rm_min": [
+      {
+        "reporter": "Samuel Deetz",
+        "requirements": ["by right", "other"],
+        "citations": [
+          {
+            "description": "Red Lion Zoning Code",
+            "type": "city code",
+            "url": "https://ecode360.com/32109298#32109298",
+            "notes": "§ 27-410Parking.\n2.",
+            "attachments": [
+              {
+                "fileName": "RedLion_PA_1_1.png",
+                "isDoc": false,
+                "directusId": "022d5f74-8636-4672-9745-3131cdf360f9"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
   "Red Lodge, MT": {
     "rm_min": [
       {
@@ -67902,6 +68355,34 @@
       ]
     }
   },
+  "Shrewsbury, PA": {
+    "rm_min": [
+      {
+        "reporter": "Samuel Deetz",
+        "requirements": ["by right"],
+        "citations": [
+          {
+            "description": "Shrewsbury Zoning Code",
+            "type": "city code",
+            "url": "https://shrewsburyborough.org/wp-content/uploads/2024/11/2024-Shrewsbury-Borough-Zoning-Ordinance.pdf",
+            "notes": "s.303.2\nPages 47-48",
+            "attachments": [
+              {
+                "fileName": "Shrewsbury_PA_1_1.png",
+                "isDoc": false,
+                "directusId": "4a028811-960d-458c-ab0b-be6ddc8cdf28"
+              },
+              {
+                "fileName": "Shrewsbury_PA_1_2.png",
+                "isDoc": false,
+                "directusId": "95bc15a4-c064-4298-b96c-abab16bb88d5"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
   "Sidney, IA": {
     "rm_min": [
       {
@@ -72176,7 +72657,54 @@
           ]
         }
       ]
-    }
+    },
+    "reduce_min": [
+      {
+        "reporter": "Samuel Deetz",
+        "requirements": ["by right", "frequent transit"],
+        "citations": [
+          {
+            "description": "Stuttgart Stellplatzsatzung",
+            "type": "city code",
+            "url": "https://www.stuttgart.de/leben/bauen/baurecht/stellplatzabloese.php",
+            "notes": "See downloads 2 and 3 for detailed information",
+            "attachments": [
+              {
+                "fileName": "Stuttgart_BW_1_1.png",
+                "isDoc": false,
+                "directusId": "d5ecbcce-fcc0-47d0-8747-05788a79b375"
+              },
+              {
+                "fileName": "Stuttgart_BW_1_2.png",
+                "isDoc": false,
+                "directusId": "7957e63d-2bf3-42f4-8813-a8cca332a0b7"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "rm_min": [
+      {
+        "reporter": "Samuel Deetz",
+        "requirements": ["by right"],
+        "citations": [
+          {
+            "description": "Stuttgart Stellplatzsatzung",
+            "type": "city code",
+            "url": "https://www.stuttgart.de/leben/bauen/baurecht/stellplatzabloese.php",
+            "notes": null,
+            "attachments": [
+              {
+                "fileName": "Stuttgart_BW_1_1.png",
+                "isDoc": false,
+                "directusId": "6ebfc995-1790-453b-ae02-8a123e6a61e7"
+              }
+            ]
+          }
+        ]
+      }
+    ]
   },
   "Subiaco, WA": {
     "legacy": {
@@ -75499,6 +76027,29 @@
         }
       ]
     }
+  },
+  "Tunkhannock, PA": {
+    "rm_min": [
+      {
+        "reporter": "Samuel Deetz",
+        "requirements": ["by right", "other"],
+        "citations": [
+          {
+            "description": "Tunkhannock Zoning Code",
+            "type": "city code",
+            "url": "https://tunkboro.com/wp-content/uploads/2020/05/Tunk-Boro-Zoning-Ord-2017-09-Adopted.pdf",
+            "notes": "701.5.i.\nPage 100",
+            "attachments": [
+              {
+                "fileName": "Tunkhannock_PA_1_1.png",
+                "isDoc": false,
+                "directusId": "03eecbcd-c516-441f-858f-56671a92a159"
+              }
+            ]
+          }
+        ]
+      }
+    ]
   },
   "Tupelo, MS": {
     "add_max": [
@@ -79583,7 +80134,49 @@
           ]
         }
       ]
-    }
+    },
+    "add_max": [
+      {
+        "reporter": "Samuel Deetz",
+        "requirements": ["by right"],
+        "citations": [
+          {
+            "description": "West Middletown Zoning Code",
+            "type": "city code",
+            "url": "https://westmiddletownpa.com/wp-content/uploads/2024/07/Hopewell-West-Mid-Master-Joint-Zoning-Ordinance-10-30-18.pdf",
+            "notes": "§ 902.A.\nPage 75",
+            "attachments": [
+              {
+                "fileName": "WestMiddletown_PA_1_1.png",
+                "isDoc": false,
+                "directusId": "7bb987d0-f484-46d4-8878-5b94aff70764"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "rm_min": [
+      {
+        "reporter": "Samuel Deetz",
+        "requirements": ["by right"],
+        "citations": [
+          {
+            "description": "West Middletown Zoning Code",
+            "type": "city code",
+            "url": "https://westmiddletownpa.com/wp-content/uploads/2024/07/Hopewell-West-Mid-Master-Joint-Zoning-Ordinance-10-30-18.pdf",
+            "notes": "§ 902.A.\nPage 75",
+            "attachments": [
+              {
+                "fileName": "WestMiddletown_PA_1_1.png",
+                "isDoc": false,
+                "directusId": "7bb987d0-f484-46d4-8878-5b94aff70764"
+              }
+            ]
+          }
+        ]
+      }
+    ]
   },
   "West Milton, OH": {
     "rm_min": [
@@ -79601,6 +80194,29 @@
                 "fileName": "WestMilton_OH_1_1.png",
                 "isDoc": false,
                 "directusId": "2f9a7756-63f8-4bef-ade0-c31a6ad6b980"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "West Newton, PA": {
+    "rm_min": [
+      {
+        "reporter": "Samuel Deetz",
+        "requirements": ["by right"],
+        "citations": [
+          {
+            "description": "West Newton Zoning Code",
+            "type": "city code",
+            "url": "https://mywestnewton.com/wp-content/uploads/2019/09/Zoning-Regulations1.pdf",
+            "notes": "8.16 - Off-Street Parking Requirements\nPage 30 of pdf, page 804 of original document",
+            "attachments": [
+              {
+                "fileName": "WestNewton_PA_1_1.png",
+                "isDoc": false,
+                "directusId": "18466968-9bc7-4b46-8a45-f3808ed04b40"
               }
             ]
           }
@@ -81456,7 +82072,85 @@
           ]
         }
       ]
-    }
+    },
+    "add_max": [
+      {
+        "reporter": "Samuel Deetz",
+        "requirements": ["by right"],
+        "citations": [
+          {
+            "description": "Winterthur Parkplatzverordnung",
+            "type": "city code",
+            "url": "https://winterthur.tlex.ch/app/de/texts_of_law/7.1.3-4/versions/608",
+            "notes": "II. Art.2. 3.\nII. Art. 4",
+            "attachments": [
+              {
+                "fileName": "Winterthur_ZH_1_1.png",
+                "isDoc": false,
+                "directusId": "94aa7c4a-5b0d-4d1b-bc92-7c5112a28af3"
+              },
+              {
+                "fileName": "Winterthur_ZH_1_2.png",
+                "isDoc": false,
+                "directusId": "ad4d796e-d459-4590-b8ea-d65c590de526"
+              },
+              {
+                "fileName": "Winterthur_ZH_1_3.png",
+                "isDoc": false,
+                "directusId": "768163ca-1538-4ff8-98fd-6fed66cd54f9"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "reduce_min": [
+      {
+        "reporter": "Samuel Deetz",
+        "requirements": ["by right", "frequent transit"],
+        "citations": [
+          {
+            "description": "Winterthur Parkplatzverordnung",
+            "type": "city code",
+            "url": "https://winterthur.tlex.ch/app/de/texts_of_law/7.1.3-4/versions/608",
+            "notes": "II. Art. 4",
+            "attachments": [
+              {
+                "fileName": "Winterthur_ZH_1_1.png",
+                "isDoc": false,
+                "directusId": "7afbdd90-7476-4b49-8f6b-892d1a07854f"
+              },
+              {
+                "fileName": "Winterthur_ZH_1_2.png",
+                "isDoc": false,
+                "directusId": "2441c43d-30c1-44ad-9ea2-f95127b787a6"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "rm_min": [
+      {
+        "reporter": "Samuel Deetz",
+        "requirements": ["by right"],
+        "citations": [
+          {
+            "description": "Winterthur Parkplatzverordnung",
+            "type": "city code",
+            "url": "https://winterthur.tlex.ch/app/de/texts_of_law/7.1.3-4/versions/608",
+            "notes": "II. Art.2. 3.",
+            "attachments": [
+              {
+                "fileName": "Winterthur_ZH_1_1.png",
+                "isDoc": false,
+                "directusId": "a680f19c-2d67-4704-ace9-d895bf3abc65"
+              }
+            ]
+          }
+        ]
+      }
+    ]
   },
   "Winthrop Harbor, IL": {
     "add_max": [
@@ -82415,6 +83109,29 @@
       }
     ]
   },
+  "Yoe, PA": {
+    "reduce_min": [
+      {
+        "reporter": "Samuel Deetz",
+        "requirements": ["other"],
+        "citations": [
+          {
+            "description": "Yoe Zoning Code",
+            "type": "city code",
+            "url": "https://codelibrary.amlegal.com/codes/yoe/latest/yoeb_pa/0-0-0-5535",
+            "notes": "§ 27-603.\n1.F.(2)",
+            "attachments": [
+              {
+                "fileName": "Yoe_PA_1_1.png",
+                "isDoc": false,
+                "directusId": "c6db09b3-daf7-4095-9ff2-d0ade570c3fd"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
   "Yonkers, NY": {
     "legacy": {
       "reporter": "Samuel Deetz",
@@ -82491,7 +83208,49 @@
           ]
         }
       ]
-    }
+    },
+    "add_max": [
+      {
+        "reporter": "Samuel Deetz",
+        "requirements": ["by right"],
+        "citations": [
+          {
+            "description": "York car and cycle parking standards",
+            "type": "city code",
+            "url": "https://www.york.gov.uk/downloads/file/2813/the-local-plan-2005-appendix-e-car-and-cycle-parking-standards",
+            "notes": null,
+            "attachments": [
+              {
+                "fileName": "York_England_1_1.png",
+                "isDoc": false,
+                "directusId": "53044d9f-c5bc-4317-95e3-36f1859c1341"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "rm_min": [
+      {
+        "reporter": "Samuel Deetz",
+        "requirements": ["by right"],
+        "citations": [
+          {
+            "description": "York car and cycle parking standards",
+            "type": "city code",
+            "url": "https://www.york.gov.uk/downloads/file/2813/the-local-plan-2005-appendix-e-car-and-cycle-parking-standards",
+            "notes": null,
+            "attachments": [
+              {
+                "fileName": "York_England_1_1.png",
+                "isDoc": false,
+                "directusId": "53044d9f-c5bc-4317-95e3-36f1859c1341"
+              }
+            ]
+          }
+        ]
+      }
+    ]
   },
   "York, PA": {
     "rm_min": [
@@ -82925,7 +83684,49 @@
           ]
         }
       ]
-    }
+    },
+    "add_max": [
+      {
+        "reporter": "Samuel Deetz",
+        "requirements": ["by right"],
+        "citations": [
+          {
+            "description": "Zoar Zoning Code",
+            "type": "city code",
+            "url": "http://www.zoarohio.net/zoning",
+            "notes": "Open \"Zoning Ordinance (No. 2023-06)\" document\nPage 24",
+            "attachments": [
+              {
+                "fileName": "Zoar_OH_1_1.png",
+                "isDoc": false,
+                "directusId": "340a1fe0-9652-4b92-9d10-3d77684dba66"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "rm_min": [
+      {
+        "reporter": "Samuel Deetz",
+        "requirements": ["by right"],
+        "citations": [
+          {
+            "description": "Zoar Zoning Code",
+            "type": "city code",
+            "url": "http://www.zoarohio.net/zoning",
+            "notes": "Open \"Zoning Ordinance (No. 2023-06)\" document\nPage 24",
+            "attachments": [
+              {
+                "fileName": "Zoar_OH_1_1.png",
+                "isDoc": false,
+                "directusId": "340a1fe0-9652-4b92-9d10-3d77684dba66"
+              }
+            ]
+          }
+        ]
+      }
+    ]
   },
   "Zumbro Falls, MN": {
     "rm_min": [
