@@ -6,8 +6,9 @@ import Observable from "./Observable";
 
 export const UNKNOWN_YEAR = "Unknown";
 
+// Keep in alignment with FilterState.
 type FilterGroupKey =
-  | "policyChange"
+  | "includedPolicyChanges"
   | "scope"
   | "landUse"
   | "status"
@@ -15,7 +16,7 @@ type FilterGroupKey =
   | "year";
 
 const DESELECTED_BY_DEFAULT: Record<FilterGroupKey, Set<string>> = {
-  policyChange: new Set(),
+  includedPolicyChanges: new Set(),
   scope: new Set(),
   landUse: new Set(),
   status: new Set(["planned", "proposed", "repealed", "unverified"]),
@@ -44,7 +45,7 @@ export class FilterOptions {
       entry.unifiedPolicy.land.forEach((v) => landUse.add(v));
     });
     this.options = {
-      policyChange: Array.from(policy).sort(),
+      includedPolicyChanges: Array.from(policy).sort(),
       scope: Array.from(scope).sort(),
       landUse: Array.from(landUse).sort(),
       status: Array.from(status).sort(),
@@ -332,7 +333,7 @@ export function initFilterOptions(
 ): void {
   initFilterGroup(filterManager, filterOptions, {
     htmlName: "policy-change",
-    filterStateKey: "policyChange",
+    filterStateKey: "includedPolicyChanges",
     legend: "Policy change",
   });
   initFilterGroup(filterManager, filterOptions, {
