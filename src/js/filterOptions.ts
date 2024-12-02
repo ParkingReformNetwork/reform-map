@@ -1,7 +1,7 @@
 import { capitalize } from "lodash-es";
 
 import { ProcessedCoreEntry } from "./types";
-import { PlaceFilterManager } from "./FilterState";
+import { PlaceFilterManager, PolicyTypeFilter } from "./FilterState";
 import Observable from "./Observable";
 
 export const UNKNOWN_YEAR = "Unknown";
@@ -92,6 +92,7 @@ type AccordionElements = {
 };
 
 type AccordionState = {
+  hidden: boolean;
   expanded: boolean;
   checkboxStats: CheckboxStats;
 };
@@ -101,6 +102,8 @@ function updateAccordionUI(
   title: string,
   state: AccordionState,
 ): void {
+  elements.outerContainer.hidden = state.hidden;
+
   elements.accordionTitle.textContent = `${title} (${state.checkboxStats.checked}/${state.checkboxStats.total})`;
 
   const upIcon =
@@ -126,6 +129,7 @@ type FilterGroupParams = {
   /// only impacts the UI and not the underlying data.
   preserveCapitalization?: boolean;
   useTwoColumns?: boolean;
+  hideForPolicyTypeFilter?: PolicyTypeFilter[];
 };
 
 function generateAccordion(
@@ -245,6 +249,7 @@ function generateAccordion(
   };
 
   const accordionState = new Observable<AccordionState>({
+    hidden: false,
     expanded: false,
     checkboxStats: getCheckboxStats(fieldSet),
   });
@@ -254,6 +259,7 @@ function generateAccordion(
   accordionButton.addEventListener("click", () => {
     const priorState = accordionState.getValue();
     accordionState.setValue({
+      hidden: priorState.hidden,
       expanded: !priorState.expanded,
       checkboxStats: priorState.checkboxStats,
     });
@@ -269,6 +275,7 @@ function updateCheckboxStats(
 ): void {
   const accordionPriorState = observable.getValue();
   observable.setValue({
+    hidden: accordionPriorState.hidden,
     expanded: accordionPriorState.expanded,
     checkboxStats: getCheckboxStats(fieldSet),
   });
@@ -325,6 +332,13 @@ function initFilterGroup(
       [params.filterStateKey]: [],
     });
   });
+
+  filterManager.subscribe((state) => {
+    const priorAccordionState = accordionState.getValue();
+    const hidden =
+      params.hideForPolicyTypeFilter?.includes(state.policyTypeFilter) ?? false;
+    accordionState.setValue({ ...priorAccordionState, hidden });
+  });
 }
 
 export function initFilterOptions(
@@ -335,21 +349,29 @@ export function initFilterOptions(
     htmlName: "policy-change",
     filterStateKey: "includedPolicyChanges",
     legend: "Policy change",
+    hideForPolicyTypeFilter: [
+      "add parking maximums",
+      "reduce parking minimums",
+      "remove parking minimums",
+    ],
   });
   initFilterGroup(filterManager, filterOptions, {
     htmlName: "scope",
     filterStateKey: "scope",
     legend: "Reform scope",
+    hideForPolicyTypeFilter: ["any parking reform"],
   });
   initFilterGroup(filterManager, filterOptions, {
     htmlName: "land-use",
     filterStateKey: "landUse",
     legend: "Affected land use",
+    hideForPolicyTypeFilter: ["any parking reform"],
   });
   initFilterGroup(filterManager, filterOptions, {
     htmlName: "status",
     filterStateKey: "status",
     legend: "Status",
+    hideForPolicyTypeFilter: ["any parking reform"],
   });
   initFilterGroup(filterManager, filterOptions, {
     htmlName: "country",
@@ -362,6 +384,7 @@ export function initFilterOptions(
     filterStateKey: "year",
     legend: "Year",
     useTwoColumns: true,
+    hideForPolicyTypeFilter: ["any parking reform"],
   });
 
   const minimumsToggle = document.querySelector<HTMLInputElement>(
