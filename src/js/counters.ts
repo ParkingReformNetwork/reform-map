@@ -1,6 +1,7 @@
 import { FilterState, PlaceFilterManager } from "./FilterState";
 
 export function determineHtml(
+  view: "table" | "map",
   state: FilterState,
   numPlaces: number,
   numPolicyRecords: number,
@@ -24,6 +25,12 @@ export function determineHtml(
   const placesWord = numPlaces === 1 ? "place" : "places";
   const recordsWord = numPolicyRecords === 1 ? "record" : "records";
 
+  // We only show the number of policy records when it's useful information to the user
+  // because it would otherwise be noisy.
+  const showRecords = view === "table" && numPlaces !== numPolicyRecords;
+  const multipleRecordsExplanation =
+    "because some places have multiple records";
+
   const prefix = `Showing ${numPlaces} ${placesWord} in ${country}`;
 
   if (
@@ -31,29 +38,44 @@ export function determineHtml(
     state.policyTypeFilter === "legacy reform"
   ) {
     const suffix = state.allMinimumsRemovedToggle
-      ? "with all parking minimums removed."
-      : "with parking reforms.";
+      ? "with all parking minimums removed"
+      : "with parking reforms";
     return `${prefix} ${suffix}`;
   }
 
   if (state.policyTypeFilter === "reduce parking minimums") {
-    return `${prefix} with parking minimum reductions. Matched ${numPolicyRecords} total policy ${recordsWord}.`;
+    const firstSentence = `${prefix} with parking minimum reductions`;
+    return showRecords
+      ? `${firstSentence}. Matched ${numPolicyRecords} total policy ${recordsWord} ${multipleRecordsExplanation}.`
+      : firstSentence;
   }
 
   if (state.policyTypeFilter === "add parking maximums") {
-    const suffix = state.allMinimumsRemovedToggle
-      ? `with both all parking minimums removed and parking maximums added. Matched ${numPolicyRecords} total parking maximum policy ${recordsWord}.`
-      : `with parking maximums added. Matched ${numPolicyRecords} total policy ${recordsWord}.`;
-    return `${prefix} ${suffix}`;
+    let firstSentenceSuffix;
+    let secondSentence;
+    if (state.allMinimumsRemovedToggle) {
+      firstSentenceSuffix =
+        "with both all parking minimums removed and parking maximums added";
+      secondSentence = `Matched ${numPolicyRecords} total parking maximum policy ${recordsWord} ${multipleRecordsExplanation}`;
+    } else {
+      firstSentenceSuffix = "with parking maximums added";
+      secondSentence = `Matched ${numPolicyRecords} total policy ${recordsWord} ${multipleRecordsExplanation}`;
+    }
+    const firstSentence = `${prefix} ${firstSentenceSuffix}`;
+    return showRecords ? `${firstSentence}. ${secondSentence}.` : firstSentence;
   }
 
   if (state.policyTypeFilter === "remove parking minimums") {
-    const suffix = state.allMinimumsRemovedToggle
-      ? // It's not necessary to say the # of policy records when allMinimumsRemovedToggle is true because the place should have
-        // only one removal policy record that is citywide & all land uses.
-        `with all parking minimums removed.`
-      : `with parking minimum removals. Matched ${numPolicyRecords} total policy ${recordsWord}.`;
-    return `${prefix} ${suffix}`;
+    // It's not necessary to say the # of policy records when allMinimumsRemovedToggle is true because the place should have
+    // only one removal policy record that is citywide & all land uses.
+    if (state.allMinimumsRemovedToggle) {
+      return `${prefix} with all parking minimums removed`;
+    }
+
+    const firstSentence = `${prefix} with parking minimum removals`;
+    return showRecords
+      ? `${firstSentence}. Matched ${numPolicyRecords} total policy ${recordsWord} ${multipleRecordsExplanation}.`
+      : firstSentence;
   }
 
   throw new Error("unreachable");
@@ -82,13 +104,19 @@ export default function initCounters(manager: PlaceFilterManager): void {
   setUpResetButton(tableCounter, manager);
 
   manager.subscribe((state) => {
-    const html = determineHtml(
+    mapCounter.innerHTML = determineHtml(
+      "map",
       state,
       manager.placeIds.size,
       manager.numMatchedPolicyRecords,
       manager.matchedCountries,
     );
-    mapCounter.innerHTML = html;
-    tableCounter.innerHTML = html;
+    tableCounter.innerHTML = determineHtml(
+      "table",
+      state,
+      manager.placeIds.size,
+      manager.numMatchedPolicyRecords,
+      manager.matchedCountries,
+    );
   });
 }
