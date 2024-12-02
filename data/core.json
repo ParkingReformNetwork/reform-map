@@ -27304,7 +27304,40 @@
         "residential, multi-family"
       ],
       "date": "2017-11-17"
-    }
+    },
+    "add_max": [
+      {
+        "summary": "Within the Urban Center District (UC), parking maximums are set at 125% of the minimums excluding dedicated residential spaces and parking structures.",
+        "status": "implemented",
+        "scope": ["main street / special"],
+        "land": ["commercial", "industrial", "medical", "other"],
+        "date": "2017-11-17"
+      }
+    ],
+    "reduce_min": [
+      {
+        "summary": "Within the Urban Center District (UC), on-street parking may be counted towards parking minimums.",
+        "status": "implemented",
+        "scope": ["main street / special"],
+        "land": ["all uses"],
+        "date": "2017-11-17"
+      }
+    ],
+    "rm_min": [
+      {
+        "summary": "The Downtown District (D) is exempt from parking mandates, except for standalone multifamily dwelling buildings. Accessory Dwelling Units are exempt from mandates citywide.",
+        "status": "implemented",
+        "scope": ["city center / business district", "citywide"],
+        "land": [
+          "commercial",
+          "medical",
+          "other",
+          "residential, low-density",
+          "residential, multi-family"
+        ],
+        "date": "2017-11-17"
+      }
+    ]
   },
   "Jefferson City, MO": {
     "place": {
@@ -50894,7 +50927,40 @@
       "scope": ["city center / business district", "transit-oriented"],
       "land": ["commercial", "industrial", "other", "residential, all uses"],
       "date": null
-    }
+    },
+    "add_max": [
+      {
+        "summary": "Parking maximums apply to most uses in zones 1-3.",
+        "status": "implemented",
+        "scope": ["citywide", "transit-oriented"],
+        "land": [
+          "commercial",
+          "industrial",
+          "medical",
+          "other",
+          "residential, all uses"
+        ],
+        "date": null
+      }
+    ],
+    "reduce_min": [
+      {
+        "summary": "Parking requirements vary across zones 1-3 based on location and transit availability.",
+        "status": "implemented",
+        "scope": ["city center / business district", "transit-oriented"],
+        "land": ["all uses"],
+        "date": null
+      }
+    ],
+    "rm_min": [
+      {
+        "summary": "Zone 4 is exempt from parking mandates.",
+        "status": "implemented",
+        "scope": ["city center / business district", "transit-oriented"],
+        "land": ["commercial", "industrial", "other", "residential, all uses"],
+        "date": null
+      }
+    ]
   },
   "Sinking Spring, PA": {
     "place": {
@@ -61872,7 +61938,47 @@
       "scope": ["city center / business district"],
       "land": ["commercial", "other"],
       "date": null
-    }
+    },
+    "add_max": [
+      {
+        "summary": "Parking maximums are set at 120% of the minimums for nonresidential and multi-family uses.",
+        "status": "implemented",
+        "scope": ["citywide"],
+        "land": [
+          "commercial",
+          "industrial",
+          "medical",
+          "other",
+          "residential, multi-family"
+        ],
+        "date": null
+      }
+    ],
+    "reduce_min": [
+      {
+        "summary": "Parking reductions are available for on-street parking, public parking, pedestrian access and bike parking. A fee in lieu of parking may also be provided.",
+        "status": "implemented",
+        "scope": ["citywide"],
+        "land": [
+          "all uses",
+          "commercial",
+          "industrial",
+          "medical",
+          "other",
+          "residential, multi-family"
+        ],
+        "date": null
+      }
+    ],
+    "rm_min": [
+      {
+        "summary": "Nonresidential uses within the B-2 Mixed-Use District are exempt from parking mandates.",
+        "status": "implemented",
+        "scope": ["city center / business district"],
+        "land": ["commercial", "other"],
+        "date": null
+      }
+    ]
   },
   "Youngstown, OH": {
     "place": {
@@ -61890,7 +61996,25 @@
       "scope": ["city center / business district"],
       "land": ["commercial", "other", "residential, low-density"],
       "date": null
-    }
+    },
+    "add_max": [
+      {
+        "summary": "Parking maximums apply to surface parking lots with 50 or more spaces where no more than 125% of the minimums may be provided.",
+        "status": "implemented",
+        "scope": ["citywide"],
+        "land": ["all uses"],
+        "date": null
+      }
+    ],
+    "rm_min": [
+      {
+        "summary": "Parking is not required in the downtown area, except for bus or rail transit stations, multi‐family dwellings, and lodging. Nonresidential uses on small lots in Mixed-Use Districts are exempted, as well as uses on lots in a residential district with a width of 25 feet or less and no alley access.",
+        "status": "implemented",
+        "scope": ["city center / business district"],
+        "land": ["commercial", "other", "residential, low-density"],
+        "date": null
+      }
+    ]
   },
   "Ypsilanti Charter Township, MI": {
     "place": {
@@ -61936,7 +62060,40 @@
         "residential, low-density"
       ],
       "date": null
-    }
+    },
+    "add_max": [
+      {
+        "summary": "Parking maximums are set at 120% of the minimums for nonresidential uses.",
+        "status": "implemented",
+        "scope": ["citywide"],
+        "land": ["commercial", "industrial", "medical", "other"],
+        "date": null
+      }
+    ],
+    "reduce_min": [
+      {
+        "summary": "Upper-story dwellings in the Historic Corridor District may pay a fee in lieu of providing off-street parking. Parking requirements may be reduced through the availability of transit, or the provision of carshare spaces, carpooling spaces, EV chargers, or bike parking. Parking requirements are reduced by half for uses in the Walkable Urban Zoning Districts.",
+        "status": "implemented",
+        "scope": ["city center / business district", "citywide"],
+        "land": ["all uses", "residential, multi-family"],
+        "date": null
+      }
+    ],
+    "rm_min": [
+      {
+        "summary": "Single-family detached dwellings, townhouses, two-family dwellings and ADUs are exempt from parking mandates citywide. Parking mandates also do not apply to uses in the Center District or existing commercial uses in the Historic Corridor zoning districts, except for upper-story dwellings.",
+        "status": "implemented",
+        "scope": ["city center / business district", "citywide"],
+        "land": [
+          "all uses",
+          "commercial",
+          "other",
+          "residential, all uses",
+          "residential, low-density"
+        ],
+        "date": null
+      }
+    ]
   },
   "Yukon, OK": {
     "place": {
@@ -62087,7 +62244,25 @@
       "scope": ["city center / business district"],
       "land": ["commercial", "other"],
       "date": null
-    }
+    },
+    "reduce_min": [
+      {
+        "summary": "Commercial uses in the C-1 Central Business District may pay a fee in lieu of required parking. Commercial uses in C-1, C-2 and C-3 Commercial Districts may count public parking towards parking requirements.",
+        "status": "implemented",
+        "scope": ["city center / business district"],
+        "land": ["commercial", "other"],
+        "date": null
+      }
+    ],
+    "rm_min": [
+      {
+        "summary": "Most commercial uses under 1500 square feet in the C-1 Central Business District are exempt from parking mandates.",
+        "status": "implemented",
+        "scope": ["city center / business district"],
+        "land": ["commercial", "other"],
+        "date": null
+      }
+    ]
   },
   "Zingst, MV": {
     "place": {
