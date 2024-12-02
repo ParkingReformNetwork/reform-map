@@ -15,9 +15,21 @@ import initTable from "./table";
 import subscribeSnapToPlace from "./mapPosition";
 import readData from "./data";
 
-// This should always be "legacy reform" in production during the database migration.
-// However, it can be changed locally to experiment with other reform types.
-const POLICY_TYPE_FILTER: PolicyTypeFilter = "legacy reform";
+function policyTypeFilterFromUrl(): PolicyTypeFilter {
+  const typeParam = new URLSearchParams(window.location.search).get("type");
+  switch (typeParam) {
+    case "any":
+      return "any parking reform";
+    case "max":
+      return "add parking maximums";
+    case "rm":
+      return "remove parking minimums";
+    case "reduce":
+      return "reduce parking minimums";
+    default:
+      return "legacy reform";
+  }
+}
 
 export default async function initApp(): Promise<void> {
   initIcons();
@@ -25,16 +37,18 @@ export default async function initApp(): Promise<void> {
   initAbout();
   const filterPopupIsVisible = initFilterPopup();
 
+  const policyTypeFilter = policyTypeFilterFromUrl();
+
   const map = createMap();
   const data = await readData({
-    includeMultipleReforms: POLICY_TYPE_FILTER !== "legacy reform",
+    includeMultipleReforms: policyTypeFilter !== "legacy reform",
   });
 
   const filterOptions = new FilterOptions(Object.values(data));
 
   const filterManager = new PlaceFilterManager(data, {
     searchInput: null,
-    policyTypeFilter: POLICY_TYPE_FILTER,
+    policyTypeFilter,
     allMinimumsRemovedToggle: true,
     includedPolicyChanges: filterOptions.default("includedPolicyChanges"),
     scope: filterOptions.default("scope"),
