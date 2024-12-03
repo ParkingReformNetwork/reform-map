@@ -2565,7 +2565,54 @@
           ]
         }
       ]
-    }
+    },
+    "add_max": [
+      {
+        "reporter": "Samuel Deetz",
+        "requirements": ["by right", "other"],
+        "citations": [
+          {
+            "description": "Angola Zoning Code",
+            "type": "city code",
+            "url": "https://www.codepublishing.com/IN/Angola/#!/Angola18/Angola18176.html#18.176.080",
+            "notes": "18.176.080(A)(2)",
+            "attachments": [
+              {
+                "fileName": "Angola_IN_1_1.png",
+                "isDoc": false,
+                "directusId": "8ca4c60d-b63e-491a-a8c8-3f24ccfbfea4"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "rm_min": [
+      {
+        "reporter": "Samuel Deetz",
+        "requirements": ["by right"],
+        "citations": [
+          {
+            "description": "Angola Zoning Code",
+            "type": "city code",
+            "url": "https://www.codepublishing.com/IN/Angola/#!/Angola18/Angola18176.html#18.176",
+            "notes": "18.176.070\n18.176.080",
+            "attachments": [
+              {
+                "fileName": "Angola_IN_1_1.png",
+                "isDoc": false,
+                "directusId": "91bd5e5e-e6f8-4171-be96-0dc089668554"
+              },
+              {
+                "fileName": "Angola_IN_1_2.png",
+                "isDoc": false,
+                "directusId": "64402065-d1ec-41b4-85ce-76efa9aadb20"
+              }
+            ]
+          }
+        ]
+      }
+    ]
   },
   "Ankeny, IA": {
     "rm_min": [
@@ -3179,7 +3226,85 @@
           ]
         }
       ]
-    }
+    },
+    "add_max": [
+      {
+        "reporter": "Samuel Deetz",
+        "requirements": ["by right"],
+        "citations": [
+          {
+            "description": "Arlington Zoning Code",
+            "type": "city code",
+            "url": "https://cms1files.revize.com/arlingtontn/document_center/Planning%20Docs/08_CHAPTER%208%20-%20PKG%20AND%20LOADING%20Rev%2006Feb2017.pdf",
+            "notes": "8.1.13\nPage 16",
+            "attachments": [
+              {
+                "fileName": "Arlington_TN_1_1.png",
+                "isDoc": false,
+                "directusId": "8619c43f-cc30-4ecb-8f0a-a05ba640f314"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "reduce_min": [
+      {
+        "reporter": "Samuel Deetz",
+        "requirements": ["by right", "other"],
+        "citations": [
+          {
+            "description": "Arlington Zoning Code",
+            "type": "city code",
+            "url": "https://cms1files.revize.com/arlingtontn/document_center/Planning%20Docs/08_CHAPTER%208%20-%20PKG%20AND%20LOADING%20Rev%2006Feb2017.pdf",
+            "notes": "CHAPTER 8: PARKING AND LOADING REGULATIONS\n8.1 OFF-STREET PARKING, PAVING AND LOADING REQUIREMENTS\n8.1.6 Credit for On-Street Parking Spaces\n8.1.13 Minimum and Maximum Parking Space Requirements.\nPages 5, 16",
+            "attachments": [
+              {
+                "fileName": "Arlington_TN_1_1.png",
+                "isDoc": false,
+                "directusId": "0b8b1c83-aa61-4c0b-a476-df1272c2ca40"
+              },
+              {
+                "fileName": "Arlington_TN_1_2.png",
+                "isDoc": false,
+                "directusId": "b7dd060c-f762-43fa-be69-f7af1c545bf4"
+              },
+              {
+                "fileName": "Arlington_TN_1_3.png",
+                "isDoc": false,
+                "directusId": "fc0862e8-e397-42fd-bbb3-988efa37d5cd"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "rm_min": [
+      {
+        "reporter": "Samuel Deetz",
+        "requirements": ["by right"],
+        "citations": [
+          {
+            "description": "Arlington Zoning Code",
+            "type": "city code",
+            "url": "https://cms1files.revize.com/arlingtontn/document_center/Planning%20Docs/08_CHAPTER%208%20-%20PKG%20AND%20LOADING%20Rev%2006Feb2017.pdf",
+            "notes": "8.1.13\nPage 16",
+            "attachments": [
+              {
+                "fileName": "Arlington_TN_1_1.png",
+                "isDoc": false,
+                "directusId": "06ff37cc-6681-4b6e-b2cc-7daaab901e30"
+              },
+              {
+                "fileName": "Arlington_TN_1_2.png",
+                "isDoc": false,
+                "directusId": "fbb254a0-41a8-4de6-a797-7ee59c4d7747"
+              }
+            ]
+          }
+        ]
+      }
+    ]
   },
   "Arlington, TX": {
     "legacy": {
@@ -5862,7 +5987,49 @@
           ]
         }
       ]
-    }
+    },
+    "add_max": [
+      {
+        "reporter": "Samuel Deetz",
+        "requirements": ["by right"],
+        "citations": [
+          {
+            "description": "ITDP Breaking the Code report",
+            "type": "other",
+            "url": "https://www.itdp.org/wp-content/uploads/2023/09/ITDP_Breaking-the-Code_Sep.-7.pdf",
+            "notes": "4.2 BEIJING, CHINA\nPages 21-27",
+            "attachments": [
+              {
+                "fileName": "Beijing_BJ_1_1.png",
+                "isDoc": false,
+                "directusId": "7e0b9662-6bad-4b15-8e21-4ca87d3beb97"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "rm_min": [
+      {
+        "reporter": "Samuel Deetz",
+        "requirements": ["by right"],
+        "citations": [
+          {
+            "description": "ITDP Breaking the Code report",
+            "type": "other",
+            "url": "https://www.itdp.org/wp-content/uploads/2023/09/ITDP_Breaking-the-Code_Sep.-7.pdf",
+            "notes": "4.2 BEIJING, CHINA\nPages 21-27",
+            "attachments": [
+              {
+                "fileName": "Beijing_BJ_1_1.png",
+                "isDoc": false,
+                "directusId": "7e0b9662-6bad-4b15-8e21-4ca87d3beb97"
+              }
+            ]
+          }
+        ]
+      }
+    ]
   },
   "Bel Air, MD": {
     "legacy": {
@@ -7074,7 +7241,49 @@
           ]
         }
       ]
-    }
+    },
+    "add_max": [
+      {
+        "reporter": "Samuel Deetz",
+        "requirements": ["by right", "other"],
+        "citations": [
+          {
+            "description": "Berthold Zoning Code",
+            "type": "city code",
+            "url": "https://www.berthold-nd.gov/zoning.html",
+            "notes": "8.0. “MS-C” Main Street Commercial District\n8.5. Parking Requirements.\nPage 19",
+            "attachments": [
+              {
+                "fileName": "Berthold_ND_1_1.png",
+                "isDoc": false,
+                "directusId": "915a34c6-e838-4abe-a519-2d1773ee389b"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "rm_min": [
+      {
+        "reporter": "Samuel Deetz",
+        "requirements": ["by right", "other"],
+        "citations": [
+          {
+            "description": "Berthold Zoning Code",
+            "type": "city code",
+            "url": "https://www.berthold-nd.gov/zoning.html",
+            "notes": "8.0. “MS-C” Main Street Commercial District\n8.5. Parking Requirements.\nPage 19",
+            "attachments": [
+              {
+                "fileName": "Berthold_ND_1_1.png",
+                "isDoc": false,
+                "directusId": "915a34c6-e838-4abe-a519-2d1773ee389b"
+              }
+            ]
+          }
+        ]
+      }
+    ]
   },
   "Berthoud, CO": {
     "legacy": {
@@ -7529,7 +7738,75 @@
           ]
         }
       ]
-    }
+    },
+    "add_max": [
+      {
+        "reporter": "Randy Vinson",
+        "requirements": ["by right"],
+        "citations": [
+          {
+            "description": "Billings Zoning Code",
+            "type": "city code",
+            "url": "https://library.municode.com/mt/billings/codes/code_of_ordinances?nodeId=CICO_CH27ZO_ART27-1300PALO_S27-1302CAREPA",
+            "notes": "Sec. 27-1302.F.",
+            "attachments": [
+              {
+                "fileName": "Billings_MT_1_1.png",
+                "isDoc": false,
+                "directusId": "b481c749-8b0c-4e80-a326-22b12e4b970f"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "reduce_min": [
+      {
+        "reporter": "Randy Vinson",
+        "requirements": ["other"],
+        "citations": [
+          {
+            "description": "Billings Zoning Code",
+            "type": "city code",
+            "url": "https://library.municode.com/mt/billings/codes/code_of_ordinances?nodeId=CICO_CH27ZO_ART27-1300PALO_S27-1304PAEXRE",
+            "notes": "Sec. 27-1304.B.",
+            "attachments": [
+              {
+                "fileName": "Billings_MT_1_1.png",
+                "isDoc": false,
+                "directusId": "9a775533-ff89-4a70-b415-7775eb1853c9"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "rm_min": [
+      {
+        "reporter": "Randy Vinson",
+        "requirements": ["by right"],
+        "citations": [
+          {
+            "description": "Billings Zoning Code",
+            "type": "city code",
+            "url": "https://library.municode.com/mt/billings/codes/code_of_ordinances?nodeId=CICO_CH27ZO_ART27-1300PALO_S27-1304PAEXRE",
+            "notes": "Sec. 27-1304.A.",
+            "attachments": [
+              {
+                "fileName": "Billings_MT_1_1.png",
+                "isDoc": false,
+                "directusId": "ce3f7ff1-cc61-4683-805a-db6849995a17"
+              },
+              {
+                "fileName": "Billings_MT_1_2.png",
+                "isDoc": false,
+                "directusId": "93c0929b-bdf3-4d89-90a1-5f7116664cb6"
+              }
+            ]
+          }
+        ]
+      }
+    ]
   },
   "Biloxi, MS": {
     "rm_min": [
@@ -10530,7 +10807,49 @@
           ]
         }
       ]
-    }
+    },
+    "reduce_min": [
+      {
+        "reporter": "Samuel Deetz",
+        "requirements": ["in-lieu fees"],
+        "citations": [
+          {
+            "description": "Butte-Silver Bow County Zoning Code",
+            "type": "city code",
+            "url": "https://library.municode.com/mt/butte-silver_bow_county/codes/code_of_ordinances?nodeId=TIT17ZO_CH17.40ORELOPA_17.40.600CALIPA",
+            "notes": "17.40.600 - Cash in lieu of parking.",
+            "attachments": [
+              {
+                "fileName": "Butte-SilverBowCounty_MT_1_1.png",
+                "isDoc": false,
+                "directusId": "29476388-110d-4c00-aaca-29c65b439e83"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "rm_min": [
+      {
+        "reporter": "Samuel Deetz",
+        "requirements": ["by right", "other"],
+        "citations": [
+          {
+            "description": "Butte-Silver Bow County Zoning Code",
+            "type": "city code",
+            "url": "https://library.municode.com/mt/butte-silver_bow_county/codes/code_of_ordinances?nodeId=TIT17ZO_CH17.40ORELOPA_17.40.060OREPALOXEAR",
+            "notes": "17.40.060 - Off-street parking and loading—Exempted area.",
+            "attachments": [
+              {
+                "fileName": "Butte-SilverBowCounty_MT_1_1.png",
+                "isDoc": false,
+                "directusId": "faf7e0ce-cff0-4a1d-9a3a-35f53d9acc39"
+              }
+            ]
+          }
+        ]
+      }
+    ]
   },
   "Byesville, OH": {
     "reduce_min": [
@@ -11615,7 +11934,49 @@
           ]
         }
       ]
-    }
+    },
+    "reduce_min": [
+      {
+        "reporter": "Samuel Deetz",
+        "requirements": ["bike parking", "other"],
+        "citations": [
+          {
+            "description": "Cape Town Municipal Planning By-Law",
+            "type": "city code",
+            "url": "https://resource.capetown.gov.za/documentcentre/Documents/Bylaws%20and%20policies/City%20of%20Cape%20Town%20Municipal%20Planning%20By-law%202015.pdf",
+            "notes": "CHAPTER 15.143.(2)\nPage 150 of pdf, page 147 of original document",
+            "attachments": [
+              {
+                "fileName": "CapeTown_WC_1_1.png",
+                "isDoc": false,
+                "directusId": "eb7a4dc5-17b5-486d-a474-2fd9be8eea2f"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "rm_min": [
+      {
+        "reporter": "Samuel Deetz",
+        "requirements": ["by right"],
+        "citations": [
+          {
+            "description": "Cape Town Municipal Planning By-Law",
+            "type": "city code",
+            "url": "https://resource.capetown.gov.za/documentcentre/Documents/Bylaws%20and%20policies/City%20of%20Cape%20Town%20Municipal%20Planning%20By-law%202015.pdf",
+            "notes": "CHAPTER 15.138. \nPage 147 of pdf, page 144 of original document",
+            "attachments": [
+              {
+                "fileName": "CapeTown_WC_1_1.png",
+                "isDoc": false,
+                "directusId": "97d83678-bbe0-4d5b-8357-1d67e672c178"
+              }
+            ]
+          }
+        ]
+      }
+    ]
   },
   "Carbondale, CO": {
     "legacy": {
@@ -18373,7 +18734,49 @@
           ]
         }
       ]
-    }
+    },
+    "add_max": [
+      {
+        "reporter": "Samuel Deetz",
+        "requirements": ["by right"],
+        "citations": [
+          {
+            "description": "Cross Plains Zoning Code",
+            "type": "city code",
+            "url": "https://www.cross-plains.wi.us/DocumentCenter/View/1235/Chapter-84?bidId=",
+            "notes": "SECTION 84.104(f)(15)\nPage 176 of pdf, page 172 of original document",
+            "attachments": [
+              {
+                "fileName": "CrossPlains_WI_1_1.png",
+                "isDoc": false,
+                "directusId": "d977ad9f-b9fb-4420-bf76-e2adc352f281"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "rm_min": [
+      {
+        "reporter": "Samuel Deetz",
+        "requirements": ["by right"],
+        "citations": [
+          {
+            "description": "Cross Plains Zoning Code",
+            "type": "city code",
+            "url": "https://www.cross-plains.wi.us/DocumentCenter/View/1235/Chapter-84?bidId=",
+            "notes": "SECTION 84.104(m)(2)\nPage 180 of pdf, page 176 of original document",
+            "attachments": [
+              {
+                "fileName": "CrossPlains_WI_1_1.png",
+                "isDoc": false,
+                "directusId": "a80faac6-0e74-4e0b-9942-538942e91a74"
+              }
+            ]
+          }
+        ]
+      }
+    ]
   },
   "Crowley, LA": {
     "rm_min": [
@@ -19321,7 +19724,49 @@
           ]
         }
       ]
-    }
+    },
+    "add_max": [
+      {
+        "reporter": "Samuel Deetz",
+        "requirements": ["by right"],
+        "citations": [
+          {
+            "description": "De Pere Zoning Code",
+            "type": "city code",
+            "url": "https://www.deperewi.gov/egov/documents/1672340123_52311.pdf",
+            "notes": "Article VIII. ARTTICLLE VVIII PARKING AND ACCES   14-81 Parking Ratios   (1) MX1 District\nPage 98",
+            "attachments": [
+              {
+                "fileName": "DePere_WI_1_1.png",
+                "isDoc": false,
+                "directusId": "217351ec-9913-4532-bcd5-8905cf73e9a5"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "rm_min": [
+      {
+        "reporter": "Samuel Deetz",
+        "requirements": ["by right"],
+        "citations": [
+          {
+            "description": "De Pere Zoning Code",
+            "type": "city code",
+            "url": "https://www.deperewi.gov/egov/documents/1672340123_52311.pdf",
+            "notes": "Article VIII. ARTTICLLE VVIII PARKING AND ACCES   14-81 Parking Ratios   (1) MX1 District\nPage 98",
+            "attachments": [
+              {
+                "fileName": "DePere_WI_1_1.png",
+                "isDoc": false,
+                "directusId": "217351ec-9913-4532-bcd5-8905cf73e9a5"
+              }
+            ]
+          }
+        ]
+      }
+    ]
   },
   "De Soto, IA": {
     "rm_min": [
@@ -19439,7 +19884,49 @@
           ]
         }
       ]
-    }
+    },
+    "add_max": [
+      {
+        "reporter": "Samuel Deetz",
+        "requirements": ["by right"],
+        "citations": [
+          {
+            "description": "DeForest Zoning Code",
+            "type": "city code",
+            "url": "https://www.vi.deforest.wi.us/DocumentCenter/View/86/Chapter-15-Zoning-Code-PDF",
+            "notes": "15.07(1)(e)\nPage 84",
+            "attachments": [
+              {
+                "fileName": "DeForest_WI_1_1.png",
+                "isDoc": false,
+                "directusId": "f9d60b9b-e5cb-4df7-af8f-2f5c6e0fd4fc"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "rm_min": [
+      {
+        "reporter": "Samuel Deetz",
+        "requirements": ["by right"],
+        "citations": [
+          {
+            "description": "DeForest Zoning Code",
+            "type": "city code",
+            "url": "https://www.vi.deforest.wi.us/DocumentCenter/View/86/Chapter-15-Zoning-Code-PDF",
+            "notes": "15.07(4)(a)\nPage 86",
+            "attachments": [
+              {
+                "fileName": "DeForest_WI_1_1.png",
+                "isDoc": false,
+                "directusId": "51feb7c8-361b-4d60-9393-8b1b565a9d9b"
+              }
+            ]
+          }
+        ]
+      }
+    ]
   },
   "DeKalb, IL": {
     "rm_min": [
@@ -20221,7 +20708,49 @@
           ]
         }
       ]
-    }
+    },
+    "add_max": [
+      {
+        "reporter": "Samuel Deetz",
+        "requirements": ["by right"],
+        "citations": [
+          {
+            "description": "Denmark Zoning Code",
+            "type": "city code",
+            "url": "https://ecode360.com/42175417#42175460",
+            "notes": "§ 315-124.B.",
+            "attachments": [
+              {
+                "fileName": "Denmark_WI_1_1.png",
+                "isDoc": false,
+                "directusId": "f27fd843-b412-4e3b-853a-7c51a5b4630b"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "reduce_min": [
+      {
+        "reporter": "Samuel Deetz",
+        "requirements": ["by right", "other"],
+        "citations": [
+          {
+            "description": "Denmark Zoning Code",
+            "type": "city code",
+            "url": "https://ecode360.com/42175417#42175420",
+            "notes": "§ 315-122.I.",
+            "attachments": [
+              {
+                "fileName": "Denmark_WI_1_1.png",
+                "isDoc": false,
+                "directusId": "25fa6c1d-c94c-4580-ac8b-6247b35afd65"
+              }
+            ]
+          }
+        ]
+      }
+    ]
   },
   "Dennis, MA": {
     "legacy": {
@@ -22575,7 +23104,49 @@
           ]
         }
       ]
-    }
+    },
+    "add_max": [
+      {
+        "reporter": "Samuel Deetz",
+        "requirements": ["by right"],
+        "citations": [
+          {
+            "description": "East Troy Zoning Code",
+            "type": "city code",
+            "url": "https://ecode360.com/27769620#27769620",
+            "notes": "§ 510-93.F.(13)",
+            "attachments": [
+              {
+                "fileName": "EastTroy_WI_1_1.png",
+                "isDoc": false,
+                "directusId": "cc438816-d3d9-4acb-8768-f64db80ddbb2"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "rm_min": [
+      {
+        "reporter": "Samuel Deetz",
+        "requirements": ["by right"],
+        "citations": [
+          {
+            "description": "East Troy Zoning Code",
+            "type": "city code",
+            "url": "https://ecode360.com/27769620#27769620",
+            "notes": "§ 510-93.H.",
+            "attachments": [
+              {
+                "fileName": "EastTroy_WI_1_1.png",
+                "isDoc": false,
+                "directusId": "3f7cac05-9816-409a-b5f3-e0352eb2d7b6"
+              }
+            ]
+          }
+        ]
+      }
+    ]
   },
   "East Washington, PA": {
     "rm_min": [
@@ -22738,7 +23309,49 @@
           ]
         }
       ]
-    }
+    },
+    "add_max": [
+      {
+        "reporter": "Samuel Deetz",
+        "requirements": ["by right"],
+        "citations": [
+          {
+            "description": "Eau Claire Zoning Code",
+            "type": "city code",
+            "url": "https://www.eauclairewi.gov/home/showpublisheddocument/30577/637123426740400000",
+            "notes": "18.25.035 \nPage 95 of pdf, page 581 of original document",
+            "attachments": [
+              {
+                "fileName": "EauClaire_WI_1_1.png",
+                "isDoc": false,
+                "directusId": "498bc5b1-a110-433c-8be1-18e2827fd177"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "reduce_min": [
+      {
+        "reporter": "Samuel Deetz",
+        "requirements": ["bike parking", "frequent transit", "other"],
+        "citations": [
+          {
+            "description": "Eau Claire Zoning Code",
+            "type": "city code",
+            "url": "https://www.eauclairewi.gov/home/showpublisheddocument/30577/637123426740400000",
+            "notes": "18.25.020.C.\nPage 92 of pdf, page 578 of original document",
+            "attachments": [
+              {
+                "fileName": "EauClaire_WI_1_1.png",
+                "isDoc": false,
+                "directusId": "6a705807-6720-4449-9daf-7c3559c45600"
+              }
+            ]
+          }
+        ]
+      }
+    ]
   },
   "Ebensburg, PA": {
     "legacy": {
@@ -24900,7 +25513,54 @@
           ]
         }
       ]
-    }
+    },
+    "reduce_min": [
+      {
+        "reporter": "Samuel Deetz",
+        "requirements": ["by right"],
+        "citations": [
+          {
+            "description": "Evanston Zoning Code",
+            "type": "city code",
+            "url": "https://ecode360.com/9852799",
+            "notes": "Article VIII Parking\n§ 24-56 Off-street parking.\nC.\n§ 24-57 Parking deferral.\nB.",
+            "attachments": [
+              {
+                "fileName": "Evanston_WY_1_1.png",
+                "isDoc": false,
+                "directusId": "faa278e9-c522-4aac-9717-1a48109148d6"
+              },
+              {
+                "fileName": "Evanston_WY_1_2.png",
+                "isDoc": false,
+                "directusId": "4f708813-8d77-474d-b341-d5d9186adf9a"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "rm_min": [
+      {
+        "reporter": "Samuel Deetz",
+        "requirements": ["by right"],
+        "citations": [
+          {
+            "description": "Evanston Zoning Code",
+            "type": "city code",
+            "url": "https://ecode360.com/9852799#9852800",
+            "notes": "§ 24-56(C)",
+            "attachments": [
+              {
+                "fileName": "Evanston_WY_1_1.png",
+                "isDoc": false,
+                "directusId": "ba4b2b19-cb80-4cdd-8840-19648e107a56"
+              }
+            ]
+          }
+        ]
+      }
+    ]
   },
   "Evansville, IN": {
     "legacy": {
@@ -26646,7 +27306,54 @@
           ]
         }
       ]
-    }
+    },
+    "add_max": [
+      {
+        "reporter": "Samuel Deetz",
+        "requirements": ["by right"],
+        "citations": [
+          {
+            "description": "Fort Atkinson Zoning Code",
+            "type": "city code",
+            "url": "https://cms8.revize.com/revize/fortatkinson/Document%20Center/Department/Building%20and%20Zoning/Adopted%20City%20of%20Fort%20Atkinson%20Zoning%20Ordinance%2011.1.20.pdf",
+            "notes": "15.06.06(7)\nPages 226-230 of pdf, pages 217-221 of original document",
+            "attachments": [
+              {
+                "fileName": "FortAtkinson_WI_1_1.png",
+                "isDoc": false,
+                "directusId": "b79c9e6f-3d1a-4d22-b5ab-9ca0310ea4d7"
+              },
+              {
+                "fileName": "FortAtkinson_WI_1_2.png",
+                "isDoc": false,
+                "directusId": "ad5aec65-4adb-47d0-b308-0b88888a683d"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "rm_min": [
+      {
+        "reporter": "Samuel Deetz",
+        "requirements": ["by right"],
+        "citations": [
+          {
+            "description": "Fort Atkinson Zoning Code",
+            "type": "city code",
+            "url": "https://cms8.revize.com/revize/fortatkinson/Document%20Center/Department/Building%20and%20Zoning/Adopted%20City%20of%20Fort%20Atkinson%20Zoning%20Ordinance%2011.1.20.pdf",
+            "notes": "15.06.06(6)\nPage 225 of pdf, page 216 of original document",
+            "attachments": [
+              {
+                "fileName": "FortAtkinson_WI_1_1.png",
+                "isDoc": false,
+                "directusId": "762c9082-0a43-496a-83bb-8ebe83e1d9e1"
+              }
+            ]
+          }
+        ]
+      }
+    ]
   },
   "Fort Calhoun, NE": {
     "rm_min": [
@@ -29226,7 +29933,75 @@
           ]
         }
       ]
-    }
+    },
+    "add_max": [
+      {
+        "reporter": "Samuel Deetz",
+        "requirements": ["by right"],
+        "citations": [
+          {
+            "description": "Gering Zoning Code",
+            "type": "city code",
+            "url": "https://www.gering.org/sites/default/files/files/85/08_10_20_gering_zoning_regulations_final_adopted_0.pdf",
+            "notes": "5.6.2\nPages 93-94 of pdf, pages 86-87 of original document",
+            "attachments": [
+              {
+                "fileName": "Gering_NE_1_1.png",
+                "isDoc": false,
+                "directusId": "94adf55a-0299-46be-b92a-15921d531386"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "reduce_min": [
+      {
+        "reporter": "Samuel Deetz",
+        "requirements": [
+          "bike parking",
+          "by right",
+          "other",
+          "size of project"
+        ],
+        "citations": [
+          {
+            "description": "Gering Zoning Code",
+            "type": "city code",
+            "url": "https://www.gering.org/sites/default/files/files/85/08_10_20_gering_zoning_regulations_final_adopted_0.pdf",
+            "notes": "5.6.3\nPage 94 of pdf, page 87 of original document",
+            "attachments": [
+              {
+                "fileName": "Gering_NE_1_1.png",
+                "isDoc": false,
+                "directusId": "a5cd819a-31eb-4de4-803c-1324a0f82cbf"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "rm_min": [
+      {
+        "reporter": "Samuel Deetz",
+        "requirements": ["by right", "size of project"],
+        "citations": [
+          {
+            "description": "Gering Zoning Code",
+            "type": "city code",
+            "url": "https://www.gering.org/sites/default/files/files/85/08_10_20_gering_zoning_regulations_final_adopted_0.pdf",
+            "notes": "5.6.3\nPage 94 of pdf, page 87 of original document",
+            "attachments": [
+              {
+                "fileName": "Gering_NE_1_1.png",
+                "isDoc": false,
+                "directusId": "a5cd819a-31eb-4de4-803c-1324a0f82cbf"
+              }
+            ]
+          }
+        ]
+      }
+    ]
   },
   "Germantown, TN": {
     "legacy": {
@@ -31132,7 +31907,49 @@
           ]
         }
       ]
-    }
+    },
+    "add_max": [
+      {
+        "reporter": "Samuel Deetz",
+        "requirements": ["by right"],
+        "citations": [
+          {
+            "description": "Great Falls Zoning Code",
+            "type": "city code",
+            "url": "https://library.municode.com/mt/great_falls_/codes/code_of_ordinances?nodeId=TIT17LADECO_CH36PA_ART2VEPA_17.36.2.020MIOREPARE",
+            "notes": "17.36.2.020.B.",
+            "attachments": [
+              {
+                "fileName": "GreatFalls_MT_1_1.png",
+                "isDoc": false,
+                "directusId": "8254833c-6353-4ce6-84cc-c071ab3ec319"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "rm_min": [
+      {
+        "reporter": "Samuel Deetz",
+        "requirements": ["by right"],
+        "citations": [
+          {
+            "description": "Great Falls Zoning Code",
+            "type": "city code",
+            "url": "https://library.municode.com/mt/great_falls_/codes/code_of_ordinances?nodeId=TIT17LADECO_CH36PA_ART2VEPA_17.36.2.050PARECEBUCOCEBUPEZODI",
+            "notes": "17.36.2.050",
+            "attachments": [
+              {
+                "fileName": "GreatFalls_MT_1_1.png",
+                "isDoc": false,
+                "directusId": "fe568ea1-9b12-4f5f-8764-dad713a0eb69"
+              }
+            ]
+          }
+        ]
+      }
+    ]
   },
   "Greeley, CO": {
     "legacy": {
@@ -32276,7 +33093,54 @@
           ]
         }
       ]
-    }
+    },
+    "add_max": [
+      {
+        "reporter": "Samuel Deetz",
+        "requirements": ["by right"],
+        "citations": [
+          {
+            "description": "Hamilton Zoning Code",
+            "type": "city code",
+            "url": "https://library.municode.com/mt/hamilton/codes/code_of_ordinances?nodeId=TIT17ZO_CH17.24OREPALO_17.24.130PARECEBUDICB",
+            "notes": "17.24.130.T.",
+            "attachments": [
+              {
+                "fileName": "Hamilton_MT_1_1.png",
+                "isDoc": false,
+                "directusId": "e1794153-080a-4ebe-8467-e537cb221a09"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "reduce_min": [
+      {
+        "reporter": "Samuel Deetz",
+        "requirements": ["by right", "other"],
+        "citations": [
+          {
+            "description": "Hamilton Zoning Code",
+            "type": "city code",
+            "url": "https://library.municode.com/mt/hamilton/codes/code_of_ordinances?nodeId=TIT17ZO_CH17.24OREPALO",
+            "notes": "17.24.070.A.1.\n17.24.130",
+            "attachments": [
+              {
+                "fileName": "Hamilton_MT_1_1.png",
+                "isDoc": false,
+                "directusId": "a186cc0d-7dbf-4c62-ba49-41085c369673"
+              },
+              {
+                "fileName": "Hamilton_MT_1_2.png",
+                "isDoc": false,
+                "directusId": "4532bf11-d2f3-450d-a48e-e6db4a1e71b3"
+              }
+            ]
+          }
+        ]
+      }
+    ]
   },
   "Hamilton, OH": {
     "reduce_min": [
@@ -33729,7 +34593,49 @@
           ]
         }
       ]
-    }
+    },
+    "add_max": [
+      {
+        "reporter": "Samuel Deetz",
+        "requirements": ["by right"],
+        "citations": [
+          {
+            "description": "Helena Zoning Code",
+            "type": "city code",
+            "url": "https://codelibrary.amlegal.com/codes/helenamt/latest/helena_mt/0-0-0-6390",
+            "notes": "CHAPTER 9 DOWNTOWN DISTRICT AND TRANSITIONAL RESIDENTIAL DISTRICT\n11-9-7: DESIGN STANDARDS:\nD.   Activation\n3.   Parking\nb. Space Allocation",
+            "attachments": [
+              {
+                "fileName": "Helena_MT_1_1.png",
+                "isDoc": false,
+                "directusId": "b655de6a-c124-44b1-a57a-113b9b142687"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "rm_min": [
+      {
+        "reporter": "Samuel Deetz",
+        "requirements": ["by right"],
+        "citations": [
+          {
+            "description": "Helena Zoning Code",
+            "type": "city code",
+            "url": "https://codelibrary.amlegal.com/codes/helenamt/latest/helena_mt/0-0-0-6390",
+            "notes": "CHAPTER 9 DOWNTOWN DISTRICT AND TRANSITIONAL RESIDENTIAL DISTRICT\n11-9-7: DESIGN STANDARDS:\nD.   Activation\n3.   Parking\nb. Space Allocation",
+            "attachments": [
+              {
+                "fileName": "Helena_MT_1_1.png",
+                "isDoc": false,
+                "directusId": "b655de6a-c124-44b1-a57a-113b9b142687"
+              }
+            ]
+          }
+        ]
+      }
+    ]
   },
   "Henderson County, KY": {
     "rm_min": [
@@ -37530,7 +38436,59 @@
           ]
         }
       ]
-    }
+    },
+    "reduce_min": [
+      {
+        "reporter": "Samuel Deetz",
+        "requirements": ["by right", "frequent transit"],
+        "citations": [
+          {
+            "description": "Johannesburg Land Use Scheme",
+            "type": "city code",
+            "url": "https://joburg.org.za/documents_/Documents/City%20of%20Johannesburg%20Land%20Use%20Scheme%20-%20FINAL%202018.pdf",
+            "notes": "PART VI: PARKING AND LOADING\n36.(3.)\nTable 8\nPages 72, 74",
+            "attachments": [
+              {
+                "fileName": "Johannesburg_GP_1_1.png",
+                "isDoc": false,
+                "directusId": "57cbf55c-578a-45c6-b3e9-e17592d503f7"
+              },
+              {
+                "fileName": "Johannesburg_GP_1_2.png",
+                "isDoc": false,
+                "directusId": "79672252-c399-48d9-9826-62f7ddd405a7"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "rm_min": [
+      {
+        "reporter": "Samuel Deetz",
+        "requirements": ["by right"],
+        "citations": [
+          {
+            "description": "Johannesburg Land Use Scheme",
+            "type": "city code",
+            "url": "https://joburg.org.za/documents_/Documents/City%20of%20Johannesburg%20Land%20Use%20Scheme%20-%20FINAL%202018.pdf",
+            "notes": "PART VI: PARKING AND LOADING\n36.(3.)\nTable 8\nPages 72, 74",
+            "attachments": [
+              {
+                "fileName": "Johannesburg_GP_1_1.png",
+                "isDoc": false,
+                "directusId": "57cbf55c-578a-45c6-b3e9-e17592d503f7"
+              },
+              {
+                "fileName": "Johannesburg_GP_1_2.png",
+                "isDoc": false,
+                "directusId": "79672252-c399-48d9-9826-62f7ddd405a7"
+              }
+            ]
+          }
+        ]
+      }
+    ]
   },
   "Johnson City, TN": {
     "rm_min": [
@@ -37874,7 +38832,69 @@
           ]
         }
       ]
-    }
+    },
+    "reduce_min": [
+      {
+        "reporter": "Samuel Deetz",
+        "requirements": ["by right", "in-lieu fees"],
+        "citations": [
+          {
+            "description": "Juneau Zoning Code",
+            "type": "city code",
+            "url": "https://library.municode.com/ak/juneau/codes/code_of_ordinances?nodeId=PTIICOOR_TIT49LAUS_CH49.40PATR_ARTIIPALO_49.40.200GEAP",
+            "notes": "Chapter 49.40 - PARKING AND TRAFFIC\nARTICLE II. - PARKING AND LOADING\n49.40.200 - General applicability.\n  (a)Special parking areas.\n49.40.220 - Parking reductions.\n  (b)Town center parking area, fee-in-lieu of off-street parking spaces.",
+            "attachments": [
+              {
+                "fileName": "Juneau_AK_1_1.png",
+                "isDoc": false,
+                "directusId": "995d215c-a092-4c78-9f1e-b9d639331f3d"
+              },
+              {
+                "fileName": "Juneau_AK_1_2.png",
+                "isDoc": false,
+                "directusId": "ddb006c4-ffb0-47d2-8aa4-99c3bd35a9f9"
+              },
+              {
+                "fileName": "Juneau_AK_1_3.png",
+                "isDoc": false,
+                "directusId": "c29feea4-b3e5-4028-a75f-548efbbb676a"
+              },
+              {
+                "fileName": "Juneau_AK_1_4.png",
+                "isDoc": false,
+                "directusId": "23a9591a-4ec5-4a49-92f3-3dba30c94936"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "rm_min": [
+      {
+        "reporter": "Samuel Deetz",
+        "requirements": ["by right"],
+        "citations": [
+          {
+            "description": "Juneau Zoning Code",
+            "type": "city code",
+            "url": "https://library.municode.com/ak/juneau/codes/code_of_ordinances?nodeId=PTIICOOR_TIT49LAUS_CH49.40PATR_ARTIIPALO_49.40.200GEAP",
+            "notes": "49.40.200(a)(2)",
+            "attachments": [
+              {
+                "fileName": "Juneau_AK_1_1.png",
+                "isDoc": false,
+                "directusId": "1f0a559f-29db-4dd9-9eea-bd3db2392020"
+              },
+              {
+                "fileName": "Juneau_AK_1_2.png",
+                "isDoc": false,
+                "directusId": "ad0f80cb-db1f-4c61-8f24-d17eeb60d683"
+              }
+            ]
+          }
+        ]
+      }
+    ]
   },
   "Juneau, WI": {
     "rm_min": [
@@ -38015,7 +39035,69 @@
           ]
         }
       ]
-    }
+    },
+    "reduce_min": [
+      {
+        "reporter": "Samuel Deetz",
+        "requirements": ["bike parking", "by right"],
+        "citations": [
+          {
+            "description": "Kalispell Zoning Code",
+            "type": "city code",
+            "url": "https://ecode360.com/42633609",
+            "notes": "Chapter 27.24 OFF-STREET PARKING DESIGN STANDARDS\n§ 27.24.040 Special Provisions.\n(6)  Parking Districts.\n(7)  Reductions.",
+            "attachments": [
+              {
+                "fileName": "Kalispell_MT_1_1.png",
+                "isDoc": false,
+                "directusId": "9ad608a2-e0a1-458f-bb36-c9d044587629"
+              },
+              {
+                "fileName": "Kalispell_MT_1_2.png",
+                "isDoc": false,
+                "directusId": "0cabca89-53bb-4241-8d1e-0d8759339500"
+              },
+              {
+                "fileName": "Kalispell_MT_1_3.png",
+                "isDoc": false,
+                "directusId": "913f43af-f4a3-4dea-8ffd-80ee58607114"
+              },
+              {
+                "fileName": "Kalispell_MT_1_4.png",
+                "isDoc": false,
+                "directusId": "886cd72e-2dc7-46cb-84b5-57ccb4558079"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "rm_min": [
+      {
+        "reporter": "Samuel Deetz",
+        "requirements": ["by right"],
+        "citations": [
+          {
+            "description": "Kalispell Zoning Code",
+            "type": "city code",
+            "url": "https://ecode360.com/42633609#42633609",
+            "notes": "§ 27.24.040(6)(c)",
+            "attachments": [
+              {
+                "fileName": "Kalispell_MT_1_1.png",
+                "isDoc": false,
+                "directusId": "45649f18-2477-4a7c-a19b-da03d7ed3302"
+              },
+              {
+                "fileName": "Kalispell_MT_1_2.png",
+                "isDoc": false,
+                "directusId": "c916239b-43ec-4af6-9044-b5a30d0bdedb"
+              }
+            ]
+          }
+        ]
+      }
+    ]
   },
   "Kalkaska, MI": {
     "legacy": {
@@ -38263,7 +39345,49 @@
           ]
         }
       ]
-    }
+    },
+    "reduce_min": [
+      {
+        "reporter": "Samuel Deetz",
+        "requirements": ["in-lieu fees"],
+        "citations": [
+          {
+            "description": "Kemmerer Zoning Code",
+            "type": "city code",
+            "url": "https://www.kemmerer.org/wp-content/uploads/2023/06/Chapter-23.pdf",
+            "notes": "23-89.(d)(4)\nPage 63",
+            "attachments": [
+              {
+                "fileName": "Kemmerer_WY_1_1.png",
+                "isDoc": false,
+                "directusId": "88a3ea42-6b14-4318-9d79-f6c910d1773e"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "rm_min": [
+      {
+        "reporter": "Samuel Deetz",
+        "requirements": ["by right"],
+        "citations": [
+          {
+            "description": "Kemmerer Zoning Code",
+            "type": "city code",
+            "url": "https://www.kemmerer.org/wp-content/uploads/2023/06/Chapter-23.pdf",
+            "notes": "23-89.(d)(9)\nPage 63",
+            "attachments": [
+              {
+                "fileName": "Kemmerer_WY_1_1.png",
+                "isDoc": false,
+                "directusId": "0a880181-3763-4665-8877-9cc3c0686be9"
+              }
+            ]
+          }
+        ]
+      }
+    ]
   },
   "Kempten, BY": {
     "reduce_min": [
@@ -41104,7 +42228,75 @@
           ]
         }
       ]
-    }
+    },
+    "add_max": [
+      {
+        "reporter": "Samuel Deetz",
+        "requirements": ["by right"],
+        "citations": [
+          {
+            "description": "Laramie Zoning Code",
+            "type": "city code",
+            "url": "https://library.municode.com/wy/laramie/codes/code_of_ordinances?nodeId=TIT15UNDECO_CH15.14DEST_15.14.040PAORELO",
+            "notes": "15.14.040.B.4.",
+            "attachments": [
+              {
+                "fileName": "Laramie_WY_1_1.png",
+                "isDoc": false,
+                "directusId": "d1d334a5-5441-4aec-884d-ecc72dd04be7"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "reduce_min": [
+      {
+        "reporter": "Samuel Deetz",
+        "requirements": ["by right"],
+        "citations": [
+          {
+            "description": "Laramie Zoning Code",
+            "type": "city code",
+            "url": "https://library.municode.com/wy/laramie/codes/code_of_ordinances?nodeId=TIT15UNDECO_CH15.08ZODI_15.08.030NODI",
+            "notes": "15.08.030.E..2.c.(ii)",
+            "attachments": [
+              {
+                "fileName": "Laramie_WY_1_1.png",
+                "isDoc": false,
+                "directusId": "aa292813-e7e5-4216-b797-773e98256cce"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "rm_min": [
+      {
+        "reporter": "Samuel Deetz",
+        "requirements": ["by right", "size of project"],
+        "citations": [
+          {
+            "description": "Laramie Zoning Code",
+            "type": "city code",
+            "url": "https://library.municode.com/wy/laramie/codes/code_of_ordinances?nodeId=TIT15UNDECO_CH15.08ZODI_15.08.030NODI",
+            "notes": "15.08.030.E.2.c.(ii)\n15.14.040.B.3.a.",
+            "attachments": [
+              {
+                "fileName": "Laramie_WY_1_1.png",
+                "isDoc": false,
+                "directusId": "342784fa-ac6a-49c9-8edd-49142aef0542"
+              },
+              {
+                "fileName": "Laramie_WY_1_2.png",
+                "isDoc": false,
+                "directusId": "b7989c2b-44eb-4e11-a428-c3a67c78c1e4"
+              }
+            ]
+          }
+        ]
+      }
+    ]
   },
   "Laredo, TX": {
     "rm_min": [
@@ -42689,7 +43881,7 @@
       "requirements": ["by right"],
       "citations": [
         {
-          "description": "Lincoln Zoning Code",
+          "description": "Old Lincoln Zoning Code",
           "type": "city code",
           "url": "https://online.encodeplus.com/regs/lincoln-ne/doc-viewer.aspx#secid-12168",
           "notes": "Chapter 27.67 PARKING\n27.67.100 Special Conditions; Parking Lots.\nFigure 27.67.020 PARKING MATRIX",
@@ -42715,7 +43907,101 @@
           ]
         }
       ]
-    }
+    },
+    "reduce_min": [
+      {
+        "reporter": "Samuel Deetz",
+        "requirements": ["by right"],
+        "citations": [
+          {
+            "description": "Old Lincoln Zoning Code",
+            "type": "city code",
+            "url": "https://online.encodeplus.com/regs/lincoln-ne/doc-viewer.aspx#secid-12168",
+            "notes": "Chapter 27.67 PARKING\n27.67.100 Special Conditions; Parking Lots.\nFigure 27.67.020 PARKING MATRIX",
+            "attachments": [
+              {
+                "fileName": "Lincoln_NE_1_1.png",
+                "isDoc": false,
+                "directusId": "6e4b4ce5-3ae8-495b-b94f-92bddef6b561"
+              }
+            ]
+          },
+          {
+            "description": "News Article",
+            "type": "media report",
+            "url": "https://journalstar.com/news/local/government-politics/lincoln-parking-lots-requirements-gateway-mall/article_9bdc9d0a-90aa-11ee-a47a-b7db003d8e31.html",
+            "notes": null,
+            "attachments": [
+              {
+                "fileName": "Lincoln_NE_2_1.png",
+                "isDoc": false,
+                "directusId": "40e18df7-0d89-486a-8b90-19bc2ff19cf9"
+              }
+            ]
+          },
+          {
+            "description": "Lincoln Zoning Code",
+            "type": "city code",
+            "url": "https://online.encodeplus.com/regs/lincoln-ne/doc-viewer.aspx#secid-12168",
+            "notes": "27.67.100\nFigure 27.67.020",
+            "attachments": [
+              {
+                "fileName": "Lincoln_NE_3_1.png",
+                "isDoc": false,
+                "directusId": "24bef803-f718-4028-8bbe-478821e96066"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "rm_min": [
+      {
+        "reporter": "Samuel Deetz",
+        "requirements": ["by right"],
+        "citations": [
+          {
+            "description": "Old Lincoln Zoning Code",
+            "type": "city code",
+            "url": "https://online.encodeplus.com/regs/lincoln-ne/doc-viewer.aspx#secid-12168",
+            "notes": "Chapter 27.67 PARKING\n27.67.100 Special Conditions; Parking Lots.\nFigure 27.67.020 PARKING MATRIX",
+            "attachments": [
+              {
+                "fileName": "Lincoln_NE_1_1.png",
+                "isDoc": false,
+                "directusId": "6e4b4ce5-3ae8-495b-b94f-92bddef6b561"
+              }
+            ]
+          },
+          {
+            "description": "News Article",
+            "type": "media report",
+            "url": "https://journalstar.com/news/local/government-politics/lincoln-parking-lots-requirements-gateway-mall/article_9bdc9d0a-90aa-11ee-a47a-b7db003d8e31.html",
+            "notes": null,
+            "attachments": [
+              {
+                "fileName": "Lincoln_NE_2_1.png",
+                "isDoc": false,
+                "directusId": "40e18df7-0d89-486a-8b90-19bc2ff19cf9"
+              }
+            ]
+          },
+          {
+            "description": "Lincoln Zoning Code",
+            "type": "city code",
+            "url": "https://online.encodeplus.com/regs/lincoln-ne/doc-viewer.aspx#secid-12168",
+            "notes": "27.67.100\nFigure 27.67.020",
+            "attachments": [
+              {
+                "fileName": "Lincoln_NE_3_1.png",
+                "isDoc": false,
+                "directusId": "24bef803-f718-4028-8bbe-478821e96066"
+              }
+            ]
+          }
+        ]
+      }
+    ]
   },
   "Lincolnwood, IL": {
     "reduce_min": [
@@ -48345,7 +49631,49 @@
           ]
         }
       ]
-    }
+    },
+    "reduce_min": [
+      {
+        "reporter": "Samuel Deetz",
+        "requirements": ["by right", "other"],
+        "citations": [
+          {
+            "description": "Miles City Zoning Code",
+            "type": "city code",
+            "url": "https://library.municode.com/mt/miles_city/codes/code_of_ordinances?nodeId=COOR_CH24ZO_ARTIIIAPZOREALDI_S24-50OREPALO",
+            "notes": "Sec. 24-50. - Off-street parking and loading.\n(f)Exception: Commercial parking requirements in the central business district.\n(g)Exception: Commercial parking requirements in the general commercial district.\n(h)Exception: Commercial parking requirements in residential districts.",
+            "attachments": [
+              {
+                "fileName": "MilesCity_MT_1_1.png",
+                "isDoc": false,
+                "directusId": "45e0ce6f-152a-4663-aaf7-9792f9a66b7b"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "rm_min": [
+      {
+        "reporter": "Samuel Deetz",
+        "requirements": ["by right"],
+        "citations": [
+          {
+            "description": "Miles City Zoning Code",
+            "type": "city code",
+            "url": "https://library.municode.com/mt/miles_city/codes/code_of_ordinances?nodeId=COOR_CH24ZO_ARTIIIAPZOREALDI_S24-50OREPALO",
+            "notes": "Sec. 24-50. - Off-street parking and loading.\n(f)Exception: Commercial parking requirements in the central business district.\n(g)Exception: Commercial parking requirements in the general commercial district.\n(h)Exception: Commercial parking requirements in residential districts.",
+            "attachments": [
+              {
+                "fileName": "MilesCity_MT_1_1.png",
+                "isDoc": false,
+                "directusId": "45e0ce6f-152a-4663-aaf7-9792f9a66b7b"
+              }
+            ]
+          }
+        ]
+      }
+    ]
   },
   "Milford Center, OH": {
     "reduce_min": [
@@ -74472,7 +75800,49 @@
           ]
         }
       ]
-    }
+    },
+    "reduce_min": [
+      {
+        "reporter": "Samuel Deetz",
+        "requirements": ["by right", "other"],
+        "citations": [
+          {
+            "description": "Thermopolis Zoning Code",
+            "type": "city code",
+            "url": "https://thermopoliswy.gov/wp-content/uploads/2024/06/ThermopolisCode_2021-1.pdf",
+            "notes": "ARTICLE VI. ON-SITE PARKING AND LOADING PERFORMANCE STANDARDS.\nSec. 15-602. Minimum parking space requirements.\n(b)\nPage 302 of pdf, page 297 of original document",
+            "attachments": [
+              {
+                "fileName": "Thermopolis_WY_1_1.png",
+                "isDoc": false,
+                "directusId": "c0624781-c6ad-46c3-832a-001e8c467e3a"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "rm_min": [
+      {
+        "reporter": "Samuel Deetz",
+        "requirements": ["by right"],
+        "citations": [
+          {
+            "description": "Thermopolis Zoning Code",
+            "type": "city code",
+            "url": "https://thermopoliswy.gov/wp-content/uploads/2024/06/ThermopolisCode_2021-1.pdf",
+            "notes": "ARTICLE VI. ON-SITE PARKING AND LOADING PERFORMANCE STANDARDS.\nSec. 15-602. Minimum parking space requirements.\n(b)\nPage 302 of pdf, page 297 of original document",
+            "attachments": [
+              {
+                "fileName": "Thermopolis_WY_1_1.png",
+                "isDoc": false,
+                "directusId": "c0624781-c6ad-46c3-832a-001e8c467e3a"
+              }
+            ]
+          }
+        ]
+      }
+    ]
   },
   "Thibodaux, LA": {
     "rm_min": [
@@ -79002,7 +80372,49 @@
           ]
         }
       ]
-    }
+    },
+    "reduce_min": [
+      {
+        "reporter": "Samuel Deetz",
+        "requirements": ["by right", "size of project"],
+        "citations": [
+          {
+            "description": "Watertown Zoning Code",
+            "type": "city code",
+            "url": "https://www.watertownsd.us/DocumentCenter/View/774/City-of-Watertown-Ordinance-Book-Master-updated-to-1-7-2024",
+            "notes": "21.6301.6.\nPage 464 of pdf, page 76 of original document",
+            "attachments": [
+              {
+                "fileName": "Watertown_SD_1_1.png",
+                "isDoc": false,
+                "directusId": "a26dd2ae-d43a-4d31-aef2-3dab53a77934"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "rm_min": [
+      {
+        "reporter": "Samuel Deetz",
+        "requirements": ["by right", "size of project"],
+        "citations": [
+          {
+            "description": "Watertown Zoning Code",
+            "type": "city code",
+            "url": "https://www.watertownsd.us/DocumentCenter/View/774/City-of-Watertown-Ordinance-Book-Master-updated-to-1-7-2024",
+            "notes": "21.6301.6.\nPage 464 of pdf, page 76 of original document",
+            "attachments": [
+              {
+                "fileName": "Watertown_SD_1_1.png",
+                "isDoc": false,
+                "directusId": "a26dd2ae-d43a-4d31-aef2-3dab53a77934"
+              }
+            ]
+          }
+        ]
+      }
+    ]
   },
   "Watertown, WI": {
     "rm_min": [
@@ -79997,7 +81409,54 @@
           ]
         }
       ]
-    }
+    },
+    "add_max": [
+      {
+        "reporter": "Samuel Deetz",
+        "requirements": ["by right", "other"],
+        "citations": [
+          {
+            "description": "West Chester Zoning Code",
+            "type": "city code",
+            "url": "https://ecode360.com/6472545#6472545",
+            "notes": "§ 112-309.C.(4)(c)",
+            "attachments": [
+              {
+                "fileName": "WestChester_PA_1_1.png",
+                "isDoc": false,
+                "directusId": "c7102043-962d-450f-bf0c-24c0ff9fc05f"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "reduce_min": [
+      {
+        "reporter": "Samuel Deetz",
+        "requirements": ["other"],
+        "citations": [
+          {
+            "description": "West Chester Zoning Code",
+            "type": "city code",
+            "url": "https://ecode360.com/6472968#6472968",
+            "notes": "§ 112-602.C.\n§ 112-603.",
+            "attachments": [
+              {
+                "fileName": "WestChester_PA_1_1.png",
+                "isDoc": false,
+                "directusId": "8e464ccd-2ca9-41af-b942-1c8a35425cb1"
+              },
+              {
+                "fileName": "WestChester_PA_1_2.png",
+                "isDoc": false,
+                "directusId": "0edcf938-2342-413a-b030-c0b158a12cba"
+              }
+            ]
+          }
+        ]
+      }
+    ]
   },
   "West Chicago, IL": {
     "rm_min": [
@@ -81093,7 +82552,59 @@
           ]
         }
       ]
-    }
+    },
+    "add_max": [
+      {
+        "reporter": "Samuel Deetz",
+        "requirements": ["by right"],
+        "citations": [
+          {
+            "description": "Whitehorse Zoning Bylaw",
+            "type": "city code",
+            "url": "https://www.whitehorse.ca/wp-content/uploads/2022/06/2012-20-Zoning-Bylaw-2012-20.pdf",
+            "notes": "7.3.7.g)\nPage 89 of pdf, page 83 of original document",
+            "attachments": [
+              {
+                "fileName": "Whitehorse_YT_1_1.png",
+                "isDoc": false,
+                "directusId": "9bbb978d-49eb-4a7b-8d10-14a736b8eb12"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "reduce_min": [
+      {
+        "reporter": "Samuel Deetz",
+        "requirements": ["by right", "in-lieu fees", "other"],
+        "citations": [
+          {
+            "description": "Whitehorse Zoning Bylaw",
+            "type": "city code",
+            "url": "https://www.whitehorse.ca/wp-content/uploads/2022/06/2012-20-Zoning-Bylaw-2012-20.pdf",
+            "notes": "7.3.7.;\n7.3.8.\nPages 88-89 of pdf, pages 82-83 of original document",
+            "attachments": [
+              {
+                "fileName": "Whitehorse_YT_1_1.png",
+                "isDoc": false,
+                "directusId": "54760261-abae-4e29-8a16-167362eefc0f"
+              },
+              {
+                "fileName": "Whitehorse_YT_1_2.png",
+                "isDoc": false,
+                "directusId": "d8ce1f40-afd3-4777-b7f8-1c6e24e54d91"
+              },
+              {
+                "fileName": "Whitehorse_YT_1_3.png",
+                "isDoc": false,
+                "directusId": "fabd97b7-3319-47ec-ab72-f73f27773446"
+              }
+            ]
+          }
+        ]
+      }
+    ]
   },
   "Whitemarsh Township, PA": {
     "add_max": [
@@ -82489,7 +84000,49 @@
           ]
         }
       ]
-    }
+    },
+    "add_max": [
+      {
+        "reporter": "Samuel Deetz",
+        "requirements": ["by right"],
+        "citations": [
+          {
+            "description": "Wonder Lake Zoning Code",
+            "type": "city code",
+            "url": "https://www.villageofwonderlake.org/media/5301",
+            "notes": "XI.Table 6:1.\nPage 13",
+            "attachments": [
+              {
+                "fileName": "WonderLake_IL_1_1.png",
+                "isDoc": false,
+                "directusId": "03edc31f-ec25-47ad-9110-be0adc6550a5"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "reduce_min": [
+      {
+        "reporter": "Samuel Deetz",
+        "requirements": ["by right", "other"],
+        "citations": [
+          {
+            "description": "Wonder Lake Zoning Code",
+            "type": "city code",
+            "url": "https://www.villageofwonderlake.org/media/5301",
+            "notes": "XI.A.4.\nPage 1",
+            "attachments": [
+              {
+                "fileName": "WonderLake_IL_1_1.png",
+                "isDoc": false,
+                "directusId": "9fa72e13-326b-4091-b0a3-2bacb615d2df"
+              }
+            ]
+          }
+        ]
+      }
+    ]
   },
   "Wood Dale, IL": {
     "reduce_min": [
@@ -82561,7 +84114,49 @@
           ]
         }
       ]
-    }
+    },
+    "reduce_min": [
+      {
+        "reporter": "Samuel Deetz",
+        "requirements": ["bike parking", "frequent transit", "other"],
+        "citations": [
+          {
+            "description": "Woodburn Zoning Code",
+            "type": "city code",
+            "url": "https://www.cityofwoodburn.org/wp-content/uploads/2018/03/Woodburn_Zoning_Ordinance_2018_-_w_new_floodplain_language.pdf",
+            "notes": "§ 154.407(D)(2) \nPage 188 of pdf, page 180 of original document",
+            "attachments": [
+              {
+                "fileName": "Woodburn_IN_1_1.png",
+                "isDoc": false,
+                "directusId": "ed329b94-e2e4-4de3-acec-f24f0107dd8b"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "rm_min": [
+      {
+        "reporter": "Samuel Deetz",
+        "requirements": ["by right"],
+        "citations": [
+          {
+            "description": "Woodburn Zoning Code",
+            "type": "city code",
+            "url": "https://www.cityofwoodburn.org/wp-content/uploads/2018/03/Woodburn_Zoning_Ordinance_2018_-_w_new_floodplain_language.pdf",
+            "notes": "§ 154.407(D)(1)(d) \nPage 186 of pdf, page 178 of original document",
+            "attachments": [
+              {
+                "fileName": "Woodburn_IN_1_1.png",
+                "isDoc": false,
+                "directusId": "55571efb-3cc9-4117-851d-a8309e126143"
+              }
+            ]
+          }
+        ]
+      }
+    ]
   },
   "Woodbury, MN": {
     "reduce_min": [
@@ -82940,7 +84535,49 @@
           ]
         }
       ]
-    }
+    },
+    "add_max": [
+      {
+        "reporter": "Samuel Deetz",
+        "requirements": ["by right"],
+        "citations": [
+          {
+            "description": "Worthington Zoning Code",
+            "type": "city code",
+            "url": "https://codelibrary.amlegal.com/codes/worthington/latest/worthington_oh/0-0-0-37651",
+            "notes": "1181.05(f)(2)",
+            "attachments": [
+              {
+                "fileName": "Worthington_OH_1_1.png",
+                "isDoc": false,
+                "directusId": "1756088a-9b72-4ddd-b800-4d868404602e"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "rm_min": [
+      {
+        "reporter": "Samuel Deetz",
+        "requirements": ["by right"],
+        "citations": [
+          {
+            "description": "Worthington Zoning Code",
+            "type": "city code",
+            "url": "https://codelibrary.amlegal.com/codes/worthington/latest/worthington_oh/0-0-0-23672",
+            "notes": "1171.01(b)",
+            "attachments": [
+              {
+                "fileName": "Worthington_OH_1_1.png",
+                "isDoc": false,
+                "directusId": "51fd696a-79be-4501-a1e3-c053a33fe86b"
+              }
+            ]
+          }
+        ]
+      }
+    ]
   },
   "Wrangell, AK": {
     "rm_min": [
@@ -83030,7 +84667,49 @@
           ]
         }
       ]
-    }
+    },
+    "reduce_min": [
+      {
+        "reporter": "Samuel Deetz",
+        "requirements": ["by right"],
+        "citations": [
+          {
+            "description": "Wyandotte Zoning Code",
+            "type": "city code",
+            "url": "https://codelibrary.amlegal.com/codes/wyandotte/latest/wyandotte_mi/0-0-0-13197",
+            "notes": "SUPPLEMENTAL REGULATIONS\n§ 190.324 PARKING REQUIREMENTS.\n(P)   CBD parking.",
+            "attachments": [
+              {
+                "fileName": "Wyandotte_MI_1_1.png",
+                "isDoc": false,
+                "directusId": "4844ca39-f6b9-41aa-bfbe-814223bacf4a"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "rm_min": [
+      {
+        "reporter": "Samuel Deetz",
+        "requirements": ["by right"],
+        "citations": [
+          {
+            "description": "Wyandotte Zoning Code",
+            "type": "city code",
+            "url": "https://codelibrary.amlegal.com/codes/wyandotte/latest/wyandotte_mi/0-0-0-13197",
+            "notes": "SUPPLEMENTAL REGULATIONS\n§ 190.324 PARKING REQUIREMENTS.\n(P)   CBD parking.",
+            "attachments": [
+              {
+                "fileName": "Wyandotte_MI_1_1.png",
+                "isDoc": false,
+                "directusId": "4844ca39-f6b9-41aa-bfbe-814223bacf4a"
+              }
+            ]
+          }
+        ]
+      }
+    ]
   },
   "Wyoming, MI": {
     "add_max": [
@@ -83212,7 +84891,49 @@
           ]
         }
       ]
-    }
+    },
+    "add_max": [
+      {
+        "reporter": "Samuel Deetz",
+        "requirements": ["by right"],
+        "citations": [
+          {
+            "description": "Yellow Springs Zoning Code",
+            "type": "city code",
+            "url": "https://codelibrary.amlegal.com/codes/yellowsprings/latest/yellowsprings_oh/0-0-0-17431",
+            "notes": "1264.02   GENERAL REQUIREMENTS.\n(g)\n(h)",
+            "attachments": [
+              {
+                "fileName": "YellowSprings_OH_1_1.png",
+                "isDoc": false,
+                "directusId": "2ef43da4-3b83-418d-9205-d25f3b849439"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "rm_min": [
+      {
+        "reporter": "Samuel Deetz",
+        "requirements": ["by right"],
+        "citations": [
+          {
+            "description": "Yellow Springs Zoning Code",
+            "type": "city code",
+            "url": "https://codelibrary.amlegal.com/codes/yellowsprings/latest/yellowsprings_oh/0-0-0-17431",
+            "notes": "1264.02   GENERAL REQUIREMENTS.\n(g)\n(h)",
+            "attachments": [
+              {
+                "fileName": "YellowSprings_OH_1_1.png",
+                "isDoc": false,
+                "directusId": "2ef43da4-3b83-418d-9205-d25f3b849439"
+              }
+            ]
+          }
+        ]
+      }
+    ]
   },
   "Yellowknife, NT": {
     "rm_min": [
