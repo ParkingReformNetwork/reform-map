@@ -1520,7 +1520,49 @@
           ]
         }
       ]
-    }
+    },
+    "reduce_min": [
+      {
+        "reporter": "Samuel Deetz",
+        "requirements": ["other"],
+        "citations": [
+          {
+            "description": "Allen Park Zoning Code",
+            "type": "city code",
+            "url": "https://library.municode.com/mi/allen_park/codes/code_of_ordinances?nodeId=PTIICOOR_CH52ZO_ARTIXPALOWAARRE_S52-1006SPPADI",
+            "notes": "Sec. 52-1006.",
+            "attachments": [
+              {
+                "fileName": "AllenPark_MI_1_1.png",
+                "isDoc": false,
+                "directusId": "93e377e8-8127-4453-a71b-2073498e123d"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "rm_min": [
+      {
+        "reporter": "Samuel Deetz",
+        "requirements": ["by right"],
+        "citations": [
+          {
+            "description": "Allen Park Zoning Code",
+            "type": "city code",
+            "url": "https://library.municode.com/mi/allen_park/codes/code_of_ordinances?nodeId=PTIICOOR_CH52ZO_ARTIIIDIRE_DIV9CEBUDI_S52-391PA",
+            "notes": "Sec. 52-391.",
+            "attachments": [
+              {
+                "fileName": "AllenPark_MI_1_1.png",
+                "isDoc": false,
+                "directusId": "31bbb704-db85-4cec-98be-63766d49464a"
+              }
+            ]
+          }
+        ]
+      }
+    ]
   },
   "Allentown, PA": {
     "legacy": {
@@ -1831,6 +1873,63 @@
                 "fileName": "Alpena_MI_1_1.png",
                 "isDoc": false,
                 "directusId": "664e5f8a-855d-430b-a1a1-1b2186a3e682"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "reduce_min": [
+      {
+        "reporter": "Samuel Deetz",
+        "requirements": ["bike parking", "other"],
+        "citations": [
+          {
+            "description": "Alpena Zoning Code",
+            "type": "city code",
+            "url": "https://cms3.revize.com/revize/alpenami/document_center/residents/Transparency/City%20of%20Alpena%20Zoning%20Ordinance%202010%20Interactive%20amended%20July%202021.pdf",
+            "notes": "3.30.E.1.e.13.d.;\n3.30.E.1.e.13.f.;\nPages 87-88 of original document, pages 96-97 of pdf",
+            "attachments": [
+              {
+                "fileName": "Alpena_MI_1_1.png",
+                "isDoc": false,
+                "directusId": "5a6115e2-3b8b-4fe6-9fd0-a03427107388"
+              },
+              {
+                "fileName": "Alpena_MI_1_2.png",
+                "isDoc": false,
+                "directusId": "9e55c427-bb0e-47e2-9939-4aca2a497405"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "rm_min": [
+      {
+        "reporter": "Samuel Deetz",
+        "requirements": ["by right", "other", "size of project"],
+        "citations": [
+          {
+            "description": "Alpena Zoning Code",
+            "type": "city code",
+            "url": "https://cms3.revize.com/revize/alpenami/document_center/residents/Transparency/City%20of%20Alpena%20Zoning%20Ordinance%202010%20Interactive%20amended%20July%202021.pdf",
+            "notes": "SECTION 3.30.E.1.e.;\nSECTION 3.30.E.13.f.;\nSECTION 7.2.C.;\nPages 82, 88, 259 of original document, pages 91, 97, 268 of pdf",
+            "attachments": [
+              {
+                "fileName": "Alpena_MI_1_1.png",
+                "isDoc": false,
+                "directusId": "617f3901-7753-4c27-9d7b-2d88f1a0ceeb"
+              },
+              {
+                "fileName": "Alpena_MI_1_2.png",
+                "isDoc": false,
+                "directusId": "dce2c61c-01a8-4e28-b103-dd2d609330f1"
+              },
+              {
+                "fileName": "Alpena_MI_1_3.png",
+                "isDoc": false,
+                "directusId": "36cb141a-4b89-4371-82e4-2a0e56809523"
               }
             ]
           }
@@ -2697,7 +2796,67 @@
           ]
         }
       ]
-    }
+    },
+    "add_max": [
+      {
+        "reporter": "Brad Wu",
+        "requirements": ["by right"],
+        "citations": [
+          {
+            "description": "Ann Arbor Unified Development Code",
+            "type": "city code",
+            "url": "https://www.a2gov.org/departments/planning/Documents/9th%20Edition%20Unified%20Development%20Code.pdf",
+            "notes": "5.19.2.\nPages 91-96",
+            "attachments": [
+              {
+                "fileName": "AnnArbor_MI_1_1.png",
+                "isDoc": false,
+                "directusId": "9bfadf92-c33b-4382-a6da-8aa0890b8af6"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "rm_min": [
+      {
+        "reporter": "Brad Wu",
+        "requirements": ["by right"],
+        "citations": [
+          {
+            "description": "Proposed Amendments from Planning Commission",
+            "type": "other",
+            "url": "https://a2gov.legistar.com/View.ashx?M=F&ID=10686954&GUID=38E47AC9-84A5-43DE-ADAF-46248AE6BCF2",
+            "notes": "PROPOSED AMENDMENTS\nAmendments to the off-street parking standards in the Unified Development Code are proposed\nto:  Eliminate minimum parking requirements for any land use in any zoning district",
+            "attachments": [
+              {
+                "fileName": "AnnArbor_MI_1_1.png",
+                "isDoc": false,
+                "directusId": "a973cd89-8ef0-442f-8a70-d3d93d785f3e"
+              }
+            ]
+          },
+          {
+            "description": "City Legislative Site for Ordinance",
+            "type": "other",
+            "url": "https://a2gov.legistar.com/LegislationDetail.aspx?ID=5718604&GUID=997A327F-999A-439E-AF3B-29591C3FB77C",
+            "notes": "City code hasn't yet been updated, but the section with minimums has been replaced with a section only containing maximums.",
+            "attachments": [
+              {
+                "fileName": "AnnArbor_MI_2_1.png",
+                "isDoc": false,
+                "directusId": "5467e33e-631f-4531-a038-4bf5ebf07c28"
+              },
+              {
+                "fileName": "AnnArbor_MI_2_2.png",
+                "isDoc": false,
+                "directusId": "e017444e-a375-4609-97f3-cbe3abdedd0d"
+              }
+            ]
+          }
+        ]
+      }
+    ]
   },
   "Anna, IL": {
     "rm_min": [
@@ -5966,7 +6125,70 @@
           ]
         }
       ]
-    }
+    },
+    "add_max": [
+      {
+        "reporter": "Samuel Deetz",
+        "requirements": ["by right"],
+        "citations": [
+          {
+            "description": "Battle Creek Zoning Code",
+            "type": "city code",
+            "url": "https://codelibrary.amlegal.com/codes/battlecreek/latest/battlecreek_mi/0-0-0-55037",
+            "notes": "1261.01(d)(8);\n1261.01(e)",
+            "attachments": [
+              {
+                "fileName": "BattleCreek_MI_1_1.png",
+                "isDoc": false,
+                "directusId": "5747b092-79f5-4f1f-84c5-39bc10c0b627"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "reduce_min": [
+      {
+        "reporter": "Samuel Deetz",
+        "requirements": ["bike parking"],
+        "citations": [
+          {
+            "description": "Battle Creek Zoning Code",
+            "type": "city code",
+            "url": "https://codelibrary.amlegal.com/codes/battlecreek/latest/battlecreek_mi/0-0-0-55037",
+            "notes": "1261.01(d)(4)",
+            "attachments": [
+              {
+                "fileName": "BattleCreek_MI_1_1.png",
+                "isDoc": false,
+                "directusId": "f7ca565c-4a16-40aa-a6e6-32b5d0b424b0"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "rm_min": [
+      {
+        "reporter": "Samuel Deetz",
+        "requirements": ["by right"],
+        "citations": [
+          {
+            "description": "Battle Creek Zoning Code",
+            "type": "city code",
+            "url": "https://codelibrary.amlegal.com/codes/battlecreek/latest/battlecreek_mi/0-0-0-55037",
+            "notes": "1261.01(b)(1)",
+            "attachments": [
+              {
+                "fileName": "BattleCreek_MI_1_1.png",
+                "isDoc": false,
+                "directusId": "28efff38-0268-4d10-b325-8b68dd39621b"
+              }
+            ]
+          }
+        ]
+      }
+    ]
   },
   "Baudette, MN": {
     "rm_min": [
@@ -6107,7 +6329,49 @@
           ]
         }
       ]
-    }
+    },
+    "add_max": [
+      {
+        "reporter": "Samuel Deetz",
+        "requirements": ["by right"],
+        "citations": [
+          {
+            "description": "Bear Lake Zoning Code",
+            "type": "city code",
+            "url": "https://drive.google.com/drive/folders/15pk3ewBamSqqptYDdCt1UA8vDzevzHPQ",
+            "notes": "109)G.a.9)\nPage 62",
+            "attachments": [
+              {
+                "fileName": "BearLake_MI_1_1.png",
+                "isDoc": false,
+                "directusId": "6b3d197c-7584-4a85-a594-4efa4d495228"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "rm_min": [
+      {
+        "reporter": "Samuel Deetz",
+        "requirements": ["by right"],
+        "citations": [
+          {
+            "description": "Bear Lake Zoning Code",
+            "type": "city code",
+            "url": "https://drive.google.com/drive/folders/15pk3ewBamSqqptYDdCt1UA8vDzevzHPQ",
+            "notes": "7004)E.\nPage 123",
+            "attachments": [
+              {
+                "fileName": "BearLake_MI_1_1.png",
+                "isDoc": false,
+                "directusId": "1f9fd81c-6b4a-4df1-8398-ff0efad05628"
+              }
+            ]
+          }
+        ]
+      }
+    ]
   },
   "Beatrice, NE": {
     "rm_min": [
@@ -7240,7 +7504,49 @@
           ]
         }
       ]
-    }
+    },
+    "add_max": [
+      {
+        "reporter": "Samuel Deetz",
+        "requirements": ["by right"],
+        "citations": [
+          {
+            "description": "Benton Harbor Zoning Code",
+            "type": "city code",
+            "url": "https://www.bhcity.us/files/documents/BentonHarborZoningOrdinance864100510120522AM.pdf",
+            "notes": "§2.7.4.D.3. \nPage 35",
+            "attachments": [
+              {
+                "fileName": "BentonHarbor_MI_1_1.png",
+                "isDoc": false,
+                "directusId": "40380b28-397a-4585-9665-f001caa83dce"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "rm_min": [
+      {
+        "reporter": "Samuel Deetz",
+        "requirements": ["by right"],
+        "citations": [
+          {
+            "description": "Benton Harbor Zoning Code",
+            "type": "city code",
+            "url": "https://www.bhcity.us/files/documents/BentonHarborZoningOrdinance864100510120522AM.pdf",
+            "notes": "§4.2.3.C. \nPage 65",
+            "attachments": [
+              {
+                "fileName": "BentonHarbor_MI_1_1.png",
+                "isDoc": false,
+                "directusId": "95851b77-8f2b-4ef9-9311-3415ac8c57b0"
+              }
+            ]
+          }
+        ]
+      }
+    ]
   },
   "Benton, AR": {
     "legacy": {
@@ -7492,7 +7798,49 @@
           ]
         }
       ]
-    }
+    },
+    "reduce_min": [
+      {
+        "reporter": "Samuel Deetz",
+        "requirements": ["bike parking", "other"],
+        "citations": [
+          {
+            "description": "Benzonia Zoning Code",
+            "type": "city code",
+            "url": "https://drive.google.com/file/d/1dJBTRnlLwBDsyz354XvLgaZgyjbBSlls/view?pli=1",
+            "notes": "GENERAL PROVISIONS Article 4\nSection 4.21 Parking and Loading\nh. Bicycle Parking Substitution\ni. Electric Vehicle Parking\nj. Parking in the Village Mixed Use District (VMU)\nk. Parking within the US-31 Corridor Overlay Top-of-the-Hill District (COD-T)\nPages 129-130",
+            "attachments": [
+              {
+                "fileName": "Benzonia_MI_1_1.png",
+                "isDoc": false,
+                "directusId": "a2d90591-2437-45b9-9ec2-62e97bd997ed"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "rm_min": [
+      {
+        "reporter": "Samuel Deetz",
+        "requirements": ["by right"],
+        "citations": [
+          {
+            "description": "Benzonia Zoning Code",
+            "type": "city code",
+            "url": "https://drive.google.com/file/d/1dJBTRnlLwBDsyz354XvLgaZgyjbBSlls/view?pli=1",
+            "notes": "GENERAL PROVISIONS Article 4\nSection 4.21 Parking and Loading\nh. Bicycle Parking Substitution\ni. Electric Vehicle Parking\nj. Parking in the Village Mixed Use District (VMU)\nk. Parking within the US-31 Corridor Overlay Top-of-the-Hill District (COD-T)\nPages 129-130",
+            "attachments": [
+              {
+                "fileName": "Benzonia_MI_1_1.png",
+                "isDoc": false,
+                "directusId": "a2d90591-2437-45b9-9ec2-62e97bd997ed"
+              }
+            ]
+          }
+        ]
+      }
+    ]
   },
   "Beresford, SD": {
     "rm_min": [
@@ -7567,7 +7915,49 @@
           ]
         }
       ]
-    }
+    },
+    "reduce_min": [
+      {
+        "reporter": "Samuel Deetz",
+        "requirements": ["bike parking"],
+        "citations": [
+          {
+            "description": "Berkley Zoning Code",
+            "type": "city code",
+            "url": "https://library.municode.com/mi/berkley/codes/code_of_ordinances?nodeId=PTIICOOR_CH138ZO_ARTIVOREPALO_DIV3BIPARE_S138-268PACR",
+            "notes": "Sec. 138-268.",
+            "attachments": [
+              {
+                "fileName": "Berkley_MI_1_1.png",
+                "isDoc": false,
+                "directusId": "dd456d60-6b3c-42a7-88d7-14b0ca4086d4"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "rm_min": [
+      {
+        "reporter": "Samuel Deetz",
+        "requirements": ["other"],
+        "citations": [
+          {
+            "description": "Berkley Zoning Code",
+            "type": "city code",
+            "url": "https://library.municode.com/mi/berkley/codes/code_of_ordinances?nodeId=PTIICOOR_CH138ZO_ARTIVOREPALO_DIV1OREPARE_S138-222PALOLODECO",
+            "notes": "Sec. 138-222.(c)(1)b.",
+            "attachments": [
+              {
+                "fileName": "Berkley_MI_1_1.png",
+                "isDoc": false,
+                "directusId": "d258a472-34b6-4868-93f6-ed504ef44d08"
+              }
+            ]
+          }
+        ]
+      }
+    ]
   },
   "Berlin, BE": {
     "rm_min": [
@@ -7810,7 +8200,49 @@
           ]
         }
       ]
-    }
+    },
+    "add_max": [
+      {
+        "reporter": "Samuel Deetz",
+        "requirements": ["by right"],
+        "citations": [
+          {
+            "description": "Bertrand Township Zoning Code",
+            "type": "city code",
+            "url": "https://library.municode.com/mi/bertrand_township,_(berrien_co.)/codes/code_of_ordinances?nodeId=COOR_CH24ZO_CH13SIDERE_S24-413PARE",
+            "notes": "Sec. 24-413. (c)",
+            "attachments": [
+              {
+                "fileName": "BertrandTownship_MI_1_1.png",
+                "isDoc": false,
+                "directusId": "301b9016-2f86-47ad-b4fa-5c27df899038"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "reduce_min": [
+      {
+        "reporter": "Samuel Deetz",
+        "requirements": ["other"],
+        "citations": [
+          {
+            "description": "Bertrand Township Zoning Code",
+            "type": "city code",
+            "url": "https://library.municode.com/mi/bertrand_township,_(berrien_co.)/codes/code_of_ordinances?nodeId=COOR_CH24ZO_CH13SIDERE_S24-413PARE",
+            "notes": "Sec. 24-413.(e)(1)",
+            "attachments": [
+              {
+                "fileName": "BertrandTownship_MI_1_1.png",
+                "isDoc": false,
+                "directusId": "ecc38b9e-3ca7-47c8-8a17-d731705305d5"
+              }
+            ]
+          }
+        ]
+      }
+    ]
   },
   "Berwick, PA": {
     "rm_min": [
@@ -8108,7 +8540,49 @@
           ]
         }
       ]
-    }
+    },
+    "add_max": [
+      {
+        "reporter": "Samuel Deetz",
+        "requirements": ["by right"],
+        "citations": [
+          {
+            "description": "Big Rapids Zoning Code",
+            "type": "city code",
+            "url": "https://cms6.revize.com/revize/bigrapids/Document%20Center/Departments/Community%20Development/Zoning/Zoning%20Ordinance.pdf",
+            "notes": "5.2:2\nPage 79",
+            "attachments": [
+              {
+                "fileName": "BigRapids_MI_1_1.png",
+                "isDoc": false,
+                "directusId": "b48b6eaf-1ff6-4d9c-a71f-ac04fba85b12"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "reduce_min": [
+      {
+        "reporter": "Samuel Deetz",
+        "requirements": ["by right", "other"],
+        "citations": [
+          {
+            "description": "Big Rapids Zoning Code",
+            "type": "city code",
+            "url": "https://cms6.revize.com/revize/bigrapids/Document%20Center/Departments/Community%20Development/Zoning/Zoning%20Ordinance.pdf",
+            "notes": "5.2\nPage 74",
+            "attachments": [
+              {
+                "fileName": "BigRapids_MI_1_1.png",
+                "isDoc": false,
+                "directusId": "61fbc815-7d0e-4435-9389-2911be1d5ae7"
+              }
+            ]
+          }
+        ]
+      }
+    ]
   },
   "Big Rock, IL": {
     "rm_min": [
@@ -8569,7 +9043,54 @@
           ]
         }
       ]
-    }
+    },
+    "reduce_min": [
+      {
+        "reporter": "Samuel Deetz",
+        "requirements": ["by right", "other"],
+        "citations": [
+          {
+            "description": "Birmingham Zoning Code",
+            "type": "city code",
+            "url": "https://online.encodeplus.com/regs/birmingham-mi/doc-viewer.aspx#secid-671",
+            "notes": "4.50 PK-06;\n4.53 PK-09 E.",
+            "attachments": [
+              {
+                "fileName": "Birmingham_MI_1_1.png",
+                "isDoc": false,
+                "directusId": "e7b81553-667d-4494-8bee-a07bd091f680"
+              },
+              {
+                "fileName": "Birmingham_MI_1_2.png",
+                "isDoc": false,
+                "directusId": "49d15a76-177f-4f4d-a794-801295cc1761"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "rm_min": [
+      {
+        "reporter": "Samuel Deetz",
+        "requirements": ["historic preservation", "other"],
+        "citations": [
+          {
+            "description": "Birmingham Zoning Code",
+            "type": "city code",
+            "url": "https://online.encodeplus.com/regs/birmingham-mi/doc-viewer.aspx?secid=385#secid-385",
+            "notes": "3.04.D.",
+            "attachments": [
+              {
+                "fileName": "Birmingham_MI_1_1.png",
+                "isDoc": false,
+                "directusId": "e899d34a-a571-4eef-b962-8b3695dfc2a0"
+              }
+            ]
+          }
+        ]
+      }
+    ]
   },
   "Biron, WI": {
     "rm_min": [
@@ -10269,7 +10790,7 @@
         {
           "description": "Bridgeport Charter Township Zoning Code",
           "type": "city code",
-          "url": "https://www.bridgeportmi.org/images/zoning/chapter5.pdf",
+          "url": "https://cms3.revize.com/revize/bridgeporttwpmi/Documents/Departments/Planning%20And%20Zoning/Zoning%20Ordinances/chapter5.pdf",
           "notes": "CHAPTER 5 Parking Requirements\nSECTION 504. RECOMMENDED PARKING QUANTITIES. \nPage 5",
           "attachments": [
             {
@@ -10280,7 +10801,49 @@
           ]
         }
       ]
-    }
+    },
+    "add_max": [
+      {
+        "reporter": "Samuel Deetz",
+        "requirements": ["other"],
+        "citations": [
+          {
+            "description": "Bridgeport Charter Township Zoning Code",
+            "type": "city code",
+            "url": "https://cms3.revize.com/revize/bridgeporttwpmi/Documents/Departments/Planning%20And%20Zoning/Zoning%20Ordinances/chapter5.pdf",
+            "notes": "CHAPTER 5 Parking Requirements\nSECTION 504. RECOMMENDED PARKING QUANTITIES. \nPage 5",
+            "attachments": [
+              {
+                "fileName": "BridgeportCharterTownship_MI_1_1.png",
+                "isDoc": false,
+                "directusId": "b309e64f-8f0a-497c-99f6-f393a2578bd7"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "rm_min": [
+      {
+        "reporter": "Samuel Deetz",
+        "requirements": ["other"],
+        "citations": [
+          {
+            "description": "Bridgeport Charter Township Zoning Code",
+            "type": "city code",
+            "url": "https://cms3.revize.com/revize/bridgeporttwpmi/Documents/Departments/Planning%20And%20Zoning/Zoning%20Ordinances/chapter5.pdf",
+            "notes": "CHAPTER 5 Parking Requirements\nSECTION 504. RECOMMENDED PARKING QUANTITIES. \nPage 5",
+            "attachments": [
+              {
+                "fileName": "BridgeportCharterTownship_MI_1_1.png",
+                "isDoc": false,
+                "directusId": "b309e64f-8f0a-497c-99f6-f393a2578bd7"
+              }
+            ]
+          }
+        ]
+      }
+    ]
   },
   "Bridgeport, CT": {
     "legacy": {
@@ -10355,7 +10918,59 @@
           ]
         }
       ]
-    }
+    },
+    "reduce_min": [
+      {
+        "reporter": "Samuel Deetz",
+        "requirements": ["by right", "other"],
+        "citations": [
+          {
+            "description": "Bridgman Zoning Code",
+            "type": "city code",
+            "url": "https://www.bridgman.org/DocumentCenter/View/1818/Bridgman-Amended-Zoning-Ordinance-as-of-04022021",
+            "notes": "5.10.A.\nPage 186",
+            "attachments": [
+              {
+                "fileName": "Bridgman_MI_1_1.png",
+                "isDoc": false,
+                "directusId": "26184ade-6d59-410f-9903-a40934367170"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "rm_min": [
+      {
+        "reporter": "Samuel Deetz",
+        "requirements": ["by right"],
+        "citations": [
+          {
+            "description": "Bridgman Zoning Code",
+            "type": "city code",
+            "url": "https://www.bridgman.org/DocumentCenter/View/1818/Bridgman-Amended-Zoning-Ordinance-as-of-04022021",
+            "notes": "ARTICLE II. ZONING DISTRICTS AND MAP\n  2.11 Downtown Core District\n    SITE DESIGN STANDARDS SNAPSHOT\n  2.12 Commercial Gateway District\n    SITE DESIGN STANDARDS SNAPSHOT\n  2.13 Downtown Edge District\n    SITE DESIGN STANDARDS SNAPSHOT\n  2.14 Neighborhood Edge District\n    SITE DESIGN STANDARDS SNAPSHOT\nARTICLE V. PARKING\n  5.10 PARKING REQUIRED\n    A.\nPages 31, 35, 39, 43, 186",
+            "attachments": [
+              {
+                "fileName": "Bridgman_MI_1_1.png",
+                "isDoc": false,
+                "directusId": "cd2bf15c-fba2-46bf-b8b2-0256fbb14cfb"
+              },
+              {
+                "fileName": "Bridgman_MI_1_2.png",
+                "isDoc": false,
+                "directusId": "913dba2f-8855-4763-b315-562d34a235c6"
+              },
+              {
+                "fileName": "Bridgman_MI_1_3.png",
+                "isDoc": false,
+                "directusId": "3bbef388-e98b-432a-820f-acb5e93d03e4"
+              }
+            ]
+          }
+        ]
+      }
+    ]
   },
   "Brighton Charter Township, MI": {
     "add_max": [
@@ -10996,7 +11611,49 @@
           ]
         }
       ]
-    }
+    },
+    "add_max": [
+      {
+        "reporter": "Samuel Deetz",
+        "requirements": ["by right"],
+        "citations": [
+          {
+            "description": "Brownstown Charter Township Zoning Code Article 15",
+            "type": "city code",
+            "url": "https://cms8.revize.com/revize/brownstownmi/document_center/Ordinances/Zoning%20Ordinances%20by%20Chapter/15%20Off-Street%20Parking,%20Loading,%20Access%20&%20Circulation.pdf",
+            "notes": "Section 15.01 Off-Street Parking, Loading, Access and Circulation Requirements\n(h)\nPage 4",
+            "attachments": [
+              {
+                "fileName": "BrownstownCharterTownship_MI_1_1.png",
+                "isDoc": false,
+                "directusId": "e266ecde-ba1e-4395-84d9-14aae87ee534"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "reduce_min": [
+      {
+        "reporter": "Samuel Deetz",
+        "requirements": ["other"],
+        "citations": [
+          {
+            "description": "Brownstown Charter Township Zoning Code Article 07 Town Center Districts",
+            "type": "city code",
+            "url": "https://cms8.revize.com/revize/brownstownmi/document_center/Ordinances/Zoning%20Ordinances%20by%20Chapter/07%20Town%20Center%20Districts.pdf",
+            "notes": "Article 07 Town Center Districts\nSection 7.06 Parking and Loading\n(b)\nPage 16",
+            "attachments": [
+              {
+                "fileName": "BrownstownCharterTownship_MI_1_1.png",
+                "isDoc": false,
+                "directusId": "0361ee91-ef2d-4e9e-badb-35eab439d4a4"
+              }
+            ]
+          }
+        ]
+      }
+    ]
   },
   "Brownsville, TX": {
     "legacy": {
@@ -12025,7 +12682,49 @@
           ]
         }
       ]
-    }
+    },
+    "add_max": [
+      {
+        "reporter": "Nani Wolf",
+        "requirements": ["by right"],
+        "citations": [
+          {
+            "description": "Municipal Code",
+            "type": "city code",
+            "url": "https://www.villageofcalumet.com/uploads/1/1/8/5/118509013/adopted_calumet_zoning_ordinance_[4-21-22].pdf",
+            "notes": "5.3.2",
+            "attachments": [
+              {
+                "fileName": "Calumet_MI_1_1.png",
+                "isDoc": false,
+                "directusId": "60d46009-f6ff-4e53-902a-ac7f5f87f15b"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "rm_min": [
+      {
+        "reporter": "Nani Wolf",
+        "requirements": ["by right"],
+        "citations": [
+          {
+            "description": "Municipal Code",
+            "type": "city code",
+            "url": "https://www.villageofcalumet.com/uploads/1/1/8/5/118509013/adopted_calumet_zoning_ordinance_[4-21-22].pdf",
+            "notes": "5.3.2",
+            "attachments": [
+              {
+                "fileName": "Calumet_MI_1_1.png",
+                "isDoc": false,
+                "directusId": "60d46009-f6ff-4e53-902a-ac7f5f87f15b"
+              }
+            ]
+          }
+        ]
+      }
+    ]
   },
   "Calvert County, MD": {
     "legacy": {
@@ -14079,7 +14778,49 @@
           ]
         }
       ]
-    }
+    },
+    "add_max": [
+      {
+        "reporter": "Samuel Deetz",
+        "requirements": ["by right", "size of project"],
+        "citations": [
+          {
+            "description": "Cedar Springs Zoning Code",
+            "type": "city code",
+            "url": "https://library.municode.com/mi/cedar_springs/codes/code_of_ordinances?nodeId=PTIICOOR_CH32ZO_ARTVIOREPALOAC_S32-621MAPA",
+            "notes": "Sec. 32-621.",
+            "attachments": [
+              {
+                "fileName": "CedarSprings_MI_1_1.png",
+                "isDoc": false,
+                "directusId": "de5c7744-e8e7-4094-ad0d-a44226c4ea50"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "reduce_min": [
+      {
+        "reporter": "Samuel Deetz",
+        "requirements": ["other"],
+        "citations": [
+          {
+            "description": "Cedar Springs Zoning Code",
+            "type": "city code",
+            "url": "https://library.municode.com/mi/cedar_springs/codes/code_of_ordinances?nodeId=PTIICOOR_CH32ZO_ARTVIOREPALOAC_S32-619LOPA",
+            "notes": "Sec. 32-619.(d)",
+            "attachments": [
+              {
+                "fileName": "CedarSprings_MI_1_1.png",
+                "isDoc": false,
+                "directusId": "513aeefb-76a5-4487-8f3b-6547b8fcb4b9"
+              }
+            ]
+          }
+        ]
+      }
+    ]
   },
   "Cedarburg, WI": {
     "rm_min": [
@@ -15150,7 +15891,54 @@
           ]
         }
       ]
-    }
+    },
+    "add_max": [
+      {
+        "reporter": "Samuel Deetz",
+        "requirements": ["by right"],
+        "citations": [
+          {
+            "description": "Charlevoix Zoning Code",
+            "type": "city code",
+            "url": "https://codelibrary.amlegal.com/codes/charlevoix/latest/charlevoix_mi/0-0-0-5797",
+            "notes": "§ 153.187(G)",
+            "attachments": [
+              {
+                "fileName": "Charlevoix_MI_1_1.png",
+                "isDoc": false,
+                "directusId": "5828020c-0c21-4de6-bd19-9e1153075cc0"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "rm_min": [
+      {
+        "reporter": "Samuel Deetz",
+        "requirements": ["by right"],
+        "citations": [
+          {
+            "description": "Charlevoix Zoning Code",
+            "type": "city code",
+            "url": "https://codelibrary.amlegal.com/codes/charlevoix/latest/charlevoix_mi/0-0-0-5790",
+            "notes": "§ 153.186(A); \n§ 153.188(D)",
+            "attachments": [
+              {
+                "fileName": "Charlevoix_MI_1_1.png",
+                "isDoc": false,
+                "directusId": "adb383b6-74fd-4224-8b31-4395e8cbc3f5"
+              },
+              {
+                "fileName": "Charlevoix_MI_1_2.png",
+                "isDoc": false,
+                "directusId": "3c76255a-5ae2-4c46-82f4-8f239fc88bd2"
+              }
+            ]
+          }
+        ]
+      }
+    ]
   },
   "Charlotte, NC": {
     "rm_min": [
@@ -15384,7 +16172,49 @@
           ]
         }
       ]
-    }
+    },
+    "add_max": [
+      {
+        "reporter": "Samuel Deetz",
+        "requirements": ["by right"],
+        "citations": [
+          {
+            "description": "Chelsea Zoning Code",
+            "type": "city code",
+            "url": "https://cms3.revize.com/revize/chelseami/Documents/Services/Planning%20&%20Zoning/Zoning%20Ordinance/Chelsea%20ZO%20-%20FINAL%20-%2005062021.pdf",
+            "notes": "SECTION 8.08\nPage 141",
+            "attachments": [
+              {
+                "fileName": "Chelsea_MI_1_1.png",
+                "isDoc": false,
+                "directusId": "a14bdaf9-eb46-4f8d-9253-6d896d2d974e"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "rm_min": [
+      {
+        "reporter": "Samuel Deetz",
+        "requirements": ["other"],
+        "citations": [
+          {
+            "description": "Chelsea Zoning Code",
+            "type": "city code",
+            "url": "https://cms3.revize.com/revize/chelseami/Documents/Services/Planning%20&%20Zoning/Zoning%20Ordinance/Chelsea%20ZO%20-%20FINAL%20-%2005062021.pdf",
+            "notes": "8.04.B.\nPage 138",
+            "attachments": [
+              {
+                "fileName": "Chelsea_MI_1_1.png",
+                "isDoc": false,
+                "directusId": "df6ea625-d564-4623-804c-736182ec04cf"
+              }
+            ]
+          }
+        ]
+      }
+    ]
   },
   "Cheltenham Township, PA": {
     "legacy": {
@@ -16375,7 +17205,49 @@
           ]
         }
       ]
-    }
+    },
+    "add_max": [
+      {
+        "reporter": "Samuel Deetz",
+        "requirements": ["by right"],
+        "citations": [
+          {
+            "description": "Clarkston Zoning Code",
+            "type": "city code",
+            "url": "http://villageofclarkston.org/DocumentCenter/View/548/Zoning-Ordinance-",
+            "notes": "20.02.J.\nPages 201-202",
+            "attachments": [
+              {
+                "fileName": "Clarkston_MI_1_1.png",
+                "isDoc": false,
+                "directusId": "823bce42-2d44-406f-b69f-95ffb2ae0278"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "reduce_min": [
+      {
+        "reporter": "Samuel Deetz",
+        "requirements": ["in-lieu fees"],
+        "citations": [
+          {
+            "description": "Clarkston Zoning Code",
+            "type": "city code",
+            "url": "http://villageofclarkston.org/DocumentCenter/View/548/Zoning-Ordinance-",
+            "notes": "20.02.V. \nPages 204-205",
+            "attachments": [
+              {
+                "fileName": "Clarkston_MI_1_1.png",
+                "isDoc": false,
+                "directusId": "e28dc2d2-0a6b-4d1c-92ce-ef78a7b8a4c6"
+              }
+            ]
+          }
+        ]
+      }
+    ]
   },
   "Clarksville, AR": {
     "rm_min": [
@@ -16470,7 +17342,49 @@
           ]
         }
       ]
-    }
+    },
+    "add_max": [
+      {
+        "reporter": "Samuel Deetz",
+        "requirements": ["by right"],
+        "citations": [
+          {
+            "description": "Clawson Zoning Code",
+            "type": "city code",
+            "url": "https://cms3.revize.com/revize/clawsonnew/your_government/building_and_planning/docs/Clawson%20ZO%202023%2005%2016_Secured.pdf",
+            "notes": "5.1.B.1.n.\nPage 250",
+            "attachments": [
+              {
+                "fileName": "Clawson_MI_1_1.png",
+                "isDoc": false,
+                "directusId": "fa4799fa-f099-42d2-8486-132238dc4c25"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "reduce_min": [
+      {
+        "reporter": "Samuel Deetz",
+        "requirements": ["in-lieu fees"],
+        "citations": [
+          {
+            "description": "Clawson Zoning Code",
+            "type": "city code",
+            "url": "https://cms3.revize.com/revize/clawsonnew/your_government/building_and_planning/docs/Clawson%20ZO%202023%2005%2016_Secured.pdf",
+            "notes": "5.1.C.\nPages 251-252",
+            "attachments": [
+              {
+                "fileName": "Clawson_MI_1_1.png",
+                "isDoc": false,
+                "directusId": "5f2c07d6-641c-4896-a258-4a37adb88f42"
+              }
+            ]
+          }
+        ]
+      }
+    ]
   },
   "Clayton, IL": {
     "rm_min": [
@@ -18402,7 +19316,49 @@
           ]
         }
       ]
-    }
+    },
+    "add_max": [
+      {
+        "reporter": "Samuel Deetz",
+        "requirements": ["by right"],
+        "citations": [
+          {
+            "description": "Comstock Charter Township Zoning Code",
+            "type": "city code",
+            "url": "https://library.municode.com/mi/comstock_charter_township,_(_kalamazoo_co.)/codes/zoning?nodeId=PT300_300.000ZOORORNO156ADNO11976EFJA11977_ART6.00_300.600OREPALOREAMORNO511XIXI8-17-20_300.601OREPARE",
+            "notes": "300.601 Sec. 6.01.A.4.",
+            "attachments": [
+              {
+                "fileName": "ComstockCharterTownship_MI_1_1.png",
+                "isDoc": false,
+                "directusId": "c5464ab4-7f0d-4b87-8e3d-13161ba65c96"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "reduce_min": [
+      {
+        "reporter": "Samuel Deetz",
+        "requirements": ["other", "size of project"],
+        "citations": [
+          {
+            "description": "Comstock Charter Township Zoning Code",
+            "type": "city code",
+            "url": "https://library.municode.com/mi/comstock_charter_township,_(_kalamazoo_co.)/codes/zoning?nodeId=PT300_300.000ZOORORNO156ADNO11976EFJA11977_ART14.50_300.1450COCEDI_300.1454STAPCOCEZO",
+            "notes": "300.1454 Sec. 14.50.04.A.1.",
+            "attachments": [
+              {
+                "fileName": "ComstockCharterTownship_MI_1_1.png",
+                "isDoc": false,
+                "directusId": "912df8ce-f5ff-4ee3-899d-4016ef51e950"
+              }
+            ]
+          }
+        ]
+      }
+    ]
   },
   "Concord, CA": {
     "legacy": {
@@ -18874,7 +19830,49 @@
           ]
         }
       ]
-    }
+    },
+    "reduce_min": [
+      {
+        "reporter": "Samuel Deetz",
+        "requirements": ["by right"],
+        "citations": [
+          {
+            "description": "Coopersville Zoning Code",
+            "type": "city code",
+            "url": "https://library.municode.com/mi/coopersville/codes/code_of_ordinances?nodeId=COORCO_PATWLAZOCO_CH1271CEBUDI_1271.08OREPA",
+            "notes": "CHAPTER 1271 - C-2 Central Business District\t\n1271.08 - OFF-STREET PARKING.",
+            "attachments": [
+              {
+                "fileName": "Coopersville_MI_1_1.png",
+                "isDoc": false,
+                "directusId": "95e7b121-03ff-4680-8ec3-c3900d71047f"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "rm_min": [
+      {
+        "reporter": "Samuel Deetz",
+        "requirements": ["other"],
+        "citations": [
+          {
+            "description": "Coopersville Zoning Code",
+            "type": "city code",
+            "url": "https://library.municode.com/mi/coopersville/codes/code_of_ordinances?nodeId=COORCO_PATWLAZOCO_CH1271CEBUDI_1271.08OREPA",
+            "notes": "CHAPTER 1271 - C-2 Central Business District\t\n1271.08 - OFF-STREET PARKING.",
+            "attachments": [
+              {
+                "fileName": "Coopersville_MI_1_1.png",
+                "isDoc": false,
+                "directusId": "95e7b121-03ff-4680-8ec3-c3900d71047f"
+              }
+            ]
+          }
+        ]
+      }
+    ]
   },
   "Coos Bay, OR": {
     "legacy": {
@@ -21772,7 +22770,49 @@
           ]
         }
       ]
-    }
+    },
+    "add_max": [
+      {
+        "reporter": "Samuel Deetz",
+        "requirements": ["by right"],
+        "citations": [
+          {
+            "description": "Decatur Zoning Code",
+            "type": "city code",
+            "url": "https://library.municode.com/mi/decatur/codes/code_of_ordinances?nodeId=CD_ORD_CH42ZO_ARTVSIDEST_S42-166PASPRE",
+            "notes": "Sec. 42-166.(c)",
+            "attachments": [
+              {
+                "fileName": "Decatur_MI_1_1.png",
+                "isDoc": false,
+                "directusId": "c0f29571-0a91-470d-8254-6801949b0b96"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "reduce_min": [
+      {
+        "reporter": "Samuel Deetz",
+        "requirements": ["other"],
+        "citations": [
+          {
+            "description": "Decatur Zoning Code",
+            "type": "city code",
+            "url": "https://library.municode.com/mi/decatur/codes/code_of_ordinances?nodeId=CD_ORD_CH42ZO_ARTVSIDEST_S42-165RE",
+            "notes": "Sec. 42-165.(3)",
+            "attachments": [
+              {
+                "fileName": "Decatur_MI_1_1.png",
+                "isDoc": false,
+                "directusId": "df8a36ff-40b6-42e7-9577-8a5eb799a329"
+              }
+            ]
+          }
+        ]
+      }
+    ]
   },
   "Decatur, TX": {
     "rm_min": [
@@ -22743,7 +23783,70 @@
           ]
         }
       ]
-    }
+    },
+    "add_max": [
+      {
+        "reporter": "Samuel Deetz",
+        "requirements": ["by right"],
+        "citations": [
+          {
+            "description": "Dexter Zoning Code",
+            "type": "city code",
+            "url": "https://files.dextermi.gov/Charter_and_Ordinances/2024-06-21.revised.adopted.zo.to.correct.error.pdf",
+            "notes": "Section 5.05.C. \nPage 104",
+            "attachments": [
+              {
+                "fileName": "Dexter_MI_1_1.png",
+                "isDoc": false,
+                "directusId": "36053199-fba4-4172-9609-35cc17c4d82a"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "reduce_min": [
+      {
+        "reporter": "Samuel Deetz",
+        "requirements": ["in-lieu fees"],
+        "citations": [
+          {
+            "description": "Dexter Zoning Code",
+            "type": "city code",
+            "url": "https://files.dextermi.gov/Charter_and_Ordinances/2024-06-21.revised.adopted.zo.to.correct.error.pdf",
+            "notes": "Section 5.05.A.4.\nPage 104",
+            "attachments": [
+              {
+                "fileName": "Dexter_MI_1_1.png",
+                "isDoc": false,
+                "directusId": "1cc2e74c-1e23-4355-a4e4-f0285788dca7"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "rm_min": [
+      {
+        "reporter": "Samuel Deetz",
+        "requirements": ["by right"],
+        "citations": [
+          {
+            "description": "Dexter Zoning Code",
+            "type": "city code",
+            "url": "https://files.dextermi.gov/Charter_and_Ordinances/2024-06-21.revised.adopted.zo.to.correct.error.pdf",
+            "notes": "Section 505.A.1.\nPage 103",
+            "attachments": [
+              {
+                "fileName": "Dexter_MI_1_1.png",
+                "isDoc": false,
+                "directusId": "eca0e007-ef4b-40a2-89cb-36381ddedfe3"
+              }
+            ]
+          }
+        ]
+      }
+    ]
   },
   "Dexter, MN": {
     "rm_min": [
@@ -23765,7 +24868,49 @@
           ]
         }
       ]
-    }
+    },
+    "add_max": [
+      {
+        "reporter": "Samuel Deetz",
+        "requirements": ["by right"],
+        "citations": [
+          {
+            "description": "Dundee Zoning Code",
+            "type": "city code",
+            "url": "https://www.dundeevillage.net/DocumentCenter/View/886/FULL-ZONING-ORDINANCE--CLEAN-Hyperlinked--01-06-23",
+            "notes": "16.05.A.10.\nPage 154",
+            "attachments": [
+              {
+                "fileName": "Dundee_MI_1_1.png",
+                "isDoc": false,
+                "directusId": "749db733-2b44-424b-8bd2-725c7bd9610c"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "rm_min": [
+      {
+        "reporter": "Samuel Deetz",
+        "requirements": ["by right"],
+        "citations": [
+          {
+            "description": "Dundee Zoning Code",
+            "type": "city code",
+            "url": "https://www.dundeevillage.net/DocumentCenter/View/886/FULL-ZONING-ORDINANCE--CLEAN-Hyperlinked--01-06-23",
+            "notes": "16.05.A.5.\nPage 153",
+            "attachments": [
+              {
+                "fileName": "Dundee_MI_1_1.png",
+                "isDoc": false,
+                "directusId": "40f6807e-8420-4228-b2ee-9ee99ff03718"
+              }
+            ]
+          }
+        ]
+      }
+    ]
   },
   "Dunkirk, NY": {
     "reduce_min": [
@@ -24432,7 +25577,75 @@
           ]
         }
       ]
-    }
+    },
+    "add_max": [
+      {
+        "reporter": "Samuel Deetz",
+        "requirements": ["by right", "size of project"],
+        "citations": [
+          {
+            "description": "East Lansing Zoning Code",
+            "type": "city code",
+            "url": "https://library.municode.com/mi/east_lansing/codes/code_of_ordinances?nodeId=PTIICOOR_CH50ZO_ARTVIBUOFINDI_DIV4CICECODIB-_S50-593DEST",
+            "notes": "Sec. 50-593.(j);\nSec. 50-812.(3);\nSec. 50-812.(4)",
+            "attachments": [
+              {
+                "fileName": "EastLansing_MI_1_1.png",
+                "isDoc": false,
+                "directusId": "8dbef3a2-24de-4ca4-9a08-75312adfe4a7"
+              },
+              {
+                "fileName": "EastLansing_MI_1_2.png",
+                "isDoc": false,
+                "directusId": "ae0ae36b-ca59-47ee-9f29-5e4241ef395f"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "reduce_min": [
+      {
+        "reporter": "Samuel Deetz",
+        "requirements": ["by right", "other"],
+        "citations": [
+          {
+            "description": "East Lansing Zoning Code",
+            "type": "city code",
+            "url": "https://library.municode.com/mi/east_lansing/codes/code_of_ordinances?nodeId=PTIICOOR_CH50ZO_ARTVIIIOREPARE_S50-814GEPARE",
+            "notes": "Sec. 50-814.(6)",
+            "attachments": [
+              {
+                "fileName": "EastLansing_MI_1_1.png",
+                "isDoc": false,
+                "directusId": "3d41af03-c39b-4e51-978f-26eff1408f2e"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "rm_min": [
+      {
+        "reporter": "Samuel Deetz",
+        "requirements": ["by right"],
+        "citations": [
+          {
+            "description": "East Lansing Zoning Code",
+            "type": "city code",
+            "url": "https://library.municode.com/mi/east_lansing/codes/code_of_ordinances?nodeId=PTIICOOR_CH50ZO_ARTVIBUOFINDI_DIV4CICECODIB-_S50-593DEST",
+            "notes": "Sec. 50-593.(j)",
+            "attachments": [
+              {
+                "fileName": "EastLansing_MI_1_1.png",
+                "isDoc": false,
+                "directusId": "d82b81fe-104f-4b5c-bea2-0ca71a7a7470"
+              }
+            ]
+          }
+        ]
+      }
+    ]
   },
   "East Liverpool, OH": {
     "rm_min": [
@@ -24850,7 +26063,75 @@
           ]
         }
       ]
-    }
+    },
+    "add_max": [
+      {
+        "reporter": "Samuel Deetz",
+        "requirements": ["by right"],
+        "citations": [
+          {
+            "description": "Eastpointe Zoning Code",
+            "type": "city code",
+            "url": "https://cms9files.revize.com/eastpointemi/Eastpointe-ZoningOrdinance-Spring2024%20Update-06.18.2024-Final-Adopted.pdf",
+            "notes": "Section 8.02J)\nPage 63 of pdf, page 54 of original document",
+            "attachments": [
+              {
+                "fileName": "Eastpointe_MI_1_1.png",
+                "isDoc": false,
+                "directusId": "f43cf54d-7007-403f-8531-4245087cd863"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "reduce_min": [
+      {
+        "reporter": "Samuel Deetz",
+        "requirements": ["bike parking", "frequent transit", "other"],
+        "citations": [
+          {
+            "description": "Eastpointe Zoning Code",
+            "type": "city code",
+            "url": "https://cms9files.revize.com/eastpointemi/Eastpointe-ZoningOrdinance-Spring2024%20Update-06.18.2024-Final-Adopted.pdf",
+            "notes": "Section 8.03B)\nPages 64-65 of pdf, pages 55-56 of original document",
+            "attachments": [
+              {
+                "fileName": "Eastpointe_MI_1_1.png",
+                "isDoc": false,
+                "directusId": "0826a75c-927e-4e64-8810-e3606c907ec3"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "rm_min": [
+      {
+        "reporter": "Samuel Deetz",
+        "requirements": [
+          "accessory dwelling units",
+          "affordable housing",
+          "by right",
+          "size of project"
+        ],
+        "citations": [
+          {
+            "description": "Eastpointe Zoning Code",
+            "type": "city code",
+            "url": "https://cms9files.revize.com/eastpointemi/Eastpointe-ZoningOrdinance-Spring2024%20Update-06.18.2024-Final-Adopted.pdf",
+            "notes": "Section 8.03A)\nPage 64 of pdf, page 55 of original document",
+            "attachments": [
+              {
+                "fileName": "Eastpointe_MI_1_1.png",
+                "isDoc": false,
+                "directusId": "d33fdaba-689d-4715-a431-54f0670ae56e"
+              }
+            ]
+          }
+        ]
+      }
+    ]
   },
   "Eaton Rapids, MI": {
     "add_max": [
@@ -24988,7 +26269,49 @@
           ]
         }
       ]
-    }
+    },
+    "add_max": [
+      {
+        "reporter": "Nani Wolf",
+        "requirements": ["by right"],
+        "citations": [
+          {
+            "description": "Ecorse City Zoning Code",
+            "type": "city code",
+            "url": "https://library.municode.com/mi/ecorse/codes/code_of_ordinances?nodeId=COOR_APXAZO_ART6SIDEST_6.3PAST",
+            "notes": "To minimize excessive areas of pavement which detracts from the aesthetics of the city and contributes to high rates of storm water runoff, this ordinance establishes a maximum number of parking spaces for each use. There are no minimum parking requirements except where specifically required in this ordinance.",
+            "attachments": [
+              {
+                "fileName": "Ecorse_MI_1_1.png",
+                "isDoc": false,
+                "directusId": "694497e6-d83b-4af7-84a4-012238066571"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "rm_min": [
+      {
+        "reporter": "Nani Wolf",
+        "requirements": ["by right"],
+        "citations": [
+          {
+            "description": "Ecorse City Zoning Code",
+            "type": "city code",
+            "url": "https://library.municode.com/mi/ecorse/codes/code_of_ordinances?nodeId=COOR_APXAZO_ART6SIDEST_6.3PAST",
+            "notes": "To minimize excessive areas of pavement which detracts from the aesthetics of the city and contributes to high rates of storm water runoff, this ordinance establishes a maximum number of parking spaces for each use. There are no minimum parking requirements except where specifically required in this ordinance.",
+            "attachments": [
+              {
+                "fileName": "Ecorse_MI_1_1.png",
+                "isDoc": false,
+                "directusId": "694497e6-d83b-4af7-84a4-012238066571"
+              }
+            ]
+          }
+        ]
+      }
+    ]
   },
   "Eden Prairie, MN": {
     "add_max": [
@@ -29323,6 +30646,120 @@
         }
       ]
     }
+  },
+  "Forest Grove, OR": {
+    "legacy": {
+      "reporter": null,
+      "requirements": ["by right"],
+      "citations": [
+        {
+          "description": "Forest Grove Ordinance 2024-07",
+          "type": "other",
+          "url": "https://forestgroveor.portal.civicclerk.com/event/1752/files/attachment/752",
+          "notes": "Pages 5-13",
+          "attachments": [
+            {
+              "fileName": "ForestGrove_OR_1_1.png",
+              "isDoc": false,
+              "directusId": "327bc2c9-4205-4d4b-82e9-7efe7be78dc6"
+            },
+            {
+              "fileName": "ForestGrove_OR_1_2.png",
+              "isDoc": false,
+              "directusId": "dec1d1a8-bedc-4f21-9f7b-ce489d114ea9"
+            },
+            {
+              "fileName": "ForestGrove_OR_1_3.png",
+              "isDoc": false,
+              "directusId": "6e00789a-692e-4b90-a5e7-77e4eff84f4e"
+            },
+            {
+              "fileName": "ForestGrove_OR_1_4.png",
+              "isDoc": false,
+              "directusId": "a8444b52-40d9-4137-b92c-3d7816660755"
+            }
+          ]
+        }
+      ]
+    },
+    "add_max": [
+      {
+        "reporter": "Samuel Deetz",
+        "requirements": ["by right", "frequent transit"],
+        "citations": [
+          {
+            "description": "Forest Grove Ordinance 2024-07",
+            "type": "other",
+            "url": "https://forestgroveor.portal.civicclerk.com/event/1752/files/attachment/752",
+            "notes": "§ 17.8.515\nPages 6-12",
+            "attachments": [
+              {
+                "fileName": "ForestGrove_OR_1_1.png",
+                "isDoc": false,
+                "directusId": "0bbeff5a-81ea-4a91-adac-ba18d49b9841"
+              },
+              {
+                "fileName": "ForestGrove_OR_1_2.png",
+                "isDoc": false,
+                "directusId": "52fb2785-e73c-4703-a70c-8d43faa86d28"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "reduce_min": [
+      {
+        "reporter": null,
+        "requirements": ["carshare", "other", "supportive housing"],
+        "citations": [
+          {
+            "description": "Forest Grove Ordinance 2024-07",
+            "type": "other",
+            "url": "https://forestgroveor.portal.civicclerk.com/event/1752/files/attachment/752",
+            "notes": "§ 17.8.520\nPage 13",
+            "attachments": [
+              {
+                "fileName": "ForestGrove_OR_1_1.png",
+                "isDoc": false,
+                "directusId": "9c8154af-1345-46fe-a55a-621dac86d304"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "rm_min": [
+      {
+        "reporter": null,
+        "requirements": ["by right"],
+        "citations": [
+          {
+            "description": "Forest Grove Ordinance 2024-07",
+            "type": "other",
+            "url": "https://forestgroveor.portal.civicclerk.com/event/1752/files/attachment/752",
+            "notes": "§ 17.8.515\nPages 5-12",
+            "attachments": [
+              {
+                "fileName": "ForestGrove_OR_1_1.png",
+                "isDoc": false,
+                "directusId": "4258f069-9188-4b95-b388-a88738090229"
+              },
+              {
+                "fileName": "ForestGrove_OR_1_2.png",
+                "isDoc": false,
+                "directusId": "c4f6b2cc-8453-4e6d-9d9a-67ac6d08fcfa"
+              },
+              {
+                "fileName": "ForestGrove_OR_1_3.png",
+                "isDoc": false,
+                "directusId": "2a40152e-2854-4b26-8353-7b6082245306"
+              }
+            ]
+          }
+        ]
+      }
+    ]
   },
   "Forest Hills, PA": {
     "legacy": {
@@ -38940,6 +40377,102 @@
                 "fileName": "Hillsboro_OH_1_1.png",
                 "isDoc": false,
                 "directusId": "efbe31d4-a123-448a-9fb9-45846aadb06c"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "Hillsboro, OR": {
+    "legacy": {
+      "reporter": null,
+      "requirements": ["by right"],
+      "citations": [
+        {
+          "description": "Hillsboro Community Development Code",
+          "type": "city code",
+          "url": "https://ecode360.com/44408024#44408040",
+          "notes": "§ 12.50.320",
+          "attachments": [
+            {
+              "fileName": "Hillsboro_OR_1_1.png",
+              "isDoc": false,
+              "directusId": "8b580d32-4453-4ca4-9d6b-4f9bd132f3e5"
+            },
+            {
+              "fileName": "Hillsboro_OR_1_2.png",
+              "isDoc": false,
+              "directusId": "d42bc272-82e1-4d1d-bd74-603a2da5bc84"
+            }
+          ]
+        },
+        {
+          "description": "Hillsboro Ordinance 6488",
+          "type": "other",
+          "url": "https://hillsboro-oregon.civicweb.net/document/241764/PLNG%20CDCA-001-23%20Draft%20Ordinance%20and%20Exhibits.pdf?handle=923F06CE0A654CB5A46DCFF7D7EA2A27",
+          "notes": "12.50.310;\n12.50.320;\nPages 16-17",
+          "attachments": [
+            {
+              "fileName": "Hillsboro_OR_2_1.png",
+              "isDoc": false,
+              "directusId": "9663ab3f-8557-4940-a04d-bf1026011d02"
+            },
+            {
+              "fileName": "Hillsboro_OR_2_2.png",
+              "isDoc": false,
+              "directusId": "71f3a699-d0a8-4d00-89ff-4bbcf93c2248"
+            }
+          ]
+        }
+      ]
+    },
+    "add_max": [
+      {
+        "reporter": "Samuel Deetz",
+        "requirements": ["by right", "frequent transit"],
+        "citations": [
+          {
+            "description": "Hillsboro Community Development Code",
+            "type": "city code",
+            "url": "https://ecode360.com/44408024#44408040",
+            "notes": "§ 12.50.320",
+            "attachments": [
+              {
+                "fileName": "Hillsboro_OR_1_1.png",
+                "isDoc": false,
+                "directusId": "8b580d32-4453-4ca4-9d6b-4f9bd132f3e5"
+              },
+              {
+                "fileName": "Hillsboro_OR_1_2.png",
+                "isDoc": false,
+                "directusId": "d42bc272-82e1-4d1d-bd74-603a2da5bc84"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "rm_min": [
+      {
+        "reporter": null,
+        "requirements": ["by right", "other"],
+        "citations": [
+          {
+            "description": "Hillsboro Ordinance 6488",
+            "type": "other",
+            "url": "https://hillsboro-oregon.civicweb.net/document/241764/PLNG%20CDCA-001-23%20Draft%20Ordinance%20and%20Exhibits.pdf?handle=923F06CE0A654CB5A46DCFF7D7EA2A27",
+            "notes": "12.50.310;\n12.50.320;\nPages 16-17",
+            "attachments": [
+              {
+                "fileName": "Hillsboro_OR_1_1.png",
+                "isDoc": false,
+                "directusId": "9663ab3f-8557-4940-a04d-bf1026011d02"
+              },
+              {
+                "fileName": "Hillsboro_OR_1_2.png",
+                "isDoc": false,
+                "directusId": "71f3a699-d0a8-4d00-89ff-4bbcf93c2248"
               }
             ]
           }
@@ -94200,7 +95733,49 @@
           ]
         }
       ]
-    }
+    },
+    "reduce_min": [
+      {
+        "reporter": "Samuel Deetz",
+        "requirements": ["other"],
+        "citations": [
+          {
+            "description": "Winnetka Zoning Code",
+            "type": "city code",
+            "url": "https://codelibrary.amlegal.com/codes/winnetka/latest/winnetka_il/0-0-0-26955",
+            "notes": "Chapter 17.46 USE, LOT, SPACE, BULK AND YARD REGULATIONS FOR COMMERCIAL DISTRICTS\nSection 17.46.110   Off-street parking.\nB.   Off-Street Parking and Loading Spaces Required.\nC.   Existing Buildings and Structures.\n1.   Existing Uses.\n2.   Changes in Use.",
+            "attachments": [
+              {
+                "fileName": "Winnetka_IL_1_1.png",
+                "isDoc": false,
+                "directusId": "a84f7190-ccd3-4934-8cdd-b0ba6567a974"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "rm_min": [
+      {
+        "reporter": "Samuel Deetz",
+        "requirements": ["by right", "size of project"],
+        "citations": [
+          {
+            "description": "Winnetka Zoning Code",
+            "type": "city code",
+            "url": "https://codelibrary.amlegal.com/codes/winnetka/latest/winnetka_il/0-0-0-26955",
+            "notes": "Chapter 17.46 USE, LOT, SPACE, BULK AND YARD REGULATIONS FOR COMMERCIAL DISTRICTS\nSection 17.46.110   Off-street parking.\nB.   Off-Street Parking and Loading Spaces Required.\nC.   Existing Buildings and Structures.\n1.   Existing Uses.\n2.   Changes in Use.",
+            "attachments": [
+              {
+                "fileName": "Winnetka_IL_1_1.png",
+                "isDoc": false,
+                "directusId": "a84f7190-ccd3-4934-8cdd-b0ba6567a974"
+              }
+            ]
+          }
+        ]
+      }
+    ]
   },
   "Winnipeg, MB": {
     "reduce_min": [
