@@ -89391,7 +89391,69 @@
           ]
         }
       ]
-    }
+    },
+    "reduce_min": [
+      {
+        "reporter": "Samuel Deetz",
+        "requirements": ["other"],
+        "citations": [
+          {
+            "description": "Tuscola Zoning Code",
+            "type": "city code",
+            "url": "https://codelibrary.amlegal.com/codes/tuscola/latest/tuscola_il/0-0-0-22274",
+            "notes": "OFF-STREET PARKING AND LOADING\n§ 156.158 PARKING SPACE REQUIREMENTS.",
+            "attachments": [
+              {
+                "fileName": "Tuscola_IL_1_1.png",
+                "isDoc": false,
+                "directusId": "3f613440-63ff-4404-8242-8f54995f119b"
+              },
+              {
+                "fileName": "Tuscola_IL_1_2.png",
+                "isDoc": false,
+                "directusId": "0f04e8d8-2d56-4474-8d60-263c5e149f66"
+              },
+              {
+                "fileName": "Tuscola_IL_1_3.png",
+                "isDoc": false,
+                "directusId": "8439cf40-91a6-49f6-ac93-dc3a6e38dadf"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "rm_min": [
+      {
+        "reporter": "Samuel Deetz",
+        "requirements": ["by right"],
+        "citations": [
+          {
+            "description": "Tuscola Zoning Code",
+            "type": "city code",
+            "url": "https://codelibrary.amlegal.com/codes/tuscola/latest/tuscola_il/0-0-0-22274",
+            "notes": "OFF-STREET PARKING AND LOADING\n§ 156.158 PARKING SPACE REQUIREMENTS.",
+            "attachments": [
+              {
+                "fileName": "Tuscola_IL_1_1.png",
+                "isDoc": false,
+                "directusId": "3f613440-63ff-4404-8242-8f54995f119b"
+              },
+              {
+                "fileName": "Tuscola_IL_1_2.png",
+                "isDoc": false,
+                "directusId": "0f04e8d8-2d56-4474-8d60-263c5e149f66"
+              },
+              {
+                "fileName": "Tuscola_IL_1_3.png",
+                "isDoc": false,
+                "directusId": "8439cf40-91a6-49f6-ac93-dc3a6e38dadf"
+              }
+            ]
+          }
+        ]
+      }
+    ]
   },
   "Tuttle, OK": {
     "add_max": [
@@ -92303,7 +92365,59 @@
           ]
         }
       ]
-    }
+    },
+    "reduce_min": [
+      {
+        "reporter": "Samuel Deetz",
+        "requirements": ["other"],
+        "citations": [
+          {
+            "description": "Waterman Zoning Code",
+            "type": "city code",
+            "url": "https://codelibrary.amlegal.com/codes/watermanil/latest/waterman_il/0-0-0-3740",
+            "notes": "CHAPTER 12 OFF STREET PARKING AND LOADING   \n9-12-5: SCHEDULE OF REQUIRED PARKING  \nB. Floor Area Exemptions\nC.   Schedule Of Parking Requirements",
+            "attachments": [
+              {
+                "fileName": "Waterman_IL_1_1.png",
+                "isDoc": false,
+                "directusId": "1c34185a-450e-4e71-bb80-a487329f5caf"
+              },
+              {
+                "fileName": "Waterman_IL_1_2.png",
+                "isDoc": false,
+                "directusId": "ac4249c3-8f46-45b5-a730-30844cad6ada"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "rm_min": [
+      {
+        "reporter": "Samuel Deetz",
+        "requirements": ["by right"],
+        "citations": [
+          {
+            "description": "Waterman Zoning Code",
+            "type": "city code",
+            "url": "https://codelibrary.amlegal.com/codes/watermanil/latest/waterman_il/0-0-0-3740",
+            "notes": "CHAPTER 12 OFF STREET PARKING AND LOADING   \n9-12-5: SCHEDULE OF REQUIRED PARKING  \nB. Floor Area Exemptions\nC.   Schedule Of Parking Requirements",
+            "attachments": [
+              {
+                "fileName": "Waterman_IL_1_1.png",
+                "isDoc": false,
+                "directusId": "1c34185a-450e-4e71-bb80-a487329f5caf"
+              },
+              {
+                "fileName": "Waterman_IL_1_2.png",
+                "isDoc": false,
+                "directusId": "ac4249c3-8f46-45b5-a730-30844cad6ada"
+              }
+            ]
+          }
+        ]
+      }
+    ]
   },
   "Watertown, NY": {
     "legacy": {
@@ -92541,7 +92655,75 @@
           ]
         }
       ]
-    }
+    },
+    "add_max": [
+      {
+        "reporter": "Jake Seid",
+        "requirements": ["by right"],
+        "citations": [
+          {
+            "description": "Waukegan Unified Development Ordinance",
+            "type": "city code",
+            "url": "https://www.waukeganil.gov/DocumentCenter/View/10026/Unified-Development-Ordinance-pdf?bidId=",
+            "notes": "Table 10.03-1\nPages 163-165",
+            "attachments": [
+              {
+                "fileName": "Waukegan_IL_1_1.png",
+                "isDoc": false,
+                "directusId": "5f8a428f-b857-4d2b-a46b-8823035c2547"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "reduce_min": [
+      {
+        "reporter": "Jake Seid",
+        "requirements": ["by right"],
+        "citations": [
+          {
+            "description": "Waukegan Unified Development Code",
+            "type": "city code",
+            "url": "https://www.waukeganil.gov/DocumentCenter/View/10026/Unified-Development-Ordinance-pdf?bidId=",
+            "notes": "10.02.C.2.\nPage 160",
+            "attachments": [
+              {
+                "fileName": "Waukegan_IL_1_1.png",
+                "isDoc": false,
+                "directusId": "4ff433c6-5de8-44af-993e-8448fc744f89"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "rm_min": [
+      {
+        "reporter": "Jake Seid",
+        "requirements": ["by right"],
+        "citations": [
+          {
+            "description": "Waukegan Unified Development Ordinance",
+            "type": "city code",
+            "url": "https://www.waukeganil.gov/DocumentCenter/View/10026/Unified-Development-Ordinance-pdf?bidId=",
+            "notes": "10.02.C.1.\nPages 160, 163-165",
+            "attachments": [
+              {
+                "fileName": "Waukegan_IL_1_1.png",
+                "isDoc": false,
+                "directusId": "e552d6d7-b80f-4f1d-88f8-28c7af2949a2"
+              },
+              {
+                "fileName": "Waukegan_IL_1_2.png",
+                "isDoc": false,
+                "directusId": "4e9a1143-a629-4445-abb8-225d9eff90d5"
+              }
+            ]
+          }
+        ]
+      }
+    ]
   },
   "Waukesha, WI": {
     "rm_min": [
@@ -94339,7 +94521,80 @@
           ]
         }
       ]
-    }
+    },
+    "add_max": [
+      {
+        "reporter": "Samuel Deetz",
+        "requirements": ["by right"],
+        "citations": [
+          {
+            "description": "Westmont Zoning Code",
+            "type": "city code",
+            "url": "https://library.municode.com/il/westmont/codes/code_of_ordinances?nodeId=COOR_APXAZO_ARTXOREPAORELO_S10.06OREPA",
+            "notes": "Sec. 10.06.(K)(1)(d)",
+            "attachments": [
+              {
+                "fileName": "Westmont_IL_1_1.png",
+                "isDoc": false,
+                "directusId": "10cce7c3-4022-4c2c-8470-d5f539391adf"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "reduce_min": [
+      {
+        "reporter": "Samuel Deetz",
+        "requirements": ["in-lieu fees", "other"],
+        "citations": [
+          {
+            "description": "Westmont Zoning Code",
+            "type": "city code",
+            "url": "https://library.municode.com/il/westmont/codes/code_of_ordinances?nodeId=COOR_APXAZO_ARTXOREPAORELO_S10.06OREPA",
+            "notes": "Sec. 10.06.(B)(2)(a);\nSec. 10.06.(B)(2)(j)",
+            "attachments": [
+              {
+                "fileName": "Westmont_IL_1_1.png",
+                "isDoc": false,
+                "directusId": "4f1e15d1-0938-4eb1-abb3-301d05d8e1be"
+              },
+              {
+                "fileName": "Westmont_IL_1_2.png",
+                "isDoc": false,
+                "directusId": "f52a85b0-9a3f-4b55-a9e2-97df4d746ef4"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "rm_min": [
+      {
+        "reporter": "Samuel Deetz",
+        "requirements": ["by right"],
+        "citations": [
+          {
+            "description": "Westmont Zoning Code",
+            "type": "city code",
+            "url": "https://library.municode.com/il/westmont/codes/code_of_ordinances?nodeId=COOR_APXAZO_ARTXOREPAORELO_S10.06OREPA",
+            "notes": "Sec. 10.06.(B)(1);\nSec. 10.06.(K)(1)(c)",
+            "attachments": [
+              {
+                "fileName": "Westmont_IL_1_1.png",
+                "isDoc": false,
+                "directusId": "7e9483c5-708f-4751-af0c-eb6212577707"
+              },
+              {
+                "fileName": "Westmont_IL_1_2.png",
+                "isDoc": false,
+                "directusId": "1caee5c9-670f-4af8-a2cc-930260dd2d51"
+              }
+            ]
+          }
+        ]
+      }
+    ]
   },
   "Weston, MO": {
     "rm_min": [
@@ -95320,7 +95575,75 @@
           ]
         }
       ]
-    }
+    },
+    "add_max": [
+      {
+        "reporter": "Samuel Deetz",
+        "requirements": ["by right"],
+        "citations": [
+          {
+            "description": "Wilmette Zoning Code",
+            "type": "city code",
+            "url": "https://library.municode.com/il/wilmette/codes/code_of_ordinances?nodeId=COOR_APXAZOOR_ART30-14OREPALO_S30-14.9REOREPASP",
+            "notes": "Sec. 30-14.9.(e)",
+            "attachments": [
+              {
+                "fileName": "Wilmette_IL_1_1.png",
+                "isDoc": false,
+                "directusId": "0f9ad1b3-da01-4074-9388-1ee89f2c8754"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "reduce_min": [
+      {
+        "reporter": "Samuel Deetz",
+        "requirements": ["in-lieu fees", "other", "size of project"],
+        "citations": [
+          {
+            "description": "Wilmette Zoning Code",
+            "type": "city code",
+            "url": "https://library.municode.com/il/wilmette/codes/code_of_ordinances?nodeId=COOR_APXAZOOR_ART30-14OREPALO_S30-14.9REOREPASP",
+            "notes": "Sec. 30-14.9.(c);\nSec. 30-14.9.(d);\nSec. 30-14.9.(f);\nSec. 30-14.10.(c)",
+            "attachments": [
+              {
+                "fileName": "Wilmette_IL_1_1.png",
+                "isDoc": false,
+                "directusId": "9221cec1-2883-43f4-a067-e8f8e44e0071"
+              },
+              {
+                "fileName": "Wilmette_IL_1_2.png",
+                "isDoc": false,
+                "directusId": "c3c423df-6ef8-44ec-bad9-ba2a6657863e"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "rm_min": [
+      {
+        "reporter": "Samuel Deetz",
+        "requirements": ["by right", "size of project"],
+        "citations": [
+          {
+            "description": "Wilmette Zoning Code",
+            "type": "city code",
+            "url": "https://library.municode.com/il/wilmette/codes/code_of_ordinances?nodeId=COOR_APXAZOOR_ART30-14OREPALO_S30-14.3CO",
+            "notes": "Sec. 30-14.3.(f)",
+            "attachments": [
+              {
+                "fileName": "Wilmette_IL_1_1.png",
+                "isDoc": false,
+                "directusId": "a55937ba-9177-4ce3-b041-8f6496163dda"
+              }
+            ]
+          }
+        ]
+      }
+    ]
   },
   "Wilmington, DE": {
     "rm_min": [
