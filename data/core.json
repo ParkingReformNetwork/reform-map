@@ -61908,7 +61908,25 @@
       "scope": ["city center / business district"],
       "land": ["commercial"],
       "date": null
-    }
+    },
+    "reduce_min": [
+      {
+        "summary": "On-street or public parking may reduce requirements for multi-family dwellings and places of public assembly.",
+        "status": "implemented",
+        "scope": ["citywide"],
+        "land": ["other", "residential, multi-family"],
+        "date": null
+      }
+    ],
+    "rm_min": [
+      {
+        "summary": "Stores and other retail establishments are exempt in the B-3, Central Business District.",
+        "status": "implemented",
+        "scope": ["city center / business district"],
+        "land": ["commercial"],
+        "date": null
+      }
+    ]
   },
   "Tuttle, OK": {
     "place": {
@@ -64066,7 +64084,25 @@
       "scope": ["city center / business district", "citywide"],
       "land": ["commercial", "industrial", "residential, low-density"],
       "date": null
-    }
+    },
+    "reduce_min": [
+      {
+        "summary": "Parking requirements may be reduced for nonresidential uses when located adjacent to on-street parking.",
+        "status": "implemented",
+        "scope": ["citywide"],
+        "land": ["commercial", "industrial", "medical", "other"],
+        "date": null
+      }
+    ],
+    "rm_min": [
+      {
+        "summary": "Single-family dwellings are exempt from parking mandates. Additionally, parking regulations do not apply to any use in a commercial or industrial zoning district within the area bounded as follows:\nPine Street extended to Adams Street, on the west; Grant Street on the north; Maple Street, extended to the Adams Street, on the east; and Adams Street on the south including all parcels having frontage on Adams Street.",
+        "status": "implemented",
+        "scope": ["city center / business district", "citywide"],
+        "land": ["commercial", "industrial", "residential, low-density"],
+        "date": null
+      }
+    ]
   },
   "Watertown, NY": {
     "place": {
@@ -64237,7 +64273,40 @@
       "scope": ["city center / business district", "citywide"],
       "land": ["commercial", "industrial", "other", "residential, all uses"],
       "date": "2024-07-01"
-    }
+    },
+    "add_max": [
+      {
+        "summary": "Parking maximums apply to most uses, but may be exceeded through a fee towards city owned bike parking.",
+        "status": "implemented",
+        "scope": ["citywide"],
+        "land": [
+          "commercial",
+          "industrial",
+          "medical",
+          "other",
+          "residential, all uses"
+        ],
+        "date": "2024-07-01"
+      }
+    ],
+    "reduce_min": [
+      {
+        "summary": "Residential uses have reduced requirements in the L1, L2, and L3 Lakefront Districts.",
+        "status": "implemented",
+        "scope": ["main street / special"],
+        "land": ["residential, all uses"],
+        "date": "2024-07-01"
+      }
+    ],
+    "rm_min": [
+      {
+        "summary": "All nonresidential uses except bed and breakfast uses are exempt from parking mandates citywide. Residential uses are exempt in the B4 District.",
+        "status": "implemented",
+        "scope": ["city center / business district", "citywide"],
+        "land": ["commercial", "industrial", "other", "residential, all uses"],
+        "date": "2024-07-01"
+      }
+    ]
   },
   "Waukesha, WI": {
     "place": {
@@ -65551,7 +65620,34 @@
       "scope": ["city center / business district", "citywide"],
       "land": ["commercial", "residential, low-density"],
       "date": null
-    }
+    },
+    "add_max": [
+      {
+        "summary": "Two-family dwellings may not provide more than 4 spaces per unit.",
+        "status": "implemented",
+        "scope": ["citywide"],
+        "land": ["residential, low-density"],
+        "date": null
+      }
+    ],
+    "reduce_min": [
+      {
+        "summary": "Within the B-1 Limited Business District, existing buildings are exempt from minimum parking requirements and new buildings may pay a fee-in-lieu of required parking.",
+        "status": "implemented",
+        "scope": ["city center / business district"],
+        "land": ["all uses"],
+        "date": null
+      }
+    ],
+    "rm_min": [
+      {
+        "summary": "When the application of the off-street parking regulations for proposed commercial uses results in a requirement of not more than three spaces on a single lot in the B-2 General Business District or C-1 Commercial District, such parking spaces need not be provided. In all districts, single-family dwellings are exempt from parking requirements.",
+        "status": "implemented",
+        "scope": ["city center / business district", "citywide"],
+        "land": ["commercial", "residential, low-density"],
+        "date": null
+      }
+    ]
   },
   "Weston, MO": {
     "place": {
@@ -66253,7 +66349,34 @@
       "scope": ["city center / business district"],
       "land": ["commercial", "other"],
       "date": null
-    }
+    },
+    "add_max": [
+      {
+        "summary": "In the VC Village Center Business District, parking maximums are set at 110% of the minimum, except for residential uses.",
+        "status": "implemented",
+        "scope": ["city center / business district"],
+        "land": ["commercial", "other"],
+        "date": null
+      }
+    ],
+    "reduce_min": [
+      {
+        "summary": "A fee in lieu of required parking may be provided for nonresidential uses above 2,500 square feet in the VC Village Center Business District. In the VC District and NR-1 Linden Square Neighborhood Business District, uses located in existing structures are exempt from minimum parking requirements, with the exception of any large medical clinics and residential dwellings. In these districts, on-street parking spaces may be counted toward required off-street parking spaces for commercial uses. In all districts, non-residential uses may count public off-street parking spaces.",
+        "status": "implemented",
+        "scope": ["city center / business district", "citywide"],
+        "land": ["commercial", "industrial", "medical", "other"],
+        "date": null
+      }
+    ],
+    "rm_min": [
+      {
+        "summary": "In the VC Village Center Business District, non-residential uses containing a total gross floor area (GFA) of 2,500 square feet or less are exempt from parking requirements.",
+        "status": "implemented",
+        "scope": ["city center / business district"],
+        "land": ["commercial", "other"],
+        "date": null
+      }
+    ]
   },
   "Wilmington, DE": {
     "place": {
