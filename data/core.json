@@ -32062,22 +32062,17 @@
       "name": "La Crosse",
       "state": "WI",
       "country": "US",
-      "pop": 51666,
+      "pop": 52680,
       "coord": [-91.2395429, 43.8014053],
-      "repeal": false
+      "repeal": true
     },
     "rm_min": [
       {
-        "summary": "On March 10, 2022 La Crosse eliminated parking mandates for non-residential uses in Local Business, Commercial, and Community Business zones. Previously La Crosse had no parking requirements in Industrial zones, as well as exemptions for the downtown and uptown areas. In early 2024, the city allowed ADUs without parking and a further reduction or full elimination of parking minimums is proposed.",
+        "summary": "La Crosse removed all parking mandates on December 12, 2024. This followed on the removal of mandates for ADUs earlier in the year and for nonresidential uses in the Local Business, Commercial, and Community Business zones on March 10, 2022. Previously La Crosse had no parking requirements in Industrial zones, as well as exemptions for the downtown and uptown areas.",
         "status": "implemented",
-        "scope": ["city center / business district", "citywide"],
-        "land": [
-          "all uses",
-          "commercial",
-          "industrial",
-          "residential, low-density"
-        ],
-        "date": "2022-03-10"
+        "scope": ["citywide"],
+        "land": ["all uses"],
+        "date": "2024-12-12"
       }
     ]
   },
@@ -45315,7 +45310,25 @@
       "scope": ["city center / business district"],
       "land": ["all uses"],
       "date": null
-    }
+    },
+    "add_max": [
+      {
+        "summary": "Parking maximums are set at 125% of the minimums for commercial and industrial uses.",
+        "status": "implemented",
+        "scope": ["citywide"],
+        "land": ["commercial", "industrial"],
+        "date": null
+      }
+    ],
+    "rm_min": [
+      {
+        "summary": "Properties zoned mixed commercial (MC) are exempt from off-street parking requirements.",
+        "status": "implemented",
+        "scope": ["city center / business district"],
+        "land": ["all uses"],
+        "date": null
+      }
+    ]
   },
   "Oelwein, IA": {
     "place": {
@@ -45857,7 +45870,31 @@
       "scope": ["city center / business district"],
       "land": ["all uses"],
       "date": null
-    }
+    },
+    "add_max": [
+      {
+        "summary": "No site plan may be approved, for a multi-family or non-residential use, which contains more than 120% of the development’s minimum number of required parking spaces, except as granted through a conditional use permit.",
+        "status": "implemented",
+        "scope": ["citywide"],
+        "land": [
+          "commercial",
+          "industrial",
+          "medical",
+          "other",
+          "residential, multi-family"
+        ],
+        "date": null
+      }
+    ],
+    "rm_min": [
+      {
+        "summary": "Within the Central Business (CB) District, the parking requirements are waived. ",
+        "status": "implemented",
+        "scope": ["city center / business district"],
+        "land": ["all uses"],
+        "date": null
+      }
+    ]
   },
   "Orion, IL": {
     "place": {
@@ -49648,7 +49685,31 @@
       "scope": ["main street / special"],
       "land": ["all uses"],
       "date": null
-    }
+    },
+    "add_max": [
+      {
+        "summary": "No site plan may be approved for a multi-family residential or non-residential use that contains more than 125 percent of the development’s minimum number of required parking spaces, except by conditional use permit.",
+        "status": "implemented",
+        "scope": ["citywide"],
+        "land": [
+          "commercial",
+          "industrial",
+          "medical",
+          "other",
+          "residential, multi-family"
+        ],
+        "date": null
+      }
+    ],
+    "rm_min": [
+      {
+        "summary": "No off-street parking or loading spaces are required for any property that is both zoned B-1 Downtown Commercial and addressed in the North 200, North 100, or South 100 blocks of Main Street.",
+        "status": "implemented",
+        "scope": ["main street / special"],
+        "land": ["all uses"],
+        "date": null
+      }
+    ]
   },
   "Prairie du Chien, WI": {
     "place": {
@@ -61290,7 +61351,31 @@
       "scope": ["citywide"],
       "land": ["all uses"],
       "date": null
-    }
+    },
+    "add_max": [
+      {
+        "summary": "Parking maximums apply to most multifamily and nonresidential uses.",
+        "status": "implemented",
+        "scope": ["citywide"],
+        "land": [
+          "commercial",
+          "industrial",
+          "medical",
+          "other",
+          "residential, multi-family"
+        ],
+        "date": null
+      }
+    ],
+    "reduce_min": [
+      {
+        "summary": "On-street parking may count towards parking requirements. A fee in lieu of required parking may be provided.",
+        "status": "implemented",
+        "scope": ["citywide"],
+        "land": ["all uses"],
+        "date": null
+      }
+    ]
   },
   "Town of Lowell, WI": {
     "place": {
@@ -62809,7 +62894,31 @@
       "scope": ["city center / business district"],
       "land": ["commercial"],
       "date": null
-    }
+    },
+    "add_max": [
+      {
+        "summary": "Parking maximums apply to all uses except single family dwellings.",
+        "status": "implemented",
+        "scope": ["citywide"],
+        "land": [
+          "commercial",
+          "industrial",
+          "medical",
+          "other",
+          "residential, multi-family"
+        ],
+        "date": null
+      }
+    ],
+    "rm_min": [
+      {
+        "summary": "Within the Central Commercial (CC) District, the parking requirements are waived for all non-residential uses.",
+        "status": "implemented",
+        "scope": ["city center / business district"],
+        "land": ["commercial", "other"],
+        "date": null
+      }
+    ]
   },
   "Versailles, MO": {
     "place": {
@@ -63408,7 +63517,7 @@
       "state": "MS",
       "country": "US",
       "pop": 704,
-      "coord": [-90.3989834, 34.1489999],
+      "coord": [-88.900482, 34.946201],
       "repeal": false
     },
     "rm_min": [
@@ -63787,7 +63896,25 @@
       "scope": ["city center / business district"],
       "land": ["commercial"],
       "date": null
-    }
+    },
+    "add_max": [
+      {
+        "summary": "For land uses located in a commercial, mixed-use, or industrial zoning district, the number of parking spaces provided in a ground surface parking lot shall not exceed the number of minimum parking spaces by more than 15 percent.",
+        "status": "implemented",
+        "scope": ["city center / business district"],
+        "land": ["all uses"],
+        "date": null
+      }
+    ],
+    "rm_min": [
+      {
+        "summary": "Nonresidential land uses located in the downtown parking district are not required to provide off-street parking.",
+        "status": "implemented",
+        "scope": ["city center / business district"],
+        "land": ["commercial"],
+        "date": null
+      }
+    ]
   },
   "Washington Charter Township, MI": {
     "place": {
@@ -64857,7 +64984,25 @@
       "scope": ["citywide"],
       "land": ["all uses"],
       "date": "2022-05-03"
-    }
+    },
+    "add_max": [
+      {
+        "summary": "Parking maximums apply to all uses citywide.",
+        "status": "implemented",
+        "scope": ["citywide"],
+        "land": ["all uses"],
+        "date": "2022-05-03"
+      }
+    ],
+    "rm_min": [
+      {
+        "summary": "West Allis has had no minimum requirements since May 2022.",
+        "status": "implemented",
+        "scope": ["citywide"],
+        "land": ["all uses"],
+        "date": "2022-05-03"
+      }
+    ]
   },
   "West Baton Rouge Parish, LA": {
     "place": {
@@ -66108,7 +66253,31 @@
       "scope": ["city center / business district"],
       "land": ["all uses"],
       "date": null
-    }
+    },
+    "add_max": [
+      {
+        "summary": "No site plan may be approved for a multifamily or nonresidential use that proposes more than 120% of the development's minimum number of required parking spaces, except as granted through a conditional use permit.",
+        "status": "implemented",
+        "scope": ["citywide"],
+        "land": [
+          "commercial",
+          "industrial",
+          "medical",
+          "other",
+          "residential, multi-family"
+        ],
+        "date": null
+      }
+    ],
+    "rm_min": [
+      {
+        "summary": "Within the Village Center (VC) District, the minimum parking requirements are waived.",
+        "status": "implemented",
+        "scope": ["city center / business district"],
+        "land": ["all uses"],
+        "date": null
+      }
+    ]
   },
   "Williams, AZ": {
     "place": {
@@ -66975,7 +67144,25 @@
       "scope": ["city center / business district"],
       "land": ["all uses"],
       "date": null
-    }
+    },
+    "add_max": [
+      {
+        "summary": "Parking maximums are set at 120% of the minimums for surface parking.",
+        "status": "implemented",
+        "scope": ["citywide"],
+        "land": ["all uses"],
+        "date": null
+      }
+    ],
+    "rm_min": [
+      {
+        "summary": "Parking requirements do not apply to the C-2 Downtown Commercial zoning district.",
+        "status": "implemented",
+        "scope": ["city center / business district"],
+        "land": ["all uses"],
+        "date": null
+      }
+    ]
   },
   "Wisconsin Rapids, WI": {
     "place": {
@@ -66997,7 +67184,34 @@
       "scope": ["city center / business district"],
       "land": ["all uses"],
       "date": null
-    }
+    },
+    "add_max": [
+      {
+        "summary": "For land uses located in a business, mixed-use, or industrial zoning district, the number of parking spaces provided in a ground surface parking lot may not exceed the number of minimum parking spaces by more than 15 percent.",
+        "status": "implemented",
+        "scope": ["city center / business district"],
+        "land": ["all uses"],
+        "date": null
+      }
+    ],
+    "reduce_min": [
+      {
+        "summary": "Parking requirements may be reduced through the provision of bike parking.",
+        "status": "implemented",
+        "scope": ["citywide"],
+        "land": ["all uses"],
+        "date": null
+      }
+    ],
+    "rm_min": [
+      {
+        "summary": "Land uses located in the downtown zoning (B-1) district are not required to provide off-street parking.",
+        "status": "implemented",
+        "scope": ["city center / business district"],
+        "land": ["all uses"],
+        "date": null
+      }
+    ]
   },
   "Wittenberg, WI": {
     "place": {
