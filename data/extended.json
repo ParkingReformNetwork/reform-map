@@ -5327,7 +5327,54 @@
           ]
         }
       ]
-    }
+    },
+    "reduce_min": [
+      {
+        "reporter": "Samuel Deetz",
+        "requirements": ["by right"],
+        "citations": [
+          {
+            "description": "Bangor Land Development Code",
+            "type": "city code",
+            "url": "https://ecode360.com/6891807",
+            "notes": "Article X Off-Street Parking\n§ 165-72 Required number of spaces.\nR.",
+            "attachments": [
+              {
+                "fileName": "Bangor_ME_1_1.png",
+                "isDoc": false,
+                "directusId": "26615b27-984d-40a2-a995-846e6436b044"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "rm_min": [
+      {
+        "reporter": "Samuel Deetz",
+        "requirements": [
+          "accessory dwelling units",
+          "by right",
+          "other",
+          "size of project"
+        ],
+        "citations": [
+          {
+            "description": "Bangor Land Development Code",
+            "type": "city code",
+            "url": "https://ecode360.com/6891807",
+            "notes": "Article X Off-Street Parking\n§ 165-72 Required number of spaces.\nR.",
+            "attachments": [
+              {
+                "fileName": "Bangor_ME_1_1.png",
+                "isDoc": false,
+                "directusId": "26615b27-984d-40a2-a995-846e6436b044"
+              }
+            ]
+          }
+        ]
+      }
+    ]
   },
   "Bangor, PA": {
     "legacy": {
@@ -10118,7 +10165,111 @@
           ]
         }
       ]
-    }
+    },
+    "add_max": [
+      {
+        "reporter": null,
+        "requirements": ["by right", "size of project"],
+        "citations": [
+          {
+            "description": "Article about reforms",
+            "type": "media report",
+            "url": "https://mass.streetsblog.org/2021/10/20/boston-city-council-votes-to-end-minimum-parking-requirements-for-affordable-housing/",
+            "notes": null,
+            "attachments": [
+              {
+                "fileName": "Boston_MA_1_1.png",
+                "isDoc": false,
+                "directusId": "3bd25451-e54b-4f4d-8618-956ebc49307f"
+              }
+            ]
+          },
+          {
+            "description": "City Site Explaining Maximum Parking Ratios for Boston",
+            "type": "other",
+            "url": "https://www.boston.gov/departments/transportation/maximum-parking-ratios",
+            "notes": "Comprehensive site with explanations and graphics why ratios are needed. ",
+            "attachments": [
+              {
+                "fileName": "Boston_MA_2_1.pdf",
+                "isDoc": true,
+                "directusId": "f74fc37e-67f2-486b-8577-fe66f36cb7da"
+              }
+            ]
+          },
+          {
+            "description": "Boston Zoning Code",
+            "type": "city code",
+            "url": "https://library.municode.com/ma/boston/codes/redevelopment_authority?nodeId=ART23OREPA_S23-1REUS",
+            "notes": "Section 23-1. - Residential Uses.\nSection 23-6. - Off-Street Parking Not Required in Certain Cases.",
+            "attachments": [
+              {
+                "fileName": "Boston_MA_3_1.png",
+                "isDoc": false,
+                "directusId": "40923021-f83c-4b44-96f1-90f259da07e5"
+              },
+              {
+                "fileName": "Boston_MA_3_2.png",
+                "isDoc": false,
+                "directusId": "fb1ef7f5-f8b4-4514-a615-9b74045645bb"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "rm_min": [
+      {
+        "reporter": null,
+        "requirements": ["affordable housing"],
+        "citations": [
+          {
+            "description": "Article about reforms",
+            "type": "media report",
+            "url": "https://mass.streetsblog.org/2021/10/20/boston-city-council-votes-to-end-minimum-parking-requirements-for-affordable-housing/",
+            "notes": null,
+            "attachments": [
+              {
+                "fileName": "Boston_MA_1_1.png",
+                "isDoc": false,
+                "directusId": "3bd25451-e54b-4f4d-8618-956ebc49307f"
+              }
+            ]
+          },
+          {
+            "description": "City Site Explaining Maximum Parking Ratios for Boston",
+            "type": "other",
+            "url": "https://www.boston.gov/departments/transportation/maximum-parking-ratios",
+            "notes": "Comprehensive site with explanations and graphics why ratios are needed. ",
+            "attachments": [
+              {
+                "fileName": "Boston_MA_2_1.pdf",
+                "isDoc": true,
+                "directusId": "f74fc37e-67f2-486b-8577-fe66f36cb7da"
+              }
+            ]
+          },
+          {
+            "description": "Boston Zoning Code",
+            "type": "city code",
+            "url": "https://library.municode.com/ma/boston/codes/redevelopment_authority?nodeId=ART23OREPA_S23-1REUS",
+            "notes": "Section 23-1. - Residential Uses.\nSection 23-6. - Off-Street Parking Not Required in Certain Cases.",
+            "attachments": [
+              {
+                "fileName": "Boston_MA_3_1.png",
+                "isDoc": false,
+                "directusId": "40923021-f83c-4b44-96f1-90f259da07e5"
+              },
+              {
+                "fileName": "Boston_MA_3_2.png",
+                "isDoc": false,
+                "directusId": "fb1ef7f5-f8b4-4514-a615-9b74045645bb"
+              }
+            ]
+          }
+        ]
+      }
+    ]
   },
   "Boulder City, NV": {
     "rm_min": [
@@ -11119,7 +11270,75 @@
           ]
         }
       ]
-    }
+    },
+    "add_max": [
+      {
+        "reporter": "Samuel Deetz",
+        "requirements": ["by right"],
+        "citations": [
+          {
+            "description": "Bristol Zoning Code",
+            "type": "city code",
+            "url": "https://library.municode.com/ri/bristol/codes/code_of_ordinances?nodeId=PTIVCO_CH28ZO_ARTVIIIOREPALORE_S28-252PANURESP",
+            "notes": "Sec. 28-252.(a)",
+            "attachments": [
+              {
+                "fileName": "Bristol_RI_1_1.png",
+                "isDoc": false,
+                "directusId": "455737da-e2d7-4f0c-988d-5a79517621ae"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "reduce_min": [
+      {
+        "reporter": "Samuel Deetz",
+        "requirements": ["by right", "other"],
+        "citations": [
+          {
+            "description": "Bristol Zoning Code",
+            "type": "city code",
+            "url": "https://library.municode.com/ri/bristol/codes/code_of_ordinances?nodeId=PTIVCO_CH28ZO_ARTVIIIOREPALORE_S28-251GERE",
+            "notes": "Sec. 28-251.(7);\nSec. 28-252.(c)",
+            "attachments": [
+              {
+                "fileName": "Bristol_RI_1_1.png",
+                "isDoc": false,
+                "directusId": "cf6db6f5-0470-41c1-ae72-dbebf71a97cb"
+              },
+              {
+                "fileName": "Bristol_RI_1_2.png",
+                "isDoc": false,
+                "directusId": "e888e76e-a7da-4e2f-b814-2f1e05586ce6"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "rm_min": [
+      {
+        "reporter": "Samuel Deetz",
+        "requirements": ["by right"],
+        "citations": [
+          {
+            "description": "Bristol Zoning Code",
+            "type": "city code",
+            "url": "https://library.municode.com/ri/bristol/codes/code_of_ordinances?nodeId=PTIVCO_CH28ZO_ARTVIIIOREPALORE_S28-252PANURESP",
+            "notes": "Sec. 28-252.(b)",
+            "attachments": [
+              {
+                "fileName": "Bristol_RI_1_1.png",
+                "isDoc": false,
+                "directusId": "496f4f57-8ca0-4598-abb9-6e35df3ea749"
+              }
+            ]
+          }
+        ]
+      }
+    ]
   },
   "Broadview, IL": {
     "reduce_min": [
@@ -12155,7 +12374,111 @@
           ]
         }
       ]
-    }
+    },
+    "add_max": [
+      {
+        "reporter": "Edward Erfurt",
+        "requirements": ["by right"],
+        "citations": [
+          {
+            "description": "Burlington lifts rules about building new parking spots",
+            "type": "media report",
+            "url": "https://www.burlingtonfreepress.com/story/news/local/2023/01/11/burlington-development-council-votes-to-eliminate-parking-minimums/69794906007/",
+            "notes": null,
+            "attachments": [
+              {
+                "fileName": "Burlington_VT_1_1.png",
+                "isDoc": false,
+                "directusId": "e466ea9e-e612-4a5d-8dae-9bbfd08cd704"
+              }
+            ]
+          },
+          {
+            "description": "Planning Report",
+            "type": "other",
+            "url": "https://go.boarddocs.com/vt/burlingtonvt/Board.nsf/files/CMRTXH741D01/$file/ZA-22-07%20Memo%20for%20CCPH_20221227.pdf",
+            "notes": null,
+            "attachments": [
+              {
+                "fileName": "Burlington_VT_2_1.pdf",
+                "isDoc": true,
+                "directusId": "43b6d646-81cf-4a0f-85ea-70583125dbac"
+              }
+            ]
+          },
+          {
+            "description": "Burlington Zoning Code",
+            "type": "city code",
+            "url": "https://www.burlingtonvt.gov/sites/default/files/20230215%20ART08-Parking_1.pdf",
+            "notes": "Sec. 8.1.8 Minimum Off-Street Parking Requirements\nSec. 8.1.9 Maximum On-Site Parking Spaces\nPages 5-6",
+            "attachments": [
+              {
+                "fileName": "Burlington_VT_3_1.png",
+                "isDoc": false,
+                "directusId": "99b5f5d2-6149-4ded-9ca1-5137a6fc3753"
+              },
+              {
+                "fileName": "Burlington_VT_3_2.png",
+                "isDoc": false,
+                "directusId": "5d28dab7-de28-4703-b6a3-fb579b26fc20"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "rm_min": [
+      {
+        "reporter": "Edward Erfurt",
+        "requirements": ["by right"],
+        "citations": [
+          {
+            "description": "Burlington lifts rules about building new parking spots",
+            "type": "media report",
+            "url": "https://www.burlingtonfreepress.com/story/news/local/2023/01/11/burlington-development-council-votes-to-eliminate-parking-minimums/69794906007/",
+            "notes": null,
+            "attachments": [
+              {
+                "fileName": "Burlington_VT_1_1.png",
+                "isDoc": false,
+                "directusId": "e466ea9e-e612-4a5d-8dae-9bbfd08cd704"
+              }
+            ]
+          },
+          {
+            "description": "Planning Report",
+            "type": "other",
+            "url": "https://go.boarddocs.com/vt/burlingtonvt/Board.nsf/files/CMRTXH741D01/$file/ZA-22-07%20Memo%20for%20CCPH_20221227.pdf",
+            "notes": null,
+            "attachments": [
+              {
+                "fileName": "Burlington_VT_2_1.pdf",
+                "isDoc": true,
+                "directusId": "43b6d646-81cf-4a0f-85ea-70583125dbac"
+              }
+            ]
+          },
+          {
+            "description": "Burlington Zoning Code",
+            "type": "city code",
+            "url": "https://www.burlingtonvt.gov/sites/default/files/20230215%20ART08-Parking_1.pdf",
+            "notes": "Sec. 8.1.8 Minimum Off-Street Parking Requirements\nSec. 8.1.9 Maximum On-Site Parking Spaces\nPages 5-6",
+            "attachments": [
+              {
+                "fileName": "Burlington_VT_3_1.png",
+                "isDoc": false,
+                "directusId": "99b5f5d2-6149-4ded-9ca1-5137a6fc3753"
+              },
+              {
+                "fileName": "Burlington_VT_3_2.png",
+                "isDoc": false,
+                "directusId": "5d28dab7-de28-4703-b6a3-fb579b26fc20"
+              }
+            ]
+          }
+        ]
+      }
+    ]
   },
   "Burlington, WI": {
     "rm_min": [
@@ -15860,7 +16183,70 @@
           ]
         }
       ]
-    }
+    },
+    "add_max": [
+      {
+        "reporter": "Samuel Deetz",
+        "requirements": ["by right"],
+        "citations": [
+          {
+            "description": "Charlestown Zoning Code",
+            "type": "city code",
+            "url": "https://ecode360.com/8493861#8493897",
+            "notes": "§ 218-57.A.",
+            "attachments": [
+              {
+                "fileName": "Charlestown_RI_1_1.png",
+                "isDoc": false,
+                "directusId": "07b46c2d-2639-424a-8085-4f45deb3e30c"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "reduce_min": [
+      {
+        "reporter": "Samuel Deetz",
+        "requirements": ["bike parking"],
+        "citations": [
+          {
+            "description": "Charlestown Zoning Code",
+            "type": "city code",
+            "url": "https://ecode360.com/8493861#8493899",
+            "notes": "§ 218-58.D.",
+            "attachments": [
+              {
+                "fileName": "Charlestown_RI_1_1.png",
+                "isDoc": false,
+                "directusId": "907f7f05-87a8-4a0a-adf8-8a0e7dab39ce"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "rm_min": [
+      {
+        "reporter": "Samuel Deetz",
+        "requirements": ["by right"],
+        "citations": [
+          {
+            "description": "Charlestown Zoning Code",
+            "type": "city code",
+            "url": "https://ecode360.com/8493861#8493897",
+            "notes": "§ 218-57.A.",
+            "attachments": [
+              {
+                "fileName": "Charlestown_RI_1_1.png",
+                "isDoc": false,
+                "directusId": "0f15e210-a383-4166-a443-d8a019cca4e1"
+              }
+            ]
+          }
+        ]
+      }
+    ]
   },
   "Charlevoix, MI": {
     "legacy": {
@@ -23041,7 +23427,49 @@
           ]
         }
       ]
-    }
+    },
+    "add_max": [
+      {
+        "reporter": "Samuel Deetz",
+        "requirements": ["by right"],
+        "citations": [
+          {
+            "description": "Delhi Zoning Code",
+            "type": "city code",
+            "url": "https://www.delhiia.com/copy-of-permits-licenses",
+            "notes": "TITLE VI PHYSICAL ENVIRONMENT\nCHAPTER 13  CENTRAL BUSINESS DISTRICT\n6-  13-2 SITE DEVELOPMENT REGULATIONS. \nPage 212 of pdf, page 209 of original document",
+            "attachments": [
+              {
+                "fileName": "Delhi_IA_1_1.png",
+                "isDoc": false,
+                "directusId": "0ac63fe7-0e76-4dfb-9293-ba86efe4dcd6"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "rm_min": [
+      {
+        "reporter": "Samuel Deetz",
+        "requirements": ["by right"],
+        "citations": [
+          {
+            "description": "Delhi Zoning Code",
+            "type": "city code",
+            "url": "https://www.delhiia.com/copy-of-permits-licenses",
+            "notes": "TITLE VI PHYSICAL ENVIRONMENT\nCHAPTER 13  CENTRAL BUSINESS DISTRICT\n6-  13-2 SITE DEVELOPMENT REGULATIONS. \nPage 212 of pdf, page 209 of original document",
+            "attachments": [
+              {
+                "fileName": "Delhi_IA_1_1.png",
+                "isDoc": false,
+                "directusId": "0ac63fe7-0e76-4dfb-9293-ba86efe4dcd6"
+              }
+            ]
+          }
+        ]
+      }
+    ]
   },
   "Delhi, LA": {
     "rm_min": [
@@ -23283,7 +23711,7 @@
         {
           "description": "Zoning By-Laws PDF",
           "type": "city code",
-          "url": "https://www.town.dennis.ma.us/sites/g/files/vyhlif3016/f/uploads/zoningbylaw5-2-2017.pdf",
+          "url": "https://www.town.dennis.ma.us/DocumentCenter/View/805/Zoning-By-Laws-Current---May-2-2023-PDF",
           "notes": "Section 9.7.7 Parking, p. 125",
           "attachments": [
             {
@@ -23294,7 +23722,49 @@
           ]
         }
       ]
-    }
+    },
+    "add_max": [
+      {
+        "reporter": "Daniel Fortier",
+        "requirements": ["by right"],
+        "citations": [
+          {
+            "description": "Zoning By-Laws PDF",
+            "type": "city code",
+            "url": "https://www.town.dennis.ma.us/DocumentCenter/View/805/Zoning-By-Laws-Current---May-2-2023-PDF",
+            "notes": "Section 9.7.7 Parking, p. 125",
+            "attachments": [
+              {
+                "fileName": "Dennis_MA_1_1.png",
+                "isDoc": false,
+                "directusId": "d0a08880-8d82-4e2a-b1de-3cd98df52a4a"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "reduce_min": [
+      {
+        "reporter": "Daniel Fortier",
+        "requirements": ["by right"],
+        "citations": [
+          {
+            "description": "Zoning By-Laws PDF",
+            "type": "city code",
+            "url": "https://www.town.dennis.ma.us/DocumentCenter/View/805/Zoning-By-Laws-Current---May-2-2023-PDF",
+            "notes": "Section 9.7.7 Parking, p. 125",
+            "attachments": [
+              {
+                "fileName": "Dennis_MA_1_1.png",
+                "isDoc": false,
+                "directusId": "d0a08880-8d82-4e2a-b1de-3cd98df52a4a"
+              }
+            ]
+          }
+        ]
+      }
+    ]
   },
   "Denton, MD": {
     "reduce_min": [
@@ -24399,7 +24869,49 @@
           ]
         }
       ]
-    }
+    },
+    "add_max": [
+      {
+        "reporter": "Christopher Parker",
+        "requirements": ["by right"],
+        "citations": [
+          {
+            "description": "Site Plan Regulations Section D",
+            "type": "city code",
+            "url": "https://www.dover.nh.gov/Assets/government/city-operations/2document/planning/Regulations/Site%20Plan%20Regulations%202018.pdf",
+            "notes": "149-14. Site Development Design Criteria D. - Parking (2)",
+            "attachments": [
+              {
+                "fileName": "Dover_NH_1_1.png",
+                "isDoc": false,
+                "directusId": "c1f297e8-d0a9-46df-9ae5-a6a2ac01fbd6"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "rm_min": [
+      {
+        "reporter": "Christopher Parker",
+        "requirements": ["other"],
+        "citations": [
+          {
+            "description": "Site Plan Regulations Section D",
+            "type": "city code",
+            "url": "https://www.dover.nh.gov/Assets/government/city-operations/2document/planning/Regulations/Site%20Plan%20Regulations%202018.pdf",
+            "notes": "149-14. Site Development Design Criteria D. - Parking (2)",
+            "attachments": [
+              {
+                "fileName": "Dover_NH_1_1.png",
+                "isDoc": false,
+                "directusId": "c1f297e8-d0a9-46df-9ae5-a6a2ac01fbd6"
+              }
+            ]
+          }
+        ]
+      }
+    ]
   },
   "Dover, OH": {
     "rm_min": [
@@ -35184,7 +35696,49 @@
           ]
         }
       ]
-    }
+    },
+    "add_max": [
+      {
+        "reporter": "Samuel Deetz",
+        "requirements": ["by right"],
+        "citations": [
+          {
+            "description": "Grafton Zoning Code",
+            "type": "city code",
+            "url": "https://www.villageofgraftonwi.gov/DocumentCenter/View/21525/Article-IV-Performance-Standards",
+            "notes": "Section 19.04.03.E.\nPages 8-14 of pdf, pages 174-180 of original document",
+            "attachments": [
+              {
+                "fileName": "Grafton_WI_1_1.png",
+                "isDoc": false,
+                "directusId": "85a375d5-7133-4247-aa5b-6e03f8470cf9"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "rm_min": [
+      {
+        "reporter": "Samuel Deetz",
+        "requirements": ["by right", "other"],
+        "citations": [
+          {
+            "description": "Grafton Zoning Code",
+            "type": "city code",
+            "url": "https://www.villageofgraftonwi.gov/DocumentCenter/View/21525/Article-IV-Performance-Standards",
+            "notes": "Section 19.04.03.G.\nPage 15 of pdf, page 181 of original document",
+            "attachments": [
+              {
+                "fileName": "Grafton_WI_1_1.png",
+                "isDoc": false,
+                "directusId": "177b4c90-0273-4d8a-a817-009ea7e9cddc"
+              }
+            ]
+          }
+        ]
+      }
+    ]
   },
   "Graham, NC": {
     "legacy": {
@@ -36709,7 +37263,49 @@
           ]
         }
       ]
-    }
+    },
+    "add_max": [
+      {
+        "reporter": "Samuel Deetz",
+        "requirements": ["by right"],
+        "citations": [
+          {
+            "description": "Greendale Zoning Code",
+            "type": "city code",
+            "url": "https://ecode360.com/113562#113562",
+            "notes": "17.06(6)(k)1.e.",
+            "attachments": [
+              {
+                "fileName": "Greendale_WI_1_1.png",
+                "isDoc": false,
+                "directusId": "a518d1e2-d235-44fe-9c2d-3ecd15f45dd2"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "rm_min": [
+      {
+        "reporter": "Samuel Deetz",
+        "requirements": ["by right", "size of project"],
+        "citations": [
+          {
+            "description": "Greendale Zoning Code",
+            "type": "city code",
+            "url": "https://ecode360.com/113562#113562",
+            "notes": "17.06(6)(b)",
+            "attachments": [
+              {
+                "fileName": "Greendale_WI_1_1.png",
+                "isDoc": false,
+                "directusId": "b9b0df1d-b370-4ed7-bf72-d0396b17635e"
+              }
+            ]
+          }
+        ]
+      }
+    ]
   },
   "Greenfield, IN": {
     "legacy": {
@@ -37160,7 +37756,49 @@
           ]
         }
       ]
-    }
+    },
+    "add_max": [
+      {
+        "reporter": "Samuel Deetz",
+        "requirements": ["by right", "other"],
+        "citations": [
+          {
+            "description": "Grimes Zoning Code",
+            "type": "city code",
+            "url": "https://online.encodeplus.com/regs/grimes-ia/doc-viewer.aspx#secid-3323",
+            "notes": "12-15-4.5.",
+            "attachments": [
+              {
+                "fileName": "Grimes_IA_1_1.png",
+                "isDoc": false,
+                "directusId": "501784af-3a0c-4580-9610-16b473da5f74"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "reduce_min": [
+      {
+        "reporter": "Samuel Deetz",
+        "requirements": ["other"],
+        "citations": [
+          {
+            "description": "Grimes Zoning Code",
+            "type": "city code",
+            "url": "https://online.encodeplus.com/regs/grimes-ia/doc-viewer.aspx#secid-3323",
+            "notes": "12-15-4.4.B.",
+            "attachments": [
+              {
+                "fileName": "Grimes_IA_1_1.png",
+                "isDoc": false,
+                "directusId": "1f50e348-d2c5-4657-87b8-3e08d04ec02b"
+              }
+            ]
+          }
+        ]
+      }
+    ]
   },
   "Grinnell, IA": {
     "rm_min": [
@@ -37829,7 +38467,7 @@
         {
           "description": "Hampden Zoning Code",
           "type": "city code",
-          "url": "https://www.hampdenmaine.gov/vertical/sites/%7B1FCAF0C4-5C5E-476D-A92E-1BED5B1F9E05%7D/uploads/Zoning_Ordinance_Effective_11-16-2023.pdf",
+          "url": "https://www.hampdenmaine.gov/vertical/sites/%7B1FCAF0C4-5C5E-476D-A92E-1BED5B1F9E05%7D/uploads/Zoning-Ordinance_Effective_07-17-2024.pdf",
           "notes": "Article 4 General Regulations\n4.7 Design Standards\n  4.7.1 Off-Street Parking, Loading, and Drive-Through Facilities\n    4.7.1.1\n4.19. Day Care Provisions\n  4.19.3 Performance Standards\n    4.19.3.4\nPages 32 and 46",
           "attachments": [
             {
@@ -37845,7 +38483,49 @@
           ]
         }
       ]
-    }
+    },
+    "add_max": [
+      {
+        "reporter": "Clifton Iler",
+        "requirements": ["by right"],
+        "citations": [
+          {
+            "description": "Hampden Zoning Code",
+            "type": "city code",
+            "url": "https://www.hampdenmaine.gov/vertical/sites/%7B1FCAF0C4-5C5E-476D-A92E-1BED5B1F9E05%7D/uploads/Zoning-Ordinance_Effective_07-17-2024.pdf",
+            "notes": "4.7.1.1\nPage 32",
+            "attachments": [
+              {
+                "fileName": "Hampden_ME_1_1.png",
+                "isDoc": false,
+                "directusId": "34392527-db2a-448c-843e-277b6ef99688"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "rm_min": [
+      {
+        "reporter": "Clifton Iler",
+        "requirements": ["by right"],
+        "citations": [
+          {
+            "description": "Hampden Zoning Code",
+            "type": "city code",
+            "url": "https://www.hampdenmaine.gov/vertical/sites/%7B1FCAF0C4-5C5E-476D-A92E-1BED5B1F9E05%7D/uploads/Zoning-Ordinance_Effective_07-17-2024.pdf",
+            "notes": "4.19.3.4 \nPage 46",
+            "attachments": [
+              {
+                "fileName": "Hampden_ME_1_1.png",
+                "isDoc": false,
+                "directusId": "f5b63bdb-60fc-4569-bb47-49ff12931307"
+              }
+            ]
+          }
+        ]
+      }
+    ]
   },
   "Hampshire, IL": {
     "reduce_min": [
@@ -43562,7 +44242,49 @@
           ]
         }
       ]
-    }
+    },
+    "add_max": [
+      {
+        "reporter": "Samuel Deetz",
+        "requirements": ["by right"],
+        "citations": [
+          {
+            "description": "Jefferson Zoning Code",
+            "type": "city code",
+            "url": "https://ecode360.com/37669687#37669687",
+            "notes": "§ 300-6.06. Figure 300-6.06a",
+            "attachments": [
+              {
+                "fileName": "Jefferson_WI_1_1.png",
+                "isDoc": false,
+                "directusId": "26321e96-dc30-4f28-a9a0-58af2a25e8f3"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "rm_min": [
+      {
+        "reporter": "Samuel Deetz",
+        "requirements": ["by right"],
+        "citations": [
+          {
+            "description": "Jefferson Zoning Code",
+            "type": "city code",
+            "url": "https://ecode360.com/37669687",
+            "notes": "§ 300-6.06.F.(1)",
+            "attachments": [
+              {
+                "fileName": "Jefferson_WI_1_1.png",
+                "isDoc": false,
+                "directusId": "7486b142-8aaf-43d7-b3c0-f73445a6f76b"
+              }
+            ]
+          }
+        ]
+      }
+    ]
   },
   "Jeffersontown, KY": {
     "legacy": {
@@ -44095,7 +44817,49 @@
           ]
         }
       ]
-    }
+    },
+    "add_max": [
+      {
+        "reporter": "Samuel Deetz",
+        "requirements": ["by right"],
+        "citations": [
+          {
+            "description": "Johnston Zoning Code",
+            "type": "city code",
+            "url": "https://ecode360.com/9724116#9724118",
+            "notes": "§ 340-29Table of Uses and Required Off-Street Parking.",
+            "attachments": [
+              {
+                "fileName": "Johnston_RI_1_1.png",
+                "isDoc": false,
+                "directusId": "ee02de76-901a-4f7a-b900-d82d179a29fe"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "reduce_min": [
+      {
+        "reporter": "Samuel Deetz",
+        "requirements": ["frequent transit"],
+        "citations": [
+          {
+            "description": "Johnston Zoning Code",
+            "type": "city code",
+            "url": "https://ecode360.com/9724116#9724118",
+            "notes": "§ 340-29Table of Uses and Required Off-Street Parking.",
+            "attachments": [
+              {
+                "fileName": "Johnston_RI_1_1.png",
+                "isDoc": false,
+                "directusId": "ee02de76-901a-4f7a-b900-d82d179a29fe"
+              }
+            ]
+          }
+        ]
+      }
+    ]
   },
   "Johnstown, PA": {
     "reduce_min": [
@@ -46499,15 +47263,15 @@
             ]
           },
           {
-            "description": "News8000 article",
+            "description": "La Crosse Tribune article",
             "type": "media report",
-            "url": "https://www.news8000.com/news/local-news/la-crosse/la-crosse-commission-looking-into-changing-citys-parking-policy/article_0f4c2496-dc3b-11ee-9ef4-4bcaeefb3957.html",
+            "url": "https://lacrossetribune.com/news/local/government-politics/la-crosse-city-council-nixes-off-street-parking-requirements/article_def72310-b810-11ef-bf77-bf293291ca98.html",
             "notes": null,
             "attachments": [
               {
                 "fileName": "LaCrosse_WI_5_1.png",
                 "isDoc": false,
-                "directusId": "49e39718-fa79-453b-93dc-1c3baa1f26b7"
+                "directusId": "2d2fce14-f2ce-44dd-a339-77cbc25a24e2"
               }
             ]
           }
@@ -52735,7 +53499,49 @@
           ]
         }
       ]
-    }
+    },
+    "reduce_min": [
+      {
+        "reporter": "Jeff Levine",
+        "requirements": ["by right"],
+        "citations": [
+          {
+            "description": "State Legislation",
+            "type": "other",
+            "url": "https://legislature.maine.gov/bills/getPDF.asp?paper=HP1489&item=2&snum=130",
+            "notes": "Line 23\nPage 3",
+            "attachments": [
+              {
+                "fileName": "Maine_ME_1_1.png",
+                "isDoc": false,
+                "directusId": "f05bca40-fb03-42c6-8e03-a8a3398bb4e2"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "rm_min": [
+      {
+        "reporter": "Jeff Levine",
+        "requirements": ["accessory dwelling units", "by right"],
+        "citations": [
+          {
+            "description": "State Legislation",
+            "type": "other",
+            "url": "https://legislature.maine.gov/bills/getPDF.asp?paper=HP1489&item=2&snum=130",
+            "notes": "Line 12\nPage 7",
+            "attachments": [
+              {
+                "fileName": "Maine_ME_1_1.png",
+                "isDoc": false,
+                "directusId": "8227dac8-3d16-40fc-941a-cd9e28049787"
+              }
+            ]
+          }
+        ]
+      }
+    ]
   },
   "Maize, KS": {
     "rm_min": [
@@ -54469,7 +55275,49 @@
           ]
         }
       ]
-    }
+    },
+    "add_max": [
+      {
+        "reporter": "Samuel Deetz",
+        "requirements": ["by right"],
+        "citations": [
+          {
+            "description": "Marshalltown Zoning Code",
+            "type": "city code",
+            "url": "https://codelibrary.amlegal.com/codes/marshalltown/latest/marshalltown_ia/0-0-0-23143",
+            "notes": "§ 156.E.004(C)",
+            "attachments": [
+              {
+                "fileName": "Marshalltown_IA_1_1.png",
+                "isDoc": false,
+                "directusId": "6786a198-a29e-402b-9bcf-d67ba64be6a7"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "rm_min": [
+      {
+        "reporter": "Samuel Deetz",
+        "requirements": ["by right"],
+        "citations": [
+          {
+            "description": "Marshalltown",
+            "type": "city code",
+            "url": "https://codelibrary.amlegal.com/codes/marshalltown/latest/marshalltown_ia/0-0-0-23143",
+            "notes": "§ 156.E.004(A)(2)\n",
+            "attachments": [
+              {
+                "fileName": "Marshalltown_IA_1_1.png",
+                "isDoc": false,
+                "directusId": "5e1c939f-8863-4d45-8732-000221d2ee87"
+              }
+            ]
+          }
+        ]
+      }
+    ]
   },
   "Marshville, NC": {
     "legacy": {
@@ -54613,7 +55461,49 @@
           ]
         }
       ]
-    }
+    },
+    "add_max": [
+      {
+        "reporter": "Zane Jacobson",
+        "requirements": ["by right"],
+        "citations": [
+          {
+            "description": "Mason City Zoning Code",
+            "type": "city code",
+            "url": "https://www.masoncity.net/files/documents/A2018RecodifiedZoningOrdinancethru04-04-231464050536041823PM.pdf",
+            "notes": "12-8-5 General Parking Provisions\nTable 4 Required Parking Table\nFootnote 1\nPage 66",
+            "attachments": [
+              {
+                "fileName": "MasonCity_IA_1_1.png",
+                "isDoc": false,
+                "directusId": "e0b4e68a-bd7c-4525-8465-1334240bb033"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "rm_min": [
+      {
+        "reporter": "Zane Jacobson",
+        "requirements": ["by right"],
+        "citations": [
+          {
+            "description": "Mason City Zoning Code",
+            "type": "city code",
+            "url": "https://www.masoncity.net/files/documents/A2018RecodifiedZoningOrdinancethru04-04-231464050536041823PM.pdf",
+            "notes": "12-8-5 General Parking Provisions\nTable 4 Required Parking Table\nFootnote 1\nPage 66",
+            "attachments": [
+              {
+                "fileName": "MasonCity_IA_1_1.png",
+                "isDoc": false,
+                "directusId": "e0b4e68a-bd7c-4525-8465-1334240bb033"
+              }
+            ]
+          }
+        ]
+      }
+    ]
   },
   "Mason, MI": {
     "rm_min": [
@@ -58468,7 +59358,49 @@
           ]
         }
       ]
-    }
+    },
+    "add_max": [
+      {
+        "reporter": "Samuel Deetz",
+        "requirements": ["by right"],
+        "citations": [
+          {
+            "description": "Montello Zoning Code",
+            "type": "city code",
+            "url": "https://cityofmontello.wpenginepowered.com/wp-content/uploads/2017/12/Adopted-City-of-Montello-Zoning-Ordinance.pdf",
+            "notes": "385.9.08(10)\nPages 88",
+            "attachments": [
+              {
+                "fileName": "Montello_WI_1_1.png",
+                "isDoc": false,
+                "directusId": "ad8ac3ca-b190-4a7c-b300-27e2861b06b6"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "rm_min": [
+      {
+        "reporter": "Samuel Deetz",
+        "requirements": ["by right"],
+        "citations": [
+          {
+            "description": "Montello Zoning Code",
+            "type": "city code",
+            "url": "https://cityofmontello.wpenginepowered.com/wp-content/uploads/2017/12/Adopted-City-of-Montello-Zoning-Ordinance.pdf",
+            "notes": "Section 385.9.08(12)\nPage 89",
+            "attachments": [
+              {
+                "fileName": "Montello_WI_1_1.png",
+                "isDoc": false,
+                "directusId": "4d08ff1a-8a5f-4f28-bc5b-d179d769644a"
+              }
+            ]
+          }
+        ]
+      }
+    ]
   },
   "Montevideo, MN": {
     "reduce_min": [
@@ -58763,7 +59695,49 @@
           ]
         }
       ]
-    }
+    },
+    "add_max": [
+      {
+        "reporter": "Samuel Deetz",
+        "requirements": ["by right"],
+        "citations": [
+          {
+            "description": "Montpelier Zoning Code",
+            "type": "city code",
+            "url": "https://www.montpelier-vt.org/DocumentCenter/View/10318/Draft-Montpelier-Zoning-Regs-2023-12-12?bidId=",
+            "notes": "3011.D. \nPage 101",
+            "attachments": [
+              {
+                "fileName": "Montpelier_VT_1_1.png",
+                "isDoc": false,
+                "directusId": "c57fb831-48df-41f7-936b-bd186c93ce65"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "rm_min": [
+      {
+        "reporter": "Samuel Deetz",
+        "requirements": ["by right"],
+        "citations": [
+          {
+            "description": "Montpelier Zoning Code",
+            "type": "city code",
+            "url": "https://www.montpelier-vt.org/DocumentCenter/View/10318/Draft-Montpelier-Zoning-Regs-2023-12-12?bidId=",
+            "notes": "3011.B.\nPage 101",
+            "attachments": [
+              {
+                "fileName": "Montpelier_VT_1_1.png",
+                "isDoc": false,
+                "directusId": "54f5fda0-6080-4b74-9943-e98a66029b5d"
+              }
+            ]
+          }
+        ]
+      }
+    ]
   },
   "Montreal, QC": {
     "rm_min": [
@@ -68145,7 +69119,90 @@
           ]
         }
       ]
-    }
+    },
+    "add_max": [
+      {
+        "reporter": "Samuel Deetz",
+        "requirements": ["by right"],
+        "citations": [
+          {
+            "description": "Pawtucket Zoning Code",
+            "type": "city code",
+            "url": "https://ecode360.com/8133653#8133657",
+            "notes": "§ 410-43.17.B.;\n§ 410-43.17.C.;\n§ 410-76.A.",
+            "attachments": [
+              {
+                "fileName": "Pawtucket_RI_1_1.png",
+                "isDoc": false,
+                "directusId": "ce3dccf0-0d40-436f-a291-9650a527a2d4"
+              },
+              {
+                "fileName": "Pawtucket_RI_1_2.png",
+                "isDoc": false,
+                "directusId": "ca476116-187b-433d-829e-68124ab564d9"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "reduce_min": [
+      {
+        "reporter": "Samuel Deetz",
+        "requirements": ["by right", "other"],
+        "citations": [
+          {
+            "description": "Pawtucket Zoning Code",
+            "type": "city code",
+            "url": "https://ecode360.com/8133653#8133657",
+            "notes": "§ 410-76.K.;\n§ 410-76.H.",
+            "attachments": [
+              {
+                "fileName": "Pawtucket_RI_1_1.png",
+                "isDoc": false,
+                "directusId": "57f7f7ae-b00e-472a-9345-fe0c080bd99d"
+              },
+              {
+                "fileName": "Pawtucket_RI_1_2.png",
+                "isDoc": false,
+                "directusId": "803d6de4-d50f-4b18-bf70-cc77697f14d0"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "rm_min": [
+      {
+        "reporter": "Samuel Deetz",
+        "requirements": ["by right", "size of project"],
+        "citations": [
+          {
+            "description": "Pawtucket Zoning Code",
+            "type": "city code",
+            "url": "https://ecode360.com/8133653#8133657",
+            "notes": "§ 410-43.17.A.;\n§ 410-76.B.;\n§ 410-76.J.",
+            "attachments": [
+              {
+                "fileName": "Pawtucket_RI_1_1.png",
+                "isDoc": false,
+                "directusId": "af1faf89-1ec6-49f8-8d05-c3d38f5d6ffb"
+              },
+              {
+                "fileName": "Pawtucket_RI_1_2.png",
+                "isDoc": false,
+                "directusId": "f5ba3c7f-6248-4128-ac6b-6983d7d4653b"
+              },
+              {
+                "fileName": "Pawtucket_RI_1_3.png",
+                "isDoc": false,
+                "directusId": "d9852c07-4baf-4c6a-ad12-8ccffbcf158b"
+              }
+            ]
+          }
+        ]
+      }
+    ]
   },
   "Paxtang, PA": {
     "reduce_min": [
@@ -71180,7 +72237,137 @@
           ]
         }
       ]
-    }
+    },
+    "add_max": [
+      {
+        "reporter": "Jacob Lavarnway",
+        "requirements": ["by right"],
+        "citations": [
+          {
+            "description": "Portland, ME zoning code.",
+            "type": "city code",
+            "url": "https://www.portlandmaine.gov/DocumentCenter/View/1080/Chapter-14-Land-Use-ReCode---Revised-7192021?bidId=",
+            "notes": "TABLE 19-B: CATEGORICAL EXCEPTIONS TO OFF-STREET PARKING MINIMUMS",
+            "attachments": [
+              {
+                "fileName": "Portland_ME_1_1.png",
+                "isDoc": false,
+                "directusId": "1e034f03-1b4c-42b7-ba2e-ed230354c13b"
+              }
+            ]
+          },
+          {
+            "description": "Draft Recode Parking Summary",
+            "type": "other",
+            "url": "https://static1.squarespace.com/static/5a75f43a692ebeeb1159413d/t/660c49617a695031d413d31c/1712081250189/Draft_Parking_Loading.pdf",
+            "notes": null,
+            "attachments": [
+              {
+                "fileName": "Portland_ME_2_1.png",
+                "isDoc": false,
+                "directusId": "2b6ac956-d791-4839-b58e-d8efca081f2f"
+              }
+            ]
+          },
+          {
+            "description": "Portland Press Herald Article",
+            "type": "media report",
+            "url": "https://www.pressherald.com/2024/11/04/portland-council-approves-recode-zoning-ordinance/",
+            "notes": null,
+            "attachments": [
+              {
+                "fileName": "Portland_ME_3_1.png",
+                "isDoc": false,
+                "directusId": "64ef743e-cb52-4843-91bc-471d6c98f8c1"
+              }
+            ]
+          },
+          {
+            "description": "Land Use Code Final Draft",
+            "type": "other",
+            "url": "https://static1.squarespace.com/static/5a75f43a692ebeeb1159413d/t/671025bbe5595f4d699c1994/1729111486146/Final+draft+LUC_10_8_24_compressed_reduced.pdf",
+            "notes": "18.1.2\n18.1.3\nPages 324-329",
+            "attachments": [
+              {
+                "fileName": "Portland_ME_4_1.png",
+                "isDoc": false,
+                "directusId": "d5374b06-9d1b-4b85-bfd1-e79051c17a93"
+              },
+              {
+                "fileName": "Portland_ME_4_2.png",
+                "isDoc": false,
+                "directusId": "ebac4d31-2eee-468a-9cf2-1efca30e3418"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "rm_min": [
+      {
+        "reporter": "Jacob Lavarnway",
+        "requirements": ["by right"],
+        "citations": [
+          {
+            "description": "Portland, ME zoning code.",
+            "type": "city code",
+            "url": "https://www.portlandmaine.gov/DocumentCenter/View/1080/Chapter-14-Land-Use-ReCode---Revised-7192021?bidId=",
+            "notes": "TABLE 19-B: CATEGORICAL EXCEPTIONS TO OFF-STREET PARKING MINIMUMS",
+            "attachments": [
+              {
+                "fileName": "Portland_ME_1_1.png",
+                "isDoc": false,
+                "directusId": "1e034f03-1b4c-42b7-ba2e-ed230354c13b"
+              }
+            ]
+          },
+          {
+            "description": "Draft Recode Parking Summary",
+            "type": "other",
+            "url": "https://static1.squarespace.com/static/5a75f43a692ebeeb1159413d/t/660c49617a695031d413d31c/1712081250189/Draft_Parking_Loading.pdf",
+            "notes": null,
+            "attachments": [
+              {
+                "fileName": "Portland_ME_2_1.png",
+                "isDoc": false,
+                "directusId": "2b6ac956-d791-4839-b58e-d8efca081f2f"
+              }
+            ]
+          },
+          {
+            "description": "Portland Press Herald Article",
+            "type": "media report",
+            "url": "https://www.pressherald.com/2024/11/04/portland-council-approves-recode-zoning-ordinance/",
+            "notes": null,
+            "attachments": [
+              {
+                "fileName": "Portland_ME_3_1.png",
+                "isDoc": false,
+                "directusId": "64ef743e-cb52-4843-91bc-471d6c98f8c1"
+              }
+            ]
+          },
+          {
+            "description": "Land Use Code Final Draft",
+            "type": "other",
+            "url": "https://static1.squarespace.com/static/5a75f43a692ebeeb1159413d/t/671025bbe5595f4d699c1994/1729111486146/Final+draft+LUC_10_8_24_compressed_reduced.pdf",
+            "notes": "18.1.2\n18.1.3\nPages 324-329",
+            "attachments": [
+              {
+                "fileName": "Portland_ME_4_1.png",
+                "isDoc": false,
+                "directusId": "d5374b06-9d1b-4b85-bfd1-e79051c17a93"
+              },
+              {
+                "fileName": "Portland_ME_4_2.png",
+                "isDoc": false,
+                "directusId": "ebac4d31-2eee-468a-9cf2-1efca30e3418"
+              }
+            ]
+          }
+        ]
+      }
+    ]
   },
   "Portland, MI": {
     "legacy": {
@@ -71989,7 +73176,85 @@
           ]
         }
       ]
-    }
+    },
+    "add_max": [
+      {
+        "reporter": null,
+        "requirements": ["by right"],
+        "citations": [
+          {
+            "description": "Providence Zoning Code",
+            "type": "city code",
+            "url": "https://www.providenceri.gov/wp-content/uploads/2024/08/24.07.23-Official-Zoning-Ordinance.pdf",
+            "notes": "1105.E.;\n1402.B.;\nPages 95, 150",
+            "attachments": [
+              {
+                "fileName": "Providence_RI_1_1.jpg",
+                "isDoc": false,
+                "directusId": "e09c30c1-f4e7-4248-a876-911a0b087a01"
+              },
+              {
+                "fileName": "Providence_RI_1_2.jpg",
+                "isDoc": false,
+                "directusId": "e9a6e6ba-1a1e-45e4-9d83-20f105464948"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "reduce_min": [
+      {
+        "reporter": null,
+        "requirements": ["bike parking", "by right"],
+        "citations": [
+          {
+            "description": "Providence Zoning Code",
+            "type": "city code",
+            "url": "https://www.providenceri.gov/wp-content/uploads/2024/08/24.07.23-Official-Zoning-Ordinance.pdf",
+            "notes": "1402.C.;\n1402.D.;\n1410.B.6.;\nPages 151, 163",
+            "attachments": [
+              {
+                "fileName": "Providence_RI_1_1.jpg",
+                "isDoc": false,
+                "directusId": "5170ad70-26bd-4710-b6a3-772256f95012"
+              },
+              {
+                "fileName": "Providence_RI_1_2.jpg",
+                "isDoc": false,
+                "directusId": "42bc039e-bf66-4a32-bd1b-49e9a90f24b1"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "rm_min": [
+      {
+        "reporter": null,
+        "requirements": ["by right", "size of project"],
+        "citations": [
+          {
+            "description": "Providence Zoning Code",
+            "type": "city code",
+            "url": "https://www.providenceri.gov/wp-content/uploads/2024/08/24.07.23-Official-Zoning-Ordinance.pdf",
+            "notes": "1105.E.;\n1410.A.;\n1410.B.;\nPages 95, 163-164",
+            "attachments": [
+              {
+                "fileName": "Providence_RI_1_1.jpg",
+                "isDoc": false,
+                "directusId": "d27698bc-55c6-4859-adfc-2a19ce32cb86"
+              },
+              {
+                "fileName": "Providence_RI_1_2.jpg",
+                "isDoc": false,
+                "directusId": "9acf2b05-5ff9-431c-9d40-508d35afe6ba"
+              }
+            ]
+          }
+        ]
+      }
+    ]
   },
   "Provincetown, MA": {
     "rm_min": [
@@ -78649,7 +79914,49 @@
           ]
         }
       ]
-    }
+    },
+    "add_max": [
+      {
+        "reporter": "Tom Morgan",
+        "requirements": ["by right"],
+        "citations": [
+          {
+            "description": "Seabrook City Code",
+            "type": "city code",
+            "url": "https://seabrooknh.info/wp-content/uploads/2020/12/Site-Plan-Regs-dated-20October2020.pdf",
+            "notes": "Section 11 - table shows no parking required for many uses. If no standard is specified in these regulations, parking requirements will be at the discretion of the Planning Board.",
+            "attachments": [
+              {
+                "fileName": "Seabrook_NH_1_1.png",
+                "isDoc": false,
+                "directusId": "d135f6ad-12ff-4f54-8fa5-bd0e5be9f6ac"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "rm_min": [
+      {
+        "reporter": "Tom Morgan",
+        "requirements": ["by right"],
+        "citations": [
+          {
+            "description": "Seabrook City Code",
+            "type": "city code",
+            "url": "https://seabrooknh.info/wp-content/uploads/2020/12/Site-Plan-Regs-dated-20October2020.pdf",
+            "notes": "Section 11 - table shows no parking required for many uses. If no standard is specified in these regulations, parking requirements will be at the discretion of the Planning Board.",
+            "attachments": [
+              {
+                "fileName": "Seabrook_NH_1_1.png",
+                "isDoc": false,
+                "directusId": "d135f6ad-12ff-4f54-8fa5-bd0e5be9f6ac"
+              }
+            ]
+          }
+        ]
+      }
+    ]
   },
   "Searcy, AR": {
     "rm_min": [
@@ -81230,8 +82537,8 @@
   },
   "Somerville, MA": {
     "legacy": {
-      "reporter": null,
-      "requirements": ["by right", "frequent transit"],
+      "reporter": "Ellie Medal",
+      "requirements": ["by right"],
       "citations": [
         {
           "description": " 1.3.3 for definition of \"Transit Area\" and the \"Parking & Mobility\" section of each zoning district for the maximums for each use within a Transit Area",
@@ -81245,9 +82552,77 @@
               "directusId": "cf868dab-b2b3-48ef-a7dd-e3b64ff80881"
             }
           ]
+        },
+        {
+          "description": "Somerville File 24-1197",
+          "type": "other",
+          "url": "https://somervillema.legistar.com/LegislationDetail.aspx?ID=6836172&GUID=85FD9913-4A60-4D88-AEA7-C773DA820EF0",
+          "notes": "See \"12.12.24 CC Zoning Parking Minimums\" for final ordinance",
+          "attachments": [
+            {
+              "fileName": "Somerville_MA_2_1.png",
+              "isDoc": false,
+              "directusId": "a83d29ea-1e94-431b-8755-afa93356eccd"
+            }
+          ]
         }
       ]
-    }
+    },
+    "add_max": [
+      {
+        "reporter": "Ellie Medal",
+        "requirements": ["by right", "frequent transit"],
+        "citations": [
+          {
+            "description": " 1.3.3 for definition of \"Transit Area\" and the \"Parking & Mobility\" section of each zoning district for the maximums for each use within a Transit Area",
+            "type": "city code",
+            "url": "https://3pb8cv933tuz26rfz3u13x17-wpengine.netdna-ssl.com/wp-content/uploads/sites/2/2019/12/20191212-Adopted-SomervilleZoningOrdinance.pdf",
+            "notes": null,
+            "attachments": [
+              {
+                "fileName": "Somerville_MA_1_1.jpg",
+                "isDoc": false,
+                "directusId": "cf868dab-b2b3-48ef-a7dd-e3b64ff80881"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "rm_min": [
+      {
+        "reporter": "Ellie Medal",
+        "requirements": ["by right"],
+        "citations": [
+          {
+            "description": " 1.3.3 for definition of \"Transit Area\" and the \"Parking & Mobility\" section of each zoning district for the maximums for each use within a Transit Area",
+            "type": "city code",
+            "url": "https://3pb8cv933tuz26rfz3u13x17-wpengine.netdna-ssl.com/wp-content/uploads/sites/2/2019/12/20191212-Adopted-SomervilleZoningOrdinance.pdf",
+            "notes": null,
+            "attachments": [
+              {
+                "fileName": "Somerville_MA_1_1.jpg",
+                "isDoc": false,
+                "directusId": "cf868dab-b2b3-48ef-a7dd-e3b64ff80881"
+              }
+            ]
+          },
+          {
+            "description": "Somerville File 24-1197",
+            "type": "other",
+            "url": "https://somervillema.legistar.com/LegislationDetail.aspx?ID=6836172&GUID=85FD9913-4A60-4D88-AEA7-C773DA820EF0",
+            "notes": "See \"12.12.24 CC Zoning Parking Minimums\" for final ordinance",
+            "attachments": [
+              {
+                "fileName": "Somerville_MA_2_1.png",
+                "isDoc": false,
+                "directusId": "a83d29ea-1e94-431b-8755-afa93356eccd"
+              }
+            ]
+          }
+        ]
+      }
+    ]
   },
   "Somonauk, IL": {
     "reduce_min": [
@@ -84802,7 +86177,49 @@
           ]
         }
       ]
-    }
+    },
+    "add_max": [
+      {
+        "reporter": "Samuel Deetz",
+        "requirements": ["by right"],
+        "citations": [
+          {
+            "description": "Story County Zoning Code",
+            "type": "city code",
+            "url": "https://codelibrary.amlegal.com/codes/storycounty/latest/storycount_ia/0-0-0-2993",
+            "notes": "88.08   PARKING AND CIRCULATION STANDARDS.\n13.",
+            "attachments": [
+              {
+                "fileName": "StoryCounty_IA_1_1.png",
+                "isDoc": false,
+                "directusId": "7c467697-6724-4b93-9b87-eebe7379a6cf"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "rm_min": [
+      {
+        "reporter": "Samuel Deetz",
+        "requirements": ["by right"],
+        "citations": [
+          {
+            "description": "Story County Zoning Code",
+            "type": "city code",
+            "url": "https://codelibrary.amlegal.com/codes/storycounty/latest/storycount_ia/0-0-0-2993",
+            "notes": "88.08   PARKING AND CIRCULATION STANDARDS.\n13.",
+            "attachments": [
+              {
+                "fileName": "StoryCounty_IA_1_1.png",
+                "isDoc": false,
+                "directusId": "7c467697-6724-4b93-9b87-eebe7379a6cf"
+              }
+            ]
+          }
+        ]
+      }
+    ]
   },
   "Stoughton, WI": {
     "rm_min": [
@@ -92071,7 +93488,49 @@
           ]
         }
       ]
-    }
+    },
+    "add_max": [
+      {
+        "reporter": "Samuel Deetz",
+        "requirements": ["by right"],
+        "citations": [
+          {
+            "description": "Warwick Zoning Code",
+            "type": "city code",
+            "url": "https://library.municode.com/ri/warwick/codes/code_of_ordinances?nodeId=PTIICOOR_APZO_S700OREPALO_701PARE",
+            "notes": "701. - Parking requirements.\n701.6B Construction requirements for the village district, access and parking.\nE.F.",
+            "attachments": [
+              {
+                "fileName": "Warwick_RI_1_1.png",
+                "isDoc": false,
+                "directusId": "88c5e730-0803-4caf-9b95-e01c4653c726"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "reduce_min": [
+      {
+        "reporter": "Samuel Deetz",
+        "requirements": ["other"],
+        "citations": [
+          {
+            "description": "Warwick Zoning Code",
+            "type": "city code",
+            "url": "https://library.municode.com/ri/warwick/codes/code_of_ordinances?nodeId=PTIICOOR_APZO_S700OREPALO_701PARE",
+            "notes": "701. - Parking requirements.\n701.6B Construction requirements for the village district, access and parking.\nE.F.",
+            "attachments": [
+              {
+                "fileName": "Warwick_RI_1_1.png",
+                "isDoc": false,
+                "directusId": "88c5e730-0803-4caf-9b95-e01c4653c726"
+              }
+            ]
+          }
+        ]
+      }
+    ]
   },
   "Waseca, MN": {
     "legacy": {
@@ -92562,7 +94021,7 @@
         {
           "description": "Waterloo Zoning Code",
           "type": "city code",
-          "url": "https://cms6.revize.com/revize/waterlooiowa/PlanningZoning/Zoning%20Ord%205079%2006-20-22.pdf",
+          "url": "https://cms6.revize.com/revize/waterloo/PlanningZoning/Zoning%20Ord%205079%2006-20-22.pdf",
           "notes": "CHAPTER 25 VEHICULAR USE, PARKING AND LOADING AREAS, PUBLIC GARAGES, PARKING LOTS AND FILLING STATIONS.\n10-25-2 OFF-STREET PARKING AREA REQUIRED.\nA. Scope of Regulations.\nPage 127 of pdf, page 121 of original document",
           "attachments": [
             {
@@ -92573,7 +94032,49 @@
           ]
         }
       ]
-    }
+    },
+    "add_max": [
+      {
+        "reporter": "Samuel Deetz",
+        "requirements": ["by right"],
+        "citations": [
+          {
+            "description": "Waterloo Zoning Code",
+            "type": "city code",
+            "url": "https://cms6.revize.com/revize/waterloo/PlanningZoning/Zoning%20Ord%205079%2006-20-22.pdf",
+            "notes": "CHAPTER 25 VEHICULAR USE, PARKING AND LOADING AREAS, PUBLIC GARAGES, PARKING LOTS AND FILLING STATIONS.\n10-25-2 OFF-STREET PARKING AREA REQUIRED.\nA. Scope of Regulations.\nPage 127 of pdf, page 121 of original document",
+            "attachments": [
+              {
+                "fileName": "Waterloo_IA_1_1.png",
+                "isDoc": false,
+                "directusId": "fe03cbec-43d5-4861-b346-7aaf36d2aa6c"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "rm_min": [
+      {
+        "reporter": "Samuel Deetz",
+        "requirements": ["by right"],
+        "citations": [
+          {
+            "description": "Waterloo Zoning Code",
+            "type": "city code",
+            "url": "https://cms6.revize.com/revize/waterloo/PlanningZoning/Zoning%20Ord%205079%2006-20-22.pdf",
+            "notes": "CHAPTER 25 VEHICULAR USE, PARKING AND LOADING AREAS, PUBLIC GARAGES, PARKING LOTS AND FILLING STATIONS.\n10-25-2 OFF-STREET PARKING AREA REQUIRED.\nA. Scope of Regulations.\nPage 127 of pdf, page 121 of original document",
+            "attachments": [
+              {
+                "fileName": "Waterloo_IA_1_1.png",
+                "isDoc": false,
+                "directusId": "fe03cbec-43d5-4861-b346-7aaf36d2aa6c"
+              }
+            ]
+          }
+        ]
+      }
+    ]
   },
   "Waterloo, WI": {
     "rm_min": [
@@ -97490,7 +98991,70 @@
           ]
         }
       ]
-    }
+    },
+    "add_max": [
+      {
+        "reporter": "Stephen Rolle",
+        "requirements": ["by right"],
+        "citations": [
+          {
+            "description": "Worcester Zoning Code",
+            "type": "city code",
+            "url": "https://www.worcesterma.gov/uploads/d9/84/d98416d31a75df36b9f6c81177ad48ef/zoning-ord.pdf",
+            "notes": "ARTICLE IX Section 7 Table 9.1\n Pages 206-211 of pdf, pages 201-206 of original document",
+            "attachments": [
+              {
+                "fileName": "Worcester_MA_1_1.png",
+                "isDoc": false,
+                "directusId": "e9472815-b2f9-4cc3-b9e4-f7e05338859c"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "reduce_min": [
+      {
+        "reporter": "Stephen Rolle",
+        "requirements": ["by right"],
+        "citations": [
+          {
+            "description": "Worcester Zoning Code",
+            "type": "city code",
+            "url": "https://www.worcesterma.gov/uploads/d9/84/d98416d31a75df36b9f6c81177ad48ef/zoning-ord.pdf",
+            "notes": "ARTICLE IX Section 7 Table 9.1\n Pages 206-211 of pdf, pages 201-206 of original document",
+            "attachments": [
+              {
+                "fileName": "Worcester_MA_1_1.png",
+                "isDoc": false,
+                "directusId": "e9472815-b2f9-4cc3-b9e4-f7e05338859c"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "rm_min": [
+      {
+        "reporter": "Stephen Rolle",
+        "requirements": ["by right"],
+        "citations": [
+          {
+            "description": "Worcester Zoning Code",
+            "type": "city code",
+            "url": "https://www.worcesterma.gov/uploads/d9/84/d98416d31a75df36b9f6c81177ad48ef/zoning-ord.pdf",
+            "notes": "ARTICLE IV Section 7 Notes to Table 4.4 Note 1.b.)\nPage 109 of pdf, page 104 of original document",
+            "attachments": [
+              {
+                "fileName": "Worcester_MA_1_1.png",
+                "isDoc": false,
+                "directusId": "c76d21f5-d525-4e46-afef-d4dcab93a8f9"
+              }
+            ]
+          }
+        ]
+      }
+    ]
   },
   "Wormleysburg, PA": {
     "reduce_min": [
