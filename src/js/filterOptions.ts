@@ -54,9 +54,11 @@ export class FilterOptions {
     };
   }
 
-  default(groupKey: FilterGroupKey): string[] {
-    return this.options[groupKey].filter(
-      (opt) => !DESELECTED_BY_DEFAULT[groupKey].has(opt),
+  default(groupKey: FilterGroupKey): Set<string> {
+    return new Set(
+      this.options[groupKey].filter(
+        (opt) => !DESELECTED_BY_DEFAULT[groupKey].has(opt),
+      ),
     );
   }
 
@@ -308,7 +310,7 @@ function initFilterGroup(
         return params.preserveCapitalization ? text : text?.toLowerCase();
       })
       .filter((x) => x !== undefined);
-    filterManager.update({ [params.filterStateKey]: checkedLabels });
+    filterManager.update({ [params.filterStateKey]: new Set(checkedLabels) });
   });
 
   const allCheckboxes = Array.from(
@@ -321,7 +323,9 @@ function initFilterGroup(
     allCheckboxes.forEach((input) => (input.checked = true));
     updateCheckboxStats(accordionState, accordionElements.fieldSet);
     filterManager.update({
-      [params.filterStateKey]: filterOptions.all(params.filterStateKey),
+      [params.filterStateKey]: new Set(
+        filterOptions.all(params.filterStateKey),
+      ),
     });
   });
 
@@ -329,7 +333,7 @@ function initFilterGroup(
     allCheckboxes.forEach((input) => (input.checked = false));
     updateCheckboxStats(accordionState, accordionElements.fieldSet);
     filterManager.update({
-      [params.filterStateKey]: [],
+      [params.filterStateKey]: new Set(),
     });
   });
 
