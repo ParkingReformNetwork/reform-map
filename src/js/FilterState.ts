@@ -153,7 +153,9 @@ export class PlaceFilterManager {
 
   private matchesPlace(place: ProcessedPlace): boolean {
     const filterState = this.state.getValue();
+
     const isCountry = filterState.country.has(place.country);
+    if (!isCountry) return false;
 
     const isAllMinimumsRepealed =
       // If the toggle is false, we don't care.
@@ -163,26 +165,32 @@ export class PlaceFilterManager {
       // also have parking minimum reductions.
       filterState.policyTypeFilter === "reduce parking minimums" ||
       place.repeal;
+    if (!isAllMinimumsRepealed) return false;
 
     const [sliderLeftIndex, sliderRightIndex] =
       filterState.populationSliderIndexes;
     const isPopulation =
       place.pop >= POPULATION_INTERVALS[sliderLeftIndex][1] &&
       place.pop <= POPULATION_INTERVALS[sliderRightIndex][1];
-
-    return isCountry && isAllMinimumsRepealed && isPopulation;
+    return isPopulation;
   }
 
   private matchesPolicyRecord(policyRecord: ProcessedCorePolicy): boolean {
     const filterState = this.state.getValue();
 
-    const isScope = policyRecord.scope.some((v) => filterState.scope.has(v));
-    const isLand = policyRecord.land.some((v) => filterState.landUse.has(v));
     const isStatus = filterState.status.has(policyRecord.status);
+    if (!isStatus) return false;
+
     const isYear = filterState.year.has(
       policyRecord.date?.parsed.year.toString() || UNKNOWN_YEAR,
     );
-    return isScope && isLand && isStatus && isYear;
+    if (!isYear) return false;
+
+    const isScope = policyRecord.scope.some((v) => filterState.scope.has(v));
+    if (!isScope) return false;
+
+    const isLand = policyRecord.land.some((v) => filterState.landUse.has(v));
+    return isLand;
   }
 
   private getMatchingPolicyRecords(
@@ -204,14 +212,14 @@ export class PlaceFilterManager {
     }
 
     const isPlace = this.matchesPlace(entry.place);
+    if (!isPlace) return null;
 
     if (filterState.policyTypeFilter === "legacy reform") {
       const isPolicyType = entry.unifiedPolicy.policy.some((v) =>
         filterState.includedPolicyChanges.has(v),
       );
-      return isPlace &&
-        isPolicyType &&
-        this.matchesPolicyRecord(entry.unifiedPolicy)
+      if (!isPolicyType) return null;
+      return this.matchesPolicyRecord(entry.unifiedPolicy)
         ? {
             rmMinIdx: [],
             reduceMinIdx: [],
@@ -225,7 +233,7 @@ export class PlaceFilterManager {
       const isPolicyType = policyTypes.some((v) =>
         filterState.includedPolicyChanges.has(v),
       );
-      return isPlace && isPolicyType
+      return isPolicyType
         ? {
             rmMinIdx: [],
             reduceMinIdx: [],
@@ -239,7 +247,7 @@ export class PlaceFilterManager {
         entry.add_max ?? [],
         (policyRecord) => this.matchesPolicyRecord(policyRecord),
       );
-      return isPlace && matchingPolicies.length
+      return matchingPolicies.length
         ? { addMaxIdx: matchingPolicies, reduceMinIdx: [], rmMinIdx: [] }
         : null;
     }
@@ -249,7 +257,7 @@ export class PlaceFilterManager {
         entry.reduce_min ?? [],
         (policyRecord) => this.matchesPolicyRecord(policyRecord),
       );
-      return isPlace && matchingPolicies.length
+      return matchingPolicies.length
         ? { addMaxIdx: [], reduceMinIdx: matchingPolicies, rmMinIdx: [] }
         : null;
     }
@@ -259,7 +267,7 @@ export class PlaceFilterManager {
         entry.rm_min ?? [],
         (policyRecord) => this.matchesPolicyRecord(policyRecord),
       );
-      return isPlace && matchingPolicies.length
+      return matchingPolicies.length
         ? { addMaxIdx: [], reduceMinIdx: [], rmMinIdx: matchingPolicies }
         : null;
     }
