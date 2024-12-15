@@ -8,16 +8,16 @@ test.describe("determineHtml", () => {
     searchInput: null,
     policyTypeFilter: "any parking reform",
     allMinimumsRemovedToggle: false,
-    includedPolicyChanges: [
+    includedPolicyChanges: new Set([
       "add parking maximums",
       "remove parking minimums",
       "reduce parking minimums",
-    ],
-    scope: [],
-    landUse: [],
-    status: [],
-    country: [],
-    year: [],
+    ]),
+    scope: new Set(),
+    landUse: new Set(),
+    status: new Set(),
+    country: new Set(),
+    year: new Set(),
     populationSliderIndexes: [0, 0],
   };
 
@@ -60,23 +60,32 @@ test.describe("determineHtml", () => {
     assertMapAndTable(
       {
         ...DEFAULT_STATE,
-        includedPolicyChanges: [
+        includedPolicyChanges: new Set([
           "reduce parking minimums",
           "remove parking minimums",
-        ],
+        ]),
       },
       "Showing 5 places in Mexico with parking minimums removed or parking minimums reduced",
     );
     assertMapAndTable(
-      { ...DEFAULT_STATE, includedPolicyChanges: ["remove parking minimums"] },
+      {
+        ...DEFAULT_STATE,
+        includedPolicyChanges: new Set(["remove parking minimums"]),
+      },
       "Showing 5 places in Mexico with parking minimums removed",
     );
     assertMapAndTable(
-      { ...DEFAULT_STATE, includedPolicyChanges: ["reduce parking minimums"] },
+      {
+        ...DEFAULT_STATE,
+        includedPolicyChanges: new Set(["reduce parking minimums"]),
+      },
       "Showing 5 places in Mexico with parking minimums reduced",
     );
     assertMapAndTable(
-      { ...DEFAULT_STATE, includedPolicyChanges: ["add parking maximums"] },
+      {
+        ...DEFAULT_STATE,
+        includedPolicyChanges: new Set(["add parking maximums"]),
+      },
       "Showing 5 places in Mexico with parking maximums added",
     );
 
@@ -91,7 +100,7 @@ test.describe("determineHtml", () => {
       {
         ...DEFAULT_STATE,
         allMinimumsRemovedToggle: true,
-        includedPolicyChanges: ["add parking maximums"],
+        includedPolicyChanges: new Set(["add parking maximums"]),
       },
       "Showing 5 places in Mexico with both all parking minimums removed and parking maximums added",
     );

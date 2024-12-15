@@ -38,12 +38,12 @@ export interface FilterState {
   searchInput: string | null;
   policyTypeFilter: PolicyTypeFilter;
   allMinimumsRemovedToggle: boolean;
-  includedPolicyChanges: string[];
-  scope: string[];
-  landUse: string[];
-  status: string[];
-  country: string[];
-  year: string[];
+  includedPolicyChanges: Set<string>;
+  scope: Set<string>;
+  landUse: Set<string>;
+  status: Set<string>;
+  country: Set<string>;
+  year: Set<string>;
   populationSliderIndexes: [number, number];
 }
 
@@ -153,7 +153,7 @@ export class PlaceFilterManager {
 
   private matchesPlace(place: ProcessedPlace): boolean {
     const filterState = this.state.getValue();
-    const isCountry = filterState.country.includes(place.country);
+    const isCountry = filterState.country.has(place.country);
 
     const isAllMinimumsRepealed =
       // If the toggle is false, we don't care.
@@ -176,14 +176,10 @@ export class PlaceFilterManager {
   private matchesPolicyRecord(policyRecord: ProcessedCorePolicy): boolean {
     const filterState = this.state.getValue();
 
-    const isScope = policyRecord.scope.some((v) =>
-      filterState.scope.includes(v),
-    );
-    const isLand = policyRecord.land.some((v) =>
-      filterState.landUse.includes(v),
-    );
-    const isStatus = filterState.status.includes(policyRecord.status);
-    const isYear = filterState.year.includes(
+    const isScope = policyRecord.scope.some((v) => filterState.scope.has(v));
+    const isLand = policyRecord.land.some((v) => filterState.landUse.has(v));
+    const isStatus = filterState.status.has(policyRecord.status);
+    const isYear = filterState.year.has(
       policyRecord.date?.parsed.year.toString() || UNKNOWN_YEAR,
     );
     return isScope && isLand && isStatus && isYear;
@@ -211,7 +207,7 @@ export class PlaceFilterManager {
 
     if (filterState.policyTypeFilter === "legacy reform") {
       const isPolicyType = entry.unifiedPolicy.policy.some((v) =>
-        filterState.includedPolicyChanges.includes(v),
+        filterState.includedPolicyChanges.has(v),
       );
       return isPlace &&
         isPolicyType &&
@@ -227,7 +223,7 @@ export class PlaceFilterManager {
     if (filterState.policyTypeFilter === "any parking reform") {
       const policyTypes = determinePolicyTypes(entry);
       const isPolicyType = policyTypes.some((v) =>
-        filterState.includedPolicyChanges.includes(v),
+        filterState.includedPolicyChanges.has(v),
       );
       return isPlace && isPolicyType
         ? {

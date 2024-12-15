@@ -47,7 +47,10 @@ export function determineHtml(
     // We customize the text based on which policy changes are selected.
     let suffix;
     if (state.allMinimumsRemovedToggle) {
-      suffix = isEqual(state.includedPolicyChanges, ["add parking maximums"])
+      suffix = isEqual(
+        state.includedPolicyChanges,
+        new Set(["add parking maximums"]),
+      )
         ? "both all parking minimums removed and parking maximums added"
         : "all parking minimums removed";
     } else {
@@ -56,7 +59,7 @@ export function determineHtml(
         "reduce parking minimums": "parking minimums reduced",
         "remove parking minimums": "parking minimums removed",
       };
-      const policyDescriptions = state.includedPolicyChanges
+      const policyDescriptions = Array.from(state.includedPolicyChanges)
         .map((policy) => policyDescriptionMap[policy as PolicyType])
         .sort()
         .reverse();
