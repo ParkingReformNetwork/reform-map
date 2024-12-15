@@ -8,7 +8,11 @@ test.describe("determineHtml", () => {
     searchInput: null,
     policyTypeFilter: "any parking reform",
     allMinimumsRemovedToggle: false,
-    includedPolicyChanges: [],
+    includedPolicyChanges: [
+      "add parking maximums",
+      "remove parking minimums",
+      "reduce parking minimums",
+    ],
     scope: [],
     landUse: [],
     status: [],
@@ -36,46 +40,61 @@ test.describe("determineHtml", () => {
   });
 
   test("any parking reform", () => {
-    const resultMap = determineHtml(
-      "map",
-      DEFAULT_STATE,
-      5,
-      0,
-      new Set(["Mexico"]),
-    );
-    const resultTable = determineHtml(
-      "table",
-      DEFAULT_STATE,
-      5,
-      0,
-      new Set(["Mexico"]),
-    );
-    const expected = "Showing 5 places in Mexico with parking reforms";
-    expect(resultMap).toEqual(expected);
-    expect(resultTable).toEqual(expected);
-
-    const allMinimumsRemovedState = {
-      ...DEFAULT_STATE,
-      allMinimumsRemovedToggle: true,
+    const assertMapAndTable = (state: FilterState, expected: string): void => {
+      const resultMap = determineHtml("map", state, 5, 0, new Set(["Mexico"]));
+      const resultTable = determineHtml(
+        "table",
+        state,
+        5,
+        0,
+        new Set(["Mexico"]),
+      );
+      expect(resultMap).toEqual(expected);
+      expect(resultTable).toEqual(expected);
     };
-    const allMinimumsRemovedMap = determineHtml(
-      "map",
-      allMinimumsRemovedState,
-      5,
-      0,
-      new Set(["Mexico", "Brazil"]),
+
+    assertMapAndTable(
+      DEFAULT_STATE,
+      "Showing 5 places in Mexico with parking minimums removed, parking minimums reduced, or parking maximums added",
     );
-    const allMinimumsRemovedTable = determineHtml(
-      "table",
-      allMinimumsRemovedState,
-      5,
-      0,
-      new Set(["Mexico", "Brazil"]),
+    assertMapAndTable(
+      {
+        ...DEFAULT_STATE,
+        includedPolicyChanges: [
+          "reduce parking minimums",
+          "remove parking minimums",
+        ],
+      },
+      "Showing 5 places in Mexico with parking minimums removed or parking minimums reduced",
     );
-    const allMinimumsRemovedExpected =
-      "Showing 5 places in 2 countries with all parking minimums removed";
-    expect(allMinimumsRemovedMap).toEqual(allMinimumsRemovedExpected);
-    expect(allMinimumsRemovedTable).toEqual(allMinimumsRemovedExpected);
+    assertMapAndTable(
+      { ...DEFAULT_STATE, includedPolicyChanges: ["remove parking minimums"] },
+      "Showing 5 places in Mexico with parking minimums removed",
+    );
+    assertMapAndTable(
+      { ...DEFAULT_STATE, includedPolicyChanges: ["reduce parking minimums"] },
+      "Showing 5 places in Mexico with parking minimums reduced",
+    );
+    assertMapAndTable(
+      { ...DEFAULT_STATE, includedPolicyChanges: ["add parking maximums"] },
+      "Showing 5 places in Mexico with parking maximums added",
+    );
+
+    assertMapAndTable(
+      {
+        ...DEFAULT_STATE,
+        allMinimumsRemovedToggle: true,
+      },
+      "Showing 5 places in Mexico with all parking minimums removed",
+    );
+    assertMapAndTable(
+      {
+        ...DEFAULT_STATE,
+        allMinimumsRemovedToggle: true,
+        includedPolicyChanges: ["add parking maximums"],
+      },
+      "Showing 5 places in Mexico with both all parking minimums removed and parking maximums added",
+    );
   });
 
   test("reduce minimums", () => {
@@ -105,9 +124,9 @@ test.describe("determineHtml", () => {
       new Set(["Mexico", "Brazil"]),
     );
     const expectedNoRecords =
-      "Showing 5 places in 2 countries with parking minimum reductions";
+      "Showing 5 places in 2 countries with parking minimums reduced";
     const expectedRecords =
-      "Showing 5 places in 2 countries with parking minimum reductions. Matched 6 total policy records because some places have multiple records.";
+      "Showing 5 places in 2 countries with parking minimums reduced. Matched 6 total policy records because some places have multiple records.";
     expect(resultMap).toEqual(expectedNoRecords);
     expect(resultTableEqualRecords).toEqual(expectedNoRecords);
     expect(resultTableUnequalRecords).toEqual(expectedRecords);
@@ -171,9 +190,9 @@ test.describe("determineHtml", () => {
       new Set(["Mexico", "Brazil"]),
     );
     const expectedNoRecords =
-      "Showing 5 places in 2 countries with parking minimum removals";
+      "Showing 5 places in 2 countries with parking minimums removed";
     const expectedRecords =
-      "Showing 5 places in 2 countries with parking minimum removals. Matched 6 total policy records because some places have multiple records.";
+      "Showing 5 places in 2 countries with parking minimums removed. Matched 6 total policy records because some places have multiple records.";
     expect(resultMap).toEqual(expectedNoRecords);
     expect(resultTableEqualRecords).toEqual(expectedNoRecords);
     expect(resultTableUnequalRecords).toEqual(expectedRecords);
@@ -299,7 +318,7 @@ test.describe("determineHtml", () => {
       new Set(["United States"]),
     );
     expect(result).toEqual(
-      "Showing 1 place in the United States with parking minimum reductions. Matched 2 total policy records because some places have multiple records.",
+      "Showing 1 place in the United States with parking minimums reduced. Matched 2 total policy records because some places have multiple records.",
     );
   });
 });
