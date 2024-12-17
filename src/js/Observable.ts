@@ -19,11 +19,15 @@ export default class Observable<T> {
 
   private subscribers: Subscriber<T>[] = [];
 
-  private isInitialized: boolean = false;
+  private _isInitialized: boolean = false;
 
   constructor(id: string, initialValue: T) {
     this.id = id;
     this.value = initialValue;
+  }
+
+  get isInitialized(): boolean {
+    return this._isInitialized;
   }
 
   getValue(): T {
@@ -46,8 +50,8 @@ export default class Observable<T> {
     if (this.isInitialized) {
       throw new Error("Observable is already initialized");
     }
-    this.isInitialized = true;
     this.notify();
+    this._isInitialized = true;
   }
 
   private notify(): void {
