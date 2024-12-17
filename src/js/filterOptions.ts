@@ -370,7 +370,7 @@ function initAllMinimumsToggle(filterManager: PlaceFilterManager): void {
     "filter-all-minimums-toggle",
     "filter-all-minimums-toggle",
     filterManager.getState().allMinimumsRemovedToggle,
-    "Only places with all minimums removed",
+    "Only places with all parking minimums removed",
   );
   label.id = "filter-all-minimums-toggle-container";
 
