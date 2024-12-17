@@ -372,6 +372,7 @@ function initAllMinimumsToggle(filterManager: PlaceFilterManager): void {
     filterManager.getState().allMinimumsRemovedToggle,
     "Only places with all minimums removed",
   );
+  label.id = "filter-all-minimums-toggle-container";
 
   const filterPopup = document.getElementById("filter-popup");
   if (!filterPopup) return;
