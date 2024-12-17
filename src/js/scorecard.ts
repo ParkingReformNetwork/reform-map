@@ -35,8 +35,13 @@ function generateScorecard(
 }
 
 type ScorecardState =
-  | { type: "hidden" }
-  | { type: "visible"; entry: ProcessedCoreEntry; placeId: PlaceId };
+  | { type: "hidden"; hasBeenVisible: boolean }
+  | {
+      type: "visible";
+      hasBeenVisible: boolean;
+      entry: ProcessedCoreEntry;
+      placeId: PlaceId;
+    };
 
 function updateScorecardUI(state: ScorecardState): void {
   const scorecardContainer = document.querySelector<HTMLElement>(
@@ -68,6 +73,7 @@ export default function initScorecard(
 ): void {
   const scorecardState = new Observable<ScorecardState>("scorecard", {
     type: "hidden",
+    hasBeenVisible: false,
   });
   scorecardState.subscribe(updateScorecardUI);
 
@@ -79,6 +85,7 @@ export default function initScorecard(
     const placeId = e.sourceTarget.getTooltip().getContent();
     scorecardState.setValue({
       type: "visible",
+      hasBeenVisible: true,
       placeId,
       entry: data[placeId],
     });
@@ -90,6 +97,7 @@ export default function initScorecard(
     if (search && viewToggle.getValue() === "map") {
       scorecardState.setValue({
         type: "visible",
+        hasBeenVisible: true,
         placeId: search,
         entry: data[search],
       });
@@ -107,7 +115,7 @@ export default function initScorecard(
       !header?.contains(event.target) &&
       !scorecardContainer?.contains(event.target)
     ) {
-      scorecardState.setValue({ type: "hidden" });
+      scorecardState.setValue({ type: "hidden", hasBeenVisible: true });
     }
   });
 
@@ -123,13 +131,15 @@ export default function initScorecard(
       ".scorecard-close-icon-container",
     );
     if (!closeIcon) return;
-    scorecardState.setValue({ type: "hidden" });
+    scorecardState.setValue({ type: "hidden", hasBeenVisible: true });
   });
 
   // Closing the scorecard resets search.
-  scorecardState.subscribe(({ type }) => {
-    if (type === "hidden") filterManager.update({ searchInput: null });
-  });
+  scorecardState.subscribe(({ type, hasBeenVisible }) => {
+    if (type === "hidden" && hasBeenVisible) {
+      filterManager.update({ searchInput: null });
+    }
+  }, "reset search FilterState when scorecard closed");
 
   scorecardState.initialize();
 }
