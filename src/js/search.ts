@@ -15,7 +15,7 @@ function updateSearchPopupUI(isVisible: boolean) {
 type SearchPopupObservable = Observable<boolean>;
 
 function initSearchPopup(): SearchPopupObservable {
-  const isVisible = new Observable<boolean>(false);
+  const isVisible = new Observable<boolean>({ initialValue: false });
   isVisible.subscribe(updateSearchPopupUI);
 
   const popup = document.querySelector("#search-popup");
@@ -70,7 +70,7 @@ export default function initSearch(filterManager: PlaceFilterManager): void {
 
   // Ensure that programmatic changes that set FilterState.searchInput to null
   // update the UI element too.
-  filterManager.subscribe((state) => {
+  filterManager.subscribe("reset search UI when search is cleared", (state) => {
     if (state.searchInput === null) choices.setChoiceByValue("");
   });
 

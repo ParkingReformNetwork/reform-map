@@ -77,7 +77,11 @@ export class PlaceFilterManager {
     initialState: FilterState,
   ) {
     this.entries = entries;
-    this.state = new Observable(initialState);
+    this.state = new Observable({
+      initialValue: initialState,
+      id: "FilterState",
+      enableBenchmarks: true,
+    });
   }
 
   get totalNumPlaces(): number {
@@ -113,8 +117,8 @@ export class PlaceFilterManager {
     this.state.setValue({ ...priorState, ...changes });
   }
 
-  subscribe(observer: (state: FilterState) => void): void {
-    this.state.subscribe(observer);
+  subscribe(id: string, observer: (state: FilterState) => void): void {
+    this.state.subscribe(observer, id);
   }
 
   initialize(): void {

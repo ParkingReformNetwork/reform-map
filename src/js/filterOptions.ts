@@ -251,9 +251,11 @@ function generateAccordion(
   };
 
   const accordionState = new Observable<AccordionState>({
-    hidden: false,
-    expanded: false,
-    checkboxStats: getCheckboxStats(fieldSet),
+    initialValue: {
+      hidden: false,
+      expanded: false,
+      checkboxStats: getCheckboxStats(fieldSet),
+    },
   });
   accordionState.subscribe((state) =>
     updateAccordionUI(elements, params.legend, state),
@@ -337,12 +339,16 @@ function initFilterGroup(
     });
   });
 
-  filterManager.subscribe((state) => {
-    const priorAccordionState = accordionState.getValue();
-    const hidden =
-      params.hideForPolicyTypeFilter?.includes(state.policyTypeFilter) ?? false;
-    accordionState.setValue({ ...priorAccordionState, hidden });
-  });
+  filterManager.subscribe(
+    `possibly hide ${params.htmlName} in filter`,
+    (state) => {
+      const priorAccordionState = accordionState.getValue();
+      const hidden =
+        params.hideForPolicyTypeFilter?.includes(state.policyTypeFilter) ??
+        false;
+      accordionState.setValue({ ...priorAccordionState, hidden });
+    },
+  );
 }
 
 export function initFilterOptions(

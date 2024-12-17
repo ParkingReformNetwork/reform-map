@@ -1,3 +1,8 @@
+export interface Subscriber<T> {
+  callback: (value: T) => void;
+  id: string | undefined;
+}
+
 /**
  * A class to manage state of type T.
  *
@@ -6,14 +11,26 @@
  * know which other parts of the app need to be updated.
  */
 export default class Observable<T> {
+  private id: string | undefined;
+
   private value: T;
 
-  private subscribers: ((value: T) => void)[] = [];
+  private subscribers: Subscriber<T>[] = [];
+
+  private benchmarkEnabled: boolean = false;
 
   private isInitialized: boolean = false;
 
-  constructor(initialValue: T) {
+  constructor(options: {
+    initialValue: T;
+    id?: string;
+    enableBenchmarks?: boolean;
+  }) {
+    const { initialValue, id, enableBenchmarks } = options;
+    this.id = id;
     this.value = initialValue;
+    this.benchmarkEnabled =
+      !!enableBenchmarks && process.env.NODE_ENV !== "production";
   }
 
   getValue(): T {
@@ -25,11 +42,11 @@ export default class Observable<T> {
     this.notify();
   }
 
-  subscribe(callback: (value: T) => void): void {
+  subscribe(callback: (value: T) => void, id?: string): void {
     if (this.isInitialized) {
       throw new Error("Cannot add subscribers after initialization");
     }
-    this.subscribers.push(callback);
+    this.subscribers.push({ callback, id });
   }
 
   initialize(): void {
@@ -40,7 +57,22 @@ export default class Observable<T> {
     this.notify();
   }
 
+  private subscriberLabel(subscriberId?: string): string {
+    const observableLabel = this.id ?? "anonymous";
+    const callbackLabel = subscriberId ?? "anonymous";
+    return `Observable(${observableLabel}) - Subscriber(${callbackLabel})`;
+  }
+
   private notify(): void {
-    this.subscribers.forEach((callback) => callback(this.value));
+    if (this.benchmarkEnabled) {
+      this.subscribers.forEach(({ callback, id }) => {
+        const benchmarkId = this.subscriberLabel(id);
+        console.time(benchmarkId);
+        callback(this.value);
+        console.timeEnd(benchmarkId);
+      });
+    } else {
+      this.subscribers.forEach(({ callback }) => callback(this.value));
+    }
   }
 }

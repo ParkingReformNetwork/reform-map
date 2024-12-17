@@ -101,7 +101,7 @@ export function initPopulationSlider(
   });
 
   // Also update UI when values change, but only if the filter popup is open.
-  filterManager.subscribe((state) => {
+  filterManager.subscribe("update population sliders", (state) => {
     if (!filterPopupIsVisible.getValue()) return;
     updateSlidersUI(state);
   });

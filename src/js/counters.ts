@@ -138,7 +138,7 @@ export default function initCounters(manager: PlaceFilterManager): void {
   setUpResetButton(mapCounter, manager);
   setUpResetButton(tableCounter, manager);
 
-  manager.subscribe((state) => {
+  manager.subscribe("update counters", (state) => {
     mapCounter.innerHTML = determineHtml(
       "map",
       state,

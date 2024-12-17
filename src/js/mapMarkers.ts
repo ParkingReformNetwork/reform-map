@@ -57,7 +57,7 @@ export default function initPlaceMarkers(
   }, {});
 
   // When the filter state changes, update what gets rendered.
-  filterManager.subscribe(() => {
+  filterManager.subscribe("update map markers", () => {
     const newVisiblePlaceIds = filterManager.placeIds;
 
     // Remove markers no longer visible.
