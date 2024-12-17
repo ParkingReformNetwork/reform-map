@@ -38,35 +38,44 @@ export default function initPlaceMarkers(
   map: Map,
 ): FeatureGroup {
   const markerGroup = new FeatureGroup();
+  let currentlyVisiblePlaceIds = new Set<string>();
 
   const placesToMarkers: Record<string, CircleMarker> = Object.entries(
     filterManager.entries,
   ).reduce((acc: Record<string, CircleMarker>, [placeId, entry]) => {
+    const [long, lat] = entry.place.coord;
     const isPrimary = entry.place.repeal;
     const style = isPrimary ? PRIMARY_MARKER_STYLE : SECONDARY_MARKER_STYLE;
-
-    const [long, lat] = entry.place.coord;
     const marker = new CircleMarker([lat, long], {
       ...style,
       radius: radiusGivenZoom({ zoom: map.getZoom(), isPrimary }),
     });
-    acc[placeId] = marker;
-
     marker.bindTooltip(placeId);
-    marker.addTo(markerGroup);
+
+    acc[placeId] = marker;
     return acc;
   }, {});
 
   // When the filter state changes, update what gets rendered.
   filterManager.subscribe(() => {
-    Object.entries(placesToMarkers).forEach(([placeId, marker]) => {
-      if (filterManager.placeIds.has(placeId)) {
-        marker.addTo(markerGroup);
-      } else {
+    const newVisiblePlaceIds = filterManager.placeIds;
+
+    // Remove markers no longer visible.
+    for (const placeId of currentlyVisiblePlaceIds) {
+      if (!newVisiblePlaceIds.has(placeId)) {
         // @ts-ignore the API allows passing a LayerGroup, but the type hint doesn't show this.
-        marker.removeFrom(markerGroup);
+        placesToMarkers[placeId].removeFrom(markerGroup);
       }
-    });
+    }
+
+    // Add new markers not yet visible.
+    for (const placeId of newVisiblePlaceIds) {
+      if (!currentlyVisiblePlaceIds.has(placeId)) {
+        placesToMarkers[placeId].addTo(markerGroup);
+      }
+    }
+
+    currentlyVisiblePlaceIds = newVisiblePlaceIds;
   });
 
   // Adjust marker size on zoom changes.
