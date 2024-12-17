@@ -127,7 +127,7 @@ for (const edgeCase of TESTS) {
     await deselectToggle(page);
 
     if (edgeCase.allMinimumsRemoved !== undefined) {
-      await page.locator("#filter-all-minimums-toggle-container").click();
+      await page.locator("#filter-all-minimums-toggle-label").click();
     }
 
     await selectIfSet(page, "scope", edgeCase.scope);

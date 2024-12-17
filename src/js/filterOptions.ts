@@ -366,23 +366,33 @@ function initFilterGroup(
 }
 
 function initAllMinimumsToggle(filterManager: PlaceFilterManager): void {
+  const outerContainer = document.createElement("div");
+
   const [label, input] = generateCheckbox(
     "filter-all-minimums-toggle",
     "filter-all-minimums-toggle",
     filterManager.getState().allMinimumsRemovedToggle,
     "Only places with all parking minimums removed",
   );
-  label.id = "filter-all-minimums-toggle-container";
+  label.id = "filter-all-minimums-toggle-label";
+  outerContainer.append(label);
 
   const filterPopup = document.getElementById("filter-popup");
   if (!filterPopup) return;
-  filterPopup.prepend(label);
+  filterPopup.prepend(outerContainer);
 
   input.addEventListener("change", () => {
     filterManager.update({
       allMinimumsRemovedToggle: input.checked,
     });
   });
+
+  filterManager.subscribe(
+    `possibly hide all minimums toggle`,
+    ({ policyTypeFilter }) => {
+      outerContainer.hidden = policyTypeFilter === "reduce parking minimums";
+    },
+  );
 }
 
 export function initFilterOptions(
