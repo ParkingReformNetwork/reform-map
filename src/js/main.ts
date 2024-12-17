@@ -10,7 +10,7 @@ import { FilterOptions, initFilterOptions } from "./filterOptions";
 import initFilterPopup from "./filterPopup";
 import { PlaceFilterManager, PolicyTypeFilter } from "./FilterState";
 import initCounters from "./counters";
-import initViewToggle from "./viewToggle";
+import { initViewToggle, addViewToggleSubscribers } from "./viewToggle";
 import initTable from "./table";
 import subscribeSnapToPlace from "./mapPosition";
 import readData from "./data";
@@ -39,6 +39,8 @@ export default async function initApp(): Promise<void> {
 
   const policyTypeFilter = policyTypeFilterFromUrl();
 
+  const viewToggle = initViewToggle();
+
   const map = createMap();
   const data = await readData({
     includeMultipleReforms: policyTypeFilter !== "legacy reform",
@@ -59,15 +61,15 @@ export default async function initApp(): Promise<void> {
     populationSliderIndexes: [0, POPULATION_MAX_INDEX],
   });
 
-  const markerGroup = initPlaceMarkers(filterManager, map);
+  const markerGroup = initPlaceMarkers(filterManager, map, viewToggle);
   subscribeSnapToPlace(filterManager, map);
   initCounters(filterManager);
   initSearch(filterManager);
   initFilterOptions(filterManager, filterOptions);
   initPopulationSlider(filterManager, filterPopupIsVisible);
 
-  const table = initTable(filterManager);
-  const viewToggle = initViewToggle(table);
+  const table = initTable(filterManager, viewToggle);
+  addViewToggleSubscribers(viewToggle, table);
 
   initScorecard(filterManager, viewToggle, markerGroup, data);
 

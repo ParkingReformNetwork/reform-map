@@ -2,6 +2,8 @@ import { CircleMarker, FeatureGroup, Map } from "leaflet";
 
 import { NO_MANDATES_MARKERS_PANE } from "./map";
 import { PlaceFilterManager } from "./FilterState";
+import { ViewStateObservable } from "./viewToggle";
+import { PlaceId } from "./types";
 
 const PRIMARY_MARKER_STYLE = {
   weight: 1,
@@ -33,13 +35,33 @@ function radiusGivenZoom(options: {
   return isPrimary ? base + 2 : base;
 }
 
+function updatePlaceVisibility(
+  currentlyVisiblePlaceIds: Set<string>,
+  newVisiblePlaceIds: Set<PlaceId>,
+  placesToMarkers: Record<string, CircleMarker>,
+  markerGroup: FeatureGroup,
+): void {
+  // Remove markers no longer visible.
+  for (const placeId of currentlyVisiblePlaceIds) {
+    if (!newVisiblePlaceIds.has(placeId)) {
+      // @ts-ignore the API allows passing a LayerGroup, but the type hint doesn't show this.
+      placesToMarkers[placeId].removeFrom(markerGroup);
+    }
+  }
+
+  // Add new markers not yet visible.
+  for (const placeId of newVisiblePlaceIds) {
+    if (!currentlyVisiblePlaceIds.has(placeId)) {
+      placesToMarkers[placeId].addTo(markerGroup);
+    }
+  }
+}
+
 export default function initPlaceMarkers(
   filterManager: PlaceFilterManager,
   map: Map,
+  viewToggle: ViewStateObservable,
 ): FeatureGroup {
-  const markerGroup = new FeatureGroup();
-  let currentlyVisiblePlaceIds = new Set<string>();
-
   const placesToMarkers: Record<string, CircleMarker> = Object.entries(
     filterManager.entries,
   ).reduce((acc: Record<string, CircleMarker>, [placeId, entry]) => {
@@ -56,27 +78,40 @@ export default function initPlaceMarkers(
     return acc;
   }, {});
 
-  // When the filter state changes, update what gets rendered.
+  const markerGroup = new FeatureGroup();
+  let currentlyVisiblePlaceIds = new Set<string>();
+
+  // When on table view, we should only lazily update the map the next time
+  // we switch to map view.
+  let dataRefreshQueued = false;
+
   filterManager.subscribe("update map markers", () => {
-    const newVisiblePlaceIds = filterManager.placeIds;
-
-    // Remove markers no longer visible.
-    for (const placeId of currentlyVisiblePlaceIds) {
-      if (!newVisiblePlaceIds.has(placeId)) {
-        // @ts-ignore the API allows passing a LayerGroup, but the type hint doesn't show this.
-        placesToMarkers[placeId].removeFrom(markerGroup);
-      }
+    if (viewToggle.getValue() === "table") {
+      dataRefreshQueued = true;
+      return;
     }
 
-    // Add new markers not yet visible.
-    for (const placeId of newVisiblePlaceIds) {
-      if (!currentlyVisiblePlaceIds.has(placeId)) {
-        placesToMarkers[placeId].addTo(markerGroup);
-      }
-    }
-
-    currentlyVisiblePlaceIds = newVisiblePlaceIds;
+    updatePlaceVisibility(
+      currentlyVisiblePlaceIds,
+      filterManager.placeIds,
+      placesToMarkers,
+      markerGroup,
+    );
+    currentlyVisiblePlaceIds = filterManager.placeIds;
   });
+
+  viewToggle.subscribe((view) => {
+    if (view === "map" && dataRefreshQueued) {
+      updatePlaceVisibility(
+        currentlyVisiblePlaceIds,
+        filterManager.placeIds,
+        placesToMarkers,
+        markerGroup,
+      );
+      currentlyVisiblePlaceIds = filterManager.placeIds;
+      dataRefreshQueued = false;
+    }
+  }, "apply queued map data refresh");
 
   // Adjust marker size on zoom changes.
   map.addEventListener("zoomend", () => {
