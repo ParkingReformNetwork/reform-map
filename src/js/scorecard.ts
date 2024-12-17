@@ -35,10 +35,9 @@ function generateScorecard(
 }
 
 type ScorecardState =
-  | { type: "hidden"; hasBeenVisible: boolean }
+  | { type: "hidden" }
   | {
       type: "visible";
-      hasBeenVisible: boolean;
       entry: ProcessedCoreEntry;
       placeId: PlaceId;
     };
@@ -73,7 +72,6 @@ export default function initScorecard(
 ): void {
   const scorecardState = new Observable<ScorecardState>("scorecard", {
     type: "hidden",
-    hasBeenVisible: false,
   });
   scorecardState.subscribe(updateScorecardUI);
 
@@ -85,7 +83,6 @@ export default function initScorecard(
     const placeId = e.sourceTarget.getTooltip().getContent();
     scorecardState.setValue({
       type: "visible",
-      hasBeenVisible: true,
       placeId,
       entry: data[placeId],
     });
@@ -97,7 +94,6 @@ export default function initScorecard(
     if (search && viewToggle.getValue() === "map") {
       scorecardState.setValue({
         type: "visible",
-        hasBeenVisible: true,
         placeId: search,
         entry: data[search],
       });
@@ -115,7 +111,7 @@ export default function initScorecard(
       !header?.contains(event.target) &&
       !scorecardContainer?.contains(event.target)
     ) {
-      scorecardState.setValue({ type: "hidden", hasBeenVisible: true });
+      scorecardState.setValue({ type: "hidden" });
     }
   });
 
@@ -131,12 +127,15 @@ export default function initScorecard(
       ".scorecard-close-icon-container",
     );
     if (!closeIcon) return;
-    scorecardState.setValue({ type: "hidden", hasBeenVisible: true });
+    scorecardState.setValue({ type: "hidden" });
   });
 
   // Closing the scorecard resets search.
-  scorecardState.subscribe(({ type, hasBeenVisible }) => {
-    if (type === "hidden" && hasBeenVisible) {
+  scorecardState.subscribe(({ type }) => {
+    // Don't run this code when initializing the scorecardState observable.
+    if (!scorecardState.isInitialized) return;
+
+    if (type === "hidden") {
       filterManager.update({ searchInput: null });
     }
   }, "reset search FilterState when scorecard closed");
