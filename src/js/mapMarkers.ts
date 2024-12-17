@@ -43,16 +43,15 @@ export default function initPlaceMarkers(
   const placesToMarkers: Record<string, CircleMarker> = Object.entries(
     filterManager.entries,
   ).reduce((acc: Record<string, CircleMarker>, [placeId, entry]) => {
+    const [long, lat] = entry.place.coord;
     const isPrimary = entry.place.repeal;
     const style = isPrimary ? PRIMARY_MARKER_STYLE : SECONDARY_MARKER_STYLE;
-
-    const [long, lat] = entry.place.coord;
     const marker = new CircleMarker([lat, long], {
       ...style,
       radius: radiusGivenZoom({ zoom: map.getZoom(), isPrimary }),
     });
-
     marker.bindTooltip(placeId);
+
     acc[placeId] = marker;
     return acc;
   }, {});
