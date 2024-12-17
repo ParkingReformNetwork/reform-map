@@ -250,13 +250,14 @@ function generateAccordion(
     uncheckAllButton,
   };
 
-  const accordionState = new Observable<AccordionState>({
-    initialValue: {
+  const accordionState = new Observable<AccordionState>(
+    `filter accordion ${params.htmlName}`,
+    {
       hidden: false,
       expanded: false,
       checkboxStats: getCheckboxStats(fieldSet),
     },
-  });
+  );
   accordionState.subscribe((state) =>
     updateAccordionUI(elements, params.legend, state),
   );

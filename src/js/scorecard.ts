@@ -66,8 +66,8 @@ export default function initScorecard(
   markerGroup: FeatureGroup,
   data: Record<PlaceId, ProcessedCoreEntry>,
 ): void {
-  const scorecardState = new Observable<ScorecardState>({
-    initialValue: { type: "hidden" },
+  const scorecardState = new Observable<ScorecardState>("scorecard", {
+    type: "hidden",
   });
   scorecardState.subscribe(updateScorecardUI);
 

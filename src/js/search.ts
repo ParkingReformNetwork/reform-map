@@ -15,7 +15,7 @@ function updateSearchPopupUI(isVisible: boolean) {
 type SearchPopupObservable = Observable<boolean>;
 
 function initSearchPopup(): SearchPopupObservable {
-  const isVisible = new Observable<boolean>({ initialValue: false });
+  const isVisible = new Observable<boolean>("search popup", false);
   isVisible.subscribe(updateSearchPopupUI);
 
   const popup = document.querySelector("#search-popup");

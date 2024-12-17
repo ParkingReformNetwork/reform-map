@@ -9,9 +9,7 @@ function updatePopupUI(visible: boolean): void {
 }
 
 export default function initAbout(): void {
-  const isVisible = new Observable<boolean>({
-    initialValue: false,
-  });
+  const isVisible = new Observable<boolean>("about popup", false);
   isVisible.subscribe(updatePopupUI);
 
   const popup = document.querySelector(".about-popup");

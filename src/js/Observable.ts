@@ -1,3 +1,5 @@
+const SLOW_CALLBACK_THRESHOLD_MS = 2;
+
 export interface Subscriber<T> {
   callback: (value: T) => void;
   id: string | undefined;
@@ -17,20 +19,11 @@ export default class Observable<T> {
 
   private subscribers: Subscriber<T>[] = [];
 
-  private benchmarkEnabled: boolean = false;
-
   private isInitialized: boolean = false;
 
-  constructor(options: {
-    initialValue: T;
-    id?: string;
-    enableBenchmarks?: boolean;
-  }) {
-    const { initialValue, id, enableBenchmarks } = options;
+  constructor(id: string, initialValue: T) {
     this.id = id;
     this.value = initialValue;
-    this.benchmarkEnabled =
-      !!enableBenchmarks && process.env.NODE_ENV !== "production";
   }
 
   getValue(): T {
@@ -57,22 +50,22 @@ export default class Observable<T> {
     this.notify();
   }
 
-  private subscriberLabel(subscriberId?: string): string {
-    const observableLabel = this.id ?? "anonymous";
-    const callbackLabel = subscriberId ?? "anonymous";
-    return `Observable(${observableLabel}) - Subscriber(${callbackLabel})`;
-  }
-
   private notify(): void {
-    if (this.benchmarkEnabled) {
-      this.subscribers.forEach(({ callback, id }) => {
-        const benchmarkId = this.subscriberLabel(id);
-        console.time(benchmarkId);
+    this.subscribers.forEach(({ callback, id }) => {
+      if (process.env.NODE_ENV === "production") {
         callback(this.value);
-        console.timeEnd(benchmarkId);
-      });
-    } else {
-      this.subscribers.forEach(({ callback }) => callback(this.value));
-    }
+        return;
+      }
+
+      const start = performance.now();
+      callback(this.value);
+      const duration = performance.now() - start;
+
+      if (duration < SLOW_CALLBACK_THRESHOLD_MS) return;
+      const callbackLabel = id ?? "anonymous";
+      console.warn(
+        `Slow callback detected: Observable(${this.id}) - Subscriber(${callbackLabel}) (${duration.toFixed(0)}ms)`,
+      );
+    });
   }
 }

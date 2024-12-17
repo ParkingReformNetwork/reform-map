@@ -58,7 +58,7 @@ function updateOnIconClick(observable: ViewStateObservable): void {
 }
 
 export default function initViewToggle(table: Tabulator): ViewStateObservable {
-  const viewToggle = new Observable<ViewState>({ initialValue: "map" });
+  const viewToggle = new Observable<ViewState>("view toggle", "map");
   viewToggle.subscribe((state) => updateUI(table, state));
   updateOnIconClick(viewToggle);
   return viewToggle;

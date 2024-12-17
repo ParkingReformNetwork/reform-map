@@ -11,7 +11,7 @@ function updateFilterPopupUI(isVisible: boolean): void {
 }
 
 export default function initFilterPopup(): FilterPopupVisibleObservable {
-  const isVisible = new Observable<boolean>({ initialValue: false });
+  const isVisible = new Observable<boolean>("filter popup", false);
   isVisible.subscribe(updateFilterPopupUI);
 
   const popup = document.querySelector(".filter-popup");

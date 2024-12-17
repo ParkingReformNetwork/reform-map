@@ -77,11 +77,7 @@ export class PlaceFilterManager {
     initialState: FilterState,
   ) {
     this.entries = entries;
-    this.state = new Observable({
-      initialValue: initialState,
-      id: "FilterState",
-      enableBenchmarks: true,
-    });
+    this.state = new Observable("FilterState", initialState);
   }
 
   get totalNumPlaces(): number {
