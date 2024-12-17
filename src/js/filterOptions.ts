@@ -352,10 +352,51 @@ function initFilterGroup(
   );
 }
 
+function initAllMinimumsToggle(filterManager: PlaceFilterManager): void {
+  const inputId = `filter-all-minimums-toggle`;
+
+  const label = document.createElement("label");
+  label.className = "filter-checkbox";
+  label.htmlFor = inputId;
+
+  const input = document.createElement("input");
+  input.type = "checkbox";
+  input.name = inputId;
+  input.id = inputId;
+  input.checked = filterManager.getState().allMinimumsRemovedToggle;
+
+  const squareIcon = document.createElement("i");
+  squareIcon.className = "fa-regular fa-square";
+  squareIcon.ariaHidden = "true";
+  const checkedIcon = document.createElement("i");
+  checkedIcon.className = "fa-solid fa-square-check";
+  checkedIcon.ariaHidden = "true";
+
+  const description = document.createElement("span");
+  description.textContent = "Only places with all minimums removed";
+
+  label.appendChild(input);
+  label.appendChild(squareIcon);
+  label.appendChild(checkedIcon);
+  label.appendChild(description);
+
+  const filterPopup = document.getElementById("filter-popup");
+  if (!filterPopup) return;
+  filterPopup.prepend(label);
+
+  input.addEventListener("change", () => {
+    filterManager.update({
+      allMinimumsRemovedToggle: input.checked,
+    });
+  });
+}
+
 export function initFilterOptions(
   filterManager: PlaceFilterManager,
   filterOptions: FilterOptions,
 ): void {
+  initAllMinimumsToggle(filterManager);
+
   initFilterGroup(filterManager, filterOptions, {
     htmlName: "policy-change",
     filterStateKey: "includedPolicyChanges",
