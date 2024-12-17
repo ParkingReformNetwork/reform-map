@@ -11,7 +11,7 @@ export function determineHtml(
   matchedCountries: Set<string>,
 ): string {
   if (!numPlaces) {
-    return "No places selected — use the filter and search icons";
+    return "No places selected — use the filter or search icons";
   }
   if (state.searchInput) {
     return `Showing ${state.searchInput} from search — <a class="counter-search-reset" role="button" aria-label="reset search">reset</a>`;

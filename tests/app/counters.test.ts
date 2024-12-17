@@ -24,7 +24,7 @@ test.describe("determineHtml", () => {
   test("no places", () => {
     const resultMap = determineHtml("map", DEFAULT_STATE, 0, 0, new Set());
     const resultTable = determineHtml("table", DEFAULT_STATE, 0, 0, new Set());
-    const expected = "No places selected — use the filter and search icons";
+    const expected = "No places selected — use the filter or search icons";
     expect(resultMap).toEqual(expected);
     expect(resultTable).toEqual(expected);
   });
