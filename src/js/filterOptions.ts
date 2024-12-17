@@ -134,6 +134,39 @@ type FilterGroupParams = {
   hideForPolicyTypeFilter?: PolicyTypeFilter[];
 };
 
+function generateCheckbox(
+  inputId: string,
+  inputName: string,
+  checked: boolean,
+  description: string,
+): [HTMLLabelElement, HTMLInputElement] {
+  const label = document.createElement("label");
+  label.className = "filter-checkbox";
+  label.htmlFor = inputId;
+
+  const input = document.createElement("input");
+  input.type = "checkbox";
+  input.name = inputName;
+  input.id = inputId;
+  input.checked = checked;
+
+  const squareIcon = document.createElement("i");
+  squareIcon.className = "fa-regular fa-square";
+  squareIcon.ariaHidden = "true";
+  const checkedIcon = document.createElement("i");
+  checkedIcon.className = "fa-solid fa-square-check";
+  checkedIcon.ariaHidden = "true";
+
+  const span = document.createElement("span");
+  span.textContent = description;
+
+  label.appendChild(input);
+  label.appendChild(squareIcon);
+  label.appendChild(checkedIcon);
+  label.appendChild(span);
+  return [label, input];
+}
+
 function generateAccordion(
   params: FilterGroupParams,
   filterOptions: FilterOptions,
@@ -206,34 +239,14 @@ function generateAccordion(
 
   filterOptions.all(params.filterStateKey).forEach((val, i) => {
     const inputId = `filter-${params.htmlName}-option-${i}`;
-
-    const label = document.createElement("label");
-    label.className = "filter-checkbox";
-    label.htmlFor = inputId;
-
-    const input = document.createElement("input");
-    input.type = "checkbox";
-    input.name = params.htmlName;
-    input.id = inputId;
-    input.checked = !DESELECTED_BY_DEFAULT[params.filterStateKey].has(val);
-
-    const squareIcon = document.createElement("i");
-    squareIcon.className = "fa-regular fa-square";
-    squareIcon.ariaHidden = "true";
-    const checkedIcon = document.createElement("i");
-    checkedIcon.className = "fa-solid fa-square-check";
-    checkedIcon.ariaHidden = "true";
-
-    const description = document.createElement("span");
-    description.textContent = params.preserveCapitalization
-      ? val
-      : capitalize(val);
-
-    label.appendChild(input);
-    label.appendChild(squareIcon);
-    label.appendChild(checkedIcon);
-    label.appendChild(description);
-
+    const checked = !DESELECTED_BY_DEFAULT[params.filterStateKey].has(val);
+    const description = params.preserveCapitalization ? val : capitalize(val);
+    const [label] = generateCheckbox(
+      inputId,
+      params.htmlName,
+      checked,
+      description,
+    );
     filterOptionsContainer.appendChild(label);
   });
 
@@ -352,10 +365,32 @@ function initFilterGroup(
   );
 }
 
+function initAllMinimumsToggle(filterManager: PlaceFilterManager): void {
+  const [label, input] = generateCheckbox(
+    "filter-all-minimums-toggle",
+    "filter-all-minimums-toggle",
+    filterManager.getState().allMinimumsRemovedToggle,
+    "Only places with all minimums removed",
+  );
+  label.id = "filter-all-minimums-toggle-container";
+
+  const filterPopup = document.getElementById("filter-popup");
+  if (!filterPopup) return;
+  filterPopup.prepend(label);
+
+  input.addEventListener("change", () => {
+    filterManager.update({
+      allMinimumsRemovedToggle: input.checked,
+    });
+  });
+}
+
 export function initFilterOptions(
   filterManager: PlaceFilterManager,
   filterOptions: FilterOptions,
 ): void {
+  initAllMinimumsToggle(filterManager);
+
   initFilterGroup(filterManager, filterOptions, {
     htmlName: "policy-change",
     filterStateKey: "includedPolicyChanges",
