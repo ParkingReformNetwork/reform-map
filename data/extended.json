@@ -3835,7 +3835,101 @@
           ]
         }
       ]
-    }
+    },
+    "add_max": [
+      {
+        "reporter": "Derek Severson",
+        "requirements": ["by right"],
+        "citations": [
+          {
+            "description": "Municipal Code",
+            "type": "city code",
+            "url": "https://ashland.municipal.codes/LandUse/18.4.3.060",
+            "notes": "18.4.3.030 General Automobile Parking Requirements and Exceptions",
+            "attachments": [
+              {
+                "fileName": "Ashland_OR_1_1.png",
+                "isDoc": false,
+                "directusId": "e969032c-345c-4386-92df-3a465528ef22"
+              }
+            ]
+          },
+          {
+            "description": "Oregon Department of Land Conservation and Development",
+            "type": "other",
+            "url": "https://content.govdelivery.com/accounts/ORDLCD/bulletins/380aafa",
+            "notes": null,
+            "attachments": [
+              {
+                "fileName": "Ashland_OR_2_1.png",
+                "isDoc": false,
+                "directusId": "d1856e83-2231-4506-b01d-abd5b6c83848"
+              }
+            ]
+          },
+          {
+            "description": "Ashland Land Development Code",
+            "type": "city code",
+            "url": "https://ashland.municipal.codes/LandUse/18.4.3.030",
+            "notes": "18.4.3.030 General Automobile Parking Requirements and Exceptions",
+            "attachments": [
+              {
+                "fileName": "Ashland_OR_3_1.png",
+                "isDoc": false,
+                "directusId": "90cdc869-6198-40d3-a078-1a12bfa0f6df"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "rm_min": [
+      {
+        "reporter": "Derek Severson",
+        "requirements": ["by right"],
+        "citations": [
+          {
+            "description": "Municipal Code",
+            "type": "city code",
+            "url": "https://ashland.municipal.codes/LandUse/18.4.3.060",
+            "notes": "18.4.3.030 General Automobile Parking Requirements and Exceptions",
+            "attachments": [
+              {
+                "fileName": "Ashland_OR_1_1.png",
+                "isDoc": false,
+                "directusId": "e969032c-345c-4386-92df-3a465528ef22"
+              }
+            ]
+          },
+          {
+            "description": "Oregon Department of Land Conservation and Development",
+            "type": "other",
+            "url": "https://content.govdelivery.com/accounts/ORDLCD/bulletins/380aafa",
+            "notes": null,
+            "attachments": [
+              {
+                "fileName": "Ashland_OR_2_1.png",
+                "isDoc": false,
+                "directusId": "d1856e83-2231-4506-b01d-abd5b6c83848"
+              }
+            ]
+          },
+          {
+            "description": "Ashland Land Development Code",
+            "type": "city code",
+            "url": "https://ashland.municipal.codes/LandUse/18.4.3.030",
+            "notes": "18.4.3.030 General Automobile Parking Requirements and Exceptions",
+            "attachments": [
+              {
+                "fileName": "Ashland_OR_3_1.png",
+                "isDoc": false,
+                "directusId": "90cdc869-6198-40d3-a078-1a12bfa0f6df"
+              }
+            ]
+          }
+        ]
+      }
+    ]
   },
   "Ashland, WI": {
     "legacy": {
@@ -7181,7 +7275,69 @@
           ]
         }
       ]
-    }
+    },
+    "add_max": [
+      {
+        "reporter": "Samuel Deetz",
+        "requirements": ["by right"],
+        "citations": [
+          {
+            "description": "Bellevue Land Use Code",
+            "type": "city code",
+            "url": "https://bellevue.municipal.codes/LUC/20.20.590",
+            "notes": "20.20.590.F.1.",
+            "attachments": [
+              {
+                "fileName": "Bellevue_WA_1_1.png",
+                "isDoc": false,
+                "directusId": "cf91c6c3-2ca1-4f13-b21c-1d7058311ed4"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "reduce_min": [
+      {
+        "reporter": "Samuel Deetz",
+        "requirements": ["by right", "frequent transit"],
+        "citations": [
+          {
+            "description": "Bellevue Land Use Code",
+            "type": "city code",
+            "url": "https://bellevue.municipal.codes/LUC",
+            "notes": "Chapter 20.20 GENERAL DEVELOPMENT REQUIREMENTS\nWord Index\n   20.20.590 Parking, circulation and walkway requirements.\n      F. Minimum/Maximum Parking Requirement by Use.\n      L. Minimum Parking for Residential Uses with Frequent Transit Service.\nChapter 20.25 SPECIAL AND OVERLAY DISTRICTS\nPart 20.25A Downtown\n   20.25A.080 Parking standards.\n      B. Minimum/Maximum Parking Requirement by Use – Specified Uses.\nPart 20.25P Eastgate Transit Oriented Development Land Use District\n   20.25P.080 Parking, circulation, and internal walkway requirements.\n      B. Minimum/Maximum Parking Requirements by Use – Specified Uses.\nPart 20.25Q East Main Transit Oriented Development Land Use District\n   20.25Q.090 Parking and circulation.\n      B. Minimum/Maximum Parking Requirements by Use – Specified Uses.",
+            "attachments": [
+              {
+                "fileName": "Bellevue_WA_1_1.png",
+                "isDoc": false,
+                "directusId": "c3c514dd-a49f-4263-8fb8-5c07a063a73b"
+              },
+              {
+                "fileName": "Bellevue_WA_1_2.png",
+                "isDoc": false,
+                "directusId": "179ca519-2d15-4597-9d76-81e1466771e9"
+              },
+              {
+                "fileName": "Bellevue_WA_1_3.png",
+                "isDoc": false,
+                "directusId": "ce49c2a1-5839-451e-8e25-2022848d0b23"
+              },
+              {
+                "fileName": "Bellevue_WA_1_4.png",
+                "isDoc": false,
+                "directusId": "af174c93-1865-480e-965f-059b5fc96578"
+              },
+              {
+                "fileName": "Bellevue_WA_1_5.png",
+                "isDoc": false,
+                "directusId": "ff1a9d9d-a6c9-4263-8d67-4c78171ad7a0"
+              }
+            ]
+          }
+        ]
+      }
+    ]
   },
   "Bellflower, IL": {
     "rm_min": [
@@ -7425,7 +7581,75 @@
           ]
         }
       ]
-    }
+    },
+    "add_max": [
+      {
+        "reporter": "Melanie Kebler",
+        "requirements": ["by right"],
+        "citations": [
+          {
+            "description": "City Press Release",
+            "type": "other",
+            "url": "https://www.bendoregon.gov/Home/Components/News/News/5592/29?cftype=News",
+            "notes": null,
+            "attachments": [
+              {
+                "fileName": "Bend_OR_1_1.png",
+                "isDoc": false,
+                "directusId": "353bfa78-8027-4ac3-b394-3d76eed4fef5"
+              }
+            ]
+          },
+          {
+            "description": "Bend Land Development Code",
+            "type": "city code",
+            "url": "https://bend.municipal.codes/BDC/3.3.300",
+            "notes": "3.3.300 Vehicle Parking Standards for On-Site Parking.",
+            "attachments": [
+              {
+                "fileName": "Bend_OR_2_1.png",
+                "isDoc": false,
+                "directusId": "fd966842-fcdc-41d9-9db0-4e3c01e9af64"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "rm_min": [
+      {
+        "reporter": "Melanie Kebler",
+        "requirements": ["by right"],
+        "citations": [
+          {
+            "description": "City Press Release",
+            "type": "other",
+            "url": "https://www.bendoregon.gov/Home/Components/News/News/5592/29?cftype=News",
+            "notes": null,
+            "attachments": [
+              {
+                "fileName": "Bend_OR_1_1.png",
+                "isDoc": false,
+                "directusId": "353bfa78-8027-4ac3-b394-3d76eed4fef5"
+              }
+            ]
+          },
+          {
+            "description": "Bend Land Development Code",
+            "type": "city code",
+            "url": "https://bend.municipal.codes/BDC/3.3.300",
+            "notes": "3.3.300 Vehicle Parking Standards for On-Site Parking.",
+            "attachments": [
+              {
+                "fileName": "Bend_OR_2_1.png",
+                "isDoc": false,
+                "directusId": "fd966842-fcdc-41d9-9db0-4e3c01e9af64"
+              }
+            ]
+          }
+        ]
+      }
+    ]
   },
   "Bennet, NE": {
     "rm_min": [
@@ -8550,7 +8774,7 @@
         {
           "description": "Big Lake Zoning Code",
           "type": "city code",
-          "url": "https://www.biglakemn.org/DocumentCenter/View/4561/Chapter-10-Zoning---revised-061423?bidId=",
+          "url": "https://codelibrary.amlegal.com/codes/biglakemn/latest/biglake_mn/0-0-0-5394",
           "notes": "SECTION 1004: Overlay Districts\n1004.06: Transit Oriented Development District \nSubd. 4. Parking Requirements\n1. Supply Requirements\nPages 167-168",
           "attachments": [
             {
@@ -8561,7 +8785,70 @@
           ]
         }
       ]
-    }
+    },
+    "add_max": [
+      {
+        "reporter": "Samuel Deetz",
+        "requirements": ["by right"],
+        "citations": [
+          {
+            "description": "Big Lake Zoning Code",
+            "type": "city code",
+            "url": "https://codelibrary.amlegal.com/codes/biglakemn/latest/biglake_mn/0-0-0-5394",
+            "notes": "SECTION 1004: Overlay Districts\n1004.06: Transit Oriented Development District \nSubd. 4. Parking Requirements\n1. Supply Requirements\nPages 167-168",
+            "attachments": [
+              {
+                "fileName": "BigLake_MN_1_1.png",
+                "isDoc": false,
+                "directusId": "89f82548-8970-4c9f-8189-c45390fa52cd"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "reduce_min": [
+      {
+        "reporter": "Samuel Deetz",
+        "requirements": ["by right"],
+        "citations": [
+          {
+            "description": "Big Lake Zoning Code",
+            "type": "city code",
+            "url": "https://codelibrary.amlegal.com/codes/biglakemn/latest/biglake_mn/0-0-0-5394",
+            "notes": "SECTION 1004: Overlay Districts\n1004.06: Transit Oriented Development District \nSubd. 4. Parking Requirements\n1. Supply Requirements\nPages 167-168",
+            "attachments": [
+              {
+                "fileName": "BigLake_MN_1_1.png",
+                "isDoc": false,
+                "directusId": "89f82548-8970-4c9f-8189-c45390fa52cd"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "rm_min": [
+      {
+        "reporter": "Samuel Deetz",
+        "requirements": ["by right"],
+        "citations": [
+          {
+            "description": "Big Lake Zoning Code",
+            "type": "city code",
+            "url": "https://codelibrary.amlegal.com/codes/biglakemn/latest/biglake_mn/0-0-0-5394",
+            "notes": "SECTION 1004: Overlay Districts\n1004.06: Transit Oriented Development District \nSubd. 4. Parking Requirements\n1. Supply Requirements\nPages 167-168",
+            "attachments": [
+              {
+                "fileName": "BigLake_MN_1_1.png",
+                "isDoc": false,
+                "directusId": "89f82548-8970-4c9f-8189-c45390fa52cd"
+              }
+            ]
+          }
+        ]
+      }
+    ]
   },
   "Big Rapids, MI": {
     "legacy": {
@@ -10701,7 +10988,178 @@
           ]
         }
       ]
-    }
+    },
+    "add_max": [
+      {
+        "reporter": "Mark Ostgarden",
+        "requirements": ["by right"],
+        "citations": [
+          {
+            "description": "Old City Code",
+            "type": "city code",
+            "url": "https://www.ci.brainerd.mn.us/DocumentCenter/View/214/Section-515-22-Off-Street-Parking-PDF?bidId=",
+            "notes": "515-22-2: Application of Off-Street Parking Regulations. 515-22-8: Number of Spaces Required.",
+            "attachments": [
+              {
+                "fileName": "Brainerd_MN_1_1.png",
+                "isDoc": false,
+                "directusId": "d26962b7-82e2-4a89-9801-8fa12f0d303c"
+              }
+            ]
+          },
+          {
+            "description": "Old City Code",
+            "type": "city code",
+            "url": "https://www.ci.brainerd.mn.us/DocumentCenter/View/214/Section-515-22-Off-Street-Parking-PDF?bidId=",
+            "notes": "Exceptions 515-22-9: Parking Deferment",
+            "attachments": [
+              {
+                "fileName": "Brainerd_MN_2_1.png",
+                "isDoc": false,
+                "directusId": "6ee5fd1c-6c11-435e-9986-54453ef67a8e"
+              }
+            ]
+          },
+          {
+            "description": "Brainerd Zoning Code (Effective Oct 16, 2023)",
+            "type": "city code",
+            "url": "https://www.ci.brainerd.mn.us/DocumentCenter/View/6610/515-4-12-Off-Street-Parking",
+            "notes": "515-4-12 Off-Street Parking\nJ. Maximum and Minimum Off-Street Parking Spaces Required. \nPages 4-6",
+            "attachments": [
+              {
+                "fileName": "Brainerd_MN_3_1.png",
+                "isDoc": false,
+                "directusId": "d3fd1ac7-b583-4a23-b5b6-f01df041ac3c"
+              },
+              {
+                "fileName": "Brainerd_MN_3_2.png",
+                "isDoc": false,
+                "directusId": "1fe49cda-2806-4679-bee2-fae5ad306859"
+              },
+              {
+                "fileName": "Brainerd_MN_3_3.png",
+                "isDoc": false,
+                "directusId": "c6ffdb32-b269-46e3-9e2e-bb7c24fc20b8"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "reduce_min": [
+      {
+        "reporter": "Mark Ostgarden",
+        "requirements": ["bike parking", "by right"],
+        "citations": [
+          {
+            "description": "Old City Code",
+            "type": "city code",
+            "url": "https://www.ci.brainerd.mn.us/DocumentCenter/View/214/Section-515-22-Off-Street-Parking-PDF?bidId=",
+            "notes": "515-22-2: Application of Off-Street Parking Regulations. 515-22-8: Number of Spaces Required.",
+            "attachments": [
+              {
+                "fileName": "Brainerd_MN_1_1.png",
+                "isDoc": false,
+                "directusId": "d26962b7-82e2-4a89-9801-8fa12f0d303c"
+              }
+            ]
+          },
+          {
+            "description": "Old City Code",
+            "type": "city code",
+            "url": "https://www.ci.brainerd.mn.us/DocumentCenter/View/214/Section-515-22-Off-Street-Parking-PDF?bidId=",
+            "notes": "Exceptions 515-22-9: Parking Deferment",
+            "attachments": [
+              {
+                "fileName": "Brainerd_MN_2_1.png",
+                "isDoc": false,
+                "directusId": "6ee5fd1c-6c11-435e-9986-54453ef67a8e"
+              }
+            ]
+          },
+          {
+            "description": "Brainerd Zoning Code (Effective Oct 16, 2023)",
+            "type": "city code",
+            "url": "https://www.ci.brainerd.mn.us/DocumentCenter/View/6610/515-4-12-Off-Street-Parking",
+            "notes": "515-4-12 Off-Street Parking\nJ. Maximum and Minimum Off-Street Parking Spaces Required. \nPages 4-6",
+            "attachments": [
+              {
+                "fileName": "Brainerd_MN_3_1.png",
+                "isDoc": false,
+                "directusId": "d3fd1ac7-b583-4a23-b5b6-f01df041ac3c"
+              },
+              {
+                "fileName": "Brainerd_MN_3_2.png",
+                "isDoc": false,
+                "directusId": "1fe49cda-2806-4679-bee2-fae5ad306859"
+              },
+              {
+                "fileName": "Brainerd_MN_3_3.png",
+                "isDoc": false,
+                "directusId": "c6ffdb32-b269-46e3-9e2e-bb7c24fc20b8"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "rm_min": [
+      {
+        "reporter": "Mark Ostgarden",
+        "requirements": ["by right"],
+        "citations": [
+          {
+            "description": "Old City Code",
+            "type": "city code",
+            "url": "https://www.ci.brainerd.mn.us/DocumentCenter/View/214/Section-515-22-Off-Street-Parking-PDF?bidId=",
+            "notes": "515-22-2: Application of Off-Street Parking Regulations. 515-22-8: Number of Spaces Required.",
+            "attachments": [
+              {
+                "fileName": "Brainerd_MN_1_1.png",
+                "isDoc": false,
+                "directusId": "d26962b7-82e2-4a89-9801-8fa12f0d303c"
+              }
+            ]
+          },
+          {
+            "description": "Old City Code",
+            "type": "city code",
+            "url": "https://www.ci.brainerd.mn.us/DocumentCenter/View/214/Section-515-22-Off-Street-Parking-PDF?bidId=",
+            "notes": "Exceptions 515-22-9: Parking Deferment",
+            "attachments": [
+              {
+                "fileName": "Brainerd_MN_2_1.png",
+                "isDoc": false,
+                "directusId": "6ee5fd1c-6c11-435e-9986-54453ef67a8e"
+              }
+            ]
+          },
+          {
+            "description": "Brainerd Zoning Code (Effective Oct 16, 2023)",
+            "type": "city code",
+            "url": "https://www.ci.brainerd.mn.us/DocumentCenter/View/6610/515-4-12-Off-Street-Parking",
+            "notes": "515-4-12 Off-Street Parking\nJ. Maximum and Minimum Off-Street Parking Spaces Required. \nPages 4-6",
+            "attachments": [
+              {
+                "fileName": "Brainerd_MN_3_1.png",
+                "isDoc": false,
+                "directusId": "d3fd1ac7-b583-4a23-b5b6-f01df041ac3c"
+              },
+              {
+                "fileName": "Brainerd_MN_3_2.png",
+                "isDoc": false,
+                "directusId": "1fe49cda-2806-4679-bee2-fae5ad306859"
+              },
+              {
+                "fileName": "Brainerd_MN_3_3.png",
+                "isDoc": false,
+                "directusId": "c6ffdb32-b269-46e3-9e2e-bb7c24fc20b8"
+              }
+            ]
+          }
+        ]
+      }
+    ]
   },
   "Brandenburg, KY": {
     "rm_min": [
@@ -12606,7 +13064,49 @@
           ]
         }
       ]
-    }
+    },
+    "add_max": [
+      {
+        "reporter": "Samuel Deetz",
+        "requirements": ["by right"],
+        "citations": [
+          {
+            "description": "Burnsville Zoning Code",
+            "type": "city code",
+            "url": "https://burnsville.municipalcodeonline.com/book?type=ordinances#name=10-22D-5:_General_Standards",
+            "notes": "10-22D-5: General Standards\nD. Parking:\n1.\n2.\n4.",
+            "attachments": [
+              {
+                "fileName": "Burnsville_MN_1_1.png",
+                "isDoc": false,
+                "directusId": "93011bf0-4ee2-458f-b9c5-3a30b3a9c04e"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "reduce_min": [
+      {
+        "reporter": "Samuel Deetz",
+        "requirements": ["by right", "carshare", "other"],
+        "citations": [
+          {
+            "description": "Burnsville Zoning Code",
+            "type": "city code",
+            "url": "https://burnsville.municipalcodeonline.com/book?type=ordinances#name=10-22D-5:_General_Standards",
+            "notes": "10-22D-5: General Standards\nD. Parking:\n1.\n2.\n4.",
+            "attachments": [
+              {
+                "fileName": "Burnsville_MN_1_1.png",
+                "isDoc": false,
+                "directusId": "93011bf0-4ee2-458f-b9c5-3a30b3a9c04e"
+              }
+            ]
+          }
+        ]
+      }
+    ]
   },
   "Burr Ridge, IL": {
     "add_max": [
@@ -14598,7 +15098,49 @@
           ]
         }
       ]
-    }
+    },
+    "add_max": [
+      {
+        "reporter": "Samuel Deetz",
+        "requirements": ["by right"],
+        "citations": [
+          {
+            "description": "Carver Zoning Code",
+            "type": "city code",
+            "url": "https://library.municode.com/mn/carver/codes/code_of_ordinances?nodeId=CO_CH50ZOOR_ARTVSPRE_S50-88PADR",
+            "notes": "Sec. 50-88.(1)C.",
+            "attachments": [
+              {
+                "fileName": "Carver_MN_1_1.png",
+                "isDoc": false,
+                "directusId": "738c8cb1-6a2b-4bd6-81e3-88d57ec40143"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "rm_min": [
+      {
+        "reporter": "Samuel Deetz",
+        "requirements": ["by right"],
+        "citations": [
+          {
+            "description": "Carver Zoning Code",
+            "type": "city code",
+            "url": "https://library.municode.com/mn/carver/codes/code_of_ordinances?nodeId=CO_CH50ZOOR_ARTVSPRE_S50-88PADR",
+            "notes": "Sec. 50-88.(1)A.1.",
+            "attachments": [
+              {
+                "fileName": "Carver_MN_1_1.png",
+                "isDoc": false,
+                "directusId": "22495ce8-3c88-40fe-b02b-ab47d18f64e1"
+              }
+            ]
+          }
+        ]
+      }
+    ]
   },
   "Cary, NC": {
     "legacy": {
@@ -15590,7 +16132,75 @@
           ]
         }
       ]
-    }
+    },
+    "add_max": [
+      {
+        "reporter": "Tony Jordan",
+        "requirements": ["by right"],
+        "citations": [
+          {
+            "description": "City Council Minutes",
+            "type": "other",
+            "url": "https://centralpointor.iqm2.com/Citizens/FileOpen.aspx?Type=12&ID=1217&Inline=True",
+            "notes": null,
+            "attachments": [
+              {
+                "fileName": "CentralPoint_OR_1_1.png",
+                "isDoc": false,
+                "directusId": "b6a8107f-79d1-4abb-bd44-64997d631401"
+              }
+            ]
+          },
+          {
+            "description": "Central Point Zoning Code",
+            "type": "city code",
+            "url": "https://www.codepublishing.com/OR/CentralPoint/#!/CentralPoint17/CentralPoint1764.html#17.64.040",
+            "notes": "17.64.040 Off-street parking requirements.",
+            "attachments": [
+              {
+                "fileName": "CentralPoint_OR_2_1.png",
+                "isDoc": false,
+                "directusId": "157f408c-7d05-4019-ab13-8eba6d5ba39f"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "rm_min": [
+      {
+        "reporter": "Tony Jordan",
+        "requirements": ["by right"],
+        "citations": [
+          {
+            "description": "City Council Minutes",
+            "type": "other",
+            "url": "https://centralpointor.iqm2.com/Citizens/FileOpen.aspx?Type=12&ID=1217&Inline=True",
+            "notes": null,
+            "attachments": [
+              {
+                "fileName": "CentralPoint_OR_1_1.png",
+                "isDoc": false,
+                "directusId": "b6a8107f-79d1-4abb-bd44-64997d631401"
+              }
+            ]
+          },
+          {
+            "description": "Central Point Zoning Code",
+            "type": "city code",
+            "url": "https://www.codepublishing.com/OR/CentralPoint/#!/CentralPoint17/CentralPoint1764.html#17.64.040",
+            "notes": "17.64.040 Off-street parking requirements.",
+            "attachments": [
+              {
+                "fileName": "CentralPoint_OR_2_1.png",
+                "isDoc": false,
+                "directusId": "157f408c-7d05-4019-ab13-8eba6d5ba39f"
+              }
+            ]
+          }
+        ]
+      }
+    ]
   },
   "Central, LA": {
     "legacy": {
@@ -18644,7 +19254,54 @@
           ]
         }
       ]
-    }
+    },
+    "reduce_min": [
+      {
+        "reporter": "Samuel Deetz",
+        "requirements": ["other"],
+        "citations": [
+          {
+            "description": "Cloquet Zoning Code",
+            "type": "city code",
+            "url": "https://www.cloquetmn.gov/home/showpublisheddocument/6318/638495452545970000",
+            "notes": "17.6.12.Subd. 6.B.;\n17.6.13.Subd. 6.B.;\nPages 198, 203 of pdf, pages 187, 192 of original document",
+            "attachments": [
+              {
+                "fileName": "Cloquet_MN_1_1.png",
+                "isDoc": false,
+                "directusId": "40c4fedb-820c-45c0-b494-256f24b983cb"
+              },
+              {
+                "fileName": "Cloquet_MN_1_2.png",
+                "isDoc": false,
+                "directusId": "e06bd451-4b1c-4ee8-ad6d-48530d5070be"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "rm_min": [
+      {
+        "reporter": "Samuel Deetz",
+        "requirements": ["by right"],
+        "citations": [
+          {
+            "description": "Cloquet Zoning Code",
+            "type": "city code",
+            "url": "https://www.cloquetmn.gov/home/showpublisheddocument/6318/638495452545970000",
+            "notes": "17.5.11.Subd. 6 Table\nPage 104 of pdf, page 93 of original document",
+            "attachments": [
+              {
+                "fileName": "Cloquet_MN_1_1.png",
+                "isDoc": false,
+                "directusId": "ae34469b-36cb-4cd8-b47a-afa3b28db814"
+              }
+            ]
+          }
+        ]
+      }
+    ]
   },
   "Cloudcroft, NM": {
     "legacy": {
@@ -19142,7 +19799,49 @@
           ]
         }
       ]
-    }
+    },
+    "add_max": [
+      {
+        "reporter": "Samuel Deetz",
+        "requirements": ["by right"],
+        "citations": [
+          {
+            "description": "Collierville Zoning Code",
+            "type": "city code",
+            "url": "https://codelibrary.amlegal.com/codes/collierville/latest/collierv_tn/0-0-0-44306",
+            "notes": "§ 151.115 ACCESSORY OFF-STREET PARKING REGULATIONS.\n(B)   Accessory off-street parking requirements.\n(4)   Space requirements for off-street parking for commercial activities outside the limits of the Downtown Collierville Small Area Plan.\n(b)\n(c)",
+            "attachments": [
+              {
+                "fileName": "Collierville_TN_1_1.png",
+                "isDoc": false,
+                "directusId": "870aa212-f2a5-4c92-9c02-ad2158b0db37"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "rm_min": [
+      {
+        "reporter": "Samuel Deetz",
+        "requirements": ["by right"],
+        "citations": [
+          {
+            "description": "Collierville Zoning Code",
+            "type": "city code",
+            "url": "https://codelibrary.amlegal.com/codes/collierville/latest/collierv_tn/0-0-0-44306",
+            "notes": "§ 151.115 ACCESSORY OFF-STREET PARKING REGULATIONS.\n(B)   Accessory off-street parking requirements.\n(4)   Space requirements for off-street parking for commercial activities outside the limits of the Downtown Collierville Small Area Plan.\n(b)\n(c)",
+            "attachments": [
+              {
+                "fileName": "Collierville_TN_1_1.png",
+                "isDoc": false,
+                "directusId": "870aa212-f2a5-4c92-9c02-ad2158b0db37"
+              }
+            ]
+          }
+        ]
+      }
+    ]
   },
   "Collins, IA": {
     "rm_min": [
@@ -20498,7 +21197,63 @@
           ]
         }
       ]
-    }
+    },
+    "reduce_min": [
+      {
+        "reporter": "Samuel Deetz",
+        "requirements": ["by right", "size of project"],
+        "citations": [
+          {
+            "description": "Coos Bay Development Code",
+            "type": "city code",
+            "url": "https://www.codepublishing.com/OR/CoosBay/#!/CoosBay17/CoosBay17330.html#17.330.010",
+            "notes": "17.330.010(2)(b)",
+            "attachments": [
+              {
+                "fileName": "CoosBay_OR_1_1.png",
+                "isDoc": false,
+                "directusId": "f99aeacb-d670-406a-843e-30f5a64ba304"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "rm_min": [
+      {
+        "reporter": "Samuel Deetz",
+        "requirements": [
+          "accessory dwelling units",
+          "by right",
+          "size of project"
+        ],
+        "citations": [
+          {
+            "description": "Coos Bay Development Code",
+            "type": "city code",
+            "url": "https://www.codepublishing.com/OR/CoosBay/#!/CoosBay17/CoosBay17330.html#17.330.010",
+            "notes": "Chapter 17.330 OFF-STREET PARKING AND LOADING REQUIREMENTS\n17.330.010 Off-street parking requirements.",
+            "attachments": [
+              {
+                "fileName": "CoosBay_OR_1_1.png",
+                "isDoc": false,
+                "directusId": "f05fe148-691c-40d6-ade0-1c702d680b99"
+              },
+              {
+                "fileName": "CoosBay_OR_1_2.png",
+                "isDoc": false,
+                "directusId": "27dd1273-d111-4137-a82a-1a4c61078f08"
+              },
+              {
+                "fileName": "CoosBay_OR_1_3.png",
+                "isDoc": false,
+                "directusId": "69e56477-31ab-48c7-9df2-2d064c181988"
+              }
+            ]
+          }
+        ]
+      }
+    ]
   },
   "Copemish, MI": {
     "add_max": [
@@ -21960,7 +22715,49 @@
           ]
         }
       ]
-    }
+    },
+    "add_max": [
+      {
+        "reporter": "Samuel Deetz",
+        "requirements": ["by right"],
+        "citations": [
+          {
+            "description": "Crystal Zoning Code",
+            "type": "city code",
+            "url": "https://cdnsm5-hosted.civiclive.com/UserFiles/Servers/Server_10879634/File/Resident/Community%20Development/Planning%20and%20Zoning/520.pdf",
+            "notes": "Section 520 Development standards \n520.15. Off-street parking and loading. \nSubd. 6. Off-street parking space requirements. \n(c)\nPage 32 of pdf, page 137 of original document",
+            "attachments": [
+              {
+                "fileName": "Crystal_MN_1_1.png",
+                "isDoc": false,
+                "directusId": "3f9dcdc2-dcd9-40e8-95b7-19d3a09c4229"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "rm_min": [
+      {
+        "reporter": "Samuel Deetz",
+        "requirements": ["by right"],
+        "citations": [
+          {
+            "description": "Crystal Zoning Code",
+            "type": "city code",
+            "url": "https://cdnsm5-hosted.civiclive.com/UserFiles/Servers/Server_10879634/File/Resident/Community%20Development/Planning%20and%20Zoning/520.pdf",
+            "notes": "Section 520 Development standards \n520.15. Off-street parking and loading. \nSubd. 6. Off-street parking space requirements. \n(c)\nPage 32 of pdf, page 137 of original document",
+            "attachments": [
+              {
+                "fileName": "Crystal_MN_1_1.png",
+                "isDoc": false,
+                "directusId": "3f9dcdc2-dcd9-40e8-95b7-19d3a09c4229"
+              }
+            ]
+          }
+        ]
+      }
+    ]
   },
   "Culver City, CA": {
     "rm_min": [
@@ -25689,7 +26486,131 @@
           ]
         }
       ]
-    }
+    },
+    "add_max": [
+      {
+        "reporter": "Samuel Deetz",
+        "requirements": ["by right"],
+        "citations": [
+          {
+            "description": "Duluth Zoning Code",
+            "type": "city code",
+            "url": "https://library.municode.com/mn/duluth/codes/legislative_code?nodeId=Chapter%2050%20-%20Article%20IV%20-%20Development%20Standards",
+            "notes": "50-24 PARKING AND LOADING.\n50-24.1Applicability.\n50-24.3Adjustment to required off-street parking.\n50-24.4 Maximum parking limits.\nPages 49-54",
+            "attachments": [
+              {
+                "fileName": "Duluth_MN_1_1.png",
+                "isDoc": false,
+                "directusId": "2c89f7ea-0138-452c-abc5-5cb52a227351"
+              },
+              {
+                "fileName": "Duluth_MN_1_2.png",
+                "isDoc": false,
+                "directusId": "649795a6-bd23-41a4-a364-043fb2ff65ed"
+              },
+              {
+                "fileName": "Duluth_MN_1_3.png",
+                "isDoc": false,
+                "directusId": "7812b6a7-21df-4d7f-9323-4bb6eabd0c03"
+              }
+            ]
+          },
+          {
+            "description": "News Article",
+            "type": "media report",
+            "url": "https://www.duluthnewstribune.com/news/local/duluth-lifts-parking-mandates-looks-to-sell-pair-of-ramps",
+            "notes": null,
+            "attachments": [
+              {
+                "fileName": "Duluth_MN_2_1.png",
+                "isDoc": false,
+                "directusId": "2ed09f2c-f3b0-457f-8c04-fb3b25d38e92"
+              }
+            ]
+          },
+          {
+            "description": "Revised Code/Legistar",
+            "type": "other",
+            "url": "https://duluth-mn.legistar.com/LegislationDetail.aspx?ID=6414791&GUID=6F85BCFE-BBB6-49C6-BF59-319C60B8A2FA",
+            "notes": null,
+            "attachments": [
+              {
+                "fileName": "Duluth_MN_3_1.png",
+                "isDoc": false,
+                "directusId": "1788c368-6bcd-4f0d-bbda-7b97d3c67224"
+              },
+              {
+                "fileName": "Duluth_MN_3_2.png",
+                "isDoc": false,
+                "directusId": "af2d6a71-def2-407b-b160-470ccb117d6d"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "rm_min": [
+      {
+        "reporter": "Samuel Deetz",
+        "requirements": ["by right"],
+        "citations": [
+          {
+            "description": "Duluth Zoning Code",
+            "type": "city code",
+            "url": "https://library.municode.com/mn/duluth/codes/legislative_code?nodeId=Chapter%2050%20-%20Article%20IV%20-%20Development%20Standards",
+            "notes": "50-24 PARKING AND LOADING.\n50-24.1Applicability.\n50-24.3Adjustment to required off-street parking.\n50-24.4 Maximum parking limits.\nPages 49-54",
+            "attachments": [
+              {
+                "fileName": "Duluth_MN_1_1.png",
+                "isDoc": false,
+                "directusId": "2c89f7ea-0138-452c-abc5-5cb52a227351"
+              },
+              {
+                "fileName": "Duluth_MN_1_2.png",
+                "isDoc": false,
+                "directusId": "649795a6-bd23-41a4-a364-043fb2ff65ed"
+              },
+              {
+                "fileName": "Duluth_MN_1_3.png",
+                "isDoc": false,
+                "directusId": "7812b6a7-21df-4d7f-9323-4bb6eabd0c03"
+              }
+            ]
+          },
+          {
+            "description": "News Article",
+            "type": "media report",
+            "url": "https://www.duluthnewstribune.com/news/local/duluth-lifts-parking-mandates-looks-to-sell-pair-of-ramps",
+            "notes": null,
+            "attachments": [
+              {
+                "fileName": "Duluth_MN_2_1.png",
+                "isDoc": false,
+                "directusId": "2ed09f2c-f3b0-457f-8c04-fb3b25d38e92"
+              }
+            ]
+          },
+          {
+            "description": "Revised Code/Legistar",
+            "type": "other",
+            "url": "https://duluth-mn.legistar.com/LegislationDetail.aspx?ID=6414791&GUID=6F85BCFE-BBB6-49C6-BF59-319C60B8A2FA",
+            "notes": null,
+            "attachments": [
+              {
+                "fileName": "Duluth_MN_3_1.png",
+                "isDoc": false,
+                "directusId": "1788c368-6bcd-4f0d-bbda-7b97d3c67224"
+              },
+              {
+                "fileName": "Duluth_MN_3_2.png",
+                "isDoc": false,
+                "directusId": "af2d6a71-def2-407b-b160-470ccb117d6d"
+              }
+            ]
+          }
+        ]
+      }
+    ]
   },
   "Duncan, NE": {
     "rm_min": [
@@ -27393,7 +28314,59 @@
           ]
         }
       ]
-    }
+    },
+    "add_max": [
+      {
+        "reporter": "Samuel Deetz",
+        "requirements": ["by right"],
+        "citations": [
+          {
+            "description": "Edina Zoning Code",
+            "type": "city code",
+            "url": "https://library.municode.com/mn/edina/codes/code_of_ordinances?nodeId=SPBLADERE_CH36ZO_ARTXIISUDIRE_DIV3PACI_SDIIPASP",
+            "notes": "Sec. 36-1311.(b)(1);\nSec. 36-1311.(w)(1);\nSec. 36-1312.Multiresidential uses.",
+            "attachments": [
+              {
+                "fileName": "Edina_MN_1_1.png",
+                "isDoc": false,
+                "directusId": "ae661f9e-516f-4a17-add7-78ba9d055ac0"
+              },
+              {
+                "fileName": "Edina_MN_1_2.png",
+                "isDoc": false,
+                "directusId": "abeb2b0d-1389-4291-a491-dac5bbd4cd09"
+              },
+              {
+                "fileName": "Edina_MN_1_3.png",
+                "isDoc": false,
+                "directusId": "45981fa6-f97a-4495-b1a6-6b7dda4aab83"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "reduce_min": [
+      {
+        "reporter": "Samuel Deetz",
+        "requirements": ["bike parking", "carshare", "frequent transit"],
+        "citations": [
+          {
+            "description": "Edina Zoning Code",
+            "type": "city code",
+            "url": "https://library.municode.com/mn/edina/codes/code_of_ordinances?nodeId=SPBLADERE_CH36ZO_ARTXIISUDIRE_DIV3PACI_SDIIPASP_S36-1324PASPRE",
+            "notes": "Sec. 36-1324.",
+            "attachments": [
+              {
+                "fileName": "Edina_MN_1_1.png",
+                "isDoc": false,
+                "directusId": "17c3dcc5-a9ce-4b30-a182-b453cbffc6c3"
+              }
+            ]
+          }
+        ]
+      }
+    ]
   },
   "Edinboro, PA": {
     "rm_min": [
@@ -27840,7 +28813,49 @@
           ]
         }
       ]
-    }
+    },
+    "reduce_min": [
+      {
+        "reporter": "Samuel Deetz",
+        "requirements": ["by right", "size of project"],
+        "citations": [
+          {
+            "description": "Elgin Zoning Code",
+            "type": "city code",
+            "url": "https://library.municode.com/or/elgin/codes/code_of_ordinances?nodeId=TIT17ZO_CH17.40PRAPALZO_17.40.080OREPA",
+            "notes": "Chapter 17.40 - PROVISIONS APPLICABLE TO ALL ZONES\n17.40.080 - Off-street parking.\nC.Off-Street Parking Requirements in the CBD.",
+            "attachments": [
+              {
+                "fileName": "Elgin_OR_1_1.png",
+                "isDoc": false,
+                "directusId": "81d8a8d9-0d8f-49da-812d-f9a3b34c4531"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "rm_min": [
+      {
+        "reporter": "Samuel Deetz",
+        "requirements": ["by right", "size of project"],
+        "citations": [
+          {
+            "description": "Elgin Zoning Code",
+            "type": "city code",
+            "url": "https://library.municode.com/or/elgin/codes/code_of_ordinances?nodeId=TIT17ZO_CH17.40PRAPALZO_17.40.080OREPA",
+            "notes": "Chapter 17.40 - PROVISIONS APPLICABLE TO ALL ZONES\n17.40.080 - Off-street parking.\nC.Off-Street Parking Requirements in the CBD.",
+            "attachments": [
+              {
+                "fileName": "Elgin_OR_1_1.png",
+                "isDoc": false,
+                "directusId": "81d8a8d9-0d8f-49da-812d-f9a3b34c4531"
+              }
+            ]
+          }
+        ]
+      }
+    ]
   },
   "Elgin, TX": {
     "legacy": {
@@ -28867,7 +29882,49 @@
           ]
         }
       ]
-    }
+    },
+    "add_max": [
+      {
+        "reporter": "Samuel Deetz",
+        "requirements": ["other"],
+        "citations": [
+          {
+            "description": "Emily Zoning Code",
+            "type": "city code",
+            "url": "https://codelibrary.amlegal.com/codes/emily/latest/emily_mn/0-0-0-3392",
+            "notes": "§ 152.038 DOWNTOWN MIXED-USE (DMU)\n(C)   Performance standards (DMU).\n  (1)   Parking.\n    (c)   Maximum parking ratio.\n    (d)",
+            "attachments": [
+              {
+                "fileName": "Emily_MN_1_1.png",
+                "isDoc": false,
+                "directusId": "6344671f-a4a2-41e3-8006-2ea44b6852e9"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "rm_min": [
+      {
+        "reporter": "Samuel Deetz",
+        "requirements": ["other"],
+        "citations": [
+          {
+            "description": "Emily Zoning Code",
+            "type": "city code",
+            "url": "https://codelibrary.amlegal.com/codes/emily/latest/emily_mn/0-0-0-3392",
+            "notes": "§ 152.038 DOWNTOWN MIXED-USE (DMU)\n(C)   Performance standards (DMU).\n  (1)   Parking.\n    (c)   Maximum parking ratio.\n    (d)",
+            "attachments": [
+              {
+                "fileName": "Emily_MN_1_1.png",
+                "isDoc": false,
+                "directusId": "6344671f-a4a2-41e3-8006-2ea44b6852e9"
+              }
+            ]
+          }
+        ]
+      }
+    ]
   },
   "Emmaus, PA": {
     "legacy": {
@@ -29366,7 +30423,111 @@
           ]
         }
       ]
-    }
+    },
+    "add_max": [
+      {
+        "reporter": "Will Dowdy",
+        "requirements": ["by right"],
+        "citations": [
+          {
+            "description": "Eugene Code",
+            "type": "city code",
+            "url": "https://eugene.municipal.codes/EC/9.6410",
+            "notes": "Section 9.6410 Maximum Number of Off-Street Parking Spaces",
+            "attachments": [
+              {
+                "fileName": "Eugene_OR_1_1.jpg",
+                "isDoc": false,
+                "directusId": "35dcd754-3d7b-476e-afe4-e3a5f1c3f191"
+              }
+            ]
+          },
+          {
+            "description": "Eugene City Code",
+            "type": "city code",
+            "url": "https://eugene.municipal.codes/EC/9.6410(3)",
+            "notes": "EC 9.6410(3), Minimum Number of Required Off-Street Parking Spaces",
+            "attachments": [
+              {
+                "fileName": "Eugene_OR_2_1.png",
+                "isDoc": false,
+                "directusId": "59db6435-fcef-4526-b2cd-9bab5082da28"
+              },
+              {
+                "fileName": "Eugene_OR_2_2.png",
+                "isDoc": false,
+                "directusId": "9c9cc21d-905e-4aa2-8d0b-137bd8d9084d"
+              }
+            ]
+          },
+          {
+            "description": "The Register-Guard",
+            "type": "media report",
+            "url": "https://www.registerguard.com/story/news/local/2023/11/14/parking-reform-ordinance-removes-requirement-for-off-street-minimums/71536844007/",
+            "notes": null,
+            "attachments": [
+              {
+                "fileName": "Eugene_OR_3_1.png",
+                "isDoc": false,
+                "directusId": "0705e14c-bc34-44a5-908a-ad38b98fff14"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "rm_min": [
+      {
+        "reporter": "Will Dowdy",
+        "requirements": ["by right"],
+        "citations": [
+          {
+            "description": "Eugene Code",
+            "type": "city code",
+            "url": "https://eugene.municipal.codes/EC/9.6410",
+            "notes": "Section 9.6410 Maximum Number of Off-Street Parking Spaces",
+            "attachments": [
+              {
+                "fileName": "Eugene_OR_1_1.jpg",
+                "isDoc": false,
+                "directusId": "35dcd754-3d7b-476e-afe4-e3a5f1c3f191"
+              }
+            ]
+          },
+          {
+            "description": "Eugene City Code",
+            "type": "city code",
+            "url": "https://eugene.municipal.codes/EC/9.6410(3)",
+            "notes": "EC 9.6410(3), Minimum Number of Required Off-Street Parking Spaces",
+            "attachments": [
+              {
+                "fileName": "Eugene_OR_2_1.png",
+                "isDoc": false,
+                "directusId": "59db6435-fcef-4526-b2cd-9bab5082da28"
+              },
+              {
+                "fileName": "Eugene_OR_2_2.png",
+                "isDoc": false,
+                "directusId": "9c9cc21d-905e-4aa2-8d0b-137bd8d9084d"
+              }
+            ]
+          },
+          {
+            "description": "The Register-Guard",
+            "type": "media report",
+            "url": "https://www.registerguard.com/story/news/local/2023/11/14/parking-reform-ordinance-removes-requirement-for-off-street-minimums/71536844007/",
+            "notes": null,
+            "attachments": [
+              {
+                "fileName": "Eugene_OR_3_1.png",
+                "isDoc": false,
+                "directusId": "0705e14c-bc34-44a5-908a-ad38b98fff14"
+              }
+            ]
+          }
+        ]
+      }
+    ]
   },
   "Eunice, LA": {
     "rm_min": [
@@ -29786,7 +30947,49 @@
           ]
         }
       ]
-    }
+    },
+    "add_max": [
+      {
+        "reporter": "Samuel Deetz",
+        "requirements": ["by right"],
+        "citations": [
+          {
+            "description": "Excelsior Zoning Code",
+            "type": "city code",
+            "url": "https://library.municode.com/mn/excelsior/codes/code_of_ordinances?nodeId=PTIICOOR_APXEZO_ART19OREPARE_S19-7NUSPRE",
+            "notes": "Sec. 19-7.(b)(2)",
+            "attachments": [
+              {
+                "fileName": "Excelsior_MN_1_1.png",
+                "isDoc": false,
+                "directusId": "96434d53-4e45-40b6-bf6a-3999022269fa"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "reduce_min": [
+      {
+        "reporter": "Samuel Deetz",
+        "requirements": ["in-lieu fees"],
+        "citations": [
+          {
+            "description": "Excelsior Zoning Code",
+            "type": "city code",
+            "url": "https://library.municode.com/mn/excelsior/codes/code_of_ordinances?nodeId=PTIICOOR_APXEZO_ART19OREPARE_S19-9ANPAIMFE",
+            "notes": "Sec. 19-9.",
+            "attachments": [
+              {
+                "fileName": "Excelsior_MN_1_1.png",
+                "isDoc": false,
+                "directusId": "4cb2ed81-3d25-4230-ac01-a46befbc542a"
+              }
+            ]
+          }
+        ]
+      }
+    ]
   },
   "Eyota, MN": {
     "rm_min": [
@@ -30736,7 +31939,70 @@
           ]
         }
       ]
-    }
+    },
+    "add_max": [
+      {
+        "reporter": null,
+        "requirements": ["by right"],
+        "citations": [
+          {
+            "description": "Ferndale Zoning Code",
+            "type": "city code",
+            "url": "https://www.codepublishing.com/WA/Ferndale/#!/Ferndale18/Ferndale1876.html#18.76.070",
+            "notes": "18.76.070",
+            "attachments": [
+              {
+                "fileName": "Ferndale_WA_1_1.png",
+                "isDoc": false,
+                "directusId": "883deede-fc97-4f0c-8792-ee4fe24686ce"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "reduce_min": [
+      {
+        "reporter": null,
+        "requirements": ["by right", "other"],
+        "citations": [
+          {
+            "description": "Ferndale Zoning Code",
+            "type": "city code",
+            "url": "https://www.codepublishing.com/WA/Ferndale/#!/Ferndale18/Ferndale1876.html#18.76.090",
+            "notes": "18.76.090",
+            "attachments": [
+              {
+                "fileName": "Ferndale_WA_1_1.jpg",
+                "isDoc": false,
+                "directusId": "aa80ff07-ad21-49c0-8ccf-5e39c5c4c653"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "rm_min": [
+      {
+        "reporter": null,
+        "requirements": ["accessory dwelling units", "by right"],
+        "citations": [
+          {
+            "description": "Ferndale Zoning Code",
+            "type": "city code",
+            "url": "https://www.codepublishing.com/WA/Ferndale/#!/Ferndale18/Ferndale1876.html#18.76.070",
+            "notes": "18.76.070",
+            "attachments": [
+              {
+                "fileName": "Ferndale_WA_1_1.jpg",
+                "isDoc": false,
+                "directusId": "54674a6b-5114-4265-9e20-f8a54156e780"
+              }
+            ]
+          }
+        ]
+      }
+    ]
   },
   "Ferrysburg, MI": {
     "legacy": {
@@ -33617,7 +34883,49 @@
           ]
         }
       ]
-    }
+    },
+    "add_max": [
+      {
+        "reporter": "Samuel Deetz",
+        "requirements": ["by right"],
+        "citations": [
+          {
+            "description": "Fridley Zoning Code",
+            "type": "city code",
+            "url": "https://fridley.municipalcodeonline.com/book?type=ordinances#name=205.33.09_PARKING_REQUIREMENTS",
+            "notes": "SECTION 205.33 O-8 TRANSIT ORIENTED DEVELOPMENT OVERLAY DISTRICT\n205.33.09 PARKING REQUIREMENTS\nA. Reduction of Parking. ",
+            "attachments": [
+              {
+                "fileName": "Fridley_MN_1_1.png",
+                "isDoc": false,
+                "directusId": "e7a71979-b0bd-471d-aabd-93a305d32a59"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "reduce_min": [
+      {
+        "reporter": "Samuel Deetz",
+        "requirements": ["by right"],
+        "citations": [
+          {
+            "description": "Fridley Zoning Code",
+            "type": "city code",
+            "url": "https://fridley.municipalcodeonline.com/book?type=ordinances#name=205.33.09_PARKING_REQUIREMENTS",
+            "notes": "SECTION 205.33 O-8 TRANSIT ORIENTED DEVELOPMENT OVERLAY DISTRICT\n205.33.09 PARKING REQUIREMENTS\nA. Reduction of Parking. ",
+            "attachments": [
+              {
+                "fileName": "Fridley_MN_1_1.png",
+                "isDoc": false,
+                "directusId": "e7a71979-b0bd-471d-aabd-93a305d32a59"
+              }
+            ]
+          }
+        ]
+      }
+    ]
   },
   "Friesland, WI": {
     "rm_min": [
@@ -35003,7 +36311,49 @@
           ]
         }
       ]
-    }
+    },
+    "add_max": [
+      {
+        "reporter": "Samuel Deetz",
+        "requirements": ["by right"],
+        "citations": [
+          {
+            "description": "Germantown SmartCode",
+            "type": "city code",
+            "url": "https://library.municode.com/tn/germantown/codes/code_of_ordinances?nodeId=PTIICOOR_CH23ZO_ARTVIISMGRZODISM_DIV7SIST_S23-792PARE",
+            "notes": "Sec. 23-792.(a)",
+            "attachments": [
+              {
+                "fileName": "Germantown_TN_1_1.png",
+                "isDoc": false,
+                "directusId": "5769d83c-142e-41ae-a5bf-707f89e1fdbd"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "reduce_min": [
+      {
+        "reporter": "Samuel Deetz",
+        "requirements": ["other"],
+        "citations": [
+          {
+            "description": "Germantown SmartCode",
+            "type": "city code",
+            "url": "https://library.municode.com/tn/germantown/codes/code_of_ordinances?nodeId=PTIICOOR_CH23ZO_ARTVIISMGRZODISM_DIV7SIST_S23-792PARE",
+            "notes": "Sec. 23-792.(a)",
+            "attachments": [
+              {
+                "fileName": "Germantown_TN_1_1.png",
+                "isDoc": false,
+                "directusId": "2b44138f-da32-4dee-80bd-4eff4257e53b"
+              }
+            ]
+          }
+        ]
+      }
+    ]
   },
   "Gettysburg, PA": {
     "legacy": {
@@ -35735,7 +37085,49 @@
           ]
         }
       ]
-    }
+    },
+    "add_max": [
+      {
+        "reporter": "Samuel Deetz",
+        "requirements": ["by right", "other"],
+        "citations": [
+          {
+            "description": "Golden Valley Zoning Code",
+            "type": "city code",
+            "url": "https://library.municode.com/mn/golden_valley/codes/code_of_ordinances?nodeId=PTIILADE_CH113ZO_ARTIVSURE_S113-151OREPALO",
+            "notes": "Sec. 113-151.(c)(2)",
+            "attachments": [
+              {
+                "fileName": "GoldenValley_MN_1_1.png",
+                "isDoc": false,
+                "directusId": "a7766cd1-bd78-423b-92e8-19e1c6d5d3f4"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "reduce_min": [
+      {
+        "reporter": "Samuel Deetz",
+        "requirements": ["bike parking"],
+        "citations": [
+          {
+            "description": "Golden Valley Zoning Code",
+            "type": "city code",
+            "url": "https://library.municode.com/mn/golden_valley/codes/code_of_ordinances?nodeId=PTIILADE_CH113ZO_ARTIVSURE_S113-151OREPALO",
+            "notes": "Sec. 113-151.(c)",
+            "attachments": [
+              {
+                "fileName": "GoldenValley_MN_1_1.png",
+                "isDoc": false,
+                "directusId": "4fcf0647-a746-4230-bc6f-384f2e5a562d"
+              }
+            ]
+          }
+        ]
+      }
+    ]
   },
   "Golden, CO": {
     "reduce_min": [
@@ -42117,7 +43509,90 @@
           ]
         }
       ]
-    }
+    },
+    "add_max": [
+      {
+        "reporter": "Samuel Deetz",
+        "requirements": ["by right"],
+        "citations": [
+          {
+            "description": "Hopkins Land Development Code",
+            "type": "city code",
+            "url": "https://www.hopkinsmn.com/DocumentCenter/View/4001/City-of-Hopkins-Land-Development-Code-PDF",
+            "notes": "102-920(b)\nPage 161",
+            "attachments": [
+              {
+                "fileName": "Hopkins_MN_1_1.png",
+                "isDoc": false,
+                "directusId": "530abc4d-9855-437a-9a38-202761693426"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "reduce_min": [
+      {
+        "reporter": "Samuel Deetz",
+        "requirements": [
+          "affordable housing",
+          "bike parking",
+          "carshare",
+          "other",
+          "tree preservation"
+        ],
+        "citations": [
+          {
+            "description": "Hopkins Land Development Code",
+            "type": "city code",
+            "url": "https://www.hopkinsmn.com/DocumentCenter/View/4001/City-of-Hopkins-Land-Development-Code-PDF",
+            "notes": "102-940\nPages 163-164",
+            "attachments": [
+              {
+                "fileName": "Hopkins_MN_1_1.png",
+                "isDoc": false,
+                "directusId": "dab2da01-ea34-4d92-9ba3-3d6e3b3b0110"
+              },
+              {
+                "fileName": "Hopkins_MN_1_2.png",
+                "isDoc": false,
+                "directusId": "a5d0f548-d25f-4eb1-8aa0-1a3ada3a2c05"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "rm_min": [
+      {
+        "reporter": "Samuel Deetz",
+        "requirements": [
+          "by right",
+          "other",
+          "transportation demand management"
+        ],
+        "citations": [
+          {
+            "description": "Hopkins Land Development Code",
+            "type": "city code",
+            "url": "https://www.hopkinsmn.com/DocumentCenter/View/4001/City-of-Hopkins-Land-Development-Code-PDF",
+            "notes": "102-930: Table 9-1.;\n102-940(a)(2);\nPages 162-163",
+            "attachments": [
+              {
+                "fileName": "Hopkins_MN_1_1.png",
+                "isDoc": false,
+                "directusId": "76b45c08-9211-46de-b1f7-072c774378ba"
+              },
+              {
+                "fileName": "Hopkins_MN_1_2.png",
+                "isDoc": false,
+                "directusId": "a1220678-b03d-4e67-b4d0-00d360ea7690"
+              }
+            ]
+          }
+        ]
+      }
+    ]
   },
   "Hopkinsville, KY": {
     "reduce_min": [
@@ -46579,7 +48054,70 @@
           ]
         }
       ]
-    }
+    },
+    "add_max": [
+      {
+        "reporter": "Samuel Deetz",
+        "requirements": ["by right"],
+        "citations": [
+          {
+            "description": "Kent Zoning Code",
+            "type": "city code",
+            "url": "https://www.codepublishing.com/WA/Kent/?Kent15/Kent15.html",
+            "notes": "Chapter 15.05 OFF-STREET PARKING AND LOADING REQUIREMENTS\n15.05.070 Off-street parking regulations for downtown commercial and downtown commercial enterprise districts.",
+            "attachments": [
+              {
+                "fileName": "Kent_WA_1_1.png",
+                "isDoc": false,
+                "directusId": "32473a0a-2504-41ac-9356-1b5bfff486d6"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "reduce_min": [
+      {
+        "reporter": "Samuel Deetz",
+        "requirements": ["by right"],
+        "citations": [
+          {
+            "description": "Kent Zoning Code",
+            "type": "city code",
+            "url": "https://www.codepublishing.com/WA/Kent/?Kent15/Kent15.html",
+            "notes": "Chapter 15.05 OFF-STREET PARKING AND LOADING REQUIREMENTS\n15.05.070 Off-street parking regulations for downtown commercial and downtown commercial enterprise districts.",
+            "attachments": [
+              {
+                "fileName": "Kent_WA_1_1.png",
+                "isDoc": false,
+                "directusId": "32473a0a-2504-41ac-9356-1b5bfff486d6"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "rm_min": [
+      {
+        "reporter": "Samuel Deetz",
+        "requirements": ["by right"],
+        "citations": [
+          {
+            "description": "Kent Zoning Code",
+            "type": "city code",
+            "url": "https://www.codepublishing.com/WA/Kent/?Kent15/Kent15.html",
+            "notes": "Chapter 15.05 OFF-STREET PARKING AND LOADING REQUIREMENTS\n15.05.070 Off-street parking regulations for downtown commercial and downtown commercial enterprise districts.",
+            "attachments": [
+              {
+                "fileName": "Kent_WA_1_1.png",
+                "isDoc": false,
+                "directusId": "32473a0a-2504-41ac-9356-1b5bfff486d6"
+              }
+            ]
+          }
+        ]
+      }
+    ]
   },
   "Kenton, OH": {
     "rm_min": [
@@ -47579,7 +49117,70 @@
           ]
         }
       ]
-    }
+    },
+    "add_max": [
+      {
+        "reporter": "Samuel Deetz",
+        "requirements": ["by right"],
+        "citations": [
+          {
+            "description": "Knoxville Zoning Code",
+            "type": "city code",
+            "url": "https://library.municode.com/tn/knoxville/codes/code_of_ordinances?nodeId=APXBZOCO_ART11OREPA_11.4REOREPASP",
+            "notes": "11.4.A.1.",
+            "attachments": [
+              {
+                "fileName": "Knoxville_TN_1_1.png",
+                "isDoc": false,
+                "directusId": "eeafad5b-246a-4795-8179-469b075f497a"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "reduce_min": [
+      {
+        "reporter": "Samuel Deetz",
+        "requirements": ["by right", "frequent transit"],
+        "citations": [
+          {
+            "description": "Knoxville Zoning Code",
+            "type": "city code",
+            "url": "https://library.municode.com/tn/knoxville/codes/code_of_ordinances?nodeId=APXBZOCO_ART11OREPA_11.4REOREPASP",
+            "notes": "11.4.B.2.;\n11.4.B.3.",
+            "attachments": [
+              {
+                "fileName": "Knoxville_TN_1_1.png",
+                "isDoc": false,
+                "directusId": "00d85268-7a02-47f3-bb3f-95a83ec0abcd"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "rm_min": [
+      {
+        "reporter": "Samuel Deetz",
+        "requirements": ["by right"],
+        "citations": [
+          {
+            "description": "Knoxville Zoning Code",
+            "type": "city code",
+            "url": "https://library.municode.com/tn/knoxville/codes/code_of_ordinances?nodeId=APXBZOCO_ART11OREPA_11.4REOREPASP",
+            "notes": "11.4.B.1.",
+            "attachments": [
+              {
+                "fileName": "Knoxville_TN_1_1.png",
+                "isDoc": false,
+                "directusId": "7247204c-d90b-4ada-8b28-8ad5c0684a0e"
+              }
+            ]
+          }
+        ]
+      }
+    ]
   },
   "Koblenz, RP": {
     "legacy": {
@@ -49146,7 +50747,49 @@
           ]
         }
       ]
-    }
+    },
+    "add_max": [
+      {
+        "reporter": "Samuel Deetz",
+        "requirements": ["by right", "other"],
+        "citations": [
+          {
+            "description": "Lakeland Land Development Regulations",
+            "type": "city code",
+            "url": "https://www.lakelandtn.gov/DocumentCenter/View/11410/LDR_Complete-Document-040423",
+            "notes": "Section 6.B.2.d.\nPage 243 of pdf, page 228 of original document",
+            "attachments": [
+              {
+                "fileName": "Lakeland_TN_1_1.png",
+                "isDoc": false,
+                "directusId": "86cecb91-4f22-40a4-b9cc-06985258e910"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "reduce_min": [
+      {
+        "reporter": "Samuel Deetz",
+        "requirements": ["other"],
+        "citations": [
+          {
+            "description": "Lakeland Land Development Regulations",
+            "type": "city code",
+            "url": "https://www.lakelandtn.gov/DocumentCenter/View/11410/LDR_Complete-Document-040423",
+            "notes": "Section 6.B.5.\nPage 245 of pdf, page 230 of original document",
+            "attachments": [
+              {
+                "fileName": "Lakeland_TN_1_1.png",
+                "isDoc": false,
+                "directusId": "06aaa00b-6534-4201-a731-4bb1b170c141"
+              }
+            ]
+          }
+        ]
+      }
+    ]
   },
   "Lakesite, TN": {
     "add_max": [
@@ -55182,7 +56825,7 @@
       "requirements": ["other"],
       "citations": [
         {
-          "description": "Maplewood Zoning Code",
+          "description": "Maplewood Zoning Code (Old)",
           "type": "city code",
           "url": "https://library.municode.com/mn/maplewood/codes/code_of_ordinances?nodeId=COOR_CH44ZO_ARTIIDIRE_DIV14MIEDI_S44-683OREPA",
           "notes": "ARTICLE II. - DISTRICT REGULATIONS\nDIVISION 14. - M-U MIXED-USE DISTRICT\nSec. 44-683. - Off-street parking.\nAmount of parking\nb.\nc.\nd.",
@@ -55195,7 +56838,62 @@
           ]
         }
       ]
-    }
+    },
+    "add_max": [
+      {
+        "reporter": "Samuel Deetz",
+        "requirements": ["by right", "other"],
+        "citations": [
+          {
+            "description": "Maplewood Zoning Code",
+            "type": "city code",
+            "url": "https://library.municode.com/mn/maplewood/codes/code_of_ordinances?nodeId=COOR_CH44ZO_ARTIIDIRE_DIV16MUMIEDI_S44-295OREPA",
+            "notes": "Sec. 44-295.b.ii.",
+            "attachments": [
+              {
+                "fileName": "Maplewood_MN_1_1.png",
+                "isDoc": false,
+                "directusId": "6178dd5f-67b5-4eed-8135-c5b3577bba2b"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "reduce_min": [
+      {
+        "reporter": "Samuel Deetz",
+        "requirements": ["other"],
+        "citations": [
+          {
+            "description": "Maplewood Zoning Code (Old)",
+            "type": "city code",
+            "url": "https://library.municode.com/mn/maplewood/codes/code_of_ordinances?nodeId=COOR_CH44ZO_ARTIIDIRE_DIV14MIEDI_S44-683OREPA",
+            "notes": "ARTICLE II. - DISTRICT REGULATIONS\nDIVISION 14. - M-U MIXED-USE DISTRICT\nSec. 44-683. - Off-street parking.\nAmount of parking\nb.\nc.\nd.",
+            "attachments": [
+              {
+                "fileName": "Maplewood_MN_1_1.png",
+                "isDoc": false,
+                "directusId": "43a0796c-9a21-41b3-8398-c5688b3b0f1b"
+              }
+            ]
+          },
+          {
+            "description": "Maplewood Zoning Code",
+            "type": "city code",
+            "url": "https://library.municode.com/mn/maplewood/codes/code_of_ordinances?nodeId=COOR_CH44ZO_ARTIIDIRE_DIV16MUMIEDI_S44-295OREPA",
+            "notes": "Sec. 44-295.b.iii.",
+            "attachments": [
+              {
+                "fileName": "Maplewood_MN_2_1.png",
+                "isDoc": false,
+                "directusId": "b91ed622-f49b-4f36-b577-4485647c03aa"
+              }
+            ]
+          }
+        ]
+      }
+    ]
   },
   "Maquoketa, IA": {
     "reduce_min": [
@@ -57379,7 +59077,7 @@
       ],
       "citations": [
         {
-          "description": "Memphis and Shelby County Unified Development Code",
+          "description": "Memphis and Shelby County Unified Development Code (Former)",
           "type": "city code",
           "url": "https://shelbycountytn.gov/DocumentCenter/View/40803/ZTA-22-1_approved-fxd?bidId=",
           "notes": "4.5 PARKING AND LOADING\n4.5.3. Parking Ratios\nB. Minimum Parking Ratios\nE. Parking Reduction Table\nPages 168, 174",
@@ -57402,7 +59100,93 @@
           ]
         }
       ]
-    }
+    },
+    "reduce_min": [
+      {
+        "reporter": "Samuel Deetz",
+        "requirements": [
+          "bike parking",
+          "by right",
+          "frequent transit",
+          "other",
+          "tree preservation"
+        ],
+        "citations": [
+          {
+            "description": "Memphis and Shelby County Unified Development Code (Former)",
+            "type": "city code",
+            "url": "https://shelbycountytn.gov/DocumentCenter/View/40803/ZTA-22-1_approved-fxd?bidId=",
+            "notes": "4.5 PARKING AND LOADING\n4.5.3. Parking Ratios\nB. Minimum Parking Ratios\nE. Parking Reduction Table\nPages 168, 174",
+            "attachments": [
+              {
+                "fileName": "Memphis_TN_1_1.png",
+                "isDoc": false,
+                "directusId": "31b6337b-39bf-445a-9aca-8f7b40d04c51"
+              },
+              {
+                "fileName": "Memphis_TN_1_2.png",
+                "isDoc": false,
+                "directusId": "7adb690c-19eb-4fda-afb4-a067826bf1da"
+              },
+              {
+                "fileName": "Memphis_TN_1_3.png",
+                "isDoc": false,
+                "directusId": "d8bd03a9-0bfc-4ee0-8633-4846a85c158c"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "rm_min": [
+      {
+        "reporter": "Samuel Deetz",
+        "requirements": ["by right"],
+        "citations": [
+          {
+            "description": "Memphis and Shelby County Unified Development Code (Former)",
+            "type": "city code",
+            "url": "https://shelbycountytn.gov/DocumentCenter/View/40803/ZTA-22-1_approved-fxd?bidId=",
+            "notes": "4.5 PARKING AND LOADING\n4.5.3. Parking Ratios\nB. Minimum Parking Ratios\nE. Parking Reduction Table\nPages 168, 174",
+            "attachments": [
+              {
+                "fileName": "Memphis_TN_1_1.png",
+                "isDoc": false,
+                "directusId": "31b6337b-39bf-445a-9aca-8f7b40d04c51"
+              },
+              {
+                "fileName": "Memphis_TN_1_2.png",
+                "isDoc": false,
+                "directusId": "7adb690c-19eb-4fda-afb4-a067826bf1da"
+              },
+              {
+                "fileName": "Memphis_TN_1_3.png",
+                "isDoc": false,
+                "directusId": "d8bd03a9-0bfc-4ee0-8633-4846a85c158c"
+              }
+            ]
+          },
+          {
+            "description": "Memphis and Shelby County Unified Development Code",
+            "type": "city code",
+            "url": "https://shelbycountytn.gov/DocumentCenter/View/40803/Unified-Development-Code-ZTA-24-2?bidId=",
+            "notes": "4.5.3.B.;\n8.3.10.E.;\nPages 173, 353",
+            "attachments": [
+              {
+                "fileName": "Memphis_TN_2_1.png",
+                "isDoc": false,
+                "directusId": "77fbee18-ea32-4af5-8d35-e8f861027d51"
+              },
+              {
+                "fileName": "Memphis_TN_2_2.png",
+                "isDoc": false,
+                "directusId": "0810d41a-8b89-4470-9128-712580f061d8"
+              }
+            ]
+          }
+        ]
+      }
+    ]
   },
   "Menahga, MN": {
     "rm_min": [
@@ -59208,7 +60992,151 @@
           ]
         }
       ]
-    }
+    },
+    "add_max": [
+      {
+        "reporter": null,
+        "requirements": ["by right"],
+        "citations": [
+          {
+            "description": "Minute packet of the proposal from the Milwaukie Planning Commission p.388",
+            "type": "other",
+            "url": "https://www.milwaukieoregon.gov/sites/default/files/0.01_pc_packet_11.09.2021.pdf",
+            "notes": "This was the proposal to eliminate parking requirements for Middle Housing (i.e. duplexes, triplexes, quadplexes) and not require on-site parking for Accessory Dwelling Units citywide in 2021 (Since enacted).",
+            "attachments": [
+              {
+                "fileName": "Milwaukie_OR_1_1.jpg",
+                "isDoc": false,
+                "directusId": "503049e6-f3cf-49a5-83bd-8e77d06f7999"
+              }
+            ]
+          },
+          {
+            "description": "Milwaukie Zoning Code",
+            "type": "city code",
+            "url": "https://library.qcode.us/lib/milwaukie_or/pub/municipal_code/item/title_19-chapter_19_600-19_605",
+            "notes": "CHAPTER 19.300 BASE ZONES\n19.304 DOWNTOWN ZONES\n  19.304.5  Detailed Development Standards\n    D.    Off-Street Parking\n      2.    Standards\n        b.\nCHAPTER 19.600 OFF-STREET PARKING AND LOADING\n19.605 VEHICLE PARKING QUANTITY REQUIREMENTS\n  19.605.1  Minimum and Maximum Requirements\n  19.605.3  Exemptions and By-Right Reductions to Quantity Requirements\n    B.    Reductions to Minimum Parking Requirements",
+            "attachments": [
+              {
+                "fileName": "Milwaukie_OR_2_1.png",
+                "isDoc": false,
+                "directusId": "aa5307fd-b54b-4403-99f0-8de21aa69b84"
+              },
+              {
+                "fileName": "Milwaukie_OR_2_2.png",
+                "isDoc": false,
+                "directusId": "73dedf02-cc9f-438c-a159-ced737716e6a"
+              },
+              {
+                "fileName": "Milwaukie_OR_2_3.png",
+                "isDoc": false,
+                "directusId": "58c223c2-075f-4693-8d31-857013278d15"
+              },
+              {
+                "fileName": "Milwaukie_OR_2_4.png",
+                "isDoc": false,
+                "directusId": "8b3a5d21-1d4d-4946-9dba-2d9435b1cae8"
+              },
+              {
+                "fileName": "Milwaukie_OR_2_5.png",
+                "isDoc": false,
+                "directusId": "9b9e8b8a-d9ef-4c84-81d5-b55739e207fc"
+              }
+            ]
+          },
+          {
+            "description": "Milwaukie Draft Ordinance",
+            "type": "other",
+            "url": "https://www.milwaukieoregon.gov/sites/default/files/fileattachments/City%20Council/meeting/125333/2024-0521-rs_8_a_draft_ordinance_cfec.pdf",
+            "notes": "Page 25",
+            "attachments": [
+              {
+                "fileName": "Milwaukie_OR_3_1.png",
+                "isDoc": false,
+                "directusId": "2a711af1-8b27-4ee6-8bdc-e62f1d972a88"
+              },
+              {
+                "fileName": "Milwaukie_OR_3_2.png",
+                "isDoc": false,
+                "directusId": "1d79fc9c-45c6-4591-997a-0dd1d30cb4d6"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "rm_min": [
+      {
+        "reporter": null,
+        "requirements": ["by right"],
+        "citations": [
+          {
+            "description": "Minute packet of the proposal from the Milwaukie Planning Commission p.388",
+            "type": "other",
+            "url": "https://www.milwaukieoregon.gov/sites/default/files/0.01_pc_packet_11.09.2021.pdf",
+            "notes": "This was the proposal to eliminate parking requirements for Middle Housing (i.e. duplexes, triplexes, quadplexes) and not require on-site parking for Accessory Dwelling Units citywide in 2021 (Since enacted).",
+            "attachments": [
+              {
+                "fileName": "Milwaukie_OR_1_1.jpg",
+                "isDoc": false,
+                "directusId": "503049e6-f3cf-49a5-83bd-8e77d06f7999"
+              }
+            ]
+          },
+          {
+            "description": "Milwaukie Zoning Code",
+            "type": "city code",
+            "url": "https://library.qcode.us/lib/milwaukie_or/pub/municipal_code/item/title_19-chapter_19_600-19_605",
+            "notes": "CHAPTER 19.300 BASE ZONES\n19.304 DOWNTOWN ZONES\n  19.304.5  Detailed Development Standards\n    D.    Off-Street Parking\n      2.    Standards\n        b.\nCHAPTER 19.600 OFF-STREET PARKING AND LOADING\n19.605 VEHICLE PARKING QUANTITY REQUIREMENTS\n  19.605.1  Minimum and Maximum Requirements\n  19.605.3  Exemptions and By-Right Reductions to Quantity Requirements\n    B.    Reductions to Minimum Parking Requirements",
+            "attachments": [
+              {
+                "fileName": "Milwaukie_OR_2_1.png",
+                "isDoc": false,
+                "directusId": "aa5307fd-b54b-4403-99f0-8de21aa69b84"
+              },
+              {
+                "fileName": "Milwaukie_OR_2_2.png",
+                "isDoc": false,
+                "directusId": "73dedf02-cc9f-438c-a159-ced737716e6a"
+              },
+              {
+                "fileName": "Milwaukie_OR_2_3.png",
+                "isDoc": false,
+                "directusId": "58c223c2-075f-4693-8d31-857013278d15"
+              },
+              {
+                "fileName": "Milwaukie_OR_2_4.png",
+                "isDoc": false,
+                "directusId": "8b3a5d21-1d4d-4946-9dba-2d9435b1cae8"
+              },
+              {
+                "fileName": "Milwaukie_OR_2_5.png",
+                "isDoc": false,
+                "directusId": "9b9e8b8a-d9ef-4c84-81d5-b55739e207fc"
+              }
+            ]
+          },
+          {
+            "description": "Milwaukie Draft Ordinance",
+            "type": "other",
+            "url": "https://www.milwaukieoregon.gov/sites/default/files/fileattachments/City%20Council/meeting/125333/2024-0521-rs_8_a_draft_ordinance_cfec.pdf",
+            "notes": "Page 25",
+            "attachments": [
+              {
+                "fileName": "Milwaukie_OR_3_1.png",
+                "isDoc": false,
+                "directusId": "2a711af1-8b27-4ee6-8bdc-e62f1d972a88"
+              },
+              {
+                "fileName": "Milwaukie_OR_3_2.png",
+                "isDoc": false,
+                "directusId": "1d79fc9c-45c6-4591-997a-0dd1d30cb4d6"
+              }
+            ]
+          }
+        ]
+      }
+    ]
   },
   "Minden, LA": {
     "rm_min": [
@@ -59357,7 +61285,121 @@
           ]
         }
       ]
-    }
+    },
+    "add_max": [
+      {
+        "reporter": "Matt Steele",
+        "requirements": ["by right"],
+        "citations": [
+          {
+            "description": "Streetsblog Article",
+            "type": "media report",
+            "url": "https://usa.streetsblog.org/2018/12/12/minneapolis-moves-to-eliminate-mandatory-parking/",
+            "notes": null,
+            "attachments": [
+              {
+                "fileName": "Minneapolis_MN_1_1.png",
+                "isDoc": false,
+                "directusId": "ec52a688-130b-40a7-9b0a-738abc4884df"
+              }
+            ]
+          },
+          {
+            "description": "Presentation on Ordinance to implement comprehensive plan.",
+            "type": "other",
+            "url": "https://lims.minneapolismn.gov/download/Agenda/1767/Text%20amendment%20-%20off%20street%20parking.pdf/53904/2293/Parking,%20Loading,%20and%20Mobilty%20Zoning%20Code%20Text%20Amendment",
+            "notes": "Introduced March 11, 2021",
+            "attachments": [
+              {
+                "fileName": "Minneapolis_MN_2_1.pdf",
+                "isDoc": true,
+                "directusId": "240d171c-9d15-45ce-9019-67df0e50bd90"
+              }
+            ]
+          },
+          {
+            "description": "Minneapolis Zoning Code",
+            "type": "city code",
+            "url": "https://library.municode.com/mn/minneapolis/codes/code_of_ordinances?nodeId=MICOOR_TIT20ZOCO_CH541OREPALOMO",
+            "notes": "ARTICLE I. - GENERAL PROVISIONS\n541.10. - Purpose.\nARTICLE III. - SPECIFIC OFF-STREET PARKING REQUIREMENTS\n541.310. - Vehicle parking requirements.",
+            "attachments": [
+              {
+                "fileName": "Minneapolis_MN_3_1.png",
+                "isDoc": false,
+                "directusId": "6c2765d5-75e2-4da1-bad7-7b117789a806"
+              },
+              {
+                "fileName": "Minneapolis_MN_3_2.png",
+                "isDoc": false,
+                "directusId": "c05a8c57-a192-45d5-a027-bd572567cbf6"
+              },
+              {
+                "fileName": "Minneapolis_MN_3_3.png",
+                "isDoc": false,
+                "directusId": "cc1f16de-4c0f-4d42-88f3-a5bd2794dc24"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "rm_min": [
+      {
+        "reporter": "Matt Steele",
+        "requirements": ["by right"],
+        "citations": [
+          {
+            "description": "Streetsblog Article",
+            "type": "media report",
+            "url": "https://usa.streetsblog.org/2018/12/12/minneapolis-moves-to-eliminate-mandatory-parking/",
+            "notes": null,
+            "attachments": [
+              {
+                "fileName": "Minneapolis_MN_1_1.png",
+                "isDoc": false,
+                "directusId": "ec52a688-130b-40a7-9b0a-738abc4884df"
+              }
+            ]
+          },
+          {
+            "description": "Presentation on Ordinance to implement comprehensive plan.",
+            "type": "other",
+            "url": "https://lims.minneapolismn.gov/download/Agenda/1767/Text%20amendment%20-%20off%20street%20parking.pdf/53904/2293/Parking,%20Loading,%20and%20Mobilty%20Zoning%20Code%20Text%20Amendment",
+            "notes": "Introduced March 11, 2021",
+            "attachments": [
+              {
+                "fileName": "Minneapolis_MN_2_1.pdf",
+                "isDoc": true,
+                "directusId": "240d171c-9d15-45ce-9019-67df0e50bd90"
+              }
+            ]
+          },
+          {
+            "description": "Minneapolis Zoning Code",
+            "type": "city code",
+            "url": "https://library.municode.com/mn/minneapolis/codes/code_of_ordinances?nodeId=MICOOR_TIT20ZOCO_CH541OREPALOMO",
+            "notes": "ARTICLE I. - GENERAL PROVISIONS\n541.10. - Purpose.\nARTICLE III. - SPECIFIC OFF-STREET PARKING REQUIREMENTS\n541.310. - Vehicle parking requirements.",
+            "attachments": [
+              {
+                "fileName": "Minneapolis_MN_3_1.png",
+                "isDoc": false,
+                "directusId": "6c2765d5-75e2-4da1-bad7-7b117789a806"
+              },
+              {
+                "fileName": "Minneapolis_MN_3_2.png",
+                "isDoc": false,
+                "directusId": "c05a8c57-a192-45d5-a027-bd572567cbf6"
+              },
+              {
+                "fileName": "Minneapolis_MN_3_3.png",
+                "isDoc": false,
+                "directusId": "cc1f16de-4c0f-4d42-88f3-a5bd2794dc24"
+              }
+            ]
+          }
+        ]
+      }
+    ]
   },
   "Minnesota, MN": {
     "rm_min": [
@@ -63079,7 +65121,49 @@
           ]
         }
       ]
-    }
+    },
+    "add_max": [
+      {
+        "reporter": "Neil Kornutick",
+        "requirements": ["by right"],
+        "citations": [
+          {
+            "description": "Nashville Tennessean",
+            "type": "media report",
+            "url": "https://www.tennessean.com/story/news/local/davidson/2022/11/16/nashville-eliminates-minimum-urban-area-parking-space-requirements/69651050007/",
+            "notes": "Nov. 16, 2022",
+            "attachments": [
+              {
+                "fileName": "Nashville_TN_1_1.jpg",
+                "isDoc": false,
+                "directusId": "bf16183f-7ba6-4c03-a4ed-d56b8653b90b"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "rm_min": [
+      {
+        "reporter": "Neil Kornutick",
+        "requirements": ["by right"],
+        "citations": [
+          {
+            "description": "Nashville Tennessean",
+            "type": "media report",
+            "url": "https://www.tennessean.com/story/news/local/davidson/2022/11/16/nashville-eliminates-minimum-urban-area-parking-space-requirements/69651050007/",
+            "notes": "Nov. 16, 2022",
+            "attachments": [
+              {
+                "fileName": "Nashville_TN_1_1.jpg",
+                "isDoc": false,
+                "directusId": "bf16183f-7ba6-4c03-a4ed-d56b8653b90b"
+              }
+            ]
+          }
+        ]
+      }
+    ]
   },
   "Natchez, MS": {
     "rm_min": [
@@ -64001,7 +66085,59 @@
           ]
         }
       ]
-    }
+    },
+    "add_max": [
+      {
+        "reporter": "Samuel Deetz",
+        "requirements": ["by right"],
+        "citations": [
+          {
+            "description": "New Hope Zoning Code",
+            "type": "city code",
+            "url": "https://library.municode.com/mn/new_hope/codes/code_of_ordinances?nodeId=CD_ORD_CH4ZO_S4-17CCCEDI",
+            "notes": "Sec. 4-17.(g)",
+            "attachments": [
+              {
+                "fileName": "NewHope_MN_1_1.png",
+                "isDoc": false,
+                "directusId": "2ab87936-4c9a-4465-989e-6457f446edec"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "reduce_min": [
+      {
+        "reporter": "Samuel Deetz",
+        "requirements": ["in-lieu fees", "other"],
+        "citations": [
+          {
+            "description": "New Hope Zoning Code",
+            "type": "city code",
+            "url": "https://library.municode.com/mn/new_hope/codes/code_of_ordinances?nodeId=CD_ORD_CH4ZO_S4-17CCCEDI",
+            "notes": "Sec. 4-17.(g)(3);\nSec. 4-17.(g)(5);\nSec. 4-17.(g)(10)",
+            "attachments": [
+              {
+                "fileName": "NewHope_MN_1_1.png",
+                "isDoc": false,
+                "directusId": "fb8cc0f0-2111-4a4d-bce8-16b70b141c21"
+              },
+              {
+                "fileName": "NewHope_MN_1_2.png",
+                "isDoc": false,
+                "directusId": "58fa283e-5542-4a52-bfc9-59fe5dc62859"
+              },
+              {
+                "fileName": "NewHope_MN_1_3.png",
+                "isDoc": false,
+                "directusId": "3531fc97-9a83-411c-8eb8-504955a44ef8"
+              }
+            ]
+          }
+        ]
+      }
+    ]
   },
   "New Hope, PA": {
     "reduce_min": [
@@ -64485,7 +66621,49 @@
           ]
         }
       ]
-    }
+    },
+    "reduce_min": [
+      {
+        "reporter": "Samuel Deetz",
+        "requirements": ["in-lieu fees"],
+        "citations": [
+          {
+            "description": "New Ulm Zoning Code",
+            "type": "city code",
+            "url": "https://www.newulmmn.gov/DocumentCenter/View/117/Zoning-Ordinance-PDF",
+            "notes": "CHAPTER 10: DEVELOPMENT STANDARDS \n10.7 OFF-STREET PARKING \nH. General Standards\n1. Exemption from Off-Street Parking Regulations\nPage 288 of pdf, page 284 of original document",
+            "attachments": [
+              {
+                "fileName": "NewUlm_MN_1_1.png",
+                "isDoc": false,
+                "directusId": "1c94847a-7b5d-4b52-ae3d-717b40f859a8"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "rm_min": [
+      {
+        "reporter": "Samuel Deetz",
+        "requirements": ["by right", "other"],
+        "citations": [
+          {
+            "description": "New Ulm Zoning Code",
+            "type": "city code",
+            "url": "https://www.newulmmn.gov/DocumentCenter/View/117/Zoning-Ordinance-PDF",
+            "notes": "CHAPTER 10: DEVELOPMENT STANDARDS \n10.7 OFF-STREET PARKING \nH. General Standards\n1. Exemption from Off-Street Parking Regulations\nPage 288 of pdf, page 284 of original document",
+            "attachments": [
+              {
+                "fileName": "NewUlm_MN_1_1.png",
+                "isDoc": false,
+                "directusId": "1c94847a-7b5d-4b52-ae3d-717b40f859a8"
+              }
+            ]
+          }
+        ]
+      }
+    ]
   },
   "New Wilmington, PA": {
     "rm_min": [
@@ -64836,7 +67014,49 @@
           ]
         }
       ]
-    }
+    },
+    "add_max": [
+      {
+        "reporter": "Samuel Deetz",
+        "requirements": ["by right"],
+        "citations": [
+          {
+            "description": "Newport Zoning Code",
+            "type": "city code",
+            "url": "https://library.municode.com/mn/newport/codes/code_of_ordinances?nodeId=COOR_CH36ZO_ARTIIIDIREAPALDI_DIV2PEST_S36-162STNODI",
+            "notes": "ARTICLE III. - DISTRICT REGULATIONS APPLICABLE TO ALL DISTRICTS\nDIVISION 2. - PERFORMANCE STANDARDS\nSec. 36-162. - Standards for nonresidential districts.\n(17)MX District parking standards.\nb.",
+            "attachments": [
+              {
+                "fileName": "Newport_MN_1_1.png",
+                "isDoc": false,
+                "directusId": "4fd4057d-f73f-4598-b3eb-e59fb0ad5e5b"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "reduce_min": [
+      {
+        "reporter": "Samuel Deetz",
+        "requirements": ["by right", "other"],
+        "citations": [
+          {
+            "description": "Newport Zoning Code",
+            "type": "city code",
+            "url": "https://library.municode.com/mn/newport/codes/code_of_ordinances?nodeId=COOR_CH36ZO_ARTIIIDIREAPALDI_DIV2PEST_S36-162STNODI",
+            "notes": "ARTICLE III. - DISTRICT REGULATIONS APPLICABLE TO ALL DISTRICTS\nDIVISION 2. - PERFORMANCE STANDARDS\nSec. 36-162. - Standards for nonresidential districts.\n(17)MX District parking standards.\nb.",
+            "attachments": [
+              {
+                "fileName": "Newport_MN_1_1.png",
+                "isDoc": false,
+                "directusId": "4fd4057d-f73f-4598-b3eb-e59fb0ad5e5b"
+              }
+            ]
+          }
+        ]
+      }
+    ]
   },
   "Newport, RI": {
     "add_max": [
@@ -66303,7 +68523,54 @@
           ]
         }
       ]
-    }
+    },
+    "add_max": [
+      {
+        "reporter": "Samuel Deetz",
+        "requirements": ["by right"],
+        "citations": [
+          {
+            "description": "Northfield Zoning Code",
+            "type": "city code",
+            "url": "https://library.municode.com/mn/northfield/codes/code_of_ordinances?nodeId=PTIINOCO_CH34LADECO_ART3SIDE_3.6OREPALOMO",
+            "notes": "3.6.5:Table 3.6-1;\n3.6.5:Table 3.6-2",
+            "attachments": [
+              {
+                "fileName": "Northfield_MN_1_1.png",
+                "isDoc": false,
+                "directusId": "fea6312f-4a90-404e-9a70-7f2c5b4b89c7"
+              },
+              {
+                "fileName": "Northfield_MN_1_2.png",
+                "isDoc": false,
+                "directusId": "1bbfecb2-043c-4c9b-897a-e4ff7c1ddb00"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "reduce_min": [
+      {
+        "reporter": "Samuel Deetz",
+        "requirements": ["by right", "other"],
+        "citations": [
+          {
+            "description": "Northfield Zoning Code",
+            "type": "city code",
+            "url": "https://library.municode.com/mn/northfield/codes/code_of_ordinances?nodeId=PTIINOCO_CH34LADECO_ART3SIDE_3.6OREPALOMO",
+            "notes": "3.6.4(A)",
+            "attachments": [
+              {
+                "fileName": "Northfield_MN_1_1.png",
+                "isDoc": false,
+                "directusId": "bb9e8ef5-29f9-45fa-989d-b20322a00f08"
+              }
+            ]
+          }
+        ]
+      }
+    ]
   },
   "Northglenn, CO": {
     "legacy": {
@@ -67505,7 +69772,64 @@
           ]
         }
       ]
-    }
+    },
+    "reduce_min": [
+      {
+        "reporter": "Max DeJarnatt",
+        "requirements": ["by right", "other"],
+        "citations": [
+          {
+            "description": "18.38.160 Specific zone district requirements",
+            "type": "city code",
+            "url": "https://www.codepublishing.com/WA/Olympia/?OlympiaNT.html",
+            "notes": "Chapter 18.38 PARKING AND LOADING\n18.38.060 Parking and loading general regulations\nJ.\n18.38.160 Specific zone district requirements",
+            "attachments": [
+              {
+                "fileName": "Olympia_WA_1_1.png",
+                "isDoc": false,
+                "directusId": "0598a1cb-d334-47fc-baf5-e45afd5f3c7a"
+              },
+              {
+                "fileName": "Olympia_WA_1_2.png",
+                "isDoc": false,
+                "directusId": "9342ae38-0e74-49b7-948f-6efffb7ac0df"
+              },
+              {
+                "fileName": "Olympia_WA_1_3.png",
+                "isDoc": false,
+                "directusId": "97f8b999-5e42-438c-884c-5b13064565de"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "rm_min": [
+      {
+        "reporter": "Max DeJarnatt",
+        "requirements": ["by right", "other"],
+        "citations": [
+          {
+            "description": "Olympia Unified Development Code",
+            "type": "city code",
+            "url": "https://www.codepublishing.com/WA/Olympia/?OlympiaNT.html",
+            "notes": "18.38.160.C.",
+            "attachments": [
+              {
+                "fileName": "Olympia_WA_1_1.png",
+                "isDoc": false,
+                "directusId": "ecdcc3c9-ded2-4456-9d81-692c3975559b"
+              },
+              {
+                "fileName": "Olympia_WA_1_2.png",
+                "isDoc": false,
+                "directusId": "38efc337-e419-44fe-afaf-c43e6734cec2"
+              }
+            ]
+          }
+        ]
+      }
+    ]
   },
   "Olyphant, PA": {
     "rm_min": [
@@ -67959,7 +70283,65 @@
           "attachments": []
         }
       ]
-    }
+    },
+    "reduce_min": [
+      {
+        "reporter": "Patrick Siegman",
+        "requirements": ["by right", "size of project"],
+        "citations": [
+          {
+            "description": "Sightline Article: OREGON JUST ENDED EXCESSIVE PARKING MANDATES ON MOST URBAN LOTS",
+            "type": "media report",
+            "url": "https://www.sightline.org/2020/12/14/oregon-big-parking-reform/",
+            "notes": null,
+            "attachments": []
+          },
+          {
+            "description": "Oregon Department of Land Conservation and Development - HB2001 Housing Choices",
+            "type": "other",
+            "url": "https://www.oregon.gov/lcd/UP/Pages/Housing-Choices.aspx",
+            "notes": "Several documents pertinent to the law and implementation can be found on this page.",
+            "attachments": []
+          },
+          {
+            "description": "Sightline - OREGON NEARS GREEN LIGHT FOR BIG PARKING REFORM",
+            "type": "media report",
+            "url": "https://www.sightline.org/2022/05/21/oregon-nears-green-light-for-big-parking-reform/",
+            "notes": null,
+            "attachments": []
+          }
+        ]
+      }
+    ],
+    "rm_min": [
+      {
+        "reporter": "Patrick Siegman",
+        "requirements": ["by right", "size of project"],
+        "citations": [
+          {
+            "description": "Sightline Article: OREGON JUST ENDED EXCESSIVE PARKING MANDATES ON MOST URBAN LOTS",
+            "type": "media report",
+            "url": "https://www.sightline.org/2020/12/14/oregon-big-parking-reform/",
+            "notes": null,
+            "attachments": []
+          },
+          {
+            "description": "Oregon Department of Land Conservation and Development - HB2001 Housing Choices",
+            "type": "other",
+            "url": "https://www.oregon.gov/lcd/UP/Pages/Housing-Choices.aspx",
+            "notes": "Several documents pertinent to the law and implementation can be found on this page.",
+            "attachments": []
+          },
+          {
+            "description": "Sightline - OREGON NEARS GREEN LIGHT FOR BIG PARKING REFORM",
+            "type": "media report",
+            "url": "https://www.sightline.org/2022/05/21/oregon-nears-green-light-for-big-parking-reform/",
+            "notes": null,
+            "attachments": []
+          }
+        ]
+      }
+    ]
   },
   "Oregon, WI": {
     "legacy": {
@@ -73137,7 +75519,178 @@
           ]
         }
       ]
-    }
+    },
+    "add_max": [
+      {
+        "reporter": "David Faber",
+        "requirements": ["by right"],
+        "citations": [
+          {
+            "description": "Port Townsend Zoning Code",
+            "type": "city code",
+            "url": "https://www.codepublishing.com/WA/PortTownsend/#!/PortTownsend17/PortTownsend1772.html#17.72.020",
+            "notes": "Chapter 17.72 OFF-STREET PARKING AND LOADING\n17.72.020 Applicability and exemptions.\nC. Exemption – Upper Floors of Commercial and Mixed Use Buildings.",
+            "attachments": [
+              {
+                "fileName": "PortTownsend_WA_1_1.png",
+                "isDoc": false,
+                "directusId": "e76e3085-5a2f-4e2c-90df-4edb9cd8d269"
+              },
+              {
+                "fileName": "PortTownsend_WA_1_2.png",
+                "isDoc": false,
+                "directusId": "2550a3e3-5f4b-43c5-ba89-dd07ce1bf49d"
+              }
+            ]
+          },
+          {
+            "description": "Port Townsend March 4 meeting agenda",
+            "type": "other",
+            "url": "https://cityofpt.granicus.com/MetaViewer.php?view_id=4&clip_id=3034&meta_id=225678",
+            "notes": "Pages 5-13",
+            "attachments": [
+              {
+                "fileName": "PortTownsend_WA_2_1.png",
+                "isDoc": false,
+                "directusId": "7ffb23b0-76b5-463c-8241-05b88a8c6836"
+              },
+              {
+                "fileName": "PortTownsend_WA_2_2.png",
+                "isDoc": false,
+                "directusId": "b169b51a-11c1-4c5f-b0f1-2e17356f6ac1"
+              }
+            ]
+          },
+          {
+            "description": "September 16, 2024 Agenda Item AB24-139",
+            "type": "other",
+            "url": "https://cityofpt.granicus.com/MetaViewer.php?view_id=4&clip_id=3273&meta_id=232843",
+            "notes": null,
+            "attachments": [
+              {
+                "fileName": "PortTownsend_WA_3_1.png",
+                "isDoc": false,
+                "directusId": "4670595b-099d-41c8-9071-05da0612532c"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "reduce_min": [
+      {
+        "reporter": "David Faber",
+        "requirements": ["by right", "other"],
+        "citations": [
+          {
+            "description": "Port Townsend Zoning Code",
+            "type": "city code",
+            "url": "https://www.codepublishing.com/WA/PortTownsend/#!/PortTownsend17/PortTownsend1772.html#17.72.020",
+            "notes": "Chapter 17.72 OFF-STREET PARKING AND LOADING\n17.72.020 Applicability and exemptions.\nC. Exemption – Upper Floors of Commercial and Mixed Use Buildings.",
+            "attachments": [
+              {
+                "fileName": "PortTownsend_WA_1_1.png",
+                "isDoc": false,
+                "directusId": "e76e3085-5a2f-4e2c-90df-4edb9cd8d269"
+              },
+              {
+                "fileName": "PortTownsend_WA_1_2.png",
+                "isDoc": false,
+                "directusId": "2550a3e3-5f4b-43c5-ba89-dd07ce1bf49d"
+              }
+            ]
+          },
+          {
+            "description": "Port Townsend March 4 meeting agenda",
+            "type": "other",
+            "url": "https://cityofpt.granicus.com/MetaViewer.php?view_id=4&clip_id=3034&meta_id=225678",
+            "notes": "Pages 5-13",
+            "attachments": [
+              {
+                "fileName": "PortTownsend_WA_2_1.png",
+                "isDoc": false,
+                "directusId": "7ffb23b0-76b5-463c-8241-05b88a8c6836"
+              },
+              {
+                "fileName": "PortTownsend_WA_2_2.png",
+                "isDoc": false,
+                "directusId": "b169b51a-11c1-4c5f-b0f1-2e17356f6ac1"
+              }
+            ]
+          },
+          {
+            "description": "September 16, 2024 Agenda Item AB24-139",
+            "type": "other",
+            "url": "https://cityofpt.granicus.com/MetaViewer.php?view_id=4&clip_id=3273&meta_id=232843",
+            "notes": null,
+            "attachments": [
+              {
+                "fileName": "PortTownsend_WA_3_1.png",
+                "isDoc": false,
+                "directusId": "4670595b-099d-41c8-9071-05da0612532c"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "rm_min": [
+      {
+        "reporter": "David Faber",
+        "requirements": ["by right", "other"],
+        "citations": [
+          {
+            "description": "Port Townsend Zoning Code",
+            "type": "city code",
+            "url": "https://www.codepublishing.com/WA/PortTownsend/#!/PortTownsend17/PortTownsend1772.html#17.72.020",
+            "notes": "Chapter 17.72 OFF-STREET PARKING AND LOADING\n17.72.020 Applicability and exemptions.\nC. Exemption – Upper Floors of Commercial and Mixed Use Buildings.",
+            "attachments": [
+              {
+                "fileName": "PortTownsend_WA_1_1.png",
+                "isDoc": false,
+                "directusId": "e76e3085-5a2f-4e2c-90df-4edb9cd8d269"
+              },
+              {
+                "fileName": "PortTownsend_WA_1_2.png",
+                "isDoc": false,
+                "directusId": "2550a3e3-5f4b-43c5-ba89-dd07ce1bf49d"
+              }
+            ]
+          },
+          {
+            "description": "Port Townsend March 4 meeting agenda",
+            "type": "other",
+            "url": "https://cityofpt.granicus.com/MetaViewer.php?view_id=4&clip_id=3034&meta_id=225678",
+            "notes": "Pages 5-13",
+            "attachments": [
+              {
+                "fileName": "PortTownsend_WA_2_1.png",
+                "isDoc": false,
+                "directusId": "7ffb23b0-76b5-463c-8241-05b88a8c6836"
+              },
+              {
+                "fileName": "PortTownsend_WA_2_2.png",
+                "isDoc": false,
+                "directusId": "b169b51a-11c1-4c5f-b0f1-2e17356f6ac1"
+              }
+            ]
+          },
+          {
+            "description": "September 16, 2024 Agenda Item AB24-139",
+            "type": "other",
+            "url": "https://cityofpt.granicus.com/MetaViewer.php?view_id=4&clip_id=3273&meta_id=232843",
+            "notes": null,
+            "attachments": [
+              {
+                "fileName": "PortTownsend_WA_3_1.png",
+                "isDoc": false,
+                "directusId": "4670595b-099d-41c8-9071-05da0612532c"
+              }
+            ]
+          }
+        ]
+      }
+    ]
   },
   "Port Washington, WI": {
     "rm_min": [
@@ -73544,7 +76097,54 @@
           ]
         }
       ]
-    }
+    },
+    "add_max": [
+      {
+        "reporter": "Tony Jordan",
+        "requirements": ["by right"],
+        "citations": [
+          {
+            "description": "Portland City Zoning Code Amendment",
+            "type": "city code",
+            "url": "https://www.portland.gov/council/documents/ordinance/passed/191310",
+            "notes": "33.266.110 Required Carpool and Electric Vehicle Parking Spaces <- this is the new section which does not mandate any minimum parking but does require carpool and EV parking when it is provided voluntarily. ",
+            "attachments": [
+              {
+                "fileName": "Portland_OR_1_1.png",
+                "isDoc": false,
+                "directusId": "39d1e4c1-e605-4770-98a6-ae2670c7ae86"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "rm_min": [
+      {
+        "reporter": "Tony Jordan",
+        "requirements": [
+          "affordable housing",
+          "by right",
+          "frequent transit",
+          "inclusionary housing"
+        ],
+        "citations": [
+          {
+            "description": "Portland City Zoning Code Amendment",
+            "type": "city code",
+            "url": "https://www.portland.gov/council/documents/ordinance/passed/191310",
+            "notes": "33.266.110 Required Carpool and Electric Vehicle Parking Spaces <- this is the new section which does not mandate any minimum parking but does require carpool and EV parking when it is provided voluntarily. ",
+            "attachments": [
+              {
+                "fileName": "Portland_OR_1_1.png",
+                "isDoc": false,
+                "directusId": "39d1e4c1-e605-4770-98a6-ae2670c7ae86"
+              }
+            ]
+          }
+        ]
+      }
+    ]
   },
   "Portland, PA": {
     "rm_min": [
@@ -75830,7 +78430,49 @@
           ]
         }
       ]
-    }
+    },
+    "add_max": [
+      {
+        "reporter": "Samuel Deetz",
+        "requirements": ["by right", "other"],
+        "citations": [
+          {
+            "description": "Richfield Zoning Code",
+            "type": "city code",
+            "url": "https://library.municode.com/mn/richfield/codes/code_of_ordinances?nodeId=APXBRIZOCO_S544GEBUPEST_544.13VEPALORE",
+            "notes": "544.13.Subd. 8.",
+            "attachments": [
+              {
+                "fileName": "Richfield_MN_1_1.png",
+                "isDoc": false,
+                "directusId": "7ed263b1-caf0-463b-8b0f-fe2eb57809da"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "reduce_min": [
+      {
+        "reporter": "Samuel Deetz",
+        "requirements": ["bike parking", "frequent transit", "other"],
+        "citations": [
+          {
+            "description": "Richfield Zoning Code",
+            "type": "city code",
+            "url": "https://library.municode.com/mn/richfield/codes/code_of_ordinances?nodeId=APXBRIZOCO_S544GEBUPEST_544.13VEPALORE",
+            "notes": "544.13.Subd. 9.",
+            "attachments": [
+              {
+                "fileName": "Richfield_MN_1_1.png",
+                "isDoc": false,
+                "directusId": "bdd5f9f4-7e21-48f9-ba8d-d8d61b459a33"
+              }
+            ]
+          }
+        ]
+      }
+    ]
   },
   "Richland Center, WI": {
     "rm_min": [
@@ -76104,7 +78746,28 @@
           ]
         }
       ]
-    }
+    },
+    "rm_min": [
+      {
+        "reporter": "Daniel Robinson",
+        "requirements": ["by right", "size of project"],
+        "citations": [
+          {
+            "description": "Ridgefield City Code",
+            "type": "city code",
+            "url": "https://library.municode.com/wa/ridgefield/codes/code_of_ordinances?nodeId=CO_TIT18DECO_CH18.720OREPALO_18.720.020GEPR",
+            "notes": "18.720.020 - General provisions subsection I",
+            "attachments": [
+              {
+                "fileName": "Ridgefield_WA_1_1.png",
+                "isDoc": false,
+                "directusId": "5b8833a3-aa0c-422f-882a-0eca5825de89"
+              }
+            ]
+          }
+        ]
+      }
+    ]
   },
   "Ridgeland, MS": {
     "reduce_min": [
@@ -76851,7 +79514,70 @@
           ]
         }
       ]
-    }
+    },
+    "add_max": [
+      {
+        "reporter": "Samuel Deetz",
+        "requirements": ["by right"],
+        "citations": [
+          {
+            "description": "Rochester Unified Development Code",
+            "type": "city code",
+            "url": "https://www.rochestermn.gov/home/showpublisheddocument/36333/638084270359130000",
+            "notes": "Section 60.400.080.E. \nPages 237-241 of pdf, pages 228-232 of original document",
+            "attachments": [
+              {
+                "fileName": "Rochester_MN_1_1.png",
+                "isDoc": false,
+                "directusId": "f4f5e037-545c-4efb-9d91-ac0654cf884f"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "reduce_min": [
+      {
+        "reporter": "Samuel Deetz",
+        "requirements": ["by right"],
+        "citations": [
+          {
+            "description": "Rochester Unified Development Code",
+            "type": "city code",
+            "url": "https://www.rochestermn.gov/home/showpublisheddocument/36333/638084270359130000",
+            "notes": "Section 60.400.080.E. \nPages 237-241 of pdf, pages 228-232 of original document",
+            "attachments": [
+              {
+                "fileName": "Rochester_MN_1_1.png",
+                "isDoc": false,
+                "directusId": "f4f5e037-545c-4efb-9d91-ac0654cf884f"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "rm_min": [
+      {
+        "reporter": "Samuel Deetz",
+        "requirements": ["by right", "size of project"],
+        "citations": [
+          {
+            "description": "Rochester Unified Development Code",
+            "type": "city code",
+            "url": "https://www.rochestermn.gov/home/showpublisheddocument/36333/638084270359130000",
+            "notes": "Section 60.400.080.B.2.\nPage 236 of pdf, page 227 of original document",
+            "attachments": [
+              {
+                "fileName": "Rochester_MN_1_1.png",
+                "isDoc": false,
+                "directusId": "3e31cec6-ffb7-4d27-8f97-7f9b490945df"
+              }
+            ]
+          }
+        ]
+      }
+    ]
   },
   "Rochester, NY": {
     "rm_min": [
@@ -77784,7 +80510,53 @@
           ]
         }
       ]
-    }
+    },
+    "add_max": [
+      {
+        "reporter": "Samuel Deetz",
+        "requirements": ["by right"],
+        "citations": [
+          {
+            "description": "Roseville Zoning Code",
+            "type": "city code",
+            "url": "https://www.cityofroseville.com/DocumentCenter/View/33685/Title-10-Zoning",
+            "notes": "1019.06\nPage 216",
+            "attachments": [
+              {
+                "fileName": "Roseville_MN_1_1.png",
+                "isDoc": false,
+                "directusId": "72773848-e679-4b20-839c-199b6887a57a"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "reduce_min": [
+      {
+        "reporter": "Samuel Deetz",
+        "requirements": [
+          "frequent transit",
+          "other",
+          "transportation demand management"
+        ],
+        "citations": [
+          {
+            "description": "Roseville Zoning Code",
+            "type": "city code",
+            "url": "https://www.cityofroseville.com/DocumentCenter/View/33685/Title-10-Zoning",
+            "notes": "1019.05\nPages 215-216",
+            "attachments": [
+              {
+                "fileName": "Roseville_MN_1_1.png",
+                "isDoc": false,
+                "directusId": "4213e4f6-d5f0-4f81-8b3a-34ca84a24978"
+              }
+            ]
+          }
+        ]
+      }
+    ]
   },
   "Rossford, OH": {
     "rm_min": [
@@ -78818,7 +81590,101 @@
           ]
         }
       ]
-    }
+    },
+    "add_max": [
+      {
+        "reporter": "Tony Jordan",
+        "requirements": ["by right"],
+        "citations": [
+          {
+            "description": "Second reading for City Council on April 24, 2023",
+            "type": "other",
+            "url": null,
+            "notes": "City council held the second reading of this ordinance on 4/24/2023",
+            "attachments": [
+              {
+                "fileName": "Salem_OR_1_1.png",
+                "isDoc": false,
+                "directusId": "6b498397-a343-436f-bc2d-e5354a797500"
+              }
+            ]
+          },
+          {
+            "description": "Code Amendment",
+            "type": "other",
+            "url": "https://salem.legistar.com/View.ashx?M=F&ID=11892457&GUID=B95A0157-A53F-40AC-9AE1-38852C505A58",
+            "notes": "Screenshot showing strikethrough of off-street requirements language",
+            "attachments": [
+              {
+                "fileName": "Salem_OR_2_1.png",
+                "isDoc": false,
+                "directusId": "99b13a15-d934-410a-829b-82b2e15720e3"
+              }
+            ]
+          },
+          {
+            "description": "Salem Unified Development Code",
+            "type": "city code",
+            "url": "https://library.municode.com/or/salem/codes/code_of_ordinances?nodeId=TITXUNDECO_UDC_CH806OREPALODR_S806.015AMOREPA",
+            "notes": "Sec. 806.015. - Amount off-street parking.",
+            "attachments": [
+              {
+                "fileName": "Salem_OR_3_1.png",
+                "isDoc": false,
+                "directusId": "3801d382-a0bb-479f-9edf-02ac8dbcc5a5"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "rm_min": [
+      {
+        "reporter": "Tony Jordan",
+        "requirements": ["by right"],
+        "citations": [
+          {
+            "description": "Second reading for City Council on April 24, 2023",
+            "type": "other",
+            "url": null,
+            "notes": "City council held the second reading of this ordinance on 4/24/2023",
+            "attachments": [
+              {
+                "fileName": "Salem_OR_1_1.png",
+                "isDoc": false,
+                "directusId": "6b498397-a343-436f-bc2d-e5354a797500"
+              }
+            ]
+          },
+          {
+            "description": "Code Amendment",
+            "type": "other",
+            "url": "https://salem.legistar.com/View.ashx?M=F&ID=11892457&GUID=B95A0157-A53F-40AC-9AE1-38852C505A58",
+            "notes": "Screenshot showing strikethrough of off-street requirements language",
+            "attachments": [
+              {
+                "fileName": "Salem_OR_2_1.png",
+                "isDoc": false,
+                "directusId": "99b13a15-d934-410a-829b-82b2e15720e3"
+              }
+            ]
+          },
+          {
+            "description": "Salem Unified Development Code",
+            "type": "city code",
+            "url": "https://library.municode.com/or/salem/codes/code_of_ordinances?nodeId=TITXUNDECO_UDC_CH806OREPALODR_S806.015AMOREPA",
+            "notes": "Sec. 806.015. - Amount off-street parking.",
+            "attachments": [
+              {
+                "fileName": "Salem_OR_3_1.png",
+                "isDoc": false,
+                "directusId": "3801d382-a0bb-479f-9edf-02ac8dbcc5a5"
+              }
+            ]
+          }
+        ]
+      }
+    ]
   },
   "Salem, SD": {
     "rm_min": [
@@ -81083,7 +83949,84 @@
           ]
         }
       ]
-    }
+    },
+    "add_max": [
+      {
+        "reporter": null,
+        "requirements": ["by right"],
+        "citations": [
+          {
+            "description": "Section 23.54.015 of the Seattle Municipal Code. See Section II of Table A (for non-residential uses) and Section II of Table B (for residential uses) for the parking exemptions in urban centers, station overlay areas, and frequent transit service areas within urban villages.",
+            "type": "city code",
+            "url": "https://library.municode.com/wa/seattle/codes/municipal_code?nodeId=TIT23LAUSCO_SUBTITLE_IIILAUSRE_CH23.54QUDESTACOREPASOWAST_23.54.015REPAMAPALI",
+            "notes": null,
+            "attachments": [
+              {
+                "fileName": "Seattle_WA_1_1.jpg",
+                "isDoc": false,
+                "directusId": "4bea42b1-e8b9-4a7b-8da9-d47e000dfcff"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "reduce_min": [
+      {
+        "reporter": null,
+        "requirements": ["by right"],
+        "citations": [
+          {
+            "description": "Section 23.54.015 of the Seattle Municipal Code. See Section II of Table A (for non-residential uses) and Section II of Table B (for residential uses) for the parking exemptions in urban centers, station overlay areas, and frequent transit service areas within urban villages.",
+            "type": "city code",
+            "url": "https://library.municode.com/wa/seattle/codes/municipal_code?nodeId=TIT23LAUSCO_SUBTITLE_IIILAUSRE_CH23.54QUDESTACOREPASOWAST_23.54.015REPAMAPALI",
+            "notes": null,
+            "attachments": [
+              {
+                "fileName": "Seattle_WA_1_1.jpg",
+                "isDoc": false,
+                "directusId": "4bea42b1-e8b9-4a7b-8da9-d47e000dfcff"
+              }
+            ]
+          },
+          {
+            "description": "Parking Flexibility Map",
+            "type": "other",
+            "url": "https://www.seattle.gov/Documents/Departments/OPCD/Vault/RegulatoryReform/ParkingFlexibilityAreasMap.pdf",
+            "notes": "Dark and light grey areas have no parking requirements (except for hospitals), and yellow areas have 50% parking reductions.",
+            "attachments": []
+          }
+        ]
+      }
+    ],
+    "rm_min": [
+      {
+        "reporter": null,
+        "requirements": ["by right", "frequent transit"],
+        "citations": [
+          {
+            "description": "Section 23.54.015 of the Seattle Municipal Code. See Section II of Table A (for non-residential uses) and Section II of Table B (for residential uses) for the parking exemptions in urban centers, station overlay areas, and frequent transit service areas within urban villages.",
+            "type": "city code",
+            "url": "https://library.municode.com/wa/seattle/codes/municipal_code?nodeId=TIT23LAUSCO_SUBTITLE_IIILAUSRE_CH23.54QUDESTACOREPASOWAST_23.54.015REPAMAPALI",
+            "notes": null,
+            "attachments": [
+              {
+                "fileName": "Seattle_WA_1_1.jpg",
+                "isDoc": false,
+                "directusId": "4bea42b1-e8b9-4a7b-8da9-d47e000dfcff"
+              }
+            ]
+          },
+          {
+            "description": "Parking Flexibility Map",
+            "type": "other",
+            "url": "https://www.seattle.gov/Documents/Departments/OPCD/Vault/RegulatoryReform/ParkingFlexibilityAreasMap.pdf",
+            "notes": "Dark and light grey areas have no parking requirements (except for hospitals), and yellow areas have 50% parking reductions.",
+            "attachments": []
+          }
+        ]
+      }
+    ]
   },
   "Sebewaing, MI": {
     "reduce_min": [
@@ -82318,7 +85261,53 @@
           ]
         }
       ]
-    }
+    },
+    "add_max": [
+      {
+        "reporter": "Samuel Deetz",
+        "requirements": ["by right"],
+        "citations": [
+          {
+            "description": "Shoreview Zoning Code",
+            "type": "city code",
+            "url": "https://www.shoreviewmn.gov/home/showpublisheddocument/12/637680084263700000",
+            "notes": "206.020 Parking.\n(C)Exceptions to the Minimum Parking Requirements.\n(D)Maximum Parking.\nPages 10-11",
+            "attachments": [
+              {
+                "fileName": "Shoreview_MN_1_1.png",
+                "isDoc": false,
+                "directusId": "099a45e3-673c-4c1c-8102-fcf6b0b1cd8c"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "reduce_min": [
+      {
+        "reporter": "Samuel Deetz",
+        "requirements": [
+          "frequent transit",
+          "other",
+          "transportation demand management"
+        ],
+        "citations": [
+          {
+            "description": "Shoreview Zoning Code",
+            "type": "city code",
+            "url": "https://www.shoreviewmn.gov/home/showpublisheddocument/12/637680084263700000",
+            "notes": "206.020 Parking.\n(C)Exceptions to the Minimum Parking Requirements.\n(D)Maximum Parking.\nPages 10-11",
+            "attachments": [
+              {
+                "fileName": "Shoreview_MN_1_1.png",
+                "isDoc": false,
+                "directusId": "099a45e3-673c-4c1c-8102-fcf6b0b1cd8c"
+              }
+            ]
+          }
+        ]
+      }
+    ]
   },
   "Shorewood, IL": {
     "add_max": [
@@ -84924,7 +87913,75 @@
           ]
         }
       ]
-    }
+    },
+    "add_max": [
+      {
+        "reporter": "Evan Manvel",
+        "requirements": ["by right"],
+        "citations": [
+          {
+            "description": "The Register-Guard",
+            "type": "media report",
+            "url": "https://www.registerguard.com/story/news/local/2023/11/14/parking-reform-ordinance-removes-requirement-for-off-street-minimums/71536844007/",
+            "notes": null,
+            "attachments": [
+              {
+                "fileName": "Springfield_OR_1_1.png",
+                "isDoc": false,
+                "directusId": "7fd48a66-41f5-4475-8527-84d09ab53422"
+              }
+            ]
+          },
+          {
+            "description": "Springfield Ordinance 6465",
+            "type": "other",
+            "url": "https://ecode360.com/SP5045/laws/LF1940474.pdf",
+            "notes": "Page 18",
+            "attachments": [
+              {
+                "fileName": "Springfield_OR_2_1.png",
+                "isDoc": false,
+                "directusId": "35d9e1d2-852b-4d47-944e-85a9039c009e"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "rm_min": [
+      {
+        "reporter": "Evan Manvel",
+        "requirements": ["by right"],
+        "citations": [
+          {
+            "description": "The Register-Guard",
+            "type": "media report",
+            "url": "https://www.registerguard.com/story/news/local/2023/11/14/parking-reform-ordinance-removes-requirement-for-off-street-minimums/71536844007/",
+            "notes": null,
+            "attachments": [
+              {
+                "fileName": "Springfield_OR_1_1.png",
+                "isDoc": false,
+                "directusId": "7fd48a66-41f5-4475-8527-84d09ab53422"
+              }
+            ]
+          },
+          {
+            "description": "Springfield Ordinance 6465",
+            "type": "other",
+            "url": "https://ecode360.com/SP5045/laws/LF1940474.pdf",
+            "notes": "Page 18",
+            "attachments": [
+              {
+                "fileName": "Springfield_OR_2_1.png",
+                "isDoc": false,
+                "directusId": "35d9e1d2-852b-4d47-944e-85a9039c009e"
+              }
+            ]
+          }
+        ]
+      }
+    ]
   },
   "Springport, MI": {
     "reduce_min": [
@@ -85243,7 +88300,49 @@
           ]
         }
       ]
-    }
+    },
+    "reduce_min": [
+      {
+        "reporter": "Samuel Deetz",
+        "requirements": ["in-lieu fees"],
+        "citations": [
+          {
+            "description": "St. Cloud Land Development Code",
+            "type": "city code",
+            "url": "https://www.ci.stcloud.mn.us/DocumentCenter/View/4081/Article-16---Off-Street-Parking-and-Loading-6-4-18?bidId=",
+            "notes": "Article 16. Off-Street Parking and Loading\n16.6 EXEMPTION FROM OFF-STREET PARKING REQUIREMENTS\nPage 4",
+            "attachments": [
+              {
+                "fileName": "St.Cloud_MN_1_1.png",
+                "isDoc": false,
+                "directusId": "51a328f2-96a3-440f-88a2-f14795f06a75"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "rm_min": [
+      {
+        "reporter": "Samuel Deetz",
+        "requirements": ["by right", "other"],
+        "citations": [
+          {
+            "description": "St. Cloud Land Development Code",
+            "type": "city code",
+            "url": "https://www.ci.stcloud.mn.us/DocumentCenter/View/4081/Article-16---Off-Street-Parking-and-Loading-6-4-18?bidId=",
+            "notes": "Article 16. Off-Street Parking and Loading\n16.6 EXEMPTION FROM OFF-STREET PARKING REQUIREMENTS\nPage 4",
+            "attachments": [
+              {
+                "fileName": "St.Cloud_MN_1_1.png",
+                "isDoc": false,
+                "directusId": "51a328f2-96a3-440f-88a2-f14795f06a75"
+              }
+            ]
+          }
+        ]
+      }
+    ]
   },
   "St. Croix Falls, WI": {
     "rm_min": [
@@ -85713,7 +88812,63 @@
           ]
         }
       ]
-    }
+    },
+    "add_max": [
+      {
+        "reporter": "Samuel Deetz",
+        "requirements": ["by right"],
+        "citations": [
+          {
+            "description": "St. Louis Park Zoning Code",
+            "type": "city code",
+            "url": "https://www.stlouisparkmn.gov/home/showpublisheddocument/28119/638688259393670000",
+            "notes": "Sec. 36-361.(c)(2);\nSec. 36-361.(c)(3);\nPages 3-6",
+            "attachments": [
+              {
+                "fileName": "St.LouisPark_MN_1_1.png",
+                "isDoc": false,
+                "directusId": "64cb90d0-616d-4881-b57d-6f08cd249967"
+              },
+              {
+                "fileName": "St.LouisPark_MN_1_2.png",
+                "isDoc": false,
+                "directusId": "86c2597c-5e9c-45b2-9371-f4a769ee9e6a"
+              },
+              {
+                "fileName": "St.LouisPark_MN_1_3.png",
+                "isDoc": false,
+                "directusId": "dfd504bf-9704-4679-9706-58687792d2df"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "reduce_min": [
+      {
+        "reporter": "Samuel Deetz",
+        "requirements": [
+          "frequent transit",
+          "other",
+          "transportation demand management"
+        ],
+        "citations": [
+          {
+            "description": "St. Louis Park Zoning Code",
+            "type": "city code",
+            "url": "https://www.stlouisparkmn.gov/home/showpublisheddocument/28119/638688259393670000",
+            "notes": "Sec. 36-361.(e)\nPage 7",
+            "attachments": [
+              {
+                "fileName": "St.LouisPark_MN_1_1.png",
+                "isDoc": false,
+                "directusId": "b93d2acf-65ca-46be-bcd0-a3b445d71e33"
+              }
+            ]
+          }
+        ]
+      }
+    ]
   },
   "St. Louis, MI": {
     "reduce_min": [
@@ -85941,7 +89096,99 @@
           ]
         }
       ]
-    }
+    },
+    "add_max": [
+      {
+        "reporter": null,
+        "requirements": ["by right", "other", "size of project"],
+        "citations": [
+          {
+            "description": "Sec. 63 Zoning Code-Regulations of General Applicability. ARTICLE I.122. - Travel demand management.  and ARTICLE II. - 63.200. Parking Requirements .01 Off-street Parking. table 63.207. Maximum Off-street Surface Parking by Use ",
+            "type": "city code",
+            "url": "https://library.municode.com/mn/st._paul/codes/code_of_ordinances?nodeId=PTIILECO_TITVIIIZOCO_CH63ZOCOEGGEAP_ARTII63.200.PARE",
+            "notes": null,
+            "attachments": [
+              {
+                "fileName": "St.Paul_MN_1_1.jpg",
+                "isDoc": false,
+                "directusId": "8fd02a71-411f-4b29-b38c-cdccb7561d76"
+              },
+              {
+                "fileName": "St.Paul_MN_1_2.jpg",
+                "isDoc": false,
+                "directusId": "d322830e-479b-47cc-ba28-dbed7e9c3ed1"
+              },
+              {
+                "fileName": "St.Paul_MN_1_3.jpg",
+                "isDoc": false,
+                "directusId": "5ddeac9e-9c84-45ab-83fe-a6e1350b9a41"
+              },
+              {
+                "fileName": "St.Paul_MN_1_4.jpg",
+                "isDoc": false,
+                "directusId": "df3d40b1-6e0b-4019-8e95-8370033b235a"
+              },
+              {
+                "fileName": "St.Paul_MN_1_5.jpg",
+                "isDoc": false,
+                "directusId": "74240c83-3e20-49ac-9766-47390596e4b5"
+              },
+              {
+                "fileName": "St.Paul_MN_1_6.jpg",
+                "isDoc": false,
+                "directusId": "4d293d52-0df6-4494-b633-628b29e1279a"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "rm_min": [
+      {
+        "reporter": null,
+        "requirements": ["by right"],
+        "citations": [
+          {
+            "description": "Sec. 63 Zoning Code-Regulations of General Applicability. ARTICLE I.122. - Travel demand management.  and ARTICLE II. - 63.200. Parking Requirements .01 Off-street Parking. table 63.207. Maximum Off-street Surface Parking by Use ",
+            "type": "city code",
+            "url": "https://library.municode.com/mn/st._paul/codes/code_of_ordinances?nodeId=PTIILECO_TITVIIIZOCO_CH63ZOCOEGGEAP_ARTII63.200.PARE",
+            "notes": null,
+            "attachments": [
+              {
+                "fileName": "St.Paul_MN_1_1.jpg",
+                "isDoc": false,
+                "directusId": "8fd02a71-411f-4b29-b38c-cdccb7561d76"
+              },
+              {
+                "fileName": "St.Paul_MN_1_2.jpg",
+                "isDoc": false,
+                "directusId": "d322830e-479b-47cc-ba28-dbed7e9c3ed1"
+              },
+              {
+                "fileName": "St.Paul_MN_1_3.jpg",
+                "isDoc": false,
+                "directusId": "5ddeac9e-9c84-45ab-83fe-a6e1350b9a41"
+              },
+              {
+                "fileName": "St.Paul_MN_1_4.jpg",
+                "isDoc": false,
+                "directusId": "df3d40b1-6e0b-4019-8e95-8370033b235a"
+              },
+              {
+                "fileName": "St.Paul_MN_1_5.jpg",
+                "isDoc": false,
+                "directusId": "74240c83-3e20-49ac-9766-47390596e4b5"
+              },
+              {
+                "fileName": "St.Paul_MN_1_6.jpg",
+                "isDoc": false,
+                "directusId": "4d293d52-0df6-4494-b633-628b29e1279a"
+              }
+            ]
+          }
+        ]
+      }
+    ]
   },
   "St. Paul, NE": {
     "rm_min": [
@@ -91672,7 +94919,59 @@
           ]
         }
       ]
-    }
+    },
+    "add_max": [
+      {
+        "reporter": "Evan Manvel",
+        "requirements": ["by right"],
+        "citations": [
+          {
+            "description": "Tualatin June 10 Agenda Packet",
+            "type": "other",
+            "url": "https://mccmeetings.blob.core.usgovcloudapi.net/tualtnor-pubu/MEET-Packet-af1dea1a12d344aca8e2d01a73e05876.pdf",
+            "notes": "Pages 402, 405-411",
+            "attachments": [
+              {
+                "fileName": "Tualatin_OR_1_1.png",
+                "isDoc": false,
+                "directusId": "a6a0a11f-5939-4571-bea7-da1414e940b3"
+              },
+              {
+                "fileName": "Tualatin_OR_1_2.png",
+                "isDoc": false,
+                "directusId": "c026e445-c6a7-4a33-8a96-25b65111e433"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "rm_min": [
+      {
+        "reporter": "Evan Manvel",
+        "requirements": ["by right"],
+        "citations": [
+          {
+            "description": "Tualatin June 10 Agenda Packet",
+            "type": "other",
+            "url": "https://mccmeetings.blob.core.usgovcloudapi.net/tualtnor-pubu/MEET-Packet-af1dea1a12d344aca8e2d01a73e05876.pdf",
+            "notes": "Pages 402, 405-411",
+            "attachments": [
+              {
+                "fileName": "Tualatin_OR_1_1.png",
+                "isDoc": false,
+                "directusId": "a6a0a11f-5939-4571-bea7-da1414e940b3"
+              },
+              {
+                "fileName": "Tualatin_OR_1_2.png",
+                "isDoc": false,
+                "directusId": "c026e445-c6a7-4a33-8a96-25b65111e433"
+              }
+            ]
+          }
+        ]
+      }
+    ]
   },
   "Tucson, AZ": {
     "legacy": {
@@ -93109,7 +96408,74 @@
           ]
         }
       ]
-    }
+    },
+    "add_max": [
+      {
+        "reporter": "Samuel Deetz",
+        "requirements": ["by right"],
+        "citations": [
+          {
+            "description": "Vancouver Zoning Code",
+            "type": "city code",
+            "url": "https://vancouver.municipal.codes/VMC/20.550.040",
+            "notes": "20.550.040.H.4.",
+            "attachments": [
+              {
+                "fileName": "Vancouver_WA_1_1.png",
+                "isDoc": false,
+                "directusId": "c1f20bd3-6a61-43ae-995e-450cae919150"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "reduce_min": [
+      {
+        "reporter": "Samuel Deetz",
+        "requirements": [
+          "by right",
+          "frequent transit",
+          "other",
+          "size of project"
+        ],
+        "citations": [
+          {
+            "description": "Vancouver Zoning Code",
+            "type": "city code",
+            "url": "https://vancouver.municipal.codes/VMC/20.945",
+            "notes": "Chapter 20.945 PARKING AND LOADING\n20.945.030 General Provisions.\nC.\n20.945.070 Minimum Off-Street Parking Requirements.\nF.\nG.\nH.\nI.",
+            "attachments": [
+              {
+                "fileName": "Vancouver_WA_1_1.png",
+                "isDoc": false,
+                "directusId": "dde185d6-2176-419b-8d3a-eb4ad8c3cf36"
+              },
+              {
+                "fileName": "Vancouver_WA_1_2.png",
+                "isDoc": false,
+                "directusId": "d840aaff-d687-4dda-9de6-4a2746ad0ff5"
+              },
+              {
+                "fileName": "Vancouver_WA_1_3.png",
+                "isDoc": false,
+                "directusId": "b4712462-5791-499d-95fc-bb3e0ae528da"
+              },
+              {
+                "fileName": "Vancouver_WA_1_4.png",
+                "isDoc": false,
+                "directusId": "55457811-5028-420b-9ceb-1c9d41e51ea5"
+              },
+              {
+                "fileName": "Vancouver_WA_1_5.png",
+                "isDoc": false,
+                "directusId": "bf6120f1-5ec3-4dc9-b2e7-d7a733576c89"
+              }
+            ]
+          }
+        ]
+      }
+    ]
   },
   "Vandalia, IL": {
     "rm_min": [
@@ -94749,7 +98115,49 @@
           ]
         }
       ]
-    }
+    },
+    "add_max": [
+      {
+        "reporter": "Samuel Deetz",
+        "requirements": ["by right"],
+        "citations": [
+          {
+            "description": "Waseca Zoning Code",
+            "type": "city code",
+            "url": "https://codelibrary.amlegal.com/codes/waseca/latest/waseca_mn/0-0-0-14017",
+            "notes": "§ 154.161 PARKING REQUIREMENTS, OFF-STREET.\n(D)   Reductions to minimum requirements.\n(E)   Maximum number of parking spaces allowed.",
+            "attachments": [
+              {
+                "fileName": "Waseca_MN_1_1.png",
+                "isDoc": false,
+                "directusId": "ab80149b-326d-4a28-bf51-56d10e65f29d"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "rm_min": [
+      {
+        "reporter": "Samuel Deetz",
+        "requirements": ["by right"],
+        "citations": [
+          {
+            "description": "Waseca Zoning Code",
+            "type": "city code",
+            "url": "https://codelibrary.amlegal.com/codes/waseca/latest/waseca_mn/0-0-0-14017",
+            "notes": "§ 154.161 PARKING REQUIREMENTS, OFF-STREET.\n(D)   Reductions to minimum requirements.\n(E)   Maximum number of parking spaces allowed.",
+            "attachments": [
+              {
+                "fileName": "Waseca_MN_1_1.png",
+                "isDoc": false,
+                "directusId": "ab80149b-326d-4a28-bf51-56d10e65f29d"
+              }
+            ]
+          }
+        ]
+      }
+    ]
   },
   "Washburn, WI": {
     "legacy": {
@@ -97028,7 +100436,59 @@
           ]
         }
       ]
-    }
+    },
+    "add_max": [
+      {
+        "reporter": "Evan Manvel",
+        "requirements": ["by right"],
+        "citations": [
+          {
+            "description": "West Linn November 12 Agenda",
+            "type": "other",
+            "url": "https://westlinn.granicus.com/MetaViewer.php?view_id=&clip_id=1645&meta_id=81403",
+            "notes": null,
+            "attachments": [
+              {
+                "fileName": "WestLinn_OR_1_1.png",
+                "isDoc": false,
+                "directusId": "bda985fe-2e03-4948-984d-85b2c2da4e15"
+              },
+              {
+                "fileName": "WestLinn_OR_1_2.png",
+                "isDoc": false,
+                "directusId": "b764fc5d-82de-4925-99aa-a407915ef99f"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "rm_min": [
+      {
+        "reporter": "Evan Manvel",
+        "requirements": ["by right"],
+        "citations": [
+          {
+            "description": "West Linn November 12 Agenda",
+            "type": "other",
+            "url": "https://westlinn.granicus.com/MetaViewer.php?view_id=&clip_id=1645&meta_id=81403",
+            "notes": null,
+            "attachments": [
+              {
+                "fileName": "WestLinn_OR_1_1.png",
+                "isDoc": false,
+                "directusId": "bda985fe-2e03-4948-984d-85b2c2da4e15"
+              },
+              {
+                "fileName": "WestLinn_OR_1_2.png",
+                "isDoc": false,
+                "directusId": "b764fc5d-82de-4925-99aa-a407915ef99f"
+              }
+            ]
+          }
+        ]
+      }
+    ]
   },
   "West Memphis, AR": {
     "legacy": {
@@ -97331,7 +100791,49 @@
           ]
         }
       ]
-    }
+    },
+    "reduce_min": [
+      {
+        "reporter": "Morgan Kavanaugh",
+        "requirements": ["by right"],
+        "citations": [
+          {
+            "description": "West St. Paul Zoning Code",
+            "type": "city code",
+            "url": "https://codelibrary.amlegal.com/codes/weststpaul/latest/weststpaul_mn/0-0-0-6295",
+            "notes": "§ 153.348(E)",
+            "attachments": [
+              {
+                "fileName": "WestSaintPaul_MN_1_1.png",
+                "isDoc": false,
+                "directusId": "e6e5b3bd-bd86-42a9-a844-7d829749b241"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "rm_min": [
+      {
+        "reporter": "Morgan Kavanaugh",
+        "requirements": ["by right"],
+        "citations": [
+          {
+            "description": "West St. Paul Zoning Code",
+            "type": "city code",
+            "url": "https://codelibrary.amlegal.com/codes/weststpaul/latest/weststpaul_mn/0-0-0-9113",
+            "notes": "§ 153.315(B) (9)",
+            "attachments": [
+              {
+                "fileName": "WestSaintPaul_MN_1_1.png",
+                "isDoc": false,
+                "directusId": "debcb4a3-6852-48d3-9a09-f93383def6b3"
+              }
+            ]
+          }
+        ]
+      }
+    ]
   },
   "West Salem, WI": {
     "rm_min": [
@@ -97821,7 +101323,64 @@
           ]
         }
       ]
-    }
+    },
+    "add_max": [
+      {
+        "reporter": "Samuel Deetz",
+        "requirements": ["by right"],
+        "citations": [
+          {
+            "description": "Wheat Ridge Zoning & Development Code",
+            "type": "city code",
+            "url": "https://library.municode.com/co/wheat_ridge/codes/code_of_ordinances?nodeId=PTIICOLA_CH26ZODE_ARTXIMIUSZODI_S26-1109PARE",
+            "notes": "Sec. 26-1109.B.",
+            "attachments": [
+              {
+                "fileName": "WheatRidge_CO_1_1.png",
+                "isDoc": false,
+                "directusId": "f6fc9133-4b61-416c-b618-98e1fcf31206"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "reduce_min": [
+      {
+        "reporter": "Samuel Deetz",
+        "requirements": [
+          "affordable housing",
+          "bike parking",
+          "frequent transit",
+          "other"
+        ],
+        "citations": [
+          {
+            "description": "Wheat Ridge Zoning & Development Code",
+            "type": "city code",
+            "url": "https://library.municode.com/co/wheat_ridge/codes/code_of_ordinances?nodeId=PTIICOLA_CH26ZODE_ARTVDEST_S26-501OREPALO",
+            "notes": "Sec. 26-501.D.1.;\nSec. 26-501.E.2.;\nSec. 26-1109.C.;\nSec. 26-1109.F.",
+            "attachments": [
+              {
+                "fileName": "WheatRidge_CO_1_1.png",
+                "isDoc": false,
+                "directusId": "5bee1117-fe2e-4219-857e-1448910796b7"
+              },
+              {
+                "fileName": "WheatRidge_CO_1_2.png",
+                "isDoc": false,
+                "directusId": "4e5f2e5b-7ba1-4283-b5e2-ca72d1424bd7"
+              },
+              {
+                "fileName": "WheatRidge_CO_1_3.png",
+                "isDoc": false,
+                "directusId": "7d78604e-83cd-4a71-868e-a8c743944df7"
+              }
+            ]
+          }
+        ]
+      }
+    ]
   },
   "Wheaton, IL": {
     "rm_min": [
@@ -98611,7 +102170,85 @@
           ]
         }
       ]
-    }
+    },
+    "add_max": [
+      {
+        "reporter": "Samuel Deetz",
+        "requirements": ["other"],
+        "citations": [
+          {
+            "description": "Updated Zoning Code",
+            "type": "city code",
+            "url": "https://www.willmarmn.gov/1994%20Zoning%20Ordinance%20for%201994%20with%20updates%20as%20of%202023-11-27.pdf",
+            "notes": "Page 63 of pdf, page 55 of original document",
+            "attachments": [
+              {
+                "fileName": "Willmar_MN_1_1.png",
+                "isDoc": false,
+                "directusId": "6d7af373-c88a-4252-8e4e-799688458d50"
+              },
+              {
+                "fileName": "Willmar_MN_1_2.png",
+                "isDoc": false,
+                "directusId": "e9c98c17-e8e6-4cc8-9afc-c3435b9b7ec3"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "rm_min": [
+      {
+        "reporter": "Samuel Deetz",
+        "requirements": ["other"],
+        "citations": [
+          {
+            "description": "Willmar Old Zoning Code",
+            "type": "other",
+            "url": "https://www.willmarmn.gov/Zoning%20Ordiance%20-%204-5-10_0.pdf",
+            "notes": "SECTION 4: OFF-STREET PARKING AND LOADING\nA. OFF-STREET PARKING.\n2. Exempt.\n(Page 43 of pdf, page 36 of original document)",
+            "attachments": [
+              {
+                "fileName": "Willmar_MN_1_1.png",
+                "isDoc": false,
+                "directusId": "2f55949a-ed47-46ab-a1f4-37f74f8cd45d"
+              }
+            ]
+          },
+          {
+            "description": "Updated Zoning Code",
+            "type": "city code",
+            "url": "https://www.willmarmn.gov/1994%20Zoning%20Ordinance%20for%201994%20with%20updates%20as%20of%202023-11-27.pdf",
+            "notes": "Page 63 of pdf, page 55 of original document",
+            "attachments": [
+              {
+                "fileName": "Willmar_MN_2_1.png",
+                "isDoc": false,
+                "directusId": "6d7af373-c88a-4252-8e4e-799688458d50"
+              },
+              {
+                "fileName": "Willmar_MN_2_2.png",
+                "isDoc": false,
+                "directusId": "e9c98c17-e8e6-4cc8-9afc-c3435b9b7ec3"
+              }
+            ]
+          },
+          {
+            "description": "News Article",
+            "type": "media report",
+            "url": "https://www.wctrib.com/news/local/giant-unused-parking-lots-will-no-longer-be-required-in-the-city-of-willmar",
+            "notes": null,
+            "attachments": [
+              {
+                "fileName": "Willmar_MN_3_1.png",
+                "isDoc": false,
+                "directusId": "4edf66a1-075c-4c5a-90ab-2c24257f20ab"
+              }
+            ]
+          }
+        ]
+      }
+    ]
   },
   "Willowbrook, IL": {
     "add_max": [
