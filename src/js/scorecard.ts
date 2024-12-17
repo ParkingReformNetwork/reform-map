@@ -66,7 +66,9 @@ export default function initScorecard(
   markerGroup: FeatureGroup,
   data: Record<PlaceId, ProcessedCoreEntry>,
 ): void {
-  const scorecardState = new Observable<ScorecardState>({ type: "hidden" });
+  const scorecardState = new Observable<ScorecardState>("scorecard", {
+    type: "hidden",
+  });
   scorecardState.subscribe(updateScorecardUI);
 
   const scorecardContainer = document.querySelector("#scorecard-container");
@@ -83,7 +85,7 @@ export default function initScorecard(
   });
 
   // Searching for a city opens up the scorecard if in map view.
-  filterManager.subscribe((state) => {
+  filterManager.subscribe("open scorecard on search", (state) => {
     const search = state.searchInput;
     if (search && viewToggle.getValue() === "map") {
       scorecardState.setValue({

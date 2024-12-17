@@ -137,7 +137,7 @@ export default function initTable(
     tableBuilt = true;
     table.setFilter((row) => filterManager.placeIds.has(row.id));
   });
-  filterManager.subscribe(() => {
+  filterManager.subscribe("update table", () => {
     if (!tableBuilt) return;
     table.refreshFilter();
   });
