@@ -12,7 +12,7 @@ function updateFilterPopupUI(isVisible: boolean): void {
 
 export default function initFilterPopup(): FilterPopupVisibleObservable {
   const isVisible = new Observable<boolean>("filter popup", false);
-  isVisible.subscribe(updateFilterPopupUI);
+  isVisible.subscribe(updateFilterPopupUI, "toggle filter popup");
 
   const popup = document.querySelector(".filter-popup");
   const icon = document.querySelector(".header-filter-icon-container");

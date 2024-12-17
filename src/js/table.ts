@@ -14,6 +14,7 @@ import "tabulator-tables/dist/css/tabulator.min.css";
 
 import { PlaceFilterManager } from "./FilterState";
 import { Date } from "./types";
+import { ViewStateObservable } from "./viewToggle";
 
 function formatDate(cell: CellComponent): string {
   const v = cell.getValue() as Date | null;
@@ -32,6 +33,7 @@ function compareStringArrays(a: string[], b: string[]): number {
 
 export default function initTable(
   filterManager: PlaceFilterManager,
+  viewToggle: ViewStateObservable,
 ): Tabulator {
   Tabulator.registerModule([
     FilterModule,
@@ -132,15 +134,32 @@ export default function initTable(
     ) => `Page ${currentPage} of ${totalPages}`,
   });
 
+  // We use Tabulator's filter to add/remove records based on FilterState,
+  // as it's much faster than resetting the data.
   let tableBuilt = false;
   table.on("tableBuilt", () => {
     tableBuilt = true;
     table.setFilter((row) => filterManager.placeIds.has(row.id));
   });
-  filterManager.subscribe("update table", () => {
+
+  // When on map view, we should only lazily update the table the next time
+  // we switch to table view.
+  let dataRefreshQueued = false;
+  filterManager.subscribe("update table's records", () => {
     if (!tableBuilt) return;
+    if (viewToggle.getValue() === "map") {
+      dataRefreshQueued = true;
+      return;
+    }
     table.refreshFilter();
   });
+
+  viewToggle.subscribe((view) => {
+    if (view === "table" && dataRefreshQueued) {
+      table.refreshFilter();
+      dataRefreshQueued = false;
+    }
+  }, "apply queued table data refresh");
 
   return table;
 }

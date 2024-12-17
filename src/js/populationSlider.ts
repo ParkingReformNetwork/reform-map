@@ -98,7 +98,7 @@ export function initPopulationSlider(
     if (isVisible) {
       updateSlidersUI(filterManager.getState());
     }
-  });
+  }, "render population slider");
 
   // Also update UI when values change, but only if the filter popup is open.
   filterManager.subscribe("update population sliders", (state) => {
