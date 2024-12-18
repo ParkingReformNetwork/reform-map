@@ -30,6 +30,7 @@ function generateSliders(filterPopup: HTMLFormElement): Sliders {
   left.type = "range";
   left.step = "0.5";
   left.min = "0";
+  left.value = "0";
   controls.append(left);
 
   const right = document.createElement("input");
@@ -39,7 +40,6 @@ function generateSliders(filterPopup: HTMLFormElement): Sliders {
   right.type = "range";
   right.step = "0.5";
   right.min = "0";
-  right.value = "0";
   controls.append(right);
 
   filterPopup.append(container);
