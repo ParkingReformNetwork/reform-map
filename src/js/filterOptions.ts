@@ -1,7 +1,11 @@
 import { capitalize } from "lodash-es";
 
 import { ProcessedCoreEntry } from "./types";
-import { PlaceFilterManager, PolicyTypeFilter } from "./FilterState";
+import {
+  FilterState,
+  PlaceFilterManager,
+  PolicyTypeFilter,
+} from "./FilterState";
 import Observable from "./Observable";
 
 export const UNKNOWN_YEAR = "Unknown";
@@ -131,7 +135,7 @@ type FilterGroupParams = {
   /// only impacts the UI and not the underlying data.
   preserveCapitalization?: boolean;
   useTwoColumns?: boolean;
-  hideForPolicyTypeFilter?: PolicyTypeFilter[];
+  hide?: (state: FilterState) => boolean;
 };
 
 function generateCheckbox(
@@ -357,9 +361,7 @@ function initFilterGroup(
     `possibly hide ${params.htmlName} in filter`,
     (state) => {
       const priorAccordionState = accordionState.getValue();
-      const hidden =
-        params.hideForPolicyTypeFilter?.includes(state.policyTypeFilter) ??
-        false;
+      const hidden = params.hide ? params.hide(state) : false;
       accordionState.setValue({ ...priorAccordionState, hidden });
     },
   );
@@ -447,29 +449,33 @@ export function initFilterOptions(
     htmlName: "policy-change",
     filterStateKey: "includedPolicyChanges",
     legend: "Policy change",
-    hideForPolicyTypeFilter: [
-      "add parking maximums",
-      "reduce parking minimums",
-      "remove parking minimums",
-    ],
+    hide: ({ policyTypeFilter }) =>
+      policyTypeFilter !== "legacy reform" &&
+      policyTypeFilter !== "any parking reform",
   });
   initFilterGroup(filterManager, filterOptions, {
     htmlName: "scope",
     filterStateKey: "scope",
     legend: "Reform scope",
-    hideForPolicyTypeFilter: ["any parking reform"],
+    hide: ({ policyTypeFilter, allMinimumsRemovedToggle }) =>
+      policyTypeFilter === "any parking reform" ||
+      (allMinimumsRemovedToggle &&
+        policyTypeFilter !== "reduce parking minimums"),
   });
   initFilterGroup(filterManager, filterOptions, {
     htmlName: "land-use",
     filterStateKey: "landUse",
     legend: "Affected land use",
-    hideForPolicyTypeFilter: ["any parking reform"],
+    hide: ({ policyTypeFilter, allMinimumsRemovedToggle }) =>
+      policyTypeFilter === "any parking reform" ||
+      (allMinimumsRemovedToggle &&
+        policyTypeFilter !== "reduce parking minimums"),
   });
   initFilterGroup(filterManager, filterOptions, {
     htmlName: "status",
     filterStateKey: "status",
     legend: "Status",
-    hideForPolicyTypeFilter: ["any parking reform"],
+    hide: ({ policyTypeFilter }) => policyTypeFilter === "any parking reform",
   });
   initFilterGroup(filterManager, filterOptions, {
     htmlName: "country",
@@ -482,7 +488,7 @@ export function initFilterOptions(
     filterStateKey: "year",
     legend: "Reform year",
     useTwoColumns: true,
-    hideForPolicyTypeFilter: ["any parking reform"],
+    hide: ({ policyTypeFilter }) => policyTypeFilter === "any parking reform",
   });
 
   const minimumsToggle = document.querySelector<HTMLInputElement>(
