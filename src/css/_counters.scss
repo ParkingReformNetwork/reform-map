@@ -6,13 +6,14 @@
 @use "theme/typography";
 @use "theme/zindex";
 @use "header";
+@use "zoom";
 
 .map-counter {
   $font-size: typography.$font-size-md;
 
   z-index: zindex.$map-counter;
   position: fixed;
-  right: spacing.$map-controls-margin-x;
+  left: calc(zoom.$total-width + spacing.$map-controls-margin-x);
   top: calc(header.$header-height + spacing.$map-controls-margin-top);
 
   font-size: $font-size;
@@ -23,6 +24,12 @@
   width: 260px;
   @include breakpoints.gt-xxs {
     width: 280px;
+  }
+  @include breakpoints.gt-xs {
+    width: 300px;
+  }
+  @include breakpoints.gt-md {
+    width: 340px;
   }
 
   background-color: colors.$white;
