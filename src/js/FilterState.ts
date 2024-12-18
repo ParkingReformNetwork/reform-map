@@ -7,8 +7,9 @@ import {
   ProcessedPlace,
 } from "./types";
 import Observable from "./Observable";
-import { UNKNOWN_YEAR } from "./filterOptions";
 import { determinePolicyTypes, getFilteredIndexes } from "./data";
+
+export const UNKNOWN_YEAR = "Unknown";
 
 export const POPULATION_INTERVALS: Array<[string, number]> = [
   ["100", 100],

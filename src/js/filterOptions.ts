@@ -5,10 +5,11 @@ import {
   FilterState,
   PlaceFilterManager,
   PolicyTypeFilter,
+  UNKNOWN_YEAR,
 } from "./FilterState";
 import Observable from "./Observable";
-
-export const UNKNOWN_YEAR = "Unknown";
+import { FilterPopupVisibleObservable } from "./filterPopup";
+import { initPopulationSlider } from "./populationSlider";
 
 // Keep in alignment with FilterState.
 type FilterGroupKey =
@@ -306,16 +307,14 @@ function updateCheckboxStats(
 function initFilterGroup(
   filterManager: PlaceFilterManager,
   filterOptions: FilterOptions,
+  filterPopup: HTMLFormElement,
   params: FilterGroupParams,
 ): void {
   const [accordionElements, accordionState] = generateAccordion(
     params,
     filterOptions,
   );
-
-  const outerContainer = document.getElementById("filter-accordion-options");
-  if (!outerContainer) return;
-  outerContainer.appendChild(accordionElements.outerContainer);
+  filterPopup.appendChild(accordionElements.outerContainer);
 
   accordionElements.fieldSet.addEventListener("change", () => {
     updateCheckboxStats(accordionState, accordionElements.fieldSet);
@@ -367,7 +366,10 @@ function initFilterGroup(
   );
 }
 
-function initAllMinimumsToggle(filterManager: PlaceFilterManager): void {
+function initAllMinimumsToggle(
+  filterManager: PlaceFilterManager,
+  filterPopup: HTMLFormElement,
+): void {
   const outerContainer = document.createElement("div");
 
   const [label, input] = generateCheckbox(
@@ -378,10 +380,7 @@ function initAllMinimumsToggle(filterManager: PlaceFilterManager): void {
   );
   label.id = "filter-all-minimums-toggle-label";
   outerContainer.append(label);
-
-  const filterPopup = document.getElementById("filter-popup");
-  if (!filterPopup) return;
-  filterPopup.prepend(outerContainer);
+  filterPopup.append(outerContainer);
 
   input.addEventListener("change", () => {
     filterManager.update({
@@ -397,7 +396,10 @@ function initAllMinimumsToggle(filterManager: PlaceFilterManager): void {
   );
 }
 
-function initPolicyTypeFilterDropdown(filterManager: PlaceFilterManager): void {
+function initPolicyTypeFilterDropdown(
+  filterManager: PlaceFilterManager,
+  filterPopup: HTMLFormElement,
+): void {
   // Hide the dropdown if on the legacy app.
   if (filterManager.getState().policyTypeFilter === "legacy reform") return;
 
@@ -428,20 +430,24 @@ function initPolicyTypeFilterDropdown(filterManager: PlaceFilterManager): void {
     filterManager.update({ policyTypeFilter });
   });
 
-  const filterPopup = document.getElementById("filter-popup");
-  if (!filterPopup) return;
   container.append(select);
-  filterPopup.prepend(container);
+  filterPopup.append(container);
 }
 
 export function initFilterOptions(
   filterManager: PlaceFilterManager,
   filterOptions: FilterOptions,
+  filterPopupIsVisible: FilterPopupVisibleObservable,
 ): void {
-  initAllMinimumsToggle(filterManager);
-  initPolicyTypeFilterDropdown(filterManager);
+  // Note that the order of this function determines the order of the filter.
+  const filterPopup = document.querySelector<HTMLFormElement>("#filter-popup");
+  if (!filterPopup) return;
 
-  initFilterGroup(filterManager, filterOptions, {
+  initPolicyTypeFilterDropdown(filterManager, filterPopup);
+  initAllMinimumsToggle(filterManager, filterPopup);
+  initPopulationSlider(filterManager, filterPopupIsVisible, filterPopup);
+
+  initFilterGroup(filterManager, filterOptions, filterPopup, {
     htmlName: "policy-change",
     filterStateKey: "includedPolicyChanges",
     legend: "Policy change",
@@ -449,7 +455,7 @@ export function initFilterOptions(
       policyTypeFilter !== "legacy reform" &&
       policyTypeFilter !== "any parking reform",
   });
-  initFilterGroup(filterManager, filterOptions, {
+  initFilterGroup(filterManager, filterOptions, filterPopup, {
     htmlName: "scope",
     filterStateKey: "scope",
     legend: "Reform scope",
@@ -458,7 +464,7 @@ export function initFilterOptions(
       (allMinimumsRemovedToggle &&
         policyTypeFilter !== "reduce parking minimums"),
   });
-  initFilterGroup(filterManager, filterOptions, {
+  initFilterGroup(filterManager, filterOptions, filterPopup, {
     htmlName: "land-use",
     filterStateKey: "landUse",
     legend: "Affected land use",
@@ -467,19 +473,19 @@ export function initFilterOptions(
       (allMinimumsRemovedToggle &&
         policyTypeFilter !== "reduce parking minimums"),
   });
-  initFilterGroup(filterManager, filterOptions, {
+  initFilterGroup(filterManager, filterOptions, filterPopup, {
     htmlName: "status",
     filterStateKey: "status",
     legend: "Status",
     hide: ({ policyTypeFilter }) => policyTypeFilter === "any parking reform",
   });
-  initFilterGroup(filterManager, filterOptions, {
+  initFilterGroup(filterManager, filterOptions, filterPopup, {
     htmlName: "country",
     filterStateKey: "country",
     legend: "Country",
     preserveCapitalization: true,
   });
-  initFilterGroup(filterManager, filterOptions, {
+  initFilterGroup(filterManager, filterOptions, filterPopup, {
     htmlName: "year",
     filterStateKey: "year",
     legend: "Reform year",

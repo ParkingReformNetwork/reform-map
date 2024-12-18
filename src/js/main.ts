@@ -5,7 +5,7 @@ import initSearch from "./search";
 import maybeDisableFullScreenIcon from "./iframe";
 import initAbout from "./about";
 import initScorecard from "./scorecard";
-import { initPopulationSlider, POPULATION_MAX_INDEX } from "./populationSlider";
+import { POPULATION_MAX_INDEX } from "./populationSlider";
 import { FilterOptions, initFilterOptions } from "./filterOptions";
 import initFilterPopup from "./filterPopup";
 import { PlaceFilterManager } from "./FilterState";
@@ -54,8 +54,7 @@ export default async function initApp(): Promise<void> {
   subscribeSnapToPlace(filterManager, map);
   initCounters(filterManager);
   initSearch(filterManager);
-  initFilterOptions(filterManager, filterOptions);
-  initPopulationSlider(filterManager, filterPopupIsVisible);
+  initFilterOptions(filterManager, filterOptions, filterPopupIsVisible);
 
   const table = initTable(filterManager, viewToggle);
   addViewToggleSubscribers(viewToggle, table);
