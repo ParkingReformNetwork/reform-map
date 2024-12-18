@@ -7380,6 +7380,13 @@
                 "directusId": "dfbb1202-760d-45e7-84fc-d7858c22e47c"
               }
             ]
+          },
+          {
+            "description": "Bellingham Parking Reform Page",
+            "type": "other",
+            "url": "https://cob.org/project/parking-reforms",
+            "notes": null,
+            "attachments": []
           }
         ]
       }
@@ -50912,7 +50919,49 @@
           ]
         }
       ]
-    }
+    },
+    "add_max": [
+      {
+        "reporter": "Samuel Deetz",
+        "requirements": ["by right"],
+        "citations": [
+          {
+            "description": "Lakewood Zoning Code",
+            "type": "city code",
+            "url": "https://www.lakewood.org/files/assets/public/v/1/planning/development-assistance/pdfs/zoning-ordinance/2019-08-26-new-articles/article-8.pdf",
+            "notes": "Table 17.8.1\nPages 5-10",
+            "attachments": [
+              {
+                "fileName": "Lakewood_CO_1_1.png",
+                "isDoc": false,
+                "directusId": "52d9d174-f9df-4001-83a9-2cbbd0883d69"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "reduce_min": [
+      {
+        "reporter": "Samuel Deetz",
+        "requirements": ["other"],
+        "citations": [
+          {
+            "description": "Lakewood Zoning Code",
+            "type": "city code",
+            "url": "https://www.lakewood.org/files/assets/public/v/1/planning/development-assistance/pdfs/zoning-ordinance/2019-08-26-new-articles/article-8.pdf",
+            "notes": "17.8.3.1\nPage 11",
+            "attachments": [
+              {
+                "fileName": "Lakewood_CO_1_1.png",
+                "isDoc": false,
+                "directusId": "c97718b7-2cd9-4bc0-ad96-8f7fddec9f7e"
+              }
+            ]
+          }
+        ]
+      }
+    ]
   },
   "Lakewood, NY": {
     "reduce_min": [
@@ -54951,7 +55000,54 @@
           ]
         }
       ]
-    }
+    },
+    "reduce_min": [
+      {
+        "reporter": "Samuel Deetz",
+        "requirements": ["affordable housing", "other", "supportive housing"],
+        "citations": [
+          {
+            "description": "Loveland UDC",
+            "type": "city code",
+            "url": "https://online.encodeplus.com/regs/loveland-co/doc-viewer.aspx#secid-4310",
+            "notes": "18.05.03.06",
+            "attachments": [
+              {
+                "fileName": "Loveland_CO_1_1.png",
+                "isDoc": false,
+                "directusId": "7d824758-a844-41b9-a4e5-bad27780ebdb"
+              },
+              {
+                "fileName": "Loveland_CO_1_2.png",
+                "isDoc": false,
+                "directusId": "c252474f-3f96-4a3b-a6d6-851791584292"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "rm_min": [
+      {
+        "reporter": "Samuel Deetz",
+        "requirements": ["by right"],
+        "citations": [
+          {
+            "description": "Loveland UDC",
+            "type": "city code",
+            "url": "https://online.encodeplus.com/regs/loveland-co/doc-viewer.aspx#secid-4366",
+            "notes": "18.05.03.02",
+            "attachments": [
+              {
+                "fileName": "Loveland_CO_1_1.png",
+                "isDoc": false,
+                "directusId": "0c27d1fc-9de4-4838-8b08-f2b51a2d1e94"
+              }
+            ]
+          }
+        ]
+      }
+    ]
   },
   "Lovington, IL": {
     "reduce_min": [
@@ -55461,7 +55557,49 @@
           ]
         }
       ]
-    }
+    },
+    "reduce_min": [
+      {
+        "reporter": "Samuel Deetz",
+        "requirements": ["other"],
+        "citations": [
+          {
+            "description": "Lyons Zoning Code",
+            "type": "city code",
+            "url": "https://library.municode.com/co/lyons/codes/municipal_code?nodeId=CH16ZO_ART8OREPARE_S16-8-20GEPR",
+            "notes": "Sec. 16-8-20.(k)",
+            "attachments": [
+              {
+                "fileName": "Lyons_CO_1_1.png",
+                "isDoc": false,
+                "directusId": "56345085-071e-4526-a0ba-f516546ba903"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "rm_min": [
+      {
+        "reporter": "Samuel Deetz",
+        "requirements": ["by right"],
+        "citations": [
+          {
+            "description": "Lyons Zoning Code",
+            "type": "city code",
+            "url": "https://library.municode.com/co/lyons/codes/municipal_code?nodeId=CH16ZO_ART8OREPARE_S16-8-90EXOREPASPREMASTBETHAVFIAVREUS",
+            "notes": "Sec. 16-8-90.",
+            "attachments": [
+              {
+                "fileName": "Lyons_CO_1_1.png",
+                "isDoc": false,
+                "directusId": "115f429e-e2d8-4469-93d9-accf2c4c9181"
+              }
+            ]
+          }
+        ]
+      }
+    ]
   },
   "Mackinac Island, MI": {
     "rm_min": [
@@ -65792,7 +65930,54 @@
           ]
         }
       ]
-    }
+    },
+    "reduce_min": [
+      {
+        "reporter": "Samuel Deetz",
+        "requirements": ["by right", "in-lieu fees"],
+        "citations": [
+          {
+            "description": "New Castle Zoning Code",
+            "type": "city code",
+            "url": "https://library.municode.com/co/new_castle/codes/code_of_ordinances?nodeId=TIT17ZO_CH17.76OREPA_17.76.120RESTOREPAZODI",
+            "notes": "Chapter 17.76 - OFF-STREET PARKING\n17.76.120 - Requirements and standards for off-street parking in the C-1 zone district.\nB.\nI.",
+            "attachments": [
+              {
+                "fileName": "NewCastle_CO_1_1.png",
+                "isDoc": false,
+                "directusId": "7fe8bb22-45c8-49ee-87a0-ae520493afd3"
+              },
+              {
+                "fileName": "NewCastle_CO_1_2.png",
+                "isDoc": false,
+                "directusId": "be025a03-8288-425c-a738-4b9d97194779"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "rm_min": [
+      {
+        "reporter": "Samuel Deetz",
+        "requirements": ["by right"],
+        "citations": [
+          {
+            "description": "New Castle Zoning Code",
+            "type": "city code",
+            "url": "https://library.municode.com/co/new_castle/codes/code_of_ordinances?nodeId=TIT17ZO_CH17.76OREPA_17.76.120RESTOREPAZODI",
+            "notes": "17.76.120.B.",
+            "attachments": [
+              {
+                "fileName": "NewCastle_CO_1_1.png",
+                "isDoc": false,
+                "directusId": "a897dedd-89a2-4956-b222-d24f06f60edc"
+              }
+            ]
+          }
+        ]
+      }
+    ]
   },
   "New Castle, DE": {
     "legacy": {
@@ -68611,7 +68796,75 @@
           ]
         }
       ]
-    }
+    },
+    "add_max": [
+      {
+        "reporter": "Samuel Deetz",
+        "requirements": ["by right"],
+        "citations": [
+          {
+            "description": "Northglenn UDC",
+            "type": "city code",
+            "url": "https://municode.northglenn.org/ch11/content_11-4.html#11-4-6",
+            "notes": "Section 11-4-6.(e)(2)",
+            "attachments": [
+              {
+                "fileName": "Northglenn_CO_1_1.png",
+                "isDoc": false,
+                "directusId": "f870a0d6-1e00-4cac-b1b6-f81ca4f1e5bb"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "reduce_min": [
+      {
+        "reporter": "Samuel Deetz",
+        "requirements": ["by right", "frequent transit", "other"],
+        "citations": [
+          {
+            "description": "Northglenn UDC",
+            "type": "city code",
+            "url": "https://municode.northglenn.org/ch11/content_11-4.html#11-4-6",
+            "notes": "Section 11-4-6.(g)(2);\nSection 11-4-6.(g)(3);\nSection 11-4-6.(g)(5)",
+            "attachments": [
+              {
+                "fileName": "Northglenn_CO_1_1.png",
+                "isDoc": false,
+                "directusId": "24ce24c1-a9c3-42ba-ac1b-98128764c542"
+              },
+              {
+                "fileName": "Northglenn_CO_1_2.png",
+                "isDoc": false,
+                "directusId": "c478c006-23d7-4c6f-8c7f-efa56f28542f"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "rm_min": [
+      {
+        "reporter": "Samuel Deetz",
+        "requirements": ["by right", "size of project"],
+        "citations": [
+          {
+            "description": "Northglenn UDC",
+            "type": "city code",
+            "url": "https://municode.northglenn.org/ch11/content_11-4.html#11-4-6",
+            "notes": "Section 11-4-6.(b)(4)",
+            "attachments": [
+              {
+                "fileName": "Northglenn_CO_1_1.png",
+                "isDoc": false,
+                "directusId": "31ad519b-4f29-4981-b4a0-dce0cb772e6f"
+              }
+            ]
+          }
+        ]
+      }
+    ]
   },
   "Northville Charter Township, MI": {
     "add_max": [
@@ -71956,7 +72209,84 @@
           ]
         }
       ]
-    }
+    },
+    "add_max": [
+      {
+        "reporter": "Samuel Deetz",
+        "requirements": ["by right"],
+        "citations": [
+          {
+            "description": "Parker Zoning Code",
+            "type": "city code",
+            "url": "https://library.municode.com/co/parker/codes/municipal_code?nodeId=TIT13LADEOR_CH13.06SIPLSTPR_13.06.050OREPAINCI",
+            "notes": "13.06.050(d) - Schedule 13.06.050B",
+            "attachments": [
+              {
+                "fileName": "Parker_CO_1_1.png",
+                "isDoc": false,
+                "directusId": "15dcbc72-8d65-4e66-8997-fca9987b1506"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "reduce_min": [
+      {
+        "reporter": "Samuel Deetz",
+        "requirements": [
+          "by right",
+          "size of project",
+          "transportation demand management"
+        ],
+        "citations": [
+          {
+            "description": "Parker Zoning Code",
+            "type": "city code",
+            "url": "https://library.municode.com/co/parker/codes/municipal_code?nodeId=TIT13LADEOR_CH13.06SIPLSTPR_13.06.050OREPAINCI",
+            "notes": "CHAPTER 13.06 - Site Plan Standards and Procedures\t\n  13.06.050 - Off-street parking and internal circulation.\t\n    Schedule 13.06.050B\n    (i)\n    (k)",
+            "attachments": [
+              {
+                "fileName": "Parker_CO_1_1.png",
+                "isDoc": false,
+                "directusId": "cc8482ac-f7f3-4213-82dd-99621fea9220"
+              },
+              {
+                "fileName": "Parker_CO_1_2.png",
+                "isDoc": false,
+                "directusId": "a27c1454-480f-457b-aea6-7d92f63f23fe"
+              },
+              {
+                "fileName": "Parker_CO_1_3.png",
+                "isDoc": false,
+                "directusId": "6e5da94f-fca9-45ea-9549-9ffcd19d9f5a"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "rm_min": [
+      {
+        "reporter": "Samuel Deetz",
+        "requirements": ["by right", "size of project"],
+        "citations": [
+          {
+            "description": "Parker Zoning Code",
+            "type": "city code",
+            "url": "https://library.municode.com/co/parker/codes/municipal_code?nodeId=TIT13LADEOR_CH13.06SIPLSTPR_13.06.050OREPAINCI",
+            "notes": "13.06.050(i)",
+            "attachments": [
+              {
+                "fileName": "Parker_CO_1_1.png",
+                "isDoc": false,
+                "directusId": "093634a8-816c-49e7-9627-cf7c9ca40e2d"
+              }
+            ]
+          }
+        ]
+      }
+    ]
   },
   "Parker, SD": {
     "rm_min": [
@@ -78906,7 +79236,49 @@
           ]
         }
       ]
-    }
+    },
+    "reduce_min": [
+      {
+        "reporter": "Samuel Deetz",
+        "requirements": ["by right", "size of project"],
+        "citations": [
+          {
+            "description": "Rifle Land Use and Development Code",
+            "type": "city code",
+            "url": "https://library.municode.com/co/rifle/codes/charter_and_municipal_code?nodeId=CH16LAUSDE_ARTXVIIICBCEBUDI_DIV9PAST_S16-18-930PALORE",
+            "notes": "ARTICLE XVIII - CB Central Business District\nDivision 9 - Parking Standards\nSec. 16-18-930. - Parking and loading requirements.\n(a)Exemptions.\n(1)",
+            "attachments": [
+              {
+                "fileName": "Rifle_CO_1_1.png",
+                "isDoc": false,
+                "directusId": "d6d30a79-a65f-4361-8a08-b857a46c7af0"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "rm_min": [
+      {
+        "reporter": "Samuel Deetz",
+        "requirements": ["by right", "size of project"],
+        "citations": [
+          {
+            "description": "Rifle Land Use and Development Code",
+            "type": "city code",
+            "url": "https://library.municode.com/co/rifle/codes/charter_and_municipal_code?nodeId=CH16LAUSDE_ARTXVIIICBCEBUDI_DIV9PAST_S16-18-930PALORE",
+            "notes": "ARTICLE XVIII - CB Central Business District\nDivision 9 - Parking Standards\nSec. 16-18-930. - Parking and loading requirements.\n(a)Exemptions.\n(1)",
+            "attachments": [
+              {
+                "fileName": "Rifle_CO_1_1.png",
+                "isDoc": false,
+                "directusId": "d6d30a79-a65f-4361-8a08-b857a46c7af0"
+              }
+            ]
+          }
+        ]
+      }
+    ]
   },
   "Riley, KS": {
     "rm_min": [
@@ -85238,6 +85610,138 @@
       ]
     }
   },
+  "Shoreline, WA": {
+    "legacy": {
+      "reporter": "Tony Jordan",
+      "requirements": [
+        "frequent transit",
+        "other",
+        "planned frequent transit",
+        "transportation demand management",
+        "tree preservation"
+      ],
+      "citations": [
+        {
+          "description": "Shoreline Comprehensive Plan Presentation",
+          "type": "other",
+          "url": "https://shoreline.granicus.com/MetaViewer.php?view_id=4&clip_id=1878&meta_id=162658",
+          "notes": "Page 14",
+          "attachments": [
+            {
+              "fileName": "Shoreline_WA_1_1.png",
+              "isDoc": false,
+              "directusId": "7771efd0-76c9-4b16-8843-42a8553796fc"
+            }
+          ]
+        },
+        {
+          "description": "Shoreline Development Code",
+          "type": "city code",
+          "url": "https://www.codepublishing.com/WA/Shoreline/#!/Shoreline20/Shoreline2050.html#20.50.400",
+          "notes": "20.50.400",
+          "attachments": [
+            {
+              "fileName": "Shoreline_WA_2_1.png",
+              "isDoc": false,
+              "directusId": "80b264ad-8bd1-482e-b9af-ac3650720627"
+            },
+            {
+              "fileName": "Shoreline_WA_2_2.png",
+              "isDoc": false,
+              "directusId": "4bc3affe-94f3-4799-95ef-53e88c48f7f3"
+            }
+          ]
+        },
+        {
+          "description": "Shoreline Development Code",
+          "type": "city code",
+          "url": "https://www.codepublishing.com/WA/Shoreline/#!/Shoreline20/Shoreline2050.html#20.50.390",
+          "notes": "20.50.390.C.;\n20.50.390.D.",
+          "attachments": [
+            {
+              "fileName": "Shoreline_WA_3_1.png",
+              "isDoc": false,
+              "directusId": "283f9555-fbca-48b5-8744-0cb97fc98533"
+            }
+          ]
+        }
+      ]
+    },
+    "add_max": [
+      {
+        "reporter": "Samuel Deetz",
+        "requirements": ["by right", "other"],
+        "citations": [
+          {
+            "description": "Shoreline Development Code",
+            "type": "city code",
+            "url": "https://www.codepublishing.com/WA/Shoreline/#!/Shoreline20/Shoreline2050.html#20.50.390",
+            "notes": "20.50.390.C.;\n20.50.390.D.",
+            "attachments": [
+              {
+                "fileName": "Shoreline_WA_1_1.png",
+                "isDoc": false,
+                "directusId": "283f9555-fbca-48b5-8744-0cb97fc98533"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "reduce_min": [
+      {
+        "reporter": "Samuel Deetz",
+        "requirements": [
+          "frequent transit",
+          "other",
+          "planned frequent transit",
+          "transportation demand management",
+          "tree preservation"
+        ],
+        "citations": [
+          {
+            "description": "Shoreline Development Code",
+            "type": "city code",
+            "url": "https://www.codepublishing.com/WA/Shoreline/#!/Shoreline20/Shoreline2050.html#20.50.400",
+            "notes": "20.50.400",
+            "attachments": [
+              {
+                "fileName": "Shoreline_WA_1_1.png",
+                "isDoc": false,
+                "directusId": "80b264ad-8bd1-482e-b9af-ac3650720627"
+              },
+              {
+                "fileName": "Shoreline_WA_1_2.png",
+                "isDoc": false,
+                "directusId": "4bc3affe-94f3-4799-95ef-53e88c48f7f3"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "rm_min": [
+      {
+        "reporter": "Tony Jordan",
+        "requirements": ["by right"],
+        "citations": [
+          {
+            "description": "Shoreline Comprehensive Plan Presentation",
+            "type": "other",
+            "url": "https://shoreline.granicus.com/MetaViewer.php?view_id=4&clip_id=1878&meta_id=162658",
+            "notes": "Page 14",
+            "attachments": [
+              {
+                "fileName": "Shoreline_WA_1_1.png",
+                "isDoc": false,
+                "directusId": "7771efd0-76c9-4b16-8843-42a8553796fc"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
   "Shoreview, MN": {
     "legacy": {
       "reporter": "Samuel Deetz",
@@ -86447,7 +86951,49 @@
           ]
         }
       ]
-    }
+    },
+    "add_max": [
+      {
+        "reporter": "Samuel Deetz",
+        "requirements": ["by right"],
+        "citations": [
+          {
+            "description": "Snowmass Village Land Use Code",
+            "type": "city code",
+            "url": "https://library.municode.com/co/snowmass_village/codes/municipal_code?nodeId=CH16ALAUSDECO_ARTIVDEEVST_DIV3SIDEST_S16A-4-310OREPAST",
+            "notes": "Sec. 16A-4-310.(b)",
+            "attachments": [
+              {
+                "fileName": "SnowmassVillage_CO_1_1.png",
+                "isDoc": false,
+                "directusId": "3d9ed13b-002e-499b-a4b4-4399211481fa"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "reduce_min": [
+      {
+        "reporter": "Samuel Deetz",
+        "requirements": ["in-lieu fees"],
+        "citations": [
+          {
+            "description": "Snowmass Village Land Use Code",
+            "type": "city code",
+            "url": "https://library.municode.com/co/snowmass_village/codes/municipal_code?nodeId=CH16ALAUSDECO_ARTIVDEEVST_DIV3SIDEST_S16A-4-310OREPAST",
+            "notes": "Sec. 16A-4-310.(c)(2)e.",
+            "attachments": [
+              {
+                "fileName": "SnowmassVillage_CO_1_1.png",
+                "isDoc": false,
+                "directusId": "0f78a6aa-47cf-49f9-8a11-d82d32e5bc09"
+              }
+            ]
+          }
+        ]
+      }
+    ]
   },
   "Somerset, PA": {
     "legacy": {
@@ -93393,7 +93939,49 @@
           ]
         }
       ]
-    }
+    },
+    "add_max": [
+      {
+        "reporter": "Samuel Deetz",
+        "requirements": ["by right", "other"],
+        "citations": [
+          {
+            "description": "Thornton Development Code",
+            "type": "city code",
+            "url": "https://library.municode.com/co/thornton/codes/code_of_ordinances?nodeId=CO_CH18DECO_ARTIIIZODI_S18-98TRORDETODI",
+            "notes": "Sec. 18-98.(b)(13)",
+            "attachments": [
+              {
+                "fileName": "Thornton_CO_1_1.png",
+                "isDoc": false,
+                "directusId": "458ad247-80a3-4c41-bc49-9ea1d171ae80"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "reduce_min": [
+      {
+        "reporter": "Samuel Deetz",
+        "requirements": ["by right", "frequent transit", "other"],
+        "citations": [
+          {
+            "description": "Thornton Development Code",
+            "type": "city code",
+            "url": "https://library.municode.com/co/thornton/codes/code_of_ordinances?nodeId=CO_CH18DECO_ARTIIIZODI_S18-98TRORDETODI",
+            "notes": "Sec. 18-98.(b)(10)",
+            "attachments": [
+              {
+                "fileName": "Thornton_CO_1_1.png",
+                "isDoc": false,
+                "directusId": "b47c95a6-1413-4788-b764-a5f8d486a06a"
+              }
+            ]
+          }
+        ]
+      }
+    ]
   },
   "Thousand Oaks, CA": {
     "rm_min": [
@@ -93679,7 +94267,49 @@
           ]
         }
       ]
-    }
+    },
+    "add_max": [
+      {
+        "reporter": "Samuel Deetz",
+        "requirements": ["by right"],
+        "citations": [
+          {
+            "description": "Timnath Land Use Code",
+            "type": "city code",
+            "url": "https://timnath.org/wp-content/uploads/2024/11/Interactive-Land-Use-Code-Update-Timnath-ORD-16.pdf",
+            "notes": "5.8.2.3\n Page 118",
+            "attachments": [
+              {
+                "fileName": "Timnath_CO_1_1.png",
+                "isDoc": false,
+                "directusId": "b44a8065-496a-4b43-ad5e-b85bcb001804"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "rm_min": [
+      {
+        "reporter": "Samuel Deetz",
+        "requirements": ["other"],
+        "citations": [
+          {
+            "description": "Timnath Land Use Code",
+            "type": "city code",
+            "url": "https://timnath.org/wp-content/uploads/2024/11/Interactive-Land-Use-Code-Update-Timnath-ORD-16.pdf",
+            "notes": "5.8.7 \nPage 118",
+            "attachments": [
+              {
+                "fileName": "Timnath_CO_1_1.png",
+                "isDoc": false,
+                "directusId": "04467b06-4aee-42d3-8e0f-cd158aab91af"
+              }
+            ]
+          }
+        ]
+      }
+    ]
   },
   "Tioga, ND": {
     "rm_min": [
@@ -94824,7 +95454,49 @@
           ]
         }
       ]
-    }
+    },
+    "add_max": [
+      {
+        "reporter": "Samuel Deetz",
+        "requirements": ["by right"],
+        "citations": [
+          {
+            "description": "Trinidad Land Use Code",
+            "type": "city code",
+            "url": "https://cms2.revize.com/revize/trinidadco/Document%20Center/Government/Chapter%2014%20-%20Land%20Use%20Code%20rev.%209-27-24.pdf",
+            "notes": "Section 14-61.C.\nPages 127-132 of pdf, pages 118-123 of original document",
+            "attachments": [
+              {
+                "fileName": "Trinidad_CO_1_1.png",
+                "isDoc": false,
+                "directusId": "6de74ac1-9077-4cb6-8b98-ff1ea8f9a86c"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "rm_min": [
+      {
+        "reporter": "Samuel Deetz",
+        "requirements": ["by right"],
+        "citations": [
+          {
+            "description": "Trinidad Land Use Code",
+            "type": "city code",
+            "url": "https://cms2.revize.com/revize/trinidadco/Document%20Center/Government/Chapter%2014%20-%20Land%20Use%20Code%20rev.%209-27-24.pdf",
+            "notes": "Section 14-61.I.\nPage 134 of pdf, page 125 of original document",
+            "attachments": [
+              {
+                "fileName": "Trinidad_CO_1_1.png",
+                "isDoc": false,
+                "directusId": "9870eeaf-b259-4ef9-a607-c2f79877e5b1"
+              }
+            ]
+          }
+        ]
+      }
+    ]
   },
   "Troy, MI": {
     "add_max": [
@@ -96069,7 +96741,59 @@
           ]
         }
       ]
-    }
+    },
+    "add_max": [
+      {
+        "reporter": "Samuel Deetz",
+        "requirements": ["by right", "other"],
+        "citations": [
+          {
+            "description": "Vail Zoning Code",
+            "type": "city code",
+            "url": "https://codelibrary.amlegal.com/codes/vailco/latest/vail_co/0-0-0-9191",
+            "notes": "§ 12-7B-17",
+            "attachments": [
+              {
+                "fileName": "Vail_CO_1_1.png",
+                "isDoc": false,
+                "directusId": "c8e08919-fb37-4700-aef1-418fb8b35c5a"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "reduce_min": [
+      {
+        "reporter": "Samuel Deetz",
+        "requirements": ["in-lieu fees", "other"],
+        "citations": [
+          {
+            "description": "Vail Zoning Code",
+            "type": "city code",
+            "url": "https://codelibrary.amlegal.com/codes/vailco/latest/vail_co/0-0-0-9191",
+            "notes": "CHAPTER 7: COMMERCIAL AND BUSINESS DISTRICTS\n  ARTICLE 7B: COMMERCIAL CORE 1 (CC1) DISTRICT\n    § 12-7B-17 PARKING AND LOADING.\nCHAPTER 10: OFF-STREET PARKING AND LOADING\n  § 12-10-12 CREDIT FOR MULTIPLE USE PARKING FACILITIES.\n  § 12-10-16 EXEMPT AREAS; PARKING FUND ESTABLISHED.\n    (B)",
+            "attachments": [
+              {
+                "fileName": "Vail_CO_1_1.png",
+                "isDoc": false,
+                "directusId": "bddac46f-e8d2-49c5-99a3-e17043b53a32"
+              },
+              {
+                "fileName": "Vail_CO_1_2.png",
+                "isDoc": false,
+                "directusId": "62b284c6-c174-452b-bd60-c301c43019c9"
+              },
+              {
+                "fileName": "Vail_CO_1_3.png",
+                "isDoc": false,
+                "directusId": "6a780cac-7973-4987-98ee-5ba9acbabc75"
+              }
+            ]
+          }
+        ]
+      }
+    ]
   },
   "Vallejo, CA": {
     "legacy": {

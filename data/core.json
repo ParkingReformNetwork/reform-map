@@ -4698,7 +4698,7 @@
     },
     "rm_min": [
       {
-        "summary": "There are no minimum parking requirements for specific land tracts in the downtown area, with the exception of hotels/motels. \n\nThe planning director may reduce minimum parking required if the development includes programs to reduce single occupancy vehicle trips through senior and affordable housing, implementation of a shared car service (i.e., Zipcar™), enhanced bike storage facilities, purchase of WTA transit passes, installation of covered transit shelters, off-site pedestrian infrastructure improvements, or other similar strategies. ",
+        "summary": "There are no minimum parking requirements for specific land tracts in the downtown area, with the exception of hotels/motels. \n\nThe planning director may reduce minimum parking required if the development includes programs to reduce single occupancy vehicle trips through senior and affordable housing, implementation of a shared car service (i.e., Zipcar™), enhanced bike storage facilities, purchase of WTA transit passes, installation of covered transit shelters, off-site pedestrian infrastructure improvements, or other similar strategies. \n\nThe city is considering an ordinance to eliminate parking mandates citywide in 2025.",
         "status": "implemented",
         "scope": ["city center / business district"],
         "land": ["all uses"],
@@ -34166,7 +34166,25 @@
       "scope": ["citywide"],
       "land": ["all uses"],
       "date": null
-    }
+    },
+    "add_max": [
+      {
+        "summary": "Parking maximums apply to all uses and vary by district.",
+        "status": "implemented",
+        "scope": ["citywide"],
+        "land": ["all uses"],
+        "date": null
+      }
+    ],
+    "reduce_min": [
+      {
+        "summary": "Parking requirements may be reduced through motorcycle or scooter parking.",
+        "status": "implemented",
+        "scope": ["citywide"],
+        "land": ["all uses"],
+        "date": null
+      }
+    ]
   },
   "Lakewood, NY": {
     "place": {
@@ -36904,7 +36922,25 @@
       "scope": ["city center / business district"],
       "land": ["commercial", "other"],
       "date": null
-    }
+    },
+    "reduce_min": [
+      {
+        "summary": "Parking reductions are available for on-street parking, affordable housing, age-restricted housing, and other factors.",
+        "status": "implemented",
+        "scope": ["citywide"],
+        "land": ["all uses", "residential, multi-family"],
+        "date": null
+      }
+    ],
+    "rm_min": [
+      {
+        "summary": "Nonresidential and mixed-use development that is located within the boundaries of General Improvement District #1 is exempt from parking requirements.",
+        "status": "implemented",
+        "scope": ["city center / business district"],
+        "land": ["commercial", "other"],
+        "date": null
+      }
+    ]
   },
   "Lovington, IL": {
     "place": {
@@ -37306,7 +37342,25 @@
       "scope": ["main street / special"],
       "land": ["commercial"],
       "date": null
-    }
+    },
+    "reduce_min": [
+      {
+        "summary": "On-street parking may count towards minimums in the CD Commercial Downtown district.",
+        "status": "implemented",
+        "scope": ["city center / business district"],
+        "land": ["all uses"],
+        "date": null
+      }
+    ],
+    "rm_min": [
+      {
+        "summary": "Commercial uses on Main Street between Third Avenue and Fifth Avenue are exempt from parking mandates.",
+        "status": "implemented",
+        "scope": ["main street / special"],
+        "land": ["commercial"],
+        "date": null
+      }
+    ]
   },
   "Mackinac Island, MI": {
     "place": {
@@ -44470,7 +44524,25 @@
       "scope": ["city center / business district"],
       "land": ["commercial"],
       "date": null
-    }
+    },
+    "reduce_min": [
+      {
+        "summary": "Residential uses in the C-1 District have a reduced requirement, which may be further reduced through the payment of a fee in lieu of required parking.",
+        "status": "implemented",
+        "scope": ["city center / business district"],
+        "land": ["residential, all uses"],
+        "date": null
+      }
+    ],
+    "rm_min": [
+      {
+        "summary": "Commercial uses in the C-1 District are exempt from parking mandates.",
+        "status": "implemented",
+        "scope": ["city center / business district"],
+        "land": ["commercial"],
+        "date": null
+      }
+    ]
   },
   "New Castle, DE": {
     "place": {
@@ -46264,7 +46336,46 @@
       "scope": ["citywide"],
       "land": ["commercial", "industrial", "other", "residential, all uses"],
       "date": null
-    }
+    },
+    "add_max": [
+      {
+        "summary": "Parking maximums are set at 125% of the minimums for nonresidential uses.",
+        "status": "implemented",
+        "scope": ["citywide"],
+        "land": ["commercial", "industrial", "medical", "other"],
+        "date": null
+      }
+    ],
+    "reduce_min": [
+      {
+        "summary": "Parking requirements may be reduced upon approval through on-street parking, proximity to transit or EV charging stations.",
+        "status": "implemented",
+        "scope": ["citywide"],
+        "land": [
+          "all uses",
+          "commercial",
+          "industrial",
+          "medical",
+          "other",
+          "residential, multi-family"
+        ],
+        "date": null
+      }
+    ],
+    "rm_min": [
+      {
+        "summary": "Properties smaller than 5000 square feet are exempt from parking mandates except for single-family, two-family and manufactured homes.",
+        "status": "implemented",
+        "scope": ["citywide"],
+        "land": [
+          "commercial",
+          "industrial",
+          "other",
+          "residential, multi-family"
+        ],
+        "date": null
+      }
+    ]
   },
   "Northville Charter Township, MI": {
     "place": {
@@ -48597,7 +48708,34 @@
       "scope": ["city center / business district"],
       "land": ["commercial", "other"],
       "date": null
-    }
+    },
+    "add_max": [
+      {
+        "summary": "Within the Greater Downtown Districts, parking maximums are set at 150% of the minimums.",
+        "status": "implemented",
+        "scope": ["city center / business district"],
+        "land": ["all uses"],
+        "date": null
+      }
+    ],
+    "reduce_min": [
+      {
+        "summary": "Within the Greater Downtown Districts, the first 3000 square feet of a nonresidential use is exempt from parking mandates, while parking minimums are reduced. Mandates may be further reduced through TDM strategies.",
+        "status": "implemented",
+        "scope": ["city center / business district"],
+        "land": ["all uses", "commercial", "other"],
+        "date": null
+      }
+    ],
+    "rm_min": [
+      {
+        "summary": "Within the Greater Downtown Districts, the first 3000 square feet of a nonresidential use is exempt from parking mandates.",
+        "status": "implemented",
+        "scope": ["city center / business district"],
+        "land": ["commercial", "other"],
+        "date": null
+      }
+    ]
   },
   "Parker, SD": {
     "place": {
@@ -53224,7 +53362,25 @@
       "scope": ["city center / business district"],
       "land": ["commercial"],
       "date": null
-    }
+    },
+    "reduce_min": [
+      {
+        "summary": "The first five thousand (5,000) gross square feet of a nonresidential use is exempt from all off-street parking and loading requirements in the Central Business District.",
+        "status": "implemented",
+        "scope": ["city center / business district"],
+        "land": ["commercial"],
+        "date": null
+      }
+    ],
+    "rm_min": [
+      {
+        "summary": "The first five thousand (5,000) gross square feet of a nonresidential use is exempt from all off-street parking and loading requirements in the Central Business District.",
+        "status": "implemented",
+        "scope": ["city center / business district"],
+        "land": ["commercial"],
+        "date": null
+      }
+    ]
   },
   "Riley, KS": {
     "place": {
@@ -57427,6 +57583,51 @@
       "date": null
     }
   },
+  "Shoreline, WA": {
+    "place": {
+      "name": "Shoreline",
+      "state": "WA",
+      "country": "US",
+      "pop": 58608,
+      "coord": [-122.3437497, 47.7564667],
+      "repeal": false
+    },
+    "legacy": {
+      "summary": "Parking requirements may be reduced upon approval for transit, tree preservation, a transportation demand management plan and other methods. Parking maximums are set at 150% of the minimums for nonresidential uses. All surface parking provided above the minimums must be permeable pavement. Shoreline passed a Comprehensive Plan in December 2024 which will require the city to remove parking mandates in the near future.",
+      "status": "implemented",
+      "policy": ["add parking maximums", "reduce parking minimums"],
+      "scope": ["citywide"],
+      "land": ["all uses", "commercial", "residential, all uses"],
+      "date": null
+    },
+    "add_max": [
+      {
+        "summary": "Parking maximums are set at 150% of the minimums for nonresidential uses. All surface parking provided above the minimums must be permeable pavement.",
+        "status": "implemented",
+        "scope": ["citywide"],
+        "land": ["commercial", "industrial", "medical", "other"],
+        "date": null
+      }
+    ],
+    "reduce_min": [
+      {
+        "summary": "Parking requirements may be reduced upon approval for transit, tree preservation, a transportation demand management plan and other methods.",
+        "status": "implemented",
+        "scope": ["citywide"],
+        "land": ["all uses", "commercial", "residential, all uses"],
+        "date": null
+      }
+    ],
+    "rm_min": [
+      {
+        "summary": "Shoreline passed a Comprehensive Plan in December 2024 which will require the city to remove parking mandates in the near future.",
+        "status": "planned",
+        "scope": ["citywide"],
+        "land": ["all uses"],
+        "date": "2024-12-16"
+      }
+    ]
+  },
   "Shoreview, MN": {
     "place": {
       "name": "Shoreview",
@@ -58249,7 +58450,25 @@
       "scope": ["citywide"],
       "land": ["all uses"],
       "date": null
-    }
+    },
+    "add_max": [
+      {
+        "summary": "Parking maximums are set at 125% of the minimums in multi-family, mixed-use and commercial districts.",
+        "status": "implemented",
+        "scope": ["city center / business district", "main street / special"],
+        "land": ["all uses"],
+        "date": null
+      }
+    ],
+    "reduce_min": [
+      {
+        "summary": "A fee in lieu of required parking may be provided citywide.",
+        "status": "implemented",
+        "scope": ["citywide"],
+        "land": ["all uses"],
+        "date": null
+      }
+    ]
   },
   "Somerset, PA": {
     "place": {
@@ -62759,7 +62978,25 @@
       "scope": ["transit oriented"],
       "land": ["all uses"],
       "date": null
-    }
+    },
+    "add_max": [
+      {
+        "summary": "Within the TOD Transit Oriented Development District, surface parking maximums are set at 125% of the minimums.",
+        "status": "implemented",
+        "scope": ["transit oriented", "transit-oriented"],
+        "land": ["all uses"],
+        "date": null
+      }
+    ],
+    "reduce_min": [
+      {
+        "summary": "Within the TOD Transit Oriented Development District, on-street parking may count towards the parking minimums.",
+        "status": "implemented",
+        "scope": ["transit oriented", "transit-oriented"],
+        "land": ["all uses"],
+        "date": null
+      }
+    ]
   },
   "Thousand Oaks, CA": {
     "place": {
@@ -62952,7 +63189,25 @@
       "scope": ["city center / business district"],
       "land": ["commercial", "other"],
       "date": null
-    }
+    },
+    "add_max": [
+      {
+        "summary": "Parking maximums are set at 125% of the minimums.",
+        "status": "implemented",
+        "scope": ["citywide"],
+        "land": ["all uses"],
+        "date": null
+      }
+    ],
+    "rm_min": [
+      {
+        "summary": "Nonresidential uses in the B - Business District are exempt from parking mandates, although adequate on-street and off-street parking an unloading spaces must be demonstrated by the applicant.",
+        "status": "implemented",
+        "scope": ["city center / business district"],
+        "land": ["commercial", "other"],
+        "date": null
+      }
+    ]
   },
   "Tioga, ND": {
     "place": {
@@ -63816,7 +64071,25 @@
       "scope": ["city center / business district"],
       "land": ["all uses"],
       "date": null
-    }
+    },
+    "add_max": [
+      {
+        "summary": "Parking maximums apply to most nonresidential uses citywide.",
+        "status": "implemented",
+        "scope": ["citywide"],
+        "land": ["commercial", "industrial", "medical", "other"],
+        "date": null
+      }
+    ],
+    "rm_min": [
+      {
+        "summary": "No off-street parking is required in the HP - Corazon de Trinidad Historic Preservation District.",
+        "status": "implemented",
+        "scope": ["city center / business district"],
+        "land": ["all uses"],
+        "date": null
+      }
+    ]
   },
   "Troy, MI": {
     "place": {
@@ -64601,7 +64874,25 @@
       "scope": ["city center / business district", "citywide"],
       "land": ["commercial", "other", "residential, all uses"],
       "date": null
-    }
+    },
+    "add_max": [
+      {
+        "summary": "Within the CC1 Commercial Core 1 District, no parking may be provided on site. Instead, developments are required to pay a fee into the parking fund.",
+        "status": "implemented",
+        "scope": ["city center / business district"],
+        "land": ["all uses"],
+        "date": null
+      }
+    ],
+    "reduce_min": [
+      {
+        "summary": "Within the CC1 Commercial Core 1 District, no parking may be provided on site. Instead, developments are required to pay a fee into the parking fund. Parking requirements are reduced for large mixed-use developments citywide.",
+        "status": "implemented",
+        "scope": ["city center / business district", "citywide"],
+        "land": ["commercial", "other", "residential, all uses"],
+        "date": null
+      }
+    ]
   },
   "Vallejo, CA": {
     "place": {
