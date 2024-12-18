@@ -178,3 +178,31 @@ $filter-inner-width: calc(
     margin: 0;
   }
 }
+
+// Inspired by https://designsystem.digital.gov/components/select/.
+.filter-policy-type-dropdown-container {
+  margin: spacing.$element-gap spacing.$container-edge-spacing;
+
+  select {
+    appearance: none;
+
+    font-size: typography.$font-size-base;
+    min-height: spacing.$min-touch-target;
+    width: 100%;
+
+    padding-left: spacing.$container-edge-spacing;
+
+    border: borders.$component-border;
+    border-radius: borders.$border-radius;
+
+    background-image: url(../../assets/unfold-more.svg),
+      linear-gradient(transparent, transparent);
+    background-repeat: no-repeat;
+    background-position: right 8px center;
+    background-size: 20px;
+
+    &:hover {
+      background-color: colors.$hover-white;
+    }
+  }
+}
