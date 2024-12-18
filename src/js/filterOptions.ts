@@ -395,11 +395,53 @@ function initAllMinimumsToggle(filterManager: PlaceFilterManager): void {
   );
 }
 
+function initPolicyTypeFilterDropdown(filterManager: PlaceFilterManager): void {
+  // Hide the dropdown if on the legacy app.
+  if (filterManager.getState().policyTypeFilter === "legacy reform") return;
+
+  const id = "filter-policy-type-dropdown";
+
+  const container = document.createElement("div");
+
+  const label = document.createElement("label");
+  label.htmlFor = id;
+  label.textContent = "Policy type:";
+
+  const select = document.createElement("select");
+  select.id = id;
+  select.name = id;
+
+  const options: PolicyTypeFilter[] = [
+    "any parking reform",
+    "add parking maximums",
+    "reduce parking minimums",
+    "remove parking minimums",
+  ];
+  options.forEach((option) => {
+    const element = document.createElement("option");
+    element.value = option;
+    element.textContent = capitalize(option);
+    select.append(element);
+  });
+
+  select.addEventListener("change", () => {
+    const policyTypeFilter = select.value as PolicyTypeFilter;
+    filterManager.update({ policyTypeFilter });
+  });
+
+  const filterPopup = document.getElementById("filter-popup");
+  if (!filterPopup) return;
+  container.append(label);
+  container.append(select);
+  filterPopup.prepend(container);
+}
+
 export function initFilterOptions(
   filterManager: PlaceFilterManager,
   filterOptions: FilterOptions,
 ): void {
   initAllMinimumsToggle(filterManager);
+  initPolicyTypeFilterDropdown(filterManager);
 
   initFilterGroup(filterManager, filterOptions, {
     htmlName: "policy-change",

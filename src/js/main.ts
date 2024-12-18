@@ -8,27 +8,16 @@ import initScorecard from "./scorecard";
 import { initPopulationSlider, POPULATION_MAX_INDEX } from "./populationSlider";
 import { FilterOptions, initFilterOptions } from "./filterOptions";
 import initFilterPopup from "./filterPopup";
-import { PlaceFilterManager, PolicyTypeFilter } from "./FilterState";
+import { PlaceFilterManager } from "./FilterState";
 import initCounters from "./counters";
 import { initViewToggle, addViewToggleSubscribers } from "./viewToggle";
 import initTable from "./table";
 import subscribeSnapToPlace from "./mapPosition";
 import readData from "./data";
 
-function policyTypeFilterFromUrl(): PolicyTypeFilter {
-  const typeParam = new URLSearchParams(window.location.search).get("type");
-  switch (typeParam) {
-    case "any":
-      return "any parking reform";
-    case "max":
-      return "add parking maximums";
-    case "rm":
-      return "remove parking minimums";
-    case "reduce":
-      return "reduce parking minimums";
-    default:
-      return "legacy reform";
-  }
+function isRevampEnabled(): boolean {
+  const param = new URLSearchParams(window.location.search).get("revamp");
+  return param !== null;
 }
 
 export default async function initApp(): Promise<void> {
@@ -37,20 +26,20 @@ export default async function initApp(): Promise<void> {
   initAbout();
   const filterPopupIsVisible = initFilterPopup();
 
-  const policyTypeFilter = policyTypeFilterFromUrl();
+  const revampEnabled = isRevampEnabled();
 
   const viewToggle = initViewToggle();
 
   const map = createMap();
   const data = await readData({
-    includeMultipleReforms: policyTypeFilter !== "legacy reform",
+    includeMultipleReforms: revampEnabled,
   });
 
   const filterOptions = new FilterOptions(Object.values(data));
 
   const filterManager = new PlaceFilterManager(data, {
     searchInput: null,
-    policyTypeFilter,
+    policyTypeFilter: revampEnabled ? "any parking reform" : "legacy reform",
     allMinimumsRemovedToggle: true,
     includedPolicyChanges: filterOptions.default("includedPolicyChanges"),
     scope: filterOptions.default("scope"),
