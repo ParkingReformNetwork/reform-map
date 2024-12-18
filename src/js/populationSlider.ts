@@ -1,41 +1,62 @@
 import { FilterPopupVisibleObservable } from "./filterPopup";
-import {
-  FilterState,
-  PlaceFilterManager,
-  POPULATION_INTERVALS,
-} from "./FilterState";
+import { PlaceFilterManager, POPULATION_INTERVALS } from "./FilterState";
 
 const THUMBSIZE = 24;
 export const POPULATION_MAX_INDEX = POPULATION_INTERVALS.length - 1;
 
 interface Sliders {
   readonly controls: HTMLDivElement;
+  readonly label: HTMLDivElement;
   readonly left: HTMLInputElement;
   readonly right: HTMLInputElement;
 }
 
-function getSliders(): Sliders {
-  const controls = document.querySelector<HTMLDivElement>(
-    ".population-slider-controls",
-  );
-  const left = document.querySelector<HTMLInputElement>(
-    ".population-slider-left",
-  );
-  const right = document.querySelector<HTMLInputElement>(
-    ".population-slider-right",
-  );
-  if (!controls || !left || !right)
-    throw new Error("Could not init population slider");
+function generateSliders(filterPopup: HTMLFormElement): Sliders {
+  const container = document.createElement("div");
+  container.className = "population-slider-container";
+
+  const label = document.createElement("div");
+  label.id = "population-slider-label";
+  container.append(label);
+
+  const controls = document.createElement("div");
+  controls.className = "population-slider-controls";
+  container.append(controls);
+
+  const left = document.createElement("input");
+  left.setAttribute("aria-labelledby", "population-slider-label");
+  left.className = "population-slider-left";
+  left.name = "min";
+  left.type = "range";
+  left.step = "0.5";
+  left.min = "0";
+  controls.append(left);
+
+  const right = document.createElement("input");
+  right.setAttribute("aria-labelledby", "population-slider-label");
+  right.className = "population-slider-right";
+  right.name = "max";
+  right.type = "range";
+  right.step = "0.5";
+  right.min = "0";
+  right.value = "0";
+  controls.append(right);
+
+  filterPopup.append(container);
+
   return {
     controls,
+    label,
     left,
     right,
   };
 }
 
-function updateSlidersUI(state: FilterState): void {
-  const [leftIndex, rightIndex] = state.populationSliderIndexes;
-  const sliders = getSliders();
+function updateSlidersUI(
+  populationSliderIndexes: [number, number],
+  sliders: Sliders,
+): void {
+  const [leftIndex, rightIndex] = populationSliderIndexes;
 
   sliders.left.value = leftIndex.toString();
   sliders.right.value = rightIndex.toString();
@@ -64,16 +85,15 @@ function updateSlidersUI(state: FilterState): void {
 
   const leftLabel = POPULATION_INTERVALS[leftIndex][0];
   const rightLabel = POPULATION_INTERVALS[rightIndex][0];
-  const labelElement = document.querySelector("#population-slider-label");
-  if (!labelElement) return;
-  labelElement.innerHTML = `${leftLabel} - ${rightLabel} residents`;
+  sliders.label.innerHTML = `${leftLabel} - ${rightLabel} residents`;
 }
 
 export function initPopulationSlider(
   filterManager: PlaceFilterManager,
   filterPopupIsVisible: FilterPopupVisibleObservable,
+  filterPopup: HTMLFormElement,
 ): void {
-  const sliders = getSliders();
+  const sliders = generateSliders(filterPopup);
 
   // Set initial state.
   const maxIndex = filterManager
@@ -96,13 +116,16 @@ export function initPopulationSlider(
   // the popup must be visible for the width calculations to work.
   filterPopupIsVisible.subscribe((isVisible) => {
     if (isVisible) {
-      updateSlidersUI(filterManager.getState());
+      updateSlidersUI(
+        filterManager.getState().populationSliderIndexes,
+        sliders,
+      );
     }
   }, "render population slider");
 
   // Also update UI when values change, but only if the filter popup is open.
   filterManager.subscribe("update population sliders", (state) => {
     if (!filterPopupIsVisible.getValue()) return;
-    updateSlidersUI(state);
+    updateSlidersUI(state.populationSliderIndexes, sliders);
   });
 }
