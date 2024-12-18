@@ -81,7 +81,8 @@ interface CacheEntry {
   state: FilterState;
   matchedPlaces: Record<PlaceId, PlaceMatch>;
   matchedCountries: Set<string>;
-  numMatchedPolicyRecords: number;
+  matchedPolicyTypesForAnyPolicy: Set<PolicyType>;
+  numMatchedPolicyRecordsForSinglePolicy: number;
 }
 
 export class PlaceFilterManager {
@@ -111,7 +112,7 @@ export class PlaceFilterManager {
   ///
   /// Note that this will be zero with 'any parking reform' and 'search'.
   get numMatchedPolicyRecords(): number {
-    return this.ensureCache().numMatchedPolicyRecords;
+    return this.ensureCache().numMatchedPolicyRecordsForSinglePolicy;
   }
 
   get placeIds(): Set<PlaceId> {
@@ -120,6 +121,16 @@ export class PlaceFilterManager {
 
   get matchedCountries(): Set<string> {
     return this.ensureCache().matchedCountries;
+  }
+
+  /// The policy types the matched places have.
+  ///
+  /// This is only set when the policy type is 'any parking reform'.
+  ///
+  /// Stores all policy types belonging to matched places, even if the
+  /// filter state is set to ignore that policy type.
+  get matchedPolicyTypes(): Set<PolicyType> {
+    return this.ensureCache().matchedPolicyTypesForAnyPolicy;
   }
 
   getState(): FilterState {
@@ -148,6 +159,7 @@ export class PlaceFilterManager {
 
     const matchedPlaces: Record<PlaceId, PlaceMatch> = {};
     const matchedCountries = new Set<string>();
+    const matchedPolicyTypes = new Set<PolicyType>();
     let numMatchedPolicyRecords = 0;
     for (const placeId in this.entries) {
       const match = this.getPlaceMatch(placeId);
@@ -157,13 +169,20 @@ export class PlaceFilterManager {
       if (match.type === "single policy") {
         numMatchedPolicyRecords += match.matchingIndexes.length;
       }
+      if (match.type === "any") {
+        if (match.hasAddMax) matchedPolicyTypes.add("add parking maximums");
+        if (match.hasReduceMin)
+          matchedPolicyTypes.add("reduce parking minimums");
+        if (match.hasRmMin) matchedPolicyTypes.add("remove parking minimums");
+      }
     }
 
     this.cache = {
       state: currentState,
       matchedPlaces,
       matchedCountries,
-      numMatchedPolicyRecords,
+      matchedPolicyTypesForAnyPolicy: matchedPolicyTypes,
+      numMatchedPolicyRecordsForSinglePolicy: numMatchedPolicyRecords,
     };
     return this.cache;
   }

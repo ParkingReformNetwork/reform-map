@@ -8,6 +8,7 @@ export function determineHtml(
   state: FilterState,
   numPlaces: number,
   numPolicyRecords: number,
+  matchedPolicyTypes: Set<PolicyType>,
   matchedCountries: Set<string>,
 ): string {
   if (!numPlaces) {
@@ -60,6 +61,7 @@ export function determineHtml(
         "remove parking minimums": "parking minimums removed",
       };
       const policyDescriptions = Array.from(state.includedPolicyChanges)
+        .filter((policy) => matchedPolicyTypes.has(policy as PolicyType))
         .map((policy) => policyDescriptionMap[policy as PolicyType])
         .sort()
         .reverse();
@@ -144,6 +146,7 @@ export default function initCounters(manager: PlaceFilterManager): void {
       state,
       manager.placeIds.size,
       manager.numMatchedPolicyRecords,
+      manager.matchedPolicyTypes,
       manager.matchedCountries,
     );
     tableCounter.innerHTML = determineHtml(
@@ -151,6 +154,7 @@ export default function initCounters(manager: PlaceFilterManager): void {
       state,
       manager.placeIds.size,
       manager.numMatchedPolicyRecords,
+      manager.matchedPolicyTypes,
       manager.matchedCountries,
     );
   });
