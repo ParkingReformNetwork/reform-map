@@ -6,14 +6,17 @@
 @use "theme/zindex";
 @use "header";
 
-$filter-width: 310px;
+$filter-total-width: 310px;
+$filter-inner-width: calc(
+  $filter-total-width - (borders.$border-thickness * 2)
+);
 
 .filter-popup {
   position: fixed;
   right: spacing.$map-controls-margin-x;
   top: calc(header.$header-height + spacing.$map-controls-margin-top);
   z-index: zindex.$filter-popup;
-  width: $filter-width;
+  width: $filter-total-width;
 
   max-height: min(600px, 75vh);
   overflow-y: auto;
