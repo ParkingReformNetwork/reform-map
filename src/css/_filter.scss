@@ -184,6 +184,8 @@ $filter-inner-width: calc(
   margin: spacing.$element-gap spacing.$container-edge-spacing;
 
   select {
+    -webkit-appearance: none;
+    -moz-appearance: none;
     appearance: none;
 
     font-size: typography.$font-size-base;
@@ -197,17 +199,15 @@ $filter-inner-width: calc(
 
     color: colors.$black;
 
+    background-color: colors.$white;
     background-image: url(../../assets/unfold-more.svg),
       linear-gradient(transparent, transparent);
     background-repeat: no-repeat;
     background-position: right 8px center;
     background-size: 20px;
 
-    // Media query avoids iOS always showing the background in hover state.
-    @media (hover: hover) {
-      &:hover {
-        background-color: colors.$hover-white;
-      }
+    &:hover {
+      background-color: colors.$hover-white;
     }
   }
 }
