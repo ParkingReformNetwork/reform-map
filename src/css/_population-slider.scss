@@ -17,8 +17,10 @@ $thumbsize: icons.$icon-size-md;
   flex-direction: column;
   align-items: center;
 
-  // `width` must be hardcoded for the calculations in populationSlider.tss to work.
-  width: calc(filter.$filter-width - (spacing.$container-edge-spacing * 2));
+  // `width` must be hardcoded for the calculations in populationSlider.ts to work.
+  width: calc(
+    filter.$filter-inner-width - (spacing.$container-edge-spacing * 2)
+  );
   margin: spacing.$element-gap spacing.$container-edge-spacing;
 }
 
