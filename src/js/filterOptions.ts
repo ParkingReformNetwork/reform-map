@@ -486,15 +486,4 @@ export function initFilterOptions(
     useTwoColumns: true,
     hide: ({ policyTypeFilter }) => policyTypeFilter === "any parking reform",
   });
-
-  const minimumsToggle = document.querySelector<HTMLInputElement>(
-    "#all-minimums-toggle-checkbox",
-  );
-  if (!minimumsToggle) return;
-  minimumsToggle.checked = filterManager.getState().allMinimumsRemovedToggle;
-  minimumsToggle.addEventListener("change", () => {
-    filterManager.update({
-      allMinimumsRemovedToggle: minimumsToggle.checked,
-    });
-  });
 }
