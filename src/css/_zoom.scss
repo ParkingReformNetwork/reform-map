@@ -6,8 +6,12 @@
 
 $label-font-size: typography.$font-size-md;
 
+$container-margin-left: spacing.$map-controls-margin-x;
+$button-width: spacing.$min-touch-target;
+$total-width: calc($container-margin-left + $button-width);
+
 div.leaflet-left .leaflet-control {
-  margin-left: spacing.$map-controls-margin-x;
+  margin-left: $container-margin-left;
   border: borders.$component-border;
   border-radius: borders.$border-radius;
 }
@@ -16,7 +20,7 @@ div.leaflet-control-zoom.leaflet-bar {
   top: calc(46px + spacing.$map-controls-margin-top - header.$header-height);
 
   a {
-    width: spacing.$min-touch-target;
+    width: $button-width;
     height: spacing.$min-touch-target;
     font-size: $label-font-size;
     font-weight: normal;
