@@ -480,7 +480,7 @@ export function initFilterOptions(
   initFilterGroup(filterManager, filterOptions, {
     htmlName: "year",
     filterStateKey: "year",
-    legend: "Year",
+    legend: "Reform year",
     useTwoColumns: true,
     hideForPolicyTypeFilter: ["any parking reform"],
   });
