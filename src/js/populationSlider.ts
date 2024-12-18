@@ -61,7 +61,6 @@ function generateSliders(
   right.min = "0";
   controls.append(right);
 
-  // const populationSliderIndexes = filterMa
   const accordionState = new Observable<AccordionState>(
     `filter accordion population`,
     {
