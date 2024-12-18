@@ -139,6 +139,7 @@ for (const edgeCase of TESTS) {
 
     if (edgeCase.populationIntervals !== undefined) {
       const [leftInterval, rightInterval] = edgeCase.populationIntervals;
+      await page.locator("#filter-accordion-toggle-population-slider").click();
       await page
         .locator(".population-slider-left")
         .fill(leftInterval.toString());

@@ -1,7 +1,5 @@
 import Observable from "./Observable";
 
-export type FilterPopupVisibleObservable = Observable<boolean>;
-
 function updateFilterPopupUI(isVisible: boolean): void {
   const popup = document.querySelector<HTMLElement>(".filter-popup");
   const icon = document.querySelector(".header-filter-icon-container");
@@ -10,7 +8,7 @@ function updateFilterPopupUI(isVisible: boolean): void {
   icon.ariaExpanded = isVisible.toString();
 }
 
-export default function initFilterPopup(): FilterPopupVisibleObservable {
+export default function initFilterPopup(): void {
   const isVisible = new Observable<boolean>("filter popup", false);
   isVisible.subscribe(updateFilterPopupUI, "toggle filter popup");
 
@@ -34,5 +32,5 @@ export default function initFilterPopup(): FilterPopupVisibleObservable {
     }
   });
 
-  return isVisible;
+  isVisible.initialize();
 }

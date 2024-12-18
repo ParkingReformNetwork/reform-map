@@ -24,7 +24,7 @@ export default async function initApp(): Promise<void> {
   initIcons();
   maybeDisableFullScreenIcon();
   initAbout();
-  const filterPopupIsVisible = initFilterPopup();
+  initFilterPopup();
 
   const revampEnabled = isRevampEnabled();
 
@@ -54,7 +54,7 @@ export default async function initApp(): Promise<void> {
   subscribeSnapToPlace(filterManager, map);
   initCounters(filterManager);
   initSearch(filterManager);
-  initFilterOptions(filterManager, filterOptions, filterPopupIsVisible);
+  initFilterOptions(filterManager, filterOptions);
 
   const table = initTable(filterManager, viewToggle);
   addViewToggleSubscribers(viewToggle, table);
@@ -62,6 +62,5 @@ export default async function initApp(): Promise<void> {
   initScorecard(filterManager, viewToggle, markerGroup, data);
 
   viewToggle.initialize();
-  filterPopupIsVisible.initialize();
   filterManager.initialize();
 }
