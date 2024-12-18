@@ -404,10 +404,7 @@ function initPolicyTypeFilterDropdown(filterManager: PlaceFilterManager): void {
   const id = "filter-policy-type-dropdown";
 
   const container = document.createElement("div");
-
-  const label = document.createElement("label");
-  label.htmlFor = id;
-  label.textContent = "Policy type:";
+  container.className = "filter-policy-type-dropdown-container";
 
   const select = document.createElement("select");
   select.id = id;
@@ -433,7 +430,6 @@ function initPolicyTypeFilterDropdown(filterManager: PlaceFilterManager): void {
 
   const filterPopup = document.getElementById("filter-popup");
   if (!filterPopup) return;
-  container.append(label);
   container.append(select);
   filterPopup.prepend(container);
 }
