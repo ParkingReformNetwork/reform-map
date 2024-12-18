@@ -47,20 +47,39 @@ export interface FilterState {
   populationSliderIndexes: [number, number];
 }
 
-/// The policy record indexes matching the current FilterState.
-///
-/// Only one of the policy types will be set at a time. If the PolicyTypeFilter
-/// is set to 'any parking reform', none of the indexes will be set.
-export interface MatchedPolicyRecords {
-  rmMinIdx: number[];
-  reduceMinIdx: number[];
-  addMaxIdx: number[];
+interface PlaceMatchLegacy {
+  type: "legacy";
 }
+
+interface PlaceMatchSearch {
+  type: "search";
+}
+
+interface PlaceMatchSinglePolicy {
+  type: "single policy";
+  policyType: PolicyType;
+  matchingIndexes: number[];
+}
+
+interface PlaceMatchAnyPolicy {
+  type: "any";
+  // Note that we still record if a place has a certain policy type
+  // even if the filter state is actively ignoring that policy.
+  hasRmMin: boolean;
+  hasReduceMin: boolean;
+  hasAddMax: boolean;
+}
+
+type PlaceMatch =
+  | PlaceMatchLegacy
+  | PlaceMatchSearch
+  | PlaceMatchSinglePolicy
+  | PlaceMatchAnyPolicy;
 
 // This allows us to avoid recomputing computed state when the FilterState has not changed.
 interface CacheEntry {
   state: FilterState;
-  matchedPolicyRecords: Record<PlaceId, MatchedPolicyRecords>;
+  matchedPlaces: Record<PlaceId, PlaceMatch>;
   matchedCountries: Set<string>;
   numMatchedPolicyRecords: number;
 }
@@ -84,20 +103,19 @@ export class PlaceFilterManager {
     return Object.keys(this.entries).length;
   }
 
-  get matchedPolicyRecords(): Record<PlaceId, MatchedPolicyRecords> {
-    return this.ensureCache().matchedPolicyRecords;
+  get matchedPlaces(): Record<PlaceId, PlaceMatch> {
+    return this.ensureCache().matchedPlaces;
   }
 
   /// The number of matching policy records, given that a place may have >1 policy record.
   ///
-  /// Note that this will be zero with 'any parking reform' since only the place
-  /// matches and not individual policy records.
+  /// Note that this will be zero with 'any parking reform' and 'search'.
   get numMatchedPolicyRecords(): number {
     return this.ensureCache().numMatchedPolicyRecords;
   }
 
   get placeIds(): Set<PlaceId> {
-    return new Set(Object.keys(this.matchedPolicyRecords));
+    return new Set(Object.keys(this.matchedPlaces));
   }
 
   get matchedCountries(): Set<string> {
@@ -128,23 +146,22 @@ export class PlaceFilterManager {
       return this.cache;
     }
 
-    const matchedPolicyRecords: Record<PlaceId, MatchedPolicyRecords> = {};
+    const matchedPlaces: Record<PlaceId, PlaceMatch> = {};
     const matchedCountries = new Set<string>();
     let numMatchedPolicyRecords = 0;
     for (const placeId in this.entries) {
-      const matchedRecords = this.getMatchingPolicyRecords(placeId);
-      if (!matchedRecords) continue;
-      matchedPolicyRecords[placeId] = matchedRecords;
+      const match = this.getPlaceMatch(placeId);
+      if (!match) continue;
+      matchedPlaces[placeId] = match;
       matchedCountries.add(this.entries[placeId].place.country);
-      numMatchedPolicyRecords +=
-        matchedRecords.addMaxIdx.length +
-        matchedRecords.reduceMinIdx.length +
-        matchedRecords.rmMinIdx.length;
+      if (match.type === "single policy") {
+        numMatchedPolicyRecords += match.matchingIndexes.length;
+      }
     }
 
     this.cache = {
       state: currentState,
-      matchedPolicyRecords,
+      matchedPlaces,
       matchedCountries,
       numMatchedPolicyRecords,
     };
@@ -193,20 +210,15 @@ export class PlaceFilterManager {
     return isLand;
   }
 
-  private getMatchingPolicyRecords(
-    placeId: PlaceId,
-  ): MatchedPolicyRecords | null {
+  private getPlaceMatch(placeId: PlaceId): PlaceMatch | null {
     const filterState = this.state.getValue();
     const entry = this.entries[placeId];
 
-    // Search overrides filter config. It acts like 'any parking reform', so
-    // return empty policy record indexes if it's a match.
+    // Search overrides filter config.
     if (filterState.searchInput) {
       return filterState.searchInput === placeId
         ? {
-            rmMinIdx: [],
-            reduceMinIdx: [],
-            addMaxIdx: [],
+            type: "search",
           }
         : null;
     }
@@ -220,11 +232,7 @@ export class PlaceFilterManager {
       );
       if (!isPolicyType) return null;
       return this.matchesPolicyRecord(entry.unifiedPolicy)
-        ? {
-            rmMinIdx: [],
-            reduceMinIdx: [],
-            addMaxIdx: [],
-          }
+        ? { type: "legacy" }
         : null;
     }
 
@@ -235,9 +243,10 @@ export class PlaceFilterManager {
       );
       return isPolicyType
         ? {
-            rmMinIdx: [],
-            reduceMinIdx: [],
-            addMaxIdx: [],
+            type: "any",
+            hasAddMax: policyTypes.includes("add parking maximums"),
+            hasReduceMin: policyTypes.includes("reduce parking minimums"),
+            hasRmMin: policyTypes.includes("remove parking minimums"),
           }
         : null;
     }
@@ -248,7 +257,11 @@ export class PlaceFilterManager {
         (policyRecord) => this.matchesPolicyRecord(policyRecord),
       );
       return matchingPolicies.length
-        ? { addMaxIdx: matchingPolicies, reduceMinIdx: [], rmMinIdx: [] }
+        ? {
+            type: "single policy",
+            policyType: "add parking maximums",
+            matchingIndexes: matchingPolicies,
+          }
         : null;
     }
 
@@ -258,7 +271,11 @@ export class PlaceFilterManager {
         (policyRecord) => this.matchesPolicyRecord(policyRecord),
       );
       return matchingPolicies.length
-        ? { addMaxIdx: [], reduceMinIdx: matchingPolicies, rmMinIdx: [] }
+        ? {
+            type: "single policy",
+            policyType: "reduce parking minimums",
+            matchingIndexes: matchingPolicies,
+          }
         : null;
     }
 
@@ -268,7 +285,11 @@ export class PlaceFilterManager {
         (policyRecord) => this.matchesPolicyRecord(policyRecord),
       );
       return matchingPolicies.length
-        ? { addMaxIdx: [], reduceMinIdx: [], rmMinIdx: matchingPolicies }
+        ? {
+            type: "single policy",
+            policyType: "remove parking minimums",
+            matchingIndexes: matchingPolicies,
+          }
         : null;
     }
 
