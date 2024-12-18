@@ -5,12 +5,11 @@ import {
   FilterState,
   PlaceFilterManager,
   PolicyTypeFilter,
+  UNKNOWN_YEAR,
 } from "./FilterState";
 import Observable from "./Observable";
 import { FilterPopupVisibleObservable } from "./filterPopup";
 import { initPopulationSlider } from "./populationSlider";
-
-export const UNKNOWN_YEAR = "Unknown";
 
 // Keep in alignment with FilterState.
 type FilterGroupKey =
