@@ -1,5 +1,10 @@
-import { FilterPopupVisibleObservable } from "./filterPopup";
+import {
+  AccordionState,
+  generateAccordion,
+  updateAccordionUI,
+} from "./filterOptions";
 import { PlaceFilterManager, POPULATION_INTERVALS } from "./FilterState";
+import Observable from "./Observable";
 
 const THUMBSIZE = 24;
 export const POPULATION_MAX_INDEX = POPULATION_INTERVALS.length - 1;
@@ -11,7 +16,21 @@ interface Sliders {
   readonly right: HTMLInputElement;
 }
 
-function generateSliders(filterPopup: HTMLFormElement): Sliders {
+function determineAccordionDescription(
+  populationSliderIndexes: [number, number],
+): string {
+  const [leftIndex, rightIndex] = populationSliderIndexes;
+  const leftLabel = POPULATION_INTERVALS[leftIndex][0];
+  const rightLabel = POPULATION_INTERVALS[rightIndex][0];
+  return ` (${leftLabel}-${rightLabel})`;
+}
+
+function generateSliders(
+  initialPopulationSliderIndexes: [number, number],
+  filterPopup: HTMLFormElement,
+): [Sliders, Observable<AccordionState>] {
+  const accordionElements = generateAccordion("population-slider");
+
   const container = document.createElement("div");
   container.className = "population-slider-container";
 
@@ -42,14 +61,39 @@ function generateSliders(filterPopup: HTMLFormElement): Sliders {
   right.min = "0";
   controls.append(right);
 
-  filterPopup.append(container);
+  const accordionState = new Observable<AccordionState>(
+    `filter accordion population`,
+    {
+      hidden: false,
+      expanded: false,
+      supplementalTitle: determineAccordionDescription(
+        initialPopulationSliderIndexes,
+      ),
+    },
+  );
+  accordionState.subscribe((state) =>
+    updateAccordionUI(accordionElements, "Population", state),
+  );
+  accordionElements.accordionButton.addEventListener("click", () => {
+    const priorState = accordionState.getValue();
+    accordionState.setValue({
+      ...priorState,
+      expanded: !priorState.expanded,
+    });
+  });
 
-  return {
-    controls,
-    label,
-    left,
-    right,
-  };
+  accordionElements.contentContainer.append(container);
+  filterPopup.append(accordionElements.outerContainer);
+
+  return [
+    {
+      controls,
+      label,
+      left,
+      right,
+    },
+    accordionState,
+  ];
 }
 
 function updateSlidersUI(
@@ -90,15 +134,17 @@ function updateSlidersUI(
 
 export function initPopulationSlider(
   filterManager: PlaceFilterManager,
-  filterPopupIsVisible: FilterPopupVisibleObservable,
   filterPopup: HTMLFormElement,
 ): void {
-  const sliders = generateSliders(filterPopup);
+  const populationSliderIndexes =
+    filterManager.getState().populationSliderIndexes;
+  const [sliders, accordionStateObservable] = generateSliders(
+    populationSliderIndexes,
+    filterPopup,
+  );
 
   // Set initial state.
-  const maxIndex = filterManager
-    .getState()
-    .populationSliderIndexes[1].toString();
+  const maxIndex = populationSliderIndexes[1].toString();
   sliders.left.setAttribute("max", maxIndex);
   sliders.right.setAttribute("max", maxIndex);
   sliders.right.setAttribute("value", maxIndex);
@@ -112,10 +158,10 @@ export function initPopulationSlider(
   sliders.left.addEventListener("input", onChange);
   sliders.right.addEventListener("input", onChange);
 
-  // Update UI whenever filter popup is visible. Note that
-  // the popup must be visible for the width calculations to work.
-  filterPopupIsVisible.subscribe((isVisible) => {
-    if (isVisible) {
+  // Update UI whenever accordion is expanded. Note that the accordion
+  // must be visible for the width calculations to work.
+  accordionStateObservable.subscribe(({ hidden }) => {
+    if (!hidden) {
       updateSlidersUI(
         filterManager.getState().populationSliderIndexes,
         sliders,
@@ -123,9 +169,20 @@ export function initPopulationSlider(
     }
   }, "render population slider");
 
-  // Also update UI when values change, but only if the filter popup is open.
+  // Also update UI when values change
   filterManager.subscribe("update population sliders", (state) => {
-    if (!filterPopupIsVisible.getValue()) return;
-    updateSlidersUI(state.populationSliderIndexes, sliders);
+    const accordionPriorState = accordionStateObservable.getValue();
+    accordionStateObservable.setValue({
+      ...accordionPriorState,
+      supplementalTitle: determineAccordionDescription(
+        state.populationSliderIndexes,
+      ),
+    });
+
+    if (!accordionStateObservable.getValue().hidden) {
+      updateSlidersUI(state.populationSliderIndexes, sliders);
+    }
   });
+
+  accordionStateObservable.initialize();
 }

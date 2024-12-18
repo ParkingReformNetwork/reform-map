@@ -8,7 +8,6 @@ import {
   UNKNOWN_YEAR,
 } from "./FilterState";
 import Observable from "./Observable";
-import { FilterPopupVisibleObservable } from "./filterPopup";
 import { initPopulationSlider } from "./populationSlider";
 
 // Keep in alignment with FilterState.
@@ -102,7 +101,7 @@ export interface AccordionState {
   supplementalTitle?: string;
 }
 
-function updateAccordionUI(
+export function updateAccordionUI(
   elements: BaseAccordionElements,
   title: string,
   state: AccordionState,
@@ -215,6 +214,7 @@ export function generateAccordion(htmlName: string): BaseAccordionElements {
   contentContainer.id = contentId;
   contentContainer.className = "filter-accordion-content";
   contentContainer.setAttribute("aria-describedby", titleId);
+  outerContainer.appendChild(contentContainer);
 
   return {
     outerContainer,
@@ -232,6 +232,7 @@ function generateAccordionForFilterGroup(
 
   const fieldSet = document.createElement("fieldset");
   fieldSet.className = `filter-${params.htmlName}`;
+  baseElements.contentContainer.appendChild(fieldSet);
 
   const groupSelectorButtons = document.createElement("div");
   groupSelectorButtons.className = "filter-group-selectors-container";
@@ -268,9 +269,6 @@ function generateAccordionForFilterGroup(
     );
     filterOptionsContainer.appendChild(label);
   });
-
-  baseElements.contentContainer.appendChild(fieldSet);
-  baseElements.outerContainer.appendChild(baseElements.contentContainer);
 
   const elements = {
     ...baseElements,
@@ -447,7 +445,6 @@ function initPolicyTypeFilterDropdown(
 export function initFilterOptions(
   filterManager: PlaceFilterManager,
   filterOptions: FilterOptions,
-  filterPopupIsVisible: FilterPopupVisibleObservable,
 ): void {
   // Note that the order of this function determines the order of the filter.
   const filterPopup = document.querySelector<HTMLFormElement>("#filter-popup");
@@ -455,7 +452,7 @@ export function initFilterOptions(
 
   initPolicyTypeFilterDropdown(filterManager, filterPopup);
   initAllMinimumsToggle(filterManager, filterPopup);
-  initPopulationSlider(filterManager, filterPopupIsVisible, filterPopup);
+  initPopulationSlider(filterManager, filterPopup);
 
   initFilterGroup(filterManager, filterOptions, filterPopup, {
     htmlName: "policy-change",
