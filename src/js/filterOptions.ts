@@ -72,12 +72,7 @@ export class FilterOptions {
   }
 }
 
-type CheckboxStats = {
-  total: number;
-  checked: number;
-};
-
-function getCheckboxStats(fieldset: HTMLFieldSetElement): CheckboxStats {
+function getCheckboxStatsDescription(fieldset: HTMLFieldSetElement): string {
   const checkboxes = fieldset.querySelectorAll<HTMLInputElement>(
     'input[type="checkbox"]',
   );
@@ -85,33 +80,36 @@ function getCheckboxStats(fieldset: HTMLFieldSetElement): CheckboxStats {
   const checked = Array.from(checkboxes).filter(
     (checkbox) => checkbox.checked,
   ).length;
-  return { total, checked };
+  return ` (${checked}/${total})`;
 }
 
-type AccordionElements = {
+export interface BaseAccordionElements {
   outerContainer: HTMLDivElement;
   accordionTitle: HTMLSpanElement;
   accordionButton: HTMLButtonElement;
   contentContainer: HTMLDivElement;
+}
+
+type FilterGroupAccordionElements = BaseAccordionElements & {
   fieldSet: HTMLFieldSetElement;
   checkAllButton: HTMLButtonElement;
   uncheckAllButton: HTMLButtonElement;
 };
 
-type AccordionState = {
+export interface AccordionState {
   hidden: boolean;
   expanded: boolean;
-  checkboxStats: CheckboxStats;
-};
+  supplementalTitle?: string;
+}
 
 function updateAccordionUI(
-  elements: AccordionElements,
+  elements: BaseAccordionElements,
   title: string,
   state: AccordionState,
 ): void {
   elements.outerContainer.hidden = state.hidden;
 
-  elements.accordionTitle.textContent = `${title} (${state.checkboxStats.checked}/${state.checkboxStats.total})`;
+  elements.accordionTitle.textContent = `${title}${state.supplementalTitle ?? ""}`;
 
   const upIcon =
     elements.accordionButton.querySelector<SVGElement>(".fa-chevron-up");
@@ -172,16 +170,18 @@ function generateCheckbox(
   return [label, input];
 }
 
-function generateAccordion(
-  params: FilterGroupParams,
-  filterOptions: FilterOptions,
-): [AccordionElements, Observable<AccordionState>] {
+/** Generate the base of an accordion.
+ *
+ * The contentContainer is empty and needs to be filled in by callers. An Observable
+ * for AccordionState also needs to be configured.
+ */
+export function generateAccordion(htmlName: string): BaseAccordionElements {
   const outerContainer = document.createElement("div");
   outerContainer.className = "filter-accordion";
 
-  const buttonId = `filter-accordion-toggle-${params.htmlName}`;
-  const contentId = `filter-accordion-content-${params.htmlName}`;
-  const titleId = `filter-accordion-title-${params.htmlName}`;
+  const buttonId = `filter-accordion-toggle-${htmlName}`;
+  const contentId = `filter-accordion-content-${htmlName}`;
+  const titleId = `filter-accordion-title-${htmlName}`;
 
   const accordionButton = document.createElement("button");
   // Turn off clicking "submitting" the form, which reloads the page.
@@ -215,6 +215,20 @@ function generateAccordion(
   contentContainer.id = contentId;
   contentContainer.className = "filter-accordion-content";
   contentContainer.setAttribute("aria-describedby", titleId);
+
+  return {
+    outerContainer,
+    accordionTitle,
+    accordionButton,
+    contentContainer,
+  };
+}
+
+function generateAccordionForFilterGroup(
+  params: FilterGroupParams,
+  filterOptions: FilterOptions,
+): [FilterGroupAccordionElements, Observable<AccordionState>] {
+  const baseElements = generateAccordion(params.htmlName);
 
   const fieldSet = document.createElement("fieldset");
   fieldSet.className = `filter-${params.htmlName}`;
@@ -255,36 +269,33 @@ function generateAccordion(
     filterOptionsContainer.appendChild(label);
   });
 
-  contentContainer.appendChild(fieldSet);
-  outerContainer.appendChild(contentContainer);
+  baseElements.contentContainer.appendChild(fieldSet);
+  baseElements.outerContainer.appendChild(baseElements.contentContainer);
 
   const elements = {
-    outerContainer,
-    accordionTitle,
-    accordionButton,
-    contentContainer,
+    ...baseElements,
     fieldSet,
     checkAllButton,
     uncheckAllButton,
   };
 
+  const checkboxStats = getCheckboxStatsDescription(fieldSet);
   const accordionState = new Observable<AccordionState>(
     `filter accordion ${params.htmlName}`,
     {
       hidden: false,
       expanded: false,
-      checkboxStats: getCheckboxStats(fieldSet),
+      supplementalTitle: checkboxStats,
     },
   );
   accordionState.subscribe((state) =>
     updateAccordionUI(elements, params.legend, state),
   );
-  accordionButton.addEventListener("click", () => {
+  baseElements.accordionButton.addEventListener("click", () => {
     const priorState = accordionState.getValue();
     accordionState.setValue({
-      hidden: priorState.hidden,
+      ...priorState,
       expanded: !priorState.expanded,
-      checkboxStats: priorState.checkboxStats,
     });
   });
   accordionState.initialize();
@@ -298,9 +309,8 @@ function updateCheckboxStats(
 ): void {
   const accordionPriorState = observable.getValue();
   observable.setValue({
-    hidden: accordionPriorState.hidden,
-    expanded: accordionPriorState.expanded,
-    checkboxStats: getCheckboxStats(fieldSet),
+    ...accordionPriorState,
+    supplementalTitle: getCheckboxStatsDescription(fieldSet),
   });
 }
 
@@ -310,7 +320,7 @@ function initFilterGroup(
   filterPopup: HTMLFormElement,
   params: FilterGroupParams,
 ): void {
-  const [accordionElements, accordionState] = generateAccordion(
+  const [accordionElements, accordionState] = generateAccordionForFilterGroup(
     params,
     filterOptions,
   );
