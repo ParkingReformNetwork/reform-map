@@ -195,14 +195,19 @@ $filter-inner-width: calc(
     border: borders.$component-border;
     border-radius: borders.$border-radius;
 
+    color: colors.$black;
+
     background-image: url(../../assets/unfold-more.svg),
       linear-gradient(transparent, transparent);
     background-repeat: no-repeat;
     background-position: right 8px center;
     background-size: 20px;
 
-    &:hover {
-      background-color: colors.$hover-white;
+    // Media query avoids iOS always showing the background in hover state.
+    @media (hover: hover) {
+      &:hover {
+        background-color: colors.$hover-white;
+      }
     }
   }
 }
