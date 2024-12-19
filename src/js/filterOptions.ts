@@ -419,6 +419,7 @@ function initPolicyTypeFilterDropdown(
   const select = document.createElement("select");
   select.id = id;
   select.name = id;
+  select.ariaLabel = "the policy type to focus on";
 
   const options: PolicyTypeFilter[] = [
     "any parking reform",
