@@ -192,7 +192,7 @@ $filter-inner-width: calc(
     min-height: spacing.$min-touch-target;
     width: 100%;
 
-    padding-left: spacing.$container-edge-spacing;
+    padding-left: spacing.$element-gap;
 
     border: borders.$component-border;
     border-radius: borders.$border-radius;
@@ -203,8 +203,8 @@ $filter-inner-width: calc(
     background-image: url(../../assets/unfold-more.svg),
       linear-gradient(transparent, transparent);
     background-repeat: no-repeat;
-    background-position: right 8px center;
-    background-size: 20px;
+    background-position: right spacing.$element-gap center;
+    background-size: icons.$icon-size-md;
 
     &:hover {
       background-color: colors.$hover-white;
