@@ -3696,7 +3696,75 @@
           ]
         }
       ]
-    }
+    },
+    "reduce_min": [
+      {
+        "reporter": "Samuel Deetz",
+        "requirements": [
+          "bike parking",
+          "by right",
+          "frequent transit",
+          "other",
+          "transportation demand management"
+        ],
+        "citations": [
+          {
+            "description": "Arvada Land Development Code",
+            "type": "city code",
+            "url": "https://library.municode.com/co/arvada/codes/code_of_ordinances?nodeId=LADECOARCO_CH4ENSIDE_ART4-5PALO_DIV4-5-2PALOCA_4-5-2-5PACRRE",
+            "notes": "Chapter 4 - ENVIRONMENTAL AND SITE DESIGN\nARTICLE 4-5. - PARKING AND LOADING\nDIVISION 4-5-2. - PARKING AND LOADING CALCULATIONS\n4-5-2-5. - Parking credits and reductions.",
+            "attachments": [
+              {
+                "fileName": "Arvada_CO_1_1.png",
+                "isDoc": false,
+                "directusId": "08c106fc-dcba-4d34-b939-a1e08978f562"
+              },
+              {
+                "fileName": "Arvada_CO_1_2.png",
+                "isDoc": false,
+                "directusId": "1c703011-173f-4f47-ad78-460a07484847"
+              },
+              {
+                "fileName": "Arvada_CO_1_3.png",
+                "isDoc": false,
+                "directusId": "49162583-cffb-444c-b50e-ea243be7481c"
+              },
+              {
+                "fileName": "Arvada_CO_1_4.png",
+                "isDoc": false,
+                "directusId": "b3522d22-c887-4a60-b3e8-21fda65c514a"
+              },
+              {
+                "fileName": "Arvada_CO_1_5.png",
+                "isDoc": false,
+                "directusId": "57699282-25a6-4985-835f-960d38267432"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "rm_min": [
+      {
+        "reporter": "Samuel Deetz",
+        "requirements": ["by right"],
+        "citations": [
+          {
+            "description": "Arvada Land Development Code",
+            "type": "city code",
+            "url": "https://library.municode.com/co/arvada/codes/code_of_ordinances?nodeId=LADECOARCO_CH4ENSIDE_ART4-5PALO_DIV4-5-2PALOCA_4-5-2-5PACRRE",
+            "notes": "4-5-2-5.C.1.b.",
+            "attachments": [
+              {
+                "fileName": "Arvada_CO_1_1.png",
+                "isDoc": false,
+                "directusId": "fa4e3fd6-4bdc-4f60-abf9-36366a6d61d1"
+              }
+            ]
+          }
+        ]
+      }
+    ]
   },
   "Ascension Parish, LA": {
     "reduce_min": [
@@ -4107,7 +4175,69 @@
           ]
         }
       ]
-    }
+    },
+    "add_max": [
+      {
+        "reporter": "Samuel Deetz",
+        "requirements": ["by right"],
+        "citations": [
+          {
+            "description": "Aspen Land Use Code",
+            "type": "city code",
+            "url": "https://library.municode.com/co/aspen/codes/municipal_code?nodeId=TIT26LAUSRE_PT500SURE_CH26.515TRPAMA_S26.515.040PARE",
+            "notes": "Sec. 26.515.040.(3)",
+            "attachments": [
+              {
+                "fileName": "Aspen_CO_1_1.png",
+                "isDoc": false,
+                "directusId": "a9bdaa16-1800-4cd3-9dc5-d15b984c0633"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "reduce_min": [
+      {
+        "reporter": "Samuel Deetz",
+        "requirements": ["in-lieu fees", "transportation demand management"],
+        "citations": [
+          {
+            "description": "Aspen Land Use Code",
+            "type": "city code",
+            "url": "https://library.municode.com/co/aspen/codes/municipal_code?nodeId=TIT26LAUSRE_PT500SURE_CH26.515TRPAMA",
+            "notes": "Sec. 26.515.030.;\nSec. 26.515.040.;\nSec. 26.515.050.",
+            "attachments": [
+              {
+                "fileName": "Aspen_CO_1_1.png",
+                "isDoc": false,
+                "directusId": "820c6fbf-4346-4f01-b066-d1b6f7cbff9e"
+              },
+              {
+                "fileName": "Aspen_CO_1_2.png",
+                "isDoc": false,
+                "directusId": "7f214fe6-298d-4830-8f4e-86b5be9bcef3"
+              },
+              {
+                "fileName": "Aspen_CO_1_3.png",
+                "isDoc": false,
+                "directusId": "2152a82b-8fa5-45ef-803a-fc35370fd0c1"
+              },
+              {
+                "fileName": "Aspen_CO_1_4.png",
+                "isDoc": false,
+                "directusId": "30751ed8-a55c-4435-bf74-c63cd89887f0"
+              },
+              {
+                "fileName": "Aspen_CO_1_5.png",
+                "isDoc": false,
+                "directusId": "46b81b25-3b7a-4590-91a6-2eaa05dfd46c"
+              }
+            ]
+          }
+        ]
+      }
+    ]
   },
   "Atchison, KS": {
     "reduce_min": [
@@ -5773,7 +5903,64 @@
           ]
         }
       ]
-    }
+    },
+    "add_max": [
+      {
+        "reporter": "Samuel Deetz",
+        "requirements": ["by right", "other"],
+        "citations": [
+          {
+            "description": "Basalt Zoning Code",
+            "type": "city code",
+            "url": "https://library.municode.com/co/basalt/codes/municipal_code?nodeId=CH16ZO_ARTIIDIRE_S16-30CSZODI",
+            "notes": "Sec. 16-30.(e)(4)d.2.",
+            "attachments": [
+              {
+                "fileName": "Basalt_CO_1_1.png",
+                "isDoc": false,
+                "directusId": "ecff336a-5e9a-4d5e-b138-09a2596f36f0"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "reduce_min": [
+      {
+        "reporter": "Samuel Deetz",
+        "requirements": [
+          "by right",
+          "historic preservation",
+          "in-lieu fees",
+          "other"
+        ],
+        "citations": [
+          {
+            "description": "Basalt Zoning Code",
+            "type": "city code",
+            "url": "https://library.municode.com/co/basalt/codes/municipal_code?nodeId=CH16ZO_ARTVOREPALO_S16-94OTEPA",
+            "notes": "Sec. 16-30.(e)(4)a.;\nSec. 16-30.(e)(4)b.;\nSec. 16-94.(3);\nSec. 16-94.(4);\nSec. 16-394.(a)",
+            "attachments": [
+              {
+                "fileName": "Basalt_CO_1_1.png",
+                "isDoc": false,
+                "directusId": "9833d766-7dbf-401b-a764-f6b993f6320d"
+              },
+              {
+                "fileName": "Basalt_CO_1_2.png",
+                "isDoc": false,
+                "directusId": "1fe83c46-810a-41b0-a478-fd6bca35452a"
+              },
+              {
+                "fileName": "Basalt_CO_1_3.png",
+                "isDoc": false,
+                "directusId": "582ac9cd-f979-460f-ab7d-069b3ace176b"
+              }
+            ]
+          }
+        ]
+      }
+    ]
   },
   "Basin, WY": {
     "rm_min": [
@@ -8452,7 +8639,49 @@
           ]
         }
       ]
-    }
+    },
+    "add_max": [
+      {
+        "reporter": "Samuel Deetz",
+        "requirements": ["by right"],
+        "citations": [
+          {
+            "description": "Berthoud Development Code",
+            "type": "city code",
+            "url": "https://library.municode.com/co/berthoud/codes/code_of_ordinances?nodeId=CH30BEDECO_S2DEST_30-2-106PA",
+            "notes": "30-2-106.C.1.**",
+            "attachments": [
+              {
+                "fileName": "Berthoud_CO_1_1.png",
+                "isDoc": false,
+                "directusId": "5c809417-c588-4338-9cfb-e3dbd773e1c0"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "reduce_min": [
+      {
+        "reporter": "Samuel Deetz",
+        "requirements": ["other"],
+        "citations": [
+          {
+            "description": "Berthoud Development Code",
+            "type": "city code",
+            "url": "https://library.municode.com/co/berthoud/codes/code_of_ordinances?nodeId=CH30BEDECO_S2DEST_30-2-106PA",
+            "notes": "30-2-106.C.4.",
+            "attachments": [
+              {
+                "fileName": "Berthoud_CO_1_1.png",
+                "isDoc": false,
+                "directusId": "abfb5d7f-04da-4ccd-b46e-292abd325cea"
+              }
+            ]
+          }
+        ]
+      }
+    ]
   },
   "Bertrand Township, MI": {
     "legacy": {
@@ -10659,7 +10888,64 @@
           ]
         }
       ]
-    }
+    },
+    "add_max": [
+      {
+        "reporter": "Samuel Deetz",
+        "requirements": ["by right"],
+        "citations": [
+          {
+            "description": "Boulder Land Use Code",
+            "type": "city code",
+            "url": "https://library.municode.com/co/boulder/codes/municipal_code?nodeId=TIT9LAUSCO_CH9DEST_9-9-6PAST",
+            "notes": "9-9-6.: TABLE 9-1, TABLE 9-3",
+            "attachments": [
+              {
+                "fileName": "Boulder_CO_1_1.png",
+                "isDoc": false,
+                "directusId": "080fa3e2-981e-49e1-8664-2ddb9bac6ada"
+              },
+              {
+                "fileName": "Boulder_CO_1_2.png",
+                "isDoc": false,
+                "directusId": "ef362f75-5499-4747-9d1b-e9edc63cf44b"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "rm_min": [
+      {
+        "reporter": "Samuel Deetz",
+        "requirements": ["by right"],
+        "citations": [
+          {
+            "description": "Boulder Land Use Code",
+            "type": "city code",
+            "url": "https://library.municode.com/co/boulder/codes/municipal_code?nodeId=TIT9LAUSCO_CH9DEST_9-9-6PAST",
+            "notes": "Chapter 9 - Development Standards\n9-9-6. - Parking Standards.\nTables 9-1, 9-3, 9-4",
+            "attachments": [
+              {
+                "fileName": "Boulder_CO_1_1.png",
+                "isDoc": false,
+                "directusId": "7fd1040e-debe-48ef-a812-1f586161f081"
+              },
+              {
+                "fileName": "Boulder_CO_1_2.png",
+                "isDoc": false,
+                "directusId": "a8acd5b0-e1a0-4b44-a39e-6fff074ed424"
+              },
+              {
+                "fileName": "Boulder_CO_1_3.png",
+                "isDoc": false,
+                "directusId": "47c0bf53-611f-49dd-b518-0b889f02f347"
+              }
+            ]
+          }
+        ]
+      }
+    ]
   },
   "Bourbonnais, IL": {
     "rm_min": [
@@ -11380,7 +11666,54 @@
           ]
         }
       ]
-    }
+    },
+    "add_max": [
+      {
+        "reporter": "Samuel Deetz",
+        "requirements": ["by right"],
+        "citations": [
+          {
+            "description": "Breckenridge Land Use and Development Code",
+            "type": "city code",
+            "url": "https://breckenridge.town.codes/Code/9-3-8",
+            "notes": "9-3-8.A.;\n9-3-8.B.",
+            "attachments": [
+              {
+                "fileName": "Breckenridge_CO_1_1.png",
+                "isDoc": false,
+                "directusId": "7302230b-3854-47b5-9223-ff8d65d5901b"
+              },
+              {
+                "fileName": "Breckenridge_CO_1_2.png",
+                "isDoc": false,
+                "directusId": "980d644e-e163-498a-bee9-c8a9afa95ec8"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "reduce_min": [
+      {
+        "reporter": "Samuel Deetz",
+        "requirements": ["in-lieu fees"],
+        "citations": [
+          {
+            "description": "Breckenridge Land Use and Development Code",
+            "type": "city code",
+            "url": "https://breckenridge.town.codes/Code/9-3-12",
+            "notes": "9-3-12",
+            "attachments": [
+              {
+                "fileName": "Breckenridge_CO_1_1.png",
+                "isDoc": false,
+                "directusId": "7743f773-a2ba-4a7a-9c2b-ba13f406a6f2"
+              }
+            ]
+          }
+        ]
+      }
+    ]
   },
   "Breckenridge, MI": {
     "reduce_min": [
@@ -11719,7 +12052,70 @@
           ]
         }
       ]
-    }
+    },
+    "add_max": [
+      {
+        "reporter": "Samuel Deetz",
+        "requirements": ["by right"],
+        "citations": [
+          {
+            "description": "Brighton Land Use & Development Code",
+            "type": "city code",
+            "url": "https://library.municode.com/CO/Brighton/codes/land_use?nodeId=ART7ACPAST_7.03REPA",
+            "notes": "7.03.B.",
+            "attachments": [
+              {
+                "fileName": "Brighton_CO_1_1.png",
+                "isDoc": false,
+                "directusId": "0c76962f-e5bc-4b13-bca0-cdac2d6c9fd3"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "reduce_min": [
+      {
+        "reporter": "Samuel Deetz",
+        "requirements": ["bike parking", "frequent transit", "other"],
+        "citations": [
+          {
+            "description": "Brighton Land Use & Development Code",
+            "type": "city code",
+            "url": "https://library.municode.com/CO/Brighton/codes/land_use?nodeId=ART7ACPAST_7.03REPA",
+            "notes": "7.03.C.",
+            "attachments": [
+              {
+                "fileName": "Brighton_CO_1_1.png",
+                "isDoc": false,
+                "directusId": "6f01710a-283c-471b-b6af-a49b3a1ef722"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "rm_min": [
+      {
+        "reporter": "Samuel Deetz",
+        "requirements": ["by right", "size of project"],
+        "citations": [
+          {
+            "description": "Brighton Land Use & Development Code",
+            "type": "city code",
+            "url": "https://library.municode.com/CO/Brighton/codes/land_use?nodeId=ART7ACPAST_7.03REPA",
+            "notes": "7.03.C.1.",
+            "attachments": [
+              {
+                "fileName": "Brighton_CO_1_1.png",
+                "isDoc": false,
+                "directusId": "75839806-491f-4286-a6ac-abaeeaff12e0"
+              }
+            ]
+          }
+        ]
+      }
+    ]
   },
   "Brighton, MI": {
     "rm_min": [
@@ -12261,7 +12657,7 @@
           "description": "Broomfield Zoning Code",
           "type": "city code",
           "url": "https://library.municode.com/co/broomfield/codes/municipal_code?nodeId=TIT17ZO_CH17-32ACBUUS_17-32-040OREPARESP",
-          "notes": "Chapter 17-32 - Accessory Buildings and Uses\n17-32-040 - Off-street parking; required spaces.\n(A)\n(B)\n(C)",
+          "notes": "17-32-040(A);\n17-32-040(C)",
           "attachments": [
             {
               "fileName": "Broomfield_CO_1_1.png",
@@ -12276,7 +12672,54 @@
           ]
         }
       ]
-    }
+    },
+    "add_max": [
+      {
+        "reporter": "Samuel Deetz",
+        "requirements": ["by right"],
+        "citations": [
+          {
+            "description": "Broomfield Zoning Code",
+            "type": "city code",
+            "url": "https://library.municode.com/co/broomfield/codes/municipal_code?nodeId=TIT17ZO_CH17-32ACBUUS_17-32-040OREPARESP",
+            "notes": "17-32-040(A);\n17-32-040(C)",
+            "attachments": [
+              {
+                "fileName": "Broomfield_CO_1_1.png",
+                "isDoc": false,
+                "directusId": "098ef416-f745-4946-abfc-68e95fc614a3"
+              },
+              {
+                "fileName": "Broomfield_CO_1_2.png",
+                "isDoc": false,
+                "directusId": "54d6006c-1d1f-420e-b6a4-dcc4a1e1cc74"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "reduce_min": [
+      {
+        "reporter": "Samuel Deetz",
+        "requirements": ["by right"],
+        "citations": [
+          {
+            "description": "Broomfield Zoning Code",
+            "type": "city code",
+            "url": "https://library.municode.com/co/broomfield/codes/municipal_code?nodeId=TIT17ZO_CH17-32ACBUUS_17-32-040OREPARESP",
+            "notes": "17-32-040(B)",
+            "attachments": [
+              {
+                "fileName": "Broomfield_CO_1_1.png",
+                "isDoc": false,
+                "directusId": "f4c66a7f-806e-4f30-b17b-9cb8a7c60230"
+              }
+            ]
+          }
+        ]
+      }
+    ]
   },
   "Brown City, MI": {
     "reduce_min": [
@@ -12733,7 +13176,28 @@
           ]
         }
       ]
-    }
+    },
+    "add_max": [
+      {
+        "reporter": "Samuel Deetz",
+        "requirements": ["by right"],
+        "citations": [
+          {
+            "description": "Buena Vista UDC",
+            "type": "city code",
+            "url": "https://library.municode.com/co/buena%20vista/codes/municipal_code?nodeId=CH16UNDECO_ART16.04DEDEST_S4.3OREPALO",
+            "notes": "4.3.4.C.",
+            "attachments": [
+              {
+                "fileName": "BuenaVista_CO_1_1.png",
+                "isDoc": false,
+                "directusId": "b22dc6e9-fd94-4849-97bf-32cbb765e4fc"
+              }
+            ]
+          }
+        ]
+      }
+    ]
   },
   "Buffalo, NY": {
     "rm_min": [
@@ -14450,7 +14914,75 @@
           ]
         }
       ]
-    }
+    },
+    "add_max": [
+      {
+        "reporter": "Samuel Deetz",
+        "requirements": ["by right"],
+        "citations": [
+          {
+            "description": "Carbondale UDC",
+            "type": "city code",
+            "url": "https://teammunicode.com/webcontent/18132/Carbondale%20UDC%20April%2017%202024%20without%20Appendix%20A%20%28Obsolete%20Zone%20Districts%29.pdf",
+            "notes": "5.8.3.E.\nPage 244 of pdf, page 235 of original document",
+            "attachments": [
+              {
+                "fileName": "Carbondale_CO_1_1.png",
+                "isDoc": false,
+                "directusId": "5d1adf15-eab3-403b-8a8a-c87e9de6ee8d"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "reduce_min": [
+      {
+        "reporter": "Samuel Deetz",
+        "requirements": ["by right", "frequent transit", "in-lieu fees"],
+        "citations": [
+          {
+            "description": "Carbondale UDC",
+            "type": "city code",
+            "url": "https://teammunicode.com/webcontent/18132/Carbondale%20UDC%20April%2017%202024%20without%20Appendix%20A%20%28Obsolete%20Zone%20Districts%29.pdf",
+            "notes": "5.8.4.D.;\n5.8.4.E.;\nPage 247 of pdf, page 238 of original document",
+            "attachments": [
+              {
+                "fileName": "Carbondale_CO_1_1.png",
+                "isDoc": false,
+                "directusId": "bb3152f6-0915-41e2-894b-d391bc730cdc"
+              },
+              {
+                "fileName": "Carbondale_CO_1_2.png",
+                "isDoc": false,
+                "directusId": "b6ebcc21-301f-471a-b381-39672191f820"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "rm_min": [
+      {
+        "reporter": "Samuel Deetz",
+        "requirements": ["by right"],
+        "citations": [
+          {
+            "description": "Carbondale UDC",
+            "type": "city code",
+            "url": "https://teammunicode.com/webcontent/18132/Carbondale%20UDC%20April%2017%202024%20without%20Appendix%20A%20%28Obsolete%20Zone%20Districts%29.pdf",
+            "notes": "5.8.4.E.\nPage 247 of pdf, page 238 of original document",
+            "attachments": [
+              {
+                "fileName": "Carbondale_CO_1_1.png",
+                "isDoc": false,
+                "directusId": "f7588920-2988-4a40-9b93-fe9108bcb37b"
+              }
+            ]
+          }
+        ]
+      }
+    ]
   },
   "Carbondale, IL": {
     "legacy": {
@@ -50562,6 +51094,82 @@
                 "fileName": "LakeOrion_MI_1_1.png",
                 "isDoc": false,
                 "directusId": "3178d762-7a98-498a-b56c-b738aa32cb46"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "Lake Oswego, OR": {
+    "legacy": {
+      "reporter": "Evan Manvel",
+      "requirements": ["by right"],
+      "citations": [
+        {
+          "description": "Lake Oswego Citywide Parking Reform Project",
+          "type": "other",
+          "url": "https://www.ci.oswego.or.us/planning/pp-22-0001-citywide-parking-reform",
+          "notes": null,
+          "attachments": [
+            {
+              "fileName": "LakeOswego_OR_1_1.png",
+              "isDoc": false,
+              "directusId": "1ab94d97-9eab-48c2-be56-a00b5ba4129c"
+            }
+          ]
+        },
+        {
+          "description": "Lake Oswego Development Code",
+          "type": "city code",
+          "url": "https://ecode360.com/43143141#43143141",
+          "notes": "§ 50.06.002.2.a.ii.(4)",
+          "attachments": [
+            {
+              "fileName": "LakeOswego_OR_2_1.png",
+              "isDoc": false,
+              "directusId": "4079992e-dc6d-4423-97f9-48c4502fe7da"
+            }
+          ]
+        }
+      ]
+    },
+    "add_max": [
+      {
+        "reporter": null,
+        "requirements": ["by right"],
+        "citations": [
+          {
+            "description": "Lake Oswego Development Code",
+            "type": "city code",
+            "url": "https://ecode360.com/43143141#43143141",
+            "notes": "§ 50.06.002.2.a.ii.(4)",
+            "attachments": [
+              {
+                "fileName": "LakeOswego_OR_1_1.png",
+                "isDoc": false,
+                "directusId": "4079992e-dc6d-4423-97f9-48c4502fe7da"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "rm_min": [
+      {
+        "reporter": "Evan Manvel",
+        "requirements": ["by right"],
+        "citations": [
+          {
+            "description": "Lake Oswego Citywide Parking Reform Project",
+            "type": "other",
+            "url": "https://www.ci.oswego.or.us/planning/pp-22-0001-citywide-parking-reform",
+            "notes": null,
+            "attachments": [
+              {
+                "fileName": "LakeOswego_OR_1_1.png",
+                "isDoc": false,
+                "directusId": "1ab94d97-9eab-48c2-be56-a00b5ba4129c"
               }
             ]
           }
