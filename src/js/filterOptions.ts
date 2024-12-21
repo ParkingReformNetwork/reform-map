@@ -451,17 +451,11 @@ export function initFilterOptions(
   const filterPopup = document.querySelector<HTMLFormElement>("#filter-popup");
   if (!filterPopup) return;
 
+  // Top-level options that change profoundly the app.
   initPolicyTypeFilterDropdown(filterManager, filterPopup);
   initAllMinimumsToggle(filterManager, filterPopup);
 
-  initPopulationSlider(filterManager, filterPopup);
-  initFilterGroup(filterManager, filterOptions, filterPopup, {
-    htmlName: "country",
-    filterStateKey: "country",
-    legend: "Country",
-    preserveCapitalization: true,
-  });
-
+  // Options about the reform
   initFilterGroup(filterManager, filterOptions, filterPopup, {
     htmlName: "policy-change",
     filterStateKey: "includedPolicyChanges",
@@ -500,5 +494,14 @@ export function initFilterOptions(
     legend: "Reform year",
     useTwoColumns: true,
     hide: ({ policyTypeFilter }) => policyTypeFilter === "any parking reform",
+  });
+
+  // Options about the Place
+  initPopulationSlider(filterManager, filterPopup);
+  initFilterGroup(filterManager, filterOptions, filterPopup, {
+    htmlName: "country",
+    filterStateKey: "country",
+    legend: "Country",
+    preserveCapitalization: true,
   });
 }
