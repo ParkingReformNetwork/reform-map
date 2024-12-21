@@ -56,7 +56,7 @@ export default async function initApp(): Promise<void> {
   initSearch(filterManager);
   initFilterOptions(filterManager, filterOptions);
 
-  const table = initTable(filterManager, viewToggle);
+  const table = initTable(filterManager, viewToggle, { revampEnabled });
   addViewToggleSubscribers(viewToggle, table);
 
   initScorecard(filterManager, viewToggle, markerGroup, data);
