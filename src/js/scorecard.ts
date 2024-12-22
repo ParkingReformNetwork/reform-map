@@ -4,8 +4,9 @@ import type { ProcessedCoreEntry, PlaceId } from "./types";
 import Observable from "./Observable";
 import { PlaceFilterManager } from "./FilterState";
 import { ViewStateObservable } from "./viewToggle";
+import { determinePolicyTypes } from "./data";
 
-function generateScorecard(
+function generateScorecardLegacy(
   entry: ProcessedCoreEntry,
   placeId: PlaceId,
 ): string {
@@ -34,6 +35,47 @@ function generateScorecard(
     `;
 }
 
+function generateScorecardRevamp(
+  entry: ProcessedCoreEntry,
+  placeId: PlaceId,
+): string {
+  const policyTypes = determinePolicyTypes(entry);
+  let singlePolicyType = "";
+  let multiplePolicyTypes = "";
+  if (policyTypes.length === 1) {
+    singlePolicyType = `<li>Reform type: ${policyTypes[0]}</li>`;
+  } else {
+    const policies = policyTypes.map((type) => `<li>${type}</li>`).join("");
+    multiplePolicyTypes = `<div>Reform types:</div><ul>${policies}</ul>`;
+  }
+
+  const allMinimumsRemoved = entry.place.repeal
+    ? "<li>All parking minimums removed</li>"
+    : "";
+
+  return `
+    <header class="scorecard-header">
+      <h2 class="scorecard-title">${placeId}</h2>
+      <button
+        class="scorecard-close-icon-container"
+        title="close the place details popup"
+        aria-label="close the place details popup"
+      >
+        <i class="fa-regular fa-circle-xmark" aria-hidden="true"></i>
+      </button>
+    </header>
+    <ul>
+      <li><a class="external-link" target="_blank" href=${
+        entry.place.url
+      }>Reform details and citations <i aria-hidden="true" class="fa-solid fa-arrow-right"></i></a></li>
+      <li>${entry.place.pop.toLocaleString()} residents</li>
+      ${allMinimumsRemoved}
+      ${singlePolicyType}
+    </ul>
+    ${multiplePolicyTypes}
+    `;
+}
+
 type ScorecardState =
   | { type: "hidden" }
   | {
@@ -42,7 +84,10 @@ type ScorecardState =
       placeId: PlaceId;
     };
 
-function updateScorecardUI(state: ScorecardState): void {
+function updateScorecardUI(
+  revampEnabled: boolean,
+  state: ScorecardState,
+): void {
   const scorecardContainer = document.querySelector<HTMLElement>(
     "#scorecard-container",
   );
@@ -54,10 +99,9 @@ function updateScorecardUI(state: ScorecardState): void {
       break;
     }
     case "visible": {
-      scorecardContainer.innerHTML = generateScorecard(
-        state.entry,
-        state.placeId,
-      );
+      scorecardContainer.innerHTML = revampEnabled
+        ? generateScorecardRevamp(state.entry, state.placeId)
+        : generateScorecardLegacy(state.entry, state.placeId);
       scorecardContainer.hidden = false;
       break;
     }
@@ -69,11 +113,14 @@ export default function initScorecard(
   viewToggle: ViewStateObservable,
   markerGroup: FeatureGroup,
   data: Record<PlaceId, ProcessedCoreEntry>,
+  options: { revampEnabled: boolean },
 ): void {
   const scorecardState = new Observable<ScorecardState>("scorecard", {
     type: "hidden",
   });
-  scorecardState.subscribe(updateScorecardUI);
+  scorecardState.subscribe((state) =>
+    updateScorecardUI(options.revampEnabled, state),
+  );
 
   const scorecardContainer = document.querySelector("#scorecard-container");
   const header = document.querySelector(".top-header");
