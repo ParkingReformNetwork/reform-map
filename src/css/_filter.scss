@@ -176,6 +176,10 @@ $filter-inner-width: calc(
   .filter-checkbox {
     min-width: calc(50% - spacing.$element-gap / 2);
     margin: 0;
+
+    &:nth-last-child(2) {
+      margin-bottom: spacing.$container-edge-spacing;
+    }
   }
 }
 
