@@ -9,7 +9,7 @@ import {
 import Observable from "./Observable";
 import { determinePolicyTypes, getFilteredIndexes } from "./data";
 
-export const UNKNOWN_YEAR = "Unknown";
+export const UNKNOWN_YEAR = "unknown";
 
 export const POPULATION_INTERVALS: Array<[string, number]> = [
   ["100", 100],
