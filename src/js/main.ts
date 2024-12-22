@@ -59,7 +59,9 @@ export default async function initApp(): Promise<void> {
   const table = initTable(filterManager, viewToggle, { revampEnabled });
   addViewToggleSubscribers(viewToggle, table);
 
-  initScorecard(filterManager, viewToggle, markerGroup, data);
+  initScorecard(filterManager, viewToggle, markerGroup, data, {
+    revampEnabled,
+  });
 
   viewToggle.initialize();
   filterManager.initialize();
