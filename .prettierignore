@@ -1,9 +1,4 @@
-# While we use Prettier on this file, it currently removes <!DOCTYPE html> due to
-# https://github.com/prettier/prettier/issues/11223. So, only use this manually and be sure to
-# add back <!DOCTYPE html>.
-scripts/city_detail.html.handlebars
-
-# No need to run Prettier on this, which would be slow. Run on the handlebars template instead.
+scripts/11ty/
 city_detail/
 
 dist/
