@@ -2,7 +2,9 @@
 .idea
 
 /data/data.csv
-/data/csv/*.csv
+/data/generated/*.csv
+/data/generated/*.json
+/data/generated/*.zip
 /city_detail/*.html
 
 /node_modules

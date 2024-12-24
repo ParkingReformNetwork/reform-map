@@ -3,6 +3,7 @@
 
 import fs from "fs/promises";
 
+import { $, glob } from "zx";
 import { sum } from "lodash-es";
 import Papa from "papaparse";
 
@@ -119,24 +120,38 @@ async function writeCsv(csv: string, filePath: string): Promise<void> {
   console.log(`Generated CSV at ${filePath}`);
 }
 
+async function writeJson(
+  data: Record<string, ProcessedCompleteEntry>,
+  filePath: string,
+): Promise<void> {
+  await fs.writeFile(filePath, JSON.stringify(data, null, 2));
+  console.log(`Generated ${filePath}`);
+}
+
 async function main(): Promise<void> {
   const completeData = await readProcessedCompleteData();
   const data = Object.values(completeData);
+
+  await writeJson(completeData, "data/generated/complete-data.json");
 
   const legacy = createLegacyCsv(data);
   await writeCsv(legacy, "map/data.csv");
 
   const anyPolicy = createAnyPolicyCsv(data);
-  await writeCsv(anyPolicy, "data/csv/any_parking_reform.csv");
+  await writeCsv(anyPolicy, "data/generated/any_parking_reform.csv");
 
   const addMax = createReformCsv(data, (entry) => entry.add_max);
-  await writeCsv(addMax, "data/csv/add_maximums.csv");
+  await writeCsv(addMax, "data/generated/add_maximums.csv");
 
   const reduceMin = createReformCsv(data, (entry) => entry.reduce_min);
-  await writeCsv(reduceMin, "data/csv/reduce_minimums.csv");
+  await writeCsv(reduceMin, "data/generated/reduce_minimums.csv");
 
   const rmMin = createReformCsv(data, (entry) => entry.rm_min);
-  await writeCsv(rmMin, "data/csv/remove_minimums.csv");
+  await writeCsv(rmMin, "data/generated/remove_minimums.csv");
+
+  const files = await glob("data/generated/*");
+  await $`zip -j data/generated/mandates-map-data.zip ${files}`;
+  console.log("Generated CSV at data/generated/mandates-map-data.zip");
 }
 
 if (process.env.NODE_ENV !== "test") {
