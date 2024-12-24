@@ -3,7 +3,7 @@
 
 import fs from "fs/promises";
 
-import { $, glob } from 'zx';
+import { $, glob } from "zx";
 import { sum } from "lodash-es";
 import Papa from "papaparse";
 
@@ -149,9 +149,9 @@ async function main(): Promise<void> {
   const rmMin = createReformCsv(data, (entry) => entry.rm_min);
   await writeCsv(rmMin, "data/generated/remove_minimums.csv");
 
-  const files = await glob('data/generated/*');
+  const files = await glob("data/generated/*");
   await $`zip -j data/generated/mandates-map-data.zip ${files}`;
-  console.log("Generated CSV at data/generated/mandates-map-data.zip")
+  console.log("Generated CSV at data/generated/mandates-map-data.zip");
 }
 
 if (process.env.NODE_ENV !== "test") {

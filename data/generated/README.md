@@ -6,10 +6,10 @@ This folder contains the data used for https://parkingreform.org/resources/manda
 
 There are four CSV files:
 
-* `any_parking_reform.csv`: overview of which reforms a place has implemented
-* `add_maximums.csv`: parking maximum policies
-* `reduce_minimums.csv`: parking minimum reductions
-* `remove_minimums.csv`: parking minimum removals
+- `any_parking_reform.csv`: overview of which reforms a place has implemented
+- `add_maximums.csv`: parking maximum policies
+- `reduce_minimums.csv`: parking minimum reductions
+- `remove_minimums.csv`: parking minimum removals
 
 ## JSON
 
