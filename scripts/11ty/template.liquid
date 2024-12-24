@@ -28,7 +28,7 @@ permalink: "{{ entry.escapedPlaceId }}.html"
       border: none; color: white; padding: 7px 16px; text-align: center;
       text-decoration: none; display: inline-block; font-size: 16px; }
     </style>
-    <title>Parking Reform Network - Reforms in {{entry.placeId}}</title>
+    <title>Parking Reform Network - Reforms in {{ entry.placeId }}</title>
     <script
       async
       src="https://www.googletagmanager.com/gtag/js?id=G-5MFS4ZVMY3"
@@ -52,7 +52,7 @@ permalink: "{{ entry.escapedPlaceId }}.html"
         <div class="row">
           <div class="col-sm-8">
             <header>
-              <h1 class="display-3">{{entry.placeId}}</h1>
+              <h1 class="display-3">{{ entry.placeId }}</h1>
             </header>
           </div>
           <div class="col-sm-4" align="center">
@@ -67,53 +67,53 @@ permalink: "{{ entry.escapedPlaceId }}.html"
       </div>
       <hr />
       <h2>Summary</h2>
-      <p class="lead">{{entry.summary}}</p>
+      <p class="lead">{{ entry.summary }}</p>
       <hr />
       <dl class="row">
         <dt class="col-12 col-sm-4 col-lg-3">Implementation status</dt>
-        <dd class="col-12 col-sm-8 col-lg-9">{{entry.status}}</dd>
+        <dd class="col-12 col-sm-8 col-lg-9">{{ entry.status }}</dd>
         <dt class="col-12 col-sm-4 col-lg-3">Reform type</dt>
-        <dd class="col-12 col-sm-8 col-lg-9">{{entry.policyChange}}</dd>
+        <dd class="col-12 col-sm-8 col-lg-9">{{ entry.policyChange }}</dd>
         <dt class="col-12 col-sm-4 col-lg-3">Land uses</dt>
-        <dd class="col-12 col-sm-8 col-lg-9">{{entry.landUse}}</dd>
+        <dd class="col-12 col-sm-8 col-lg-9">{{ entry.landUse }}</dd>
         <dt class="col-12 col-sm-4 col-lg-3">Scope of reform</dt>
-        <dd class="col-12 col-sm-8 col-lg-9">{{entry.scope}}</dd>
+        <dd class="col-12 col-sm-8 col-lg-9">{{ entry.scope }}</dd>
         <dt class="col-12 col-sm-4 col-lg-3">Requirements</dt>
-        <dd class="col-12 col-sm-8 col-lg-9">{{entry.requirements}}</dd>
+        <dd class="col-12 col-sm-8 col-lg-9">{{ entry.requirements }}</dd>
         <dt class="col-12 col-sm-4 col-lg-3">Reporter</dt>
-        <dd class="col-12 col-sm-8 col-lg-9">{{entry.reporter}}</dd>
+        <dd class="col-12 col-sm-8 col-lg-9">{{ entry.reporter }}</dd>
       </dl>
-      {{#each entry.citations}}
+      {% for citation in entry.citations -%}
         <section class="my-3">
           <header>
-            <h2>Citation {{idx}}</h2>
+            <h2>Citation {{ forloop.index }}</h2>
           </header>
           <dl class="row">
             <dt class="col-12 col-sm-4 col-lg-3">Source description</dt>
-            <dd class="col-12 col-sm-8 col-lg-9">{{description}}</dd>
+            <dd class="col-12 col-sm-8 col-lg-9">{{ citation.description }}</dd>
             <dt class="col-12 col-sm-4 col-lg-3">Type</dt>
-            <dd class="col-12 col-sm-8 col-lg-9">{{type}}</dd>
+            <dd class="col-12 col-sm-8 col-lg-9">{{ citation.type }}</dd>
             <dt class="col-12 col-sm-4 col-lg-3">URL</dt>
-            <dd class="col-12 col-sm-8 col-lg-9"><a target="_blank" href="{{citationUrl}}">{{citationUrl}}</a></dd>
+            <dd class="col-12 col-sm-8 col-lg-9"><a target="_blank" href="{{ citation.url }}">{{ citation.url }}</a></dd>
             <dt class="col-12 col-sm-4 col-lg-3">Notes</dt>
-            <dd class="col-12 col-sm-8 col-lg-9">{{notes}}</dd>
+            <dd class="col-12 col-sm-8 col-lg-9">{{ citation.notes }}</dd>
           </dl>
-          {{#if attachments}}
+          {% if citation.attachments -%}
             <h3>Attachments and screenshots</h3>
             <ul class="mt-4 list-unstyled">
-              {{#each attachments}}
+              {% for attachment in citation.attachments -%}
                 <li class="attachment">
-                  {{#if isDoc}}
-                    <a target="_blank" download="{{fileName}}" href="https://mandates-map.directus.app/assets/{{directusId}}/{{fileName}}?download">{{fileName}}</a>
-                  {{else}}
-                    <img class="img-fluid" border="1" src="https://mandates-map.directus.app/assets/{{directusId}}/{{fileName}}" />
-                  {{/if}}
+                  {% if attachment.isDoc -%}
+                    <a target="_blank" download="{{ attachment.fileName }}" href="https://mandates-map.directus.app/assets/{{ attachment.directusId }}/{{ attachment.fileName }}?download">{{ attachment.fileName }}</a>
+                  {%- else -%}
+                    <img class="img-fluid" border="1" src="https://mandates-map.directus.app/assets/{{ attachment.directusId }}/{{ attachment.fileName }}" />
+                  {%- endif %}
                 </li>
-              {{/each}}
+              {%- endfor %}
             </ul>
-          {{/if}}
+          {%- endif %}
         </section>
-      {{/each}}
+      {%- endfor %}
     </main>
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js"
