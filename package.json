@@ -6,7 +6,7 @@
   "scripts": {
     "start": "parcel",
     "build": "rm -rf dist; parcel build --detailed-report",
-    "test": "playwright test",
+    "test": "npm run gen-html; playwright test",
     "check": "tsc --noEmit",
     "fmt": "prettier --write .",
     "fix": "prettier --write .; eslint --fix scripts/  tests/",
