@@ -46,7 +46,7 @@ We write our code in TypeScript. The types are ignored when starting the server 
 ❯ npm test
 ```
 
-If the tests are taking a long time to start, run `rm -rf .parcel-cache` and try the tests again.
+If the tests are taking a long time to start or have unexpected failures, run `rm -rf .parcel-cache` and try the tests again.
 
 ### Autoformat code
 
