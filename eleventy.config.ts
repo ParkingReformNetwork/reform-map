@@ -1,11 +1,18 @@
 /** Config for Eleventy to generate the details pages. */
 
+// @ts-ignore
+import CleanCSS from "clean-css";
+
 import { readProcessedCompleteData } from "./scripts/lib/data.js";
 import { escapePlaceId } from "./src/js/data.js";
 
 export default async function (eleventyConfig: any) {
   eleventyConfig.setLiquidOptions({
     jsTruthy: true,
+  });
+
+  eleventyConfig.addFilter("cssmin", function (code: any) {
+    return new CleanCSS({}).minify(code).styles;
   });
 
   const completeData = await readProcessedCompleteData();
