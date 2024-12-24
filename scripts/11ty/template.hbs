@@ -1,3 +1,10 @@
+---
+pagination:
+  data: entries
+  size: 1
+  alias: entry
+permalink: "{{ entry.escapedPlaceId }}.html"
+---
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -21,7 +28,7 @@
       border: none; color: white; padding: 7px 16px; text-align: center;
       text-decoration: none; display: inline-block; font-size: 16px; }
     </style>
-    <title>Parking Reform Network - Reforms in {{placeId}}</title>
+    <title>Parking Reform Network - Reforms in {{entry.placeId}}</title>
     <script
       async
       src="https://www.googletagmanager.com/gtag/js?id=G-5MFS4ZVMY3"
@@ -45,7 +52,7 @@
         <div class="row">
           <div class="col-sm-8">
             <header>
-              <h1 class="display-3">{{placeId}}</h1>
+              <h1 class="display-3">{{entry.placeId}}</h1>
             </header>
           </div>
           <div class="col-sm-4" align="center">
@@ -60,23 +67,23 @@
       </div>
       <hr />
       <h2>Summary</h2>
-      <p class="lead">{{summary}}</p>
+      <p class="lead">{{entry.summary}}</p>
       <hr />
       <dl class="row">
         <dt class="col-12 col-sm-4 col-lg-3">Implementation status</dt>
-        <dd class="col-12 col-sm-8 col-lg-9">{{status}}</dd>
+        <dd class="col-12 col-sm-8 col-lg-9">{{entry.status}}</dd>
         <dt class="col-12 col-sm-4 col-lg-3">Reform type</dt>
-        <dd class="col-12 col-sm-8 col-lg-9">{{policyChange}}</dd>
+        <dd class="col-12 col-sm-8 col-lg-9">{{entry.policyChange}}</dd>
         <dt class="col-12 col-sm-4 col-lg-3">Land uses</dt>
-        <dd class="col-12 col-sm-8 col-lg-9">{{landUse}}</dd>
+        <dd class="col-12 col-sm-8 col-lg-9">{{entry.landUse}}</dd>
         <dt class="col-12 col-sm-4 col-lg-3">Scope of reform</dt>
-        <dd class="col-12 col-sm-8 col-lg-9">{{scope}}</dd>
+        <dd class="col-12 col-sm-8 col-lg-9">{{entry.scope}}</dd>
         <dt class="col-12 col-sm-4 col-lg-3">Requirements</dt>
-        <dd class="col-12 col-sm-8 col-lg-9">{{requirements}}</dd>
+        <dd class="col-12 col-sm-8 col-lg-9">{{entry.requirements}}</dd>
         <dt class="col-12 col-sm-4 col-lg-3">Reporter</dt>
-        <dd class="col-12 col-sm-8 col-lg-9">{{reporter}}</dd>
+        <dd class="col-12 col-sm-8 col-lg-9">{{entry.reporter}}</dd>
       </dl>
-      {{#each citations}}
+      {{#each entry.citations}}
         <section class="my-3">
           <header>
             <h2>Citation {{idx}}</h2>
@@ -87,10 +94,7 @@
             <dt class="col-12 col-sm-4 col-lg-3">Type</dt>
             <dd class="col-12 col-sm-8 col-lg-9">{{type}}</dd>
             <dt class="col-12 col-sm-4 col-lg-3">URL</dt>
-            <dd class="col-12 col-sm-8 col-lg-9"><a
-                target="_blank"
-                href="{{url}}"
-              >{{url}}</a></dd>
+            <dd class="col-12 col-sm-8 col-lg-9"><a target="_blank" href="{{citationUrl}}">{{citationUrl}}</a></dd>
             <dt class="col-12 col-sm-4 col-lg-3">Notes</dt>
             <dd class="col-12 col-sm-8 col-lg-9">{{notes}}</dd>
           </dl>
