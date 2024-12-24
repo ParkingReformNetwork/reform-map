@@ -1,25 +1,22 @@
 # Mandates Map data set
 
-This folder contains the data used for https://parkingreform.org/resources/mandates-map/.
+This folder contains the data used for https://parkingreform.org/resources/mandates-map/, which records places/governments that have implemented parking reform.
 
 ## CSV files
 
-The CSV `any_parking_reform.csv` gives high-level information on each place, including which types of parking reforms it has implemented.
+There are four CSV files:
 
-For more granular data, such as the reform status and date of reform, use one of the three more specific CSVs:
-
-* `add_maximums.csv`: data on parking maximum reforms
-* `reduce_minimums.csv`: data on parking minimum reduction reforms
-* `remove_minimums.csv`: data on parking minimum repeals
+* `any_parking_reform.csv`: overview of which reforms a place has implemented
+* `add_maximums.csv`: parking maximum policies
+* `reduce_minimums.csv`: parking minimum reductions
+* `remove_minimums.csv`: parking minimum removals
 
 ## JSON
 
-The full data set is stored in `complete-data.json`. 
+`complete-data.json` contains the full dataset with additional features not available in the CSVs, such as array support and citation information.
 
-This JSON file is more powerful and ergonomic than the CSV file because of it's support for string arrays. For example, a place may have multiple values for  affected land use, which is more naturally represented in the JSON.
+For working with JSON data, we recommend using [`jq`](https://jqlang.github.io/jq/tutorial/), a command-line tool for filtering and transforming JSON. Online tutorials and AI assistants like ChatGPT can help you create `jq` queries.
 
-It can be helpful to use the tool [`jq`](https://jqlang.github.io/jq/tutorial/) when working with JSON data. Consider using online tutorials and generative AI like ChatGPT or Claude for help with creating `jq` queries.
+## Attribution
 
-## Citations
-
-Use of this data set should be attributed to "Parking Reform Network" with a link to https://parkingreform.org/resources/mandates-map/ and the date the data was downloaded.
+Please attribute to "Parking Reform Network" with a link to https://parkingreform.org/resources/mandates-map/ and include the data download date.
