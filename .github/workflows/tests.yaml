@@ -24,4 +24,4 @@ jobs:
       - name: Check static generation works
         run: |
           npm run gen-html
-          npm run gen-csv
+          npm run gen-data-set
