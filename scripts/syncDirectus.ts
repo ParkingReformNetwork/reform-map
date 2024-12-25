@@ -147,7 +147,6 @@ async function readCitations(
 ): Promise<Record<number, Partial<DirectusCitation>>> {
   const rawCitations = await readItemsBatched(client, "citations", [
     "id",
-    "type",
     "source_description",
     "notes",
     "url",
@@ -289,7 +288,6 @@ function createCitations(
     );
     return {
       description: citationRecord.source_description!,
-      type: citationRecord.type!,
       url: citationRecord.url!,
       notes: citationRecord.notes!,
       attachments,

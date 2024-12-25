@@ -8271,6 +8271,24 @@
         "land": ["commercial"],
         "date": null
       }
+    ],
+    "reduce_min": [
+      {
+        "summary": "Existing buildings are exempt from parking mandates. A fee in lieu of required parking may be provided in the MU-MS district while requirements are reduced in the downtown area by right. Parking requirements may be reduced citywide for bike parking.",
+        "status": "implemented",
+        "scope": ["city center / business district", "citywide"],
+        "land": ["all uses"],
+        "date": null
+      }
+    ],
+    "rm_min": [
+      {
+        "summary": "Properties in the MU-1 and MU-2 districts without an alley are exempt from parking mandates. ADUs are exempt in the downtown area.",
+        "status": "implemented",
+        "scope": ["city center / business district"],
+        "land": ["all uses", "residential, low-density"],
+        "date": null
+      }
     ]
   },
   "Buffalo, NY": {
@@ -10199,7 +10217,34 @@
       "scope": ["city center / business district"],
       "land": ["commercial", "other"],
       "date": null
-    }
+    },
+    "add_max": [
+      {
+        "summary": "Parking maximums are set at 100% of the minimums citywide.",
+        "status": "implemented",
+        "scope": ["citywide"],
+        "land": ["all uses"],
+        "date": null
+      }
+    ],
+    "reduce_min": [
+      {
+        "summary": "Within the North Non-Residential Downtown Parking Area, buildings that are not exempted have reduced requirements, except for hotels.",
+        "status": "implemented",
+        "scope": ["city center / business district"],
+        "land": ["commercial", "other", "residential, all uses"],
+        "date": null
+      }
+    ],
+    "rm_min": [
+      {
+        "summary": "Within the North Non-Residential Downtown Parking Area, the first 2000 square feet of a nonresidential use is exempt from parking mandates.",
+        "status": "implemented",
+        "scope": ["city center / business district"],
+        "land": ["commercial", "other"],
+        "date": null
+      }
+    ]
   },
   "Castle Shannon, PA": {
     "place": {
@@ -10312,7 +10357,25 @@
       "scope": ["city center / business district"],
       "land": ["commercial", "other"],
       "date": null
-    }
+    },
+    "reduce_min": [
+      {
+        "summary": "Parking requirements may be reduced for on-street parking, bike parking, or motorcycle parking citywide. A fee in lieu of parking may be provided in the Central Business District. Within the Riverfront districts, parking requirements are reduced by right and may be further reduced through bike parking, carshare, affordable housing or on-street parking.",
+        "status": "implemented",
+        "scope": ["city center / business district", "citywide"],
+        "land": ["all uses"],
+        "date": null
+      }
+    ],
+    "rm_min": [
+      {
+        "summary": "Nonresidential uses in the Central Business (CB) District are exempt from parking mandates as well as locally designated historic structures.",
+        "status": "implemented",
+        "scope": ["city center / business district"],
+        "land": ["commercial", "other"],
+        "date": null
+      }
+    ]
   },
   "Cecil, WI": {
     "place": {
@@ -13364,7 +13427,25 @@
       "scope": ["city center / business district"],
       "land": ["all uses"],
       "date": null
-    }
+    },
+    "reduce_min": [
+      {
+        "summary": "Parking requirements may be reduced for affordable housing, senior housing, on-street parking, public parking, proximity to transit or a bike trail, carpool or vanpool parking, carshare, bike parking, or provision of green infrastructure.",
+        "status": "implemented",
+        "scope": ["citywide"],
+        "land": ["all uses", "residential, multi-family"],
+        "date": null
+      }
+    ],
+    "rm_min": [
+      {
+        "summary": "There are two established parking exempt districts in which there is no additional off-street parking required; Downtown/FBZ district and Old Colorado City.",
+        "status": "implemented",
+        "scope": ["city center / business district"],
+        "land": ["all uses"],
+        "date": null
+      }
+    ]
   },
   "Colorado, CO": {
     "place": {
@@ -16567,7 +16648,25 @@
       "scope": ["city center / business district"],
       "land": ["commercial", "other"],
       "date": null
-    }
+    },
+    "reduce_min": [
+      {
+        "summary": "Residential uses, churches, hotels, child care facilities, schools, funeral homes and adult care facilities in the B-1 District may provide a fee in lieu of required parking.",
+        "status": "implemented",
+        "scope": ["city center / business district"],
+        "land": ["other", "residential, all uses"],
+        "date": null
+      }
+    ],
+    "rm_min": [
+      {
+        "summary": "The B-1 District is exempt from parking mandates, except for residential uses, churches, hotels, child care facilities, schools, funeral homes and adult care facilities.",
+        "status": "implemented",
+        "scope": ["city center / business district"],
+        "land": ["commercial", "other"],
+        "date": null
+      }
+    ]
   },
   "Denison, IA": {
     "place": {
@@ -16728,7 +16827,47 @@
       ],
       "land": ["all uses", "commercial", "residential, low-density"],
       "date": null
-    }
+    },
+    "add_max": [
+      {
+        "summary": "Surface parking maximums are set at 110% of the minimums for transit oriented development. Parking maximums apply in various other districts as determined in articles 3-9.",
+        "status": "implemented",
+        "scope": [
+          "main street / special",
+          "transit oriented",
+          "transit-oriented"
+        ],
+        "land": ["all uses"],
+        "date": null
+      }
+    ],
+    "reduce_min": [
+      {
+        "summary": "Parking reductions are available for tree preservation, small lots in the C-CCN District, carsharing, bike sharing, proximity to transit, and assisted living facilities.",
+        "status": "implemented",
+        "scope": [
+          "city center / business district",
+          "citywide",
+          "transit oriented",
+          "transit-oriented"
+        ],
+        "land": ["all uses", "residential, multi-family"],
+        "date": null
+      }
+    ],
+    "rm_min": [
+      {
+        "summary": "Exemptions exist for small uses near transit, affordable housing, or retail in mixed-use projects. The D-C, D-TD, D-CV, D-GT, D-AS-12+/20+, D-CPV-T/R/C Downtown Districts have no parking mandates.",
+        "status": "implemented",
+        "scope": [
+          "city center / business district",
+          "citywide",
+          "transit oriented"
+        ],
+        "land": ["all uses", "commercial", "residential, low-density"],
+        "date": null
+      }
+    ]
   },
   "Denver, PA": {
     "place": {
@@ -17250,7 +17389,25 @@
       "scope": ["city center / business district", "citywide"],
       "land": ["all uses"],
       "date": null
-    }
+    },
+    "reduce_min": [
+      {
+        "summary": "On-street parking may be used to meet a portion of the minimum off-street parking requirements.",
+        "status": "implemented",
+        "scope": ["citywide"],
+        "land": ["all uses"],
+        "date": null
+      }
+    ],
+    "rm_min": [
+      {
+        "summary": "No off-street parking or loading space is required for any use located in the DMU Downtown District or for any individual use in a space that is 2,000 square feet or smaller in any district.",
+        "status": "implemented",
+        "scope": ["city center / business district", "citywide"],
+        "land": ["all uses"],
+        "date": null
+      }
+    ]
   },
   "Donnelly, ID": {
     "place": {
@@ -20203,7 +20360,40 @@
       "scope": ["main street / special"],
       "land": ["commercial", "other"],
       "date": null
-    }
+    },
+    "add_max": [
+      {
+        "summary": "Parking maximums are set at 140% of the minimums for nonresidential uses.",
+        "status": "implemented",
+        "scope": ["citywide"],
+        "land": ["commercial", "industrial", "medical", "other"],
+        "date": null
+      }
+    ],
+    "reduce_min": [
+      {
+        "summary": "Parking requirements may be reduced for multi-family housing near transit, or through on-street parking for nonresidential uses, or through an administrative adjustment.",
+        "status": "implemented",
+        "scope": ["citywide", "transit-oriented"],
+        "land": [
+          "commercial",
+          "industrial",
+          "medical",
+          "other",
+          "residential, multi-family"
+        ],
+        "date": null
+      }
+    ],
+    "rm_min": [
+      {
+        "summary": "No parking is required for nonresidential uses in the MU-B-1 district with frontage on South Broadway.",
+        "status": "implemented",
+        "scope": ["main street / special"],
+        "land": ["commercial", "other"],
+        "date": null
+      }
+    ]
   },
   "Enid, OK": {
     "place": {
@@ -21877,7 +22067,25 @@
       "scope": ["city center / business district"],
       "land": ["commercial", "other"],
       "date": null
-    }
+    },
+    "reduce_min": [
+      {
+        "summary": "Within the CB - Central Business district, and the CHB - Central Historic Business district, dwellings have reduced requirements.",
+        "status": "implemented",
+        "scope": ["city center / business district"],
+        "land": ["residential, all uses"],
+        "date": null
+      }
+    ],
+    "rm_min": [
+      {
+        "summary": "Within the CB - Central Business district, and the CHB - Central Historic Business district, all uses except dwellings and lodging uses are exempt from parking mandates.",
+        "status": "implemented",
+        "scope": ["city center / business district"],
+        "land": ["commercial", "other"],
+        "date": null
+      }
+    ]
   },
   "Florida, FL": {
     "place": {
@@ -22335,7 +22543,31 @@
       "scope": ["citywide", "transit oriented"],
       "land": ["commercial", "other", "residential, all uses"],
       "date": null
-    }
+    },
+    "add_max": [
+      {
+        "summary": "Parking maximums apply to all nonresidential uses, and to multi-family uses in the Transit-Oriented Development (TOD) Overlay Zone.",
+        "status": "implemented",
+        "scope": ["citywide", "transit oriented", "transit-oriented"],
+        "land": [
+          "commercial",
+          "industrial",
+          "medical",
+          "other",
+          "residential, multi-family"
+        ],
+        "date": null
+      }
+    ],
+    "reduce_min": [
+      {
+        "summary": "A change of use within an existing building is exempt from parking requirements. Within the Transit-Oriented Development (TOD) Overlay zone, twenty-five (25) percent of the square footage of gross leasable area is exempt from minimum parking requirements. Parking requirements are reduced by right within the Transit Oriented Development Overlay Zone, and may be further reduced for affordable housing, carshare, distribution of transit passes, or proximity to transit.",
+        "status": "implemented",
+        "scope": ["citywide", "transit oriented"],
+        "land": ["commercial", "other", "residential, all uses"],
+        "date": null
+      }
+    ]
   },
   "Fort Dodge, IA": {
     "place": {
@@ -22394,7 +22626,34 @@
       "scope": ["city center / business district"],
       "land": ["commercial", "other", "residential, all uses"],
       "date": null
-    }
+    },
+    "add_max": [
+      {
+        "summary": "Parking maximums are set at 140% of the minimums for nonresidential uses.",
+        "status": "implemented",
+        "scope": ["citywide"],
+        "land": ["commercial", "industrial", "medical", "other"],
+        "date": null
+      }
+    ],
+    "reduce_min": [
+      {
+        "summary": "Parking requirements may be reduced through on-street parking or bike parking.",
+        "status": "implemented",
+        "scope": ["citywide"],
+        "land": ["all uses"],
+        "date": null
+      }
+    ],
+    "rm_min": [
+      {
+        "summary": "No parking is required in the DT zoning district, however, the Director may require parking for any nonresidential use over ten thousand (10,000) square feet.",
+        "status": "implemented",
+        "scope": ["city center / business district"],
+        "land": ["commercial", "other", "residential, all uses"],
+        "date": null
+      }
+    ]
   },
   "Fort Madison, IA": {
     "place": {
@@ -23490,7 +23749,38 @@
       "scope": ["city center / business district"],
       "land": ["commercial"],
       "date": null
-    }
+    },
+    "add_max": [
+      {
+        "summary": "Parking maximums apply to residential uses citywide.",
+        "status": "implemented",
+        "scope": ["citywide"],
+        "land": ["residential, all uses"],
+        "date": null
+      }
+    ],
+    "reduce_min": [
+      {
+        "summary": "Uses in the Central Core District (CC) and within the Mixed-Use District (MU) that front West Main Street have reduced requirements. Uses here may also count on-street parking. Parking requirements may be reduced for nonresidential uses with EV charging facilities citywide.",
+        "status": "implemented",
+        "scope": [
+          "city center / business district",
+          "citywide",
+          "main street / special"
+        ],
+        "land": ["all uses", "commercial", "industrial", "medical", "other"],
+        "date": null
+      }
+    ],
+    "rm_min": [
+      {
+        "summary": "Retail, personal services and restaurant uses are exempt from parking mandates in the Central Core District (CC) and within the Mixed-Use District (MU) that front West Main Street.",
+        "status": "implemented",
+        "scope": ["city center / business district", "main street / special"],
+        "land": ["commercial"],
+        "date": null
+      }
+    ]
   },
   "Frisco, TX": {
     "place": {
@@ -24905,7 +25195,34 @@
       "scope": ["city center / business district"],
       "land": ["all uses", "commercial", "industrial", "other"],
       "date": null
-    }
+    },
+    "add_max": [
+      {
+        "summary": "In nonresidential and mixed-use districts, uses may not provide more than 125% of the minimum off-street parking spaces required.",
+        "status": "implemented",
+        "scope": ["city center / business district"],
+        "land": ["all uses"],
+        "date": null
+      }
+    ],
+    "reduce_min": [
+      {
+        "summary": "Where parking is required, a fee-in-lieu of parking may be provided instead.",
+        "status": "implemented",
+        "scope": ["citywide"],
+        "land": ["all uses"],
+        "date": null
+      }
+    ],
+    "rm_min": [
+      {
+        "summary": "Properties within the boundaries of the Glenwood Springs General Improvement District No. 1980, as well as nonresidential uses in any zoning district which contain less than five thousand (5,000) square feet of lot area, are exempt from minimum parking requirements.",
+        "status": "implemented",
+        "scope": ["city center / business district", "citywide"],
+        "land": ["all uses", "commercial", "industrial", "other"],
+        "date": null
+      }
+    ]
   },
   "Glenwood, IA": {
     "place": {
@@ -25444,7 +25761,16 @@
       "scope": ["city center / business district"],
       "land": ["commercial"],
       "date": null
-    }
+    },
+    "reduce_min": [
+      {
+        "summary": "Within the CB Central Business District, office, business, personal, and professional services are exempt from parking mandates when not located on the ground floor. All other uses have reduced requirements which may be further reduced through a fee in lieu, on-street parking or tuck-under parking.",
+        "status": "implemented",
+        "scope": ["city center / business district"],
+        "land": ["all uses", "commercial", "other"],
+        "date": null
+      }
+    ]
   },
   "Grand Blanc Charter Township, MI": {
     "place": {
@@ -25591,7 +25917,25 @@
       "scope": ["city center / business district"],
       "land": ["commercial", "industrial", "other"],
       "date": null
-    }
+    },
+    "reduce_min": [
+      {
+        "summary": "Parking requirements may be reduced through proximity to transit, proximity to trails, transportation demand management, and for bike parking.",
+        "status": "implemented",
+        "scope": ["citywide"],
+        "land": ["all uses"],
+        "date": null
+      }
+    ],
+    "rm_min": [
+      {
+        "summary": "Nonresidential uses are exempt from minimum parking requirements in the Redevelopment Area and Corridor Infill Area.",
+        "status": "implemented",
+        "scope": ["city center / business district"],
+        "land": ["commercial", "industrial", "other"],
+        "date": null
+      }
+    ]
   },
   "Grand Lake, CO": {
     "place": {
@@ -26199,7 +26543,34 @@
       "scope": ["city center / business district"],
       "land": ["commercial", "other"],
       "date": null
-    }
+    },
+    "add_max": [
+      {
+        "summary": "Parking maximums are set at 125% of the minimums for nonresidential uses.",
+        "status": "implemented",
+        "scope": ["citywide"],
+        "land": ["commercial", "industrial", "medical", "other"],
+        "date": null
+      }
+    ],
+    "reduce_min": [
+      {
+        "summary": "Parking requirements may be reduced through on-street parking, bike parking, public parking, affordable housing, or proximity to transit.",
+        "status": "implemented",
+        "scope": ["citywide"],
+        "land": ["all uses"],
+        "date": null
+      }
+    ],
+    "rm_min": [
+      {
+        "summary": "Nonresidential uses under 10,000 square feet are exempt from parking mandates within the General Improvement (GID) overlay district.",
+        "status": "implemented",
+        "scope": ["city center / business district"],
+        "land": ["commercial", "other"],
+        "date": null
+      }
+    ]
   },
   "Green Bay, WI": {
     "place": {
@@ -35302,7 +35673,25 @@
       "scope": ["citywide"],
       "land": ["residential, all uses"],
       "date": null
-    }
+    },
+    "reduce_min": [
+      {
+        "summary": "Businesses that are a use by right in existing buildings in the TC zone and in portions of the RC zone are not required to provide off-street parking.",
+        "status": "implemented",
+        "scope": ["main street / special"],
+        "land": ["commercial"],
+        "date": null
+      }
+    ],
+    "rm_min": [
+      {
+        "summary": "ADUs are exempt from parking mandates citywide.",
+        "status": "implemented",
+        "scope": ["citywide"],
+        "land": ["residential, low-density"],
+        "date": null
+      }
+    ]
   },
   "Leavenworth, KS": {
     "place": {
@@ -36482,7 +36871,47 @@
         "residential, multi-family"
       ],
       "date": null
-    }
+    },
+    "add_max": [
+      {
+        "summary": "Parking maximums apply to all uses except single-family dwellings. Surface parking maximums in the downtown are set at 125% of the minimums.",
+        "status": "implemented",
+        "scope": [
+          "city center / business district",
+          "citywide",
+          "transit oriented"
+        ],
+        "land": [
+          "all uses",
+          "commercial",
+          "industrial",
+          "medical",
+          "other",
+          "residential, multi-family"
+        ],
+        "date": null
+      }
+    ],
+    "reduce_min": [
+      {
+        "summary": "Parking requirements may be reduced for uses near transit. Within the downtown districts, parking requirements are reduced by right and may be further reduced for EV charging stations, proximity to transit, transit pass provision, ridesharing, on-street parking, bike parking, shuttle service to transit, or tuck-under parking.",
+        "status": "implemented",
+        "scope": [
+          "city center / business district",
+          "citywide",
+          "transit oriented",
+          "transit-oriented"
+        ],
+        "land": [
+          "all uses",
+          "commercial",
+          "medical",
+          "other",
+          "residential, multi-family"
+        ],
+        "date": null
+      }
+    ]
   },
   "Livingston, MT": {
     "place": {
@@ -36904,7 +37333,25 @@
       "scope": ["citywide"],
       "land": ["all uses"],
       "date": "2024-05-28"
-    }
+    },
+    "add_max": [
+      {
+        "summary": "Parking maximums apply to all residential and most nonresidential uses outside the GID District. Commercial and industrial land uses have had parking maximums since 2014 and multi-family residential in the Mixed Use Downtown (MU-D) and Mixed Use Corridor (MU-C) zoning districts have had parking maximums since 2022.",
+        "status": "implemented",
+        "scope": ["citywide"],
+        "land": ["all uses"],
+        "date": null
+      }
+    ],
+    "rm_min": [
+      {
+        "summary": "Parking minimums were removed citywide in May 2024. Previously, parking minimums only applied to residential and educational uses. Commercial and industrial land uses have had no minimum parking requirements since 2014 and multi-family residential in the Mixed Use Downtown (MU-D) and Mixed Use Corridor (MU-C) zoning districts were exempted in 2022..",
+        "status": "implemented",
+        "scope": ["citywide"],
+        "land": ["all uses"],
+        "date": "2024-05-28"
+      }
+    ]
   },
   "Longview, TX": {
     "place": {
@@ -37095,7 +37542,34 @@
       "scope": ["city center / business district"],
       "land": ["all uses"],
       "date": null
-    }
+    },
+    "add_max": [
+      {
+        "summary": "Within Downtown Louisville, parking maximums apply to one bedroom units.",
+        "status": "implemented",
+        "scope": ["city center / business district"],
+        "land": ["residential, multi-family"],
+        "date": null
+      }
+    ],
+    "reduce_min": [
+      {
+        "summary": "Parking requirements are reduced in Downtown Louisville by right, while on-street parking and in lieu fees may further reduce requirements.",
+        "status": "implemented",
+        "scope": ["city center / business district"],
+        "land": ["all uses"],
+        "date": null
+      }
+    ],
+    "rm_min": [
+      {
+        "summary": "The first 999 square feet of a building are exempt from parking mandates in Downtown Louisville.",
+        "status": "implemented",
+        "scope": ["city center / business district"],
+        "land": ["all uses"],
+        "date": null
+      }
+    ]
   },
   "Louisville, KY": {
     "place": {
@@ -60954,7 +61428,34 @@
       "scope": ["city center / business district"],
       "land": ["commercial"],
       "date": null
-    }
+    },
+    "add_max": [
+      {
+        "summary": "Parking maximums are set at 110% of the minimums.",
+        "status": "implemented",
+        "scope": ["citywide"],
+        "land": ["all uses"],
+        "date": null
+      }
+    ],
+    "reduce_min": [
+      {
+        "summary": "Parking requirements for nonresidential uses may be reduced through the provision of bike parking.",
+        "status": "implemented",
+        "scope": ["citywide"],
+        "land": ["commercial", "industrial", "medical", "other"],
+        "date": null
+      }
+    ],
+    "rm_min": [
+      {
+        "summary": "Parking is not required for non-residential uses in the DB, downtown business district.",
+        "status": "implemented",
+        "scope": ["city center / business district"],
+        "land": ["commercial", "other"],
+        "date": null
+      }
+    ]
   },
   "Sterling, KS": {
     "place": {
