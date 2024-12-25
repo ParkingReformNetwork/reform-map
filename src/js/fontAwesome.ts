@@ -15,7 +15,6 @@ import {
   faTable,
   faEarthAmericas,
 } from "@fortawesome/free-solid-svg-icons";
-import "@fortawesome/fontawesome-svg-core/styles.css";
 
 export default function initIcons(): void {
   library.add(

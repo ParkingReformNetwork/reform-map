@@ -1,5 +1,4 @@
 import { Map, TileLayer } from "leaflet";
-import "leaflet/dist/leaflet.css";
 
 export const NO_MANDATES_MARKERS_PANE = "noMandatesMarkers";
 const MIN_ZOOM = 3;
