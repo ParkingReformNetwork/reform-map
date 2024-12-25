@@ -1,45 +1,108 @@
-body {
-  background-color: #20c9c9;
-  background-image: url("bg-photo.jpg");
-  background-position: center center;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  background-size: cover;
+// -------------------------------------------------------------------------
+// Theme: breakpoints
+// -------------------------------------------------------------------------
+
+$breakpoints-sm-width: "640px";
+
+@mixin breakpoints-gt-xs() {
+  @media screen and (min-width: $breakpoints-sm-width) {
+    @content();
+  }
 }
+
+// -------------------------------------------------------------------------
+// Theme: spacing
+// -------------------------------------------------------------------------
+
+// https://www.w3.org/WAI/WCAG21/Understanding/target-size.html
+$min-touch-target: 44px;
+
+$spacing-element-gap: 10px;
+$spacing-container-edge-spacing: 15px;
+
+// -------------------------------------------------------------------------
+// Theme: typography
+// -------------------------------------------------------------------------
+
+$font-size-xs: 12px;
+$font-size-sm: 14px;
+$font-size-base: 16px;
+$font-size-md: 18px;
+$font-size-lg: 20px;
+$font-size-xl: 24px;
+$font-size-2xl: 30px;
+
+// -------------------------------------------------------------------------
+// main
+// -------------------------------------------------------------------------
 
 main {
   word-break: break-word;
   width: calc(100% - 2rem);
-  background-color: white;
 }
+
+// -------------------------------------------------------------------------
+// Header
+// -------------------------------------------------------------------------
+
+$logo-height: 75px;
 
 .site-header {
-  background-color: #4d4d4d;
-  color: white;
+  background-color: hsl(0, 0%, 25.88%);
+  font-size: $font-size-2xl;
+  padding: $spacing-container-edge-spacing;
+
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+
+  border-bottom: 4px solid hsl(173, 72%, 46%);
+
+  img {
+    height: $logo-height;
+    cursor: pointer;
+  }
 }
 
-.all-caps-link {
-  display: inline-block;
-  text-transform: uppercase;
-  text-decoration-line: none;
-  color: unset;
+.site-header-map-link {
+  display: none;
+
+  @include breakpoints-gt-xs {
+    display: block;
+  }
 }
 
-.all-caps-link:hover {
-  color: unset;
+.site-header-right {
+  ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+  }
+
+  a {
+    color: hsl(0, 0%, 100%);
+    text-decoration: none;
+    display: flex;
+    height: $min-touch-target;
+    padding: 0 $spacing-element-gap;
+    align-items: center;
+
+    @include breakpoints-gt-xs {
+      height: $logo-height;
+    }
+
+    &:hover {
+      background-color: hsl(0, 0%, 32%);
+    }
+  }
 }
+
+// -------------------------------------------------------------------------
+// Attachments
+// -------------------------------------------------------------------------
 
 .attachment + .attachment {
   margin-top: 3rem;
-}
-
-.button {
-  background-color: #21ccb9;
-  border: none;
-  color: white;
-  padding: 7px 16px;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  font-size: 16px;
 }
