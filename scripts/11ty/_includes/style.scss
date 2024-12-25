@@ -85,13 +85,9 @@ $logo-height: 75px;
     color: hsl(0, 0%, 100%);
     text-decoration: none;
     display: flex;
-    height: $min-touch-target;
+    height: $logo-height;
     padding: 0 $spacing-element-gap;
     align-items: center;
-
-    @include breakpoints-gt-xs {
-      height: $logo-height;
-    }
 
     &:hover {
       background-color: hsl(0, 0%, 32%);
