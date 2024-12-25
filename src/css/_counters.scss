@@ -22,6 +22,12 @@
   padding: spacing.$element-gap spacing.$container-edge-spacing;
   min-height: calc($font-size * 2 + spacing.$element-gap * 2);
   width: 260px;
+
+  background-color: colors.$white;
+  color: colors.$black;
+  border: borders.$component-border;
+  border-radius: borders.$border-radius;
+
   @include breakpoints.gt-xxs {
     width: 280px;
   }
@@ -31,11 +37,6 @@
   @include breakpoints.gt-md {
     width: 340px;
   }
-
-  background-color: colors.$white;
-  color: colors.$black;
-  border: borders.$component-border;
-  border-radius: borders.$border-radius;
 }
 
 .table-counter-container {
@@ -44,13 +45,14 @@
   width: 100%;
 
   font-size: typography.$font-size-base;
-  @include breakpoints.gt-xs {
-    font-size: typography.$font-size-md;
-  }
 
   display: flex;
   align-items: center;
   justify-content: space-betwen;
+
+  @include breakpoints.gt-xs {
+    font-size: typography.$font-size-md;
+  }
 
   #table-counter {
     margin: 0;

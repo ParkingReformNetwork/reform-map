@@ -15,10 +15,6 @@
   margin-left: spacing.$map-controls-margin-x;
   margin-right: spacing.$map-controls-margin-x;
 
-  @include breakpoints.gt-sm {
-    margin-left: 10%;
-  }
-
   min-height: 50%;
   max-height: 70%;
   min-width: 200px;
@@ -35,6 +31,10 @@
 
   overflow-y: auto;
   overflow-wrap: break-word;
+
+  @include breakpoints.gt-sm {
+    margin-left: 10%;
+  }
 
   h3 {
     margin: 0;

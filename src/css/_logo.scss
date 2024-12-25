@@ -11,16 +11,17 @@
   // `bottom` is set so high to avoid covering the attribution
   // on small screens, since it wraps to two lines.
   bottom: 30px;
+
+  width: 80px;
+  @include breakpoints.gt-xxs {
+    width: 100px;
+  }
+
   @include breakpoints.gt-xs {
     bottom: 15px;
   }
   @include breakpoints.gt-sm {
     bottom: 0px;
-  }
-
-  width: 80px;
-  @include breakpoints.gt-xxs {
-    width: 100px;
   }
 
   img {
