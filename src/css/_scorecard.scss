@@ -18,17 +18,18 @@
 
   padding: spacing.$container-edge-spacing;
   width: 300px;
+
+  background-color: colors.$white;
+  border: borders.$component-border;
+  border-radius: borders.$border-radius;
+  color: colors.$black;
+
   @include breakpoints.gt-xxs {
     width: 340px;
   }
   @include breakpoints.gt-xs {
     width: 400px;
   }
-
-  background-color: colors.$white;
-  border: borders.$component-border;
-  border-radius: borders.$border-radius;
-  color: colors.$black;
 
   p,
   li {

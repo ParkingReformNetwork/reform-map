@@ -20,14 +20,15 @@ div.choices[data-type*="select-one"] {
 
     min-height: spacing.$min-touch-target;
     width: 260px;
-    @include breakpoints.gt-xxs {
-      width: 280px;
-    }
 
     border-top-left-radius: borders.$border-radius;
     border-top-right-radius: borders.$border-radius;
     border-bottom-left-radius: 0;
     border-bottom-right-radius: 0;
+
+    @include breakpoints.gt-xxs {
+      width: 280px;
+    }
   }
 
   input.choices__input {
