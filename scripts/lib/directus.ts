@@ -22,7 +22,6 @@ import {
 } from "@directus/sdk";
 
 import { PolicyType, ReformStatus } from "../../src/js/types.js";
-import { CitationType } from "../../scripts/lib/data.js";
 
 export const CITATIONS_FILES_FOLDER = "f085de08-b747-4251-973d-1752ccc29649";
 
@@ -68,6 +67,8 @@ export type Place = {
   complete_minimums_repeal: boolean;
   coordinates: Coordinates | null;
 } & Metadata;
+
+type CitationType = "city code" | "media report" | "other";
 
 export type Citation = {
   type: CitationType;

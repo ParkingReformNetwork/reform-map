@@ -21,11 +21,8 @@ export type Attachment = {
   isDoc: boolean;
 };
 
-export type CitationType = "city code" | "media report" | "other";
-
 export interface Citation {
   description: string;
-  type: CitationType;
   url: string | null;
   notes: string | null;
   attachments: Attachment[];

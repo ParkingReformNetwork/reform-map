@@ -36,7 +36,6 @@ test("generate CSVs", async ({}, testInfo) => {
 
   const citation: Citation = {
     description: "citation",
-    type: "city code",
     url: null,
     notes: null,
     attachments: [],
