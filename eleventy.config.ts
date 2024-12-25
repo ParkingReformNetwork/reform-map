@@ -2,6 +2,7 @@
 
 // @ts-ignore
 import CleanCSS from "clean-css";
+import { compileString as compileStringSass } from "sass";
 
 import { readProcessedCompleteData } from "./scripts/lib/data.js";
 import { escapePlaceId } from "./src/js/data.js";
@@ -11,9 +12,14 @@ export default async function (eleventyConfig: any) {
     jsTruthy: true,
   });
 
-  eleventyConfig.addFilter("cssmin", function (code: any) {
-    return new CleanCSS({}).minify(code).styles;
-  });
+  eleventyConfig.addFilter(
+    "scss_compile",
+    (code: any) => compileStringSass(code).css,
+  );
+  eleventyConfig.addFilter(
+    "cssmin",
+    (code: any) => new CleanCSS({}).minify(code).styles,
+  );
 
   const completeData = await readProcessedCompleteData();
   eleventyConfig.addGlobalData(

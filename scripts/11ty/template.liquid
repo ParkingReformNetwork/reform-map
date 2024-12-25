@@ -16,8 +16,8 @@ permalink: "{{ entry.escapedPlaceId }}.html"
       integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU"
       crossorigin="anonymous"
     />
-    {% capture css -%} {% render "style.css" %} {%- endcapture -%}
-    <style>{{ css | cssmin }}</style>
+    {% capture scss -%} {% render "style.scss" %} {%- endcapture -%}
+    <style>{{ scss | scss_compile | cssmin }}</style>
     <title>Parking Reform Network - Reforms in {{ entry.placeId }}</title>
     <script
       async
