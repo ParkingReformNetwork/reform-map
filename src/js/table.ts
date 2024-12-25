@@ -10,7 +10,6 @@ import {
   PageModule,
   CellComponent,
 } from "tabulator-tables";
-import "tabulator-tables/dist/css/tabulator.min.css";
 
 import { PlaceFilterManager, PolicyTypeFilter } from "./FilterState";
 import { Date, ProcessedCorePolicy } from "./types";

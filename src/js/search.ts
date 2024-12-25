@@ -1,5 +1,4 @@
 import Choices from "choices.js";
-import "choices.js/public/assets/styles/choices.css";
 
 import Observable from "./Observable";
 import { PlaceFilterManager } from "./FilterState";
