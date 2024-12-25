@@ -1,3 +1,68 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap");
+
+// -------------------------------------------------------------------------
+// Theme: resets
+// -------------------------------------------------------------------------
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  padding: 0;
+  margin: 0;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+button {
+  background-color: transparent;
+  border: none;
+  padding: 0;
+  font: inherit;
+  color: inherit;
+  cursor: pointer;
+}
+
+p {
+  margin: 0 0 10px;
+}
+
+ul,
+ol,
+dl {
+  margin-top: 0;
+  margin-bottom: 10px;
+  padding: 0;
+  padding-inline-start: 20px; // Default is 40px
+}
+
+p,
+li,
+a {
+  line-height: 1.3;
+}
+
+// -------------------------------------------------------------------------
+// Theme: colors
+// -------------------------------------------------------------------------
+
+$teal: hsl(173, 72%, 46%);
+$white: hsl(0, 0%, 100%);
+$black: hsl(0, 0%, 0%);
+$gray: hsl(0, 0%, 25.88%);
+$gray-light: hsl(0, 0%, 80%);
+
+$black-translucent: hsla(0, 0%, 0%, 0.4);
+
+$hover-white: hsl(0, 0%, 96%);
+$hover-gray: hsl(0, 0%, 32%);
+
 // -------------------------------------------------------------------------
 // Theme: breakpoints
 // -------------------------------------------------------------------------
@@ -24,21 +89,47 @@ $spacing-container-edge-spacing: 15px;
 // Theme: typography
 // -------------------------------------------------------------------------
 
-$font-size-xs: 12px;
-$font-size-sm: 14px;
-$font-size-base: 16px;
-$font-size-md: 18px;
-$font-size-lg: 20px;
-$font-size-xl: 24px;
-$font-size-2xl: 30px;
+// Scale is different than map apps because the project constraints are different.
+
+$font-size-base: 18px;
+$font-size-md: 20px;
+$font-size-lg: 24px;
+$font-size-xl: 28px;
+$font-size-2xl: 36px;
+
+h1 {
+  font-size: $font-size-2xl;
+  margin-bottom: $spacing-element-gap;
+  font-weight: 500;
+  line-height: 1.1;
+}
+h2 {
+  font-size: $font-size-xl;
+  margin-bottom: $spacing-element-gap;
+  font-weight: 500;
+  line-height: 1.15;
+}
+h3 {
+  font-size: $font-size-lg;
+  margin-bottom: $spacing-element-gap;
+  font-weight: 500;
+  line-height: 1.2;
+}
 
 // -------------------------------------------------------------------------
 // main
 // -------------------------------------------------------------------------
 
+body {
+  font-family: Poppins, Helvetica, Arial, sans-serif;
+  font-size: $font-size-base;
+}
+
 main {
   word-break: break-word;
-  width: calc(100% - 2rem);
+  max-width: min(1000px, 100%);
+  margin: 0 auto;
+  padding: 0 $spacing-container-edge-spacing;
 }
 
 // -------------------------------------------------------------------------
@@ -48,8 +139,8 @@ main {
 $logo-height: 75px;
 
 .site-header {
-  background-color: hsl(0, 0%, 25.88%);
-  font-size: $font-size-2xl;
+  background-color: $gray;
+  font-size: $font-size-lg;
   padding: $spacing-container-edge-spacing;
 
   display: flex;
@@ -57,7 +148,7 @@ $logo-height: 75px;
   justify-content: space-between;
   align-items: center;
 
-  border-bottom: 4px solid hsl(173, 72%, 46%);
+  border-bottom: 4px solid $teal;
 
   img {
     height: $logo-height;
@@ -82,7 +173,7 @@ $logo-height: 75px;
   }
 
   a {
-    color: hsl(0, 0%, 100%);
+    color: $white;
     text-decoration: none;
     display: flex;
     height: $logo-height;
@@ -90,14 +181,59 @@ $logo-height: 75px;
     align-items: center;
 
     &:hover {
-      background-color: hsl(0, 0%, 32%);
+      background-color: $hover-gray;
     }
   }
 }
 
 // -------------------------------------------------------------------------
+// Summary
+// -------------------------------------------------------------------------
+
+.summary {
+  font-size: $font-size-md;
+  margin-bottom: $spacing-container-edge-spacing;
+}
+
+// -------------------------------------------------------------------------
+// Metadata list
+// -------------------------------------------------------------------------
+
+dl {
+  display: grid;
+  grid-template-columns: 1fr;
+  column-gap: calc($spacing-container-edge-spacing + $spacing-element-gap);
+  align-items: start;
+  padding-left: 0;
+
+  @include breakpoints-gt-xs() {
+    grid-template-columns: auto 1fr;
+  }
+}
+
+dt {
+  font-weight: 500;
+}
+
+dd {
+  margin-left: 0;
+  margin-bottom: $spacing-element-gap;
+}
+
+// -------------------------------------------------------------------------
 // Attachments
 // -------------------------------------------------------------------------
+
+main img {
+  width: 100%;
+  border: 1px solid $black-translucent;
+  border-radius: 5px;
+}
+
+.attachments {
+  list-style: none;
+  padding-left: 0;
+}
 
 .attachment + .attachment {
   margin-top: 3rem;
