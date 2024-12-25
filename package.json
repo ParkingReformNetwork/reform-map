@@ -16,7 +16,7 @@
     "sync-directus": "tsx scripts/syncDirectus.ts",
     "broken-links": "tsx scripts/brokenLinks.ts",
     "serve-dist": "cd dist; http-server",
-    "test-dist": "PORT=8080 playwright test"
+    "test-dist": "PORT=8080 playwright test tests/app"
   },
   "devDependencies": {
     "@11ty/eleventy": "^3.0.0",
