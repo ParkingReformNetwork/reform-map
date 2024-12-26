@@ -58,7 +58,7 @@ permalink: "{{ entry.escapedPlaceId }}.html"
               <dt>Notes</dt>
               <dd>{{ citation.notes }}</dd>
             {%- endif %}
-            {% if citation.notes -%}
+            {% if citation.url -%}
               <dt>URL</dt>
               <dd><a target="_blank" href="{{ citation.url }}">{{ citation.url }}</a></dd>
             {%- endif %}
