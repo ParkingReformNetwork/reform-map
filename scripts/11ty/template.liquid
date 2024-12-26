@@ -32,16 +32,16 @@ permalink: "{{ entry.escapedPlaceId }}.html"
       <p class="summary">{{ entry.summary }}</p>
       <dl>
         <dt>Reform type</dt>
-        <dd>{{ entry.policyChange }}</dd>
+        <dd>{% render "string-array" array: entry.policyChange %}</dd>
         <dt>Reform status</dt>
         <dd>{{ entry.status }}</dd>
         <dt>Affected land uses</dt>
-        <dd>{{ entry.landUse }}</dd>
+        <dd>{% render "string-array" array: entry.landUse %}</dd>
         <dt>Reform scope</dt>
-        <dd>{{ entry.scope }}</dd>
+        <dd>{% render "string-array" array: entry.scope %}</dd>
         {% if entry.requirements -%}
           <dt>Requirements</dt>
-          <dd>{{ entry.requirements }}</dd>
+          <dd>{% render "string-array" array: entry.requirements %}</dd>
         {%- endif %}
         {% if entry.reporter -%}
           <dt>Reporter</dt>

@@ -1,0 +1,9 @@
+{%- if array.size == 1 -%}
+  {{ array[0] }}
+{%- else -%}
+  <ul>
+    {%- for item in array -%}
+      <li>{{ item }}</li>
+    {%- endfor -%}
+  </ul>
+{%- endif -%}
