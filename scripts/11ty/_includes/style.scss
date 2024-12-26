@@ -36,8 +36,7 @@ p {
 ul,
 ol,
 dl {
-  margin-top: 0;
-  margin-bottom: 10px;
+  margin: 0;
   padding: 0;
   padding-inline-start: 20px; // Default is 40px
 }
@@ -164,6 +163,10 @@ $logo-height: 75px;
   }
 }
 
+.site-header-left {
+  height: $logo-height;
+}
+
 .site-header-right {
   ul {
     list-style: none;
@@ -227,6 +230,11 @@ dd {
 .screenshots {
   list-style: none;
   padding-left: 0;
+  margin-top: $spacing-container-edge-spacing;
+
+  li {
+    margin-bottom: $spacing-element-gap;
+  }
 
   img {
     width: 100%;
