@@ -48,9 +48,11 @@ permalink: "{{ entry.escapedPlaceId }}.html"
           <dd>{{ entry.reporter }}</dd>
         {%- endif %}
       </dl>
-      {% for citation in entry.citations -%}
-        {% render "citation" citation: citation index: forloop.index %}
-      {%- endfor %}
+      <section aria-label="citations">
+        {% for citation in entry.citations -%}
+          {% render "citation" citation: citation index: forloop.index %}
+        {%- endfor %}
+      <section>
     </main>
   </body>
 </html>
