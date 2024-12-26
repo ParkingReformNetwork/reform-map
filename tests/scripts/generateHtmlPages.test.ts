@@ -21,4 +21,5 @@ test("generate html page", async ({}, testInfo) => {
   await assertPlace("Abilene_TX");
   await assertPlace("Abbottstown_PA");
   await assertPlace("Basalt_CO");
+  await assertPlace("Auburn_ME");
 });
