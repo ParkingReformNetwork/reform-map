@@ -50293,7 +50293,16 @@
       "scope": ["city center / business district", "citywide"],
       "land": ["commercial"],
       "date": "2015-07-28"
-    }
+    },
+    "rm_min": [
+      {
+        "summary": "The city removed parking minimum requirements for most non-residential developments in 2015. Zoning lots greater than 12,000 square feet in land area in the Warehouse District and 7,500 square feet in the other Form Districts have minimums.",
+        "status": "implemented",
+        "scope": ["city center / business district", "citywide"],
+        "land": ["commercial", "industrial", "medical", "other"],
+        "date": "2015-07-28"
+      }
+    ]
   },
   "Peralta, NM": {
     "place": {
@@ -51226,7 +51235,34 @@
       "scope": ["city center / business district"],
       "land": ["all uses"],
       "date": null
-    }
+    },
+    "add_max": [
+      {
+        "summary": "Parking maximums are set at 100% of the minimums for commercial establishments within the DPZ Downtown Parking Zone.",
+        "status": "implemented",
+        "scope": ["city center / business district"],
+        "land": ["commercial"],
+        "date": null
+      }
+    ],
+    "reduce_min": [
+      {
+        "summary": "If parking is required of a particular use within the Downtown Parking Zone (DPZ), nearby on-street parking spaces and municipal parking lots may count towards off-street parking spaces.",
+        "status": "implemented",
+        "scope": ["city center / business district"],
+        "land": ["all uses"],
+        "date": null
+      }
+    ],
+    "rm_min": [
+      {
+        "summary": "Small residential and business land uses within the Downtown Parking Zone (DPZ) are exempt from the minimum parking requirements. However, If a commercial land use has a gross floor area of five thousand (5,000) square feet or more, then the standards apply.",
+        "status": "implemented",
+        "scope": ["city center / business district"],
+        "land": ["all uses"],
+        "date": null
+      }
+    ]
   },
   "Plainview, MN": {
     "place": {
@@ -54254,7 +54290,34 @@
       "scope": ["city center / business district"],
       "land": ["commercial"],
       "date": "2006-12-21"
-    }
+    },
+    "add_max": [
+      {
+        "summary": "Single-family dwellings may not provide more than four spaces.",
+        "status": "implemented",
+        "scope": ["citywide"],
+        "land": ["residential, low-density"],
+        "date": null
+      }
+    ],
+    "reduce_min": [
+      {
+        "summary": "In the R3, R4, C1 and C2 Districts, on-street parking spaces may be counted toward required off street parking spaces. New on-street parking spaces may be created to count toward required off street parking.",
+        "status": "implemented",
+        "scope": ["city center / business district"],
+        "land": ["all uses"],
+        "date": "2016-08-18"
+      }
+    ],
+    "rm_min": [
+      {
+        "summary": "Businesses containing cultural and religious uses, recreational and entertainment uses, and retail and service uses, which are under one thousand (1,000) square feet in gross floor area in the R4, C1 and C2 districts are exempt from minimum parking requirements. Businesses under one thousand (1,000) square feet in gross floor area located within a shopping center configuration (i.e., a \"strip mall\") are not eligible for this exemption.",
+        "status": "implemented",
+        "scope": ["city center / business district"],
+        "land": ["commercial", "other"],
+        "date": "2006-12-21"
+      }
+    ]
   },
   "River Rouge, MI": {
     "place": {
@@ -54364,7 +54427,29 @@
       "scope": ["city center / business district", "transit oriented"],
       "land": ["commercial", "other"],
       "date": null
-    }
+    },
+    "reduce_min": [
+      {
+        "summary": "In the B2 Central Business District, existing buildings are exempt from minimum parking requirements.\nParking requirements are reduced for residential uses in transit-oriented areas, including the B2 District and B1-TOD subdistrict, as well as dwellings above the ground floor of a mixed-use development in the B1-C and B1-TC. Nonresidential uses have reduced parking requirements in transit-oriented areas, including the B2 districts and B1-TOD subdistrict. A further reduction in the required number of off street parking spaces for nonresidential uses in the B2 District and B-1 TOD may be granted through a fee in lieu of required parking.",
+        "status": "implemented",
+        "scope": [
+          "city center / business district",
+          "transit oriented",
+          "transit-oriented"
+        ],
+        "land": ["all uses", "commercial", "other", "residential, all uses"],
+        "date": null
+      }
+    ],
+    "rm_min": [
+      {
+        "summary": "Nonresidential uses of 3,000 square feet or less of gross floor area do not require parking in the B1-C Business Subdistrict - Commercial, B1-TC Business Subdistrict - Transitional Commercial, B1-TOD Business Subdistrict - Transit-Oriented Development, or B2 District.",
+        "status": "implemented",
+        "scope": ["city center / business district", "transit oriented"],
+        "land": ["commercial", "other"],
+        "date": null
+      }
+    ]
   },
   "Riverton, IL": {
     "place": {
@@ -54457,7 +54542,25 @@
       "scope": ["city center / business district"],
       "land": ["commercial", "residential, all uses"],
       "date": "2022-11-15"
-    }
+    },
+    "add_max": [
+      {
+        "summary": "Parking maximums are set at 100% of the minimums in the downtown area for commercial uses.",
+        "status": "implemented",
+        "scope": ["city center / business district"],
+        "land": ["commercial"],
+        "date": "2022-11-15"
+      }
+    ],
+    "rm_min": [
+      {
+        "summary": "Residential and business land uses are exempt in the downtown area.",
+        "status": "implemented",
+        "scope": ["city center / business district"],
+        "land": ["commercial", "residential, all uses"],
+        "date": "2022-11-15"
+      }
+    ]
   },
   "Rochester Hills, MI": {
     "place": {
@@ -54683,7 +54786,25 @@
       "scope": ["city center / business district"],
       "land": ["all uses"],
       "date": null
-    }
+    },
+    "add_max": [
+      {
+        "summary": "Parking maximums are set at 120% of the minimums.",
+        "status": "implemented",
+        "scope": ["citywide"],
+        "land": ["all uses"],
+        "date": null
+      }
+    ],
+    "rm_min": [
+      {
+        "summary": "The B-2 Central Business District is exempt from parking mandates.",
+        "status": "implemented",
+        "scope": ["city center / business district"],
+        "land": ["all uses"],
+        "date": null
+      }
+    ]
   },
   "Rock Island, WA": {
     "place": {
@@ -56514,7 +56635,25 @@
       "scope": ["city center / business district"],
       "land": ["commercial"],
       "date": null
-    }
+    },
+    "reduce_min": [
+      {
+        "summary": "Residential uses within the CBD-1 and CBD-2 Districts have reduced parking requirements.",
+        "status": "implemented",
+        "scope": ["city center / business district"],
+        "land": ["residential, all uses"],
+        "date": null
+      }
+    ],
+    "rm_min": [
+      {
+        "summary": "Nonresidential uses within the CBD-1 and CBD-2 Districts are exempt from minimum parking requirements. However, any parking existing on November 1, 2007 must be maintained.",
+        "status": "implemented",
+        "scope": ["city center / business district"],
+        "land": ["commercial", "other"],
+        "date": null
+      }
+    ]
   },
   "Sandy Springs, GA": {
     "place": {
@@ -57035,7 +57174,25 @@
       "scope": ["citywide"],
       "land": ["all uses"],
       "date": null
-    }
+    },
+    "add_max": [
+      {
+        "summary": "Parking maximums are set at 110% of the minimums for projects involving site plan approvals or site plan amendments. The parking maximums do not apply to office, residential, or hospital uses.",
+        "status": "implemented",
+        "scope": ["citywide"],
+        "land": ["commercial", "industrial", "other"],
+        "date": null
+      }
+    ],
+    "reduce_min": [
+      {
+        "summary": "Parking requirements may be reduced with approval through frequent transit, in-lieu fees or transportation demand management.",
+        "status": "implemented",
+        "scope": ["citywide"],
+        "land": ["all uses"],
+        "date": null
+      }
+    ]
   },
   "Schenectady, NY": {
     "place": {
@@ -57592,7 +57749,34 @@
       "scope": ["city center / business district"],
       "land": ["all uses"],
       "date": null
-    }
+    },
+    "add_max": [
+      {
+        "summary": "Parking maximums are set at 100% of the minimums for commercial uses within the DPZ downtown parking zone.",
+        "status": "implemented",
+        "scope": ["city center / business district"],
+        "land": ["commercial"],
+        "date": null
+      }
+    ],
+    "reduce_min": [
+      {
+        "summary": "If parking is required of a particular use in the DPZ downtown parking zone, all on-street parking spaces within one hundred fifty feet (150') and any parking spaces within municipal parking lots within three hundred feet (300') may count towards the required number of off street parking spaces.",
+        "status": "implemented",
+        "scope": ["city center / business district"],
+        "land": ["all uses"],
+        "date": null
+      }
+    ],
+    "rm_min": [
+      {
+        "summary": "The downtown parking zone (DPZ) approximates an area that historically has been the village's downtown and also includes the area around village hall. Small residential and business land uses under 5,000 square feet within the DPZ are exempt from the minimum parking requirements of this section.",
+        "status": "implemented",
+        "scope": ["city center / business district"],
+        "land": ["all uses"],
+        "date": null
+      }
+    ]
   },
   "Seneca, KS": {
     "place": {
@@ -57648,7 +57832,25 @@
       "scope": ["city center / business district"],
       "land": ["all uses", "commercial", "other"],
       "date": null
-    }
+    },
+    "reduce_min": [
+      {
+        "summary": "Within the B-1 Secondary Business District, public parking may be used to satisfy requirements for multi-family dwellings.",
+        "status": "implemented",
+        "scope": ["city center / business district"],
+        "land": ["residential, multi-family"],
+        "date": null
+      }
+    ],
+    "rm_min": [
+      {
+        "summary": "The B-2 Primary Business District is exempt from parking mandates. All uses except multi-family dwellings are exempt in the B-1 Secondary Business District.",
+        "status": "implemented",
+        "scope": ["city center / business district"],
+        "land": ["all uses", "commercial", "other"],
+        "date": null
+      }
+    ]
   },
   "Severance, CO": {
     "place": {
@@ -58906,7 +59108,30 @@
       "scope": ["city center / business district"],
       "land": ["commercial"],
       "date": null
-    }
+    },
+    "reduce_min": [
+      {
+        "summary": "Multifamily dwellings with 3 or more units and upper story residences as part of mixed-use developments have reduced parking requirements in the B3 Business District, NX Neighborhood Mixed-Use District, TX Transit Mixed-Use District, and CX Core Mixed-Use District. Parking requirements for nonresidential uses in the B6 Downtown Science and Technology district are reduced by 15% from the otherwise required number. Within the B4 Regional Shopping district, parking requirements may be reduced if a transit station serving at least 4 routes exists on-site. Reduced parking requirements apply in the CX Core Mixed-Use District and no parking is required for existing structures or buildings. Within a the NX, TX and CX districts, a fee-in-lieu of required parking may be made for nonresidential uses and guest parking for residential uses.",
+        "status": "implemented",
+        "scope": ["city center / business district", "main street / special"],
+        "land": [
+          "all uses",
+          "commercial",
+          "other",
+          "residential, multi-family"
+        ],
+        "date": null
+      }
+    ],
+    "rm_min": [
+      {
+        "summary": "Within the CX Core Mixed-Use District, no parking is required for consumer goods, food establishments, health and personal care, professional offices, and food services uses when the total gross floor area is less than 8,000 square feet.",
+        "status": "implemented",
+        "scope": ["city center / business district"],
+        "land": ["commercial"],
+        "date": null
+      }
+    ]
   },
   "Slayton, MN": {
     "place": {
@@ -59477,7 +59702,41 @@
       "scope": ["city center / business district"],
       "land": ["commercial", "other"],
       "date": null
-    }
+    },
+    "add_max": [
+      {
+        "summary": "No use may provide parking spaces in excess of 125% of the required minimum parking amount except for residential uses in residential districts or where the required parking is less than 10 spaces.",
+        "status": "implemented",
+        "scope": ["city center / business district", "main street / special"],
+        "land": ["commercial", "industrial", "medical", "other"],
+        "date": null
+      }
+    ],
+    "reduce_min": [
+      {
+        "summary": "Parking requirements may be reduced through proximity to a bus stop, proximity to a municipal parking lot, the payment of a fee-in-lieu, or the provision of EV charging stations, carshare parking or bike parking.",
+        "status": "implemented",
+        "scope": ["citywide"],
+        "land": [
+          "all uses",
+          "commercial",
+          "industrial",
+          "medical",
+          "other",
+          "residential, multi-family"
+        ],
+        "date": null
+      }
+    ],
+    "rm_min": [
+      {
+        "summary": "The minimum parking requirements do not apply to non-residential uses in the VC Village Center District.",
+        "status": "implemented",
+        "scope": ["city center / business district"],
+        "land": ["commercial", "other"],
+        "date": null
+      }
+    ]
   },
   "South Euclid, OH": {
     "place": {
@@ -60342,7 +60601,25 @@
       "scope": ["city center / business district"],
       "land": ["commercial", "other", "residential, all uses"],
       "date": null
-    }
+    },
+    "reduce_min": [
+      {
+        "summary": "Uses in the CBD-1 and CBD-2 districts which are not exempt may count on-street parking towards parking requirements.",
+        "status": "implemented",
+        "scope": ["city center / business district"],
+        "land": ["all uses"],
+        "date": null
+      }
+    ],
+    "rm_min": [
+      {
+        "summary": "All uses allowed in the CBD-1 and CBD-2 Districts, except for Public Service Facilities, Motor Vehicle Rental, and Drive-through Facilities are exempt from parking mandates, if the lot is located within a Special Service Area and a public parking facility is located nearby.",
+        "status": "implemented",
+        "scope": ["city center / business district"],
+        "land": ["commercial", "other", "residential, all uses"],
+        "date": null
+      }
+    ]
   },
   "St. Charles, MI": {
     "place": {

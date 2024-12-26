@@ -21,7 +21,7 @@ import {
 import { PlaceId as PlaceStringId, RawCorePolicy } from "../src/js/types";
 import { getLongLat, initGeocoder } from "./lib/geocoder";
 import {
-  Attachment,
+  DirectusFile,
   Citation,
   ExtendedPolicy,
   RawCompleteEntry,
@@ -259,17 +259,21 @@ function createAttachments(
   attachmentJunctionIds: number[],
   placeId: string,
   citationIdx: number,
-): Attachment[] {
-  return attachmentJunctionIds.map((attachmentJunctionId, attachmentIdx) => {
+): { attachments: DirectusFile[]; screenshots: DirectusFile[] } {
+  const attachments: DirectusFile[] = [];
+  const screenshots: DirectusFile[] = [];
+  attachmentJunctionIds.forEach((attachmentJunctionId, attachmentIdx) => {
     const fileMetadata = filesByAttachmentJunctionId[attachmentJunctionId];
     const fileExtension = mimeTypeToFileExtension(fileMetadata);
     const fileName = `${escapePlaceId(placeId)}_${citationIdx + 1}_${attachmentIdx + 1}.${fileExtension}`;
-    return {
-      fileName,
-      isDoc: fileExtension === "pdf" || fileExtension === "docx",
-      directusId: fileMetadata.id,
-    };
+    const directusFile = { fileName, directusId: fileMetadata.id };
+    if (fileExtension === "pdf" || fileExtension === "docx") {
+      attachments.push(directusFile);
+    } else {
+      screenshots.push(directusFile);
+    }
   });
+  return { attachments, screenshots };
 }
 
 function createCitations(
@@ -280,7 +284,7 @@ function createCitations(
 ): Citation[] {
   return citationJunctionIds.map((junctionId, citationIdx) => {
     const citationRecord = citationsByJunctionId[junctionId];
-    const attachments = createAttachments(
+    const { attachments, screenshots } = createAttachments(
       filesByAttachmentJunctionId,
       citationRecord.attachments!,
       placeId,
@@ -291,6 +295,7 @@ function createCitations(
       url: citationRecord.url!,
       notes: citationRecord.notes!,
       attachments,
+      screenshots,
     };
   });
 }

@@ -15,17 +15,17 @@ import {
 } from "../../src/js/types";
 import { processRawCoreEntry } from "../../src/js/data";
 
-export type Attachment = {
+export interface DirectusFile {
   fileName: string;
   directusId: string;
-  isDoc: boolean;
-};
+}
 
 export interface Citation {
   description: string;
   url: string | null;
   notes: string | null;
-  attachments: Attachment[];
+  attachments: DirectusFile[];
+  screenshots: DirectusFile[];
 }
 
 export interface ExtendedPolicy {

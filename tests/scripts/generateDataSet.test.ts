@@ -39,6 +39,7 @@ test("generate CSVs", async ({}, testInfo) => {
     url: null,
     notes: null,
     attachments: [],
+    screenshots: [],
   };
 
   const entries: ProcessedCompleteEntry[] = [
