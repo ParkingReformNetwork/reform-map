@@ -39,10 +39,14 @@ permalink: "{{ entry.escapedPlaceId }}.html"
         <dd>{{ entry.landUse }}</dd>
         <dt>Reform scope</dt>
         <dd>{{ entry.scope }}</dd>
-        <dt>Requirements</dt>
-        <dd>{{ entry.requirements }}</dd>
-        <dt>Reporter</dt>
-        <dd>{{ entry.reporter }}</dd>
+        {% if entry.requirements -%}
+          <dt>Requirements</dt>
+          <dd>{{ entry.requirements }}</dd>
+        {%- endif %}
+        {% if entry.reporter -%}
+          <dt>Reporter</dt>
+          <dd>{{ entry.reporter }}</dd>
+        {%- endif %}
       </dl>
       {% for citation in entry.citations -%}
         <section>
@@ -50,10 +54,14 @@ permalink: "{{ entry.escapedPlaceId }}.html"
           <dl>
             <dt>Source</dt>
             <dd>{{ citation.description }}</dd>
-            <dt>Notes</dt>
-            <dd>{{ citation.notes }}</dd>
-            <dt>URL</dt>
-            <dd><a target="_blank" href="{{ citation.url }}">{{ citation.url }}</a></dd>
+            {% if citation.notes -%}
+              <dt>Notes</dt>
+              <dd>{{ citation.notes }}</dd>
+            {%- endif %}
+            {% if citation.notes -%}
+              <dt>URL</dt>
+              <dd><a target="_blank" href="{{ citation.url }}">{{ citation.url }}</a></dd>
+            {%- endif %}
           </dl>
           {% if citation.attachments -%}
             <h3>Attachments and screenshots</h3>
