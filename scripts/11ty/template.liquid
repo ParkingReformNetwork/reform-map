@@ -31,7 +31,7 @@ layout: layout.liquid
   </dl>
   <section aria-label="citations">
     {% for citation in entry.citations -%}
-      {% render "citation" citation: citation index: forloop.index %}
+      {% render "citation" citation: citation numCitations: entry.citations.size index: forloop.index %}
     {%- endfor %}
   <section>
 </main>
