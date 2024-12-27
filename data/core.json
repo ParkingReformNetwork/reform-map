@@ -49388,7 +49388,25 @@
       "scope": ["city center / business district", "citywide"],
       "land": ["all uses", "commercial", "residential, multi-family"],
       "date": "2017-12-11"
-    }
+    },
+    "add_max": [
+      {
+        "summary": "Parking maximums are set at 125% of the minimums, except for residential uses in residential districts, and uses with a requirement of less than ten spaces.",
+        "status": "implemented",
+        "scope": ["city center / business district", "main street / special"],
+        "land": ["commercial", "industrial", "medical", "other"],
+        "date": "2017-12-11"
+      }
+    ],
+    "reduce_min": [
+      {
+        "summary": "Minimum parking requirements do not apply to nonresidential uses in existing buildings within the Downtown area, within the boundaries of Lakewood Boulevard to the north, Orchard Drive to the west, Indianwood Boulevard to the South, and Forest Boulevard to the east. Parking requirements may be reduced for nonresidential uses within one-half mile of a commuter rail station, within one-quarter mile of a public transit bus stop, or within 400 feet of a municipally-owned parking lot. Parking requirements may be reduced for all uses in all districts by providing EV charging stations or through the payment of a fee-in-lieu of required parking. Multi-family dwellings that reserve car-share parking spaces may further reduce the total number of required parking spaces.",
+        "status": "implemented",
+        "scope": ["city center / business district", "citywide"],
+        "land": ["all uses", "commercial", "residential, multi-family"],
+        "date": "2017-12-11"
+      }
+    ]
   },
   "Park Ridge, IL": {
     "place": {
@@ -49950,7 +49968,34 @@
       "scope": ["city center / business district", "citywide"],
       "land": ["all uses", "commercial"],
       "date": null
-    }
+    },
+    "add_max": [
+      {
+        "summary": "The total number of accessory parking spaces provided for one-, two-, or multiple-family dwellings or hotels may not exceed the requirements by more than 50%, or four spaces, whichever number is greater.",
+        "status": "implemented",
+        "scope": ["citywide"],
+        "land": ["other", "residential, all uses"],
+        "date": null
+      }
+    ],
+    "reduce_min": [
+      {
+        "summary": " The first 2000 square feet of retail stores, banks, furniture and appliance stores, household equipment or furniture repair shops is exempt from minimum parking requirements, as well as the first 4000 square feet of wholesale establishments.",
+        "status": "implemented",
+        "scope": ["citywide"],
+        "land": ["commercial"],
+        "date": null
+      }
+    ],
+    "rm_min": [
+      {
+        "summary": "Within the area determined by the Plan Commission to be the Central Business District the parking regulations do not apply. The first 2000 square feet of retail stores, banks, furniture and appliance stores, household equipment or furniture repair shops is exempt from minimum parking requirements, as well as the first 4000 square feet of wholesale establishments.",
+        "status": "implemented",
+        "scope": ["city center / business district", "citywide"],
+        "land": ["all uses", "commercial"],
+        "date": null
+      }
+    ]
   },
   "Peachtree Corners, GA": {
     "place": {
@@ -50294,6 +50339,15 @@
       "land": ["commercial"],
       "date": "2015-07-28"
     },
+    "reduce_min": [
+      {
+        "summary": "Parking requirements may be reduced through on-street parking.",
+        "status": "implemented",
+        "scope": ["citywide"],
+        "land": ["all uses"],
+        "date": null
+      }
+    ],
     "rm_min": [
       {
         "summary": "The city removed parking minimum requirements for most non-residential developments in 2015. Zoning lots greater than 12,000 square feet in land area in the Warehouse District and 7,500 square feet in the other Form Districts have minimums.",
