@@ -116,6 +116,39 @@ h3 {
 }
 
 // -------------------------------------------------------------------------
+// Theme: Links
+// -------------------------------------------------------------------------
+
+a {
+  color: #337ab7;
+  text-decoration: none;
+
+  &:hover,
+  &:focus {
+    color: #23527c;
+    text-decoration: underline;
+  }
+}
+
+.external-link:hover,
+.download-link:hover {
+  // We disable underlining because the font awesome icon won't
+  // have underlining on hover, which looks weird.
+  text-decoration: none;
+}
+
+.external-link svg,
+.download-link svg {
+  width: 1em;
+  height: 1em;
+  vertical-align: -0.125em;
+}
+
+.external-link svg {
+  transform: rotate(-45deg);
+}
+
+// -------------------------------------------------------------------------
 // main
 // -------------------------------------------------------------------------
 

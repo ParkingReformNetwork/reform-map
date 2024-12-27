@@ -1,0 +1,9 @@
+{%- if array.size == 1 -%}
+  {% render "attachment" attachment: array[0] %}
+{%- else -%}
+  <ul>
+    {%- for item in array -%}
+      <li>{% render "attachment" attachment: item %}</li>
+    {%- endfor -%}
+  </ul>
+{%- endif -%}

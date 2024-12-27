@@ -9,18 +9,12 @@
     {%- endif %}
     {% if citation.url -%}
       <dt>URL</dt>
-      <dd><a target="_blank" href="{{ citation.url }}">{{ citation.url }}</a></dd>
+      <dd><a target="_blank" class="external-link" href="{{ citation.url }}">{{ citation.urlDomain }} {% render "icons/right-arrow" %}</a></dd>
     {%- endif %}
     {%- if citation.attachments.size > 0 -%}
       <dt>Attachments</dt>
       <dd>
-        {%- capture attachment_links -%}
-        {%- for attachment in citation.attachments -%}
-          <a target="_blank" download="{{ attachment.fileName }}" href="https://mandates-map.directus.app/assets/{{ attachment.directusId }}/{{ attachment.fileName }}?download">{{ attachment.fileName }}</a>{% unless forloop.last %},{% endunless %}
-        {%- endfor -%}
-        {%- endcapture -%}
-        {%- assign mapped_attachments = attachment_links | split: "," -%}
-        {% render "string-array" array: mapped_attachments %}
+        {% render "attachment-array" array: citation.attachments %}
       </dd>
     {%- endif %}
   </dl>

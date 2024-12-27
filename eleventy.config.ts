@@ -35,7 +35,10 @@ export default async function (eleventyConfig: any) {
       scope: entry.unifiedPolicy.scope,
       requirements: entry.unifiedPolicy.requirements,
       reporter: entry.unifiedPolicy.reporter,
-      citations: entry.unifiedPolicy.citations,
+      citations: entry.unifiedPolicy.citations.map((citation) => ({
+        urlDomain: citation.url ? new URL(citation.url).hostname : null,
+        ...citation,
+      })),
     })),
   );
 
