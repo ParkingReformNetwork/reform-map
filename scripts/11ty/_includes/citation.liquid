@@ -9,7 +9,7 @@
     {%- endif %}
     {% if citation.url -%}
       <dt>URL</dt>
-      <dd><a target="_blank" class="external-link" href="{{ citation.url }}">{{ citation.url }} {% render "icons/right-arrow" %}</a></dd>
+      <dd><a target="_blank" class="external-link" href="{{ citation.url }}">{{ citation.urlDomain }} {% render "icons/right-arrow" %}</a></dd>
     {%- endif %}
     {%- if citation.attachments.size > 0 -%}
       <dt>Attachments</dt>
