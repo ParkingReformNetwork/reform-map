@@ -28,6 +28,7 @@ export default async function (eleventyConfig: any) {
       placeId,
       escapedPlaceId: escapePlaceId(placeId),
       summary: entry.unifiedPolicy.summary,
+      date: entry.unifiedPolicy.date?.format(),
       status: entry.unifiedPolicy.status,
       policyChange: entry.unifiedPolicy.policy,
       landUse: entry.unifiedPolicy.land,
