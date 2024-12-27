@@ -14,6 +14,10 @@ layout: layout.liquid
   <dl>
     <dt>Reform type</dt>
     <dd>{% render "string-array" array: entry.policyChange %}</dd>
+    {% if entry.date -%}
+      <dt>Reform date</dt>
+      <dd>{{ entry.date }}</dd>
+    {%- endif %}
     <dt>Reform status</dt>
     <dd>{{ entry.status }}</dd>
     <dt>Affected land uses</dt>
