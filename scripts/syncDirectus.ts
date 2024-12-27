@@ -4,7 +4,7 @@
 
 import fs from "fs/promises";
 
-import { groupBy } from "lodash-es";
+import { groupBy, kebabCase } from "lodash-es";
 import { updateItem } from "@directus/sdk";
 import NodeGeocoder from "node-geocoder";
 
@@ -26,7 +26,6 @@ import {
   ExtendedPolicy,
   RawCompleteEntry,
 } from "./lib/data";
-import { escapePlaceId } from "../src/js/data";
 
 // --------------------------------------------------------------------------
 // Read Directus
@@ -258,21 +257,40 @@ function createAttachments(
   filesByAttachmentJunctionId: Record<number, FileMetadata>,
   attachmentJunctionIds: number[],
   placeId: string,
-  citationIdx: number,
+  citationIdx: number | null,
 ): { attachments: DirectusFile[]; screenshots: DirectusFile[] } {
-  const attachments: DirectusFile[] = [];
-  const screenshots: DirectusFile[] = [];
-  attachmentJunctionIds.forEach((attachmentJunctionId, attachmentIdx) => {
+  const attachmentIds: Array<{ directusId: string; extension: string }> = [];
+  const screenshotIds: Array<{ directusId: string; extension: string }> = [];
+  attachmentJunctionIds.forEach((attachmentJunctionId) => {
     const fileMetadata = filesByAttachmentJunctionId[attachmentJunctionId];
     const fileExtension = mimeTypeToFileExtension(fileMetadata);
-    const fileName = `${escapePlaceId(placeId)}_${citationIdx + 1}_${attachmentIdx + 1}.${fileExtension}`;
-    const directusFile = { fileName, directusId: fileMetadata.id };
+    const result = { extension: fileExtension, directusId: fileMetadata.id };
     if (fileExtension === "pdf" || fileExtension === "docx") {
-      attachments.push(directusFile);
+      attachmentIds.push(result);
     } else {
-      screenshots.push(directusFile);
+      screenshotIds.push(result);
     }
   });
+
+  let fileNamePrefix = kebabCase(placeId);
+  if (citationIdx !== null) {
+    fileNamePrefix += `-citation${citationIdx + 1}`;
+  }
+
+  const attachments: DirectusFile[] = attachmentIds.map(
+    ({ directusId, extension }, idx) => {
+      const fileIndex = attachmentIds.length === 1 ? "" : `${idx + 1}`;
+      const fileName = `${fileNamePrefix}-attachment${fileIndex}.${extension}`;
+      return { fileName, directusId };
+    },
+  );
+  const screenshots: DirectusFile[] = screenshotIds.map(
+    ({ directusId, extension }, idx) => {
+      const fileIndex = screenshotIds.length === 1 ? "" : `${idx + 1}`;
+      const fileName = `${fileNamePrefix}-screenshot${fileIndex}.${extension}`;
+      return { fileName, directusId };
+    },
+  );
   return { attachments, screenshots };
 }
 
@@ -288,7 +306,7 @@ function createCitations(
       filesByAttachmentJunctionId,
       citationRecord.attachments!,
       placeId,
-      citationIdx,
+      citationJunctionIds.length === 1 ? null : citationIdx,
     );
     return {
       description: citationRecord.source_description!,
