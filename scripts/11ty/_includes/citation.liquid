@@ -1,5 +1,5 @@
 <article>
-  <h2>Citation {{ index }}</h2>
+  <h2>Citation{% if numCitations > 1 %} {{ index }}{% endif %}</h2>
   <dl>
     <dt>Source</dt>
     <dd>{{ citation.description }}</dd>
