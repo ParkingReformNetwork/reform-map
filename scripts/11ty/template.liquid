@@ -4,55 +4,34 @@ pagination:
   size: 1
   alias: entry
 permalink: "{{ entry.escapedPlaceId }}.html"
+layout: layout.liquid
 ---
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    {% capture scss -%} {% render "style.scss" %} {%- endcapture -%}
-    <style>{{ scss | scss_compile | cssmin }}</style>
-    <title>Parking reforms in {{ entry.placeId }} | Parking Reform Network</title>
-    <script
-      async
-      src="https://www.googletagmanager.com/gtag/js?id=G-5MFS4ZVMY3"
-    ></script>
-    <script>
-      window.dataLayer = window.dataLayer || []; function
-      gtag(){dataLayer.push(arguments);} gtag('js', new Date()); gtag('config',
-      'G-5MFS4ZVMY3');
-    </script>
-  </head>
-  <body>
-    {% render "header" %}
-    <main>
-      <header>
-        <h1>Parking reforms in {{ entry.placeId }}</h1>
-      </header>
-      <p class="summary">{{ entry.summary }}</p>
-      <dl>
-        <dt>Reform type</dt>
-        <dd>{% render "string-array" array: entry.policyChange %}</dd>
-        <dt>Reform status</dt>
-        <dd>{{ entry.status }}</dd>
-        <dt>Affected land uses</dt>
-        <dd>{% render "string-array" array: entry.landUse %}</dd>
-        <dt>Reform scope</dt>
-        <dd>{% render "string-array" array: entry.scope %}</dd>
-        {% if entry.requirements.size > 0 -%}
-          <dt>Requirements</dt>
-          <dd>{% render "string-array" array: entry.requirements %}</dd>
-        {%- endif %}
-        {% if entry.reporter -%}
-          <dt>Reporter</dt>
-          <dd>{{ entry.reporter }}</dd>
-        {%- endif %}
-      </dl>
-      <section aria-label="citations">
-        {% for citation in entry.citations -%}
-          {% render "citation" citation: citation index: forloop.index %}
-        {%- endfor %}
-      <section>
-    </main>
-  </body>
-</html>
+<main>
+  <header>
+    <h1>Parking reforms in {{ entry.placeId }}</h1>
+  </header>
+  <p class="summary">{{ entry.summary }}</p>
+  <dl>
+    <dt>Reform type</dt>
+    <dd>{% render "string-array" array: entry.policyChange %}</dd>
+    <dt>Reform status</dt>
+    <dd>{{ entry.status }}</dd>
+    <dt>Affected land uses</dt>
+    <dd>{% render "string-array" array: entry.landUse %}</dd>
+    <dt>Reform scope</dt>
+    <dd>{% render "string-array" array: entry.scope %}</dd>
+    {% if entry.requirements.size > 0 -%}
+      <dt>Requirements</dt>
+      <dd>{% render "string-array" array: entry.requirements %}</dd>
+    {%- endif %}
+    {% if entry.reporter -%}
+      <dt>Reporter</dt>
+      <dd>{{ entry.reporter }}</dd>
+    {%- endif %}
+  </dl>
+  <section aria-label="citations">
+    {% for citation in entry.citations -%}
+      {% render "citation" citation: citation index: forloop.index %}
+    {%- endfor %}
+  <section>
+</main>

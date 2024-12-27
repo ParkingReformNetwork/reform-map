@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    {% capture scss -%} {% render "style.scss" %} {%- endcapture -%}
+    <style>{{ scss | scss_compile | cssmin }}</style>
+    <title>Parking reforms in {{ entry.placeId }} | Parking Reform Network</title>
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=G-5MFS4ZVMY3"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || []; function
+      gtag(){dataLayer.push(arguments);} gtag('js', new Date()); gtag('config',
+      'G-5MFS4ZVMY3');
+    </script>
+  </head>
+  <body>
+    {% render "header" %}
+    {{ content }}
+  </body>
+</html>
