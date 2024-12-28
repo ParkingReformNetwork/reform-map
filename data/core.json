@@ -5047,7 +5047,34 @@
       "scope": ["city center / business district"],
       "land": ["commercial"],
       "date": "2018-12-18"
-    }
+    },
+    "add_max": [
+      {
+        "summary": "Parking maximums are set at 125% of the minimums, except for residential uses in residential districts, or for uses requiring 10 spaces or less.",
+        "status": "implemented",
+        "scope": ["citywide"],
+        "land": ["commercial", "industrial", "medical", "other"],
+        "date": "2018-12-18"
+      }
+    ],
+    "reduce_min": [
+      {
+        "summary": "Off-street parking requirements may be reduced for non-residential uses with prior written approval by the Zoning Administrator based on proximity to a commuter rail station, proximity to a bus stop, or proximity to a municipal parking lot. All uses may reduce parking requirements with approval by providing an EV charging station, paying a fee-in-lieu of required parking, or providing dedicated carshare spaces.",
+        "status": "implemented",
+        "scope": ["citywide"],
+        "land": ["all uses", "commercial", "industrial", "medical", "other"],
+        "date": "2018-12-18"
+      }
+    ],
+    "rm_min": [
+      {
+        "summary": "Minimum parking requirements do not apply to non-residential uses in the C-1 District with approval of the Zoning Administrator.",
+        "status": "implemented",
+        "scope": ["city center / business district"],
+        "land": ["commercial", "other"],
+        "date": "2018-12-18"
+      }
+    ]
   },
   "Benson, AZ": {
     "place": {
@@ -6443,7 +6470,25 @@
       "scope": ["city center / business district", "transit oriented"],
       "land": ["commercial"],
       "date": null
-    }
+    },
+    "reduce_min": [
+      {
+        "summary": "The first 2000 square feet of a commercial use in the C-1 Central Area Commercial District and UTOD Uptown Transit Oriented Development District is exempt from parking mandates. Any business use may count on-street parking towards the minimums. Parking minimums were lowered for most uses in 2024 citywide.",
+        "status": "implemented",
+        "scope": ["city center / business district", "transit oriented"],
+        "land": ["commercial"],
+        "date": null
+      }
+    ],
+    "rm_min": [
+      {
+        "summary": "The first 2000 square feet of a commercial use in the C-1 Central Area Commercial District and UTOD Uptown Transit Oriented Development District is exempt from parking mandates. Prior to 2024, all uses in the C-1 District were exempt.",
+        "status": "implemented",
+        "scope": ["city center / business district", "transit oriented"],
+        "land": ["commercial"],
+        "date": null
+      }
+    ]
   },
   "Blue River, CO": {
     "place": {
@@ -8864,7 +8909,25 @@
       "scope": ["city center / business district"],
       "land": ["commercial"],
       "date": null
-    }
+    },
+    "add_max": [
+      {
+        "summary": "Within the MU Mixed-Use Overlay District, a maximum of 1.5 parking spaces may provided per residential unit.",
+        "status": "implemented",
+        "scope": ["city center / business district"],
+        "land": ["residential, all uses"],
+        "date": null
+      }
+    ],
+    "rm_min": [
+      {
+        "summary": "Within the MU Mixed-Use Overlay District, off-street parking is not required for commercial uses abutting the sidewalk unless the use exceeds ten thousand (10,000) square feet.",
+        "status": "implemented",
+        "scope": ["city center / business district"],
+        "land": ["commercial"],
+        "date": null
+      }
+    ]
   },
   "Calumet Park, IL": {
     "place": {
@@ -8882,7 +8945,25 @@
       "scope": ["citywide"],
       "land": ["all uses"],
       "date": null
-    }
+    },
+    "add_max": [
+      {
+        "summary": "Parking maximums are set at 110% of the minimums for nonresidential uses, unless additional parking is granted by approval of the zoning board of appeals.",
+        "status": "implemented",
+        "scope": ["citywide"],
+        "land": ["commercial", "industrial", "medical", "other"],
+        "date": null
+      }
+    ],
+    "reduce_min": [
+      {
+        "summary": "The zoning board of appeals may reduce the parking requirements based upon a finding that there will be a lower demand for parking due to convenient municipal off-street parking or on-street spaces located along the site’s frontage, sidewalk connections to adjacent residential neighborhoods or employment centers, the availability of other forms of travel, such as transit or non-motorized transportation, or where a parking study demonstrates that another standard would be more appropriate.",
+        "status": "implemented",
+        "scope": ["citywide"],
+        "land": ["all uses"],
+        "date": null
+      }
+    ]
   },
   "Calumet, MI": {
     "place": {
@@ -11936,7 +12017,25 @@
       "scope": ["city center / business district", "transit oriented"],
       "land": ["commercial", "residential, all uses"],
       "date": null
-    }
+    },
+    "add_max": [
+      {
+        "summary": "Parking maximums apply to all residential uses, and most nonresidential uses within the Downtown Zoning District.",
+        "status": "implemented",
+        "scope": ["city center / business district", "transit oriented"],
+        "land": ["commercial", "residential, all uses"],
+        "date": null
+      }
+    ],
+    "rm_min": [
+      {
+        "summary": "There are no minimum parking requirements for certain nonresidential uses within the Downtown Zoning District. \n\nIn certain districts (B,C, or D), the minimum parking requirement for residential uses may be reduced by 50% if the property is within 1,320 feet of a CTA rail station, a Metra rail station, OR along a high frequency bus line corridor, or 2,640 feet of other specified bus line corridors that is also along a designated 'pedestrian street or a 'pedestrian retail street'.\n\nIn other districts (B,C, D or M), the minimum parking requirement for non-residential uses may be reduced by 50% if the property is within 1,320 feet of a CTA rail station, a Metra rail station, OR along a high frequency bus line corridor, or 2,640 feet of other specified bus line corridors that is also along a designated 'pedestrian street or a 'pedestrian retail street'.\n\nThe parking may be reduced by 100% if it is approved as a special use. ",
+        "status": "implemented",
+        "scope": ["city center / business district", "transit oriented"],
+        "land": ["commercial", "residential, all uses"],
+        "date": null
+      }
+    ]
   },
   "Chico, CA": {
     "place": {
@@ -63374,7 +63473,30 @@
       "scope": ["citywide", "transit oriented"],
       "land": ["commercial", "industrial", "residential, all uses"],
       "date": null
-    }
+    },
+    "reduce_min": [
+      {
+        "summary": "Nonresidential uses citywide may have reduced requirements when showers or lockers for bike commuters are provided.",
+        "status": "implemented",
+        "scope": ["citywide", "transit oriented"],
+        "land": ["commercial", "industrial", "medical", "other"],
+        "date": null
+      }
+    ],
+    "rm_min": [
+      {
+        "summary": "A development project located within one-half mile of a major transit stop is not required to comply with minimum parking requirements except for event centers and hotels. ADUs are exempt from parking mandates citywide.",
+        "status": "implemented",
+        "scope": ["citywide", "transit oriented"],
+        "land": [
+          "commercial",
+          "industrial",
+          "residential, all uses",
+          "residential, low-density"
+        ],
+        "date": null
+      }
+    ]
   },
   "Superior Charter Township, MI": {
     "place": {
@@ -66679,7 +66801,33 @@
       ],
       "land": ["commercial", "residential, all uses"],
       "date": null
-    }
+    },
+    "reduce_min": [
+      {
+        "summary": "Within the Downtown Mixed-Use Zoning District, buildings constructed prior to adoption of the Downtown Specific Plan (September 2005) are exempt from parking requirements. Parking reductions are available citywide for historic preservation and motorcycle parking.",
+        "status": "implemented",
+        "scope": [
+          "city center / business district",
+          "citywide",
+          "transit oriented"
+        ],
+        "land": ["all uses"],
+        "date": null
+      }
+    ],
+    "rm_min": [
+      {
+        "summary": "ADUs may be exempted from parking mandates under certain conditions. Commercial retail uses in multi-tenant buildings having a gross floor area of 2500 square feet or less are exempt from off-street parking and loading requirements. One and two-story nonresidential projects on existing lots that are 5000 square feet or less are exempt from off-street parking and loading requirements. Within the Downtown and Waterfront Mixed-use Zoning Districts, ground floor non-residential uses in mixed-use buildings occupying less than 5000 square feet are exempt from off-street parking and loading requirements.",
+        "status": "implemented",
+        "scope": [
+          "city center / business district",
+          "citywide",
+          "transit oriented"
+        ],
+        "land": ["commercial", "residential, low-density"],
+        "date": null
+      }
+    ]
   },
   "Valley Center, KS": {
     "place": {
@@ -67395,7 +67543,25 @@
       "scope": ["citywide", "transit oriented"],
       "land": ["residential, low-density"],
       "date": null
-    }
+    },
+    "reduce_min": [
+      {
+        "summary": "Within the Central Business District Parking Zone, a fee in-lieu of required parking may be provided.",
+        "status": "implemented",
+        "scope": ["city center / business district", "transit oriented"],
+        "land": ["all uses"],
+        "date": null
+      }
+    ],
+    "rm_min": [
+      {
+        "summary": "ADUs may be exempted from parking mandates when certain criteria are met.",
+        "status": "implemented",
+        "scope": ["citywide", "transit oriented"],
+        "land": ["residential, low-density"],
+        "date": null
+      }
+    ]
   },
   "Vivian, LA": {
     "place": {
