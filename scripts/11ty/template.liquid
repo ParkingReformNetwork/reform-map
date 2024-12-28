@@ -10,30 +10,25 @@ layout: layout.liquid
   <header>
     <h1>Parking reforms in {{ entry.placeId }}</h1>
   </header>
-  <p class="summary">{{ entry.summary }}</p>
-  <dl>
-    <dt>Reform type</dt>
-    <dd>{% render "string-array" array: entry.policyChange %}</dd>
-    {% if entry.date -%}
-      <dt>Reform date</dt>
-      <dd>{{ entry.date }}</dd>
-    {%- endif %}
-    <dt>Reform status</dt>
-    <dd>{{ entry.status }}</dd>
-    <dt>Reform scope</dt>
-    <dd>{% render "string-array" array: entry.scope %}</dd>
-    <dt>Affected land uses</dt>
-    <dd>{% render "string-array" array: entry.landUse %}</dd>
-    {% if entry.requirements.size > 0 -%}
-      <dt>Requirements</dt>
-      <dd>{% render "string-array" array: entry.requirements %}</dd>
-    {%- endif %}
-    {% if entry.reporter -%}
-      <dt>Reporter</dt>
-      <dd>{{ entry.reporter }}</dd>
-    {%- endif %}
-  </dl>
-  {% for citation in entry.citations -%}
-    {% render "citation" citation: citation numCitations: entry.citations.size index: forloop.index %}
-  {%- endfor %}
+  <ul class="place-details">
+    <li>{{ entry.population }} residents</li>
+  </ul>
+  {% if entry.rmMin.size > 0 -%}
+    <section>
+      <h2>Parking minimum removal{% if entry.rmMin.size > 1 %}s{% endif %}</h2>
+      {% render "policy-record-array" array: entry.rmMin %}
+    </section>
+  {%- endif %}
+  {% if entry.reduceMin.size > 0 -%}
+    <section>
+      <h2>Parking minimum reduction{% if entry.addMax.size > 1 %}s{% endif %}</h2>
+      {% render "policy-record-array" array: entry.reduceMin %}
+    </section>
+  {%- endif %}
+  {% if entry.addMax.size > 0 -%}
+    <section>
+      <h2>Parking maximum{% if entry.addMax.size > 1 %}s{% endif %}</h2>
+      {% render "policy-record-array" array: entry.addMax %}
+    </section>
+  {%- endif %}
 </main>
