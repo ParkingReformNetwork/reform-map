@@ -21,7 +21,7 @@
   {% if citation.screenshots.size > 0 -%}
     <ul class="screenshots">
     {% for screenshot in citation.screenshots -%}
-      <li><img src="https://mandates-map.directus.app/assets/{{ screenshot.directusId }}/{{ screenshot.fileName }}" /></li>
+      <li><img alt="Screenshot of {{ citation.description }}" src="https://mandates-map.directus.app/assets/{{ screenshot.directusId }}/{{ screenshot.fileName }}" /></li>
     {%- endfor %}
     </ul>
   {%- endif %}
