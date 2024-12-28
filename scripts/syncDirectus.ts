@@ -404,7 +404,7 @@ function combineData(
           });
         }
         const hasDistinctPolicyTypes =
-          [numAddMax, numReduceMin, numRmMin].filter(Boolean).length > 2;
+          [numAddMax, numReduceMin, numRmMin].filter(Boolean).length > 1;
 
         const addMax: Array<RawCorePolicy & ExtendedPolicy> = [];
         const reduceMin: Array<RawCorePolicy & ExtendedPolicy> = [];
