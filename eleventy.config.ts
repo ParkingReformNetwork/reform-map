@@ -3,6 +3,7 @@
 // @ts-ignore
 import CleanCSS from "clean-css";
 import { compileString as compileStringSass } from "sass";
+import { capitalize } from "lodash-es";
 
 import { readProcessedCompleteData } from "./scripts/lib/data.js";
 import { escapePlaceId } from "./src/js/data.js";
@@ -29,11 +30,11 @@ export default async function (eleventyConfig: any) {
       escapedPlaceId: escapePlaceId(placeId),
       summary: entry.unifiedPolicy.summary,
       date: entry.unifiedPolicy.date?.format(),
-      status: entry.unifiedPolicy.status,
-      policyChange: entry.unifiedPolicy.policy,
-      landUse: entry.unifiedPolicy.land,
-      scope: entry.unifiedPolicy.scope,
-      requirements: entry.unifiedPolicy.requirements,
+      status: capitalize(entry.unifiedPolicy.status),
+      policyChange: entry.unifiedPolicy.policy.map(capitalize),
+      landUse: entry.unifiedPolicy.land.map(capitalize),
+      scope: entry.unifiedPolicy.scope.map(capitalize),
+      requirements: entry.unifiedPolicy.requirements.map(capitalize),
       reporter: entry.unifiedPolicy.reporter,
       citations: entry.unifiedPolicy.citations.map((citation) => ({
         urlDomain: citation.url ? new URL(citation.url).hostname : null,
