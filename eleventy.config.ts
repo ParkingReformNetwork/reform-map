@@ -5,8 +5,27 @@ import CleanCSS from "clean-css";
 import { compileString as compileStringSass } from "sass";
 import { capitalize } from "lodash-es";
 
-import { readProcessedCompleteData } from "./scripts/lib/data.js";
+import {
+  ProcessedCompletePolicy,
+  readProcessedCompleteData,
+} from "./scripts/lib/data.js";
 import { escapePlaceId } from "./src/js/data.js";
+
+function processPolicyRecord(policy: ProcessedCompletePolicy): object {
+  return {
+    summary: policy.summary,
+    date: policy.date?.format(),
+    status: capitalize(policy.status),
+    scope: policy.scope.map(capitalize),
+    landUse: policy.land.map(capitalize),
+    requirements: policy.requirements.map(capitalize),
+    reporter: policy.reporter,
+    citations: policy.citations.map((citation) => ({
+      urlDomain: citation.url ? new URL(citation.url).hostname : null,
+      ...citation,
+    })),
+  };
+}
 
 export default async function (eleventyConfig: any) {
   eleventyConfig.setLiquidOptions({
@@ -23,25 +42,36 @@ export default async function (eleventyConfig: any) {
   );
 
   const completeData = await readProcessedCompleteData();
-  eleventyConfig.addGlobalData(
-    "entries",
-    Object.entries(completeData).map(([placeId, entry]) => ({
+  const legacy: object[] = [];
+  const revamp: object[] = [];
+  Object.entries(completeData).forEach(([placeId, entry]) => {
+    const common = {
       placeId,
       escapedPlaceId: escapePlaceId(placeId),
-      summary: entry.unifiedPolicy.summary,
-      date: entry.unifiedPolicy.date?.format(),
-      status: capitalize(entry.unifiedPolicy.status),
-      policyChange: entry.unifiedPolicy.policy.map(capitalize),
-      landUse: entry.unifiedPolicy.land.map(capitalize),
-      scope: entry.unifiedPolicy.scope.map(capitalize),
-      requirements: entry.unifiedPolicy.requirements.map(capitalize),
-      reporter: entry.unifiedPolicy.reporter,
-      citations: entry.unifiedPolicy.citations.map((citation) => ({
-        urlDomain: citation.url ? new URL(citation.url).hostname : null,
-        ...citation,
-      })),
-    })),
-  );
+      population: entry.place.pop.toLocaleString("en-us"),
+    };
+    if (
+      entry.add_max?.length ||
+      entry.reduce_min?.length ||
+      entry.rm_min?.length
+    ) {
+      revamp.push({
+        ...common,
+        rmMin: entry.rm_min?.map(processPolicyRecord) || [],
+        reduceMin: entry.reduce_min?.map(processPolicyRecord) || [],
+        addMax: entry.add_max?.map(processPolicyRecord) || [],
+      });
+    } else {
+      legacy.push({
+        ...common,
+        ...processPolicyRecord(entry.unifiedPolicy),
+        policyChange: entry.unifiedPolicy.policy,
+      });
+    }
+  });
+
+  eleventyConfig.addGlobalData("legacyEntries", legacy);
+  eleventyConfig.addGlobalData("entries", revamp);
 
   return {
     dir: {

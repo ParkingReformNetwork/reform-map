@@ -1,0 +1,39 @@
+---
+pagination:
+  data: legacyEntries
+  size: 1
+  alias: entry
+permalink: "{{ entry.escapedPlaceId }}.html"
+layout: layout.liquid
+---
+<main>
+  <header>
+    <h1>Parking reforms in {{ entry.placeId }}</h1>
+  </header>
+  <p class="summary">{{ entry.summary }}</p>
+  <dl>
+    <dt>Reform type</dt>
+    <dd>{% render "string-array" array: entry.policyChange %}</dd>
+    {% if entry.date -%}
+      <dt>Reform date</dt>
+      <dd>{{ entry.date }}</dd>
+    {%- endif %}
+    <dt>Reform status</dt>
+    <dd>{{ entry.status }}</dd>
+    <dt>Reform scope</dt>
+    <dd>{% render "string-array" array: entry.scope %}</dd>
+    <dt>Affected land uses</dt>
+    <dd>{% render "string-array" array: entry.landUse %}</dd>
+    {% if entry.requirements.size > 0 -%}
+      <dt>Requirements</dt>
+      <dd>{% render "string-array" array: entry.requirements %}</dd>
+    {%- endif %}
+    {% if entry.reporter -%}
+      <dt>Reporter</dt>
+      <dd>{{ entry.reporter }}</dd>
+    {%- endif %}
+  </dl>
+  {% for citation in entry.citations -%}
+    {% render "citation" citation: citation numCitations: entry.citations.size index: forloop.index %}
+  {%- endfor %}
+</main>
