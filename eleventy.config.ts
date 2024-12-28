@@ -49,6 +49,7 @@ export default async function (eleventyConfig: any) {
       placeId,
       escapedPlaceId: escapePlaceId(placeId),
       population: entry.place.pop.toLocaleString("en-us"),
+      repeal: entry.place.repeal,
     };
     if (
       entry.add_max?.length ||

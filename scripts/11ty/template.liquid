@@ -12,6 +12,9 @@ layout: layout.liquid
   </header>
   <ul class="place-details">
     <li>{{ entry.population }} residents</li>
+    {% if entry.repeal -%}
+      <li>All parking minimums removed</li>
+    {%- endif %}
   </ul>
   {% if entry.rmMin.size > 0 -%}
     <section>
