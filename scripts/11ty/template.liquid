@@ -20,10 +20,10 @@ layout: layout.liquid
     {%- endif %}
     <dt>Reform status</dt>
     <dd>{{ entry.status }}</dd>
-    <dt>Affected land uses</dt>
-    <dd>{% render "string-array" array: entry.landUse %}</dd>
     <dt>Reform scope</dt>
     <dd>{% render "string-array" array: entry.scope %}</dd>
+    <dt>Affected land uses</dt>
+    <dd>{% render "string-array" array: entry.landUse %}</dd>
     {% if entry.requirements.size > 0 -%}
       <dt>Requirements</dt>
       <dd>{% render "string-array" array: entry.requirements %}</dd>

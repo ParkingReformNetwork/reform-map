@@ -1,4 +1,5 @@
 import type { FeatureGroup } from "leaflet";
+import { capitalize } from "lodash-es";
 
 import type { ProcessedCoreEntry, PlaceId } from "./types";
 import Observable from "./Observable";
@@ -45,7 +46,9 @@ function generateScorecardRevamp(
   if (policyTypes.length === 1) {
     singlePolicyType = `<li>Reform type: ${policyTypes[0]}</li>`;
   } else {
-    const policies = policyTypes.map((type) => `<li>${type}</li>`).join("");
+    const policies = policyTypes
+      .map((type) => `<li>${capitalize(type)}</li>`)
+      .join("");
     multiplePolicyTypes = `<div>Reform types:</div><ul>${policies}</ul>`;
   }
 
