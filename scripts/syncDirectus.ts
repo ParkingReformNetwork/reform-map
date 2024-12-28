@@ -18,7 +18,11 @@ import {
   readCitationsFilesBatched,
   PolicyRecord,
 } from "./lib/directus";
-import { PlaceId as PlaceStringId, RawCorePolicy } from "../src/js/types";
+import {
+  PlaceId as PlaceStringId,
+  PolicyType,
+  RawCorePolicy,
+} from "../src/js/types";
 import { getLongLat, initGeocoder } from "./lib/geocoder";
 import {
   DirectusFile,
@@ -253,11 +257,27 @@ function mimeTypeToFileExtension(metadata: FileMetadata): string {
   return result;
 }
 
+interface AttachmentFileNameArgsBase {
+  placeId: string;
+  hasDistinctPolicyTypes: boolean;
+  policyType: PolicyType | "legacy";
+  /// The index of policy records for the current `policyType`. If
+  /// there is only one record for the `policyType`, this value should
+  /// be set to `null`.
+  policyRecordIdx: number | null;
+}
+
+type AttachmentFileNameArgs = AttachmentFileNameArgsBase & {
+  /// The index of citations for the current policy record. If
+  /// there is only one citation for the policy record, this value
+  /// should be set to `null`.
+  citationIdx: number | null;
+};
+
 export function createAttachments(
   filesByAttachmentJunctionId: Record<number, FileMetadata>,
   attachmentJunctionIds: number[],
-  placeId: string,
-  citationIdx: number | null,
+  fileNameArgs: AttachmentFileNameArgs,
 ): { attachments: DirectusFile[]; screenshots: DirectusFile[] } {
   const attachmentIds: Array<{ directusId: string; extension: string }> = [];
   const screenshotIds: Array<{ directusId: string; extension: string }> = [];
@@ -272,9 +292,25 @@ export function createAttachments(
     }
   });
 
-  let fileNamePrefix = kebabCase(placeId);
-  if (citationIdx !== null) {
-    fileNamePrefix += `-citation${citationIdx + 1}`;
+  let fileNamePrefix = kebabCase(fileNameArgs.placeId);
+  if (
+    fileNameArgs.hasDistinctPolicyTypes ||
+    fileNameArgs.policyRecordIdx !== null
+  ) {
+    const policyType = {
+      "add parking maximums": "add-max",
+      "reduce parking minimums": "reduce-min",
+      "remove parking minimums": "remove-min",
+      legacy: "legacy",
+    }[fileNameArgs.policyType];
+    const recordIdx =
+      fileNameArgs.policyRecordIdx === null
+        ? ""
+        : `${fileNameArgs.policyRecordIdx + 1}`;
+    fileNamePrefix += `-${policyType}${recordIdx}`;
+  }
+  if (fileNameArgs.citationIdx !== null) {
+    fileNamePrefix += `-citation${fileNameArgs.citationIdx + 1}`;
   }
 
   const attachments: DirectusFile[] = attachmentIds.map(
@@ -295,18 +331,20 @@ export function createAttachments(
 }
 
 function createCitations(
-  placeId: PlaceStringId,
   citationJunctionIds: number[],
   citationsByJunctionId: Record<number, Partial<DirectusCitation>>,
   filesByAttachmentJunctionId: Record<number, FileMetadata>,
+  fileNameArgs: AttachmentFileNameArgsBase,
 ): Citation[] {
   return citationJunctionIds.map((junctionId, citationIdx) => {
     const citationRecord = citationsByJunctionId[junctionId];
     const { attachments, screenshots } = createAttachments(
       filesByAttachmentJunctionId,
       citationRecord.attachments!,
-      placeId,
-      citationJunctionIds.length === 1 ? null : citationIdx,
+      {
+        ...fileNameArgs,
+        citationIdx: citationJunctionIds.length === 1 ? null : citationIdx,
+      },
     );
     return {
       description: citationRecord.source_description!,
@@ -342,19 +380,44 @@ function combineData(
             reporter: record.reporter!,
             requirements: record.requirements!,
             citations: createCitations(
-              placeId,
               record.citations!,
               citationsByLegacyReformJunctionId,
               filesByAttachmentJunctionId,
+              {
+                placeId,
+                policyType: "legacy",
+                hasDistinctPolicyTypes: false,
+                policyRecordIdx: null,
+              },
             ),
           };
         }
+
+        let numAddMax = 0;
+        let numReduceMin = 0;
+        let numRmMin = 0;
+        if (policyRecords[placeId]) {
+          policyRecords[placeId].forEach((record) => {
+            if (record.type === "add parking maximums") numAddMax += 1;
+            if (record.type === "reduce parking minimums") numReduceMin += 1;
+            if (record.type === "remove parking minimums") numRmMin += 1;
+          });
+        }
+        const hasDistinctPolicyTypes =
+          [numAddMax, numReduceMin, numRmMin].filter(Boolean).length > 2;
 
         const addMax: Array<RawCorePolicy & ExtendedPolicy> = [];
         const reduceMin: Array<RawCorePolicy & ExtendedPolicy> = [];
         const rmMin: Array<RawCorePolicy & ExtendedPolicy> = [];
         if (policyRecords[placeId]) {
           policyRecords[placeId].forEach((record) => {
+            const [collection, numPolicyRecords] = {
+              "add parking maximums": [addMax, numAddMax] as const,
+              "reduce parking minimums": [reduceMin, numReduceMin] as const,
+              "remove parking minimums": [rmMin, numRmMin] as const,
+            }[record.type!];
+            const policyRecordIdx =
+              numPolicyRecords > 1 ? collection.length : null;
             const policy = {
               summary: record.summary!,
               status: record.status!,
@@ -364,17 +427,17 @@ function combineData(
               reporter: record.reporter!,
               requirements: record.requirements!,
               citations: createCitations(
-                placeId,
                 record.citations!,
                 citationsByPolicyRecordJunctionId,
                 filesByAttachmentJunctionId,
+                {
+                  placeId,
+                  hasDistinctPolicyTypes,
+                  policyType: record.type!,
+                  policyRecordIdx,
+                },
               ),
             };
-            const collection = {
-              "add parking maximums": addMax,
-              "reduce parking minimums": reduceMin,
-              "remove parking minimums": rmMin,
-            }[record.type!];
             collection.push(policy);
           });
         }
