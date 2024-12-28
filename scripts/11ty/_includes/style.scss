@@ -169,6 +169,7 @@ main {
   width: min(1000px, 100%);
   margin: 0 auto;
   padding: 0 $spacing-container-edge-spacing;
+  padding-bottom: $spacing-container-edge-spacing;
 }
 
 // -------------------------------------------------------------------------
