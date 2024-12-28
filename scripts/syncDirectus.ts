@@ -253,7 +253,7 @@ function mimeTypeToFileExtension(metadata: FileMetadata): string {
   return result;
 }
 
-function createAttachments(
+export function createAttachments(
   filesByAttachmentJunctionId: Record<number, FileMetadata>,
   attachmentJunctionIds: number[],
   placeId: string,
@@ -524,7 +524,9 @@ async function main(): Promise<void> {
   process.exit(0);
 }
 
-main().catch((error) => {
-  console.error(error);
-  process.exit(1);
-});
+if (process.env.NODE_ENV !== "test") {
+  main().catch((error) => {
+    console.error(error);
+    process.exit(1);
+  });
+}
