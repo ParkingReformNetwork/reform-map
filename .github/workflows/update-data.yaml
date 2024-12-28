@@ -22,8 +22,8 @@ jobs:
         env:
           DIRECTUS_EMAIL: ${{ secrets.DIRECTUS_EMAIL }}
           DIRECTUS_PASSWORD: ${{ secrets.DIRECTUS_PASSWORD }}
-      - name: Gen CSV
-        run: npm run gen-csv
+      - name: Gen data set
+        run: npm run gen-data-set
       - name: Gen HTML pages
         run: npm run gen-html
       - name: Format JSON

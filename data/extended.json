@@ -2902,7 +2902,67 @@
           ]
         }
       ]
-    }
+    },
+    "add_max": [
+      {
+        "reporter": "Samuel Deetz",
+        "requirements": ["by right"],
+        "citations": [
+          {
+            "description": "Antioch Zoning Code",
+            "url": "https://codelibrary.amlegal.com/codes/antiochil/latest/antioch_il/0-0-0-9130",
+            "notes": "CHAPTER 12 OFF-STREET PARKING AND LOADING\n10-12-5: DOWNTOWN PARKING DISTRICT:\nB.   Standards:",
+            "attachments": [],
+            "screenshots": [
+              {
+                "fileName": "antioch-il-screenshot.png",
+                "directusId": "3d0e3855-f759-4d4b-a77e-aeca8b779fda"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "reduce_min": [
+      {
+        "reporter": "Samuel Deetz",
+        "requirements": ["other"],
+        "citations": [
+          {
+            "description": "Antioch Zoning Code",
+            "url": "https://codelibrary.amlegal.com/codes/antiochil/latest/antioch_il/0-0-0-9130",
+            "notes": "CHAPTER 12 OFF-STREET PARKING AND LOADING\n10-12-5: DOWNTOWN PARKING DISTRICT:\nB.   Standards:",
+            "attachments": [],
+            "screenshots": [
+              {
+                "fileName": "antioch-il-screenshot.png",
+                "directusId": "3d0e3855-f759-4d4b-a77e-aeca8b779fda"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "rm_min": [
+      {
+        "reporter": "Samuel Deetz",
+        "requirements": ["by right", "size of project"],
+        "citations": [
+          {
+            "description": "Antioch Zoning Code",
+            "url": "https://codelibrary.amlegal.com/codes/antiochil/latest/antioch_il/0-0-0-9130",
+            "notes": "CHAPTER 12 OFF-STREET PARKING AND LOADING\n10-12-5: DOWNTOWN PARKING DISTRICT:\nB.   Standards:",
+            "attachments": [],
+            "screenshots": [
+              {
+                "fileName": "antioch-il-screenshot.png",
+                "directusId": "3d0e3855-f759-4d4b-a77e-aeca8b779fda"
+              }
+            ]
+          }
+        ]
+      }
+    ]
   },
   "Appleton, MN": {
     "reduce_min": [
@@ -5750,7 +5810,51 @@
           ]
         }
       ]
-    }
+    },
+    "add_max": [
+      {
+        "reporter": "Samuel Deetz",
+        "requirements": ["by right"],
+        "citations": [
+          {
+            "description": "Batavia Zoning Code",
+            "url": "https://www.bataviail.gov/DocumentCenter/View/132/Chapter-42-Off-Street-Parking-and-Loading-Regulations-PDF",
+            "notes": "4.204.B. \nPage 9",
+            "attachments": [],
+            "screenshots": [
+              {
+                "fileName": "batavia-il-screenshot.png",
+                "directusId": "5dc2aa6e-28d1-4d9c-9870-1c1f9d12c799"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "reduce_min": [
+      {
+        "reporter": "Samuel Deetz",
+        "requirements": ["in-lieu fees", "other"],
+        "citations": [
+          {
+            "description": "Batavia Zoning Code",
+            "url": "https://www.bataviail.gov/DocumentCenter/View/132/Chapter-42-Off-Street-Parking-and-Loading-Regulations-PDF",
+            "notes": "4.203.F.;\n4.203.I.;\nPages 2-4",
+            "attachments": [],
+            "screenshots": [
+              {
+                "fileName": "batavia-il-screenshot1.png",
+                "directusId": "a2e7dd34-1cb0-4a94-9a93-6d278287778a"
+              },
+              {
+                "fileName": "batavia-il-screenshot2.png",
+                "directusId": "b86c740b-5a14-42e5-bac5-97a4d8d4e946"
+              }
+            ]
+          }
+        ]
+      }
+    ]
   },
   "Batavia, OH": {
     "rm_min": [
@@ -9397,7 +9501,79 @@
           ]
         }
       ]
-    }
+    },
+    "reduce_min": [
+      {
+        "reporter": "Noah Tang",
+        "requirements": ["by right", "frequent transit", "other"],
+        "citations": [
+          {
+            "description": "Bloomington Zoning Code",
+            "url": "https://ecode360.com/36804987",
+            "notes": "Article XII Off-Street Parking and Loading\n§ 44-1208 Off-street parking requirements.\nC. Exemptions.",
+            "attachments": [],
+            "screenshots": [
+              {
+                "fileName": "bloomington-il-citation1-screenshot.png",
+                "directusId": "ae337ea2-0b3b-411c-99ef-cb62ec0cf5a0"
+              }
+            ]
+          },
+          {
+            "description": "Bloomington Zoning Amendment",
+            "url": "https://d3n9y02raazwpg.cloudfront.net/cityblm/44ce2603-5bc7-11ee-ae13-0050569183fa-64528255-b1e8-4826-b779-8e42da5ac7eb-1709240232.pdf",
+            "notes": "Pages 32-35",
+            "attachments": [],
+            "screenshots": [
+              {
+                "fileName": "bloomington-il-citation2-screenshot1.png",
+                "directusId": "0f0d88fa-bd19-48d0-866e-bc1c9fcdf073"
+              },
+              {
+                "fileName": "bloomington-il-citation2-screenshot2.png",
+                "directusId": "854aaabe-0e14-4791-8f69-464dca3c57e2"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "rm_min": [
+      {
+        "reporter": "Noah Tang",
+        "requirements": ["by right", "size of project"],
+        "citations": [
+          {
+            "description": "Bloomington Zoning Code",
+            "url": "https://ecode360.com/36804987",
+            "notes": "Article XII Off-Street Parking and Loading\n§ 44-1208 Off-street parking requirements.\nC. Exemptions.",
+            "attachments": [],
+            "screenshots": [
+              {
+                "fileName": "bloomington-il-citation1-screenshot.png",
+                "directusId": "ae337ea2-0b3b-411c-99ef-cb62ec0cf5a0"
+              }
+            ]
+          },
+          {
+            "description": "Bloomington Zoning Amendment",
+            "url": "https://d3n9y02raazwpg.cloudfront.net/cityblm/44ce2603-5bc7-11ee-ae13-0050569183fa-64528255-b1e8-4826-b779-8e42da5ac7eb-1709240232.pdf",
+            "notes": "Pages 32-35",
+            "attachments": [],
+            "screenshots": [
+              {
+                "fileName": "bloomington-il-citation2-screenshot1.png",
+                "directusId": "0f0d88fa-bd19-48d0-866e-bc1c9fcdf073"
+              },
+              {
+                "fileName": "bloomington-il-citation2-screenshot2.png",
+                "directusId": "854aaabe-0e14-4791-8f69-464dca3c57e2"
+              }
+            ]
+          }
+        ]
+      }
+    ]
   },
   "Bloomington, IN": {
     "legacy": {
@@ -13807,7 +13983,47 @@
           ]
         }
       ]
-    }
+    },
+    "reduce_min": [
+      {
+        "reporter": "Samuel Deetz",
+        "requirements": ["by right", "other"],
+        "citations": [
+          {
+            "description": "Canton Zoning Code",
+            "url": "https://codelibrary.amlegal.com/codes/cantonil/latest/canton_il/0-0-0-8965",
+            "notes": "10-14-1(J)",
+            "attachments": [],
+            "screenshots": [
+              {
+                "fileName": "canton-il-screenshot.png",
+                "directusId": "4490535b-5ad2-4d11-831e-148f467aab99"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "rm_min": [
+      {
+        "reporter": "Samuel Deetz",
+        "requirements": ["by right", "size of project"],
+        "citations": [
+          {
+            "description": "Canton Zoning Code",
+            "url": "https://codelibrary.amlegal.com/codes/cantonil/latest/canton_il/0-0-0-8693",
+            "notes": "10-10-8",
+            "attachments": [],
+            "screenshots": [
+              {
+                "fileName": "canton-il-screenshot.png",
+                "directusId": "b6f3d568-f420-4f3e-a377-3af01e19ddd4"
+              }
+            ]
+          }
+        ]
+      }
+    ]
   },
   "Canton, OH": {
     "reduce_min": [
@@ -14169,7 +14385,55 @@
           ]
         }
       ]
-    }
+    },
+    "reduce_min": [
+      {
+        "reporter": "Samuel Deetz",
+        "requirements": ["bike parking"],
+        "citations": [
+          {
+            "description": "Carbondale Zoning Code",
+            "url": "https://codelibrary.amlegal.com/codes/carbondaleil/latest/carbondale_il/0-0-0-9984",
+            "notes": "15.4.8.7.C.",
+            "attachments": [],
+            "screenshots": [
+              {
+                "fileName": "carbondale-il-screenshot.png",
+                "directusId": "2174fc7d-f84c-4977-b197-c2e935a9acab"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "rm_min": [
+      {
+        "reporter": "Samuel Deetz",
+        "requirements": ["by right"],
+        "citations": [
+          {
+            "description": "Carbondale Zoning Code",
+            "url": "https://codelibrary.amlegal.com/codes/carbondaleil/latest/carbondale_il/0-0-0-7010",
+            "notes": "15.2.17.8; \n15.2.23.10;\n15.2.30.5",
+            "attachments": [],
+            "screenshots": [
+              {
+                "fileName": "carbondale-il-screenshot1.png",
+                "directusId": "7f20d383-ac0b-44ce-a6e8-702bb3993e47"
+              },
+              {
+                "fileName": "carbondale-il-screenshot2.png",
+                "directusId": "58af3195-7cce-4efc-884d-da3ac24ed400"
+              },
+              {
+                "fileName": "carbondale-il-screenshot3.png",
+                "directusId": "e15b96f6-4231-4873-800d-7d5e687640d5"
+              }
+            ]
+          }
+        ]
+      }
+    ]
   },
   "Carbondale, KS": {
     "rm_min": [
@@ -19024,7 +19288,47 @@
           ]
         }
       ]
-    }
+    },
+    "add_max": [
+      {
+        "reporter": "Samuel Deetz",
+        "requirements": ["by right"],
+        "citations": [
+          {
+            "description": "Coal City Zoning Code",
+            "url": "https://ecode360.com/attachment/CO3150/CO3150-156m%20Table%2012%20Req%20Parking%20Spaces%20Residential.pdf",
+            "notes": "a.",
+            "attachments": [],
+            "screenshots": [
+              {
+                "fileName": "coal-city-il-screenshot.png",
+                "directusId": "1e238dff-dfb4-419f-8c92-0e7550fea5d0"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "rm_min": [
+      {
+        "reporter": "Samuel Deetz",
+        "requirements": ["by right"],
+        "citations": [
+          {
+            "description": "Coal City Zoning Code",
+            "url": "https://ecode360.com/26954161#26954161",
+            "notes": "§ 156-128",
+            "attachments": [],
+            "screenshots": [
+              {
+                "fileName": "coal-city-il-screenshot.png",
+                "directusId": "b117590c-2db3-43e3-bf54-c085f9b726ec"
+              }
+            ]
+          }
+        ]
+      }
+    ]
   },
   "Coatesville, PA": {
     "reduce_min": [
@@ -22093,7 +22397,47 @@
           ]
         }
       ]
-    }
+    },
+    "add_max": [
+      {
+        "reporter": "Samuel Deetz",
+        "requirements": ["by right"],
+        "citations": [
+          {
+            "description": "Crystal Lake Unified Development Ordinance",
+            "url": "https://ecode360.com/29067127#29067127",
+            "notes": "SECTION 4-200.D.5.\n",
+            "attachments": [],
+            "screenshots": [
+              {
+                "fileName": "crystal-lake-il-screenshot.png",
+                "directusId": "55404387-3b48-428d-97e2-2b836b1360b1"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "reduce_min": [
+      {
+        "reporter": "Samuel Deetz",
+        "requirements": ["by right", "in-lieu fees"],
+        "citations": [
+          {
+            "description": "Crystal Lake Unified Development Ordinance",
+            "url": "https://ecode360.com/29067127#29067127",
+            "notes": "SECTION 4-200.B.5.",
+            "attachments": [],
+            "screenshots": [
+              {
+                "fileName": "crystal-lake-il-screenshot.png",
+                "directusId": "664db22f-5f04-4360-b272-08e668318c6f"
+              }
+            ]
+          }
+        ]
+      }
+    ]
   },
   "Crystal, MN": {
     "legacy": {
@@ -22623,7 +22967,47 @@
           ]
         }
       ]
-    }
+    },
+    "reduce_min": [
+      {
+        "reporter": "Samuel Deetz",
+        "requirements": ["by right"],
+        "citations": [
+          {
+            "description": "Danville Zoning Code",
+            "url": "https://codelibrary.amlegal.com/codes/danvilleil/latest/danville_il/0-0-0-81354",
+            "notes": "§ 150.064(D)(2)",
+            "attachments": [],
+            "screenshots": [
+              {
+                "fileName": "danville-il-screenshot.png",
+                "directusId": "d7eade9d-50c3-4264-ad7c-b9c1b1b853d6"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "rm_min": [
+      {
+        "reporter": "Samuel Deetz",
+        "requirements": ["by right"],
+        "citations": [
+          {
+            "description": "Danville Zoning Code",
+            "url": "https://codelibrary.amlegal.com/codes/danvilleil/latest/danville_il/0-0-0-81354",
+            "notes": "§ 150.064(D)(1)",
+            "attachments": [],
+            "screenshots": [
+              {
+                "fileName": "danville-il-screenshot.png",
+                "directusId": "ecd9fbee-6405-411a-ba0c-ba48b20712b3"
+              }
+            ]
+          }
+        ]
+      }
+    ]
   },
   "Danville, IN": {
     "legacy": {
@@ -25547,7 +25931,67 @@
           ]
         }
       ]
-    }
+    },
+    "add_max": [
+      {
+        "reporter": "Samuel Deetz",
+        "requirements": ["by right", "size of project"],
+        "citations": [
+          {
+            "description": "Downers Grove Zoning Code",
+            "url": "https://downersgrove.municipalcodeonline.com/book?type=ordinances#name=Sec_28.7.020_Maximum_Requirements",
+            "notes": "Sec 28.7.020",
+            "attachments": [],
+            "screenshots": [
+              {
+                "fileName": "downers-grove-il-screenshot.png",
+                "directusId": "47fca18a-85f3-4eab-8376-2e448e6d79db"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "reduce_min": [
+      {
+        "reporter": "Samuel Deetz",
+        "requirements": ["carshare", "other"],
+        "citations": [
+          {
+            "description": "Downers Grove Zoning Code",
+            "url": "https://downersgrove.municipalcodeonline.com/book?type=ordinances#name=Sec_28.7.050_Parking_Exemptions_And_Reductions",
+            "notes": "Sec 28.7.050(c);\nSec 28.7.050(d);\nSec 28.7.050(e)",
+            "attachments": [],
+            "screenshots": [
+              {
+                "fileName": "downers-grove-il-screenshot.png",
+                "directusId": "ae67de81-cd54-4d06-9b7e-586394a388e7"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "rm_min": [
+      {
+        "reporter": "Samuel Deetz",
+        "requirements": ["by right"],
+        "citations": [
+          {
+            "description": "Downers Grove Zoning Code",
+            "url": "https://downersgrove.municipalcodeonline.com/book?type=ordinances#name=Sec_28.7.050_Parking_Exemptions_And_Reductions",
+            "notes": "Sec 28.7.050(a)",
+            "attachments": [],
+            "screenshots": [
+              {
+                "fileName": "downers-grove-il-screenshot.png",
+                "directusId": "222ae46e-c0ef-459e-b073-d02c5e7418ec"
+              }
+            ]
+          }
+        ]
+      }
+    ]
   },
   "Downingtown, PA": {
     "reduce_min": [
@@ -28008,7 +28452,51 @@
           ]
         }
       ]
-    }
+    },
+    "reduce_min": [
+      {
+        "reporter": "Jake Seid",
+        "requirements": ["by right"],
+        "citations": [
+          {
+            "description": "Elburn Zoning Code",
+            "url": "https://elburn.municipalcodeonline.com/book?type=ordinances#name=1274.02_Off-Street_Parking_Spaces",
+            "notes": "1274.02(c)(1)",
+            "attachments": [],
+            "screenshots": [
+              {
+                "fileName": "elburn-il-screenshot.png",
+                "directusId": "5239103d-dd50-4390-9c82-f5dc00652a0d"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "rm_min": [
+      {
+        "reporter": "Jake Seid",
+        "requirements": ["by right"],
+        "citations": [
+          {
+            "description": "Elburn Zoning Code",
+            "url": "https://elburn.municipalcodeonline.com/book?type=ordinances#name=1274.02_Off-Street_Parking_Spaces",
+            "notes": "1274.02(c)",
+            "attachments": [],
+            "screenshots": [
+              {
+                "fileName": "elburn-il-screenshot1.png",
+                "directusId": "24fb247b-16c8-4572-92ed-6f2c78a804ea"
+              },
+              {
+                "fileName": "elburn-il-screenshot2.png",
+                "directusId": "17897381-8ba9-4669-83ae-294b4c9f5025"
+              }
+            ]
+          }
+        ]
+      }
+    ]
   },
   "Eldora, IA": {
     "rm_min": [
@@ -32012,7 +32500,47 @@
           ]
         }
       ]
-    }
+    },
+    "add_max": [
+      {
+        "reporter": "Samuel Deetz",
+        "requirements": ["by right"],
+        "citations": [
+          {
+            "description": "Ford Heights Zoning Code",
+            "url": "https://library.municode.com/il/ford_heights/codes/code_of_ordinances?nodeId=COOR_CH56ZO_ARTIVOREPALORE_S56-172ADREPA",
+            "notes": "Sec. 56-172.(g)(7)",
+            "attachments": [],
+            "screenshots": [
+              {
+                "fileName": "ford-heights-il-screenshot.png",
+                "directusId": "35e13a15-4fd5-4cb7-99ad-664efd9175d8"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "rm_min": [
+      {
+        "reporter": "Samuel Deetz",
+        "requirements": ["by right", "size of project"],
+        "citations": [
+          {
+            "description": "Ford Heights Zoning Code",
+            "url": "https://library.municode.com/il/ford_heights/codes/code_of_ordinances?nodeId=COOR_CH56ZO_ARTIVOREPALORE_S56-174SCPARE",
+            "notes": "Sec. 56-174.(f)",
+            "attachments": [],
+            "screenshots": [
+              {
+                "fileName": "ford-heights-il-screenshot.png",
+                "directusId": "102b816c-1ee9-4ee7-8914-c4063f4b145f"
+              }
+            ]
+          }
+        ]
+      }
+    ]
   },
   "Forest Grove, OR": {
     "legacy": {
@@ -33201,7 +33729,47 @@
           ]
         }
       ]
-    }
+    },
+    "add_max": [
+      {
+        "reporter": "Samuel Deetz",
+        "requirements": ["by right"],
+        "citations": [
+          {
+            "description": "Fox River Grove Zoning Code",
+            "url": "https://cms5.revize.com/revize/foxrivergrove/document%20center/code%20of%20ordinances/Zoning%20Ordinance%20-%20Current%20(2024-10).pdf",
+            "notes": "ARTICLE IX G.11.a.iii.;\nARTICLE IX G.11.a.iv.;\nPage 111",
+            "attachments": [],
+            "screenshots": [
+              {
+                "fileName": "fox-river-grove-il-screenshot.png",
+                "directusId": "522925fb-29a9-407b-b08d-f561ee173e49"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "rm_min": [
+      {
+        "reporter": "Samuel Deetz",
+        "requirements": ["by right", "size of project"],
+        "citations": [
+          {
+            "description": "Fox River Grove Zoning Code",
+            "url": "https://cms5.revize.com/revize/foxrivergrove/document%20center/code%20of%20ordinances/Zoning%20Ordinance%20-%20Current%20(2024-10).pdf",
+            "notes": "ARTICLE IX G.2.\nPage 106",
+            "attachments": [],
+            "screenshots": [
+              {
+                "fileName": "fox-river-grove-il-screenshot.png",
+                "directusId": "23b0ff57-ec36-473c-85bb-00ac5c947ba2"
+              }
+            ]
+          }
+        ]
+      }
+    ]
   },
   "Framingham, MA": {
     "reduce_min": [
@@ -33421,7 +33989,47 @@
           ]
         }
       ]
-    }
+    },
+    "reduce_min": [
+      {
+        "reporter": "Samuel Deetz",
+        "requirements": ["frequent transit", "in-lieu fees", "other"],
+        "citations": [
+          {
+            "description": "Franklin Park Zoning Code",
+            "url": "https://library.municode.com/il/franklin_park/codes/code_of_ordinances?nodeId=CO_TIT9ZOOR_CH11OREPALO_9-11-6PAFL",
+            "notes": "9-11-6.B.",
+            "attachments": [],
+            "screenshots": [
+              {
+                "fileName": "franklin-park-il-screenshot.png",
+                "directusId": "ca4f3eeb-809a-4f5d-a56b-94f980eb63b2"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "rm_min": [
+      {
+        "reporter": "Samuel Deetz",
+        "requirements": ["by right"],
+        "citations": [
+          {
+            "description": "Franklin Park Zoning Code",
+            "url": "https://library.municode.com/il/franklin_park/codes/code_of_ordinances?nodeId=CO_TIT9ZOOR_CH11OREPALO_9-11-5REOREVEPASP",
+            "notes": "9-11-5.A.",
+            "attachments": [],
+            "screenshots": [
+              {
+                "fileName": "franklin-park-il-screenshot.png",
+                "directusId": "694fad6d-e5f1-4328-942d-d41aa6e6cb5f"
+              }
+            ]
+          }
+        ]
+      }
+    ]
   },
   "Franklin, IN": {
     "rm_min": [
@@ -36132,7 +36740,47 @@
           ]
         }
       ]
-    }
+    },
+    "add_max": [
+      {
+        "reporter": "Samuel Deetz",
+        "requirements": ["by right"],
+        "citations": [
+          {
+            "description": "Glenwood Zoning Code",
+            "url": "https://library.municode.com/il/glenwood/codes/code_of_ordinances?nodeId=COOR_APXAZOOR_ARTXOREPAORELO_10.06OREPA",
+            "notes": "10.06.K.1.c.",
+            "attachments": [],
+            "screenshots": [
+              {
+                "fileName": "glenwood-il-screenshot.png",
+                "directusId": "d384ff09-482f-44f5-bbeb-1d805c0fbb35"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "rm_min": [
+      {
+        "reporter": "Samuel Deetz",
+        "requirements": ["by right", "size of project"],
+        "citations": [
+          {
+            "description": "Glenwood Zoning Code",
+            "url": "https://library.municode.com/il/glenwood/codes/code_of_ordinances?nodeId=COOR_APXAZOOR_ARTXOREPAORELO_10.06OREPA",
+            "notes": "10.06.B.",
+            "attachments": [],
+            "screenshots": [
+              {
+                "fileName": "glenwood-il-screenshot.png",
+                "directusId": "df4c05cf-1744-4858-8923-5c868c9bf798"
+              }
+            ]
+          }
+        ]
+      }
+    ]
   },
   "Glidden, IA": {
     "rm_min": [
@@ -38578,7 +39226,79 @@
           ]
         }
       ]
-    }
+    },
+    "add_max": [
+      {
+        "reporter": "Samuel Deetz",
+        "requirements": ["by right"],
+        "citations": [
+          {
+            "description": "Greenville Zoning Code",
+            "url": "https://codelibrary.amlegal.com/codes/greenvilleil/latest/greenville_il/0-0-0-12390",
+            "notes": "§ 153.1296(C)",
+            "attachments": [],
+            "screenshots": [
+              {
+                "fileName": "greenville-il-screenshot.png",
+                "directusId": "0a8c60d4-216c-4a27-be2e-fe7caeb0da61"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "reduce_min": [
+      {
+        "reporter": "Samuel Deetz",
+        "requirements": ["in-lieu fees", "other"],
+        "citations": [
+          {
+            "description": "Greenville Zoning Code",
+            "url": "https://codelibrary.amlegal.com/codes/greenvilleil/latest/greenville_il/0-0-0-12390",
+            "notes": "§ 153.1296(A)(6);\n§ 153.1296(B)(2)",
+            "attachments": [],
+            "screenshots": [
+              {
+                "fileName": "greenville-il-screenshot1.png",
+                "directusId": "6f47d895-6c11-4494-8f24-c46513153877"
+              },
+              {
+                "fileName": "greenville-il-screenshot2.png",
+                "directusId": "a6365cc0-61eb-4f08-9734-c6118ac5649f"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "rm_min": [
+      {
+        "reporter": "Samuel Deetz",
+        "requirements": ["by right"],
+        "citations": [
+          {
+            "description": "Greenville Zoning Code",
+            "url": "https://codelibrary.amlegal.com/codes/greenvilleil/latest/greenville_il/0-0-0-12390",
+            "notes": "§ 153.1296(A)(1);\nTable 153.1296(A)",
+            "attachments": [],
+            "screenshots": [
+              {
+                "fileName": "greenville-il-screenshot1.png",
+                "directusId": "d7f73d33-7b8a-459d-bd6e-efb17a9c508f"
+              },
+              {
+                "fileName": "greenville-il-screenshot2.png",
+                "directusId": "c1f5b77b-6320-42d3-86d3-32786135b8f9"
+              },
+              {
+                "fileName": "greenville-il-screenshot3.png",
+                "directusId": "5db73ce7-4096-4a7b-b964-d703df629697"
+              }
+            ]
+          }
+        ]
+      }
+    ]
   },
   "Greenville, OH": {
     "reduce_min": [
@@ -40444,7 +41164,47 @@
           ]
         }
       ]
-    }
+    },
+    "reduce_min": [
+      {
+        "reporter": "Samuel Deetz",
+        "requirements": ["bike parking"],
+        "citations": [
+          {
+            "description": "Harvard Unified Development Ordinance",
+            "url": "https://www.cityofharvard.org/media/22806",
+            "notes": "10.3.B.2.\nPage 77",
+            "attachments": [],
+            "screenshots": [
+              {
+                "fileName": "harvard-il-screenshot.png",
+                "directusId": "2ad21e14-8b34-498e-b53a-f844ea1f253b"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "rm_min": [
+      {
+        "reporter": "Samuel Deetz",
+        "requirements": ["by right"],
+        "citations": [
+          {
+            "description": "Harvard Unified Development Ordinance",
+            "url": "https://www.cityofharvard.org/media/22806",
+            "notes": "10.3.A.\nPage 78",
+            "attachments": [],
+            "screenshots": [
+              {
+                "fileName": "harvard-il-screenshot.png",
+                "directusId": "d6499289-d46b-439c-81e5-48162b4bb330"
+              }
+            ]
+          }
+        ]
+      }
+    ]
   },
   "Harvey, IL": {
     "reduce_min": [
@@ -40517,7 +41277,47 @@
           ]
         }
       ]
-    }
+    },
+    "add_max": [
+      {
+        "reporter": "Samuel Deetz",
+        "requirements": ["by right"],
+        "citations": [
+          {
+            "description": "Harwood Heights Zoning Code",
+            "url": "https://library.municode.com/il/harwood_heights/codes/code_of_ordinances?nodeId=TIT17ZOOR_CH17.28OREPALO_17.28.150RESP",
+            "notes": "17.28.150: TABLE 17.28.150.1",
+            "attachments": [],
+            "screenshots": [
+              {
+                "fileName": "harwood-heights-il-screenshot.png",
+                "directusId": "45160f00-6d56-45c6-ab9f-4c9bffb34f7e"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "reduce_min": [
+      {
+        "reporter": "Samuel Deetz",
+        "requirements": ["in-lieu fees", "other"],
+        "citations": [
+          {
+            "description": "Harwood Heights Zoning Code",
+            "url": "https://library.municode.com/il/harwood_heights/codes/code_of_ordinances?nodeId=TIT17ZOOR_CH17.28OREPALO_17.28.150RESP",
+            "notes": "17.28.150.B.;\n17.28.150.C.",
+            "attachments": [],
+            "screenshots": [
+              {
+                "fileName": "harwood-heights-il-screenshot.png",
+                "directusId": "94997f1a-2e97-4b51-8acf-81766deac333"
+              }
+            ]
+          }
+        ]
+      }
+    ]
   },
   "Haskell, AR": {
     "legacy": {
@@ -46561,7 +47361,47 @@
           ]
         }
       ]
-    }
+    },
+    "add_max": [
+      {
+        "reporter": "Samuel Deetz",
+        "requirements": ["by right"],
+        "citations": [
+          {
+            "description": "Kenilworth Zoning Code",
+            "url": "https://codelibrary.amlegal.com/codes/kenilworth/latest/kenilworth_il/0-0-0-6713",
+            "notes": "§ 153.080(C)",
+            "attachments": [],
+            "screenshots": [
+              {
+                "fileName": "kenilworth-il-screenshot.png",
+                "directusId": "7ab7e906-dc06-4827-8853-0c7eac58ecfe"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "rm_min": [
+      {
+        "reporter": "Samuel Deetz",
+        "requirements": ["by right", "size of project"],
+        "citations": [
+          {
+            "description": "Kenilworth Zoning Code",
+            "url": "https://codelibrary.amlegal.com/codes/kenilworth/latest/kenilworth_il/0-0-0-6857",
+            "notes": "§ 153.192",
+            "attachments": [],
+            "screenshots": [
+              {
+                "fileName": "kenilworth-il-screenshot.png",
+                "directusId": "2f183ec6-530d-4eb9-9e16-66b66a5e913f"
+              }
+            ]
+          }
+        ]
+      }
+    ]
   },
   "Kenner, LA": {
     "add_max": [
@@ -48187,7 +49027,47 @@
           ]
         }
       ]
-    }
+    },
+    "reduce_min": [
+      {
+        "reporter": "Samuel Deetz",
+        "requirements": ["by right", "other", "size of project"],
+        "citations": [
+          {
+            "description": "La Grange Park Zoning Code",
+            "url": "https://codelibrary.amlegal.com/codes/lagrangepark/latest/lagrange-park_il/0-0-0-18410",
+            "notes": "OFF-STREET PARKING AND LOADING\n§ 153.216 REQUIRED OFF-STREET PARKING SPACES.\n(B)   Parking requirement exemptions in the C-1 District.",
+            "attachments": [],
+            "screenshots": [
+              {
+                "fileName": "la-grange-park-il-screenshot.png",
+                "directusId": "27f09a1f-e6bc-497e-aa5a-c2b5acd219de"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "rm_min": [
+      {
+        "reporter": "Samuel Deetz",
+        "requirements": ["by right", "size of project"],
+        "citations": [
+          {
+            "description": "La Grange Park Zoning Code",
+            "url": "https://codelibrary.amlegal.com/codes/lagrangepark/latest/lagrange-park_il/0-0-0-18410",
+            "notes": "OFF-STREET PARKING AND LOADING\n§ 153.216 REQUIRED OFF-STREET PARKING SPACES.\n(B)   Parking requirement exemptions in the C-1 District.",
+            "attachments": [],
+            "screenshots": [
+              {
+                "fileName": "la-grange-park-il-screenshot.png",
+                "directusId": "27f09a1f-e6bc-497e-aa5a-c2b5acd219de"
+              }
+            ]
+          }
+        ]
+      }
+    ]
   },
   "La Grange, IL": {
     "rm_min": [
@@ -51095,7 +51975,47 @@
           ]
         }
       ]
-    }
+    },
+    "add_max": [
+      {
+        "reporter": "Samuel Deetz",
+        "requirements": ["by right"],
+        "citations": [
+          {
+            "description": "Leland Grove Zoning Code",
+            "url": "https://codelibrary.amlegal.com/codes/lelandgroveil/latest/lelandgrove_il/0-0-0-2837",
+            "notes": "CHAPTER 3 A RESIDENTIAL DISTRICT\n9-3-12: OFF STREET PARKING REGULATIONS:\n   A.   Number Of Spaces",
+            "attachments": [],
+            "screenshots": [
+              {
+                "fileName": "leland-grove-il-screenshot.png",
+                "directusId": "324d9f88-efdf-41fa-8b9a-8977fb3fcefa"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "rm_min": [
+      {
+        "reporter": "Samuel Deetz",
+        "requirements": ["by right"],
+        "citations": [
+          {
+            "description": "Leland Grove Zoning Code",
+            "url": "https://codelibrary.amlegal.com/codes/lelandgroveil/latest/lelandgrove_il/0-0-0-2837",
+            "notes": "CHAPTER 3 A RESIDENTIAL DISTRICT\n9-3-12: OFF STREET PARKING REGULATIONS:\n   A.   Number Of Spaces",
+            "attachments": [],
+            "screenshots": [
+              {
+                "fileName": "leland-grove-il-screenshot.png",
+                "directusId": "324d9f88-efdf-41fa-8b9a-8977fb3fcefa"
+              }
+            ]
+          }
+        ]
+      }
+    ]
   },
   "Leland, IL": {
     "legacy": {
@@ -51115,7 +52035,47 @@
           ]
         }
       ]
-    }
+    },
+    "reduce_min": [
+      {
+        "reporter": "Samuel Deetz",
+        "requirements": ["in-lieu fees", "other"],
+        "citations": [
+          {
+            "description": "Leland Zoning Code",
+            "url": "https://codelibrary.amlegal.com/codes/lelandil/latest/leland_il/0-0-0-3353",
+            "notes": "CHAPTER 11 OFF STREET PARKING AND LOADING\n11-11-7: NUMBER OF PARKING AND LOADING SPACES REQUIRED\n11-11-8: PARKING EXEMPTIONS",
+            "attachments": [],
+            "screenshots": [
+              {
+                "fileName": "leland-il-screenshot.png",
+                "directusId": "1dda20d7-3062-46d5-8e6d-15d9dc9b4166"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "rm_min": [
+      {
+        "reporter": "Samuel Deetz",
+        "requirements": ["by right"],
+        "citations": [
+          {
+            "description": "Leland Zoning Code",
+            "url": "https://codelibrary.amlegal.com/codes/lelandil/latest/leland_il/0-0-0-3353",
+            "notes": "CHAPTER 11 OFF STREET PARKING AND LOADING\n11-11-7: NUMBER OF PARKING AND LOADING SPACES REQUIRED\n11-11-8: PARKING EXEMPTIONS",
+            "attachments": [],
+            "screenshots": [
+              {
+                "fileName": "leland-il-screenshot.png",
+                "directusId": "1dda20d7-3062-46d5-8e6d-15d9dc9b4166"
+              }
+            ]
+          }
+        ]
+      }
+    ]
   },
   "Lemont, IL": {
     "legacy": {
@@ -51139,7 +52099,47 @@
           ]
         }
       ]
-    }
+    },
+    "add_max": [
+      {
+        "reporter": "Samuel Deetz",
+        "requirements": ["by right"],
+        "citations": [
+          {
+            "description": "Lemont Zoning Code",
+            "url": "https://library.municode.com/il/lemont/codes/code_of_ordinances?nodeId=TIT17UNDEOR_ARTIIZOZOOR_CH17.10OREPALO_17.10.050MALIPASP",
+            "notes": "17.10.050.",
+            "attachments": [],
+            "screenshots": [
+              {
+                "fileName": "lemont-il-screenshot.png",
+                "directusId": "fb932c69-adc9-4627-93ad-4fb28f4d5048"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "rm_min": [
+      {
+        "reporter": "Samuel Deetz",
+        "requirements": ["by right", "size of project"],
+        "citations": [
+          {
+            "description": "Lemont Zoning Code",
+            "url": "https://library.municode.com/il/lemont/codes/code_of_ordinances?nodeId=TIT17UNDEOR_ARTIIZOZOOR_CH17.10OREPALO_17.10.060DODIOREPA",
+            "notes": "17.10.060.",
+            "attachments": [],
+            "screenshots": [
+              {
+                "fileName": "lemont-il-screenshot.png",
+                "directusId": "557adcb7-4638-48bc-9e10-d15dfd5dfb04"
+              }
+            ]
+          }
+        ]
+      }
+    ]
   },
   "Lemoyne, PA": {
     "reduce_min": [
@@ -51684,7 +52684,51 @@
           ]
         }
       ]
-    }
+    },
+    "reduce_min": [
+      {
+        "reporter": "Samuel Deetz",
+        "requirements": ["by right", "in-lieu fees", "size of project"],
+        "citations": [
+          {
+            "description": "Libertyville Zoning Code",
+            "url": "https://library.municode.com/il/libertyville/codes/code_of_ordinances?nodeId=LIILMUCO_CH26ZO_ART10PALO_PTAPA_S26-10-1OREPA",
+            "notes": "ARTICLE 10. - PARKING AND LOADING\nPART A. - PARKING\nSec. 26-10-1. - Off-street parking.\n26-10-1.2.Required spaces.\n(d)Exception for the C-1 Downtown Core Commercial District.\n(f)Payment in lieu of required parking spaces.",
+            "attachments": [],
+            "screenshots": [
+              {
+                "fileName": "libertyville-il-screenshot1.png",
+                "directusId": "dd214f88-ddc7-45e8-9f9d-7566c701ba39"
+              },
+              {
+                "fileName": "libertyville-il-screenshot2.png",
+                "directusId": "3cfdb859-9f40-41c2-958f-16c9fd8eef1c"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "rm_min": [
+      {
+        "reporter": "Samuel Deetz",
+        "requirements": ["by right", "size of project"],
+        "citations": [
+          {
+            "description": "Libertyville Zoning Code",
+            "url": "https://library.municode.com/il/libertyville/codes/code_of_ordinances?nodeId=LIILMUCO_CH26ZO_ART10PALO_PTAPA_S26-10-1OREPA",
+            "notes": "26-10-1.2.(d)",
+            "attachments": [],
+            "screenshots": [
+              {
+                "fileName": "libertyville-il-screenshot.png",
+                "directusId": "7c8fda44-e7be-459e-b51d-90ce3c45be33"
+              }
+            ]
+          }
+        ]
+      }
+    ]
   },
   "Ligonier, IN": {
     "reduce_min": [
@@ -52267,7 +53311,47 @@
           ]
         }
       ]
-    }
+    },
+    "reduce_min": [
+      {
+        "reporter": "Samuel Deetz",
+        "requirements": ["other"],
+        "citations": [
+          {
+            "description": "Lisle Zoning Code",
+            "url": "https://codelibrary.amlegal.com/codes/lisleil/latest/lisle_il/0-0-0-28949",
+            "notes": "CHAPTER 13 OFF STREET PARKING\n5-13-6: PARKING EXEMPTIONS AND CREDITS:\n   (A)   On-Street Parking\n   (B)   B-3A (Central Retail Core) District",
+            "attachments": [],
+            "screenshots": [
+              {
+                "fileName": "lisle-il-screenshot.png",
+                "directusId": "27d52b9f-a8bb-4b70-bcf0-b26a15594f4f"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "rm_min": [
+      {
+        "reporter": "Samuel Deetz",
+        "requirements": ["by right"],
+        "citations": [
+          {
+            "description": "Lisle Zoning Code",
+            "url": "https://codelibrary.amlegal.com/codes/lisleil/latest/lisle_il/0-0-0-28949",
+            "notes": "CHAPTER 13 OFF STREET PARKING\n5-13-6: PARKING EXEMPTIONS AND CREDITS:\n   (A)   On-Street Parking\n   (B)   B-3A (Central Retail Core) District",
+            "attachments": [],
+            "screenshots": [
+              {
+                "fileName": "lisle-il-screenshot.png",
+                "directusId": "27d52b9f-a8bb-4b70-bcf0-b26a15594f4f"
+              }
+            ]
+          }
+        ]
+      }
+    ]
   },
   "Litchfield Park, AZ": {
     "reduce_min": [
@@ -56884,7 +57968,67 @@
           ]
         }
       ]
-    }
+    },
+    "reduce_min": [
+      {
+        "reporter": "Samuel Deetz",
+        "requirements": ["in-lieu fees", "other"],
+        "citations": [
+          {
+            "description": "Maywood Zoning Code",
+            "url": "https://cms2.revize.com/revize/maywoodil/_news/Document_Center/Business/Community%20Development/Zoning/2010-Maywood-Zoning-Code-ed-1001-2018.pdf",
+            "notes": "13.12.B.2.;\n13.12.B.3.;\n13.12.B.4.;\nPages 120-121",
+            "attachments": [],
+            "screenshots": [
+              {
+                "fileName": "maywood-il-citation1-screenshot1.png",
+                "directusId": "261724da-a58e-4f42-9fc7-fe660d615f0c"
+              },
+              {
+                "fileName": "maywood-il-citation1-screenshot2.png",
+                "directusId": "b08d2741-7b4b-4f60-a887-bcc1a9d71b7b"
+              }
+            ]
+          },
+          {
+            "description": "Maywood Zoning Code",
+            "url": "https://cms2.revize.com/revize/maywoodil/_news/Document_Center/Business/Community%20Development/Zoning/2010-Maywood-Zoning-Code-ed-1001-2018.pdf",
+            "notes": "13.12.B.2.;\n13.12.B.3.;\n13.12.B.4.;\nPages 120-121",
+            "attachments": [],
+            "screenshots": [
+              {
+                "fileName": "maywood-il-citation2-screenshot1.png",
+                "directusId": "261724da-a58e-4f42-9fc7-fe660d615f0c"
+              },
+              {
+                "fileName": "maywood-il-citation2-screenshot2.png",
+                "directusId": "b08d2741-7b4b-4f60-a887-bcc1a9d71b7b"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "rm_min": [
+      {
+        "reporter": "Samuel Deetz",
+        "requirements": ["by right", "size of project"],
+        "citations": [
+          {
+            "description": "Maywood Zoning Code",
+            "url": "https://cms2.revize.com/revize/maywoodil/_news/Document_Center/Business/Community%20Development/Zoning/2010-Maywood-Zoning-Code-ed-1001-2018.pdf",
+            "notes": "13.12.B.1.;\n13.12.B.2.;\nPages 119-120",
+            "attachments": [],
+            "screenshots": [
+              {
+                "fileName": "maywood-il-screenshot.png",
+                "directusId": "3eb2caa1-2cb8-4e20-9c12-49a571abb646"
+              }
+            ]
+          }
+        ]
+      }
+    ]
   },
   "Mazomanie, WI": {
     "rm_min": [
@@ -60079,7 +61223,47 @@
           ]
         }
       ]
-    }
+    },
+    "reduce_min": [
+      {
+        "reporter": "Samuel Deetz",
+        "requirements": ["by right"],
+        "citations": [
+          {
+            "description": "Mokena Zoning Code",
+            "url": "https://codelibrary.amlegal.com/codes/mokenail/latest/mokena_il/0-0-0-7546",
+            "notes": "CHAPTER 16 OFF STREET PARKING AND LOADING\nARTICLE A. OFF STREET PARKING\n9-16A-8: SPECIFIC REQUIREMENTS FOR THE TRADITIONAL DOWNTOWN DISTRICT (C-4):",
+            "attachments": [],
+            "screenshots": [
+              {
+                "fileName": "mokena-il-screenshot.png",
+                "directusId": "de4a3349-6580-4827-bdb1-741c8ff922a0"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "rm_min": [
+      {
+        "reporter": "Samuel Deetz",
+        "requirements": ["by right", "size of project"],
+        "citations": [
+          {
+            "description": "Mokena Zoning Code",
+            "url": "https://codelibrary.amlegal.com/codes/mokenail/latest/mokena_il/0-0-0-7546",
+            "notes": "CHAPTER 16 OFF STREET PARKING AND LOADING\nARTICLE A. OFF STREET PARKING\n9-16A-8: SPECIFIC REQUIREMENTS FOR THE TRADITIONAL DOWNTOWN DISTRICT (C-4):",
+            "attachments": [],
+            "screenshots": [
+              {
+                "fileName": "mokena-il-screenshot.png",
+                "directusId": "de4a3349-6580-4827-bdb1-741c8ff922a0"
+              }
+            ]
+          }
+        ]
+      }
+    ]
   },
   "Moline, IL": {
     "rm_min": [
@@ -60728,7 +61912,67 @@
           ]
         }
       ]
-    }
+    },
+    "add_max": [
+      {
+        "reporter": "Samuel Deetz",
+        "requirements": ["by right"],
+        "citations": [
+          {
+            "description": "Montgomery Unified Development Ordinance",
+            "url": "https://www.montgomeryil.org/DocumentCenter/View/122/Unified-Development-Ordinance",
+            "notes": "10.02.C.\nPage 146",
+            "attachments": [],
+            "screenshots": [
+              {
+                "fileName": "montgomery-il-screenshot.png",
+                "directusId": "eb402dc9-df49-489b-81c1-d0404279349d"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "reduce_min": [
+      {
+        "reporter": "Samuel Deetz",
+        "requirements": ["other"],
+        "citations": [
+          {
+            "description": "Montgomery Unified Development Ordinance",
+            "url": "https://www.montgomeryil.org/DocumentCenter/View/122/Unified-Development-Ordinance",
+            "notes": "10.02.C.3.\nPage 147",
+            "attachments": [],
+            "screenshots": [
+              {
+                "fileName": "montgomery-il-screenshot.png",
+                "directusId": "0198e713-fe56-45f0-9bcf-97d7bab402a8"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "rm_min": [
+      {
+        "reporter": "Samuel Deetz",
+        "requirements": ["by right"],
+        "citations": [
+          {
+            "description": "Montgomery Unified Development Ordinance",
+            "url": "https://www.montgomeryil.org/DocumentCenter/View/122/Unified-Development-Ordinance",
+            "notes": "10.02.C.1.\nPage 147",
+            "attachments": [],
+            "screenshots": [
+              {
+                "fileName": "montgomery-il-screenshot.png",
+                "directusId": "e7333eac-8c80-4757-ad08-840eb35d1f84"
+              }
+            ]
+          }
+        ]
+      }
+    ]
   },
   "Montgomery, MN": {
     "rm_min": [
@@ -62540,7 +63784,47 @@
           ]
         }
       ]
-    }
+    },
+    "add_max": [
+      {
+        "reporter": "Samuel Deetz",
+        "requirements": ["by right"],
+        "citations": [
+          {
+            "description": "Mt. Zion Zoning Code",
+            "url": "https://library.municode.com/il/mt._zion/codes/code_of_ordinances?nodeId=PTBLADEOR_CH119ZO_ARTXOREPAORELOFA_S119-372RESP",
+            "notes": "Sec. 119-372.(1)e.",
+            "attachments": [],
+            "screenshots": [
+              {
+                "fileName": "mt-zion-il-screenshot.png",
+                "directusId": "b16b7b69-def1-4aa2-9258-678cdb662c55"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "reduce_min": [
+      {
+        "reporter": "Samuel Deetz",
+        "requirements": ["other"],
+        "citations": [
+          {
+            "description": "Mt. Zion Zoning Code",
+            "url": "https://library.municode.com/il/mt._zion/codes/code_of_ordinances?nodeId=PTBLADEOR_CH119ZO_ARTIVZODIRE_S119-180DIRERE",
+            "notes": "Sec. 119-180.(k)(3)j.",
+            "attachments": [],
+            "screenshots": [
+              {
+                "fileName": "mt-zion-il-screenshot.png",
+                "directusId": "8689b4de-f804-40ab-93f6-37a9283916fe"
+              }
+            ]
+          }
+        ]
+      }
+    ]
   },
   "Muir, MI": {
     "rm_min": [
@@ -62682,7 +63966,55 @@
           ]
         }
       ]
-    }
+    },
+    "reduce_min": [
+      {
+        "reporter": "Samuel Deetz",
+        "requirements": ["in-lieu fees"],
+        "citations": [
+          {
+            "description": "Mundelein Zoning Code",
+            "url": "https://library.municode.com/il/mundelein/codes/code_of_ordinances%20?nodeId=TIT20ZO_CH20.36DOZODI_20.36.100DIPAORELO",
+            "notes": "20.36.100.M.",
+            "attachments": [],
+            "screenshots": [
+              {
+                "fileName": "mundelein-il-screenshot.png",
+                "directusId": "fb531425-0c98-481d-a529-9435e4ed42fa"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "rm_min": [
+      {
+        "reporter": "Samuel Deetz",
+        "requirements": ["by right", "size of project"],
+        "citations": [
+          {
+            "description": "Mundelein Zoning Code",
+            "url": "https://library.municode.com/il/mundelein/codes/code_of_ordinances%20?nodeId=TIT20ZO_CH20.36DOZODI_20.36.100DIPAORELO",
+            "notes": "20.36.100.W.",
+            "attachments": [],
+            "screenshots": [
+              {
+                "fileName": "mundelein-il-screenshot1.png",
+                "directusId": "0538720c-566c-4691-b764-533e00d051cf"
+              },
+              {
+                "fileName": "mundelein-il-screenshot2.png",
+                "directusId": "c38bb5af-8f04-4a49-b87a-0c911a806484"
+              },
+              {
+                "fileName": "mundelein-il-screenshot3.png",
+                "directusId": "e71bf215-3f17-4e0e-a3c9-036c416f4eac"
+              }
+            ]
+          }
+        ]
+      }
+    ]
   },
   "Munhall, PA": {
     "reduce_min": [
@@ -65642,7 +66974,47 @@
           ]
         }
       ]
-    }
+    },
+    "add_max": [
+      {
+        "reporter": "Samuel Deetz",
+        "requirements": ["by right"],
+        "citations": [
+          {
+            "description": "Normal Zoning Code",
+            "url": "https://normal.municipalcodeonline.com/book?type=ordinances#name=15.7-2_OFF-STREET_PARKING",
+            "notes": "15.7-2.G.8.",
+            "attachments": [],
+            "screenshots": [
+              {
+                "fileName": "normal-il-screenshot.png",
+                "directusId": "c3332bc5-fce2-45dd-bb79-83729696bf3e"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "rm_min": [
+      {
+        "reporter": "Samuel Deetz",
+        "requirements": ["by right"],
+        "citations": [
+          {
+            "description": "Normal Zoning Code",
+            "url": "https://normal.municipalcodeonline.com/book?type=ordinances#name=15.7-2_OFF-STREET_PARKING",
+            "notes": "15.7-2.D.1.",
+            "attachments": [],
+            "screenshots": [
+              {
+                "fileName": "normal-il-screenshot.png",
+                "directusId": "69cb8fba-9b3d-4e64-8853-e1e114727e6b"
+              }
+            ]
+          }
+        ]
+      }
+    ]
   },
   "Norman, OK": {
     "rm_min": [
@@ -66910,7 +68282,47 @@
           ]
         }
       ]
-    }
+    },
+    "reduce_min": [
+      {
+        "reporter": "Samuel Deetz",
+        "requirements": ["by right", "other"],
+        "citations": [
+          {
+            "description": "O'Fallon Zoning Code",
+            "url": "https://codelibrary.amlegal.com/codes/ofallon/latest/ofallon_il/0-0-0-19173",
+            "notes": "ARTICLE 7: PARKING AND LOADING\n§ 158.139 GUIDELINES; DOWNTOWN DISTRICT PARKING.\n(B)   Residential uses.\n(C)   Non-residential uses.\n      (1)   Vehicle parking.\n         (a)",
+            "attachments": [],
+            "screenshots": [
+              {
+                "fileName": "o-fallon-il-screenshot.png",
+                "directusId": "3223abaf-fe6c-4a36-8382-529ae9f424c9"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "rm_min": [
+      {
+        "reporter": "Samuel Deetz",
+        "requirements": ["by right", "size of project"],
+        "citations": [
+          {
+            "description": "O'Fallon Zoning Code",
+            "url": "https://codelibrary.amlegal.com/codes/ofallon/latest/ofallon_il/0-0-0-19173",
+            "notes": "ARTICLE 7: PARKING AND LOADING\n§ 158.139 GUIDELINES; DOWNTOWN DISTRICT PARKING.\n(B)   Residential uses.\n(C)   Non-residential uses.\n      (1)   Vehicle parking.\n         (a)",
+            "attachments": [],
+            "screenshots": [
+              {
+                "fileName": "o-fallon-il-screenshot.png",
+                "directusId": "3223abaf-fe6c-4a36-8382-529ae9f424c9"
+              }
+            ]
+          }
+        ]
+      }
+    ]
   },
   "O'Neill, NE": {
     "reduce_min": [
@@ -67029,7 +68441,57 @@
           ]
         }
       ]
-    }
+    },
+    "reduce_min": [
+      {
+        "reporter": "Samuel Deetz",
+        "requirements": [
+          "by right",
+          "frequent transit",
+          "in-lieu fees",
+          "other",
+          "transportation demand management"
+        ],
+        "citations": [
+          {
+            "description": "Oak Park Zoning Code",
+            "url": "https://www.oak-park.us/sites/default/files/planning-documents/2017_oak_park_zoning_ordinance_revised_01.25.2022_reduced_v2.pdf",
+            "notes": "ARTICLE 10. OFF-STREET PARKING & LOADING \n10.5 PARKING FLEXIBILITIES, EXEMPTIONS, AND REDUCTIONS\nB. Exemptions and Reductions from Parking Requirements\nC. In-Lieu Parking Contribution\nPages 115-116",
+            "attachments": [],
+            "screenshots": [
+              {
+                "fileName": "oak-park-il-screenshot1.png",
+                "directusId": "aad94871-b8cf-4606-85bb-ce8347af5f26"
+              },
+              {
+                "fileName": "oak-park-il-screenshot2.png",
+                "directusId": "d6ed89bf-bfa0-480d-a3c8-0f797069a38b"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "rm_min": [
+      {
+        "reporter": "Samuel Deetz",
+        "requirements": ["by right", "size of project"],
+        "citations": [
+          {
+            "description": "Oak Park Zoning Code",
+            "url": "https://www.oak-park.us/sites/default/files/planning-documents/2017_oak_park_zoning_ordinance_revised_01.25.2022_reduced_v2.pdf",
+            "notes": "10.5.B.1.\nPage 115",
+            "attachments": [],
+            "screenshots": [
+              {
+                "fileName": "oak-park-il-screenshot.png",
+                "directusId": "469e69ee-1af6-4453-bd1b-d6a491ec3174"
+              }
+            ]
+          }
+        ]
+      }
+    ]
   },
   "Oak Park, MI": {
     "add_max": [
@@ -68818,7 +70280,62 @@
           ]
         }
       ]
-    }
+    },
+    "add_max": [
+      {
+        "reporter": "Jake Seid",
+        "requirements": ["by right"],
+        "citations": [
+          {
+            "description": "Oswego Unified Development Ordinance",
+            "url": "https://www.oswegoil.org/home/showpublisheddocument/316/638501505487700000",
+            "notes": "Table 10.02.1\nPages 130-134",
+            "attachments": [],
+            "screenshots": [
+              {
+                "fileName": "oswego-il-screenshot.png",
+                "directusId": "c983a540-8eee-4fe1-8e69-c9cf0a18be83"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "reduce_min": [
+      {
+        "reporter": "Jake Seid",
+        "requirements": ["by right"],
+        "citations": [
+          {
+            "description": "Oswego Unified Development Ordinance",
+            "url": "https://www.oswegoil.org/home/showpublisheddocument/316/638501505487700000",
+            "notes": null,
+            "attachments": [],
+            "screenshots": []
+          }
+        ]
+      }
+    ],
+    "rm_min": [
+      {
+        "reporter": "Jake Seid",
+        "requirements": ["by right"],
+        "citations": [
+          {
+            "description": "Oswego Unified Development Ordinance",
+            "url": "https://www.oswegoil.org/home/showpublisheddocument/316/638501505487700000",
+            "notes": "10.02.C.1.\nPage 128",
+            "attachments": [],
+            "screenshots": [
+              {
+                "fileName": "oswego-il-screenshot.png",
+                "directusId": "9c21035b-3a86-4cc6-b7eb-d5904409ebad"
+              }
+            ]
+          }
+        ]
+      }
+    ]
   },
   "Otsego, MI": {
     "add_max": [
@@ -69701,7 +71218,51 @@
           ]
         }
       ]
-    }
+    },
+    "add_max": [
+      {
+        "reporter": "Samuel Deetz",
+        "requirements": ["by right"],
+        "citations": [
+          {
+            "description": "Park City Zoning Code",
+            "url": "https://library.municode.com/il/park_city/codes/code_of_ordinances?nodeId=TIT17ZO_CH17.53OREPALO_17.53.270TAQUPASPRELOUS",
+            "notes": "17.53.270(a)",
+            "attachments": [],
+            "screenshots": [
+              {
+                "fileName": "park-city-il-screenshot.png",
+                "directusId": "2aa628d1-ef4e-457c-b197-45811518aa4d"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "rm_min": [
+      {
+        "reporter": "Samuel Deetz",
+        "requirements": ["by right"],
+        "citations": [
+          {
+            "description": "Park City Zoning Code",
+            "url": "https://library.municode.com/il/park_city/codes/code_of_ordinances?nodeId=TIT17ZO_CH17.53OREPALO_17.53.270TAQUPASPRELOUS",
+            "notes": "17.53.270 - Table 5—Required parking spaces for residential and lodging uses.\n17.53.280 - Table 6—Required parking spaces for nonresidential and nonlodging uses.\t",
+            "attachments": [],
+            "screenshots": [
+              {
+                "fileName": "park-city-il-screenshot1.png",
+                "directusId": "6e32d25f-48b3-4cf6-bd67-75a0be89b77d"
+              },
+              {
+                "fileName": "park-city-il-screenshot2.png",
+                "directusId": "b4ca7eb5-4296-4263-9db6-32721f0f55a3"
+              }
+            ]
+          }
+        ]
+      }
+    ]
   },
   "Park Forest, IL": {
     "legacy": {

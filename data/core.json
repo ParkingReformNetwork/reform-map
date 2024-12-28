@@ -1873,7 +1873,34 @@
       "scope": ["city center / business district"],
       "land": ["commercial", "residential, all uses"],
       "date": null
-    }
+    },
+    "add_max": [
+      {
+        "summary": "Commercial establishments within the Downtown Parking District (DPD) may not provide off-street parking spaces in a greater number than one hundred percent (100%) of the parking requirement for that establishment's land use.",
+        "status": "implemented",
+        "scope": ["city center / business district"],
+        "land": ["commercial"],
+        "date": null
+      }
+    ],
+    "reduce_min": [
+      {
+        "summary": "If parking is required of a particular use in the Downtown Parking District (DPD), all on-street parking spaces within six hundred feet (600') of the proposed use and any parking spaces within municipal parking lots within six hundred feet (600') may be included in the calculation for the required number of off-street parking spaces.",
+        "status": "implemented",
+        "scope": ["city center / business district"],
+        "land": ["all uses"],
+        "date": null
+      }
+    ],
+    "rm_min": [
+      {
+        "summary": "Small residential and business land uses within the Downtown Parking District (DPD) are exempt from the minimum parking requirements. Large commercial or office development with a gross floor area of ten thousand (10,000) square feet or more will have to provide the village with a parking plan, and it will be subject to village board review and approval.",
+        "status": "implemented",
+        "scope": ["city center / business district"],
+        "land": ["commercial", "residential, all uses"],
+        "date": null
+      }
+    ]
   },
   "Appleton, MN": {
     "place": {
@@ -3776,7 +3803,31 @@
       "scope": ["city center / business district"],
       "land": ["all uses"],
       "date": null
-    }
+    },
+    "add_max": [
+      {
+        "summary": "In all Zoning Districts, except the LI Light Industrial District, GI General Industrial District, Single-Family and the R2 Two Family Residence districts, no use except Conference Centers, and Hotels and Commercial Lodging may provide parking in excess of 125% of the required minimum parking.",
+        "status": "implemented",
+        "scope": ["citywide"],
+        "land": [
+          "commercial",
+          "industrial",
+          "medical",
+          "other",
+          "residential, multi-family"
+        ],
+        "date": null
+      }
+    ],
+    "reduce_min": [
+      {
+        "summary": "On-street parking may be counted toward the visitor parking requirement for developments in the R2 Two Family, R3 Multi-Family Low Density, R4 Multi-Family Medium Density, and R5 Multi-Family High Density zoning districts. Within the DMU Downtown Mixed Use Zoning District, existing buildings are exempt from minimum parking requirements, while new uses and additions must provide parking, but may pay a fee-in-lieu instead.",
+        "status": "implemented",
+        "scope": ["city center / business district"],
+        "land": ["all uses"],
+        "date": null
+      }
+    ]
   },
   "Batavia, OH": {
     "place": {
@@ -6282,7 +6333,25 @@
       "scope": ["city center / business district"],
       "land": ["commercial"],
       "date": null
-    }
+    },
+    "reduce_min": [
+      {
+        "summary": "In March 2024, reductions were expanded for transit, mixed-use areas, on-street parking or public parking upon approval.",
+        "status": "implemented",
+        "scope": ["citywide"],
+        "land": ["all uses", "commercial", "industrial", "medical", "other"],
+        "date": null
+      }
+    ],
+    "rm_min": [
+      {
+        "summary": "Nonresidential uses in the D-1 Central Business District are exempt from parking mandates. In addition, when the application of the off-street parking regulations results in a requirement of not more than three parking spaces for any nonresidential use, such parking spaces need not be provided. However, where two or more uses are located on a single lot, only one of these uses is eligible for the exemption. In March 2024, parking mandates for nonresidential uses in the D-2 Downtown Transitional District were removed.",
+        "status": "implemented",
+        "scope": ["city center / business district", "citywide"],
+        "land": ["commercial", "other"],
+        "date": null
+      }
+    ]
   },
   "Bloomington, IN": {
     "place": {
@@ -9264,7 +9333,25 @@
       "scope": ["city center / business district"],
       "land": ["all uses"],
       "date": null
-    }
+    },
+    "reduce_min": [
+      {
+        "summary": "Parking requirements are reduced for mixed uses citywide.",
+        "status": "implemented",
+        "scope": ["citywide"],
+        "land": ["commercial", "other", "residential, multi-family"],
+        "date": null
+      }
+    ],
+    "rm_min": [
+      {
+        "summary": "Lots in the B-3 Central Business District with a width of less than forty feet (40') and/or less than five thousand (5,000) square feet in area are exempted from off street parking requirements.",
+        "status": "implemented",
+        "scope": ["city center / business district"],
+        "land": ["all uses"],
+        "date": "1976-11"
+      }
+    ]
   },
   "Canton, OH": {
     "place": {
@@ -9504,7 +9591,25 @@
       "scope": ["city center / business district"],
       "land": ["all uses"],
       "date": null
-    }
+    },
+    "reduce_min": [
+      {
+        "summary": "Commercial developments citywide are eligible for reduced parking requirements in exchange for additional bicycle parking facilities.",
+        "status": "implemented",
+        "scope": ["citywide"],
+        "land": ["commercial"],
+        "date": null
+      }
+    ],
+    "rm_min": [
+      {
+        "summary": "Uses in the NB Neighborhood, BPR Primary Business, or Retail Revitalization Overlay districts are exempt from parking mandates.",
+        "status": "implemented",
+        "scope": ["city center / business district"],
+        "land": ["all uses"],
+        "date": null
+      }
+    ]
   },
   "Carbondale, KS": {
     "place": {
@@ -13015,7 +13120,25 @@
       "scope": ["city center / business district"],
       "land": ["commercial"],
       "date": null
-    }
+    },
+    "add_max": [
+      {
+        "summary": "A parking maximum of four spaces per dwelling unit applies to residential uses.",
+        "status": "implemented",
+        "scope": ["citywide"],
+        "land": ["residential, all uses"],
+        "date": null
+      }
+    ],
+    "rm_min": [
+      {
+        "summary": "Business owners utilizing property located within the C-4 Downtown Commercial District are not required to provide off-street parking.",
+        "status": "implemented",
+        "scope": ["city center / business district"],
+        "land": ["commercial"],
+        "date": null
+      }
+    ]
   },
   "Coatesville, PA": {
     "place": {
@@ -15197,7 +15320,25 @@
       "scope": ["city center / business district"],
       "land": ["all uses"],
       "date": null
-    }
+    },
+    "add_max": [
+      {
+        "summary": "In all districts, maximum parking may not exceed 125% of the minimum standards for parking lots with fewer than 200 spaces and 115% of the minimum standards for parking lots with greater than 200 spaces.",
+        "status": "implemented",
+        "scope": ["citywide"],
+        "land": ["all uses"],
+        "date": null
+      }
+    ],
+    "reduce_min": [
+      {
+        "summary": "Uses within the Downtown District and Virginia Street Corridor are allowed a reduction in the required number of parking spaces to provide 70% of the required number of spaces for a similar new building or use. When meeting these provisions would constitute a hardship or make the redevelopment of properties in these districts economically impractical, the City will receive a cash contribution in lieu of on-site parking facilities.",
+        "status": "implemented",
+        "scope": ["city center / business district"],
+        "land": ["all uses"],
+        "date": null
+      }
+    ]
   },
   "Crystal, MN": {
     "place": {
@@ -15592,7 +15733,25 @@
       "scope": ["city center / business district"],
       "land": ["commercial"],
       "date": null
-    }
+    },
+    "reduce_min": [
+      {
+        "summary": "Parking requirements are reduced for shared parking.",
+        "status": "implemented",
+        "scope": ["citywide"],
+        "land": ["all uses"],
+        "date": null
+      }
+    ],
+    "rm_min": [
+      {
+        "summary": "Off-street parking spaces are not required for permitted business and office uses in the B-4 Zoning District.",
+        "status": "implemented",
+        "scope": ["city center / business district"],
+        "land": ["commercial"],
+        "date": null
+      }
+    ]
   },
   "Danville, IN": {
     "place": {
@@ -17682,7 +17841,34 @@
       "scope": ["city center / business district"],
       "land": ["commercial", "other"],
       "date": null
-    }
+    },
+    "add_max": [
+      {
+        "summary": "Commercial uses requiring one hundred (100) or more parking spaces may not provide more than four and one-half (4.5) spaces per one thousand (1,000) square feet of floor area unless otherwise approved through the special use approval process.",
+        "status": "implemented",
+        "scope": ["citywide"],
+        "land": ["commercial"],
+        "date": null
+      }
+    ],
+    "reduce_min": [
+      {
+        "summary": "Parking in all districts may be reduced through the provision of motorcycle parking, carshare service, or dedicated EV parking.",
+        "status": "implemented",
+        "scope": ["citywide"],
+        "land": ["all uses"],
+        "date": null
+      }
+    ],
+    "rm_min": [
+      {
+        "summary": "Minimum off-street parking requirements do not apply in the DC Downtown Core District or DB Downtown Business District or the Fairview Concentrated Business District, except for residential uses, medical offices, dental or health practitioner offices, and any nonresidential uses requiring Village Council approval.",
+        "status": "implemented",
+        "scope": ["city center / business district"],
+        "land": ["commercial", "other"],
+        "date": null
+      }
+    ]
   },
   "Downingtown, PA": {
     "place": {
@@ -19424,7 +19610,25 @@
       "scope": ["city center / business district", "citywide"],
       "land": ["commercial", "industrial", "other"],
       "date": "2024-05-06"
-    }
+    },
+    "reduce_min": [
+      {
+        "summary": "Within the D-1 Downtown District, residential uses have reduced requirements.",
+        "status": "implemented",
+        "scope": ["city center / business district"],
+        "land": ["residential, all uses"],
+        "date": "2024-05-06"
+      }
+    ],
+    "rm_min": [
+      {
+        "summary": "Nonresidential uses in the D-1 Downtown District are exempt from parking mandates and various nonresidential uses are exempt citywide.",
+        "status": "implemented",
+        "scope": ["city center / business district", "citywide"],
+        "land": ["commercial", "industrial", "other"],
+        "date": "2024-05-06"
+      }
+    ]
   },
   "Eldora, IA": {
     "place": {
@@ -22277,7 +22481,25 @@
       "scope": ["citywide"],
       "land": ["commercial"],
       "date": null
-    }
+    },
+    "add_max": [
+      {
+        "summary": "The total number of parking spaces provided for one-family, two-family or multiple-family dwellings or hotels may [not] exceed the requirements for such use or for any equivalent new use by more than 50 percent, or four spaces, whichever number is greater.",
+        "status": "implemented",
+        "scope": ["citywide"],
+        "land": ["other", "residential, all uses"],
+        "date": null
+      }
+    ],
+    "rm_min": [
+      {
+        "summary": "Retail stores, banks, furniture and appliance stores, household equipment, or furniture repair shops under 2000 square feet are exempt from minimum parking requirements. Wholesale establishments under 4000 square feet are also exempt.",
+        "status": "implemented",
+        "scope": ["citywide"],
+        "land": ["commercial"],
+        "date": null
+      }
+    ]
   },
   "Forest Grove, OR": {
     "place": {
@@ -23067,7 +23289,25 @@
       "scope": ["city center / business district"],
       "land": ["commercial"],
       "date": null
-    }
+    },
+    "add_max": [
+      {
+        "summary": "Parking maximums apply to single-family and two-family dwellings.",
+        "status": "implemented",
+        "scope": ["citywide"],
+        "land": ["residential, low-density"],
+        "date": null
+      }
+    ],
+    "rm_min": [
+      {
+        "summary": "When the application of the off-street parking regulations results in a requirement of not more than three spaces on a single lot in the B1 Retail/Service District or B2 General Business District, such parking spaces need not be provided. However, where two or more uses are located on a single lot, only one of these uses is eligible for the exemption. This exemption does not apply to dwelling units.",
+        "status": "implemented",
+        "scope": ["city center / business district"],
+        "land": ["commercial", "other"],
+        "date": null
+      }
+    ]
   },
   "Framingham, MA": {
     "place": {
@@ -23197,7 +23437,25 @@
       "scope": ["city center / business district", "citywide"],
       "land": ["residential, low-density"],
       "date": null
-    }
+    },
+    "reduce_min": [
+      {
+        "summary": "Parking requirements for all uses may be reduced with proximity to any commuter rail station or transit line. Within the C-1 Neighborhood convenience district, C-4 Commercial flex district, C-5 Commercial manufacturing district, and DT Downtown districts and with approval of the Zoning Administrator, on-street parking spaces may be counted toward the required off-street parking spaces. A fee in lieu for each credit is required for the C-4 and C-5 Districts. In addition, off-street public parking spaces may be counted toward the required off-street parking spaces. A fee in lieu is required for each credit in the C-4 and C-5 Districts, as well as for each credit above five (5) in the DT Districts.",
+        "status": "implemented",
+        "scope": ["citywide"],
+        "land": ["all uses"],
+        "date": null
+      }
+    ],
+    "rm_min": [
+      {
+        "summary": "Single family dwellings are exempt from minimum parking requirements.",
+        "status": "implemented",
+        "scope": ["citywide"],
+        "land": ["residential, low-density"],
+        "date": null
+      }
+    ]
   },
   "Franklin, IN": {
     "place": {
@@ -25259,7 +25517,25 @@
       "scope": ["city center / business district"],
       "land": ["all uses"],
       "date": null
-    }
+    },
+    "add_max": [
+      {
+        "summary": "Single family dwellings may not provide more than four spaces.",
+        "status": "implemented",
+        "scope": ["citywide"],
+        "land": ["residential, low-density"],
+        "date": null
+      }
+    ],
+    "rm_min": [
+      {
+        "summary": "When the application of the off-street parking regulations results in a requirement of not more than three spaces on a single lot in the B1 Limited Business or B2 General Business districts, such parking spaces need not be provided. However, where two or more uses are located on a single lot, only one of these uses may be eligible for the exemption. This exemption does not apply to dwelling units.",
+        "status": "implemented",
+        "scope": ["city center / business district"],
+        "land": ["commercial", "other"],
+        "date": null
+      }
+    ]
   },
   "Glidden, IA": {
     "place": {
@@ -26876,7 +27152,40 @@
       "scope": ["city center / business district", "citywide"],
       "land": ["all uses", "residential, low-density"],
       "date": "2013-09-10"
-    }
+    },
+    "add_max": [
+      {
+        "summary": "Parking maximums apply to most nonresidential and multi-family residential uses.",
+        "status": "implemented",
+        "scope": ["citywide"],
+        "land": [
+          "commercial",
+          "industrial",
+          "medical",
+          "other",
+          "residential, multi-family"
+        ],
+        "date": "2013-09-10"
+      }
+    ],
+    "reduce_min": [
+      {
+        "summary": "Parking requirements may be reduced through on-street parking or the payment of a fee in lieu of required parking.",
+        "status": "implemented",
+        "scope": ["citywide"],
+        "land": ["all uses"],
+        "date": "2013-09-10"
+      }
+    ],
+    "rm_min": [
+      {
+        "summary": "The “D” (Downtown) Zoning District, the TND or TOD use patterns, and single-family dwellings are exempt from parking mandates.",
+        "status": "implemented",
+        "scope": ["city center / business district", "citywide"],
+        "land": ["all uses", "residential, low-density"],
+        "date": "2013-09-10"
+      }
+    ]
   },
   "Greenville, OH": {
     "place": {
@@ -28272,7 +28581,25 @@
       "scope": ["city center / business district"],
       "land": ["residential, all uses"],
       "date": null
-    }
+    },
+    "reduce_min": [
+      {
+        "summary": "Spaces within parking lots and structures may include designated areas for bikeshare facilities. When a minimum of 15 bicycles are provided for rental, such bikeshare facilities may substituted for up to four automobile spaces or 5% of the required parking spaces, whichever is less.",
+        "status": "implemented",
+        "scope": ["citywide"],
+        "land": ["all uses"],
+        "date": null
+      }
+    ],
+    "rm_min": [
+      {
+        "summary": "Within the B-1-RC Retail Core Sub-District and B-1-MU Mixed-Use Sub-District, residential dwelling units above the ground floor are exempt from minimum parking requirements.",
+        "status": "implemented",
+        "scope": ["city center / business district"],
+        "land": ["residential, multi-family"],
+        "date": null
+      }
+    ]
   },
   "Harvey, IL": {
     "place": {
@@ -28328,7 +28655,25 @@
       "scope": ["city center / business district"],
       "land": ["all uses", "commercial"],
       "date": null
-    }
+    },
+    "add_max": [
+      {
+        "summary": "Parking maximums apply to single-family and two-family dwellings.",
+        "status": "implemented",
+        "scope": ["citywide"],
+        "land": ["residential, low-density"],
+        "date": null
+      }
+    ],
+    "reduce_min": [
+      {
+        "summary": "In the B-1 Neighborhood Shopping District, on-street parking spaces may be counted toward required off-street parking spaces. New on-street parking spaces may be created to count toward required off-street parking. A fee-in-lieu of providing some or all of the required number of off-street parking spaces for non-residential uses in the B-1 Neighborhood Shopping District and B-2 Central Shopping District may be granted by the village.",
+        "status": "implemented",
+        "scope": ["city center / business district"],
+        "land": ["all uses", "commercial"],
+        "date": null
+      }
+    ]
   },
   "Haskell, AR": {
     "place": {
@@ -32715,7 +33060,25 @@
       "scope": ["city center / business district"],
       "land": ["commercial"],
       "date": null
-    }
+    },
+    "add_max": [
+      {
+        "summary": "Parking maximums apply to all uses in residential districts.",
+        "status": "implemented",
+        "scope": ["citywide"],
+        "land": ["residential, all uses"],
+        "date": null
+      }
+    ],
+    "rm_min": [
+      {
+        "summary": "Nonresidential uses on the ground floor in the B Business District are exempt from minimum parking requirements.",
+        "status": "implemented",
+        "scope": ["city center / business district"],
+        "land": ["commercial", "other"],
+        "date": null
+      }
+    ]
   },
   "Kenner, LA": {
     "place": {
@@ -33825,7 +34188,25 @@
       "scope": ["city center / business district"],
       "land": ["commercial"],
       "date": null
-    }
+    },
+    "reduce_min": [
+      {
+        "summary": "The first 2,000 square feet in gross floor area for commercial uses in the C-1 Commercial Corridor Zoning District are exempt from parking mandates. In addition, on-street parking spaces in the C-1 District may be counted toward required off-street parking spaces.",
+        "status": "implemented",
+        "scope": ["city center / business district"],
+        "land": ["all uses", "commercial"],
+        "date": null
+      }
+    ],
+    "rm_min": [
+      {
+        "summary": "The first 2,000 square feet in gross floor area for commercial uses in the C-1 Commercial Corridor Zoning District are exempt from parking mandates. Commercial uses 2,000 square feet or less in gross floor area located within a shopping center configuration (i.e., a “strip mall”) are not eligible for this exemption.",
+        "status": "implemented",
+        "scope": ["city center / business district"],
+        "land": ["commercial"],
+        "date": null
+      }
+    ]
   },
   "La Grange, IL": {
     "place": {
@@ -35894,7 +36275,25 @@
       "scope": ["citywide"],
       "land": ["all uses"],
       "date": null
-    }
+    },
+    "add_max": [
+      {
+        "summary": "Parking maximums apply to all uses.",
+        "status": "implemented",
+        "scope": ["citywide"],
+        "land": ["all uses"],
+        "date": null
+      }
+    ],
+    "rm_min": [
+      {
+        "summary": "No parking is required for any use.",
+        "status": "implemented",
+        "scope": ["citywide"],
+        "land": ["all uses"],
+        "date": null
+      }
+    ]
   },
   "Leland, IL": {
     "place": {
@@ -35912,7 +36311,25 @@
       "scope": ["citywide"],
       "land": ["residential, low-density"],
       "date": null
-    }
+    },
+    "reduce_min": [
+      {
+        "summary": "A change of use in an existing building is exempt from parking mandates. A fee in lieu of required parking may be paid in the central business district area.",
+        "status": "implemented",
+        "scope": ["city center / business district", "citywide"],
+        "land": ["all uses"],
+        "date": null
+      }
+    ],
+    "rm_min": [
+      {
+        "summary": "Single-family dwellings are exempt from parking mandates.",
+        "status": "implemented",
+        "scope": ["citywide"],
+        "land": ["residential, low-density"],
+        "date": null
+      }
+    ]
   },
   "Lemont, IL": {
     "place": {
@@ -35930,7 +36347,25 @@
       "scope": ["city center / business district"],
       "land": ["all uses"],
       "date": null
-    }
+    },
+    "add_max": [
+      {
+        "summary": "Parking maximums are set at 140% of the minimums.",
+        "status": "implemented",
+        "scope": ["citywide"],
+        "land": ["all uses"],
+        "date": "2008"
+      }
+    ],
+    "rm_min": [
+      {
+        "summary": "Land uses on lots one-half acre or less in the Downtown District are exempt from parking mandates.",
+        "status": "implemented",
+        "scope": ["city center / business district"],
+        "land": ["all uses"],
+        "date": "2008"
+      }
+    ]
   },
   "Lemoyne, PA": {
     "place": {
@@ -36348,7 +36783,25 @@
       "scope": ["city center / business district"],
       "land": ["all uses"],
       "date": null
-    }
+    },
+    "reduce_min": [
+      {
+        "summary": "The first 100 square feet of floor area within any new building and the first 100 square feet of any new floor area added to any separately owned portion of any existing building in the C-1 Downtown Core Commercial District is exempt from parking mandates, unless required by a special use permit. A fee-in-lieu of required spaces may be paid in the district.",
+        "status": "implemented",
+        "scope": ["city center / business district"],
+        "land": ["all uses"],
+        "date": null
+      }
+    ],
+    "rm_min": [
+      {
+        "summary": "The first 100 square feet of floor area within any new building and the first 100 square feet of any new floor area added to any separately owned portion of any existing building in the C-1 Downtown Core Commercial District is exempt from parking mandates, unless required by a special use permit.",
+        "status": "implemented",
+        "scope": ["city center / business district"],
+        "land": ["all uses"],
+        "date": null
+      }
+    ]
   },
   "Ligonier, IN": {
     "place": {
@@ -36729,7 +37182,25 @@
       "scope": ["city center / business district"],
       "land": ["commercial", "other"],
       "date": null
-    }
+    },
+    "reduce_min": [
+      {
+        "summary": "Nonresidential uses in the B-3A Central Retail Core District may count on-street parking spaces abutting the property towards satisfying off-street parking requirements.",
+        "status": "implemented",
+        "scope": ["city center / business district"],
+        "land": ["commercial", "other"],
+        "date": null
+      }
+    ],
+    "rm_min": [
+      {
+        "summary": "Minimum off-street parking requirements do not apply in the B-3A Central Retail Core District, except for all household living uses, medical offices, and any nonresidential uses which require a special use permit.",
+        "status": "implemented",
+        "scope": ["city center / business district"],
+        "land": ["commercial", "other"],
+        "date": null
+      }
+    ]
   },
   "Litchfield Park, AZ": {
     "place": {
@@ -40123,7 +40594,25 @@
       "scope": ["city center / business district"],
       "land": ["commercial"],
       "date": null
-    }
+    },
+    "reduce_min": [
+      {
+        "summary": "In the C-2 Pedestrian-Oriented Commercial District, the first 2,000 square feet in gross floor area for nonresidential uses is exempt from parking mandates. Within the C-2 District, all uses may count on-street parking toward parking requirements and a fee in lieu of required parking may be provided for nonresidential uses. Changes in use within existing buildings do not require payment of a fee-in-lieu.",
+        "status": "implemented",
+        "scope": ["city center / business district"],
+        "land": ["all uses", "commercial", "other"],
+        "date": null
+      }
+    ],
+    "rm_min": [
+      {
+        "summary": "In the C-1 Local Commercial Zoning District, all commercial uses are exempt from parking mandates. In the C-2 Pedestrian-Oriented Commercial District, the first 2,000 square feet in gross floor area for nonresidential uses is exempt from parking mandates. This does not apply to a multi-tenant structure.",
+        "status": "implemented",
+        "scope": ["city center / business district"],
+        "land": ["commercial", "other"],
+        "date": null
+      }
+    ]
   },
   "Mazomanie, WI": {
     "place": {
@@ -42348,7 +42837,25 @@
       "scope": ["city center / business district"],
       "land": ["all uses"],
       "date": "2000-02-14"
-    }
+    },
+    "reduce_min": [
+      {
+        "summary": "No off street parking is required for the first two thousand five hundred (2,500) square feet of a use in the C-4 traditional downtown district.",
+        "status": "implemented",
+        "scope": ["city center / business district"],
+        "land": ["all uses"],
+        "date": "2000-02-14"
+      }
+    ],
+    "rm_min": [
+      {
+        "summary": "No off street parking is required for the first two thousand five hundred (2,500) square feet of a use in the C-4 traditional downtown district.",
+        "status": "implemented",
+        "scope": ["city center / business district"],
+        "land": ["all uses"],
+        "date": "2000-02-14"
+      }
+    ]
   },
   "Moline, IL": {
     "place": {
@@ -42821,7 +43328,40 @@
       "scope": ["city center / business district"],
       "land": ["commercial"],
       "date": null
-    }
+    },
+    "add_max": [
+      {
+        "summary": "Parking maximums apply to all residential uses and most nonresidential uses citywide.",
+        "status": "implemented",
+        "scope": ["citywide"],
+        "land": [
+          "commercial",
+          "industrial",
+          "medical",
+          "other",
+          "residential, all uses"
+        ],
+        "date": null
+      }
+    ],
+    "reduce_min": [
+      {
+        "summary": "Parking requirements may be reduced by providing EV chargers or a solar canopy over the parking lot.",
+        "status": "implemented",
+        "scope": ["citywide"],
+        "land": ["all uses"],
+        "date": "2024-03-25"
+      }
+    ],
+    "rm_min": [
+      {
+        "summary": "In the MD Mill District, properties are not required to provide off-street parking spaces with the exception of residential uses.",
+        "status": "implemented",
+        "scope": ["city center / business district"],
+        "land": ["commercial", "other"],
+        "date": null
+      }
+    ]
   },
   "Montgomery, MN": {
     "place": {
@@ -44226,7 +44766,25 @@
       "scope": ["city center / business district"],
       "land": ["all uses"],
       "date": null
-    }
+    },
+    "add_max": [
+      {
+        "summary": "Parking maximums apply to single-family dwellings.",
+        "status": "implemented",
+        "scope": ["citywide"],
+        "land": ["residential, low-density"],
+        "date": null
+      }
+    ],
+    "reduce_min": [
+      {
+        "summary": "Parking mandates may be waived in the central business zone if on-street parking is permitted.",
+        "status": "implemented",
+        "scope": ["city center / business district"],
+        "land": ["all uses"],
+        "date": null
+      }
+    ]
   },
   "Muir, MI": {
     "place": {
@@ -44339,7 +44897,25 @@
       "scope": ["city center / business district"],
       "land": ["commercial", "other"],
       "date": null
-    }
+    },
+    "reduce_min": [
+      {
+        "summary": "Within the C-5 Downtown Zoning District, non-residential uses may provide a fee-in-lieu of required parking.",
+        "status": "implemented",
+        "scope": ["city center / business district"],
+        "land": ["commercial", "other"],
+        "date": null
+      }
+    ],
+    "rm_min": [
+      {
+        "summary": "Within the C-5 Downtown Zoning District, the first 1000 square feet of many commercial and institutional uses is exempt from minimum parking requirements.",
+        "status": "implemented",
+        "scope": ["city center / business district"],
+        "land": ["commercial", "other"],
+        "date": null
+      }
+    ]
   },
   "Munhall, PA": {
     "place": {
@@ -46390,7 +46966,25 @@
       "scope": ["city center / business district"],
       "land": ["commercial"],
       "date": null
-    }
+    },
+    "add_max": [
+      {
+        "summary": "Parking maximums apply to single-family and two-family dwellings.",
+        "status": "implemented",
+        "scope": ["citywide"],
+        "land": ["residential, low-density"],
+        "date": null
+      }
+    ],
+    "rm_min": [
+      {
+        "summary": "Permitted business and office uses in the B-2 Central Business District are exempt from off-street parking requirements.",
+        "status": "implemented",
+        "scope": ["city center / business district"],
+        "land": ["commercial", "other"],
+        "date": null
+      }
+    ]
   },
   "Norman, OK": {
     "place": {
@@ -47306,7 +47900,25 @@
       "scope": ["city center / business district"],
       "land": ["residential, all uses"],
       "date": "1970-09-08"
-    }
+    },
+    "reduce_min": [
+      {
+        "summary": "Within the Downtown District, non-residential uses in existing buildings are exempt from minimum parking requirements. Nor is any parking required for existing or re-developed second story dwelling units located within existing buildings in the Downtown District.",
+        "status": "implemented",
+        "scope": ["city center / business district"],
+        "land": ["commercial", "other", "residential, multi-family"],
+        "date": "1970-09-08"
+      }
+    ],
+    "rm_min": [
+      {
+        "summary": "Within the Downtown District, uses with two or fewer dwelling units are exempt from parking mandates.",
+        "status": "implemented",
+        "scope": ["city center / business district"],
+        "land": ["residential, all uses"],
+        "date": "1970-09-08"
+      }
+    ]
   },
   "O'Neill, NE": {
     "place": {
@@ -47400,7 +48012,29 @@
       "scope": ["city center / business district"],
       "land": ["commercial"],
       "date": null
-    }
+    },
+    "reduce_min": [
+      {
+        "summary": "In commercial districts, on-street parking may be counted toward parking requirements for commercial uses. In the DT-1 Downtown Central Sub-District, parking requirements are reduced. In all districts, all uses located within one-half mile of a rail transit station have reduced parking requirements. Furthermore, the Zoning Administrator may authorize greater reductions through the provision of a transportation management plan, the use of off-peak work schedules, or the provision of cash or in-kind financial incentives for employees commuting by carpool, car sharing, vanpool, and transit. At the discretion of the Village, a one-time fee may be paid in lieu of providing a portion of the required off-street parking.",
+        "status": "implemented",
+        "scope": [
+          "city center / business district",
+          "citywide",
+          "transit-oriented"
+        ],
+        "land": ["all uses", "commercial"],
+        "date": null
+      }
+    ],
+    "rm_min": [
+      {
+        "summary": "Nonresidential uses of 2,500 square feet or less in commercial districts are exempt from parking requirements.",
+        "status": "implemented",
+        "scope": ["city center / business district"],
+        "land": ["commercial", "other"],
+        "date": null
+      }
+    ]
   },
   "Oak Park, MI": {
     "place": {
@@ -48673,7 +49307,41 @@
       "scope": ["city center / business district"],
       "land": ["commercial", "other"],
       "date": "2024-05-01"
-    }
+    },
+    "add_max": [
+      {
+        "summary": "Parking maximums apply to all residential and most nonresidential uses.",
+        "status": "implemented",
+        "scope": ["city center / business district"],
+        "land": ["commercial", "other"],
+        "date": "2024-05-01"
+      }
+    ],
+    "reduce_min": [
+      {
+        "summary": "Parking minimums were reduced for many uses in May 2024 with a new Unified Development Ordinance.",
+        "status": "implemented",
+        "scope": ["citywide"],
+        "land": [
+          "commercial",
+          "industrial",
+          "medical",
+          "other",
+          "residential, low-density",
+          "residential, multi-family"
+        ],
+        "date": "2024-05-01"
+      }
+    ],
+    "rm_min": [
+      {
+        "summary": "Nonresidential uses in the D-1 District are exempt from parking mandates.",
+        "status": "implemented",
+        "scope": ["city center / business district"],
+        "land": ["commercial", "other"],
+        "date": "2024-05-01"
+      }
+    ]
   },
   "Otsego, MI": {
     "place": {
@@ -49370,7 +50038,25 @@
       "scope": ["city center / business district"],
       "land": ["all uses"],
       "date": null
-    }
+    },
+    "add_max": [
+      {
+        "summary": "Parking maximums apply to residential uses citywide.",
+        "status": "implemented",
+        "scope": ["citywide"],
+        "land": ["residential, all uses"],
+        "date": null
+      }
+    ],
+    "rm_min": [
+      {
+        "summary": "The D-4 downtown commercial district is exempt from minimum parking requirements.",
+        "status": "implemented",
+        "scope": ["city center / business district"],
+        "land": ["all uses"],
+        "date": null
+      }
+    ]
   },
   "Park Forest, IL": {
     "place": {
