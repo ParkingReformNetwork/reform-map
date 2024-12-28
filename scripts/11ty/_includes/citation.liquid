@@ -1,5 +1,5 @@
-<article>
-  <h2>Citation{% if numCitations > 1 %} {{ index }}{% endif %}</h2>
+<details class="citation">
+  <summary>Citation{% if numCitations > 1 %} {{ index }}{% endif %}</summary>
   <dl>
     <dt>Source</dt>
     <dd>{{ citation.description }}</dd>
@@ -25,4 +25,4 @@
     {%- endfor %}
     </ul>
   {%- endif %}
-</article>
+</details>

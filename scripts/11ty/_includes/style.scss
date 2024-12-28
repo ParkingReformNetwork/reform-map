@@ -149,6 +149,13 @@ a {
 }
 
 // -------------------------------------------------------------------------
+// Theme: borders
+// -------------------------------------------------------------------------
+
+$border-radius: 5px;
+$component-border: 1px solid $black-translucent;
+
+// -------------------------------------------------------------------------
 // main
 // -------------------------------------------------------------------------
 
@@ -159,7 +166,7 @@ body {
 
 main {
   word-break: break-word;
-  max-width: min(1000px, 100%);
+  width: min(1000px, 100%);
   margin: 0 auto;
   padding: 0 $spacing-container-edge-spacing;
 }
@@ -257,21 +264,44 @@ dd {
 }
 
 // -------------------------------------------------------------------------
+// Citations
+// -------------------------------------------------------------------------
+
+.citation {
+  border: $component-border;
+  border-radius: $border-radius;
+  padding: $spacing-element-gap $spacing-container-edge-spacing;
+  margin: $spacing-element-gap 0;
+
+  &[open] > summary {
+    margin-bottom: $spacing-element-gap;
+  }
+
+  summary {
+    font-weight: 500;
+  }
+}
+
+// -------------------------------------------------------------------------
 // Screenshots
 // -------------------------------------------------------------------------
 
 .screenshots {
   list-style: none;
   padding-left: 0;
-  margin-top: $spacing-container-edge-spacing;
+  margin-top: $spacing-element-gap;
 
   li {
     margin-bottom: $spacing-element-gap;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
   }
 
   img {
     width: 100%;
-    border: 1px solid $black-translucent;
-    border-radius: 5px;
+    border: $component-border;
+    border-radius: $border-radius;
   }
 }

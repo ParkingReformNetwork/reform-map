@@ -33,9 +33,7 @@ layout: layout.liquid
       <dd>{{ entry.reporter }}</dd>
     {%- endif %}
   </dl>
-  <section aria-label="citations">
-    {% for citation in entry.citations -%}
-      {% render "citation" citation: citation numCitations: entry.citations.size index: forloop.index %}
-    {%- endfor %}
-  <section>
+  {% for citation in entry.citations -%}
+    {% render "citation" citation: citation numCitations: entry.citations.size index: forloop.index %}
+  {%- endfor %}
 </main>
