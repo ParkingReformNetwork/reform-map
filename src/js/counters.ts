@@ -1,7 +1,7 @@
 import { isEqual } from "lodash-es";
 
 import { FilterState, PlaceFilterManager } from "./FilterState";
-import { PolicyType } from "./types";
+import { PlaceType, PolicyType } from "./types";
 
 export function determineHtml(
   view: "table" | "map",
@@ -10,6 +10,7 @@ export function determineHtml(
   numPolicyRecords: number,
   matchedPolicyTypes: Set<PolicyType>,
   matchedCountries: Set<string>,
+  matchedPlaceTypes: Set<PlaceType>,
 ): string {
   if (!numPlaces) {
     return "No places selected — use the filter or search icons";
@@ -26,16 +27,30 @@ export function determineHtml(
     country = `the ${country}`;
   }
 
-  const placesWord = numPlaces === 1 ? "place" : "places";
-  const recordsWord = numPolicyRecords === 1 ? "record" : "records";
+  let placeDescription;
+  if (isEqual(matchedPlaceTypes, new Set(["city"]))) {
+    const label = numPlaces === 1 ? "city" : "cities";
+    placeDescription = `${label} in ${country}`;
+  } else if (isEqual(matchedPlaceTypes, new Set(["county"]))) {
+    const label = numPlaces === 1 ? "county" : "counties";
+    placeDescription = `${label} in ${country}`;
+  } else if (isEqual(matchedPlaceTypes, new Set(["state"]))) {
+    const label = numPlaces === 1 ? "state" : "states";
+    placeDescription = `${label} in ${country}`;
+  } else if (isEqual(matchedPlaceTypes, new Set(["country"]))) {
+    placeDescription = numPlaces === 1 ? "country" : "countries";
+  } else {
+    const label = numPlaces === 1 ? "place" : "places";
+    placeDescription = `${label} in ${country}`;
+  }
+  const prefix = `Showing ${numPlaces} ${placeDescription} with`;
 
   // We only show the number of policy records when it's useful information to the user
   // because it would otherwise be noisy.
+  const recordsWord = numPolicyRecords === 1 ? "record" : "records";
   const showRecords = view === "table" && numPlaces !== numPolicyRecords;
   const multipleRecordsExplanation =
     "because some places have multiple records";
-
-  const prefix = `Showing ${numPlaces} ${placesWord} in ${country} with`;
 
   if (state.policyTypeFilter === "legacy reform") {
     const suffix = state.allMinimumsRemovedToggle
@@ -148,6 +163,7 @@ export default function initCounters(manager: PlaceFilterManager): void {
       manager.numMatchedPolicyRecords,
       manager.matchedPolicyTypes,
       manager.matchedCountries,
+      manager.matchedPlaceTypes,
     );
     tableCounter.innerHTML = determineHtml(
       "table",
@@ -156,6 +172,7 @@ export default function initCounters(manager: PlaceFilterManager): void {
       manager.numMatchedPolicyRecords,
       manager.matchedPolicyTypes,
       manager.matchedCountries,
+      manager.matchedPlaceTypes,
     );
   });
 }

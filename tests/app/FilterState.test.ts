@@ -18,6 +18,7 @@ test.describe("PlaceFilterManager.matchedPolicyRecords()", () => {
     landUse: new Set(["all uses", "commercial", "other"]),
     status: new Set(["implemented", "passed"]),
     country: new Set(["United States", "Brazil"]),
+    placeType: new Set(["city", "county"]),
     year: new Set(["2023", "2024"]),
     populationSliderIndexes: [0, POPULATION_MAX_INDEX],
   };
@@ -28,6 +29,7 @@ test.describe("PlaceFilterManager.matchedPolicyRecords()", () => {
         name: "Place 1",
         state: "",
         country: "United States",
+        type: "city",
         pop: 48100,
         repeal: false,
         coord: [0, 0],
@@ -56,6 +58,7 @@ test.describe("PlaceFilterManager.matchedPolicyRecords()", () => {
         name: "Place 2",
         state: "",
         country: "Brazil",
+        type: "county",
         pop: 400,
         repeal: true,
         coord: [0, 0],
@@ -159,6 +162,14 @@ test.describe("PlaceFilterManager.matchedPolicyRecords()", () => {
     });
     manager.update({
       populationSliderIndexes: DEFAULT_STATE.populationSliderIndexes,
+    });
+
+    manager.update({ placeType: new Set(["county"]) });
+    expect(manager.matchedPlaces).toEqual({
+      "Place 2": expectedPlace2Match,
+    });
+    manager.update({
+      placeType: DEFAULT_STATE.placeType,
     });
   });
 

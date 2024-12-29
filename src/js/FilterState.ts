@@ -1,6 +1,7 @@
 import { isEqual } from "lodash-es";
 import {
   PlaceId,
+  PlaceType,
   PolicyType,
   ProcessedCoreEntry,
   ProcessedCorePolicy,
@@ -39,6 +40,7 @@ export interface FilterState {
   searchInput: string | null;
   policyTypeFilter: PolicyTypeFilter;
   allMinimumsRemovedToggle: boolean;
+  placeType: Set<string>;
   includedPolicyChanges: Set<string>;
   scope: Set<string>;
   landUse: Set<string>;
@@ -83,6 +85,7 @@ interface CacheEntry {
   matchedPlaces: Record<PlaceId, PlaceMatch>;
   matchedCountries: Set<string>;
   matchedPolicyTypesForAnyPolicy: Set<PolicyType>;
+  matchedPlaceTypes: Set<PlaceType>;
   numMatchedPolicyRecordsForSinglePolicy: number;
 }
 
@@ -124,6 +127,10 @@ export class PlaceFilterManager {
     return this.ensureCache().matchedCountries;
   }
 
+  get matchedPlaceTypes(): Set<PlaceType> {
+    return this.ensureCache().matchedPlaceTypes;
+  }
+
   /// The policy types the matched places have.
   ///
   /// This is only set when the policy type is 'any parking reform'.
@@ -161,12 +168,14 @@ export class PlaceFilterManager {
     const matchedPlaces: Record<PlaceId, PlaceMatch> = {};
     const matchedCountries = new Set<string>();
     const matchedPolicyTypes = new Set<PolicyType>();
+    const matchedPlaceTypes = new Set<PlaceType>();
     let numMatchedPolicyRecords = 0;
     for (const placeId in this.entries) {
       const match = this.getPlaceMatch(placeId);
       if (!match) continue;
       matchedPlaces[placeId] = match;
       matchedCountries.add(this.entries[placeId].place.country);
+      matchedPlaceTypes.add(this.entries[placeId].place.type);
       if (match.type === "single policy") {
         numMatchedPolicyRecords += match.matchingIndexes.length;
       }
@@ -183,6 +192,7 @@ export class PlaceFilterManager {
       matchedPlaces,
       matchedCountries,
       matchedPolicyTypesForAnyPolicy: matchedPolicyTypes,
+      matchedPlaceTypes,
       numMatchedPolicyRecordsForSinglePolicy: numMatchedPolicyRecords,
     };
     return this.cache;
@@ -190,6 +200,9 @@ export class PlaceFilterManager {
 
   private matchesPlace(place: ProcessedPlace): boolean {
     const filterState = this.state.getValue();
+
+    const isPlaceType = filterState.placeType.has(place.type);
+    if (!isPlaceType) return false;
 
     const isCountry = filterState.country.has(place.country);
     if (!isCountry) return false;

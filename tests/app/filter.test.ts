@@ -21,6 +21,7 @@ interface EdgeCase {
   status?: StringArrayOption;
   country?: StringArrayOption;
   year?: StringArrayOption;
+  placeType?: StringArrayOption;
   populationIntervals?: [number, number];
   allMinimumsRemoved?: boolean;
   expectedRange: [number, number] | "all";
@@ -50,6 +51,11 @@ const TESTS: EdgeCase[] = [
     desc: "country filter",
     country: ["Mexico"],
     expectedRange: [2, 7],
+  },
+  {
+    desc: "place type filter",
+    placeType: ["Country"],
+    expectedRange: [5, 11],
   },
   {
     desc: "year filter",
@@ -136,6 +142,7 @@ for (const edgeCase of TESTS) {
     await selectIfSet(page, "status", edgeCase.status);
     await selectIfSet(page, "country", edgeCase.country);
     await selectIfSet(page, "year", edgeCase.year);
+    await selectIfSet(page, "place-type", edgeCase.placeType);
 
     if (edgeCase.populationIntervals !== undefined) {
       const [leftInterval, rightInterval] = edgeCase.populationIntervals;
