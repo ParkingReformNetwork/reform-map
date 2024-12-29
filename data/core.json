@@ -480,7 +480,25 @@
       "scope": ["city center / business district"],
       "land": ["commercial"],
       "date": null
-    }
+    },
+    "add_max": [
+      {
+        "summary": "The Ashland and Cherryland Business District Specific Plan regulates a 246-acre area along two major streets in unincorporated Alameda County. The plan sets maximum parking requirements for most nonresidential uses.",
+        "status": "implemented",
+        "scope": ["city center / business district"],
+        "land": ["commercial", "industrial", "medical", "other"],
+        "date": null
+      }
+    ],
+    "rm_min": [
+      {
+        "summary": "The Ashland and Cherryland Business District Specific Plan regulates a 246-acre area along two major streets in unincorporated Alameda County. Within the plan area, there are no minimum parking requirements for restaurants and small retail establishments. In most zones within the plan area, there are also no minimum requirements for offices, “general commercial”, gas stations, car washes, and automobile sales, rental, and repair establishments. For land uses where minimum parking requirements still apply, the requirements are generally lower than the County’s standard requirements. At many residential developments, the plan also requires the unbundling of parking costs and the provision of designated spaces for carshare cars.",
+        "status": "implemented",
+        "scope": ["city center / business district"],
+        "land": ["commercial"],
+        "date": null
+      }
+    ]
   },
   "Alameda, CA": {
     "place": {
@@ -498,7 +516,25 @@
       "scope": ["citywide"],
       "land": ["all uses"],
       "date": "2021-12-16"
-    }
+    },
+    "add_max": [
+      {
+        "summary": "Alameda replaced parking minimums with maximums in December 2021.",
+        "status": "implemented",
+        "scope": ["citywide"],
+        "land": ["all uses"],
+        "date": "2021-12-16"
+      }
+    ],
+    "rm_min": [
+      {
+        "summary": "Effective 12/16/2021, Alameda has repealed parking requirements for all uses, citywide.",
+        "status": "implemented",
+        "scope": ["citywide"],
+        "land": ["all uses"],
+        "date": "2021-12-16"
+      }
+    ]
   },
   "Alamogordo, NM": {
     "place": {
@@ -3263,7 +3299,44 @@
       "scope": ["transit oriented"],
       "land": ["residential, all uses"],
       "date": null
-    }
+    },
+    "reduce_min": [
+      {
+        "summary": "Parking requirements are reduced for uses near transit or for nonresidential uses that provide motorcycle parking. On-street parking may be counted towards the minimums for nonresidential uses or for guest parking of residential uses. A change of use in the “central district” is exempt from parking mandates.",
+        "status": "implemented",
+        "scope": [
+          "city center / business district",
+          "citywide",
+          "transit oriented"
+        ],
+        "land": [
+          "all uses",
+          "commercial",
+          "industrial",
+          "medical",
+          "other",
+          "residential, multi-family"
+        ],
+        "date": null
+      }
+    ],
+    "rm_min": [
+      {
+        "summary": "Since March 2024, all residential uses under 20 dwelling units or for low income households are exempt from parking mandates and all residential uses in the Central District and Old Town Kern. Previously, only ADUs were exempt from parking mandates when located near transit or for garage conversions.",
+        "status": "implemented",
+        "scope": [
+          "city center / business district",
+          "citywide",
+          "transit oriented"
+        ],
+        "land": [
+          "residential, all uses",
+          "residential, low-density",
+          "residential, multi-family"
+        ],
+        "date": "2024-03-27"
+      }
+    ]
   },
   "Baldwin, MI": {
     "place": {
@@ -5344,7 +5417,25 @@
       "scope": ["citywide"],
       "land": ["residential, all uses"],
       "date": null
-    }
+    },
+    "add_max": [
+      {
+        "summary": "The city has parking maximums for new residential uses. ",
+        "status": "implemented",
+        "scope": ["citywide"],
+        "land": ["residential, all uses"],
+        "date": null
+      }
+    ],
+    "rm_min": [
+      {
+        "summary": "Berkeley has no parking requirements for new residential developments of any size, except for new developments on certain narrow streets in the hills.",
+        "status": "implemented",
+        "scope": ["citywide"],
+        "land": ["residential, all uses"],
+        "date": null
+      }
+    ]
   },
   "Berkley, MI": {
     "place": {
@@ -14116,7 +14207,38 @@
       "scope": ["citywide", "transit oriented"],
       "land": ["residential, low-density"],
       "date": null
-    }
+    },
+    "add_max": [
+      {
+        "summary": "Parking maximums are set at 100% of the minimums for all uses.",
+        "status": "implemented",
+        "scope": ["citywide", "transit oriented"],
+        "land": ["all uses"],
+        "date": null
+      }
+    ],
+    "reduce_min": [
+      {
+        "summary": "For nonresidential uses located within one-half mile of a BART station in the Transit Station Overlay District, the number of parking spaces may be reduced by 25 percent. Within the downtown parking district, a fee in lieu of required parking may be provided.",
+        "status": "implemented",
+        "scope": [
+          "city center / business district",
+          "transit oriented",
+          "transit-oriented"
+        ],
+        "land": ["all uses", "commercial", "industrial", "medical", "other"],
+        "date": null
+      }
+    ],
+    "rm_min": [
+      {
+        "summary": "ADUs may be exempted from parking mandates when certain criteria are met.",
+        "status": "implemented",
+        "scope": ["citywide", "transit oriented"],
+        "land": ["residential, low-density"],
+        "date": null
+      }
+    ]
   },
   "Concord, NC": {
     "place": {
@@ -14621,7 +14743,25 @@
       "scope": ["citywide", "transit oriented"],
       "land": ["residential, low-density"],
       "date": null
-    }
+    },
+    "reduce_min": [
+      {
+        "summary": "Within the downtown area, existing buildings are exempt and a fee in-lieu of parking may be provided.",
+        "status": "implemented",
+        "scope": ["city center / business district", "transit oriented"],
+        "land": ["all uses"],
+        "date": null
+      }
+    ],
+    "rm_min": [
+      {
+        "summary": "ADUs may be exempted from parking mandates when certain criteria are met.",
+        "status": "implemented",
+        "scope": ["citywide", "transit oriented"],
+        "land": ["residential, low-density"],
+        "date": null
+      }
+    ]
   },
   "Corpus Christi, TX": {
     "place": {
@@ -19932,7 +20072,25 @@
       "scope": ["citywide", "transit oriented"],
       "land": ["residential, low-density"],
       "date": null
-    }
+    },
+    "reduce_min": [
+      {
+        "summary": "Parking requirements may be reduced for office, commercial or industrial uses when bike facilities are provided, or for office or industrial uses when carpool spaces are provided.",
+        "status": "implemented",
+        "scope": ["citywide", "transit oriented"],
+        "land": ["commercial", "industrial", "other"],
+        "date": null
+      }
+    ],
+    "rm_min": [
+      {
+        "summary": "ADUs are exempt from parking mandates if any of five conditions are met.",
+        "status": "implemented",
+        "scope": ["citywide", "transit oriented"],
+        "land": ["residential, low-density"],
+        "date": null
+      }
+    ]
   },
   "Elk Point, SD": {
     "place": {
@@ -20549,7 +20707,25 @@
       "scope": ["citywide"],
       "land": ["all uses"],
       "date": "2019-07-19"
-    }
+    },
+    "add_max": [
+      {
+        "summary": "The maximum number of parking spaces allowed shall be ten percent (10%) more than the estimated parking demand, specified in Table 9-4.404.",
+        "status": "implemented",
+        "scope": ["citywide"],
+        "land": ["all uses"],
+        "date": "2019-07-19"
+      }
+    ],
+    "rm_min": [
+      {
+        "summary": "There are no minimum number of parking spaces required for any use, with the exception of accessible space provisions. \n\nAll off-street parking spaces shall be leased or sold separately from the rental or purchase fees giving potential renters or buyers the option of renting or buying a residential unit at a price lower than would be the case if there were a single price for both the residential unit and the parking space(s).",
+        "status": "implemented",
+        "scope": ["citywide"],
+        "land": ["all uses"],
+        "date": "2019-07-19"
+      }
+    ]
   },
   "Emily, MN": {
     "place": {
@@ -21106,7 +21282,42 @@
         "residential, all uses"
       ],
       "date": null
-    }
+    },
+    "reduce_min": [
+      {
+        "summary": "A change of use is exempt from minimum parking requirements. Parking minimums may be reduced through frequent transit, the provision of bus passes for residents, bicycle facility proximity, carpool spaces, EV chargers, bike parking, motorcycle parking or in-lieu fees.",
+        "status": "implemented",
+        "scope": ["citywide", "transit oriented"],
+        "land": [
+          "all uses",
+          "commercial",
+          "industrial",
+          "other",
+          "residential, multi-family"
+        ],
+        "date": null
+      }
+    ],
+    "rm_min": [
+      {
+        "summary": "Parking minimums are waived for accessory dwelling units, daycares, hospitals, and parks citywide. Small residential uses, income-restricted affordable housing, and a limited number of dwelling units qualify for exemptions in various districts. For nonresidential uses, small uses are exempt as well as uses in the Downtown (DT), Downtown West (DW), Henderson Center (HC), and Hinge Industrial (HN) Districts, in the Neighborhood Market (NMO) Overlay Zone, or uses within the Parking Assessment District.",
+        "status": "implemented",
+        "scope": [
+          "city center / business district",
+          "citywide",
+          "transit oriented"
+        ],
+        "land": [
+          "all uses",
+          "commercial",
+          "industrial",
+          "medical",
+          "other",
+          "residential, all uses"
+        ],
+        "date": null
+      }
+    ]
   },
   "Evanston, IL": {
     "place": {
@@ -23898,7 +24109,25 @@
       "scope": ["transit oriented"],
       "land": ["all uses"],
       "date": null
-    }
+    },
+    "add_max": [
+      {
+        "summary": "Parking maximums apply to all uses in the D Downtown District and City Center Districts, and to assembly and convention uses in the WSI Warm Springs Innovation District.",
+        "status": "implemented",
+        "scope": ["city center / business district", "transit oriented"],
+        "land": ["all uses", "other"],
+        "date": null
+      }
+    ],
+    "rm_min": [
+      {
+        "summary": "The Warm Springs/South Fremont Community Plan, adopted in July 2015, eliminates minimum parking requirements within the community plan area. The plan area is centered on the new Warm Springs/South Fremont BART Station.",
+        "status": "implemented",
+        "scope": ["transit oriented", "transit-oriented"],
+        "land": ["all uses"],
+        "date": null
+      }
+    ]
   },
   "Fremont, MI": {
     "place": {
@@ -25416,7 +25645,25 @@
       "scope": ["citywide"],
       "land": ["residential, low-density"],
       "date": null
-    }
+    },
+    "reduce_min": [
+      {
+        "summary": "In the DSP Downtown Specific Plan and TOD Transit Oriented Development zones, parking requirements may be reduced through bike parking, or a fee in-lieu of parking may be provided.",
+        "status": "implemented",
+        "scope": ["city center / business district", "transit-oriented"],
+        "land": ["all uses"],
+        "date": null
+      }
+    ],
+    "rm_min": [
+      {
+        "summary": "ADUs may be exempt from parking mandates when any of five criteria are met.",
+        "status": "implemented",
+        "scope": ["citywide"],
+        "land": ["residential, low-density"],
+        "date": null
+      }
+    ]
   },
   "Glendale, CO": {
     "place": {
@@ -29035,7 +29282,25 @@
       "scope": ["transit oriented"],
       "land": ["all uses"],
       "date": null
-    }
+    },
+    "add_max": [
+      {
+        "summary": "The Mission Boulevard Form-based Code, adopted in 2020, establishes maximum parking requirements for residential land uses, but not non-residential uses. The code applies to approximately 480 acres along Mission Boulevard, a major commercial corridor that traverses the length of the city.",
+        "status": "implemented",
+        "scope": ["transit oriented", "transit-oriented"],
+        "land": ["residential, all uses"],
+        "date": "2020"
+      }
+    ],
+    "rm_min": [
+      {
+        "summary": "The Mission Boulevard Form-based Code, adopted in 2020, removes all minimum parking requirements within the code area. The code applies to approximately 480 acres along Mission Boulevard, a major commercial corridor that traverses the length of the city.",
+        "status": "implemented",
+        "scope": ["transit oriented", "transit-oriented"],
+        "land": ["all uses"],
+        "date": null
+      }
+    ]
   },
   "Hayward, WI": {
     "place": {
@@ -30761,7 +31026,25 @@
       "scope": ["transit oriented"],
       "land": ["residential, low-density"],
       "date": null
-    }
+    },
+    "reduce_min": [
+      {
+        "summary": "Within the Downtown Specific Plan Area, a fee-in-lieu of parking may be paid.",
+        "status": "implemented",
+        "scope": ["city center / business district", "transit oriented"],
+        "land": ["all uses"],
+        "date": "1997"
+      }
+    ],
+    "rm_min": [
+      {
+        "summary": "ADUs are exempt from parking requirements when located within one-half mile walking distance of a high-quality transit corridor, or a major transit stop, or there is a car share vehicle located within one block of the project.",
+        "status": "implemented",
+        "scope": ["citywide", "transit oriented"],
+        "land": ["residential, low-density"],
+        "date": null
+      }
+    ]
   },
   "Huntington Woods, MI": {
     "place": {
@@ -34531,7 +34814,25 @@
       "scope": ["city center / business district"],
       "land": ["commercial"],
       "date": null
-    }
+    },
+    "add_max": [
+      {
+        "summary": "For nonresidential uses in NBU Neighborhood Business Zones, off-street parking spaces are limited to no more than 60% of the minimum requirements.",
+        "status": "implemented",
+        "scope": ["city center / business district"],
+        "land": ["commercial", "other"],
+        "date": null
+      }
+    ],
+    "rm_min": [
+      {
+        "summary": "Off-street parking is not required in a CB Central Business Zone, except for hotels, motels and newly constructed residential buildings, and except for places of public assembly as determined by the Administrative Officer (such as bingo parlors, motion picture theaters, etc.).",
+        "status": "implemented",
+        "scope": ["city center / business district"],
+        "land": ["commercial"],
+        "date": null
+      }
+    ]
   },
   "Lafayette, LA": {
     "place": {
@@ -37804,7 +38105,25 @@
       "scope": ["transit oriented"],
       "land": ["residential, all uses"],
       "date": null
-    }
+    },
+    "reduce_min": [
+      {
+        "summary": "Long Beach has reduced parking minimums for transit-oriented off street parking for residential and hospital use reducing parking from 25% to 50%. Long Beach has proposed eliminating mandates for businesses when there is a change of use.",
+        "status": "implemented",
+        "scope": ["transit oriented", "transit-oriented"],
+        "land": ["medical", "residential, all uses"],
+        "date": null
+      }
+    ],
+    "rm_min": [
+      {
+        "summary": "ADUs are exempt from parking mandates under certain conditions.",
+        "status": "implemented",
+        "scope": ["transit oriented", "transit-oriented"],
+        "land": ["residential, all uses"],
+        "date": null
+      }
+    ]
   },
   "Long Beach, MS": {
     "place": {
@@ -42918,7 +43237,25 @@
       "scope": ["citywide"],
       "land": ["residential, low-density"],
       "date": null
-    }
+    },
+    "reduce_min": [
+      {
+        "summary": "A change of use in the Downtown Area is exempt from parking requirements. Certain nonresidential uses have reduced requirements in the Downtown Area.",
+        "status": "implemented",
+        "scope": ["city center / business district"],
+        "land": ["all uses", "commercial"],
+        "date": null
+      }
+    ],
+    "rm_min": [
+      {
+        "summary": "ADUs may be exempted if certain criteria are met as a result of state law.",
+        "status": "implemented",
+        "scope": ["citywide"],
+        "land": ["residential, low-density"],
+        "date": "2023-05-11"
+      }
+    ]
   },
   "Mokena, IL": {
     "place": {
@@ -44424,7 +44761,25 @@
       "scope": ["main street / special"],
       "land": ["all uses"],
       "date": null
-    }
+    },
+    "add_max": [
+      {
+        "summary": "The North Bayshore Precise Plan has a parking maximum of 2.7 spaces per 1,000 square feet of office/R&D for an office park district where Google, LinkedIn, and Intuit have their headquarters. All new development must meet at 45% drive-alone rate cap, and there is an overall trip cap for the entire plan area.",
+        "status": "implemented",
+        "scope": ["main street / special"],
+        "land": ["other"],
+        "date": null
+      }
+    ],
+    "rm_min": [
+      {
+        "summary": "The North Bayshore Precise Plan has eliminated minimum parking requirements for an office park district where Google, LinkedIn, and Intuit have their headquarters.",
+        "status": "implemented",
+        "scope": ["main street / special"],
+        "land": ["all uses"],
+        "date": null
+      }
+    ]
   },
   "Mountainair, NM": {
     "place": {
@@ -45070,7 +45425,25 @@
       "scope": ["citywide"],
       "land": ["commercial", "residential, all uses"],
       "date": null
-    }
+    },
+    "add_max": [
+      {
+        "summary": "Parking maximums are set at 100% of the minimums.",
+        "status": "implemented",
+        "scope": ["citywide"],
+        "land": ["all uses"],
+        "date": null
+      }
+    ],
+    "rm_min": [
+      {
+        "summary": "Accessory dwelling units and liner buildings less than 30 feet deep and no more than two stories are exempt from minimum parking requirements.",
+        "status": "implemented",
+        "scope": ["citywide"],
+        "land": ["commercial", "residential, low-density"],
+        "date": null
+      }
+    ]
   },
   "Murfreesboro, TN": {
     "place": {
@@ -45733,7 +46106,31 @@
       "scope": ["citywide"],
       "land": ["all uses"],
       "date": null
-    }
+    },
+    "add_max": [
+      {
+        "summary": "Parking maximums apply to multifamily and most nonresidential uses.",
+        "status": "implemented",
+        "scope": ["citywide"],
+        "land": [
+          "commercial",
+          "industrial",
+          "medical",
+          "other",
+          "residential, multi-family"
+        ],
+        "date": null
+      }
+    ],
+    "reduce_min": [
+      {
+        "summary": "The minimum number of required off-street parking spaces may be reduced by the number of on-street parking spaces abutting the property lines of the lot or parcel.",
+        "status": "implemented",
+        "scope": ["citywide"],
+        "land": ["all uses"],
+        "date": null
+      }
+    ]
   },
   "New Auburn, MN": {
     "place": {
@@ -46102,7 +46499,34 @@
       "scope": ["city center / business district", "citywide"],
       "land": ["all uses", "medical", "other"],
       "date": null
-    }
+    },
+    "add_max": [
+      {
+        "summary": "Within the CC and MU districts, the minimum parking requirements are waived, and are instead the maximums.",
+        "status": "implemented",
+        "scope": ["city center / business district"],
+        "land": ["all uses"],
+        "date": null
+      }
+    ],
+    "reduce_min": [
+      {
+        "summary": "Within the nonresidential zoning districts (CC, MU, C1 through C4, SC, NC, BTI, and I1 through I4), parking requirements may be reduced through on-street parking, bike parking, transit availability, or pervious pavement.",
+        "status": "implemented",
+        "scope": ["city center / business district"],
+        "land": ["commercial", "industrial", "medical", "other"],
+        "date": null
+      }
+    ],
+    "rm_min": [
+      {
+        "summary": "Within the CC and MU districts, the minimum parking requirements are waived. Citywide, airports, hospitals, religious institutions and schools are exempt.",
+        "status": "implemented",
+        "scope": ["city center / business district", "citywide"],
+        "land": ["all uses", "medical", "other"],
+        "date": null
+      }
+    ]
   },
   "New Haven, MO": {
     "place": {
@@ -48208,7 +48632,25 @@
       "scope": ["city center / business district", "transit oriented"],
       "land": ["all uses"],
       "date": null
-    }
+    },
+    "add_max": [
+      {
+        "summary": "Oakland has parking maximums the in CBD, S-2, and D-LM zones.",
+        "status": "implemented",
+        "scope": ["city center / business district", "transit oriented"],
+        "land": ["all uses"],
+        "date": null
+      }
+    ],
+    "rm_min": [
+      {
+        "summary": "Oakland has no required parking in CBD, S-2, and D-LM zones.",
+        "status": "implemented",
+        "scope": ["city center / business district", "transit oriented"],
+        "land": ["all uses"],
+        "date": null
+      }
+    ]
   },
   "Oakland, IA": {
     "place": {
@@ -48397,7 +48839,25 @@
       "scope": ["citywide", "transit oriented"],
       "land": ["residential, low-density"],
       "date": null
-    }
+    },
+    "reduce_min": [
+      {
+        "summary": "A fee in-lieu of required parking may be paid for nonresidential uses in the D Downtown District.",
+        "status": "implemented",
+        "scope": ["city center / business district", "transit oriented"],
+        "land": ["commercial", "other"],
+        "date": null
+      }
+    ],
+    "rm_min": [
+      {
+        "summary": "ADUs may be exempted from parking mandates when certain criteria are met.",
+        "status": "implemented",
+        "scope": ["citywide", "transit oriented"],
+        "land": ["residential, low-density"],
+        "date": null
+      }
+    ]
   },
   "Ochtrup, NW": {
     "place": {
@@ -48816,7 +49276,25 @@
       "scope": ["citywide", "transit oriented"],
       "land": ["residential, all uses"],
       "date": null
-    }
+    },
+    "reduce_min": [
+      {
+        "summary": "Within the MU-1 (Downtown Mixed Use) district, off-street parking is not required for existing buildings having a floor area of less than 10,000 square feet.",
+        "status": "implemented",
+        "scope": ["city center / business district", "transit oriented"],
+        "land": ["all uses"],
+        "date": null
+      }
+    ],
+    "rm_min": [
+      {
+        "summary": "ADUs may be exempt from parking mandates when located near transit, carshare is available or other factors.",
+        "status": "implemented",
+        "scope": ["citywide", "transit oriented"],
+        "land": ["residential, low-density"],
+        "date": null
+      }
+    ]
   },
   "Ontonagon, MI": {
     "place": {
@@ -48957,7 +49435,25 @@
       "scope": ["citywide", "transit oriented"],
       "land": ["residential, low-density"],
       "date": null
-    }
+    },
+    "reduce_min": [
+      {
+        "summary": "Uses in the Downtown Plaza District have reduced requirements and may pay a fee in-lieu of required parking.",
+        "status": "implemented",
+        "scope": ["city center / business district", "transit oriented"],
+        "land": ["all uses"],
+        "date": null
+      }
+    ],
+    "rm_min": [
+      {
+        "summary": "ADUs are exempt from parking mandates when certain criteria are met.",
+        "status": "implemented",
+        "scope": ["citywide", "transit oriented"],
+        "land": ["residential, low-density"],
+        "date": null
+      }
+    ]
   },
   "Oregon, IL": {
     "place": {
@@ -50444,7 +50940,42 @@
       "scope": ["citywide", "transit oriented"],
       "land": ["residential, low-density"],
       "date": null
-    }
+    },
+    "add_max": [
+      {
+        "summary": "Parking maximums are set at 100% of the minimums for nonresidential uses within 1/4 mile of a light-rail station or within the Central District Transit-Oriented Area.",
+        "status": "implemented",
+        "scope": [
+          "city center / business district",
+          "transit oriented",
+          "transit-oriented"
+        ],
+        "land": ["commercial", "industrial", "medical", "other"],
+        "date": null
+      }
+    ],
+    "reduce_min": [
+      {
+        "summary": "Parking mandates are reduced for Transit Oriented Development, and within the CD-1 Old Pasadena and CD-4 Pasadena Playhouse Districts.",
+        "status": "implemented",
+        "scope": [
+          "city center / business district",
+          "transit oriented",
+          "transit-oriented"
+        ],
+        "land": ["all uses"],
+        "date": null
+      }
+    ],
+    "rm_min": [
+      {
+        "summary": "ADUs are exempt from parking requirements when certain conditions are met.",
+        "status": "implemented",
+        "scope": ["citywide", "transit oriented"],
+        "land": ["residential, low-density"],
+        "date": null
+      }
+    ]
   },
   "Pascagoula, MS": {
     "place": {
@@ -52445,7 +52976,25 @@
       "scope": ["city center / business district"],
       "land": ["all uses"],
       "date": null
-    }
+    },
+    "add_max": [
+      {
+        "summary": "The Downtown Pomona Specific Plan, adopted August 5, 2019, establishes maximum parking requirements, although this limit does not apply to parking spaces that are provided in parking structures.",
+        "status": "implemented",
+        "scope": ["city center / business district"],
+        "land": ["all uses"],
+        "date": "2019-08-05"
+      }
+    ],
+    "rm_min": [
+      {
+        "summary": "The Downtown Pomona Specific Plan, adopted August 5, 2019, removes minimum parking requirements for most existing buildings and many new ones. \n\nSpecifically, the code states that \"Parking requirements do not apply to the first two floors of any proposed development within the MU-CBD or MU-I districts. Moreover, the first two floors of any existing development within said boundaries are also not subject to parking requirements.\"\n\nSince most of downtown Pomona's existing buildings are only one or two stories high, this provision removes minimum parking requirements for them. New one and two-story buildings are also exempt from parking minimums. Taller new buildings still have minimum parking requirements applied to the upper floors.\n\nADUs are exempt from parking mandates citywide.",
+        "status": "implemented",
+        "scope": ["city center / business district", "citywide"],
+        "land": ["all uses", "residential, low-density"],
+        "date": null
+      }
+    ]
   },
   "Ponca City, OK": {
     "place": {
@@ -52845,7 +53394,25 @@
       "scope": ["city center / business district"],
       "land": ["all uses"],
       "date": null
-    }
+    },
+    "add_max": [
+      {
+        "summary": "All surface parking in the CR CM and CC downtown districts is shared parking. Because parking is provided by the city, private off-street parking is prohibited unless it existed prior to the establishment of the guidelines or is granted approval by the development review committee.",
+        "status": "implemented",
+        "scope": ["city center / business district"],
+        "land": ["all uses"],
+        "date": null
+      }
+    ],
+    "rm_min": [
+      {
+        "summary": "There are no parking mandates in the CR CM and CC downtown districts. All parking provided is shared parking.",
+        "status": "implemented",
+        "scope": ["city center / business district"],
+        "land": ["all uses"],
+        "date": null
+      }
+    ]
   },
   "Portage, MI": {
     "place": {
@@ -55229,7 +55796,25 @@
       "scope": ["citywide"],
       "land": ["residential, low-density"],
       "date": null
-    }
+    },
+    "reduce_min": [
+      {
+        "summary": "A change of use within an existing structure in a nonresidential zone, which is designated as a historic resource or a contributor to a historic district, is exempt from parking requirements. Parking requirements may be reduced by implementing TDM strategies to reduce VMT.",
+        "status": "implemented",
+        "scope": ["city center / business district", "citywide"],
+        "land": ["all uses"],
+        "date": null
+      }
+    ],
+    "rm_min": [
+      {
+        "summary": "ADUs are exempt from parking mandates.",
+        "status": "implemented",
+        "scope": ["citywide"],
+        "land": ["residential, low-density"],
+        "date": null
+      }
+    ]
   },
   "Riverside, IA": {
     "place": {
@@ -57010,7 +57595,25 @@
       "scope": ["citywide", "transit oriented"],
       "land": ["residential, low-density"],
       "date": null
-    }
+    },
+    "reduce_min": [
+      {
+        "summary": "Uses located in the new urbanism (NU) districts, mixed use (MU) districts, central city overlay (downtown core area) district, or focused growth overlay district may count on-street parking towards the requirements. Nonresidential uses in a parking district may pay a fee in-lieu of required parking.",
+        "status": "implemented",
+        "scope": ["city center / business district", "transit oriented"],
+        "land": ["all uses", "commercial", "industrial", "medical", "other"],
+        "date": null
+      }
+    ],
+    "rm_min": [
+      {
+        "summary": "ADUs may be exempted when certain criteria are met.",
+        "status": "implemented",
+        "scope": ["citywide", "transit oriented"],
+        "land": ["residential, low-density"],
+        "date": null
+      }
+    ]
   },
   "Saline, MI": {
     "place": {
@@ -57233,7 +57836,25 @@
       "scope": ["transit oriented"],
       "land": ["residential, all uses"],
       "date": null
-    }
+    },
+    "reduce_min": [
+      {
+        "summary": "Parking minimum requirements were reduced for the Transit-Oriented Development Overlay District, and bicycle parking minimums were introduced. Parking requirements may be further reduced with unbundled parking and in-lieu fees. The development code noted that as the transit system matures, they are looking to reduce or eliminate parking minimums. A 2017 Accessory Dwelling Unit Amendment reduced minimum parking requirements for ADUs.",
+        "status": "implemented",
+        "scope": ["transit oriented", "transit-oriented"],
+        "land": ["residential, all uses"],
+        "date": null
+      }
+    ],
+    "rm_min": [
+      {
+        "summary": "A 2017 Accessory Dwelling Unit Amendment prohibits minimums in certain qualified locations.",
+        "status": "implemented",
+        "scope": ["citywide", "transit oriented"],
+        "land": ["residential, low-density"],
+        "date": null
+      }
+    ]
   },
   "San Diego, CA": {
     "place": {
@@ -57270,7 +57891,32 @@
       "scope": ["citywide"],
       "land": ["all uses"],
       "date": "2018-12-11"
-    }
+    },
+    "add_max": [
+      {
+        "summary": "There are parking maximums for most uses.",
+        "status": "implemented",
+        "scope": ["citywide"],
+        "land": [
+          "commercial",
+          "industrial",
+          "medical",
+          "other",
+          "residential, low-density",
+          "residential, multi-family"
+        ],
+        "date": "2018-12-11"
+      }
+    ],
+    "rm_min": [
+      {
+        "summary": "There are no parking mandates in the city of San Francisco for any use except Mortuary (8 spaces mandated).",
+        "status": "implemented",
+        "scope": ["citywide"],
+        "land": ["all uses"],
+        "date": "2018-12-11"
+      }
+    ]
   },
   "San Jose, CA": {
     "place": {
@@ -57528,7 +58174,25 @@
       "scope": ["citywide"],
       "land": ["residential, low-density"],
       "date": null
-    }
+    },
+    "reduce_min": [
+      {
+        "summary": "A change of use may be exempted in certain circumstances.",
+        "status": "implemented",
+        "scope": ["citywide"],
+        "land": ["all uses"],
+        "date": null
+      }
+    ],
+    "rm_min": [
+      {
+        "summary": "ADUs may be exempted from parking requirements based on five conditions.",
+        "status": "implemented",
+        "scope": ["citywide"],
+        "land": ["residential, low-density"],
+        "date": null
+      }
+    ]
   },
   "Santa Barbara, CA": {
     "place": {
@@ -57626,7 +58290,34 @@
       "scope": ["city center / business district"],
       "land": ["all uses"],
       "date": null
-    }
+    },
+    "add_max": [
+      {
+        "summary": "Parking maximums are set at 105% of the minimums.",
+        "status": "implemented",
+        "scope": ["citywide"],
+        "land": ["all uses"],
+        "date": null
+      }
+    ],
+    "reduce_min": [
+      {
+        "summary": "Parking requirements may be reduced through bike parking, motorcycle parking, historic preservation and carshare parking.",
+        "status": "implemented",
+        "scope": ["citywide"],
+        "land": ["all uses"],
+        "date": null
+      }
+    ],
+    "rm_min": [
+      {
+        "summary": "Parking mandates do not apply in the Downtown Community Plan Area, or to uses within 1/2 mile of a major transit stop, except for lodging uses. Land uses within a housing project are exempted other than those within the Single-Unit Residential (R1) and Ocean Park Single-Unit Residential (OP1) Zoning Districts.",
+        "status": "implemented",
+        "scope": ["city center / business district", "citywide"],
+        "land": ["all uses", "commercial", "other", "residential, all uses"],
+        "date": null
+      }
+    ]
   },
   "Santa Rosa, CA": {
     "place": {
@@ -58067,7 +58758,34 @@
       "scope": ["citywide"],
       "land": ["all uses"],
       "date": null
-    }
+    },
+    "add_max": [
+      {
+        "summary": "Single-family and two-family dwellings are subject to parking maximums. Maximums were 4 spaces per dwelling unit until 2024 when they were raised to 6 per dwelling unit.",
+        "status": "implemented",
+        "scope": ["citywide"],
+        "land": ["residential, low-density"],
+        "date": null
+      }
+    ],
+    "reduce_min": [
+      {
+        "summary": "Parking requirements may be reduced where on-street parking is available.",
+        "status": "implemented",
+        "scope": ["citywide"],
+        "land": ["all uses"],
+        "date": null
+      }
+    ],
+    "rm_min": [
+      {
+        "summary": "The R-1 and R-2 Residential Zoning Districts are exempt from parking mandates.",
+        "status": "implemented",
+        "scope": ["main street / special"],
+        "land": ["all uses"],
+        "date": "2024-04-10"
+      }
+    ]
   },
   "Schiller Park, IL": {
     "place": {
@@ -62822,7 +63540,29 @@
       "scope": ["city center / business district", "transit oriented"],
       "land": ["all uses"],
       "date": null
-    }
+    },
+    "reduce_min": [
+      {
+        "summary": "Residential uses in the Downtown Core have a reduced parking requirement as well as all uses in the Magnolia Historic Overlay District. Properties within the Parking Improvement District No. 2001-1, bounded by Park Street on the north, Mormon Slough on the west, Sonora Street on the south, and the Union Pacific Railroad tracks on the east are exempt if the property pays into the district. Parking requirements citywide may be reduced through bike parking, carpool spaces, EV chargers, frequent transit, small infill projects or motorcycle parking.",
+        "status": "implemented",
+        "scope": [
+          "city center / business district",
+          "citywide",
+          "transit oriented"
+        ],
+        "land": ["all uses", "residential, all uses"],
+        "date": null
+      }
+    ],
+    "rm_min": [
+      {
+        "summary": "There is no minimum parking requirement for uses within one-quarter mile from the Altamont Commuter Express (ACE) Robert J. Cabral Train Station or a proposed California High-Speed Rail station.",
+        "status": "implemented",
+        "scope": ["city center / business district", "transit oriented"],
+        "land": ["all uses"],
+        "date": null
+      }
+    ]
   },
   "Stonington, CT": {
     "place": {
@@ -63474,6 +64214,15 @@
       "land": ["commercial", "industrial", "residential, all uses"],
       "date": null
     },
+    "add_max": [
+      {
+        "summary": "Parking maximums apply to most nonresidential uses, except for recreation, education and care uses.",
+        "status": "implemented",
+        "scope": ["citywide", "transit oriented"],
+        "land": ["commercial", "industrial"],
+        "date": null
+      }
+    ],
     "reduce_min": [
       {
         "summary": "Nonresidential uses citywide may have reduced requirements when showers or lockers for bike commuters are provided.",
@@ -66902,7 +67651,25 @@
       "scope": ["city center / business district"],
       "land": ["commercial"],
       "date": null
-    }
+    },
+    "reduce_min": [
+      {
+        "summary": "Parking requirements may be reduced through the availability of on-street parking and public parking in the CBD (for residential uses), CP, and CA Districts.",
+        "status": "implemented",
+        "scope": ["city center / business district"],
+        "land": ["all uses", "residential, all uses"],
+        "date": null
+      }
+    ],
+    "rm_min": [
+      {
+        "summary": "No parking is required for non-residential development in the CBD, except as may be required for special uses.",
+        "status": "implemented",
+        "scope": ["city center / business district"],
+        "land": ["commercial", "other"],
+        "date": null
+      }
+    ]
   },
   "Van Buren Charter Township, MI": {
     "place": {
@@ -69786,7 +70553,25 @@
       "scope": ["city center / business district"],
       "land": ["commercial"],
       "date": null
-    }
+    },
+    "add_max": [
+      {
+        "summary": "For nonresidential uses in NBU Neighborhood Business Zones, off-street parking spaces are limited to no more than 60% of the minimum requirements.",
+        "status": "implemented",
+        "scope": ["city center / business district"],
+        "land": ["commercial", "other"],
+        "date": null
+      }
+    ],
+    "rm_min": [
+      {
+        "summary": "Off-street parking is not required in a CB Central Business Zone, except for hotels, motels and newly constructed residential buildings, and except for places of public assembly as determined by the Administrative Officer (such as bingo parlors, motion picture theaters, etc.).",
+        "status": "implemented",
+        "scope": ["city center / business district"],
+        "land": ["commercial"],
+        "date": null
+      }
+    ]
   },
   "West Liberty, IA": {
     "place": {

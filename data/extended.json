@@ -717,7 +717,95 @@
           ]
         }
       ]
-    }
+    },
+    "add_max": [
+      {
+        "reporter": "Patrick Siegman",
+        "requirements": ["by right"],
+        "citations": [
+          {
+            "description": "Ashland and Cherryland Business District Specific Plan page 6-44",
+            "url": "https://www.acgov.org/cda/planning/generalplans/documents/LWC_ACBD_Adopted_SP-Code_Dec2015.pdf",
+            "notes": "Table 6.4.2 Parking Requirements",
+            "attachments": [],
+            "screenshots": [
+              {
+                "fileName": "alameda-county-ca-add-max-citation1-screenshot.jpg",
+                "directusId": "e41c014b-22e1-45b7-b046-f83f57785628"
+              }
+            ]
+          },
+          {
+            "description": "Ashland and Cherryland Business District Specific Plan page 6-46",
+            "url": "https://www.acgov.org/cda/planning/generalplans/documents/LWC_ACBD_Adopted_SP-Code_Dec2015.pdf",
+            "notes": "carshare spaces required for certain residential developments",
+            "attachments": [],
+            "screenshots": [
+              {
+                "fileName": "alameda-county-ca-add-max-citation2-screenshot.jpg",
+                "directusId": "eab1b2ce-6f9f-4f59-8d50-727e4facf0cc"
+              }
+            ]
+          },
+          {
+            "description": "Ashland and Cherryland Business District Specific Plan page 6-50",
+            "url": "https://www.acgov.org/cda/planning/generalplans/documents/LWC_ACBD_Adopted_SP-Code_Dec2015.pdf",
+            "notes": "Unbundling of parking costs required at many residential developments",
+            "attachments": [],
+            "screenshots": [
+              {
+                "fileName": "alameda-county-ca-add-max-citation3-screenshot.jpg",
+                "directusId": "bb421c10-a916-4288-9011-34f5fcb6bb02"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "rm_min": [
+      {
+        "reporter": "Patrick Siegman",
+        "requirements": ["by right"],
+        "citations": [
+          {
+            "description": "Ashland and Cherryland Business District Specific Plan page 6-44",
+            "url": "https://www.acgov.org/cda/planning/generalplans/documents/LWC_ACBD_Adopted_SP-Code_Dec2015.pdf",
+            "notes": "Table 6.4.2 Parking Requirements",
+            "attachments": [],
+            "screenshots": [
+              {
+                "fileName": "alameda-county-ca-remove-min-citation1-screenshot.jpg",
+                "directusId": "e41c014b-22e1-45b7-b046-f83f57785628"
+              }
+            ]
+          },
+          {
+            "description": "Ashland and Cherryland Business District Specific Plan page 6-46",
+            "url": "https://www.acgov.org/cda/planning/generalplans/documents/LWC_ACBD_Adopted_SP-Code_Dec2015.pdf",
+            "notes": "carshare spaces required for certain residential developments",
+            "attachments": [],
+            "screenshots": [
+              {
+                "fileName": "alameda-county-ca-remove-min-citation2-screenshot.jpg",
+                "directusId": "eab1b2ce-6f9f-4f59-8d50-727e4facf0cc"
+              }
+            ]
+          },
+          {
+            "description": "Ashland and Cherryland Business District Specific Plan page 6-50",
+            "url": "https://www.acgov.org/cda/planning/generalplans/documents/LWC_ACBD_Adopted_SP-Code_Dec2015.pdf",
+            "notes": "Unbundling of parking costs required at many residential developments",
+            "attachments": [],
+            "screenshots": [
+              {
+                "fileName": "alameda-county-ca-remove-min-citation3-screenshot.jpg",
+                "directusId": "bb421c10-a916-4288-9011-34f5fcb6bb02"
+              }
+            ]
+          }
+        ]
+      }
+    ]
   },
   "Alameda, CA": {
     "legacy": {
@@ -744,7 +832,61 @@
           "screenshots": []
         }
       ]
-    }
+    },
+    "add_max": [
+      {
+        "reporter": "John Knox White",
+        "requirements": ["by right"],
+        "citations": [
+          {
+            "description": "City Ordinance",
+            "url": "https://alameda.legistar.com/LegislationDetail.aspx?ID=5206101&GUID=429C9828-DBAE-483F-8696-D0D9B13E21A2&FullText=1",
+            "notes": "30-7.3                                          Off-Street Vehicle Parking Regulations.",
+            "attachments": [],
+            "screenshots": [
+              {
+                "fileName": "alameda-ca-add-max-citation1-screenshot.png",
+                "directusId": "71656fe4-88e4-405d-a6b7-e99d9a6e9bb3"
+              }
+            ]
+          },
+          {
+            "description": "Staff Report on Ordinance",
+            "url": "https://alameda.legistar.com/LegislationDetail.aspx?ID=5191847&GUID=19CF3745-BD98-4848-8DFC-FE3AC2DE7713&Options=&Search=&FullText=1",
+            "notes": "Public Hearing to Consider Introduction of an Ordinance Amending Alameda Municipal Code Chapter XXX to Comprehensively Update Citywide Off-Street Parking and Loading Space Regulations and Make Conforming Changes to Other Zoning Code Sections, as Recommended by the Planning Board. (Planning, Building and Transportation 20962700)\n",
+            "attachments": [],
+            "screenshots": []
+          }
+        ]
+      }
+    ],
+    "rm_min": [
+      {
+        "reporter": "John Knox White",
+        "requirements": ["by right"],
+        "citations": [
+          {
+            "description": "City Ordinance",
+            "url": "https://alameda.legistar.com/LegislationDetail.aspx?ID=5206101&GUID=429C9828-DBAE-483F-8696-D0D9B13E21A2&FullText=1",
+            "notes": "30-7.3                                          Off-Street Vehicle Parking Regulations.",
+            "attachments": [],
+            "screenshots": [
+              {
+                "fileName": "alameda-ca-remove-min-citation1-screenshot.png",
+                "directusId": "71656fe4-88e4-405d-a6b7-e99d9a6e9bb3"
+              }
+            ]
+          },
+          {
+            "description": "Staff Report on Ordinance",
+            "url": "https://alameda.legistar.com/LegislationDetail.aspx?ID=5191847&GUID=19CF3745-BD98-4848-8DFC-FE3AC2DE7713&Options=&Search=&FullText=1",
+            "notes": "Public Hearing to Consider Introduction of an Ordinance Amending Alameda Municipal Code Chapter XXX to Comprehensively Update Citywide Off-Street Parking and Loading Space Regulations and Make Conforming Changes to Other Zoning Code Sections, as Recommended by the Planning Board. (Planning, Building and Transportation 20962700)\n",
+            "attachments": [],
+            "screenshots": []
+          }
+        ]
+      }
+    ]
   },
   "Alamogordo, NM": {
     "reduce_min": [
@@ -5036,7 +5178,7 @@
       "requirements": ["affordable housing", "frequent transit", "other"],
       "citations": [
         {
-          "description": "Bakersfield Zoning Code",
+          "description": "Former Bakersfield Zoning Code",
           "url": "https://bakersfield.municipal.codes/Code/17.58.055",
           "notes": "Chapter 17.58 PARKING AND LOADING STANDARDS\n17.58.055 Transit credit.\n17.58.100 On-street parking credit.\n17.58.110 Parking space requirements by land use.\nC.\nE.\n17.58.120 Parking space requirements within the “central district,” “Old Town Kern,” and other mixed-use areas.",
           "attachments": [],
@@ -5064,7 +5206,119 @@
           ]
         }
       ]
-    }
+    },
+    "reduce_min": [
+      {
+        "reporter": "Samuel Deetz",
+        "requirements": ["frequent transit", "other"],
+        "citations": [
+          {
+            "description": "Former Bakersfield Zoning Code",
+            "url": "https://bakersfield.municipal.codes/Code/17.58.055",
+            "notes": "Chapter 17.58 PARKING AND LOADING STANDARDS\n17.58.055 Transit credit.\n17.58.100 On-street parking credit.\n17.58.110 Parking space requirements by land use.\nC.\nE.\n17.58.120 Parking space requirements within the “central district,” “Old Town Kern,” and other mixed-use areas.",
+            "attachments": [],
+            "screenshots": [
+              {
+                "fileName": "bakersfield-ca-reduce-min-citation1-screenshot1.png",
+                "directusId": "71e23e27-2663-461a-a60a-c352b8a1614e"
+              },
+              {
+                "fileName": "bakersfield-ca-reduce-min-citation1-screenshot2.png",
+                "directusId": "140e400e-8f86-48aa-9e93-9a8dc1d32f55"
+              },
+              {
+                "fileName": "bakersfield-ca-reduce-min-citation1-screenshot3.png",
+                "directusId": "99925e71-0c4c-474e-9bc6-2913b2e6b026"
+              },
+              {
+                "fileName": "bakersfield-ca-reduce-min-citation1-screenshot4.png",
+                "directusId": "c517ff1d-265e-479d-965e-bef9eab90fb2"
+              },
+              {
+                "fileName": "bakersfield-ca-reduce-min-citation1-screenshot5.png",
+                "directusId": "f935c31c-0818-467f-96ab-8064b0316f03"
+              }
+            ]
+          },
+          {
+            "description": "Bakersfield Zoning Code",
+            "url": "https://bakersfield.municipal.codes/Code/17.58.055",
+            "notes": "17.58.055;\n17.58.100;\n17.58.110.C.;\n17.58.120.C.",
+            "attachments": [],
+            "screenshots": [
+              {
+                "fileName": "bakersfield-ca-reduce-min-citation2-screenshot1.png",
+                "directusId": "1960a3ce-935a-4bfb-9832-fea206dbc7df"
+              },
+              {
+                "fileName": "bakersfield-ca-reduce-min-citation2-screenshot2.png",
+                "directusId": "330fe6c5-3b72-47d4-8819-1c33889c6e7d"
+              },
+              {
+                "fileName": "bakersfield-ca-reduce-min-citation2-screenshot3.png",
+                "directusId": "9a6551b0-06fb-4841-90bd-5ee6bfadb1cb"
+              },
+              {
+                "fileName": "bakersfield-ca-reduce-min-citation2-screenshot4.png",
+                "directusId": "8c0bf676-22ae-415f-b766-79d6f687cd61"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "rm_min": [
+      {
+        "reporter": "Samuel Deetz",
+        "requirements": ["affordable housing", "by right", "size of project"],
+        "citations": [
+          {
+            "description": "Former Bakersfield Zoning Code",
+            "url": "https://bakersfield.municipal.codes/Code/17.58.055",
+            "notes": "Chapter 17.58 PARKING AND LOADING STANDARDS\n17.58.055 Transit credit.\n17.58.100 On-street parking credit.\n17.58.110 Parking space requirements by land use.\nC.\nE.\n17.58.120 Parking space requirements within the “central district,” “Old Town Kern,” and other mixed-use areas.",
+            "attachments": [],
+            "screenshots": [
+              {
+                "fileName": "bakersfield-ca-remove-min-citation1-screenshot1.png",
+                "directusId": "71e23e27-2663-461a-a60a-c352b8a1614e"
+              },
+              {
+                "fileName": "bakersfield-ca-remove-min-citation1-screenshot2.png",
+                "directusId": "140e400e-8f86-48aa-9e93-9a8dc1d32f55"
+              },
+              {
+                "fileName": "bakersfield-ca-remove-min-citation1-screenshot3.png",
+                "directusId": "99925e71-0c4c-474e-9bc6-2913b2e6b026"
+              },
+              {
+                "fileName": "bakersfield-ca-remove-min-citation1-screenshot4.png",
+                "directusId": "c517ff1d-265e-479d-965e-bef9eab90fb2"
+              },
+              {
+                "fileName": "bakersfield-ca-remove-min-citation1-screenshot5.png",
+                "directusId": "f935c31c-0818-467f-96ab-8064b0316f03"
+              }
+            ]
+          },
+          {
+            "description": "Bakersfield Zoning Code",
+            "url": "https://bakersfield.municipal.codes/Code/17.58.110",
+            "notes": "17.58.110.E.;\n17.58.120.A.",
+            "attachments": [],
+            "screenshots": [
+              {
+                "fileName": "bakersfield-ca-remove-min-citation2-screenshot1.png",
+                "directusId": "fbddee23-9906-4ecb-991d-3180f9ff0ec4"
+              },
+              {
+                "fileName": "bakersfield-ca-remove-min-citation2-screenshot2.png",
+                "directusId": "05999962-b384-4d08-9b39-46969f8603dc"
+              }
+            ]
+          }
+        ]
+      }
+    ]
   },
   "Baldwin, MI": {
     "reduce_min": [
@@ -8015,7 +8269,55 @@
           ]
         }
       ]
-    }
+    },
+    "add_max": [
+      {
+        "reporter": "Tom Radulovich",
+        "requirements": ["by right"],
+        "citations": [
+          {
+            "description": "City of Berkeley Website",
+            "url": "https://berkeley.municipal.codes/BMC/23.322.050",
+            "notes": "Minimum Residential Parking Requirements: There are no off-street residential parking requirements for residential projects (or mixed-use projects that include residential units) of any size. However, if the project is located in the Environmental Safety--Residential (ES-R) zoning district, or is located on a street narrower than 26 feet in the Hills overlay district, off-street parking requirements still apply.  Those requirements can be reduced with an Administrative Use Permit (AUP).\nResidential Parking Maximums: For projects of two or more units located on a parcel wholly or partially located within 0.25 miles of a high-quality transit corridor, off-street residential parking cannot be offered at a rate of more than 0.5 spaces per unit.  Single-family homes, projects where 50% or more of the units are deed-restricted affordable, projects in the ES-R zoning district, and projects located on a street narrower than 26 feet in the Hills overlay district  are exempt from parking maximums.  The parking maximums can be exceeded with an Administrative Use Permit (AUP).",
+            "attachments": [],
+            "screenshots": [
+              {
+                "fileName": "berkeley-ca-add-max-screenshot1.png",
+                "directusId": "37bb5899-6f0d-4e77-974b-aef08d0ea591"
+              },
+              {
+                "fileName": "berkeley-ca-add-max-screenshot2.png",
+                "directusId": "0feccae8-f597-4461-98c4-dbaff0ae795c"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "rm_min": [
+      {
+        "reporter": "Tom Radulovich",
+        "requirements": ["by right"],
+        "citations": [
+          {
+            "description": "City of Berkeley Website",
+            "url": "https://berkeley.municipal.codes/BMC/23.322.050",
+            "notes": "Minimum Residential Parking Requirements: There are no off-street residential parking requirements for residential projects (or mixed-use projects that include residential units) of any size. However, if the project is located in the Environmental Safety--Residential (ES-R) zoning district, or is located on a street narrower than 26 feet in the Hills overlay district, off-street parking requirements still apply.  Those requirements can be reduced with an Administrative Use Permit (AUP).\nResidential Parking Maximums: For projects of two or more units located on a parcel wholly or partially located within 0.25 miles of a high-quality transit corridor, off-street residential parking cannot be offered at a rate of more than 0.5 spaces per unit.  Single-family homes, projects where 50% or more of the units are deed-restricted affordable, projects in the ES-R zoning district, and projects located on a street narrower than 26 feet in the Hills overlay district  are exempt from parking maximums.  The parking maximums can be exceeded with an Administrative Use Permit (AUP).",
+            "attachments": [],
+            "screenshots": [
+              {
+                "fileName": "berkeley-ca-remove-min-screenshot1.png",
+                "directusId": "37bb5899-6f0d-4e77-974b-aef08d0ea591"
+              },
+              {
+                "fileName": "berkeley-ca-remove-min-screenshot2.png",
+                "directusId": "0feccae8-f597-4461-98c4-dbaff0ae795c"
+              }
+            ]
+          }
+        ]
+      }
+    ]
   },
   "Berkley, MI": {
     "legacy": {
@@ -20768,7 +21070,71 @@
           ]
         }
       ]
-    }
+    },
+    "add_max": [
+      {
+        "reporter": "Samuel Deetz",
+        "requirements": ["by right"],
+        "citations": [
+          {
+            "description": "Concord Development Code",
+            "url": "https://www.codepublishing.com/CA/Concord/#!/Concord18/Concord18160.html#18.160.040",
+            "notes": "18.160.040.D.",
+            "attachments": [],
+            "screenshots": [
+              {
+                "fileName": "concord-ca-add-max-screenshot.png",
+                "directusId": "de7ce9b5-2ba5-488d-86d6-0f6833d7c570"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "reduce_min": [
+      {
+        "reporter": "Samuel Deetz",
+        "requirements": ["frequent transit", "in-lieu fees"],
+        "citations": [
+          {
+            "description": "Concord Development Code",
+            "url": "https://www.codepublishing.com/CA/Concord/#!/Concord18/Concord18160.html#18.160.050",
+            "notes": "18.160.050.A.;\n18.160.060.B.",
+            "attachments": [],
+            "screenshots": [
+              {
+                "fileName": "concord-ca-reduce-min-screenshot1.png",
+                "directusId": "130de6f8-9946-4863-b7ac-b3cbf146eebe"
+              },
+              {
+                "fileName": "concord-ca-reduce-min-screenshot2.png",
+                "directusId": "639453b4-3feb-4978-9800-b5ab5ccee673"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "rm_min": [
+      {
+        "reporter": "Samuel Deetz",
+        "requirements": ["accessory dwelling units"],
+        "citations": [
+          {
+            "description": "Concord Development Code",
+            "url": "https://www.codepublishing.com/CA/Concord/#!/Concord18/Concord18200.html#18.200.180",
+            "notes": "18.200.180.11.b.",
+            "attachments": [],
+            "screenshots": [
+              {
+                "fileName": "concord-ca-remove-min-screenshot.png",
+                "directusId": "d4964260-c898-4a8e-abf4-70070d9c2498"
+              }
+            ]
+          }
+        ]
+      }
+    ]
   },
   "Concord, NC": {
     "legacy": {
@@ -21556,7 +21922,57 @@
           ]
         }
       ]
-    }
+    },
+    "reduce_min": [
+      {
+        "reporter": "Samuel Deetz",
+        "requirements": ["in-lieu fees", "other"],
+        "citations": [
+          {
+            "description": "Corona Zoning Code",
+            "url": "https://codelibrary.amlegal.com/codes/corona/latest/corona_ca/0-0-0-54690",
+            "notes": "17.76.050;\n17.76.060",
+            "attachments": [],
+            "screenshots": [
+              {
+                "fileName": "corona-ca-reduce-min-screenshot1.png",
+                "directusId": "6f1c070b-f49d-4fd2-a405-bb9a4611f367"
+              },
+              {
+                "fileName": "corona-ca-reduce-min-screenshot2.png",
+                "directusId": "37f1ba1f-3848-4242-bc3d-38679b1e99d7"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "rm_min": [
+      {
+        "reporter": "Samuel Deetz",
+        "requirements": [
+          "accessory dwelling units",
+          "carshare",
+          "frequent transit",
+          "historic preservation",
+          "other"
+        ],
+        "citations": [
+          {
+            "description": "Corona Zoning Code",
+            "url": "https://codelibrary.amlegal.com/codes/corona/latest/corona_ca/0-0-0-55134",
+            "notes": "17.85.040(C)",
+            "attachments": [],
+            "screenshots": [
+              {
+                "fileName": "corona-ca-remove-min-screenshot.png",
+                "directusId": "2465ba55-288d-44fa-9271-e85e253c6590"
+              }
+            ]
+          }
+        ]
+      }
+    ]
   },
   "Corpus Christi, TX": {
     "legacy": {
@@ -29026,7 +29442,53 @@
           ]
         }
       ]
-    }
+    },
+    "reduce_min": [
+      {
+        "reporter": "Samuel Deetz",
+        "requirements": ["bike parking", "other"],
+        "citations": [
+          {
+            "description": "Elk Grove Zoning Code",
+            "url": "https://www.codepublishing.com/CA/ElkGrove/#!/ElkGrove23/ElkGrove2358.html#23.58.060",
+            "notes": "23.58.060",
+            "attachments": [],
+            "screenshots": [
+              {
+                "fileName": "elk-grove-ca-reduce-min-screenshot.png",
+                "directusId": "4e66a227-bcbd-400c-9a52-402e1b38555b"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "rm_min": [
+      {
+        "reporter": "Samuel Deetz",
+        "requirements": [
+          "accessory dwelling units",
+          "carshare",
+          "frequent transit",
+          "historic preservation",
+          "other"
+        ],
+        "citations": [
+          {
+            "description": "Elk Grove Zoning Code",
+            "url": "https://www.codepublishing.com/CA/ElkGrove/#!/ElkGrove23/ElkGrove2390.html#23.90.040",
+            "notes": "23.90.040.J.",
+            "attachments": [],
+            "screenshots": [
+              {
+                "fileName": "elk-grove-ca-remove-min-screenshot.png",
+                "directusId": "945645e8-c35f-45ee-ad8d-71c6a063d4b3"
+              }
+            ]
+          }
+        ]
+      }
+    ]
   },
   "Elk Point, SD": {
     "rm_min": [
@@ -29834,7 +30296,55 @@
           ]
         }
       ]
-    }
+    },
+    "add_max": [
+      {
+        "reporter": null,
+        "requirements": ["by right"],
+        "citations": [
+          {
+            "description": "Zoning code",
+            "url": "https://www.codepublishing.com/CA/Emeryville/html/Emeryville09/Emeryville094.html#9-4.404",
+            "notes": null,
+            "attachments": [],
+            "screenshots": [
+              {
+                "fileName": "emeryville-ca-add-max-screenshot1.jpg",
+                "directusId": "c3140ba5-8cbb-4731-ab03-6360c2d61c68"
+              },
+              {
+                "fileName": "emeryville-ca-add-max-screenshot2.jpg",
+                "directusId": "90e74713-f6e0-40bd-8a4a-3ce10877dbb2"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "rm_min": [
+      {
+        "reporter": null,
+        "requirements": ["by right"],
+        "citations": [
+          {
+            "description": "Zoning code",
+            "url": "https://www.codepublishing.com/CA/Emeryville/html/Emeryville09/Emeryville094.html#9-4.404",
+            "notes": null,
+            "attachments": [],
+            "screenshots": [
+              {
+                "fileName": "emeryville-ca-remove-min-screenshot1.jpg",
+                "directusId": "c3140ba5-8cbb-4731-ab03-6360c2d61c68"
+              },
+              {
+                "fileName": "emeryville-ca-remove-min-screenshot2.jpg",
+                "directusId": "90e74713-f6e0-40bd-8a4a-3ce10877dbb2"
+              }
+            ]
+          }
+        ]
+      }
+    ]
   },
   "Emily, MN": {
     "legacy": {
@@ -30642,7 +31152,70 @@
           ]
         }
       ]
-    }
+    },
+    "reduce_min": [
+      {
+        "reporter": "Samuel Deetz",
+        "requirements": [
+          "bike parking",
+          "carshare",
+          "frequent transit",
+          "in-lieu fees",
+          "other"
+        ],
+        "citations": [
+          {
+            "description": "Eureka Zoning Code",
+            "url": "https://codelibrary.amlegal.com/codes/eureka/latest/eureka_ca/0-0-0-59879",
+            "notes": "§ 155.324.040(C)",
+            "attachments": [],
+            "screenshots": [
+              {
+                "fileName": "eureka-ca-reduce-min-screenshot1.png",
+                "directusId": "37c3b3e4-acbd-4ed8-810b-7231bf81664f"
+              },
+              {
+                "fileName": "eureka-ca-reduce-min-screenshot2.png",
+                "directusId": "1d9722f9-10bd-49bc-80de-0ab466242d46"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "rm_min": [
+      {
+        "reporter": "Samuel Deetz",
+        "requirements": [
+          "accessory dwelling units",
+          "affordable housing",
+          "by right",
+          "size of project"
+        ],
+        "citations": [
+          {
+            "description": "Eureka Zoning Code",
+            "url": "https://codelibrary.amlegal.com/codes/eureka/latest/eureka_ca/0-0-0-59846",
+            "notes": "§ 155.324.020(B);\n§ 155.324.020(C);\n§ 155.324.030(A)",
+            "attachments": [],
+            "screenshots": [
+              {
+                "fileName": "eureka-ca-remove-min-screenshot1.png",
+                "directusId": "abf1ea9a-69d6-46b9-b03d-7ab5e48f7e0b"
+              },
+              {
+                "fileName": "eureka-ca-remove-min-screenshot2.png",
+                "directusId": "73d6f442-7cff-45fc-b8ea-d10d1b56174d"
+              },
+              {
+                "fileName": "eureka-ca-remove-min-screenshot3.png",
+                "directusId": "300dd7ce-f084-49c8-85ca-7f0f06acd1b9"
+              }
+            ]
+          }
+        ]
+      }
+    ]
   },
   "Evanston, IL": {
     "reduce_min": [
@@ -34714,7 +35287,63 @@
           ]
         }
       ]
-    }
+    },
+    "add_max": [
+      {
+        "reporter": "Tom Radulovich",
+        "requirements": ["by right"],
+        "citations": [
+          {
+            "description": "Fremont Zoning Code",
+            "url": "https://www.codepublishing.com/CA/Fremont/#!/Fremont18/Fremont18.html#18",
+            "notes": "18.43.130;\n18.47.100;\n18.49.070",
+            "attachments": [],
+            "screenshots": [
+              {
+                "fileName": "fremont-ca-add-max-screenshot1.png",
+                "directusId": "ae9f6e17-d43c-4996-ba95-62766ef484cb"
+              },
+              {
+                "fileName": "fremont-ca-add-max-screenshot2.png",
+                "directusId": "cc37341d-04ee-48d4-8e13-86be10c0fdc9"
+              },
+              {
+                "fileName": "fremont-ca-add-max-screenshot3.png",
+                "directusId": "113fd872-79b6-47c0-a583-bb70283b685c"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "rm_min": [
+      {
+        "reporter": "Tom Radulovich",
+        "requirements": ["by right"],
+        "citations": [
+          {
+            "description": "Community Plan",
+            "url": "https://www.codepublishing.com/CA/Fremont/#!/html/Fremont18/Fremont18152.html",
+            "notes": "18.152.070 Parking.",
+            "attachments": [],
+            "screenshots": [
+              {
+                "fileName": "fremont-ca-remove-min-screenshot1.jpg",
+                "directusId": "3aac3401-5a3b-4922-9a21-34ab513c7d25"
+              },
+              {
+                "fileName": "fremont-ca-remove-min-screenshot2.png",
+                "directusId": "7ed46919-1b60-4204-a0a3-803b33d2d504"
+              },
+              {
+                "fileName": "fremont-ca-remove-min-screenshot3.png",
+                "directusId": "04d4c7cf-603e-46e6-ba00-15494a01800a"
+              }
+            ]
+          }
+        ]
+      }
+    ]
   },
   "Fremont, MI": {
     "legacy": {
@@ -36735,7 +37364,56 @@
           ]
         }
       ]
-    }
+    },
+    "reduce_min": [
+      {
+        "reporter": "Samuel Deetz",
+        "requirements": ["bike parking", "in-lieu fees"],
+        "citations": [
+          {
+            "description": "Glendale Zoning Code",
+            "url": "https://ecode360.com/43353284#43353284",
+            "notes": "§ 30.32.172;\n§ 30.32.173.B.;\n§ 30.32.173.C.",
+            "attachments": [],
+            "screenshots": [
+              {
+                "fileName": "glendale-ca-reduce-min-screenshot1.png",
+                "directusId": "493e1cae-ca26-4b90-a201-c76ced2f3895"
+              },
+              {
+                "fileName": "glendale-ca-reduce-min-screenshot2.png",
+                "directusId": "a9d8f682-d735-4776-beb4-bc24e793e983"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "rm_min": [
+      {
+        "reporter": "Samuel Deetz",
+        "requirements": [
+          "accessory dwelling units",
+          "frequent transit",
+          "historic preservation",
+          "other"
+        ],
+        "citations": [
+          {
+            "description": "Glendale Zoning Code",
+            "url": "https://ecode360.com/43353830#43353972",
+            "notes": "§ 30.34.080.G.4.",
+            "attachments": [],
+            "screenshots": [
+              {
+                "fileName": "glendale-ca-remove-min-screenshot.png",
+                "directusId": "ee95da11-38b9-4d27-bd27-c805b4be976d"
+              }
+            ]
+          }
+        ]
+      }
+    ]
   },
   "Glendale, CO": {
     "reduce_min": [
@@ -41908,7 +42586,71 @@
           ]
         }
       ]
-    }
+    },
+    "add_max": [
+      {
+        "reporter": "Patrick Siegman",
+        "requirements": ["by right"],
+        "citations": [
+          {
+            "description": "Municipal Code Section 10-24.3.2.050",
+            "url": "https://library.municode.com/ca/hayward/codes/municipal_code?nodeId=HAYWARD_MUNICIPAL_CODE_CH10PLZOSU_ART24MIBOCO_SUBARTICLE_10-24.3SUZO_DIV10-24.3.2GEST_10-24.3.2.050PALO",
+            "notes": "Part of Municipal Code Article 24 – MISSION BOULEVARD CODE",
+            "attachments": [],
+            "screenshots": [
+              {
+                "fileName": "hayward-ca-add-max-citation1-screenshot.jpg",
+                "directusId": "94146e2e-bc12-4161-9aba-d13538d5ce63"
+              }
+            ]
+          },
+          {
+            "description": "City webpage on the form-based code update",
+            "url": "https://www.hayward-ca.gov/content/form-based-code-update",
+            "notes": "Provides overview of the code update process, with maps, presentations, and links to the code",
+            "attachments": [],
+            "screenshots": [
+              {
+                "fileName": "hayward-ca-add-max-citation2-screenshot.jpg",
+                "directusId": "657e70d3-8ebb-4967-a463-001c0a04c1ce"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "rm_min": [
+      {
+        "reporter": "Patrick Siegman",
+        "requirements": ["by right"],
+        "citations": [
+          {
+            "description": "Municipal Code Section 10-24.3.2.050",
+            "url": "https://library.municode.com/ca/hayward/codes/municipal_code?nodeId=HAYWARD_MUNICIPAL_CODE_CH10PLZOSU_ART24MIBOCO_SUBARTICLE_10-24.3SUZO_DIV10-24.3.2GEST_10-24.3.2.050PALO",
+            "notes": "Part of Municipal Code Article 24 – MISSION BOULEVARD CODE",
+            "attachments": [],
+            "screenshots": [
+              {
+                "fileName": "hayward-ca-remove-min-citation1-screenshot.jpg",
+                "directusId": "94146e2e-bc12-4161-9aba-d13538d5ce63"
+              }
+            ]
+          },
+          {
+            "description": "City webpage on the form-based code update",
+            "url": "https://www.hayward-ca.gov/content/form-based-code-update",
+            "notes": "Provides overview of the code update process, with maps, presentations, and links to the code",
+            "attachments": [],
+            "screenshots": [
+              {
+                "fileName": "hayward-ca-remove-min-citation2-screenshot.jpg",
+                "directusId": "657e70d3-8ebb-4967-a463-001c0a04c1ce"
+              }
+            ]
+          }
+        ]
+      }
+    ]
   },
   "Hayward, WI": {
     "rm_min": [
@@ -44256,7 +44998,51 @@
           ]
         }
       ]
-    }
+    },
+    "reduce_min": [
+      {
+        "reporter": "Samuel Deetz",
+        "requirements": ["in-lieu fees"],
+        "citations": [
+          {
+            "description": "Huntington Beach Zoning Code",
+            "url": "https://ecode360.com/43804974#43805010",
+            "notes": "§ 231.10",
+            "attachments": [],
+            "screenshots": [
+              {
+                "fileName": "huntington-beach-ca-reduce-min-screenshot.png",
+                "directusId": "99c87fd2-291a-4523-8f9d-6f3ba8d74444"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "rm_min": [
+      {
+        "reporter": "Samuel Deetz",
+        "requirements": [
+          "accessory dwelling units",
+          "carshare",
+          "frequent transit"
+        ],
+        "citations": [
+          {
+            "description": "Huntington Beach Zoning Code",
+            "url": "https://ecode360.com/43805592#43805624",
+            "notes": "§ 237.12.D.1.",
+            "attachments": [],
+            "screenshots": [
+              {
+                "fileName": "huntington-beach-ca-remove-min-screenshot.png",
+                "directusId": "58779b1e-0351-4060-8491-b696e9ac7dcd"
+              }
+            ]
+          }
+        ]
+      }
+    ]
   },
   "Huntington Woods, MI": {
     "add_max": [
@@ -49589,7 +50375,7 @@
       "citations": [
         {
           "description": "Tippecanoe County UZO",
-          "url": "https://www.tippecanoe.in.gov/DocumentCenter/View/24429/UZO-2022-Update-wAmendments-1-106PDF?bidId=",
+          "url": "https://www.tippecanoe.in.gov/DocumentCenter/View/37843/UZO?bidId=",
           "notes": "4-6 PARKING AND LOADING REQUIREMENTS\n4-6-11EXCLUSIONS, REDUCTIONS, AND EXCEPTIONS\n(a)\n(b)\nPage 213",
           "attachments": [],
           "screenshots": [
@@ -49600,7 +50386,47 @@
           ]
         }
       ]
-    }
+    },
+    "add_max": [
+      {
+        "reporter": "Samuel Deetz",
+        "requirements": ["by right"],
+        "citations": [
+          {
+            "description": "Tippecanoe County UZO",
+            "url": "https://www.tippecanoe.in.gov/DocumentCenter/View/37843/UZO?bidId=",
+            "notes": "4-6 PARKING AND LOADING REQUIREMENTS\n4-6-11EXCLUSIONS, REDUCTIONS, AND EXCEPTIONS\n(a)\n(b)\nPage 213",
+            "attachments": [],
+            "screenshots": [
+              {
+                "fileName": "lafayette-in-add-max-screenshot.png",
+                "directusId": "945d86a1-3ae4-42c7-9f3f-fe7281161bf3"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "rm_min": [
+      {
+        "reporter": "Samuel Deetz",
+        "requirements": ["by right"],
+        "citations": [
+          {
+            "description": "Tippecanoe County UZO",
+            "url": "https://www.tippecanoe.in.gov/DocumentCenter/View/37843/UZO?bidId=",
+            "notes": "4-6 PARKING AND LOADING REQUIREMENTS\n4-6-11EXCLUSIONS, REDUCTIONS, AND EXCEPTIONS\n(a)\n(b)\nPage 213",
+            "attachments": [],
+            "screenshots": [
+              {
+                "fileName": "lafayette-in-remove-min-screenshot.png",
+                "directusId": "945d86a1-3ae4-42c7-9f3f-fe7281161bf3"
+              }
+            ]
+          }
+        ]
+      }
+    ]
   },
   "Lafayette, LA": {
     "legacy": {
@@ -54290,7 +55116,95 @@
           ]
         }
       ]
-    }
+    },
+    "reduce_min": [
+      {
+        "reporter": "Bobby Siemiaszko",
+        "requirements": ["by right"],
+        "citations": [
+          {
+            "description": "Development Standards",
+            "url": "http://www.longbeach.gov/globalassets/lbds/media-library/documents/orphans/midtown-specific/final-revised-2018-mtsp---3-0-land-use-plan-and-development",
+            "notes": "Section 3.5",
+            "attachments": [],
+            "screenshots": [
+              {
+                "fileName": "long-beach-ca-reduce-min-citation1-screenshot.png",
+                "directusId": "c283e6e1-3a4f-44f3-ac7f-328275056ab8"
+              }
+            ]
+          },
+          {
+            "description": "Long Beach Zoning Code",
+            "url": "https://library.municode.com/ca/long_beach/codes/municipal_code?nodeId=TIT21ZO_CH21.51ACUS_DIVIIUSCO_21.51.276ACDWUN",
+            "notes": "CHAPTER 21.51 - ACCESSORY USES\nDIVISION II. - USE CONDITIONS\n21.51.276 - Accessory Dwelling Units.\nD.Development Standards.\nNotes:\n(b)",
+            "attachments": [],
+            "screenshots": [
+              {
+                "fileName": "long-beach-ca-reduce-min-citation2-screenshot.png",
+                "directusId": "0ddedd86-928e-4ec1-8762-dac603b62e68"
+              }
+            ]
+          },
+          {
+            "description": "Long Beach Post article",
+            "url": "https://lbpost.com/news/changes-to-parking-requirements-in-long-beach-head-to-the-planning-commission/",
+            "notes": null,
+            "attachments": [],
+            "screenshots": [
+              {
+                "fileName": "long-beach-ca-reduce-min-citation3-screenshot.png",
+                "directusId": "d407d010-7f97-4eb5-94e8-f2b36afb89fe"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "rm_min": [
+      {
+        "reporter": "Bobby Siemiaszko",
+        "requirements": ["accessory dwelling units", "by right"],
+        "citations": [
+          {
+            "description": "Development Standards",
+            "url": "http://www.longbeach.gov/globalassets/lbds/media-library/documents/orphans/midtown-specific/final-revised-2018-mtsp---3-0-land-use-plan-and-development",
+            "notes": "Section 3.5",
+            "attachments": [],
+            "screenshots": [
+              {
+                "fileName": "long-beach-ca-remove-min-citation1-screenshot.png",
+                "directusId": "c283e6e1-3a4f-44f3-ac7f-328275056ab8"
+              }
+            ]
+          },
+          {
+            "description": "Long Beach Zoning Code",
+            "url": "https://library.municode.com/ca/long_beach/codes/municipal_code?nodeId=TIT21ZO_CH21.51ACUS_DIVIIUSCO_21.51.276ACDWUN",
+            "notes": "CHAPTER 21.51 - ACCESSORY USES\nDIVISION II. - USE CONDITIONS\n21.51.276 - Accessory Dwelling Units.\nD.Development Standards.\nNotes:\n(b)",
+            "attachments": [],
+            "screenshots": [
+              {
+                "fileName": "long-beach-ca-remove-min-citation2-screenshot.png",
+                "directusId": "0ddedd86-928e-4ec1-8762-dac603b62e68"
+              }
+            ]
+          },
+          {
+            "description": "Long Beach Post article",
+            "url": "https://lbpost.com/news/changes-to-parking-requirements-in-long-beach-head-to-the-planning-commission/",
+            "notes": null,
+            "attachments": [],
+            "screenshots": [
+              {
+                "fileName": "long-beach-ca-remove-min-citation3-screenshot.png",
+                "directusId": "d407d010-7f97-4eb5-94e8-f2b36afb89fe"
+              }
+            ]
+          }
+        ]
+      }
+    ]
   },
   "Long Beach, MS": {
     "rm_min": [
@@ -61460,7 +62374,51 @@
           ]
         }
       ]
-    }
+    },
+    "reduce_min": [
+      {
+        "reporter": "Samuel Deetz",
+        "requirements": ["by right", "other"],
+        "citations": [
+          {
+            "description": "Modesto Zoning Code",
+            "url": "https://library.municode.com/ca/modesto/codes/code_of_ordinances?nodeId=TIT10ZORE_CH5PARE_ART1OREPARE_10-5.101AP",
+            "notes": "10-5.101(b);\n10-5.102",
+            "attachments": [],
+            "screenshots": [
+              {
+                "fileName": "modesto-ca-reduce-min-screenshot1.png",
+                "directusId": "b23675b3-d94a-4a63-af95-5867144790b4"
+              },
+              {
+                "fileName": "modesto-ca-reduce-min-screenshot2.png",
+                "directusId": "6ce96cf6-65cb-4b52-9e37-7a2321a843ba"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "rm_min": [
+      {
+        "reporter": "Samuel Deetz",
+        "requirements": ["accessory dwelling units"],
+        "citations": [
+          {
+            "description": "Modesto Zoning Code",
+            "url": "https://library.municode.com/ca/modesto/codes/code_of_ordinances?nodeId=TIT10ZORE_CH4DEST_ART5ACDWUN_10-4.509PAACDWUN",
+            "notes": "10-4.509(c)",
+            "attachments": [],
+            "screenshots": [
+              {
+                "fileName": "modesto-ca-remove-min-screenshot.png",
+                "directusId": "af03817e-4099-4e18-a0ce-6c7c23c2f072"
+              }
+            ]
+          }
+        ]
+      }
+    ]
   },
   "Mokena, IL": {
     "legacy": {
@@ -63413,8 +64371,8 @@
       "requirements": ["by right"],
       "citations": [
         {
-          "description": "Mountain View, CA North Bayshore Precise Plan",
-          "url": "https://www.mountainview.gov/depts/comdev/planning/activeprojects/northbayshore_/default.asp",
+          "description": "Mountain View North Bayshore Precise Plan",
+          "url": "https://www.mountainview.gov/home/showpublisheddocument/4406/638214110650830000",
           "notes": "6.11 Off-Street Parking Requirements, Standards",
           "attachments": [],
           "screenshots": [
@@ -63429,7 +64387,55 @@
           ]
         }
       ]
-    }
+    },
+    "add_max": [
+      {
+        "reporter": "Jeffrey Tumlin",
+        "requirements": ["by right"],
+        "citations": [
+          {
+            "description": "Mountain View North Bayshore Precise Plan",
+            "url": "https://www.mountainview.gov/home/showpublisheddocument/4406/638214110650830000",
+            "notes": "6.11 Off-Street Parking Requirements, Standards",
+            "attachments": [],
+            "screenshots": [
+              {
+                "fileName": "mountain-view-ca-add-max-screenshot1.png",
+                "directusId": "ecdd5e87-3728-4480-9a2e-352c60b84da2"
+              },
+              {
+                "fileName": "mountain-view-ca-add-max-screenshot2.png",
+                "directusId": "2cb34603-1729-4798-aaa3-f5552d467bde"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "rm_min": [
+      {
+        "reporter": "Jeffrey Tumlin",
+        "requirements": ["by right"],
+        "citations": [
+          {
+            "description": "Mountain View North Bayshore Precise Plan",
+            "url": "https://www.mountainview.gov/home/showpublisheddocument/4406/638214110650830000",
+            "notes": "6.11 Off-Street Parking Requirements, Standards",
+            "attachments": [],
+            "screenshots": [
+              {
+                "fileName": "mountain-view-ca-remove-min-screenshot1.png",
+                "directusId": "ecdd5e87-3728-4480-9a2e-352c60b84da2"
+              },
+              {
+                "fileName": "mountain-view-ca-remove-min-screenshot2.png",
+                "directusId": "2cb34603-1729-4798-aaa3-f5552d467bde"
+              }
+            ]
+          }
+        ]
+      }
+    ]
   },
   "Mountainair, NM": {
     "legacy": {
@@ -64343,7 +65349,47 @@
           ]
         }
       ]
-    }
+    },
+    "add_max": [
+      {
+        "reporter": "Samuel Deetz",
+        "requirements": ["by right"],
+        "citations": [
+          {
+            "description": "Munster Character Based Code",
+            "url": "https://www.munster.org/egov/documents/1637094521_47325.pdf",
+            "notes": "DIVISION 4: O.1.d.\nPage 261 of pdf, page 250 of original document",
+            "attachments": [],
+            "screenshots": [
+              {
+                "fileName": "munster-in-add-max-screenshot.png",
+                "directusId": "c08a80aa-bf51-4d17-b720-2eca75acf7a4"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "rm_min": [
+      {
+        "reporter": "Samuel Deetz",
+        "requirements": ["by right", "size of project"],
+        "citations": [
+          {
+            "description": "Munster Character-Based Code",
+            "url": "https://www.munster.org/egov/documents/1637094521_47325.pdf",
+            "notes": "DIVISION 4:O.1.g. \nPage 261 of pdf, page 250 of original document",
+            "attachments": [],
+            "screenshots": [
+              {
+                "fileName": "munster-in-remove-min-screenshot.png",
+                "directusId": "f4f6f1e6-0ab4-4ca0-9346-710ad8458634"
+              }
+            ]
+          }
+        ]
+      }
+    ]
   },
   "Murfreesboro, TN": {
     "rm_min": [
@@ -65232,7 +66278,47 @@
           ]
         }
       ]
-    }
+    },
+    "add_max": [
+      {
+        "reporter": "Samuel Deetz",
+        "requirements": ["other"],
+        "citations": [
+          {
+            "description": "New Albany Zoning Code",
+            "url": "https://cityofnewalbany.com/wp-content/uploads/2023/07/FINAL-New-Albany-Zoning-Ordinance-2019-02-14.pdf",
+            "notes": "6.16.J.6.\nPage 155",
+            "attachments": [],
+            "screenshots": [
+              {
+                "fileName": "new-albany-in-add-max-screenshot.png",
+                "directusId": "09d48a11-6f7a-4c1d-b6f1-f66bcfc9413e"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "reduce_min": [
+      {
+        "reporter": "Samuel Deetz",
+        "requirements": ["other"],
+        "citations": [
+          {
+            "description": "New Albany Zoning Code",
+            "url": "https://cityofnewalbany.com/wp-content/uploads/2023/07/FINAL-New-Albany-Zoning-Ordinance-2019-02-14.pdf",
+            "notes": "6.16.J.4.\nPage 154",
+            "attachments": [],
+            "screenshots": [
+              {
+                "fileName": "new-albany-in-reduce-min-screenshot.png",
+                "directusId": "2b5f4f8a-318f-4887-a7f9-e22b6c92d0bb"
+              }
+            ]
+          }
+        ]
+      }
+    ]
   },
   "New Auburn, MN": {
     "rm_min": [
@@ -65734,7 +66820,71 @@
           ]
         }
       ]
-    }
+    },
+    "add_max": [
+      {
+        "reporter": "Samuel Deetz",
+        "requirements": ["by right"],
+        "citations": [
+          {
+            "description": "New Haven Unified Development Ordinance",
+            "url": "https://www.newhaven.in.gov/DocumentCenter/View/719/New-Haven-Unified-Development-Ordinance-2023-PDF?bidId=",
+            "notes": "157.407(B)(1)\nPage 258 of pdf, page 250 of original document\n",
+            "attachments": [],
+            "screenshots": [
+              {
+                "fileName": "new-haven-in-add-max-screenshot.png",
+                "directusId": "0f7f7143-f9fc-4538-916e-fca899ab8fbb"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "reduce_min": [
+      {
+        "reporter": "Samuel Deetz",
+        "requirements": ["bike parking", "frequent transit", "other"],
+        "citations": [
+          {
+            "description": "New Haven Unified Development Ordinance",
+            "url": "https://www.newhaven.in.gov/DocumentCenter/View/719/New-Haven-Unified-Development-Ordinance-2023-PDF?bidId=",
+            "notes": "157.407(D)(2)\nPage 262 of pdf, page 254 of original document",
+            "attachments": [],
+            "screenshots": [
+              {
+                "fileName": "new-haven-in-reduce-min-screenshot.png",
+                "directusId": "e4c56116-58bd-4117-b51b-7d23be0eb9f3"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "rm_min": [
+      {
+        "reporter": "Samuel Deetz",
+        "requirements": ["by right"],
+        "citations": [
+          {
+            "description": "New Haven Unified Development Ordinance",
+            "url": "https://www.newhaven.in.gov/DocumentCenter/View/719/New-Haven-Unified-Development-Ordinance-2023-PDF?bidId=",
+            "notes": "157.407(B)(1);\n157.407(D)(1)(f);\nPages 258, 260 of pdf, pages 250, 252 of original document",
+            "attachments": [],
+            "screenshots": [
+              {
+                "fileName": "new-haven-in-remove-min-screenshot1.png",
+                "directusId": "276c4f41-eddc-4261-a26c-a972c5411fc9"
+              },
+              {
+                "fileName": "new-haven-in-remove-min-screenshot2.png",
+                "directusId": "7ca7ccee-689a-41a0-94ea-a1dc82197183"
+              }
+            ]
+          }
+        ]
+      }
+    ]
   },
   "New Haven, MO": {
     "rm_min": [
@@ -68846,7 +69996,71 @@
           ]
         }
       ]
-    }
+    },
+    "add_max": [
+      {
+        "reporter": "Tom Radulovich",
+        "requirements": ["by right"],
+        "citations": [
+          {
+            "description": "East Bay Times Publication",
+            "url": "https://www.eastbaytimes.com/2016/09/20/oakland-council-approves-sweeping-reductions-to-parking-for-new-developments/#",
+            "notes": "City council approved amendments to all parking. Chapter 17.116 - OFF-STREET PARKING AND LOADING REQUIREMENTS: Article II - Off-Street Parking Requirements  17.116.060.\n",
+            "attachments": [],
+            "screenshots": [
+              {
+                "fileName": "oakland-ca-add-max-citation1-screenshot.jpg",
+                "directusId": "32f8aea2-71e4-43c1-ab60-4fafb8ba134c"
+              }
+            ]
+          },
+          {
+            "description": "City Code",
+            "url": "https://library.municode.com/ca/oakland/codes/planning_code?nodeId=TIT17PL_CH17.116OREPALORE_ARTIIOREPARE_17.116.060OREPAESAC",
+            "notes": "17.116.  Also, http://www2.oaklandnet.com/oakca1/groups/ceda/documents/report/oak055400.pdf Showing the draft.",
+            "attachments": [],
+            "screenshots": [
+              {
+                "fileName": "oakland-ca-add-max-citation2-screenshot.png",
+                "directusId": "b109f9f0-ee6d-4169-a4af-b6ad69ede9a2"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "rm_min": [
+      {
+        "reporter": "Tom Radulovich",
+        "requirements": ["by right"],
+        "citations": [
+          {
+            "description": "East Bay Times Publication",
+            "url": "https://www.eastbaytimes.com/2016/09/20/oakland-council-approves-sweeping-reductions-to-parking-for-new-developments/#",
+            "notes": "City council approved amendments to all parking. Chapter 17.116 - OFF-STREET PARKING AND LOADING REQUIREMENTS: Article II - Off-Street Parking Requirements  17.116.060.\n",
+            "attachments": [],
+            "screenshots": [
+              {
+                "fileName": "oakland-ca-remove-min-citation1-screenshot.jpg",
+                "directusId": "32f8aea2-71e4-43c1-ab60-4fafb8ba134c"
+              }
+            ]
+          },
+          {
+            "description": "City Code",
+            "url": "https://library.municode.com/ca/oakland/codes/planning_code?nodeId=TIT17PL_CH17.116OREPALORE_ARTIIOREPARE_17.116.060OREPAESAC",
+            "notes": "17.116.  Also, http://www2.oaklandnet.com/oakca1/groups/ceda/documents/report/oak055400.pdf Showing the draft.",
+            "attachments": [],
+            "screenshots": [
+              {
+                "fileName": "oakland-ca-remove-min-citation2-screenshot.png",
+                "directusId": "b109f9f0-ee6d-4169-a4af-b6ad69ede9a2"
+              }
+            ]
+          }
+        ]
+      }
+    ]
   },
   "Oakland, IA": {
     "rm_min": [
@@ -69075,7 +70289,53 @@
           ]
         }
       ]
-    }
+    },
+    "reduce_min": [
+      {
+        "reporter": "Samuel Deetz",
+        "requirements": ["in-lieu fees"],
+        "citations": [
+          {
+            "description": "Oceanside Zoning Code",
+            "url": "https://www.ci.oceanside.ca.us/home/showpublisheddocument/4062/638230236915600000",
+            "notes": "3106\nPage 16",
+            "attachments": [],
+            "screenshots": [
+              {
+                "fileName": "oceanside-ca-reduce-min-screenshot.png",
+                "directusId": "e051df53-003c-42ac-9f7a-adc013884c5a"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "rm_min": [
+      {
+        "reporter": "Samuel Deetz",
+        "requirements": [
+          "accessory dwelling units",
+          "carshare",
+          "frequent transit",
+          "historic preservation",
+          "other"
+        ],
+        "citations": [
+          {
+            "description": "Oceanside Zoning Code",
+            "url": "https://www.ci.oceanside.ca.us/home/showpublisheddocument/4060/638538912694100000",
+            "notes": "3006.D.5.g. \nPage 10",
+            "attachments": [],
+            "screenshots": [
+              {
+                "fileName": "oceanside-ca-remove-min-screenshot.png",
+                "directusId": "61536d55-2672-4614-9824-f0eca5a9ab52"
+              }
+            ]
+          }
+        ]
+      }
+    ]
   },
   "Ochtrup, NW": {
     "reduce_min": [
@@ -69640,7 +70900,52 @@
           ]
         }
       ]
-    }
+    },
+    "reduce_min": [
+      {
+        "reporter": "Samuel Deetz",
+        "requirements": ["other", "size of project"],
+        "citations": [
+          {
+            "description": "Ontario Development Code",
+            "url": "https://www.ontarioca.gov/sites/default/files/Ontario-Files/Planning/Documents/Development%20Code/Development%20Code%20Feb%202023/Chapter%206.0%20-%20Development%20%26%20Subdivision%20Regs_Rev%2001-16-2024.pdf",
+            "notes": "6.03.015.A. \nPage 103",
+            "attachments": [],
+            "screenshots": [
+              {
+                "fileName": "ontario-ca-reduce-min-screenshot.png",
+                "directusId": "5b207320-cfe9-4c37-acdd-fa63e90a72b2"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "rm_min": [
+      {
+        "reporter": "Samuel Deetz",
+        "requirements": [
+          "accessory dwelling units",
+          "carshare",
+          "frequent transit",
+          "historic preservation"
+        ],
+        "citations": [
+          {
+            "description": "Ontario Development Code",
+            "url": "https://www.ontarioca.gov/sites/default/files/Ontario-Files/Planning/Documents/Development%20Code/Development%20Code%20Feb%202023/Chapter%205.0%20-%20Zoning%20and%20Land%20Use_Rev%2001-16-2024.pdf",
+            "notes": "5.03.010.F.6.b.;\nPage 63",
+            "attachments": [],
+            "screenshots": [
+              {
+                "fileName": "ontario-ca-remove-min-screenshot.png",
+                "directusId": "34e26ef1-33c9-43a3-8c0c-69c356facd80"
+              }
+            ]
+          }
+        ]
+      }
+    ]
   },
   "Ontonagon, MI": {
     "add_max": [
@@ -69872,7 +71177,51 @@
           ]
         }
       ]
-    }
+    },
+    "reduce_min": [
+      {
+        "reporter": "Samuel Deetz",
+        "requirements": ["by right", "in-lieu fees"],
+        "citations": [
+          {
+            "description": "Orange Zoning Code",
+            "url": "https://ecode360.com/43569295#43569295",
+            "notes": "§ 17.34.060",
+            "attachments": [],
+            "screenshots": [
+              {
+                "fileName": "orange-ca-reduce-min-screenshot1.png",
+                "directusId": "6c9faf62-7eec-438e-8f6b-8f294dcba4df"
+              },
+              {
+                "fileName": "orange-ca-reduce-min-screenshot2.png",
+                "directusId": "8beccdcc-39c8-43eb-ac3c-896daa593f2b"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "rm_min": [
+      {
+        "reporter": "Samuel Deetz",
+        "requirements": ["accessory dwelling units"],
+        "citations": [
+          {
+            "description": "Orange Zoning Code",
+            "url": "https://ecode360.com/43569104#43569104",
+            "notes": "§ 17.29.130.D.",
+            "attachments": [],
+            "screenshots": [
+              {
+                "fileName": "orange-ca-remove-min-screenshot.png",
+                "directusId": "1199f9b7-ca90-47fc-8277-afb9332de0e0"
+              }
+            ]
+          }
+        ]
+      }
+    ]
   },
   "Oregon, IL": {
     "reduce_min": [
@@ -71974,7 +73323,80 @@
           ]
         }
       ]
-    }
+    },
+    "add_max": [
+      {
+        "reporter": "Samuel Deetz",
+        "requirements": ["by right"],
+        "citations": [
+          {
+            "description": "Pasadena Zoning Code",
+            "url": "https://library.municode.com/ca/pasadena/codes/code_of_ordinances?nodeId=TIT17ZOCO_ART4SIPLGEDEST_CH17.46PALO_17.46.040NUOREPASPRE",
+            "notes": "17.46.040.D.",
+            "attachments": [],
+            "screenshots": [
+              {
+                "fileName": "pasadena-ca-add-max-screenshot.png",
+                "directusId": "8561b3dc-2ff2-42e0-83b9-4b52fbe5f43c"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "reduce_min": [
+      {
+        "reporter": "Samuel Deetz",
+        "requirements": ["by right"],
+        "citations": [
+          {
+            "description": "Pasadena Zoning Code",
+            "url": "https://library.municode.com/ca/pasadena/codes/code_of_ordinances?nodeId=TIT17ZOCO_ART5STSPLAUS_CH17.50STSPLAUS_17.50.340TRIEDETO",
+            "notes": "17.46.250.E.;\n17.46.250.F.;\n17.50.340.D.",
+            "attachments": [],
+            "screenshots": [
+              {
+                "fileName": "pasadena-ca-reduce-min-screenshot1.png",
+                "directusId": "4da4ea7c-0fc5-4ac7-9009-092983c9aa3c"
+              },
+              {
+                "fileName": "pasadena-ca-reduce-min-screenshot2.png",
+                "directusId": "6e5bbcf0-d22d-4c75-9113-e96e0b9ddca7"
+              },
+              {
+                "fileName": "pasadena-ca-reduce-min-screenshot3.png",
+                "directusId": "cc9ee797-2adf-4a03-98e6-e07b338c554d"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "rm_min": [
+      {
+        "reporter": "Samuel Deetz",
+        "requirements": [
+          "accessory dwelling units",
+          "carshare",
+          "frequent transit",
+          "other"
+        ],
+        "citations": [
+          {
+            "description": "Pasadena Zoning Code",
+            "url": "https://library.municode.com/ca/pasadena/codes/code_of_ordinances?nodeId=TIT17ZOCO_ART5STSPLAUS_CH17.50STSPLAUS_17.50.275ACDWUNJUACDWUN",
+            "notes": "17.50.275.D.6.a.(1)",
+            "attachments": [],
+            "screenshots": [
+              {
+                "fileName": "pasadena-ca-remove-min-screenshot.png",
+                "directusId": "eaec2c51-4994-4f16-b90f-9f9972f52823"
+              }
+            ]
+          }
+        ]
+      }
+    ]
   },
   "Pascagoula, MS": {
     "legacy": {
@@ -74819,7 +76241,71 @@
           ]
         }
       ]
-    }
+    },
+    "add_max": [
+      {
+        "reporter": "Patrick Siegman",
+        "requirements": ["accessory dwelling units", "size of project"],
+        "citations": [
+          {
+            "description": "Downtown Pomona Specific Plan.",
+            "url": "https://www.pomonaca.gov/home/showpublisheddocument/2400/637521041630070000",
+            "notes": "Parking requirements are shown on pages 25-26 of the Downtown Pomona Specific Plan. (34th page of PDF - 2 -Private Realm section 3 Parking)",
+            "attachments": [],
+            "screenshots": [
+              {
+                "fileName": "pomona-ca-add-max-citation1-screenshot.png",
+                "directusId": "1c8563d1-9c30-4b79-8d8b-6dd091fd446a"
+              }
+            ]
+          },
+          {
+            "description": "Pomona Ordinance 4324",
+            "url": "https://library.municode.com/ca/pomona/ordinances/zoning?nodeId=1234727",
+            "notes": "Page 14",
+            "attachments": [],
+            "screenshots": [
+              {
+                "fileName": "pomona-ca-add-max-citation2-screenshot.png",
+                "directusId": "7f68ac6c-e883-47aa-b977-615094d08e23"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "rm_min": [
+      {
+        "reporter": "Patrick Siegman",
+        "requirements": ["accessory dwelling units", "size of project"],
+        "citations": [
+          {
+            "description": "Downtown Pomona Specific Plan.",
+            "url": "https://www.pomonaca.gov/home/showpublisheddocument/2400/637521041630070000",
+            "notes": "Parking requirements are shown on pages 25-26 of the Downtown Pomona Specific Plan. (34th page of PDF - 2 -Private Realm section 3 Parking)",
+            "attachments": [],
+            "screenshots": [
+              {
+                "fileName": "pomona-ca-remove-min-citation1-screenshot.png",
+                "directusId": "1c8563d1-9c30-4b79-8d8b-6dd091fd446a"
+              }
+            ]
+          },
+          {
+            "description": "Pomona Ordinance 4324",
+            "url": "https://library.municode.com/ca/pomona/ordinances/zoning?nodeId=1234727",
+            "notes": "Page 14",
+            "attachments": [],
+            "screenshots": [
+              {
+                "fileName": "pomona-ca-remove-min-citation2-screenshot.png",
+                "directusId": "7f68ac6c-e883-47aa-b977-615094d08e23"
+              }
+            ]
+          }
+        ]
+      }
+    ]
   },
   "Ponca City, OK": {
     "rm_min": [
@@ -75441,7 +76927,47 @@
           ]
         }
       ]
-    }
+    },
+    "add_max": [
+      {
+        "reporter": "Samuel Deetz",
+        "requirements": ["by right"],
+        "citations": [
+          {
+            "description": "Portage Zoning Code",
+            "url": "https://library.municode.com/in/portage/codes/code_of_ordinances?nodeId=MUCO_CH90ZO_ARTVIDEST_S90-6.26PASTABDO",
+            "notes": "ARTICLE VI. - DEVELOPMENT STANDARDS\nSec. 90-6.26. - Parking standards—CABD (downtown).\nA.",
+            "attachments": [],
+            "screenshots": [
+              {
+                "fileName": "portage-in-add-max-screenshot.png",
+                "directusId": "cb015230-1097-4bc5-95be-39c9b545c55d"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "rm_min": [
+      {
+        "reporter": "Samuel Deetz",
+        "requirements": ["by right"],
+        "citations": [
+          {
+            "description": "Portage Zoning Code",
+            "url": "https://library.municode.com/in/portage/codes/code_of_ordinances?nodeId=MUCO_CH90ZO_ARTVIDEST_S90-6.26PASTABDO",
+            "notes": "ARTICLE VI. - DEVELOPMENT STANDARDS\nSec. 90-6.26. - Parking standards—CABD (downtown).\nA.",
+            "attachments": [],
+            "screenshots": [
+              {
+                "fileName": "portage-in-remove-min-screenshot.png",
+                "directusId": "cb015230-1097-4bc5-95be-39c9b545c55d"
+              }
+            ]
+          }
+        ]
+      }
+    ]
   },
   "Portage, MI": {
     "add_max": [
@@ -78851,7 +80377,51 @@
           ]
         }
       ]
-    }
+    },
+    "reduce_min": [
+      {
+        "reporter": "Samuel Deetz",
+        "requirements": ["other", "transportation demand management"],
+        "citations": [
+          {
+            "description": "Riverside Zoning Code",
+            "url": "https://library.municode.com/ca/riverside/codes/code_of_ordinances?nodeId=PTIICOOR_TIT19ZO_ARTVIIISIPLGEDEPR_CH19.580PALO_19.580.060PARE",
+            "notes": "19.580.060.D.;\n19.580.060.F.",
+            "attachments": [],
+            "screenshots": [
+              {
+                "fileName": "riverside-ca-reduce-min-screenshot1.png",
+                "directusId": "86261993-7522-4518-9b05-25306c3a3d1d"
+              },
+              {
+                "fileName": "riverside-ca-reduce-min-screenshot2.png",
+                "directusId": "aec187a1-18c1-4100-8c6a-e772965cebfd"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "rm_min": [
+      {
+        "reporter": "Samuel Deetz",
+        "requirements": ["accessory dwelling units", "by right"],
+        "citations": [
+          {
+            "description": "Riverside Zoning Code",
+            "url": "https://library.municode.com/ca/riverside/codes/code_of_ordinances?nodeId=PTIICOOR_TIT19ZO_ARTVIIISIPLGEDEPR_CH19.580PALO_19.580.060PARE",
+            "notes": "19.580.060.A.",
+            "attachments": [],
+            "screenshots": [
+              {
+                "fileName": "riverside-ca-remove-min-screenshot.png",
+                "directusId": "82cc25c7-6378-44db-93c4-1e3f0932f627"
+              }
+            ]
+          }
+        ]
+      }
+    ]
   },
   "Riverside, IA": {
     "rm_min": [
@@ -81453,7 +83023,57 @@
           ]
         }
       ]
-    }
+    },
+    "reduce_min": [
+      {
+        "reporter": "Samuel Deetz",
+        "requirements": ["in-lieu fees", "other"],
+        "citations": [
+          {
+            "description": "Salinas Zoning Code",
+            "url": "https://library.municode.com/ca/salinas/codes/code_of_ordinances?nodeId=PTIITHCO_CH37ZO_ARTVSUREAPALDI_DIV2PALOOULI_S37-50.360OREPALOSPRE",
+            "notes": "Sec. 37-50.360.(b)(3);\nSec. 37-50.380.",
+            "attachments": [],
+            "screenshots": [
+              {
+                "fileName": "salinas-ca-reduce-min-screenshot1.png",
+                "directusId": "2153cd5b-0dc0-4d10-b6dd-6f1db5164c5c"
+              },
+              {
+                "fileName": "salinas-ca-reduce-min-screenshot2.png",
+                "directusId": "57eac504-14d9-4110-a2bb-5be05fa9fad3"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "rm_min": [
+      {
+        "reporter": "Samuel Deetz",
+        "requirements": [
+          "accessory dwelling units",
+          "carshare",
+          "frequent transit",
+          "historic preservation",
+          "other"
+        ],
+        "citations": [
+          {
+            "description": "Salinas Zoning Code",
+            "url": "https://library.municode.com/ca/salinas/codes/code_of_ordinances?nodeId=PTIITHCO_CH37ZO_ARTVSUREAPALDI_DIV1SPREAPALDI_S37-50.250ACDWUN",
+            "notes": "Sec. 37-50.250.(f)",
+            "attachments": [],
+            "screenshots": [
+              {
+                "fileName": "salinas-ca-remove-min-screenshot.png",
+                "directusId": "bf2c6065-9397-4038-a55e-52c4ee6fac7d"
+              }
+            ]
+          }
+        ]
+      }
+    ]
   },
   "Saline, MI": {
     "legacy": {
@@ -81876,7 +83496,76 @@
           ]
         }
       ]
-    }
+    },
+    "reduce_min": [
+      {
+        "reporter": "Maggie Kochman",
+        "requirements": [
+          "accessory dwelling units",
+          "frequent transit",
+          "in-lieu fees",
+          "other"
+        ],
+        "citations": [
+          {
+            "description": "Project Report",
+            "url": "https://www.sbcounty.gov/uploads/lus/pc/StaffreportADU.pdf",
+            "notes": "ANALYSIS\nChapter 83.11\nPage 3",
+            "attachments": [],
+            "screenshots": [
+              {
+                "fileName": "san-bernardino-ca-reduce-min-citation1-screenshot.png",
+                "directusId": "12b41b53-719a-4ba1-b344-6c14030ebe27"
+              }
+            ]
+          },
+          {
+            "description": "San Bernardino Zoning Code",
+            "url": "https://cdnsm5-hosted.civiclive.com/UserFiles/Servers/Server_17442462/File/Government/Department/Community%20&%20Economic%20Development/Development%20Code/19.19-A%20TOD%20(Transit%20Overlay%20District)%20Zone.pdf",
+            "notes": "19.19-A.080 PARKING\nB. Required On-Site Parking",
+            "attachments": [],
+            "screenshots": [
+              {
+                "fileName": "san-bernardino-ca-reduce-min-citation2-screenshot.png",
+                "directusId": "8edaf20a-fb32-40c6-9849-3368061f473d"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "rm_min": [
+      {
+        "reporter": "Maggie Kochman",
+        "requirements": ["accessory dwelling units"],
+        "citations": [
+          {
+            "description": "Project Report",
+            "url": "https://www.sbcounty.gov/uploads/lus/pc/StaffreportADU.pdf",
+            "notes": "ANALYSIS\nChapter 83.11\nPage 3",
+            "attachments": [],
+            "screenshots": [
+              {
+                "fileName": "san-bernardino-ca-remove-min-citation1-screenshot.png",
+                "directusId": "12b41b53-719a-4ba1-b344-6c14030ebe27"
+              }
+            ]
+          },
+          {
+            "description": "San Bernardino Zoning Code",
+            "url": "https://cdnsm5-hosted.civiclive.com/UserFiles/Servers/Server_17442462/File/Government/Department/Community%20&%20Economic%20Development/Development%20Code/19.19-A%20TOD%20(Transit%20Overlay%20District)%20Zone.pdf",
+            "notes": "19.19-A.080 PARKING\nB. Required On-Site Parking",
+            "attachments": [],
+            "screenshots": [
+              {
+                "fileName": "san-bernardino-ca-remove-min-citation2-screenshot.png",
+                "directusId": "8edaf20a-fb32-40c6-9849-3368061f473d"
+              }
+            ]
+          }
+        ]
+      }
+    ]
   },
   "San Diego, CA": {
     "rm_min": [
@@ -81938,7 +83627,55 @@
           ]
         }
       ]
-    }
+    },
+    "add_max": [
+      {
+        "reporter": "Tom Radulovich",
+        "requirements": ["by right"],
+        "citations": [
+          {
+            "description": " San Francisco city code",
+            "url": "https://codelibrary.amlegal.com/codes/san_francisco/latest/sf_planning/0-0-0-18845",
+            "notes": "There are no parking minimums",
+            "attachments": [],
+            "screenshots": [
+              {
+                "fileName": "san-francisco-ca-add-max-screenshot1.png",
+                "directusId": "22216838-37e0-4f77-91a4-0c45a8fd0f99"
+              },
+              {
+                "fileName": "san-francisco-ca-add-max-screenshot2.jpg",
+                "directusId": "e6d7fd0b-c06b-4586-9769-f4c0847c6190"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "rm_min": [
+      {
+        "reporter": "Tom Radulovich",
+        "requirements": ["by right"],
+        "citations": [
+          {
+            "description": " San Francisco city code",
+            "url": "https://codelibrary.amlegal.com/codes/san_francisco/latest/sf_planning/0-0-0-18845",
+            "notes": "There are no parking minimums",
+            "attachments": [],
+            "screenshots": [
+              {
+                "fileName": "san-francisco-ca-remove-min-screenshot1.png",
+                "directusId": "22216838-37e0-4f77-91a4-0c45a8fd0f99"
+              },
+              {
+                "fileName": "san-francisco-ca-remove-min-screenshot2.jpg",
+                "directusId": "e6d7fd0b-c06b-4586-9769-f4c0847c6190"
+              }
+            ]
+          }
+        ]
+      }
+    ]
   },
   "San Jose, CA": {
     "rm_min": [
@@ -82336,7 +84073,47 @@
           ]
         }
       ]
-    }
+    },
+    "reduce_min": [
+      {
+        "reporter": "Samuel Deetz",
+        "requirements": ["other"],
+        "citations": [
+          {
+            "description": "Santa Ana Zoning Code",
+            "url": "https://library.municode.com/ca/santa_ana/codes/code_of_ordinances?nodeId=PTIITHCO_CH41ZO_ARTXVOREPA_DIV1GERE_S41-1309.1CHUSEX",
+            "notes": "Sec. 41-1309.1.",
+            "attachments": [],
+            "screenshots": [
+              {
+                "fileName": "santa-ana-ca-reduce-min-screenshot.png",
+                "directusId": "ba1791be-008c-4789-a178-d69a0828568f"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "rm_min": [
+      {
+        "reporter": "Samuel Deetz",
+        "requirements": ["accessory dwelling units"],
+        "citations": [
+          {
+            "description": "Santa Ana Zoning Code",
+            "url": "https://library.municode.com/ca/santa_ana/codes/code_of_ordinances?nodeId=PTIITHCO_CH41ZO_ARTIIUSDIENPR_S41-194.3DEST",
+            "notes": "Sec. 41-194.3.(L)",
+            "attachments": [],
+            "screenshots": [
+              {
+                "fileName": "santa-ana-ca-remove-min-screenshot.png",
+                "directusId": "b52849c4-a36a-4afc-8cd6-864e63f85845"
+              }
+            ]
+          }
+        ]
+      }
+    ]
   },
   "Santa Barbara, CA": {
     "reduce_min": [
@@ -82463,7 +84240,80 @@
           ]
         }
       ]
-    }
+    },
+    "add_max": [
+      {
+        "reporter": "Ellen Schwartz",
+        "requirements": ["by right"],
+        "citations": [
+          {
+            "description": "Santa Monica Planning and Zoning Code",
+            "url": "https://ecode360.com/42747771#42747799",
+            "notes": "§ 9.28.040A.6.",
+            "attachments": [],
+            "screenshots": [
+              {
+                "fileName": "santa-monica-ca-add-max-screenshot.png",
+                "directusId": "68c90894-d552-4b74-9032-8a030fc7593c"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "reduce_min": [
+      {
+        "reporter": "Samuel Deetz",
+        "requirements": [
+          "bike parking",
+          "carshare",
+          "historic preservation",
+          "other"
+        ],
+        "citations": [
+          {
+            "description": "Santa Monica Planning and Zoning Code",
+            "url": "https://ecode360.com/42747771#42748107",
+            "notes": "§ 9.28.180",
+            "attachments": [],
+            "screenshots": [
+              {
+                "fileName": "santa-monica-ca-reduce-min-screenshot1.png",
+                "directusId": "66485bab-5ce3-4c57-913f-f58f2440f6b0"
+              },
+              {
+                "fileName": "santa-monica-ca-reduce-min-screenshot2.png",
+                "directusId": "02176e20-11f3-4b3f-ac6c-9e56d4e4a6b6"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "rm_min": [
+      {
+        "reporter": "Ellen Schwartz",
+        "requirements": [
+          "by right",
+          "frequent transit",
+          "inclusionary housing"
+        ],
+        "citations": [
+          {
+            "description": "Santa Monica Planning and Zoning Code",
+            "url": "https://ecode360.com/42747771#45330865",
+            "notes": "§ 9.28.060.A.1.",
+            "attachments": [],
+            "screenshots": [
+              {
+                "fileName": "santa-monica-ca-remove-min-screenshot.png",
+                "directusId": "df971506-cde2-49e8-b1bf-c632abff90e5"
+              }
+            ]
+          }
+        ]
+      }
+    ]
   },
   "Santa Rosa, CA": {
     "rm_min": [
@@ -83092,7 +84942,7 @@
       "requirements": ["other"],
       "citations": [
         {
-          "description": "Schererville Zoning Code",
+          "description": "Former Schererville Zoning Code",
           "url": "https://www.schererville.org/assets/1/6/2012_Schererville_Zoning_Ordinance.pdf",
           "notes": "Title XX Off-Street Parking and Off-Street Loading\nSECTION 2: General Provisions\nK. On-Street Parking Credit\nSECTION 4: Off-Street Parking Requirements\nA. Dwelling and Lodging Uses\n(1)\n(2)\nPages 327 and 334",
           "attachments": [],
@@ -83108,7 +84958,99 @@
           ]
         }
       ]
-    }
+    },
+    "add_max": [
+      {
+        "reporter": "Samuel Deetz",
+        "requirements": ["by right"],
+        "citations": [
+          {
+            "description": "Former Schererville Zoning Code",
+            "url": "https://www.schererville.org/assets/1/6/2012_Schererville_Zoning_Ordinance.pdf",
+            "notes": "Title XX Off-Street Parking and Off-Street Loading\nSECTION 2: General Provisions\nK. On-Street Parking Credit\nSECTION 4: Off-Street Parking Requirements\nA. Dwelling and Lodging Uses\n(1)\n(2)\nPages 327 and 334",
+            "attachments": [],
+            "screenshots": [
+              {
+                "fileName": "schererville-in-add-max-citation1-screenshot1.png",
+                "directusId": "b747c441-8287-4446-af11-d8e33117a268"
+              },
+              {
+                "fileName": "schererville-in-add-max-citation1-screenshot2.png",
+                "directusId": "f4646e76-4418-4914-a7d8-dc50928b5594"
+              }
+            ]
+          },
+          {
+            "description": "Schererville Zoning Code",
+            "url": "https://www.schererville.org/assets/1/23/zoning_ordinance_complete_41224.pdf",
+            "notes": "Title XX: Section 4: A.\nPage 349",
+            "attachments": [],
+            "screenshots": [
+              {
+                "fileName": "schererville-in-add-max-citation2-screenshot.png",
+                "directusId": "93ad0665-6bd8-4a05-baf7-e8be3157de7f"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "reduce_min": [
+      {
+        "reporter": "Samuel Deetz",
+        "requirements": ["other"],
+        "citations": [
+          {
+            "description": "Former Schererville Zoning Code",
+            "url": "https://www.schererville.org/assets/1/6/2012_Schererville_Zoning_Ordinance.pdf",
+            "notes": "Title XX Off-Street Parking and Off-Street Loading\nSECTION 2: General Provisions\nK. On-Street Parking Credit\nSECTION 4: Off-Street Parking Requirements\nA. Dwelling and Lodging Uses\n(1)\n(2)\nPages 327 and 334",
+            "attachments": [],
+            "screenshots": [
+              {
+                "fileName": "schererville-in-reduce-min-citation1-screenshot1.png",
+                "directusId": "b747c441-8287-4446-af11-d8e33117a268"
+              },
+              {
+                "fileName": "schererville-in-reduce-min-citation1-screenshot2.png",
+                "directusId": "f4646e76-4418-4914-a7d8-dc50928b5594"
+              }
+            ]
+          },
+          {
+            "description": "Schererville Zoning Code",
+            "url": "https://www.schererville.org/assets/1/23/zoning_ordinance_complete_41224.pdf",
+            "notes": "Title XX: Section 2: L.\nPage 341",
+            "attachments": [],
+            "screenshots": [
+              {
+                "fileName": "schererville-in-reduce-min-citation2-screenshot.png",
+                "directusId": "5af6ed8c-5013-4d5d-8967-09106d650885"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "rm_min": [
+      {
+        "reporter": "Samuel Deetz",
+        "requirements": ["by right"],
+        "citations": [
+          {
+            "description": "Schererville Zoning Code",
+            "url": "https://www.schererville.org/assets/1/23/zoning_ordinance_complete_41224.pdf",
+            "notes": "Title XX: Section 2: A.\nPage 340",
+            "attachments": [],
+            "screenshots": [
+              {
+                "fileName": "schererville-in-remove-min-screenshot.png",
+                "directusId": "efdd8135-0bbc-4814-ac40-083cd12f5f45"
+              }
+            ]
+          }
+        ]
+      }
+    ]
   },
   "Schiller Park, IL": {
     "rm_min": [
@@ -90152,7 +92094,70 @@
           ]
         }
       ]
-    }
+    },
+    "reduce_min": [
+      {
+        "reporter": "Samuel Deetz",
+        "requirements": [
+          "bike parking",
+          "by right",
+          "frequent transit",
+          "in-lieu fees",
+          "other",
+          "size of project"
+        ],
+        "citations": [
+          {
+            "description": "Stockton Zoning Code",
+            "url": "https://library.qcode.us/lib/stockton_ca/pub/municipal_code/item/title_16-division_3-chapter_16_64",
+            "notes": "Chapter 16.28 OVERLAY ZONING DISTRICT LAND USE AND DEVELOPMENT STANDARDS\n  16.28.060 Magnolia historic (-MHD) overlay district.\n    G.       Parking.\nChapter 16.64 OFF-STREET PARKING AND LOADING STANDARDS\n  16.64.040 Number of parking spaces required.\n    I.        Parking Requirements by Land Use.\n  16.64.050 Adjustments to off-street parking requirements.\n    C.       Ministerial Parking Reductions.\n    F.       Transit-Oriented Development.\n  16.64.060 Parking assessment districts.",
+            "attachments": [],
+            "screenshots": [
+              {
+                "fileName": "stockton-ca-reduce-min-screenshot1.png",
+                "directusId": "f40c14c8-92de-4dfa-a669-8e689450efcb"
+              },
+              {
+                "fileName": "stockton-ca-reduce-min-screenshot2.png",
+                "directusId": "55b8e69b-b0ea-46d6-9804-53d653dd3b94"
+              },
+              {
+                "fileName": "stockton-ca-reduce-min-screenshot3.png",
+                "directusId": "a952fe74-c509-4f37-93c4-771f35059452"
+              },
+              {
+                "fileName": "stockton-ca-reduce-min-screenshot4.png",
+                "directusId": "a0a3d403-353c-4fb4-a3c4-c15c934ab661"
+              },
+              {
+                "fileName": "stockton-ca-reduce-min-screenshot5.png",
+                "directusId": "b6d5c93a-8a61-4a78-983f-78089e93734b"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "rm_min": [
+      {
+        "reporter": "Samuel Deetz",
+        "requirements": ["by right", "frequent transit"],
+        "citations": [
+          {
+            "description": "Stockton Zoning Code",
+            "url": "https://ecode360.com/43713810#43713867",
+            "notes": "§ 16.64.050.F.",
+            "attachments": [],
+            "screenshots": [
+              {
+                "fileName": "stockton-ca-remove-min-screenshot.png",
+                "directusId": "7dd4f99b-ee77-4917-9856-aa613cb35951"
+              }
+            ]
+          }
+        ]
+      }
+    ]
   },
   "Stonington, CT": {
     "rm_min": [
@@ -91015,6 +93020,26 @@
         }
       ]
     },
+    "add_max": [
+      {
+        "reporter": "Samuel Deetz",
+        "requirements": ["by right"],
+        "citations": [
+          {
+            "description": "Sunnyvale Zoning Code",
+            "url": "https://ecode360.com/42731285#42731372",
+            "notes": "§ 19.46.100(a)",
+            "attachments": [],
+            "screenshots": [
+              {
+                "fileName": "sunnyvale-ca-add-max-screenshot.png",
+                "directusId": "cc2843f9-10ca-446f-9c2d-15b72a1446fe"
+              }
+            ]
+          }
+        ]
+      }
+    ],
     "reduce_min": [
       {
         "reporter": "Samuel Deetz",
@@ -95808,7 +97833,47 @@
           ]
         }
       ]
-    }
+    },
+    "reduce_min": [
+      {
+        "reporter": "Samuel Deetz",
+        "requirements": ["other"],
+        "citations": [
+          {
+            "description": "Valparaiso Unified Development Ordinance",
+            "url": "https://online.encodeplus.com/regs/valparaiso-in/doc-viewer.aspx#secid-145",
+            "notes": "Sec. 9.203",
+            "attachments": [],
+            "screenshots": [
+              {
+                "fileName": "valparaiso-in-reduce-min-screenshot.png",
+                "directusId": "cde89851-6689-46ee-8231-34be469774d9"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "rm_min": [
+      {
+        "reporter": "Samuel Deetz",
+        "requirements": ["by right"],
+        "citations": [
+          {
+            "description": "Valparaiso Unified Development Ordinance",
+            "url": "https://online.encodeplus.com/regs/valparaiso-in/doc-viewer.aspx#secid-1214",
+            "notes": "Sec. 9.102.A.4.",
+            "attachments": [],
+            "screenshots": [
+              {
+                "fileName": "valparaiso-in-remove-min-screenshot.png",
+                "directusId": "cccd86dc-7c60-4cd5-a8fe-ffd0e099e639"
+              }
+            ]
+          }
+        ]
+      }
+    ]
   },
   "Van Buren Charter Township, MI": {
     "add_max": [
@@ -99774,7 +101839,7 @@
       "citations": [
         {
           "description": "Tippecanoe County UZO",
-          "url": "https://www.tippecanoe.in.gov/DocumentCenter/View/24429/UZO-2022-Update-wAmendments-1-106PDF?bidId=",
+          "url": "https://www.tippecanoe.in.gov/DocumentCenter/View/37843/UZO?bidId=",
           "notes": "4-6 PARKING AND LOADING REQUIREMENTS\n4-6-11EXCLUSIONS, REDUCTIONS, AND EXCEPTIONS\n(a)\n(b)\nPage 213",
           "attachments": [],
           "screenshots": [
@@ -99785,7 +101850,47 @@
           ]
         }
       ]
-    }
+    },
+    "add_max": [
+      {
+        "reporter": "Samuel Deetz",
+        "requirements": ["by right"],
+        "citations": [
+          {
+            "description": "Tippecanoe County UZO",
+            "url": "https://www.tippecanoe.in.gov/DocumentCenter/View/37843/UZO?bidId=",
+            "notes": "4-6 PARKING AND LOADING REQUIREMENTS\n4-6-11EXCLUSIONS, REDUCTIONS, AND EXCEPTIONS\n(a)\n(b)\nPage 213",
+            "attachments": [],
+            "screenshots": [
+              {
+                "fileName": "west-lafayette-in-add-max-screenshot.png",
+                "directusId": "7608d05c-4f8f-4650-b5a2-5de17cb6623d"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "rm_min": [
+      {
+        "reporter": "Samuel Deetz",
+        "requirements": ["by right"],
+        "citations": [
+          {
+            "description": "Tippecanoe County UZO",
+            "url": "https://www.tippecanoe.in.gov/DocumentCenter/View/37843/UZO?bidId=",
+            "notes": "4-6 PARKING AND LOADING REQUIREMENTS\n4-6-11EXCLUSIONS, REDUCTIONS, AND EXCEPTIONS\n(a)\n(b)\nPage 213",
+            "attachments": [],
+            "screenshots": [
+              {
+                "fileName": "west-lafayette-in-remove-min-screenshot.png",
+                "directusId": "7608d05c-4f8f-4650-b5a2-5de17cb6623d"
+              }
+            ]
+          }
+        ]
+      }
+    ]
   },
   "West Liberty, IA": {
     "rm_min": [
