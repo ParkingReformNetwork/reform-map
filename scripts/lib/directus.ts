@@ -21,7 +21,7 @@ import {
   QueryFilter,
 } from "@directus/sdk";
 
-import { PolicyType, ReformStatus } from "../../src/js/types.js";
+import { PlaceType, PolicyType, ReformStatus } from "../../src/js/types.js";
 
 export const CITATIONS_FILES_FOLDER = "f085de08-b747-4251-973d-1752ccc29649";
 
@@ -55,8 +55,6 @@ export interface Schema {
   legacy_reforms_citations: LegacyReformCitationJunction[];
   policy_records_citations: PolicyRecordCitationJunction[];
 }
-
-export type PlaceType = "city" | "county" | "state" | "country";
 
 export type Place = {
   name: string;

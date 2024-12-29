@@ -55,6 +55,7 @@ const PLACE_COLUMNS: ColumnDefinition[] = [
   },
   { title: "State", field: "state", width: 70 },
   { title: "Country", field: "country", width: 110 },
+  { title: "Jurisdiction", field: "placeType", width: 80 },
   {
     title: "Population",
     field: "population",
@@ -163,6 +164,7 @@ export default function initTable(
       place: entry.place.name,
       state: entry.place.state,
       country: entry.place.country,
+      placeType: entry.place.type,
       population: entry.place.pop.toLocaleString("en-us"),
       url: entry.place.url,
     };

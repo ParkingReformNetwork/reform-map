@@ -29,6 +29,7 @@ export class Date {
 }
 
 export type PlaceId = string;
+export type PlaceType = "city" | "county" | "state" | "country";
 
 export interface RawPlace {
   // Full name of the town, city, county, province, state, or country.
@@ -36,6 +37,7 @@ export interface RawPlace {
   // State or province abbreviation. Not set for countries.
   state: string | null;
   country: string;
+  type: PlaceType;
   pop: number;
   // [long, lat]
   coord: [number, number];

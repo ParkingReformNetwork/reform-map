@@ -12,6 +12,7 @@ import { initPopulationSlider } from "./populationSlider";
 
 // Keep in alignment with FilterState.
 type FilterGroupKey =
+  | "placeType"
   | "includedPolicyChanges"
   | "scope"
   | "landUse"
@@ -20,6 +21,7 @@ type FilterGroupKey =
   | "year";
 
 const DESELECTED_BY_DEFAULT: Record<FilterGroupKey, Set<string>> = {
+  placeType: new Set(),
   includedPolicyChanges: new Set(),
   scope: new Set(),
   landUse: new Set(),
@@ -32,6 +34,7 @@ export class FilterOptions {
   readonly options: Record<FilterGroupKey, string[]>;
 
   constructor(entries: ProcessedCoreEntry[]) {
+    const placeType = new Set<string>();
     const policy = new Set<string>();
     const scope = new Set<string>();
     const landUse = new Set<string>();
@@ -39,6 +42,7 @@ export class FilterOptions {
     const country = new Set<string>();
     const year = new Set<string>();
     entries.forEach((entry) => {
+      placeType.add(entry.place.type);
       status.add(entry.unifiedPolicy.status);
       country.add(entry.place.country);
       year.add(
@@ -49,6 +53,7 @@ export class FilterOptions {
       entry.unifiedPolicy.land.forEach((v) => landUse.add(v));
     });
     this.options = {
+      placeType: Array.from(placeType).sort(),
       includedPolicyChanges: Array.from(policy).sort(),
       scope: Array.from(scope).sort(),
       landUse: Array.from(landUse).sort(),
@@ -465,18 +470,18 @@ export function initFilterOptions(
       policyTypeFilter !== "any parking reform",
   });
   initFilterGroup(filterManager, filterOptions, filterPopup, {
-    htmlName: "land-use",
-    filterStateKey: "landUse",
-    legend: "Affected land use",
+    htmlName: "scope",
+    filterStateKey: "scope",
+    legend: "Reform scope",
     hide: ({ policyTypeFilter, allMinimumsRemovedToggle }) =>
       policyTypeFilter === "any parking reform" ||
       (allMinimumsRemovedToggle &&
         policyTypeFilter !== "reduce parking minimums"),
   });
   initFilterGroup(filterManager, filterOptions, filterPopup, {
-    htmlName: "scope",
-    filterStateKey: "scope",
-    legend: "Reform scope",
+    htmlName: "land-use",
+    filterStateKey: "landUse",
+    legend: "Affected land use",
     hide: ({ policyTypeFilter, allMinimumsRemovedToggle }) =>
       policyTypeFilter === "any parking reform" ||
       (allMinimumsRemovedToggle &&
@@ -497,11 +502,17 @@ export function initFilterOptions(
   });
 
   // Options about the Place
-  initPopulationSlider(filterManager, filterPopup);
   initFilterGroup(filterManager, filterOptions, filterPopup, {
     htmlName: "country",
     filterStateKey: "country",
     legend: "Country",
     preserveCapitalization: true,
   });
+  initFilterGroup(filterManager, filterOptions, filterPopup, {
+    htmlName: "place-type",
+    filterStateKey: "placeType",
+    legend: "Jurisdiction",
+    useTwoColumns: true,
+  });
+  initPopulationSlider(filterManager, filterPopup);
 }

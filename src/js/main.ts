@@ -41,6 +41,7 @@ export default async function initApp(): Promise<void> {
     searchInput: null,
     policyTypeFilter: revampEnabled ? "any parking reform" : "legacy reform",
     allMinimumsRemovedToggle: true,
+    placeType: filterOptions.default("placeType"),
     includedPolicyChanges: filterOptions.default("includedPolicyChanges"),
     scope: filterOptions.default("scope"),
     landUse: filterOptions.default("landUse"),
