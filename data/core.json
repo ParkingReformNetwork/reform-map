@@ -3757,7 +3757,25 @@
       "scope": ["citywide"],
       "land": ["commercial", "industrial", "other", "residential, all uses"],
       "date": null
-    }
+    },
+    "add_max": [
+      {
+        "summary": "Parking maximums apply to all uses.",
+        "status": "implemented",
+        "scope": ["citywide"],
+        "land": ["all uses"],
+        "date": null
+      }
+    ],
+    "rm_min": [
+      {
+        "summary": "Except for certain residential uses, there are no minimum required parking spaces. Instead, the owner provides parking spaces based upon the number employees, expected level of customer traffic, or actual counts at similar establishments.",
+        "status": "implemented",
+        "scope": ["citywide"],
+        "land": ["commercial", "industrial", "medical", "other"],
+        "date": null
+      }
+    ]
   },
   "Barnesville, MN": {
     "place": {
@@ -6766,7 +6784,25 @@
       "scope": ["city center / business district"],
       "land": ["all uses"],
       "date": null
-    }
+    },
+    "add_max": [
+      {
+        "summary": "Parking maximums apply to all uses.",
+        "status": "implemented",
+        "scope": ["citywide"],
+        "land": ["all uses"],
+        "date": null
+      }
+    ],
+    "rm_min": [
+      {
+        "summary": "Minimum parking requirements do not apply to development in the Courthouse Square Character Area or the Downtown Core Character Area south of 4th Street.",
+        "status": "implemented",
+        "scope": ["city center / business district"],
+        "land": ["all uses"],
+        "date": null
+      }
+    ]
   },
   "Bloomsburg, PA": {
     "place": {
@@ -14593,7 +14629,25 @@
       "scope": ["city center / business district"],
       "land": ["all uses"],
       "date": null
-    }
+    },
+    "reduce_min": [
+      {
+        "summary": "All properties located in the CDS, Downtown Commercial Support district may provide 50% of the parking spaces otherwise required upon certain conditions. Uses in all commercial, public/semi-public, and industrial zoning districts may count 20% of any public spaces within 300 feet of the property on which the use is located toward meeting the minimum number of required parking spaces.",
+        "status": "implemented",
+        "scope": ["city center / business district"],
+        "land": ["all uses"],
+        "date": null
+      }
+    ],
+    "rm_min": [
+      {
+        "summary": "All properties located in the CD, Downtown Commercial district are exempt from minimum parking requirements.",
+        "status": "implemented",
+        "scope": ["city center / business district"],
+        "land": ["all uses"],
+        "date": null
+      }
+    ]
   },
   "Columbus, MS": {
     "place": {
@@ -16722,7 +16776,25 @@
       "scope": ["city center / business district"],
       "land": ["all uses"],
       "date": null
-    }
+    },
+    "reduce_min": [
+      {
+        "summary": "Parking reductions are available in non CB districts based on the availability of public parking.",
+        "status": "implemented",
+        "scope": ["citywide"],
+        "land": ["all uses"],
+        "date": null
+      }
+    ],
+    "rm_min": [
+      {
+        "summary": "There are no minimum parking requirements in the Primary Central Business District.",
+        "status": "implemented",
+        "scope": ["city center / business district"],
+        "land": ["all uses"],
+        "date": null
+      }
+    ]
   },
   "Danville, PA": {
     "place": {
@@ -33719,7 +33791,34 @@
       "scope": ["city center / business district"],
       "land": ["all uses"],
       "date": null
-    }
+    },
+    "add_max": [
+      {
+        "summary": "Parking maximums are set at 115% of the minimums where 100 or more parking spaces are required.",
+        "status": "implemented",
+        "scope": ["citywide"],
+        "land": ["all uses"],
+        "date": null
+      }
+    ],
+    "reduce_min": [
+      {
+        "summary": "Minimum off-street parking requirements within the Mixed-Use Overlay District are one-half (1/2) of the required spaces.",
+        "status": "implemented",
+        "scope": ["city center / business district"],
+        "land": ["all uses"],
+        "date": null
+      }
+    ],
+    "rm_min": [
+      {
+        "summary": "No minimum parking is required for new or redevelopment in the B-2 Central Business District.",
+        "status": "implemented",
+        "scope": ["city center / business district"],
+        "land": ["all uses"],
+        "date": null
+      }
+    ]
   },
   "Jeannette, PA": {
     "place": {
@@ -33924,7 +34023,40 @@
       "scope": ["city center / business district"],
       "land": ["all uses"],
       "date": null
-    }
+    },
+    "add_max": [
+      {
+        "summary": "Parking maximums are set at 125% of the minimums for nonresidential uses. Residential uses in the CD and CN districts also have parking maximums.",
+        "status": "implemented",
+        "scope": ["city center / business district", "citywide"],
+        "land": [
+          "commercial",
+          "industrial",
+          "medical",
+          "other",
+          "residential, all uses"
+        ],
+        "date": null
+      }
+    ],
+    "reduce_min": [
+      {
+        "summary": "Within the M2 and M3 Districts, parking requirements may be reduced when located near a bus stop or when bike parking is provided. In commercial and industrial districts, parking requirements may be reduced through proximity to transit, on-street parking, bike parking, mixed-use development, or carpool parking. Lots in the CD and CN districts that are over 10,000 square feet or used for residential uses have reduced requirements.",
+        "status": "implemented",
+        "scope": ["city center / business district"],
+        "land": ["all uses"],
+        "date": null
+      }
+    ],
+    "rm_min": [
+      {
+        "summary": "Lots in the CD and CN districts that are under 10,000 square feet are exempt from the parking minimums.",
+        "status": "implemented",
+        "scope": ["city center / business district"],
+        "land": ["all uses"],
+        "date": null
+      }
+    ]
   },
   "Jenkintown, PA": {
     "place": {
@@ -33987,7 +34119,25 @@
       "scope": ["city center / business district"],
       "land": ["all uses"],
       "date": null
-    }
+    },
+    "add_max": [
+      {
+        "summary": "The total number of accessory parking spaces provided for a single-family, two-family or multiple-family dwelling shall not exceed that required by more than 50% or four spaces, whichever is greater.",
+        "status": "implemented",
+        "scope": ["citywide"],
+        "land": ["residential, all uses"],
+        "date": null
+      }
+    ],
+    "rm_min": [
+      {
+        "summary": "When the application of off-street parking regulations results in a requirement of not more than three spaces on a single lot in any business or commercial district, such parking spaces need not be provided. However, where two or more uses are located on a single lot, the foregoing exemption shall apply only if the total requirement for all uses is three spaces or less.",
+        "status": "implemented",
+        "scope": ["city center / business district"],
+        "land": ["all uses"],
+        "date": null
+      }
+    ]
   },
   "Jennings, MO": {
     "place": {
@@ -35940,7 +36090,25 @@
       "scope": ["city center / business district"],
       "land": ["commercial"],
       "date": null
-    }
+    },
+    "add_max": [
+      {
+        "summary": "Parking maximums apply to dwellings in the R-1 and R-2 districts.",
+        "status": "implemented",
+        "scope": ["main street / special"],
+        "land": ["residential, all uses"],
+        "date": "1995-07-06"
+      }
+    ],
+    "rm_min": [
+      {
+        "summary": "When the application of the off-street parking regulations results in a requirement of not more than three spaces on a single lot in any Commercial Zoning District, such parking spaces need not be provided. However, where two or more uses are located on a single lot, only one of these uses may be eligible for the exemption. This exemption does not apply to dwelling units.",
+        "status": "implemented",
+        "scope": ["city center / business district"],
+        "land": ["commercial"],
+        "date": null
+      }
+    ]
   },
   "Kronenwetter, WI": {
     "place": {
@@ -36221,7 +36389,34 @@
       "scope": ["city center / business district"],
       "land": ["commercial", "other"],
       "date": null
-    }
+    },
+    "add_max": [
+      {
+        "summary": "Parking maximums are set at 120% of the minimums for nonresidential uses.",
+        "status": "implemented",
+        "scope": ["citywide"],
+        "land": ["commercial", "industrial", "medical", "other"],
+        "date": null
+      }
+    ],
+    "reduce_min": [
+      {
+        "summary": "Within the CBD1 Downtown District, re-use of existing buildings that were in existence prior to the effective date of the ordinance are exempt from parking requirements. A fee-in-lieu of parking may be provided for larger non-residential buildings in the district.",
+        "status": "implemented",
+        "scope": ["city center / business district"],
+        "land": ["commercial", "other"],
+        "date": null
+      }
+    ],
+    "rm_min": [
+      {
+        "summary": "Within the CBD1 Downtown District, any new non-residential buildings less than 5,000 square feet in gross floor area are not required to provide off-street parking.",
+        "status": "implemented",
+        "scope": ["city center / business district"],
+        "land": ["commercial", "other"],
+        "date": null
+      }
+    ]
   },
   "La Rochelle, Charente-Maritime": {
     "place": {
@@ -39616,7 +39811,34 @@
       "scope": ["city center / business district"],
       "land": ["all uses"],
       "date": null
-    }
+    },
+    "add_max": [
+      {
+        "summary": "Properties within the B-2 Central Business District have parking maximums at 50% of the normal minimums.",
+        "status": "implemented",
+        "scope": ["city center / business district"],
+        "land": ["all uses"],
+        "date": null
+      }
+    ],
+    "reduce_min": [
+      {
+        "summary": "Parking requirements may be reduced through the provision of motorcycle parking.",
+        "status": "implemented",
+        "scope": ["citywide"],
+        "land": ["all uses"],
+        "date": null
+      }
+    ],
+    "rm_min": [
+      {
+        "summary": "Properties within the B-2 Central Business District are exempt from minimum parking requirements.",
+        "status": "implemented",
+        "scope": ["city center / business district"],
+        "land": ["all uses"],
+        "date": null
+      }
+    ]
   },
   "Loganville, GA": {
     "place": {
@@ -44058,7 +44280,25 @@
       "scope": ["city center / business district"],
       "land": ["commercial"],
       "date": null
-    }
+    },
+    "add_max": [
+      {
+        "summary": "Parking maximums are set at 120% of the minimums for nonresidential uses.",
+        "status": "implemented",
+        "scope": ["citywide"],
+        "land": ["commercial", "industrial", "medical", "other"],
+        "date": null
+      }
+    ],
+    "rm_min": [
+      {
+        "summary": "Existing buildings and any new non-residential building less than 5,000 square feet in gross floor area in the CBD1 Downtown District are not required to provide off-street parking.",
+        "status": "implemented",
+        "scope": ["city center / business district"],
+        "land": ["commercial"],
+        "date": null
+      }
+    ]
   },
   "Middleburg Heights, OH": {
     "place": {
