@@ -1,7 +1,7 @@
 import { expect, test } from "@playwright/test";
 
 import {
-  createAnyPolicyCsv,
+  createAnyPolicyCsvs,
   createReformCsv,
 } from "../../scripts/generateDataSet";
 import type {
@@ -13,6 +13,10 @@ import { Date } from "../../src/js/types";
 
 // This test uses snapshot testing (https://jestjs.io/docs/snapshot-testing#updating-snapshots). If the tests fail and the changes
 // are valid, run `npm test -- --updateSnapshot`.
+
+function normalize(csv: string): string {
+  return csv.replace(/\r\n/g, "\n");
+}
 
 // eslint-disable-next-line no-empty-pattern
 test("generate CSVs", async ({}, testInfo) => {
@@ -93,7 +97,7 @@ test("generate CSVs", async ({}, testInfo) => {
       rm_min: [
         {
           summary: "Remove minimums",
-          status: "passed",
+          status: "proposed",
           scope: [],
           land: [],
           requirements: [],
@@ -104,12 +108,11 @@ test("generate CSVs", async ({}, testInfo) => {
       ],
     },
   ];
-  const anyPolicy = createAnyPolicyCsv(entries).replace(/\r\n/g, "\n");
-  expect(anyPolicy).toMatchSnapshot("any-reform.csv");
+  const { passed, proposed, repealed } = createAnyPolicyCsvs(entries);
+  expect(normalize(passed)).toMatchSnapshot("overview-passed.csv");
+  expect(normalize(proposed)).toMatchSnapshot("overview-proposed.csv");
+  expect(normalize(repealed)).toMatchSnapshot("overview-repealed.csv");
 
-  const maximums = createReformCsv(entries, (entry) => entry.add_max).replace(
-    /\r\n/g,
-    "\n",
-  );
-  expect(maximums).toMatchSnapshot("maximums.csv");
+  const maximums = createReformCsv(entries, (entry) => entry.add_max);
+  expect(normalize(maximums)).toMatchSnapshot("maximums.csv");
 });
