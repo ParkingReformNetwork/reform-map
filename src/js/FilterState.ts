@@ -20,7 +20,7 @@ export const POPULATION_INTERVALS: Array<[string, number]> = [
   ["100k", 100000],
   ["500k", 500000],
   ["1M", 1000000],
-  ["50M", 50000000],
+  ["75M", 750000000],
 ];
 
 export type PolicyTypeFilter =
