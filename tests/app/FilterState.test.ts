@@ -16,7 +16,7 @@ test.describe("PlaceFilterManager.matchedPolicyRecords()", () => {
     ]),
     scope: new Set(["citywide", "city center / business district"]),
     landUse: new Set(["all uses", "commercial", "other"]),
-    status: new Set(["implemented", "passed"]),
+    status: new Set(["passed"]),
     country: new Set(["United States", "Brazil"]),
     placeType: new Set(["city", "county"]),
     year: new Set(["2023", "2024"]),
@@ -38,7 +38,7 @@ test.describe("PlaceFilterManager.matchedPolicyRecords()", () => {
       unifiedPolicy: {
         summary: "",
         policy: ["reduce parking minimums"],
-        status: "implemented",
+        status: "passed",
         scope: ["citywide"],
         land: ["all uses"],
         date: new Date("2024"),
@@ -46,7 +46,7 @@ test.describe("PlaceFilterManager.matchedPolicyRecords()", () => {
       reduce_min: [
         {
           summary: "",
-          status: "implemented",
+          status: "passed",
           scope: ["citywide"],
           land: ["all uses"],
           date: new Date("2024"),
@@ -67,7 +67,7 @@ test.describe("PlaceFilterManager.matchedPolicyRecords()", () => {
       unifiedPolicy: {
         summary: "",
         policy: ["add parking maximums", "remove parking minimums"],
-        status: "implemented",
+        status: "passed",
         scope: ["citywide", "city center / business district"],
         land: ["all uses", "commercial"],
         date: new Date("2023"),
@@ -75,14 +75,14 @@ test.describe("PlaceFilterManager.matchedPolicyRecords()", () => {
       add_max: [
         {
           summary: "",
-          status: "implemented",
+          status: "passed",
           scope: ["city center / business district"],
           land: ["commercial"],
           date: new Date("2023"),
         },
         {
           summary: "",
-          status: "implemented",
+          status: "passed",
           scope: ["citywide"],
           land: ["other"],
           date: new Date("2023"),
