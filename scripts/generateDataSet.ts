@@ -1,5 +1,6 @@
 /* eslint-disable import/no-extraneous-dependencies */
 /* eslint-disable no-console */
+/* eslint-disable @typescript-eslint/no-explicit-any */
 
 import fs from "fs/promises";
 
@@ -12,6 +13,7 @@ import {
   ProcessedCompletePolicy,
   readProcessedCompleteData,
 } from "./lib/data";
+import { ReformStatus } from "../src/js/types";
 
 const DELIMITER = "; ";
 
@@ -50,31 +52,88 @@ function createLegacyCsv(data: ProcessedCompleteEntry[]): string {
   return csv;
 }
 
-export function createAnyPolicyCsv(data: ProcessedCompleteEntry[]): string {
-  const entries = data.map((entry) => ({
-    place: entry.place.name,
-    state: entry.place.state,
-    country: entry.place.country,
-    place_type: entry.place.type,
-    population: entry.place.pop,
-    lat: entry.place.coord[1],
-    long: entry.place.coord[0],
-    all_minimums_repealed: toBoolean(entry.place.repeal),
-    has_minimums_repeal: toBoolean(!!entry.rm_min?.length),
-    has_minimums_reduction: toBoolean(!!entry.reduce_min?.length),
-    has_maximums: toBoolean(!!entry.add_max?.length),
-    prn_url: entry.place.url,
-  }));
-  const csv = Papa.unparse(entries);
+interface AnyPolicySet {
+  hasReforms: boolean;
+  csvValues: {
+    minimums_removal: string;
+    minimums_reduction: string;
+    maximums: string;
+  };
+}
 
-  // Validate expected number of entries.
-  const numJson = data.length;
-  const numCsv = csv.split("\r\n").length - 1;
-  if (numJson !== numCsv) {
-    throw new Error(`CSV has unequal entries to JSON: ${numCsv} vs ${numJson}`);
-  }
+function determineAnyPolicySet(
+  entry: ProcessedCompleteEntry,
+  status: ReformStatus,
+): AnyPolicySet {
+  const hasRm =
+    entry.rm_min?.some((policy) => policy.status === status) ?? false;
+  const hasReduce =
+    entry.reduce_min?.some((policy) => policy.status === status) ?? false;
+  const hasMax =
+    entry.add_max?.some((policy) => policy.status === status) ?? false;
+  return {
+    hasReforms: hasRm || hasReduce || hasMax,
+    csvValues: {
+      minimums_removal: toBoolean(hasRm),
+      minimums_reduction: toBoolean(hasReduce),
+      maximums: toBoolean(hasMax),
+    },
+  };
+}
 
-  return csv;
+export function createAnyPolicyCsvs(data: ProcessedCompleteEntry[]): {
+  passed: string;
+  proposed: string;
+  repealed: string;
+} {
+  const passed: any[] = [];
+  const proposed: any[] = [];
+  const repealed: any[] = [];
+  data.forEach((entry) => {
+    const initialValues = {
+      place: entry.place.name,
+      state: entry.place.state,
+      country: entry.place.country,
+      place_type: entry.place.type,
+      population: entry.place.pop,
+      lat: entry.place.coord[1],
+      long: entry.place.coord[0],
+    };
+    const prnUrl = { prn_url: entry.place.url };
+
+    const passedPolicySet = determineAnyPolicySet(entry, "passed");
+    const proposedPolicySet = determineAnyPolicySet(entry, "proposed");
+    const repealedPolicySet = determineAnyPolicySet(entry, "repealed");
+
+    if (passedPolicySet.hasReforms) {
+      passed.push({
+        ...initialValues,
+        all_minimums_removed: toBoolean(entry.place.repeal),
+        ...passedPolicySet.csvValues,
+        ...prnUrl,
+      });
+    }
+    if (proposedPolicySet.hasReforms) {
+      proposed.push({
+        ...initialValues,
+        ...proposedPolicySet.csvValues,
+        ...prnUrl,
+      });
+    }
+    if (repealedPolicySet.hasReforms) {
+      repealed.push({
+        ...initialValues,
+        ...repealedPolicySet.csvValues,
+        ...prnUrl,
+      });
+    }
+  });
+
+  return {
+    passed: Papa.unparse(passed),
+    proposed: Papa.unparse(proposed),
+    repealed: Papa.unparse(repealed),
+  };
 }
 
 export function createReformCsv(
@@ -94,7 +153,7 @@ export function createReformCsv(
       place_type: entry.place.type,
       lat: entry.place.coord[1],
       long: entry.place.coord[0],
-      all_minimums_repealed: toBoolean(entry.place.repeal),
+      all_minimums_removed: toBoolean(entry.place.repeal),
       status: policy.status,
       reform_date: policy.date?.raw,
       scope: policy.scope.join(DELIMITER),
@@ -140,8 +199,10 @@ async function main(): Promise<void> {
   const legacy = createLegacyCsv(data);
   await writeCsv(legacy, "map/data.csv");
 
-  const anyPolicy = createAnyPolicyCsv(data);
-  await writeCsv(anyPolicy, "data/generated/any_parking_reform.csv");
+  const { passed, proposed, repealed } = createAnyPolicyCsvs(data);
+  await writeCsv(passed, "data/generated/overview_passed.csv");
+  await writeCsv(proposed, "data/generated/overview_proposed.csv");
+  await writeCsv(repealed, "data/generated/overview_repealed.csv");
 
   const addMax = createReformCsv(data, (entry) => entry.add_max);
   await writeCsv(addMax, "data/generated/add_maximums.csv");
