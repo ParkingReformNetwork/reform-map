@@ -61827,6 +61827,14 @@
       "coord": [-82.403533, 42.9743821],
       "repeal": false
     },
+    "legacy": {
+      "summary": "There are no parking mandates for all permitted uses in the “COC” - Community Commercial Zones located on the east side of East street between Maple Avenue and Kathleen Avenue, or in the “GC” - General Commercial Zones located within the Mitton Village District (between Wellington Street and Davis Street). Nonresidential permitted uses in the “D” - Downtown Zones are exempt. As part of a zoning rewrite, the council may consider reducing or eliminating parking mandates in 2025.",
+      "status": "passed",
+      "policy": ["remove parking minimums"],
+      "scope": ["city center / business district", "main street / special"],
+      "land": ["all uses", "commercial", "other"],
+      "date": null
+    },
     "rm_min": [
       {
         "summary": "There are no parking mandates for all permitted uses in the “COC” - Community Commercial Zones located on the east side of East street between Maple Avenue and Kathleen Avenue, or in the “GC” - General Commercial Zones located within the Mitton Village District (between Wellington Street and Davis Street). Nonresidential permitted uses in the “D” - Downtown Zones are exempt.",
@@ -66437,6 +66445,14 @@
       "pop": 258201,
       "coord": [-82.6695085, 27.7703796],
       "repeal": false
+    },
+    "legacy": {
+      "summary": "On July 14, 2022, St. Petersburg eliminated minimum parking requirements for residential housing units in the downtown core that have 750 square feet or less. On September 12, 2024, the city created a new overlay district ((SunRunner TEC-Local Overlay) with no parking mandates. On July 14, 2022, St. Petersburg reduced minimum parking requirements by 10% for affordable housing units, ADUs, and other properties located within 660 feet of a high-frequency transit route. ",
+      "status": "passed",
+      "policy": ["reduce parking minimums", "remove parking minimums"],
+      "scope": ["city center / business district", "main street / special"],
+      "land": ["all uses", "residential, all uses"],
+      "date": "2024-09-12"
     },
     "reduce_min": [
       {
