@@ -50,12 +50,7 @@ export type PolicyType =
   | "remove parking minimums"
   | "add parking maximums";
 
-export type ReformStatus =
-  | "implemented"
-  | "passed"
-  | "planned"
-  | "proposed"
-  | "repealed";
+export type ReformStatus = "passed" | "proposed" | "repealed";
 
 /// Every policy has these values, new-style and legacy. It is missing some fields like `date`.
 export interface BasePolicy {

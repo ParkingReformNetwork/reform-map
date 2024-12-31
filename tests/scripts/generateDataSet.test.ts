@@ -24,7 +24,7 @@ test("generate CSVs", async ({}, testInfo) => {
   // This gets ignored and is only for the type checker.
   const unifiedPolicy: ProcessedCompleteLegacyReform = {
     summary: "",
-    status: "implemented",
+    status: "passed",
     policy: [],
     scope: [],
     land: [],
@@ -58,7 +58,7 @@ test("generate CSVs", async ({}, testInfo) => {
       add_max: [
         {
           summary: "Maximums summary #1",
-          status: "implemented",
+          status: "passed",
           scope: ["citywide"],
           land: ["commercial", "other"],
           requirements: ["by right"],
@@ -93,7 +93,7 @@ test("generate CSVs", async ({}, testInfo) => {
       rm_min: [
         {
           summary: "Remove minimums",
-          status: "implemented",
+          status: "passed",
           scope: [],
           land: [],
           requirements: [],
