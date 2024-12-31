@@ -23,6 +23,7 @@ const countryMapping: Partial<Record<string, string>> = {
   FR: "France",
   IE: "Ireland",
   IL: "Israel",
+  KR: "Korea",
   MX: "Mexico",
   NZ: "New Zealand",
   SE: "Sweden",

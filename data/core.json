@@ -5109,11 +5109,26 @@
       "coord": [-122.4788361, 48.7544012],
       "repeal": false
     },
+    "legacy": {
+      "summary": "There are no minimum parking requirements for specific land tracts in the downtown area, with the exception of hotels/motels. \n\nThe planning director may reduce minimum parking required if the development includes programs to reduce single occupancy vehicle trips through senior and affordable housing, implementation of a shared car service (i.e., Zipcar™), enhanced bike storage facilities, purchase of WTA transit passes, installation of covered transit shelters, off-site pedestrian infrastructure improvements, or other similar strategies.\n\nThe city is considering an ordinance to eliminate parking mandates citywide in 2025.",
+      "status": "passed",
+      "policy": ["remove parking minimums"],
+      "scope": ["city center / business district"],
+      "land": ["all uses"],
+      "date": null
+    },
     "rm_min": [
       {
-        "summary": "There are no minimum parking requirements for specific land tracts in the downtown area, with the exception of hotels/motels. \n\nThe planning director may reduce minimum parking required if the development includes programs to reduce single occupancy vehicle trips through senior and affordable housing, implementation of a shared car service (i.e., Zipcar™), enhanced bike storage facilities, purchase of WTA transit passes, installation of covered transit shelters, off-site pedestrian infrastructure improvements, or other similar strategies. \n\nThe city is considering an ordinance to eliminate parking mandates citywide in 2025.",
+        "summary": "There are no minimum parking requirements for specific land tracts in the downtown area, with the exception of hotels/motels. \n\nThe planning director may reduce minimum parking required if the development includes programs to reduce single occupancy vehicle trips through senior and affordable housing, implementation of a shared car service (i.e., Zipcar™), enhanced bike storage facilities, purchase of WTA transit passes, installation of covered transit shelters, off-site pedestrian infrastructure improvements, or other similar strategies.",
         "status": "passed",
         "scope": ["city center / business district"],
+        "land": ["all uses"],
+        "date": null
+      },
+      {
+        "summary": "The city is considering an ordinance to eliminate parking mandates citywide in 2025.",
+        "status": "proposed",
+        "scope": ["citywide"],
         "land": ["all uses"],
         "date": null
       }
@@ -6369,7 +6384,40 @@
       "scope": ["city center / business district", "citywide"],
       "land": ["all uses", "commercial", "other", "residential, all uses"],
       "date": null
-    }
+    },
+    "add_max": [
+      {
+        "summary": "Parking maximums are set at 110% of the minimums, except for one or two-unit dwellings.",
+        "status": "passed",
+        "scope": ["citywide"],
+        "land": [
+          "commercial",
+          "industrial",
+          "medical",
+          "other",
+          "residential, multi-family"
+        ],
+        "date": null
+      }
+    ],
+    "reduce_min": [
+      {
+        "summary": "Off-street parking requirements do not apply to any existing buildings located in the Downtown Business (C-2) District where no parking presently exists and there is no opportunity to provide it, except for certain residential uses. In all Zoning Districts except C-2, off-street parking requirements do not apply to a non-residential land use occupying 4,000 square feet or less and located within an existing structure. Parking requirements may be reduced through the provision of EV chargers. Parking requirements were reduced for residential uses with 4 or fewer units on December 18, 2024.",
+        "status": "passed",
+        "scope": ["city center / business district", "citywide"],
+        "land": ["all uses", "commercial", "other", "residential, all uses"],
+        "date": null
+      }
+    ],
+    "rm_min": [
+      {
+        "summary": "Affordable housing and senior housing projects with 4 units or less are exempt from parking mandates.",
+        "status": "passed",
+        "scope": ["citywide"],
+        "land": ["residential, multi-family"],
+        "date": "2024-12-18"
+      }
+    ]
   },
   "Birchwood, WI": {
     "place": {
@@ -8113,6 +8161,26 @@
         "status": "passed",
         "scope": ["city center / business district"],
         "land": ["all uses"],
+        "date": null
+      }
+    ]
+  },
+  "Brisbane, QLD": {
+    "place": {
+      "name": "Brisbane",
+      "state": "QLD",
+      "country": "AU",
+      "type": "city",
+      "pop": 1242825,
+      "coord": [153.0234991, -27.4689682],
+      "repeal": false
+    },
+    "reduce_min": [
+      {
+        "summary": "In 2024, Brisbane proposed reducing parking mandates for housing close to the city center.",
+        "status": "proposed",
+        "scope": ["city center / business district"],
+        "land": ["residential, all uses"],
         "date": null
       }
     ]
@@ -16614,7 +16682,7 @@
     },
     "rm_min": [
       {
-        "summary": "Within the Central Area Districts, no parking is required of buildings which existed prior to June 26, 1967 or for ground-floor retail and personal service uses except for establishments serving alcohol or commercial amusement uses. Additionally, no parking is required for the first 5,000 square feet of ground-floor floor area for a restaurant without drive-in or drive-through service.\n\nAs of February 2024, there is a proposal to eliminate most parking minimums in the city.",
+        "summary": "Within the Central Area Districts, no parking is required of buildings which existed prior to June 26, 1967 or for ground-floor retail and personal service uses except for establishments serving alcohol or commercial amusement uses. Additionally, no parking is required for the first 5,000 square feet of ground-floor floor area for a restaurant without drive-in or drive-through service.\n\nThere is currently a proposal to eliminate parking minimums in the city that will be considered in early 2025.",
         "status": "passed",
         "scope": ["city center / business district"],
         "land": ["commercial", "other"],
@@ -18106,6 +18174,13 @@
         ],
         "land": ["all uses", "commercial", "residential, low-density"],
         "date": null
+      },
+      {
+        "summary": "City staff have proposed eliminating all parking mandates in part spurred by state law. The reform could be implemented in June 2025 at the earliest.",
+        "status": "proposed",
+        "scope": ["citywide"],
+        "land": ["all uses"],
+        "date": null
       }
     ]
   },
@@ -19120,6 +19195,43 @@
         "summary": "When the application of the off-street parking provisions results in a requirement of not more than three (3) spaces on a single zoning lot in any business, office research, or industrial district, such parking spaces need not be provided where the building is unmanned; however, where two (2) or more uses are located on a single lot, only one (1) of those may be eligible for the exemption.",
         "status": "passed",
         "scope": ["city center / business district"],
+        "land": ["all uses"],
+        "date": null
+      }
+    ]
+  },
+  "Dublin, County Dublin": {
+    "place": {
+      "name": "Dublin",
+      "state": "County Dublin",
+      "country": "US",
+      "type": "city",
+      "pop": 592713,
+      "coord": [-83.0864859, 40.0983199],
+      "repeal": false
+    },
+    "legacy": {
+      "summary": "Parking maximums apply to all uses. While there are no set parking minimums, parking is expected to be provided and provision of parking under the maximums must be justified.",
+      "status": "passed",
+      "policy": ["add parking maximums", "remove parking minimums"],
+      "scope": ["citywide"],
+      "land": ["all uses"],
+      "date": null
+    },
+    "add_max": [
+      {
+        "summary": "Parking maximums apply citywide.",
+        "status": "passed",
+        "scope": ["citywide"],
+        "land": ["all uses"],
+        "date": null
+      }
+    ],
+    "rm_min": [
+      {
+        "summary": "There are no set parking minimums, however parking is expected to be provided and providing less parking than the maximums must be justified and have no negative impacts.",
+        "status": "passed",
+        "scope": ["citywide"],
         "land": ["all uses"],
         "date": null
       }
@@ -21178,7 +21290,34 @@
       "scope": ["city center / business district"],
       "land": ["commercial"],
       "date": null
-    }
+    },
+    "add_max": [
+      {
+        "summary": "Parking maximums are set at 130% of the minimums for all uses.",
+        "status": "passed",
+        "scope": ["citywide"],
+        "land": ["all uses"],
+        "date": null
+      }
+    ],
+    "reduce_min": [
+      {
+        "summary": "The first 3,000 square feet of gross floor area is exempted from minimum parking requirements for nonresidential uses in the Central Business District (CBD). Up to 25% of the number of public parking spaces within 400 feet of a proposed building in the CBD may be counted toward the required number of spaces. Citywide, bicycle parking may be substituted for required parking.",
+        "status": "passed",
+        "scope": ["city center / business district", "citywide"],
+        "land": ["all uses", "commercial", "other"],
+        "date": null
+      }
+    ],
+    "rm_min": [
+      {
+        "summary": "The first 3,000 square feet of gross floor area is exempted from minimum parking requirements for nonresidential uses in the Central Business District (CBD).",
+        "status": "passed",
+        "scope": ["city center / business district"],
+        "land": ["commercial", "other"],
+        "date": null
+      }
+    ]
   },
   "Elkhorn, WI": {
     "place": {
@@ -22415,7 +22554,25 @@
       "scope": ["city center / business district"],
       "land": ["commercial", "residential, all uses"],
       "date": null
-    }
+    },
+    "reduce_min": [
+      {
+        "summary": "Within the West Franklin Overlay Zone, parking requirements are reduced by 25% in nonresidential zones and may be further reduced with bike parking for nonresidential uses only. Parking requirements in the Jacobsville Overlay Zone may be reduced with bike parking for nonresidential uses.",
+        "status": "passed",
+        "scope": ["main street / special"],
+        "land": ["commercial", "industrial", "medical", "other"],
+        "date": null
+      }
+    ],
+    "rm_min": [
+      {
+        "summary": "All uses permitted in the C-3 central business district are exempt from minimum parking requirements except for residential uses, nurseries, nursery schools, child care centers, hotels and motels, and special uses. In residential zoning districts within the Arts Overlay Zone, off-street parking is not required.",
+        "status": "passed",
+        "scope": ["city center / business district"],
+        "land": ["commercial", "residential, all uses"],
+        "date": null
+      }
+    ]
   },
   "Evart, MI": {
     "place": {
@@ -24497,7 +24654,34 @@
       "scope": ["city center / business district"],
       "land": ["all uses", "commercial", "other", "residential, all uses"],
       "date": null
-    }
+    },
+    "add_max": [
+      {
+        "summary": "Parking maximums apply within the DC/Downtown Core and DE/Downtown Edge districts, set at 50% of the minimums when provided as surface parking, or 100% of the minimums when provided in a parking structure.",
+        "status": "passed",
+        "scope": ["city center / business district"],
+        "land": ["all uses"],
+        "date": null
+      }
+    ],
+    "reduce_min": [
+      {
+        "summary": "Parking reductions are available in the City’s nonresidential zoning districts (DC, DE, UC, C1 through C4, SC, NC, BTI, and I1 through I3) via on-street parking, bike parking, public transit access, and the use of pervious surfaces.",
+        "status": "passed",
+        "scope": ["city center / business district"],
+        "land": ["all uses"],
+        "date": null
+      }
+    ],
+    "rm_min": [
+      {
+        "summary": "There are no minimum off-street parking requirements for uses in the DC/Downtown Core, or DE/Downtown Edge, or for airports, community gardens, cemeteries, fairgrounds, hospitals, nature preserves, religious institutions, or schools.\nIn the UC/Urban Corridor districts, minimum parking requirements apply only to a new bars, taverns, dance or similar school buildings, restaurants, night clubs or similar entertainment uses, the addition of units to an existing residential structure; or the conversion of a residential structure to nonresidential use.",
+        "status": "passed",
+        "scope": ["city center / business district", "citywide"],
+        "land": ["all uses", "commercial", "other", "residential, all uses"],
+        "date": null
+      }
+    ]
   },
   "Fort Worth, TX": {
     "place": {
@@ -24755,6 +24939,26 @@
         "status": "passed",
         "scope": ["city center / business district"],
         "land": ["all uses"],
+        "date": null
+      }
+    ]
+  },
+  "France": {
+    "place": {
+      "name": "France",
+      "state": null,
+      "country": "FR",
+      "type": "country",
+      "pop": 68373433,
+      "coord": [1.8883335, 46.603354],
+      "repeal": false
+    },
+    "reduce_min": [
+      {
+        "summary": "Municipalities are only allowed to set parking minimums up to 1 space per dwelling unit near transit, or 0.5 spaces per unit near transit for student housing, housing for the elderly or social housing. Elsewhere, the minimums may be up to 1 space per unit.",
+        "status": "passed",
+        "scope": ["regional"],
+        "land": ["residential, all uses"],
         "date": null
       }
     ]
@@ -26150,7 +26354,34 @@
       "scope": ["citywide"],
       "land": ["all uses", "commercial", "other", "residential, low-density"],
       "date": null
-    }
+    },
+    "add_max": [
+      {
+        "summary": "No parking is allowed within the B2-2, B2-3, B4-2 and B4-3 districts unless approved by the plan commission. Parking maximums are set at 150% of the minimums for residential and hotel uses.",
+        "status": "passed",
+        "scope": ["city center / business district", "citywide"],
+        "land": ["all uses", "residential, all uses"],
+        "date": null
+      }
+    ],
+    "reduce_min": [
+      {
+        "summary": "Within the B5-2 District, retail, service and office uses which are not exempt from parking mandates have reduced parking requirements.",
+        "status": "passed",
+        "scope": ["city center / business district"],
+        "land": ["commercial", "other"],
+        "date": null
+      }
+    ],
+    "rm_min": [
+      {
+        "summary": "Small retail, service and office uses are exempt from minimum parking requirements within the B5-2 District. On lots of record as of the date of the adoption of the chapter, which are 40 feet or less in width and contain a single-family dwelling or a two-family dwelling for which there is no alley to the rear, accessory off-street parking facilities are not required. Within the B2-2, B2-3, B4-2 and B4-3 districts, no accessory off-street parking facilities are required for any use.",
+        "status": "passed",
+        "scope": ["city center / business district", "citywide"],
+        "land": ["all uses", "commercial", "other", "residential, low-density"],
+        "date": null
+      }
+    ]
   },
   "Gas City, IN": {
     "place": {
@@ -28665,7 +28896,25 @@
       "scope": ["city center / business district"],
       "land": ["commercial"],
       "date": null
-    }
+    },
+    "reduce_min": [
+      {
+        "summary": "Uses in the DT District which are not exempted have reduced parking requirements.",
+        "status": "passed",
+        "scope": ["city center / business district"],
+        "land": ["commercial", "other", "residential, all uses"],
+        "date": null
+      }
+    ],
+    "rm_min": [
+      {
+        "summary": "Commercial uses with less than five thousand (5,000) square feet of floor area in the DT District are exempt from parking mandates.",
+        "status": "passed",
+        "scope": ["city center / business district"],
+        "land": ["commercial"],
+        "date": null
+      }
+    ]
   },
   "Greenfield, OH": {
     "place": {
@@ -29385,6 +29634,26 @@
       }
     ]
   },
+  "Haltom City, TX": {
+    "place": {
+      "name": "Haltom City",
+      "state": "TX",
+      "country": "US",
+      "type": "city",
+      "pop": 46073,
+      "coord": [-97.2691817, 32.7995738],
+      "repeal": false
+    },
+    "rm_min": [
+      {
+        "summary": "The Haltom United Business Alliance has proposed to the city that parking mandates be removed within overlay districts along main corridors in the south and central areas of the city.",
+        "status": "proposed",
+        "scope": ["main street / special"],
+        "land": ["all uses"],
+        "date": null
+      }
+    ]
+  },
   "Hamilton, IN": {
     "place": {
       "name": "Hamilton",
@@ -29479,7 +29748,25 @@
       "scope": ["city center / business district"],
       "land": ["commercial", "other"],
       "date": null
-    }
+    },
+    "add_max": [
+      {
+        "summary": "Parking maximums apply to single-family and two-family dwellings.",
+        "status": "passed",
+        "scope": ["citywide"],
+        "land": ["residential, low-density"],
+        "date": null
+      }
+    ],
+    "rm_min": [
+      {
+        "summary": "The C-3 Central Business District is exempt from minimum parking requirements, except for hotels and convention centers.",
+        "status": "passed",
+        "scope": ["city center / business district"],
+        "land": ["commercial", "medical", "other", "residential, all uses"],
+        "date": null
+      }
+    ]
   },
   "Hammond, LA": {
     "place": {
@@ -31337,7 +31624,25 @@
       "scope": ["citywide"],
       "land": ["all uses"],
       "date": null
-    }
+    },
+    "add_max": [
+      {
+        "summary": "Parking maximums apply to all residential uses.",
+        "status": "passed",
+        "scope": ["citywide"],
+        "land": ["residential, all uses"],
+        "date": null
+      }
+    ],
+    "reduce_min": [
+      {
+        "summary": "Parking requirements may be reduced for senior housing, or through the provision of on-street parking or bike parking.",
+        "status": "passed",
+        "scope": ["citywide"],
+        "land": ["all uses", "residential, multi-family"],
+        "date": null
+      }
+    ]
   },
   "Highland, WI": {
     "place": {
@@ -31875,6 +32180,26 @@
         "status": "passed",
         "scope": ["city center / business district"],
         "land": ["all uses"],
+        "date": null
+      }
+    ]
+  },
+  "Hong Kong, HK": {
+    "place": {
+      "name": "Hong Kong",
+      "state": "HK",
+      "country": "CN",
+      "type": "state",
+      "pop": 7413070,
+      "coord": [114.1628131, 22.2793278],
+      "repeal": false
+    },
+    "add_max": [
+      {
+        "summary": "Parking maximums were instituted in the early 1970s in order to reduce the growth in car ownership. Maximums were repealed in 1981 and replaced with very low minimums and fiscal measures to constrain car ownership.",
+        "status": "repealed",
+        "scope": ["citywide"],
+        "land": ["residential, all uses"],
         "date": null
       }
     ]
@@ -32420,7 +32745,25 @@
       "scope": ["citywide"],
       "land": ["medical", "other"],
       "date": null
-    }
+    },
+    "reduce_min": [
+      {
+        "summary": "Within the nonresidential zoning districts (C1 through C4, SC, NC, BTI, and I1 through I3), parking requirements may be reduced through on-street parking, bike parking, transit or the use of pervious pavement.",
+        "status": "passed",
+        "scope": ["city center / business district"],
+        "land": ["all uses"],
+        "date": null
+      }
+    ],
+    "rm_min": [
+      {
+        "summary": "Airports, hospitals, religious institutions and schools are exempt from minimum parking requirements.",
+        "status": "passed",
+        "scope": ["citywide"],
+        "land": ["medical", "other"],
+        "date": null
+      }
+    ]
   },
   "Huntingburg, IN": {
     "place": {
@@ -32773,7 +33116,7 @@
     },
     "rm_min": [
       {
-        "summary": "The Local Parking Regulation Act was introduced on January 31, 2024 and would limit the ability of a unit of local government from imposing minimum parking requirements on a development project if the project is located within one-half mile of a public transportation hub.",
+        "summary": "The Local Parking Regulation Act was introduced on January 31, 2024 and would limit the ability of a unit of local government from imposing minimum parking requirements on a development project if the project is located within one-half mile of a public transportation hub. \nA state report from September 2024 recommends replacing parking minimums with maximums, particularly near transit.",
         "status": "proposed",
         "scope": ["regional"],
         "land": ["all uses"],
@@ -35534,6 +35877,49 @@
         "scope": ["main street / special"],
         "land": ["commercial", "other"],
         "date": null
+      }
+    ]
+  },
+  "King City, OR": {
+    "place": {
+      "name": "King City",
+      "state": "OR",
+      "country": "US",
+      "type": "city",
+      "pop": 5184,
+      "coord": [-122.804109, 45.4028329],
+      "repeal": true
+    },
+    "legacy": {
+      "summary": "King City replaced parking minimums with maximums citywide on December 18, 2024.",
+      "status": "passed",
+      "policy": ["add parking maximums", "remove parking minimums"],
+      "scope": ["citywide"],
+      "land": ["all uses"],
+      "date": "2024-12-18"
+    },
+    "add_max": [
+      {
+        "summary": "Parking maximums apply to multi-family and nonresidential uses citywide. Most maximums are set at the previous minimums.",
+        "status": "passed",
+        "scope": ["citywide"],
+        "land": [
+          "commercial",
+          "industrial",
+          "medical",
+          "other",
+          "residential, multi-family"
+        ],
+        "date": "2024-12-18"
+      }
+    ],
+    "rm_min": [
+      {
+        "summary": "Parking mandates were repealed citywide on December 18, 2024.",
+        "status": "passed",
+        "scope": ["citywide"],
+        "land": ["all uses"],
+        "date": "2024-12-18"
       }
     ]
   },
@@ -47929,6 +48315,43 @@
       }
     ]
   },
+  "Nanaimo, BC": {
+    "place": {
+      "name": "Nanaimo",
+      "state": "BC",
+      "country": "CA",
+      "type": "city",
+      "pop": 99863,
+      "coord": [-123.938122, 49.163877],
+      "repeal": false
+    },
+    "legacy": {
+      "summary": "Nanaimo removed parking mandates for residential uses in transit oriented areas (within 400 meters of a bus exchange) in compliance with provincial law in May 2024. Within the Downtown-Specified Area, parking is not required for the first 100 parking spaces that would otherwise be required, except for residential uses. A fee in lieu of required parking may be provided in designated areas.",
+      "status": "passed",
+      "policy": ["reduce parking minimums", "remove parking minimums"],
+      "scope": ["city center / business district", "transit-oriented"],
+      "land": ["commercial", "other", "residential, all uses"],
+      "date": "2024-05-06"
+    },
+    "reduce_min": [
+      {
+        "summary": "Within the Downtown-Specified Area, parking is not required for the first 100 parking spaces that would otherwise be required, except where the use is residential. A fee in lieu of required parking may be provided in designated areas.",
+        "status": "passed",
+        "scope": ["city center / business district", "main street / special"],
+        "land": ["all uses", "commercial", "other"],
+        "date": null
+      }
+    ],
+    "rm_min": [
+      {
+        "summary": "Nanaimo removed parking mandates for residential uses in transit oriented areas (within 400 meters of a bus exchange) in compliance with provincial law in May 2024. Within the Downtown-Specified Area, parking is not required for the first 100 parking spaces that would otherwise be required, except for residential uses.",
+        "status": "passed",
+        "scope": ["city center / business district", "transit-oriented"],
+        "land": ["commercial", "other", "residential, all uses"],
+        "date": "2024-05-06"
+      }
+    ]
+  },
   "Nanty Glo, PA": {
     "place": {
       "name": "Nanty Glo",
@@ -49308,7 +49731,29 @@
       "scope": ["city center / business district", "transit oriented"],
       "land": ["all uses"],
       "date": null
-    }
+    },
+    "add_max": [
+      {
+        "summary": "In the Manhattan Core (Community Districts 1-8), the maximum amount of off-street parking allowable is determined by the proposed use and Community District.",
+        "status": "passed",
+        "scope": ["city center / business district", "transit oriented"],
+        "land": ["all uses"],
+        "date": null
+      }
+    ],
+    "rm_min": [
+      {
+        "summary": "NYC consists of 5 boroughs with over 8 million people. NYC has no parking minimums in most of Manhattan, and reduced requirements (with no requirement for certain types of housing) in several other dense neighborhoods around the city. In the Manhattan Core (Community Districts 1-8), no off-street parking has been required for a number of years. Beginning in 2023, the City of Yes proposed to remove all parking mandates for housing, however this was watered down to remove minimums in a greater portion of Manhattan and Brooklyn, while reducing minimums along transit elsewhere. This version passed in December 2024.",
+        "status": "passed",
+        "scope": [
+          "city center / business district",
+          "transit oriented",
+          "transit-oriented"
+        ],
+        "land": ["all uses", "residential, all uses"],
+        "date": "2024-12-05"
+      }
+    ]
   },
   "New Zealand": {
     "place": {
@@ -55048,7 +55493,34 @@
       "scope": ["city center / business district"],
       "land": ["all uses"],
       "date": null
-    }
+    },
+    "add_max": [
+      {
+        "summary": "In designated \"Parking Exempt Areas\", land uses may not exceed the minimum parking requirements otherwise stated in the zoning code.",
+        "status": "passed",
+        "scope": ["city center / business district"],
+        "land": ["all uses"],
+        "date": null
+      }
+    ],
+    "reduce_min": [
+      {
+        "summary": "In designated \"Parking Exempt Areas\", minimum parking requirements have been reduced by percentages ranging from 50% - 100% specified in the Pittsburgh zoning code.",
+        "status": "passed",
+        "scope": ["city center / business district"],
+        "land": ["all uses"],
+        "date": null
+      }
+    ],
+    "rm_min": [
+      {
+        "summary": "Pittsburgh will consider removing all parking mandates in 2025 to boost affordable housing production. The city has had parking minimums since 1958.",
+        "status": "proposed",
+        "scope": ["citywide"],
+        "land": ["all uses"],
+        "date": null
+      }
+    ]
   },
   "Pittsfield Charter Township, MI": {
     "place": {
@@ -60131,6 +60603,23 @@
       "coord": [-121.493895, 38.5810606],
       "repeal": true
     },
+    "legacy": {
+      "summary": "There are currently no minimum parking requirements in the Central Business & Arts/Entertainment District for all land uses. In this district, commercial land uses have parking maximums.\n\nThe city adopted a housing plan in 2021 which called for further eliminating city-mandated parking minimums and explore instituting parking maximums along established transit corridors. The General Plan passed in February 2024 and implemented in March 2024 will require the city to update the zoning code to eliminate parking minimums citywide. Although the zoning code has yet to be updated, the general plan policy of no minimums will prevail in the interim.\n\nParking maximums apply to multi-family and nonresidential uses in the Central Business and Arts & Entertainment District. Based on the 2040 General Plan, the city is considering expanding parking maximums in the city center and within ½ mile of transit for residential and commercial uses in 2025.",
+      "status": "passed",
+      "policy": ["add parking maximums", "remove parking minimums"],
+      "scope": ["citywide"],
+      "land": ["all uses"],
+      "date": "2024-03-28"
+    },
+    "add_max": [
+      {
+        "summary": "Parking maximums apply to multi-family and nonresidential uses in the Central Business and Arts & Entertainment District. Based on the 2040 General Plan, the city is considering expanding parking maximums in the city center and within ½ mile of transit for residential and commercial uses in 2025.",
+        "status": "passed",
+        "scope": ["city center / business district"],
+        "land": ["commercial", "other", "residential, multi-family"],
+        "date": null
+      }
+    ],
     "rm_min": [
       {
         "summary": "There are currently no minimum parking requirements in the Central Business & Arts/Entertainment District for all land uses. In this district, commercial land uses have parking maximums.\n\nThe city adopted a housing plan in 2021 which called for further eliminating city-mandated parking minimums and explore instituting parking maximums along established transit corridors. The General Plan passed in February 2024 and implemented in March 2024 will require the city to update the zoning code to eliminate parking minimums citywide. Although the zoning code has yet to be updated, the general plan policy of no minimums will prevail in the interim.",
@@ -61328,6 +61817,41 @@
       }
     ]
   },
+  "Sarnia, ON": {
+    "place": {
+      "name": "Sarnia",
+      "state": "ON",
+      "country": "CA",
+      "type": "city",
+      "pop": 72047,
+      "coord": [-82.403533, 42.9743821],
+      "repeal": false
+    },
+    "legacy": {
+      "summary": "There are no parking mandates for all permitted uses in the “COC” - Community Commercial Zones located on the east side of East street between Maple Avenue and Kathleen Avenue, or in the “GC” - General Commercial Zones located within the Mitton Village District (between Wellington Street and Davis Street). Nonresidential permitted uses in the “D” - Downtown Zones are exempt. As part of a zoning rewrite, the council may consider reducing or eliminating parking mandates in 2025.",
+      "status": "passed",
+      "policy": ["remove parking minimums"],
+      "scope": ["city center / business district", "main street / special"],
+      "land": ["all uses", "commercial", "other"],
+      "date": null
+    },
+    "rm_min": [
+      {
+        "summary": "There are no parking mandates for all permitted uses in the “COC” - Community Commercial Zones located on the east side of East street between Maple Avenue and Kathleen Avenue, or in the “GC” - General Commercial Zones located within the Mitton Village District (between Wellington Street and Davis Street). Nonresidential permitted uses in the “D” - Downtown Zones are exempt.",
+        "status": "passed",
+        "scope": ["city center / business district", "main street / special"],
+        "land": ["all uses", "commercial", "other"],
+        "date": null
+      },
+      {
+        "summary": "As part of a zoning rewrite, the council may consider reducing or eliminating parking mandates in 2025.",
+        "status": "proposed",
+        "scope": ["citywide"],
+        "land": ["all uses"],
+        "date": null
+      }
+    ]
+  },
   "Saskatoon, SK": {
     "place": {
       "name": "Saskatoon",
@@ -61979,7 +62503,7 @@
     ],
     "reduce_min": [
       {
-        "summary": "For commercial and multifamily residential zones outside of Urban Villages, parking requirements are reduced by 50% within 1/4 mile of frequent transit stops.",
+        "summary": "For commercial and multifamily residential zones outside of Urban Villages, parking requirements are reduced by 50% within 1/4 mile of frequent transit stops. \n\nUnder the One Seattle Comprehensive Plan, parking requirements will be reduced citywide for housing.",
         "status": "passed",
         "scope": ["main street / special"],
         "land": ["commercial", "residential, all uses"],
@@ -61988,7 +62512,7 @@
     ],
     "rm_min": [
       {
-        "summary": "Parking is currently not required for any non-hospital uses in designated Urban Centers and Station Overlay Areas, plus any properties within 1/4 mile of a frequent transit stop that lie inside Urban Village boundaries.",
+        "summary": "Parking is currently not required for any non-hospital uses in designated Urban Centers and Station Overlay Areas, plus any properties within 1/4 mile of a frequent transit stop that lie inside Urban Village boundaries.\n\nUnder the One Seattle Comprehensive plan, parking mandates will be removed within a 1/2 mile of major transit stops in compliance with state law.",
         "status": "passed",
         "scope": [
           "city center / business district",
@@ -62237,6 +62761,26 @@
         "scope": ["city center / business district"],
         "land": ["all uses"],
         "date": null
+      }
+    ]
+  },
+  "Seoul, Seoul Special Metropolitan City": {
+    "place": {
+      "name": "Seoul",
+      "state": "Seoul Special Metropolitan City",
+      "country": "KR",
+      "type": "city",
+      "pop": 9586195,
+      "coord": [126.78926445637777, 37.57662381985587],
+      "repeal": false
+    },
+    "add_max": [
+      {
+        "summary": "Seoul imposes parking maximums at 50% of the normal minimums in 10 business districts with good public transit access. The policy began in 1997 and was expanded from 7 to 10 districts in 2009.",
+        "status": "passed",
+        "scope": ["city center / business district"],
+        "land": ["all uses"],
+        "date": "1997"
       }
     ]
   },
@@ -65902,13 +66446,34 @@
       "coord": [-82.6695085, 27.7703796],
       "repeal": false
     },
+    "legacy": {
+      "summary": "On July 14, 2022, St. Petersburg eliminated minimum parking requirements for residential housing units in the downtown core that have 750 square feet or less. On September 12, 2024, the city created a new overlay district ((SunRunner TEC-Local Overlay) with no parking mandates. On July 14, 2022, St. Petersburg reduced minimum parking requirements by 10% for affordable housing units, ADUs, and other properties located within 660 feet of a high-frequency transit route. ",
+      "status": "passed",
+      "policy": ["reduce parking minimums", "remove parking minimums"],
+      "scope": ["city center / business district", "main street / special"],
+      "land": ["all uses", "residential, all uses"],
+      "date": "2024-09-12"
+    },
+    "reduce_min": [
+      {
+        "summary": "On July 14, 2022, St. Petersburg reduced minimum parking requirements by 10% for affordable housing units, ADUs, and other properties located within 660 feet of a high-frequency transit route. ",
+        "status": "passed",
+        "scope": ["citywide"],
+        "land": [
+          "all uses",
+          "residential, low-density",
+          "residential, multi-family"
+        ],
+        "date": "2022-07-14"
+      }
+    ],
     "rm_min": [
       {
-        "summary": "In 2022. St. Petersburg eliminated minimum parking requirements for residential housing units in the downtown core that have 750 square feet or less.\n\nThey also reduced minimum parking requirements by 10% for affordable housing units, ADUs, and other properties located within 660 feet of a high-frequency transit route. ",
+        "summary": "On July 14, 2022, St. Petersburg eliminated minimum parking requirements for residential housing units in the downtown core that have 750 square feet or less. On September 12, 2024, the city created a new overlay district ((SunRunner TEC-Local Overlay) with no parking mandates.",
         "status": "passed",
-        "scope": ["city center / business district"],
-        "land": ["residential, all uses"],
-        "date": "2022-07-14"
+        "scope": ["city center / business district", "main street / special"],
+        "land": ["all uses", "residential, all uses"],
+        "date": "2024-09-12"
       }
     ]
   },
@@ -67782,11 +68347,11 @@
     },
     "rm_min": [
       {
-        "summary": "The City of Tacoma has a \"Reduced Parking area\" that encompasses most of the downtown core area, and effectively requires zero parking. Also all of the mixed use centers (which makes up the majority of all the new development in town) has low/no required parking. There are still parking requirements, but they have been greatly reduced and there is support at the policy level to expand the reduced parking area. As of early 2024, the Tacoma Planning Commission has proposed a significant expansion of the Reduced Parking Area along three transit corridors as part of the \"Home in Tacoma\" initiative.",
+        "summary": "The City of Tacoma has a \"Reduced Parking area\" that encompasses most of the downtown core area, and effectively requires zero parking. Also all of the mixed use centers (which makes up the majority of all the new development in town) has low/no required parking. There are still parking requirements, but they have been greatly reduced and there is support at the policy level to expand the reduced parking area. A significant expansion of the Reduced Parking Area along three transit corridors as part of the \"Home in Tacoma\" initiative was approved on November 19, 2024.",
         "status": "passed",
         "scope": ["city center / business district"],
         "land": ["all uses"],
-        "date": null
+        "date": "2024-11-19"
       }
     ]
   },
@@ -72873,12 +73438,29 @@
       "coord": [-69.6313607, 44.5524176],
       "repeal": false
     },
+    "legacy": {
+      "summary": "Accessory dwelling units are exempt from parking mandates. No parking is required for existing buildings in the Commercial-A Zone Downtown. As originally proposed, this would have included new buildings as well.",
+      "status": "passed",
+      "policy": ["reduce parking minimums", "remove parking minimums"],
+      "scope": ["citywide"],
+      "land": ["residential, low-density"],
+      "date": null
+    },
+    "reduce_min": [
+      {
+        "summary": "No parking is required for existing buildings in the Commercial-A Zone Downtown. As originally proposed, this would have included new buildings as well.",
+        "status": "passed",
+        "scope": ["city center / business district"],
+        "land": ["all uses"],
+        "date": "2024-08-07"
+      }
+    ],
     "rm_min": [
       {
-        "summary": "Accessory dwelling units are exempt from parking mandates. As of July 2024, the city is proposing removing parking mandates for properties in the Commercial-A Zone Downtown.",
+        "summary": "Accessory dwelling units are exempt from parking mandates.",
         "status": "passed",
         "scope": ["citywide"],
-        "land": ["residential, all uses"],
+        "land": ["residential, low-density"],
         "date": "2023-11-21"
       }
     ]

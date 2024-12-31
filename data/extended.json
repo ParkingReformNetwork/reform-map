@@ -7484,6 +7484,38 @@
     ]
   },
   "Bellingham, WA": {
+    "legacy": {
+      "reporter": null,
+      "requirements": [
+        "affordable housing",
+        "bike parking",
+        "by right",
+        "carshare",
+        "other",
+        "supportive housing"
+      ],
+      "citations": [
+        {
+          "description": "Title 20 LAND USE DEVELOPMENT\nChapter 12 GENERAL STANDARDS",
+          "url": "https://www.portofbellingham.com/DocumentCenter/View/716/b-BMC-Parking-Standards?bidId=",
+          "notes": "Title 20 LAND USE DEVELOPMENT\nChapter 12 GENERAL STANDARDS\n20.12.010 - PARKING \nB. Number of Spaces Required.\n",
+          "attachments": [],
+          "screenshots": [
+            {
+              "fileName": "bellingham-wa-citation1-screenshot.jpg",
+              "directusId": "dfbb1202-760d-45e7-84fc-d7858c22e47c"
+            }
+          ]
+        },
+        {
+          "description": "Bellingham Parking Reform Page",
+          "url": "https://cob.org/project/parking-reforms",
+          "notes": null,
+          "attachments": [],
+          "screenshots": []
+        }
+      ]
+    },
     "rm_min": [
       {
         "reporter": null,
@@ -7496,11 +7528,17 @@
             "attachments": [],
             "screenshots": [
               {
-                "fileName": "bellingham-wa-citation1-screenshot.jpg",
+                "fileName": "bellingham-wa-remove-min1-screenshot.jpg",
                 "directusId": "dfbb1202-760d-45e7-84fc-d7858c22e47c"
               }
             ]
-          },
+          }
+        ]
+      },
+      {
+        "reporter": "Tony Jordan",
+        "requirements": ["by right"],
+        "citations": [
           {
             "description": "Bellingham Parking Reform Page",
             "url": "https://cob.org/project/parking-reforms",
@@ -9324,7 +9362,92 @@
           ]
         }
       ]
-    }
+    },
+    "add_max": [
+      {
+        "reporter": "Samuel Deetz",
+        "requirements": ["by right"],
+        "citations": [
+          {
+            "description": "Binghamton Zoning Code",
+            "url": "https://www.binghamton-ny.gov/government/elected-officials/city-charter-and-code-of-ordinances/chapter-410-zoning#A10",
+            "notes": "§ 410-51.I.",
+            "attachments": [],
+            "screenshots": [
+              {
+                "fileName": "binghamton-ny-add-max-screenshot.png",
+                "directusId": "25595717-bf5c-4b76-a8e8-0cddc95d9e52"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "reduce_min": [
+      {
+        "reporter": "Samuel Deetz",
+        "requirements": ["other", "size of project"],
+        "citations": [
+          {
+            "description": "Binghamton Zoning Code",
+            "url": "https://www.binghamton-ny.gov/government/elected-officials/city-charter-and-code-of-ordinances/chapter-410-zoning#A10",
+            "notes": "ARTICLE X, Off-Street Parking, Loading and Storage\n§ 410-51. Standards.\n  I. Maximum number of parking spaces.\n§ 410-53. Off-street parking requirements by land use.\n  A.\n  B.\n  G. Electric vehicle charging stations.",
+            "attachments": [],
+            "screenshots": [
+              {
+                "fileName": "binghamton-ny-reduce-min-citation1-screenshot1.png",
+                "directusId": "3ec1f3e2-abcc-4360-b4c1-4a63c27c4933"
+              },
+              {
+                "fileName": "binghamton-ny-reduce-min-citation1-screenshot2.png",
+                "directusId": "92f58710-a719-4361-b7a0-2bf7aa2dc8fb"
+              },
+              {
+                "fileName": "binghamton-ny-reduce-min-citation1-screenshot3.png",
+                "directusId": "8ec39d3d-60f6-4a0a-ac87-21278c51511b"
+              }
+            ]
+          },
+          {
+            "description": "Binghamton Ordinance O24-120",
+            "url": "https://www.binghamton-ny.gov/home/showpublisheddocument/13936",
+            "notes": "Page 6",
+            "attachments": [],
+            "screenshots": [
+              {
+                "fileName": "binghamton-ny-reduce-min-citation2-screenshot.png",
+                "directusId": "cc796135-42fc-452f-bbbc-d0dcf26c0e20"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "rm_min": [
+      {
+        "reporter": "Etienne Lefebvre",
+        "requirements": [
+          "affordable housing",
+          "by right",
+          "size of project",
+          "supportive housing"
+        ],
+        "citations": [
+          {
+            "description": "Binghamton Ordinance O24-120",
+            "url": "https://www.binghamton-ny.gov/home/showpublisheddocument/13936",
+            "notes": "Page 6",
+            "attachments": [],
+            "screenshots": [
+              {
+                "fileName": "binghamton-ny-remove-min-screenshot.png",
+                "directusId": "cc796135-42fc-452f-bbbc-d0dcf26c0e20"
+              }
+            ]
+          }
+        ]
+      }
+    ]
   },
   "Birchwood, WI": {
     "rm_min": [
@@ -12101,6 +12224,28 @@
               {
                 "fileName": "brimfield-il-screenshot.png",
                 "directusId": "dfb30a54-dd3a-4bd5-bd06-995142e330d7"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "Brisbane, QLD": {
+    "reduce_min": [
+      {
+        "reporter": "Etienne Lefebvre",
+        "requirements": ["by right"],
+        "citations": [
+          {
+            "description": "Guardian article",
+            "url": "https://www.theguardian.com/australia-news/article/2024/may/16/brisbane-city-council-parking-requirements-developers-housing-costs",
+            "notes": null,
+            "attachments": [],
+            "screenshots": [
+              {
+                "fileName": "brisbane-qld-screenshot.png",
+                "directusId": "a906dd17-34a1-435e-940c-58d0c875eb4d"
               }
             ]
           }
@@ -23623,6 +23768,13 @@
                 "directusId": "af4497c9-77db-4df9-b37c-7eec9f7e6a60"
               }
             ]
+          },
+          {
+            "description": "MSN News Article",
+            "url": "https://www.msn.com/en-us/news/us/dallas-delays-vote-on-eliminating-parking-minimums/ar-AA1vpcgN",
+            "notes": null,
+            "attachments": [],
+            "screenshots": []
           }
         ]
       }
@@ -25617,39 +25769,39 @@
             "attachments": [],
             "screenshots": [
               {
-                "fileName": "denver-co-remove-min-citation1-screenshot1.png",
+                "fileName": "denver-co-remove-min1-citation1-screenshot1.png",
                 "directusId": "a7800cad-627f-439f-9f48-85d80cf91870"
               },
               {
-                "fileName": "denver-co-remove-min-citation1-screenshot2.png",
+                "fileName": "denver-co-remove-min1-citation1-screenshot2.png",
                 "directusId": "26244a3d-1e50-4a7f-b59a-1716933d6d7e"
               },
               {
-                "fileName": "denver-co-remove-min-citation1-screenshot3.png",
+                "fileName": "denver-co-remove-min1-citation1-screenshot3.png",
                 "directusId": "322b4e5d-a7d7-4690-a778-f55f27c832c7"
               },
               {
-                "fileName": "denver-co-remove-min-citation1-screenshot4.png",
+                "fileName": "denver-co-remove-min1-citation1-screenshot4.png",
                 "directusId": "001996aa-9a15-424e-b9dd-d5f31bbbaba3"
               },
               {
-                "fileName": "denver-co-remove-min-citation1-screenshot5.png",
+                "fileName": "denver-co-remove-min1-citation1-screenshot5.png",
                 "directusId": "58f82b6c-b34a-41ab-bbc0-5d9238b9cb40"
               },
               {
-                "fileName": "denver-co-remove-min-citation1-screenshot6.png",
+                "fileName": "denver-co-remove-min1-citation1-screenshot6.png",
                 "directusId": "14465a04-a35f-4e7e-a676-a2ea86443f15"
               },
               {
-                "fileName": "denver-co-remove-min-citation1-screenshot7.png",
+                "fileName": "denver-co-remove-min1-citation1-screenshot7.png",
                 "directusId": "03d8abe0-c4c0-4af2-a846-b4abd9b14ccc"
               },
               {
-                "fileName": "denver-co-remove-min-citation1-screenshot8.png",
+                "fileName": "denver-co-remove-min1-citation1-screenshot8.png",
                 "directusId": "5856e3b3-dcb8-4d74-a848-133747886ad1"
               },
               {
-                "fileName": "denver-co-remove-min-citation1-screenshot9.png",
+                "fileName": "denver-co-remove-min1-citation1-screenshot9.png",
                 "directusId": "5c83c305-9543-41a2-9d6b-217bd5ebaa30"
               }
             ]
@@ -25661,8 +25813,26 @@
             "attachments": [],
             "screenshots": [
               {
-                "fileName": "denver-co-remove-min-citation2-screenshot.png",
+                "fileName": "denver-co-remove-min1-citation2-screenshot.png",
                 "directusId": "0c65ce2f-56ea-4a37-b231-2b18496bfdf6"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "reporter": "Etienne Lefebvre",
+        "requirements": ["by right"],
+        "citations": [
+          {
+            "description": "Denverite News Article",
+            "url": "https://denverite.com/2024/12/09/denver-parking-minimums-requirements-eliminated-proposal-2024/",
+            "notes": null,
+            "attachments": [],
+            "screenshots": [
+              {
+                "fileName": "denver-co-remove-min2-screenshot.png",
+                "directusId": "b4e42fa3-b99a-4e5b-b20a-56678bd13edb"
               }
             ]
           }
@@ -26989,6 +27159,66 @@
               {
                 "fileName": "du-page-county-il-screenshot.png",
                 "directusId": "9831fc30-af5b-4d1e-8830-2b61428de66e"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "Dublin, County Dublin": {
+    "legacy": {
+      "reporter": null,
+      "requirements": ["other"],
+      "citations": [
+        {
+          "description": "Parking Reform Atlas",
+          "url": "https://www.parkingreformatlas.org/parking-reform-cases-1/dublin-parking-maximums",
+          "notes": null,
+          "attachments": [],
+          "screenshots": [
+            {
+              "fileName": "dublin-county-dublin-screenshot.png",
+              "directusId": "339daf7c-cebd-44ab-bdfd-9c76993c26e7"
+            }
+          ]
+        }
+      ]
+    },
+    "add_max": [
+      {
+        "reporter": "Paul Barter",
+        "requirements": ["by right"],
+        "citations": [
+          {
+            "description": "Parking Reform Atlas",
+            "url": "https://www.parkingreformatlas.org/parking-reform-cases-1/dublin-parking-maximums",
+            "notes": null,
+            "attachments": [],
+            "screenshots": [
+              {
+                "fileName": "dublin-county-dublin-add-max-screenshot.png",
+                "directusId": "339daf7c-cebd-44ab-bdfd-9c76993c26e7"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "rm_min": [
+      {
+        "reporter": "Paul Barter",
+        "requirements": ["other"],
+        "citations": [
+          {
+            "description": "Parking Reform Atlas",
+            "url": "https://www.parkingreformatlas.org/parking-reform-cases-1/dublin-parking-maximums",
+            "notes": null,
+            "attachments": [],
+            "screenshots": [
+              {
+                "fileName": "dublin-county-dublin-remove-min-screenshot.png",
+                "directusId": "339daf7c-cebd-44ab-bdfd-9c76993c26e7"
               }
             ]
           }
@@ -29814,7 +30044,71 @@
           ]
         }
       ]
-    }
+    },
+    "add_max": [
+      {
+        "reporter": "Samuel Deetz",
+        "requirements": ["by right"],
+        "citations": [
+          {
+            "description": "Elkhart Zoning Code",
+            "url": "https://codelibrary.amlegal.com/codes/elkhart/latest/elkhart_in/0-0-0-10928",
+            "notes": "§ 151.231(C)(2)(e)",
+            "attachments": [],
+            "screenshots": [
+              {
+                "fileName": "elkhart-in-add-max-screenshot.png",
+                "directusId": "0466e4ba-c989-45b1-9af6-9008e9bcf19d"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "reduce_min": [
+      {
+        "reporter": "Samuel Deetz",
+        "requirements": ["bike parking", "by right", "other"],
+        "citations": [
+          {
+            "description": "Elkhart Zoning Code",
+            "url": "https://codelibrary.amlegal.com/codes/elkhart/latest/elkhart_in/0-0-0-10928",
+            "notes": "§ 151.231(B)(1)(e);\n§ 151.231(C)(2)(g)",
+            "attachments": [],
+            "screenshots": [
+              {
+                "fileName": "elkhart-in-reduce-min-screenshot1.png",
+                "directusId": "dee05efa-8042-476c-87f5-a1fe48b2d02a"
+              },
+              {
+                "fileName": "elkhart-in-reduce-min-screenshot2.png",
+                "directusId": "5db77e2d-5fca-431a-b915-8feab4ddf8f3"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "rm_min": [
+      {
+        "reporter": "Samuel Deetz",
+        "requirements": ["by right", "size of project"],
+        "citations": [
+          {
+            "description": "Elkhart Zoning Code",
+            "url": "https://codelibrary.amlegal.com/codes/elkhart/latest/elkhart_in/0-0-0-10928",
+            "notes": "§ 151.231(B)(1)(e)",
+            "attachments": [],
+            "screenshots": [
+              {
+                "fileName": "elkhart-in-remove-min-screenshot.png",
+                "directusId": "94f8ac59-28c4-46ea-a30e-4df46b008542"
+              }
+            ]
+          }
+        ]
+      }
+    ]
   },
   "Elkhorn, WI": {
     "reduce_min": [
@@ -31501,7 +31795,55 @@
           ]
         }
       ]
-    }
+    },
+    "reduce_min": [
+      {
+        "reporter": "Samuel Deetz",
+        "requirements": ["bike parking", "by right"],
+        "citations": [
+          {
+            "description": "Evansville Zoning Code",
+            "url": "https://www.codepublishing.com/IN/Evansville/#!/Evansville18/Evansville18.html",
+            "notes": "18.116.025(B);\n18.117.025(C)(2)",
+            "attachments": [],
+            "screenshots": [
+              {
+                "fileName": "evansville-in-reduce-min-screenshot1.png",
+                "directusId": "d5293de6-23a2-4ff1-bf32-ae8a03106cad"
+              },
+              {
+                "fileName": "evansville-in-reduce-min-screenshot2.png",
+                "directusId": "bdb79cd5-a6a6-457f-8049-b4bf0eaa4c1f"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "rm_min": [
+      {
+        "reporter": "Samuel Deetz",
+        "requirements": ["by right"],
+        "citations": [
+          {
+            "description": "Evansville Zoning Code",
+            "url": "https://www.codepublishing.com/IN/Evansville/#!/Evansville18/Evansville18.html",
+            "notes": "18.75.010(B)(2)\n18.115.020(I)",
+            "attachments": [],
+            "screenshots": [
+              {
+                "fileName": "evansville-in-remove-min-screenshot1.png",
+                "directusId": "34282dbf-3104-41ca-95af-89578d8cb023"
+              },
+              {
+                "fileName": "evansville-in-remove-min-screenshot2.png",
+                "directusId": "29bbbd03-c94e-4f3e-be88-9c52e9f4cf20"
+              }
+            ]
+          }
+        ]
+      }
+    ]
   },
   "Evart, MI": {
     "legacy": {
@@ -34458,7 +34800,71 @@
           ]
         }
       ]
-    }
+    },
+    "add_max": [
+      {
+        "reporter": "Samuel Deetz",
+        "requirements": ["by right", "other"],
+        "citations": [
+          {
+            "description": "Fort Wayne Zoning Code",
+            "url": "https://www.allencounty.in.gov/DocumentCenter/View/7748/Fort-Wayne-Zoning-Ordinance---Effective-2-23-2024",
+            "notes": "157.407(B)(2)\nPage 238 of pdf, page 227 of original document",
+            "attachments": [],
+            "screenshots": [
+              {
+                "fileName": "fort-wayne-in-add-max-screenshot.png",
+                "directusId": "7e430b39-11ef-4420-b9c1-70935b423404"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "reduce_min": [
+      {
+        "reporter": "Samuel Deetz",
+        "requirements": ["bike parking", "frequent transit", "other"],
+        "citations": [
+          {
+            "description": "Fort Wayne Zoning Code",
+            "url": "https://www.allencounty.in.gov/DocumentCenter/View/7748/Fort-Wayne-Zoning-Ordinance---Effective-2-23-2024",
+            "notes": "157.407(D)(2)\nPage 241 of pdf, page 230 of original document",
+            "attachments": [],
+            "screenshots": [
+              {
+                "fileName": "fort-wayne-in-reduce-min-screenshot.png",
+                "directusId": "0b9c509a-d74d-4b69-a64f-9afaba06332a"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "rm_min": [
+      {
+        "reporter": "Samuel Deetz",
+        "requirements": ["by right", "other"],
+        "citations": [
+          {
+            "description": "Fort Wayne Zoning Code",
+            "url": "https://www.allencounty.in.gov/DocumentCenter/View/7748/Fort-Wayne-Zoning-Ordinance---Effective-2-23-2024",
+            "notes": "157.407(B)(2);\n157.407(B)(3);\n 157.407(D)(1)(d);\nPages 238-240 of pdf, pages 227-229 of original document",
+            "attachments": [],
+            "screenshots": [
+              {
+                "fileName": "fort-wayne-in-remove-min-screenshot1.png",
+                "directusId": "86958d2f-8714-473a-974c-b6b3262ba9c0"
+              },
+              {
+                "fileName": "fort-wayne-in-remove-min-screenshot2.png",
+                "directusId": "d35d05ef-638b-4bf9-9a99-46c218244e6f"
+              }
+            ]
+          }
+        ]
+      }
+    ]
   },
   "Fort Worth, TX": {
     "legacy": {
@@ -34780,6 +35186,28 @@
               {
                 "fileName": "framingham-ma-screenshot.png",
                 "directusId": "1f9334cc-b9ba-45f9-8e9f-259a37d0148d"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "France": {
+    "reduce_min": [
+      {
+        "reporter": "Paul Barter",
+        "requirements": ["other"],
+        "citations": [
+          {
+            "description": "Parking Reform Atlas",
+            "url": "https://www.parkingreformatlas.org/parking-reform-cases-1/france-limits-how-high-parking-minimums-can-be-set",
+            "notes": null,
+            "attachments": [],
+            "screenshots": [
+              {
+                "fileName": "france-screenshot.png",
+                "directusId": "65f3b678-12c5-48d0-82ae-b68a29d0311f"
               }
             ]
           }
@@ -36610,7 +37038,79 @@
           ]
         }
       ]
-    }
+    },
+    "add_max": [
+      {
+        "reporter": "Samuel Deetz",
+        "requirements": ["by right"],
+        "citations": [
+          {
+            "description": "Gary Zoning Code",
+            "url": "https://library.municode.com/in/gary/codes/code_of_ordinances?nodeId=PTIILADEOR_CH123ZO_ARTVOREPALO_S123-365PASPRE",
+            "notes": "Sec. 123-365.(m);\nSec. 123-371.(2)",
+            "attachments": [],
+            "screenshots": [
+              {
+                "fileName": "gary-in-add-max-screenshot1.png",
+                "directusId": "b8c47539-beb4-4a28-b1d8-cd161cc7a766"
+              },
+              {
+                "fileName": "gary-in-add-max-screenshot2.png",
+                "directusId": "74d2d7e1-09ec-4f97-85c0-a0a5aa512fc1"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "reduce_min": [
+      {
+        "reporter": "Samuel Deetz",
+        "requirements": ["by right"],
+        "citations": [
+          {
+            "description": "Gary Zoning Code",
+            "url": "https://library.municode.com/in/gary/codes/code_of_ordinances?nodeId=PTIILADEOR_CH123ZO_ARTVOREPALO_S123-367NUPASPRE",
+            "notes": "Sec. 123-367.(2);\nSec. 123-367.(3);\nSec. 123-367.(4)",
+            "attachments": [],
+            "screenshots": [
+              {
+                "fileName": "gary-in-reduce-min-screenshot.png",
+                "directusId": "81a58bf3-aefb-412d-99c1-abb35f73892e"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "rm_min": [
+      {
+        "reporter": "Samuel Deetz",
+        "requirements": ["by right", "size of project"],
+        "citations": [
+          {
+            "description": "Gary Zoning Code",
+            "url": "https://library.municode.com/in/gary/codes/code_of_ordinances?nodeId=PTIILADEOR_CH123ZO_ARTVOREPALO",
+            "notes": "Sec. 123-365.(c);\nSec. 123-367.(2);\nSec. 123-367.(3);\nSec. 123-367.(4);\nSec. 123-371.",
+            "attachments": [],
+            "screenshots": [
+              {
+                "fileName": "gary-in-remove-min-screenshot1.png",
+                "directusId": "c77b0ad6-3e66-4277-a521-934f61354b0c"
+              },
+              {
+                "fileName": "gary-in-remove-min-screenshot2.png",
+                "directusId": "d0768eb9-2bb8-4a21-b31c-4720f06160a9"
+              },
+              {
+                "fileName": "gary-in-remove-min-screenshot3.png",
+                "directusId": "3559de9f-5f56-4541-84d2-11333117b2df"
+              }
+            ]
+          }
+        ]
+      }
+    ]
   },
   "Gas City, IN": {
     "rm_min": [
@@ -40134,7 +40634,51 @@
           ]
         }
       ]
-    }
+    },
+    "reduce_min": [
+      {
+        "reporter": "Samuel Deetz",
+        "requirements": ["by right"],
+        "citations": [
+          {
+            "description": "Greenfield Unified Development Ordinance",
+            "url": "https://www.greenfieldin.org/government/planning-and-building/udo",
+            "notes": "Open \"City of Greenfield UDO 2020 as Amended - June 28 2023 Update\" document;\n155.008.4.F.;\n155.066.4.H.;\nPages 24, 197",
+            "attachments": [],
+            "screenshots": [
+              {
+                "fileName": "greenfield-in-reduce-min-screenshot1.png",
+                "directusId": "d188ceb9-0330-4d4c-9d61-88a576327197"
+              },
+              {
+                "fileName": "greenfield-in-reduce-min-screenshot2.png",
+                "directusId": "ef9f8c09-9e06-4abb-94a0-5241007fbbda"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "rm_min": [
+      {
+        "reporter": "Samuel Deetz",
+        "requirements": ["by right", "size of project"],
+        "citations": [
+          {
+            "description": "Greenfield Unified Development Ordinance",
+            "url": "https://www.greenfieldin.org/government/planning-and-building/udo",
+            "notes": "Open \"City of Greenfield UDO 2020 as Amended - June 28 2023 Update\" document;\n155.066.4.H.\nPage 197",
+            "attachments": [],
+            "screenshots": [
+              {
+                "fileName": "greenfield-in-remove-min-screenshot.png",
+                "directusId": "cff0e9bc-1a8e-4721-9f91-905f6b21e82a"
+              }
+            ]
+          }
+        ]
+      }
+    ]
   },
   "Greenfield, OH": {
     "legacy": {
@@ -41049,6 +41593,28 @@
       }
     ]
   },
+  "Haltom City, TX": {
+    "rm_min": [
+      {
+        "reporter": "Etienne Lefebvre",
+        "requirements": ["by right"],
+        "citations": [
+          {
+            "description": "Citybuzz Article",
+            "url": "https://www.citybuzz.co/2024/07/30/haltom-city-urged-to-eliminate-parking-mandates-for-urban-revitalization/",
+            "notes": null,
+            "attachments": [],
+            "screenshots": [
+              {
+                "fileName": "haltom-city-tx-screenshot.png",
+                "directusId": "cb3b2602-27d2-4572-a6b0-c8b5f5603485"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
   "Hamilton, IN": {
     "reduce_min": [
       {
@@ -41191,7 +41757,47 @@
           ]
         }
       ]
-    }
+    },
+    "add_max": [
+      {
+        "reporter": "Samuel Deetz",
+        "requirements": ["by right"],
+        "citations": [
+          {
+            "description": "Hammond Zoning Code",
+            "url": "https://www.gohammond.com/wp-content/uploads/2024/10/Zoning-Ordinance-8514.pdf",
+            "notes": "20.41.01.\nPage 140 of pdf, page 121 of original document",
+            "attachments": [],
+            "screenshots": [
+              {
+                "fileName": "hammond-in-add-max-screenshot.png",
+                "directusId": "101b5d12-b7fd-4fb8-8407-30e048dd0d87"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "rm_min": [
+      {
+        "reporter": "Samuel Deetz",
+        "requirements": ["by right"],
+        "citations": [
+          {
+            "description": "Hammond Zoning Code",
+            "url": "https://www.gohammond.com/wp-content/uploads/2024/10/Zoning-Ordinance-8514.pdf",
+            "notes": "Section 9.40\nPage 74 of pdf, page 59 of original document",
+            "attachments": [],
+            "screenshots": [
+              {
+                "fileName": "hammond-in-remove-min-screenshot.png",
+                "directusId": "4de93ba3-4d58-414f-8785-d09c9fa32968"
+              }
+            ]
+          }
+        ]
+      }
+    ]
   },
   "Hammond, LA": {
     "legacy": {
@@ -43635,7 +44241,51 @@
           ]
         }
       ]
-    }
+    },
+    "add_max": [
+      {
+        "reporter": "Samuel Deetz",
+        "requirements": ["by right"],
+        "citations": [
+          {
+            "description": "Highland Zoning Code",
+            "url": "https://www.codepublishing.com/IN/Highland/#!/Highland18/Highland1880.html#18.80.050",
+            "notes": "18.80.050 Table 18",
+            "attachments": [],
+            "screenshots": [
+              {
+                "fileName": "highland-in-add-max-screenshot.png",
+                "directusId": "5fab7cfe-d387-44aa-b6d7-cc33fa7aa332"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "reduce_min": [
+      {
+        "reporter": "Samuel Deetz",
+        "requirements": ["bike parking", "other"],
+        "citations": [
+          {
+            "description": "Highland Zoning Code",
+            "url": "https://www.codepublishing.com/IN/Highland/#!/Highland18/Highland1880.html#18.80.060",
+            "notes": "18.80.060",
+            "attachments": [],
+            "screenshots": [
+              {
+                "fileName": "highland-in-reduce-min-screenshot1.png",
+                "directusId": "c9cb40bd-3c7a-40aa-9803-0f9586db9c99"
+              },
+              {
+                "fileName": "highland-in-reduce-min-screenshot2.png",
+                "directusId": "d0b4f09d-66ae-43bb-b5a2-e96c33cbf26e"
+              }
+            ]
+          }
+        ]
+      }
+    ]
   },
   "Highland, WI": {
     "rm_min": [
@@ -44354,6 +45004,28 @@
               {
                 "fileName": "honesdale-pa-screenshot.png",
                 "directusId": "fc549af6-8773-496f-a58c-c6b11176d466"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "Hong Kong, HK": {
+    "add_max": [
+      {
+        "reporter": "Paul Barter",
+        "requirements": ["by right"],
+        "citations": [
+          {
+            "description": "Parking Reform Atlas",
+            "url": "https://www.parkingreformatlas.org/parking-reform-cases-1/hong-kong-low-residential-parking-maximums-in-the-1970s",
+            "notes": null,
+            "attachments": [],
+            "screenshots": [
+              {
+                "fileName": "hong-kong-hk-screenshot.png",
+                "directusId": "d781d17a-5e57-4394-b6e1-58ff95e343f5"
               }
             ]
           }
@@ -45094,7 +45766,47 @@
           ]
         }
       ]
-    }
+    },
+    "reduce_min": [
+      {
+        "reporter": "Samuel Deetz",
+        "requirements": ["bike parking", "frequent transit", "other"],
+        "citations": [
+          {
+            "description": "Huntertown Zoning Code",
+            "url": "https://www.allencounty.in.gov/DocumentCenter/View/7424/Huntertown-Zoning-Ordinance---Effective-9-1-2023",
+            "notes": "§ 154.407(D)(2)\nPage 203 of pdf, page 194 of original document",
+            "attachments": [],
+            "screenshots": [
+              {
+                "fileName": "huntertown-in-reduce-min-screenshot.png",
+                "directusId": "0fc4251e-3ff4-40b6-998e-8401c0101426"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "rm_min": [
+      {
+        "reporter": "Samuel Deetz",
+        "requirements": ["by right"],
+        "citations": [
+          {
+            "description": "Huntertown Zoning Code",
+            "url": "https://www.allencounty.in.gov/DocumentCenter/View/7424/Huntertown-Zoning-Ordinance---Effective-9-1-2023",
+            "notes": "§ 154.407(D)(1)(d)\nPage 201 of pdf, page 192 of original document",
+            "attachments": [],
+            "screenshots": [
+              {
+                "fileName": "huntertown-in-remove-min-screenshot.png",
+                "directusId": "cb996bfd-ee6e-4191-82b6-4a0fd26c7026"
+              }
+            ]
+          }
+        ]
+      }
+    ]
   },
   "Huntingburg, IN": {
     "rm_min": [
@@ -45521,8 +46233,20 @@
             "attachments": [],
             "screenshots": [
               {
-                "fileName": "illinois-il-screenshot.png",
+                "fileName": "illinois-il-citation1-screenshot.png",
                 "directusId": "3007eefe-da12-4374-be8c-f06f3ffce169"
+              }
+            ]
+          },
+          {
+            "description": "Illinois Report of the Ad-Hoc Missing Middle Housing Solutions Advisory Committee",
+            "url": "https://gov.illinois.gov/content/dam/soi/en/web/gov/documents/ad-hoc-committee-report.pdf",
+            "notes": "16.\nPage 18",
+            "attachments": [],
+            "screenshots": [
+              {
+                "fileName": "illinois-il-citation2-screenshot.png",
+                "directusId": "390214b4-1c9e-44d8-a8de-8957a506d275"
               }
             ]
           }
@@ -49374,6 +50098,78 @@
               {
                 "fileName": "kimberly-wi-screenshot.png",
                 "directusId": "1aa298f1-aba0-4d6b-aafe-19725f0546a5"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "King City, OR": {
+    "legacy": {
+      "reporter": "Evan Manvel",
+      "requirements": ["by right"],
+      "citations": [
+        {
+          "description": "King City December 18 Agenda Packet",
+          "url": "https://towncloud-core-prod.s3.amazonaws.com/uploads/king-city-or/meetings/agenda_packet/pdf_packet/285/regular-city-council-meeting_2024-12-18_211714_combined.pdf",
+          "notes": "Pages 322-324",
+          "attachments": [],
+          "screenshots": [
+            {
+              "fileName": "king-city-or-citation1-screenshot.png",
+              "directusId": "f7e03bb1-9ccb-4232-8158-5ba4c3e36783"
+            }
+          ]
+        },
+        {
+          "description": "King City December 18 Agenda Packet",
+          "url": "https://towncloud-core-prod.s3.amazonaws.com/uploads/king-city-or/meetings/agenda_packet/pdf_packet/285/regular-city-council-meeting_2024-12-18_211714_combined.pdf",
+          "notes": "Pages 322-324",
+          "attachments": [],
+          "screenshots": [
+            {
+              "fileName": "king-city-or-citation2-screenshot.png",
+              "directusId": "49a067a4-9088-4659-8d17-d08d0c82db9f"
+            }
+          ]
+        }
+      ]
+    },
+    "add_max": [
+      {
+        "reporter": "Evan Manvel",
+        "requirements": ["by right"],
+        "citations": [
+          {
+            "description": "King City December 18 Agenda Packet",
+            "url": "https://towncloud-core-prod.s3.amazonaws.com/uploads/king-city-or/meetings/agenda_packet/pdf_packet/285/regular-city-council-meeting_2024-12-18_211714_combined.pdf",
+            "notes": "Pages 322-324",
+            "attachments": [],
+            "screenshots": [
+              {
+                "fileName": "king-city-or-add-max-screenshot.png",
+                "directusId": "49a067a4-9088-4659-8d17-d08d0c82db9f"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "rm_min": [
+      {
+        "reporter": "Evan Manvel",
+        "requirements": ["by right"],
+        "citations": [
+          {
+            "description": "King City December 18 Agenda Packet",
+            "url": "https://towncloud-core-prod.s3.amazonaws.com/uploads/king-city-or/meetings/agenda_packet/pdf_packet/285/regular-city-council-meeting_2024-12-18_211714_combined.pdf",
+            "notes": "Pages 322-324",
+            "attachments": [],
+            "screenshots": [
+              {
+                "fileName": "king-city-or-remove-min-screenshot.png",
+                "directusId": "f7e03bb1-9ccb-4232-8158-5ba4c3e36783"
               }
             ]
           }
@@ -66267,6 +67063,126 @@
       }
     ]
   },
+  "Nanaimo, BC": {
+    "legacy": {
+      "reporter": null,
+      "requirements": ["by right", "in-lieu fees", "size of project"],
+      "citations": [
+        {
+          "description": "Nanaimo Bulletin Article",
+          "url": "https://www.nanaimobulletin.com/local-news/nanaimos-new-transit-oriented-areas-come-with-no-minimum-parking-requirements-7355266",
+          "notes": null,
+          "attachments": [],
+          "screenshots": [
+            {
+              "fileName": "nanaimo-bc-citation1-screenshot.png",
+              "directusId": "e2edaebb-3017-47c6-b690-57340b972a21"
+            }
+          ]
+        },
+        {
+          "description": "Nanaimo Parking Bylaw",
+          "url": "https://www.nanaimo.ca/bylaws/ViewBylaw/7266.pdf",
+          "notes": "7.2.i.;\n7.3.ii.;\nPages 12, 16",
+          "attachments": [],
+          "screenshots": [
+            {
+              "fileName": "nanaimo-bc-citation2-screenshot.png",
+              "directusId": "3b170f93-d153-41ab-bb6f-9460285f8ba1"
+            }
+          ]
+        },
+        {
+          "description": "Nanaimo Parking Bylaw",
+          "url": "https://www.nanaimo.ca/bylaws/ViewBylaw/7266.pdf",
+          "notes": "7.3.ii.;\n7.3.iii.;\nPages 16-17",
+          "attachments": [],
+          "screenshots": [
+            {
+              "fileName": "nanaimo-bc-citation3-screenshot1.png",
+              "directusId": "7d6879a3-ca74-4736-b8d0-4e80267063d1"
+            },
+            {
+              "fileName": "nanaimo-bc-citation3-screenshot2.png",
+              "directusId": "5d333162-14ac-4928-8007-24b114e56a6b"
+            },
+            {
+              "fileName": "nanaimo-bc-citation3-screenshot3.png",
+              "directusId": "b8b8e4ed-2d0f-4988-900e-ab565efc67c7"
+            },
+            {
+              "fileName": "nanaimo-bc-citation3-screenshot4.png",
+              "directusId": "b27ebf19-9c17-4e29-8c9c-22690916ec19"
+            }
+          ]
+        }
+      ]
+    },
+    "reduce_min": [
+      {
+        "reporter": "Samuel Deetz",
+        "requirements": ["by right", "in-lieu fees"],
+        "citations": [
+          {
+            "description": "Nanaimo Parking Bylaw",
+            "url": "https://www.nanaimo.ca/bylaws/ViewBylaw/7266.pdf",
+            "notes": "7.3.ii.;\n7.3.iii.;\nPages 16-17",
+            "attachments": [],
+            "screenshots": [
+              {
+                "fileName": "nanaimo-bc-reduce-min-screenshot1.png",
+                "directusId": "7d6879a3-ca74-4736-b8d0-4e80267063d1"
+              },
+              {
+                "fileName": "nanaimo-bc-reduce-min-screenshot2.png",
+                "directusId": "5d333162-14ac-4928-8007-24b114e56a6b"
+              },
+              {
+                "fileName": "nanaimo-bc-reduce-min-screenshot3.png",
+                "directusId": "b8b8e4ed-2d0f-4988-900e-ab565efc67c7"
+              },
+              {
+                "fileName": "nanaimo-bc-reduce-min-screenshot4.png",
+                "directusId": "b27ebf19-9c17-4e29-8c9c-22690916ec19"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "rm_min": [
+      {
+        "reporter": "Etienne Lefebvre",
+        "requirements": ["by right", "size of project"],
+        "citations": [
+          {
+            "description": "Nanaimo Bulletin Article",
+            "url": "https://www.nanaimobulletin.com/local-news/nanaimos-new-transit-oriented-areas-come-with-no-minimum-parking-requirements-7355266",
+            "notes": null,
+            "attachments": [],
+            "screenshots": [
+              {
+                "fileName": "nanaimo-bc-remove-min-citation1-screenshot.png",
+                "directusId": "e2edaebb-3017-47c6-b690-57340b972a21"
+              }
+            ]
+          },
+          {
+            "description": "Nanaimo Parking Bylaw",
+            "url": "https://www.nanaimo.ca/bylaws/ViewBylaw/7266.pdf",
+            "notes": "7.2.i.;\n7.3.ii.;\nPages 12, 16",
+            "attachments": [],
+            "screenshots": [
+              {
+                "fileName": "nanaimo-bc-remove-min-citation2-screenshot.png",
+                "directusId": "3b170f93-d153-41ab-bb6f-9460285f8ba1"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
   "Nanty Glo, PA": {
     "rm_min": [
       {
@@ -68104,7 +69020,117 @@
           ]
         }
       ]
-    }
+    },
+    "add_max": [
+      {
+        "reporter": "Laura Smith",
+        "requirements": ["by right"],
+        "citations": [
+          {
+            "description": "City Code",
+            "url": "https://zr.planning.nyc.gov/article-iii/chapter-6",
+            "notes": "Chapter 6 part 36.  Many Codes for this City.",
+            "attachments": [],
+            "screenshots": []
+          },
+          {
+            "description": "Minimum Parking Requirements, Transit Proximity and Development in New York City ",
+            "url": "https://wagner.nyu.edu/files/faculty/publications/Parking_Requirements_Submitted_TRB_resubmit_withref-1.pdf",
+            "notes": "Research Report on complicated NYC requirements. \nTable B: Average Required Parking Ratio and Average Required Parking Density,\nwith Lot/Building Size Waivers ",
+            "attachments": [],
+            "screenshots": [
+              {
+                "fileName": "new-york-city-ny-add-max-citation2-screenshot1.png",
+                "directusId": "45e8c96e-102d-4ad6-ba98-8b8b8a7ef5c7"
+              },
+              {
+                "fileName": "new-york-city-ny-add-max-citation2-screenshot2.png",
+                "directusId": "e7e286d9-647c-4c4f-ae3f-30ee4f59323d"
+              }
+            ]
+          },
+          {
+            "description": "NYC Planning + Zoning",
+            "url": "https://zr.planning.nyc.gov/article-i/chapter-3#13-10",
+            "notes": "Section 13-10",
+            "attachments": [
+              {
+                "fileName": "new-york-city-ny-add-max-citation3-attachment.pdf",
+                "directusId": "f1bbef93-b192-4f5c-a442-f9eca22aacc4"
+              }
+            ],
+            "screenshots": []
+          }
+        ]
+      }
+    ],
+    "rm_min": [
+      {
+        "reporter": "Laura Smith",
+        "requirements": ["by right"],
+        "citations": [
+          {
+            "description": "City Code",
+            "url": "https://zr.planning.nyc.gov/article-iii/chapter-6",
+            "notes": "Chapter 6 part 36.  Many Codes for this City.",
+            "attachments": [],
+            "screenshots": []
+          },
+          {
+            "description": "Minimum Parking Requirements, Transit Proximity and Development in New York City ",
+            "url": "https://wagner.nyu.edu/files/faculty/publications/Parking_Requirements_Submitted_TRB_resubmit_withref-1.pdf",
+            "notes": "Research Report on complicated NYC requirements. \nTable B: Average Required Parking Ratio and Average Required Parking Density,\nwith Lot/Building Size Waivers ",
+            "attachments": [],
+            "screenshots": [
+              {
+                "fileName": "new-york-city-ny-remove-min-citation2-screenshot1.png",
+                "directusId": "45e8c96e-102d-4ad6-ba98-8b8b8a7ef5c7"
+              },
+              {
+                "fileName": "new-york-city-ny-remove-min-citation2-screenshot2.png",
+                "directusId": "e7e286d9-647c-4c4f-ae3f-30ee4f59323d"
+              }
+            ]
+          },
+          {
+            "description": "NYC Planning + Zoning",
+            "url": "https://zr.planning.nyc.gov/article-i/chapter-3#13-10",
+            "notes": "Section 13-10",
+            "attachments": [
+              {
+                "fileName": "new-york-city-ny-remove-min-citation3-attachment.pdf",
+                "directusId": "f1bbef93-b192-4f5c-a442-f9eca22aacc4"
+              }
+            ],
+            "screenshots": []
+          },
+          {
+            "description": "Streetsblog Article",
+            "url": "https://nyc.streetsblog.org/2023/09/21/city-of-yes-yes-yes-adams-eliminates-parking-mandates-on-all-new-construction",
+            "notes": null,
+            "attachments": [],
+            "screenshots": [
+              {
+                "fileName": "new-york-city-ny-remove-min-citation4-screenshot.png",
+                "directusId": "ee6e535a-e867-4f1a-b02b-4fa68d26e55a"
+              }
+            ]
+          },
+          {
+            "description": "City Limits article",
+            "url": "https://citylimits.org/2024/12/05/what-the-councils-revamped-city-of-yes-for-housing-deal-includes/",
+            "notes": null,
+            "attachments": [],
+            "screenshots": [
+              {
+                "fileName": "new-york-city-ny-remove-min-citation5-screenshot.png",
+                "directusId": "bbe9018c-444b-4fc4-8a35-c10cbb969a10"
+              }
+            ]
+          }
+        ]
+      }
+    ]
   },
   "New Zealand": {
     "rm_min": [
@@ -76083,7 +77109,7 @@
           ]
         },
         {
-          "description": "News Article",
+          "description": "WESA Article",
           "url": "https://www.wesa.fm/politics-government/2024-09-05/gainey-proposes-zoning-changes-to-boost-affordable-housing-options-in-pittsburgh",
           "notes": null,
           "attachments": [],
@@ -76095,7 +77121,99 @@
           ]
         }
       ]
-    }
+    },
+    "add_max": [
+      {
+        "reporter": null,
+        "requirements": ["by right"],
+        "citations": [
+          {
+            "description": "Article VI-Development Standards. 914. Parking Loading and Access 04. - Off-Street Parking Exemption/Reduction Areas.",
+            "url": "https://library.municode.com/pa/pittsburgh/codes/code_of_ordinances?nodeId=PIZOCO_TITNINEZOCO_ARTVIDEST_CH914PALOAC",
+            "notes": null,
+            "attachments": [],
+            "screenshots": [
+              {
+                "fileName": "pittsburgh-pa-add-max-screenshot1.jpg",
+                "directusId": "a761da78-7ea8-4d87-8f3b-8beff7c645ed"
+              },
+              {
+                "fileName": "pittsburgh-pa-add-max-screenshot2.jpg",
+                "directusId": "e5343953-f330-4297-8fc8-27bd95c1046c"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "reduce_min": [
+      {
+        "reporter": null,
+        "requirements": ["by right"],
+        "citations": [
+          {
+            "description": "Article VI-Development Standards. 914. Parking Loading and Access 04. - Off-Street Parking Exemption/Reduction Areas.",
+            "url": "https://library.municode.com/pa/pittsburgh/codes/code_of_ordinances?nodeId=PIZOCO_TITNINEZOCO_ARTVIDEST_CH914PALOAC",
+            "notes": null,
+            "attachments": [],
+            "screenshots": [
+              {
+                "fileName": "pittsburgh-pa-reduce-min-screenshot1.jpg",
+                "directusId": "a761da78-7ea8-4d87-8f3b-8beff7c645ed"
+              },
+              {
+                "fileName": "pittsburgh-pa-reduce-min-screenshot2.jpg",
+                "directusId": "e5343953-f330-4297-8fc8-27bd95c1046c"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "rm_min": [
+      {
+        "reporter": null,
+        "requirements": ["by right"],
+        "citations": [
+          {
+            "description": "Pittsburgh Draft Parking Reform",
+            "url": "https://hdp-us-prod-app-pgh-engage-files.s3.us-west-2.amazonaws.com/8917/3211/2136/Draft_Parking_Reform_-_Updated.pdf",
+            "notes": "Pages 63-89",
+            "attachments": [],
+            "screenshots": [
+              {
+                "fileName": "pittsburgh-pa-remove-min-citation1-screenshot.png",
+                "directusId": "a6a45b39-034e-4b5e-8646-d9b3b41cec9f"
+              }
+            ]
+          },
+          {
+            "description": "WESA Article",
+            "url": "https://www.wesa.fm/politics-government/2024-09-05/gainey-proposes-zoning-changes-to-boost-affordable-housing-options-in-pittsburgh",
+            "notes": null,
+            "attachments": [],
+            "screenshots": [
+              {
+                "fileName": "pittsburgh-pa-remove-min-citation2-screenshot.png",
+                "directusId": "80231f56-50ba-4f86-ac04-ac196b9e7927"
+              }
+            ]
+          },
+          {
+            "description": "Pittsburgh Parking Reform Page",
+            "url": "https://engage.pittsburghpa.gov/implementing-housing-needs-assessment/parking-reform",
+            "notes": null,
+            "attachments": [],
+            "screenshots": [
+              {
+                "fileName": "pittsburgh-pa-remove-min-citation3-screenshot.png",
+                "directusId": "8fe35b6e-ba1d-4a11-8821-8d3fa3ddfa35"
+              }
+            ]
+          }
+        ]
+      }
+    ]
   },
   "Pittsfield Charter Township, MI": {
     "add_max": [
@@ -83041,6 +84159,108 @@
     ]
   },
   "Sacramento, CA": {
+    "legacy": {
+      "reporter": "Ryan Dodge",
+      "requirements": ["by right"],
+      "citations": [
+        {
+          "description": "17.608.030 Parking requirement by land use type and parking district.",
+          "url": "https://www.qcode.us/codes/sacramento/view.php?topic=17-vi-17_608-17_608_030",
+          "notes": null,
+          "attachments": [],
+          "screenshots": [
+            {
+              "fileName": "sacramento-ca-citation1-screenshot1.jpg",
+              "directusId": "d1962338-2b80-4707-aafe-c87dec13de0e"
+            },
+            {
+              "fileName": "sacramento-ca-citation1-screenshot2.jpg",
+              "directusId": "b1878836-2121-406f-a315-ba181acb668a"
+            }
+          ]
+        },
+        {
+          "description": "City of Sacramento Housing Element - 8 year strategy",
+          "url": "https://www.cityofsacramento.org/-/media/Corporate/Files/CDD/Planning/Long-Range/Housing-Element/00_Sac-HE_Amended_Final_Dec142021.pdf?la=en",
+          "notes": "H.8 is the policy underway",
+          "attachments": [],
+          "screenshots": [
+            {
+              "fileName": "sacramento-ca-citation2-screenshot.png",
+              "directusId": "953e8677-59f4-4bac-8ff1-3f8826b0bb54"
+            }
+          ]
+        },
+        {
+          "description": "Sacramento General Plan",
+          "url": "https://sacramento.granicus.com/MetaViewer.php?view_id=22&clip_id=5834&meta_id=768023",
+          "notes": "LUP-4.14 Elimination of Vehicle Parking Minimums.\nPage 87",
+          "attachments": [],
+          "screenshots": [
+            {
+              "fileName": "sacramento-ca-citation3-screenshot.png",
+              "directusId": "ff958d4f-9d4c-453f-898c-7bee2abc69e9"
+            }
+          ]
+        },
+        {
+          "description": "Sacramento Planning & Development Code",
+          "url": "https://codelibrary.amlegal.com/codes/sacramentoca/latest/sacramento_ca/0-0-0-39229",
+          "notes": "17.608.030.B.",
+          "attachments": [],
+          "screenshots": [
+            {
+              "fileName": "sacramento-ca-citation4-screenshot.png",
+              "directusId": "44754aa3-8f65-49f9-9a25-72c57f112f45"
+            }
+          ]
+        },
+        {
+          "description": "Sacramento Parking Revisions page",
+          "url": "https://www.cityofsacramento.gov/community-development/planning/housing/parking-revisions",
+          "notes": null,
+          "attachments": [],
+          "screenshots": [
+            {
+              "fileName": "sacramento-ca-citation5-screenshot.png",
+              "directusId": "27f1041c-bfc0-4462-becf-b26e83a50054"
+            }
+          ]
+        }
+      ]
+    },
+    "add_max": [
+      {
+        "reporter": null,
+        "requirements": ["by right"],
+        "citations": [
+          {
+            "description": "Sacramento Planning & Development Code",
+            "url": "https://codelibrary.amlegal.com/codes/sacramentoca/latest/sacramento_ca/0-0-0-39229",
+            "notes": "17.608.030.B.",
+            "attachments": [],
+            "screenshots": [
+              {
+                "fileName": "sacramento-ca-add-max-citation1-screenshot.png",
+                "directusId": "44754aa3-8f65-49f9-9a25-72c57f112f45"
+              }
+            ]
+          },
+          {
+            "description": "Sacramento Parking Revisions page",
+            "url": "https://www.cityofsacramento.gov/community-development/planning/housing/parking-revisions",
+            "notes": null,
+            "attachments": [],
+            "screenshots": [
+              {
+                "fileName": "sacramento-ca-add-max-citation2-screenshot.png",
+                "directusId": "27f1041c-bfc0-4462-becf-b26e83a50054"
+              }
+            ]
+          }
+        ]
+      }
+    ],
     "rm_min": [
       {
         "reporter": "Ryan Dodge",
@@ -83053,11 +84273,11 @@
             "attachments": [],
             "screenshots": [
               {
-                "fileName": "sacramento-ca-citation1-screenshot1.jpg",
+                "fileName": "sacramento-ca-remove-min-citation1-screenshot1.jpg",
                 "directusId": "d1962338-2b80-4707-aafe-c87dec13de0e"
               },
               {
-                "fileName": "sacramento-ca-citation1-screenshot2.jpg",
+                "fileName": "sacramento-ca-remove-min-citation1-screenshot2.jpg",
                 "directusId": "b1878836-2121-406f-a315-ba181acb668a"
               }
             ]
@@ -83069,7 +84289,7 @@
             "attachments": [],
             "screenshots": [
               {
-                "fileName": "sacramento-ca-citation2-screenshot.png",
+                "fileName": "sacramento-ca-remove-min-citation2-screenshot.png",
                 "directusId": "953e8677-59f4-4bac-8ff1-3f8826b0bb54"
               }
             ]
@@ -83081,7 +84301,7 @@
             "attachments": [],
             "screenshots": [
               {
-                "fileName": "sacramento-ca-citation3-screenshot.png",
+                "fileName": "sacramento-ca-remove-min-citation3-screenshot.png",
                 "directusId": "ff958d4f-9d4c-453f-898c-7bee2abc69e9"
               }
             ]
@@ -85104,6 +86324,76 @@
       }
     ]
   },
+  "Sarnia, ON": {
+    "legacy": {
+      "reporter": null,
+      "requirements": ["by right"],
+      "citations": [
+        {
+          "description": "The Sarnia Journal article",
+          "url": "https://www.thesarniajournal.ca/news/city-council-considers-reducing-parking-minimums-to-address-housing-and-environmental-concerns-9799866",
+          "notes": null,
+          "attachments": [],
+          "screenshots": [
+            {
+              "fileName": "sarnia-on-citation1-screenshot.png",
+              "directusId": "a8475327-48e0-4c05-b63f-8307dd7251f7"
+            }
+          ]
+        },
+        {
+          "description": "Sarnia Zoning Bylaw",
+          "url": "https://www.sarnia.ca/app/uploads/2022/07/ZB_Sec_03_General_Regulations.pdf",
+          "notes": "3.37(1)(a)\nPage 30",
+          "attachments": [],
+          "screenshots": [
+            {
+              "fileName": "sarnia-on-citation2-screenshot.png",
+              "directusId": "ff009f8a-cf09-4fe0-b21d-147d78bdb21e"
+            }
+          ]
+        }
+      ]
+    },
+    "rm_min": [
+      {
+        "reporter": "Samuel Deetz",
+        "requirements": ["by right"],
+        "citations": [
+          {
+            "description": "Sarnia Zoning Bylaw",
+            "url": "https://www.sarnia.ca/app/uploads/2022/07/ZB_Sec_03_General_Regulations.pdf",
+            "notes": "3.37(1)(a)\nPage 30",
+            "attachments": [],
+            "screenshots": [
+              {
+                "fileName": "sarnia-on-remove-min1-screenshot.png",
+                "directusId": "ff009f8a-cf09-4fe0-b21d-147d78bdb21e"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "reporter": "Etienne Lefebvre",
+        "requirements": [],
+        "citations": [
+          {
+            "description": "The Sarnia Journal article",
+            "url": "https://www.thesarniajournal.ca/news/city-council-considers-reducing-parking-minimums-to-address-housing-and-environmental-concerns-9799866",
+            "notes": null,
+            "attachments": [],
+            "screenshots": [
+              {
+                "fileName": "sarnia-on-remove-min2-screenshot.png",
+                "directusId": "a8475327-48e0-4c05-b63f-8307dd7251f7"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
   "Saskatoon, SK": {
     "rm_min": [
       {
@@ -86052,6 +87342,18 @@
             "notes": "Dark and light grey areas have no parking requirements (except for hospitals), and yellow areas have 50% parking reductions.",
             "attachments": [],
             "screenshots": []
+          },
+          {
+            "description": "The Urbanist article",
+            "url": "https://www.theurbanist.org/2024/11/08/seattle-set-to-double-down-on-arbitrary-parking-mandates/",
+            "notes": null,
+            "attachments": [],
+            "screenshots": [
+              {
+                "fileName": "seattle-wa-reduce-min-citation3-screenshot.png",
+                "directusId": "b0d8456c-c685-4c33-af09-56e673dedf35"
+              }
+            ]
           }
         ]
       }
@@ -86079,6 +87381,18 @@
             "notes": "Dark and light grey areas have no parking requirements (except for hospitals), and yellow areas have 50% parking reductions.",
             "attachments": [],
             "screenshots": []
+          },
+          {
+            "description": "The Urbanist article",
+            "url": "https://www.theurbanist.org/2024/11/08/seattle-set-to-double-down-on-arbitrary-parking-mandates/",
+            "notes": null,
+            "attachments": [],
+            "screenshots": [
+              {
+                "fileName": "seattle-wa-remove-min-citation3-screenshot.png",
+                "directusId": "8f85fc29-7fc6-4cbc-a882-617c986fa848"
+              }
+            ]
           }
         ]
       }
@@ -86392,6 +87706,28 @@
               {
                 "fileName": "seneca-ks-screenshot.png",
                 "directusId": "369df479-638f-474c-a51a-6454ca689dfe"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "Seoul, Seoul Special Metropolitan City": {
+    "add_max": [
+      {
+        "reporter": "Paul Barter",
+        "requirements": ["by right"],
+        "citations": [
+          {
+            "description": "Parking Reform Atlas",
+            "url": "https://www.parkingreformatlas.org/parking-reform-cases-1/seoul-parking-maximums-in-parking-restriction-zones",
+            "notes": null,
+            "attachments": [],
+            "screenshots": [
+              {
+                "fileName": "seoul-seoul-special-metropolitan-city-screenshot.png",
+                "directusId": "8067cd9a-934f-443e-8cc8-3a8a5080241d"
               }
             ]
           }
@@ -91439,6 +92775,81 @@
     ]
   },
   "St. Petersburg, FL": {
+    "legacy": {
+      "reporter": "Anthony Close",
+      "requirements": [
+        "accessory dwelling units",
+        "affordable housing",
+        "by right",
+        "frequent transit"
+      ],
+      "citations": [
+        {
+          "description": "St. Petersburg city code",
+          "url": "https://library.municode.com/fl/st._petersburg/codes/code_of_ordinances?nodeId=PTIISTPECO_CH16LADERE_S16.10.010ESZODIMAMA_16.10.020.1MAUSPEPAREMAZOMA",
+          "notes": "SECTION 16.10.010. - ESTABLISHMENT OF ZONING DISTRICTS, MATRICES AND MAP\t\n\n16.10.020.1. - Matrix: Use permissions and parking requirements matrix and zoning matrix.\t\n",
+          "attachments": [],
+          "screenshots": [
+            {
+              "fileName": "st-petersburg-fl-citation1-screenshot1.png",
+              "directusId": "ca77e838-cefa-4021-a852-5c46af46d146"
+            },
+            {
+              "fileName": "st-petersburg-fl-citation1-screenshot2.png",
+              "directusId": "e157c4f7-a11d-4036-a72e-fdfab8792fb8"
+            },
+            {
+              "fileName": "st-petersburg-fl-citation1-screenshot3.png",
+              "directusId": "e22e0533-6056-4424-92ec-6186df5a1deb"
+            }
+          ]
+        },
+        {
+          "description": "St. Petersburg September 12 Agenda",
+          "url": "https://cms5.revize.com/revize/stpete/2024-09-12%20Agenda%20Packet%20wAddsDeletes.pdf",
+          "notes": "ORDINANCE NO. 583-H;\nPage 204",
+          "attachments": [],
+          "screenshots": [
+            {
+              "fileName": "st-petersburg-fl-citation2-screenshot.png",
+              "directusId": "a950c642-d086-41e5-8b80-dbb03f6d399f"
+            }
+          ]
+        }
+      ]
+    },
+    "reduce_min": [
+      {
+        "reporter": null,
+        "requirements": [
+          "accessory dwelling units",
+          "affordable housing",
+          "frequent transit"
+        ],
+        "citations": [
+          {
+            "description": "St. Petersburg city code",
+            "url": "https://library.municode.com/fl/st._petersburg/codes/code_of_ordinances?nodeId=PTIISTPECO_CH16LADERE_S16.10.010ESZODIMAMA_16.10.020.1MAUSPEPAREMAZOMA",
+            "notes": "SECTION 16.10.010. - ESTABLISHMENT OF ZONING DISTRICTS, MATRICES AND MAP\t\n\n16.10.020.1. - Matrix: Use permissions and parking requirements matrix and zoning matrix.\t\n",
+            "attachments": [],
+            "screenshots": [
+              {
+                "fileName": "st-petersburg-fl-reduce-min-screenshot1.png",
+                "directusId": "ca77e838-cefa-4021-a852-5c46af46d146"
+              },
+              {
+                "fileName": "st-petersburg-fl-reduce-min-screenshot2.png",
+                "directusId": "e157c4f7-a11d-4036-a72e-fdfab8792fb8"
+              },
+              {
+                "fileName": "st-petersburg-fl-reduce-min-screenshot3.png",
+                "directusId": "e22e0533-6056-4424-92ec-6186df5a1deb"
+              }
+            ]
+          }
+        ]
+      }
+    ],
     "rm_min": [
       {
         "reporter": "Anthony Close",
@@ -91451,16 +92862,28 @@
             "attachments": [],
             "screenshots": [
               {
-                "fileName": "st-petersburg-fl-screenshot1.png",
+                "fileName": "st-petersburg-fl-remove-min-citation1-screenshot1.png",
                 "directusId": "ca77e838-cefa-4021-a852-5c46af46d146"
               },
               {
-                "fileName": "st-petersburg-fl-screenshot2.png",
+                "fileName": "st-petersburg-fl-remove-min-citation1-screenshot2.png",
                 "directusId": "e157c4f7-a11d-4036-a72e-fdfab8792fb8"
               },
               {
-                "fileName": "st-petersburg-fl-screenshot3.png",
+                "fileName": "st-petersburg-fl-remove-min-citation1-screenshot3.png",
                 "directusId": "e22e0533-6056-4424-92ec-6186df5a1deb"
+              }
+            ]
+          },
+          {
+            "description": "St. Petersburg September 12 Agenda",
+            "url": "https://cms5.revize.com/revize/stpete/2024-09-12%20Agenda%20Packet%20wAddsDeletes.pdf",
+            "notes": "ORDINANCE NO. 583-H;\nPage 204",
+            "attachments": [],
+            "screenshots": [
+              {
+                "fileName": "st-petersburg-fl-remove-min-citation2-screenshot.png",
+                "directusId": "a950c642-d086-41e5-8b80-dbb03f6d399f"
               }
             ]
           }
@@ -94164,6 +95587,18 @@
               {
                 "fileName": "tacoma-wa-citation2-screenshot.png",
                 "directusId": "7e959e7d-c327-4f0b-8e49-4ec0f3b27390"
+              }
+            ]
+          },
+          {
+            "description": "Tacoma Ordinance No. 28986",
+            "url": "https://www.cityoftacoma.org/UserFiles/Servers/Server_6/File/cms/Planning/Affordable%20Housing/AHAS%20Planning%20Actions/Amended%20Substitue%20Ordinance%20No.%2028986.pdf",
+            "notes": "Pages 181-193 of pdf, pages 163-175 of original document",
+            "attachments": [],
+            "screenshots": [
+              {
+                "fileName": "tacoma-wa-citation3-screenshot.png",
+                "directusId": "652d4c4d-1d7f-4d12-89d3-e858506ecad1"
               }
             ]
           }
@@ -101002,6 +102437,92 @@
     ]
   },
   "Waterville, ME": {
+    "legacy": {
+      "reporter": "Jacob Lavarnway",
+      "requirements": ["accessory dwelling units"],
+      "citations": [
+        {
+          "description": "Waterville Zoning Code",
+          "url": "https://ecode360.com/38456825#38456825",
+          "notes": "§ 275-4.23Off-street parking and loading requirements.\nA.(1)(a)[3]",
+          "attachments": [],
+          "screenshots": [
+            {
+              "fileName": "waterville-me-citation1-screenshot.png",
+              "directusId": "c1dbb9d1-a14a-4541-b295-5705dcd9af9c"
+            }
+          ]
+        },
+        {
+          "description": "Waterville July 16 Agenda Packet",
+          "url": "https://towncloud-core-prod.s3.amazonaws.com/uploads/waterville-me/meetings/agenda_packet/pdf_packet/119/regular-city-council-meeting_2024-07-16_115335_combined.pdf",
+          "notes": "ORDINANCE 146-2024\nPage 38",
+          "attachments": [],
+          "screenshots": [
+            {
+              "fileName": "waterville-me-citation2-screenshot.png",
+              "directusId": "a26952a8-fdce-4c96-b3c0-33e61a235e5c"
+            }
+          ]
+        },
+        {
+          "description": "Waterville August 7 Agenda Packet",
+          "url": "https://towncloud-core-prod.s3.amazonaws.com/uploads/waterville-me/meetings/agenda_packet/pdf_packet/120/regular-city-council-meeting_2024-08-07_190652_combined.pdf",
+          "notes": "Page 38",
+          "attachments": [],
+          "screenshots": [
+            {
+              "fileName": "waterville-me-citation3-screenshot.png",
+              "directusId": "dec24c6d-53c6-41c0-a837-b954ee1388ac"
+            }
+          ]
+        },
+        {
+          "description": "Waterville August 7 Minutes",
+          "url": "https://towncloud-core-prod.s3.amazonaws.com/uploads/waterville-me/meetings/agenda_packet/minutes/120/regular-city-council-meeting_minutes_2024-08-07_190558.pdf",
+          "notes": "Page 3",
+          "attachments": [],
+          "screenshots": [
+            {
+              "fileName": "waterville-me-citation4-screenshot.png",
+              "directusId": "2f000339-7a95-4add-a930-e6a1b68d97ee"
+            }
+          ]
+        }
+      ]
+    },
+    "reduce_min": [
+      {
+        "reporter": "Jacob Lavarnway",
+        "requirements": ["other"],
+        "citations": [
+          {
+            "description": "Waterville August 7 Agenda Packet",
+            "url": "https://towncloud-core-prod.s3.amazonaws.com/uploads/waterville-me/meetings/agenda_packet/pdf_packet/120/regular-city-council-meeting_2024-08-07_190652_combined.pdf",
+            "notes": "Page 38",
+            "attachments": [],
+            "screenshots": [
+              {
+                "fileName": "waterville-me-reduce-min-citation1-screenshot.png",
+                "directusId": "dec24c6d-53c6-41c0-a837-b954ee1388ac"
+              }
+            ]
+          },
+          {
+            "description": "Waterville August 7 Minutes",
+            "url": "https://towncloud-core-prod.s3.amazonaws.com/uploads/waterville-me/meetings/agenda_packet/minutes/120/regular-city-council-meeting_minutes_2024-08-07_190558.pdf",
+            "notes": "Page 3",
+            "attachments": [],
+            "screenshots": [
+              {
+                "fileName": "waterville-me-reduce-min-citation2-screenshot.png",
+                "directusId": "2f000339-7a95-4add-a930-e6a1b68d97ee"
+              }
+            ]
+          }
+        ]
+      }
+    ],
     "rm_min": [
       {
         "reporter": "Jacob Lavarnway",
@@ -101014,20 +102535,8 @@
             "attachments": [],
             "screenshots": [
               {
-                "fileName": "waterville-me-citation1-screenshot.png",
+                "fileName": "waterville-me-remove-min-screenshot.png",
                 "directusId": "c1dbb9d1-a14a-4541-b295-5705dcd9af9c"
-              }
-            ]
-          },
-          {
-            "description": "Waterville July 16 Agenda Packet",
-            "url": "https://towncloud-core-prod.s3.amazonaws.com/uploads/waterville-me/meetings/agenda_packet/pdf_packet/119/regular-city-council-meeting_2024-07-16_115335_combined.pdf",
-            "notes": "ORDINANCE 146-2024\nPage 38",
-            "attachments": [],
-            "screenshots": [
-              {
-                "fileName": "waterville-me-citation2-screenshot.png",
-                "directusId": "a26952a8-fdce-4c96-b3c0-33e61a235e5c"
               }
             ]
           }
