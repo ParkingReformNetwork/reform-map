@@ -6,11 +6,10 @@ import {
   ProcessedCoreEntry,
   ProcessedCorePolicy,
   ProcessedPlace,
+  UNKNOWN_YEAR,
 } from "./types";
 import Observable from "./Observable";
 import { determinePolicyTypes, getFilteredIndexes } from "./data";
-
-export const UNKNOWN_YEAR = "unknown";
 
 export const POPULATION_INTERVALS: Array<[string, number]> = [
   ["100", 100],

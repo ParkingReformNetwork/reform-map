@@ -30,12 +30,11 @@ export default async function initApp(): Promise<void> {
 
   const viewToggle = initViewToggle();
 
+  const filterOptions = new FilterOptions();
   const map = createMap();
   const data = await readData({
     includeMultipleReforms: revampEnabled,
   });
-
-  const filterOptions = new FilterOptions(Object.values(data));
 
   const filterManager = new PlaceFilterManager(data, {
     searchInput: null,

@@ -11,7 +11,7 @@ import {
   ProcessedLegacyReform,
 } from "./types";
 
-const countryMapping: Partial<Record<string, string>> = {
+export const COUNTRY_MAPPING: Partial<Record<string, string>> = {
   AU: "Australia",
   AT: "Austria",
   BR: "Brazil",
@@ -44,7 +44,7 @@ export function placeIdToUrl(v: string): string {
 export function processPlace(placeId: PlaceId, raw: RawPlace): ProcessedPlace {
   return {
     ...raw,
-    country: countryMapping[raw.country] ?? raw.country,
+    country: COUNTRY_MAPPING[raw.country] ?? raw.country,
     url: placeIdToUrl(placeId),
   };
 }

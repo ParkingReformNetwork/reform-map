@@ -1,14 +1,14 @@
 import { capitalize } from "lodash-es";
 
-import { ProcessedCoreEntry } from "./types";
 import {
   FilterState,
   PlaceFilterManager,
   PolicyTypeFilter,
-  UNKNOWN_YEAR,
 } from "./FilterState";
 import Observable from "./Observable";
 import { initPopulationSlider } from "./populationSlider";
+
+import optionValuesData from "~/data/option-values.json";
 
 // Keep in alignment with FilterState.
 type FilterGroupKey =
@@ -33,33 +33,15 @@ const DESELECTED_BY_DEFAULT: Record<FilterGroupKey, Set<string>> = {
 export class FilterOptions {
   readonly options: Record<FilterGroupKey, string[]>;
 
-  constructor(entries: ProcessedCoreEntry[]) {
-    const placeType = new Set<string>();
-    const policy = new Set<string>();
-    const scope = new Set<string>();
-    const landUse = new Set<string>();
-    const status = new Set<string>();
-    const country = new Set<string>();
-    const year = new Set<string>();
-    entries.forEach((entry) => {
-      placeType.add(entry.place.type);
-      status.add(entry.unifiedPolicy.status);
-      country.add(entry.place.country);
-      year.add(
-        entry.unifiedPolicy.date?.parsed.year.toString() || UNKNOWN_YEAR,
-      );
-      entry.unifiedPolicy.policy.forEach((v) => policy.add(v));
-      entry.unifiedPolicy.scope.forEach((v) => scope.add(v));
-      entry.unifiedPolicy.land.forEach((v) => landUse.add(v));
-    });
+  constructor() {
     this.options = {
-      placeType: Array.from(placeType).sort(),
-      includedPolicyChanges: Array.from(policy).sort(),
-      scope: Array.from(scope).sort(),
-      landUse: Array.from(landUse).sort(),
-      status: Array.from(status).sort(),
-      country: Array.from(country).sort(),
-      year: Array.from(year).sort((a, b) => b.localeCompare(a)),
+      placeType: optionValuesData.placeType,
+      includedPolicyChanges: optionValuesData.policy,
+      scope: optionValuesData.scope,
+      landUse: optionValuesData.landUse,
+      status: optionValuesData.status,
+      country: optionValuesData.country,
+      year: optionValuesData.year,
     };
   }
 
