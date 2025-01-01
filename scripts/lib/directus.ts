@@ -95,6 +95,7 @@ export type LegacyReform = _BasePolicy & {
 
 export type PolicyRecord = _BasePolicy & {
   type: PolicyType;
+  archived: boolean;
 };
 
 export interface CitationsFileJunction {
