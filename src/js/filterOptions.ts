@@ -8,7 +8,7 @@ import {
 import Observable from "./Observable";
 import { initPopulationSlider } from "./populationSlider";
 
-import optionValuesData from "~/data/option-values.json";
+import optionValuesData from "../../data/option-values.json";
 
 // Keep in alignment with FilterState.
 type FilterGroupKey =
