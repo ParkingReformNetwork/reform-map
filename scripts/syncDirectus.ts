@@ -134,6 +134,7 @@ async function readPolicyRecords(
     [
       "id",
       "place",
+      "archived",
       "last_verified_at",
       "type",
       "land_uses",
@@ -146,7 +147,12 @@ async function readPolicyRecords(
       "citations",
     ],
     100,
-    { last_verified_at: { _nnull: true } },
+    {
+      _and: [
+        { last_verified_at: { _nnull: true } },
+        { archived: { _eq: false } },
+      ],
+    },
   );
   return groupBy(records, (record) => placeDirectusIdToStringId[record.place]);
 }
@@ -468,7 +474,10 @@ function combineData(
       // Filter out places without any policy records.
       .filter(
         ([, entry]) =>
-          entry.legacy || entry.add_max || entry.rm_min || entry.reduce_min,
+          entry.legacy ||
+          entry.add_max?.length ||
+          entry.rm_min?.length ||
+          entry.reduce_min?.length,
       )
       .sort(),
   );
