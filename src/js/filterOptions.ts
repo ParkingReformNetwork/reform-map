@@ -8,7 +8,8 @@ import {
 import Observable from "./Observable";
 import { initPopulationSlider } from "./populationSlider";
 
-import optionValuesData from "../../data/option-values.json";
+// @ts-ignore
+import optionValuesData from "../../data/option-values.json" with { type: "json" };;
 
 // Keep in alignment with FilterState.
 type FilterGroupKey =
