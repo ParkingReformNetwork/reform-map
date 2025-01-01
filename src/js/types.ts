@@ -84,3 +84,15 @@ export interface ProcessedCoreEntry {
   rm_min?: ProcessedCorePolicy[];
   add_max?: ProcessedCorePolicy[];
 }
+export const UNKNOWN_YEAR = "unknown";
+
+/// The types from `data/option-values.json`.
+export interface OptionValues {
+  placeType: PlaceType[];
+  policy: PolicyType[];
+  status: ReformStatus[];
+  scope: string[];
+  landUse: string[];
+  country: string[];
+  year: string[];
+}
