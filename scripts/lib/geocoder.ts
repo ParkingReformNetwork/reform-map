@@ -1,13 +1,13 @@
 /* eslint-disable import/no-extraneous-dependencies */
 /* eslint-disable no-await-in-loop */
 
-import nodeFetch from "node-fetch";
+import nodeFetch, { RequestInfo, RequestInit, Response } from "node-fetch";
 import NodeGeocoder from "node-geocoder";
 
 export async function fetch(
-  url: nodeFetch.RequestInfo,
-  options: nodeFetch.RequestInit = {},
-): Promise<nodeFetch.Response> {
+  url: RequestInfo,
+  options: RequestInit = {},
+): Promise<Response> {
   return nodeFetch(url, {
     ...options,
     headers: { "User-Agent": "prn-update-map-data" },
