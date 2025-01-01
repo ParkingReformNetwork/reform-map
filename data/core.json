@@ -247,7 +247,7 @@
         "reduce parking minimums",
         "remove parking minimums"
       ],
-      "scope": ["transit oriented"],
+      "scope": ["transit-oriented"],
       "land": ["commercial", "other"],
       "date": null
     },
@@ -255,7 +255,7 @@
       {
         "summary": "Parking maximums apply to all uses in the TOD District. Parking maximums may be exceeded through additional landscaping, pervious pavement, or on-site stormwater mitigation.",
         "status": "passed",
-        "scope": ["transit oriented", "transit-oriented"],
+        "scope": ["transit-oriented"],
         "land": ["commercial", "other", "residential, all uses"],
         "date": null
       }
@@ -264,7 +264,7 @@
       {
         "summary": "Within the TOD Transit Oriented Development District, on-street parking may count towards parking requirements, and housing for the elderly or for those with disabilities has a reduced requirement. County-wide, parking requirements may be reduced through the provision of motorcycle parking, EV chargers, or a TDM plan.",
         "status": "passed",
-        "scope": ["citywide", "transit oriented", "transit-oriented"],
+        "scope": ["citywide", "transit-oriented"],
         "land": [
           "all uses",
           "commercial",
@@ -280,7 +280,7 @@
       {
         "summary": "Within the TOD Transit Oriented Development District, nonresidential uses under 2000 square feet are exempt from parking mandates.",
         "status": "passed",
-        "scope": ["transit oriented", "transit-oriented"],
+        "scope": ["transit-oriented"],
         "land": ["commercial", "industrial", "other"],
         "date": null
       }
@@ -827,7 +827,7 @@
       {
         "summary": "Albuquerque New Mexico has eliminated off street parking requirements in the downtown and SU-1 Transit Oriented Development.  They have also reduced parking minimums in many other areas and had on street parking account for off street parking by different reduction rates in areas like transit oriented developments.",
         "status": "passed",
-        "scope": ["city center / business district", "transit oriented"],
+        "scope": ["city center / business district", "transit-oriented"],
         "land": ["all uses"],
         "date": null
       }
@@ -964,7 +964,7 @@
       "summary": "Alexandria has established maximum parking requirements In some commercial land uses and reduced minimum requirements in 'enhanced transit areas'. \n\nAdditional reductions may be applied to multi-family/affordable housing land uses if in proximity to transit. ",
       "status": "passed",
       "policy": ["add parking maximums", "reduce parking minimums"],
-      "scope": ["citywide", "transit oriented"],
+      "scope": ["citywide", "transit-oriented"],
       "land": ["commercial"],
       "date": null
     }
@@ -1904,7 +1904,7 @@
       {
         "summary": "Parking requirements are reduced for workforce housing near transit and may be further reduced for bike parking.",
         "status": "passed",
-        "scope": ["transit oriented"],
+        "scope": ["transit-oriented"],
         "land": ["residential, all uses"],
         "date": null
       }
@@ -2423,7 +2423,7 @@
       "summary": "Parking reductions are permitted in Transit-Oriented Development and Urban Center areas through Valet parking, proximity to transit, TDM, carpool parking or bike parking. Within Zone A, commercial uses not required to meet minimum parking requirements.",
       "status": "passed",
       "policy": ["reduce parking minimums", "remove parking minimums"],
-      "scope": ["city center / business district", "transit oriented"],
+      "scope": ["city center / business district", "transit-oriented"],
       "land": ["commercial"],
       "date": null
     },
@@ -2431,11 +2431,7 @@
       {
         "summary": "Parking reductions are permitted in Transit-Oriented Development and Urban Center areas through Valet parking, proximity to transit, TDM, carpool parking or bike parking.",
         "status": "passed",
-        "scope": [
-          "city center / business district",
-          "transit oriented",
-          "transit-oriented"
-        ],
+        "scope": ["city center / business district", "transit-oriented"],
         "land": ["all uses", "commercial", "other"],
         "date": null
       }
@@ -2444,7 +2440,7 @@
       {
         "summary": "Within Zone A, commercial uses are exempt from parking mandates.",
         "status": "passed",
-        "scope": ["city center / business district", "transit oriented"],
+        "scope": ["city center / business district", "transit-oriented"],
         "land": ["commercial"],
         "date": null
       }
@@ -2839,7 +2835,7 @@
       {
         "summary": "No parking is required within 1/2 mile of MARTA Stations and near more than a dozen activity centers (Special Public Interest Districts) for any uses except establishments that serve alcohol. No parking is required for any buildings built before 1965, citywide. Many districts exempt affordable housing from parking mandates. In February 2024, the city exempted most uses in the Beltline Overlay District.",
         "status": "passed",
-        "scope": ["city center / business district", "transit oriented"],
+        "scope": ["city center / business district", "transit-oriented"],
         "land": ["all uses"],
         "date": null
       }
@@ -3082,7 +3078,7 @@
         "scope": [
           "city center / business district",
           "citywide",
-          "transit oriented"
+          "transit-oriented"
         ],
         "land": [
           "commercial",
@@ -3438,7 +3434,7 @@
       "summary": "ADUs are exempt from parking mandates when located near transit or is a garage conversion. Parking requirements are reduced for uses near transit or for nonresidential uses that provide motorcycle parking. On-street parking may be counted towards the minimums for nonresidential uses or for guest parking of residential uses. Affordable housing has reduced parking requirements. Uses in the “central district,” “Old Town Kern,” and other mixed-use areas may have reduced requirements.",
       "status": "passed",
       "policy": ["reduce parking minimums", "remove parking minimums"],
-      "scope": ["transit oriented"],
+      "scope": ["transit-oriented"],
       "land": ["residential, all uses"],
       "date": null
     },
@@ -3449,7 +3445,7 @@
         "scope": [
           "city center / business district",
           "citywide",
-          "transit oriented"
+          "transit-oriented"
         ],
         "land": [
           "all uses",
@@ -3469,7 +3465,7 @@
         "scope": [
           "city center / business district",
           "citywide",
-          "transit oriented"
+          "transit-oriented"
         ],
         "land": [
           "residential, all uses",
@@ -3574,7 +3570,7 @@
       {
         "summary": "Parking requirements may be reduced for uses near frequent transit.",
         "status": "passed",
-        "scope": ["transit oriented"],
+        "scope": ["transit-oriented"],
         "land": [
           "all uses",
           "commercial",
@@ -5052,7 +5048,7 @@
       "summary": "Parking minimums are reduced for housing near transit, and within the Downtown, Eastgate Transit Oriented Development, and East Main Transit Oriented Development districts. Parking maximums apply to most uses citywide.",
       "status": "passed",
       "policy": ["add parking maximums", "reduce parking minimums"],
-      "scope": ["city center / business district", "transit oriented"],
+      "scope": ["city center / business district", "transit-oriented"],
       "land": ["commercial", "other", "residential, all uses"],
       "date": null
     },
@@ -5060,7 +5056,7 @@
       {
         "summary": "Parking maximums apply to most nonresidential uses citywide.",
         "status": "passed",
-        "scope": ["citywide", "transit oriented"],
+        "scope": ["citywide", "transit-oriented"],
         "land": ["commercial", "industrial", "other"],
         "date": null
       }
@@ -5069,11 +5065,7 @@
       {
         "summary": "Parking minimums are reduced for housing near transit, and within the Downtown, Eastgate Transit Oriented Development, and East Main Transit Oriented Development districts.",
         "status": "passed",
-        "scope": [
-          "city center / business district",
-          "transit oriented",
-          "transit-oriented"
-        ],
+        "scope": ["city center / business district", "transit-oriented"],
         "land": ["commercial", "other", "residential, all uses"],
         "date": null
       }
@@ -6168,7 +6160,7 @@
         "reduce parking minimums",
         "remove parking minimums"
       ],
-      "scope": ["transit oriented"],
+      "scope": ["transit-oriented"],
       "land": ["commercial", "other"],
       "date": null
     },
@@ -6176,7 +6168,7 @@
       {
         "summary": "Parking maximums apply to all residential uses in the Transit Oriented District and nonresidential uses in the station zone and midway zone subdistricts.",
         "status": "passed",
-        "scope": ["transit oriented", "transit-oriented"],
+        "scope": ["transit-oriented"],
         "land": ["commercial", "other", "residential, all uses"],
         "date": null
       }
@@ -6185,7 +6177,7 @@
       {
         "summary": "Residential uses have reduced requirements in the Transit Oriented Development District.",
         "status": "passed",
-        "scope": ["transit oriented", "transit-oriented"],
+        "scope": ["transit-oriented"],
         "land": ["residential, all uses"],
         "date": null
       }
@@ -6194,7 +6186,7 @@
       {
         "summary": "Nonresidential uses in the Transit Oriented District are exempt from parking requirements.",
         "status": "passed",
-        "scope": ["transit oriented", "transit-oriented"],
+        "scope": ["transit-oriented"],
         "land": ["commercial", "other"],
         "date": null
       }
@@ -6925,7 +6917,7 @@
       "summary": "The first 2000 square feet of a commercial use in the C-1 Central Area Commercial District and UTOD Uptown Transit Oriented Development District is exempt from parking mandates. Any business use may count on-street parking towards the minimums. Prior to 2024, all uses in the C-1 District were exempt, while parking minimums were generally higher.",
       "status": "passed",
       "policy": ["reduce parking minimums", "remove parking minimums"],
-      "scope": ["city center / business district", "transit oriented"],
+      "scope": ["city center / business district", "transit-oriented"],
       "land": ["commercial"],
       "date": null
     },
@@ -6933,7 +6925,7 @@
       {
         "summary": "The first 2000 square feet of a commercial use in the C-1 Central Area Commercial District and UTOD Uptown Transit Oriented Development District is exempt from parking mandates. Any business use may count on-street parking towards the minimums. Parking minimums were lowered for most uses in 2024 citywide.",
         "status": "passed",
-        "scope": ["city center / business district", "transit oriented"],
+        "scope": ["city center / business district", "transit-oriented"],
         "land": ["commercial"],
         "date": null
       }
@@ -6942,7 +6934,7 @@
       {
         "summary": "The first 2000 square feet of a commercial use in the C-1 Central Area Commercial District and UTOD Uptown Transit Oriented Development District is exempt from parking mandates. Prior to 2024, all uses in the C-1 District were exempt.",
         "status": "passed",
-        "scope": ["city center / business district", "transit oriented"],
+        "scope": ["city center / business district", "transit-oriented"],
         "land": ["commercial"],
         "date": null
       }
@@ -8469,7 +8461,7 @@
       {
         "summary": "A Fall 2021 zoning change reduced parking minimums for housing units created within 0.5 mile of rapid transit to 0.5 per studio apartment and 1.0 parking spaces per 1-bedroom or larger dwelling unit. It further allowed the Zoning Board of Appeals to reduce or eliminate required parking spaces if doing so accomplishes material Townwide benefits such as the creation of additional housing units, affordable housing units, or open space.",
         "status": "passed",
-        "scope": ["transit oriented"],
+        "scope": ["transit-oriented"],
         "land": ["residential, all uses"],
         "date": null
       }
@@ -9158,7 +9150,7 @@
       "summary": "Uses within the TOD Transit Oriented Development District have reduced parking requirements up to 25% by right, while requirements may be further reduced through car-sharing and improved transit facilities. Parking maximums are set at 125% of the normal minimums.",
       "status": "passed",
       "policy": ["add parking maximums", "reduce parking minimums"],
-      "scope": ["transit oriented"],
+      "scope": ["transit-oriented"],
       "land": ["all uses"],
       "date": null
     },
@@ -9166,7 +9158,7 @@
       {
         "summary": "Parking maximums are set at 125% of the normal minimums in the TOD Transit Oriented Development District.",
         "status": "passed",
-        "scope": ["transit oriented", "transit-oriented"],
+        "scope": ["transit-oriented"],
         "land": ["all uses"],
         "date": null
       }
@@ -9175,7 +9167,7 @@
       {
         "summary": "Uses within the TOD Transit Oriented Development District have reduced parking requirements up to 25% by right, while requirements may be further reduced through car-sharing and improved transit facilities.",
         "status": "passed",
-        "scope": ["transit oriented", "transit-oriented"],
+        "scope": ["transit-oriented"],
         "land": ["all uses"],
         "date": null
       }
@@ -9452,7 +9444,7 @@
       {
         "summary": "AB2097, signed into law in September 2022, prohibits cities and counties from enforcing parking mandates within 1/2 mile of high quality transit service. There are avenues for city's to enforce multi-family residential mandates on a case-by-case basis, but also a backup exemption for developments which include affordable housing.\n\nPrevious California laws limited local parking mandates. \n\nSenate Bill 35, adopted in 2017, has streamlined the approval of thousands of affordable homes near transit. The law grants these projects relief from local parking mandates.\n\nSenate Bill 9 signed into law in 2021, makes it legal statewide to build up to four homes on most lots that are currently zoned for single-family homes only. Cities cannot require more than one parking space per home for projects built under the law.",
         "status": "passed",
-        "scope": ["regional", "transit oriented"],
+        "scope": ["regional", "transit-oriented"],
         "land": ["all uses"],
         "date": null
       }
@@ -10446,7 +10438,7 @@
         "scope": [
           "city center / business district",
           "citywide",
-          "transit oriented"
+          "transit-oriented"
         ],
         "land": ["all uses"],
         "date": null
@@ -10685,7 +10677,7 @@
       "summary": "Within the Transit Center District, parking requirements are reduced and surface parking lots are banned.",
       "status": "passed",
       "policy": ["add parking maximums", "reduce parking minimums"],
-      "scope": ["transit oriented"],
+      "scope": ["transit-oriented"],
       "land": ["all uses"],
       "date": null
     }
@@ -11818,7 +11810,7 @@
       {
         "summary": "Parking requirements are reduced in the Park Avenue TOD Overlay District.",
         "status": "passed",
-        "scope": ["transit oriented"],
+        "scope": ["transit-oriented"],
         "land": ["commercial", "residential, all uses"],
         "date": null
       }
@@ -12262,7 +12254,7 @@
       {
         "summary": "No vehicle parking is required for any use in any TOD District, except for bars, restaurants, micro-breweries, microdistilleries, micro-wineries, and live performance venues within 200 feet of a single-family residential zoning district.",
         "status": "passed",
-        "scope": ["transit oriented"],
+        "scope": ["transit-oriented"],
         "land": ["all uses"],
         "date": null
       }
@@ -12741,7 +12733,7 @@
       "summary": "There are no minimum parking requirements for certain nonresidential uses within the Downtown Zoning District, which are also subject to specific maximum requirements. \n\nIn certain districts (B,C, or D), the minimum parking requirement for residential uses may be reduced by 50% if the property is within 1,320 feet of a CTA rail station, a Metra rail station, OR along a high frequency bus line corridor, or 2,640 feet of other specified bus line corridors that is also along a designated 'pedestrian street or a 'pedestrian retail street'.\n\nIn other districts (B,C, D or M), the minimum parking requirement for non-residential uses may be reduced by 50% if the property is within 1,320 feet of a CTA rail station, a Metra rail station, OR along a high frequency bus line corridor, or 2,640 feet of other specified bus line corridors that is also along a designated 'pedestrian street or a 'pedestrian retail street'.\n\nThe parking may be reduced by 100% if it is approved as a special use. ",
       "status": "passed",
       "policy": ["add parking maximums", "remove parking minimums"],
-      "scope": ["city center / business district", "transit oriented"],
+      "scope": ["city center / business district", "transit-oriented"],
       "land": ["commercial", "residential, all uses"],
       "date": null
     },
@@ -12749,7 +12741,7 @@
       {
         "summary": "Parking maximums apply to all residential uses, and most nonresidential uses within the Downtown Zoning District.",
         "status": "passed",
-        "scope": ["city center / business district", "transit oriented"],
+        "scope": ["city center / business district", "transit-oriented"],
         "land": ["commercial", "residential, all uses"],
         "date": null
       }
@@ -12758,7 +12750,7 @@
       {
         "summary": "There are no minimum parking requirements for certain nonresidential uses within the Downtown Zoning District. \n\nIn certain districts (B,C, or D), the minimum parking requirement for residential uses may be reduced by 50% if the property is within 1,320 feet of a CTA rail station, a Metra rail station, OR along a high frequency bus line corridor, or 2,640 feet of other specified bus line corridors that is also along a designated 'pedestrian street or a 'pedestrian retail street'.\n\nIn other districts (B,C, D or M), the minimum parking requirement for non-residential uses may be reduced by 50% if the property is within 1,320 feet of a CTA rail station, a Metra rail station, OR along a high frequency bus line corridor, or 2,640 feet of other specified bus line corridors that is also along a designated 'pedestrian street or a 'pedestrian retail street'.\n\nThe parking may be reduced by 100% if it is approved as a special use. ",
         "status": "passed",
-        "scope": ["city center / business district", "transit oriented"],
+        "scope": ["city center / business district", "transit-oriented"],
         "land": ["commercial", "residential, all uses"],
         "date": null
       }
@@ -13644,7 +13636,7 @@
       {
         "summary": "Off-street parking requirements are not required in the Central Business District or in Transit Oriented Development Zones (within 1/4 mile radius of a High Frequency Transit Station).",
         "status": "passed",
-        "scope": ["city center / business district", "transit oriented"],
+        "scope": ["city center / business district", "transit-oriented"],
         "land": ["all uses"],
         "date": null
       }
@@ -14975,7 +14967,7 @@
         "reduce parking minimums",
         "remove parking minimums"
       ],
-      "scope": ["citywide", "transit oriented"],
+      "scope": ["citywide", "transit-oriented"],
       "land": ["residential, low-density"],
       "date": null
     },
@@ -14983,7 +14975,7 @@
       {
         "summary": "Parking maximums are set at 100% of the minimums for all uses.",
         "status": "passed",
-        "scope": ["citywide", "transit oriented"],
+        "scope": ["citywide", "transit-oriented"],
         "land": ["all uses"],
         "date": null
       }
@@ -14992,11 +14984,7 @@
       {
         "summary": "For nonresidential uses located within one-half mile of a BART station in the Transit Station Overlay District, the number of parking spaces may be reduced by 25 percent. Within the downtown parking district, a fee in lieu of required parking may be provided.",
         "status": "passed",
-        "scope": [
-          "city center / business district",
-          "transit oriented",
-          "transit-oriented"
-        ],
+        "scope": ["city center / business district", "transit-oriented"],
         "land": ["all uses", "commercial", "industrial", "medical", "other"],
         "date": null
       }
@@ -15005,7 +14993,7 @@
       {
         "summary": "ADUs may be exempted from parking mandates when certain criteria are met.",
         "status": "passed",
-        "scope": ["citywide", "transit oriented"],
+        "scope": ["citywide", "transit-oriented"],
         "land": ["residential, low-density"],
         "date": null
       }
@@ -15534,7 +15522,7 @@
       "summary": "ADUs may be exempted from parking mandates when certain criteria are met. Within the downtown area, existing buildings are exempt and a fee in-lieu of parking may be provided.",
       "status": "passed",
       "policy": ["reduce parking minimums", "remove parking minimums"],
-      "scope": ["citywide", "transit oriented"],
+      "scope": ["citywide", "transit-oriented"],
       "land": ["residential, low-density"],
       "date": null
     },
@@ -15542,7 +15530,7 @@
       {
         "summary": "Within the downtown area, existing buildings are exempt and a fee in-lieu of parking may be provided.",
         "status": "passed",
-        "scope": ["city center / business district", "transit oriented"],
+        "scope": ["city center / business district", "transit-oriented"],
         "land": ["all uses"],
         "date": null
       }
@@ -15551,7 +15539,7 @@
       {
         "summary": "ADUs may be exempted from parking mandates when certain criteria are met.",
         "status": "passed",
-        "scope": ["citywide", "transit oriented"],
+        "scope": ["citywide", "transit-oriented"],
         "land": ["residential, low-density"],
         "date": null
       }
@@ -15735,7 +15723,7 @@
       {
         "summary": "Within the city center, parking requirements are reduced by 40-50% depending on zone. Elsewhere in the city, parking requirements may be reduced by 20% when located near transit.",
         "status": "passed",
-        "scope": ["city center / business district", "transit oriented"],
+        "scope": ["city center / business district", "transit-oriented"],
         "land": ["all uses"],
         "date": null
       }
@@ -16582,7 +16570,7 @@
       {
         "summary": "Parking minimum requirements for multifamily housing built for the elderly were reduced from 2 parking spaces per dwelling to 1 parking space per dwelling citywide. \n\nParking minimum requirements for mixed-use and multifamily developments located in a special transit zone were reduced between 15-75% based on the distance from a transit stop. ",
         "status": "passed",
-        "scope": ["citywide", "transit oriented"],
+        "scope": ["citywide", "transit-oriented"],
         "land": ["residential, all uses"],
         "date": "2023-03-30"
       }
@@ -18163,7 +18151,7 @@
       "scope": [
         "city center / business district",
         "citywide",
-        "transit oriented"
+        "transit-oriented"
       ],
       "land": ["all uses", "commercial", "residential, low-density"],
       "date": null
@@ -18172,11 +18160,7 @@
       {
         "summary": "Surface parking maximums are set at 110% of the minimums for transit oriented development. Parking maximums apply in various other districts as determined in articles 3-9.",
         "status": "passed",
-        "scope": [
-          "main street / special",
-          "transit oriented",
-          "transit-oriented"
-        ],
+        "scope": ["main street / special", "transit-oriented"],
         "land": ["all uses"],
         "date": null
       }
@@ -18188,7 +18172,6 @@
         "scope": [
           "city center / business district",
           "citywide",
-          "transit oriented",
           "transit-oriented"
         ],
         "land": ["all uses", "residential, multi-family"],
@@ -18202,7 +18185,7 @@
         "scope": [
           "city center / business district",
           "citywide",
-          "transit oriented"
+          "transit-oriented"
         ],
         "land": ["all uses", "commercial", "residential, low-density"],
         "date": null
@@ -18362,7 +18345,7 @@
       {
         "summary": "Residential uses within 2,500 ft of an operational or proposed passenger rail station, or an operational bus rapid transit station in the C-3 Mixed-Use PUD zone may reduce parking requirements",
         "status": "passed",
-        "scope": ["city center / business district", "transit oriented"],
+        "scope": ["city center / business district", "transit-oriented"],
         "land": ["residential, all uses"],
         "date": null
       }
@@ -19146,7 +19129,7 @@
       {
         "summary": "Parking requirements may be reduced through covered bike parking, access to transit, transit passes or carsharing. A fee in lieu of required parking may be provided.",
         "status": "passed",
-        "scope": ["citywide", "transit oriented"],
+        "scope": ["citywide", "transit-oriented"],
         "land": ["all uses", "commercial", "industrial", "other"],
         "date": null
       }
@@ -19763,7 +19746,7 @@
           "city center / business district",
           "citywide",
           "main street / special",
-          "transit oriented"
+          "transit-oriented"
         ],
         "land": [
           "all uses",
@@ -20531,7 +20514,7 @@
       {
         "summary": "Eden Prairie has both parking minimums and maximums in the Transit Oriented Development (TOD) and TC Town Center Districts.",
         "status": "passed",
-        "scope": ["transit oriented"],
+        "scope": ["transit-oriented"],
         "land": ["all uses"],
         "date": null
       }
@@ -21181,7 +21164,7 @@
       "summary": "ADUs are exempt from parking mandates if any of five conditions are met. Parking requirements may be reduced for office, commercial or industrial uses when bike facilities are provided, or for office or industrial uses when carpool spaces are provided.",
       "status": "passed",
       "policy": ["reduce parking minimums", "remove parking minimums"],
-      "scope": ["citywide", "transit oriented"],
+      "scope": ["citywide", "transit-oriented"],
       "land": ["residential, low-density"],
       "date": null
     },
@@ -21189,7 +21172,7 @@
       {
         "summary": "Parking requirements may be reduced for office, commercial or industrial uses when bike facilities are provided, or for office or industrial uses when carpool spaces are provided.",
         "status": "passed",
-        "scope": ["citywide", "transit oriented"],
+        "scope": ["citywide", "transit-oriented"],
         "land": ["commercial", "industrial", "other"],
         "date": null
       }
@@ -21198,7 +21181,7 @@
       {
         "summary": "ADUs are exempt from parking mandates if any of five conditions are met.",
         "status": "passed",
-        "scope": ["citywide", "transit oriented"],
+        "scope": ["citywide", "transit-oriented"],
         "land": ["residential, low-density"],
         "date": null
       }
@@ -22464,7 +22447,7 @@
       "scope": [
         "city center / business district",
         "citywide",
-        "transit oriented"
+        "transit-oriented"
       ],
       "land": [
         "all uses",
@@ -22480,7 +22463,7 @@
       {
         "summary": "A change of use is exempt from minimum parking requirements. Parking minimums may be reduced through frequent transit, the provision of bus passes for residents, bicycle facility proximity, carpool spaces, EV chargers, bike parking, motorcycle parking or in-lieu fees.",
         "status": "passed",
-        "scope": ["citywide", "transit oriented"],
+        "scope": ["citywide", "transit-oriented"],
         "land": [
           "all uses",
           "commercial",
@@ -22498,7 +22481,7 @@
         "scope": [
           "city center / business district",
           "citywide",
-          "transit oriented"
+          "transit-oriented"
         ],
         "land": [
           "all uses",
@@ -22879,7 +22862,7 @@
       "summary": "On September 26, 2023, Fairfax County passed an ordinance to reduce parking minimums primarily for multi-family residential uses near transit. Parking requirements are reduced in Suburban Centers, Revitalization Areas, Transit Station Areas, Transit Oriented Development (TOD), and the PTC District. Parking maximums apply in the PTC District.",
       "status": "passed",
       "policy": ["add parking maximums", "reduce parking minimums"],
-      "scope": ["main street / special", "transit oriented"],
+      "scope": ["main street / special", "transit-oriented"],
       "land": ["commercial", "other", "residential, all uses"],
       "date": "2023-09-26"
     }
@@ -24359,7 +24342,7 @@
       "summary": "A change of use within an existing building is exempt from parking requirements. Within the Transit-Oriented Development (TOD) Overlay zone, twenty-five (25) percent of the square footage of gross leasable area is exempt from minimum parking requirements. Parking requirements are reduced by right within the Transit Oriented Development Overlay Zone, and may be further reduced for affordable housing, carshare, distribution of transit passes, or proximity to transit. Parking maximums apply to all uses.",
       "status": "passed",
       "policy": ["add parking maximums", "reduce parking minimums"],
-      "scope": ["citywide", "transit oriented"],
+      "scope": ["citywide", "transit-oriented"],
       "land": ["commercial", "other", "residential, all uses"],
       "date": null
     },
@@ -24367,7 +24350,7 @@
       {
         "summary": "Parking maximums apply to all nonresidential uses, and to multi-family uses in the Transit-Oriented Development (TOD) Overlay Zone.",
         "status": "passed",
-        "scope": ["citywide", "transit oriented", "transit-oriented"],
+        "scope": ["citywide", "transit-oriented"],
         "land": [
           "commercial",
           "industrial",
@@ -24382,7 +24365,7 @@
       {
         "summary": "A change of use within an existing building is exempt from parking requirements. Within the Transit-Oriented Development (TOD) Overlay zone, twenty-five (25) percent of the square footage of gross leasable area is exempt from minimum parking requirements. Parking requirements are reduced by right within the Transit Oriented Development Overlay Zone, and may be further reduced for affordable housing, carshare, distribution of transit passes, or proximity to transit.",
         "status": "passed",
-        "scope": ["citywide", "transit oriented"],
+        "scope": ["citywide", "transit-oriented"],
         "land": ["commercial", "other", "residential, all uses"],
         "date": null
       }
@@ -25069,7 +25052,7 @@
       "summary": "Within Zone IV (city center), multifamily housing has no parking mandates. Parking requirements are reduced by increasing amounts from Zones I through IV, which correspond to a greater access to transit. A fee in lieu of required parking may be provided in these zones.",
       "status": "passed",
       "policy": ["reduce parking minimums", "remove parking minimums"],
-      "scope": ["city center / business district", "transit oriented"],
+      "scope": ["city center / business district", "transit-oriented"],
       "land": ["residential, all uses"],
       "date": null
     },
@@ -25077,7 +25060,7 @@
       {
         "summary": "Parking requirements are reduced by increasing amounts from Zones I through IV, which correspond to a greater access to transit. A fee in lieu of required parking may be provided in these zones.",
         "status": "passed",
-        "scope": ["transit oriented", "transit-oriented"],
+        "scope": ["transit-oriented"],
         "land": ["all uses"],
         "date": null
       }
@@ -25086,7 +25069,7 @@
       {
         "summary": "Within Zone IV (city center), multifamily housing has no parking mandates.",
         "status": "passed",
-        "scope": ["city center / business district", "transit oriented"],
+        "scope": ["city center / business district", "transit-oriented"],
         "land": ["residential, all uses"],
         "date": null
       }
@@ -25486,7 +25469,7 @@
       "summary": "The Warm Springs/South Fremont Community Plan, adopted in July 2015, eliminates minimum parking requirements within the community plan area. The plan area is centered on the new Warm Springs/South Fremont BART Station.",
       "status": "passed",
       "policy": ["add parking maximums", "remove parking minimums"],
-      "scope": ["transit oriented"],
+      "scope": ["transit-oriented"],
       "land": ["all uses"],
       "date": null
     },
@@ -25494,7 +25477,7 @@
       {
         "summary": "Parking maximums apply to all uses in the D Downtown District and City Center Districts, and to assembly and convention uses in the WSI Warm Springs Innovation District.",
         "status": "passed",
-        "scope": ["city center / business district", "transit oriented"],
+        "scope": ["city center / business district", "transit-oriented"],
         "land": ["all uses", "other"],
         "date": null
       }
@@ -25503,7 +25486,7 @@
       {
         "summary": "The Warm Springs/South Fremont Community Plan, adopted in July 2015, eliminates minimum parking requirements within the community plan area. The plan area is centered on the new Warm Springs/South Fremont BART Station.",
         "status": "passed",
-        "scope": ["transit oriented", "transit-oriented"],
+        "scope": ["transit-oriented"],
         "land": ["all uses"],
         "date": null
       }
@@ -25660,7 +25643,7 @@
       "summary": "In the O-8 Transit Oriented Development Overlay District, the number of required parking stalls may be reduced by up to 50% of the number normally required. The maximum number of parking stalls may not exceed 120% of the minimum number of parking stalls required by the use in the underlying zoning district. This maximum provision does not apply to park-and-ride or other transit facilities.",
       "status": "passed",
       "policy": ["add parking maximums", "reduce parking minimums"],
-      "scope": ["transit oriented"],
+      "scope": ["transit-oriented"],
       "land": ["all uses"],
       "date": null
     },
@@ -25668,7 +25651,7 @@
       {
         "summary": "In the O-8 Transit Oriented Development Overlay District, the maximum number of parking stalls may not exceed 120% of the minimum number of parking stalls required by the use in the underlying zoning district.",
         "status": "passed",
-        "scope": ["transit oriented", "transit-oriented"],
+        "scope": ["transit-oriented"],
         "land": ["all uses"],
         "date": null
       }
@@ -25677,7 +25660,7 @@
       {
         "summary": "In the O-8 Transit Oriented Development Overlay District, the number of required parking stalls may be reduced by up to 50% of the number normally required.",
         "status": "passed",
-        "scope": ["transit oriented", "transit-oriented"],
+        "scope": ["transit-oriented"],
         "land": ["all uses"],
         "date": null
       }
@@ -26189,7 +26172,7 @@
       {
         "summary": "ADUs may be exempted from parking mandates when certain criteria are met.",
         "status": "passed",
-        "scope": ["citywide", "transit oriented"],
+        "scope": ["citywide", "transit-oriented"],
         "land": ["residential, low-density"],
         "date": null
       }
@@ -30970,7 +30953,7 @@
       "summary": "The Mission Boulevard Form-based Code, adopted in 2020, removes all minimum parking requirements within the code area. The code applies to approximately 480 acres along Mission Boulevard, a major commercial corridor that traverses the length of the city. The code also establishes maximum parking requirements for residential land uses, but not non-residential uses. ",
       "status": "passed",
       "policy": ["add parking maximums", "remove parking minimums"],
-      "scope": ["transit oriented"],
+      "scope": ["transit-oriented"],
       "land": ["all uses"],
       "date": null
     },
@@ -30978,7 +30961,7 @@
       {
         "summary": "The Mission Boulevard Form-based Code, adopted in 2020, establishes maximum parking requirements for residential land uses, but not non-residential uses. The code applies to approximately 480 acres along Mission Boulevard, a major commercial corridor that traverses the length of the city.",
         "status": "passed",
-        "scope": ["transit oriented", "transit-oriented"],
+        "scope": ["transit-oriented"],
         "land": ["residential, all uses"],
         "date": "2020"
       }
@@ -30987,7 +30970,7 @@
       {
         "summary": "The Mission Boulevard Form-based Code, adopted in 2020, removes all minimum parking requirements within the code area. The code applies to approximately 480 acres along Mission Boulevard, a major commercial corridor that traverses the length of the city.",
         "status": "passed",
-        "scope": ["transit oriented", "transit-oriented"],
+        "scope": ["transit-oriented"],
         "land": ["all uses"],
         "date": null
       }
@@ -31591,7 +31574,7 @@
       "scope": [
         "city center / business district",
         "citywide",
-        "transit oriented"
+        "transit-oriented"
       ],
       "land": ["all uses"],
       "date": null
@@ -31600,7 +31583,7 @@
       {
         "summary": "Parking maximums are set at 120% of the minimums.",
         "status": "passed",
-        "scope": ["citywide", "transit oriented"],
+        "scope": ["citywide", "transit-oriented"],
         "land": ["all uses"],
         "date": null
       }
@@ -31612,7 +31595,7 @@
         "scope": [
           "city center / business district",
           "citywide",
-          "transit oriented"
+          "transit-oriented"
         ],
         "land": ["all uses"],
         "date": null
@@ -32250,7 +32233,7 @@
       {
         "summary": "Honolulu County removed parking minimums for all uses in two of the most urbanized planning regions on Oahu, including Honolulu, and also removed parking minimums for all uses in TOD zones.",
         "status": "passed",
-        "scope": ["city center / business district", "transit oriented"],
+        "scope": ["city center / business district", "transit-oriented"],
         "land": ["commercial"],
         "date": null
       }
@@ -32274,7 +32257,7 @@
         "reduce parking minimums",
         "remove parking minimums"
       ],
-      "scope": ["city center / business district", "transit oriented"],
+      "scope": ["city center / business district", "transit-oriented"],
       "land": ["commercial", "other"],
       "date": null
     },
@@ -32282,11 +32265,7 @@
       {
         "summary": "Nonresidential uses in the MX-D, RX-D, MX-TOD, and RX-TOD zones may not provide parking in excess of 125% the minimum motor vehicle parking ratios established for \"all other zones.\"",
         "status": "passed",
-        "scope": [
-          "city center / business district",
-          "transit oriented",
-          "transit-oriented"
-        ],
+        "scope": ["city center / business district", "transit-oriented"],
         "land": ["commercial", "industrial", "medical", "other"],
         "date": null
       }
@@ -32298,7 +32277,7 @@
         "scope": [
           "city center / business district",
           "citywide",
-          "transit oriented"
+          "transit-oriented"
         ],
         "land": [
           "all uses",
@@ -32315,7 +32294,7 @@
       {
         "summary": "Within the MX-TOD and RX-TOD zones, non-residential uses are exempt from parking requirements, but a parking study and TDM plan is required for large uses. Minimum motor vehicle parking ratios do not apply to nonresidential uses in MX-D and RX-D zones.",
         "status": "passed",
-        "scope": ["city center / business district", "transit oriented"],
+        "scope": ["city center / business district", "transit-oriented"],
         "land": ["commercial", "other"],
         "date": null
       }
@@ -32435,7 +32414,7 @@
       {
         "summary": "There are no minimum parking requirements within the Central Business District (CBD); There are no parking requirements within primary Transit Oriented Development (TOD) streets and a 50% reduction along secondary TOD streets. In 2019, minimum parking requirements were also removed in parts of the Midtown and Downtown East neighborhoods.",
         "status": "passed",
-        "scope": ["city center / business district", "transit oriented"],
+        "scope": ["city center / business district", "transit-oriented"],
         "land": ["all uses"],
         "date": null
       }
@@ -32851,7 +32830,7 @@
       "summary": "ADUs are exempt from parking requirements when located within one-half mile walking distance of a high-quality transit corridor, or a major transit stop, or there is a car share vehicle located within one block of the project. Within the Downtown Specific Plan Area, a fee-in-lieu of parking may be paid.",
       "status": "passed",
       "policy": ["reduce parking minimums", "remove parking minimums"],
-      "scope": ["transit oriented"],
+      "scope": ["transit-oriented"],
       "land": ["residential, low-density"],
       "date": null
     },
@@ -32859,7 +32838,7 @@
       {
         "summary": "Within the Downtown Specific Plan Area, a fee-in-lieu of parking may be paid.",
         "status": "passed",
-        "scope": ["city center / business district", "transit oriented"],
+        "scope": ["city center / business district", "transit-oriented"],
         "land": ["all uses"],
         "date": "1997"
       }
@@ -32868,7 +32847,7 @@
       {
         "summary": "ADUs are exempt from parking requirements when located within one-half mile walking distance of a high-quality transit corridor, or a major transit stop, or there is a car share vehicle located within one block of the project.",
         "status": "passed",
-        "scope": ["citywide", "transit oriented"],
+        "scope": ["citywide", "transit-oriented"],
         "land": ["residential, low-density"],
         "date": null
       }
@@ -33692,7 +33671,7 @@
       {
         "summary": "Parking requirements are reduced for nonresidential uses in the TOD District when located near transit. Parking requirements are reduced for uses in the Urban Business Overlay District.",
         "status": "passed",
-        "scope": ["city center / business district", "transit oriented"],
+        "scope": ["city center / business district", "transit-oriented"],
         "land": ["all uses", "commercial", "industrial", "other"],
         "date": null
       }
@@ -33812,7 +33791,7 @@
         "scope": [
           "city center / business district",
           "main street / special",
-          "transit oriented"
+          "transit-oriented"
         ],
         "land": ["commercial", "residential, all uses"],
         "date": "2023-07-05"
@@ -34571,7 +34550,7 @@
       "scope": [
         "city center / business district",
         "main street / special",
-        "transit oriented"
+        "transit-oriented"
       ],
       "land": ["all uses"],
       "date": null
@@ -34784,7 +34763,7 @@
       "summary": "Residential uses near transit have reduced parking requirements. Office, retail and service uses have parking maximums within the B-1 Neighborhood Business District.",
       "status": "passed",
       "policy": ["add parking maximums", "reduce parking minimums"],
-      "scope": ["transit oriented"],
+      "scope": ["transit-oriented"],
       "land": ["residential, all uses"],
       "date": null
     },
@@ -34792,7 +34771,7 @@
       {
         "summary": "Office, retail and service uses have parking maximums within the B-1 Neighborhood Business District.",
         "status": "passed",
-        "scope": ["city center / business district", "transit oriented"],
+        "scope": ["city center / business district", "transit-oriented"],
         "land": ["commercial", "other"],
         "date": null
       }
@@ -34801,7 +34780,7 @@
       {
         "summary": "Residential uses near transit have reduced parking requirements.",
         "status": "passed",
-        "scope": ["transit oriented", "transit-oriented"],
+        "scope": ["transit-oriented"],
         "land": ["residential, all uses"],
         "date": null
       }
@@ -37891,7 +37870,7 @@
         "scope": [
           "city center / business district",
           "citywide",
-          "transit oriented"
+          "transit-oriented"
         ],
         "land": ["commercial", "residential, low-density"],
         "date": null
@@ -40016,7 +39995,7 @@
       "scope": [
         "city center / business district",
         "citywide",
-        "transit oriented"
+        "transit-oriented"
       ],
       "land": [
         "all uses",
@@ -40034,7 +40013,7 @@
         "scope": [
           "city center / business district",
           "citywide",
-          "transit oriented"
+          "transit-oriented"
         ],
         "land": [
           "all uses",
@@ -40054,7 +40033,6 @@
         "scope": [
           "city center / business district",
           "citywide",
-          "transit oriented",
           "transit-oriented"
         ],
         "land": [
@@ -40429,7 +40407,7 @@
       "summary": "ADUs are exempt from parking mandates under certain conditions. Long Beach has reduced parking minimums for transit-oriented off street parking for residential and hospital use reducing parking from 25% to 50%. Long Beach has proposed eliminating mandates for businesses when there is a change of use.",
       "status": "passed",
       "policy": ["reduce parking minimums", "remove parking minimums"],
-      "scope": ["transit oriented"],
+      "scope": ["transit-oriented"],
       "land": ["residential, all uses"],
       "date": null
     },
@@ -40437,7 +40415,7 @@
       {
         "summary": "Long Beach has reduced parking minimums for transit-oriented off street parking for residential and hospital use reducing parking from 25% to 50%. Long Beach eliminated mandates for businesses when there is a change of use in a building over ten years old in December 2024.",
         "status": "passed",
-        "scope": ["transit oriented", "transit-oriented"],
+        "scope": ["transit-oriented"],
         "land": ["medical", "residential, all uses"],
         "date": "2024-12-10"
       }
@@ -40446,7 +40424,7 @@
       {
         "summary": "ADUs are exempt from parking mandates under certain conditions. The Parking Exempt Area, adopted December 10, 2024, exempts uses within a 1/2 mile of major transit stops.",
         "status": "passed",
-        "scope": ["transit oriented", "transit-oriented"],
+        "scope": ["transit-oriented"],
         "land": ["all uses", "residential, low-density"],
         "date": "2024-12-10"
       }
@@ -40688,7 +40666,7 @@
       "summary": "Within the TOD-MU Zone, parking requirements are reduced by right for residential uses, and on-street parking may count towards the requirements for all uses. Parking maximums apply to nonresidential uses in the zone.",
       "status": "passed",
       "policy": ["add parking maximums", "reduce parking minimums"],
-      "scope": ["transit oriented"],
+      "scope": ["transit-oriented"],
       "land": ["all uses"],
       "date": null
     },
@@ -40696,7 +40674,7 @@
       {
         "summary": "Within the TOD-MU Zone, parking maximums are set at 100% of the minimums for nonresidential uses.",
         "status": "passed",
-        "scope": ["transit oriented", "transit-oriented"],
+        "scope": ["transit-oriented"],
         "land": ["commercial", "other"],
         "date": null
       }
@@ -40705,7 +40683,7 @@
       {
         "summary": "Within the TOD-MU Zone, parking requirements are reduced by right for residential uses, and on-street parking may count towards the requirements for all uses.",
         "status": "passed",
-        "scope": ["transit oriented", "transit-oriented"],
+        "scope": ["transit-oriented"],
         "land": ["all uses"],
         "date": null
       }
@@ -44483,7 +44461,7 @@
       "summary": "Parking requirements are reduced when located near a BRT or LRT station. Parking requirements for community buildings may be reduced through the provision of bike parking, golf cart parking or motorcycle parking. On-street parking spaces located immediately adjacent to the frontage of properties in the EO, MX, DB, ME, PE, and DC districts or districts with a \"-U\" designator, may be counted toward required off-street parking for non-residential uses. Maximum parking is set at 125% of the minimums.",
       "status": "passed",
       "policy": ["add parking maximums", "reduce parking minimums"],
-      "scope": ["citywide", "transit oriented"],
+      "scope": ["citywide", "transit-oriented"],
       "land": ["commercial", "other", "residential, all uses"],
       "date": null
     },
@@ -44491,7 +44469,7 @@
       {
         "summary": "Surface parking maximums are set at 125% of the minimums.",
         "status": "passed",
-        "scope": ["citywide", "transit oriented"],
+        "scope": ["citywide", "transit-oriented"],
         "land": ["all uses"],
         "date": null
       }
@@ -44500,7 +44478,7 @@
       {
         "summary": "Parking requirements are reduced when located near a BRT or LRT station. Parking requirements for community buildings may be reduced through the provision of bike parking, golf cart parking or motorcycle parking. On-street parking spaces located immediately adjacent to the frontage of properties in the EO, MX, DB, ME, PE, and DC districts or districts with a \"-U\" designator, may be counted toward required off-street parking for non-residential uses.",
         "status": "passed",
-        "scope": ["citywide", "transit oriented"],
+        "scope": ["citywide", "transit-oriented"],
         "land": ["commercial", "other", "residential, all uses"],
         "date": null
       }
@@ -44676,7 +44654,7 @@
       "summary": "Miami repealed a significant portion of its parking reforms on April 28, 2022. Will take some time to determine the ongoing status.",
       "status": "repealed",
       "policy": ["reduce parking minimums", "remove parking minimums"],
-      "scope": ["city center / business district", "transit oriented"],
+      "scope": ["city center / business district", "transit-oriented"],
       "land": ["commercial"],
       "date": null
     }
@@ -44960,7 +44938,7 @@
       {
         "summary": "Parking requirements are reduced within the TOD, Transit Oriented Development District.",
         "status": "passed",
-        "scope": ["transit oriented"],
+        "scope": ["transit-oriented"],
         "land": ["all uses"],
         "date": null
       }
@@ -46329,7 +46307,7 @@
       {
         "summary": "Montgomery County has several parking districts in which parking mandates are waived if a tax to support district parking is paid. In recent years, the tax has been reduced to zero, thereby making parking minimums effectively zero in several downtown business districts in the county. On March 5, 2024, the county eliminated parking mandates for residential uses within a half mile of Metro stations and future Purple Line (light rail) stations, and within one-quarter mile of existing BRT stations or BRT stations funded for construction.",
         "status": "passed",
-        "scope": ["city center / business district", "transit oriented"],
+        "scope": ["city center / business district", "transit-oriented"],
         "land": ["all uses", "residential, all uses"],
         "date": null
       }
@@ -48082,7 +48060,7 @@
       {
         "summary": "Parking requirements may be reduced when located in proximity to transit.",
         "status": "passed",
-        "scope": ["transit oriented"],
+        "scope": ["transit-oriented"],
         "land": ["all uses"],
         "date": null
       }
@@ -48332,7 +48310,7 @@
       {
         "summary": "Nonresidential uses in Zone 1 are only required to provide 50% of required parking and nonresidential uses in Zone 2 are only required to provide 75% of required parking. Nonresidential uses outside of these zones are only required to provide 75% of required parking if located within 600 meters of an U-Bahn or S-Bahn station or within 400 meters of a tram stop.",
         "status": "passed",
-        "scope": ["city center / business district", "transit oriented"],
+        "scope": ["city center / business district", "transit-oriented"],
         "land": ["commercial", "industrial", "other"],
         "date": null
       }
@@ -48355,7 +48333,7 @@
         "scope": [
           "city center / business district",
           "citywide",
-          "transit oriented"
+          "transit-oriented"
         ],
         "land": ["all uses", "residential, all uses"],
         "date": null
@@ -49775,7 +49753,7 @@
       "summary": "NYC consists of 5 boroughs with over 8 million people. NYC has no parking minimums in most of Manhattan, and reduced requirements (with no requirement for certain types of housing) in several other dense neighborhoods around the city. \n\nIn the Manhattan Core (Community Districts 1-8), no off-street parking is required. The maximum amount of off-street parking allowable is determined by the proposed use and Community District. \n\nOn September 21, 2023, Mayor Adams proposed removing minimum parking requirements for housing citywide. In order for the change to take effect, it will have to pass the Uniform Land Use Review Procedure and would not become law until at least fall 2024.",
       "status": "passed",
       "policy": ["add parking maximums", "remove parking minimums"],
-      "scope": ["city center / business district", "transit oriented"],
+      "scope": ["city center / business district", "transit-oriented"],
       "land": ["all uses"],
       "date": null
     },
@@ -49783,7 +49761,7 @@
       {
         "summary": "In the Manhattan Core (Community Districts 1-8), the maximum amount of off-street parking allowable is determined by the proposed use and Community District.",
         "status": "passed",
-        "scope": ["city center / business district", "transit oriented"],
+        "scope": ["city center / business district", "transit-oriented"],
         "land": ["all uses"],
         "date": null
       }
@@ -49792,11 +49770,7 @@
       {
         "summary": "NYC consists of 5 boroughs with over 8 million people. NYC has no parking minimums in most of Manhattan, and reduced requirements (with no requirement for certain types of housing) in several other dense neighborhoods around the city. In the Manhattan Core (Community Districts 1-8), no off-street parking has been required for a number of years. Beginning in 2023, the City of Yes proposed to remove all parking mandates for housing, however this was watered down to remove minimums in a greater portion of Manhattan and Brooklyn, while reducing minimums along transit elsewhere. This version passed in December 2024.",
         "status": "passed",
-        "scope": [
-          "city center / business district",
-          "transit oriented",
-          "transit-oriented"
-        ],
+        "scope": ["city center / business district", "transit-oriented"],
         "land": ["all uses", "residential, all uses"],
         "date": "2024-12-05"
       }
@@ -49855,7 +49829,7 @@
       {
         "summary": "No parking is required for residential and non-residential land uses within a 1,200-foot radius of a light rail, PATH train or NJ Transit train station.",
         "status": "passed",
-        "scope": ["transit oriented"],
+        "scope": ["transit-oriented"],
         "land": ["all uses"],
         "date": null
       }
@@ -51532,7 +51506,7 @@
       "summary": "Oakland has no required parking in CBD, S-2, and D-LM zones.  There are parking maximums in those zones.",
       "status": "passed",
       "policy": ["add parking maximums", "remove parking minimums"],
-      "scope": ["city center / business district", "transit oriented"],
+      "scope": ["city center / business district", "transit-oriented"],
       "land": ["all uses"],
       "date": null
     },
@@ -51540,7 +51514,7 @@
       {
         "summary": "Oakland has parking maximums the in CBD, S-2, and D-LM zones.",
         "status": "passed",
-        "scope": ["city center / business district", "transit oriented"],
+        "scope": ["city center / business district", "transit-oriented"],
         "land": ["all uses"],
         "date": null
       }
@@ -51549,7 +51523,7 @@
       {
         "summary": "Oakland has no required parking in CBD, S-2, and D-LM zones.",
         "status": "passed",
-        "scope": ["city center / business district", "transit oriented"],
+        "scope": ["city center / business district", "transit-oriented"],
         "land": ["all uses"],
         "date": null
       }
@@ -51749,7 +51723,7 @@
       "summary": "ADUs may be exempted from parking mandates when certain criteria are met. A fee in-lieu of required parking may be paid in the D Downtown District.",
       "status": "passed",
       "policy": ["reduce parking minimums", "remove parking minimums"],
-      "scope": ["citywide", "transit oriented"],
+      "scope": ["citywide", "transit-oriented"],
       "land": ["residential, low-density"],
       "date": null
     },
@@ -51757,7 +51731,7 @@
       {
         "summary": "A fee in-lieu of required parking may be paid for nonresidential uses in the D Downtown District.",
         "status": "passed",
-        "scope": ["city center / business district", "transit oriented"],
+        "scope": ["city center / business district", "transit-oriented"],
         "land": ["commercial", "other"],
         "date": null
       }
@@ -51766,7 +51740,7 @@
       {
         "summary": "ADUs may be exempted from parking mandates when certain criteria are met.",
         "status": "passed",
-        "scope": ["citywide", "transit oriented"],
+        "scope": ["citywide", "transit-oriented"],
         "land": ["residential, low-density"],
         "date": null
       }
@@ -52126,7 +52100,7 @@
       {
         "summary": "Minimum parking requirements have been eliminated for all land uses in the central business district (CBD) and neighborhood business districts (NBD). \n\nFor TOD-1, there are no minimum parking requirements.\nFor TOD-2, TOD-3, TOD-4 the minimum number of required parking spaces is 50 percent of the specified minimum requirements. ",
         "status": "passed",
-        "scope": ["city center / business district", "transit oriented"],
+        "scope": ["city center / business district", "transit-oriented"],
         "land": ["all uses"],
         "date": null
       }
@@ -52206,7 +52180,7 @@
       "summary": "Within the MU-1 (Downtown Mixed Use) district, off-street parking is not required for existing buildings having a floor area of less than 10,000 square feet. ADUs may be exempt from parking mandates when located near transit, carshare is available or other factors.",
       "status": "passed",
       "policy": ["reduce parking minimums", "remove parking minimums"],
-      "scope": ["citywide", "transit oriented"],
+      "scope": ["citywide", "transit-oriented"],
       "land": ["residential, all uses"],
       "date": null
     },
@@ -52214,7 +52188,7 @@
       {
         "summary": "Within the MU-1 (Downtown Mixed Use) district, off-street parking is not required for existing buildings having a floor area of less than 10,000 square feet.",
         "status": "passed",
-        "scope": ["city center / business district", "transit oriented"],
+        "scope": ["city center / business district", "transit-oriented"],
         "land": ["all uses"],
         "date": null
       }
@@ -52223,7 +52197,7 @@
       {
         "summary": "ADUs may be exempt from parking mandates when located near transit, carshare is available or other factors.",
         "status": "passed",
-        "scope": ["citywide", "transit oriented"],
+        "scope": ["citywide", "transit-oriented"],
         "land": ["residential, low-density"],
         "date": null
       }
@@ -52370,7 +52344,7 @@
       "summary": "ADUs are exempt from parking mandates when certain criteria are met. Uses in the Downtown Plaza District have reduced requirements and may pay a fee in-lieu of required parking.",
       "status": "passed",
       "policy": ["reduce parking minimums", "remove parking minimums"],
-      "scope": ["citywide", "transit oriented"],
+      "scope": ["citywide", "transit-oriented"],
       "land": ["residential, low-density"],
       "date": null
     },
@@ -52378,7 +52352,7 @@
       {
         "summary": "Uses in the Downtown Plaza District have reduced requirements and may pay a fee in-lieu of required parking.",
         "status": "passed",
-        "scope": ["city center / business district", "transit oriented"],
+        "scope": ["city center / business district", "transit-oriented"],
         "land": ["all uses"],
         "date": null
       }
@@ -52387,7 +52361,7 @@
       {
         "summary": "ADUs are exempt from parking mandates when certain criteria are met.",
         "status": "passed",
-        "scope": ["citywide", "transit oriented"],
+        "scope": ["citywide", "transit-oriented"],
         "land": ["residential, low-density"],
         "date": null
       }
@@ -52427,7 +52401,7 @@
       "summary": "In July 2022, Oregon's Land Conservation and Development Committee adopted permanent rules which required 61 cities in the state's 8 metro regions to eliminate parking mandates near high frequency transit service by 1/1/2023. Additional rules will require more comprehensive reforms in following years. \n\nHB2001, passed in 2019,  legalized “missing middle” housing types – such as duplexes, fourplexes, and townhomes – in medium and large cities statewide. The new rules implementing the law “hold mandatory parking ratios at or below one parking space per home.”\n\nHB2001 rules apply to any city with a population greater than 10,000 people and to any city in a metro area with more than 1,000 people. Approximately 58 Oregon cities fall under this definition.\n\nMedium cities had to comply by 6/30/2021 and large cities by 6/30/2022.\n\nAdditionally, ADUs are legal, statewide, and cities may not require parking for ADUs.",
       "status": "passed",
       "policy": ["reduce parking minimums", "remove parking minimums"],
-      "scope": ["regional", "transit oriented"],
+      "scope": ["regional", "transit-oriented"],
       "land": ["all uses"],
       "date": "2022-05-19"
     },
@@ -52435,7 +52409,7 @@
       {
         "summary": "HB2001, passed in 2019,  legalized “missing middle” housing types – such as duplexes, fourplexes, and townhomes – in medium and large cities statewide. The new rules implementing the law “hold mandatory parking ratios at or below one parking space per home.” HB2001 rules apply to any city with a population greater than 10,000 people and to any city in a metro area with more than 1,000 people. Approximately 58 Oregon cities fall under this definition. Medium cities had to comply by 6/30/2021 and large cities by 6/30/2022.",
         "status": "passed",
-        "scope": ["regional", "transit oriented"],
+        "scope": ["regional", "transit-oriented"],
         "land": ["all uses"],
         "date": "2022-05-19"
       }
@@ -52444,7 +52418,7 @@
       {
         "summary": "In July 2022, Oregon's Land Conservation and Development Committee adopted permanent rules which required 61 cities in the state's 8 metro regions to eliminate parking mandates near high frequency transit service by 1/1/2023. Additional rules will require more comprehensive reforms in following years. These rules apply to any city with a population greater than 10,000 people and to any city in a metro area with more than 1,000 people. Approximately 58 Oregon cities fall under this definition. Additionally, ADUs are legal, statewide, and cities may not require parking for ADUs.",
         "status": "passed",
-        "scope": ["regional", "transit oriented"],
+        "scope": ["regional", "transit-oriented"],
         "land": ["all uses"],
         "date": "2022-05-19"
       }
@@ -53381,7 +53355,7 @@
       {
         "summary": "ADUs may be exempted from parking mandates when certain criteria are met.",
         "status": "passed",
-        "scope": ["citywide", "transit oriented"],
+        "scope": ["citywide", "transit-oriented"],
         "land": ["residential, low-density"],
         "date": null
       }
@@ -53939,7 +53913,7 @@
         "reduce parking minimums",
         "remove parking minimums"
       ],
-      "scope": ["citywide", "transit oriented"],
+      "scope": ["citywide", "transit-oriented"],
       "land": ["residential, low-density"],
       "date": null
     },
@@ -53947,11 +53921,7 @@
       {
         "summary": "Parking maximums are set at 100% of the minimums for nonresidential uses within 1/4 mile of a light-rail station or within the Central District Transit-Oriented Area.",
         "status": "passed",
-        "scope": [
-          "city center / business district",
-          "transit oriented",
-          "transit-oriented"
-        ],
+        "scope": ["city center / business district", "transit-oriented"],
         "land": ["commercial", "industrial", "medical", "other"],
         "date": null
       }
@@ -53960,11 +53930,7 @@
       {
         "summary": "Parking mandates are reduced for Transit Oriented Development, and within the CD-1 Old Pasadena and CD-4 Pasadena Playhouse Districts.",
         "status": "passed",
-        "scope": [
-          "city center / business district",
-          "transit oriented",
-          "transit-oriented"
-        ],
+        "scope": ["city center / business district", "transit-oriented"],
         "land": ["all uses"],
         "date": null
       }
@@ -53973,7 +53939,7 @@
       {
         "summary": "ADUs are exempt from parking requirements when certain conditions are met.",
         "status": "passed",
-        "scope": ["citywide", "transit oriented"],
+        "scope": ["citywide", "transit-oriented"],
         "land": ["residential, low-density"],
         "date": null
       }
@@ -54547,7 +54513,7 @@
       {
         "summary": "Parking requirements are reduced for most uses in the Transit Oriented Development (TOD) Overlay District.",
         "status": "passed",
-        "scope": ["transit oriented"],
+        "scope": ["transit-oriented"],
         "land": ["commercial", "other", "residential, all uses"],
         "date": "2020-06-15"
       }
@@ -57253,7 +57219,7 @@
       "summary": "There are no minimum parking requirements for the D-1 District land use and the “neighborhood commercial establishment” use.\n\nTOD overlay districts have no minimum parking requirements, with maximums for residential land uses. For non-residential land uses, the first 5,000 GFA is exempt from minimum parking requirements, with maximums.\n\nCommercial and office projects exceeding 20,000 GFA must comply with a parking maximum (may not exceed 135% of the minimum parking requirements).\n\nParking requirements may be reduced by 50% in the M-MU-90 Sub-District.\n\nNon-residential land uses that provide cyclists shower and locker facilities may reduce parking by four spaces. Non-residential use provides 120% or more additional bicycle parking spaces may reduce parking by up to 10%. When 10 or more bicycles are provided for a bike-share facility, there may be a 5% reduction of required parking spaces.  ",
       "status": "passed",
       "policy": ["add parking maximums", "remove parking minimums"],
-      "scope": ["city center / business district", "transit oriented"],
+      "scope": ["city center / business district", "transit-oriented"],
       "land": ["commercial", "residential, all uses"],
       "date": null
     },
@@ -57261,7 +57227,7 @@
       {
         "summary": "Parking maximums apply to all uses in the TOD overlay districts. Surface parking maximums are set at 135% of the minimums for commercial and office projects exceeding 20,000 GFA citywide.",
         "status": "passed",
-        "scope": ["citywide", "transit oriented", "transit-oriented"],
+        "scope": ["citywide", "transit-oriented"],
         "land": ["all uses", "commercial", "other"],
         "date": null
       }
@@ -57279,11 +57245,7 @@
       {
         "summary": "There are no minimum parking requirements for the D-1 District land use and the “neighborhood commercial establishment” use. TOD overlay districts have no minimum parking requirements for residential land uses. For non-residential land uses, the first 5,000 GFA is exempt from minimum parking requirements.",
         "status": "passed",
-        "scope": [
-          "city center / business district",
-          "transit oriented",
-          "transit-oriented"
-        ],
+        "scope": ["city center / business district", "transit-oriented"],
         "land": ["all uses", "commercial", "other", "residential, all uses"],
         "date": null
       }
@@ -57503,7 +57465,7 @@
       {
         "summary": "Parking requirements are reduced in the Quincy Center Districts and Transit Oriented Development Districts.",
         "status": "passed",
-        "scope": ["city center / business district", "transit oriented"],
+        "scope": ["city center / business district", "transit-oriented"],
         "land": ["commercial", "other", "residential, all uses"],
         "date": null
       }
@@ -58841,7 +58803,7 @@
       "summary": "In 2019, the city removed a mandate for a minimum of one space per housing unit for buildings within 800 meters of transit, and replaced it with a maximum of one parking space for every four residential units.  It is also now mandatory to offer bike parking facilities at a minimum of one space per housing unit.",
       "status": "passed",
       "policy": ["add parking maximums", "remove parking minimums"],
-      "scope": ["transit oriented"],
+      "scope": ["transit-oriented"],
       "land": ["residential, all uses"],
       "date": null
     },
@@ -58849,7 +58811,7 @@
       {
         "summary": "In 2019, the city removed a mandate for a minimum of one space per housing unit for buildings within 800 meters of transit, and replaced it with a maximum of one parking space for every four residential units.",
         "status": "passed",
-        "scope": ["transit oriented", "transit-oriented"],
+        "scope": ["transit-oriented"],
         "land": ["residential, all uses"],
         "date": null
       }
@@ -58858,7 +58820,7 @@
       {
         "summary": "In 2019, the city removed a mandate for a minimum of one space per housing unit for buildings within 800 meters of transit, and replaced it with a maximum of one parking space for every four residential units.  It is also now mandatory to offer bike parking facilities at a minimum of one space per housing unit.",
         "status": "passed",
-        "scope": ["transit oriented", "transit-oriented"],
+        "scope": ["transit-oriented"],
         "land": ["residential, all uses"],
         "date": null
       }
@@ -59102,7 +59064,7 @@
       "summary": "In the B2 Central Business District, existing buildings are exempt from minimum parking requirements. Nonresidential uses of 3,000 square feet or less of gross floor area do not require parking in the B1-C Business Subdistrict - Commercial, B1-TC Business Subdistrict - Transitional Commercial, B1-TOD Business Subdistrict - Transit-Oriented Development or B2 District.\nParking requirements may be reduced to 1 space per dwelling unit for residential uses in transit-oriented areas, including the B2 District and B1-TOD subdistrict, as well as dwellings above the ground floor of a mixed-use development in the B1-C and B1-TC. This parking reduction may also apply to other residential uses in the B1-TC subdistrict. Nonresidential uses may apply a maximum 20% parking reduction to their parking requirements in transit-oriented areas, including the B2 districts and B1-TOD subdistrict. A further reduction in the required number of off street parking spaces for nonresidential uses in the B2 District and B-1 TOD may be granted by the Planning and Zoning Commission conditioned upon payment of a fee in lieu of providing the required parking spaces. Changes in use within existing buildings do not require payment into the Parking Fund. ",
       "status": "passed",
       "policy": ["reduce parking minimums", "remove parking minimums"],
-      "scope": ["city center / business district", "transit oriented"],
+      "scope": ["city center / business district", "transit-oriented"],
       "land": ["commercial", "other"],
       "date": null
     },
@@ -59110,11 +59072,7 @@
       {
         "summary": "In the B2 Central Business District, existing buildings are exempt from minimum parking requirements.\nParking requirements are reduced for residential uses in transit-oriented areas, including the B2 District and B1-TOD subdistrict, as well as dwellings above the ground floor of a mixed-use development in the B1-C and B1-TC. Nonresidential uses have reduced parking requirements in transit-oriented areas, including the B2 districts and B1-TOD subdistrict. A further reduction in the required number of off street parking spaces for nonresidential uses in the B2 District and B-1 TOD may be granted through a fee in lieu of required parking.",
         "status": "passed",
-        "scope": [
-          "city center / business district",
-          "transit oriented",
-          "transit-oriented"
-        ],
+        "scope": ["city center / business district", "transit-oriented"],
         "land": ["all uses", "commercial", "other", "residential, all uses"],
         "date": null
       }
@@ -59123,7 +59081,7 @@
       {
         "summary": "Nonresidential uses of 3,000 square feet or less of gross floor area do not require parking in the B1-C Business Subdistrict - Commercial, B1-TC Business Subdistrict - Transitional Commercial, B1-TOD Business Subdistrict - Transit-Oriented Development, or B2 District.",
         "status": "passed",
-        "scope": ["city center / business district", "transit oriented"],
+        "scope": ["city center / business district", "transit-oriented"],
         "land": ["commercial", "other"],
         "date": null
       }
@@ -60052,7 +60010,7 @@
         "scope": [
           "city center / business district",
           "citywide",
-          "transit oriented"
+          "transit-oriented"
         ],
         "land": ["commercial", "residential, low-density"],
         "date": null
@@ -60170,7 +60128,7 @@
       {
         "summary": "Parking requirements are reduced in Zones 1-3 as shown on the map. Parking requirements may be further reduced through a fee in lieu of parking or a mobility concept/TDM plan.",
         "status": "passed",
-        "scope": ["city center / business district", "transit oriented"],
+        "scope": ["city center / business district", "transit-oriented"],
         "land": ["commercial", "industrial", "other", "residential, all uses"],
         "date": null
       }
@@ -60949,7 +60907,7 @@
       "summary": "ADUs may be exempted when certain criteria are met. Uses located in the new urbanism (NU) districts, mixed use (MU) districts, central city overlay (downtown core area) district, or focused growth overlay district may count on-street parking towards the requirements. Nonresidential uses in a parking district may pay a fee in-lieu of required parking.",
       "status": "passed",
       "policy": ["reduce parking minimums", "remove parking minimums"],
-      "scope": ["citywide", "transit oriented"],
+      "scope": ["citywide", "transit-oriented"],
       "land": ["residential, low-density"],
       "date": null
     },
@@ -60957,7 +60915,7 @@
       {
         "summary": "Uses located in the new urbanism (NU) districts, mixed use (MU) districts, central city overlay (downtown core area) district, or focused growth overlay district may count on-street parking towards the requirements. Nonresidential uses in a parking district may pay a fee in-lieu of required parking.",
         "status": "passed",
-        "scope": ["city center / business district", "transit oriented"],
+        "scope": ["city center / business district", "transit-oriented"],
         "land": ["all uses", "commercial", "industrial", "medical", "other"],
         "date": null
       }
@@ -60966,7 +60924,7 @@
       {
         "summary": "ADUs may be exempted when certain criteria are met.",
         "status": "passed",
-        "scope": ["citywide", "transit oriented"],
+        "scope": ["citywide", "transit-oriented"],
         "land": ["residential, low-density"],
         "date": null
       }
@@ -61106,7 +61064,7 @@
         "reduce parking minimums",
         "remove parking minimums"
       ],
-      "scope": ["transit oriented"],
+      "scope": ["transit-oriented"],
       "land": ["commercial", "industrial", "other", "residential, all uses"],
       "date": "2021-02-16"
     },
@@ -61114,7 +61072,7 @@
       {
         "summary": "There are parking maximums citywide for certain uses, while other uses have maximums only in specific districts.",
         "status": "passed",
-        "scope": ["citywide", "transit oriented", "transit-oriented"],
+        "scope": ["citywide", "transit-oriented"],
         "land": [
           "commercial",
           "industrial",
@@ -61130,7 +61088,7 @@
       {
         "summary": "Parking minimums were reduced in 2021 for a variety of uses. The city also included bike parking requirements.",
         "status": "passed",
-        "scope": ["citywide", "transit oriented"],
+        "scope": ["citywide", "transit-oriented"],
         "land": ["commercial", "industrial", "other", "residential, all uses"],
         "date": "2021-02-16"
       }
@@ -61139,7 +61097,7 @@
       {
         "summary": "Parking minimums do not apply to most uses within the transit context (zones D-1, D-3, D-4, G-MU, TSA-C, UI, FB-UN2, FB-UN3, FB-SC, and R-MU).",
         "status": "passed",
-        "scope": ["transit oriented", "transit-oriented"],
+        "scope": ["transit-oriented"],
         "land": ["commercial", "industrial", "other", "residential, all uses"],
         "date": null
       }
@@ -61199,7 +61157,7 @@
       "summary": "Parking minimum requirements were reduced for the Transit-Oriented Development Overlay District, and bicycle parking minimums were introduced. Parking requirements may be further reduced with unbundled parking and in-lieu fees. The development code noted that as the transit system matures, they are looking to reduce or eliminate parking minimums. A 2017 Accessory Dwelling Unit Amendment reduced minimum parking requirements for ADUs, and prohibits minimums in certain qualified locations.",
       "status": "passed",
       "policy": ["reduce parking minimums", "remove parking minimums"],
-      "scope": ["transit oriented"],
+      "scope": ["transit-oriented"],
       "land": ["residential, all uses"],
       "date": null
     },
@@ -61207,7 +61165,7 @@
       {
         "summary": "Parking minimum requirements were reduced for the Transit-Oriented Development Overlay District, and bicycle parking minimums were introduced. Parking requirements may be further reduced with unbundled parking and in-lieu fees. The development code noted that as the transit system matures, they are looking to reduce or eliminate parking minimums. A 2017 Accessory Dwelling Unit Amendment reduced minimum parking requirements for ADUs.",
         "status": "passed",
-        "scope": ["transit oriented", "transit-oriented"],
+        "scope": ["transit-oriented"],
         "land": ["residential, all uses"],
         "date": null
       }
@@ -61216,7 +61174,7 @@
       {
         "summary": "A 2017 Accessory Dwelling Unit Amendment prohibits minimums in certain qualified locations.",
         "status": "passed",
-        "scope": ["citywide", "transit oriented"],
+        "scope": ["citywide", "transit-oriented"],
         "land": ["residential, low-density"],
         "date": null
       }
@@ -61236,7 +61194,7 @@
       {
         "summary": "Residential developments within 1/2 mile of a current or planned major transit stop are exempt from minimum parking requirements. Any provided parking in market-rate developments with more than 4 units must be rented or leased separately (unbundled) from the dwelling unit. Commercial uses are exempt from requirements in transit priority areas and commercial neighborhoods citywide.",
         "status": "passed",
-        "scope": ["transit oriented"],
+        "scope": ["transit-oriented"],
         "land": ["all uses"],
         "date": null
       }
@@ -61610,7 +61568,7 @@
         "scope": [
           "city center / business district",
           "citywide",
-          "transit oriented"
+          "transit-oriented"
         ],
         "land": ["all uses", "commercial", "other", "residential, all uses"],
         "date": null
@@ -62537,7 +62495,7 @@
       "scope": [
         "city center / business district",
         "main street / special",
-        "transit oriented"
+        "transit-oriented"
       ],
       "land": ["commercial", "residential, multi-family"],
       "date": null
@@ -62549,7 +62507,7 @@
         "scope": [
           "city center / business district",
           "main street / special",
-          "transit oriented"
+          "transit-oriented"
         ],
         "land": ["all uses", "commercial"],
         "date": null
@@ -62571,7 +62529,7 @@
         "scope": [
           "city center / business district",
           "main street / special",
-          "transit oriented"
+          "transit-oriented"
         ],
         "land": ["commercial", "residential, multi-family"],
         "date": null
@@ -63989,7 +63947,7 @@
         "scope": [
           "city center / business district",
           "citywide",
-          "transit oriented"
+          "transit-oriented"
         ],
         "land": ["all uses", "commercial", "other"],
         "date": null
@@ -64010,7 +63968,7 @@
       {
         "summary": "ADUs may be exempted from parking mandates when certain criteria are met.",
         "status": "passed",
-        "scope": ["citywide", "transit oriented"],
+        "scope": ["citywide", "transit-oriented"],
         "land": ["residential, low-density"],
         "date": null
       }
@@ -64641,7 +64599,7 @@
       "summary": "Somerville repealed all parking mandates on December 12, 2024. Previously there were no minimum requirements for residential uses within 0.5 miles of an MBTA T station. Every commercial use within 0.25 miles of an MBTA T station has a parking maximum. The radius and parking maximum ratios change based on the location/land use. ",
       "status": "passed",
       "policy": ["add parking maximums", "remove parking minimums"],
-      "scope": ["citywide", "transit oriented"],
+      "scope": ["citywide", "transit-oriented"],
       "land": ["all uses"],
       "date": "2024-12-12"
     },
@@ -64649,7 +64607,7 @@
       {
         "summary": "Most uses within 0.25 miles of an MBTA T station have a parking maximum. The radius and parking maximum ratios change based on the location/land use. ",
         "status": "passed",
-        "scope": ["transit oriented", "transit-oriented"],
+        "scope": ["transit-oriented"],
         "land": [
           "commercial",
           "industrial",
@@ -64664,7 +64622,7 @@
       {
         "summary": "Somerville repealed all parking mandates on December 12, 2024. Previously there were no minimum requirements for residential uses within 0.5 miles of an MBTA T station.",
         "status": "passed",
-        "scope": ["citywide", "transit oriented"],
+        "scope": ["citywide", "transit-oriented"],
         "land": ["all uses"],
         "date": "2024-12-12"
       }
@@ -67233,7 +67191,7 @@
       "summary": "There is no minimum parking requirement for uses within one-quarter mile from the Altamont Commuter Express (ACE) Robert J. Cabral Train Station or a proposed California High-Speed Rail station. Residential uses in the Downtown Core have a reduced parking requirement as well as all uses in the Magnolia Historic Overlay District. Properties within the Parking Improvement District No. 2001-1, bounded by Park Street on the north, Mormon Slough on the west, Sonora Street on the south, and the Union Pacific Railroad tracks on the east are exempt if the property pays into the district. Parking requirements citywide may be reduced through bike parking, carpool spaces, EV chargers, frequent transit, small infill projects or motorcycle parking.",
       "status": "passed",
       "policy": ["reduce parking minimums", "remove parking minimums"],
-      "scope": ["city center / business district", "transit oriented"],
+      "scope": ["city center / business district", "transit-oriented"],
       "land": ["all uses"],
       "date": null
     },
@@ -67244,7 +67202,7 @@
         "scope": [
           "city center / business district",
           "citywide",
-          "transit oriented"
+          "transit-oriented"
         ],
         "land": ["all uses", "residential, all uses"],
         "date": null
@@ -67254,7 +67212,7 @@
       {
         "summary": "There is no minimum parking requirement for uses within one-quarter mile from the Altamont Commuter Express (ACE) Robert J. Cabral Train Station or a proposed California High-Speed Rail station.",
         "status": "passed",
-        "scope": ["city center / business district", "transit oriented"],
+        "scope": ["city center / business district", "transit-oriented"],
         "land": ["all uses"],
         "date": null
       }
@@ -67634,7 +67592,7 @@
       "summary": "Parking requirements are reduced for uses within the Centre Zone, Activity Zone and residential uses near transit. Multiple dwellings within areas coded R40 or greater may substitute bike parking or motorcycle parking for car parking. Parking maximums apply to most uses within areas identified as Activity Centres and for multiple dwellings within areas coded R40 or greater near transit.",
       "status": "passed",
       "policy": ["add parking maximums", "reduce parking minimums"],
-      "scope": ["city center / business district", "transit oriented"],
+      "scope": ["city center / business district", "transit-oriented"],
       "land": [
         "all uses",
         "commercial",
@@ -67648,11 +67606,7 @@
       {
         "summary": "Parking maximums apply to most uses within areas identified as Activity Centres and for multiple dwellings within areas coded R40 or greater near transit.",
         "status": "passed",
-        "scope": [
-          "city center / business district",
-          "transit oriented",
-          "transit-oriented"
-        ],
+        "scope": ["city center / business district", "transit-oriented"],
         "land": [
           "commercial",
           "industrial",
@@ -67666,7 +67620,7 @@
       {
         "summary": "Parking requirements are reduced for uses within the Centre Zone, Activity Zone and residential uses near transit. Multiple dwellings within areas coded R40 or greater may substitute bike parking or motorcycle parking for car parking.",
         "status": "passed",
-        "scope": ["city center / business district", "transit oriented"],
+        "scope": ["city center / business district", "transit-oriented"],
         "land": [
           "all uses",
           "commercial",
@@ -67936,7 +67890,7 @@
         "reduce parking minimums",
         "remove parking minimums"
       ],
-      "scope": ["citywide", "transit oriented"],
+      "scope": ["citywide", "transit-oriented"],
       "land": ["commercial", "industrial", "residential, all uses"],
       "date": null
     },
@@ -67944,7 +67898,7 @@
       {
         "summary": "Parking maximums apply to most nonresidential uses, except for recreation, education and care uses.",
         "status": "passed",
-        "scope": ["citywide", "transit oriented"],
+        "scope": ["citywide", "transit-oriented"],
         "land": ["commercial", "industrial"],
         "date": null
       }
@@ -67953,7 +67907,7 @@
       {
         "summary": "Nonresidential uses citywide may have reduced requirements when showers or lockers for bike commuters are provided.",
         "status": "passed",
-        "scope": ["citywide", "transit oriented"],
+        "scope": ["citywide", "transit-oriented"],
         "land": ["commercial", "industrial", "medical", "other"],
         "date": null
       }
@@ -67962,7 +67916,7 @@
       {
         "summary": "A development project located within one-half mile of a major transit stop is not required to comply with minimum parking requirements except for event centers and hotels. ADUs are exempt from parking mandates citywide.",
         "status": "passed",
-        "scope": ["citywide", "transit oriented"],
+        "scope": ["citywide", "transit-oriented"],
         "land": [
           "commercial",
           "industrial",
@@ -68942,7 +68896,7 @@
         "reduce parking minimums",
         "remove parking minimums"
       ],
-      "scope": ["citywide", "transit oriented"],
+      "scope": ["citywide", "transit-oriented"],
       "land": ["residential, all uses"],
       "date": null
     },
@@ -68950,7 +68904,7 @@
       {
         "summary": "Residential uses in Tel Aviv are exempt from parking mandates and instead have parking maximums.",
         "status": "passed",
-        "scope": ["citywide", "transit oriented"],
+        "scope": ["citywide", "transit-oriented"],
         "land": ["residential, all uses"],
         "date": null
       }
@@ -68959,7 +68913,7 @@
       {
         "summary": "Office uses have reduced parking mandates when located near a light rail station.",
         "status": "passed",
-        "scope": ["transit oriented", "transit-oriented"],
+        "scope": ["transit-oriented"],
         "land": ["other"],
         "date": null
       }
@@ -68968,7 +68922,7 @@
       {
         "summary": "Residential uses in Tel Aviv are exempt from parking mandates and instead have parking maximums. The city has also removed the requirement to purchase a parking spot when purchasing a new apartment, and increased on-street parking costs to deter car usage.",
         "status": "passed",
-        "scope": ["citywide", "transit oriented"],
+        "scope": ["citywide", "transit-oriented"],
         "land": ["residential, all uses"],
         "date": null
       }
@@ -69400,7 +69354,7 @@
       "summary": "Within the TOD Transit Oriented Development District, on-street parking may count towards the minimums and parking maximums apply.",
       "status": "passed",
       "policy": ["add parking maximums", "reduce parking minimums"],
-      "scope": ["transit oriented"],
+      "scope": ["transit-oriented"],
       "land": ["all uses"],
       "date": null
     },
@@ -69408,7 +69362,7 @@
       {
         "summary": "Within the TOD Transit Oriented Development District, surface parking maximums are set at 125% of the minimums.",
         "status": "passed",
-        "scope": ["transit oriented", "transit-oriented"],
+        "scope": ["transit-oriented"],
         "land": ["all uses"],
         "date": null
       }
@@ -69417,7 +69371,7 @@
       {
         "summary": "Within the TOD Transit Oriented Development District, on-street parking may count towards the parking minimums.",
         "status": "passed",
-        "scope": ["transit oriented", "transit-oriented"],
+        "scope": ["transit-oriented"],
         "land": ["all uses"],
         "date": null
       }
@@ -69437,7 +69391,7 @@
       {
         "summary": "ADUs may be exempted from parking requirements if certain criteria are met.",
         "status": "passed",
-        "scope": ["citywide", "transit oriented"],
+        "scope": ["citywide", "transit-oriented"],
         "land": ["residential, low-density"],
         "date": null
       }
@@ -70023,7 +69977,7 @@
       {
         "summary": "ADUs may be exempted from parking mandates when certain criteria are met.",
         "status": "passed",
-        "scope": ["citywide", "transit oriented"],
+        "scope": ["citywide", "transit-oriented"],
         "land": ["residential, low-density"],
         "date": null
       }
@@ -71425,7 +71379,7 @@
       "scope": [
         "city center / business district",
         "citywide",
-        "transit oriented"
+        "transit-oriented"
       ],
       "land": ["commercial", "residential, all uses"],
       "date": null
@@ -71437,7 +71391,7 @@
         "scope": [
           "city center / business district",
           "citywide",
-          "transit oriented"
+          "transit-oriented"
         ],
         "land": ["all uses"],
         "date": null
@@ -71450,7 +71404,7 @@
         "scope": [
           "city center / business district",
           "citywide",
-          "transit oriented"
+          "transit-oriented"
         ],
         "land": ["commercial", "residential, low-density"],
         "date": null
@@ -71671,7 +71625,7 @@
       "scope": [
         "city center / business district",
         "main street / special",
-        "transit oriented"
+        "transit-oriented"
       ],
       "land": ["all uses", "commercial"],
       "date": null
@@ -71680,7 +71634,7 @@
       {
         "summary": "Parking maximums apply in the Transit Overlay District.",
         "status": "passed",
-        "scope": ["transit oriented", "transit-oriented"],
+        "scope": ["transit-oriented"],
         "land": ["all uses"],
         "date": null
       }
@@ -71692,7 +71646,6 @@
         "scope": [
           "city center / business district",
           "main street / special",
-          "transit oriented",
           "transit-oriented"
         ],
         "land": ["all uses", "commercial"],
@@ -72221,7 +72174,7 @@
       "summary": "ADUs may be exempted from parking mandates when certain criteria are met. Within the Central Business District Parking Zone, a fee in-lieu of required parking may be provided.",
       "status": "passed",
       "policy": ["reduce parking minimums", "remove parking minimums"],
-      "scope": ["citywide", "transit oriented"],
+      "scope": ["citywide", "transit-oriented"],
       "land": ["residential, low-density"],
       "date": null
     },
@@ -72229,7 +72182,7 @@
       {
         "summary": "Within the Central Business District Parking Zone, a fee in-lieu of required parking may be provided.",
         "status": "passed",
-        "scope": ["city center / business district", "transit oriented"],
+        "scope": ["city center / business district", "transit-oriented"],
         "land": ["all uses"],
         "date": null
       }
@@ -72238,7 +72191,7 @@
       {
         "summary": "ADUs may be exempted from parking mandates when certain criteria are met.",
         "status": "passed",
-        "scope": ["citywide", "transit oriented"],
+        "scope": ["citywide", "transit-oriented"],
         "land": ["residential, low-density"],
         "date": null
       }
@@ -74560,7 +74513,7 @@
       {
         "summary": "Parking requirements are reduced by 25% when located near transit.",
         "status": "passed",
-        "scope": ["transit oriented"],
+        "scope": ["transit-oriented"],
         "land": ["all uses"],
         "date": null
       }
@@ -75267,7 +75220,7 @@
       "scope": [
         "city center / business district",
         "citywide",
-        "transit oriented"
+        "transit-oriented"
       ],
       "land": ["all uses"],
       "date": null
@@ -75276,7 +75229,7 @@
       {
         "summary": "Parking maximums apply to all uses in the mixed-use districts.",
         "status": "passed",
-        "scope": ["city center / business district", "transit oriented"],
+        "scope": ["city center / business district", "transit-oriented"],
         "land": ["all uses"],
         "date": null
       }
@@ -75288,7 +75241,7 @@
         "scope": [
           "city center / business district",
           "citywide",
-          "transit oriented"
+          "transit-oriented"
         ],
         "land": ["all uses"],
         "date": null
@@ -77080,7 +77033,7 @@
         "reduce parking minimums",
         "remove parking minimums"
       ],
-      "scope": ["city center / business district", "transit oriented"],
+      "scope": ["city center / business district", "transit-oriented"],
       "land": ["all uses"],
       "date": null
     },
@@ -77088,7 +77041,7 @@
       {
         "summary": "Parking maximums are generally equivalent to 125% of the normal base requirement in the Commercial Corridor Overlay District (CCOD).",
         "status": "passed",
-        "scope": ["city center / business district", "transit oriented"],
+        "scope": ["city center / business district", "transit-oriented"],
         "land": ["all uses"],
         "date": null
       }
@@ -77097,7 +77050,7 @@
       {
         "summary": "Within the Commercial Corridor Overlay District (CCOD), parking minimums are reduced by 50% on average across most commercial/mixed use zoning districts.",
         "status": "passed",
-        "scope": ["city center / business district", "transit oriented"],
+        "scope": ["city center / business district", "transit-oriented"],
         "land": ["all uses"],
         "date": null
       }
@@ -77106,7 +77059,7 @@
       {
         "summary": "No parking is required for uses in downtown (BG-6.0).",
         "status": "passed",
-        "scope": ["city center / business district", "transit oriented"],
+        "scope": ["city center / business district", "transit-oriented"],
         "land": ["all uses"],
         "date": null
       }
