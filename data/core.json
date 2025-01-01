@@ -12974,13 +12974,30 @@
       "coord": [-84.5124602, 39.1014537],
       "repeal": false
     },
+    "legacy": {
+      "summary": "Cincinnati uses a tool known as an Urban Parking Overlay, which is a zoning overlay that removes parking minimums completely within its boundary.  Cincinnati implemented and Urban Parking Overlay-- completely removing parking requirements-- in four neighborhoods: Central Business District, Over the Rhine, Pendleton (all of which are considered the \"urban core\") as well we parts of the Camp Washington neighborhood.\n\nThe Connected Communities plan, passed June 5, 2024, eliminates parking minimums for small commercial and residential uses in Neighborhood Business Districts, uses along transit corridors, and allows for on-street parking to be counted citywide.",
+      "status": "passed",
+      "policy": ["reduce parking minimums", "remove parking minimums"],
+      "scope": ["city center / business district", "transit-oriented"],
+      "land": ["all uses"],
+      "date": "2024-06-05"
+    },
+    "reduce_min": [
+      {
+        "summary": "Parking requirements may be reduced by counting on-street parking within 1/4 mile.",
+        "status": "passed",
+        "scope": ["citywide"],
+        "land": ["all uses"],
+        "date": "2024-06-05"
+      }
+    ],
     "rm_min": [
       {
-        "summary": "Cincinnati uses a tool known as an Urban Parking Overlay, which is a zoning overlay that removes parking minimums completely within its boundary.  Cincinnati implemented and Urban Parking Overlay-- completely removing parking requirements-- in four neighborhoods: Central Business District, Over the Rhine, Pendleton (all of which are considered the \"urban core\") as well we parts of the Camp Washington neighborhood.\n\nThe Connected Communities plan, proposed in 2024, would eliminate parking minimums for small commercial and residential uses in Neighborhood Business Districts, uses along transit corridors, and allow reductions for on-street parking citywide.",
+        "summary": "Cincinnati uses a tool known as an Urban Parking Overlay, which is a zoning overlay that removes parking minimums completely within its boundary.  Cincinnati implemented and Urban Parking Overlay-- completely removing parking requirements-- in four neighborhoods: Central Business District, Over the Rhine, Pendleton (all of which are considered the \"urban core\") as well we parts of the Camp Washington neighborhood.\n\nThe Connected Communities plan, passed June 5, 2024, eliminates parking minimums for small commercial and residential uses in Neighborhood Business Districts, and uses along transit corridors.",
         "status": "passed",
-        "scope": ["city center / business district"],
+        "scope": ["city center / business district", "transit-oriented"],
         "land": ["all uses"],
-        "date": null
+        "date": "2024-06-05"
       }
     ]
   },
@@ -16680,12 +16697,27 @@
       "coord": [-96.7968559, 32.7762719],
       "repeal": false
     },
+    "legacy": {
+      "summary": "Within the Central Area Districts, no parking is required of buildings which existed prior to June 26, 1967 or for ground-floor retail and personal service uses except for establishments serving alcohol or commercial amusement uses. Additionally, no parking is required for the first 5,000 square feet of ground-floor floor area for a restaurant without drive-in or drive-through service. There is a proposal to eliminate most parking minimums in the city in 2025.",
+      "status": "passed",
+      "policy": ["remove parking minimums"],
+      "scope": ["city center / business district"],
+      "land": ["commercial", "other"],
+      "date": null
+    },
     "rm_min": [
       {
-        "summary": "Within the Central Area Districts, no parking is required of buildings which existed prior to June 26, 1967 or for ground-floor retail and personal service uses except for establishments serving alcohol or commercial amusement uses. Additionally, no parking is required for the first 5,000 square feet of ground-floor floor area for a restaurant without drive-in or drive-through service.\n\nThere is currently a proposal to eliminate parking minimums in the city that will be considered in early 2025.",
+        "summary": "Within the Central Area Districts, no parking is required of buildings which existed prior to June 26, 1967 or for ground-floor retail and personal service uses except for establishments serving alcohol or commercial amusement uses. Additionally, no parking is required for the first 5,000 square feet of ground-floor floor area for a restaurant without drive-in or drive-through service.",
         "status": "passed",
         "scope": ["city center / business district"],
         "land": ["commercial", "other"],
+        "date": null
+      },
+      {
+        "summary": "In early 2025 the city will consider eliminating parking mandates citywide.",
+        "status": "proposed",
+        "scope": ["citywide"],
+        "land": ["all uses"],
         "date": null
       }
     ]
@@ -40403,20 +40435,20 @@
     },
     "reduce_min": [
       {
-        "summary": "Long Beach has reduced parking minimums for transit-oriented off street parking for residential and hospital use reducing parking from 25% to 50%. Long Beach has proposed eliminating mandates for businesses when there is a change of use.",
+        "summary": "Long Beach has reduced parking minimums for transit-oriented off street parking for residential and hospital use reducing parking from 25% to 50%. Long Beach eliminated mandates for businesses when there is a change of use in a building over ten years old in December 2024.",
         "status": "passed",
         "scope": ["transit oriented", "transit-oriented"],
         "land": ["medical", "residential, all uses"],
-        "date": null
+        "date": "2024-12-10"
       }
     ],
     "rm_min": [
       {
-        "summary": "ADUs are exempt from parking mandates under certain conditions.",
+        "summary": "ADUs are exempt from parking mandates under certain conditions. The Parking Exempt Area, adopted December 10, 2024, exempts uses within a 1/2 mile of major transit stops.",
         "status": "passed",
         "scope": ["transit oriented", "transit-oriented"],
-        "land": ["residential, all uses"],
-        "date": null
+        "land": ["all uses", "residential, low-density"],
+        "date": "2024-12-10"
       }
     ]
   },
@@ -46527,12 +46559,27 @@
       "coord": [-73.5698065, 45.5031824],
       "repeal": false
     },
+    "legacy": {
+      "summary": "Parking Minimums abolished in the borough of the Sud-Ouest for 99.9% of the territory (everywhere except in zone 415, in Griffintown, where citizens won a referendum to prevent minimums from being abolished on their block. Eliminations were also made in Ville-Marie borough and Plateau-Mont-Royal borough.\n\nThe draft 2050 Urban Planning and Mobility Plan proposes the elimination of parking mandates for residential and commercial uses citywide. The plan will likely be approved in 2025.",
+      "status": "passed",
+      "policy": ["remove parking minimums"],
+      "scope": ["city center / business district"],
+      "land": ["all uses"],
+      "date": null
+    },
     "rm_min": [
       {
-        "summary": "Parking Minimums abolished in the borough of the Sud-Ouest for 99.9% of the territory (everywhere except in zone 415, in Griffintown, where citizens won a referendum to prevent minimums from being abolished on their block. Eliminations were also made in Ville-Marie borough and Plateau-Mont-Royal borough. The draft 2050 Urban Planning and Mobility Plan proposes the elimination of parking mandates for residential and commercial uses citywide.",
+        "summary": "Parking Minimums abolished in the borough of the Sud-Ouest for 99.9% of the territory (everywhere except in zone 415, in Griffintown, where citizens won a referendum to prevent minimums from being abolished on their block. Eliminations were also made in Ville-Marie borough and Plateau-Mont-Royal borough.",
         "status": "passed",
         "scope": ["city center / business district"],
         "land": ["all uses"],
+        "date": null
+      },
+      {
+        "summary": "The draft 2050 Urban Planning and Mobility Plan proposes the elimination of parking mandates for residential and commercial uses citywide. The plan will likely be approved in 2025.",
+        "status": "proposed",
+        "scope": ["citywide"],
+        "land": ["commercial", "residential, all uses"],
         "date": null
       }
     ]
@@ -60613,10 +60660,17 @@
     },
     "add_max": [
       {
-        "summary": "Parking maximums apply to multi-family and nonresidential uses in the Central Business and Arts & Entertainment District. Based on the 2040 General Plan, the city is considering expanding parking maximums in the city center and within ½ mile of transit for residential and commercial uses in 2025.",
+        "summary": "Parking maximums apply to multi-family and nonresidential uses in the Central Business and Arts & Entertainment District.",
         "status": "passed",
         "scope": ["city center / business district"],
         "land": ["commercial", "other", "residential, multi-family"],
+        "date": null
+      },
+      {
+        "summary": "Based on the 2040 General Plan, the city is considering expanding parking maximums in the city center and within ½ mile of transit for residential and commercial uses in 2025.",
+        "status": "proposed",
+        "scope": ["city center / business district", "transit-oriented"],
+        "land": ["commercial", "residential, all uses"],
         "date": null
       }
     ],

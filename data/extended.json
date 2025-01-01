@@ -18691,10 +18691,125 @@
     ]
   },
   "Cincinnati, OH": {
+    "legacy": {
+      "reporter": null,
+      "requirements": [
+        "by right",
+        "frequent transit",
+        "other",
+        "size of project"
+      ],
+      "citations": [
+        {
+          "description": "Cincinnati Connected Communities",
+          "url": "https://www.cincinnati-oh.gov/planning/connected-communities/",
+          "notes": null,
+          "attachments": [],
+          "screenshots": [
+            {
+              "fileName": "cincinnati-oh-citation1-screenshot.png",
+              "directusId": "ed178a80-d3a9-4f0b-9ab8-cd1391844ec1"
+            }
+          ]
+        },
+        {
+          "description": "City Code",
+          "url": "https://library.municode.com/oh/cincinnati/codes/code_of_ordinances?nodeId=TIXIZOCOCI_CH1425PALORE_S1425-04URPAOVDI",
+          "notes": "§ 1425-04. - Urban Parking Overlay Districts.\t - Four districts have been created - https://cincinnatioh.legistar.com/LegislationDetail.aspx?ID=4977663&GUID=B3F09E34-C280-438A-ABB7-733A45B8D5EA&Options=ID|Text|&Search=urban+parking+overlay https://city-egov2.cincinnati-oh.gov/Webtop/ws/council/public/child/ResultSet?w=doc_no%3D%27201801223%27&rpp=-10",
+          "attachments": [],
+          "screenshots": [
+            {
+              "fileName": "cincinnati-oh-citation2-screenshot1.png",
+              "directusId": "2a366e82-546f-4424-b5bb-de36e520c026"
+            },
+            {
+              "fileName": "cincinnati-oh-citation2-screenshot2.png",
+              "directusId": "3d233d3f-7748-48a5-9169-3368db453ea4"
+            },
+            {
+              "fileName": "cincinnati-oh-citation2-screenshot3.png",
+              "directusId": "95acca34-97bf-4e30-bab0-c0d79fe709d8"
+            }
+          ]
+        },
+        {
+          "description": "1425-19. Off-Street Parking and Loading Requirements",
+          "url": "http://cincinnati-oh.elaws.us/code/coor_titlexiv_ch1425_sec1425-19",
+          "notes": null,
+          "attachments": [],
+          "screenshots": [
+            {
+              "fileName": "cincinnati-oh-citation3-screenshot.jpg",
+              "directusId": "69dd3a96-7af6-4670-b2ac-790fda620266"
+            }
+          ]
+        },
+        {
+          "description": "Connected Communities Plan",
+          "url": "https://storymaps.arcgis.com/collections/8a14a12b43674b1c9a8271ffd53c8230?item=6",
+          "notes": null,
+          "attachments": [],
+          "screenshots": [
+            {
+              "fileName": "cincinnati-oh-citation4-screenshot1.png",
+              "directusId": "59ebcf9b-d902-4f94-abe6-7e22daef8086"
+            },
+            {
+              "fileName": "cincinnati-oh-citation4-screenshot2.png",
+              "directusId": "0fd2c2c5-1fd2-48b0-add3-559436ced95e"
+            },
+            {
+              "fileName": "cincinnati-oh-citation4-screenshot3.png",
+              "directusId": "6c1e74cc-54ed-4afc-8972-79f2cd173161"
+            }
+          ]
+        }
+      ]
+    },
+    "reduce_min": [
+      {
+        "reporter": "Samuel Deetz",
+        "requirements": ["other"],
+        "citations": [
+          {
+            "description": "Cincinnati Connected Communities",
+            "url": "https://www.cincinnati-oh.gov/planning/connected-communities/",
+            "notes": null,
+            "attachments": [],
+            "screenshots": [
+              {
+                "fileName": "cincinnati-oh-reduce-min-citation1-screenshot.png",
+                "directusId": "ed178a80-d3a9-4f0b-9ab8-cd1391844ec1"
+              }
+            ]
+          },
+          {
+            "description": "Connected Communities Plan",
+            "url": "https://storymaps.arcgis.com/collections/8a14a12b43674b1c9a8271ffd53c8230?item=6",
+            "notes": null,
+            "attachments": [],
+            "screenshots": [
+              {
+                "fileName": "cincinnati-oh-reduce-min-citation2-screenshot1.png",
+                "directusId": "59ebcf9b-d902-4f94-abe6-7e22daef8086"
+              },
+              {
+                "fileName": "cincinnati-oh-reduce-min-citation2-screenshot2.png",
+                "directusId": "0fd2c2c5-1fd2-48b0-add3-559436ced95e"
+              },
+              {
+                "fileName": "cincinnati-oh-reduce-min-citation2-screenshot3.png",
+                "directusId": "6c1e74cc-54ed-4afc-8972-79f2cd173161"
+              }
+            ]
+          }
+        ]
+      }
+    ],
     "rm_min": [
       {
         "reporter": "Giovanni A Rocco",
-        "requirements": ["by right"],
+        "requirements": ["by right", "size of project"],
         "citations": [
           {
             "description": "1425-19. Off-Street Parking and Loading Requirements",
@@ -18703,7 +18818,7 @@
             "attachments": [],
             "screenshots": [
               {
-                "fileName": "cincinnati-oh-citation1-screenshot.jpg",
+                "fileName": "cincinnati-oh-remove-min-citation1-screenshot.jpg",
                 "directusId": "69dd3a96-7af6-4670-b2ac-790fda620266"
               }
             ]
@@ -18715,15 +18830,15 @@
             "attachments": [],
             "screenshots": [
               {
-                "fileName": "cincinnati-oh-citation2-screenshot1.png",
+                "fileName": "cincinnati-oh-remove-min-citation2-screenshot1.png",
                 "directusId": "2a366e82-546f-4424-b5bb-de36e520c026"
               },
               {
-                "fileName": "cincinnati-oh-citation2-screenshot2.png",
+                "fileName": "cincinnati-oh-remove-min-citation2-screenshot2.png",
                 "directusId": "3d233d3f-7748-48a5-9169-3368db453ea4"
               },
               {
-                "fileName": "cincinnati-oh-citation2-screenshot3.png",
+                "fileName": "cincinnati-oh-remove-min-citation2-screenshot3.png",
                 "directusId": "95acca34-97bf-4e30-bab0-c0d79fe709d8"
               }
             ]
@@ -18735,16 +18850,28 @@
             "attachments": [],
             "screenshots": [
               {
-                "fileName": "cincinnati-oh-citation3-screenshot1.png",
+                "fileName": "cincinnati-oh-remove-min-citation3-screenshot1.png",
                 "directusId": "59ebcf9b-d902-4f94-abe6-7e22daef8086"
               },
               {
-                "fileName": "cincinnati-oh-citation3-screenshot2.png",
+                "fileName": "cincinnati-oh-remove-min-citation3-screenshot2.png",
                 "directusId": "0fd2c2c5-1fd2-48b0-add3-559436ced95e"
               },
               {
-                "fileName": "cincinnati-oh-citation3-screenshot3.png",
+                "fileName": "cincinnati-oh-remove-min-citation3-screenshot3.png",
                 "directusId": "6c1e74cc-54ed-4afc-8972-79f2cd173161"
+              }
+            ]
+          },
+          {
+            "description": "Cincinnati Connected Communities",
+            "url": "https://www.cincinnati-oh.gov/planning/connected-communities/",
+            "notes": null,
+            "attachments": [],
+            "screenshots": [
+              {
+                "fileName": "cincinnati-oh-remove-min-citation4-screenshot.png",
+                "directusId": "ed178a80-d3a9-4f0b-9ab8-cd1391844ec1"
               }
             ]
           }
@@ -23736,6 +23863,47 @@
     ]
   },
   "Dallas, TX": {
+    "legacy": {
+      "reporter": null,
+      "requirements": ["by right", "size of project"],
+      "citations": [
+        {
+          "description": "Dallas Zoning Code",
+          "url": "https://codelibrary.amlegal.com/codes/dallas/latest/dallas_tx/0-0-0-78192",
+          "notes": "SEC. 51A-4.124.   CENTRAL AREA DISTRICTS.\n(a)   CA-1(A) district.\n(5)   Off-street parking and loading.\n(B)   Special off-street parking provisions.\n\nSee also: Dallas Parking Public Forum. Zoning Ordinance Advisory Committee. 5/19/21\nhttps://dallascityhall.com/departments/sustainabledevelopment/planning/DCH%20Documents/code%20amendments/parking%20code/Public%20Forum%20_%20ZOAC%20presentation_2021.5.19%20and%205.20.2021_Final.pdf",
+          "attachments": [],
+          "screenshots": [
+            {
+              "fileName": "dallas-tx-citation1-screenshot1.jpg",
+              "directusId": "7e7eefb1-bc8a-4ec1-8606-2c3a43927b91"
+            },
+            {
+              "fileName": "dallas-tx-citation1-screenshot2.png",
+              "directusId": "4a3b9ab1-b545-4756-ac13-00628c4e842a"
+            }
+          ]
+        },
+        {
+          "description": "KERA News Article",
+          "url": "https://www.keranews.org/news/2024-01-30/controversial-parking-amendment-gets-green-light-from-dallas-zoning-advisory-committee",
+          "notes": null,
+          "attachments": [],
+          "screenshots": [
+            {
+              "fileName": "dallas-tx-citation2-screenshot.png",
+              "directusId": "af4497c9-77db-4df9-b37c-7eec9f7e6a60"
+            }
+          ]
+        },
+        {
+          "description": "MSN News Article",
+          "url": "https://www.msn.com/en-us/news/us/dallas-delays-vote-on-eliminating-parking-minimums/ar-AA1vpcgN",
+          "notes": null,
+          "attachments": [],
+          "screenshots": []
+        }
+      ]
+    },
     "rm_min": [
       {
         "reporter": null,
@@ -23748,15 +23916,21 @@
             "attachments": [],
             "screenshots": [
               {
-                "fileName": "dallas-tx-citation1-screenshot1.jpg",
+                "fileName": "dallas-tx-remove-min1-screenshot1.jpg",
                 "directusId": "7e7eefb1-bc8a-4ec1-8606-2c3a43927b91"
               },
               {
-                "fileName": "dallas-tx-citation1-screenshot2.png",
+                "fileName": "dallas-tx-remove-min1-screenshot2.png",
                 "directusId": "4a3b9ab1-b545-4756-ac13-00628c4e842a"
               }
             ]
-          },
+          }
+        ]
+      },
+      {
+        "reporter": null,
+        "requirements": ["by right"],
+        "citations": [
           {
             "description": "KERA News Article",
             "url": "https://www.keranews.org/news/2024-01-30/controversial-parking-amendment-gets-green-light-from-dallas-zoning-advisory-committee",
@@ -23764,7 +23938,7 @@
             "attachments": [],
             "screenshots": [
               {
-                "fileName": "dallas-tx-citation2-screenshot.png",
+                "fileName": "dallas-tx-remove-min2-citation1-screenshot.png",
                 "directusId": "af4497c9-77db-4df9-b37c-7eec9f7e6a60"
               }
             ]
@@ -56458,6 +56632,30 @@
                 "directusId": "d407d010-7f97-4eb5-94e8-f2b36afb89fe"
               }
             ]
+          },
+          {
+            "description": "Long Beach Amendment",
+            "url": "https://www.longbeach.gov/globalassets/lbcd/media-library/documents/planning/parking-zoning-code-amendment/2024-09-09-coupa-final-fresh-redline-authors-merged-2",
+            "notes": "Page 6",
+            "attachments": [],
+            "screenshots": [
+              {
+                "fileName": "long-beach-ca-reduce-min-citation4-screenshot.png",
+                "directusId": "0de86ce1-d16f-4ec5-acf9-959035a0878a"
+              }
+            ]
+          },
+          {
+            "description": "Signal Tribune article",
+            "url": "https://sigtrib.com/hoping-to-fill-vacant-storefronts-long-beach-will-remove-certain-parking-requirements/",
+            "notes": null,
+            "attachments": [],
+            "screenshots": [
+              {
+                "fileName": "long-beach-ca-reduce-min-citation5-screenshot.png",
+                "directusId": "dc3d5c5a-b8c5-4952-a445-66e994cff8e9"
+              }
+            ]
           }
         ]
       }
@@ -56500,6 +56698,25 @@
               {
                 "fileName": "long-beach-ca-remove-min-citation3-screenshot.png",
                 "directusId": "d407d010-7f97-4eb5-94e8-f2b36afb89fe"
+              }
+            ]
+          },
+          {
+            "description": "Long Beach Amendment",
+            "url": "https://www.longbeach.gov/globalassets/lbcd/media-library/documents/planning/parking-zoning-code-amendment/2024-09-09-coupa-final-fresh-redline-authors-merged-2",
+            "notes": null,
+            "attachments": [],
+            "screenshots": []
+          },
+          {
+            "description": "Signal Tribune article",
+            "url": "https://sigtrib.com/hoping-to-fill-vacant-storefronts-long-beach-will-remove-certain-parking-requirements/",
+            "notes": null,
+            "attachments": [],
+            "screenshots": [
+              {
+                "fileName": "long-beach-ca-remove-min-citation5-screenshot.png",
+                "directusId": "dc3d5c5a-b8c5-4952-a445-66e994cff8e9"
               }
             ]
           }
@@ -64707,6 +64924,41 @@
     ]
   },
   "Montreal, QC": {
+    "legacy": {
+      "reporter": null,
+      "requirements": ["by right"],
+      "citations": [
+        {
+          "description": "Montreal Projet de Plan d’urbanisme et de mobilité 2050",
+          "url": "https://mtl.ged.montreal.ca/constellio/?collection=mtlca&portal=REPDOCVDM#!displayDocument/00000086794",
+          "notes": "Page 47 of pdf, page 46 of original document",
+          "attachments": [],
+          "screenshots": [
+            {
+              "fileName": "montreal-qc-citation1-screenshot.png",
+              "directusId": "7dcd02f1-c1bf-40f7-ada9-2576d319135a"
+            }
+          ]
+        },
+        {
+          "description": "BY-LAW AMENDING THE URBAN PLANNING BY-LAW FOR THE SOUTH BOROUGH",
+          "url": "https://montreal.ca/en/reglements-municipaux/recherche/60d7f187fd6531a59d5a65ed",
+          "notes": "Original is in French attached PDF is translated",
+          "attachments": [
+            {
+              "fileName": "montreal-qc-citation2-attachment.pdf",
+              "directusId": "4d733089-1e19-4e3c-819c-d86a3d0187ff"
+            }
+          ],
+          "screenshots": [
+            {
+              "fileName": "montreal-qc-citation2-screenshot.png",
+              "directusId": "1fbaa2ef-2d36-4acf-aa16-40a303fa0221"
+            }
+          ]
+        }
+      ]
+    },
     "rm_min": [
       {
         "reporter": "Craig Sauvé",
@@ -64718,17 +64970,23 @@
             "notes": "Original is in French attached PDF is translated",
             "attachments": [
               {
-                "fileName": "montreal-qc-citation1-attachment.pdf",
+                "fileName": "montreal-qc-remove-min1-attachment.pdf",
                 "directusId": "4d733089-1e19-4e3c-819c-d86a3d0187ff"
               }
             ],
             "screenshots": [
               {
-                "fileName": "montreal-qc-citation1-screenshot.png",
+                "fileName": "montreal-qc-remove-min1-screenshot.png",
                 "directusId": "1fbaa2ef-2d36-4acf-aa16-40a303fa0221"
               }
             ]
-          },
+          }
+        ]
+      },
+      {
+        "reporter": null,
+        "requirements": ["by right"],
+        "citations": [
           {
             "description": "Montreal Projet de Plan d’urbanisme et de mobilité 2050",
             "url": "https://mtl.ged.montreal.ca/constellio/?collection=mtlca&portal=REPDOCVDM#!displayDocument/00000086794",
@@ -64736,7 +64994,7 @@
             "attachments": [],
             "screenshots": [
               {
-                "fileName": "montreal-qc-citation2-screenshot.png",
+                "fileName": "montreal-qc-remove-min2-screenshot.png",
                 "directusId": "7dcd02f1-c1bf-40f7-ada9-2576d319135a"
               }
             ]
@@ -84241,11 +84499,17 @@
             "attachments": [],
             "screenshots": [
               {
-                "fileName": "sacramento-ca-add-max-citation1-screenshot.png",
+                "fileName": "sacramento-ca-add-max1-screenshot.png",
                 "directusId": "44754aa3-8f65-49f9-9a25-72c57f112f45"
               }
             ]
-          },
+          }
+        ]
+      },
+      {
+        "reporter": "Samuel Deetz",
+        "requirements": ["by right"],
+        "citations": [
           {
             "description": "Sacramento Parking Revisions page",
             "url": "https://www.cityofsacramento.gov/community-development/planning/housing/parking-revisions",
@@ -84253,7 +84517,7 @@
             "attachments": [],
             "screenshots": [
               {
-                "fileName": "sacramento-ca-add-max-citation2-screenshot.png",
+                "fileName": "sacramento-ca-add-max2-screenshot.png",
                 "directusId": "27f1041c-bfc0-4462-becf-b26e83a50054"
               }
             ]
