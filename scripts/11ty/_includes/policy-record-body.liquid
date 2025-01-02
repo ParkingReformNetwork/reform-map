@@ -1,12 +1,12 @@
 <p class="summary">{{ record.summary }}</p>
 <dl>
+  <dt>Status</dt>
+  <dd>{{ record.status }}</dd>
   {% if record.date -%}
     <dt>Reform date</dt>
     <dd>{{ record.date }}</dd>
   {%- endif %}
-  <dt>Reform status</dt>
-  <dd>{{ record.status }}</dd>
-  <dt>Reform scope</dt>
+  <dt>Scope</dt>
   <dd>{% render "string-array" array: record.scope %}</dd>
   <dt>Affected land uses</dt>
   <dd>{% render "string-array" array: record.landUse %}</dd>
