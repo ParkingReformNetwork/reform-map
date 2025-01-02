@@ -61,11 +61,19 @@ export function numberOfPolicyRecords(
 
 export function determinePolicyTypes(
   entry: RawCoreEntry | ProcessedCoreEntry,
+  options: { onlyPassed: boolean },
 ): PolicyType[] {
+  const hasPolicy = (
+    policies: ProcessedCorePolicy[] | RawCorePolicy[] | undefined,
+  ) =>
+    !!policies?.filter((policy) =>
+      options.onlyPassed ? policy.status === "passed" : true,
+    ).length;
+
   const result: PolicyType[] = [];
-  if (entry.add_max?.length) result.push("add parking maximums");
-  if (entry.reduce_min?.length) result.push("reduce parking minimums");
-  if (entry.rm_min?.length) result.push("remove parking minimums");
+  if (hasPolicy(entry.add_max)) result.push("add parking maximums");
+  if (hasPolicy(entry.reduce_min)) result.push("reduce parking minimums");
+  if (hasPolicy(entry.rm_min)) result.push("remove parking minimums");
   return result;
 }
 
