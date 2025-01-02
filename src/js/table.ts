@@ -14,6 +14,7 @@ import {
 import { PlaceFilterManager, PolicyTypeFilter } from "./FilterState";
 import { Date, ProcessedCorePolicy } from "./types";
 import { ViewStateObservable } from "./viewToggle";
+import { determinePolicyTypes } from "./data";
 
 function formatBoolean(cell: CellComponent): string {
   const v = cell.getValue() as boolean;
@@ -176,12 +177,15 @@ export default function initTable(
       policyChange: entry.unifiedPolicy.policy,
       scope: entry.unifiedPolicy.scope,
     });
+
     if (!options.revampEnabled) return;
+
+    const policyTypes = determinePolicyTypes(entry, { onlyPassed: true });
     dataAnyReform.push({
       ...common,
-      reduceMin: !!entry.reduce_min?.length,
-      rmMin: !!entry.rm_min?.length,
-      addMax: !!entry.add_max?.length,
+      reduceMin: policyTypes.includes("reduce parking minimums"),
+      rmMin: policyTypes.includes("remove parking minimums"),
+      addMax: policyTypes.includes("add parking maximums"),
     });
 
     const savePolicies = (
