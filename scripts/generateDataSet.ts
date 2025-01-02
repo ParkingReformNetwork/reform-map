@@ -82,11 +82,11 @@ function determineAnyPolicySet(
 }
 
 export function createAnyPolicyCsvs(data: ProcessedCompleteEntry[]): {
-  passed: string;
+  adopted: string;
   proposed: string;
   repealed: string;
 } {
-  const passed: any[] = [];
+  const adopted: any[] = [];
   const proposed: any[] = [];
   const repealed: any[] = [];
   data.forEach((entry) => {
@@ -101,15 +101,15 @@ export function createAnyPolicyCsvs(data: ProcessedCompleteEntry[]): {
     };
     const prnUrl = { prn_url: entry.place.url };
 
-    const passedPolicySet = determineAnyPolicySet(entry, "passed");
+    const adoptedPolicySet = determineAnyPolicySet(entry, "adopted");
     const proposedPolicySet = determineAnyPolicySet(entry, "proposed");
     const repealedPolicySet = determineAnyPolicySet(entry, "repealed");
 
-    if (passedPolicySet.hasReforms) {
-      passed.push({
+    if (adoptedPolicySet.hasReforms) {
+      adopted.push({
         ...initialValues,
         all_minimums_removed: toBoolean(entry.place.repeal),
-        ...passedPolicySet.csvValues,
+        ...adoptedPolicySet.csvValues,
         ...prnUrl,
       });
     }
@@ -130,7 +130,7 @@ export function createAnyPolicyCsvs(data: ProcessedCompleteEntry[]): {
   });
 
   return {
-    passed: Papa.unparse(passed),
+    adopted: Papa.unparse(adopted),
     proposed: Papa.unparse(proposed),
     repealed: Papa.unparse(repealed),
   };
@@ -199,8 +199,8 @@ async function main(): Promise<void> {
   const legacy = createLegacyCsv(data);
   await writeCsv(legacy, "map/data.csv");
 
-  const { passed, proposed, repealed } = createAnyPolicyCsvs(data);
-  await writeCsv(passed, "data/generated/overview_passed.csv");
+  const { adopted, proposed, repealed } = createAnyPolicyCsvs(data);
+  await writeCsv(adopted, "data/generated/overview_adopted.csv");
   await writeCsv(proposed, "data/generated/overview_proposed.csv");
   await writeCsv(repealed, "data/generated/overview_repealed.csv");
 
