@@ -617,7 +617,40 @@
       "scope": ["city center / business district", "citywide"],
       "land": ["all uses"],
       "date": null
-    }
+    },
+    "add_max": [
+      {
+        "summary": "Parking maximums apply to nonresidential and multi-family uses.",
+        "status": "passed",
+        "scope": ["citywide"],
+        "land": [
+          "commercial",
+          "industrial",
+          "medical",
+          "other",
+          "residential, multi-family"
+        ],
+        "date": null
+      }
+    ],
+    "reduce_min": [
+      {
+        "summary": "Parking reductions are available through the provision of frequent transit, on-street parking, a TDM plan or the payment of a fee-in-lieu of parking.",
+        "status": "passed",
+        "scope": ["citywide", "transit-oriented"],
+        "land": ["all uses"],
+        "date": null
+      }
+    ],
+    "rm_min": [
+      {
+        "summary": "Off-street vehicle parking is not required for any lot containing less than 5,000 square feet of gross site area or any property located within the Mixed-Use Downtown (MU-DT) District.",
+        "status": "passed",
+        "scope": ["city center / business district", "citywide"],
+        "land": ["all uses"],
+        "date": null
+      }
+    ]
   },
   "Albany, OR": {
     "place": {
@@ -7988,7 +8021,25 @@
       "scope": ["citywide"],
       "land": ["all uses"],
       "date": "2021-11-29"
-    }
+    },
+    "add_max": [
+      {
+        "summary": "There are maximums for retail and office uses. These reforms were adopted November 29, 2021 as part of a comprehensive zoning reform.",
+        "status": "passed",
+        "scope": ["citywide"],
+        "land": ["all uses"],
+        "date": "2021-11-29"
+      }
+    ],
+    "rm_min": [
+      {
+        "summary": "Bridgeport has no established car parking mandates except for when accessible parking is required by state law. These reforms were adopted November 29, 2021 as part of a comprehensive zoning reform.",
+        "status": "passed",
+        "scope": ["citywide"],
+        "land": ["all uses"],
+        "date": "2021-11-29"
+      }
+    ]
   },
   "Bridgeport, PA": {
     "place": {
@@ -19219,7 +19270,7 @@
     "place": {
       "name": "Dublin",
       "state": "County Dublin",
-      "country": "US",
+      "country": "IE",
       "type": "city",
       "pop": 592713,
       "coord": [-83.0864859, 40.0983199],
@@ -30151,7 +30202,25 @@
       "scope": ["city center / business district"],
       "land": ["all uses"],
       "date": null
-    }
+    },
+    "add_max": [
+      {
+        "summary": "Parking maximums apply in all districts.",
+        "status": "passed",
+        "scope": ["citywide"],
+        "land": ["all uses"],
+        "date": null
+      }
+    ],
+    "reduce_min": [
+      {
+        "summary": "A fee-in-lieu of required parking may be provided in the C-2 Central Commercial District.",
+        "status": "passed",
+        "scope": ["city center / business district"],
+        "land": ["all uses"],
+        "date": null
+      }
+    ]
   },
   "Harrisburg, NC": {
     "place": {
@@ -30466,7 +30535,25 @@
       "scope": ["citywide"],
       "land": ["all uses"],
       "date": "2017-12-01"
-    }
+    },
+    "add_max": [
+      {
+        "summary": "Hartford replaced parking minimums with maximums in the new form based zoning code in 2017.",
+        "status": "passed",
+        "scope": ["citywide"],
+        "land": ["all uses"],
+        "date": "2017-12-01"
+      }
+    ],
+    "rm_min": [
+      {
+        "summary": "New form based zoning code removed parking minimums citywide.",
+        "status": "passed",
+        "scope": ["citywide"],
+        "land": ["all uses"],
+        "date": "2017-12-01"
+      }
+    ]
   },
   "Hartford, IA": {
     "place": {
@@ -34554,7 +34641,33 @@
       ],
       "land": ["all uses"],
       "date": null
-    }
+    },
+    "add_max": [
+      {
+        "summary": "Jersey City has about a dozen planning districts, (known as Redevelopment Plans) and largely concentrated near PATH rapid transit and HBLR light rail stations, with parking maximums.",
+        "status": "passed",
+        "scope": [
+          "city center / business district",
+          "main street / special",
+          "transit-oriented"
+        ],
+        "land": ["all uses"],
+        "date": null
+      }
+    ],
+    "rm_min": [
+      {
+        "summary": "Jersey City has about a dozen planning districts (known as Redevelopment Plans) with no parking minimums, largely concentrated near PATH rapid transit and HBLR light rail stations. Examples include the Journal Square 2060, Colgate, Harsimus Cove Station, Grand Jersey, and Newark Ave Downtown plans. ",
+        "status": "passed",
+        "scope": [
+          "city center / business district",
+          "main street / special",
+          "transit-oriented"
+        ],
+        "land": ["all uses"],
+        "date": null
+      }
+    ]
   },
   "Jerseyville, IL": {
     "place": {
@@ -44561,7 +44674,25 @@
       "scope": ["city center / business district"],
       "land": ["all uses"],
       "date": null
-    }
+    },
+    "add_max": [
+      {
+        "summary": "In the Central Business District (B-1), Office Business District (B-3), and Downtown Development District (D-1) parking maximums are set at 100% of the minimums.",
+        "status": "passed",
+        "scope": ["city center / business district"],
+        "land": ["all uses"],
+        "date": null
+      }
+    ],
+    "reduce_min": [
+      {
+        "summary": "In the Central Business District (B-1), Office Business District (B-3), and Downtown Development District (D-1) minimum parking requirements are reduced by 50% for all land uses. \n\nA payment in lieu of parking (PILOP) may be applied to applicant who have insufficient on-site parking. \n",
+        "status": "passed",
+        "scope": ["city center / business district"],
+        "land": ["all uses"],
+        "date": null
+      }
+    ]
   },
   "Mexico City, DF": {
     "place": {
@@ -49114,7 +49245,34 @@
       "scope": ["city center / business district"],
       "land": ["commercial", "residential, all uses"],
       "date": null
-    }
+    },
+    "add_max": [
+      {
+        "summary": "Within the Downtown Gateway District, parking maximums are set for all uses in the district.",
+        "status": "passed",
+        "scope": ["city center / business district"],
+        "land": ["all uses"],
+        "date": null
+      }
+    ],
+    "reduce_min": [
+      {
+        "summary": "Within the Downtown Gateway District, certain uses have the first 300-450 square feet exempted.",
+        "status": "passed",
+        "scope": ["city center / business district"],
+        "land": ["commercial"],
+        "date": null
+      }
+    ],
+    "rm_min": [
+      {
+        "summary": "In the HR Historic Residence and HC Historic Commerce Districts, a development which adds no more than two dwelling units does not require parking. Within the Downtown Gateway District, certain uses have the first 300-450 square feet exempted.",
+        "status": "passed",
+        "scope": ["city center / business district"],
+        "land": ["commercial", "residential, all uses"],
+        "date": null
+      }
+    ]
   },
   "New Castle, IN": {
     "place": {
@@ -49240,7 +49398,34 @@
       "scope": ["city center / business district"],
       "land": ["all uses", "commercial"],
       "date": null
-    }
+    },
+    "add_max": [
+      {
+        "summary": "Parking maximums apply is some of the business districts.",
+        "status": "passed",
+        "scope": ["city center / business district"],
+        "land": ["all uses"],
+        "date": null
+      }
+    ],
+    "reduce_min": [
+      {
+        "summary": "Parking reductions are available across the city for carsharing.",
+        "status": "passed",
+        "scope": ["citywide"],
+        "land": ["all uses"],
+        "date": null
+      }
+    ],
+    "rm_min": [
+      {
+        "summary": "In the business A-1 and A-2 zone, small nonresidential uses are exempt. In the Business D, D-1, D-2 and BD-3 Districts, dwellings and healthcare uses are exempt. All uses in the CGD Zone are exempt. New Haven Parking Authority has signed on to support DesegregateCT's platform, which includes eliminating parking requirements citywide.",
+        "status": "passed",
+        "scope": ["city center / business district"],
+        "land": ["all uses", "commercial"],
+        "date": null
+      }
+    ]
   },
   "New Haven, IN": {
     "place": {
@@ -49813,7 +49998,25 @@
       "scope": ["citywide"],
       "land": ["residential, all uses"],
       "date": null
-    }
+    },
+    "reduce_min": [
+      {
+        "summary": "Parking requirements for all uses in the BB Central Business District are reduced.",
+        "status": "passed",
+        "scope": ["city center / business district"],
+        "land": ["all uses"],
+        "date": null
+      }
+    ],
+    "rm_min": [
+      {
+        "summary": "Affordable dwelling units  built using Tax Increment Financing and/or Low Income Housing Tax Credits are exempt from minimum parking requirements.",
+        "status": "passed",
+        "scope": ["citywide"],
+        "land": ["residential, all uses"],
+        "date": null
+      }
+    ]
   },
   "Newark, NJ": {
     "place": {
@@ -51133,7 +51336,34 @@
       "scope": ["city center / business district"],
       "land": ["all uses"],
       "date": null
-    }
+    },
+    "add_max": [
+      {
+        "summary": "Norwalk passed a new zoning code on December 13, 2023 (Effective February 19, 2024) which added parking maximums citywide.",
+        "status": "passed",
+        "scope": ["city center / business district"],
+        "land": ["all uses"],
+        "date": "2023-12-13"
+      }
+    ],
+    "reduce_min": [
+      {
+        "summary": "Norwalk passed a new zoning code on December 13, 2023 (Effective February 19, 2024) which reduced parking requirements near transit and for townhomes.",
+        "status": "passed",
+        "scope": ["citywide", "transit-oriented"],
+        "land": ["all uses", "residential, low-density"],
+        "date": "2023-12-13"
+      }
+    ],
+    "rm_min": [
+      {
+        "summary": "Norwalk passed a new zoning code on December 13, 2023 (Effective February 19, 2024) which eliminated parking requirements in the Urban Zones CD-4 and CD-4W.",
+        "status": "passed",
+        "scope": ["city center / business district"],
+        "land": ["all uses"],
+        "date": null
+      }
+    ]
   },
   "Norwalk, OH": {
     "place": {
@@ -51192,7 +51422,25 @@
       "scope": ["city center / business district"],
       "land": ["commercial"],
       "date": null
-    }
+    },
+    "add_max": [
+      {
+        "summary": "Retail/shopping centers have parking maximums.",
+        "status": "passed",
+        "scope": ["citywide"],
+        "land": ["commercial"],
+        "date": null
+      }
+    ],
+    "reduce_min": [
+      {
+        "summary": "Chelsea Central District does not have parking minimums for existing buildings.",
+        "status": "passed",
+        "scope": ["city center / business district"],
+        "land": ["all uses"],
+        "date": null
+      }
+    ]
   },
   "Norwood, MA": {
     "place": {
@@ -54092,7 +54340,25 @@
       "scope": ["city center / business district"],
       "land": ["commercial"],
       "date": null
-    }
+    },
+    "reduce_min": [
+      {
+        "summary": "Parking requirements are reduced for residential and commercial uses in the B-4 District.",
+        "status": "passed",
+        "scope": ["city center / business district"],
+        "land": ["commercial", "residential, all uses"],
+        "date": null
+      }
+    ],
+    "rm_min": [
+      {
+        "summary": "In the B‐1 and B‐2 Districts, lots 25 feet or less in width existing at the date of the adoption of the Zoning Ordinance are exempt from non‐residential parking requirements.",
+        "status": "passed",
+        "scope": ["city center / business district"],
+        "land": ["commercial", "other"],
+        "date": null
+      }
+    ]
   },
   "Paw Paw, IL": {
     "place": {
@@ -61787,7 +62053,25 @@
       "scope": ["city center / business district"],
       "land": ["all uses"],
       "date": null
-    }
+    },
+    "add_max": [
+      {
+        "summary": "No use may provide parking quantities greater than 20% over the minimum requirements unless waived by the Planning Board.",
+        "status": "passed",
+        "scope": ["citywide"],
+        "land": ["all uses"],
+        "date": null
+      }
+    ],
+    "rm_min": [
+      {
+        "summary": "There are no minimum off-street parking requirements in the Transect-6 district.",
+        "status": "passed",
+        "scope": ["city center / business district"],
+        "land": ["all uses"],
+        "date": null
+      }
+    ]
   },
   "Saratoga, WY": {
     "place": {
@@ -62137,7 +62421,25 @@
       "scope": ["city center / business district"],
       "land": ["commercial"],
       "date": null
-    }
+    },
+    "add_max": [
+      {
+        "summary": "Parking maximums in the downtown area should not exceed 110%-120% of the minimum requirements outside the downtown area.",
+        "status": "passed",
+        "scope": ["city center / business district"],
+        "land": ["all uses"],
+        "date": null
+      }
+    ],
+    "rm_min": [
+      {
+        "summary": "Schenectady's zoning code does not have a minimum parking requirement for commercial properties in the downtown area. Shared parking is accepted if an applicant demonstrates that adjacent land uses have different hours of operation. ",
+        "status": "passed",
+        "scope": ["city center / business district"],
+        "land": ["commercial"],
+        "date": null
+      }
+    ]
   },
   "Schererville, IN": {
     "place": {
@@ -71303,7 +71605,34 @@
       "scope": ["citywide"],
       "land": ["commercial"],
       "date": null
-    }
+    },
+    "add_max": [
+      {
+        "summary": "Any application for a surface parking lot exceeding 30 spaces must provide the Planning Board proof of the need for the number of spaces requested.",
+        "status": "passed",
+        "scope": ["citywide"],
+        "land": ["all uses"],
+        "date": null
+      }
+    ],
+    "reduce_min": [
+      {
+        "summary": "Parking minimums may be reduced through on-street parking or the payment of a fee in lieu of parking.",
+        "status": "passed",
+        "scope": ["citywide"],
+        "land": ["all uses"],
+        "date": null
+      }
+    ],
+    "rm_min": [
+      {
+        "summary": "Neighborhood retail uses and the first 3000 square feet of a bar, restaurant or cafe is exempt from minimum parking requirements.",
+        "status": "passed",
+        "scope": ["citywide"],
+        "land": ["commercial"],
+        "date": null
+      }
+    ]
   },
   "Uvalde, TX": {
     "place": {
@@ -73376,7 +73705,25 @@
       "scope": ["city center / business district", "citywide"],
       "land": ["all uses"],
       "date": null
-    }
+    },
+    "add_max": [
+      {
+        "summary": "Parking maximums apply to all uses.",
+        "status": "passed",
+        "scope": ["citywide"],
+        "land": ["all uses"],
+        "date": null
+      }
+    ],
+    "rm_min": [
+      {
+        "summary": "Parking minimums only apply to residential uses in the R District.",
+        "status": "passed",
+        "scope": ["city center / business district", "citywide"],
+        "land": ["all uses"],
+        "date": null
+      }
+    ]
   },
   "Watertown, SD": {
     "place": {
@@ -77518,7 +77865,29 @@
       "scope": ["main street / special"],
       "land": ["commercial"],
       "date": null
-    }
+    },
+    "reduce_min": [
+      {
+        "summary": "Parking requirements are reduced in the CB District, GC District, and Downtown Districts. A change of use within an existing building within the Downtown Districts or Artisans & Industry Special District is exempt from parking requirements. Apartments and live-work units within 1/4 of a mile of a train station have reduced requirements. Citywide, a fee in lieu of required parking may be provided.",
+        "status": "passed",
+        "scope": [
+          "city center / business district",
+          "citywide",
+          "transit-oriented"
+        ],
+        "land": ["all uses", "residential, multi-family"],
+        "date": null
+      }
+    ],
+    "rm_min": [
+      {
+        "summary": "Small nonresidential uses (except restaurant and eating and drinking establishments) in a historic district in the D-MX District are exempt from off-street parking and loading requirements.",
+        "status": "passed",
+        "scope": ["main street / special"],
+        "land": ["commercial"],
+        "date": null
+      }
+    ]
   },
   "York, England": {
     "place": {

@@ -977,7 +977,84 @@
           ]
         }
       ]
-    }
+    },
+    "add_max": [
+      {
+        "reporter": "Samuel Deetz",
+        "requirements": ["by right"],
+        "citations": [
+          {
+            "description": "Albany Unified Sustainable Development Code",
+            "url": "https://ecode360.com/33431241#33431241",
+            "notes": "§ 375-405(2)(c)",
+            "attachments": [],
+            "screenshots": [
+              {
+                "fileName": "albany-ny-add-max-screenshot.png",
+                "directusId": "5cbb33f2-7615-4ecb-9006-c04675ebe7d5"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "reduce_min": [
+      {
+        "reporter": "Samuel Deetz",
+        "requirements": [
+          "frequent transit",
+          "in-lieu fees",
+          "other",
+          "transportation demand management"
+        ],
+        "citations": [
+          {
+            "description": "Albany Unified Sustainable Development Code",
+            "url": "https://ecode360.com/33431241#33431241",
+            "notes": "§ 375-405(2)(f)",
+            "attachments": [],
+            "screenshots": [
+              {
+                "fileName": "albany-ny-reduce-min-screenshot1.png",
+                "directusId": "68f70479-120c-4363-bbf3-86837470071e"
+              },
+              {
+                "fileName": "albany-ny-reduce-min-screenshot2.png",
+                "directusId": "fb4912b7-00ea-41d0-9a79-7ba463fa0346"
+              },
+              {
+                "fileName": "albany-ny-reduce-min-screenshot3.png",
+                "directusId": "1dd96c58-043e-4f37-9301-4cc63cb932fc"
+              },
+              {
+                "fileName": "albany-ny-reduce-min-screenshot4.png",
+                "directusId": "6d1d9054-ad54-48be-80d7-f05764386594"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "rm_min": [
+      {
+        "reporter": "Samuel Deetz",
+        "requirements": ["by right", "size of project"],
+        "citations": [
+          {
+            "description": "Albany Unified Sustainable Development Code",
+            "url": "https://ecode360.com/33431241#33431241",
+            "notes": "§ 375-405(2)(b)",
+            "attachments": [],
+            "screenshots": [
+              {
+                "fileName": "albany-ny-remove-min-screenshot.png",
+                "directusId": "d2567ac8-286b-4ec4-be8b-8ba1b42b79c7"
+              }
+            ]
+          }
+        ]
+      }
+    ]
   },
   "Albany, OR": {
     "legacy": {
@@ -11981,7 +12058,47 @@
           ]
         }
       ]
-    }
+    },
+    "add_max": [
+      {
+        "reporter": "Lynn Haig",
+        "requirements": ["by right"],
+        "citations": [
+          {
+            "description": "Bridgeport zoning code",
+            "url": "https://code.zonebridgeport.com/code?#page=226",
+            "notes": "8.20 Motor Vehicle Parking 8.20.1MINIMUM RATIOS",
+            "attachments": [],
+            "screenshots": [
+              {
+                "fileName": "bridgeport-ct-add-max-screenshot.png",
+                "directusId": "42440101-8840-47df-b19e-1c093f13dbf4"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "rm_min": [
+      {
+        "reporter": "Lynn Haig",
+        "requirements": ["by right"],
+        "citations": [
+          {
+            "description": "Bridgeport zoning code",
+            "url": "https://code.zonebridgeport.com/code?#page=226",
+            "notes": "8.20 Motor Vehicle Parking 8.20.1MINIMUM RATIOS",
+            "attachments": [],
+            "screenshots": [
+              {
+                "fileName": "bridgeport-ct-remove-min-screenshot.png",
+                "directusId": "42440101-8840-47df-b19e-1c093f13dbf4"
+              }
+            ]
+          }
+        ]
+      }
+    ]
   },
   "Bridgeport, PA": {
     "reduce_min": [
@@ -42503,7 +42620,51 @@
           ]
         }
       ]
-    }
+    },
+    "add_max": [
+      {
+        "reporter": "Samuel Deetz",
+        "requirements": ["by right"],
+        "citations": [
+          {
+            "description": "Harrington Zoning Code",
+            "url": "https://ecode360.com/10132899#10132899",
+            "notes": "§ 440-213.E.;\n§ 440-214;\n§ 440-224.A.(16)",
+            "attachments": [],
+            "screenshots": [
+              {
+                "fileName": "harrington-de-add-max-screenshot1.png",
+                "directusId": "7f71b7df-30f5-424f-bd5a-aa2816fea78f"
+              },
+              {
+                "fileName": "harrington-de-add-max-screenshot2.png",
+                "directusId": "dabc2465-a0a5-493a-bcbe-d2081b2d8a20"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "reduce_min": [
+      {
+        "reporter": "Samuel Deetz",
+        "requirements": ["in-lieu fees"],
+        "citations": [
+          {
+            "description": "Harrington Zoning Code",
+            "url": "https://ecode360.com/10132899#10132899",
+            "notes": "§ 440-213.C.(2)",
+            "attachments": [],
+            "screenshots": [
+              {
+                "fileName": "harrington-de-reduce-min-screenshot.png",
+                "directusId": "88964cc0-d5ee-4928-80db-444833a622ce"
+              }
+            ]
+          }
+        ]
+      }
+    ]
   },
   "Harrisburg, NC": {
     "legacy": {
@@ -42909,7 +43070,47 @@
           ]
         }
       ]
-    }
+    },
+    "add_max": [
+      {
+        "reporter": null,
+        "requirements": ["by right"],
+        "citations": [
+          {
+            "description": "city website with link to latest code",
+            "url": "https://www.hartfordct.gov/files/assets/public/development-services/planning-zoning/pz-documents/zoning-regulations/zoning-regulations-06052020.pdf",
+            "notes": "Under land use and zoning, the PDF is titled zoning regulations as of DATE",
+            "attachments": [],
+            "screenshots": [
+              {
+                "fileName": "hartford-ct-add-max-screenshot.png",
+                "directusId": "da8b87c1-d24e-4304-beab-87737ac8e4ad"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "rm_min": [
+      {
+        "reporter": null,
+        "requirements": ["by right"],
+        "citations": [
+          {
+            "description": "city website with link to latest code",
+            "url": "https://www.hartfordct.gov/files/assets/public/development-services/planning-zoning/pz-documents/zoning-regulations/zoning-regulations-06052020.pdf",
+            "notes": "Under land use and zoning, the PDF is titled zoning regulations as of DATE",
+            "attachments": [],
+            "screenshots": [
+              {
+                "fileName": "hartford-ct-remove-min-screenshot.png",
+                "directusId": "da8b87c1-d24e-4304-beab-87737ac8e4ad"
+              }
+            ]
+          }
+        ]
+      }
+    ]
   },
   "Hartford, IA": {
     "rm_min": [
@@ -48344,7 +48545,47 @@
           ]
         }
       ]
-    }
+    },
+    "add_max": [
+      {
+        "reporter": "Ed Gomez",
+        "requirements": ["by right"],
+        "citations": [
+          {
+            "description": "Redevelopment Plan - Journal Square 2060\n",
+            "url": "https://library.municode.com/nj/jersey_city/codes/code_of_ordinances?nodeId=CH345ZO_ARTVZODEST_S345-34ZODI",
+            "notes": "PARKING STANDARDS page 24",
+            "attachments": [],
+            "screenshots": [
+              {
+                "fileName": "jersey-city-nj-add-max-screenshot.png",
+                "directusId": "99dcc172-acb0-471c-aaa2-4ec8d7fc079c"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "rm_min": [
+      {
+        "reporter": "Ed Gomez",
+        "requirements": ["by right"],
+        "citations": [
+          {
+            "description": "Redevelopment Plan - Journal Square 2060\n",
+            "url": "https://library.municode.com/nj/jersey_city/codes/code_of_ordinances?nodeId=CH345ZO_ARTVZODEST_S345-34ZODI",
+            "notes": "PARKING STANDARDS page 24",
+            "attachments": [],
+            "screenshots": [
+              {
+                "fileName": "jersey-city-nj-remove-min-screenshot.png",
+                "directusId": "99dcc172-acb0-471c-aaa2-4ec8d7fc079c"
+              }
+            ]
+          }
+        ]
+      }
+    ]
   },
   "Jerseyville, IL": {
     "rm_min": [
@@ -62130,7 +62371,47 @@
           ]
         }
       ]
-    }
+    },
+    "add_max": [
+      {
+        "reporter": null,
+        "requirements": ["by right"],
+        "citations": [
+          {
+            "description": " 110-154. Parking regulations. F",
+            "url": "http://metuchen-nj.elaws.us/code/coor_ptii_ch110_ptiv_art36_sec110-154",
+            "notes": null,
+            "attachments": [],
+            "screenshots": [
+              {
+                "fileName": "metuchen-nj-add-max-screenshot.jpg",
+                "directusId": "34a19bd6-4d6a-40e8-ab64-481dc5c66902"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "reduce_min": [
+      {
+        "reporter": null,
+        "requirements": ["by right", "in-lieu fees"],
+        "citations": [
+          {
+            "description": " 110-154. Parking regulations. F",
+            "url": "http://metuchen-nj.elaws.us/code/coor_ptii_ch110_ptiv_art36_sec110-154",
+            "notes": null,
+            "attachments": [],
+            "screenshots": [
+              {
+                "fileName": "metuchen-nj-reduce-min-screenshot.jpg",
+                "directusId": "34a19bd6-4d6a-40e8-ab64-481dc5c66902"
+              }
+            ]
+          }
+        ]
+      }
+    ]
   },
   "Mexico City, DF": {
     "legacy": {
@@ -68351,7 +68632,71 @@
           ]
         }
       ]
-    }
+    },
+    "add_max": [
+      {
+        "reporter": "Samuel Deetz",
+        "requirements": ["by right"],
+        "citations": [
+          {
+            "description": "New Castle Zoning Code",
+            "url": "https://ecode360.com/8876198#8876198",
+            "notes": "§ 230-28.A.(15)",
+            "attachments": [],
+            "screenshots": [
+              {
+                "fileName": "new-castle-de-add-max-screenshot.png",
+                "directusId": "d2b2286a-1795-4a50-a336-9cf533936685"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "reduce_min": [
+      {
+        "reporter": "Samuel Deetz",
+        "requirements": ["by right", "size of project"],
+        "citations": [
+          {
+            "description": "New Castle Zoning Code",
+            "url": "https://ecode360.com/8876198#8876198",
+            "notes": "§ 230-28.A.(15)",
+            "attachments": [],
+            "screenshots": [
+              {
+                "fileName": "new-castle-de-reduce-min-screenshot.png",
+                "directusId": "4626d109-c9b0-49e2-a45d-41d826a4009b"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "rm_min": [
+      {
+        "reporter": "Samuel Deetz",
+        "requirements": ["by right", "size of project"],
+        "citations": [
+          {
+            "description": "New Castle Zoning Code",
+            "url": "https://ecode360.com/8876198#8876198",
+            "notes": "§ 230-28.A.(1);\n§ 230-28.A.(15)",
+            "attachments": [],
+            "screenshots": [
+              {
+                "fileName": "new-castle-de-remove-min-screenshot1.png",
+                "directusId": "6872c7c5-2348-40b1-9a07-e916b5ea4637"
+              },
+              {
+                "fileName": "new-castle-de-remove-min-screenshot2.png",
+                "directusId": "e05700dd-2f4f-43a1-8c7b-95eacec8c551"
+              }
+            ]
+          }
+        ]
+      }
+    ]
   },
   "New Castle, IN": {
     "rm_min": [
@@ -68511,7 +68856,115 @@
           ]
         }
       ]
-    }
+    },
+    "add_max": [
+      {
+        "reporter": "Bobby Siemiaszko",
+        "requirements": ["by right"],
+        "citations": [
+          {
+            "description": "New Haven Zoning Code",
+            "url": "https://library.municode.com/ct/new_haven/codes/zoning?nodeId=ZOOR_ARV.BUINDI_S45REPALOAUDRES",
+            "notes": "ARTICLE V. BUSINESS AND INDUSTRIAL DISTRICTS\nSection 45. - Regulations for parking, loading, automotive and drive-in establishments.\n(a)Parking and loading.\n  (1)\n    a.Quantity of parking spaces\n      1.Exceptions.\n      7.",
+            "attachments": [],
+            "screenshots": [
+              {
+                "fileName": "new-haven-ct-add-max-screenshot1.png",
+                "directusId": "ebc3d6f3-2c25-42f8-a6e7-f9c3ddd68017"
+              },
+              {
+                "fileName": "new-haven-ct-add-max-screenshot2.png",
+                "directusId": "460853b7-2c38-46c1-a858-9f4cf9ef283b"
+              },
+              {
+                "fileName": "new-haven-ct-add-max-screenshot3.png",
+                "directusId": "b434598c-f077-4a90-a4e9-b91a9ae28c67"
+              },
+              {
+                "fileName": "new-haven-ct-add-max-screenshot4.png",
+                "directusId": "9d743e67-6275-42f9-b1ba-a485d99d969e"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "reduce_min": [
+      {
+        "reporter": "Bobby Siemiaszko",
+        "requirements": ["carshare"],
+        "citations": [
+          {
+            "description": "New Haven Zoning Code",
+            "url": "https://library.municode.com/ct/new_haven/codes/zoning?nodeId=ZOOR_ARV.BUINDI_S45REPALOAUDRES",
+            "notes": "ARTICLE V. BUSINESS AND INDUSTRIAL DISTRICTS\nSection 45. - Regulations for parking, loading, automotive and drive-in establishments.\n(a)Parking and loading.\n  (1)\n    a.Quantity of parking spaces\n      1.Exceptions.\n      7.",
+            "attachments": [],
+            "screenshots": [
+              {
+                "fileName": "new-haven-ct-reduce-min-screenshot1.png",
+                "directusId": "ebc3d6f3-2c25-42f8-a6e7-f9c3ddd68017"
+              },
+              {
+                "fileName": "new-haven-ct-reduce-min-screenshot2.png",
+                "directusId": "460853b7-2c38-46c1-a858-9f4cf9ef283b"
+              },
+              {
+                "fileName": "new-haven-ct-reduce-min-screenshot3.png",
+                "directusId": "b434598c-f077-4a90-a4e9-b91a9ae28c67"
+              },
+              {
+                "fileName": "new-haven-ct-reduce-min-screenshot4.png",
+                "directusId": "9d743e67-6275-42f9-b1ba-a485d99d969e"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "rm_min": [
+      {
+        "reporter": "Bobby Siemiaszko",
+        "requirements": ["by right", "size of project"],
+        "citations": [
+          {
+            "description": "New Haven Independent",
+            "url": "https://www.newhavenindependent.org/index.php/archives/entry/parking_authority_deseg/",
+            "notes": "New Haven is in the process of trying to pass and implement 10.24 which would greatly reduce or eliminate parking minimums throughout the whole city for all uses.",
+            "attachments": [],
+            "screenshots": [
+              {
+                "fileName": "new-haven-ct-remove-min-citation1-screenshot.png",
+                "directusId": "bd2fd76c-5d7f-47e4-b830-9414ee888352"
+              }
+            ]
+          },
+          {
+            "description": "New Haven Zoning Code",
+            "url": "https://library.municode.com/ct/new_haven/codes/zoning?nodeId=ZOOR_ARV.BUINDI_S45REPALOAUDRES",
+            "notes": "ARTICLE V. BUSINESS AND INDUSTRIAL DISTRICTS\nSection 45. - Regulations for parking, loading, automotive and drive-in establishments.\n(a)Parking and loading.\n  (1)\n    a.Quantity of parking spaces\n      1.Exceptions.\n      7.",
+            "attachments": [],
+            "screenshots": [
+              {
+                "fileName": "new-haven-ct-remove-min-citation2-screenshot1.png",
+                "directusId": "ebc3d6f3-2c25-42f8-a6e7-f9c3ddd68017"
+              },
+              {
+                "fileName": "new-haven-ct-remove-min-citation2-screenshot2.png",
+                "directusId": "460853b7-2c38-46c1-a858-9f4cf9ef283b"
+              },
+              {
+                "fileName": "new-haven-ct-remove-min-citation2-screenshot3.png",
+                "directusId": "b434598c-f077-4a90-a4e9-b91a9ae28c67"
+              },
+              {
+                "fileName": "new-haven-ct-remove-min-citation2-screenshot4.png",
+                "directusId": "9d743e67-6275-42f9-b1ba-a485d99d969e"
+              }
+            ]
+          }
+        ]
+      }
+    ]
   },
   "New Haven, IN": {
     "legacy": {
@@ -69441,7 +69894,47 @@
           ]
         }
       ]
-    }
+    },
+    "reduce_min": [
+      {
+        "reporter": "Samuel Deetz",
+        "requirements": ["by right"],
+        "citations": [
+          {
+            "description": "Newark Zoning Code",
+            "url": "https://library.municode.com/de/newark/codes/code_of_ordinances?nodeId=CD_ORD_CH32ZO_ARTXIVOREPALORE_S32-45OREPARE",
+            "notes": "Sec. 32-45. Table 2",
+            "attachments": [],
+            "screenshots": [
+              {
+                "fileName": "newark-de-reduce-min-screenshot.png",
+                "directusId": "66330b4c-0a09-4bd1-a930-c2fd1a6cad11"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "rm_min": [
+      {
+        "reporter": "Samuel Deetz",
+        "requirements": ["affordable housing", "other"],
+        "citations": [
+          {
+            "description": "Newark Zoning Code",
+            "url": "https://library.municode.com/de/newark/codes/code_of_ordinances?nodeId=CD_ORD_CH32ZO_ARTXIVOREPALORE_S32-45OREPARE",
+            "notes": "Sec. 32-45. Table 1",
+            "attachments": [],
+            "screenshots": [
+              {
+                "fileName": "newark-de-remove-min-screenshot.png",
+                "directusId": "691b7b39-da3c-49f1-b016-fc3619ee04a4"
+              }
+            ]
+          }
+        ]
+      }
+    ]
   },
   "Newark, NJ": {
     "rm_min": [
@@ -71330,7 +71823,107 @@
           ]
         }
       ]
-    }
+    },
+    "add_max": [
+      {
+        "reporter": "Bryan Baker",
+        "requirements": ["by right"],
+        "citations": [
+          {
+            "description": "Norwalk Zoning Code",
+            "url": "https://www.norwalkct.gov/DocumentCenter/View/32250/Norwalk-Building-Regulations-ART4-Bldg-Lot--Building-Site-Standards---Updated_FINAL",
+            "notes": "ARTICLE 4: BUILDING & LOT/BUILDING SITE STANDARDS\nSection 4.3 BUILDING & LOT/BUILDING SITE STANDARDS\n4.3.12 Parking\nB. Parking Required.\n5.\n6.\n7.\nPages 240-241 of pdf, pages 286-287 of original document",
+            "attachments": [],
+            "screenshots": [
+              {
+                "fileName": "norwalk-ct-add-max-screenshot1.png",
+                "directusId": "73980eb3-99b9-493c-9c80-fbfc485c0569"
+              },
+              {
+                "fileName": "norwalk-ct-add-max-screenshot2.png",
+                "directusId": "013e19ce-d93b-4dcb-bbb0-411a1e5f309b"
+              },
+              {
+                "fileName": "norwalk-ct-add-max-screenshot3.png",
+                "directusId": "b55b68e5-7f09-4c4d-92d7-617fb5388041"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "reduce_min": [
+      {
+        "reporter": "Bryan Baker",
+        "requirements": ["by right"],
+        "citations": [
+          {
+            "description": "Norwalk Zoning Code",
+            "url": "https://www.norwalkct.gov/DocumentCenter/View/32250/Norwalk-Building-Regulations-ART4-Bldg-Lot--Building-Site-Standards---Updated_FINAL",
+            "notes": "ARTICLE 4: BUILDING & LOT/BUILDING SITE STANDARDS\nSection 4.3 BUILDING & LOT/BUILDING SITE STANDARDS\n4.3.12 Parking\nB. Parking Required.\n5.\n6.\n7.\nPages 240-241 of pdf, pages 286-287 of original document",
+            "attachments": [],
+            "screenshots": [
+              {
+                "fileName": "norwalk-ct-reduce-min-screenshot1.png",
+                "directusId": "73980eb3-99b9-493c-9c80-fbfc485c0569"
+              },
+              {
+                "fileName": "norwalk-ct-reduce-min-screenshot2.png",
+                "directusId": "013e19ce-d93b-4dcb-bbb0-411a1e5f309b"
+              },
+              {
+                "fileName": "norwalk-ct-reduce-min-screenshot3.png",
+                "directusId": "b55b68e5-7f09-4c4d-92d7-617fb5388041"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "rm_min": [
+      {
+        "reporter": "Bryan Baker",
+        "requirements": ["by right"],
+        "citations": [
+          {
+            "description": "News Article",
+            "url": "https://www.thehour.com/news/article/norwalk-passes-citywide-zoning-rewrite-18554225.php",
+            "notes": null,
+            "attachments": [],
+            "screenshots": [
+              {
+                "fileName": "norwalk-ct-remove-min-citation1-screenshot1.png",
+                "directusId": "cc1711c6-ddc2-45ff-aebd-75b8b3b02c0c"
+              },
+              {
+                "fileName": "norwalk-ct-remove-min-citation1-screenshot2.png",
+                "directusId": "78b80c1a-d0ba-44a3-ad03-2b2613cf1442"
+              }
+            ]
+          },
+          {
+            "description": "Norwalk Zoning Code",
+            "url": "https://www.norwalkct.gov/DocumentCenter/View/32250/Norwalk-Building-Regulations-ART4-Bldg-Lot--Building-Site-Standards---Updated_FINAL",
+            "notes": "ARTICLE 4: BUILDING & LOT/BUILDING SITE STANDARDS\nSection 4.3 BUILDING & LOT/BUILDING SITE STANDARDS\n4.3.12 Parking\nB. Parking Required.\n5.\n6.\n7.\nPages 240-241 of pdf, pages 286-287 of original document",
+            "attachments": [],
+            "screenshots": [
+              {
+                "fileName": "norwalk-ct-remove-min-citation2-screenshot1.png",
+                "directusId": "73980eb3-99b9-493c-9c80-fbfc485c0569"
+              },
+              {
+                "fileName": "norwalk-ct-remove-min-citation2-screenshot2.png",
+                "directusId": "013e19ce-d93b-4dcb-bbb0-411a1e5f309b"
+              },
+              {
+                "fileName": "norwalk-ct-remove-min-citation2-screenshot3.png",
+                "directusId": "b55b68e5-7f09-4c4d-92d7-617fb5388041"
+              }
+            ]
+          }
+        ]
+      }
+    ]
   },
   "Norwalk, OH": {
     "rm_min": [
@@ -71406,7 +71999,47 @@
           ]
         }
       ]
-    }
+    },
+    "add_max": [
+      {
+        "reporter": "Jason Vincent",
+        "requirements": ["by right"],
+        "citations": [
+          {
+            "description": "Norwich Zoning Regulations",
+            "url": "https://www.norwichct.org/DocumentCenter/View/2213/Draft-Zoning-Regulations?bidId=",
+            "notes": "Chapter 5.1 (page 66)",
+            "attachments": [],
+            "screenshots": [
+              {
+                "fileName": "norwich-ct-add-max-screenshot.jpg",
+                "directusId": "627b5ff4-4d3f-430a-8006-9611a0aad3bc"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "reduce_min": [
+      {
+        "reporter": "Jason Vincent",
+        "requirements": ["other"],
+        "citations": [
+          {
+            "description": "Norwich Zoning Regulations",
+            "url": "https://www.norwichct.org/DocumentCenter/View/2213/Draft-Zoning-Regulations?bidId=",
+            "notes": "Chapter 5.1.3.4",
+            "attachments": [],
+            "screenshots": [
+              {
+                "fileName": "norwich-ct-reduce-min-screenshot.jpg",
+                "directusId": "c062e108-f612-4ab1-a4bd-7f5dbaa7c9a4"
+              }
+            ]
+          }
+        ]
+      }
+    ]
   },
   "Norwood, MA": {
     "reduce_min": [
@@ -75437,7 +76070,51 @@
           ]
         }
       ]
-    }
+    },
+    "reduce_min": [
+      {
+        "reporter": "Samuel Deetz",
+        "requirements": ["by right"],
+        "citations": [
+          {
+            "description": "Paterson Land Development Code",
+            "url": "https://www.patersonnj.gov/egov/documents/1463422578_02635.pdf",
+            "notes": "§500‐7.3\nPages 210, 212 of pdf, pages 200, 202 of original document",
+            "attachments": [],
+            "screenshots": [
+              {
+                "fileName": "paterson-nj-reduce-min-screenshot1.png",
+                "directusId": "e3063173-742a-4d0b-967b-82315c095882"
+              },
+              {
+                "fileName": "paterson-nj-reduce-min-screenshot2.png",
+                "directusId": "1bdc64ca-280d-4494-9fce-517f8078a671"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "rm_min": [
+      {
+        "reporter": "Samuel Deetz",
+        "requirements": ["by right", "size of project"],
+        "citations": [
+          {
+            "description": "Paterson Land Development Ordinance",
+            "url": "https://www.patersonnj.gov/egov/documents/1463422578_02635.pdf",
+            "notes": "§500‐7.3*\nPage 212 of pdf, page 202 of original document",
+            "attachments": [],
+            "screenshots": [
+              {
+                "fileName": "paterson-nj-remove-min-screenshot.png",
+                "directusId": "8566b9e8-04ca-415f-9613-9ac7df0dab34"
+              }
+            ]
+          }
+        ]
+      }
+    ]
   },
   "Paw Paw, IL": {
     "rm_min": [
@@ -86538,7 +87215,47 @@
           ]
         }
       ]
-    }
+    },
+    "add_max": [
+      {
+        "reporter": "Samuel Deetz",
+        "requirements": ["by right"],
+        "citations": [
+          {
+            "description": "Saratoga Springs Zoning Code",
+            "url": "https://www.saratoga-springs.org/DocumentCenter/View/270/Zoning-Ordinance-Complete-PDF",
+            "notes": "6.2.3.F.\nPages 76-77",
+            "attachments": [],
+            "screenshots": [
+              {
+                "fileName": "saratoga-springs-ny-add-max-screenshot.png",
+                "directusId": "eda58180-4ed4-4e4a-8c97-a09ed3381ad7"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "rm_min": [
+      {
+        "reporter": "Samuel Deetz",
+        "requirements": ["by right"],
+        "citations": [
+          {
+            "description": "Saratoga Springs Zoning Code",
+            "url": "https://www.saratoga-springs.org/DocumentCenter/View/270/Zoning-Ordinance-Complete-PDF",
+            "notes": "6.2.2.A.\nPage 76",
+            "attachments": [],
+            "screenshots": [
+              {
+                "fileName": "saratoga-springs-ny-remove-min-screenshot.png",
+                "directusId": "fc41b9e8-1ac8-40d8-b681-006b6351b95b"
+              }
+            ]
+          }
+        ]
+      }
+    ]
   },
   "Saratoga, WY": {
     "reduce_min": [
@@ -87033,7 +87750,51 @@
           ]
         }
       ]
-    }
+    },
+    "add_max": [
+      {
+        "reporter": null,
+        "requirements": ["by right"],
+        "citations": [
+          {
+            "description": "Schenectady Zoning Code",
+            "url": "https://ecode360.com/8692152#8692165",
+            "notes": "§ 264-45.",
+            "attachments": [],
+            "screenshots": [
+              {
+                "fileName": "schenectady-ny-add-max-screenshot.jpg",
+                "directusId": "62cfd81e-f9a5-4699-b02e-00c139c84649"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "rm_min": [
+      {
+        "reporter": null,
+        "requirements": ["by right"],
+        "citations": [
+          {
+            "description": "Schenectady Zoning Code",
+            "url": "https://ecode360.com/8692152#8692152",
+            "notes": "§ 264-44.A.(6);\n§ 264-46.",
+            "attachments": [],
+            "screenshots": [
+              {
+                "fileName": "schenectady-ny-remove-min-screenshot1.jpg",
+                "directusId": "864d4fef-1ffe-4edb-aaaa-69f06c9ad2c4"
+              },
+              {
+                "fileName": "schenectady-ny-remove-min-screenshot2.jpg",
+                "directusId": "397543ed-770e-45fa-95b8-0520d630dc39"
+              }
+            ]
+          }
+        ]
+      }
+    ]
   },
   "Schererville, IN": {
     "legacy": {
@@ -99793,7 +100554,71 @@
           ]
         }
       ]
-    }
+    },
+    "add_max": [
+      {
+        "reporter": "Samuel Deetz",
+        "requirements": ["by right", "other"],
+        "citations": [
+          {
+            "description": "Utica Zoning Code",
+            "url": "https://ecode360.com/14014457#14014457",
+            "notes": "Sec. 2-29-165(b)",
+            "attachments": [],
+            "screenshots": [
+              {
+                "fileName": "utica-ny-add-max-screenshot.png",
+                "directusId": "7896b735-87e1-4f39-8007-1c2e0cc52442"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "reduce_min": [
+      {
+        "reporter": "Samuel Deetz",
+        "requirements": ["in-lieu fees", "size of project"],
+        "citations": [
+          {
+            "description": "Utica Zoning Code",
+            "url": "https://ecode360.com/14014457#14014460",
+            "notes": "Sec. 2-29-166(b)f.;\nSec. 2-29-166(c)",
+            "attachments": [],
+            "screenshots": [
+              {
+                "fileName": "utica-ny-reduce-min-screenshot1.png",
+                "directusId": "15e5f980-7442-44cf-99d2-97f7e206a336"
+              },
+              {
+                "fileName": "utica-ny-reduce-min-screenshot2.png",
+                "directusId": "06c06e61-e77b-4dc0-8fcd-815f19b60a15"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "rm_min": [
+      {
+        "reporter": "Samuel Deetz",
+        "requirements": ["by right", "size of project"],
+        "citations": [
+          {
+            "description": "Utica Zoning Code",
+            "url": "https://ecode360.com/14014457#14014457",
+            "notes": "Sec. 2-29-165(a)",
+            "attachments": [],
+            "screenshots": [
+              {
+                "fileName": "utica-ny-remove-min-screenshot.png",
+                "directusId": "7f9aad95-cf36-4c6d-b98a-ae42e7eaf917"
+              }
+            ]
+          }
+        ]
+      }
+    ]
   },
   "Uvalde, TX": {
     "rm_min": [
@@ -102616,7 +103441,47 @@
           ]
         }
       ]
-    }
+    },
+    "add_max": [
+      {
+        "reporter": "Samuel Deetz",
+        "requirements": ["by right"],
+        "citations": [
+          {
+            "description": "Watertown Zoning Code",
+            "url": "https://ecode360.com/42112041",
+            "notes": "Article VI Parking\n§ 310-36 Required surface parking spaces.",
+            "attachments": [],
+            "screenshots": [
+              {
+                "fileName": "watertown-ny-add-max-screenshot.png",
+                "directusId": "9adf02b1-035f-4682-99a7-180fee39b416"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "rm_min": [
+      {
+        "reporter": "Samuel Deetz",
+        "requirements": ["by right"],
+        "citations": [
+          {
+            "description": "Watertown Zoning Code",
+            "url": "https://ecode360.com/42112041",
+            "notes": "Article VI Parking\n§ 310-36 Required surface parking spaces.",
+            "attachments": [],
+            "screenshots": [
+              {
+                "fileName": "watertown-ny-remove-min-screenshot.png",
+                "directusId": "9adf02b1-035f-4682-99a7-180fee39b416"
+              }
+            ]
+          }
+        ]
+      }
+    ]
   },
   "Watertown, SD": {
     "legacy": {
@@ -108196,7 +109061,77 @@
           ]
         }
       ]
-    }
+    },
+    "reduce_min": [
+      {
+        "reporter": "Samuel Deetz",
+        "requirements": [
+          "by right",
+          "frequent transit",
+          "historic preservation",
+          "in-lieu fees",
+          "size of project"
+        ],
+        "citations": [
+          {
+            "description": "Yonkers Zoning Code",
+            "url": "https://ecode360.com/15113784#15113784",
+            "notes": "Article X Off-Street Parking and Loading\n§ 43-130 New buildings or structures exempt from providing off-street parking and loading.\n§ 43-132 Alternate methods of providing parking.\n  B.  Fee in lieu of parking.\n§ 43-137 Required parking in CB District and GC District.\n§ 43-138 Reduced parking requirements for certain apartment houses and live-work buildings.\nArticle XVIII Downtown Districts\n§ 43-224 Downtown parking requirements.\n  A.\n  B.\nArticle XIX Artisans & Industry Special District\n§ 43-233 Parking.\n  A.",
+            "attachments": [],
+            "screenshots": [
+              {
+                "fileName": "yonkers-ny-reduce-min-screenshot1.png",
+                "directusId": "082e62f4-9469-4d01-9200-b15d73a77fbb"
+              },
+              {
+                "fileName": "yonkers-ny-reduce-min-screenshot2.png",
+                "directusId": "6a0823d7-1e0c-4318-ac0f-55465c57afb9"
+              },
+              {
+                "fileName": "yonkers-ny-reduce-min-screenshot3.png",
+                "directusId": "41fdd9f8-a725-43a7-a472-64e9a90e7e2c"
+              },
+              {
+                "fileName": "yonkers-ny-reduce-min-screenshot4.png",
+                "directusId": "9de781ff-03da-44f5-9900-8bf50d728147"
+              },
+              {
+                "fileName": "yonkers-ny-reduce-min-screenshot5.png",
+                "directusId": "42af6e10-545c-4972-a13e-25139953ca3b"
+              },
+              {
+                "fileName": "yonkers-ny-reduce-min-screenshot6.png",
+                "directusId": "60ce478a-c6f2-4ed0-b699-819a6303ca11"
+              },
+              {
+                "fileName": "yonkers-ny-reduce-min-screenshot7.png",
+                "directusId": "0f17d774-aba1-4d97-a96f-1464a5b92602"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "rm_min": [
+      {
+        "reporter": "Samuel Deetz",
+        "requirements": ["by right", "size of project"],
+        "citations": [
+          {
+            "description": "Yonkers Zoning Code",
+            "url": "https://ecode360.com/15115943#15115943",
+            "notes": "§ 43-130",
+            "attachments": [],
+            "screenshots": [
+              {
+                "fileName": "yonkers-ny-remove-min-screenshot.png",
+                "directusId": "6d949c8b-273c-44af-9e9b-295160ceaaf6"
+              }
+            ]
+          }
+        ]
+      }
+    ]
   },
   "York, England": {
     "legacy": {
