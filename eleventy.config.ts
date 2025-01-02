@@ -14,6 +14,12 @@ import { escapePlaceId } from "./src/js/data.js";
 function processPolicyRecord(policy: ProcessedCompletePolicy): object {
   return {
     summary: policy.summary,
+    dateLabel:
+      {
+        adopted: "Adoption date",
+        proposed: "Proposal date",
+        repealed: "Repeal date",
+      }[policy.status] ?? "Reform date",
     date: policy.date?.format(),
     status: capitalize(policy.status),
     scope: policy.scope.map(capitalize),
