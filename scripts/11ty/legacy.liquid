@@ -14,12 +14,12 @@ layout: layout.liquid
   <dl>
     <dt>Reform type</dt>
     <dd>{% render "string-array" array: entry.policyChange %}</dd>
+    <dt>Reform status</dt>
+    <dd>{{ entry.status }}</dd>
     {% if entry.date -%}
       <dt>Reform date</dt>
       <dd>{{ entry.date }}</dd>
     {%- endif %}
-    <dt>Reform status</dt>
-    <dd>{{ entry.status }}</dd>
     <dt>Reform scope</dt>
     <dd>{% render "string-array" array: entry.scope %}</dd>
     <dt>Affected land uses</dt>
