@@ -269,7 +269,7 @@ export class PlaceFilterManager {
     }
 
     if (filterState.policyTypeFilter === "any parking reform") {
-      const policyTypes = determinePolicyTypes(entry, { onlyPassed: true });
+      const policyTypes = determinePolicyTypes(entry, { onlyAdopted: true });
       const isPolicyType = policyTypes.some((v) =>
         filterState.includedPolicyChanges.has(v),
       );

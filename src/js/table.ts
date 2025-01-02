@@ -180,7 +180,7 @@ export default function initTable(
 
     if (!options.revampEnabled) return;
 
-    const policyTypes = determinePolicyTypes(entry, { onlyPassed: true });
+    const policyTypes = determinePolicyTypes(entry, { onlyAdopted: true });
     dataAnyReform.push({
       ...common,
       reduceMin: policyTypes.includes("reduce parking minimums"),

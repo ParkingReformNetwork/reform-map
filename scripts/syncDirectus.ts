@@ -572,7 +572,7 @@ async function saveOptionValues(entries: RawCompleteEntry[]): Promise<void> {
     "remove parking minimums",
   ];
   const placeType: PlaceType[] = ["city", "county", "state", "country"];
-  const status: ReformStatus[] = ["passed", "proposed", "repealed"];
+  const status: ReformStatus[] = ["adopted", "proposed", "repealed"];
 
   const scope = new Set<string>();
   const landUse = new Set<string>();

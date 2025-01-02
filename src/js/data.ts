@@ -61,13 +61,13 @@ export function numberOfPolicyRecords(
 
 export function determinePolicyTypes(
   entry: RawCoreEntry | ProcessedCoreEntry,
-  options: { onlyPassed: boolean },
+  options: { onlyAdopted: boolean },
 ): PolicyType[] {
   const hasPolicy = (
     policies: ProcessedCorePolicy[] | RawCorePolicy[] | undefined,
   ) =>
     !!policies?.filter((policy) =>
-      options.onlyPassed ? policy.status === "passed" : true,
+      options.onlyAdopted ? policy.status === "adopted" : true,
     ).length;
 
   const result: PolicyType[] = [];

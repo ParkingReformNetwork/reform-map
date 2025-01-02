@@ -40,7 +40,7 @@ function generateScorecardRevamp(
   entry: ProcessedCoreEntry,
   placeId: PlaceId,
 ): string {
-  const policyTypes = determinePolicyTypes(entry, { onlyPassed: false });
+  const policyTypes = determinePolicyTypes(entry, { onlyAdopted: false });
   let singlePolicyType = "";
   let multiplePolicyTypes = "";
   if (policyTypes.length === 1) {
