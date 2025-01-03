@@ -14,7 +14,7 @@ import {
 import { PlaceFilterManager, PolicyTypeFilter } from "./FilterState";
 import { Date, ProcessedCorePolicy } from "./types";
 import { ViewStateObservable } from "./viewToggle";
-import { determinePolicyTypes } from "./data";
+import { determineAdoptedPolicyTypes } from "./data";
 
 function formatBoolean(cell: CellComponent): string {
   const v = cell.getValue() as boolean;
@@ -180,7 +180,7 @@ export default function initTable(
 
     if (!options.revampEnabled) return;
 
-    const policyTypes = determinePolicyTypes(entry, { onlyAdopted: true });
+    const policyTypes = determineAdoptedPolicyTypes(entry);
     dataAnyReform.push({
       ...common,
       reduceMin: policyTypes.includes("reduce parking minimums"),

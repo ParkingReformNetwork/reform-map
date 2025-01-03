@@ -5,7 +5,7 @@ import type { ProcessedCoreEntry, PlaceId } from "./types";
 import Observable from "./Observable";
 import { PlaceFilterManager } from "./FilterState";
 import { ViewStateObservable } from "./viewToggle";
-import { determinePolicyTypes } from "./data";
+import { determinePolicyTypeStatuses, joinWithConjunction } from "./data";
 
 function generateScorecardLegacy(
   entry: ProcessedCoreEntry,
@@ -36,21 +36,34 @@ function generateScorecardLegacy(
     `;
 }
 
-function generateScorecardRevamp(
+export function generateScorecardRevamp(
   entry: ProcessedCoreEntry,
   placeId: PlaceId,
 ): string {
-  const policyTypes = determinePolicyTypes(entry, { onlyAdopted: false });
-  let singlePolicyType = "";
-  let multiplePolicyTypes = "";
-  if (policyTypes.length === 1) {
-    singlePolicyType = `<li>Reform type: ${policyTypes[0]}</li>`;
-  } else {
-    const policies = policyTypes
-      .map((type) => `<li>${capitalize(type)}</li>`)
-      .join("");
-    multiplePolicyTypes = `<div>Reform types:</div><ul>${policies}</ul>`;
-  }
+  const policyToStatuses = determinePolicyTypeStatuses(entry);
+  // If at least one policy record is proposed or repealed, we mention
+  // the ReformStatus with every policy type so that people don't incorrectly
+  // think a record was adopted when it wasn't.
+  const needsStatusLabels = Object.values(policyToStatuses).some(
+    (statuses) => statuses.has("proposed") || statuses.has("repealed"),
+  );
+
+  const policies = Object.entries(policyToStatuses)
+    .filter(([, statuses]) => statuses.size)
+    .map(([policyType, statusesSet]) => {
+      let suffix = "";
+      if (needsStatusLabels) {
+        const statuses = joinWithConjunction(
+          Array.from(statusesSet).sort(),
+          "and",
+        );
+        suffix = ` (${statuses})`;
+      }
+      const val = capitalize(`${policyType}${suffix}`);
+      return `<li>${val}</li>`;
+    })
+    .join("");
+  const policyTypesHtml = `<div>Reform types:</div><ul>${policies}</ul>`;
 
   const allMinimumsRemoved = entry.place.repeal
     ? "<li>All parking minimums removed</li>"
@@ -68,14 +81,13 @@ function generateScorecardRevamp(
       </button>
     </header>
     <ul>
-      <li><a class="external-link" target="_blank" href=${
-        entry.place.url
-      }>Reform details and citations <i aria-hidden="true" class="fa-solid fa-arrow-right"></i></a></li>
       <li>${entry.place.pop.toLocaleString()} residents</li>
       ${allMinimumsRemoved}
-      ${singlePolicyType}
     </ul>
-    ${multiplePolicyTypes}
+    ${policyTypesHtml}
+    <a class="external-link" target="_blank" href=${
+      entry.place.url
+    }>Details and citations <i aria-hidden="true" class="fa-solid fa-arrow-right"></i></a>
     `;
 }
 
