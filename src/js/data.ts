@@ -9,6 +9,7 @@ import {
   ProcessedPlace,
   ProcessedCorePolicy,
   ProcessedLegacyReform,
+  ReformStatus,
 } from "./types";
 
 export const COUNTRY_MAPPING: Partial<Record<string, string>> = {
@@ -59,22 +60,31 @@ export function numberOfPolicyRecords(
   );
 }
 
-export function determinePolicyTypes(
+export function determineAdoptedPolicyTypes(
   entry: RawCoreEntry | ProcessedCoreEntry,
-  options: { onlyAdopted: boolean },
 ): PolicyType[] {
   const hasPolicy = (
     policies: ProcessedCorePolicy[] | RawCorePolicy[] | undefined,
-  ) =>
-    !!policies?.filter((policy) =>
-      options.onlyAdopted ? policy.status === "adopted" : true,
-    ).length;
+  ) => !!policies?.filter((policy) => policy.status === "adopted").length;
 
   const result: PolicyType[] = [];
   if (hasPolicy(entry.add_max)) result.push("add parking maximums");
   if (hasPolicy(entry.reduce_min)) result.push("reduce parking minimums");
   if (hasPolicy(entry.rm_min)) result.push("remove parking minimums");
   return result;
+}
+
+export function determinePolicyTypeStatuses(
+  entry: RawCoreEntry | ProcessedCoreEntry,
+): Record<PolicyType, Set<ReformStatus>> {
+  const getStatuses = (
+    policies: ProcessedCorePolicy[] | RawCorePolicy[] | undefined,
+  ) => new Set(policies?.map((policy) => policy.status) ?? []);
+  return {
+    "add parking maximums": getStatuses(entry.add_max),
+    "reduce parking minimums": getStatuses(entry.reduce_min),
+    "remove parking minimums": getStatuses(entry.rm_min),
+  };
 }
 
 function processPolicy(raw: RawCorePolicy): ProcessedCorePolicy {
@@ -165,4 +175,16 @@ export function getFilteredIndexes<T>(
     }
     return indexes;
   }, []);
+}
+
+export function joinWithConjunction(
+  items: string[],
+  conjunction: "and" | "or",
+): string {
+  if (items.length <= 2) {
+    return items.join(` ${conjunction} `);
+  }
+  const lastItem = items[items.length - 1];
+  const priorItems = items.slice(0, -1)
+  return `${priorItems.join(", ")}, ${conjunction} ${lastItem}`;
 }

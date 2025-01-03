@@ -2,6 +2,7 @@ import { isEqual } from "lodash-es";
 
 import { FilterState, PlaceFilterManager } from "./FilterState";
 import { PlaceType, PolicyType } from "./types";
+import { joinWithConjunction } from "./data";
 
 export function determineHtml(
   view: "table" | "map",
@@ -85,12 +86,7 @@ export function determineHtml(
           `Expected state.includedPolicyChanges to be set: ${JSON.stringify(state)}`,
         );
       }
-      if (policyDescriptions.length <= 2) {
-        suffix = policyDescriptions.join(" or ");
-      } else {
-        const lastTerm = policyDescriptions.pop();
-        suffix = `${policyDescriptions.join(", ")}, or ${lastTerm}`;
-      }
+      suffix = joinWithConjunction(policyDescriptions, "or");
     }
     return `${prefix} ${suffix}`;
   }

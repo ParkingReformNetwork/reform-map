@@ -5,7 +5,7 @@ import type { ProcessedCoreEntry, PlaceId } from "./types";
 import Observable from "./Observable";
 import { PlaceFilterManager } from "./FilterState";
 import { ViewStateObservable } from "./viewToggle";
-import { determinePolicyTypes } from "./data";
+import { determinePolicyTypeStatuses, joinWithConjunction } from "./data";
 
 function generateScorecardLegacy(
   entry: ProcessedCoreEntry,
@@ -40,8 +40,28 @@ function generateScorecardRevamp(
   entry: ProcessedCoreEntry,
   placeId: PlaceId,
 ): string {
-  const policies = determinePolicyTypes(entry, { onlyAdopted: false })
-    .map((type) => `<li>${capitalize(type)}</li>`)
+  const policyToStatuses = determinePolicyTypeStatuses(entry);
+  // If at least one policy record is proposed or repealed, we mention
+  // the ReformStatus with every policy type so that people don't incorrectly
+  // think a record was adopted when it wasn't.
+  const needsStatusLabels = Object.values(policyToStatuses).some(
+    (statuses) => statuses.has("proposed") || statuses.has("repealed"),
+  );
+
+  const policies = Object.entries(policyToStatuses)
+    .filter(([, statuses]) => statuses.size)
+    .map(([policyType, statusesSet]) => {
+      let suffix = "";
+      if (needsStatusLabels) {
+        const statuses = joinWithConjunction(
+          Array.from(statusesSet).sort(),
+          "and",
+        );
+        suffix = ` (${statuses})`;
+      }
+      const val = capitalize(`${policyType}${suffix}`);
+      return `<li>${val}</li>`;
+    })
     .join("");
   const policyTypesHtml = `<div>Reform types:</div><ul>${policies}</ul>`;
 

@@ -9,7 +9,7 @@ import {
   UNKNOWN_YEAR,
 } from "./types";
 import Observable from "./Observable";
-import { determinePolicyTypes, getFilteredIndexes } from "./data";
+import { determineAdoptedPolicyTypes, getFilteredIndexes } from "./data";
 
 export const POPULATION_INTERVALS: Array<[string, number]> = [
   ["100", 100],
@@ -269,7 +269,7 @@ export class PlaceFilterManager {
     }
 
     if (filterState.policyTypeFilter === "any parking reform") {
-      const policyTypes = determinePolicyTypes(entry, { onlyAdopted: true });
+      const policyTypes = determineAdoptedPolicyTypes(entry);
       const isPolicyType = policyTypes.some((v) =>
         filterState.includedPolicyChanges.has(v),
       );
