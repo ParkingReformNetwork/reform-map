@@ -85,7 +85,6 @@ interface CacheEntry {
   matchedCountries: Set<string>;
   matchedPolicyTypesForAnyPolicy: Set<PolicyType>;
   matchedPlaceTypes: Set<PlaceType>;
-  numMatchedPolicyRecordsForSinglePolicy: number;
 }
 
 export class PlaceFilterManager {
@@ -109,13 +108,6 @@ export class PlaceFilterManager {
 
   get matchedPlaces(): Record<PlaceId, PlaceMatch> {
     return this.ensureCache().matchedPlaces;
-  }
-
-  /// The number of matching policy records, given that a place may have >1 policy record.
-  ///
-  /// Note that this will be zero with 'any parking reform' and 'search'.
-  get numMatchedPolicyRecords(): number {
-    return this.ensureCache().numMatchedPolicyRecordsForSinglePolicy;
   }
 
   get placeIds(): Set<PlaceId> {
@@ -168,16 +160,12 @@ export class PlaceFilterManager {
     const matchedCountries = new Set<string>();
     const matchedPolicyTypes = new Set<PolicyType>();
     const matchedPlaceTypes = new Set<PlaceType>();
-    let numMatchedPolicyRecords = 0;
     for (const placeId in this.entries) {
       const match = this.getPlaceMatch(placeId);
       if (!match) continue;
       matchedPlaces[placeId] = match;
       matchedCountries.add(this.entries[placeId].place.country);
       matchedPlaceTypes.add(this.entries[placeId].place.type);
-      if (match.type === "single policy") {
-        numMatchedPolicyRecords += match.matchingIndexes.length;
-      }
       if (match.type === "any") {
         if (match.hasAddMax) matchedPolicyTypes.add("add parking maximums");
         if (match.hasReduceMin)
@@ -192,7 +180,6 @@ export class PlaceFilterManager {
       matchedCountries,
       matchedPolicyTypesForAnyPolicy: matchedPolicyTypes,
       matchedPlaceTypes,
-      numMatchedPolicyRecordsForSinglePolicy: numMatchedPolicyRecords,
     };
     return this.cache;
   }

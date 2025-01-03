@@ -4,11 +4,105 @@ import { FilterState, PlaceFilterManager } from "./FilterState";
 import { PlaceType, PolicyType } from "./types";
 import { joinWithConjunction } from "./data";
 
+export function determinePlaceDescription(
+  numPlaces: number,
+  matchedCountries: Set<string>,
+  matchedPlaceTypes: Set<PlaceType>,
+): string {
+  let country =
+    matchedCountries.size === 1
+      ? Array.from(matchedCountries)[0]
+      : `${matchedCountries.size} countries`;
+  if (country === "United States" || country === "United Kingdom") {
+    country = `the ${country}`;
+  }
+
+  if (isEqual(matchedPlaceTypes, new Set(["city"]))) {
+    const label = numPlaces === 1 ? "city" : "cities";
+    return `${numPlaces} ${label} in ${country}`;
+  } else if (isEqual(matchedPlaceTypes, new Set(["county"]))) {
+    const label = numPlaces === 1 ? "county" : "counties";
+    return `${numPlaces} ${label} in ${country}`;
+  } else if (isEqual(matchedPlaceTypes, new Set(["state"]))) {
+    const label = numPlaces === 1 ? "state" : "states";
+    return `${numPlaces} ${label} in ${country}`;
+  } else if (isEqual(matchedPlaceTypes, new Set(["country"]))) {
+    return numPlaces === 1 ? "1 country" : `${numPlaces} countries`;
+  } else {
+    const label = numPlaces === 1 ? "place" : "places";
+    return `${numPlaces} ${label} in ${country}`;
+  }
+}
+
+export function determineLegacy(
+  placeDescription: string,
+  allMinimumsRemovedToggle: boolean,
+): string {
+  const suffix = allMinimumsRemovedToggle
+    ? `all parking minimums removed`
+    : `parking reforms`;
+  return `Showing ${placeDescription} with ${suffix}`;
+}
+
+export function determineAnyReform(
+  placeDescription: string,
+  matchedPolicyTypes: Set<PolicyType>,
+  allMinimumsRemovedToggle: boolean,
+  statePolicyTypes: Set<string>,
+): string {
+  const prefix = `Showing ${placeDescription} with`;
+
+  if (allMinimumsRemovedToggle) {
+    const suffix = isEqual(statePolicyTypes, new Set(["add parking maximums"]))
+      ? "both all parking minimums removed and parking maximums added"
+      : "all parking minimums removed";
+    return `${prefix} ${suffix}`;
+  }
+
+  const policyDescriptionMap: Record<PolicyType, string> = {
+    "add parking maximums": "parking maximums added",
+    "reduce parking minimums": "parking minimums reduced",
+    "remove parking minimums": "parking minimums removed",
+  };
+  const policyDescriptions = Array.from(statePolicyTypes)
+    .filter((policy) => matchedPolicyTypes.has(policy as PolicyType))
+    .map((policy) => policyDescriptionMap[policy as PolicyType])
+    .sort()
+    .reverse();
+  if (!policyDescriptions.length) {
+    throw new Error(`Expected state.includedPolicyChanges to be set`);
+  }
+  const suffix = joinWithConjunction(policyDescriptions, "or");
+  return `${prefix} ${suffix}`;
+}
+
+export function determineReduceMin(placeDescription: string): string {
+  return `Showing ${placeDescription} with parking minimums reduced`;
+}
+
+export function determineAddMax(
+  placeDescription: string,
+  allMinimumsRemovedToggle: boolean,
+): string {
+  const suffix = allMinimumsRemovedToggle
+    ? "both all parking minimums removed and parking maximums added"
+    : "parking maximums added";
+  return `Showing ${placeDescription} with ${suffix}`;
+}
+
+export function determineRmMin(
+  placeDescription: string,
+  allMinimumsRemovedToggle: boolean,
+): string {
+  const suffix = allMinimumsRemovedToggle
+    ? `all parking minimums removed`
+    : `parking minimums removed`;
+  return `Showing ${placeDescription} with ${suffix}`;
+}
+
 export function determineHtml(
-  view: "table" | "map",
   state: FilterState,
   numPlaces: number,
-  numPolicyRecords: number,
   matchedPolicyTypes: Set<PolicyType>,
   matchedCountries: Set<string>,
   matchedPlaceTypes: Set<PlaceType>,
@@ -20,113 +114,31 @@ export function determineHtml(
     return `Showing ${state.searchInput} from search — <a class="counter-search-reset" role="button" aria-label="reset search">reset</a>`;
   }
 
-  let country =
-    matchedCountries.size === 1
-      ? Array.from(matchedCountries)[0]
-      : `${matchedCountries.size} countries`;
-  if (country === "United States" || country === "United Kingdom") {
-    country = `the ${country}`;
-  }
+  const placeDescription = determinePlaceDescription(
+    numPlaces,
+    matchedCountries,
+    matchedPlaceTypes,
+  );
 
-  let placeDescription;
-  if (isEqual(matchedPlaceTypes, new Set(["city"]))) {
-    const label = numPlaces === 1 ? "city" : "cities";
-    placeDescription = `${label} in ${country}`;
-  } else if (isEqual(matchedPlaceTypes, new Set(["county"]))) {
-    const label = numPlaces === 1 ? "county" : "counties";
-    placeDescription = `${label} in ${country}`;
-  } else if (isEqual(matchedPlaceTypes, new Set(["state"]))) {
-    const label = numPlaces === 1 ? "state" : "states";
-    placeDescription = `${label} in ${country}`;
-  } else if (isEqual(matchedPlaceTypes, new Set(["country"]))) {
-    placeDescription = numPlaces === 1 ? "country" : "countries";
-  } else {
-    const label = numPlaces === 1 ? "place" : "places";
-    placeDescription = `${label} in ${country}`;
-  }
-  const prefix = `Showing ${numPlaces} ${placeDescription} with`;
-
-  // We only show the number of policy records when it's useful information to the user
-  // because it would otherwise be noisy.
-  const recordsWord = numPolicyRecords === 1 ? "record" : "records";
-  const showRecords = view === "table" && numPlaces !== numPolicyRecords;
-  const multipleRecordsExplanation =
-    "because some places have multiple records";
-
-  if (state.policyTypeFilter === "legacy reform") {
-    const suffix = state.allMinimumsRemovedToggle
-      ? "all parking minimums removed"
-      : "parking reforms";
-    return `${prefix} ${suffix}`;
-  }
-
-  if (state.policyTypeFilter === "any parking reform") {
-    // We customize the text based on which policy changes are selected.
-    let suffix;
-    if (state.allMinimumsRemovedToggle) {
-      suffix = isEqual(
+  switch (state.policyTypeFilter) {
+    case "legacy reform":
+      return determineLegacy(placeDescription, state.allMinimumsRemovedToggle);
+    case "any parking reform":
+      return determineAnyReform(
+        placeDescription,
+        matchedPolicyTypes,
+        state.allMinimumsRemovedToggle,
         state.includedPolicyChanges,
-        new Set(["add parking maximums"]),
-      )
-        ? "both all parking minimums removed and parking maximums added"
-        : "all parking minimums removed";
-    } else {
-      const policyDescriptionMap: Record<PolicyType, string> = {
-        "add parking maximums": "parking maximums added",
-        "reduce parking minimums": "parking minimums reduced",
-        "remove parking minimums": "parking minimums removed",
-      };
-      const policyDescriptions = Array.from(state.includedPolicyChanges)
-        .filter((policy) => matchedPolicyTypes.has(policy as PolicyType))
-        .map((policy) => policyDescriptionMap[policy as PolicyType])
-        .sort()
-        .reverse();
-      if (!policyDescriptions.length) {
-        throw new Error(
-          `Expected state.includedPolicyChanges to be set: ${JSON.stringify(state)}`,
-        );
-      }
-      suffix = joinWithConjunction(policyDescriptions, "or");
-    }
-    return `${prefix} ${suffix}`;
+      );
+    case "reduce parking minimums":
+      return determineReduceMin(placeDescription);
+    case "add parking maximums":
+      return determineAddMax(placeDescription, state.allMinimumsRemovedToggle);
+    case "remove parking minimums":
+      return determineRmMin(placeDescription, state.allMinimumsRemovedToggle);
+    default:
+      throw new Error("unreachable");
   }
-
-  if (state.policyTypeFilter === "reduce parking minimums") {
-    const firstSentence = `${prefix} parking minimums reduced`;
-    return showRecords
-      ? `${firstSentence}. Matched ${numPolicyRecords} total policy ${recordsWord} ${multipleRecordsExplanation}.`
-      : firstSentence;
-  }
-
-  if (state.policyTypeFilter === "add parking maximums") {
-    let firstSentenceSuffix;
-    let secondSentence;
-    if (state.allMinimumsRemovedToggle) {
-      firstSentenceSuffix =
-        "both all parking minimums removed and parking maximums added";
-      secondSentence = `Matched ${numPolicyRecords} total parking maximum policy ${recordsWord} ${multipleRecordsExplanation}`;
-    } else {
-      firstSentenceSuffix = "parking maximums added";
-      secondSentence = `Matched ${numPolicyRecords} total policy ${recordsWord} ${multipleRecordsExplanation}`;
-    }
-    const firstSentence = `${prefix} ${firstSentenceSuffix}`;
-    return showRecords ? `${firstSentence}. ${secondSentence}.` : firstSentence;
-  }
-
-  if (state.policyTypeFilter === "remove parking minimums") {
-    // It's not necessary to say the # of policy records when allMinimumsRemovedToggle is true because the place should have
-    // only one removal policy record that is citywide & all land uses.
-    if (state.allMinimumsRemovedToggle) {
-      return `${prefix} all parking minimums removed`;
-    }
-
-    const firstSentence = `${prefix} parking minimums removed`;
-    return showRecords
-      ? `${firstSentence}. Matched ${numPolicyRecords} total policy ${recordsWord} ${multipleRecordsExplanation}.`
-      : firstSentence;
-  }
-
-  throw new Error("unreachable");
 }
 
 function setUpResetButton(
@@ -153,19 +165,15 @@ export default function initCounters(manager: PlaceFilterManager): void {
 
   manager.subscribe("update counters", (state) => {
     mapCounter.innerHTML = determineHtml(
-      "map",
       state,
       manager.placeIds.size,
-      manager.numMatchedPolicyRecords,
       manager.matchedPolicyTypes,
       manager.matchedCountries,
       manager.matchedPlaceTypes,
     );
     tableCounter.innerHTML = determineHtml(
-      "table",
       state,
       manager.placeIds.size,
-      manager.numMatchedPolicyRecords,
       manager.matchedPolicyTypes,
       manager.matchedCountries,
       manager.matchedPlaceTypes,
