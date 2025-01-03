@@ -1096,7 +1096,25 @@
       "scope": ["city center / business district"],
       "land": ["commercial", "residential, all uses"],
       "date": null
-    }
+    },
+    "reduce_min": [
+      {
+        "summary": "Within the B-2 Central Business District and B-5 District, multifamily development requires 1/2 of the normal requirement for dwelling units. Citywide, parking requirements may be reduced by one space through the provision of bike parking.",
+        "status": "adopted",
+        "scope": ["city center / business district", "citywide"],
+        "land": ["all uses", "residential, multi-family"],
+        "date": null
+      }
+    ],
+    "rm_min": [
+      {
+        "summary": "Off-street parking is not required for uses within the B-2 Central Business District except for residential uses consisting of five or more dwelling units. Off-street parking is not required to be provided for nonresidential uses on properties in the B-1/R District fronting on North 7th Street having a nonresidential floor area of not more than 2,000 square feet.",
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["commercial", "residential, all uses"],
+        "date": null
+      }
+    ]
   },
   "Alliance, NE": {
     "place": {
@@ -3727,7 +3745,25 @@
       "scope": ["city center / business district"],
       "land": ["all uses", "commercial"],
       "date": null
-    }
+    },
+    "add_max": [
+      {
+        "summary": "Parking maximums are set at 120% of the minimums.",
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["all uses"],
+        "date": null
+      }
+    ],
+    "reduce_min": [
+      {
+        "summary": "A fee in lieu of required parking may be provided in the Town Center, Neighborhood Commercial Residential and Gateway Commercial Districts. Within the Town Center District and Neighborhood Commercial Residential District, parking requirements are reduced.",
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["all uses", "commercial"],
+        "date": null
+      }
+    ]
   },
   "Baraboo, WI": {
     "place": {
@@ -4945,7 +4981,25 @@
       "scope": ["city center / business district"],
       "land": ["commercial", "other"],
       "date": null
-    }
+    },
+    "reduce_min": [
+      {
+        "summary": "Industrial uses, business, professional and financial offices, and multifamily housing have reduced requirements within the Central Business and Waterfront Business Districts.",
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["industrial", "other", "residential, multi-family"],
+        "date": null
+      }
+    ],
+    "rm_min": [
+      {
+        "summary": "Libraries, museums, art galleries, government buildings, eating and drinking establishments, and retail uses within the Central Business and Waterfront Business Districts are exempt from parking mandates.",
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["commercial", "other"],
+        "date": null
+      }
+    ]
   },
   "Belleville, IL": {
     "place": {
@@ -7535,7 +7589,25 @@
       "scope": ["city center / business district"],
       "land": ["all uses"],
       "date": null
-    }
+    },
+    "reduce_min": [
+      {
+        "summary": "Within the TC Town Center District, commercial uses have reduced parking requirements when located in a building existing prior to 1960. A fee in lieu of any remaining required parking in the district may be provided.",
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["all uses", "commercial"],
+        "date": null
+      }
+    ],
+    "rm_min": [
+      {
+        "summary": "Within the TC Town Center District, lots fronting portions of Philadelphia Ave and South Reading Ave are exempt from parking mandates.",
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["all uses"],
+        "date": null
+      }
+    ]
   },
   "Boyne City, MI": {
     "place": {
@@ -10553,7 +10625,25 @@
       "scope": ["city center / business district"],
       "land": ["all uses"],
       "date": null
-    }
+    },
+    "reduce_min": [
+      {
+        "summary": "A change of use for commercial uses in an existing building within the C-1 District is exempt.",
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["commercial"],
+        "date": null
+      }
+    ],
+    "rm_min": [
+      {
+        "summary": "Uses in Commercial Districts which are bounded by Mansfield, Kinney Street, Third Avenue, Williams Street and Broadway are exempt from parking mandates.",
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["all uses"],
+        "date": null
+      }
+    ]
   },
   "Carol Stream, IL": {
     "place": {
@@ -11884,7 +11974,25 @@
       "scope": ["city center / business district"],
       "land": ["all uses"],
       "date": null
-    }
+    },
+    "reduce_min": [
+      {
+        "summary": "Parking requirements are reduced by 50% in the Southgate Neighborhood Overlay District.",
+        "status": "adopted",
+        "scope": ["main street / special"],
+        "land": ["all uses"],
+        "date": null
+      }
+    ],
+    "rm_min": [
+      {
+        "summary": "The Central Core Area is exempt from parking mandates.",
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["all uses"],
+        "date": null
+      }
+    ]
   },
   "Champaign County, IL": {
     "place": {
@@ -12510,7 +12618,25 @@
       "scope": ["city center / business district"],
       "land": ["commercial"],
       "date": null
-    }
+    },
+    "add_max": [
+      {
+        "summary": "Parking maximums are set at 120% of the minimums citywide.",
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["all uses"],
+        "date": null
+      }
+    ],
+    "rm_min": [
+      {
+        "summary": "Small business and office uses in the CDEP Commercial Enhancement Districts are exempt from parking mandates.",
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["commercial"],
+        "date": null
+      }
+    ]
   },
   "Cherokee, IA": {
     "place": {
@@ -12608,7 +12734,25 @@
       "scope": ["city center / business district"],
       "land": ["all uses"],
       "date": null
-    }
+    },
+    "reduce_min": [
+      {
+        "summary": "Parking requirements may be reduced through the provision of motorcycle parking.",
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["all uses"],
+        "date": null
+      }
+    ],
+    "rm_min": [
+      {
+        "summary": "The CBD Central Business District is exempt from parking mandates.",
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["all uses"],
+        "date": null
+      }
+    ]
   },
   "Chester, SC": {
     "place": {
@@ -14298,7 +14442,25 @@
       "scope": ["city center / business district"],
       "land": ["all uses"],
       "date": null
-    }
+    },
+    "reduce_min": [
+      {
+        "summary": "Nonresidential uses citywide may count public off-street parking towards parking requirements.",
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["commercial", "industrial", "medical", "other"],
+        "date": null
+      }
+    ],
+    "rm_min": [
+      {
+        "summary": "All uses in the MSC Main Street Commercial District within 250 feet of a public parking lot are exempt from parking mandates.",
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["all uses"],
+        "date": null
+      }
+    ]
   },
   "Collierville, TN": {
     "place": {
@@ -15170,7 +15332,34 @@
       "scope": ["city center / business district"],
       "land": ["commercial", "other"],
       "date": null
-    }
+    },
+    "add_max": [
+      {
+        "summary": "Within the C-1 Downtown Commercial and C-3 Corridor Commercial districts, parking maximums apply to surface parking.",
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["all uses"],
+        "date": null
+      }
+    ],
+    "reduce_min": [
+      {
+        "summary": "Within the C-1 Downtown Commercial and C-3 Corridor Commercial districts, uses which are not exempt have reduced parking requirements.",
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["all uses"],
+        "date": null
+      }
+    ],
+    "rm_min": [
+      {
+        "summary": "Within the C-1 Downtown Commercial and C-3 Corridor Commercial districts, nonresidential uses under 3000 square feet are exempt from parking mandates.",
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["commercial", "other"],
+        "date": null
+      }
+    ]
   },
   "Connersville, IN": {
     "place": {
@@ -16952,7 +17141,25 @@
       "scope": ["city center / business district"],
       "land": ["commercial", "other"],
       "date": null
-    }
+    },
+    "reduce_min": [
+      {
+        "summary": "Residential uses have in the C-2 District have a reduced requirement of one space per dwelling unit with one bedroom or less.",
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["residential, all uses"],
+        "date": null
+      }
+    ],
+    "rm_min": [
+      {
+        "summary": "Nonresidential uses in the C-2 District are exempt from minimum parking requirements.",
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["commercial", "other"],
+        "date": null
+      }
+    ]
   },
   "Danville, VA": {
     "place": {
@@ -17845,7 +18052,25 @@
       "scope": ["city center / business district"],
       "land": ["all uses"],
       "date": null
-    }
+    },
+    "add_max": [
+      {
+        "summary": "Parking maximums are set at 100% of the minimums citywide.",
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["all uses"],
+        "date": null
+      }
+    ],
+    "rm_min": [
+      {
+        "summary": "The VC-2 Village Center Business District is exempt from parking mandates.",
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["all uses"],
+        "date": null
+      }
+    ]
   },
   "Delaware, OH": {
     "place": {
@@ -19164,7 +19389,25 @@
       "scope": ["city center / business district"],
       "land": ["commercial"],
       "date": null
-    }
+    },
+    "reduce_min": [
+      {
+        "summary": "Within the Central Commercial (CC) District, the first 400 square feet of an office or retail and consumer service use is exempt from parking mandates, with uses greater than 400 square feet having reduced requirements.",
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["commercial"],
+        "date": null
+      }
+    ],
+    "rm_min": [
+      {
+        "summary": "Within the Central Commercial (CC) District, the first 400 square feet of an office or retail and consumer service use is exempt from parking mandates.",
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["commercial"],
+        "date": null
+      }
+    ]
   },
   "Dresden, SN": {
     "place": {
@@ -19273,7 +19516,7 @@
       "country": "IE",
       "type": "city",
       "pop": 592713,
-      "coord": [-83.0864859, 40.0983199],
+      "coord": [-6.267769, 53.34407],
       "repeal": false
     },
     "legacy": {
@@ -19971,7 +20214,25 @@
       "scope": ["citywide", "main street / special"],
       "land": ["commercial", "other"],
       "date": null
-    }
+    },
+    "add_max": [
+      {
+        "summary": "Parking maximums are set at 125% of the minimums.",
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["all uses"],
+        "date": null
+      }
+    ],
+    "reduce_min": [
+      {
+        "summary": "Nonresidential uses in an existing building along Main Street are exempt from parking requirements. Nonresidential uses citywide may count on-street parking towards parking requirements and when in an existing building, may discount the first 1000 square feet.",
+        "status": "adopted",
+        "scope": ["citywide", "main street / special"],
+        "land": ["commercial", "other"],
+        "date": null
+      }
+    ]
   },
   "East Greenwich, RI": {
     "place": {
@@ -20180,7 +20441,25 @@
       "scope": ["city center / business district"],
       "land": ["commercial", "other"],
       "date": null
-    }
+    },
+    "reduce_min": [
+      {
+        "summary": "Residential uses in the NC Neighborhood Mixed Use Commercial District may count adjacent on-street parking. Uses in the C General Commercial District may count adjacent on-street parking or nearby public parking towards requirements.",
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["all uses", "residential, all uses"],
+        "date": null
+      }
+    ],
+    "rm_min": [
+      {
+        "summary": "Nonresidential uses in the NC Neighborhood Mixed Use Commercial District are exempt from parking mandates.",
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["commercial", "other"],
+        "date": null
+      }
+    ]
   },
   "East Providence, RI": {
     "place": {
@@ -20259,7 +20538,25 @@
       "scope": ["city center / business district"],
       "land": ["commercial"],
       "date": null
-    }
+    },
+    "add_max": [
+      {
+        "summary": "Parking maximums apply to single-family dwellings.",
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["residential, low-density"],
+        "date": null
+      }
+    ],
+    "rm_min": [
+      {
+        "summary": "Commercial uses in the Central Business District (C-1A) are exempt from parking mandates.",
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["commercial"],
+        "date": null
+      }
+    ]
   },
   "East Tawas, MI": {
     "place": {
@@ -20380,7 +20677,25 @@
       "scope": ["city center / business district"],
       "land": ["commercial", "other", "residential, all uses"],
       "date": null
-    }
+    },
+    "reduce_min": [
+      {
+        "summary": "Mixed-use developments within the Downtown District (DD) and Business and Entertainment District (BE) have reduced parking requirements.",
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["commercial", "other", "residential, all uses"],
+        "date": null
+      }
+    ],
+    "rm_min": [
+      {
+        "summary": "Within the DD Downtown District, nonresidential uses requiring fewer than 7 spaces or residential uses with less than 4 dwelling units are exempt from parking mandates.",
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["all uses"],
+        "date": null
+      }
+    ]
   },
   "Eastpointe, MI": {
     "place": {
@@ -20512,7 +20827,25 @@
       "scope": ["city center / business district"],
       "land": ["residential, all uses"],
       "date": null
-    }
+    },
+    "add_max": [
+      {
+        "summary": "Parking maximums are set at 120% of the minimums except in the “O-C” Open Space Conservation District.",
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["all uses"],
+        "date": null
+      }
+    ],
+    "rm_min": [
+      {
+        "summary": "Upper floor residential dwellings in the CBD Central Business District are exempt from parking mandates.",
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["residential, multi-family"],
+        "date": null
+      }
+    ]
   },
   "Ecorse, MI": {
     "place": {
@@ -21830,7 +22163,25 @@
       "scope": ["city center / business district", "citywide"],
       "land": ["all uses", "commercial", "other"],
       "date": null
-    }
+    },
+    "add_max": [
+      {
+        "summary": "Within the Town Center (TC) District parking maximums are set at 130% of the minimums.",
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["all uses"],
+        "date": null
+      }
+    ],
+    "reduce_min": [
+      {
+        "summary": "On street parking may count towards parking requirements citywide while public parking also counts within the Town Center (TC) District. Also in the TC District, nonresidential uses may provide a fee in lieu of required parking.",
+        "status": "adopted",
+        "scope": ["city center / business district", "citywide"],
+        "land": ["all uses", "commercial", "other"],
+        "date": null
+      }
+    ]
   },
   "Elwood, UT": {
     "place": {
@@ -21983,7 +22334,25 @@
       "scope": ["city center / business district"],
       "land": ["commercial", "other"],
       "date": null
-    }
+    },
+    "reduce_min": [
+      {
+        "summary": "Within the B-C Downtown District or R-HO districts, a fee in lieu of parking may be provided.",
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["all uses"],
+        "date": null
+      }
+    ],
+    "rm_min": [
+      {
+        "summary": "Within the B-C Downtown District, nonresidential uses under 4,000 square feet are exempt from parking mandates.",
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["commercial", "other"],
+        "date": null
+      }
+    ]
   },
   "Emmitsburg, MD": {
     "place": {
@@ -22158,7 +22527,25 @@
       "scope": ["city center / business district"],
       "land": ["commercial", "other"],
       "date": null
-    }
+    },
+    "reduce_min": [
+      {
+        "summary": "Parking requirements may be reduced through the provision of motorcycle parking.",
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["all uses"],
+        "date": null
+      }
+    ],
+    "rm_min": [
+      {
+        "summary": "Uses within the CBD Central Business District, except for residential or hotel uses, are exempt from parking mandates.",
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["commercial", "other"],
+        "date": null
+      }
+    ]
   },
   "Epworth, IA": {
     "place": {
@@ -22237,7 +22624,25 @@
       "scope": ["city center / business district"],
       "land": ["all uses"],
       "date": null
-    }
+    },
+    "reduce_min": [
+      {
+        "summary": "Properties in the W-C2, W-C3, RLB, C-1 and C-4 zoning districts are required to provide fifty percent (50%) of the parking minimums. Prior to September 2024, only the W-C2, W-C3 and C-4 districts were allowed this reduction. As part of the same ordinance, requirements for bowling alleys, laundromats, and neighborhood center uses were reduced.",
+        "status": "adopted",
+        "scope": ["city center / business district", "citywide"],
+        "land": ["all uses", "commercial"],
+        "date": "2024-09-18"
+      }
+    ],
+    "rm_min": [
+      {
+        "summary": "Properties in the C-3 Central Commercial District are not be required to provide off street parking.",
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["all uses"],
+        "date": null
+      }
+    ]
   },
   "Erlanger, KY": {
     "place": {
@@ -22376,7 +22781,25 @@
       "scope": ["city center / business district", "citywide"],
       "land": ["all uses"],
       "date": null
-    }
+    },
+    "add_max": [
+      {
+        "summary": "Nonresidential uses in the C2 and I Districts have parking maximums.",
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["commercial", "industrial", "medical", "other"],
+        "date": null
+      }
+    ],
+    "rm_min": [
+      {
+        "summary": "Uses on lots less than 2500 square feet and all uses in the C1 District are exempt from parking mandates.",
+        "status": "adopted",
+        "scope": ["city center / business district", "citywide"],
+        "land": ["all uses"],
+        "date": null
+      }
+    ]
   },
   "Eugene, OR": {
     "place": {
@@ -24082,7 +24505,25 @@
       "scope": ["city center / business district"],
       "land": ["all uses"],
       "date": null
-    }
+    },
+    "reduce_min": [
+      {
+        "summary": "Nonresidential uses may count on-street and public parking toward parking requirements.",
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["commercial", "industrial", "medical", "other"],
+        "date": null
+      }
+    ],
+    "rm_min": [
+      {
+        "summary": "The DX Downtown Mixed-Use District is exempt from parking mandates.",
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["all uses"],
+        "date": null
+      }
+    ]
   },
   "Ford Heights, IL": {
     "place": {
@@ -24194,7 +24635,25 @@
       "scope": ["city center / business district"],
       "land": ["all uses"],
       "date": null
-    }
+    },
+    "reduce_min": [
+      {
+        "summary": "Within the TCO Town Center Overlay District, the first 1500 square feet is exempt from parking mandates. In addition, on-street parking may count toward the parking requirements.",
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["all uses"],
+        "date": null
+      }
+    ],
+    "rm_min": [
+      {
+        "summary": "Within the TCO Town Center Overlay District, the first 1500 square feet is exempt from parking mandates.",
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["all uses"],
+        "date": null
+      }
+    ]
   },
   "Forest Lake, MN": {
     "place": {
@@ -26889,7 +27348,25 @@
       "scope": ["city center / business district"],
       "land": ["commercial", "other"],
       "date": null
-    }
+    },
+    "reduce_min": [
+      {
+        "summary": "Parking requirements may be reduced for on-street parking, public parking, proximity to transit, bike parking, carshare, or providing right-of-way to a trail.",
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["all uses"],
+        "date": null
+      }
+    ],
+    "rm_min": [
+      {
+        "summary": "The OT Old Town District and ES Elm Street Overlay District are exempt from parking mandates except for residential uses.",
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["commercial", "other"],
+        "date": "2008-05-05"
+      }
+    ]
   },
   "Gibsonburg, OH": {
     "place": {
@@ -29678,7 +30155,34 @@
       "scope": ["citywide"],
       "land": ["commercial"],
       "date": null
-    }
+    },
+    "add_max": [
+      {
+        "summary": "Parking maximums apply to all uses, but only for parking reserved for specific tenants. ",
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["all uses"],
+        "date": null
+      }
+    ],
+    "reduce_min": [
+      {
+        "summary": "On-street parking may count towards parking requirements.",
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["all uses"],
+        "date": null
+      }
+    ],
+    "rm_min": [
+      {
+        "summary": "Commercial uses under 10,000 square feet are exempt from parking mandates.",
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["commercial"],
+        "date": null
+      }
+    ]
   },
   "Hallsville, MO": {
     "place": {
@@ -31140,7 +31644,31 @@
       "scope": ["city center / business district"],
       "land": ["all uses"],
       "date": null
-    }
+    },
+    "add_max": [
+      {
+        "summary": "Parking maximums apply to all uses except single-family homes.",
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": [
+          "commercial",
+          "industrial",
+          "medical",
+          "other",
+          "residential, multi-family"
+        ],
+        "date": null
+      }
+    ],
+    "rm_min": [
+      {
+        "summary": "The Downtown Overlay District is exempt from parking mandates.",
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["all uses"],
+        "date": null
+      }
+    ]
   },
   "Healdsburg, CA": {
     "place": {
@@ -32244,7 +32772,25 @@
       "scope": ["city center / business district"],
       "land": ["commercial", "other"],
       "date": null
-    }
+    },
+    "reduce_min": [
+      {
+        "summary": "Within the C-1 Central Business District and C-2 Neighborhood Mixed-Use Commercial District, nonresidential uses have reduced parking requirements based on size.",
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["commercial", "other"],
+        "date": null
+      }
+    ],
+    "rm_min": [
+      {
+        "summary": "Within the C-1 Central Business District and C-2 Neighborhood Mixed-Use Commercial District, small nonresidential uses are exempt from parking mandates.",
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["commercial", "other"],
+        "date": null
+      }
+    ]
   },
   "Homewood, IL": {
     "place": {
@@ -34516,7 +35062,25 @@
       "scope": ["city center / business district"],
       "land": ["all uses", "residential, all uses"],
       "date": null
-    }
+    },
+    "add_max": [
+      {
+        "summary": "Parking maximums are set at 120% of the minimums.",
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["all uses"],
+        "date": null
+      }
+    ],
+    "reduce_min": [
+      {
+        "summary": "The first two residential units in a mixed-use building in the TC Town Center District are exempt from parking mandates. A fee in lieu of required parking may be provided in the TC, NCR and G Districts.",
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["all uses", "residential, all uses"],
+        "date": null
+      }
+    ]
   },
   "Jenks, OK": {
     "place": {
@@ -34726,7 +35290,25 @@
       "scope": ["city center / business district"],
       "land": ["commercial", "other", "residential, all uses"],
       "date": null
-    }
+    },
+    "add_max": [
+      {
+        "summary": "Parking maximums are set at 100% of the minimums citywide.",
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["all uses"],
+        "date": null
+      }
+    ],
+    "rm_min": [
+      {
+        "summary": "All uses except overnight accommodations in the C-3 Local Commercial District are exempt from parking mandates.",
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["commercial", "other", "residential, all uses"],
+        "date": null
+      }
+    ]
   },
   "Johannesburg, GP": {
     "place": {
@@ -38125,7 +38707,25 @@
       "scope": ["city center / business district", "citywide"],
       "land": ["all uses", "commercial"],
       "date": null
-    }
+    },
+    "reduce_min": [
+      {
+        "summary": "Within the TOD Transit Oriented Design Overlay District, parking requirements are reduced by 10% and on-street parking may be counted towards the minimums. A fee in lieu of required parking may be provided for non-exempted uses in the Downtown Core Overlay District and Downtown Business Overlay District.",
+        "status": "adopted",
+        "scope": ["city center / business district", "transit-oriented"],
+        "land": ["all uses"],
+        "date": null
+      }
+    ],
+    "rm_min": [
+      {
+        "summary": "Within the Downtown Business Overlay District and Downtown Core Overlay District, the first 10,000 square feet of a nonresidential use is exempt from parking mandates. Retail and restaurant uses within 500 feet of a public parking lot are exempt from parking mandates. Prior to August 21, 2024 when the district was consolidated into the Downtown Business Overlay, the first 400 feet of certain commercial uses were exempt from parking mandates within the Professional Office and Specialty Restaurant Conservation Overlay District. Additionally, the Downtown Business Overlay District had no parking mandates for any buildings under 20,000 square feet prior to the change.",
+        "status": "adopted",
+        "scope": ["city center / business district", "citywide"],
+        "land": ["commercial", "other"],
+        "date": null
+      }
+    ]
   },
   "Lansdowne, PA": {
     "place": {
@@ -38871,7 +39471,25 @@
       "scope": ["city center / business district"],
       "land": ["commercial", "other", "residential, all uses"],
       "date": null
-    }
+    },
+    "reduce_min": [
+      {
+        "summary": "Parking requirements may be reduced through the provision of motorcycle parking.",
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["all uses"],
+        "date": null
+      }
+    ],
+    "rm_min": [
+      {
+        "summary": "There are no parking mandates within the CBD Central Business District except for three of more dwelling units or a hotel.",
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["commercial", "other", "residential, all uses"],
+        "date": null
+      }
+    ]
   },
   "Leduc, AB": {
     "place": {
@@ -38987,7 +39605,25 @@
       "scope": ["city center / business district"],
       "land": ["commercial", "other"],
       "date": null
-    }
+    },
+    "add_max": [
+      {
+        "summary": "Parking maximums are set at 100% of the minimums citywide.",
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["all uses"],
+        "date": null
+      }
+    ],
+    "rm_min": [
+      {
+        "summary": "Nonresidential uses in the C-2 Central Business District are exempt from parking mandates.",
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["commercial", "other"],
+        "date": null
+      }
+    ]
   },
   "Leland Grove, IL": {
     "place": {
@@ -39283,7 +39919,25 @@
       "scope": ["city center / business district", "citywide"],
       "land": ["all uses", "commercial"],
       "date": "2023-08-15"
-    }
+    },
+    "reduce_min": [
+      {
+        "summary": "On August 15, 2023, Lewisburg lowered residential requirements to 1 space/dwelling unit and bike parking may now substitute for automobile parking.",
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["all uses", "residential, all uses"],
+        "date": "2023-08-15"
+      }
+    ],
+    "rm_min": [
+      {
+        "summary": "On August 15, 2023, Lewisburg eliminated all parking requirements in the Downtown Commercial District and nonresidential requirements in all districts. Previously, only nonresidential uses downtown were exempt.",
+        "status": "adopted",
+        "scope": ["city center / business district", "citywide"],
+        "land": ["all uses", "commercial", "industrial", "medical", "other"],
+        "date": "2023-08-15"
+      }
+    ]
   },
   "Lewistown, IL": {
     "place": {
@@ -44002,7 +44656,25 @@
       "scope": ["citywide", "main street / special"],
       "land": ["all uses"],
       "date": null
-    }
+    },
+    "reduce_min": [
+      {
+        "summary": "On-street parking may count towards parking requirements in the TND Districts. The first 2000 square feet of a use is exempt from parking mandates.",
+        "status": "adopted",
+        "scope": ["citywide", "main street / special"],
+        "land": ["all uses"],
+        "date": null
+      }
+    ],
+    "rm_min": [
+      {
+        "summary": "The first 2000 square feet of a use is exempt from parking mandates.",
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["all uses"],
+        "date": null
+      }
+    ]
   },
   "Mechanicsville, IA": {
     "place": {
@@ -45353,7 +46025,34 @@
       "scope": ["citywide"],
       "land": ["commercial", "industrial", "other"],
       "date": null
-    }
+    },
+    "add_max": [
+      {
+        "summary": "Parking maximums apply to nonresidential uses.",
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["commercial", "industrial", "medical", "other"],
+        "date": null
+      }
+    ],
+    "reduce_min": [
+      {
+        "summary": "On-street parking may be counted towards parking requirements.",
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["all uses"],
+        "date": null
+      }
+    ],
+    "rm_min": [
+      {
+        "summary": "Nonresidential uses under 10,000 square feet are exempt from parking mandates.",
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["commercial", "industrial", "medical", "other"],
+        "date": null
+      }
+    ]
   },
   "Millersville, PA": {
     "place": {
@@ -45912,7 +46611,25 @@
       "scope": ["citywide"],
       "land": ["commercial", "other", "residential, all uses"],
       "date": null
-    }
+    },
+    "add_max": [
+      {
+        "summary": "Parking maximums are set at 120% of the minimums in the TC-1 and TC-2 Overlay Districts.",
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["all uses"],
+        "date": null
+      }
+    ],
+    "reduce_min": [
+      {
+        "summary": "Parking requirements may be reduced through shared parking.",
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["commercial", "other", "residential, all uses"],
+        "date": null
+      }
+    ]
   },
   "Modesto, CA": {
     "place": {
@@ -47066,7 +47783,25 @@
       "scope": ["city center / business district"],
       "land": ["all uses"],
       "date": null
-    }
+    },
+    "reduce_min": [
+      {
+        "summary": "Within the Central Commercial District (C-1), the first 5000 square feet of a nonresidential use and the first 25 residential units are exempt from parking mandates. Uses larger than those thresholds have reduced requirements.",
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["all uses"],
+        "date": null
+      }
+    ],
+    "rm_min": [
+      {
+        "summary": "Within the Central Commercial District (C-1), the first 5000 square feet of a nonresidential use and the first 25 residential units are exempt from parking mandates.",
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["all uses"],
+        "date": null
+      }
+    ]
   },
   "Morton, IL": {
     "place": {
@@ -48425,7 +49160,25 @@
       "scope": ["city center / business district"],
       "land": ["commercial", "other", "residential, all uses"],
       "date": null
-    }
+    },
+    "reduce_min": [
+      {
+        "summary": "Parking requirements may be reduced through the provision of motorcycle parking.",
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["all uses"],
+        "date": null
+      }
+    ],
+    "rm_min": [
+      {
+        "summary": "In the TC Zoning District, off-street parking is not required, except for three or more new dwelling units or a hotel or rooming house.",
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["commercial", "other", "residential, all uses"],
+        "date": null
+      }
+    ]
   },
   "München, BY": {
     "place": {
@@ -48609,7 +49362,34 @@
       "scope": ["city center / business district"],
       "land": ["commercial", "other", "residential, all uses"],
       "date": null
-    }
+    },
+    "add_max": [
+      {
+        "summary": "Parking maximums are set at 120% of the minimums in the 5a Downtown District and 5b Montgomery Avenue District.",
+        "status": "adopted",
+        "scope": ["city center / business district", "main street / special"],
+        "land": ["all uses"],
+        "date": null
+      }
+    ],
+    "reduce_min": [
+      {
+        "summary": "Up to 5,000 square feet of nonresidential floor area and one dwelling unit in the 5a Downtown District is exempt from parking mandates. On-street parking in the 3b, 3c, 4a, 4b, and 5b Zoning Districts may be counted towards parking requirements.",
+        "status": "adopted",
+        "scope": ["city center / business district", "citywide"],
+        "land": ["all uses", "commercial", "other", "residential, all uses"],
+        "date": null
+      }
+    ],
+    "rm_min": [
+      {
+        "summary": "Up to 5,000 square feet of nonresidential floor area and one dwelling unit in the 5a Downtown District is exempt from parking mandates.",
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["commercial", "other", "residential, all uses"],
+        "date": null
+      }
+    ]
   },
   "Nashville, AR": {
     "place": {
@@ -49335,7 +50115,34 @@
       "scope": ["city center / business district"],
       "land": ["residential, all uses"],
       "date": null
-    }
+    },
+    "add_max": [
+      {
+        "summary": "Parking maximums are set at 120% of the minimums citywide.",
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["all uses"],
+        "date": null
+      }
+    ],
+    "reduce_min": [
+      {
+        "summary": "Within the Downtown Overlay District, the first two residential units in a mixed-use building are exempt from parking mandates. Within the Mixed Use and Industrial/Commercial Districts, a fee in lieu of parking may be provided.",
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["all uses", "residential, all uses"],
+        "date": null
+      }
+    ],
+    "rm_min": [
+      {
+        "summary": "Within the Downtown Overlay District, the first two residential units in a mixed-use building are exempt from parking mandates.",
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["residential, all uses"],
+        "date": null
+      }
+    ]
   },
   "New Florence, PA": {
     "place": {
@@ -50575,7 +51382,30 @@
       "scope": ["city center / business district"],
       "land": ["all uses"],
       "date": null
-    }
+    },
+    "reduce_min": [
+      {
+        "summary": "Parking requirements may be reduced for mixed-use developments and for uses located near transit.",
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": [
+          "all uses",
+          "commercial",
+          "other",
+          "residential, multi-family"
+        ],
+        "date": null
+      }
+    ],
+    "rm_min": [
+      {
+        "summary": "The TC Town Center and TCII Town Center II districts are exempt from parking mandates.",
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["all uses"],
+        "date": null
+      }
+    ]
   },
   "North Baltimore, OH": {
     "place": {
@@ -58976,7 +59806,25 @@
       "scope": ["city center / business district"],
       "land": ["all uses"],
       "date": null
-    }
+    },
+    "reduce_min": [
+      {
+        "summary": "On-street parking may count towards parking requirements citywide.",
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["all uses"],
+        "date": null
+      }
+    ],
+    "rm_min": [
+      {
+        "summary": "The C-1 District is exempt from parking mandates.",
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["all uses"],
+        "date": null
+      }
+    ]
   },
   "Rifle, CO": {
     "place": {
@@ -62601,7 +63449,25 @@
       "scope": ["city center / business district"],
       "land": ["commercial"],
       "date": "2022-01-06"
-    }
+    },
+    "reduce_min": [
+      {
+        "summary": "Within the Main Street Business District, the first 500 square feet of a commercial use is exempt from parking mandates. Parking requirements for all uses in the district may be reduced through on-street parking or bike parking.",
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["all uses", "commercial"],
+        "date": "2022-01-06"
+      }
+    ],
+    "rm_min": [
+      {
+        "summary": "Within the Main Street Business District, the first 500 square feet of a commercial use is exempt from parking mandates.",
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["commercial"],
+        "date": "2022-01-06"
+      }
+    ]
   },
   "Scio Township, MI": {
     "place": {
@@ -63315,7 +64181,34 @@
       "scope": ["city center / business district"],
       "land": ["commercial", "other"],
       "date": null
-    }
+    },
+    "add_max": [
+      {
+        "summary": "Parking maximums range from 120% to 135% of the minimums depending on parking lot size.",
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["all uses"],
+        "date": null
+      }
+    ],
+    "reduce_min": [
+      {
+        "summary": "Parking requirements may be reduced through bike parking, transit proximity (businesses only) or counting on-street parking.",
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["all uses", "commercial"],
+        "date": null
+      }
+    ],
+    "rm_min": [
+      {
+        "summary": "Nonresidential uses in the C-1 and C-1A Downtown Commercial Districts are exempt from parking mandates.",
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["commercial", "other"],
+        "date": null
+      }
+    ]
   },
   "Sharon, WI": {
     "place": {
@@ -64808,7 +65701,25 @@
       "scope": ["city center / business district"],
       "land": ["commercial", "other"],
       "date": null
-    }
+    },
+    "reduce_min": [
+      {
+        "summary": "Parking requirements are reduced for commercial uses in mixed-use lodging projects.",
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["commercial", "other"],
+        "date": null
+      }
+    ],
+    "rm_min": [
+      {
+        "summary": "Nonresidential uses in the C-2 Central Commercial District are exempt from parking mandates.",
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["commercial", "other"],
+        "date": null
+      }
+    ]
   },
   "Somerset, WI": {
     "place": {
@@ -64967,7 +65878,25 @@
       "scope": ["city center / business district"],
       "land": ["commercial"],
       "date": null
-    }
+    },
+    "add_max": [
+      {
+        "summary": "Parking maximums are set at 120% of the minimums.",
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["all uses"],
+        "date": null
+      }
+    ],
+    "reduce_min": [
+      {
+        "summary": "Restaurants, retail and office uses in the C-3 Commercial-Downtown Core District have reduced parking requirements. ",
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["commercial"],
+        "date": null
+      }
+    ]
   },
   "South Bend, IN": {
     "place": {
@@ -67084,7 +68013,25 @@
       "scope": ["city center / business district"],
       "land": ["commercial", "other"],
       "date": null
-    }
+    },
+    "reduce_min": [
+      {
+        "summary": "Parking requirements for housing for the elderly may be reduced when located near transit, public parking or under other conditions. ",
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["residential, multi-family"],
+        "date": null
+      }
+    ],
+    "rm_min": [
+      {
+        "summary": "Within the C General Commercial District and the CID Commercial Incentive District, the first 30,000 square feet of a nonresidential use, or a theatre with nearby public parking are exempt from parking mandates. Cafes or restaurants within the UV Urban Village District may be exempted upon certain conditions.",
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["commercial", "other"],
+        "date": null
+      }
+    ]
   },
   "Statesville, NC": {
     "place": {
@@ -68503,7 +69450,25 @@
       "scope": ["city center / business district"],
       "land": ["commercial"],
       "date": null
-    }
+    },
+    "reduce_min": [
+      {
+        "summary": "On-street parking in the  CFDD Carrie Furnace Development District may count towards parking requirements.",
+        "status": "adopted",
+        "scope": ["main street / special"],
+        "land": ["all uses"],
+        "date": null
+      }
+    ],
+    "rm_min": [
+      {
+        "summary": "Commercial uses in the CBD Central Business District and NMU Neighborhood Mixed Use districts are exempt from parking mandates when the use has adjacent on-street parking, or when public parking is reasonably available to the site.",
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["commercial"],
+        "date": null
+      }
+    ]
   },
   "Switzerland County, IN": {
     "place": {
@@ -71297,7 +72262,25 @@
       "scope": ["city center / business district"],
       "land": ["commercial", "other", "residential, all uses"],
       "date": null
-    }
+    },
+    "reduce_min": [
+      {
+        "summary": "The first 2000 square feet of floor area for permitted uses in the T-C Town Center Commercial District is exempt from parking mandates.",
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["commercial", "other", "residential, all uses"],
+        "date": null
+      }
+    ],
+    "rm_min": [
+      {
+        "summary": "The first 2000 square feet of floor area for permitted uses in the T-C Town Center Commercial District is exempt from parking mandates.",
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["commercial", "other", "residential, all uses"],
+        "date": null
+      }
+    ]
   },
   "Udall, KS": {
     "place": {
@@ -72179,7 +73162,25 @@
       "scope": ["main street / special"],
       "land": ["commercial"],
       "date": null
-    }
+    },
+    "reduce_min": [
+      {
+        "summary": "On-street parking or public or commercial parking lot spaces within 500 feet may be counted towards required parking on the basis that six public or commercial spaces may be considered equal to one required private space.",
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["all uses"],
+        "date": null
+      }
+    ],
+    "rm_min": [
+      {
+        "summary": "Commercial uses abutting Allegheny River Boulevard are exempt from parking mandates.",
+        "status": "adopted",
+        "scope": ["main street / special"],
+        "land": ["commercial"],
+        "date": null
+      }
+    ]
   },
   "Verona, WI": {
     "place": {
@@ -75156,7 +76157,25 @@
       "scope": ["city center / business district"],
       "land": ["all uses"],
       "date": null
-    }
+    },
+    "reduce_min": [
+      {
+        "summary": "A change of use in an existing building is exempt from parking mandates citywide.",
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["all uses"],
+        "date": null
+      }
+    ],
+    "rm_min": [
+      {
+        "summary": "The Central Business (CB) District is exempt from parking mandates.",
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["all uses"],
+        "date": null
+      }
+    ]
   },
   "West Saint Paul, MN": {
     "place": {
@@ -78243,7 +79262,7 @@
         "status": "adopted",
         "scope": ["city center / business district"],
         "land": ["all uses"],
-        "date": null
+        "date": "2019-09-09"
       }
     ]
   },
