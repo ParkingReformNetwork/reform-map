@@ -1,6 +1,14 @@
 import { expect, test } from "@playwright/test";
 
-import { determineHtml } from "../../src/js/counters";
+import {
+  determineHtml,
+  determineLegacy,
+  determineAnyReform,
+  determineAddMax,
+  determineReduceMin,
+  determineRmMin,
+  determinePlaceDescription,
+} from "../../src/js/counters";
 import { FilterState } from "../../src/js/FilterState";
 import { PolicyType } from "../../src/js/types";
 
@@ -38,254 +46,180 @@ test.describe("determineHtml", () => {
   });
 
   test("search", () => {
-    const state = { ...DEFAULT_STATE, searchInput: "My Town" };
-    const result = determineHtml(state, 1, new Set(), new Set(), new Set());
+    const result = determineHtml(
+      { ...DEFAULT_STATE, searchInput: "My Town" },
+      1,
+      new Set(),
+      new Set(),
+      new Set(),
+    );
     expect(result).toEqual(
       'Showing My Town from search — <a class="counter-search-reset" role="button" aria-label="reset search">reset</a>',
     );
   });
+});
 
-  test("any parking reform", () => {
-    const assert = (
-      state: FilterState,
-      matchedPolicyTypes: PolicyType[],
-      expected: string,
-    ): void => {
-      const result = determineHtml(
-        state,
-        5,
-        new Set(matchedPolicyTypes),
-        new Set(["Mexico"]),
-        new Set(["city", "county"]),
-      );
-      expect(result).toEqual(expected);
-    };
+test("determinePlaceDescription()", () => {
+  const countries = new Set(["Mexico", "Egypt"]);
+  const jurisdictions = new Set(["city", "state"] as const);
 
-    const everyPolicyType: PolicyType[] = [
-      "add parking maximums",
-      "reduce parking minimums",
-      "remove parking minimums",
-    ];
+  expect(determinePlaceDescription(1, countries, jurisdictions)).toEqual(
+    "1 place in 2 countries",
+  );
+  expect(determinePlaceDescription(2, countries, jurisdictions)).toEqual(
+    "2 places in 2 countries",
+  );
 
-    // We only show policy types that are both present in the matched places &
-    // the user requested to see via `includedPolicyChanges`.
-    assert(
-      DEFAULT_STATE,
-      everyPolicyType,
-      "Showing 5 places in Mexico with parking minimums removed, parking minimums reduced, or parking maximums added",
-    );
-    assert(
-      DEFAULT_STATE,
-      ["add parking maximums", "remove parking minimums"],
-      "Showing 5 places in Mexico with parking minimums removed or parking maximums added",
-    );
-    assert(
-      DEFAULT_STATE,
-      ["add parking maximums"],
-      "Showing 5 places in Mexico with parking maximums added",
-    );
+  expect(
+    determinePlaceDescription(2, new Set(["Mexico"]), jurisdictions),
+  ).toEqual("2 places in Mexico");
+  expect(
+    determinePlaceDescription(2, new Set(["United States"]), jurisdictions),
+  ).toEqual("2 places in the United States");
 
-    assert(
-      {
-        ...DEFAULT_STATE,
-        includedPolicyChanges: new Set([
-          "reduce parking minimums",
-          "remove parking minimums",
-        ]),
-      },
-      everyPolicyType,
-      "Showing 5 places in Mexico with parking minimums removed or parking minimums reduced",
-    );
-    assert(
-      {
-        ...DEFAULT_STATE,
-        includedPolicyChanges: new Set(["remove parking minimums"]),
-      },
-      everyPolicyType,
-      "Showing 5 places in Mexico with parking minimums removed",
-    );
-    assert(
-      {
-        ...DEFAULT_STATE,
-        includedPolicyChanges: new Set(["reduce parking minimums"]),
-      },
-      everyPolicyType,
-      "Showing 5 places in Mexico with parking minimums reduced",
-    );
-    assert(
-      {
-        ...DEFAULT_STATE,
-        includedPolicyChanges: new Set(["add parking maximums"]),
-      },
-      everyPolicyType,
-      "Showing 5 places in Mexico with parking maximums added",
-    );
+  expect(determinePlaceDescription(1, countries, new Set(["city"]))).toEqual(
+    "1 city in 2 countries",
+  );
+  expect(determinePlaceDescription(2, countries, new Set(["city"]))).toEqual(
+    "2 cities in 2 countries",
+  );
 
-    assert(
-      {
-        ...DEFAULT_STATE,
-        allMinimumsRemovedToggle: true,
-      },
-      everyPolicyType,
-      "Showing 5 places in Mexico with all parking minimums removed",
-    );
-    assert(
-      {
-        ...DEFAULT_STATE,
-        allMinimumsRemovedToggle: true,
-        includedPolicyChanges: new Set(["add parking maximums"]),
-      },
-      everyPolicyType,
-      "Showing 5 places in Mexico with both all parking minimums removed and parking maximums added",
-    );
-  });
+  expect(determinePlaceDescription(1, countries, new Set(["county"]))).toEqual(
+    "1 county in 2 countries",
+  );
+  expect(determinePlaceDescription(2, countries, new Set(["county"]))).toEqual(
+    "2 counties in 2 countries",
+  );
 
-  test("reduce minimums", () => {
-    const result = determineHtml(
-      {
-        ...DEFAULT_STATE,
-        policyTypeFilter: "reduce parking minimums",
-      },
-      5,
-      new Set(),
-      new Set(["Mexico", "Brazil"]),
-      new Set(["city", "county"]),
+  expect(determinePlaceDescription(1, countries, new Set(["state"]))).toEqual(
+    "1 state in 2 countries",
+  );
+  expect(determinePlaceDescription(2, countries, new Set(["state"]))).toEqual(
+    "2 states in 2 countries",
+  );
+
+  expect(determinePlaceDescription(1, countries, new Set(["country"]))).toEqual(
+    "1 country",
+  );
+  expect(determinePlaceDescription(2, countries, new Set(["country"]))).toEqual(
+    "2 countries",
+  );
+});
+
+test("determineLegacy()", () => {
+  expect(determineLegacy("2 places in Mexico", false)).toEqual(
+    "Showing 2 places in Mexico with parking reforms",
+  );
+  expect(determineLegacy("2 places in Mexico", true)).toEqual(
+    "Showing 2 places in Mexico with all parking minimums removed",
+  );
+});
+
+test("determineAddMax()", () => {
+  expect(determineAddMax("2 places in Mexico", false)).toEqual(
+    "Showing 2 places in Mexico with parking maximums added",
+  );
+  expect(determineAddMax("2 places in Mexico", true)).toEqual(
+    "Showing 2 places in Mexico with both all parking minimums removed and parking maximums added",
+  );
+});
+
+test("determineReduceMinimums()", () => {
+  expect(determineReduceMin("2 places in Mexico")).toEqual(
+    "Showing 2 places in Mexico with parking minimums reduced",
+  );
+});
+
+test("determineRemoveMin()", () => {
+  expect(determineRmMin("2 places in Mexico", false)).toEqual(
+    "Showing 2 places in Mexico with parking minimums removed",
+  );
+  expect(determineRmMin("2 places in Mexico", true)).toEqual(
+    "Showing 2 places in Mexico with all parking minimums removed",
+  );
+});
+
+test("determineAnyReform()", () => {
+  const assert = (
+    args: {
+      matched: PolicyType[];
+      allMinimums: boolean;
+      statePolicy: PolicyType[];
+    },
+    expected: string,
+  ): void => {
+    const result = determineAnyReform(
+      "5 places in Mexico",
+      new Set(args.matched),
+      args.allMinimums,
+      new Set(args.statePolicy),
     );
-    const expected =
-      "Showing 5 places in 2 countries with parking minimums reduced";
     expect(result).toEqual(expected);
+  };
 
-    // allMinimumsRemovedToggle doesn't matter
-    const allMinimumsRemoved = determineHtml(
-      {
-        ...DEFAULT_STATE,
-        policyTypeFilter: "reduce parking minimums",
-        allMinimumsRemovedToggle: true,
-      },
-      5,
-      new Set(),
-      new Set(["Mexico", "Brazil"]),
-      new Set(["city", "county"]),
-    );
-    expect(allMinimumsRemoved).toEqual(expected);
-  });
+  const everyPolicyType: PolicyType[] = [
+    "add parking maximums",
+    "reduce parking minimums",
+    "remove parking minimums",
+  ];
 
-  test("remove minimums", () => {
-    const result = determineHtml(
-      {
-        ...DEFAULT_STATE,
-        policyTypeFilter: "remove parking minimums",
-      },
-      5,
-      new Set(),
-      new Set(["Mexico", "Brazil"]),
-      new Set(["city", "county"]),
-    );
-    expect(result).toEqual(
-      "Showing 5 places in 2 countries with parking minimums removed",
-    );
+  // We only show policy types that are both present in the matched places &
+  // the user requested to see via `includedPolicyChanges`.
+  assert(
+    {
+      matched: everyPolicyType,
+      statePolicy: everyPolicyType,
+      allMinimums: false,
+    },
+    "Showing 5 places in Mexico with parking minimums removed, parking minimums reduced, or parking maximums added",
+  );
+  assert(
+    {
+      matched: ["add parking maximums", "remove parking minimums"],
+      statePolicy: everyPolicyType,
+      allMinimums: false,
+    },
+    "Showing 5 places in Mexico with parking minimums removed or parking maximums added",
+  );
+  assert(
+    {
+      matched: everyPolicyType,
+      statePolicy: ["add parking maximums", "remove parking minimums"],
+      allMinimums: false,
+    },
+    "Showing 5 places in Mexico with parking minimums removed or parking maximums added",
+  );
+  assert(
+    {
+      matched: ["add parking maximums"],
+      statePolicy: everyPolicyType,
+      allMinimums: false,
+    },
+    "Showing 5 places in Mexico with parking maximums added",
+  );
+  assert(
+    {
+      matched: everyPolicyType,
+      statePolicy: ["add parking maximums"],
+      allMinimums: false,
+    },
+    "Showing 5 places in Mexico with parking maximums added",
+  );
 
-    const allMinimumsRemoved = determineHtml(
-      {
-        ...DEFAULT_STATE,
-        policyTypeFilter: "remove parking minimums",
-        allMinimumsRemovedToggle: true,
-      },
-      5,
-      new Set(),
-      new Set(["Mexico", "Brazil"]),
-      new Set(["city", "county"]),
-    );
-    expect(allMinimumsRemoved).toEqual(
-      "Showing 5 places in 2 countries with all parking minimums removed",
-    );
-  });
-
-  test("add maximums", () => {
-    const result = determineHtml(
-      {
-        ...DEFAULT_STATE,
-        policyTypeFilter: "add parking maximums",
-      },
-      5,
-      new Set(),
-      new Set(["Mexico", "Brazil"]),
-      new Set(["city", "county"]),
-    );
-    expect(result).toEqual(
-      "Showing 5 places in 2 countries with parking maximums added",
-    );
-
-    const allMinimumsRemoved = determineHtml(
-      {
-        ...DEFAULT_STATE,
-        policyTypeFilter: "add parking maximums",
-        allMinimumsRemovedToggle: true,
-      },
-      5,
-      new Set(),
-      new Set(["Mexico", "Brazil"]),
-      new Set(["city", "county"]),
-    );
-    expect(allMinimumsRemoved).toEqual(
-      "Showing 5 places in 2 countries with both all parking minimums removed and parking maximums added",
-    );
-  });
-
-  test("grammar", () => {
-    const result = determineHtml(
-      { ...DEFAULT_STATE, policyTypeFilter: "reduce parking minimums" },
-      1,
-      new Set(),
-      new Set(["United States"]),
-      new Set(["city", "county"]),
-    );
-    expect(result).toEqual(
-      "Showing 1 place in the United States with parking minimums reduced",
-    );
-  });
-
-  test("place type", () => {
-    const city = determineHtml(
-      { ...DEFAULT_STATE, policyTypeFilter: "reduce parking minimums" },
-      2,
-      new Set(),
-      new Set(["Mexico"]),
-      new Set(["city"]),
-    );
-    expect(city).toEqual(
-      "Showing 2 cities in Mexico with parking minimums reduced",
-    );
-
-    const county = determineHtml(
-      { ...DEFAULT_STATE, policyTypeFilter: "reduce parking minimums" },
-      2,
-      new Set(),
-      new Set(["Mexico"]),
-      new Set(["county"]),
-    );
-    expect(county).toEqual(
-      "Showing 2 counties in Mexico with parking minimums reduced",
-    );
-
-    const state = determineHtml(
-      { ...DEFAULT_STATE, policyTypeFilter: "reduce parking minimums" },
-      2,
-      new Set(),
-      new Set(["Mexico"]),
-      new Set(["state"]),
-    );
-    expect(state).toEqual(
-      "Showing 2 states in Mexico with parking minimums reduced",
-    );
-
-    const country = determineHtml(
-      { ...DEFAULT_STATE, policyTypeFilter: "reduce parking minimums" },
-      1,
-      new Set(),
-      new Set(["Mexico"]),
-      new Set(["country"]),
-    );
-    expect(country).toEqual("Showing 1 country with parking minimums reduced");
-  });
+  assert(
+    {
+      matched: everyPolicyType,
+      statePolicy: everyPolicyType,
+      allMinimums: true,
+    },
+    "Showing 5 places in Mexico with all parking minimums removed",
+  );
+  assert(
+    {
+      matched: everyPolicyType,
+      statePolicy: ["add parking maximums"],
+      allMinimums: true,
+    },
+    "Showing 5 places in Mexico with both all parking minimums removed and parking maximums added",
+  );
 });

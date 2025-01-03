@@ -44,18 +44,16 @@ export function determineLegacy(
   return `Showing ${placeDescription} with ${suffix}`;
 }
 
-export function determineAnyParkingReform(
+export function determineAnyReform(
   placeDescription: string,
-  state: FilterState,
   matchedPolicyTypes: Set<PolicyType>,
+  allMinimumsRemovedToggle: boolean,
+  statePolicyTypes: Set<string>,
 ): string {
   const prefix = `Showing ${placeDescription} with`;
 
-  if (state.allMinimumsRemovedToggle) {
-    const suffix = isEqual(
-      state.includedPolicyChanges,
-      new Set(["add parking maximums"]),
-    )
+  if (allMinimumsRemovedToggle) {
+    const suffix = isEqual(statePolicyTypes, new Set(["add parking maximums"]))
       ? "both all parking minimums removed and parking maximums added"
       : "all parking minimums removed";
     return `${prefix} ${suffix}`;
@@ -66,21 +64,19 @@ export function determineAnyParkingReform(
     "reduce parking minimums": "parking minimums reduced",
     "remove parking minimums": "parking minimums removed",
   };
-  const policyDescriptions = Array.from(state.includedPolicyChanges)
+  const policyDescriptions = Array.from(statePolicyTypes)
     .filter((policy) => matchedPolicyTypes.has(policy as PolicyType))
     .map((policy) => policyDescriptionMap[policy as PolicyType])
     .sort()
     .reverse();
   if (!policyDescriptions.length) {
-    throw new Error(
-      `Expected state.includedPolicyChanges to be set: ${JSON.stringify(state)}`,
-    );
+    throw new Error(`Expected state.includedPolicyChanges to be set`);
   }
   const suffix = joinWithConjunction(policyDescriptions, "or");
   return `${prefix} ${suffix}`;
 }
 
-export function determineReduceMinimums(placeDescription: string): string {
+export function determineReduceMin(placeDescription: string): string {
   return `Showing ${placeDescription} with parking minimums reduced`;
 }
 
@@ -94,7 +90,7 @@ export function determineAddMax(
   return `Showing ${placeDescription} with ${suffix}`;
 }
 
-export function determineRemoveMin(
+export function determineRmMin(
   placeDescription: string,
   allMinimumsRemovedToggle: boolean,
 ): string {
@@ -128,20 +124,18 @@ export function determineHtml(
     case "legacy reform":
       return determineLegacy(placeDescription, state.allMinimumsRemovedToggle);
     case "any parking reform":
-      return determineAnyParkingReform(
+      return determineAnyReform(
         placeDescription,
-        state,
         matchedPolicyTypes,
+        state.allMinimumsRemovedToggle,
+        state.includedPolicyChanges,
       );
     case "reduce parking minimums":
-      return determineReduceMinimums(placeDescription);
+      return determineReduceMin(placeDescription);
     case "add parking maximums":
       return determineAddMax(placeDescription, state.allMinimumsRemovedToggle);
     case "remove parking minimums":
-      return determineRemoveMin(
-        placeDescription,
-        state.allMinimumsRemovedToggle,
-      );
+      return determineRmMin(placeDescription, state.allMinimumsRemovedToggle);
     default:
       throw new Error("unreachable");
   }
