@@ -36,7 +36,7 @@ function generateScorecardLegacy(
     `;
 }
 
-function generateScorecardRevamp(
+export function generateScorecardRevamp(
   entry: ProcessedCoreEntry,
   placeId: PlaceId,
 ): string {

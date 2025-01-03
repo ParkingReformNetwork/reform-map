@@ -1,5 +1,12 @@
 import { expect, test } from "@playwright/test";
+
 import { loadMap } from "./utils";
+import { generateScorecardRevamp } from "../../src/js/scorecard";
+import {
+  ProcessedCoreEntry,
+  ProcessedCorePolicy,
+  ProcessedPlace,
+} from "../../src/js/types";
 
 test("scorecard pops up and closes", async ({ page }) => {
   await loadMap(page);
@@ -34,4 +41,79 @@ test("scorecard pops up and closes", async ({ page }) => {
   // click outside of popup (not a marker either)
   await page.click("#map");
   expect(await scorecardIsVisible()).toBe(false);
+});
+
+test("generateScorecardRevamp", () => {
+  const place: ProcessedPlace = {
+    name: "My City",
+    state: "AZ",
+    country: "US",
+    type: "city",
+    pop: 245132,
+    repeal: true,
+    coord: [0, 0],
+    url: "https://my-site.org",
+  };
+  const policy: ProcessedCorePolicy = {
+    status: "adopted",
+    summary: "",
+    scope: [],
+    land: [],
+    date: null,
+  };
+  const entry: ProcessedCoreEntry = {
+    place,
+    unifiedPolicy: { ...policy, policy: [] },
+    add_max: [policy],
+  };
+  expect(generateScorecardRevamp(entry, "My City, AZ")).toEqual(
+    `
+    <header class="scorecard-header">
+      <h2 class="scorecard-title">My City, AZ</h2>
+      <button
+        class="scorecard-close-icon-container"
+        title="close the place details popup"
+        aria-label="close the place details popup"
+      >
+        <i class="fa-regular fa-circle-xmark" aria-hidden="true"></i>
+      </button>
+    </header>
+    <ul>
+      <li>245,132 residents</li>
+      <li>All parking minimums removed</li>
+    </ul>
+    <div>Reform types:</div><ul><li>Add parking maximums</li></ul>
+    <a class="external-link" target="_blank" href=https://my-site.org>Details and citations <i aria-hidden="true" class="fa-solid fa-arrow-right"></i></a>
+    `,
+  );
+
+  const repealed: ProcessedCoreEntry = {
+    place: { ...place, repeal: false },
+    unifiedPolicy: { ...policy, policy: [] },
+    add_max: [
+      { ...policy, status: "repealed" },
+      { ...policy, status: "proposed" },
+    ],
+    rm_min: [policy],
+  };
+  expect(generateScorecardRevamp(repealed, "My City, AZ")).toEqual(
+    `
+    <header class="scorecard-header">
+      <h2 class="scorecard-title">My City, AZ</h2>
+      <button
+        class="scorecard-close-icon-container"
+        title="close the place details popup"
+        aria-label="close the place details popup"
+      >
+        <i class="fa-regular fa-circle-xmark" aria-hidden="true"></i>
+      </button>
+    </header>
+    <ul>
+      <li>245,132 residents</li>
+      
+    </ul>
+    <div>Reform types:</div><ul><li>Add parking maximums (proposed and repealed)</li><li>Remove parking minimums (adopted)</li></ul>
+    <a class="external-link" target="_blank" href=https://my-site.org>Details and citations <i aria-hidden="true" class="fa-solid fa-arrow-right"></i></a>
+    `,
+  );
 });

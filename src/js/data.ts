@@ -185,6 +185,6 @@ export function joinWithConjunction(
     return items.join(` ${conjunction} `);
   }
   const lastItem = items[items.length - 1];
-  const priorItems = items.slice(0, -1)
+  const priorItems = items.slice(0, -1);
   return `${priorItems.join(", ")}, ${conjunction} ${lastItem}`;
 }
