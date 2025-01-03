@@ -105,7 +105,6 @@ export function determineRemoveMin(
 }
 
 export function determineHtml(
-  view: "table" | "map",
   state: FilterState,
   numPlaces: number,
   matchedPolicyTypes: Set<PolicyType>,
@@ -172,7 +171,6 @@ export default function initCounters(manager: PlaceFilterManager): void {
 
   manager.subscribe("update counters", (state) => {
     mapCounter.innerHTML = determineHtml(
-      "map",
       state,
       manager.placeIds.size,
       manager.matchedPolicyTypes,
@@ -180,7 +178,6 @@ export default function initCounters(manager: PlaceFilterManager): void {
       manager.matchedPlaceTypes,
     );
     tableCounter.innerHTML = determineHtml(
-      "table",
       state,
       manager.placeIds.size,
       manager.matchedPolicyTypes,

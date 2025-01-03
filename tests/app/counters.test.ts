@@ -25,75 +25,40 @@ test.describe("determineHtml", () => {
   };
 
   test("no places", () => {
-    const resultMap = determineHtml(
-      "map",
+    const result = determineHtml(
       DEFAULT_STATE,
       0,
       new Set(),
       new Set(),
       new Set(),
     );
-    const resultTable = determineHtml(
-      "table",
-      DEFAULT_STATE,
-      0,
-      new Set(),
-      new Set(),
-      new Set(),
+    expect(result).toEqual(
+      "No places selected — use the filter or search icons",
     );
-    const expected = "No places selected — use the filter or search icons";
-    expect(resultMap).toEqual(expected);
-    expect(resultTable).toEqual(expected);
   });
 
   test("search", () => {
     const state = { ...DEFAULT_STATE, searchInput: "My Town" };
-    const resultMap = determineHtml(
-      "map",
-      state,
-      1,
-      new Set(),
-      new Set(),
-      new Set(),
+    const result = determineHtml(state, 1, new Set(), new Set(), new Set());
+    expect(result).toEqual(
+      'Showing My Town from search — <a class="counter-search-reset" role="button" aria-label="reset search">reset</a>',
     );
-    const resultTable = determineHtml(
-      "table",
-      state,
-      1,
-      new Set(),
-      new Set(),
-      new Set(),
-    );
-    const expected =
-      'Showing My Town from search — <a class="counter-search-reset" role="button" aria-label="reset search">reset</a>';
-    expect(resultMap).toEqual(expected);
-    expect(resultTable).toEqual(expected);
   });
 
   test("any parking reform", () => {
-    const assertMapAndTable = (
+    const assert = (
       state: FilterState,
       matchedPolicyTypes: PolicyType[],
       expected: string,
     ): void => {
-      const resultMap = determineHtml(
-        "map",
+      const result = determineHtml(
         state,
         5,
         new Set(matchedPolicyTypes),
         new Set(["Mexico"]),
         new Set(["city", "county"]),
       );
-      const resultTable = determineHtml(
-        "table",
-        state,
-        5,
-        new Set(matchedPolicyTypes),
-        new Set(["Mexico"]),
-        new Set(["city", "county"]),
-      );
-      expect(resultMap).toEqual(expected);
-      expect(resultTable).toEqual(expected);
+      expect(result).toEqual(expected);
     };
 
     const everyPolicyType: PolicyType[] = [
@@ -104,23 +69,23 @@ test.describe("determineHtml", () => {
 
     // We only show policy types that are both present in the matched places &
     // the user requested to see via `includedPolicyChanges`.
-    assertMapAndTable(
+    assert(
       DEFAULT_STATE,
       everyPolicyType,
       "Showing 5 places in Mexico with parking minimums removed, parking minimums reduced, or parking maximums added",
     );
-    assertMapAndTable(
+    assert(
       DEFAULT_STATE,
       ["add parking maximums", "remove parking minimums"],
       "Showing 5 places in Mexico with parking minimums removed or parking maximums added",
     );
-    assertMapAndTable(
+    assert(
       DEFAULT_STATE,
       ["add parking maximums"],
       "Showing 5 places in Mexico with parking maximums added",
     );
 
-    assertMapAndTable(
+    assert(
       {
         ...DEFAULT_STATE,
         includedPolicyChanges: new Set([
@@ -131,7 +96,7 @@ test.describe("determineHtml", () => {
       everyPolicyType,
       "Showing 5 places in Mexico with parking minimums removed or parking minimums reduced",
     );
-    assertMapAndTable(
+    assert(
       {
         ...DEFAULT_STATE,
         includedPolicyChanges: new Set(["remove parking minimums"]),
@@ -139,7 +104,7 @@ test.describe("determineHtml", () => {
       everyPolicyType,
       "Showing 5 places in Mexico with parking minimums removed",
     );
-    assertMapAndTable(
+    assert(
       {
         ...DEFAULT_STATE,
         includedPolicyChanges: new Set(["reduce parking minimums"]),
@@ -147,7 +112,7 @@ test.describe("determineHtml", () => {
       everyPolicyType,
       "Showing 5 places in Mexico with parking minimums reduced",
     );
-    assertMapAndTable(
+    assert(
       {
         ...DEFAULT_STATE,
         includedPolicyChanges: new Set(["add parking maximums"]),
@@ -156,7 +121,7 @@ test.describe("determineHtml", () => {
       "Showing 5 places in Mexico with parking maximums added",
     );
 
-    assertMapAndTable(
+    assert(
       {
         ...DEFAULT_STATE,
         allMinimumsRemovedToggle: true,
@@ -164,7 +129,7 @@ test.describe("determineHtml", () => {
       everyPolicyType,
       "Showing 5 places in Mexico with all parking minimums removed",
     );
-    assertMapAndTable(
+    assert(
       {
         ...DEFAULT_STATE,
         allMinimumsRemovedToggle: true,
@@ -176,238 +141,99 @@ test.describe("determineHtml", () => {
   });
 
   test("reduce minimums", () => {
-    const state: FilterState = {
-      ...DEFAULT_STATE,
-      policyTypeFilter: "reduce parking minimums",
-    };
-    const resultMap = determineHtml(
-      "map",
-      state,
+    const result = determineHtml(
+      {
+        ...DEFAULT_STATE,
+        policyTypeFilter: "reduce parking minimums",
+      },
       5,
       new Set(),
       new Set(["Mexico", "Brazil"]),
       new Set(["city", "county"]),
     );
-    const resultTableEqualRecords = determineHtml(
-      "table",
-      state,
-      5,
-      new Set(),
-      new Set(["Mexico", "Brazil"]),
-      new Set(["city", "county"]),
-    );
-    const resultTableUnequalRecords = determineHtml(
-      "table",
-      state,
-      5,
-      new Set(),
-      new Set(["Mexico", "Brazil"]),
-      new Set(["city", "county"]),
-    );
-    const expectedNoRecords =
+    const expected =
       "Showing 5 places in 2 countries with parking minimums reduced";
-    const expectedRecords =
-      "Showing 5 places in 2 countries with parking minimums reduced";
-    expect(resultMap).toEqual(expectedNoRecords);
-    expect(resultTableEqualRecords).toEqual(expectedNoRecords);
-    expect(resultTableUnequalRecords).toEqual(expectedRecords);
+    expect(result).toEqual(expected);
 
     // allMinimumsRemovedToggle doesn't matter
-    const allMinimumsRemovedState: FilterState = {
-      ...DEFAULT_STATE,
-      policyTypeFilter: "reduce parking minimums",
-      allMinimumsRemovedToggle: true,
-    };
-    const allMinimumsRemovedMap = determineHtml(
-      "map",
-      allMinimumsRemovedState,
+    const allMinimumsRemoved = determineHtml(
+      {
+        ...DEFAULT_STATE,
+        policyTypeFilter: "reduce parking minimums",
+        allMinimumsRemovedToggle: true,
+      },
       5,
       new Set(),
       new Set(["Mexico", "Brazil"]),
       new Set(["city", "county"]),
     );
-    const allMinimumsRemovedTableEqualRecords = determineHtml(
-      "table",
-      allMinimumsRemovedState,
-      5,
-      new Set(),
-      new Set(["Mexico", "Brazil"]),
-      new Set(["city", "county"]),
-    );
-    const allMinimumsRemovedTableUnequalRecords = determineHtml(
-      "table",
-      allMinimumsRemovedState,
-      5,
-      new Set(),
-      new Set(["Mexico", "Brazil"]),
-      new Set(["city", "county"]),
-    );
-    expect(allMinimumsRemovedMap).toEqual(expectedNoRecords);
-    expect(allMinimumsRemovedTableEqualRecords).toEqual(expectedNoRecords);
-    expect(allMinimumsRemovedTableUnequalRecords).toEqual(expectedRecords);
+    expect(allMinimumsRemoved).toEqual(expected);
   });
 
   test("remove minimums", () => {
-    const state: FilterState = {
-      ...DEFAULT_STATE,
-      policyTypeFilter: "remove parking minimums",
-    };
-    const resultMap = determineHtml(
-      "map",
-      state,
+    const result = determineHtml(
+      {
+        ...DEFAULT_STATE,
+        policyTypeFilter: "remove parking minimums",
+      },
       5,
       new Set(),
       new Set(["Mexico", "Brazil"]),
       new Set(["city", "county"]),
     );
-    const resultTableEqualRecords = determineHtml(
-      "table",
-      state,
-      5,
-      new Set(),
-      new Set(["Mexico", "Brazil"]),
-      new Set(["city", "county"]),
+    expect(result).toEqual(
+      "Showing 5 places in 2 countries with parking minimums removed",
     );
-    const resultTableUnequalRecords = determineHtml(
-      "table",
-      state,
-      5,
-      new Set(),
-      new Set(["Mexico", "Brazil"]),
-      new Set(["city", "county"]),
-    );
-    const expectedNoRecords =
-      "Showing 5 places in 2 countries with parking minimums removed";
-    const expectedRecords =
-      "Showing 5 places in 2 countries with parking minimums removed";
-    expect(resultMap).toEqual(expectedNoRecords);
-    expect(resultTableEqualRecords).toEqual(expectedNoRecords);
-    expect(resultTableUnequalRecords).toEqual(expectedRecords);
 
-    const allMinimumsRemovedState: FilterState = {
-      ...DEFAULT_STATE,
-      policyTypeFilter: "remove parking minimums",
-      allMinimumsRemovedToggle: true,
-    };
-    const allMinimumsRemovedMap = determineHtml(
-      "map",
-      allMinimumsRemovedState,
+    const allMinimumsRemoved = determineHtml(
+      {
+        ...DEFAULT_STATE,
+        policyTypeFilter: "remove parking minimums",
+        allMinimumsRemovedToggle: true,
+      },
       5,
       new Set(),
       new Set(["Mexico", "Brazil"]),
       new Set(["city", "county"]),
     );
-    const allMinimumsRemovedTableEqualRecords = determineHtml(
-      "table",
-      allMinimumsRemovedState,
-      5,
-      new Set(),
-      new Set(["Mexico", "Brazil"]),
-      new Set(["city", "county"]),
-    );
-    const allMinimumsRemovedTableUnequalRecords = determineHtml(
-      "table",
-      allMinimumsRemovedState,
-      5,
-      new Set(),
-      new Set(["Mexico", "Brazil"]),
-      new Set(["city", "county"]),
-    );
-    const allMinimumsRemovedExpected =
-      "Showing 5 places in 2 countries with all parking minimums removed";
-    expect(allMinimumsRemovedMap).toEqual(allMinimumsRemovedExpected);
-    expect(allMinimumsRemovedTableEqualRecords).toEqual(
-      allMinimumsRemovedExpected,
-    );
-    expect(allMinimumsRemovedTableUnequalRecords).toEqual(
-      allMinimumsRemovedExpected,
+    expect(allMinimumsRemoved).toEqual(
+      "Showing 5 places in 2 countries with all parking minimums removed",
     );
   });
 
   test("add maximums", () => {
-    const state: FilterState = {
-      ...DEFAULT_STATE,
-      policyTypeFilter: "add parking maximums",
-    };
-    const resultMap = determineHtml(
-      "map",
-      state,
+    const result = determineHtml(
+      {
+        ...DEFAULT_STATE,
+        policyTypeFilter: "add parking maximums",
+      },
       5,
       new Set(),
       new Set(["Mexico", "Brazil"]),
       new Set(["city", "county"]),
     );
-    const resultTableEqualRecords = determineHtml(
-      "table",
-      state,
-      5,
-      new Set(),
-      new Set(["Mexico", "Brazil"]),
-      new Set(["city", "county"]),
+    expect(result).toEqual(
+      "Showing 5 places in 2 countries with parking maximums added",
     );
-    const resultTableUnequalRecords = determineHtml(
-      "table",
-      state,
-      5,
-      new Set(),
-      new Set(["Mexico", "Brazil"]),
-      new Set(["city", "county"]),
-    );
-    const expectedNoRecords =
-      "Showing 5 places in 2 countries with parking maximums added";
-    const expectedRecords =
-      "Showing 5 places in 2 countries with parking maximums added";
-    expect(resultMap).toEqual(expectedNoRecords);
-    expect(resultTableEqualRecords).toEqual(expectedNoRecords);
-    expect(resultTableUnequalRecords).toEqual(expectedRecords);
 
-    const allMinimumsRemovedState: FilterState = {
-      ...DEFAULT_STATE,
-      policyTypeFilter: "add parking maximums",
-      allMinimumsRemovedToggle: true,
-    };
-    const allMinimumsRemovedMap = determineHtml(
-      "map",
-      allMinimumsRemovedState,
+    const allMinimumsRemoved = determineHtml(
+      {
+        ...DEFAULT_STATE,
+        policyTypeFilter: "add parking maximums",
+        allMinimumsRemovedToggle: true,
+      },
       5,
       new Set(),
       new Set(["Mexico", "Brazil"]),
       new Set(["city", "county"]),
     );
-    const allMinimumsRemovedTableEqualRecords = determineHtml(
-      "table",
-      allMinimumsRemovedState,
-      5,
-      new Set(),
-      new Set(["Mexico", "Brazil"]),
-      new Set(["city", "county"]),
-    );
-    const allMinimumsRemovedTableUnequalRecords = determineHtml(
-      "table",
-      allMinimumsRemovedState,
-      5,
-      new Set(),
-      new Set(["Mexico", "Brazil"]),
-      new Set(["city", "county"]),
-    );
-    const allMinimumsRemovedExpectedEqualRecords =
-      "Showing 5 places in 2 countries with both all parking minimums removed and parking maximums added";
-    const allMinimumsRemovedExpectedUnequalRecords =
-      "Showing 5 places in 2 countries with both all parking minimums removed and parking maximums added";
-    expect(allMinimumsRemovedMap).toEqual(
-      allMinimumsRemovedExpectedEqualRecords,
-    );
-    expect(allMinimumsRemovedTableEqualRecords).toEqual(
-      allMinimumsRemovedExpectedEqualRecords,
-    );
-    expect(allMinimumsRemovedTableUnequalRecords).toEqual(
-      allMinimumsRemovedExpectedUnequalRecords,
+    expect(allMinimumsRemoved).toEqual(
+      "Showing 5 places in 2 countries with both all parking minimums removed and parking maximums added",
     );
   });
 
   test("grammar", () => {
     const result = determineHtml(
-      "table",
       { ...DEFAULT_STATE, policyTypeFilter: "reduce parking minimums" },
       1,
       new Set(),
@@ -421,7 +247,6 @@ test.describe("determineHtml", () => {
 
   test("place type", () => {
     const city = determineHtml(
-      "map",
       { ...DEFAULT_STATE, policyTypeFilter: "reduce parking minimums" },
       2,
       new Set(),
@@ -433,7 +258,6 @@ test.describe("determineHtml", () => {
     );
 
     const county = determineHtml(
-      "map",
       { ...DEFAULT_STATE, policyTypeFilter: "reduce parking minimums" },
       2,
       new Set(),
@@ -445,7 +269,6 @@ test.describe("determineHtml", () => {
     );
 
     const state = determineHtml(
-      "map",
       { ...DEFAULT_STATE, policyTypeFilter: "reduce parking minimums" },
       2,
       new Set(),
@@ -457,7 +280,6 @@ test.describe("determineHtml", () => {
     );
 
     const country = determineHtml(
-      "map",
       { ...DEFAULT_STATE, policyTypeFilter: "reduce parking minimums" },
       1,
       new Set(),
