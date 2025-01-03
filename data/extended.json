@@ -1708,7 +1708,55 @@
           ]
         }
       ]
-    }
+    },
+    "reduce_min": [
+      {
+        "reporter": "Craig Beavers",
+        "requirements": ["bike parking", "by right"],
+        "citations": [
+          {
+            "description": "Allentown Zoning Code",
+            "url": "https://ecode360.com/36445023",
+            "notes": "Article XII Off-Street Parking and Loading\n§ 660-73 General parking regulations.\nS.  Commercial districts.\nW.  Bicycle parking.\n(1)",
+            "attachments": [],
+            "screenshots": [
+              {
+                "fileName": "allentown-pa-reduce-min-screenshot1.png",
+                "directusId": "503fa549-0191-4560-8c80-bf941475035f"
+              },
+              {
+                "fileName": "allentown-pa-reduce-min-screenshot2.png",
+                "directusId": "8e8167d2-d0b2-4f8f-9889-310d08f6dd3a"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "rm_min": [
+      {
+        "reporter": "Craig Beavers",
+        "requirements": ["by right", "size of project"],
+        "citations": [
+          {
+            "description": "Allentown Zoning Code",
+            "url": "https://ecode360.com/36445023",
+            "notes": "Article XII Off-Street Parking and Loading\n§ 660-73 General parking regulations.\nS.  Commercial districts.\nW.  Bicycle parking.\n(1)",
+            "attachments": [],
+            "screenshots": [
+              {
+                "fileName": "allentown-pa-remove-min-screenshot1.png",
+                "directusId": "503fa549-0191-4560-8c80-bf941475035f"
+              },
+              {
+                "fileName": "allentown-pa-remove-min-screenshot2.png",
+                "directusId": "8e8167d2-d0b2-4f8f-9889-310d08f6dd3a"
+              }
+            ]
+          }
+        ]
+      }
+    ]
   },
   "Alliance, NE": {
     "rm_min": [
@@ -3956,25 +4004,13 @@
             ]
           },
           {
-            "description": "Oregon Department of Land Conservation and Development",
-            "url": "https://content.govdelivery.com/accounts/ORDLCD/bulletins/380aafa",
-            "notes": null,
-            "attachments": [],
-            "screenshots": [
-              {
-                "fileName": "ashland-or-add-max-citation2-screenshot.png",
-                "directusId": "d1856e83-2231-4506-b01d-abd5b6c83848"
-              }
-            ]
-          },
-          {
             "description": "Ashland Land Development Code",
             "url": "https://ashland.municipal.codes/LandUse/18.4.3.030",
             "notes": "18.4.3.030 General Automobile Parking Requirements and Exceptions",
             "attachments": [],
             "screenshots": [
               {
-                "fileName": "ashland-or-add-max-citation3-screenshot.png",
+                "fileName": "ashland-or-add-max-citation2-screenshot.png",
                 "directusId": "90cdc869-6198-40d3-a078-1a12bfa0f6df"
               }
             ]
@@ -5673,7 +5709,55 @@
           ]
         }
       ]
-    }
+    },
+    "add_max": [
+      {
+        "reporter": "Samuel Deetz",
+        "requirements": ["by right"],
+        "citations": [
+          {
+            "description": "Bangor Zoning Code",
+            "url": "https://bangorborough.org/wp-content/uploads/2021/06/Zoning-Update-Final-Adopted-06-14-2021.pdf",
+            "notes": "§ 730.6.\nPage 107",
+            "attachments": [],
+            "screenshots": [
+              {
+                "fileName": "bangor-pa-add-max-screenshot.png",
+                "directusId": "112c81f6-5432-41d5-b315-85bd504e9c69"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "reduce_min": [
+      {
+        "reporter": "Samuel Deetz",
+        "requirements": ["by right", "in-lieu fees", "size of project"],
+        "citations": [
+          {
+            "description": "Bangor Zoning Code",
+            "url": "https://bangorborough.org/wp-content/uploads/2021/06/Zoning-Update-Final-Adopted-06-14-2021.pdf",
+            "notes": "§ 730.8.;\nTable 5;\nPages 107-108, 111, 113",
+            "attachments": [],
+            "screenshots": [
+              {
+                "fileName": "bangor-pa-reduce-min-screenshot1.png",
+                "directusId": "74349b66-74c2-4a84-a70c-f24859641bf2"
+              },
+              {
+                "fileName": "bangor-pa-reduce-min-screenshot2.png",
+                "directusId": "b7120049-3db6-4703-b946-caec29f4fdbb"
+              },
+              {
+                "fileName": "bangor-pa-reduce-min-screenshot3.png",
+                "directusId": "3c1c58f1-d7fc-4589-b1bd-aae129e54c34"
+              }
+            ]
+          }
+        ]
+      }
+    ]
   },
   "Baraboo, WI": {
     "rm_min": [
@@ -7312,7 +7396,63 @@
           ]
         }
       ]
-    }
+    },
+    "reduce_min": [
+      {
+        "reporter": "Samuel Deetz",
+        "requirements": ["by right"],
+        "citations": [
+          {
+            "description": "Bellefonte Zoning Code",
+            "url": "https://ecode360.com/14494392#14494443",
+            "notes": "§ 575-99.B.",
+            "attachments": [],
+            "screenshots": [
+              {
+                "fileName": "bellefonte-pa-reduce-min-screenshot1.png",
+                "directusId": "15a8082e-5612-49f1-9224-035b9ca9bdd0"
+              },
+              {
+                "fileName": "bellefonte-pa-reduce-min-screenshot2.png",
+                "directusId": "c6ffd9a8-3c37-42f6-be2e-313ee3179228"
+              },
+              {
+                "fileName": "bellefonte-pa-reduce-min-screenshot3.png",
+                "directusId": "504f669b-51b6-4d5c-9b1e-e961d05ee8b5"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "rm_min": [
+      {
+        "reporter": "Samuel Deetz",
+        "requirements": ["by right"],
+        "citations": [
+          {
+            "description": "Bellefonte Zoning Code",
+            "url": "https://ecode360.com/14494392#14494443",
+            "notes": "§ 575-99.B.",
+            "attachments": [],
+            "screenshots": [
+              {
+                "fileName": "bellefonte-pa-remove-min-screenshot1.png",
+                "directusId": "5274e208-d339-4d6d-87b8-9ad721826526"
+              },
+              {
+                "fileName": "bellefonte-pa-remove-min-screenshot2.png",
+                "directusId": "1e47d1ff-b3d9-4b3d-b29f-a1b8f4244742"
+              },
+              {
+                "fileName": "bellefonte-pa-remove-min-screenshot3.png",
+                "directusId": "a9ab0646-fa8b-4b47-a6c4-b42a0e8d6403"
+              }
+            ]
+          }
+        ]
+      }
+    ]
   },
   "Belleville, IL": {
     "rm_min": [
@@ -7820,25 +7960,13 @@
         "requirements": ["by right"],
         "citations": [
           {
-            "description": "City Press Release",
-            "url": "https://www.bendoregon.gov/Home/Components/News/News/5592/29?cftype=News",
-            "notes": null,
-            "attachments": [],
-            "screenshots": [
-              {
-                "fileName": "bend-or-add-max-citation1-screenshot.png",
-                "directusId": "353bfa78-8027-4ac3-b394-3d76eed4fef5"
-              }
-            ]
-          },
-          {
             "description": "Bend Land Development Code",
             "url": "https://bend.municipal.codes/BDC/3.3.300",
             "notes": "3.3.300 Vehicle Parking Standards for On-Site Parking.",
             "attachments": [],
             "screenshots": [
               {
-                "fileName": "bend-or-add-max-citation2-screenshot.png",
+                "fileName": "bend-or-add-max-screenshot.png",
                 "directusId": "fd966842-fcdc-41d9-9db0-4e3c01e9af64"
               }
             ]
@@ -10973,24 +11101,12 @@
         "requirements": ["by right", "size of project"],
         "citations": [
           {
-            "description": "Article about reforms",
-            "url": "https://mass.streetsblog.org/2021/10/20/boston-city-council-votes-to-end-minimum-parking-requirements-for-affordable-housing/",
-            "notes": null,
-            "attachments": [],
-            "screenshots": [
-              {
-                "fileName": "boston-ma-add-max-citation1-screenshot.png",
-                "directusId": "3bd25451-e54b-4f4d-8618-956ebc49307f"
-              }
-            ]
-          },
-          {
             "description": "City Site Explaining Maximum Parking Ratios for Boston",
             "url": "https://www.boston.gov/departments/transportation/maximum-parking-ratios",
             "notes": "Comprehensive site with explanations and graphics why ratios are needed. ",
             "attachments": [
               {
-                "fileName": "boston-ma-add-max-citation2-attachment.pdf",
+                "fileName": "boston-ma-add-max-citation1-attachment.pdf",
                 "directusId": "f74fc37e-67f2-486b-8577-fe66f36cb7da"
               }
             ],
@@ -11003,11 +11119,11 @@
             "attachments": [],
             "screenshots": [
               {
-                "fileName": "boston-ma-add-max-citation3-screenshot1.png",
+                "fileName": "boston-ma-add-max-citation2-screenshot1.png",
                 "directusId": "40923021-f83c-4b44-96f1-90f259da07e5"
               },
               {
-                "fileName": "boston-ma-add-max-citation3-screenshot2.png",
+                "fileName": "boston-ma-add-max-citation2-screenshot2.png",
                 "directusId": "fb1ef7f5-f8b4-4514-a615-9b74045645bb"
               }
             ]
@@ -11298,7 +11414,47 @@
           ]
         }
       ]
-    }
+    },
+    "reduce_min": [
+      {
+        "reporter": "Samuel Deetz",
+        "requirements": ["in-lieu fees", "other"],
+        "citations": [
+          {
+            "description": "Boyertown Zoning Code",
+            "url": "https://ecode360.com/39786531#39786532",
+            "notes": "601.B.3.",
+            "attachments": [],
+            "screenshots": [
+              {
+                "fileName": "boyertown-pa-reduce-min-screenshot.png",
+                "directusId": "68bb761c-791f-4c45-8fd6-b1198f8df226"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "rm_min": [
+      {
+        "reporter": "Samuel Deetz",
+        "requirements": ["by right"],
+        "citations": [
+          {
+            "description": "Boyertown Zoning Code",
+            "url": "https://ecode360.com/39786531#39786532",
+            "notes": "601.B.2.",
+            "attachments": [],
+            "screenshots": [
+              {
+                "fileName": "boyertown-pa-remove-min-screenshot.png",
+                "directusId": "677bc24a-ff07-4199-bf08-b618cac36ee1"
+              }
+            ]
+          }
+        ]
+      }
+    ]
   },
   "Boyne City, MI": {
     "add_max": [
@@ -13585,24 +13741,12 @@
         "requirements": ["by right"],
         "citations": [
           {
-            "description": "Burlington lifts rules about building new parking spots",
-            "url": "https://www.burlingtonfreepress.com/story/news/local/2023/01/11/burlington-development-council-votes-to-eliminate-parking-minimums/69794906007/",
-            "notes": null,
-            "attachments": [],
-            "screenshots": [
-              {
-                "fileName": "burlington-vt-add-max-citation1-screenshot.png",
-                "directusId": "e466ea9e-e612-4a5d-8dae-9bbfd08cd704"
-              }
-            ]
-          },
-          {
             "description": "Planning Report",
             "url": "https://go.boarddocs.com/vt/burlingtonvt/Board.nsf/files/CMRTXH741D01/$file/ZA-22-07%20Memo%20for%20CCPH_20221227.pdf",
             "notes": null,
             "attachments": [
               {
-                "fileName": "burlington-vt-add-max-citation2-attachment.pdf",
+                "fileName": "burlington-vt-add-max-citation1-attachment.pdf",
                 "directusId": "43b6d646-81cf-4a0f-85ea-70583125dbac"
               }
             ],
@@ -13615,11 +13759,11 @@
             "attachments": [],
             "screenshots": [
               {
-                "fileName": "burlington-vt-add-max-citation3-screenshot1.png",
+                "fileName": "burlington-vt-add-max-citation2-screenshot1.png",
                 "directusId": "99b5f5d2-6149-4ded-9ca1-5137a6fc3753"
               },
               {
-                "fileName": "burlington-vt-add-max-citation3-screenshot2.png",
+                "fileName": "burlington-vt-add-max-citation2-screenshot2.png",
                 "directusId": "5d28dab7-de28-4703-b6a3-fb579b26fc20"
               }
             ]
@@ -15548,7 +15692,47 @@
           ]
         }
       ]
-    }
+    },
+    "reduce_min": [
+      {
+        "reporter": "Samuel Deetz",
+        "requirements": ["other"],
+        "citations": [
+          {
+            "description": "Carnegie Zoning Code",
+            "url": "https://www.carnegieborough.com/Carnegie_Zoning_Ordinance-FINAL.pdf",
+            "notes": "§707. \nPage 44",
+            "attachments": [],
+            "screenshots": [
+              {
+                "fileName": "carnegie-pa-reduce-min-screenshot.png",
+                "directusId": "8ac646ca-e1f8-4891-9dd1-2946ceac0b2b"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "rm_min": [
+      {
+        "reporter": "Samuel Deetz",
+        "requirements": ["by right"],
+        "citations": [
+          {
+            "description": "Carnegie Zoning Code",
+            "url": "https://www.carnegieborough.com/Carnegie_Zoning_Ordinance-FINAL.pdf",
+            "notes": "§701.\nPage 41",
+            "attachments": [],
+            "screenshots": [
+              {
+                "fileName": "carnegie-pa-remove-min-screenshot.png",
+                "directusId": "9b142352-93e7-40b4-9e1e-2ab67028fbce"
+              }
+            ]
+          }
+        ]
+      }
+    ]
   },
   "Carol Stream, IL": {
     "add_max": [
@@ -17298,7 +17482,47 @@
           ]
         }
       ]
-    }
+    },
+    "reduce_min": [
+      {
+        "reporter": "Samuel Deetz",
+        "requirements": ["by right"],
+        "citations": [
+          {
+            "description": "Chambersburg Zoning Code",
+            "url": "https://ecode360.com/40639626#40639626",
+            "notes": "§ 300-61.A.",
+            "attachments": [],
+            "screenshots": [
+              {
+                "fileName": "chambersburg-pa-reduce-min-screenshot.png",
+                "directusId": "6c96b03e-3e1b-4a73-a045-5ba6867c8b54"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "rm_min": [
+      {
+        "reporter": "Samuel Deetz",
+        "requirements": ["by right"],
+        "citations": [
+          {
+            "description": "Chambersburg Zoning Code",
+            "url": "https://ecode360.com/10696616#10696616",
+            "notes": "§ 300-45",
+            "attachments": [],
+            "screenshots": [
+              {
+                "fileName": "chambersburg-pa-remove-min-screenshot.png",
+                "directusId": "1295614a-463c-4d9a-903c-dd67a357a550"
+              }
+            ]
+          }
+        ]
+      }
+    ]
   },
   "Champaign County, IL": {
     "rm_min": [
@@ -18203,7 +18427,47 @@
           ]
         }
       ]
-    }
+    },
+    "add_max": [
+      {
+        "reporter": "Samuel Deetz",
+        "requirements": ["by right"],
+        "citations": [
+          {
+            "description": "Cheltenham Township Zoning Code",
+            "url": "https://ecode360.com/33238662#33238668",
+            "notes": "§ 295-2301.D.(6)",
+            "attachments": [],
+            "screenshots": [
+              {
+                "fileName": "cheltenham-township-pa-add-max-screenshot.png",
+                "directusId": "830ab037-ee0c-4685-879e-6f01cb9f9d71"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "rm_min": [
+      {
+        "reporter": "Samuel Deetz",
+        "requirements": ["by right", "size of project"],
+        "citations": [
+          {
+            "description": "Cheltenham Township Zoning Code",
+            "url": "https://ecode360.com/33238662#33238668",
+            "notes": "§ 295-2301.E.",
+            "attachments": [],
+            "screenshots": [
+              {
+                "fileName": "cheltenham-township-pa-remove-min-screenshot.png",
+                "directusId": "d3a1b7b1-85ea-4c93-ad2f-978ae07aae38"
+              }
+            ]
+          }
+        ]
+      }
+    ]
   },
   "Cherokee, IA": {
     "rm_min": [
@@ -18313,7 +18577,47 @@
           ]
         }
       ]
-    }
+    },
+    "reduce_min": [
+      {
+        "reporter": "Samuel Deetz",
+        "requirements": ["other"],
+        "citations": [
+          {
+            "description": "Chester Zoning Code",
+            "url": "https://www.chestercity.com/wp-content/uploads/2016/01/Zoning_Ordinance_Dec_2015.pdf",
+            "notes": "1357.03(b)(3)\nPage 116 of pdf, page 108 of original document",
+            "attachments": [],
+            "screenshots": [
+              {
+                "fileName": "chester-pa-reduce-min-screenshot.png",
+                "directusId": "0836c727-26cb-4c4b-a513-3e767cd1fab3"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "rm_min": [
+      {
+        "reporter": "Samuel Deetz",
+        "requirements": ["by right"],
+        "citations": [
+          {
+            "description": "Chester Zoning Code",
+            "url": "https://www.chestercity.com/wp-content/uploads/2016/01/Zoning_Ordinance_Dec_2015.pdf",
+            "notes": "1357.01(a)(1) \nPage 110 of pdf, page 102 of original document",
+            "attachments": [],
+            "screenshots": [
+              {
+                "fileName": "chester-pa-remove-min-screenshot.png",
+                "directusId": "ad93c6fa-1766-4348-97d9-9021339b1e6e"
+              }
+            ]
+          }
+        ]
+      }
+    ]
   },
   "Chester, SC": {
     "rm_min": [
@@ -20624,7 +20928,47 @@
           ]
         }
       ]
-    }
+    },
+    "reduce_min": [
+      {
+        "reporter": "Samuel Deetz",
+        "requirements": ["other"],
+        "citations": [
+          {
+            "description": "Collegeville Zoning Code",
+            "url": "https://ecode360.com/43323054#43323054",
+            "notes": "§ 680-75.E.",
+            "attachments": [],
+            "screenshots": [
+              {
+                "fileName": "collegeville-pa-reduce-min-screenshot.png",
+                "directusId": "84678696-b94a-4948-85eb-d49ea304cb5e"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "rm_min": [
+      {
+        "reporter": "Samuel Deetz",
+        "requirements": ["other"],
+        "citations": [
+          {
+            "description": "Collegeville Zoning Code",
+            "url": "https://ecode360.com/32860223#32860223",
+            "notes": "§ 680-141.D.",
+            "attachments": [],
+            "screenshots": [
+              {
+                "fileName": "collegeville-pa-remove-min-screenshot.png",
+                "directusId": "c089db3c-1ebc-488e-8bda-13b1482cf5ac"
+              }
+            ]
+          }
+        ]
+      }
+    ]
   },
   "Collierville, TN": {
     "legacy": {
@@ -21782,7 +22126,67 @@
           ]
         }
       ]
-    }
+    },
+    "add_max": [
+      {
+        "reporter": "Samuel Deetz",
+        "requirements": ["by right", "other"],
+        "citations": [
+          {
+            "description": "Connellsville Zoning Code",
+            "url": "https://www.connellsville.us/_files/ugd/5a68d4_72cbda40a8414ea4b5792462e2f7052b.pdf",
+            "notes": "§3-103. Parking and Loading\nB.\nPage 24",
+            "attachments": [],
+            "screenshots": [
+              {
+                "fileName": "connellsville-pa-add-max-screenshot.png",
+                "directusId": "92e740b9-1436-44e5-a9f1-6371aa7130ab"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "reduce_min": [
+      {
+        "reporter": "Samuel Deetz",
+        "requirements": ["by right"],
+        "citations": [
+          {
+            "description": "Connellsville Zoning Code",
+            "url": "https://www.connellsville.us/_files/ugd/5a68d4_72cbda40a8414ea4b5792462e2f7052b.pdf",
+            "notes": "§3-103. Parking and Loading\nB.\nPage 24",
+            "attachments": [],
+            "screenshots": [
+              {
+                "fileName": "connellsville-pa-reduce-min-screenshot.png",
+                "directusId": "92e740b9-1436-44e5-a9f1-6371aa7130ab"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "rm_min": [
+      {
+        "reporter": "Samuel Deetz",
+        "requirements": ["by right", "size of project"],
+        "citations": [
+          {
+            "description": "Connellsville Zoning Code",
+            "url": "https://www.connellsville.us/_files/ugd/5a68d4_72cbda40a8414ea4b5792462e2f7052b.pdf",
+            "notes": "§3-103. Parking and Loading\nB.\nPage 24",
+            "attachments": [],
+            "screenshots": [
+              {
+                "fileName": "connellsville-pa-remove-min-screenshot.png",
+                "directusId": "92e740b9-1436-44e5-a9f1-6371aa7130ab"
+              }
+            ]
+          }
+        ]
+      }
+    ]
   },
   "Connersville, IN": {
     "rm_min": [
@@ -24335,7 +24739,47 @@
           ]
         }
       ]
-    }
+    },
+    "reduce_min": [
+      {
+        "reporter": "Samuel Deetz",
+        "requirements": ["by right"],
+        "citations": [
+          {
+            "description": "Danville Zoning Code",
+            "url": "https://ecode360.com/13487525#13487525",
+            "notes": "§ 260-32 Table 1 NOTES:***",
+            "attachments": [],
+            "screenshots": [
+              {
+                "fileName": "danville-pa-reduce-min-screenshot.png",
+                "directusId": "c570c442-93f2-4a26-9d0d-1e43f568ea59"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "rm_min": [
+      {
+        "reporter": "Samuel Deetz",
+        "requirements": ["by right"],
+        "citations": [
+          {
+            "description": "Danville Zoning Code",
+            "url": "https://ecode360.com/13487525#13487525",
+            "notes": "§ 260-32.A.",
+            "attachments": [],
+            "screenshots": [
+              {
+                "fileName": "danville-pa-remove-min-screenshot.png",
+                "directusId": "44ecdc37-069e-4b6e-9c3a-11ac3165d65b"
+              }
+            ]
+          }
+        ]
+      }
+    ]
   },
   "Danville, VA": {
     "rm_min": [
@@ -25417,7 +25861,47 @@
           ]
         }
       ]
-    }
+    },
+    "add_max": [
+      {
+        "reporter": "Samuel Deetz",
+        "requirements": ["by right"],
+        "citations": [
+          {
+            "description": "Delaware Water Gap Zoning Code",
+            "url": "https://dwgpa.gov/wp-content/uploads/2023/09/Zoning-Ordinance-08.16.23pdf.pdf",
+            "notes": "§29.E.\n§29.F.\nPage 80",
+            "attachments": [],
+            "screenshots": [
+              {
+                "fileName": "delaware-water-gap-pa-add-max-screenshot.png",
+                "directusId": "ac2876ef-07df-413e-94b2-8b9346315ef2"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "rm_min": [
+      {
+        "reporter": "Samuel Deetz",
+        "requirements": ["by right"],
+        "citations": [
+          {
+            "description": "Delaware Water Gap Zoning Code",
+            "url": "https://dwgpa.gov/wp-content/uploads/2023/09/Zoning-Ordinance-08.16.23pdf.pdf",
+            "notes": "§29.E.\n§29.F.\nPage 80",
+            "attachments": [],
+            "screenshots": [
+              {
+                "fileName": "delaware-water-gap-pa-remove-min-screenshot.png",
+                "directusId": "ac2876ef-07df-413e-94b2-8b9346315ef2"
+              }
+            ]
+          }
+        ]
+      }
+    ]
   },
   "Delaware, OH": {
     "reduce_min": [
@@ -27331,7 +27815,47 @@
           ]
         }
       ]
-    }
+    },
+    "reduce_min": [
+      {
+        "reporter": "Samuel Deetz",
+        "requirements": ["by right"],
+        "citations": [
+          {
+            "description": "Doylestown Zoning Code",
+            "url": "https://ecode360.com/16054795#16054796",
+            "notes": "§ 801Required Off-Street Parking Space.\n6.\n7.",
+            "attachments": [],
+            "screenshots": [
+              {
+                "fileName": "doylestown-pa-reduce-min-screenshot.png",
+                "directusId": "4ad05535-7799-4be6-a43f-2337cd8b2150"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "rm_min": [
+      {
+        "reporter": "Samuel Deetz",
+        "requirements": ["by right", "size of project"],
+        "citations": [
+          {
+            "description": "Doylestown Zoning Code",
+            "url": "https://ecode360.com/16054795#16054796",
+            "notes": "§ 801Required Off-Street Parking Space.\n6.\n7.",
+            "attachments": [],
+            "screenshots": [
+              {
+                "fileName": "doylestown-pa-remove-min-screenshot.png",
+                "directusId": "4ad05535-7799-4be6-a43f-2337cd8b2150"
+              }
+            ]
+          }
+        ]
+      }
+    ]
   },
   "Dresden, SN": {
     "reduce_min": [
@@ -27737,29 +28261,17 @@
             ]
           },
           {
-            "description": "News Article",
-            "url": "https://www.duluthnewstribune.com/news/local/duluth-lifts-parking-mandates-looks-to-sell-pair-of-ramps",
-            "notes": null,
-            "attachments": [],
-            "screenshots": [
-              {
-                "fileName": "duluth-mn-add-max-citation2-screenshot.png",
-                "directusId": "2ed09f2c-f3b0-457f-8c04-fb3b25d38e92"
-              }
-            ]
-          },
-          {
             "description": "Revised Code/Legistar",
             "url": "https://duluth-mn.legistar.com/LegislationDetail.aspx?ID=6414791&GUID=6F85BCFE-BBB6-49C6-BF59-319C60B8A2FA",
             "notes": null,
             "attachments": [],
             "screenshots": [
               {
-                "fileName": "duluth-mn-add-max-citation3-screenshot1.png",
+                "fileName": "duluth-mn-add-max-citation2-screenshot1.png",
                 "directusId": "1788c368-6bcd-4f0d-bbda-7b97d3c67224"
               },
               {
-                "fileName": "duluth-mn-add-max-citation3-screenshot2.png",
+                "fileName": "duluth-mn-add-max-citation2-screenshot2.png",
                 "directusId": "af2d6a71-def2-407b-b160-470ccb117d6d"
               }
             ]
@@ -28462,7 +28974,47 @@
           ]
         }
       ]
-    }
+    },
+    "add_max": [
+      {
+        "reporter": "Samuel Deetz",
+        "requirements": ["by right"],
+        "citations": [
+          {
+            "description": "East Greenville Zoning Code",
+            "url": "https://ecode360.com/40872191#40872198",
+            "notes": "§ 95-121.D.",
+            "attachments": [],
+            "screenshots": [
+              {
+                "fileName": "east-greenville-pa-add-max-screenshot.png",
+                "directusId": "d6974724-8bd4-4559-8f07-489aaa8f2698"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "reduce_min": [
+      {
+        "reporter": "Samuel Deetz",
+        "requirements": ["other"],
+        "citations": [
+          {
+            "description": "East Greenville Zoning Code",
+            "url": "https://ecode360.com/40872191#40872209",
+            "notes": "§ 95-123.B.;\n§ 95-123.C.;\n§ 95-123.D.",
+            "attachments": [],
+            "screenshots": [
+              {
+                "fileName": "east-greenville-pa-reduce-min-screenshot.png",
+                "directusId": "14d66777-7f18-4342-a2c3-9cd19766631a"
+              }
+            ]
+          }
+        ]
+      }
+    ]
   },
   "East Greenwich, RI": {
     "reduce_min": [
@@ -28736,7 +29288,51 @@
           ]
         }
       ]
-    }
+    },
+    "reduce_min": [
+      {
+        "reporter": "Samuel Deetz",
+        "requirements": ["other"],
+        "citations": [
+          {
+            "description": "East Pittsburgh Zoning Code",
+            "url": "https://ecode360.com/35883057#35883057",
+            "notes": "§ 375-33D.(1);\n§ 375-34.D.",
+            "attachments": [],
+            "screenshots": [
+              {
+                "fileName": "east-pittsburgh-pa-reduce-min-screenshot1.png",
+                "directusId": "fa7e9295-79c7-4066-bbe5-97bf811bb973"
+              },
+              {
+                "fileName": "east-pittsburgh-pa-reduce-min-screenshot2.png",
+                "directusId": "a4c607f0-9afc-4fce-86c5-430cd1e735f4"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "rm_min": [
+      {
+        "reporter": "Samuel Deetz",
+        "requirements": ["by right"],
+        "citations": [
+          {
+            "description": "East Pittsburgh Zoning Code",
+            "url": "https://ecode360.com/35883057#35883057",
+            "notes": "§ 375-33.D.(2)",
+            "attachments": [],
+            "screenshots": [
+              {
+                "fileName": "east-pittsburgh-pa-remove-min-screenshot.png",
+                "directusId": "d6d729da-0bd1-4946-959b-2b0aa139236f"
+              }
+            ]
+          }
+        ]
+      }
+    ]
   },
   "East Providence, RI": {
     "reduce_min": [
@@ -28826,7 +29422,47 @@
           ]
         }
       ]
-    }
+    },
+    "add_max": [
+      {
+        "reporter": "Samuel Deetz",
+        "requirements": ["by right"],
+        "citations": [
+          {
+            "description": "East Stroudsburg Zoning Code",
+            "url": "https://ecode360.com/12389708#12389708",
+            "notes": "§ 157-64.C.",
+            "attachments": [],
+            "screenshots": [
+              {
+                "fileName": "east-stroudsburg-pa-add-max-screenshot.png",
+                "directusId": "d240795d-64f2-4899-be46-62c36e0ceb87"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "rm_min": [
+      {
+        "reporter": "Samuel Deetz",
+        "requirements": ["by right"],
+        "citations": [
+          {
+            "description": "East Stroudsburg Zoning Code",
+            "url": "https://ecode360.com/12389708#12389708",
+            "notes": "§ 157-64.A.(2)",
+            "attachments": [],
+            "screenshots": [
+              {
+                "fileName": "east-stroudsburg-pa-remove-min-screenshot.png",
+                "directusId": "00c263d7-b402-4fce-8b41-d4c3ce66e6cf"
+              }
+            ]
+          }
+        ]
+      }
+    ]
   },
   "East Tawas, MI": {
     "rm_min": [
@@ -28982,7 +29618,47 @@
           ]
         }
       ]
-    }
+    },
+    "reduce_min": [
+      {
+        "reporter": "Samuel Deetz",
+        "requirements": ["other"],
+        "citations": [
+          {
+            "description": "Easton Zoning Code",
+            "url": "https://ecode360.com/36577837#36577837",
+            "notes": "§ 595-33.D.",
+            "attachments": [],
+            "screenshots": [
+              {
+                "fileName": "easton-pa-reduce-min-screenshot.png",
+                "directusId": "8c0a48d5-64fa-4c0b-8c8c-ecb2475ff754"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "rm_min": [
+      {
+        "reporter": "Samuel Deetz",
+        "requirements": ["by right", "size of project"],
+        "citations": [
+          {
+            "description": "Easton Zoning Code",
+            "url": "https://ecode360.com/36577072#36577072",
+            "notes": "§ 595-20.F.(4)",
+            "attachments": [],
+            "screenshots": [
+              {
+                "fileName": "easton-pa-remove-min-screenshot.png",
+                "directusId": "b6a76c35-e050-430d-b734-54d51d935316"
+              }
+            ]
+          }
+        ]
+      }
+    ]
   },
   "Eastpointe, MI": {
     "legacy": {
@@ -29193,7 +29869,47 @@
           ]
         }
       ]
-    }
+    },
+    "add_max": [
+      {
+        "reporter": "Samuel Deetz",
+        "requirements": ["by right"],
+        "citations": [
+          {
+            "description": "Ebensburg Zoning Code",
+            "url": "https://ebensburgpa.com/wp-content/uploads/2020/11/Code-Chapter-20-Zoning.pdf",
+            "notes": "§20-501.7.;\n§20-502.7.;\n§20-503.7.;\n§20-504.8.;\nPages 46, 52, 58, 62",
+            "attachments": [],
+            "screenshots": [
+              {
+                "fileName": "ebensburg-pa-add-max-screenshot.png",
+                "directusId": "ebf01941-1bc6-4355-b51e-70a1e89ebaad"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "rm_min": [
+      {
+        "reporter": "Samuel Deetz",
+        "requirements": ["by right", "other"],
+        "citations": [
+          {
+            "description": "Ebensburg Zoning Code",
+            "url": "https://ebensburgpa.com/wp-content/uploads/2020/11/Code-Chapter-20-Zoning.pdf",
+            "notes": "§20-504.7.\nPage 61",
+            "attachments": [],
+            "screenshots": [
+              {
+                "fileName": "ebensburg-pa-remove-min-screenshot.png",
+                "directusId": "76eda829-af48-40d5-8588-8df1f72c5333"
+              }
+            ]
+          }
+        ]
+      }
+    ]
   },
   "Ecorse, MI": {
     "legacy": {
@@ -30955,7 +31671,55 @@
           ]
         }
       ]
-    }
+    },
+    "add_max": [
+      {
+        "reporter": "Samuel Deetz",
+        "requirements": ["by right"],
+        "citations": [
+          {
+            "description": "Elverson Zoning Code",
+            "url": "https://ecode360.com/34090940#34090995",
+            "notes": "§ 290-1403.A.(4)",
+            "attachments": [],
+            "screenshots": [
+              {
+                "fileName": "elverson-pa-add-max-screenshot.png",
+                "directusId": "cbe87788-e54b-420a-9ba8-4b318455c432"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "reduce_min": [
+      {
+        "reporter": "Samuel Deetz",
+        "requirements": ["in-lieu fees", "other"],
+        "citations": [
+          {
+            "description": "Elverson Zoning Code",
+            "url": "https://ecode360.com/34090940#34090959",
+            "notes": "§ 290-1402.D.(4);\n§ 290-1403.B.(3);\n§ 290-1403.B.(5)",
+            "attachments": [],
+            "screenshots": [
+              {
+                "fileName": "elverson-pa-reduce-min-screenshot1.png",
+                "directusId": "9f9c3058-4cbf-4afd-9f72-37e776485c90"
+              },
+              {
+                "fileName": "elverson-pa-reduce-min-screenshot2.png",
+                "directusId": "5cb198ef-a30d-47ce-a3b6-82140409af3a"
+              },
+              {
+                "fileName": "elverson-pa-reduce-min-screenshot3.png",
+                "directusId": "96b09418-586e-400e-b050-317ba106ffcc"
+              }
+            ]
+          }
+        ]
+      }
+    ]
   },
   "Elwood, UT": {
     "add_max": [
@@ -31173,7 +31937,47 @@
           ]
         }
       ]
-    }
+    },
+    "reduce_min": [
+      {
+        "reporter": "Samuel Deetz",
+        "requirements": ["in-lieu fees"],
+        "citations": [
+          {
+            "description": "Emmaus Zoning Code",
+            "url": "https://ecode360.com/30877364#30877385",
+            "notes": "§ 27-602General Regulations for Off-street Parking.\n6.\n7.",
+            "attachments": [],
+            "screenshots": [
+              {
+                "fileName": "emmaus-pa-reduce-min-screenshot.png",
+                "directusId": "338564b6-93ac-40ea-959c-4565c036548e"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "rm_min": [
+      {
+        "reporter": "Samuel Deetz",
+        "requirements": ["by right", "size of project"],
+        "citations": [
+          {
+            "description": "Emmaus Zoning Code",
+            "url": "https://ecode360.com/30877364#30877385",
+            "notes": "§ 27-602General Regulations for Off-street Parking.\n6.\n7.",
+            "attachments": [],
+            "screenshots": [
+              {
+                "fileName": "emmaus-pa-remove-min-screenshot.png",
+                "directusId": "338564b6-93ac-40ea-959c-4565c036548e"
+              }
+            ]
+          }
+        ]
+      }
+    ]
   },
   "Emmitsburg, MD": {
     "reduce_min": [
@@ -31407,7 +32211,47 @@
           ]
         }
       ]
-    }
+    },
+    "reduce_min": [
+      {
+        "reporter": "Samuel Deetz",
+        "requirements": ["other"],
+        "citations": [
+          {
+            "description": "Ephrata Zoning Code",
+            "url": "https://ecode360.com/35086523#35086557",
+            "notes": "§ 319-46.B.(3)",
+            "attachments": [],
+            "screenshots": [
+              {
+                "fileName": "ephrata-pa-reduce-min-screenshot.png",
+                "directusId": "2fbbcf29-5273-4b72-9ccb-8626de7ec157"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "rm_min": [
+      {
+        "reporter": "Samuel Deetz",
+        "requirements": ["by right"],
+        "citations": [
+          {
+            "description": "Ephrata Zoning Code",
+            "url": "https://ecode360.com/35086523#35086524",
+            "notes": "§ 319-44.A.(1)",
+            "attachments": [],
+            "screenshots": [
+              {
+                "fileName": "ephrata-pa-remove-min-screenshot.png",
+                "directusId": "064ec3d8-f743-4b27-ab9f-3226657aa056"
+              }
+            ]
+          }
+        ]
+      }
+    ]
   },
   "Epworth, IA": {
     "rm_min": [
@@ -31481,7 +32325,7 @@
       "requirements": ["by right"],
       "citations": [
         {
-          "description": "Erie Zoning Code",
+          "description": "Erie Zoning Code (Former)",
           "url": "https://ecode360.com/attachment/ER3969/Zoning%20Ordinance%202021.pdf",
           "notes": "ARTICLE 3 - GENERAL REGULATIONS\n302 OFF-STREET PARKING\nPage 48 of pdf, page 43 of original document",
           "attachments": [],
@@ -31493,7 +32337,63 @@
           ]
         }
       ]
-    }
+    },
+    "reduce_min": [
+      {
+        "reporter": "Samuel Deetz",
+        "requirements": ["by right"],
+        "citations": [
+          {
+            "description": "Erie Zoning Code (Former)",
+            "url": "https://ecode360.com/44157646#44157646",
+            "notes": "302.4.;\n302.6.",
+            "attachments": [],
+            "screenshots": [
+              {
+                "fileName": "erie-pa-reduce-min-citation1-screenshot1.png",
+                "directusId": "e9e19cff-8dcf-4275-bdaa-7fe036ef5ad2"
+              },
+              {
+                "fileName": "erie-pa-reduce-min-citation1-screenshot2.png",
+                "directusId": "44af1bb9-f703-49da-b10b-021eeb496a92"
+              }
+            ]
+          },
+          {
+            "description": "Erie Ordinance 52-2024",
+            "url": "https://ecode360.com/ER3969/laws/LF2154382.pdf",
+            "notes": "Page 6",
+            "attachments": [],
+            "screenshots": [
+              {
+                "fileName": "erie-pa-reduce-min-citation2-screenshot.png",
+                "directusId": "30cf0b90-bffb-4e35-b233-145b9ff02117"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "rm_min": [
+      {
+        "reporter": "Samuel Deetz",
+        "requirements": ["by right"],
+        "citations": [
+          {
+            "description": "Erie Zoning Code",
+            "url": "https://ecode360.com/44157646#44157646",
+            "notes": "302.6.",
+            "attachments": [],
+            "screenshots": [
+              {
+                "fileName": "erie-pa-remove-min-screenshot.png",
+                "directusId": "0b866054-0752-4277-b3ec-00d7377a70b9"
+              }
+            ]
+          }
+        ]
+      }
+    ]
   },
   "Erlanger, KY": {
     "reduce_min": [
@@ -31645,7 +32545,47 @@
           ]
         }
       ]
-    }
+    },
+    "add_max": [
+      {
+        "reporter": "Samuel Deetz",
+        "requirements": ["by right"],
+        "citations": [
+          {
+            "description": "Etna Zoning Code",
+            "url": "https://ecode360.com/35092012#35092012",
+            "notes": "§ 615-21Supplementary regulations.\nH.(1)",
+            "attachments": [],
+            "screenshots": [
+              {
+                "fileName": "etna-pa-add-max-screenshot.png",
+                "directusId": "ee09b71c-796b-4abb-8761-eb197119ceb4"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "rm_min": [
+      {
+        "reporter": "Samuel Deetz",
+        "requirements": ["by right", "size of project"],
+        "citations": [
+          {
+            "description": "Etna Zoning Code",
+            "url": "https://ecode360.com/35092012#35092012",
+            "notes": "§ 615-21Supplementary regulations.\nH.(1)",
+            "attachments": [],
+            "screenshots": [
+              {
+                "fileName": "etna-pa-remove-min-screenshot.png",
+                "directusId": "ee09b71c-796b-4abb-8761-eb197119ceb4"
+              }
+            ]
+          }
+        ]
+      }
+    ]
   },
   "Eugene, OR": {
     "legacy": {
@@ -31724,18 +32664,6 @@
               {
                 "fileName": "eugene-or-add-max-citation2-screenshot2.png",
                 "directusId": "9c9cc21d-905e-4aa2-8d0b-137bd8d9084d"
-              }
-            ]
-          },
-          {
-            "description": "The Register-Guard",
-            "url": "https://www.registerguard.com/story/news/local/2023/11/14/parking-reform-ordinance-removes-requirement-for-off-street-minimums/71536844007/",
-            "notes": null,
-            "attachments": [],
-            "screenshots": [
-              {
-                "fileName": "eugene-or-add-max-citation3-screenshot.png",
-                "directusId": "0705e14c-bc34-44a5-908a-ad38b98fff14"
               }
             ]
           }
@@ -34103,7 +35031,47 @@
           ]
         }
       ]
-    }
+    },
+    "reduce_min": [
+      {
+        "reporter": "Samuel Deetz",
+        "requirements": ["other"],
+        "citations": [
+          {
+            "description": "Ford City Zoning Code",
+            "url": "https://fordcityborough.org/wp-content/uploads/2024/03/Ford-City-Zoning-Ordinance-AMENDED.pdf",
+            "notes": "6.04.C.; \n6.04.D.; \nPage 64",
+            "attachments": [],
+            "screenshots": [
+              {
+                "fileName": "ford-city-pa-reduce-min-screenshot.png",
+                "directusId": "e597d0e2-7095-4b90-88f2-f3b8662e3de8"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "rm_min": [
+      {
+        "reporter": "Samuel Deetz",
+        "requirements": ["by right"],
+        "citations": [
+          {
+            "description": "Ford City Zoning Code",
+            "url": "https://fordcityborough.org/wp-content/uploads/2024/03/Ford-City-Zoning-Ordinance-AMENDED.pdf",
+            "notes": "6.02.A.1.\nPage 61",
+            "attachments": [],
+            "screenshots": [
+              {
+                "fileName": "ford-city-pa-remove-min-screenshot.png",
+                "directusId": "f1ddca5f-f8f1-4c18-bd81-2abc23b265b5"
+              }
+            ]
+          }
+        ]
+      }
+    ]
   },
   "Ford Heights, IL": {
     "legacy": {
@@ -34291,7 +35259,47 @@
           ]
         }
       ]
-    }
+    },
+    "reduce_min": [
+      {
+        "reporter": "Samuel Deetz",
+        "requirements": ["by right", "other", "size of project"],
+        "citations": [
+          {
+            "description": "Forest Hills Zoning Code",
+            "url": "https://ecode360.com/31375697#31375697",
+            "notes": "§ 27-404Parking Regulations.\n1.B.\n1.D.",
+            "attachments": [],
+            "screenshots": [
+              {
+                "fileName": "forest-hills-pa-reduce-min-screenshot.png",
+                "directusId": "4a31a932-1956-4d3c-a0f4-af26a8697303"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "rm_min": [
+      {
+        "reporter": "Samuel Deetz",
+        "requirements": ["by right", "size of project"],
+        "citations": [
+          {
+            "description": "Forest Hills Zoning Code",
+            "url": "https://ecode360.com/31375697#31375697",
+            "notes": "§ 27-404Parking Regulations.\n1.B.\n1.D.",
+            "attachments": [],
+            "screenshots": [
+              {
+                "fileName": "forest-hills-pa-remove-min-screenshot.png",
+                "directusId": "4a31a932-1956-4d3c-a0f4-af26a8697303"
+              }
+            ]
+          }
+        ]
+      }
+    ]
   },
   "Forest Lake, MN": {
     "rm_min": [
@@ -37996,7 +39004,56 @@
           ]
         }
       ]
-    }
+    },
+    "reduce_min": [
+      {
+        "reporter": "Samuel Deetz",
+        "requirements": [
+          "bike parking",
+          "carshare",
+          "frequent transit",
+          "other"
+        ],
+        "citations": [
+          {
+            "description": "Gettysburg Zoning Code",
+            "url": "https://ecode360.com/27359347#27359402",
+            "notes": "§ 27-1307;\n§ 27-1309",
+            "attachments": [],
+            "screenshots": [
+              {
+                "fileName": "gettysburg-pa-reduce-min-screenshot1.png",
+                "directusId": "0f262b73-a8fb-4a4a-b0e4-81f7846cc863"
+              },
+              {
+                "fileName": "gettysburg-pa-reduce-min-screenshot2.png",
+                "directusId": "677f5754-f4a5-483c-9eb5-e8106c4f56ec"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "rm_min": [
+      {
+        "reporter": "Samuel Deetz",
+        "requirements": ["by right"],
+        "citations": [
+          {
+            "description": "Gettysburg Zoning Code",
+            "url": "https://ecode360.com/27359347#27359383",
+            "notes": "§ 27-1305",
+            "attachments": [],
+            "screenshots": [
+              {
+                "fileName": "gettysburg-pa-remove-min-screenshot.png",
+                "directusId": "b3b9b759-d744-47bb-a54f-2f9d0a2a7be1"
+              }
+            ]
+          }
+        ]
+      }
+    ]
   },
   "Gibsonburg, OH": {
     "rm_min": [
@@ -41860,7 +42917,67 @@
           ]
         }
       ]
-    }
+    },
+    "add_max": [
+      {
+        "reporter": "Samuel Deetz",
+        "requirements": ["by right", "other"],
+        "citations": [
+          {
+            "description": "Halifax Zoning Code",
+            "url": "https://halifaxborough.com/wp-content/uploads/ord_chap27.pdf",
+            "notes": "2:6:3\nPages 28-29",
+            "attachments": [],
+            "screenshots": [
+              {
+                "fileName": "halifax-pa-add-max-screenshot.png",
+                "directusId": "6312a1aa-7763-43c9-a114-ddb302f470da"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "reduce_min": [
+      {
+        "reporter": "Samuel Deetz",
+        "requirements": ["other"],
+        "citations": [
+          {
+            "description": "Halifax Zoning Code",
+            "url": "https://halifaxborough.com/wp-content/uploads/ord_chap27.pdf",
+            "notes": "2:6:4.B.\nPage 29",
+            "attachments": [],
+            "screenshots": [
+              {
+                "fileName": "halifax-pa-reduce-min-screenshot.png",
+                "directusId": "5d03b1a8-0d7f-4897-b0a0-bbe5f2e20ad2"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "rm_min": [
+      {
+        "reporter": "Samuel Deetz",
+        "requirements": ["by right", "size of project"],
+        "citations": [
+          {
+            "description": "Halifax Zoning Code",
+            "url": "https://halifaxborough.com/wp-content/uploads/ord_chap27.pdf",
+            "notes": "2:6:2\nPage 28",
+            "attachments": [],
+            "screenshots": [
+              {
+                "fileName": "halifax-pa-remove-min-screenshot.png",
+                "directusId": "3fb3cc80-1270-4064-a27d-73c577fd0bcf"
+              }
+            ]
+          }
+        ]
+      }
+    ]
   },
   "Hallsville, MO": {
     "rm_min": [
@@ -43885,7 +45002,47 @@
           ]
         }
       ]
-    }
+    },
+    "add_max": [
+      {
+        "reporter": "Samuel Deetz",
+        "requirements": ["by right"],
+        "citations": [
+          {
+            "description": "Hazleton Zoning Code",
+            "url": "https://ecode360.com/37224094#37224094",
+            "notes": "§ 575-801.D.",
+            "attachments": [],
+            "screenshots": [
+              {
+                "fileName": "hazleton-pa-add-max-screenshot.png",
+                "directusId": "0a804939-8966-4818-9cef-966d2b84a569"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "rm_min": [
+      {
+        "reporter": "Samuel Deetz",
+        "requirements": ["by right"],
+        "citations": [
+          {
+            "description": "Hazleton Zoning Code",
+            "url": "https://ecode360.com/37223006#37223006",
+            "notes": "§ 575-506.O.(1)",
+            "attachments": [],
+            "screenshots": [
+              {
+                "fileName": "hazleton-pa-remove-min-screenshot.png",
+                "directusId": "40f875d0-3284-476a-911a-d15589ea2990"
+              }
+            ]
+          }
+        ]
+      }
+    ]
   },
   "Healdsburg, CA": {
     "rm_min": [
@@ -45340,7 +46497,47 @@
           ]
         }
       ]
-    }
+    },
+    "reduce_min": [
+      {
+        "reporter": "Samuel Deetz",
+        "requirements": ["by right", "size of project"],
+        "citations": [
+          {
+            "description": "Homestead Zoning Code",
+            "url": "https://ecode360.com/35880552#35880604",
+            "notes": "§ 27-1008Exemption of required parking spaces.\n1.",
+            "attachments": [],
+            "screenshots": [
+              {
+                "fileName": "homestead-pa-reduce-min-screenshot.png",
+                "directusId": "b30f9f09-5572-4a2a-b8f2-5b09d070d05f"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "rm_min": [
+      {
+        "reporter": "Samuel Deetz",
+        "requirements": ["by right", "size of project"],
+        "citations": [
+          {
+            "description": "Homestead Zoning Code",
+            "url": "https://ecode360.com/35880552#35880604",
+            "notes": "§ 27-1008Exemption of required parking spaces.\n1.",
+            "attachments": [],
+            "screenshots": [
+              {
+                "fileName": "homestead-pa-remove-min-screenshot.png",
+                "directusId": "b30f9f09-5572-4a2a-b8f2-5b09d070d05f"
+              }
+            ]
+          }
+        ]
+      }
+    ]
   },
   "Homewood, IL": {
     "add_max": [
@@ -48395,7 +49592,51 @@
           ]
         }
       ]
-    }
+    },
+    "add_max": [
+      {
+        "reporter": "Samuel Deetz",
+        "requirements": ["by right"],
+        "citations": [
+          {
+            "description": "Jenkintown Zoning Code",
+            "url": "https://ecode360.com/11184631#11184703",
+            "notes": "§ 181-73",
+            "attachments": [],
+            "screenshots": [
+              {
+                "fileName": "jenkintown-pa-add-max-screenshot.png",
+                "directusId": "d33f51af-512f-4a31-ad38-d6fd761602e7"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "reduce_min": [
+      {
+        "reporter": "Samuel Deetz",
+        "requirements": ["by right", "in-lieu fees", "size of project"],
+        "citations": [
+          {
+            "description": "Jenkintown Zoning Code",
+            "url": "https://ecode360.com/11184631#11184712",
+            "notes": "§ 181-43.C.(3)(b);\n§ 181-75",
+            "attachments": [],
+            "screenshots": [
+              {
+                "fileName": "jenkintown-pa-reduce-min-screenshot1.png",
+                "directusId": "e7029e26-b721-4adf-975a-5b99700e5997"
+              },
+              {
+                "fileName": "jenkintown-pa-reduce-min-screenshot2.png",
+                "directusId": "850d461b-eb2a-4581-8db9-b046c1ac2705"
+              }
+            ]
+          }
+        ]
+      }
+    ]
   },
   "Jenks, OK": {
     "add_max": [
@@ -48653,7 +49894,47 @@
           ]
         }
       ]
-    }
+    },
+    "add_max": [
+      {
+        "reporter": "Samuel Deetz",
+        "requirements": ["by right"],
+        "citations": [
+          {
+            "description": "Jim Thorpe Zoning Code",
+            "url": "https://ecode360.com/44965650#44965818",
+            "notes": "§ 500-29.F.",
+            "attachments": [],
+            "screenshots": [
+              {
+                "fileName": "jim-thorpe-pa-add-max-screenshot.png",
+                "directusId": "de599d3c-1f25-42a9-b503-e2e4e014ad90"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "rm_min": [
+      {
+        "reporter": "Samuel Deetz",
+        "requirements": ["by right"],
+        "citations": [
+          {
+            "description": "Jim Thorpe Zoning Code",
+            "url": "https://ecode360.com/44965650#44965818",
+            "notes": "§ 500-29.E.",
+            "attachments": [],
+            "screenshots": [
+              {
+                "fileName": "jim-thorpe-pa-remove-min-screenshot.png",
+                "directusId": "dd6c5b3d-7a9a-4cb0-902d-c0f756aa518d"
+              }
+            ]
+          }
+        ]
+      }
+    ]
   },
   "Johannesburg, GP": {
     "legacy": {
@@ -53462,7 +54743,7 @@
       ],
       "citations": [
         {
-          "description": "Lansdale Zoning Code",
+          "description": "Lansdale Zoning Code (Former)",
           "url": "https://ecode360.com/12268292#12268292",
           "notes": "§ 405-3203Development standards.\nI.\n§ 405-3303Additional development standards.\nC.\n§ 405-3505Parking.\n§ 405-1705Waiver of requirements.",
           "attachments": [],
@@ -53490,7 +54771,120 @@
           ]
         }
       ]
-    }
+    },
+    "reduce_min": [
+      {
+        "reporter": "Samuel Deetz",
+        "requirements": [
+          "by right",
+          "frequent transit",
+          "in-lieu fees",
+          "other"
+        ],
+        "citations": [
+          {
+            "description": "Lansdale Zoning Code (Former)",
+            "url": "https://ecode360.com/12268292#12268292",
+            "notes": "§ 405-3203Development standards.\nI.\n§ 405-3303Additional development standards.\nC.\n§ 405-3505Parking.\n§ 405-1705Waiver of requirements.",
+            "attachments": [],
+            "screenshots": [
+              {
+                "fileName": "lansdale-pa-reduce-min-citation1-screenshot1.png",
+                "directusId": "f86e4a66-905e-4597-8cc4-2c3b408743cb"
+              },
+              {
+                "fileName": "lansdale-pa-reduce-min-citation1-screenshot2.png",
+                "directusId": "55ddaa16-674c-439b-b782-acf458550bce"
+              },
+              {
+                "fileName": "lansdale-pa-reduce-min-citation1-screenshot3.png",
+                "directusId": "3d20037c-0951-46d2-ac14-c7f5c7adebdb"
+              },
+              {
+                "fileName": "lansdale-pa-reduce-min-citation1-screenshot4.png",
+                "directusId": "ca15b7ca-4db2-4362-b063-7ed6d911fbb8"
+              },
+              {
+                "fileName": "lansdale-pa-reduce-min-citation1-screenshot5.png",
+                "directusId": "c99cd41f-480f-4d1a-9a45-b3c4995d44f0"
+              }
+            ]
+          },
+          {
+            "description": "Lansdale Zoning Code",
+            "url": "https://ecode360.com/12268292#12268292",
+            "notes": "§ 405-3203.I.;\n§ 405-3305.D.;\n§ 405-3405.D.",
+            "attachments": [],
+            "screenshots": [
+              {
+                "fileName": "lansdale-pa-reduce-min-citation2-screenshot1.png",
+                "directusId": "9902c62b-ed95-4ce0-aad7-1ace3530c759"
+              },
+              {
+                "fileName": "lansdale-pa-reduce-min-citation2-screenshot2.png",
+                "directusId": "4f7bc30e-8b5a-450b-a546-38bfec620952"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "rm_min": [
+      {
+        "reporter": "Samuel Deetz",
+        "requirements": ["by right", "other", "size of project"],
+        "citations": [
+          {
+            "description": "Lansdale Zoning Code (Former)",
+            "url": "https://ecode360.com/12268292#12268292",
+            "notes": "§ 405-3203Development standards.\nI.\n§ 405-3303Additional development standards.\nC.\n§ 405-3505Parking.\n§ 405-1705Waiver of requirements.",
+            "attachments": [],
+            "screenshots": [
+              {
+                "fileName": "lansdale-pa-remove-min-citation1-screenshot1.png",
+                "directusId": "f86e4a66-905e-4597-8cc4-2c3b408743cb"
+              },
+              {
+                "fileName": "lansdale-pa-remove-min-citation1-screenshot2.png",
+                "directusId": "55ddaa16-674c-439b-b782-acf458550bce"
+              },
+              {
+                "fileName": "lansdale-pa-remove-min-citation1-screenshot3.png",
+                "directusId": "3d20037c-0951-46d2-ac14-c7f5c7adebdb"
+              },
+              {
+                "fileName": "lansdale-pa-remove-min-citation1-screenshot4.png",
+                "directusId": "ca15b7ca-4db2-4362-b063-7ed6d911fbb8"
+              },
+              {
+                "fileName": "lansdale-pa-remove-min-citation1-screenshot5.png",
+                "directusId": "c99cd41f-480f-4d1a-9a45-b3c4995d44f0"
+              }
+            ]
+          },
+          {
+            "description": "Lansdale Zoning Code",
+            "url": "https://ecode360.com/45614660#45614660",
+            "notes": "§ 405-1705;\n§ 405-3305.A.(1);\n§ 405-3405.A.(1)",
+            "attachments": [],
+            "screenshots": [
+              {
+                "fileName": "lansdale-pa-remove-min-citation2-screenshot1.png",
+                "directusId": "6936c1d5-bd5e-4c51-980e-c69e1dbed0e2"
+              },
+              {
+                "fileName": "lansdale-pa-remove-min-citation2-screenshot2.png",
+                "directusId": "2dec86a3-1b62-475c-85f2-bdaf5774245e"
+              },
+              {
+                "fileName": "lansdale-pa-remove-min-citation2-screenshot3.png",
+                "directusId": "d0076534-43d6-4779-8701-69b471966801"
+              }
+            ]
+          }
+        ]
+      }
+    ]
   },
   "Lansdowne, PA": {
     "reduce_min": [
@@ -54532,7 +55926,47 @@
           ]
         }
       ]
-    }
+    },
+    "reduce_min": [
+      {
+        "reporter": "Samuel Deetz",
+        "requirements": ["other"],
+        "citations": [
+          {
+            "description": "Lebanon Zoning Code",
+            "url": "https://ecode360.com/36369409#36369431",
+            "notes": "§ 1311.03(b)(3)",
+            "attachments": [],
+            "screenshots": [
+              {
+                "fileName": "lebanon-pa-reduce-min-screenshot.png",
+                "directusId": "c4fad062-dca2-46bf-b6ee-e235f363fbb4"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "rm_min": [
+      {
+        "reporter": "Samuel Deetz",
+        "requirements": ["by right", "size of project"],
+        "citations": [
+          {
+            "description": "Lebanon Zoning Code",
+            "url": "https://ecode360.com/36369409#36369410",
+            "notes": "§ 1311.01(a)(1)",
+            "attachments": [],
+            "screenshots": [
+              {
+                "fileName": "lebanon-pa-remove-min-screenshot.png",
+                "directusId": "8b9eec39-e311-4bb2-9a12-60ceb4d80912"
+              }
+            ]
+          }
+        ]
+      }
+    ]
   },
   "Leduc, AB": {
     "rm_min": [
@@ -54694,7 +56128,47 @@
           ]
         }
       ]
-    }
+    },
+    "add_max": [
+      {
+        "reporter": "Samuel Deetz",
+        "requirements": ["by right"],
+        "citations": [
+          {
+            "description": "Lehighton Zoning Code",
+            "url": "https://www.lehightonborough.org/sites/g/files/vyhlif6681/f/uploads/zoning_ordinance_2023_opt.pdf",
+            "notes": "218-29.F. \nPages 87-88 of pdf, pages 77-78 of original document",
+            "attachments": [],
+            "screenshots": [
+              {
+                "fileName": "lehighton-pa-add-max-screenshot.png",
+                "directusId": "c0524098-21c2-42bf-bfa7-1b0d8cd16209"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "rm_min": [
+      {
+        "reporter": "Samuel Deetz",
+        "requirements": ["by right"],
+        "citations": [
+          {
+            "description": "Lehighton Zoning Code",
+            "url": "https://www.lehightonborough.org/sites/g/files/vyhlif6681/f/uploads/zoning_ordinance_2023_opt.pdf",
+            "notes": "218-29.E.\nPage 87 of pdf, page 77 of original document",
+            "attachments": [],
+            "screenshots": [
+              {
+                "fileName": "lehighton-pa-remove-min-screenshot.png",
+                "directusId": "6524612e-7102-49fc-8726-f902b7e754b0"
+              }
+            ]
+          }
+        ]
+      }
+    ]
   },
   "Leland Grove, IL": {
     "legacy": {
@@ -55098,7 +56572,75 @@
           ]
         }
       ]
-    }
+    },
+    "reduce_min": [
+      {
+        "reporter": "Joe Beattie",
+        "requirements": ["bike parking", "by right"],
+        "citations": [
+          {
+            "description": "Lewisburg Ordinance 1076",
+            "url": "https://ecode360.com/LE2375/laws/LF1854780.pdf",
+            "notes": "Section 7. \nSection 8.\nSection 14. H. (7)\nPages 6-7, 10",
+            "attachments": [],
+            "screenshots": [
+              {
+                "fileName": "lewisburg-pa-reduce-min-screenshot1.png",
+                "directusId": "9d1f7be6-bb38-4e08-9f6b-45bc484c8d02"
+              },
+              {
+                "fileName": "lewisburg-pa-reduce-min-screenshot2.png",
+                "directusId": "fe1fa154-0030-4df1-8e0c-70224b7cddc3"
+              },
+              {
+                "fileName": "lewisburg-pa-reduce-min-screenshot3.png",
+                "directusId": "cddd98a0-fcb5-44a5-af98-c6574d8cf24d"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "rm_min": [
+      {
+        "reporter": "Joe Beattie",
+        "requirements": ["by right"],
+        "citations": [
+          {
+            "description": "Lewisburg Zoning Code (Former)",
+            "url": "https://ecode360.com/15684212",
+            "notes": "§ 360-26 Off-street parking and loading areas.\nB.  Determination of required number of off-street parking spaces.",
+            "attachments": [],
+            "screenshots": [
+              {
+                "fileName": "lewisburg-pa-remove-min-citation1-screenshot.png",
+                "directusId": "72a9c7d0-a3a1-4312-a3b5-fd0b24866832"
+              }
+            ]
+          },
+          {
+            "description": "Lewisburg Ordinance 1076",
+            "url": "https://ecode360.com/LE2375/laws/LF1854780.pdf",
+            "notes": "Section 7. \nSection 8.\nSection 14. H. (7)\nPages 6-7, 10",
+            "attachments": [],
+            "screenshots": [
+              {
+                "fileName": "lewisburg-pa-remove-min-citation2-screenshot1.png",
+                "directusId": "9d1f7be6-bb38-4e08-9f6b-45bc484c8d02"
+              },
+              {
+                "fileName": "lewisburg-pa-remove-min-citation2-screenshot2.png",
+                "directusId": "fe1fa154-0030-4df1-8e0c-70224b7cddc3"
+              },
+              {
+                "fileName": "lewisburg-pa-remove-min-citation2-screenshot3.png",
+                "directusId": "cddd98a0-fcb5-44a5-af98-c6574d8cf24d"
+              }
+            ]
+          }
+        ]
+      }
+    ]
   },
   "Lewistown, IL": {
     "rm_min": [
@@ -55860,25 +57402,13 @@
             ]
           },
           {
-            "description": "News Article",
-            "url": "https://journalstar.com/news/local/government-politics/lincoln-parking-lots-requirements-gateway-mall/article_9bdc9d0a-90aa-11ee-a47a-b7db003d8e31.html",
-            "notes": null,
-            "attachments": [],
-            "screenshots": [
-              {
-                "fileName": "lincoln-ne-reduce-min-citation2-screenshot.png",
-                "directusId": "40e18df7-0d89-486a-8b90-19bc2ff19cf9"
-              }
-            ]
-          },
-          {
             "description": "Lincoln Zoning Code",
             "url": "https://online.encodeplus.com/regs/lincoln-ne/doc-viewer.aspx#secid-12168",
             "notes": "27.67.100\nFigure 27.67.020",
             "attachments": [],
             "screenshots": [
               {
-                "fileName": "lincoln-ne-reduce-min-citation3-screenshot.png",
+                "fileName": "lincoln-ne-reduce-min-citation2-screenshot.png",
                 "directusId": "24bef803-f718-4028-8bbe-478821e96066"
               }
             ]
@@ -61456,7 +62986,51 @@
           ]
         }
       ]
-    }
+    },
+    "reduce_min": [
+      {
+        "reporter": "Samuel Deetz",
+        "requirements": ["by right", "other", "size of project"],
+        "citations": [
+          {
+            "description": "Mechanicsburg Zoning Code",
+            "url": "https://ecode360.com/27109345#27109346",
+            "notes": "§ 27-408TND Blocks, Streets and Parking.\nC.(1)\n§ 27-801Off-Street Parking Requirements.\nD.",
+            "attachments": [],
+            "screenshots": [
+              {
+                "fileName": "mechanicsburg-pa-reduce-min-screenshot1.png",
+                "directusId": "7b2147e7-48b2-4eff-9058-37029104ff12"
+              },
+              {
+                "fileName": "mechanicsburg-pa-reduce-min-screenshot2.png",
+                "directusId": "42015e46-cd91-4169-9b21-3222178f4716"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "rm_min": [
+      {
+        "reporter": "Samuel Deetz",
+        "requirements": ["by right", "size of project"],
+        "citations": [
+          {
+            "description": "Mechanicsburg Zoning Code",
+            "url": "https://ecode360.com/27109345#27109346",
+            "notes": "§ 27-801.D.",
+            "attachments": [],
+            "screenshots": [
+              {
+                "fileName": "mechanicsburg-pa-remove-min-screenshot.png",
+                "directusId": "5642f8f3-8b0a-4ad8-b4c6-43c7b87b47bd"
+              }
+            ]
+          }
+        ]
+      }
+    ]
   },
   "Mechanicsville, IA": {
     "rm_min": [
@@ -63299,7 +64873,67 @@
           ]
         }
       ]
-    }
+    },
+    "add_max": [
+      {
+        "reporter": "Samuel Deetz",
+        "requirements": ["by right"],
+        "citations": [
+          {
+            "description": "Millersburg Zoning Code",
+            "url": "https://www.millersburgpa.org/wp-content/uploads/Ordinances/Zoning/FINAL%20ZONING%20ORDINANCE%2008-19-16.pdf",
+            "notes": "2:4:2\nPage 24",
+            "attachments": [],
+            "screenshots": [
+              {
+                "fileName": "millersburg-pa-add-max-screenshot.png",
+                "directusId": "2534b8a3-d86d-494d-ac2a-a7d3cfea33f4"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "reduce_min": [
+      {
+        "reporter": "Samuel Deetz",
+        "requirements": ["other"],
+        "citations": [
+          {
+            "description": "Millersburg Zoning Code",
+            "url": "https://www.millersburgpa.org/wp-content/uploads/Ordinances/Zoning/FINAL%20ZONING%20ORDINANCE%2008-19-16.pdf",
+            "notes": "2:4:4.B.\nPage 25",
+            "attachments": [],
+            "screenshots": [
+              {
+                "fileName": "millersburg-pa-reduce-min-screenshot.png",
+                "directusId": "adc0f63f-ce5c-4c29-8fca-9983fdb0326e"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "rm_min": [
+      {
+        "reporter": "Samuel Deetz",
+        "requirements": ["by right", "size of project"],
+        "citations": [
+          {
+            "description": "Millersburg Zoning Code",
+            "url": "https://www.millersburgpa.org/wp-content/uploads/Ordinances/Zoning/FINAL%20ZONING%20ORDINANCE%2008-19-16.pdf",
+            "notes": "2:4:2\nPage 24",
+            "attachments": [],
+            "screenshots": [
+              {
+                "fileName": "millersburg-pa-remove-min-screenshot.png",
+                "directusId": "2534b8a3-d86d-494d-ac2a-a7d3cfea33f4"
+              }
+            ]
+          }
+        ]
+      }
+    ]
   },
   "Millersville, PA": {
     "reduce_min": [
@@ -63778,24 +65412,12 @@
         "requirements": ["by right"],
         "citations": [
           {
-            "description": "Streetsblog Article",
-            "url": "https://usa.streetsblog.org/2018/12/12/minneapolis-moves-to-eliminate-mandatory-parking/",
-            "notes": null,
-            "attachments": [],
-            "screenshots": [
-              {
-                "fileName": "minneapolis-mn-add-max-citation1-screenshot.png",
-                "directusId": "ec52a688-130b-40a7-9b0a-738abc4884df"
-              }
-            ]
-          },
-          {
             "description": "Presentation on Ordinance to implement comprehensive plan.",
             "url": "https://lims.minneapolismn.gov/download/Agenda/1767/Text%20amendment%20-%20off%20street%20parking.pdf/53904/2293/Parking,%20Loading,%20and%20Mobilty%20Zoning%20Code%20Text%20Amendment",
             "notes": "Introduced March 11, 2021",
             "attachments": [
               {
-                "fileName": "minneapolis-mn-add-max-citation2-attachment.pdf",
+                "fileName": "minneapolis-mn-add-max-citation1-attachment.pdf",
                 "directusId": "240d171c-9d15-45ce-9019-67df0e50bd90"
               }
             ],
@@ -63808,15 +65430,15 @@
             "attachments": [],
             "screenshots": [
               {
-                "fileName": "minneapolis-mn-add-max-citation3-screenshot1.png",
+                "fileName": "minneapolis-mn-add-max-citation2-screenshot1.png",
                 "directusId": "6c2765d5-75e2-4da1-bad7-7b117789a806"
               },
               {
-                "fileName": "minneapolis-mn-add-max-citation3-screenshot2.png",
+                "fileName": "minneapolis-mn-add-max-citation2-screenshot2.png",
                 "directusId": "c05a8c57-a192-45d5-a027-bd572567cbf6"
               },
               {
-                "fileName": "minneapolis-mn-add-max-citation3-screenshot3.png",
+                "fileName": "minneapolis-mn-add-max-citation2-screenshot3.png",
                 "directusId": "cc1f16de-4c0f-4d42-88f3-a5bd2794dc24"
               }
             ]
@@ -64185,7 +65807,47 @@
           ]
         }
       ]
-    }
+    },
+    "add_max": [
+      {
+        "reporter": "Samuel Deetz",
+        "requirements": ["by right"],
+        "citations": [
+          {
+            "description": "Modena Zoning Code",
+            "url": "https://boroughofmodenapa.org/wp-content/uploads/2019/07/Modena_ZO_2009_full.pdf",
+            "notes": "SECTION 1502.C.2.c. \nPage 130",
+            "attachments": [],
+            "screenshots": [
+              {
+                "fileName": "modena-pa-add-max-screenshot.png",
+                "directusId": "a252aa0a-4254-42a3-a50a-01848df0d3e9"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "reduce_min": [
+      {
+        "reporter": "Samuel Deetz",
+        "requirements": ["other"],
+        "citations": [
+          {
+            "description": "Modena Zoning Code",
+            "url": "https://boroughofmodenapa.org/wp-content/uploads/2019/07/Modena_ZO_2009_full.pdf",
+            "notes": "SECTION 1502.B.3.a.\nPage 125",
+            "attachments": [],
+            "screenshots": [
+              {
+                "fileName": "modena-pa-reduce-min-screenshot.png",
+                "directusId": "44373703-914c-439a-b4c4-8dc113126f02"
+              }
+            ]
+          }
+        ]
+      }
+    ]
   },
   "Modesto, CA": {
     "legacy": {
@@ -65712,7 +67374,47 @@
           ]
         }
       ]
-    }
+    },
+    "reduce_min": [
+      {
+        "reporter": "Samuel Deetz",
+        "requirements": ["by right"],
+        "citations": [
+          {
+            "description": "Morrisville Zoning Code",
+            "url": "https://ecode360.com/6873135#6873188",
+            "notes": "§ 465-43Downtown parking exemption.",
+            "attachments": [],
+            "screenshots": [
+              {
+                "fileName": "morrisville-pa-reduce-min-screenshot.png",
+                "directusId": "2e6f5173-8755-4e86-ab00-b4d8a09f0247"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "rm_min": [
+      {
+        "reporter": "Samuel Deetz",
+        "requirements": ["by right", "size of project"],
+        "citations": [
+          {
+            "description": "Morrisville Zoning Code",
+            "url": "https://ecode360.com/6873135#6873188",
+            "notes": "§ 465-43Downtown parking exemption.",
+            "attachments": [],
+            "screenshots": [
+              {
+                "fileName": "morrisville-pa-remove-min-screenshot.png",
+                "directusId": "2e6f5173-8755-4e86-ab00-b4d8a09f0247"
+              }
+            ]
+          }
+        ]
+      }
+    ]
   },
   "Morton, IL": {
     "rm_min": [
@@ -67529,7 +69231,47 @@
           ]
         }
       ]
-    }
+    },
+    "reduce_min": [
+      {
+        "reporter": "Samuel Deetz",
+        "requirements": ["other"],
+        "citations": [
+          {
+            "description": "Myerstown Zoning Code",
+            "url": "https://ecode360.com/42482355#42482376",
+            "notes": "§ 27-1103.2.C.",
+            "attachments": [],
+            "screenshots": [
+              {
+                "fileName": "myerstown-pa-reduce-min-screenshot.png",
+                "directusId": "2bcb8404-9300-4f4f-a1e6-15a0faca2cb2"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "rm_min": [
+      {
+        "reporter": "Samuel Deetz",
+        "requirements": ["by right", "size of project"],
+        "citations": [
+          {
+            "description": "Myerstown Zoning Code",
+            "url": "https://ecode360.com/42482355#42482356",
+            "notes": "§ 27-1101.1.A.",
+            "attachments": [],
+            "screenshots": [
+              {
+                "fileName": "myerstown-pa-remove-min-screenshot.png",
+                "directusId": "5292b85c-92dd-4bcc-806f-8307540b275d"
+              }
+            ]
+          }
+        ]
+      }
+    ]
   },
   "München, BY": {
     "reduce_min": [
@@ -67840,7 +69582,83 @@
           ]
         }
       ]
-    }
+    },
+    "add_max": [
+      {
+        "reporter": "Samuel Deetz",
+        "requirements": ["by right"],
+        "citations": [
+          {
+            "description": "Narberth Zoning Code",
+            "url": "https://ecode360.com/34355592#34355593",
+            "notes": "§ 500-601.A.(5)",
+            "attachments": [],
+            "screenshots": [
+              {
+                "fileName": "narberth-pa-add-max-screenshot.png",
+                "directusId": "e1f2ca8d-7909-42f9-aa2d-b572723cb560"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "reduce_min": [
+      {
+        "reporter": "Samuel Deetz",
+        "requirements": ["by right", "other", "size of project"],
+        "citations": [
+          {
+            "description": "Narberth Zoning Code",
+            "url": "https://ecode360.com/34355592#34355593",
+            "notes": "§ 500-601.A.",
+            "attachments": [],
+            "screenshots": [
+              {
+                "fileName": "narberth-pa-reduce-min-screenshot1.png",
+                "directusId": "8eb00d23-bbea-41b4-9349-70664c4ce0ee"
+              },
+              {
+                "fileName": "narberth-pa-reduce-min-screenshot2.png",
+                "directusId": "7de081af-87f2-4a60-8737-89c8c91e0bcb"
+              },
+              {
+                "fileName": "narberth-pa-reduce-min-screenshot3.png",
+                "directusId": "091d097a-c40f-496c-b505-f00de453c448"
+              },
+              {
+                "fileName": "narberth-pa-reduce-min-screenshot4.png",
+                "directusId": "e10bcecd-d642-47c1-ab2c-d8d926bdae3b"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "rm_min": [
+      {
+        "reporter": "Samuel Deetz",
+        "requirements": ["by right", "size of project"],
+        "citations": [
+          {
+            "description": "Narberth Zoning Code",
+            "url": "https://ecode360.com/34355592#34355593",
+            "notes": "§ 500-601.A.(6)",
+            "attachments": [],
+            "screenshots": [
+              {
+                "fileName": "narberth-pa-remove-min-screenshot1.png",
+                "directusId": "c8a7d2bf-752a-4173-ba6a-e8fe02023d3b"
+              },
+              {
+                "fileName": "narberth-pa-remove-min-screenshot2.png",
+                "directusId": "097a4ac5-3c42-4403-ab47-f44dec46328c"
+              }
+            ]
+          }
+        ]
+      }
+    ]
   },
   "Nashville, AR": {
     "rm_min": [
@@ -68768,7 +70586,76 @@
           ]
         }
       ]
-    }
+    },
+    "add_max": [
+      {
+        "reporter": "Samuel Deetz",
+        "requirements": ["by right"],
+        "citations": [
+          {
+            "description": "New Cumberland Zoning Code",
+            "url": "https://newcumberlandborough.com/wp-content/uploads/2023/04/Final-Zoning-Ordinance-w-Cover-and-Map-08-09-2023.pdf",
+            "notes": "Section 706\nPage 162",
+            "attachments": [],
+            "screenshots": [
+              {
+                "fileName": "new-cumberland-pa-add-max-screenshot.png",
+                "directusId": "43264258-86c1-486d-a34b-b792550101c4"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "reduce_min": [
+      {
+        "reporter": "Samuel Deetz",
+        "requirements": [
+          "by right",
+          "in-lieu fees",
+          "other",
+          "size of project"
+        ],
+        "citations": [
+          {
+            "description": "New Cumberland Zoning Code",
+            "url": "https://newcumberlandborough.com/wp-content/uploads/2023/04/Final-Zoning-Ordinance-w-Cover-and-Map-08-09-2023.pdf",
+            "notes": "Section 402.C.1)(3)(b);\nSection 708;\nPages 89, 163",
+            "attachments": [],
+            "screenshots": [
+              {
+                "fileName": "new-cumberland-pa-reduce-min-screenshot1.png",
+                "directusId": "900ef33e-3211-403c-a998-50906fa00e15"
+              },
+              {
+                "fileName": "new-cumberland-pa-reduce-min-screenshot2.png",
+                "directusId": "33618a7f-4031-42c1-b1e0-9493c229837e"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "rm_min": [
+      {
+        "reporter": "Samuel Deetz",
+        "requirements": ["by right", "other", "size of project"],
+        "citations": [
+          {
+            "description": "New Cumberland Zoning Code",
+            "url": "https://newcumberlandborough.com/wp-content/uploads/2023/04/Final-Zoning-Ordinance-w-Cover-and-Map-08-09-2023.pdf",
+            "notes": "Section 402.C.1)(3)(b)\nPage 89",
+            "attachments": [],
+            "screenshots": [
+              {
+                "fileName": "new-cumberland-pa-remove-min-screenshot.png",
+                "directusId": "061b09cf-1e94-45a2-a08a-36c5112eaf48"
+              }
+            ]
+          }
+        ]
+      }
+    ]
   },
   "New Florence, PA": {
     "rm_min": [
@@ -70797,7 +72684,51 @@
           ]
         }
       ]
-    }
+    },
+    "reduce_min": [
+      {
+        "reporter": "Samuel Deetz",
+        "requirements": ["frequent transit", "other"],
+        "citations": [
+          {
+            "description": "Norristown Zoning Code",
+            "url": "https://ecode360.com/33565089#33565089",
+            "notes": "§ 320-310",
+            "attachments": [],
+            "screenshots": [
+              {
+                "fileName": "norristown-pa-reduce-min-screenshot.png",
+                "directusId": "f9fcb56c-3e15-471d-99db-a3147fc461e0"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "rm_min": [
+      {
+        "reporter": "Samuel Deetz",
+        "requirements": ["by right"],
+        "citations": [
+          {
+            "description": "Norristown Zoning Code",
+            "url": "https://ecode360.com/33563931#33563931",
+            "notes": "§ 320-131.A.(1);\n§ 320-143.A.",
+            "attachments": [],
+            "screenshots": [
+              {
+                "fileName": "norristown-pa-remove-min-screenshot1.png",
+                "directusId": "552fe90f-3f10-4edd-ba99-a747cde69ebf"
+              },
+              {
+                "fileName": "norristown-pa-remove-min-screenshot2.png",
+                "directusId": "c0e87a1c-5030-481f-87c7-a173e551ae29"
+              }
+            ]
+          }
+        ]
+      }
+    ]
   },
   "North Baltimore, OH": {
     "reduce_min": [
@@ -79726,29 +81657,17 @@
             ]
           },
           {
-            "description": "Portland Press Herald Article",
-            "url": "https://www.pressherald.com/2024/11/04/portland-council-approves-recode-zoning-ordinance/",
-            "notes": null,
-            "attachments": [],
-            "screenshots": [
-              {
-                "fileName": "portland-me-add-max-citation3-screenshot.png",
-                "directusId": "64ef743e-cb52-4843-91bc-471d6c98f8c1"
-              }
-            ]
-          },
-          {
             "description": "Land Use Code Final Draft",
             "url": "https://static1.squarespace.com/static/5a75f43a692ebeeb1159413d/t/671025bbe5595f4d699c1994/1729111486146/Final+draft+LUC_10_8_24_compressed_reduced.pdf",
             "notes": "18.1.2\n18.1.3\nPages 324-329",
             "attachments": [],
             "screenshots": [
               {
-                "fileName": "portland-me-add-max-citation4-screenshot1.png",
+                "fileName": "portland-me-add-max-citation3-screenshot1.png",
                 "directusId": "d5374b06-9d1b-4b85-bfd1-e79051c17a93"
               },
               {
-                "fileName": "portland-me-add-max-citation4-screenshot2.png",
+                "fileName": "portland-me-add-max-citation3-screenshot2.png",
                 "directusId": "ebac4d31-2eee-468a-9cf2-1efca30e3418"
               }
             ]
@@ -82542,7 +84461,47 @@
           ]
         }
       ]
-    }
+    },
+    "reduce_min": [
+      {
+        "reporter": "Samuel Deetz",
+        "requirements": ["other"],
+        "citations": [
+          {
+            "description": "Ridley Park Zoning Code",
+            "url": "https://ecode360.com/33174543#33174545",
+            "notes": "§ 213-78.A.(2)",
+            "attachments": [],
+            "screenshots": [
+              {
+                "fileName": "ridley-park-pa-reduce-min-screenshot.png",
+                "directusId": "7f0657cd-529c-418a-9fdb-440901ac8a98"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "rm_min": [
+      {
+        "reporter": "Samuel Deetz",
+        "requirements": ["by right"],
+        "citations": [
+          {
+            "description": "Ridley Park Zoning Code",
+            "url": "https://ecode360.com/33174543#33174550",
+            "notes": "§ 213-79.F.",
+            "attachments": [],
+            "screenshots": [
+              {
+                "fileName": "ridley-park-pa-remove-min-screenshot.png",
+                "directusId": "855a1d11-ec5e-44f1-aef9-8bb4f4a1eaae"
+              }
+            ]
+          }
+        ]
+      }
+    ]
   },
   "Rifle, CO": {
     "legacy": {
@@ -85506,37 +87465,13 @@
         "requirements": ["by right"],
         "citations": [
           {
-            "description": "Second reading for City Council on April 24, 2023",
-            "url": null,
-            "notes": "City council held the second reading of this ordinance on 4/24/2023",
-            "attachments": [],
-            "screenshots": [
-              {
-                "fileName": "salem-or-add-max-citation1-screenshot.png",
-                "directusId": "6b498397-a343-436f-bc2d-e5354a797500"
-              }
-            ]
-          },
-          {
-            "description": "Code Amendment",
-            "url": "https://salem.legistar.com/View.ashx?M=F&ID=11892457&GUID=B95A0157-A53F-40AC-9AE1-38852C505A58",
-            "notes": "Screenshot showing strikethrough of off-street requirements language",
-            "attachments": [],
-            "screenshots": [
-              {
-                "fileName": "salem-or-add-max-citation2-screenshot.png",
-                "directusId": "99b13a15-d934-410a-829b-82b2e15720e3"
-              }
-            ]
-          },
-          {
             "description": "Salem Unified Development Code",
             "url": "https://library.municode.com/or/salem/codes/code_of_ordinances?nodeId=TITXUNDECO_UDC_CH806OREPALODR_S806.015AMOREPA",
             "notes": "Sec. 806.015. - Amount off-street parking.",
             "attachments": [],
             "screenshots": [
               {
-                "fileName": "salem-or-add-max-citation3-screenshot.png",
+                "fileName": "salem-or-add-max-screenshot.png",
                 "directusId": "3801d382-a0bb-479f-9edf-02ac8dbcc5a5"
               }
             ]
@@ -88064,7 +89999,56 @@
           ]
         }
       ]
-    }
+    },
+    "reduce_min": [
+      {
+        "reporter": "Samuel Deetz",
+        "requirements": [
+          "bike parking",
+          "by right",
+          "other",
+          "size of project"
+        ],
+        "citations": [
+          {
+            "description": "Schwenksville Zoning Code",
+            "url": "https://ecode360.com/35754354#38163836",
+            "notes": "§ 176-1706Parking requirements for Main Street Business District incentivized uses.",
+            "attachments": [],
+            "screenshots": [
+              {
+                "fileName": "schwenksville-pa-reduce-min-screenshot1.png",
+                "directusId": "d7d6c0ad-3763-4e03-80f5-cda06bd7dffc"
+              },
+              {
+                "fileName": "schwenksville-pa-reduce-min-screenshot2.png",
+                "directusId": "e172c2b4-aaef-403f-9344-6a220abff45a"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "rm_min": [
+      {
+        "reporter": "Samuel Deetz",
+        "requirements": ["by right", "size of project"],
+        "citations": [
+          {
+            "description": "Schwenksville Zoning Code",
+            "url": "https://ecode360.com/35754354#38163836",
+            "notes": "§ 176-1706.A.",
+            "attachments": [],
+            "screenshots": [
+              {
+                "fileName": "schwenksville-pa-remove-min-screenshot.png",
+                "directusId": "62f5a15a-8a55-4b86-8bbf-be6594ba0bd1"
+              }
+            ]
+          }
+        ]
+      }
+    ]
   },
   "Scio Township, MI": {
     "add_max": [
@@ -89032,7 +91016,67 @@
           ]
         }
       ]
-    }
+    },
+    "add_max": [
+      {
+        "reporter": "Samuel Deetz",
+        "requirements": ["by right", "size of project"],
+        "citations": [
+          {
+            "description": "Sharon Zoning Code",
+            "url": "https://www.cityofsharon.net/media/Uploads/Zoning-September-2006.pdf",
+            "notes": "407.2(e)\nPage 42 of pdf, page 38 of original document",
+            "attachments": [],
+            "screenshots": [
+              {
+                "fileName": "sharon-pa-add-max-screenshot.png",
+                "directusId": "389d3d6d-8c2e-4889-9c51-21258ee7348d"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "reduce_min": [
+      {
+        "reporter": "Samuel Deetz",
+        "requirements": ["bike parking", "frequent transit", "other"],
+        "citations": [
+          {
+            "description": "Sharon Zoning Code",
+            "url": "https://www.cityofsharon.net/media/Uploads/Zoning-September-2006.pdf",
+            "notes": "407.2(d)\nPage 40 of pdf, page 36 of original document\n",
+            "attachments": [],
+            "screenshots": [
+              {
+                "fileName": "sharon-pa-reduce-min-screenshot.png",
+                "directusId": "7308c263-94dc-4ecb-9663-cda5c6f5485a"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "rm_min": [
+      {
+        "reporter": "Samuel Deetz",
+        "requirements": ["by right"],
+        "citations": [
+          {
+            "description": "Sharon Zoning Code",
+            "url": "https://www.cityofsharon.net/media/Uploads/Zoning-September-2006.pdf",
+            "notes": "407.2(c)\nPage 38 of pdf, page 34 of original document\n",
+            "attachments": [],
+            "screenshots": [
+              {
+                "fileName": "sharon-pa-remove-min-screenshot.png",
+                "directusId": "bb45affa-c065-4981-86fa-5640cfa5d874"
+              }
+            ]
+          }
+        ]
+      }
+    ]
   },
   "Sharon, WI": {
     "rm_min": [
@@ -91074,7 +93118,47 @@
           ]
         }
       ]
-    }
+    },
+    "reduce_min": [
+      {
+        "reporter": "Samuel Deetz",
+        "requirements": ["other"],
+        "citations": [
+          {
+            "description": "Somerset Zoning Code",
+            "url": "https://somersetborough.com/zone/page34.html",
+            "notes": "Article VII Section 2.9.",
+            "attachments": [],
+            "screenshots": [
+              {
+                "fileName": "somerset-pa-reduce-min-screenshot.png",
+                "directusId": "4cb451ad-ea7e-4150-bd2a-3ab15cd5c8cf"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "rm_min": [
+      {
+        "reporter": "Samuel Deetz",
+        "requirements": ["by right"],
+        "citations": [
+          {
+            "description": "Somerset Zoning Code",
+            "url": "https://somersetborough.com/zone/page34.html",
+            "notes": "Article VII Section 1.",
+            "attachments": [],
+            "screenshots": [
+              {
+                "fileName": "somerset-pa-remove-min-screenshot.png",
+                "directusId": "60e4fde4-8f32-4bee-8ef9-00296c1c4b5b"
+              }
+            ]
+          }
+        ]
+      }
+    ]
   },
   "Somerset, WI": {
     "rm_min": [
@@ -91336,7 +93420,51 @@
           ]
         }
       ]
-    }
+    },
+    "add_max": [
+      {
+        "reporter": "Samuel Deetz",
+        "requirements": ["by right"],
+        "citations": [
+          {
+            "description": "Souderton Zoning Code",
+            "url": "https://soudertonborough.org/media/2427/souderton-zoning-ordinance-20240105.pdf",
+            "notes": "Section 1204.\nPage 83",
+            "attachments": [],
+            "screenshots": [
+              {
+                "fileName": "souderton-pa-add-max-screenshot.png",
+                "directusId": "d3d2e5f2-6d69-4217-9a37-ed9765ac594b"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "reduce_min": [
+      {
+        "reporter": "Samuel Deetz",
+        "requirements": ["by right", "size of project"],
+        "citations": [
+          {
+            "description": "Souderton Zoning Code",
+            "url": "https://soudertonborough.org/media/2427/souderton-zoning-ordinance-20240105.pdf",
+            "notes": "Section 1205.\nPage 85",
+            "attachments": [],
+            "screenshots": [
+              {
+                "fileName": "souderton-pa-reduce-min-screenshot1.png",
+                "directusId": "c1bf44fb-8cf2-4311-8d23-9eee0a13fd65"
+              },
+              {
+                "fileName": "souderton-pa-reduce-min-screenshot2.png",
+                "directusId": "053679ea-6027-4124-992e-20eaca0ad3f4"
+              }
+            ]
+          }
+        ]
+      }
+    ]
   },
   "South Bend, IN": {
     "rm_min": [
@@ -92510,25 +94638,13 @@
         "requirements": ["by right"],
         "citations": [
           {
-            "description": "The Register-Guard",
-            "url": "https://www.registerguard.com/story/news/local/2023/11/14/parking-reform-ordinance-removes-requirement-for-off-street-minimums/71536844007/",
-            "notes": null,
-            "attachments": [],
-            "screenshots": [
-              {
-                "fileName": "springfield-or-add-max-citation1-screenshot.png",
-                "directusId": "7fd48a66-41f5-4475-8527-84d09ab53422"
-              }
-            ]
-          },
-          {
             "description": "Springfield Ordinance 6465",
             "url": "https://ecode360.com/SP5045/laws/LF1940474.pdf",
             "notes": "Page 18",
             "attachments": [],
             "screenshots": [
               {
-                "fileName": "springfield-or-add-max-citation2-screenshot.png",
+                "fileName": "springfield-or-add-max-screenshot.png",
                 "directusId": "35d9e1d2-852b-4d47-944e-85a9039c009e"
               }
             ]
@@ -94294,7 +96410,80 @@
           ]
         }
       ]
-    }
+    },
+    "reduce_min": [
+      {
+        "reporter": "Samuel Deetz",
+        "requirements": [
+          "affordable housing",
+          "by right",
+          "frequent transit",
+          "other"
+        ],
+        "citations": [
+          {
+            "description": "State College Zoning Code",
+            "url": "https://ecode360.com/32913157#32912661",
+            "notes": "§ 19-2403.c.",
+            "attachments": [],
+            "screenshots": [
+              {
+                "fileName": "state-college-pa-reduce-min-screenshot.png",
+                "directusId": "a73d7467-de70-4722-b399-1a8c18c52c7e"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "rm_min": [
+      {
+        "reporter": "Samuel Deetz",
+        "requirements": ["by right", "other", "size of project"],
+        "citations": [
+          {
+            "description": "State College Zoning Code",
+            "url": "https://ecode360.com/32913039",
+            "notes": "§ 19-1807.b.;\n§ 19-1854.b.;\n§ 19-1927.j.",
+            "attachments": [],
+            "screenshots": [
+              {
+                "fileName": "state-college-pa-remove-min-citation1-screenshot1.png",
+                "directusId": "6a34a20c-b284-4481-881a-7181b60649bb"
+              },
+              {
+                "fileName": "state-college-pa-remove-min-citation1-screenshot2.png",
+                "directusId": "4c0c29cc-690b-4370-9be3-8b5377a1d47d"
+              },
+              {
+                "fileName": "state-college-pa-remove-min-citation1-screenshot3.png",
+                "directusId": "1e2f755d-9d57-4888-b71a-363dd35b49c4"
+              }
+            ]
+          },
+          {
+            "description": "State College Zoning Code",
+            "url": "https://ecode360.com/32913039",
+            "notes": "§ 19-1807.b.;\n§ 19-1854.b.;\n§ 19-1927.j.",
+            "attachments": [],
+            "screenshots": [
+              {
+                "fileName": "state-college-pa-remove-min-citation2-screenshot1.png",
+                "directusId": "6a34a20c-b284-4481-881a-7181b60649bb"
+              },
+              {
+                "fileName": "state-college-pa-remove-min-citation2-screenshot2.png",
+                "directusId": "4c0c29cc-690b-4370-9be3-8b5377a1d47d"
+              },
+              {
+                "fileName": "state-college-pa-remove-min-citation2-screenshot3.png",
+                "directusId": "1e2f755d-9d57-4888-b71a-363dd35b49c4"
+              }
+            ]
+          }
+        ]
+      }
+    ]
   },
   "Statesville, NC": {
     "rm_min": [
@@ -96417,7 +98606,47 @@
           ]
         }
       ]
-    }
+    },
+    "reduce_min": [
+      {
+        "reporter": "Samuel Deetz",
+        "requirements": ["other"],
+        "citations": [
+          {
+            "description": "Swissvale Zoning Code",
+            "url": "https://www.swissvaleborough.com/DocumentCenter/View/101/Swissvale-Zoning-Ordinance-2017-PDF",
+            "notes": "Section 314.07.D.\nPage 67",
+            "attachments": [],
+            "screenshots": [
+              {
+                "fileName": "swissvale-pa-reduce-min-screenshot.png",
+                "directusId": "16819d40-690c-4972-b7f4-f143676aefca"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "rm_min": [
+      {
+        "reporter": "Samuel Deetz",
+        "requirements": ["other"],
+        "citations": [
+          {
+            "description": "Swissvale Zoning Code",
+            "url": "https://www.swissvaleborough.com/DocumentCenter/View/101/Swissvale-Zoning-Ordinance-2017-PDF",
+            "notes": "Section 603.A.2. \nPage 138",
+            "attachments": [],
+            "screenshots": [
+              {
+                "fileName": "swissvale-pa-remove-min-screenshot.png",
+                "directusId": "efbfea06-ddcc-4f6c-baa8-f68846eea7bc"
+              }
+            ]
+          }
+        ]
+      }
+    ]
   },
   "Switzerland County, IN": {
     "rm_min": [
@@ -100214,7 +102443,47 @@
           ]
         }
       ]
-    }
+    },
+    "reduce_min": [
+      {
+        "reporter": "Samuel Deetz",
+        "requirements": ["by right"],
+        "citations": [
+          {
+            "description": "Tyrone Zoning Code",
+            "url": "https://ecode360.com/16110333#16110333",
+            "notes": "§ 205-12T-C Town Center Commercial District.\nI.",
+            "attachments": [],
+            "screenshots": [
+              {
+                "fileName": "tyrone-pa-reduce-min-screenshot.png",
+                "directusId": "b90d91e0-2d68-4d73-b4d3-f99290abe6d5"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "rm_min": [
+      {
+        "reporter": "Samuel Deetz",
+        "requirements": ["by right", "size of project"],
+        "citations": [
+          {
+            "description": "Tyrone Zoning Code",
+            "url": "https://ecode360.com/16110333#16110333",
+            "notes": "§ 205-12T-C Town Center Commercial District.\nI.",
+            "attachments": [],
+            "screenshots": [
+              {
+                "fileName": "tyrone-pa-remove-min-screenshot.png",
+                "directusId": "b90d91e0-2d68-4d73-b4d3-f99290abe6d5"
+              }
+            ]
+          }
+        ]
+      }
+    ]
   },
   "Udall, KS": {
     "rm_min": [
@@ -101408,7 +103677,47 @@
           ]
         }
       ]
-    }
+    },
+    "reduce_min": [
+      {
+        "reporter": "Samuel Deetz",
+        "requirements": ["other"],
+        "citations": [
+          {
+            "description": "Verona Zoning Code",
+            "url": "https://ecode360.com/15689685#15689686",
+            "notes": "§ 250-70General requirements for parking.\nB.",
+            "attachments": [],
+            "screenshots": [
+              {
+                "fileName": "verona-pa-reduce-min-screenshot.png",
+                "directusId": "1fee75dc-5ff9-4067-ab94-c6a10f6fe0d1"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "rm_min": [
+      {
+        "reporter": "Samuel Deetz",
+        "requirements": ["by right"],
+        "citations": [
+          {
+            "description": "Verona Zoning Code",
+            "url": "https://ecode360.com/15689685#15689686",
+            "notes": "§ 250-70General requirements for parking.\nB.",
+            "attachments": [],
+            "screenshots": [
+              {
+                "fileName": "verona-pa-remove-min-screenshot.png",
+                "directusId": "1fee75dc-5ff9-4067-ab94-c6a10f6fe0d1"
+              }
+            ]
+          }
+        ]
+      }
+    ]
   },
   "Verona, WI": {
     "legacy": {
@@ -105450,7 +107759,47 @@
           ]
         }
       ]
-    }
+    },
+    "reduce_min": [
+      {
+        "reporter": "Samuel Deetz",
+        "requirements": ["other"],
+        "citations": [
+          {
+            "description": "West Reading Zoning Code",
+            "url": "https://ecode360.com/30040760#30040762",
+            "notes": "§ 455-139.I.",
+            "attachments": [],
+            "screenshots": [
+              {
+                "fileName": "west-reading-pa-reduce-min-screenshot.png",
+                "directusId": "58291d86-c32d-4bac-bb0d-36fe54843949"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "rm_min": [
+      {
+        "reporter": "Samuel Deetz",
+        "requirements": ["by right"],
+        "citations": [
+          {
+            "description": "West Reading Zoning Code",
+            "url": "https://ecode360.com/30040760#30040762",
+            "notes": "§ 455-139.E.",
+            "attachments": [],
+            "screenshots": [
+              {
+                "fileName": "west-reading-pa-remove-min-screenshot.png",
+                "directusId": "ded0ebc3-a636-499a-9fdd-0c5072eeffe5"
+              }
+            ]
+          }
+        ]
+      }
+    ]
   },
   "West Saint Paul, MN": {
     "legacy": {
