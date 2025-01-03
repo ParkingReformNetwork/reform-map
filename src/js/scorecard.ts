@@ -40,17 +40,10 @@ function generateScorecardRevamp(
   entry: ProcessedCoreEntry,
   placeId: PlaceId,
 ): string {
-  const policyTypes = determinePolicyTypes(entry, { onlyAdopted: false });
-  let singlePolicyType = "";
-  let multiplePolicyTypes = "";
-  if (policyTypes.length === 1) {
-    singlePolicyType = `<li>Reform type: ${policyTypes[0]}</li>`;
-  } else {
-    const policies = policyTypes
-      .map((type) => `<li>${capitalize(type)}</li>`)
-      .join("");
-    multiplePolicyTypes = `<div>Reform types:</div><ul>${policies}</ul>`;
-  }
+  const policies = determinePolicyTypes(entry, { onlyAdopted: false })
+    .map((type) => `<li>${capitalize(type)}</li>`)
+    .join("");
+  const policyTypesHtml = `<div>Reform types:</div><ul>${policies}</ul>`;
 
   const allMinimumsRemoved = entry.place.repeal
     ? "<li>All parking minimums removed</li>"
@@ -68,14 +61,13 @@ function generateScorecardRevamp(
       </button>
     </header>
     <ul>
-      <li><a class="external-link" target="_blank" href=${
-        entry.place.url
-      }>Reform details and citations <i aria-hidden="true" class="fa-solid fa-arrow-right"></i></a></li>
       <li>${entry.place.pop.toLocaleString()} residents</li>
       ${allMinimumsRemoved}
-      ${singlePolicyType}
     </ul>
-    ${multiplePolicyTypes}
+    ${policyTypesHtml}
+    <a class="external-link" target="_blank" href=${
+      entry.place.url
+    }>Details and citations <i aria-hidden="true" class="fa-solid fa-arrow-right"></i></a>
     `;
 }
 
