@@ -4361,7 +4361,52 @@
           ]
         }
       ]
-    }
+    },
+    "reduce_min": [
+      {
+        "reporter": null,
+        "requirements": [
+          "affordable housing",
+          "bike parking",
+          "frequent transit",
+          "other"
+        ],
+        "citations": [
+          {
+            "description": "Athens Zoning Code",
+            "url": "https://library.municode.com/oh/athens/codes/code_of_ordinances?nodeId=TIT23ZOCO_CH23.08OREPALOUNRE_23.08.06EX",
+            "notes": "23.08.06.",
+            "attachments": [],
+            "screenshots": [
+              {
+                "fileName": "athens-oh-reduce-min-screenshot.png",
+                "directusId": "a78dfe2f-cfe8-421e-8d6c-7fc250241bfe"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "rm_min": [
+      {
+        "reporter": null,
+        "requirements": ["by right", "other"],
+        "citations": [
+          {
+            "description": "Athens Zoning Code",
+            "url": "https://library.municode.com/oh/athens/codes/code_of_ordinances?nodeId=TIT23ZOCO_CH23.08OREPALOUNRE_23.08.01OREPA",
+            "notes": "23.08.01.(F)",
+            "attachments": [],
+            "screenshots": [
+              {
+                "fileName": "athens-oh-remove-min-screenshot.png",
+                "directusId": "c25ca2af-7548-438a-bf35-573b63d247af"
+              }
+            ]
+          }
+        ]
+      }
+    ]
   },
   "Athens, WI": {
     "rm_min": [
@@ -9211,7 +9256,51 @@
           ]
         }
       ]
-    }
+    },
+    "add_max": [
+      {
+        "reporter": "Samuel Deetz",
+        "requirements": ["by right"],
+        "citations": [
+          {
+            "description": "Bexley Zoning Code",
+            "url": "https://codelibrary.amlegal.com/codes/bexley/latest/bexley_oh/0-0-0-41490",
+            "notes": "1254.13.kk.",
+            "attachments": [],
+            "screenshots": [
+              {
+                "fileName": "bexley-oh-add-max-screenshot.png",
+                "directusId": "153b09b4-e05b-4e0c-99ec-3f9f5e1a480d"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "reduce_min": [
+      {
+        "reporter": "Samuel Deetz",
+        "requirements": ["other"],
+        "citations": [
+          {
+            "description": "Bexley Zoning Code",
+            "url": "https://codelibrary.amlegal.com/codes/bexley/latest/bexley_oh/0-0-0-41490",
+            "notes": "1254.13.mm.;\n1254.13.oo.",
+            "attachments": [],
+            "screenshots": [
+              {
+                "fileName": "bexley-oh-reduce-min-screenshot1.png",
+                "directusId": "5ec07df6-dd66-4585-9ec2-d2e4c97e4217"
+              },
+              {
+                "fileName": "bexley-oh-reduce-min-screenshot2.png",
+                "directusId": "6412b75b-67ef-4a12-8fe8-8c8fc62d7b8d"
+              }
+            ]
+          }
+        ]
+      }
+    ]
   },
   "Big Lake, MN": {
     "legacy": {
@@ -10418,7 +10507,47 @@
           ]
         }
       ]
-    }
+    },
+    "add_max": [
+      {
+        "reporter": "Samuel Deetz",
+        "requirements": ["by right", "other"],
+        "citations": [
+          {
+            "description": "Blue Ash Zoning Code",
+            "url": "https://codelibrary.amlegal.com/codes/blueash/latest/blueash_oh/0-0-0-26950",
+            "notes": "1141.10(a)",
+            "attachments": [],
+            "screenshots": [
+              {
+                "fileName": "blue-ash-oh-add-max-screenshot.png",
+                "directusId": "33803cbc-9548-4438-b25a-f4a98f6a8a26"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "rm_min": [
+      {
+        "reporter": "Samuel Deetz",
+        "requirements": ["other"],
+        "citations": [
+          {
+            "description": "Blue Ash Zoning Code",
+            "url": "https://codelibrary.amlegal.com/codes/blueash/latest/blueash_oh/0-0-0-26884",
+            "notes": "1141.05",
+            "attachments": [],
+            "screenshots": [
+              {
+                "fileName": "blue-ash-oh-remove-min-screenshot.png",
+                "directusId": "f59d2eec-5e08-4545-82fa-7b06a7c36b67"
+              }
+            ]
+          }
+        ]
+      }
+    ]
   },
   "Blue Earth, MN": {
     "rm_min": [
@@ -17008,7 +17137,47 @@
           ]
         }
       ]
-    }
+    },
+    "add_max": [
+      {
+        "reporter": "Samuel Deetz",
+        "requirements": ["by right"],
+        "citations": [
+          {
+            "description": "Centerburg Zoning Code",
+            "url": "https://codelibrary.amlegal.com/codes/centerburg/latest/centerburg_oh/0-0-0-31808",
+            "notes": "1115.04 OFF-STREET PARKING STANDARDS.\n(a)(2)B.\n(a)(2)D.",
+            "attachments": [],
+            "screenshots": [
+              {
+                "fileName": "centerburg-oh-add-max-screenshot.png",
+                "directusId": "460acd6f-f741-4974-95d3-f91f9c30d29a"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "rm_min": [
+      {
+        "reporter": "Samuel Deetz",
+        "requirements": ["by right"],
+        "citations": [
+          {
+            "description": "Centerburg Zoning Code",
+            "url": "https://codelibrary.amlegal.com/codes/centerburg/latest/centerburg_oh/0-0-0-31808",
+            "notes": "1115.04 OFF-STREET PARKING STANDARDS.\n(a)(2)B.\n(a)(2)D.",
+            "attachments": [],
+            "screenshots": [
+              {
+                "fileName": "centerburg-oh-remove-min-screenshot.png",
+                "directusId": "460acd6f-f741-4974-95d3-f91f9c30d29a"
+              }
+            ]
+          }
+        ]
+      }
+    ]
   },
   "Centerville, IA": {
     "rm_min": [
@@ -20058,7 +20227,51 @@
           ]
         }
       ]
-    }
+    },
+    "add_max": [
+      {
+        "reporter": "Samuel Deetz",
+        "requirements": ["by right", "other"],
+        "citations": [
+          {
+            "description": "Cleveland Heights Zoning Code",
+            "url": "https://codelibrary.amlegal.com/codes/clevelandhts/latest/clevelandhts_oh/0-0-0-14419",
+            "notes": "1161.055",
+            "attachments": [],
+            "screenshots": [
+              {
+                "fileName": "cleveland-heights-oh-add-max-screenshot.png",
+                "directusId": "336b4b83-4801-41db-99e4-7efcb6fb9f14"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "reduce_min": [
+      {
+        "reporter": "Samuel Deetz",
+        "requirements": ["carshare", "other"],
+        "citations": [
+          {
+            "description": "Cleveland Heights Zoning Code",
+            "url": "https://codelibrary.amlegal.com/codes/clevelandhts/latest/clevelandhts_oh/0-0-0-14446",
+            "notes": "1161.065(c)(2);\n1161.13",
+            "attachments": [],
+            "screenshots": [
+              {
+                "fileName": "cleveland-heights-oh-reduce-min-screenshot1.png",
+                "directusId": "950821a3-bd52-40b1-8fa7-be5f15f793aa"
+              },
+              {
+                "fileName": "cleveland-heights-oh-reduce-min-screenshot2.png",
+                "directusId": "4c3c8289-e49c-4ab6-a6ef-1299606ad1d9"
+              }
+            ]
+          }
+        ]
+      }
+    ]
   },
   "Cleveland, MS": {
     "rm_min": [
@@ -24293,7 +24506,47 @@
           ]
         }
       ]
-    }
+    },
+    "add_max": [
+      {
+        "reporter": "Samuel Deetz",
+        "requirements": ["by right"],
+        "citations": [
+          {
+            "description": "Cuyahoga Falls Zoning Code",
+            "url": "https://online.encodeplus.com/regs/cuyahogafalls-oh/doc-viewer.aspx#secid-432",
+            "notes": "1134.02.C.",
+            "attachments": [],
+            "screenshots": [
+              {
+                "fileName": "cuyahoga-falls-oh-add-max-screenshot.png",
+                "directusId": "68b1ca5f-747f-4de6-91bf-87f4a84b1b38"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "reduce_min": [
+      {
+        "reporter": "Samuel Deetz",
+        "requirements": ["bike parking", "by right", "other"],
+        "citations": [
+          {
+            "description": "Cuyahoga Falls Zoning Code",
+            "url": "https://online.encodeplus.com/regs/cuyahogafalls-oh/doc-viewer.aspx#secid-434",
+            "notes": "1134.04",
+            "attachments": [],
+            "screenshots": [
+              {
+                "fileName": "cuyahoga-falls-oh-reduce-min-screenshot.png",
+                "directusId": "f46b1531-b4ac-4f51-910a-d1c26bab5822"
+              }
+            ]
+          }
+        ]
+      }
+    ]
   },
   "Dagsboro, DE": {
     "reduce_min": [
@@ -25089,7 +25342,55 @@
           ]
         }
       ]
-    }
+    },
+    "add_max": [
+      {
+        "reporter": null,
+        "requirements": ["by right"],
+        "citations": [
+          {
+            "description": "Section 150.700.5 - 150.700.6 ",
+            "url": "https://www.daytonohio.gov/DocumentCenter/View/550/City-of-Dayton-Zoning-Code-PDF?bidId=%22%20target=",
+            "notes": null,
+            "attachments": [],
+            "screenshots": [
+              {
+                "fileName": "dayton-oh-add-max-screenshot1.jpg",
+                "directusId": "9e9199d7-3105-4b8c-bbef-78e395967d52"
+              },
+              {
+                "fileName": "dayton-oh-add-max-screenshot2.jpg",
+                "directusId": "6825daf6-c8fc-4f52-b682-aa68970eb1fd"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "rm_min": [
+      {
+        "reporter": null,
+        "requirements": ["by right"],
+        "citations": [
+          {
+            "description": "Section 150.700.5 - 150.700.6 ",
+            "url": "https://www.daytonohio.gov/DocumentCenter/View/550/City-of-Dayton-Zoning-Code-PDF?bidId=%22%20target=",
+            "notes": null,
+            "attachments": [],
+            "screenshots": [
+              {
+                "fileName": "dayton-oh-remove-min-screenshot1.jpg",
+                "directusId": "9e9199d7-3105-4b8c-bbef-78e395967d52"
+              },
+              {
+                "fileName": "dayton-oh-remove-min-screenshot2.jpg",
+                "directusId": "6825daf6-c8fc-4f52-b682-aa68970eb1fd"
+              }
+            ]
+          }
+        ]
+      }
+    ]
   },
   "De Pere, WI": {
     "legacy": {
@@ -25775,7 +26076,47 @@
           ]
         }
       ]
-    }
+    },
+    "add_max": [
+      {
+        "reporter": "Samuel Deetz",
+        "requirements": ["by right"],
+        "citations": [
+          {
+            "description": "Defiance Zoning Code",
+            "url": "https://codelibrary.amlegal.com/codes/defiance/latest/defiance_oh/0-0-0-27954",
+            "notes": "1175.04(b)",
+            "attachments": [],
+            "screenshots": [
+              {
+                "fileName": "defiance-oh-add-max-screenshot.png",
+                "directusId": "ac901e67-9591-4ce1-a876-5edcff244087"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "rm_min": [
+      {
+        "reporter": "Samuel Deetz",
+        "requirements": ["by right"],
+        "citations": [
+          {
+            "description": "Defiance Zoning Code",
+            "url": "https://codelibrary.amlegal.com/codes/defiance/latest/defiance_oh/0-0-0-27914",
+            "notes": "1175.02(a)",
+            "attachments": [],
+            "screenshots": [
+              {
+                "fileName": "defiance-oh-remove-min-screenshot.png",
+                "directusId": "c6050bb0-579f-4bf0-a24a-f0f1993751ee"
+              }
+            ]
+          }
+        ]
+      }
+    ]
   },
   "Del Norte, CO": {
     "rm_min": [
@@ -28072,7 +28413,56 @@
           ]
         }
       ]
-    }
+    },
+    "add_max": [
+      {
+        "reporter": "Samuel Deetz",
+        "requirements": ["by right"],
+        "citations": [
+          {
+            "description": "Dublin Zoning Code",
+            "url": "https://codelibrary.amlegal.com/codes/dublin/latest/dublin_oh/0-0-0-98222",
+            "notes": "§ 153.065(B)(2)(a)",
+            "attachments": [],
+            "screenshots": [
+              {
+                "fileName": "dublin-oh-add-max-screenshot.png",
+                "directusId": "aac9384c-70e2-406f-b8d8-2be55832306f"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "reduce_min": [
+      {
+        "reporter": "Samuel Deetz",
+        "requirements": [
+          "carshare",
+          "frequent transit",
+          "other",
+          "transportation demand management"
+        ],
+        "citations": [
+          {
+            "description": "Dublin Zoning Code",
+            "url": "https://codelibrary.amlegal.com/codes/dublin/latest/dublin_oh/0-0-0-98222",
+            "notes": "§ 153.065(B)(1)(b)3.;\n§ 153.065(B)(2)(b)",
+            "attachments": [],
+            "screenshots": [
+              {
+                "fileName": "dublin-oh-reduce-min-screenshot1.png",
+                "directusId": "e13f717f-a112-40cb-b662-93eb35e4a463"
+              },
+              {
+                "fileName": "dublin-oh-reduce-min-screenshot2.png",
+                "directusId": "0cb1390c-204a-40d1-87e9-e10e40d3396f"
+              }
+            ]
+          }
+        ]
+      }
+    ]
   },
   "Dublin, PA": {
     "reduce_min": [
@@ -33350,7 +33740,47 @@
           ]
         }
       ]
-    }
+    },
+    "add_max": [
+      {
+        "reporter": "Samuel Deetz",
+        "requirements": ["by right"],
+        "citations": [
+          {
+            "description": "Fairborn Zoning Code",
+            "url": "https://codelibrary.amlegal.com/codes/fairborn/latest/fairborn_oh/0-0-0-48872",
+            "notes": "1130.12",
+            "attachments": [],
+            "screenshots": [
+              {
+                "fileName": "fairborn-oh-add-max-screenshot.png",
+                "directusId": "fcdd05f9-ea83-471a-9c0d-7942158fa5e1"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "reduce_min": [
+      {
+        "reporter": "Samuel Deetz",
+        "requirements": ["other"],
+        "citations": [
+          {
+            "description": "Fairborn Zoning Code",
+            "url": "https://codelibrary.amlegal.com/codes/fairborn/latest/fairborn_oh/0-0-0-48855",
+            "notes": "1130.10",
+            "attachments": [],
+            "screenshots": [
+              {
+                "fileName": "fairborn-oh-reduce-min-screenshot.png",
+                "directusId": "f5da94c8-e582-4ad8-a2ea-e3bc9fd914da"
+              }
+            ]
+          }
+        ]
+      }
+    ]
   },
   "Fairbury, IL": {
     "rm_min": [
@@ -34305,7 +34735,47 @@
           ]
         }
       ]
-    }
+    },
+    "add_max": [
+      {
+        "reporter": "Samuel Deetz",
+        "requirements": ["by right"],
+        "citations": [
+          {
+            "description": "Findlay Zoning Code",
+            "url": "https://codelibrary.amlegal.com/codes/findlay/latest/findlay_oh/0-0-0-65922",
+            "notes": "1161.11.1.L.2.",
+            "attachments": [],
+            "screenshots": [
+              {
+                "fileName": "findlay-oh-add-max-screenshot.png",
+                "directusId": "4a0bf7ae-a725-45ae-9da3-380aba991bb5"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "rm_min": [
+      {
+        "reporter": "Samuel Deetz",
+        "requirements": ["by right"],
+        "citations": [
+          {
+            "description": "Findlay Zoning Code",
+            "url": "https://codelibrary.amlegal.com/codes/findlay/latest/findlay_oh/0-0-0-66055",
+            "notes": "1161.11.6",
+            "attachments": [],
+            "screenshots": [
+              {
+                "fileName": "findlay-oh-remove-min-screenshot.png",
+                "directusId": "c9e704dd-2627-4c98-ac1d-aa8b20b5ade3"
+              }
+            ]
+          }
+        ]
+      }
+    ]
   },
   "Firestone, CO": {
     "add_max": [
@@ -38047,7 +38517,47 @@
           ]
         }
       ]
-    }
+    },
+    "add_max": [
+      {
+        "reporter": "Samuel Deetz",
+        "requirements": ["by right"],
+        "citations": [
+          {
+            "description": "Gambier Zoning Code",
+            "url": "https://codelibrary.amlegal.com/codes/gambieroh/latest/gambier_oh/0-0-0-11312",
+            "notes": "§ 155.039 PARKING AND LOADING REGULATIONS.\n(A)",
+            "attachments": [],
+            "screenshots": [
+              {
+                "fileName": "gambier-oh-add-max-screenshot.png",
+                "directusId": "bb01a3ff-a5e9-46a7-bd37-c03294f144bf"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "rm_min": [
+      {
+        "reporter": "Samuel Deetz",
+        "requirements": ["by right"],
+        "citations": [
+          {
+            "description": "Gambier Zoning Code",
+            "url": "https://codelibrary.amlegal.com/codes/gambieroh/latest/gambier_oh/0-0-0-11312",
+            "notes": "§ 155.039 PARKING AND LOADING REGULATIONS.\n(A)",
+            "attachments": [],
+            "screenshots": [
+              {
+                "fileName": "gambier-oh-remove-min-screenshot.png",
+                "directusId": "bb01a3ff-a5e9-46a7-bd37-c03294f144bf"
+              }
+            ]
+          }
+        ]
+      }
+    ]
   },
   "Garden City, KS": {
     "rm_min": [
@@ -41377,7 +41887,47 @@
           ]
         }
       ]
-    }
+    },
+    "add_max": [
+      {
+        "reporter": "Samuel Deetz",
+        "requirements": ["by right"],
+        "citations": [
+          {
+            "description": "Granville Zoning Code",
+            "url": "https://codelibrary.amlegal.com/codes/granvilleoh/latest/granville_oh/0-0-0-17145",
+            "notes": "1173.03 DEVELOPMENT STANDARDS AND DESIGN GUIDELINES.\n(a) On-Site Parking",
+            "attachments": [],
+            "screenshots": [
+              {
+                "fileName": "granville-oh-add-max-screenshot.png",
+                "directusId": "56391233-e0d7-4601-ba83-91d7cde67e6a"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "reduce_min": [
+      {
+        "reporter": "Samuel Deetz",
+        "requirements": ["by right"],
+        "citations": [
+          {
+            "description": "Granville Zoning Code",
+            "url": "https://codelibrary.amlegal.com/codes/granvilleoh/latest/granville_oh/0-0-0-17145",
+            "notes": "1173.03 DEVELOPMENT STANDARDS AND DESIGN GUIDELINES.\n(a) On-Site Parking",
+            "attachments": [],
+            "screenshots": [
+              {
+                "fileName": "granville-oh-reduce-min-screenshot.png",
+                "directusId": "56391233-e0d7-4601-ba83-91d7cde67e6a"
+              }
+            ]
+          }
+        ]
+      }
+    ]
   },
   "Grass Lake Charter Township, MI": {
     "add_max": [
@@ -42058,7 +42608,71 @@
           ]
         }
       ]
-    }
+    },
+    "add_max": [
+      {
+        "reporter": "Samuel Deetz",
+        "requirements": ["by right"],
+        "citations": [
+          {
+            "description": "Greenfield Zoning Code",
+            "url": "https://codelibrary.amlegal.com/codes/greenfield/latest/greenfield_oh/0-0-0-18882",
+            "notes": "1105.01(b)(3)",
+            "attachments": [],
+            "screenshots": [
+              {
+                "fileName": "greenfield-oh-add-max-screenshot.png",
+                "directusId": "38ebc422-e1b5-4d6d-9801-b2bd94274646"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "reduce_min": [
+      {
+        "reporter": "Samuel Deetz",
+        "requirements": ["in-lieu fees", "other"],
+        "citations": [
+          {
+            "description": "Greenfield Zoning Code",
+            "url": "https://codelibrary.amlegal.com/codes/greenfield/latest/greenfield_oh/0-0-0-18882",
+            "notes": "1105.01(b)(1)vi.;\n1105.01(b)(2)ii.",
+            "attachments": [],
+            "screenshots": [
+              {
+                "fileName": "greenfield-oh-reduce-min-screenshot1.png",
+                "directusId": "94d0dd3d-71b0-434e-85d1-55725145cc89"
+              },
+              {
+                "fileName": "greenfield-oh-reduce-min-screenshot2.png",
+                "directusId": "4974e345-af72-4cac-853d-7ba7ffae7e91"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "rm_min": [
+      {
+        "reporter": "Samuel Deetz",
+        "requirements": ["by right"],
+        "citations": [
+          {
+            "description": "Greenfield Zoning Code",
+            "url": "https://codelibrary.amlegal.com/codes/greenfield/latest/greenfield_oh/0-0-0-18882",
+            "notes": "1105.01(b)(1)i.",
+            "attachments": [],
+            "screenshots": [
+              {
+                "fileName": "greenfield-oh-remove-min-screenshot.png",
+                "directusId": "48dbf95e-0b0b-4d89-8ff7-d54b0a86822b"
+              }
+            ]
+          }
+        ]
+      }
+    ]
   },
   "Greensboro, NC": {
     "legacy": {
@@ -45933,7 +46547,47 @@
           ]
         }
       ]
-    }
+    },
+    "add_max": [
+      {
+        "reporter": "Samuel Deetz",
+        "requirements": ["by right"],
+        "citations": [
+          {
+            "description": "Hilliard Zoning Code",
+            "url": "https://library.municode.com/oh/hilliard/codes/code_of_ordinances?nodeId=PTELEVENPLZOCO_CH1127OREPALO_1127.02GERE",
+            "notes": "1127.02 - GENERAL REQUIREMENTS.\n(g)\n(h)\n(i)",
+            "attachments": [],
+            "screenshots": [
+              {
+                "fileName": "hilliard-oh-add-max-screenshot.png",
+                "directusId": "5be5d913-a38f-40a2-a6f6-59f3af763f37"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "reduce_min": [
+      {
+        "reporter": "Samuel Deetz",
+        "requirements": ["bike parking", "by right"],
+        "citations": [
+          {
+            "description": "Hilliard Zoning Code",
+            "url": "https://library.municode.com/oh/hilliard/codes/code_of_ordinances?nodeId=PTELEVENPLZOCO_CH1127OREPALO_1127.02GERE",
+            "notes": "1127.02 - GENERAL REQUIREMENTS.\n(g)\n(h)\n(i)",
+            "attachments": [],
+            "screenshots": [
+              {
+                "fileName": "hilliard-oh-reduce-min-screenshot.png",
+                "directusId": "5be5d913-a38f-40a2-a6f6-59f3af763f37"
+              }
+            ]
+          }
+        ]
+      }
+    ]
   },
   "Hillman, MI": {
     "legacy": {
@@ -47104,7 +47758,55 @@
           ]
         }
       ]
-    }
+    },
+    "add_max": [
+      {
+        "reporter": "Samuel Deetz",
+        "requirements": ["by right"],
+        "citations": [
+          {
+            "description": "Hudson Zoning Code",
+            "url": "https://codelibrary.amlegal.com/codes/hudsonoh/latest/hudson_oh/0-0-0-70194",
+            "notes": "1207.12(f)(2)",
+            "attachments": [],
+            "screenshots": [
+              {
+                "fileName": "hudson-oh-add-max-screenshot.png",
+                "directusId": "2c6deeda-bcdf-4b53-a7de-0a51a1678724"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "reduce_min": [
+      {
+        "reporter": "Samuel Deetz",
+        "requirements": ["historic preservation", "other"],
+        "citations": [
+          {
+            "description": "Hudson Zoning Code",
+            "url": "https://codelibrary.amlegal.com/codes/hudsonoh/latest/hudson_oh/0-0-0-70194",
+            "notes": "1205.12(d)(9)A.2.; \n1205.12(d)(9)C.;\n1207.12(h)(5)",
+            "attachments": [],
+            "screenshots": [
+              {
+                "fileName": "hudson-oh-reduce-min-screenshot1.png",
+                "directusId": "4ee9f6f7-becf-4c57-9df3-947066eb7477"
+              },
+              {
+                "fileName": "hudson-oh-reduce-min-screenshot2.png",
+                "directusId": "f276f88f-ba7d-4b9c-92b3-4589a33f82a0"
+              },
+              {
+                "fileName": "hudson-oh-reduce-min-screenshot3.png",
+                "directusId": "2fa98908-bdbf-4175-98f3-5d351803577e"
+              }
+            ]
+          }
+        ]
+      }
+    ]
   },
   "Hudson, WI": {
     "reduce_min": [
@@ -47646,7 +48348,47 @@
           ]
         }
       ]
-    }
+    },
+    "add_max": [
+      {
+        "reporter": "Samuel Deetz",
+        "requirements": ["by right", "other"],
+        "citations": [
+          {
+            "description": "Huron Zoning Code",
+            "url": "https://codelibrary.amlegal.com/codes/huron/latest/huron_oh/0-0-0-21235",
+            "notes": "1133.09(a)",
+            "attachments": [],
+            "screenshots": [
+              {
+                "fileName": "huron-oh-add-max-screenshot.png",
+                "directusId": "deae7477-c3c8-4ca3-ada8-fc64f8e6aa1f"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "reduce_min": [
+      {
+        "reporter": "Samuel Deetz",
+        "requirements": ["other"],
+        "citations": [
+          {
+            "description": "Huron Zoning Code",
+            "url": "https://codelibrary.amlegal.com/codes/huron/latest/huron_oh/0-0-0-21353",
+            "notes": "1133.18(a)",
+            "attachments": [],
+            "screenshots": [
+              {
+                "fileName": "huron-oh-reduce-min-screenshot.png",
+                "directusId": "6dd559eb-518b-4873-80d8-c86891834f62"
+              }
+            ]
+          }
+        ]
+      }
+    ]
   },
   "Hurstbourne, KY": {
     "legacy": {
@@ -54602,7 +55344,47 @@
           ]
         }
       ]
-    }
+    },
+    "add_max": [
+      {
+        "reporter": "Samuel Deetz",
+        "requirements": ["by right"],
+        "citations": [
+          {
+            "description": "Lancaster Zoning Code",
+            "url": "https://codelibrary.amlegal.com/codes/lancaster/latest/lancaster_oh/0-0-0-77620",
+            "notes": "1143.11",
+            "attachments": [],
+            "screenshots": [
+              {
+                "fileName": "lancaster-oh-add-max-screenshot.png",
+                "directusId": "5fa5c08b-01e9-4416-8ce8-6c5ae3234331"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "reduce_min": [
+      {
+        "reporter": "Samuel Deetz",
+        "requirements": ["bike parking"],
+        "citations": [
+          {
+            "description": "Lancaster Zoning Code",
+            "url": "https://codelibrary.amlegal.com/codes/lancaster/latest/lancaster_oh/0-0-0-77595",
+            "notes": "1143.09(c)",
+            "attachments": [],
+            "screenshots": [
+              {
+                "fileName": "lancaster-oh-reduce-min-screenshot.png",
+                "directusId": "3470fe8c-9434-4276-9296-9163210b4aef"
+              }
+            ]
+          }
+        ]
+      }
+    ]
   },
   "Lancaster, PA": {
     "rm_min": [
@@ -55902,7 +56684,55 @@
           ]
         }
       ]
-    }
+    },
+    "add_max": [
+      {
+        "reporter": "Samuel Deetz",
+        "requirements": ["by right"],
+        "citations": [
+          {
+            "description": "Lebanon Zoning Code",
+            "url": "https://cms8.revize.com/revize/lebanonoh/Planning%20Commission%20Meeting%20Agendas%20&%20Minutes/Zoning%20Code%20Amendments%20October%208,%202024%20Ord.%202024-081.pdf",
+            "notes": "1137.05.B.1.\nPage 127",
+            "attachments": [],
+            "screenshots": [
+              {
+                "fileName": "lebanon-oh-add-max-screenshot.png",
+                "directusId": "2c600c33-155a-4294-b323-273ae2eaeebd"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "reduce_min": [
+      {
+        "reporter": "Samuel Deetz",
+        "requirements": ["by right", "in-lieu fees"],
+        "citations": [
+          {
+            "description": "Lebanon Zoning Code",
+            "url": "https://cms8.revize.com/revize/lebanonoh/Planning%20Commission%20Meeting%20Agendas%20&%20Minutes/Zoning%20Code%20Amendments%20October%208,%202024%20Ord.%202024-081.pdf",
+            "notes": "1137.03.C.;\n1137.05.A.3.;\n1137.05.B.2.;\nPages 124, 125, 128",
+            "attachments": [],
+            "screenshots": [
+              {
+                "fileName": "lebanon-oh-reduce-min-screenshot1.png",
+                "directusId": "514591c7-acd2-4d41-be65-1caace711644"
+              },
+              {
+                "fileName": "lebanon-oh-reduce-min-screenshot2.png",
+                "directusId": "d4116dfd-b5bc-4c61-8d4f-976d9a742450"
+              },
+              {
+                "fileName": "lebanon-oh-reduce-min-screenshot3.png",
+                "directusId": "38e282ec-1ecb-4d98-a34a-e6641e9a2b6e"
+              }
+            ]
+          }
+        ]
+      }
+    ]
   },
   "Lebanon, PA": {
     "legacy": {
@@ -59958,7 +60788,47 @@
           ]
         }
       ]
-    }
+    },
+    "add_max": [
+      {
+        "reporter": "Samuel Deetz",
+        "requirements": ["by right"],
+        "citations": [
+          {
+            "description": "Madison Zoning Code",
+            "url": "https://img1.wsimg.com/blobby/go/73dccbd0-4ddb-49dc-accf-522a9ea8a8b3/downloads/Zoning-Code-Updated-9-27-2021.pdf?ver=1690373058295",
+            "notes": "Section 7.1(f)(7)\nPage 66 of pdf, page 59 of original document",
+            "attachments": [],
+            "screenshots": [
+              {
+                "fileName": "madison-oh-add-max-screenshot.png",
+                "directusId": "4cc23453-9600-48c1-9ff0-edd5b0a7ef51"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "rm_min": [
+      {
+        "reporter": "Samuel Deetz",
+        "requirements": ["by right"],
+        "citations": [
+          {
+            "description": "Madison Zoning Code",
+            "url": "https://img1.wsimg.com/blobby/go/73dccbd0-4ddb-49dc-accf-522a9ea8a8b3/downloads/Zoning-Code-Updated-9-27-2021.pdf?ver=1690373058295",
+            "notes": "Section 7.8\nPage 77 of pdf, page 70 of original document",
+            "attachments": [],
+            "screenshots": [
+              {
+                "fileName": "madison-oh-remove-min-screenshot.png",
+                "directusId": "9b4685dc-4ff8-4702-b38a-ae6ea69ded94"
+              }
+            ]
+          }
+        ]
+      }
+    ]
   },
   "Madison, SD": {
     "rm_min": [
@@ -62294,7 +63164,59 @@
           ]
         }
       ]
-    }
+    },
+    "add_max": [
+      {
+        "reporter": "Samuel Deetz",
+        "requirements": ["by right"],
+        "citations": [
+          {
+            "description": "Maumee Updated Zoning Code",
+            "url": "https://codelibrary.amlegal.com/codes/maumee/latest/maumee_oh/0-0-0-52873",
+            "notes": "1141.06 OFF-STREET PARKING REQUIREMENTS.",
+            "attachments": [],
+            "screenshots": [
+              {
+                "fileName": "maumee-oh-add-max-screenshot.png",
+                "directusId": "7ef0cf28-bf28-4297-a315-ec66946e73a1"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "rm_min": [
+      {
+        "reporter": "Samuel Deetz",
+        "requirements": ["by right"],
+        "citations": [
+          {
+            "description": "Maumee Zoning Code",
+            "url": "https://codelibrary.amlegal.com/codes/maumee/latest/maumee_oh/0-0-0-52864",
+            "notes": "TITLE FOUR - Supplemental Development Standards\nCHAPTER 1141 Off-Street Parking, Loading, Access Drives and Sidewalks\n1141.05 DETERMINING NUMBER OF SPACES.\n(d)\n1141.06 OFF-STREET PARKING REQUIREMENTS.",
+            "attachments": [],
+            "screenshots": [
+              {
+                "fileName": "maumee-oh-remove-min-citation1-screenshot.png",
+                "directusId": "3a8b1d6c-fd20-4891-8b0d-5802031f4841"
+              }
+            ]
+          },
+          {
+            "description": "Maumee Updated Zoning Code",
+            "url": "https://codelibrary.amlegal.com/codes/maumee/latest/maumee_oh/0-0-0-52873",
+            "notes": "1141.06 OFF-STREET PARKING REQUIREMENTS.",
+            "attachments": [],
+            "screenshots": [
+              {
+                "fileName": "maumee-oh-remove-min-citation2-screenshot.png",
+                "directusId": "7ef0cf28-bf28-4297-a315-ec66946e73a1"
+              }
+            ]
+          }
+        ]
+      }
+    ]
   },
   "Mauston, WI": {
     "reduce_min": [
@@ -62672,7 +63594,47 @@
           ]
         }
       ]
-    }
+    },
+    "add_max": [
+      {
+        "reporter": "Samuel Deetz",
+        "requirements": ["by right", "other"],
+        "citations": [
+          {
+            "description": "McComb Zoning Code",
+            "url": "https://codelibrary.amlegal.com/codes/mccomboh/latest/mccomb_oh/0-0-0-51456",
+            "notes": "§ 178.145(A)(12)(b)",
+            "attachments": [],
+            "screenshots": [
+              {
+                "fileName": "mc-comb-oh-add-max-screenshot.png",
+                "directusId": "c415901b-f8f3-46f2-810c-b6c73f0a4c96"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "rm_min": [
+      {
+        "reporter": "Samuel Deetz",
+        "requirements": ["by right"],
+        "citations": [
+          {
+            "description": "McComb Zoning Code",
+            "url": "https://codelibrary.amlegal.com/codes/mccomboh/latest/mccomb_oh/0-0-0-51456",
+            "notes": "§ 178.145(G)",
+            "attachments": [],
+            "screenshots": [
+              {
+                "fileName": "mc-comb-oh-remove-min-screenshot.png",
+                "directusId": "3a7c87d7-ee53-43fa-adfe-4fa1721c4f1b"
+              }
+            ]
+          }
+        ]
+      }
+    ]
   },
   "McCook, NE": {
     "rm_min": [
@@ -63116,7 +64078,47 @@
           ]
         }
       ]
-    }
+    },
+    "add_max": [
+      {
+        "reporter": null,
+        "requirements": ["by right"],
+        "citations": [
+          {
+            "description": "1145.04  SCHEDULE OF PARKING REQUIREMENTS AND STANDARDS.",
+            "url": "https://codelibrary.amlegal.com/codes/medina/latest/medina_oh/0-0-0-28423",
+            "notes": null,
+            "attachments": [],
+            "screenshots": [
+              {
+                "fileName": "medina-oh-add-max-screenshot.jpg",
+                "directusId": "9df53ee3-51e4-4247-90b1-d5d42e48458a"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "rm_min": [
+      {
+        "reporter": null,
+        "requirements": ["by right"],
+        "citations": [
+          {
+            "description": "1145.04  SCHEDULE OF PARKING REQUIREMENTS AND STANDARDS.",
+            "url": "https://codelibrary.amlegal.com/codes/medina/latest/medina_oh/0-0-0-28423",
+            "notes": null,
+            "attachments": [],
+            "screenshots": [
+              {
+                "fileName": "medina-oh-remove-min-screenshot.jpg",
+                "directusId": "9df53ee3-51e4-4247-90b1-d5d42e48458a"
+              }
+            ]
+          }
+        ]
+      }
+    ]
   },
   "Melbourne, FL": {
     "legacy": {
@@ -66247,7 +67249,47 @@
           ]
         }
       ]
-    }
+    },
+    "add_max": [
+      {
+        "reporter": "Samuel Deetz",
+        "requirements": ["by right"],
+        "citations": [
+          {
+            "description": "Monroe Planning and Zoning Code",
+            "url": "https://www.monroeohio.org/DocumentCenter/View/256/Planning-and-Zoning-Code-PDF",
+            "notes": "1211.03 Off-Street Parking, Loading, and Stacking Standards\n(I) MODIFICATION OF REQUIRED NUMBER OF SPACES\n  (1) Providing More Parking Spaces than Required\n  (2) Providing Fewer Parking Spaces than the Required Number of Spaces\nPages 182-183 of pdf, pages 180-181 of original document",
+            "attachments": [],
+            "screenshots": [
+              {
+                "fileName": "monroe-oh-add-max-screenshot.png",
+                "directusId": "e79a87af-3beb-4439-ab8a-1adecd110524"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "reduce_min": [
+      {
+        "reporter": "Samuel Deetz",
+        "requirements": ["by right"],
+        "citations": [
+          {
+            "description": "Monroe Planning and Zoning Code",
+            "url": "https://www.monroeohio.org/DocumentCenter/View/256/Planning-and-Zoning-Code-PDF",
+            "notes": "1211.03 Off-Street Parking, Loading, and Stacking Standards\n(I) MODIFICATION OF REQUIRED NUMBER OF SPACES\n  (1) Providing More Parking Spaces than Required\n  (2) Providing Fewer Parking Spaces than the Required Number of Spaces\nPages 182-183 of pdf, pages 180-181 of original document",
+            "attachments": [],
+            "screenshots": [
+              {
+                "fileName": "monroe-oh-reduce-min-screenshot.png",
+                "directusId": "e79a87af-3beb-4439-ab8a-1adecd110524"
+              }
+            ]
+          }
+        ]
+      }
+    ]
   },
   "Monroe, SD": {
     "rm_min": [
@@ -66734,7 +67776,47 @@
           ]
         }
       ]
-    }
+    },
+    "add_max": [
+      {
+        "reporter": "Samuel Deetz",
+        "requirements": ["by right"],
+        "citations": [
+          {
+            "description": "Montgomery Zoning Code",
+            "url": "https://codelibrary.amlegal.com/codes/montgomery/latest/montgom_oh/0-0-0-39678",
+            "notes": "§ 151.3204",
+            "attachments": [],
+            "screenshots": [
+              {
+                "fileName": "montgomery-oh-add-max-screenshot.png",
+                "directusId": "1645495b-f2ef-413c-b7d2-c77bf81ef27c"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "reduce_min": [
+      {
+        "reporter": "Samuel Deetz",
+        "requirements": ["by right"],
+        "citations": [
+          {
+            "description": "Montgomery Zoning District",
+            "url": "https://codelibrary.amlegal.com/codes/montgomery/latest/montgom_oh/0-0-0-39689",
+            "notes": "§ 151.3207(B)",
+            "attachments": [],
+            "screenshots": [
+              {
+                "fileName": "montgomery-oh-reduce-min-screenshot.png",
+                "directusId": "e0938d39-0e9b-43f4-b3cb-e3c70370dd4b"
+              }
+            ]
+          }
+        ]
+      }
+    ]
   },
   "Monticello, MN": {
     "reduce_min": [
@@ -68253,7 +69335,47 @@
           ]
         }
       ]
-    }
+    },
+    "add_max": [
+      {
+        "reporter": "Samuel Deetz",
+        "requirements": ["by right"],
+        "citations": [
+          {
+            "description": "Mt. Healthy Zoning Code",
+            "url": "https://codelibrary.amlegal.com/codes/mounthealthy/latest/mthealth_oh/0-0-0-14042",
+            "notes": "155.11 OFF-STREET PARKING AND LOADING\n§ 155.112 GENERAL REQUIREMENTS.\n (H)   Maximum allowed parking.\n (I)   Downtown parking.",
+            "attachments": [],
+            "screenshots": [
+              {
+                "fileName": "mt-healthy-oh-add-max-screenshot.png",
+                "directusId": "e1ee314c-ec02-4b79-adc2-94451dbdaa31"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "rm_min": [
+      {
+        "reporter": "Samuel Deetz",
+        "requirements": ["by right"],
+        "citations": [
+          {
+            "description": "Mt. Healthy Zoning Code",
+            "url": "https://codelibrary.amlegal.com/codes/mounthealthy/latest/mthealth_oh/0-0-0-14042",
+            "notes": "155.11 OFF-STREET PARKING AND LOADING\n§ 155.112 GENERAL REQUIREMENTS.\n (H)   Maximum allowed parking.\n (I)   Downtown parking.",
+            "attachments": [],
+            "screenshots": [
+              {
+                "fileName": "mt-healthy-oh-remove-min-screenshot.png",
+                "directusId": "e1ee314c-ec02-4b79-adc2-94451dbdaa31"
+              }
+            ]
+          }
+        ]
+      }
+    ]
   },
   "Mt. Holly Springs, PA": {
     "reduce_min": [
@@ -70006,7 +71128,47 @@
           ]
         }
       ]
-    }
+    },
+    "add_max": [
+      {
+        "reporter": "Samuel Deetz",
+        "requirements": ["by right"],
+        "citations": [
+          {
+            "description": "Nelson County Zoning Code",
+            "url": "https://ncpz.com/PDF/Zoning-Regulations-amended-9-24-2023.pdf",
+            "notes": "11.4 Table 11.4.1 \nPages 132-140 of original document, pages 137-145 of pdf",
+            "attachments": [],
+            "screenshots": [
+              {
+                "fileName": "nelson-county-ky-add-max-screenshot.png",
+                "directusId": "a65ffafc-2bfd-4631-a137-e57db9c07dd8"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "reduce_min": [
+      {
+        "reporter": "Samuel Deetz",
+        "requirements": ["other"],
+        "citations": [
+          {
+            "description": "Nelson County Zoning Code",
+            "url": "https://ncpz.com/PDF/Zoning-Regulations-amended-9-24-2023.pdf",
+            "notes": "11.8 \nPages 141-142 of original document, pages 146-147 of pdf",
+            "attachments": [],
+            "screenshots": [
+              {
+                "fileName": "nelson-county-ky-reduce-min-screenshot.png",
+                "directusId": "68e9e631-276b-4c36-8d6e-cdc250208953"
+              }
+            ]
+          }
+        ]
+      }
+    ]
   },
   "Neosho, MO": {
     "rm_min": [
@@ -76771,7 +77933,67 @@
           ]
         }
       ]
-    }
+    },
+    "add_max": [
+      {
+        "reporter": "Samuel Deetz",
+        "requirements": ["by right"],
+        "citations": [
+          {
+            "description": "Oxford Zoning Code",
+            "url": "https://codelibrary.amlegal.com/codes/oxford/latest/oxford_oh/0-0-0-60925",
+            "notes": "1149.05(a)",
+            "attachments": [],
+            "screenshots": [
+              {
+                "fileName": "oxford-oh-add-max-screenshot.png",
+                "directusId": "4db38d69-fcb6-4a88-bb93-5dcd2d168644"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "reduce_min": [
+      {
+        "reporter": "Samuel Deetz",
+        "requirements": ["bike parking", "frequent transit", "other"],
+        "citations": [
+          {
+            "description": "Oxford Zoning Code",
+            "url": "https://codelibrary.amlegal.com/codes/oxford/latest/oxford_oh/0-0-0-60925",
+            "notes": "1149.05(a)1.",
+            "attachments": [],
+            "screenshots": [
+              {
+                "fileName": "oxford-oh-reduce-min-screenshot.png",
+                "directusId": "923b6708-4c91-4483-a5e0-d3f4e7169fd6"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "rm_min": [
+      {
+        "reporter": "Samuel Deetz",
+        "requirements": ["by right"],
+        "citations": [
+          {
+            "description": "Oxford Zoning Code",
+            "url": "https://codelibrary.amlegal.com/codes/oxford/latest/oxford_oh/0-0-0-60925",
+            "notes": "1149.05(c)",
+            "attachments": [],
+            "screenshots": [
+              {
+                "fileName": "oxford-oh-remove-min-screenshot.png",
+                "directusId": "970e5847-d63b-4980-ac4d-3b54a90e298d"
+              }
+            ]
+          }
+        ]
+      }
+    ]
   },
   "Oxford, PA": {
     "rm_min": [
@@ -79929,7 +81151,47 @@
           ]
         }
       ]
-    }
+    },
+    "add_max": [
+      {
+        "reporter": "Samuel Deetz",
+        "requirements": ["other"],
+        "citations": [
+          {
+            "description": "Piqua Development Code",
+            "url": "https://piquaoh.org/DocumentCenter/View/1148/Effective-Development-Code---For-Online",
+            "notes": "4.2.5. Parking Requirements\nB6-B8\nPage 85",
+            "attachments": [],
+            "screenshots": [
+              {
+                "fileName": "piqua-oh-add-max-screenshot.png",
+                "directusId": "b3ed183f-5027-4ecc-8642-b4d0828733ce"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "reduce_min": [
+      {
+        "reporter": "Samuel Deetz",
+        "requirements": ["other"],
+        "citations": [
+          {
+            "description": "Piqua Development Code",
+            "url": "https://piquaoh.org/DocumentCenter/View/1148/Effective-Development-Code---For-Online",
+            "notes": "4.2.5. Parking Requirements\nB6-B8\nPage 85",
+            "attachments": [],
+            "screenshots": [
+              {
+                "fileName": "piqua-oh-reduce-min-screenshot.png",
+                "directusId": "b3ed183f-5027-4ecc-8642-b4d0828733ce"
+              }
+            ]
+          }
+        ]
+      }
+    ]
   },
   "Pittsboro, IN": {
     "reduce_min": [
@@ -83939,7 +85201,47 @@
           ]
         }
       ]
-    }
+    },
+    "reduce_min": [
+      {
+        "reporter": "Samuel Deetz",
+        "requirements": ["bike parking", "carshare", "frequent transit"],
+        "citations": [
+          {
+            "description": "Reynoldsburg Zoning Code",
+            "url": "https://www.reynoldsburg.gov/DocumentCenter/View/2252/Zoning-Code---Master-Code-06082023?bidId=",
+            "notes": "SECTION 1105.01.F. \nPage 103",
+            "attachments": [],
+            "screenshots": [
+              {
+                "fileName": "reynoldsburg-oh-reduce-min-screenshot.png",
+                "directusId": "2a1295a7-e914-4305-b9ab-da53ea9d5393"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "rm_min": [
+      {
+        "reporter": "Samuel Deetz",
+        "requirements": ["by right", "size of project"],
+        "citations": [
+          {
+            "description": "Reynoldsburg Zoning Code",
+            "url": "https://www.reynoldsburg.gov/DocumentCenter/View/2252/Zoning-Code---Master-Code-06082023?bidId=",
+            "notes": "SECTION 1103.11.E.\nPage 25",
+            "attachments": [],
+            "screenshots": [
+              {
+                "fileName": "reynoldsburg-oh-remove-min-screenshot.png",
+                "directusId": "887037a9-f33d-4583-8e4d-ced1a2d819ce"
+              }
+            ]
+          }
+        ]
+      }
+    ]
   },
   "Rhinelander, WI": {
     "rm_min": [
@@ -85835,7 +87137,47 @@
           ]
         }
       ]
-    }
+    },
+    "add_max": [
+      {
+        "reporter": "Samuel Deetz",
+        "requirements": ["by right"],
+        "citations": [
+          {
+            "description": "Rocky River Zoning Code",
+            "url": "https://codelibrary.amlegal.com/codes/rockyriver/latest/rockyriver_oh/0-0-0-19150",
+            "notes": "1187.09",
+            "attachments": [],
+            "screenshots": [
+              {
+                "fileName": "rocky-river-oh-add-max-screenshot.png",
+                "directusId": "a842873e-d291-4d09-a0a9-8b6bfc4ced24"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "reduce_min": [
+      {
+        "reporter": "Samuel Deetz",
+        "requirements": ["other"],
+        "citations": [
+          {
+            "description": "Rocky River Zoning Code",
+            "url": "https://codelibrary.amlegal.com/codes/rockyriver/latest/rockyriver_oh/0-0-0-19165",
+            "notes": "1187.11",
+            "attachments": [],
+            "screenshots": [
+              {
+                "fileName": "rocky-river-oh-reduce-min-screenshot.png",
+                "directusId": "d80ecad2-ee64-4a3a-9096-48eeb275148d"
+              }
+            ]
+          }
+        ]
+      }
+    ]
   },
   "Rogers City, MI": {
     "rm_min": [
@@ -90966,7 +92308,47 @@
           ]
         }
       ]
-    }
+    },
+    "reduce_min": [
+      {
+        "reporter": "Samuel Deetz",
+        "requirements": ["other"],
+        "citations": [
+          {
+            "description": "Shaker Heights Zoning Code",
+            "url": "https://codelibrary.amlegal.com/codes/shakerhts/latest/shakerhts_oh/0-0-0-22319",
+            "notes": "TITLE FIVE - Signs, Off-Street Parking, Off-Street Loading, and Landscaping\nCHAPTER 1251 Off-Street Parking Regulations\n1251.03 CREDIT FOR ON-STREET PARKING.\n1251.04 EXEMPTION FOR PROVISIONS OF REQUIRED OFF-STREET PARKING SPACES.\nA.\nB.",
+            "attachments": [],
+            "screenshots": [
+              {
+                "fileName": "shaker-heights-oh-reduce-min-screenshot.png",
+                "directusId": "aaaf1d29-11dd-4e60-aa04-335ceb028009"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "rm_min": [
+      {
+        "reporter": "Samuel Deetz",
+        "requirements": ["by right", "size of project"],
+        "citations": [
+          {
+            "description": "Shaker Heights Zoning Code",
+            "url": "https://codelibrary.amlegal.com/codes/shakerhts/latest/shakerhts_oh/0-0-0-22319",
+            "notes": "TITLE FIVE - Signs, Off-Street Parking, Off-Street Loading, and Landscaping\nCHAPTER 1251 Off-Street Parking Regulations\n1251.03 CREDIT FOR ON-STREET PARKING.\n1251.04 EXEMPTION FOR PROVISIONS OF REQUIRED OFF-STREET PARKING SPACES.\nA.\nB.",
+            "attachments": [],
+            "screenshots": [
+              {
+                "fileName": "shaker-heights-oh-remove-min-screenshot.png",
+                "directusId": "aaaf1d29-11dd-4e60-aa04-335ceb028009"
+              }
+            ]
+          }
+        ]
+      }
+    ]
   },
   "Shakopee, MN": {
     "rm_min": [
@@ -94383,7 +95765,51 @@
           ]
         }
       ]
-    }
+    },
+    "add_max": [
+      {
+        "reporter": "Samuel Deetz",
+        "requirements": ["by right"],
+        "citations": [
+          {
+            "description": "Springboro Zoning Code",
+            "url": "https://codelibrary.amlegal.com/codes/springboro/latest/springboro_oh/0-0-0-22525",
+            "notes": "1279.01(e)(4)",
+            "attachments": [],
+            "screenshots": [
+              {
+                "fileName": "springboro-oh-add-max-screenshot.png",
+                "directusId": "33dd66ac-2956-486b-83af-7a71f0ddaf8f"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "reduce_min": [
+      {
+        "reporter": "Samuel Deetz",
+        "requirements": ["bike parking", "other"],
+        "citations": [
+          {
+            "description": "Springboro Zoning Code",
+            "url": "https://codelibrary.amlegal.com/codes/springboro/latest/springboro_oh/0-0-0-22525",
+            "notes": "1279.01(f);\n1279.01(g)(2)",
+            "attachments": [],
+            "screenshots": [
+              {
+                "fileName": "springboro-oh-reduce-min-screenshot1.png",
+                "directusId": "b94519ed-9f40-4391-82dc-eb29cce97ae5"
+              },
+              {
+                "fileName": "springboro-oh-reduce-min-screenshot2.png",
+                "directusId": "884f1ef4-bf14-4def-b596-c0096f2805b8"
+              }
+            ]
+          }
+        ]
+      }
+    ]
   },
   "Springdale, AR": {
     "legacy": {
@@ -94599,7 +96025,47 @@
           ]
         }
       ]
-    }
+    },
+    "reduce_min": [
+      {
+        "reporter": "Samuel Deetz",
+        "requirements": ["other"],
+        "citations": [
+          {
+            "description": "Springfield Zoning Code",
+            "url": "https://codelibrary.amlegal.com/codes/springfield/latest/springfield_oh/0-0-0-14963",
+            "notes": "1153.02(g)",
+            "attachments": [],
+            "screenshots": [
+              {
+                "fileName": "springfield-oh-reduce-min-screenshot.png",
+                "directusId": "65832fc0-12d3-4959-8e2b-a76f5d144654"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "rm_min": [
+      {
+        "reporter": "Samuel Deetz",
+        "requirements": ["by right"],
+        "citations": [
+          {
+            "description": "Springfield Zoning Code",
+            "url": "https://codelibrary.amlegal.com/codes/springfield/latest/springfield_oh/0-0-0-13915",
+            "notes": "1141.02(a)(1)D.ii.",
+            "attachments": [],
+            "screenshots": [
+              {
+                "fileName": "springfield-oh-remove-min-screenshot.png",
+                "directusId": "d17c7449-7b64-4b44-8915-cd6871eb22b9"
+              }
+            ]
+          }
+        ]
+      }
+    ]
   },
   "Springfield, OR": {
     "legacy": {
@@ -98930,7 +100396,47 @@
           ]
         }
       ]
-    }
+    },
+    "add_max": [
+      {
+        "reporter": "Samuel Deetz",
+        "requirements": ["by right"],
+        "citations": [
+          {
+            "description": "Tallmadge Zoning Code",
+            "url": "https://tallmadge-ohio.org/DocumentCenter/View/2296/Title-5--Off-street-Parking",
+            "notes": "Section 1105.05 (A-C)\nPage 11",
+            "attachments": [],
+            "screenshots": [
+              {
+                "fileName": "tallmadge-oh-add-max-screenshot.png",
+                "directusId": "71141b7d-0d3d-48e9-9a53-bf653e6f02c2"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "reduce_min": [
+      {
+        "reporter": "Samuel Deetz",
+        "requirements": ["frequent transit", "other"],
+        "citations": [
+          {
+            "description": "Tallmadge Zoning Code",
+            "url": "https://tallmadge-ohio.org/DocumentCenter/View/2296/Title-5--Off-street-Parking",
+            "notes": "Section 1105.05 (A-C)\nPage 11",
+            "attachments": [],
+            "screenshots": [
+              {
+                "fileName": "tallmadge-oh-reduce-min-screenshot.png",
+                "directusId": "71141b7d-0d3d-48e9-9a53-bf653e6f02c2"
+              }
+            ]
+          }
+        ]
+      }
+    ]
   },
   "Tampa, FL": {
     "legacy": {
@@ -100610,7 +102116,67 @@
           ]
         }
       ]
-    }
+    },
+    "add_max": [
+      {
+        "reporter": "Samuel Deetz",
+        "requirements": ["by right"],
+        "citations": [
+          {
+            "description": "Tipp City Zoning Code",
+            "url": "https://codelibrary.amlegal.com/codes/tippcity/latest/tippcity_oh/0-0-0-15673",
+            "notes": "§ 154.10(C)(4)(b)(ii)",
+            "attachments": [],
+            "screenshots": [
+              {
+                "fileName": "tipp-city-oh-add-max-screenshot.png",
+                "directusId": "7445beea-de54-4a97-984b-aa8c5ac0521a"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "reduce_min": [
+      {
+        "reporter": "Samuel Deetz",
+        "requirements": ["by right"],
+        "citations": [
+          {
+            "description": "Tipp City Zoning Code",
+            "url": "https://codelibrary.amlegal.com/codes/tippcity/latest/tippcity_oh/0-0-0-15673",
+            "notes": "§ 154.10(C)(4)(b)(iv)",
+            "attachments": [],
+            "screenshots": [
+              {
+                "fileName": "tipp-city-oh-reduce-min-screenshot.png",
+                "directusId": "9d9a8cdb-ad88-47cf-ae69-7d1ec85dd5a6"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "rm_min": [
+      {
+        "reporter": "Samuel Deetz",
+        "requirements": ["by right"],
+        "citations": [
+          {
+            "description": "Tipp City Zoning Code",
+            "url": "https://codelibrary.amlegal.com/codes/tippcity/latest/tippcity_oh/0-0-0-15668",
+            "notes": "§ 154.10(B)(2);\n§ 154.10(B)(3)",
+            "attachments": [],
+            "screenshots": [
+              {
+                "fileName": "tipp-city-oh-remove-min-screenshot.png",
+                "directusId": "42e8f63a-4678-4199-ae69-c850f6111ad4"
+              }
+            ]
+          }
+        ]
+      }
+    ]
   },
   "Tipton, IA": {
     "rm_min": [
@@ -100804,7 +102370,135 @@
           ]
         }
       ]
-    }
+    },
+    "add_max": [
+      {
+        "reporter": "Samuel Deetz",
+        "requirements": ["by right", "other"],
+        "citations": [
+          {
+            "description": "Toledo Planning and Zoning Code",
+            "url": "https://codelibrary.amlegal.com/codes/toledo/latest/toledo_oh/0-0-0-104920",
+            "notes": "1107.0203;\n1107.0205.D.;\n1107.0302",
+            "attachments": [],
+            "screenshots": [
+              {
+                "fileName": "toledo-oh-add-max-citation1-screenshot1.png",
+                "directusId": "eb5be5f2-d44b-4187-90db-17e2cd713708"
+              },
+              {
+                "fileName": "toledo-oh-add-max-citation1-screenshot2.png",
+                "directusId": "b889887d-5860-4b40-9b4b-eca190edee6b"
+              },
+              {
+                "fileName": "toledo-oh-add-max-citation1-screenshot3.png",
+                "directusId": "93460937-0983-4f31-86c2-3f1f401ee71f"
+              }
+            ]
+          },
+          {
+            "description": "Toledo Ordinance 247-20",
+            "url": "https://toledo.legistar.com/LegislationDetail.aspx?ID=4576082&GUID=8D3B9F58-3315-4FD3-9C16-D761138E3D10",
+            "notes": "Page 13 of Plan Commission Report",
+            "attachments": [],
+            "screenshots": [
+              {
+                "fileName": "toledo-oh-add-max-citation2-screenshot.png",
+                "directusId": "f9a2a8a7-1a27-479a-9b8d-11c9eef3cd12"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "reduce_min": [
+      {
+        "reporter": "Samuel Deetz",
+        "requirements": ["by right", "historic preservation"],
+        "citations": [
+          {
+            "description": "Toledo Planning and Zoning Code",
+            "url": "https://codelibrary.amlegal.com/codes/toledo/latest/toledo_oh/0-0-0-104917",
+            "notes": "1107.0202;\n1107.0204;\n1107.0205.B.",
+            "attachments": [],
+            "screenshots": [
+              {
+                "fileName": "toledo-oh-reduce-min-citation1-screenshot1.png",
+                "directusId": "4427be67-a678-404f-a1c1-4d5d65f81723"
+              },
+              {
+                "fileName": "toledo-oh-reduce-min-citation1-screenshot2.png",
+                "directusId": "f5aa8cfe-3648-42f0-8ef9-0f251a802bdf"
+              },
+              {
+                "fileName": "toledo-oh-reduce-min-citation1-screenshot3.png",
+                "directusId": "85bbaaae-c030-4152-81cb-583572d9437a"
+              }
+            ]
+          },
+          {
+            "description": "Toledo Ordinance 247-20",
+            "url": "https://toledo.legistar.com/LegislationDetail.aspx?ID=4576082&GUID=8D3B9F58-3315-4FD3-9C16-D761138E3D10",
+            "notes": "Page 13 of Plan Commission Report",
+            "attachments": [],
+            "screenshots": [
+              {
+                "fileName": "toledo-oh-reduce-min-citation2-screenshot.png",
+                "directusId": "f9a2a8a7-1a27-479a-9b8d-11c9eef3cd12"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "rm_min": [
+      {
+        "reporter": "Samuel Deetz",
+        "requirements": ["by right", "size of project"],
+        "citations": [
+          {
+            "description": "Toledo Planning and Zoning Code",
+            "url": "https://codelibrary.amlegal.com/codes/toledo/latest/toledo_oh/0-0-0-104912",
+            "notes": "1107.0201.A.;\n1107.0205.A.;\n1107.0205.C.",
+            "attachments": [],
+            "screenshots": [
+              {
+                "fileName": "toledo-oh-remove-min-citation1-screenshot1.png",
+                "directusId": "6f75b6be-6a10-493f-b3c2-53a8e2326a75"
+              },
+              {
+                "fileName": "toledo-oh-remove-min-citation1-screenshot2.png",
+                "directusId": "4bc91a96-f912-41cf-a00e-d6f210f9d44a"
+              }
+            ]
+          },
+          {
+            "description": "Toledo Ordinance 615-22",
+            "url": "https://toledo.legistar.com/LegislationDetail.aspx?ID=5941652&GUID=110E2DAF-4130-4382-89D0-5E64C47B1EF9",
+            "notes": "Page 5 of Plan Commission Report",
+            "attachments": [],
+            "screenshots": [
+              {
+                "fileName": "toledo-oh-remove-min-citation2-screenshot.png",
+                "directusId": "fa6cfed5-54c3-482a-85ef-78c86e9525ce"
+              }
+            ]
+          },
+          {
+            "description": "Toledo Ordinance 247-20",
+            "url": "https://toledo.legistar.com/LegislationDetail.aspx?ID=4576082&GUID=8D3B9F58-3315-4FD3-9C16-D761138E3D10",
+            "notes": "Page 13 of Plan Commission Report",
+            "attachments": [],
+            "screenshots": [
+              {
+                "fileName": "toledo-oh-remove-min-citation3-screenshot.png",
+                "directusId": "f9a2a8a7-1a27-479a-9b8d-11c9eef3cd12"
+              }
+            ]
+          }
+        ]
+      }
+    ]
   },
   "Tolleson, AZ": {
     "reduce_min": [
@@ -104654,7 +106348,47 @@
           ]
         }
       ]
-    }
+    },
+    "add_max": [
+      {
+        "reporter": "Samuel Deetz",
+        "requirements": ["by right"],
+        "citations": [
+          {
+            "description": "Wapakoneta Zoning Code",
+            "url": "https://codelibrary.amlegal.com/codes/wapakoneta/latest/wapa_oh/0-0-0-82536",
+            "notes": "1284.06(j)",
+            "attachments": [],
+            "screenshots": [
+              {
+                "fileName": "wapakoneta-oh-add-max-screenshot.png",
+                "directusId": "b0801b1e-7f05-44c4-81cb-b777d2a1e1e9"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "rm_min": [
+      {
+        "reporter": "Samuel Deetz",
+        "requirements": ["by right"],
+        "citations": [
+          {
+            "description": "Wapakoneta Zoning Code",
+            "url": "https://codelibrary.amlegal.com/codes/wapakoneta/latest/wapa_oh/0-0-0-82515",
+            "notes": "1284.02(a)",
+            "attachments": [],
+            "screenshots": [
+              {
+                "fileName": "wapakoneta-oh-remove-min-screenshot.png",
+                "directusId": "b07852e9-d8d0-412f-aa63-0871f35c3fd0"
+              }
+            ]
+          }
+        ]
+      }
+    ]
   },
   "Wapella, IL": {
     "rm_min": [
@@ -105348,7 +107082,47 @@
           ]
         }
       ]
-    }
+    },
+    "reduce_min": [
+      {
+        "reporter": "Samuel Deetz",
+        "requirements": ["by right"],
+        "citations": [
+          {
+            "description": "Washington Court House Zoning Code",
+            "url": "https://codelibrary.amlegal.com/codes/washingtonch/latest/washingtonCH_oh/0-0-0-10222",
+            "notes": "§ 156.099(C)",
+            "attachments": [],
+            "screenshots": [
+              {
+                "fileName": "washington-court-house-oh-reduce-min-screenshot.png",
+                "directusId": "c5a861d8-9ff6-4c25-a5f1-644c23b261bc"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "rm_min": [
+      {
+        "reporter": "Samuel Deetz",
+        "requirements": ["by right"],
+        "citations": [
+          {
+            "description": "Washington Court House Zoning Code",
+            "url": "https://codelibrary.amlegal.com/codes/washingtonch/latest/washingtonCH_oh/0-0-0-9760",
+            "notes": "§ 156.039(D)(6)",
+            "attachments": [],
+            "screenshots": [
+              {
+                "fileName": "washington-court-house-oh-remove-min-screenshot.png",
+                "directusId": "1509f9d0-e3ec-41fe-9406-254a03d6915c"
+              }
+            ]
+          }
+        ]
+      }
+    ]
   },
   "Washington, DC": {
     "rm_min": [
@@ -106360,7 +108134,51 @@
           ]
         }
       ]
-    }
+    },
+    "add_max": [
+      {
+        "reporter": "Samuel Deetz",
+        "requirements": ["by right"],
+        "citations": [
+          {
+            "description": "Waverly Zoning Code",
+            "url": "https://codelibrary.amlegal.com/codes/waverly/latest/waverly_oh/0-0-0-20000",
+            "notes": "1155.15",
+            "attachments": [],
+            "screenshots": [
+              {
+                "fileName": "waverly-oh-add-max-screenshot.png",
+                "directusId": "e62041b0-cb34-4737-b9ab-c99bec592d49"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "rm_min": [
+      {
+        "reporter": "Samuel Deetz",
+        "requirements": ["by right", "size of project"],
+        "citations": [
+          {
+            "description": "Waverly Zoning Code",
+            "url": "https://codelibrary.amlegal.com/codes/waverly/latest/waverly_oh/0-0-0-20015",
+            "notes": "1155.18(b);\n1155.18(d)",
+            "attachments": [],
+            "screenshots": [
+              {
+                "fileName": "waverly-oh-remove-min-screenshot1.png",
+                "directusId": "571a1288-2119-41e7-8bed-050106e2e7cf"
+              },
+              {
+                "fileName": "waverly-oh-remove-min-screenshot2.png",
+                "directusId": "c6827f97-6ce9-48ae-9339-058a0196aca4"
+              }
+            ]
+          }
+        ]
+      }
+    ]
   },
   "Waxhaw, NC": {
     "legacy": {
@@ -109442,7 +111260,55 @@
           ]
         }
       ]
-    }
+    },
+    "add_max": [
+      {
+        "reporter": "Samuel Deetz",
+        "requirements": ["by right"],
+        "citations": [
+          {
+            "description": "Wilmington Zoning Code",
+            "url": "https://library.municode.com/oh/wilmington/codes/code_of_ordinances?nodeId=CD_ORD_PT11PLZOCO_TITELEVENSIDEPR_CH1171PACI_S1171.04OREPARE",
+            "notes": "Sec. 1171.04(a)(3)b.;\nSec. 1171.04(a)(4)a.3.",
+            "attachments": [],
+            "screenshots": [
+              {
+                "fileName": "wilmington-oh-add-max-screenshot1.png",
+                "directusId": "8a86aecd-0190-4f53-8c09-ebc91d581b19"
+              },
+              {
+                "fileName": "wilmington-oh-add-max-screenshot2.png",
+                "directusId": "5d37e4f5-20d8-4dfa-b190-78f1ec4312b4"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "reduce_min": [
+      {
+        "reporter": "Samuel Deetz",
+        "requirements": ["in-lieu fees", "other"],
+        "citations": [
+          {
+            "description": "Wilmington Zoning Code",
+            "url": "https://library.municode.com/oh/wilmington/codes/code_of_ordinances?nodeId=CD_ORD_PT11PLZOCO_TITELEVENSIDEPR_CH1171PACI_S1171.04OREPARE",
+            "notes": "Sec. 1171.04.(a)(3)a.;\nSec. 1171.04.(b)(1)b.",
+            "attachments": [],
+            "screenshots": [
+              {
+                "fileName": "wilmington-oh-reduce-min-screenshot1.png",
+                "directusId": "8098ddfd-d0db-414f-91c2-71ba8a0e5f3b"
+              },
+              {
+                "fileName": "wilmington-oh-reduce-min-screenshot2.png",
+                "directusId": "2292e8da-0bff-426b-b1e9-a8dd3912048b"
+              }
+            ]
+          }
+        ]
+      }
+    ]
   },
   "Wilson, NC": {
     "legacy": {
