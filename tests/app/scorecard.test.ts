@@ -56,7 +56,6 @@ test("generateScorecard()", () => {
   };
   const policy: ProcessedCorePolicy = {
     status: "adopted",
-    summary: "",
     scope: [],
     land: [],
     date: null,
