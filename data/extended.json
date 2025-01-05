@@ -1576,7 +1576,111 @@
           ]
         }
       ]
-    }
+    },
+    "add_max": [
+      {
+        "reporter": null,
+        "requirements": ["by right", "frequent transit"],
+        "citations": [
+          {
+            "description": "Alexandria Zoning Code",
+            "url": "https://library.municode.com/va/alexandria/codes/zoning?nodeId=ARTVIIIOREPALO",
+            "notes": "Sec. 8-100 - Off-street parking required.\nSec. 8-200 - General parking regulations.\nSec. 8-300 - Central business district.\nSec. 8-500 - Waterfront parking exemption.",
+            "attachments": [],
+            "screenshots": [
+              {
+                "fileName": "alexandria-va-add-max-screenshot1.png",
+                "directusId": "a584af21-9d4f-4a4d-ac18-1293dbc790dc"
+              },
+              {
+                "fileName": "alexandria-va-add-max-screenshot2.png",
+                "directusId": "4d682f1f-4ea2-412c-84a7-2e628512305b"
+              },
+              {
+                "fileName": "alexandria-va-add-max-screenshot3.png",
+                "directusId": "1285da58-d10e-46a4-b88b-b7f438dbe8a0"
+              },
+              {
+                "fileName": "alexandria-va-add-max-screenshot4.png",
+                "directusId": "f9d8108b-733a-46e8-bb5a-3389ea95a21d"
+              },
+              {
+                "fileName": "alexandria-va-add-max-screenshot5.png",
+                "directusId": "cad3edca-2361-469e-b2b4-6c40b02631bb"
+              },
+              {
+                "fileName": "alexandria-va-add-max-screenshot6.png",
+                "directusId": "8d3ec638-ec31-4209-bc98-dcd4b1daed45"
+              },
+              {
+                "fileName": "alexandria-va-add-max-screenshot7.png",
+                "directusId": "23487cbc-4772-4b2c-8236-6307cb233149"
+              },
+              {
+                "fileName": "alexandria-va-add-max-screenshot8.png",
+                "directusId": "cb6eb12b-16f8-4616-8879-4f480f4d282f"
+              },
+              {
+                "fileName": "alexandria-va-add-max-screenshot9.png",
+                "directusId": "05006198-89d5-47bf-8feb-d02aaa4bae94"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "reduce_min": [
+      {
+        "reporter": null,
+        "requirements": ["affordable housing", "by right", "frequent transit"],
+        "citations": [
+          {
+            "description": "Alexandria Zoning Code",
+            "url": "https://library.municode.com/va/alexandria/codes/zoning?nodeId=ARTVIIIOREPALO",
+            "notes": "Sec. 8-100 - Off-street parking required.\nSec. 8-200 - General parking regulations.\nSec. 8-300 - Central business district.\nSec. 8-500 - Waterfront parking exemption.",
+            "attachments": [],
+            "screenshots": [
+              {
+                "fileName": "alexandria-va-reduce-min-screenshot1.png",
+                "directusId": "a584af21-9d4f-4a4d-ac18-1293dbc790dc"
+              },
+              {
+                "fileName": "alexandria-va-reduce-min-screenshot2.png",
+                "directusId": "4d682f1f-4ea2-412c-84a7-2e628512305b"
+              },
+              {
+                "fileName": "alexandria-va-reduce-min-screenshot3.png",
+                "directusId": "1285da58-d10e-46a4-b88b-b7f438dbe8a0"
+              },
+              {
+                "fileName": "alexandria-va-reduce-min-screenshot4.png",
+                "directusId": "f9d8108b-733a-46e8-bb5a-3389ea95a21d"
+              },
+              {
+                "fileName": "alexandria-va-reduce-min-screenshot5.png",
+                "directusId": "cad3edca-2361-469e-b2b4-6c40b02631bb"
+              },
+              {
+                "fileName": "alexandria-va-reduce-min-screenshot6.png",
+                "directusId": "8d3ec638-ec31-4209-bc98-dcd4b1daed45"
+              },
+              {
+                "fileName": "alexandria-va-reduce-min-screenshot7.png",
+                "directusId": "23487cbc-4772-4b2c-8236-6307cb233149"
+              },
+              {
+                "fileName": "alexandria-va-reduce-min-screenshot8.png",
+                "directusId": "cb6eb12b-16f8-4616-8879-4f480f4d282f"
+              },
+              {
+                "fileName": "alexandria-va-reduce-min-screenshot9.png",
+                "directusId": "05006198-89d5-47bf-8feb-d02aaa4bae94"
+              }
+            ]
+          }
+        ]
+      }
+    ]
   },
   "Algona, IA": {
     "rm_min": [
@@ -2735,7 +2839,47 @@
           ]
         }
       ]
-    }
+    },
+    "reduce_min": [
+      {
+        "reporter": "Samuel Deetz",
+        "requirements": ["historic preservation", "other", "size of project"],
+        "citations": [
+          {
+            "description": "Anchorage Land Development Code",
+            "url": "https://louisvilleky.gov/office-planning/document/pdsanchoragedcupdated062020pdf",
+            "notes": "10.1.N.\nPage 268",
+            "attachments": [],
+            "screenshots": [
+              {
+                "fileName": "anchorage-ky-reduce-min-screenshot.png",
+                "directusId": "ef486f7c-ad6d-4cf4-a6e3-60d0e4985e77"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "rm_min": [
+      {
+        "reporter": "Samuel Deetz",
+        "requirements": ["by right", "size of project"],
+        "citations": [
+          {
+            "description": "Anchorage Land Development Code",
+            "url": "https://louisvilleky.gov/office-planning/document/pdsanchoragedcupdated062020pdf",
+            "notes": "10.1. \nPage 260",
+            "attachments": [],
+            "screenshots": [
+              {
+                "fileName": "anchorage-ky-remove-min-screenshot.png",
+                "directusId": "aedd9c49-8610-460d-b201-db7dbbc3bba7"
+              }
+            ]
+          }
+        ]
+      }
+    ]
   },
   "Anderson, IN": {
     "rm_min": [
@@ -3621,7 +3765,47 @@
           ]
         }
       ]
-    }
+    },
+    "add_max": [
+      {
+        "reporter": "Samuel Deetz",
+        "requirements": ["by right", "other"],
+        "citations": [
+          {
+            "description": "Arlington Unified Development Ordinance",
+            "url": "https://cdnsm5-hosted.civiclive.com/UserFiles/Servers/Server_14481062/File/City%20Hall/Depts/City%20Secretary/City_Code_of_Ordinances/UDCChapter.pdf",
+            "notes": "5.4.4.H.3.\nPage 162",
+            "attachments": [],
+            "screenshots": [
+              {
+                "fileName": "arlington-tx-add-max-screenshot.png",
+                "directusId": "20ce359d-24e6-44c1-819f-0682c7d0eec4"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "reduce_min": [
+      {
+        "reporter": "Samuel Deetz",
+        "requirements": ["by right", "other"],
+        "citations": [
+          {
+            "description": "Arlington Unified Development Ordinance",
+            "url": "https://cdnsm5-hosted.civiclive.com/UserFiles/Servers/Server_14481062/File/City%20Hall/Depts/City%20Secretary/City_Code_of_Ordinances/UDCChapter.pdf",
+            "notes": "5.4.4.H.2.\nPage 162",
+            "attachments": [],
+            "screenshots": [
+              {
+                "fileName": "arlington-tx-reduce-min-screenshot.png",
+                "directusId": "35d384ce-5ce0-40e5-a288-180da3f6ddd8"
+              }
+            ]
+          }
+        ]
+      }
+    ]
   },
   "Armada, MI": {
     "legacy": {
@@ -4452,7 +4636,47 @@
           ]
         }
       ]
-    }
+    },
+    "add_max": [
+      {
+        "reporter": "Samuel Deetz",
+        "requirements": ["by right", "other"],
+        "citations": [
+          {
+            "description": "Athens-Clarke County Zoning & Development Standards",
+            "url": "https://library.municode.com/ga/athens-clarke_county/codes/code_of_ordinances?nodeId=PTIIICOOR_TIT9ZODEST_ARTIIDEST_CH9-30OREPARE_S9-30-2SPRE",
+            "notes": "Sec. 9-30-2.F.",
+            "attachments": [],
+            "screenshots": [
+              {
+                "fileName": "athens-clarke-county-ga-add-max-screenshot.png",
+                "directusId": "40129c33-fdff-4247-b7cc-eb55b114e490"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "reduce_min": [
+      {
+        "reporter": "Samuel Deetz",
+        "requirements": ["other"],
+        "citations": [
+          {
+            "description": "Athens-Clarke County Zoning & Development Standards",
+            "url": "https://library.municode.com/ga/athens-clarke_county/codes/code_of_ordinances?nodeId=PTIIICOOR_TIT9ZODEST_ARTIIDEST_CH9-30OREPARE_S9-30-3CRREPA",
+            "notes": "Sec. 9-30-3.",
+            "attachments": [],
+            "screenshots": [
+              {
+                "fileName": "athens-clarke-county-ga-reduce-min-screenshot.png",
+                "directusId": "f7f8c1ee-f9af-476b-adb8-777f2ba9a30d"
+              }
+            ]
+          }
+        ]
+      }
+    ]
   },
   "Atkinson, NE": {
     "rm_min": [
@@ -5652,7 +5876,47 @@
           ]
         }
       ]
-    }
+    },
+    "add_max": [
+      {
+        "reporter": "Matt Lewis",
+        "requirements": ["by right"],
+        "citations": [
+          {
+            "description": "Bandera City Code",
+            "url": "https://www.cityofbandera.org/sites/default/files/fileattachments/community/page/2792/place_type_zoning_final_draft_1.pdf",
+            "notes": "APPENDIX 3: PLACE TYPE ZONING ORDINANCE  - PARKING",
+            "attachments": [],
+            "screenshots": [
+              {
+                "fileName": "bandera-tx-add-max-screenshot.png",
+                "directusId": "73ef1c3c-b18f-414e-8e59-bbbf3bbad655"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "rm_min": [
+      {
+        "reporter": "Matt Lewis",
+        "requirements": ["by right"],
+        "citations": [
+          {
+            "description": "Bandera City Code",
+            "url": "https://www.cityofbandera.org/sites/default/files/fileattachments/community/page/2792/place_type_zoning_final_draft_1.pdf",
+            "notes": "APPENDIX 3: PLACE TYPE ZONING ORDINANCE  - PARKING",
+            "attachments": [],
+            "screenshots": [
+              {
+                "fileName": "bandera-tx-remove-min-screenshot.png",
+                "directusId": "73ef1c3c-b18f-414e-8e59-bbbf3bbad655"
+              }
+            ]
+          }
+        ]
+      }
+    ]
   },
   "Bangor, ME": {
     "legacy": {
@@ -6936,7 +7200,47 @@
           ]
         }
       ]
-    }
+    },
+    "reduce_min": [
+      {
+        "reporter": "Samuel Deetz",
+        "requirements": ["other"],
+        "citations": [
+          {
+            "description": "Beaumont Zoning Code",
+            "url": "https://ecode360.com/38657078#38657078",
+            "notes": "§ 28.04.002(a)(12)",
+            "attachments": [],
+            "screenshots": [
+              {
+                "fileName": "beaumont-tx-reduce-min-screenshot.png",
+                "directusId": "be89495b-fdf5-47a8-8247-ed410de7c2fe"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "rm_min": [
+      {
+        "reporter": "Samuel Deetz",
+        "requirements": ["by right"],
+        "citations": [
+          {
+            "description": "Beaumont Zoning Code",
+            "url": "https://ecode360.com/38657078#38657078",
+            "notes": "§ 28.04.002(a)(10)",
+            "attachments": [],
+            "screenshots": [
+              {
+                "fileName": "beaumont-tx-remove-min-screenshot.png",
+                "directusId": "9dd28a57-5c42-4aaa-9214-42ff89244365"
+              }
+            ]
+          }
+        ]
+      }
+    ]
   },
   "Beaver Falls, PA": {
     "rm_min": [
@@ -13327,7 +13631,7 @@
       "requirements": ["bike parking", "by right", "other"],
       "citations": [
         {
-          "description": "Brownsville Zoning Code",
+          "description": "Brownsville Zoning Code (Former)",
           "url": "https://library.municode.com/tx/brownsville/codes/code_of_ordinances?nodeId=PTIICOOR_CH348ZO_ARTVIISUDIRE_S348-1381OREPA",
           "notes": "ARTICLE VII. - SUPPLEMENTARY DISTRICT REGULATIONS\nSec. 348-1381. - Off-street parking.\nI.General standards.\n  (g)On-street parking.\nII.Minimum required parking spaces.\n  (3)\nIII.Maximum allowed parking spaces.\nIV.Parking exceptions.\n  (a)",
           "attachments": [],
@@ -13347,7 +13651,124 @@
           ]
         }
       ]
-    }
+    },
+    "add_max": [
+      {
+        "reporter": "Samuel Deetz",
+        "requirements": ["by right", "other"],
+        "citations": [
+          {
+            "description": "Brownsville Zoning Code (Former)",
+            "url": "https://library.municode.com/tx/brownsville/codes/code_of_ordinances?nodeId=PTIICOOR_CH348ZO_ARTVIISUDIRE_S348-1381OREPA",
+            "notes": "ARTICLE VII. - SUPPLEMENTARY DISTRICT REGULATIONS\nSec. 348-1381. - Off-street parking.\nI.General standards.\n  (g)On-street parking.\nII.Minimum required parking spaces.\n  (3)\nIII.Maximum allowed parking spaces.\nIV.Parking exceptions.\n  (a)",
+            "attachments": [],
+            "screenshots": [
+              {
+                "fileName": "brownsville-tx-add-max-screenshot1.png",
+                "directusId": "05a1977f-118f-45b4-8187-b698c9aa0f09"
+              },
+              {
+                "fileName": "brownsville-tx-add-max-screenshot2.png",
+                "directusId": "42a443d8-0930-4e5b-8681-53843d3dcef3"
+              },
+              {
+                "fileName": "brownsville-tx-add-max-screenshot3.png",
+                "directusId": "5ca2b9f9-ef39-4910-9c92-3cebea709232"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "reduce_min": [
+      {
+        "reporter": "Samuel Deetz",
+        "requirements": [
+          "bike parking",
+          "by right",
+          "frequent transit",
+          "other"
+        ],
+        "citations": [
+          {
+            "description": "Brownsville Zoning Code (Former)",
+            "url": "https://library.municode.com/tx/brownsville/codes/code_of_ordinances?nodeId=PTIICOOR_CH348ZO_ARTVIISUDIRE_S348-1381OREPA",
+            "notes": "ARTICLE VII. - SUPPLEMENTARY DISTRICT REGULATIONS\nSec. 348-1381. - Off-street parking.\nI.General standards.\n  (g)On-street parking.\nII.Minimum required parking spaces.\n  (3)\nIII.Maximum allowed parking spaces.\nIV.Parking exceptions.\n  (a)",
+            "attachments": [],
+            "screenshots": [
+              {
+                "fileName": "brownsville-tx-reduce-min-citation1-screenshot1.png",
+                "directusId": "05a1977f-118f-45b4-8187-b698c9aa0f09"
+              },
+              {
+                "fileName": "brownsville-tx-reduce-min-citation1-screenshot2.png",
+                "directusId": "42a443d8-0930-4e5b-8681-53843d3dcef3"
+              },
+              {
+                "fileName": "brownsville-tx-reduce-min-citation1-screenshot3.png",
+                "directusId": "5ca2b9f9-ef39-4910-9c92-3cebea709232"
+              }
+            ]
+          },
+          {
+            "description": "Brownsville Zoning Code",
+            "url": "https://library.municode.com/tx/brownsville/codes/code_of_ordinances?nodeId=PTIICOOR_ART4ZORE_4.6ZO_4.6.2PA",
+            "notes": "4.6.2.B.1.e.;\n4.6.2.H.",
+            "attachments": [],
+            "screenshots": [
+              {
+                "fileName": "brownsville-tx-reduce-min-citation2-screenshot1.png",
+                "directusId": "089b7a59-9397-4537-9689-cf00f954caab"
+              },
+              {
+                "fileName": "brownsville-tx-reduce-min-citation2-screenshot2.png",
+                "directusId": "81d7b462-cb71-4eed-b2dc-acc6cfb790b5"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "rm_min": [
+      {
+        "reporter": "Samuel Deetz",
+        "requirements": ["by right"],
+        "citations": [
+          {
+            "description": "Brownsville Zoning Code (Former)",
+            "url": "https://library.municode.com/tx/brownsville/codes/code_of_ordinances?nodeId=PTIICOOR_CH348ZO_ARTVIISUDIRE_S348-1381OREPA",
+            "notes": "ARTICLE VII. - SUPPLEMENTARY DISTRICT REGULATIONS\nSec. 348-1381. - Off-street parking.\nI.General standards.\n  (g)On-street parking.\nII.Minimum required parking spaces.\n  (3)\nIII.Maximum allowed parking spaces.\nIV.Parking exceptions.\n  (a)",
+            "attachments": [],
+            "screenshots": [
+              {
+                "fileName": "brownsville-tx-remove-min-citation1-screenshot1.png",
+                "directusId": "05a1977f-118f-45b4-8187-b698c9aa0f09"
+              },
+              {
+                "fileName": "brownsville-tx-remove-min-citation1-screenshot2.png",
+                "directusId": "42a443d8-0930-4e5b-8681-53843d3dcef3"
+              },
+              {
+                "fileName": "brownsville-tx-remove-min-citation1-screenshot3.png",
+                "directusId": "5ca2b9f9-ef39-4910-9c92-3cebea709232"
+              }
+            ]
+          },
+          {
+            "description": "Brownsville Zoning Code",
+            "url": "https://library.municode.com/tx/brownsville/codes/code_of_ordinances?nodeId=PTIICOOR_ART4ZORE_4.6ZO_4.6.2PA",
+            "notes": "4.6.2.B.1.d.",
+            "attachments": [],
+            "screenshots": [
+              {
+                "fileName": "brownsville-tx-remove-min-citation2-screenshot.png",
+                "directusId": "2753fd4e-e7d7-4445-aa35-e7d36b6d13bf"
+              }
+            ]
+          }
+        ]
+      }
+    ]
   },
   "Brownsville, WI": {
     "rm_min": [
@@ -15301,7 +15722,47 @@
           ]
         }
       ]
-    }
+    },
+    "add_max": [
+      {
+        "reporter": "Samuel Deetz",
+        "requirements": ["by right", "size of project"],
+        "citations": [
+          {
+            "description": "Cape Coral Land Development Code",
+            "url": "https://library.municode.com/fl/cape_coral/codes/code_of_ordinances?nodeId=ART6PA_CH1PALODRRE_S6.1.7AMREPA",
+            "notes": "Section 6.1.7.A.1.",
+            "attachments": [],
+            "screenshots": [
+              {
+                "fileName": "cape-coral-fl-add-max-screenshot.png",
+                "directusId": "a3a8231d-0003-4f50-8fa0-e6585fb7e1c8"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "reduce_min": [
+      {
+        "reporter": "Samuel Deetz",
+        "requirements": ["by right"],
+        "citations": [
+          {
+            "description": "Cape Coral Land Development Code",
+            "url": "https://library.municode.com/fl/cape_coral/codes/code_of_ordinances?nodeId=ART6PA_CH1PALODRRE_S6.1.7AMREPA",
+            "notes": "Section 6.1.7. Table 6.1.7.B.",
+            "attachments": [],
+            "screenshots": [
+              {
+                "fileName": "cape-coral-fl-reduce-min-screenshot.png",
+                "directusId": "b5c5a59f-2d3c-4ca7-96f6-f478ab5bb2d8"
+              }
+            ]
+          }
+        ]
+      }
+    ]
   },
   "Cape Girardeau, MO": {
     "rm_min": [
@@ -16071,7 +16532,47 @@
           ]
         }
       ]
-    }
+    },
+    "add_max": [
+      {
+        "reporter": "Samuel Deetz",
+        "requirements": ["by right", "other"],
+        "citations": [
+          {
+            "description": "Carrollton Zoning Code",
+            "url": "https://www.cityofcarrollton.com/home/showpublisheddocument/19048/638234701136670000",
+            "notes": "Part 1 SECTION E. 1.b.i.c) \nPage 14",
+            "attachments": [],
+            "screenshots": [
+              {
+                "fileName": "carrollton-tx-add-max-screenshot.png",
+                "directusId": "0c56ebc2-5118-40ee-9468-b2e23ec8b8e0"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "reduce_min": [
+      {
+        "reporter": "Samuel Deetz",
+        "requirements": ["by right"],
+        "citations": [
+          {
+            "description": "Carrollton Zoning Code",
+            "url": "https://www.cityofcarrollton.com/home/showpublisheddocument/19048/638234701136670000",
+            "notes": "Part 1 SECTION E. 2.a.;\nPart 1 SECTION E. 2.b.;\nPage 14",
+            "attachments": [],
+            "screenshots": [
+              {
+                "fileName": "carrollton-tx-reduce-min-screenshot.png",
+                "directusId": "ae3358e3-3409-4975-af31-4075e85b9b74"
+              }
+            ]
+          }
+        ]
+      }
+    ]
   },
   "Carson City, MI": {
     "reduce_min": [
@@ -18452,7 +18953,47 @@
           ]
         }
       ]
-    }
+    },
+    "add_max": [
+      {
+        "reporter": "Thomas Reed",
+        "requirements": ["by right"],
+        "citations": [
+          {
+            "description": "Zoning Code for Parking",
+            "url": "https://library.municode.com/ga/chattahoochee_hills/codes/code_of_ordinances?nodeId=PTIICOOR_APXAUNDECO_ARTVGEPR_S5-13VEPA",
+            "notes": "Sec. 5-13. - Vehicular parking.\t",
+            "attachments": [],
+            "screenshots": [
+              {
+                "fileName": "chattahoochee-hills-ga-add-max-screenshot.png",
+                "directusId": "7ab69c20-9f3b-4c88-bd48-d72499ca60ec"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "rm_min": [
+      {
+        "reporter": "Thomas Reed",
+        "requirements": ["by right"],
+        "citations": [
+          {
+            "description": "Zoning Code for Parking",
+            "url": "https://library.municode.com/ga/chattahoochee_hills/codes/code_of_ordinances?nodeId=PTIICOOR_APXAUNDECO_ARTVGEPR_S5-13VEPA",
+            "notes": "Sec. 5-13. - Vehicular parking.\t",
+            "attachments": [],
+            "screenshots": [
+              {
+                "fileName": "chattahoochee-hills-ga-remove-min-screenshot.png",
+                "directusId": "7ab69c20-9f3b-4c88-bd48-d72499ca60ec"
+              }
+            ]
+          }
+        ]
+      }
+    ]
   },
   "Chattanooga, TN": {
     "rm_min": [
@@ -18722,7 +19263,47 @@
           ]
         }
       ]
-    }
+    },
+    "reduce_min": [
+      {
+        "reporter": "Samuel Deetz",
+        "requirements": ["by right", "other"],
+        "citations": [
+          {
+            "description": "Chesapeake Zoning Code",
+            "url": "https://library.municode.com/va/chesapeake/codes/zoning?nodeId=ZO_ART12SPOVDI_S12-605GEDEST",
+            "notes": "ARTICLE 12. - SPECIAL OVERLAY DISTRICTS\t\n§ 12-605. - General development standards.\nC.Parking.",
+            "attachments": [],
+            "screenshots": [
+              {
+                "fileName": "chesapeake-va-reduce-min-screenshot.png",
+                "directusId": "afc96456-3de0-4ee1-a3d9-4836344d3f75"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "rm_min": [
+      {
+        "reporter": "Samuel Deetz",
+        "requirements": ["by right", "other"],
+        "citations": [
+          {
+            "description": "Chesapeake Zoning Code",
+            "url": "https://library.municode.com/va/chesapeake/codes/zoning?nodeId=ZO_ART12SPOVDI_S12-605GEDEST",
+            "notes": "ARTICLE 12. - SPECIAL OVERLAY DISTRICTS\t\n§ 12-605. - General development standards.\nC.Parking.",
+            "attachments": [],
+            "screenshots": [
+              {
+                "fileName": "chesapeake-va-remove-min-screenshot.png",
+                "directusId": "afc96456-3de0-4ee1-a3d9-4836344d3f75"
+              }
+            ]
+          }
+        ]
+      }
+    ]
   },
   "Chester, PA": {
     "legacy": {
@@ -20177,7 +20758,47 @@
           ]
         }
       ]
-    }
+    },
+    "reduce_min": [
+      {
+        "reporter": "Samuel Deetz",
+        "requirements": ["by right"],
+        "citations": [
+          {
+            "description": "Cleburne Zoning Code",
+            "url": "https://www.cleburne.net/DocumentCenter/View/10085/Zoning-Ordinance_102423?bidId=",
+            "notes": "4.03. Parking Standards\n  A.2.c.\n  A.2.d.\nPage 103",
+            "attachments": [],
+            "screenshots": [
+              {
+                "fileName": "cleburne-tx-reduce-min-screenshot.png",
+                "directusId": "37df6af3-7434-46c8-947c-1e026786c13d"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "rm_min": [
+      {
+        "reporter": "Samuel Deetz",
+        "requirements": ["by right"],
+        "citations": [
+          {
+            "description": "Cleburne Zoning Code",
+            "url": "https://www.cleburne.net/DocumentCenter/View/10085/Zoning-Ordinance_102423?bidId=",
+            "notes": "4.03. Parking Standards\n  A.2.c.\n  A.2.d.\nPage 103",
+            "attachments": [],
+            "screenshots": [
+              {
+                "fileName": "cleburne-tx-remove-min-screenshot.png",
+                "directusId": "37df6af3-7434-46c8-947c-1e026786c13d"
+              }
+            ]
+          }
+        ]
+      }
+    ]
   },
   "Clemson, SC": {
     "rm_min": [
@@ -21774,7 +22395,67 @@
           ]
         }
       ]
-    }
+    },
+    "add_max": [
+      {
+        "reporter": "Samuel Deetz",
+        "requirements": ["by right"],
+        "citations": [
+          {
+            "description": "Columbus Unified Development Ordinance",
+            "url": "https://library.municode.com/ga/columbus/codes/code_of_ordinances?nodeId=APXAUNDEOR_CH4GEDEST_ART3OREPALO_S4.3.9NUPASPRE",
+            "notes": "Section 4.3.9.B.",
+            "attachments": [],
+            "screenshots": [
+              {
+                "fileName": "columbus-ga-add-max-screenshot.png",
+                "directusId": "a2f6bc87-4baf-4057-b759-374307e3c760"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "reduce_min": [
+      {
+        "reporter": "Samuel Deetz",
+        "requirements": ["bike parking"],
+        "citations": [
+          {
+            "description": "Columbus Unified Development Ordinance",
+            "url": "https://library.municode.com/ga/columbus/codes/code_of_ordinances?nodeId=APXAUNDEOR_CH4GEDEST_ART3OREPALO_S4.3.11CHRENUSP",
+            "notes": "Section 4.3.11.D.",
+            "attachments": [],
+            "screenshots": [
+              {
+                "fileName": "columbus-ga-reduce-min-screenshot.png",
+                "directusId": "10e2988d-85f8-4ea0-966b-c662418828bb"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "rm_min": [
+      {
+        "reporter": "Samuel Deetz",
+        "requirements": ["by right"],
+        "citations": [
+          {
+            "description": "Columbus Unified Development Ordinance",
+            "url": "https://library.municode.com/ga/columbus/codes/code_of_ordinances?nodeId=APXAUNDEOR_CH4GEDEST_ART3OREPALO_S4.3.9NUPASPRE",
+            "notes": "Section 4.3.9.E.2. ",
+            "attachments": [],
+            "screenshots": [
+              {
+                "fileName": "columbus-ga-remove-min-screenshot.png",
+                "directusId": "cfeb7d0d-1e0f-4195-9841-5c577bc51498"
+              }
+            ]
+          }
+        ]
+      }
+    ]
   },
   "Columbus, IN": {
     "legacy": {
@@ -23122,7 +23803,47 @@
           ]
         }
       ]
-    }
+    },
+    "reduce_min": [
+      {
+        "reporter": "Samuel Deetz",
+        "requirements": ["by right"],
+        "citations": [
+          {
+            "description": "Corpus Christi Unified Development Code",
+            "url": "https://online.encodeplus.com/regs/corpuschristi-tx/doc-viewer.aspx#secid-1695",
+            "notes": "ARTICLE 7. GENERAL DEVELOPMENT STANDARDS TABLE OF CONTENTS\n§ 7.2 Off-Street Parking, Loading and Stacking\n7.2.3. Districts Exempt from Parking Ratios",
+            "attachments": [],
+            "screenshots": [
+              {
+                "fileName": "corpus-christi-tx-reduce-min-screenshot.png",
+                "directusId": "9c8a965f-77ff-41c6-92a4-84071830b9e7"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "rm_min": [
+      {
+        "reporter": "Samuel Deetz",
+        "requirements": ["by right"],
+        "citations": [
+          {
+            "description": "Corpus Christi Unified Development Code",
+            "url": "https://online.encodeplus.com/regs/corpuschristi-tx/doc-viewer.aspx#secid-1695",
+            "notes": "ARTICLE 7. GENERAL DEVELOPMENT STANDARDS TABLE OF CONTENTS\n§ 7.2 Off-Street Parking, Loading and Stacking\n7.2.3. Districts Exempt from Parking Ratios",
+            "attachments": [],
+            "screenshots": [
+              {
+                "fileName": "corpus-christi-tx-remove-min-screenshot.png",
+                "directusId": "9c8a965f-77ff-41c6-92a4-84071830b9e7"
+              }
+            ]
+          }
+        ]
+      }
+    ]
   },
   "Cortez, CO": {
     "rm_min": [
@@ -23552,7 +24273,100 @@
           ]
         }
       ]
-    }
+    },
+    "add_max": [
+      {
+        "reporter": "Samuel Deetz",
+        "requirements": ["by right"],
+        "citations": [
+          {
+            "description": "Covington Neighborhood Development Code",
+            "url": "https://online.encodeplus.com/regs/covington-ky/doc-viewer.aspx#secid-145",
+            "notes": "Sec. 04.11.3.C.",
+            "attachments": [],
+            "screenshots": [
+              {
+                "fileName": "covington-ky-add-max-screenshot.png",
+                "directusId": "8725d5b3-58f7-4db3-99b8-1390f7106506"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "reduce_min": [
+      {
+        "reporter": "Samuel Deetz",
+        "requirements": ["bike parking", "frequent transit", "other"],
+        "citations": [
+          {
+            "description": "Covington Neighborhood Development Code",
+            "url": "https://online.encodeplus.com/regs/covington-ky/doc-viewer.aspx#secid-148",
+            "notes": "Sec. 04.11.6.C.;\nSec. 04.11.6.E.;\nSec. 04.11.6.F.;\nSec. 04.11.6.G.",
+            "attachments": [],
+            "screenshots": [
+              {
+                "fileName": "covington-ky-reduce-min-screenshot1.png",
+                "directusId": "c32d145e-7928-41a0-b30f-c2ef2e73b130"
+              },
+              {
+                "fileName": "covington-ky-reduce-min-screenshot2.png",
+                "directusId": "fde4520c-f1bc-49df-90d2-7b32346ddabf"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "rm_min": [
+      {
+        "reporter": "Samuel Deetz",
+        "requirements": [
+          "accessory dwelling units",
+          "by right",
+          "historic preservation",
+          "size of project"
+        ],
+        "citations": [
+          {
+            "description": "Covington Neighborhood Development Code",
+            "url": "https://online.encodeplus.com/regs/covington-ky/doc-viewer.aspx#secid-120",
+            "notes": "Sec. 04.11.1.B.2.;\nSec. 04.11.1.B.3.;\nSec. 04.11.3.C.",
+            "attachments": [],
+            "screenshots": [
+              {
+                "fileName": "covington-ky-remove-min-screenshot1.png",
+                "directusId": "f7086ace-0362-4c45-8943-a9473cc4e326"
+              },
+              {
+                "fileName": "covington-ky-remove-min-screenshot2.png",
+                "directusId": "758eef68-6cca-4f33-bafe-baf2ab934775"
+              },
+              {
+                "fileName": "covington-ky-remove-min-screenshot3.png",
+                "directusId": "8bfc8f70-aa1d-4067-8827-349995697586"
+              },
+              {
+                "fileName": "covington-ky-remove-min-screenshot4.png",
+                "directusId": "07e044b2-d84f-48f6-a935-0e110b2c3b59"
+              },
+              {
+                "fileName": "covington-ky-remove-min-screenshot5.png",
+                "directusId": "23ff1289-d17c-471b-b58b-1a9f1a3319a5"
+              },
+              {
+                "fileName": "covington-ky-remove-min-screenshot6.png",
+                "directusId": "ae58614b-4bfc-4a0c-8e11-df95d93b20e7"
+              },
+              {
+                "fileName": "covington-ky-remove-min-screenshot7.png",
+                "directusId": "d06f219a-b40c-407c-8139-49e187779c4b"
+              }
+            ]
+          }
+        ]
+      }
+    ]
   },
   "Covington, LA": {
     "rm_min": [
@@ -27922,7 +28736,79 @@
           ]
         }
       ]
-    }
+    },
+    "add_max": [
+      {
+        "reporter": "Samuel Deetz",
+        "requirements": ["by right"],
+        "citations": [
+          {
+            "description": "Douglass Hills Land Development Code",
+            "url": "https://louisvilleky.gov/office-planning/document/douglasshillsldcjune2015pdf",
+            "notes": "9.1.3.E.\nPages 751, 753-764",
+            "attachments": [],
+            "screenshots": [
+              {
+                "fileName": "douglass-hills-ky-add-max-screenshot1.png",
+                "directusId": "c0f79e69-e63f-4050-aeb3-87e651860fe3"
+              },
+              {
+                "fileName": "douglass-hills-ky-add-max-screenshot2.png",
+                "directusId": "4fa48c9f-a68e-40de-b0e4-e4307603ca8d"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "reduce_min": [
+      {
+        "reporter": "Samuel Deetz",
+        "requirements": ["frequent transit", "historic preservation", "other"],
+        "citations": [
+          {
+            "description": "Douglass Hills Land Development Code",
+            "url": "https://louisvilleky.gov/office-planning/document/douglasshillsldcjune2015pdf",
+            "notes": "9.1.3.E.\n9.1.3.F.\nPages 750-752",
+            "attachments": [],
+            "screenshots": [
+              {
+                "fileName": "douglass-hills-ky-reduce-min-screenshot1.png",
+                "directusId": "fa81334c-8031-412d-a2af-8723d5f53eaf"
+              },
+              {
+                "fileName": "douglass-hills-ky-reduce-min-screenshot2.png",
+                "directusId": "7875d12f-3888-4bf8-aa13-1c8e51de1207"
+              },
+              {
+                "fileName": "douglass-hills-ky-reduce-min-screenshot3.png",
+                "directusId": "9a4c51fc-2cb5-460c-8998-560261e89504"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "rm_min": [
+      {
+        "reporter": "Samuel Deetz",
+        "requirements": ["by right"],
+        "citations": [
+          {
+            "description": "Douglass Hills Land Development Code",
+            "url": "https://louisvilleky.gov/office-planning/document/douglasshillsldcjune2015pdf",
+            "notes": "9.1.3.E. \nPage 751",
+            "attachments": [],
+            "screenshots": [
+              {
+                "fileName": "douglass-hills-ky-remove-min-screenshot.png",
+                "directusId": "c7a4f88e-0422-4df3-9c3f-e3ad82e3be74"
+              }
+            ]
+          }
+        ]
+      }
+    ]
   },
   "Dover, AR": {
     "rm_min": [
@@ -28568,7 +29454,67 @@
           ]
         }
       ]
-    }
+    },
+    "add_max": [
+      {
+        "reporter": "Samuel Deetz",
+        "requirements": ["by right"],
+        "citations": [
+          {
+            "description": "Duluth Unified Development Code",
+            "url": "https://cms4files.revize.com/duluth/UDCOctober2024.pdf",
+            "notes": "404.01(b) \nPage 139",
+            "attachments": [],
+            "screenshots": [
+              {
+                "fileName": "duluth-ga-add-max-screenshot.png",
+                "directusId": "b6db0531-ea46-4590-afa5-ba3b36275e10"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "reduce_min": [
+      {
+        "reporter": "Samuel Deetz",
+        "requirements": ["other"],
+        "citations": [
+          {
+            "description": "Duluth Unified Development Code",
+            "url": "https://cms4files.revize.com/duluth/UDCOctober2024.pdf",
+            "notes": "205.15(d)(5)\nPage 46",
+            "attachments": [],
+            "screenshots": [
+              {
+                "fileName": "duluth-ga-reduce-min-screenshot.png",
+                "directusId": "c0e2f418-1d01-4836-a56d-09324ff81dac"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "rm_min": [
+      {
+        "reporter": "Samuel Deetz",
+        "requirements": ["by right"],
+        "citations": [
+          {
+            "description": "Duluth Unified Development Code",
+            "url": "https://cms4files.revize.com/duluth/UDCOctober2024.pdf",
+            "notes": "205.15(d)(5)\nPage 46",
+            "attachments": [],
+            "screenshots": [
+              {
+                "fileName": "duluth-ga-remove-min-screenshot.png",
+                "directusId": "c0e2f418-1d01-4836-a56d-09324ff81dac"
+              }
+            ]
+          }
+        ]
+      }
+    ]
   },
   "Duluth, MN": {
     "legacy": {
@@ -28874,7 +29820,47 @@
           ]
         }
       ]
-    }
+    },
+    "add_max": [
+      {
+        "reporter": "Caleb Racicot",
+        "requirements": ["by right"],
+        "citations": [
+          {
+            "description": "City Zoning Code",
+            "url": "https://library.municode.com/ga/dunwoody/codes/code_of_ordinances?nodeId=PTIICOOR_CH27ZOOR_ARTIVGEAPRE_DIV1PACI",
+            "notes": "Sec. 27-202. - Maximum motor vehicle minimum bicycle parking ratios.",
+            "attachments": [],
+            "screenshots": [
+              {
+                "fileName": "dunwoody-ga-add-max-screenshot.png",
+                "directusId": "2ca20c76-598a-47f8-acbd-bc90a78c994f"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "rm_min": [
+      {
+        "reporter": "Caleb Racicot",
+        "requirements": ["by right"],
+        "citations": [
+          {
+            "description": "City Zoning Code",
+            "url": "https://library.municode.com/ga/dunwoody/codes/code_of_ordinances?nodeId=PTIICOOR_CH27ZOOR_ARTIVGEAPRE_DIV1PACI",
+            "notes": "Sec. 27-202. - Maximum motor vehicle minimum bicycle parking ratios.",
+            "attachments": [],
+            "screenshots": [
+              {
+                "fileName": "dunwoody-ga-remove-min-screenshot.png",
+                "directusId": "2ca20c76-598a-47f8-acbd-bc90a78c994f"
+              }
+            ]
+          }
+        ]
+      }
+    ]
   },
   "Durand, MI": {
     "reduce_min": [
@@ -31114,7 +32100,51 @@
           ]
         }
       ]
-    }
+    },
+    "add_max": [
+      {
+        "reporter": "Samuel Deetz",
+        "requirements": ["by right"],
+        "citations": [
+          {
+            "description": "Elgin Zoning Code",
+            "url": "https://library.municode.com/tx/elgin/codes/code_of_ordinances?nodeId=PTIICOOR_CH46ZO_ARTVSUDIRE_DIV5OREAUVEPALO_S46-635AMOREPALORE",
+            "notes": "Sec. 46-635.(c)",
+            "attachments": [],
+            "screenshots": [
+              {
+                "fileName": "elgin-tx-add-max-screenshot.png",
+                "directusId": "cda4127d-84ab-46b4-a159-925310191d6d"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "rm_min": [
+      {
+        "reporter": "Samuel Deetz",
+        "requirements": ["by right"],
+        "citations": [
+          {
+            "description": "Elgin Zoning Code",
+            "url": "https://library.municode.com/tx/elgin/codes/code_of_ordinances?nodeId=PTIICOOR_CH46ZO_ARTVSUDIRE_DIV5OREAUVEPALO_S46-635AMOREPALORE",
+            "notes": "ARTICLE V. - SUPPLEMENTARY DISTRICT REGULATIONS\nDIVISION 5. - OFF-STREET AUTOMOBILE AND VEHICLE PARKING AND LOADING\nSec. 46-635. - Amount of off-street parking and loading required.\n(a)\n(c)",
+            "attachments": [],
+            "screenshots": [
+              {
+                "fileName": "elgin-tx-remove-min-screenshot1.png",
+                "directusId": "887a6484-a5a9-4ed2-acfc-ec785dfd6a49"
+              },
+              {
+                "fileName": "elgin-tx-remove-min-screenshot2.png",
+                "directusId": "f2eae5b3-530d-43b1-b689-fbbf9543c441"
+              }
+            ]
+          }
+        ]
+      }
+    ]
   },
   "Elizabeth, CO": {
     "reduce_min": [
@@ -33872,7 +34902,75 @@
           ]
         }
       ]
-    }
+    },
+    "add_max": [
+      {
+        "reporter": "Samuel Deetz",
+        "requirements": ["by right"],
+        "citations": [
+          {
+            "description": "Fairfax County Zoning Code",
+            "url": "https://online.encodeplus.com/regs/fairfaxcounty-va/doc-viewer.aspx#secid-2575",
+            "notes": "Table 6100.10",
+            "attachments": [],
+            "screenshots": [
+              {
+                "fileName": "fairfax-county-va-add-max-screenshot.png",
+                "directusId": "1a93ef1f-7344-4351-b0ef-9889464c2a4e"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "reduce_min": [
+      {
+        "reporter": "Samuel Deetz",
+        "requirements": ["by right"],
+        "citations": [
+          {
+            "description": "News Article",
+            "url": "https://dcist.com/story/23/09/27/fairfax-supervisors-approve-plan-to-reduce-parking-requirements/",
+            "notes": null,
+            "attachments": [],
+            "screenshots": [
+              {
+                "fileName": "fairfax-county-va-reduce-min-citation1-screenshot.png",
+                "directusId": "9e1a0189-a929-49fa-80da-e48826976f20"
+              }
+            ]
+          },
+          {
+            "description": "Fairfax County Zoning Code",
+            "url": "https://online.encodeplus.com/regs/fairfaxcounty-va/doc-viewer.aspx#secid-575",
+            "notes": "6100.5",
+            "attachments": [],
+            "screenshots": [
+              {
+                "fileName": "fairfax-county-va-reduce-min-citation2-screenshot1.png",
+                "directusId": "bb450dc4-917c-4c19-b6b4-3aecbb977be0"
+              },
+              {
+                "fileName": "fairfax-county-va-reduce-min-citation2-screenshot2.png",
+                "directusId": "96e6033a-6873-4ed8-855e-5945a7140471"
+              },
+              {
+                "fileName": "fairfax-county-va-reduce-min-citation2-screenshot3.png",
+                "directusId": "6d5e00bc-26bc-408f-ac80-2d97cf316cf6"
+              },
+              {
+                "fileName": "fairfax-county-va-reduce-min-citation2-screenshot4.png",
+                "directusId": "677c9a29-29e1-4e63-925c-66d9911a9d27"
+              },
+              {
+                "fileName": "fairfax-county-va-reduce-min-citation2-screenshot5.png",
+                "directusId": "687e560d-784b-43d3-8e57-cbdb6b74f330"
+              }
+            ]
+          }
+        ]
+      }
+    ]
   },
   "Fairfax, IA": {
     "rm_min": [
@@ -35317,7 +36415,55 @@
           ]
         }
       ]
-    }
+    },
+    "reduce_min": [
+      {
+        "reporter": null,
+        "requirements": ["frequent transit", "other"],
+        "citations": [
+          {
+            "description": "Florida CS/CS/SB 328 Bill",
+            "url": "https://www.flsenate.gov/Session/Bill/2024/328/BillText/er/PDF",
+            "notes": "Pages 7, 12-13",
+            "attachments": [],
+            "screenshots": [
+              {
+                "fileName": "florida-fl-reduce-min-screenshot1.png",
+                "directusId": "84126dca-5baa-4649-afa8-1b582734c28e"
+              },
+              {
+                "fileName": "florida-fl-reduce-min-screenshot2.png",
+                "directusId": "91f15a08-ab3f-4cc3-806c-7fbbb2c9d211"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "rm_min": [
+      {
+        "reporter": null,
+        "requirements": ["frequent transit", "other"],
+        "citations": [
+          {
+            "description": "Florida CS/CS/SB 328 Bill",
+            "url": "https://www.flsenate.gov/Session/Bill/2024/328/BillText/er/PDF",
+            "notes": "Pages 7, 12-13",
+            "attachments": [],
+            "screenshots": [
+              {
+                "fileName": "florida-fl-remove-min-screenshot1.png",
+                "directusId": "84126dca-5baa-4649-afa8-1b582734c28e"
+              },
+              {
+                "fileName": "florida-fl-remove-min-screenshot2.png",
+                "directusId": "91f15a08-ab3f-4cc3-806c-7fbbb2c9d211"
+              }
+            ]
+          }
+        ]
+      }
+    ]
   },
   "Florissant, MO": {
     "add_max": [
@@ -36143,7 +37289,47 @@
           ]
         }
       ]
-    }
+    },
+    "reduce_min": [
+      {
+        "reporter": "Maggie Kochman",
+        "requirements": ["other", "size of project"],
+        "citations": [
+          {
+            "description": "City Code\n",
+            "url": "https://library.municode.com/fl/fort_lauderdale/codes/unified_land_development_code?nodeId=UNLADERE_CH47UNLADERE_ARTIIIDERE_S47-20PALORE",
+            "notes": "47-20.2. Parking and loading zone requirements. Table 3\n",
+            "attachments": [],
+            "screenshots": [
+              {
+                "fileName": "fort-lauderdale-fl-reduce-min-screenshot.png",
+                "directusId": "53b9c338-40e0-43d9-8e57-a4f214907f7c"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "rm_min": [
+      {
+        "reporter": "Maggie Kochman",
+        "requirements": ["other", "size of project"],
+        "citations": [
+          {
+            "description": "City Code\n",
+            "url": "https://library.municode.com/fl/fort_lauderdale/codes/unified_land_development_code?nodeId=UNLADERE_CH47UNLADERE_ARTIIIDERE_S47-20PALORE",
+            "notes": "47-20.2. Parking and loading zone requirements. Table 3\n",
+            "attachments": [],
+            "screenshots": [
+              {
+                "fileName": "fort-lauderdale-fl-remove-min-screenshot.png",
+                "directusId": "53b9c338-40e0-43d9-8e57-a4f214907f7c"
+              }
+            ]
+          }
+        ]
+      }
+    ]
   },
   "Fort Lupton, CO": {
     "legacy": {
@@ -36341,7 +37527,47 @@
           ]
         }
       ]
-    }
+    },
+    "reduce_min": [
+      {
+        "reporter": "Samuel Deetz",
+        "requirements": ["other", "size of project"],
+        "citations": [
+          {
+            "description": "Fort Myers Zoning Code",
+            "url": "https://library.municode.com/fl/fort_myers/codes/code_of_ordinances?nodeId=SPBLADECO_CH118LAUSRE_ART4OVDI_118.4.4DRMALUKIJRBOVES.SHBO",
+            "notes": "118.4.4.3.B.3.",
+            "attachments": [],
+            "screenshots": [
+              {
+                "fileName": "fort-myers-fl-reduce-min-screenshot.png",
+                "directusId": "65cadc76-e0ec-4a01-9a97-064256f340e4"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "rm_min": [
+      {
+        "reporter": "Samuel Deetz",
+        "requirements": ["by right", "size of project"],
+        "citations": [
+          {
+            "description": "Fort Myers Zoning Code",
+            "url": "https://library.municode.com/fl/fort_myers/codes/code_of_ordinances?nodeId=SPBLADECO_CH118LAUSRE_ART4OVDI_118.4.4DRMALUKIJRBOVES.SHBO",
+            "notes": "118.4.4.2.A.4.",
+            "attachments": [],
+            "screenshots": [
+              {
+                "fileName": "fort-myers-fl-remove-min-screenshot.png",
+                "directusId": "eb458d37-0e34-45ab-a0f3-ac11fb77236a"
+              }
+            ]
+          }
+        ]
+      }
+    ]
   },
   "Fort Recovery, OH": {
     "rm_min": [
@@ -36648,7 +37874,62 @@
           "screenshots": []
         }
       ]
-    }
+    },
+    "add_max": [
+      {
+        "reporter": null,
+        "requirements": ["by right"],
+        "citations": [
+          {
+            "description": "Fort Worth Zoning Code",
+            "url": "https://codelibrary.amlegal.com/codes/ftworth/latest/ftworth_tx/0-0-0-38253",
+            "notes": "§ 6.201(b)(2)",
+            "attachments": [],
+            "screenshots": [
+              {
+                "fileName": "fort-worth-tx-add-max-screenshot.png",
+                "directusId": "4ae4c914-4b26-4795-912c-b7000809997f"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "rm_min": [
+      {
+        "reporter": null,
+        "requirements": ["by right", "historic preservation"],
+        "citations": [
+          {
+            "description": "6.201 subsection (b)(1-3)",
+            "url": "https://www.fortworthtexas.gov/files/assets/public/development-services/documents/subdivision-fencing.pdf",
+            "notes": null,
+            "attachments": [],
+            "screenshots": []
+          },
+          {
+            "description": "Fort Worth Zoning Code",
+            "url": "https://codelibrary.amlegal.com/codes/ftworth/latest/ftworth_tx/0-0-0-38243",
+            "notes": "§ 6.200(d);\n§ 6.201(b)(1);\n§ 6.201(b)(3)",
+            "attachments": [],
+            "screenshots": [
+              {
+                "fileName": "fort-worth-tx-remove-min-citation2-screenshot1.png",
+                "directusId": "3714e409-5aab-4155-9110-5d79d05b4f14"
+              },
+              {
+                "fileName": "fort-worth-tx-remove-min-citation2-screenshot2.png",
+                "directusId": "9228d4cc-d96b-4c1b-8a8e-405a6516973e"
+              },
+              {
+                "fileName": "fort-worth-tx-remove-min-citation2-screenshot3.png",
+                "directusId": "4b8764db-ea21-4c81-a245-e3ecf9c29cce"
+              }
+            ]
+          }
+        ]
+      }
+    ]
   },
   "Fort Wright, KY": {
     "reduce_min": [
@@ -41392,7 +42673,47 @@
           ]
         }
       ]
-    }
+    },
+    "add_max": [
+      {
+        "reporter": "Samuel Deetz",
+        "requirements": ["by right", "size of project"],
+        "citations": [
+          {
+            "description": "Grand Prairie Unified Development Code",
+            "url": "https://www.gptx.org/files/sharedassets/public/v/3/departments/planning/documents/article-10-parking-and-loading-standards-01.17.23.pdf",
+            "notes": "10.7.2.A. \nPage 11",
+            "attachments": [],
+            "screenshots": [
+              {
+                "fileName": "grand-prairie-tx-add-max-screenshot.png",
+                "directusId": "baa818a0-eacb-4221-ab10-c4b641044872"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "reduce_min": [
+      {
+        "reporter": "Samuel Deetz",
+        "requirements": ["by right", "other"],
+        "citations": [
+          {
+            "description": "Grand Prairie Unified Development Code",
+            "url": "https://www.gptx.org/files/sharedassets/public/v/3/departments/planning/documents/article-10-parking-and-loading-standards-01.17.23.pdf",
+            "notes": "10.2.2\nPage 3",
+            "attachments": [],
+            "screenshots": [
+              {
+                "fileName": "grand-prairie-tx-reduce-min-screenshot.png",
+                "directusId": "7c84e28e-109f-4106-a431-3e8309437c1e"
+              }
+            ]
+          }
+        ]
+      }
+    ]
   },
   "Grand Rapids, MI": {
     "legacy": {
@@ -42091,7 +43412,88 @@
           ]
         }
       ]
-    }
+    },
+    "add_max": [
+      {
+        "reporter": "Samuel Deetz",
+        "requirements": ["by right"],
+        "citations": [
+          {
+            "description": "Graymoor-Devondale Land Development Code",
+            "url": "https://louisvilleky.gov/office-planning/document/graymoor-devondaleldcmarch2006pdf",
+            "notes": "9.1.3.F. \nPages 804, 807-826",
+            "attachments": [],
+            "screenshots": [
+              {
+                "fileName": "graymoor-devondale-ky-add-max-screenshot1.png",
+                "directusId": "9010b03e-b969-4ae8-9c31-b6e6971528e4"
+              },
+              {
+                "fileName": "graymoor-devondale-ky-add-max-screenshot2.png",
+                "directusId": "c9b77a44-53ce-4074-8cc0-c7e0842845ea"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "reduce_min": [
+      {
+        "reporter": "Samuel Deetz",
+        "requirements": [
+          "frequent transit",
+          "historic preservation",
+          "other",
+          "size of project"
+        ],
+        "citations": [
+          {
+            "description": "Graymoor-Devondale Land Development Code",
+            "url": "https://louisvilleky.gov/office-planning/document/graymoor-devondaleldcmarch2006pdf",
+            "notes": "9.1.3.F.\nPages 804-806",
+            "attachments": [],
+            "screenshots": [
+              {
+                "fileName": "graymoor-devondale-ky-reduce-min-screenshot1.png",
+                "directusId": "8446ad20-1c18-4c1c-89d4-bc837728f4c0"
+              },
+              {
+                "fileName": "graymoor-devondale-ky-reduce-min-screenshot2.png",
+                "directusId": "ea9c81fb-0e9c-4744-9184-2264746fd667"
+              },
+              {
+                "fileName": "graymoor-devondale-ky-reduce-min-screenshot3.png",
+                "directusId": "0a2abf74-d00d-4b34-a07b-b501815d435b"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "rm_min": [
+      {
+        "reporter": "Samuel Deetz",
+        "requirements": ["by right"],
+        "citations": [
+          {
+            "description": "Graymoor-Devondale Land Development Code",
+            "url": "https://louisvilleky.gov/office-planning/document/graymoor-devondaleldcmarch2006pdf",
+            "notes": "9.1.3.F. \nPages 804-805",
+            "attachments": [],
+            "screenshots": [
+              {
+                "fileName": "graymoor-devondale-ky-remove-min-screenshot1.png",
+                "directusId": "8fa2bb99-6029-437f-a97b-c5acf3fd561e"
+              },
+              {
+                "fileName": "graymoor-devondale-ky-remove-min-screenshot2.png",
+                "directusId": "70ca0310-6abc-461c-8688-a82da13e62e3"
+              }
+            ]
+          }
+        ]
+      }
+    ]
   },
   "Grayslake, IL": {
     "rm_min": [
@@ -42137,7 +43539,47 @@
           ]
         }
       ]
-    }
+    },
+    "add_max": [
+      {
+        "reporter": "Samuel Deetz",
+        "requirements": ["by right"],
+        "citations": [
+          {
+            "description": "Grayson Zoning Code",
+            "url": "https://cityofgrayson.org/wp-content/uploads/2023/12/Grayson-Zoning-Ordinance-Revised-12-18-23.pdf",
+            "notes": "SECTION 1302.C. \nPage 111",
+            "attachments": [],
+            "screenshots": [
+              {
+                "fileName": "grayson-ga-add-max-screenshot.png",
+                "directusId": "a7e005c0-a350-4162-ac4e-227e832a2076"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "rm_min": [
+      {
+        "reporter": "Samuel Deetz",
+        "requirements": ["by right"],
+        "citations": [
+          {
+            "description": "Grayson Zoning Code",
+            "url": "https://cityofgrayson.org/wp-content/uploads/2023/12/Grayson-Zoning-Ordinance-Revised-12-18-23.pdf",
+            "notes": "SECTION 1300\nPages 109",
+            "attachments": [],
+            "screenshots": [
+              {
+                "fileName": "grayson-ga-remove-min-screenshot.png",
+                "directusId": "4a977b3c-40f5-4018-8082-b27df228c507"
+              }
+            ]
+          }
+        ]
+      }
+    ]
   },
   "Great Falls, MT": {
     "legacy": {
@@ -44043,7 +45485,92 @@
           ]
         }
       ]
-    }
+    },
+    "add_max": [
+      {
+        "reporter": "Samuel Deetz",
+        "requirements": ["by right"],
+        "citations": [
+          {
+            "description": "Hampton Zoning Code",
+            "url": "https://library.municode.com/va/hampton/codes/zoning?nodeId=CH11PA_S11-4MAPA",
+            "notes": "Sec. 11-4.",
+            "attachments": [],
+            "screenshots": [
+              {
+                "fileName": "hampton-va-add-max-screenshot.png",
+                "directusId": "7ebe057e-069b-4fbd-b929-990bf610022d"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "reduce_min": [
+      {
+        "reporter": "Samuel Deetz",
+        "requirements": ["other", "size of project"],
+        "citations": [
+          {
+            "description": "Hampton Zoning Code",
+            "url": "https://library.municode.com/va/hampton/codes/zoning?nodeId=CH11PA_S11-8PACREXRE",
+            "notes": "Sec. 11-8.(2)(a);\nSec. 11-8.(6)",
+            "attachments": [],
+            "screenshots": [
+              {
+                "fileName": "hampton-va-reduce-min-screenshot1.png",
+                "directusId": "78e17c2c-1703-4c52-8ff3-9b692d904bcd"
+              },
+              {
+                "fileName": "hampton-va-reduce-min-screenshot2.png",
+                "directusId": "ff735f14-6325-41d6-8162-a579ee513167"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "rm_min": [
+      {
+        "reporter": "Samuel Deetz",
+        "requirements": [
+          "bike parking",
+          "by right",
+          "other",
+          "size of project"
+        ],
+        "citations": [
+          {
+            "description": "Hampton File 24-0160",
+            "url": "https://hampton.legistar.com/LegislationDetail.aspx?ID=6657549&GUID=F8299056-EAAC-4069-A115-19BC91E56E2C",
+            "notes": "Redline Ordinance",
+            "attachments": [],
+            "screenshots": [
+              {
+                "fileName": "hampton-va-remove-min-citation1-screenshot.png",
+                "directusId": "5dc50fdd-28e6-49b3-b6ad-31c58cf1cf04"
+              }
+            ]
+          },
+          {
+            "description": "Hampton Zoning Code",
+            "url": "https://library.municode.com/va/hampton/codes/zoning?nodeId=CH11PA_S11-8PACREXRE",
+            "notes": "Sec. 11-8.(4);\nSec. 11-8.(6)",
+            "attachments": [],
+            "screenshots": [
+              {
+                "fileName": "hampton-va-remove-min-citation2-screenshot1.png",
+                "directusId": "441e08fa-a292-47eb-ab02-cd11c71dbdb4"
+              },
+              {
+                "fileName": "hampton-va-remove-min-citation2-screenshot2.png",
+                "directusId": "25fb128c-7592-4d72-9245-c15622c7ccf0"
+              }
+            ]
+          }
+        ]
+      }
+    ]
   },
   "Hamtramck, MI": {
     "rm_min": [
@@ -47083,7 +48610,71 @@
           ]
         }
       ]
-    }
+    },
+    "add_max": [
+      {
+        "reporter": "Samuel Deetz",
+        "requirements": ["by right"],
+        "citations": [
+          {
+            "description": "Hollywood Zoning Code",
+            "url": "https://codehub.gridics.com/us/fl/hollywood#/2bc753b0-c817-44be-b214-5dd108307f09/b1f5c6a9-60b0-4f51-8f29-1cd7c80ba939/b9f325e8-0ceb-425d-b1f3-ed4c39d630ec",
+            "notes": "§ 4.6.B.c.c.",
+            "attachments": [],
+            "screenshots": [
+              {
+                "fileName": "hollywood-fl-add-max-screenshot.png",
+                "directusId": "aa5f4661-e3ef-4a80-904d-2a53a9da6971"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "reduce_min": [
+      {
+        "reporter": "Samuel Deetz",
+        "requirements": ["by right", "in-lieu fees"],
+        "citations": [
+          {
+            "description": "Hollywood Zoning Code",
+            "url": "https://codehub.gridics.com/us/fl/hollywood#/2bc753b0-c817-44be-b214-5dd108307f09/b1f5c6a9-60b0-4f51-8f29-1cd7c80ba939/b9f325e8-0ceb-425d-b1f3-ed4c39d630ec",
+            "notes": "ARTICLE 4:  SCHEDULE OF DISTRICT, USE AND SETBACK REGULATIONS\n§ 4.6  Regional Activity Center, Downtown and Beach Community Redevelopment, and Transit Oriented Corridor Districts.\nB.3.c.\nARTICLE 7:  OFF-STREET PARKING AND LOADING\n§ 7.4.  Parking Payment in Lieu of Providing Parking Program.",
+            "attachments": [],
+            "screenshots": [
+              {
+                "fileName": "hollywood-fl-reduce-min-screenshot1.png",
+                "directusId": "d7ac24d3-7e3b-40cf-9634-6daf7d0650ee"
+              },
+              {
+                "fileName": "hollywood-fl-reduce-min-screenshot2.png",
+                "directusId": "7334a25c-acc9-4bf7-a371-7e709e96303b"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "rm_min": [
+      {
+        "reporter": "Samuel Deetz",
+        "requirements": ["by right", "size of project"],
+        "citations": [
+          {
+            "description": "Hollywood Zoning Code",
+            "url": "https://codehub.gridics.com/us/fl/hollywood#/2bc753b0-c817-44be-b214-5dd108307f09/2369fa19-88b7-454a-8dbd-97bdbc8706c9/5cf6dbab-bcaa-4e36-bd61-c23279a4247c/92a2bd77-5b8a-4452-a933-73d3a2302c7b",
+            "notes": "§ 4.6.B.c.c.",
+            "attachments": [],
+            "screenshots": [
+              {
+                "fileName": "hollywood-fl-remove-min-screenshot.png",
+                "directusId": "99c162cb-45e9-40af-89db-8f928cdb0172"
+              }
+            ]
+          }
+        ]
+      }
+    ]
   },
   "Holmen, WI": {
     "reduce_min": [
@@ -48422,7 +50013,88 @@
           ]
         }
       ]
-    }
+    },
+    "add_max": [
+      {
+        "reporter": "Samuel Deetz",
+        "requirements": ["by right"],
+        "citations": [
+          {
+            "description": "Hurstbourne Land Development Code",
+            "url": "https://louisvilleky.gov/office-planning/document/hurstbourneldcmarch2006pdf",
+            "notes": "9.1.3.F. \nPages 813, 816-835",
+            "attachments": [],
+            "screenshots": [
+              {
+                "fileName": "hurstbourne-ky-add-max-screenshot1.png",
+                "directusId": "a6f0e5fb-db0d-4dad-af8f-9eb3c177f013"
+              },
+              {
+                "fileName": "hurstbourne-ky-add-max-screenshot2.png",
+                "directusId": "9363d0ae-0336-4995-9938-10aacb1102c5"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "reduce_min": [
+      {
+        "reporter": "Samuel Deetz",
+        "requirements": [
+          "frequent transit",
+          "historic preservation",
+          "other",
+          "size of project"
+        ],
+        "citations": [
+          {
+            "description": "Hurstbourne Land Development Code",
+            "url": "https://louisvilleky.gov/office-planning/document/hurstbourneldcmarch2006pdf",
+            "notes": "9.1.3.F.\nPages 813-815",
+            "attachments": [],
+            "screenshots": [
+              {
+                "fileName": "hurstbourne-ky-reduce-min-screenshot1.png",
+                "directusId": "df994dd7-6351-460c-85ea-57e5976739ba"
+              },
+              {
+                "fileName": "hurstbourne-ky-reduce-min-screenshot2.png",
+                "directusId": "3a5824b5-28c8-41a7-825f-638833b7634b"
+              },
+              {
+                "fileName": "hurstbourne-ky-reduce-min-screenshot3.png",
+                "directusId": "5a533c40-f647-401e-8447-b1a5be691e64"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "rm_min": [
+      {
+        "reporter": "Samuel Deetz",
+        "requirements": ["by right"],
+        "citations": [
+          {
+            "description": "Hurstbourne Land Development Code",
+            "url": "https://louisvilleky.gov/office-planning/document/hurstbourneldcmarch2006pdf",
+            "notes": "9.1.3.F. \nPages 813-814",
+            "attachments": [],
+            "screenshots": [
+              {
+                "fileName": "hurstbourne-ky-remove-min-screenshot1.png",
+                "directusId": "9b461517-40a1-495f-bfb0-15320c44d180"
+              },
+              {
+                "fileName": "hurstbourne-ky-remove-min-screenshot2.png",
+                "directusId": "40953940-1e38-458c-8eba-5ccc9bb08fc0"
+              }
+            ]
+          }
+        ]
+      }
+    ]
   },
   "Hustisford, WI": {
     "rm_min": [
@@ -48768,7 +50440,47 @@
           ]
         }
       ]
-    }
+    },
+    "reduce_min": [
+      {
+        "reporter": "Samuel Deetz",
+        "requirements": ["size of project"],
+        "citations": [
+          {
+            "description": "Indian Hills Zoning Code",
+            "url": "https://louisvilleky.gov/office-planning/document/indianhillsdcdecember2003pdf",
+            "notes": "Section 10.1.N.\nPage 423",
+            "attachments": [],
+            "screenshots": [
+              {
+                "fileName": "indian-hills-ky-reduce-min-screenshot.png",
+                "directusId": "60c08e4e-7231-4858-b5dd-44ae1d17fd0b"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "rm_min": [
+      {
+        "reporter": "Samuel Deetz",
+        "requirements": ["by right"],
+        "citations": [
+          {
+            "description": "Indian Hills Zoning Code",
+            "url": "https://louisvilleky.gov/office-planning/document/indianhillsdcdecember2003pdf",
+            "notes": "Section 10.1\nPage 415",
+            "attachments": [],
+            "screenshots": [
+              {
+                "fileName": "indian-hills-ky-remove-min-screenshot.png",
+                "directusId": "75fe0f09-00dd-4c4c-a74f-037251416881"
+              }
+            ]
+          }
+        ]
+      }
+    ]
   },
   "Indian Trail, NC": {
     "legacy": {
@@ -50195,7 +51907,79 @@
           ]
         }
       ]
-    }
+    },
+    "add_max": [
+      {
+        "reporter": "Samuel Deetz",
+        "requirements": ["by right"],
+        "citations": [
+          {
+            "description": "Jeffersontown Land Development Code",
+            "url": "https://www.jeffersontownky.com/DocumentCenter/View/2921/C09JtownApp_May2021",
+            "notes": "9.1.3.A. \nPages 5, 7-18",
+            "attachments": [],
+            "screenshots": [
+              {
+                "fileName": "jeffersontown-ky-add-max-screenshot1.png",
+                "directusId": "bb828a84-e666-44db-b35c-e7871e34fc67"
+              },
+              {
+                "fileName": "jeffersontown-ky-add-max-screenshot2.png",
+                "directusId": "c68b2b4a-2b48-4eca-9c1c-720d58411a39"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "reduce_min": [
+      {
+        "reporter": "Samuel Deetz",
+        "requirements": ["frequent transit", "historic preservation", "other"],
+        "citations": [
+          {
+            "description": "Jeffersontown Land Development Code",
+            "url": "https://www.jeffersontownky.com/DocumentCenter/View/2921/C09JtownApp_May2021",
+            "notes": "9.1.3 Calculating Parking Requirements / Allowances\nE.\nF.\nPages 5-6",
+            "attachments": [],
+            "screenshots": [
+              {
+                "fileName": "jeffersontown-ky-reduce-min-screenshot1.png",
+                "directusId": "50f8ab2c-0ec3-446c-a637-474a5b679b46"
+              },
+              {
+                "fileName": "jeffersontown-ky-reduce-min-screenshot2.png",
+                "directusId": "3071b339-be9d-456a-aae3-c26007858d52"
+              },
+              {
+                "fileName": "jeffersontown-ky-reduce-min-screenshot3.png",
+                "directusId": "febabe86-5950-44a5-8704-fd9ad44c54a5"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "rm_min": [
+      {
+        "reporter": "Samuel Deetz",
+        "requirements": ["by right"],
+        "citations": [
+          {
+            "description": "Jeffersontown Land Development Code",
+            "url": "https://www.jeffersontownky.com/DocumentCenter/View/2921/C09JtownApp_May2021",
+            "notes": "9.1.3.A. \nPage 5",
+            "attachments": [],
+            "screenshots": [
+              {
+                "fileName": "jeffersontown-ky-remove-min-screenshot.png",
+                "directusId": "e645b94d-33bf-43a6-a4df-aeb67fa5a965"
+              }
+            ]
+          }
+        ]
+      }
+    ]
   },
   "Jeffersonville, IN": {
     "legacy": {
@@ -59859,7 +61643,85 @@
           ]
         }
       ]
-    }
+    },
+    "add_max": [
+      {
+        "reporter": null,
+        "requirements": ["by right"],
+        "citations": [
+          {
+            "description": "Louisville Land Development Code",
+            "url": "https://louisvilleky.gov/office-planning/document/louisville-metro-land-development-code-october-2023",
+            "notes": "9.1.3.\nPages 689, 691-697",
+            "attachments": [],
+            "screenshots": [
+              {
+                "fileName": "louisville-ky-add-max-screenshot1.jpg",
+                "directusId": "f7e6acaa-6d1d-41ba-b4d3-76aba4106922"
+              },
+              {
+                "fileName": "louisville-ky-add-max-screenshot2.png",
+                "directusId": "b194054b-a071-49c9-b104-cdd3a7fa4a70"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "reduce_min": [
+      {
+        "reporter": null,
+        "requirements": [
+          "frequent transit",
+          "historic preservation",
+          "other",
+          "size of project",
+          "tree preservation"
+        ],
+        "citations": [
+          {
+            "description": "Louisville Land Development Code",
+            "url": "https://louisvilleky.gov/office-planning/document/louisville-metro-land-development-code-october-2023",
+            "notes": "9.1.3\nPages 689-690",
+            "attachments": [],
+            "screenshots": [
+              {
+                "fileName": "louisville-ky-reduce-min-screenshot1.jpg",
+                "directusId": "e6482341-20a7-4082-9b44-d98d52297f6c"
+              },
+              {
+                "fileName": "louisville-ky-reduce-min-screenshot2.jpg",
+                "directusId": "14591c39-f976-44f8-8720-ca5f74c1e3c5"
+              },
+              {
+                "fileName": "louisville-ky-reduce-min-screenshot3.png",
+                "directusId": "65059605-0135-4616-ae48-2f1e70d0d24d"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "rm_min": [
+      {
+        "reporter": null,
+        "requirements": ["by right"],
+        "citations": [
+          {
+            "description": "Louisville Land Development Code",
+            "url": "https://louisvilleky.gov/office-planning/document/louisville-metro-land-development-code-october-2023",
+            "notes": "Table 9.1.3A\nPage 689",
+            "attachments": [],
+            "screenshots": [
+              {
+                "fileName": "louisville-ky-remove-min-screenshot.jpg",
+                "directusId": "a643de0c-5427-464c-891e-87874b53bbac"
+              }
+            ]
+          }
+        ]
+      }
+    ]
   },
   "Louisville, MS": {
     "rm_min": [
@@ -60413,6 +62275,134 @@
               {
                 "fileName": "lyndon-ks-screenshot.png",
                 "directusId": "84dd170b-41b6-4c01-ba39-c7bf63593856"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "Lyndon, KY": {
+    "legacy": {
+      "reporter": "Samuel Deetz",
+      "requirements": ["by right", "frequent transit", "other"],
+      "citations": [
+        {
+          "description": "Lyndon Land Development Code",
+          "url": "https://louisvilleky.gov/office-planning/document/lyndonldcfinal-2016-02-22pdf",
+          "notes": "9.1.3.\nPages 631, 633-644",
+          "attachments": [],
+          "screenshots": [
+            {
+              "fileName": "lyndon-ky-citation1-screenshot1.png",
+              "directusId": "1abf606a-5a75-4637-8bbc-dc3a1105779e"
+            },
+            {
+              "fileName": "lyndon-ky-citation1-screenshot2.png",
+              "directusId": "567d95db-6295-438c-a31d-0942c518f5dc"
+            }
+          ]
+        },
+        {
+          "description": "Lyndon Land Development Code",
+          "url": "https://louisvilleky.gov/office-planning/document/lyndonldcfinal-2016-02-22pdf",
+          "notes": "9.1.3\nPages 631-632",
+          "attachments": [],
+          "screenshots": [
+            {
+              "fileName": "lyndon-ky-citation2-screenshot1.png",
+              "directusId": "60ede145-3f99-4616-aab5-dbe7b60f0c79"
+            },
+            {
+              "fileName": "lyndon-ky-citation2-screenshot2.png",
+              "directusId": "ee317d3d-ed45-420a-82da-dca100a812d2"
+            },
+            {
+              "fileName": "lyndon-ky-citation2-screenshot3.png",
+              "directusId": "02ee27b0-4835-4e1e-97a3-75e9724c4827"
+            }
+          ]
+        },
+        {
+          "description": "Lyndon Land Development Code",
+          "url": "https://louisvilleky.gov/office-planning/document/lyndonldcfinal-2016-02-22pdf",
+          "notes": "Table 9.1.1\nPage 631",
+          "attachments": [],
+          "screenshots": [
+            {
+              "fileName": "lyndon-ky-citation3-screenshot.png",
+              "directusId": "8e4fede6-63d6-48ae-9f15-303689763e95"
+            }
+          ]
+        }
+      ]
+    },
+    "add_max": [
+      {
+        "reporter": "Samuel Deetz",
+        "requirements": ["by right"],
+        "citations": [
+          {
+            "description": "Lyndon Land Development Code",
+            "url": "https://louisvilleky.gov/office-planning/document/lyndonldcfinal-2016-02-22pdf",
+            "notes": "9.1.3.\nPages 631, 633-644",
+            "attachments": [],
+            "screenshots": [
+              {
+                "fileName": "lyndon-ky-add-max-screenshot1.png",
+                "directusId": "1abf606a-5a75-4637-8bbc-dc3a1105779e"
+              },
+              {
+                "fileName": "lyndon-ky-add-max-screenshot2.png",
+                "directusId": "567d95db-6295-438c-a31d-0942c518f5dc"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "reduce_min": [
+      {
+        "reporter": "Samuel Deetz",
+        "requirements": ["frequent transit", "historic preservation", "other"],
+        "citations": [
+          {
+            "description": "Lyndon Land Development Code",
+            "url": "https://louisvilleky.gov/office-planning/document/lyndonldcfinal-2016-02-22pdf",
+            "notes": "9.1.3\nPages 631-632",
+            "attachments": [],
+            "screenshots": [
+              {
+                "fileName": "lyndon-ky-reduce-min-screenshot1.png",
+                "directusId": "60ede145-3f99-4616-aab5-dbe7b60f0c79"
+              },
+              {
+                "fileName": "lyndon-ky-reduce-min-screenshot2.png",
+                "directusId": "ee317d3d-ed45-420a-82da-dca100a812d2"
+              },
+              {
+                "fileName": "lyndon-ky-reduce-min-screenshot3.png",
+                "directusId": "02ee27b0-4835-4e1e-97a3-75e9724c4827"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "rm_min": [
+      {
+        "reporter": "Samuel Deetz",
+        "requirements": ["by right"],
+        "citations": [
+          {
+            "description": "Lyndon Land Development Code",
+            "url": "https://louisvilleky.gov/office-planning/document/lyndonldcfinal-2016-02-22pdf",
+            "notes": "Table 9.1.1\nPage 631",
+            "attachments": [],
+            "screenshots": [
+              {
+                "fileName": "lyndon-ky-remove-min-screenshot.png",
+                "directusId": "8e4fede6-63d6-48ae-9f15-303689763e95"
               }
             ]
           }
@@ -63880,7 +65870,79 @@
           ]
         }
       ]
-    }
+    },
+    "reduce_min": [
+      {
+        "reporter": "Samuel Deetz",
+        "requirements": ["by right", "tree preservation"],
+        "citations": [
+          {
+            "description": "McKinney Unified Development Code",
+            "url": "https://www.mckinneytexas.org/DocumentCenter/View/33728/Unified-Development-code-10172023?bidId=",
+            "notes": "Article 2: Zoning Regulations\n206 Development Standards\nE.4.e.\nAppendix 2B: McKinney Town Center MTC\n7. BUILDING FORM AND SITE DEVELOPMENT STANDARDS\n7.1 Historic Core\n7.1.5(iii)\n7.2 Downtown Core\n7.2.5(iii)\n7.3 Downtown Edge\n7.3.5(ii)\n7.4 Transit Village Core\n7.4.5(iii)\n7.5 Transit Village Edge\n7.5.5(ii)\n7.6 Cotton Mill Core\n7.6.6(iii)\n7.7 Cotton Mill Edge\n7.7.5(ii)\nPages 168, 225, 229, 233, 237, 241, 245, 249",
+            "attachments": [],
+            "screenshots": [
+              {
+                "fileName": "mc-kinney-tx-reduce-min-screenshot1.png",
+                "directusId": "a7d4bc45-2970-479b-b669-d800581c3d9f"
+              },
+              {
+                "fileName": "mc-kinney-tx-reduce-min-screenshot2.png",
+                "directusId": "3f484b91-c988-47ff-ba23-0269f9e25f73"
+              },
+              {
+                "fileName": "mc-kinney-tx-reduce-min-screenshot3.png",
+                "directusId": "b992daaf-6eb8-43ca-8af0-df77d0ac6939"
+              },
+              {
+                "fileName": "mc-kinney-tx-reduce-min-screenshot4.png",
+                "directusId": "4b7f030c-3f03-45e0-b53e-aaca92d01217"
+              },
+              {
+                "fileName": "mc-kinney-tx-reduce-min-screenshot5.png",
+                "directusId": "ffc3a330-2b3a-43bf-8a6f-f175c236c323"
+              },
+              {
+                "fileName": "mc-kinney-tx-reduce-min-screenshot6.png",
+                "directusId": "5370a220-8528-4207-b329-f5f4718d79a4"
+              },
+              {
+                "fileName": "mc-kinney-tx-reduce-min-screenshot7.png",
+                "directusId": "4bddd324-a3b9-45a3-afb2-f608e6f7ad8e"
+              },
+              {
+                "fileName": "mc-kinney-tx-reduce-min-screenshot8.png",
+                "directusId": "f7606c15-e34b-49a1-a53c-b958ef50bf6e"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "rm_min": [
+      {
+        "reporter": "Samuel Deetz",
+        "requirements": ["by right"],
+        "citations": [
+          {
+            "description": "McKinney Unified Development Code",
+            "url": "https://www.mckinneytexas.org/DocumentCenter/View/33728/Unified-Development-Code-06042024?bidId=",
+            "notes": "Appendix 2B: 7.1.5(iii);\nAppendix 2B: 7.2.5(iii);\nPages 225, 229",
+            "attachments": [],
+            "screenshots": [
+              {
+                "fileName": "mc-kinney-tx-remove-min-screenshot1.png",
+                "directusId": "75ae632d-4f51-419f-88c6-c3523de1e660"
+              },
+              {
+                "fileName": "mc-kinney-tx-remove-min-screenshot2.png",
+                "directusId": "1e01e716-1c8f-4210-9d3b-df1a984b7988"
+              }
+            ]
+          }
+        ]
+      }
+    ]
   },
   "McPherson, KS": {
     "rm_min": [
@@ -64142,7 +66204,47 @@
           ]
         }
       ]
-    }
+    },
+    "reduce_min": [
+      {
+        "reporter": "Samuel Deetz",
+        "requirements": ["in-lieu fees"],
+        "citations": [
+          {
+            "description": "Melbourne Land Development Code",
+            "url": "https://library.municode.com/fl/melbourne/codes/code_of_ordinances?nodeId=PTIIILADERE_APXDLADECO_CH9DESTBURE_ARTVPALORE_S9.72LAUSTYOREPARARE",
+            "notes": "Sec. 9.72.(a)(57)(E)",
+            "attachments": [],
+            "screenshots": [
+              {
+                "fileName": "melbourne-fl-reduce-min-screenshot.png",
+                "directusId": "3bce8741-708d-4f21-bb7c-fc25c216c576"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "rm_min": [
+      {
+        "reporter": "Samuel Deetz",
+        "requirements": ["accessory dwelling units"],
+        "citations": [
+          {
+            "description": "Melbourne Land Development Code",
+            "url": "https://library.municode.com/fl/melbourne/codes/code_of_ordinances?nodeId=PTIIILADERE_APXDLADECO_CH9DESTBURE_ARTVPALORE_S9.72LAUSTYOREPARARE",
+            "notes": "Sec. 9.72.(a)(57)(A)",
+            "attachments": [],
+            "screenshots": [
+              {
+                "fileName": "melbourne-fl-remove-min-screenshot.png",
+                "directusId": "98cffef5-7eee-4d3e-b9a9-a3cf1b1ad171"
+              }
+            ]
+          }
+        ]
+      }
+    ]
   },
   "Memphis, MI": {
     "rm_min": [
@@ -73673,7 +75775,47 @@
           ]
         }
       ]
-    }
+    },
+    "add_max": [
+      {
+        "reporter": "Samuel Deetz",
+        "requirements": ["by right"],
+        "citations": [
+          {
+            "description": "Norcross Unified Development Ordinance",
+            "url": "https://www.norcrossga.net/DocumentCenter/View/3558/2020-02-10-Norcross-UDO---updated?bidId=",
+            "notes": "Sec. 203-8.\nPage 225",
+            "attachments": [],
+            "screenshots": [
+              {
+                "fileName": "norcross-ga-add-max-screenshot.png",
+                "directusId": "35ab6598-24aa-4471-ab1b-3d0656092728"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "reduce_min": [
+      {
+        "reporter": "Samuel Deetz",
+        "requirements": ["carshare", "frequent transit", "other"],
+        "citations": [
+          {
+            "description": "Norcross Unified Development Ordinance",
+            "url": "https://www.norcrossga.net/DocumentCenter/View/3558/2020-02-10-Norcross-UDO---updated?bidId=",
+            "notes": "Sec. 203-10.\nPages 228-229",
+            "attachments": [],
+            "screenshots": [
+              {
+                "fileName": "norcross-ga-reduce-min-screenshot.png",
+                "directusId": "58ed850b-cde0-46cc-b718-533007c01dd5"
+              }
+            ]
+          }
+        ]
+      }
+    ]
   },
   "Norfolk, NE": {
     "rm_min": [
@@ -76999,7 +79141,75 @@
           ]
         }
       ]
-    }
+    },
+    "add_max": [
+      {
+        "reporter": "Samuel Deetz",
+        "requirements": ["by right"],
+        "citations": [
+          {
+            "description": "Orlando Roadway Design & Access Management Code",
+            "url": "https://library.municode.com/fl/orlando/codes/code_of_ordinances?nodeId=TITIICICO_CH61RODEACMA_PT3PALO_3CNUPASP_S61.322PASPRE",
+            "notes": "Sec. 61.322. FIGURE 27.",
+            "attachments": [],
+            "screenshots": [
+              {
+                "fileName": "orlando-fl-add-max-screenshot.png",
+                "directusId": "f932b82b-b5e4-4e07-8ce1-c95fb4339373"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "reduce_min": [
+      {
+        "reporter": "Samuel Deetz",
+        "requirements": ["by right"],
+        "citations": [
+          {
+            "description": "Orlando Roadway Design & Access Management Code",
+            "url": "https://library.municode.com/fl/orlando/codes/code_of_ordinances?nodeId=TITIICICO_CH61RODEACMA_PT3PALO_3ECIORDOPAPR_S61.342PARE",
+            "notes": "Sec. 61.342.",
+            "attachments": [],
+            "screenshots": [
+              {
+                "fileName": "orlando-fl-reduce-min-screenshot1.png",
+                "directusId": "604c5e35-e2fd-44d3-b98f-9727fd9a9efb"
+              },
+              {
+                "fileName": "orlando-fl-reduce-min-screenshot2.png",
+                "directusId": "ccc903f1-e6f9-4f45-a6a7-280cfcc314d4"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "rm_min": [
+      {
+        "reporter": "Samuel Deetz",
+        "requirements": ["by right"],
+        "citations": [
+          {
+            "description": "Orlando Roadway Design & Access Management Code",
+            "url": "https://library.municode.com/fl/orlando/codes/code_of_ordinances?nodeId=TITIICICO_CH61RODEACMA_PT3PALO_3ECIORDOPAPR_S61.342PARE",
+            "notes": "Sec. 61.342.",
+            "attachments": [],
+            "screenshots": [
+              {
+                "fileName": "orlando-fl-remove-min-screenshot1.png",
+                "directusId": "604c5e35-e2fd-44d3-b98f-9727fd9a9efb"
+              },
+              {
+                "fileName": "orlando-fl-remove-min-screenshot2.png",
+                "directusId": "ccc903f1-e6f9-4f45-a6a7-280cfcc314d4"
+              }
+            ]
+          }
+        ]
+      }
+    ]
   },
   "Oro Valley, AZ": {
     "reduce_min": [
@@ -79859,7 +82069,47 @@
           ]
         }
       ]
-    }
+    },
+    "reduce_min": [
+      {
+        "reporter": "Samuel Deetz",
+        "requirements": ["bike parking"],
+        "citations": [
+          {
+            "description": "Pensacola Land Development Code",
+            "url": "https://library.municode.com/fl/pensacola/codes/code_of_ordinances?nodeId=PTIICOOR_TITXIILADECO_CH12-4OREPA_S12-4-1OREPASPRE",
+            "notes": "Sec. 12-4-1.(1)f.",
+            "attachments": [],
+            "screenshots": [
+              {
+                "fileName": "pensacola-fl-reduce-min-screenshot.png",
+                "directusId": "f38e98d7-dbc7-4b51-b29e-e0734c530e8b"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "rm_min": [
+      {
+        "reporter": "Samuel Deetz",
+        "requirements": ["by right", "size of project"],
+        "citations": [
+          {
+            "description": "Pensacola Land Development Code",
+            "url": "https://library.municode.com/fl/pensacola/codes/code_of_ordinances?nodeId=PTIICOOR_TITXIILADECO_CH12-4OREPA_S12-4-1OREPASPRE",
+            "notes": "Sec. 12-4-1.(1)j.;\nSec. 12-4-1.(1)k.;\nSec. 12-4-1.(1)l.;\nSec. 12-4-1.(1)m.",
+            "attachments": [],
+            "screenshots": [
+              {
+                "fileName": "pensacola-fl-remove-min-screenshot.png",
+                "directusId": "a5a0b697-b9ed-4751-9be2-c8094aa71dea"
+              }
+            ]
+          }
+        ]
+      }
+    ]
   },
   "Penticton, BC": {
     "rm_min": [
@@ -81679,7 +83929,87 @@
           ]
         }
       ]
-    }
+    },
+    "add_max": [
+      {
+        "reporter": "Samuel Deetz",
+        "requirements": ["by right"],
+        "citations": [
+          {
+            "description": "Plano Zoning Code",
+            "url": "https://content.civicplus.com/api/assets/fc707d33-03b6-4993-9a8a-9244962a2c91?cache=1800",
+            "notes": "16.700.2\nPage 296",
+            "attachments": [],
+            "screenshots": [
+              {
+                "fileName": "plano-tx-add-max-screenshot.png",
+                "directusId": "3aabe1d1-df2e-4199-8d89-6870f9437cbf"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "reduce_min": [
+      {
+        "reporter": "Samuel Deetz",
+        "requirements": ["other", "size of project"],
+        "citations": [
+          {
+            "description": "Plano Zoning Case 2023-027",
+            "url": "https://plano.novusagenda.com/agendapublic/CoverSheet.aspx?ItemID=8826&MeetingID=3468",
+            "notes": null,
+            "attachments": [],
+            "screenshots": [
+              {
+                "fileName": "plano-tx-reduce-min-citation1-screenshot1.png",
+                "directusId": "91a82c67-46e6-47cc-b100-29d20ef731dc"
+              },
+              {
+                "fileName": "plano-tx-reduce-min-citation1-screenshot2.png",
+                "directusId": "50aae46e-3d57-4652-ba6e-f18988a4a56d"
+              },
+              {
+                "fileName": "plano-tx-reduce-min-citation1-screenshot3.png",
+                "directusId": "2bbba099-14fd-461a-b559-061fb5234831"
+              }
+            ]
+          },
+          {
+            "description": "Plano Zoning Code",
+            "url": "https://content.civicplus.com/api/assets/fc707d33-03b6-4993-9a8a-9244962a2c91?cache=1800",
+            "notes": "16.1100\nPage 304",
+            "attachments": [],
+            "screenshots": [
+              {
+                "fileName": "plano-tx-reduce-min-citation2-screenshot.png",
+                "directusId": "b7e11a32-91a5-4085-898e-bf70d42f27fb"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "rm_min": [
+      {
+        "reporter": "Samuel Deetz",
+        "requirements": ["by right"],
+        "citations": [
+          {
+            "description": "Plano Zoning Code",
+            "url": "https://content.civicplus.com/api/assets/fc707d33-03b6-4993-9a8a-9244962a2c91?cache=1800",
+            "notes": "16.100.1\nPage 289",
+            "attachments": [],
+            "screenshots": [
+              {
+                "fileName": "plano-tx-remove-min-screenshot.png",
+                "directusId": "b4fbf67f-223f-457d-9542-d6751caee14e"
+              }
+            ]
+          }
+        ]
+      }
+    ]
   },
   "Platteville, WI": {
     "reduce_min": [
@@ -83770,7 +86100,88 @@
           ]
         }
       ]
-    }
+    },
+    "add_max": [
+      {
+        "reporter": "Samuel Deetz",
+        "requirements": ["by right"],
+        "citations": [
+          {
+            "description": "Prospect Land Development Code",
+            "url": "https://louisvilleky.gov/office-planning/document/prospectldcjuly2004pdf",
+            "notes": "9.1.3.F. \nPages 870, 873-884",
+            "attachments": [],
+            "screenshots": [
+              {
+                "fileName": "prospect-ky-add-max-screenshot1.png",
+                "directusId": "b85dd5ce-0541-4049-8e52-7fd7d50a3766"
+              },
+              {
+                "fileName": "prospect-ky-add-max-screenshot2.png",
+                "directusId": "ad9d1716-ee49-4e94-a13e-a6f64c6b2b70"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "reduce_min": [
+      {
+        "reporter": "Samuel Deetz",
+        "requirements": [
+          "frequent transit",
+          "historic preservation",
+          "other",
+          "size of project"
+        ],
+        "citations": [
+          {
+            "description": "Prospect Land Development Code",
+            "url": "https://louisvilleky.gov/office-planning/document/prospectldcjuly2004pdf",
+            "notes": "9.1.3.F.\nPages 870-872",
+            "attachments": [],
+            "screenshots": [
+              {
+                "fileName": "prospect-ky-reduce-min-screenshot1.png",
+                "directusId": "3ee84968-b9bb-4fe8-bc4b-d2bdfd380d84"
+              },
+              {
+                "fileName": "prospect-ky-reduce-min-screenshot2.png",
+                "directusId": "8be7bd70-73fd-46d2-8257-50276d3dd5c6"
+              },
+              {
+                "fileName": "prospect-ky-reduce-min-screenshot3.png",
+                "directusId": "ed9393eb-3930-4136-b215-5b0996e9d84c"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "rm_min": [
+      {
+        "reporter": "Samuel Deetz",
+        "requirements": ["by right"],
+        "citations": [
+          {
+            "description": "Prospect Land Development Code",
+            "url": "https://louisvilleky.gov/office-planning/document/prospectldcjuly2004pdf",
+            "notes": "9.1.3.F. \nPages 870-871",
+            "attachments": [],
+            "screenshots": [
+              {
+                "fileName": "prospect-ky-remove-min-screenshot1.png",
+                "directusId": "0b57930a-7dec-43cd-8d5a-c699a188c4f5"
+              },
+              {
+                "fileName": "prospect-ky-remove-min-screenshot2.png",
+                "directusId": "979216bf-3698-4e3d-9a03-e92a4f29b251"
+              }
+            ]
+          }
+        ]
+      }
+    ]
   },
   "Providence, RI": {
     "legacy": {
@@ -86473,7 +88884,55 @@
           ]
         }
       ]
-    }
+    },
+    "add_max": [
+      {
+        "reporter": "Chris Chittum",
+        "requirements": ["by right"],
+        "citations": [
+          {
+            "description": "Roanoke City Code",
+            "url": "https://library.municode.com/va/roanoke/codes/code_of_ordinances?nodeId=CORO1979_CH36.2ZO_ART3RESPZODI_DIV2MUPUDI_S36.2-316DIREMUPUDI",
+            "notes": "Parking maximum of 150% of city wide parking minimum in downtown area",
+            "attachments": [],
+            "screenshots": [
+              {
+                "fileName": "roanoke-va-add-max-screenshot1.png",
+                "directusId": "a9b4fb62-8814-4f01-80e4-eb08f58041e6"
+              },
+              {
+                "fileName": "roanoke-va-add-max-screenshot2.png",
+                "directusId": "bcd6dae3-f886-4db9-aa4e-df886a6a60ec"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "rm_min": [
+      {
+        "reporter": "Chris Chittum",
+        "requirements": ["by right"],
+        "citations": [
+          {
+            "description": "Roanoke City Code",
+            "url": "https://library.municode.com/va/roanoke/codes/code_of_ordinances?nodeId=CORO1979_CH36.2ZO_ART3RESPZODI_DIV2MUPUDI_S36.2-316DIREMUPUDI",
+            "notes": "Parking maximum of 150% of city wide parking minimum in downtown area",
+            "attachments": [],
+            "screenshots": [
+              {
+                "fileName": "roanoke-va-remove-min-screenshot1.png",
+                "directusId": "a9b4fb62-8814-4f01-80e4-eb08f58041e6"
+              },
+              {
+                "fileName": "roanoke-va-remove-min-screenshot2.png",
+                "directusId": "bcd6dae3-f886-4db9-aa4e-df886a6a60ec"
+              }
+            ]
+          }
+        ]
+      }
+    ]
   },
   "Robbinsdale, MN": {
     "reduce_min": [
@@ -90468,7 +92927,101 @@
           ]
         }
       ]
-    }
+    },
+    "reduce_min": [
+      {
+        "reporter": "Samuel Deetz",
+        "requirements": [
+          "bike parking",
+          "by right",
+          "in-lieu fees",
+          "other",
+          "size of project"
+        ],
+        "citations": [
+          {
+            "description": "Sarasota Zoning Code",
+            "url": "https://library.municode.com/fl/sarasota/codes/zoning?nodeId=ARTVIIREGEAP_DIV2OREPALO_SVII-206OREPARESPZODI",
+            "notes": "Article VII - REGULATIONS OF GENERAL APPLICABILITY\nDIVISION 2. - OFF-STREET PARKING AND LOADING\nSec. VII-206. - Off-street parking requirements in specific zone districts.",
+            "attachments": [],
+            "screenshots": [
+              {
+                "fileName": "sarasota-fl-reduce-min-screenshot1.png",
+                "directusId": "11524169-7d39-49b2-aeda-dcec1af3d203"
+              },
+              {
+                "fileName": "sarasota-fl-reduce-min-screenshot2.png",
+                "directusId": "718630a0-b0f8-4da4-bf7b-6b941ce1d3bb"
+              },
+              {
+                "fileName": "sarasota-fl-reduce-min-screenshot3.png",
+                "directusId": "0b694547-9e3f-4be2-870c-ae052df008da"
+              },
+              {
+                "fileName": "sarasota-fl-reduce-min-screenshot4.png",
+                "directusId": "af6542a1-c009-4fd3-af48-5daf21e43c42"
+              },
+              {
+                "fileName": "sarasota-fl-reduce-min-screenshot5.png",
+                "directusId": "c23c9353-7ce5-43a3-b7a0-ea61d96ae958"
+              },
+              {
+                "fileName": "sarasota-fl-reduce-min-screenshot6.png",
+                "directusId": "19da32a3-6955-4808-86c9-898e82040d26"
+              },
+              {
+                "fileName": "sarasota-fl-reduce-min-screenshot7.png",
+                "directusId": "6fbad0ec-f5a7-402a-af9f-c14a085697bb"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "rm_min": [
+      {
+        "reporter": "Samuel Deetz",
+        "requirements": ["accessory dwelling units", "by right"],
+        "citations": [
+          {
+            "description": "Sarasota Zoning Code",
+            "url": "https://library.municode.com/fl/sarasota/codes/zoning?nodeId=ARTVIIREGEAP_DIV2OREPALO_SVII-206OREPARESPZODI",
+            "notes": "Article VII - REGULATIONS OF GENERAL APPLICABILITY\nDIVISION 2. - OFF-STREET PARKING AND LOADING\nSec. VII-206. - Off-street parking requirements in specific zone districts.",
+            "attachments": [],
+            "screenshots": [
+              {
+                "fileName": "sarasota-fl-remove-min-screenshot1.png",
+                "directusId": "11524169-7d39-49b2-aeda-dcec1af3d203"
+              },
+              {
+                "fileName": "sarasota-fl-remove-min-screenshot2.png",
+                "directusId": "718630a0-b0f8-4da4-bf7b-6b941ce1d3bb"
+              },
+              {
+                "fileName": "sarasota-fl-remove-min-screenshot3.png",
+                "directusId": "0b694547-9e3f-4be2-870c-ae052df008da"
+              },
+              {
+                "fileName": "sarasota-fl-remove-min-screenshot4.png",
+                "directusId": "af6542a1-c009-4fd3-af48-5daf21e43c42"
+              },
+              {
+                "fileName": "sarasota-fl-remove-min-screenshot5.png",
+                "directusId": "c23c9353-7ce5-43a3-b7a0-ea61d96ae958"
+              },
+              {
+                "fileName": "sarasota-fl-remove-min-screenshot6.png",
+                "directusId": "19da32a3-6955-4808-86c9-898e82040d26"
+              },
+              {
+                "fileName": "sarasota-fl-remove-min-screenshot7.png",
+                "directusId": "6fbad0ec-f5a7-402a-af9f-c14a085697bb"
+              }
+            ]
+          }
+        ]
+      }
+    ]
   },
   "Saratoga Springs, NY": {
     "legacy": {
@@ -93114,7 +95667,84 @@
           ]
         }
       ]
-    }
+    },
+    "add_max": [
+      {
+        "reporter": "Samuel Deetz",
+        "requirements": ["by right"],
+        "citations": [
+          {
+            "description": "Shively Land Development Code",
+            "url": "https://louisvilleky.gov/office-planning/document/shivelyldcfinaljune2008pdf",
+            "notes": "9.1.3.F. \nPage 797",
+            "attachments": [],
+            "screenshots": [
+              {
+                "fileName": "shively-ky-add-max-screenshot.png",
+                "directusId": "7c124234-ab8b-481d-b56f-58c131eaae14"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "reduce_min": [
+      {
+        "reporter": "Samuel Deetz",
+        "requirements": [
+          "frequent transit",
+          "historic preservation",
+          "other",
+          "size of project"
+        ],
+        "citations": [
+          {
+            "description": "Shively Land Development Code",
+            "url": "https://louisvilleky.gov/office-planning/document/shivelyldcfinaljune2008pdf",
+            "notes": "9.1.3.F.\nPages 797-799",
+            "attachments": [],
+            "screenshots": [
+              {
+                "fileName": "shively-ky-reduce-min-screenshot1.png",
+                "directusId": "ec996cc6-75ac-44a1-b6c8-5914f5077ab5"
+              },
+              {
+                "fileName": "shively-ky-reduce-min-screenshot2.png",
+                "directusId": "4e2908f7-a2f3-49f5-b4c5-40cd4839ad04"
+              },
+              {
+                "fileName": "shively-ky-reduce-min-screenshot3.png",
+                "directusId": "8fc5de2e-33c0-4f65-9c57-e11901c83285"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "rm_min": [
+      {
+        "reporter": "Samuel Deetz",
+        "requirements": ["by right"],
+        "citations": [
+          {
+            "description": "Shively Land Development Code",
+            "url": "https://louisvilleky.gov/office-planning/document/shivelyldcfinaljune2008pdf",
+            "notes": "9.1.3.F. \nPages 797-798",
+            "attachments": [],
+            "screenshots": [
+              {
+                "fileName": "shively-ky-remove-min-screenshot1.png",
+                "directusId": "640b7021-28fa-4b77-bd59-c638d76bc7f7"
+              },
+              {
+                "fileName": "shively-ky-remove-min-screenshot2.png",
+                "directusId": "a25b62e5-64bf-489c-8e79-2f9fc5cde861"
+              }
+            ]
+          }
+        ]
+      }
+    ]
   },
   "Shoreline, WA": {
     "legacy": {
@@ -97127,7 +99757,83 @@
           ]
         }
       ]
-    }
+    },
+    "add_max": [
+      {
+        "reporter": "Samuel Deetz",
+        "requirements": ["by right"],
+        "citations": [
+          {
+            "description": "St. Matthews Land Development Code",
+            "url": "https://louisvilleky.gov/office-planning/document/st-matthews-ldc-attachment-chapter-9-parking-and-loading2006",
+            "notes": "9.1.3.F. \nPages 4, 7-26",
+            "attachments": [],
+            "screenshots": [
+              {
+                "fileName": "st-matthews-ky-add-max-screenshot1.png",
+                "directusId": "1b0213f4-3894-4fb1-a94b-c1ad6d1231ca"
+              },
+              {
+                "fileName": "st-matthews-ky-add-max-screenshot2.png",
+                "directusId": "3526f588-4336-45f9-896c-dda926a5c38d"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "reduce_min": [
+      {
+        "reporter": "Samuel Deetz",
+        "requirements": ["frequent transit", "other", "size of project"],
+        "citations": [
+          {
+            "description": "St. Matthews Land Development Code",
+            "url": "https://louisvilleky.gov/office-planning/document/st-matthews-ldc-attachment-chapter-9-parking-and-loading2006",
+            "notes": "9.1.3 Calculating Parking Requirements / Allowances \nPages 4-6",
+            "attachments": [],
+            "screenshots": [
+              {
+                "fileName": "st-matthews-ky-reduce-min-screenshot1.png",
+                "directusId": "f34fcde7-fe91-4a3d-86e6-4e0cceacd1d6"
+              },
+              {
+                "fileName": "st-matthews-ky-reduce-min-screenshot2.png",
+                "directusId": "661f0135-4796-47a8-8aa0-ae87c386c3e5"
+              },
+              {
+                "fileName": "st-matthews-ky-reduce-min-screenshot3.png",
+                "directusId": "2e9263cf-5487-4564-a6e0-1b27676065bf"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "rm_min": [
+      {
+        "reporter": "Samuel Deetz",
+        "requirements": ["by right"],
+        "citations": [
+          {
+            "description": "St. Matthews Land Development Code",
+            "url": "https://louisvilleky.gov/office-planning/document/st-matthews-ldc-attachment-chapter-9-parking-and-loading2006",
+            "notes": "9.1.3.F.\nPages 4-5",
+            "attachments": [],
+            "screenshots": [
+              {
+                "fileName": "st-matthews-ky-remove-min-screenshot1.png",
+                "directusId": "84df3e28-86c7-402e-97ee-8b4bf31c0a65"
+              },
+              {
+                "fileName": "st-matthews-ky-remove-min-screenshot2.png",
+                "directusId": "86063355-feda-4042-aff4-214113fc9b0e"
+              }
+            ]
+          }
+        ]
+      }
+    ]
   },
   "St. Michael, MN": {
     "rm_min": [
@@ -97491,6 +100197,147 @@
               {
                 "fileName": "st-petersburg-fl-remove-min-citation2-screenshot.png",
                 "directusId": "a950c642-d086-41e5-8b80-dbb03f6d399f"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "St. Regis Park, KY": {
+    "legacy": {
+      "reporter": "Samuel Deetz",
+      "requirements": ["by right", "frequent transit", "other"],
+      "citations": [
+        {
+          "description": "St. Regis Park Land Development Code",
+          "url": "https://louisvilleky.gov/office-planning/document/stregisparkldcfinaldecember2009pdf",
+          "notes": "9.1.3.\nPages 801, 804-823",
+          "attachments": [],
+          "screenshots": [
+            {
+              "fileName": "st-regis-park-ky-citation1-screenshot1.png",
+              "directusId": "69b3cf08-7f4c-4175-8179-c1fb2fd59542"
+            },
+            {
+              "fileName": "st-regis-park-ky-citation1-screenshot2.png",
+              "directusId": "f38bded3-d06d-439d-b923-f0d2f2718836"
+            }
+          ]
+        },
+        {
+          "description": "St. Regis Park Land Development Code",
+          "url": "https://louisvilleky.gov/office-planning/document/stregisparkldcfinaldecember2009pdf",
+          "notes": "9.1.3.F.\nPages 801-803",
+          "attachments": [],
+          "screenshots": [
+            {
+              "fileName": "st-regis-park-ky-citation2-screenshot1.png",
+              "directusId": "fe874f9b-1737-4a9c-b684-31aa0535676a"
+            },
+            {
+              "fileName": "st-regis-park-ky-citation2-screenshot2.png",
+              "directusId": "729bbb02-5a70-4212-8e98-460b9ba6a1db"
+            },
+            {
+              "fileName": "st-regis-park-ky-citation2-screenshot3.png",
+              "directusId": "cb1046c9-68ec-4071-bee8-d211207abc93"
+            }
+          ]
+        },
+        {
+          "description": "St. Regis Park Land Development Code",
+          "url": "https://louisvilleky.gov/office-planning/document/stregisparkldcfinaldecember2009pdf",
+          "notes": "9.1.3\nPages 801-802",
+          "attachments": [],
+          "screenshots": [
+            {
+              "fileName": "st-regis-park-ky-citation3-screenshot1.png",
+              "directusId": "bcee9441-2b1a-439c-8418-c5f25cb0881f"
+            },
+            {
+              "fileName": "st-regis-park-ky-citation3-screenshot2.png",
+              "directusId": "49eee6a1-d9cf-4cb7-9b1e-912743d23870"
+            }
+          ]
+        }
+      ]
+    },
+    "add_max": [
+      {
+        "reporter": "Samuel Deetz",
+        "requirements": ["by right"],
+        "citations": [
+          {
+            "description": "St. Regis Park Land Development Code",
+            "url": "https://louisvilleky.gov/office-planning/document/stregisparkldcfinaldecember2009pdf",
+            "notes": "9.1.3.\nPages 801, 804-823",
+            "attachments": [],
+            "screenshots": [
+              {
+                "fileName": "st-regis-park-ky-add-max-screenshot1.png",
+                "directusId": "69b3cf08-7f4c-4175-8179-c1fb2fd59542"
+              },
+              {
+                "fileName": "st-regis-park-ky-add-max-screenshot2.png",
+                "directusId": "f38bded3-d06d-439d-b923-f0d2f2718836"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "reduce_min": [
+      {
+        "reporter": "Samuel Deetz",
+        "requirements": [
+          "frequent transit",
+          "historic preservation",
+          "other",
+          "size of project"
+        ],
+        "citations": [
+          {
+            "description": "St. Regis Park Land Development Code",
+            "url": "https://louisvilleky.gov/office-planning/document/stregisparkldcfinaldecember2009pdf",
+            "notes": "9.1.3.F.\nPages 801-803",
+            "attachments": [],
+            "screenshots": [
+              {
+                "fileName": "st-regis-park-ky-reduce-min-screenshot1.png",
+                "directusId": "fe874f9b-1737-4a9c-b684-31aa0535676a"
+              },
+              {
+                "fileName": "st-regis-park-ky-reduce-min-screenshot2.png",
+                "directusId": "729bbb02-5a70-4212-8e98-460b9ba6a1db"
+              },
+              {
+                "fileName": "st-regis-park-ky-reduce-min-screenshot3.png",
+                "directusId": "cb1046c9-68ec-4071-bee8-d211207abc93"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "rm_min": [
+      {
+        "reporter": "Samuel Deetz",
+        "requirements": ["by right"],
+        "citations": [
+          {
+            "description": "St. Regis Park Land Development Code",
+            "url": "https://louisvilleky.gov/office-planning/document/stregisparkldcfinaldecember2009pdf",
+            "notes": "9.1.3\nPages 801-802",
+            "attachments": [],
+            "screenshots": [
+              {
+                "fileName": "st-regis-park-ky-remove-min-screenshot1.png",
+                "directusId": "bcee9441-2b1a-439c-8418-c5f25cb0881f"
+              },
+              {
+                "fileName": "st-regis-park-ky-remove-min-screenshot2.png",
+                "directusId": "49eee6a1-d9cf-4cb7-9b1e-912743d23870"
               }
             ]
           }
@@ -100468,7 +103315,76 @@
           ]
         }
       ]
-    }
+    },
+    "add_max": [
+      {
+        "reporter": "Samuel Deetz",
+        "requirements": ["by right", "other"],
+        "citations": [
+          {
+            "description": "Tampa Zoning & Land Development Code",
+            "url": "https://library.municode.com/fl/tampa/codes/code_of_ordinances?nodeId=COOR_CH27ZOLADE_ARTIIIESZODIDIRE_DIV2SPDI_SD3CEBUDICBDI_S27-184OFSCPEPRACSPUSREOREPARAUSPASPEQTRMO",
+            "notes": "ARTICLE III. - ESTABLISHMENT OF ZONING DISTRICTS AND DISTRICT REGULATIONS\nDIVISION 2. - SPECIAL DISTRICTS\nSubdivision 3. - Central Business District (CBD) Districts\n   Sec. 27-184. - Official schedule of permitted principal, accessory and special uses; required off-street parking ratios by use; parking space equivalencies by transportation mode.\n   Sec. 27-185.2. - Parking compliance; options for alternative compliance.\n      (a)\n         (3)Option 3—In-lieu parking payment\nSubdivision 4. - Channel District (CD) Districts\n   Sec. 27-198. - Official schedule of permitted principal, accessory and special uses; required off-street parking ratios by use; parking space equivalencies by transportation mode.",
+            "attachments": [],
+            "screenshots": [
+              {
+                "fileName": "tampa-fl-add-max-screenshot1.png",
+                "directusId": "4b7e40cb-9dd9-4fc1-86ab-37fc88a75137"
+              },
+              {
+                "fileName": "tampa-fl-add-max-screenshot2.png",
+                "directusId": "b79e0fe3-bc8e-4084-99ce-8eb6deb903c8"
+              },
+              {
+                "fileName": "tampa-fl-add-max-screenshot3.png",
+                "directusId": "d9164343-b33d-4041-9d29-c5c4a5714cb0"
+              },
+              {
+                "fileName": "tampa-fl-add-max-screenshot4.png",
+                "directusId": "92db35ed-7ba5-4ab0-831c-b1be22382787"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "reduce_min": [
+      {
+        "reporter": "Samuel Deetz",
+        "requirements": [
+          "bike parking",
+          "by right",
+          "carshare",
+          "in-lieu fees"
+        ],
+        "citations": [
+          {
+            "description": "Tampa Zoning & Land Development Code",
+            "url": "https://library.municode.com/fl/tampa/codes/code_of_ordinances?nodeId=COOR_CH27ZOLADE_ARTIIIESZODIDIRE_DIV2SPDI_SD3CEBUDICBDI_S27-184OFSCPEPRACSPUSREOREPARAUSPASPEQTRMO",
+            "notes": "ARTICLE III. - ESTABLISHMENT OF ZONING DISTRICTS AND DISTRICT REGULATIONS\nDIVISION 2. - SPECIAL DISTRICTS\nSubdivision 3. - Central Business District (CBD) Districts\n   Sec. 27-184. - Official schedule of permitted principal, accessory and special uses; required off-street parking ratios by use; parking space equivalencies by transportation mode.\n   Sec. 27-185.2. - Parking compliance; options for alternative compliance.\n      (a)\n         (3)Option 3—In-lieu parking payment\nSubdivision 4. - Channel District (CD) Districts\n   Sec. 27-198. - Official schedule of permitted principal, accessory and special uses; required off-street parking ratios by use; parking space equivalencies by transportation mode.",
+            "attachments": [],
+            "screenshots": [
+              {
+                "fileName": "tampa-fl-reduce-min-screenshot1.png",
+                "directusId": "4b7e40cb-9dd9-4fc1-86ab-37fc88a75137"
+              },
+              {
+                "fileName": "tampa-fl-reduce-min-screenshot2.png",
+                "directusId": "b79e0fe3-bc8e-4084-99ce-8eb6deb903c8"
+              },
+              {
+                "fileName": "tampa-fl-reduce-min-screenshot3.png",
+                "directusId": "d9164343-b33d-4041-9d29-c5c4a5714cb0"
+              },
+              {
+                "fileName": "tampa-fl-reduce-min-screenshot4.png",
+                "directusId": "92db35ed-7ba5-4ab0-831c-b1be22382787"
+              }
+            ]
+          }
+        ]
+      }
+    ]
   },
   "Tampico, IL": {
     "rm_min": [
@@ -101270,7 +104186,47 @@
           ]
         }
       ]
-    }
+    },
+    "reduce_min": [
+      {
+        "reporter": "Samuel Deetz",
+        "requirements": ["by right"],
+        "citations": [
+          {
+            "description": "Temple Unified Development Code",
+            "url": "https://library.municode.com/tx/temple/codes/code_of_ordinances?nodeId=Unified%20Development%20Code",
+            "notes": "7.5.4.C. \nPage 301",
+            "attachments": [],
+            "screenshots": [
+              {
+                "fileName": "temple-tx-reduce-min-screenshot.png",
+                "directusId": "e70aac8e-8bd8-4456-a0bc-7ec03a7ad68d"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "rm_min": [
+      {
+        "reporter": "Samuel Deetz",
+        "requirements": ["by right"],
+        "citations": [
+          {
+            "description": "Temple Unified Development Code",
+            "url": "https://library.municode.com/tx/temple/codes/code_of_ordinances?nodeId=Unified%20Development%20Code",
+            "notes": "7.5.4.C.4.\nPage 302",
+            "attachments": [],
+            "screenshots": [
+              {
+                "fileName": "temple-tx-remove-min-screenshot.png",
+                "directusId": "a9482adc-520e-49f8-b75f-5cfe94b021a7"
+              }
+            ]
+          }
+        ]
+      }
+    ]
   },
   "Templeton, IA": {
     "rm_min": [
