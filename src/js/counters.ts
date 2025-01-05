@@ -5,8 +5,8 @@ import {
   PlaceFilterManager,
   PolicyTypeFilter,
 } from "./FilterState";
-import { PlaceType, PolicyType } from "./types";
-import { joinWithConjunction } from "./data";
+import { PlaceId, PlaceType, PolicyType } from "./types";
+import { joinWithConjunction, placeIdToUrl } from "./data";
 import type { ViewState } from "./viewToggle";
 
 export function determinePlaceDescription(
@@ -43,13 +43,17 @@ export const SEARCH_RESET_HTML = `<a class="counter-search-reset" role="button" 
 
 export function determineSearch(
   view: ViewState,
-  searchInput: string,
+  placeId: PlaceId,
   policyType: PolicyTypeFilter,
 ): string {
+  const placeLink = `<a class="external-link" target="_blank" href=${placeIdToUrl(
+    placeId,
+  )}>${placeId} <i aria-hidden="true" class="fa-solid fa-arrow-right"></i></a>`;
+
   if (view === "map" || policyType === "legacy reform") {
-    return `Showing ${searchInput} — ${SEARCH_RESET_HTML}`;
+    return `Showing ${placeLink} — ${SEARCH_RESET_HTML}`;
   }
-  const suffix = `in ${searchInput} — ${SEARCH_RESET_HTML}`;
+  const suffix = `in ${placeLink} — ${SEARCH_RESET_HTML}`;
   switch (policyType) {
     case "any parking reform":
       return `Showing an overview of adopted parking reforms ${suffix}`;
