@@ -114,7 +114,10 @@ test.describe("PlaceFilterManager.matchedPolicyRecords()", () => {
       hasReduceMin: false,
     };
 
-    const manager = new PlaceFilterManager(DEFAULT_ENTRIES, DEFAULT_STATE);
+    const manager = new PlaceFilterManager(
+      DEFAULT_ENTRIES,
+      structuredClone(DEFAULT_STATE),
+    );
     expect(manager.matchedPlaces).toEqual({
       "Place 1": expectedPlace1Match,
       "Place 2": expectedPlace2Match,
@@ -175,7 +178,7 @@ test.describe("PlaceFilterManager.matchedPolicyRecords()", () => {
 
   test("reduce minimums", () => {
     const manager = new PlaceFilterManager(DEFAULT_ENTRIES, {
-      ...DEFAULT_STATE,
+      ...structuredClone(DEFAULT_STATE),
       policyTypeFilter: "reduce parking minimums",
       // This option should be ignored with 'reduce parking minimums'.
       allMinimumsRemovedToggle: true,
@@ -209,7 +212,7 @@ test.describe("PlaceFilterManager.matchedPolicyRecords()", () => {
 
   test("add maximums", () => {
     const manager = new PlaceFilterManager(DEFAULT_ENTRIES, {
-      ...DEFAULT_STATE,
+      ...structuredClone(DEFAULT_STATE),
       policyTypeFilter: "add parking maximums",
       // Should be ignored.
       includedPolicyChanges: new Set(),
@@ -250,10 +253,10 @@ test.describe("PlaceFilterManager.matchedPolicyRecords()", () => {
     expect(manager.matchedPlaces).toEqual({});
     manager.update({ year: DEFAULT_STATE.year });
 
-    const noRepealsEntries = { ...DEFAULT_ENTRIES };
+    const noRepealsEntries = structuredClone(DEFAULT_ENTRIES);
     noRepealsEntries["Place 2"].place.repeal = false;
     const manager2 = new PlaceFilterManager(noRepealsEntries, {
-      ...DEFAULT_STATE,
+      ...structuredClone(DEFAULT_STATE),
       policyTypeFilter: "add parking maximums",
       allMinimumsRemovedToggle: true,
     });
@@ -262,26 +265,32 @@ test.describe("PlaceFilterManager.matchedPolicyRecords()", () => {
 
   test("remove minimums", () => {
     const manager = new PlaceFilterManager(DEFAULT_ENTRIES, {
-      ...DEFAULT_STATE,
+      ...structuredClone(DEFAULT_STATE),
       policyTypeFilter: "remove parking minimums",
       // Should be ignored.
       includedPolicyChanges: new Set(),
     });
-    expect(manager.matchedPlaces).toEqual({
+    const expectedMatch = {
       "Place 2": {
         type: "single policy",
         policyType: "remove parking minimums",
         matchingIndexes: [0],
       },
-    });
+    };
+
+    expect(manager.matchedPlaces).toEqual(expectedMatch);
 
     manager.update({ scope: new Set(["city center / business district"]) });
     expect(manager.matchedPlaces).toEqual({});
-    manager.update({ scope: DEFAULT_STATE.scope });
+    manager.update({
+      scope: DEFAULT_STATE.scope,
+    });
 
     manager.update({ landUse: new Set(["commercial"]) });
     expect(manager.matchedPlaces).toEqual({});
-    manager.update({ landUse: DEFAULT_STATE.landUse });
+    manager.update({
+      landUse: DEFAULT_STATE.landUse,
+    });
 
     manager.update({ status: new Set(["repealed"]) });
     expect(manager.matchedPlaces).toEqual({});
@@ -291,11 +300,11 @@ test.describe("PlaceFilterManager.matchedPolicyRecords()", () => {
     expect(manager.matchedPlaces).toEqual({});
     manager.update({ year: DEFAULT_STATE.year });
 
-    const noRepealsEntries = { ...DEFAULT_ENTRIES };
+    const noRepealsEntries = structuredClone(DEFAULT_ENTRIES);
     noRepealsEntries["Place 2"].place.repeal = false;
     const manager2 = new PlaceFilterManager(noRepealsEntries, {
-      ...DEFAULT_STATE,
-      policyTypeFilter: "add parking maximums",
+      ...structuredClone(DEFAULT_STATE),
+      policyTypeFilter: "remove parking minimums",
       allMinimumsRemovedToggle: true,
     });
     expect(manager2.matchedPlaces).toEqual({});
@@ -304,7 +313,7 @@ test.describe("PlaceFilterManager.matchedPolicyRecords()", () => {
   test("search", () => {
     // Start with a state that does not match anything to prove that search overrides filters.
     const manager = new PlaceFilterManager(DEFAULT_ENTRIES, {
-      ...DEFAULT_STATE,
+      ...structuredClone(DEFAULT_STATE),
       country: new Set(),
     });
     expect(manager.matchedPlaces).toEqual({});
