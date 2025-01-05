@@ -4,11 +4,7 @@ import {
   createAnyPolicyCsvs,
   createReformCsv,
 } from "../../scripts/generateDataSet";
-import type {
-  Citation,
-  ProcessedCompleteEntry,
-  ProcessedCompleteLegacyReform,
-} from "../../scripts/lib/data";
+import type { Citation, ProcessedCompleteEntry } from "../../scripts/lib/data";
 import { Date } from "../../src/js/types";
 
 // This test uses snapshot testing (https://jestjs.io/docs/snapshot-testing#updating-snapshots). If the tests fail and the changes
@@ -24,19 +20,6 @@ test("generate CSVs", async ({}, testInfo) => {
   // Our test is OS-independent, so turn this off.
   // eslint-disable-next-line no-param-reassign
   testInfo.snapshotSuffix = "";
-
-  // This gets ignored and is only for the type checker.
-  const unifiedPolicy: ProcessedCompleteLegacyReform = {
-    summary: "",
-    status: "adopted",
-    policy: [],
-    scope: [],
-    land: [],
-    date: null,
-    reporter: "",
-    requirements: [],
-    citations: [],
-  };
 
   const citation: Citation = {
     description: "citation",
@@ -58,7 +41,6 @@ test("generate CSVs", async ({}, testInfo) => {
         coord: [44.23, 14.23],
         url: "https://parkingreform.org/my-city-details.html",
       },
-      unifiedPolicy,
       add_max: [
         {
           summary: "Maximums summary #1",
@@ -93,7 +75,6 @@ test("generate CSVs", async ({}, testInfo) => {
         coord: [80.3, 24.23],
         url: "https://parkingreform.org/another-place.html",
       },
-      unifiedPolicy,
       rm_min: [
         {
           summary: "Remove minimums",

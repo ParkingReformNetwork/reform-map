@@ -1,7 +1,7 @@
 import { expect, test } from "@playwright/test";
 
 import { loadMap } from "./utils";
-import { generateScorecardRevamp } from "../../src/js/scorecard";
+import { generateScorecard } from "../../src/js/scorecard";
 import {
   ProcessedCoreEntry,
   ProcessedCorePolicy,
@@ -43,7 +43,7 @@ test("scorecard pops up and closes", async ({ page }) => {
   expect(await scorecardIsVisible()).toBe(false);
 });
 
-test("generateScorecardRevamp", () => {
+test("generateScorecard()", () => {
   const place: ProcessedPlace = {
     name: "My City",
     state: "AZ",
@@ -63,10 +63,9 @@ test("generateScorecardRevamp", () => {
   };
   const entry: ProcessedCoreEntry = {
     place,
-    unifiedPolicy: { ...policy, policy: [] },
     add_max: [policy],
   };
-  expect(generateScorecardRevamp(entry, "My City, AZ")).toEqual(
+  expect(generateScorecard(entry, "My City, AZ")).toEqual(
     `
     <header class="scorecard-header">
       <h2 class="scorecard-title">My City, AZ</h2>
@@ -89,14 +88,13 @@ test("generateScorecardRevamp", () => {
 
   const repealed: ProcessedCoreEntry = {
     place: { ...place, repeal: false },
-    unifiedPolicy: { ...policy, policy: [] },
     add_max: [
       { ...policy, status: "repealed" },
       { ...policy, status: "proposed" },
     ],
     rm_min: [policy],
   };
-  expect(generateScorecardRevamp(repealed, "My City, AZ")).toEqual(
+  expect(generateScorecard(repealed, "My City, AZ")).toEqual(
     `
     <header class="scorecard-header">
       <h2 class="scorecard-title">My City, AZ</h2>

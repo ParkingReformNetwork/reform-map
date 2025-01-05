@@ -15,30 +15,21 @@ import initTable from "./table";
 import subscribeSnapToPlace from "./mapPosition";
 import readData from "./data";
 
-function isRevampEnabled(): boolean {
-  const param = new URLSearchParams(window.location.search).get("revamp");
-  return param !== null;
-}
-
 export default async function initApp(): Promise<void> {
   initIcons();
   maybeDisableFullScreenIcon();
   initAbout();
   initFilterPopup();
 
-  const revampEnabled = isRevampEnabled();
-
   const viewToggle = initViewToggle();
 
   const filterOptions = new FilterOptions();
   const map = createMap();
-  const data = await readData({
-    includeMultipleReforms: revampEnabled,
-  });
+  const data = await readData();
 
   const filterManager = new PlaceFilterManager(data, {
     searchInput: null,
-    policyTypeFilter: revampEnabled ? "any parking reform" : "legacy reform",
+    policyTypeFilter: "any parking reform",
     allMinimumsRemovedToggle: true,
     placeType: filterOptions.default("placeType"),
     includedPolicyChanges: filterOptions.default("includedPolicyChanges"),
@@ -56,12 +47,10 @@ export default async function initApp(): Promise<void> {
   initSearch(filterManager);
   initFilterOptions(filterManager, filterOptions);
 
-  const table = initTable(filterManager, viewToggle, { revampEnabled });
+  const table = initTable(filterManager, viewToggle);
   addViewToggleSubscribers(viewToggle, table);
 
-  initScorecard(filterManager, viewToggle, markerGroup, data, {
-    revampEnabled,
-  });
+  initScorecard(filterManager, viewToggle, markerGroup, data);
 
   viewToggle.initialize();
   filterManager.initialize();

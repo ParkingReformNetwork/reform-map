@@ -8,7 +8,6 @@ import {
   RawPlace,
   ProcessedPlace,
   ProcessedCorePolicy,
-  ProcessedLegacyReform,
   ReformStatus,
 } from "./types";
 
@@ -97,48 +96,10 @@ function processPolicy(raw: RawCorePolicy): ProcessedCorePolicy {
 export function processRawCoreEntry(
   placeId: PlaceId,
   raw: RawCoreEntry,
-  options: { includeMultipleReforms: boolean },
 ): ProcessedCoreEntry {
-  let unifiedPolicy: ProcessedLegacyReform;
-  if (raw.legacy) {
-    unifiedPolicy = {
-      ...raw.legacy,
-      date: Date.fromNullable(raw.legacy.date),
-    };
-  } else {
-    // Else, if `legacy` is missing, it's a new-style entry but should have exactly
-    // one new-style policy record.
-    const numNonLegacy = numberOfPolicyRecords(raw);
-    if (numNonLegacy > 1) {
-      throw new Error(
-        `${placeId} has ${numNonLegacy} new-style policy records, but is missing a legacy reform. ` +
-          "It must either have exactly one new-style policy record or set a legacy reform",
-      );
-    }
-    let newStylePolicy: RawCorePolicy;
-    let policyType: PolicyType;
-    if (raw.add_max) {
-      newStylePolicy = raw.add_max[0];
-      policyType = "add parking maximums";
-    } else if (raw.reduce_min) {
-      newStylePolicy = raw.reduce_min[0];
-      policyType = "reduce parking minimums";
-    } else if (raw.rm_min) {
-      newStylePolicy = raw.rm_min[0];
-      policyType = "remove parking minimums";
-    } else {
-      throw new Error(`${placeId} has no policies set (new-style or legacy).`);
-    }
-    unifiedPolicy = { ...processPolicy(newStylePolicy), policy: [policyType] };
-  }
-
   const result: ProcessedCoreEntry = {
     place: processPlace(placeId, raw.place),
-    unifiedPolicy,
   };
-  if (!options.includeMultipleReforms) return result;
-
-  // Else, add the new-style policy records in addition to the legacy reform.
   if (raw.add_max) {
     result.add_max = raw.add_max.map(processPolicy);
   }
@@ -151,16 +112,16 @@ export function processRawCoreEntry(
   return result;
 }
 
-export default async function readData(options: {
-  includeMultipleReforms: boolean;
-}): Promise<Record<PlaceId, ProcessedCoreEntry>> {
+export default async function readData(): Promise<
+  Record<PlaceId, ProcessedCoreEntry>
+> {
   const rawData = (await import("../../data/core.json", {
     with: { type: "json" },
   })) as unknown as Record<PlaceId, RawCoreEntry>;
   return Object.fromEntries(
     Object.entries(rawData).map(([placeId, entry]) => [
       placeId,
-      processRawCoreEntry(placeId, entry, options),
+      processRawCoreEntry(placeId, entry),
     ]),
   );
 }

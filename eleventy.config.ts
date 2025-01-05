@@ -48,37 +48,17 @@ export default async function (eleventyConfig: any) {
   );
 
   const completeData = await readProcessedCompleteData();
-  const legacy: object[] = [];
-  const revamp: object[] = [];
-  Object.entries(completeData).forEach(([placeId, entry]) => {
-    const common = {
-      placeId,
-      escapedPlaceId: escapePlaceId(placeId),
-      population: entry.place.pop.toLocaleString("en-us"),
-      repeal: entry.place.repeal,
-    };
-    if (
-      entry.add_max?.length ||
-      entry.reduce_min?.length ||
-      entry.rm_min?.length
-    ) {
-      revamp.push({
-        ...common,
-        rmMin: entry.rm_min?.map(processPolicyRecord) || [],
-        reduceMin: entry.reduce_min?.map(processPolicyRecord) || [],
-        addMax: entry.add_max?.map(processPolicyRecord) || [],
-      });
-    } else {
-      legacy.push({
-        ...common,
-        ...processPolicyRecord(entry.unifiedPolicy),
-        policyChange: entry.unifiedPolicy.policy,
-      });
-    }
-  });
+  const entries = Object.entries(completeData).map(([placeId, entry]) => ({
+    placeId,
+    escapedPlaceId: escapePlaceId(placeId),
+    population: entry.place.pop.toLocaleString("en-us"),
+    repeal: entry.place.repeal,
+    rmMin: entry.rm_min?.map(processPolicyRecord) || [],
+    reduceMin: entry.reduce_min?.map(processPolicyRecord) || [],
+    addMax: entry.add_max?.map(processPolicyRecord) || [],
+  }));
 
-  eleventyConfig.addGlobalData("legacyEntries", legacy);
-  eleventyConfig.addGlobalData("entries", revamp);
+  eleventyConfig.addGlobalData("entries", entries);
 
   return {
     dir: {

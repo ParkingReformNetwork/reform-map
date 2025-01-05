@@ -21,37 +21,6 @@ function toBoolean(condition: boolean): string {
   return condition ? "TRUE" : "FALSE";
 }
 
-function createLegacyCsv(data: ProcessedCompleteEntry[]): string {
-  const entries = data.map((entry) => ({
-    place: entry.place.name,
-    state: entry.place.state,
-    country: entry.place.country,
-    place_type: entry.place.type,
-    all_minimums_repealed: toBoolean(entry.place.repeal),
-    status: entry.unifiedPolicy.status,
-    policy_change: entry.unifiedPolicy.policy,
-    scope: entry.unifiedPolicy.scope,
-    land_uses: entry.unifiedPolicy.land,
-    reform_date: entry.unifiedPolicy.date?.raw,
-    population: entry.place.pop,
-    lat: entry.place.coord[1],
-    long: entry.place.coord[0],
-    url: entry.place.url,
-    reporter: entry.unifiedPolicy.reporter,
-    summary: entry.unifiedPolicy.summary,
-  }));
-  const csv = Papa.unparse(entries);
-
-  // Validate expected number of entries.
-  const numJson = data.length;
-  const numCsv = csv.split("\r\n").length - 1;
-  if (numJson !== numCsv) {
-    throw new Error(`CSV has unequal entries to JSON: ${numCsv} vs ${numJson}`);
-  }
-
-  return csv;
-}
-
 interface AnyPolicySet {
   hasReforms: boolean;
   csvValues: {
@@ -195,9 +164,6 @@ async function main(): Promise<void> {
   const data = Object.values(completeData);
 
   await writeJson(completeData, "data/generated/complete-data.json");
-
-  const legacy = createLegacyCsv(data);
-  await writeCsv(legacy, "map/data.csv");
 
   const { adopted, proposed, repealed } = createAnyPolicyCsvs(data);
   await writeCsv(adopted, "data/generated/overview_adopted.csv");

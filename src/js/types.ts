@@ -52,7 +52,7 @@ export type PolicyType =
 
 export type ReformStatus = "adopted" | "proposed" | "repealed";
 
-/// Every policy has these values, new-style and legacy. It is missing some fields like `date`.
+/// Every policy has these values. It is missing some fields like `date`.
 export interface BasePolicy {
   summary: string;
   status: ReformStatus;
@@ -60,18 +60,11 @@ export interface BasePolicy {
   land: string[];
 }
 
-type BaseLegacyReform = BasePolicy & {
-  policy: PolicyType[];
-};
-export type RawLegacyReform = BaseLegacyReform & { date: string | null };
-export type ProcessedLegacyReform = BaseLegacyReform & { date: Date | null };
-
 export type RawCorePolicy = BasePolicy & { date: string | null };
 export type ProcessedCorePolicy = BasePolicy & { date: Date | null };
 
 export interface RawCoreEntry {
   place: RawPlace;
-  legacy?: RawLegacyReform;
   reduce_min?: RawCorePolicy[];
   rm_min?: RawCorePolicy[];
   add_max?: RawCorePolicy[];
@@ -79,7 +72,6 @@ export interface RawCoreEntry {
 
 export interface ProcessedCoreEntry {
   place: ProcessedPlace;
-  unifiedPolicy: ProcessedLegacyReform;
   reduce_min?: ProcessedCorePolicy[];
   rm_min?: ProcessedCorePolicy[];
   add_max?: ProcessedCorePolicy[];

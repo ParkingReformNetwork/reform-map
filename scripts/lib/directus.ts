@@ -49,10 +49,8 @@ interface Coordinates {
 export interface Schema {
   places: Place[];
   citations: Citation[];
-  legacy_reforms: LegacyReform[];
   policy_records: PolicyRecord[];
   citations_files: CitationsFileJunction[];
-  legacy_reforms_citations: LegacyReformCitationJunction[];
   policy_records_citations: PolicyRecordCitationJunction[];
 }
 
@@ -76,8 +74,9 @@ export type Citation = {
   attachments: number[];
 } & Metadata;
 
-type _BasePolicy = {
+export type PolicyRecord = {
   place: number;
+  type: PolicyType;
   last_verified_at: string | null;
   land_uses: string[];
   reform_scope: string[];
@@ -87,27 +86,13 @@ type _BasePolicy = {
   reporter: string | null;
   reform_date: string | null;
   citations: number[];
-} & Metadata;
-
-export type LegacyReform = _BasePolicy & {
-  policy_changes: PolicyType[];
-};
-
-export type PolicyRecord = _BasePolicy & {
-  type: PolicyType;
   archived: boolean;
-};
+} & Metadata;
 
 export interface CitationsFileJunction {
   id: number;
   citations_id: number;
   directus_files_id: string;
-}
-
-export interface LegacyReformCitationJunction {
-  id: number;
-  legacy_reforms_id: number;
-  citations_id: number;
 }
 
 export interface PolicyRecordCitationJunction {

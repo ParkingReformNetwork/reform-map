@@ -7,36 +7,7 @@ import { PlaceFilterManager } from "./FilterState";
 import { ViewStateObservable } from "./viewToggle";
 import { determinePolicyTypeStatuses, joinWithConjunction } from "./data";
 
-function generateScorecardLegacy(
-  entry: ProcessedCoreEntry,
-  placeId: PlaceId,
-): string {
-  const dateOfReform = entry.unifiedPolicy.date
-    ? `<li>Reformed ${entry.unifiedPolicy.date.preposition()} ${entry.unifiedPolicy.date.format()}</li>`
-    : "";
-  return `
-    <header class="scorecard-header">
-      <h2 class="scorecard-title">${placeId}</h2>
-      <button
-        class="scorecard-close-icon-container"
-        title="close the place details popup"
-        aria-label="close the place details popup"
-      >
-        <i class="fa-regular fa-circle-xmark" aria-hidden="true"></i>
-      </button>
-    </header>
-    <ul>
-      <li><a class="external-link" target="_blank" href=${
-        entry.place.url
-      }>Details and citations <i aria-hidden="true" class="fa-solid fa-arrow-right"></i></a></li>
-      ${dateOfReform}
-      <li>${entry.place.pop.toLocaleString()} residents</li>
-    </ul>
-    <p>${entry.unifiedPolicy.summary}</p>
-    `;
-}
-
-export function generateScorecardRevamp(
+export function generateScorecard(
   entry: ProcessedCoreEntry,
   placeId: PlaceId,
 ): string {
@@ -99,10 +70,7 @@ type ScorecardState =
       placeId: PlaceId;
     };
 
-function updateScorecardUI(
-  revampEnabled: boolean,
-  state: ScorecardState,
-): void {
+function updateScorecardUI(state: ScorecardState): void {
   const scorecardContainer = document.querySelector<HTMLElement>(
     "#scorecard-container",
   );
@@ -114,9 +82,10 @@ function updateScorecardUI(
       break;
     }
     case "visible": {
-      scorecardContainer.innerHTML = revampEnabled
-        ? generateScorecardRevamp(state.entry, state.placeId)
-        : generateScorecardLegacy(state.entry, state.placeId);
+      scorecardContainer.innerHTML = generateScorecard(
+        state.entry,
+        state.placeId,
+      );
       scorecardContainer.hidden = false;
       break;
     }
@@ -128,14 +97,11 @@ export default function initScorecard(
   viewToggle: ViewStateObservable,
   markerGroup: FeatureGroup,
   data: Record<PlaceId, ProcessedCoreEntry>,
-  options: { revampEnabled: boolean },
 ): void {
   const scorecardState = new Observable<ScorecardState>("scorecard", {
     type: "hidden",
   });
-  scorecardState.subscribe((state) =>
-    updateScorecardUI(options.revampEnabled, state),
-  );
+  scorecardState.subscribe((state) => updateScorecardUI(state));
 
   const scorecardContainer = document.querySelector("#scorecard-container");
   const header = document.querySelector(".top-header");

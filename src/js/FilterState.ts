@@ -22,10 +22,7 @@ export const POPULATION_INTERVALS: Array<[string, number]> = [
   ["75M", 750000000],
 ];
 
-export type PolicyTypeFilter =
-  | PolicyType
-  | "legacy reform"
-  | "any parking reform";
+export type PolicyTypeFilter = PolicyType | "any parking reform";
 
 // Note that this only tracks state set by the user.
 // Computed values are handled elsewhere.
@@ -49,10 +46,6 @@ export interface FilterState {
   populationSliderIndexes: [number, number];
 }
 
-interface PlaceMatchLegacy {
-  type: "legacy";
-}
-
 interface PlaceMatchSearch {
   type: "search";
 }
@@ -73,7 +66,6 @@ interface PlaceMatchAnyPolicy {
 }
 
 type PlaceMatch =
-  | PlaceMatchLegacy
   | PlaceMatchSearch
   | PlaceMatchSinglePolicy
   | PlaceMatchAnyPolicy;
@@ -253,16 +245,6 @@ export class PlaceFilterManager {
 
     const isPlace = this.matchesPlace(entry.place);
     if (!isPlace) return null;
-
-    if (filterState.policyTypeFilter === "legacy reform") {
-      const isPolicyType = entry.unifiedPolicy.policy.some((v) =>
-        filterState.includedPolicyChanges.has(v),
-      );
-      if (!isPolicyType) return null;
-      return this.matchesPolicyRecord(entry.unifiedPolicy, {})
-        ? { type: "legacy" }
-        : null;
-    }
 
     if (filterState.policyTypeFilter === "any parking reform") {
       const policyTypes = determineAdoptedPolicyTypes(entry);
