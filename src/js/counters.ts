@@ -80,11 +80,11 @@ export function determineAnyReform(
   statePolicyTypes: Set<string>,
 ): string {
   if (view === "table") {
-    const prefix = `Showing an overview of ${placeDescription} with`;
+    const prefix = `Showing an overview of adopted parking reforms in ${placeDescription}`;
     const suffix = allMinimumsRemovedToggle
-      ? "all parking minimums removed"
-      : "adopted parking reforms";
-    return `${prefix} ${suffix}`;
+      ? " with all parking minimums removed"
+      : "";
+    return `${prefix}${suffix}`;
   }
 
   const prefix = `Showing ${placeDescription} with`;

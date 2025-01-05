@@ -212,11 +212,11 @@ test("determineAnyReform()", () => {
   // For table view, the text only depends on allMinimumsRemovedToggle.
   assert(
     { view: "table", matched: [], statePolicy: [], allMinimums: false },
-    "Showing an overview of 5 places in Mexico with adopted parking reforms",
+    "Showing an overview of adopted parking reforms in 5 places in Mexico",
   );
   assert(
     { view: "table", matched: [], statePolicy: [], allMinimums: true },
-    "Showing an overview of 5 places in Mexico with all parking minimums removed",
+    "Showing an overview of adopted parking reforms in 5 places in Mexico with all parking minimums removed",
   );
 
   // For map view, we only show policy types that are both present in the matched places &
