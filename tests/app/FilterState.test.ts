@@ -280,16 +280,24 @@ test.describe("PlaceFilterManager.matchedPolicyRecords()", () => {
 
     expect(manager.matchedPlaces).toEqual(expectedMatch);
 
+    // `scope` only applies if allMinimumsRemovedToggle is false.
     manager.update({ scope: new Set(["city center / business district"]) });
     expect(manager.matchedPlaces).toEqual({});
+    manager.update({ allMinimumsRemovedToggle: true });
+    expect(manager.matchedPlaces).toEqual(expectedMatch);
     manager.update({
       scope: DEFAULT_STATE.scope,
+      allMinimumsRemovedToggle: false,
     });
 
+    // `landUse` only applies if allMinimumsRemovedToggle is false.
     manager.update({ landUse: new Set(["commercial"]) });
     expect(manager.matchedPlaces).toEqual({});
+    manager.update({ allMinimumsRemovedToggle: true });
+    expect(manager.matchedPlaces).toEqual(expectedMatch);
     manager.update({
       landUse: DEFAULT_STATE.landUse,
+      allMinimumsRemovedToggle: false,
     });
 
     manager.update({ status: new Set(["repealed"]) });
