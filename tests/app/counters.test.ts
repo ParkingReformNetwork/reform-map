@@ -107,6 +107,9 @@ test("determineLegacy()", () => {
 });
 
 test("determineSearch()", () => {
+  const placeLink =
+    '<a class="external-link" target="_blank" href=https://parkingreform.org/mandates-map/city_detail/Baltimore_MD.html>Baltimore, MD <i aria-hidden="true" class="fa-solid fa-arrow-right"></i></a>';
+
   // Map view always has the same text.
   for (const policyType of [
     "legacy reform",
@@ -116,29 +119,29 @@ test("determineSearch()", () => {
     "reduce parking minimums",
   ] as const) {
     expect(determineSearch("map", "Baltimore, MD", policyType)).toEqual(
-      `Showing Baltimore, MD — ${SEARCH_RESET_HTML}`,
+      `Showing ${placeLink} — ${SEARCH_RESET_HTML}`,
     );
   }
 
   expect(
     determineSearch("table", "Baltimore, MD", "any parking reform"),
   ).toEqual(
-    `Showing an overview of adopted parking reforms in Baltimore, MD — ${SEARCH_RESET_HTML}`,
+    `Showing an overview of adopted parking reforms in ${placeLink} — ${SEARCH_RESET_HTML}`,
   );
   expect(
     determineSearch("table", "Baltimore, MD", "add parking maximums"),
   ).toEqual(
-    `Showing details about parking maximums in Baltimore, MD — ${SEARCH_RESET_HTML}`,
+    `Showing details about parking maximums in ${placeLink} — ${SEARCH_RESET_HTML}`,
   );
   expect(
     determineSearch("table", "Baltimore, MD", "reduce parking minimums"),
   ).toEqual(
-    `Showing details about parking minimum reductions in Baltimore, MD — ${SEARCH_RESET_HTML}`,
+    `Showing details about parking minimum reductions in ${placeLink} — ${SEARCH_RESET_HTML}`,
   );
   expect(
     determineSearch("table", "Baltimore, MD", "remove parking minimums"),
   ).toEqual(
-    `Showing details about parking minimum removals in Baltimore, MD — ${SEARCH_RESET_HTML}`,
+    `Showing details about parking minimum removals in ${placeLink} — ${SEARCH_RESET_HTML}`,
   );
 });
 
