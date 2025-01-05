@@ -3,6 +3,7 @@ import { isEqual } from "lodash-es";
 import { FilterState, PlaceFilterManager } from "./FilterState";
 import { PlaceType, PolicyType } from "./types";
 import { joinWithConjunction } from "./data";
+import type { ViewState } from "./viewToggle";
 
 export function determinePlaceDescription(
   numPlaces: number,
@@ -45,11 +46,20 @@ export function determineLegacy(
 }
 
 export function determineAnyReform(
+  view: ViewState,
   placeDescription: string,
   matchedPolicyTypes: Set<PolicyType>,
   allMinimumsRemovedToggle: boolean,
   statePolicyTypes: Set<string>,
 ): string {
+  if (view === "table") {
+    const prefix = `Showing an overview of ${placeDescription} with`;
+    const suffix = allMinimumsRemovedToggle
+      ? "all parking minimums removed"
+      : "parking reforms";
+    return `${prefix} ${suffix}`;
+  }
+
   const prefix = `Showing ${placeDescription} with`;
 
   if (allMinimumsRemovedToggle) {
@@ -76,31 +86,51 @@ export function determineAnyReform(
   return `${prefix} ${suffix}`;
 }
 
-export function determineReduceMin(placeDescription: string): string {
-  return `Showing ${placeDescription} with parking minimums reduced`;
+export function determineReduceMin(
+  view: ViewState,
+  placeDescription: string,
+): string {
+  return view === "map"
+    ? `Showing ${placeDescription} with parking minimums reduced`
+    : `Showing details about parking minimum reductions for ${placeDescription}`;
 }
 
 export function determineAddMax(
+  view: ViewState,
   placeDescription: string,
   allMinimumsRemovedToggle: boolean,
 ): string {
-  const suffix = allMinimumsRemovedToggle
-    ? "both all parking minimums removed and parking maximums added"
-    : "parking maximums added";
-  return `Showing ${placeDescription} with ${suffix}`;
+  if (view === "map") {
+    const suffix = allMinimumsRemovedToggle
+      ? "both all parking minimums removed and parking maximums added"
+      : "parking maximums added";
+    return `Showing ${placeDescription} with ${suffix}`;
+  }
+  const prefix = `Showing details about parking maximums for ${placeDescription}`;
+  return allMinimumsRemovedToggle
+    ? `${prefix} that have also removed all parking minimums`
+    : prefix;
 }
 
 export function determineRmMin(
+  view: ViewState,
   placeDescription: string,
   allMinimumsRemovedToggle: boolean,
 ): string {
-  const suffix = allMinimumsRemovedToggle
-    ? `all parking minimums removed`
-    : `parking minimums removed`;
-  return `Showing ${placeDescription} with ${suffix}`;
+  if (view === "map") {
+    const suffix = allMinimumsRemovedToggle
+      ? `all parking minimums removed`
+      : `parking minimums removed`;
+    return `Showing ${placeDescription} with ${suffix}`;
+  }
+  const prefix = `Showing details about parking minimum removals for ${placeDescription}`;
+  return allMinimumsRemovedToggle
+    ? `${prefix} that removed all parking minimums`
+    : prefix;
 }
 
 export function determineHtml(
+  view: ViewState,
   state: FilterState,
   numPlaces: number,
   matchedPolicyTypes: Set<PolicyType>,
@@ -125,17 +155,26 @@ export function determineHtml(
       return determineLegacy(placeDescription, state.allMinimumsRemovedToggle);
     case "any parking reform":
       return determineAnyReform(
+        view,
         placeDescription,
         matchedPolicyTypes,
         state.allMinimumsRemovedToggle,
         state.includedPolicyChanges,
       );
     case "reduce parking minimums":
-      return determineReduceMin(placeDescription);
+      return determineReduceMin(view, placeDescription);
     case "add parking maximums":
-      return determineAddMax(placeDescription, state.allMinimumsRemovedToggle);
+      return determineAddMax(
+        view,
+        placeDescription,
+        state.allMinimumsRemovedToggle,
+      );
     case "remove parking minimums":
-      return determineRmMin(placeDescription, state.allMinimumsRemovedToggle);
+      return determineRmMin(
+        view,
+        placeDescription,
+        state.allMinimumsRemovedToggle,
+      );
     default:
       throw new Error("unreachable");
   }
@@ -165,6 +204,7 @@ export default function initCounters(manager: PlaceFilterManager): void {
 
   manager.subscribe("update counters", (state) => {
     mapCounter.innerHTML = determineHtml(
+      "map",
       state,
       manager.placeIds.size,
       manager.matchedPolicyTypes,
@@ -172,6 +212,7 @@ export default function initCounters(manager: PlaceFilterManager): void {
       manager.matchedPlaceTypes,
     );
     tableCounter.innerHTML = determineHtml(
+      "table",
       state,
       manager.placeIds.size,
       manager.matchedPolicyTypes,

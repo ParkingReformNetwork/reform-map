@@ -11,6 +11,7 @@ import {
 } from "../../src/js/counters";
 import { FilterState } from "../../src/js/FilterState";
 import { PolicyType } from "../../src/js/types";
+import { ViewState } from "../../src/js/viewToggle";
 
 test.describe("determineHtml", () => {
   const DEFAULT_STATE: FilterState = {
@@ -34,6 +35,7 @@ test.describe("determineHtml", () => {
 
   test("no places", () => {
     const result = determineHtml(
+      "map",
       DEFAULT_STATE,
       0,
       new Set(),
@@ -47,6 +49,7 @@ test.describe("determineHtml", () => {
 
   test("search", () => {
     const result = determineHtml(
+      "map",
       { ...DEFAULT_STATE, searchInput: "My Town" },
       1,
       new Set(),
@@ -116,32 +119,50 @@ test("determineLegacy()", () => {
 });
 
 test("determineAddMax()", () => {
-  expect(determineAddMax("2 places in Mexico", false)).toEqual(
+  expect(determineAddMax("map", "2 places in Mexico", false)).toEqual(
     "Showing 2 places in Mexico with parking maximums added",
   );
-  expect(determineAddMax("2 places in Mexico", true)).toEqual(
+  expect(determineAddMax("map", "2 places in Mexico", true)).toEqual(
     "Showing 2 places in Mexico with both all parking minimums removed and parking maximums added",
+  );
+
+  expect(determineAddMax("table", "2 places in Mexico", false)).toEqual(
+    "Showing details about parking maximums for 2 places in Mexico",
+  );
+  expect(determineAddMax("table", "2 places in Mexico", true)).toEqual(
+    "Showing details about parking maximums for 2 places in Mexico that have also removed all parking minimums",
   );
 });
 
 test("determineReduceMinimums()", () => {
-  expect(determineReduceMin("2 places in Mexico")).toEqual(
+  expect(determineReduceMin("map", "2 places in Mexico")).toEqual(
     "Showing 2 places in Mexico with parking minimums reduced",
+  );
+  expect(determineReduceMin("table", "2 places in Mexico")).toEqual(
+    "Showing details about parking minimum reductions for 2 places in Mexico",
   );
 });
 
 test("determineRemoveMin()", () => {
-  expect(determineRmMin("2 places in Mexico", false)).toEqual(
+  expect(determineRmMin("map", "2 places in Mexico", false)).toEqual(
     "Showing 2 places in Mexico with parking minimums removed",
   );
-  expect(determineRmMin("2 places in Mexico", true)).toEqual(
+  expect(determineRmMin("map", "2 places in Mexico", true)).toEqual(
     "Showing 2 places in Mexico with all parking minimums removed",
+  );
+
+  expect(determineRmMin("table", "2 places in Mexico", false)).toEqual(
+    "Showing details about parking minimum removals for 2 places in Mexico",
+  );
+  expect(determineRmMin("table", "2 places in Mexico", true)).toEqual(
+    "Showing details about parking minimum removals for 2 places in Mexico that removed all parking minimums",
   );
 });
 
 test("determineAnyReform()", () => {
   const assert = (
     args: {
+      view: ViewState;
       matched: PolicyType[];
       allMinimums: boolean;
       statePolicy: PolicyType[];
@@ -149,6 +170,7 @@ test("determineAnyReform()", () => {
     expected: string,
   ): void => {
     const result = determineAnyReform(
+      args.view,
       "5 places in Mexico",
       new Set(args.matched),
       args.allMinimums,
@@ -163,10 +185,21 @@ test("determineAnyReform()", () => {
     "remove parking minimums",
   ];
 
-  // We only show policy types that are both present in the matched places &
+  // For table view, the text only depends on allMinimumsRemovedToggle.
+  assert(
+    { view: "table", matched: [], statePolicy: [], allMinimums: false },
+    "Showing an overview of 5 places in Mexico with parking reforms",
+  );
+  assert(
+    { view: "table", matched: [], statePolicy: [], allMinimums: true },
+    "Showing an overview of 5 places in Mexico with all parking minimums removed",
+  );
+
+  // For map view, we only show policy types that are both present in the matched places &
   // the user requested to see via `includedPolicyChanges`.
   assert(
     {
+      view: "map",
       matched: everyPolicyType,
       statePolicy: everyPolicyType,
       allMinimums: false,
@@ -175,6 +208,7 @@ test("determineAnyReform()", () => {
   );
   assert(
     {
+      view: "map",
       matched: ["add parking maximums", "remove parking minimums"],
       statePolicy: everyPolicyType,
       allMinimums: false,
@@ -183,6 +217,7 @@ test("determineAnyReform()", () => {
   );
   assert(
     {
+      view: "map",
       matched: everyPolicyType,
       statePolicy: ["add parking maximums", "remove parking minimums"],
       allMinimums: false,
@@ -191,6 +226,7 @@ test("determineAnyReform()", () => {
   );
   assert(
     {
+      view: "map",
       matched: ["add parking maximums"],
       statePolicy: everyPolicyType,
       allMinimums: false,
@@ -199,6 +235,7 @@ test("determineAnyReform()", () => {
   );
   assert(
     {
+      view: "map",
       matched: everyPolicyType,
       statePolicy: ["add parking maximums"],
       allMinimums: false,
@@ -208,6 +245,7 @@ test("determineAnyReform()", () => {
 
   assert(
     {
+      view: "map",
       matched: everyPolicyType,
       statePolicy: everyPolicyType,
       allMinimums: true,
@@ -216,6 +254,7 @@ test("determineAnyReform()", () => {
   );
   assert(
     {
+      view: "map",
       matched: everyPolicyType,
       statePolicy: ["add parking maximums"],
       allMinimums: true,
