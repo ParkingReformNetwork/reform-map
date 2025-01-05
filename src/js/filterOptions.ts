@@ -452,13 +452,19 @@ export function initFilterOptions(
       policyTypeFilter !== "any parking reform",
   });
   initFilterGroup(filterManager, filterOptions, filterPopup, {
+    htmlName: "status",
+    filterStateKey: "status",
+    legend: "Reform status",
+    hide: ({ policyTypeFilter }) => policyTypeFilter === "any parking reform",
+  });
+  initFilterGroup(filterManager, filterOptions, filterPopup, {
     htmlName: "scope",
     filterStateKey: "scope",
     legend: "Reform scope",
     hide: ({ policyTypeFilter, allMinimumsRemovedToggle }) =>
       policyTypeFilter === "any parking reform" ||
       (allMinimumsRemovedToggle &&
-        policyTypeFilter !== "reduce parking minimums"),
+        policyTypeFilter === "remove parking minimums"),
   });
   initFilterGroup(filterManager, filterOptions, filterPopup, {
     htmlName: "land-use",
@@ -467,13 +473,7 @@ export function initFilterOptions(
     hide: ({ policyTypeFilter, allMinimumsRemovedToggle }) =>
       policyTypeFilter === "any parking reform" ||
       (allMinimumsRemovedToggle &&
-        policyTypeFilter !== "reduce parking minimums"),
-  });
-  initFilterGroup(filterManager, filterOptions, filterPopup, {
-    htmlName: "status",
-    filterStateKey: "status",
-    legend: "Reform status",
-    hide: ({ policyTypeFilter }) => policyTypeFilter === "any parking reform",
+        policyTypeFilter === "remove parking minimums"),
   });
   initFilterGroup(filterManager, filterOptions, filterPopup, {
     htmlName: "year",

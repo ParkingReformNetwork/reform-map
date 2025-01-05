@@ -211,7 +211,10 @@ export class PlaceFilterManager {
     return isPopulation;
   }
 
-  private matchesPolicyRecord(policyRecord: ProcessedCorePolicy): boolean {
+  private matchesPolicyRecord(
+    policyRecord: ProcessedCorePolicy,
+    options: { ignoreScope?: boolean; ignoreLand?: boolean },
+  ): boolean {
     const filterState = this.state.getValue();
 
     const isStatus = filterState.status.has(policyRecord.status);
@@ -222,11 +225,17 @@ export class PlaceFilterManager {
     );
     if (!isYear) return false;
 
-    const isScope = policyRecord.scope.some((v) => filterState.scope.has(v));
-    if (!isScope) return false;
+    if (!options.ignoreScope) {
+      const isScope = policyRecord.scope.some((v) => filterState.scope.has(v));
+      if (!isScope) return false;
+    }
 
-    const isLand = policyRecord.land.some((v) => filterState.landUse.has(v));
-    return isLand;
+    if (!options.ignoreLand) {
+      const isLand = policyRecord.land.some((v) => filterState.landUse.has(v));
+      if (!isLand) return false;
+    }
+
+    return true;
   }
 
   private getPlaceMatch(placeId: PlaceId): PlaceMatch | null {
@@ -250,7 +259,7 @@ export class PlaceFilterManager {
         filterState.includedPolicyChanges.has(v),
       );
       if (!isPolicyType) return null;
-      return this.matchesPolicyRecord(entry.unifiedPolicy)
+      return this.matchesPolicyRecord(entry.unifiedPolicy, {})
         ? { type: "legacy" }
         : null;
     }
@@ -273,7 +282,7 @@ export class PlaceFilterManager {
     if (filterState.policyTypeFilter === "add parking maximums") {
       const matchingPolicies = getFilteredIndexes(
         entry.add_max ?? [],
-        (policyRecord) => this.matchesPolicyRecord(policyRecord),
+        (policyRecord) => this.matchesPolicyRecord(policyRecord, {}),
       );
       return matchingPolicies.length
         ? {
@@ -287,7 +296,7 @@ export class PlaceFilterManager {
     if (filterState.policyTypeFilter === "reduce parking minimums") {
       const matchingPolicies = getFilteredIndexes(
         entry.reduce_min ?? [],
-        (policyRecord) => this.matchesPolicyRecord(policyRecord),
+        (policyRecord) => this.matchesPolicyRecord(policyRecord, {}),
       );
       return matchingPolicies.length
         ? {
@@ -299,9 +308,16 @@ export class PlaceFilterManager {
     }
 
     if (filterState.policyTypeFilter === "remove parking minimums") {
+      // If 'all minimums removed' is checked, then 'land use' and 'scope' are irrelevent:
+      //  - the place will only have a single policy record for minimum removal
+      //  - that policy record must be set to "All uses" and "Citywide"
+      const options = {
+        ignoreScope: filterState.allMinimumsRemovedToggle,
+        ignoreLand: filterState.allMinimumsRemovedToggle,
+      };
       const matchingPolicies = getFilteredIndexes(
         entry.rm_min ?? [],
-        (policyRecord) => this.matchesPolicyRecord(policyRecord),
+        (policyRecord) => this.matchesPolicyRecord(policyRecord, options),
       );
       return matchingPolicies.length
         ? {
