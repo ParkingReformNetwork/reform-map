@@ -4,10 +4,12 @@ import type { Page } from "@playwright/test";
 import { readRawCoreData } from "../../scripts/lib/data";
 
 const PLACE_MARKER = "path.leaflet-interactive";
-export const DEFAULT_PLACE_RANGE: [number, number] = [3000, 4000];
+
+export const DEFAULT_ALL_MINIMUMS_RANGE: [number, number] = [95, 135];
+export const DEFAULT_PLACE_RANGE: [number, number] = [3100, 4100];
 
 export const loadMap = async (page: Page): Promise<void> => {
-  await page.goto("");
+  await page.goto("?revamp");
   // Wait for data to load.
   await page.waitForSelector(PLACE_MARKER);
 };
@@ -36,8 +38,10 @@ export const assertNumPlaces = async (
   expect(mapNumPlaces).toEqual(counterNumPlaces);
 };
 
-export const deselectToggle = async (page: Page): Promise<void> => {
-  // Default has requirement toggle on, so first de-select it by opening filter pop-up and clicking toggle.
+export async function openFilter(page: Page): Promise<void> {
   await page.locator(".header-filter-icon-container").click();
+}
+
+export const deselectToggle = async (page: Page): Promise<void> => {
   await page.locator("#filter-all-minimums-toggle-label").click();
 };

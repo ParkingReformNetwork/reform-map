@@ -9,14 +9,18 @@ import {
   deselectToggle,
   DEFAULT_PLACE_RANGE,
   getTotalNumPlaces,
+  openFilter,
+  DEFAULT_ALL_MINIMUMS_RANGE,
 } from "./utils";
+import { PolicyTypeFilter } from "../../src/js/FilterState";
 
 type StringArrayOption = string[] | "all";
 
 interface EdgeCase {
   desc: string;
+  policyTypeFilter: PolicyTypeFilter;
   scope?: StringArrayOption;
-  policy?: StringArrayOption;
+  includedPolicy?: StringArrayOption;
   land?: StringArrayOption;
   status?: StringArrayOption;
   country?: StringArrayOption;
@@ -27,56 +31,89 @@ interface EdgeCase {
   expectedRange: [number, number] | "all";
 }
 
+const EXPECTED_MAX_RANGE: [number, number] = [760, 1100];
+
 // The expected ranges can be updated as the data is updated!
 const TESTS: EdgeCase[] = [
-  { desc: "default filters", expectedRange: DEFAULT_PLACE_RANGE },
-  { desc: "disabled filter", scope: [], expectedRange: [0, 0] },
-  { desc: "scope filter", scope: ["Regional"], expectedRange: [8, 20] },
   {
-    desc: "policy change filter",
-    policy: ["Add parking maximums"],
-    expectedRange: [700, 1100],
+    desc: "default: any",
+    policyTypeFilter: "any parking reform",
+    expectedRange: DEFAULT_PLACE_RANGE,
   },
   {
-    desc: "land use filter",
-    land: ["Residential, all uses"],
-    expectedRange: [290, 550],
+    desc: "default: reduce",
+    policyTypeFilter: "reduce parking minimums",
+    expectedRange: [1125, 1700],
   },
   {
-    desc: "status filter",
-    status: ["Repealed"],
-    expectedRange: [1, 10],
+    desc: "default: remove",
+    policyTypeFilter: "remove parking minimums",
+    expectedRange: [2200, 2700],
+  },
+  {
+    desc: "default: max",
+    policyTypeFilter: "add parking maximums",
+    expectedRange: EXPECTED_MAX_RANGE,
+  },
+  {
+    desc: "disabled filter",
+    policyTypeFilter: "any parking reform",
+    country: [],
+    expectedRange: [0, 0],
+  },
+  {
+    desc: "any reform: policy change filter",
+    policyTypeFilter: "any parking reform",
+    includedPolicy: ["Add parking maximums"],
+    expectedRange: EXPECTED_MAX_RANGE,
   },
   {
     desc: "country filter",
+    policyTypeFilter: "any parking reform",
     country: ["Mexico"],
     expectedRange: [2, 7],
   },
   {
     desc: "place type filter",
+    policyTypeFilter: "any parking reform",
     placeType: ["Country"],
-    expectedRange: [5, 11],
-  },
-  {
-    desc: "year filter",
-    year: ["1952"],
-    expectedRange: [1, 1],
+    expectedRange: [6, 14],
   },
   {
     desc: "population slider",
+    policyTypeFilter: "any parking reform",
     populationIntervals: [3, 6],
-    expectedRange: [480, 700],
+    expectedRange: [500, 800],
   },
   {
     desc: "all minimums removed",
+    policyTypeFilter: "any parking reform",
     allMinimumsRemoved: true,
-    expectedRange: [80, 250],
+    expectedRange: DEFAULT_ALL_MINIMUMS_RANGE,
   },
   {
-    desc: "all places",
-    // The other filters already enable all options by default.
-    status: "all",
-    expectedRange: "all",
+    desc: "scope filter",
+    policyTypeFilter: "add parking maximums",
+    scope: ["City center / business district"],
+    expectedRange: [130, 350],
+  },
+  {
+    desc: "land use filter",
+    policyTypeFilter: "remove parking minimums",
+    land: ["Residential, all uses"],
+    expectedRange: [130, 350],
+  },
+  {
+    desc: "status filter",
+    policyTypeFilter: "remove parking minimums",
+    status: ["Repealed"],
+    expectedRange: [2, 10],
+  },
+  {
+    desc: "year filter",
+    policyTypeFilter: "remove parking minimums",
+    year: ["1952"],
+    expectedRange: [1, 2],
   },
 ];
 
@@ -129,15 +166,23 @@ const selectIfSet = async (
 for (const edgeCase of TESTS) {
   test(`${edgeCase.desc}`, async ({ page }) => {
     await loadMap(page);
+    await openFilter(page);
 
-    await deselectToggle(page);
+    if (
+      edgeCase.allMinimumsRemoved !== true &&
+      edgeCase.policyTypeFilter !== "reduce parking minimums"
+    ) {
+      await deselectToggle(page);
+    }
 
-    if (edgeCase.allMinimumsRemoved !== undefined) {
-      await page.locator("#filter-all-minimums-toggle-label").click();
+    if (edgeCase.policyTypeFilter !== "any parking reform") {
+      await page
+        .locator("#filter-policy-type-dropdown")
+        .selectOption(edgeCase.policyTypeFilter);
     }
 
     await selectIfSet(page, "scope", edgeCase.scope);
-    await selectIfSet(page, "policy-change", edgeCase.policy);
+    await selectIfSet(page, "policy-change", edgeCase.includedPolicy);
     await selectIfSet(page, "land-use", edgeCase.land);
     await selectIfSet(page, "status", edgeCase.status);
     await selectIfSet(page, "country", edgeCase.country);
