@@ -27,7 +27,7 @@ export const assertNumPlaces = async (
 
   const counter = await page.locator("#map-counter").innerText();
   let counterNumPlaces: number;
-  if (counter.includes("from search")) {
+  if (counter.includes("reset search")) {
     counterNumPlaces = 1;
   } else {
     const counterNumMatch = counter.match(/\d+/);
