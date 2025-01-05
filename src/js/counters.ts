@@ -1,6 +1,10 @@
 import { isEqual } from "lodash-es";
 
-import { FilterState, PlaceFilterManager } from "./FilterState";
+import {
+  FilterState,
+  PlaceFilterManager,
+  PolicyTypeFilter,
+} from "./FilterState";
 import { PlaceType, PolicyType } from "./types";
 import { joinWithConjunction } from "./data";
 import type { ViewState } from "./viewToggle";
@@ -35,6 +39,29 @@ export function determinePlaceDescription(
   }
 }
 
+export const SEARCH_RESET_HTML = `<a class="counter-search-reset" role="button" aria-label="reset search">reset search</a>`;
+
+export function determineSearch(
+  view: ViewState,
+  searchInput: string,
+  policyType: PolicyTypeFilter,
+): string {
+  if (view === "map" || policyType === "legacy reform") {
+    return `Showing ${searchInput} — ${SEARCH_RESET_HTML}`;
+  }
+  const suffix = `in ${searchInput} — ${SEARCH_RESET_HTML}`;
+  switch (policyType) {
+    case "any parking reform":
+      return `Showing an overview of adopted parking reforms ${suffix}`;
+    case "add parking maximums":
+      return `Showing details about parking maximums ${suffix}`;
+    case "reduce parking minimums":
+      return `Showing details about parking minimum reductions ${suffix}`;
+    case "remove parking minimums":
+      return `Showing details about parking minimum removals ${suffix}`;
+  }
+}
+
 export function determineLegacy(
   placeDescription: string,
   allMinimumsRemovedToggle: boolean,
@@ -56,7 +83,7 @@ export function determineAnyReform(
     const prefix = `Showing an overview of ${placeDescription} with`;
     const suffix = allMinimumsRemovedToggle
       ? "all parking minimums removed"
-      : "parking reforms";
+      : "adopted parking reforms";
     return `${prefix} ${suffix}`;
   }
 
@@ -141,7 +168,7 @@ export function determineHtml(
     return "No places selected — use the filter or search icons";
   }
   if (state.searchInput) {
-    return `Showing ${state.searchInput} from search — <a class="counter-search-reset" role="button" aria-label="reset search">reset</a>`;
+    return determineSearch(view, state.searchInput, state.policyTypeFilter);
   }
 
   const placeDescription = determinePlaceDescription(
@@ -175,8 +202,6 @@ export function determineHtml(
         placeDescription,
         state.allMinimumsRemovedToggle,
       );
-    default:
-      throw new Error("unreachable");
   }
 }
 

@@ -8,6 +8,8 @@ import {
   determineReduceMin,
   determineRmMin,
   determinePlaceDescription,
+  determineSearch,
+  SEARCH_RESET_HTML,
 } from "../../src/js/counters";
 import { FilterState } from "../../src/js/FilterState";
 import { PolicyType } from "../../src/js/types";
@@ -44,20 +46,6 @@ test.describe("determineHtml", () => {
     );
     expect(result).toEqual(
       "No places selected — use the filter or search icons",
-    );
-  });
-
-  test("search", () => {
-    const result = determineHtml(
-      "map",
-      { ...DEFAULT_STATE, searchInput: "My Town" },
-      1,
-      new Set(),
-      new Set(),
-      new Set(),
-    );
-    expect(result).toEqual(
-      'Showing My Town from search — <a class="counter-search-reset" role="button" aria-label="reset search">reset</a>',
     );
   });
 });
@@ -115,6 +103,42 @@ test("determineLegacy()", () => {
   );
   expect(determineLegacy("2 places in Mexico", true)).toEqual(
     "Showing 2 places in Mexico with all parking minimums removed",
+  );
+});
+
+test("determineSearch()", () => {
+  // Map view always has the same text.
+  for (const policyType of [
+    "legacy reform",
+    "any parking reform",
+    "add parking maximums",
+    "remove parking minimums",
+    "reduce parking minimums",
+  ] as const) {
+    expect(determineSearch("map", "Baltimore, MD", policyType)).toEqual(
+      `Showing Baltimore, MD — ${SEARCH_RESET_HTML}`,
+    );
+  }
+
+  expect(
+    determineSearch("table", "Baltimore, MD", "any parking reform"),
+  ).toEqual(
+    `Showing an overview of adopted parking reforms in Baltimore, MD — ${SEARCH_RESET_HTML}`,
+  );
+  expect(
+    determineSearch("table", "Baltimore, MD", "add parking maximums"),
+  ).toEqual(
+    `Showing details about parking maximums in Baltimore, MD — ${SEARCH_RESET_HTML}`,
+  );
+  expect(
+    determineSearch("table", "Baltimore, MD", "reduce parking minimums"),
+  ).toEqual(
+    `Showing details about parking minimum reductions in Baltimore, MD — ${SEARCH_RESET_HTML}`,
+  );
+  expect(
+    determineSearch("table", "Baltimore, MD", "remove parking minimums"),
+  ).toEqual(
+    `Showing details about parking minimum removals in Baltimore, MD — ${SEARCH_RESET_HTML}`,
   );
 });
 
@@ -188,7 +212,7 @@ test("determineAnyReform()", () => {
   // For table view, the text only depends on allMinimumsRemovedToggle.
   assert(
     { view: "table", matched: [], statePolicy: [], allMinimums: false },
-    "Showing an overview of 5 places in Mexico with parking reforms",
+    "Showing an overview of 5 places in Mexico with adopted parking reforms",
   );
   assert(
     { view: "table", matched: [], statePolicy: [], allMinimums: true },
