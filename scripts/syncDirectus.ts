@@ -12,7 +12,6 @@ import {
   initDirectus,
   DirectusClient,
   Place as DirectusPlace,
-  LegacyReform,
   Citation as DirectusCitation,
   readItemsBatched,
   readCitationsFilesBatched,
@@ -95,35 +94,6 @@ async function readPlacesAndEnsureCoordinates(
   };
 }
 
-async function readLegacyReforms(
-  client: DirectusClient,
-  placeDirectusIdToStringId: Record<number, PlaceStringId>,
-): Promise<Record<PlaceStringId, Partial<LegacyReform>>> {
-  const records = await readItemsBatched(
-    client,
-    "legacy_reforms",
-    [
-      "id",
-      "place",
-      "last_verified_at",
-      "policy_changes",
-      "land_uses",
-      "reform_scope",
-      "requirements",
-      "status",
-      "summary",
-      "reporter",
-      "reform_date",
-      "citations",
-    ],
-    100,
-    { last_verified_at: { _nnull: true } },
-  );
-  return Object.fromEntries(
-    records.map((record) => [placeDirectusIdToStringId[record.place], record]),
-  );
-}
-
 async function readPolicyRecords(
   client: DirectusClient,
   placeDirectusIdToStringId: Record<number, PlaceStringId>,
@@ -168,27 +138,6 @@ async function readCitations(
     "attachments",
   ]);
   return Object.fromEntries(rawCitations.map((record) => [record.id, record]));
-}
-
-async function readCitationsByLegacyReformJunctionId(
-  client: DirectusClient,
-  citations: Record<number, Partial<DirectusCitation>>,
-): Promise<Record<number, Partial<DirectusCitation>>> {
-  const junctionRecords = await readItemsBatched(
-    client,
-    "legacy_reforms_citations",
-    ["id", "citations_id"],
-    300,
-  );
-  const citationIdsByJunctionIds = Object.fromEntries(
-    junctionRecords.map((record) => [record.id, record.citations_id]),
-  );
-  return Object.fromEntries(
-    Object.entries(citationIdsByJunctionIds).map(([junctionId, citationId]) => [
-      junctionId,
-      citations[citationId],
-    ]),
-  );
 }
 
 async function readCitationsByPolicyRecordJunctionId(
@@ -272,7 +221,7 @@ function mimeTypeToFileExtension(metadata: FileMetadata): string {
 interface AttachmentFileNameArgsBase {
   placeId: string;
   hasDistinctPolicyTypes: boolean;
-  policyType: PolicyType | "legacy";
+  policyType: PolicyType;
   /// The index of policy records for the current `policyType`. If
   /// there is only one record for the `policyType`, this value should
   /// be set to `null`.
@@ -313,7 +262,6 @@ export function createAttachments(
       "add parking maximums": "add-max",
       "reduce parking minimums": "reduce-min",
       "remove parking minimums": "remove-min",
-      legacy: "legacy",
     }[fileNameArgs.policyType];
     const recordIdx =
       fileNameArgs.policyRecordIdx === null
@@ -370,41 +318,13 @@ function createCitations(
 
 function combineData(
   places: Record<PlaceStringId, Partial<DirectusPlace>>,
-  legacyReforms: Record<PlaceStringId, Partial<LegacyReform>>,
   policyRecords: Record<PlaceStringId, Array<Partial<PolicyRecord>>>,
-  citationsByLegacyReformJunctionId: Record<number, Partial<DirectusCitation>>,
   citationsByPolicyRecordJunctionId: Record<number, Partial<DirectusCitation>>,
   filesByAttachmentJunctionId: Record<number, FileMetadata>,
 ): Record<PlaceStringId, RawCompleteEntry> {
   return Object.fromEntries(
     Object.entries(places)
       .map(([placeId, place]): [PlaceStringId, RawCompleteEntry] => {
-        let legacy;
-        if (legacyReforms[placeId]) {
-          const record = legacyReforms[placeId];
-          legacy = {
-            summary: record.summary!,
-            status: record.status!,
-            policy: record.policy_changes!,
-            scope: record.reform_scope!,
-            land: record.land_uses!,
-            date: record.reform_date!,
-            reporter: record.reporter!,
-            requirements: record.requirements!,
-            citations: createCitations(
-              record.citations!,
-              citationsByLegacyReformJunctionId,
-              filesByAttachmentJunctionId,
-              {
-                placeId,
-                policyType: "legacy",
-                hasDistinctPolicyTypes: false,
-                policyRecordIdx: null,
-              },
-            ),
-          };
-        }
-
         let numAddMax = 0;
         let numReduceMin = 0;
         let numRmMin = 0;
@@ -464,7 +384,6 @@ function combineData(
             repeal: place.complete_minimums_repeal!,
             coord: place.coordinates!.coordinates,
           },
-          ...(legacy && { legacy }),
           ...(addMax.length && { add_max: addMax }),
           ...(reduceMin.length && { reduce_min: reduceMin }),
           ...(rmMin.length && { rm_min: rmMin }),
@@ -474,7 +393,6 @@ function combineData(
       // Filter out places without any policy records.
       .filter(
         ([, entry]) =>
-          entry.legacy ||
           entry.add_max?.length ||
           entry.rm_min?.length ||
           entry.reduce_min?.length,
@@ -511,16 +429,6 @@ async function saveCoreData(
           coord: entry.place.coord,
           repeal: entry.place.repeal,
         },
-        ...(entry.legacy && {
-          legacy: {
-            summary: entry.legacy.summary,
-            status: entry.legacy.status,
-            policy: entry.legacy.policy.sort(),
-            scope: entry.legacy.scope.sort(),
-            land: entry.legacy.land.sort(),
-            date: entry.legacy.date,
-          },
-        }),
         ...(entry.add_max && {
           add_max: entry.add_max.map(formatPolicy),
         }),
@@ -551,7 +459,6 @@ async function saveExtendedData(
     Object.entries(result).map(([placeId, entry]) => [
       placeId,
       {
-        ...(entry.legacy && { legacy: formatPolicy(entry.legacy) }),
         ...(entry.add_max && { add_max: entry.add_max.map(formatPolicy) }),
         ...(entry.reduce_min && {
           reduce_min: entry.reduce_min.map(formatPolicy),
@@ -589,9 +496,6 @@ async function saveOptionValues(entries: RawCompleteEntry[]): Promise<void> {
 
   entries.forEach((entry) => {
     country.add(COUNTRY_MAPPING[entry.place.country] ?? entry.place.country);
-    if (entry.legacy) {
-      savePolicyRecord(entry.legacy);
-    }
     entry.add_max?.forEach(savePolicyRecord);
     entry.reduce_min?.forEach(savePolicyRecord);
     entry.rm_min?.forEach(savePolicyRecord);
@@ -619,17 +523,11 @@ async function main(): Promise<void> {
   const geocoder = initGeocoder();
 
   const places = await readPlacesAndEnsureCoordinates(client, geocoder);
-  const legacyReforms = await readLegacyReforms(
-    client,
-    places.directusIdToStringId,
-  );
   const policyRecords = await readPolicyRecords(
     client,
     places.directusIdToStringId,
   );
   const citations = await readCitations(client);
-  const citationsByLegacyReformJunctionId =
-    await readCitationsByLegacyReformJunctionId(client, citations);
   const citationsByPolicyRecordJunctionId =
     await readCitationsByPolicyRecordJunctionId(client, citations);
   const filesByAttachmentJunctionId =
@@ -637,9 +535,7 @@ async function main(): Promise<void> {
 
   const result = combineData(
     places.stringIdToPlace,
-    legacyReforms,
     policyRecords,
-    citationsByLegacyReformJunctionId,
     citationsByPolicyRecordJunctionId,
     filesByAttachmentJunctionId,
   );

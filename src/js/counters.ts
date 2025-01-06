@@ -50,9 +50,10 @@ export function determineSearch(
     placeId,
   )}>${placeId} <i aria-hidden="true" class="fa-solid fa-arrow-right"></i></a>`;
 
-  if (view === "map" || policyType === "legacy reform") {
+  if (view === "map") {
     return `Showing ${placeLink} — ${SEARCH_RESET_HTML}`;
   }
+
   const suffix = `in ${placeLink} — ${SEARCH_RESET_HTML}`;
   switch (policyType) {
     case "any parking reform":
@@ -64,16 +65,6 @@ export function determineSearch(
     case "remove parking minimums":
       return `Showing details about parking minimum removals ${suffix}`;
   }
-}
-
-export function determineLegacy(
-  placeDescription: string,
-  allMinimumsRemovedToggle: boolean,
-): string {
-  const suffix = allMinimumsRemovedToggle
-    ? `all parking minimums removed`
-    : `parking reforms`;
-  return `Showing ${placeDescription} with ${suffix}`;
 }
 
 export function determineAnyReform(
@@ -182,8 +173,6 @@ export function determineHtml(
   );
 
   switch (state.policyTypeFilter) {
-    case "legacy reform":
-      return determineLegacy(placeDescription, state.allMinimumsRemovedToggle);
     case "any parking reform":
       return determineAnyReform(
         view,

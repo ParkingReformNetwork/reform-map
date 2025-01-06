@@ -127,22 +127,9 @@ const ANY_REFORM_COLUMNS: ColumnDefinition[] = [
   },
 ];
 
-const LEGACY_COLUMNS: ColumnDefinition[] = [
-  ...PLACE_COLUMNS,
-  {
-    title: "Policy change",
-    field: "policyChange",
-    width: 260,
-    formatter: formatStringArrays,
-    sorter: compareStringArrays,
-  },
-  ...POLICY_COLUMNS,
-];
-
 export default function initTable(
   filterManager: PlaceFilterManager,
   viewToggle: ViewStateObservable,
-  options: { revampEnabled: boolean },
 ): Tabulator {
   Tabulator.registerModule([
     FilterModule,
@@ -154,7 +141,6 @@ export default function initTable(
     PageModule,
   ]);
 
-  const dataLegacy: any[] = [];
   const dataAnyReform: any[] = [];
   const dataReduceMin: any[] = [];
   const dataRmMin: any[] = [];
@@ -169,16 +155,6 @@ export default function initTable(
       population: entry.place.pop.toLocaleString("en-us"),
       url: entry.place.url,
     };
-    dataLegacy.push({
-      ...common,
-      date: entry.unifiedPolicy.date,
-      status: entry.unifiedPolicy.status,
-      landUse: entry.unifiedPolicy.land,
-      policyChange: entry.unifiedPolicy.policy,
-      scope: entry.unifiedPolicy.scope,
-    });
-
-    if (!options.revampEnabled) return;
 
     const policyTypes = determineAdoptedPolicyTypes(entry);
     dataAnyReform.push({
@@ -212,7 +188,6 @@ export default function initTable(
     PolicyTypeFilter,
     [ColumnDefinition[], any[]]
   > = {
-    "legacy reform": [LEGACY_COLUMNS, dataLegacy],
     "any parking reform": [ANY_REFORM_COLUMNS, dataAnyReform],
     "reduce parking minimums": [SINGLE_POLICY_COLUMNS, dataReduceMin],
     "remove parking minimums": [SINGLE_POLICY_COLUMNS, dataRmMin],
@@ -252,11 +227,7 @@ export default function initTable(
     table.setFilter((row) => {
       const entry = filterManager.matchedPlaces[row.placeId];
       if (!entry) return false;
-      if (
-        entry.type === "legacy" ||
-        entry.type === "any" ||
-        entry.type === "search"
-      ) {
+      if (entry.type === "any" || entry.type === "search") {
         return true;
       }
       return entry.matchingIndexes.includes(row.policyIdx);

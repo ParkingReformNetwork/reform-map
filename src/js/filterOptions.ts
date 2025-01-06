@@ -395,9 +395,6 @@ function initPolicyTypeFilterDropdown(
   filterManager: PlaceFilterManager,
   filterPopup: HTMLFormElement,
 ): void {
-  // Hide the dropdown if on the legacy app.
-  if (filterManager.getState().policyTypeFilter === "legacy reform") return;
-
   const id = "filter-policy-type-dropdown";
 
   const container = document.createElement("div");
@@ -447,9 +444,7 @@ export function initFilterOptions(
     htmlName: "policy-change",
     filterStateKey: "includedPolicyChanges",
     legend: "Policy change",
-    hide: ({ policyTypeFilter }) =>
-      policyTypeFilter !== "legacy reform" &&
-      policyTypeFilter !== "any parking reform",
+    hide: ({ policyTypeFilter }) => policyTypeFilter !== "any parking reform",
   });
   initFilterGroup(filterManager, filterOptions, filterPopup, {
     htmlName: "status",

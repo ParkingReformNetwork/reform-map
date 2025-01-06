@@ -35,14 +35,6 @@ test.describe("PlaceFilterManager.matchedPolicyRecords()", () => {
         coord: [0, 0],
         url: "",
       },
-      unifiedPolicy: {
-        summary: "",
-        policy: ["reduce parking minimums"],
-        status: "adopted",
-        scope: ["citywide"],
-        land: ["all uses"],
-        date: new Date("2024"),
-      },
       reduce_min: [
         {
           summary: "",
@@ -63,14 +55,6 @@ test.describe("PlaceFilterManager.matchedPolicyRecords()", () => {
         repeal: true,
         coord: [0, 0],
         url: "",
-      },
-      unifiedPolicy: {
-        summary: "",
-        policy: ["add parking maximums", "remove parking minimums"],
-        status: "adopted",
-        scope: ["citywide", "city center / business district"],
-        land: ["all uses", "commercial"],
-        date: new Date("2023"),
       },
       add_max: [
         {

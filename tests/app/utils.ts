@@ -9,7 +9,7 @@ export const DEFAULT_ALL_MINIMUMS_RANGE: [number, number] = [95, 135];
 export const DEFAULT_PLACE_RANGE: [number, number] = [3100, 4100];
 
 export const loadMap = async (page: Page): Promise<void> => {
-  await page.goto("?revamp");
+  await page.goto("");
   // Wait for data to load.
   await page.waitForSelector(PLACE_MARKER);
 };

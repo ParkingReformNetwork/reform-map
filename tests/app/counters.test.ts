@@ -2,7 +2,6 @@ import { expect, test } from "@playwright/test";
 
 import {
   determineHtml,
-  determineLegacy,
   determineAnyReform,
   determineAddMax,
   determineReduceMin,
@@ -97,22 +96,12 @@ test("determinePlaceDescription()", () => {
   );
 });
 
-test("determineLegacy()", () => {
-  expect(determineLegacy("2 places in Mexico", false)).toEqual(
-    "Showing 2 places in Mexico with parking reforms",
-  );
-  expect(determineLegacy("2 places in Mexico", true)).toEqual(
-    "Showing 2 places in Mexico with all parking minimums removed",
-  );
-});
-
 test("determineSearch()", () => {
   const placeLink =
     '<a class="external-link" target="_blank" href=https://parkingreform.org/mandates-map/city_detail/Baltimore_MD.html>Baltimore, MD <i aria-hidden="true" class="fa-solid fa-arrow-right"></i></a>';
 
   // Map view always has the same text.
   for (const policyType of [
-    "legacy reform",
     "any parking reform",
     "add parking maximums",
     "remove parking minimums",
