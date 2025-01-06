@@ -5,7 +5,7 @@ import {
   createReformCsv,
 } from "../../scripts/generateDataSet";
 import type { Citation, ProcessedCompleteEntry } from "../../scripts/lib/data";
-import { Date } from "../../src/js/types";
+import { Date } from "../../src/js/model/types";
 
 // This test uses snapshot testing (https://jestjs.io/docs/snapshot-testing#updating-snapshots). If the tests fail and the changes
 // are valid, run `npm test -- --updateSnapshot`.

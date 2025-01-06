@@ -25,8 +25,8 @@ import {
   RawCorePolicy,
   ReformStatus,
   UNKNOWN_YEAR,
-} from "../src/js/types";
-import { COUNTRY_MAPPING } from "../src/js/data";
+} from "../src/js/model/types";
+import { COUNTRY_MAPPING } from "../src/js/model/data";
 import { getLongLat, initGeocoder } from "./lib/geocoder";
 import {
   DirectusFile,

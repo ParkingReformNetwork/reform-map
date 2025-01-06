@@ -5,7 +5,7 @@ import {
   placeIdToUrl,
   getFilteredIndexes,
   joinWithConjunction,
-} from "../../src/js/data";
+} from "../../src/js/model/data";
 
 test("escapePlaceID", () => {
   expect(escapePlaceId("Tucson, AZ")).toEqual("Tucson_AZ");

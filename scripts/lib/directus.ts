@@ -21,7 +21,11 @@ import {
   QueryFilter,
 } from "@directus/sdk";
 
-import { PlaceType, PolicyType, ReformStatus } from "../../src/js/types.js";
+import {
+  PlaceType,
+  PolicyType,
+  ReformStatus,
+} from "../../src/js/model/types.js";
 
 export const CITATIONS_FILES_FOLDER = "f085de08-b747-4251-973d-1752ccc29649";
 

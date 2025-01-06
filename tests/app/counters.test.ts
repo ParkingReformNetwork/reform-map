@@ -9,10 +9,10 @@ import {
   determinePlaceDescription,
   determineSearch,
   SEARCH_RESET_HTML,
-} from "../../src/js/counters";
-import { FilterState } from "../../src/js/FilterState";
-import { PolicyType } from "../../src/js/types";
-import { ViewState } from "../../src/js/viewToggle";
+} from "../../src/js/filter-features/counters";
+import { FilterState } from "../../src/js/state/FilterState";
+import { PolicyType } from "../../src/js/model/types";
+import { ViewState } from "../../src/js/layout/viewToggle";
 
 test.describe("determineHtml", () => {
   const DEFAULT_STATE: FilterState = {

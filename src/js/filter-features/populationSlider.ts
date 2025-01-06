@@ -2,9 +2,9 @@ import {
   AccordionState,
   generateAccordion,
   updateAccordionUI,
-} from "./filterOptions";
-import { PlaceFilterManager, POPULATION_INTERVALS } from "./FilterState";
-import Observable from "./Observable";
+} from "./options";
+import { PlaceFilterManager, POPULATION_INTERVALS } from "../state/FilterState";
+import Observable from "../state/Observable";
 
 const THUMBSIZE = 24;
 export const POPULATION_MAX_INDEX = POPULATION_INTERVALS.length - 1;

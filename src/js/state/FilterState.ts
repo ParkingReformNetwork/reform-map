@@ -7,9 +7,9 @@ import {
   ProcessedCorePolicy,
   ProcessedPlace,
   UNKNOWN_YEAR,
-} from "./types";
+} from "../model/types";
 import Observable from "./Observable";
-import { determineAdoptedPolicyTypes, getFilteredIndexes } from "./data";
+import { determineAdoptedPolicyTypes, getFilteredIndexes } from "../model/data";
 
 export const POPULATION_INTERVALS: Array<[string, number]> = [
   ["100", 100],

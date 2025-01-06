@@ -4,10 +4,10 @@ import {
   FilterState,
   PlaceFilterManager,
   PolicyTypeFilter,
-} from "./FilterState";
-import { PlaceId, PlaceType, PolicyType } from "./types";
-import { joinWithConjunction, placeIdToUrl } from "./data";
-import type { ViewState } from "./viewToggle";
+} from "../state/FilterState";
+import { PlaceId, PlaceType, PolicyType } from "../model/types";
+import { joinWithConjunction, placeIdToUrl } from "../model/data";
+import type { ViewState } from "../layout/viewToggle";
 
 export function determinePlaceDescription(
   numPlaces: number,

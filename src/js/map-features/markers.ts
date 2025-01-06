@@ -1,9 +1,9 @@
 import { CircleMarker, FeatureGroup, Map } from "leaflet";
 
-import { NO_MANDATES_MARKERS_PANE } from "./map";
-import { PlaceFilterManager } from "./FilterState";
-import { ViewStateObservable } from "./viewToggle";
-import { PlaceId } from "./types";
+import { NO_MANDATES_MARKERS_PANE } from "../layout/map";
+import { PlaceFilterManager } from "../state/FilterState";
+import { ViewStateObservable } from "../layout/viewToggle";
+import { PlaceId } from "../model/types";
 
 const PRIMARY_MARKER_STYLE = {
   weight: 1,

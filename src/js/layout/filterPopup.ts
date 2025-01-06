@@ -1,4 +1,4 @@
-import Observable from "./Observable";
+import Observable from "../state/Observable";
 
 function updateFilterPopupUI(isVisible: boolean): void {
   const popup = document.querySelector<HTMLElement>(".filter-popup");

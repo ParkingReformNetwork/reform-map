@@ -1,11 +1,14 @@
 import type { FeatureGroup } from "leaflet";
 import { capitalize } from "lodash-es";
 
-import type { ProcessedCoreEntry, PlaceId } from "./types";
-import Observable from "./Observable";
-import { PlaceFilterManager } from "./FilterState";
-import { ViewStateObservable } from "./viewToggle";
-import { determinePolicyTypeStatuses, joinWithConjunction } from "./data";
+import type { ProcessedCoreEntry, PlaceId } from "../model/types";
+import Observable from "../state/Observable";
+import { PlaceFilterManager } from "../state/FilterState";
+import { ViewStateObservable } from "../layout/viewToggle";
+import {
+  determinePolicyTypeStatuses,
+  joinWithConjunction,
+} from "../model/data";
 
 export function generateScorecard(
   entry: ProcessedCoreEntry,

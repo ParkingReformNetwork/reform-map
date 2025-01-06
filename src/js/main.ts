@@ -1,19 +1,19 @@
-import initIcons from "./fontAwesome";
-import createMap from "./map";
-import initPlaceMarkers from "./mapMarkers";
+import initIcons from "./layout/fontAwesome";
+import createMap from "./layout/map";
+import initFilterPopup from "./layout/filterPopup";
+import maybeDisableFullScreenIcon from "./layout/iframe";
+import initAbout from "./layout/about";
+import { initViewToggle, addViewToggleSubscribers } from "./layout/viewToggle";
+import readData from "./model/data";
+import { PlaceFilterManager } from "./state/FilterState";
+import { POPULATION_MAX_INDEX } from "./filter-features/populationSlider";
+import { FilterOptions, initFilterOptions } from "./filter-features/options";
+import initCounters from "./filter-features/counters";
+import subscribeSnapToPlace from "./map-features/position";
+import initPlaceMarkers from "./map-features/markers";
+import initScorecard from "./map-features/scorecard";
 import initSearch from "./search";
-import maybeDisableFullScreenIcon from "./iframe";
-import initAbout from "./about";
-import initScorecard from "./scorecard";
-import { POPULATION_MAX_INDEX } from "./populationSlider";
-import { FilterOptions, initFilterOptions } from "./filterOptions";
-import initFilterPopup from "./filterPopup";
-import { PlaceFilterManager } from "./FilterState";
-import initCounters from "./counters";
-import { initViewToggle, addViewToggleSubscribers } from "./viewToggle";
 import initTable from "./table";
-import subscribeSnapToPlace from "./mapPosition";
-import readData from "./data";
 
 export default async function initApp(): Promise<void> {
   initIcons();

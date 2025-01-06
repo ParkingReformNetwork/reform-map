@@ -115,7 +115,7 @@ export function processRawCoreEntry(
 export default async function readData(): Promise<
   Record<PlaceId, ProcessedCoreEntry>
 > {
-  const rawData = (await import("../../data/core.json", {
+  const rawData = (await import("../../../data/core.json", {
     with: { type: "json" },
   })) as unknown as Record<PlaceId, RawCoreEntry>;
   return Object.fromEntries(
