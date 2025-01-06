@@ -2,7 +2,7 @@ import {
   AccordionState,
   generateAccordion,
   updateAccordionUI,
-} from "./options";
+} from "../layout/accordion";
 import { PlaceFilterManager, POPULATION_INTERVALS } from "../state/FilterState";
 import Observable from "../state/Observable";
 
