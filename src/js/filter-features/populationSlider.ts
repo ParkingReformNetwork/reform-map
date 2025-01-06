@@ -16,13 +16,13 @@ interface Sliders {
   readonly right: HTMLInputElement;
 }
 
-function determineAccordionDescription(
+function determineAccordionTitle(
   populationSliderIndexes: [number, number],
 ): string {
   const [leftIndex, rightIndex] = populationSliderIndexes;
   const leftLabel = POPULATION_INTERVALS[leftIndex][0];
   const rightLabel = POPULATION_INTERVALS[rightIndex][0];
-  return ` (${leftLabel}-${rightLabel})`;
+  return `Population (${leftLabel}-${rightLabel})`;
 }
 
 function generateSliders(
@@ -66,13 +66,11 @@ function generateSliders(
     {
       hidden: false,
       expanded: false,
-      supplementalTitle: determineAccordionDescription(
-        initialPopulationSliderIndexes,
-      ),
+      title: determineAccordionTitle(initialPopulationSliderIndexes),
     },
   );
   accordionState.subscribe((state) =>
-    updateAccordionUI(accordionElements, "Population", state),
+    updateAccordionUI(accordionElements, state),
   );
   accordionElements.accordionButton.addEventListener("click", () => {
     const priorState = accordionState.getValue();
@@ -174,9 +172,7 @@ export function initPopulationSlider(
     const accordionPriorState = accordionStateObservable.getValue();
     accordionStateObservable.setValue({
       ...accordionPriorState,
-      supplementalTitle: determineAccordionDescription(
-        state.populationSliderIndexes,
-      ),
+      title: determineAccordionTitle(state.populationSliderIndexes),
     });
 
     if (!accordionStateObservable.getValue().hidden) {

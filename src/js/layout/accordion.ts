@@ -8,17 +8,15 @@ export interface BaseAccordionElements {
 export interface AccordionState {
   hidden: boolean;
   expanded: boolean;
-  supplementalTitle?: string;
+  title: string;
 }
 
 export function updateAccordionUI(
   elements: BaseAccordionElements,
-  title: string,
   state: AccordionState,
 ): void {
   elements.outerContainer.hidden = state.hidden;
-
-  elements.accordionTitle.textContent = `${title}${state.supplementalTitle ?? ""}`;
+  elements.accordionTitle.textContent = state.title;
 
   const upIcon =
     elements.accordionButton.querySelector<SVGElement>(".fa-chevron-up");
