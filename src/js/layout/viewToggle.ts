@@ -1,5 +1,5 @@
 import { Tabulator } from "tabulator-tables";
-import Observable from "./Observable";
+import Observable from "../state/Observable";
 
 export type ViewState = "map" | "table";
 

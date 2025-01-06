@@ -11,10 +11,10 @@ import {
   CellComponent,
 } from "tabulator-tables";
 
-import { PlaceFilterManager, PolicyTypeFilter } from "./FilterState";
-import { Date, ProcessedCorePolicy } from "./types";
-import { ViewStateObservable } from "./viewToggle";
-import { determineAdoptedPolicyTypes } from "./data";
+import { PlaceFilterManager, PolicyTypeFilter } from "./state/FilterState";
+import { Date, ProcessedCorePolicy } from "./model/types";
+import { ViewStateObservable } from "./layout/viewToggle";
+import { determineAdoptedPolicyTypes } from "./model/data";
 
 function formatBoolean(cell: CellComponent): string {
   const v = cell.getValue() as boolean;

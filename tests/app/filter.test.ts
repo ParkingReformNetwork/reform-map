@@ -12,7 +12,7 @@ import {
   openFilter,
   DEFAULT_ALL_MINIMUMS_RANGE,
 } from "./utils";
-import { PolicyTypeFilter } from "../../src/js/FilterState";
+import { PolicyTypeFilter } from "../../src/js/state/FilterState";
 
 type StringArrayOption = string[] | "all";
 

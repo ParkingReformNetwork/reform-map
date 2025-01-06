@@ -1,6 +1,6 @@
 import { Map } from "leaflet";
 
-import { PlaceFilterManager } from "./FilterState";
+import { PlaceFilterManager } from "../state/FilterState";
 
 export default function subscribeSnapToPlace(
   manager: PlaceFilterManager,

@@ -4,11 +4,11 @@ import {
   FilterState,
   PlaceFilterManager,
   PolicyTypeFilter,
-} from "./FilterState";
-import Observable from "./Observable";
+} from "../state/FilterState";
+import Observable from "../state/Observable";
 import { initPopulationSlider } from "./populationSlider";
 
-import optionValuesData from "../../data/option-values.json" with { type: "json" };
+import optionValuesData from "../../../data/option-values.json" with { type: "json" };
 
 // Keep in alignment with FilterState.
 type FilterGroupKey =

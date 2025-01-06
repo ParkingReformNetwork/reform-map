@@ -10,8 +10,8 @@ import {
   RawCorePolicy,
   ProcessedPlace,
   ProcessedCorePolicy,
-} from "../../src/js/types";
-import { processRawCoreEntry } from "../../src/js/data";
+} from "../../src/js/model/types";
+import { processRawCoreEntry } from "../../src/js/model/data";
 
 export interface DirectusFile {
   fileName: string;

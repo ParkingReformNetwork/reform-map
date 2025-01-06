@@ -9,7 +9,7 @@ import {
   ProcessedCompletePolicy,
   readProcessedCompleteData,
 } from "./scripts/lib/data.js";
-import { escapePlaceId } from "./src/js/data.js";
+import { escapePlaceId } from "./src/js/model/data.js";
 
 function processPolicyRecord(policy: ProcessedCompletePolicy): object {
   return {

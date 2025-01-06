@@ -1,4 +1,4 @@
-import Observable from "./Observable";
+import Observable from "../state/Observable";
 
 function updatePopupUI(visible: boolean): void {
   const popup = document.querySelector<HTMLElement>(".about-popup");

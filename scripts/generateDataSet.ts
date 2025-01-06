@@ -13,7 +13,7 @@ import {
   ProcessedCompletePolicy,
   readProcessedCompleteData,
 } from "./lib/data";
-import { ReformStatus } from "../src/js/types";
+import { ReformStatus } from "../src/js/model/types";
 
 const DELIMITER = "; ";
 
