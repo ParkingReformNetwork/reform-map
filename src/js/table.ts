@@ -71,7 +71,7 @@ const PLACE_COLUMNS: ColumnDefinition[] = [
 
 const POLICY_COLUMNS: ColumnDefinition[] = [
   {
-    title: "Reform date",
+    title: "Date",
     field: "date",
     width: 110,
     formatter: formatDate,
