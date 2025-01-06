@@ -54,7 +54,6 @@ export type ReformStatus = "adopted" | "proposed" | "repealed";
 
 /// Every policy has these values. It is missing some fields like `date`.
 export interface BasePolicy {
-  summary: string;
   status: ReformStatus;
   scope: string[];
   land: string[];

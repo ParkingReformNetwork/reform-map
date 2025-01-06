@@ -27,6 +27,7 @@ export interface Citation {
 }
 
 export interface ExtendedPolicy {
+  summary: string;
   reporter: string | null;
   requirements: string[];
   citations: Citation[];

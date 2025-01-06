@@ -37,7 +37,6 @@ test.describe("PlaceFilterManager.matchedPolicyRecords()", () => {
       },
       reduce_min: [
         {
-          summary: "",
           status: "adopted",
           scope: ["citywide"],
           land: ["all uses"],
@@ -58,14 +57,12 @@ test.describe("PlaceFilterManager.matchedPolicyRecords()", () => {
       },
       add_max: [
         {
-          summary: "",
           status: "adopted",
           scope: ["city center / business district"],
           land: ["commercial"],
           date: new Date("2023"),
         },
         {
-          summary: "",
           status: "adopted",
           scope: ["citywide"],
           land: ["other"],
@@ -74,7 +71,6 @@ test.describe("PlaceFilterManager.matchedPolicyRecords()", () => {
       ],
       rm_min: [
         {
-          summary: "",
           status: "adopted",
           scope: ["citywide"],
           land: ["all uses"],

@@ -409,7 +409,6 @@ async function saveCoreData(
   result: Record<PlaceStringId, RawCompleteEntry>,
 ): Promise<void> {
   const formatPolicy = (record: RawCorePolicy) => ({
-    summary: record.summary,
     status: record.status,
     scope: record.scope.sort(),
     land: record.land.sort(),
@@ -450,6 +449,7 @@ async function saveExtendedData(
   result: Record<PlaceStringId, RawCompleteEntry>,
 ): Promise<void> {
   const formatPolicy = (record: ExtendedPolicy) => ({
+    summary: record.summary,
     reporter: record.reporter,
     requirements: record.requirements.sort(),
     citations: record.citations,
