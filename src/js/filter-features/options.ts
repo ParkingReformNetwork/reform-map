@@ -1,4 +1,4 @@
-import { capitalize } from "lodash-es";
+import { capitalize, isEqual } from "lodash-es";
 
 import {
   FilterState,
@@ -65,10 +65,7 @@ export class FilterOptions {
   }
 }
 
-function determineAccordionTitle(
-  legend: string,
-  fieldset: HTMLFieldSetElement,
-): string {
+function determineSupplementalTitle(fieldset: HTMLFieldSetElement): string {
   const checkboxes = fieldset.querySelectorAll<HTMLInputElement>(
     'input[type="checkbox"]',
   );
@@ -76,7 +73,7 @@ function determineAccordionTitle(
   const checked = Array.from(checkboxes).filter(
     (checkbox) => checkbox.checked,
   ).length;
-  return `${legend} (${checked}/${total})`;
+  return ` (${checked}/${total})`;
 }
 
 type FilterGroupAccordionElements = BaseAccordionElements & {
@@ -88,7 +85,7 @@ type FilterGroupAccordionElements = BaseAccordionElements & {
 type FilterGroupParams = {
   htmlName: string;
   filterStateKey: FilterGroupKey;
-  legend: string;
+  legend: string | ((state: FilterState) => string);
   /// If not set to true, the option will use Lodash's `capitalize()`. This
   /// only impacts the UI and not the underlying data.
   preserveCapitalization?: boolean;
@@ -97,6 +94,7 @@ type FilterGroupParams = {
 };
 
 function generateAccordionForFilterGroup(
+  filterState: FilterState,
   params: FilterGroupParams,
   filterOptions: FilterOptions,
 ): [FilterGroupAccordionElements, Observable<AccordionState>] {
@@ -154,7 +152,11 @@ function generateAccordionForFilterGroup(
     {
       hidden: false,
       expanded: false,
-      title: determineAccordionTitle(params.legend, fieldSet),
+      title:
+        typeof params.legend === "string"
+          ? params.legend
+          : params.legend(filterState),
+      supplementalTitle: determineSupplementalTitle(fieldSet),
     },
   );
   accordionState.subscribe((state) => updateAccordionUI(elements, state));
@@ -172,13 +174,12 @@ function generateAccordionForFilterGroup(
 
 function updateCheckboxStats(
   observable: Observable<AccordionState>,
-  legend: string,
   fieldSet: HTMLFieldSetElement,
 ): void {
   const accordionPriorState = observable.getValue();
   observable.setValue({
     ...accordionPriorState,
-    title: determineAccordionTitle(legend, fieldSet),
+    supplementalTitle: determineSupplementalTitle(fieldSet),
   });
 }
 
@@ -189,17 +190,14 @@ function initFilterGroup(
   params: FilterGroupParams,
 ): void {
   const [accordionElements, accordionState] = generateAccordionForFilterGroup(
+    filterManager.getState(),
     params,
     filterOptions,
   );
   filterPopup.appendChild(accordionElements.outerContainer);
 
   accordionElements.fieldSet.addEventListener("change", () => {
-    updateCheckboxStats(
-      accordionState,
-      params.legend,
-      accordionElements.fieldSet,
-    );
+    updateCheckboxStats(accordionState, accordionElements.fieldSet);
 
     const checkedLabels = Array.from(
       accordionElements.fieldSet.querySelectorAll(
@@ -222,11 +220,7 @@ function initFilterGroup(
 
   accordionElements.checkAllButton.addEventListener("click", () => {
     allCheckboxes.forEach((input) => (input.checked = true));
-    updateCheckboxStats(
-      accordionState,
-      params.legend,
-      accordionElements.fieldSet,
-    );
+    updateCheckboxStats(accordionState, accordionElements.fieldSet);
     filterManager.update({
       [params.filterStateKey]: new Set(
         filterOptions.all(params.filterStateKey),
@@ -236,22 +230,22 @@ function initFilterGroup(
 
   accordionElements.uncheckAllButton.addEventListener("click", () => {
     allCheckboxes.forEach((input) => (input.checked = false));
-    updateCheckboxStats(
-      accordionState,
-      params.legend,
-      accordionElements.fieldSet,
-    );
+    updateCheckboxStats(accordionState, accordionElements.fieldSet);
     filterManager.update({
       [params.filterStateKey]: new Set(),
     });
   });
 
   filterManager.subscribe(
-    `possibly hide ${params.htmlName} in filter`,
+    `possibly update ${params.htmlName} filter UI`,
     (state) => {
       const priorAccordionState = accordionState.getValue();
       const hidden = params.hide ? params.hide(state) : false;
-      accordionState.setValue({ ...priorAccordionState, hidden });
+      const title =
+        typeof params.legend === "string"
+          ? params.legend
+          : params.legend(state);
+      accordionState.setValue({ ...priorAccordionState, title, hidden });
     },
   );
 }
@@ -368,7 +362,12 @@ export function initFilterOptions(
   initFilterGroup(filterManager, filterOptions, filterPopup, {
     htmlName: "year",
     filterStateKey: "year",
-    legend: "Reform year",
+    legend: ({ status }) => {
+      if (isEqual(status, new Set(["adopted"]))) return "Adoption year";
+      if (isEqual(status, new Set(["proposed"]))) return "Proposal year";
+      if (isEqual(status, new Set(["repealed"]))) return "Repeal year";
+      return "Reform year";
+    },
     useTwoColumns: true,
     hide: ({ policyTypeFilter }) => policyTypeFilter === "any parking reform",
   });
