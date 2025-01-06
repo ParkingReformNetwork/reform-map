@@ -65,7 +65,10 @@ export class FilterOptions {
   }
 }
 
-function getCheckboxStatsDescription(fieldset: HTMLFieldSetElement): string {
+function determineAccordionTitle(
+  legend: string,
+  fieldset: HTMLFieldSetElement,
+): string {
   const checkboxes = fieldset.querySelectorAll<HTMLInputElement>(
     'input[type="checkbox"]',
   );
@@ -73,7 +76,7 @@ function getCheckboxStatsDescription(fieldset: HTMLFieldSetElement): string {
   const checked = Array.from(checkboxes).filter(
     (checkbox) => checkbox.checked,
   ).length;
-  return `(${checked}/${total})`;
+  return `${legend} (${checked}/${total})`;
 }
 
 type FilterGroupAccordionElements = BaseAccordionElements & {
@@ -146,13 +149,12 @@ function generateAccordionForFilterGroup(
     uncheckAllButton,
   };
 
-  const checkboxStats = getCheckboxStatsDescription(fieldSet);
   const accordionState = new Observable<AccordionState>(
     `filter accordion ${params.htmlName}`,
     {
       hidden: false,
       expanded: false,
-      title: `${params.legend} ${checkboxStats}`,
+      title: determineAccordionTitle(params.legend, fieldSet),
     },
   );
   accordionState.subscribe((state) => updateAccordionUI(elements, state));
@@ -170,13 +172,13 @@ function generateAccordionForFilterGroup(
 
 function updateCheckboxStats(
   observable: Observable<AccordionState>,
-  title: string,
+  legend: string,
   fieldSet: HTMLFieldSetElement,
 ): void {
   const accordionPriorState = observable.getValue();
   observable.setValue({
     ...accordionPriorState,
-    title: `${title} ${getCheckboxStatsDescription(fieldSet)}`,
+    title: determineAccordionTitle(legend, fieldSet),
   });
 }
 
