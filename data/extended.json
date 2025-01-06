@@ -5820,21 +5820,106 @@
         {
           "description": "Baltimore Zoning Code",
           "url": "https://legislativereference.baltimorecity.gov/sites/default/files/Art%2032%20-%20Zoning.pdf",
-          "notes": "SUBTITLE 6\nREQUIRED OFF-STREET PARKING\n§ 16-601. Exemptions from requirements.",
+          "notes": "§ 16-205.\nPage 356 of pdf, page 338 of original document",
           "attachments": [],
           "screenshots": [
             {
-              "fileName": "baltimore-md-screenshot1.png",
+              "fileName": "baltimore-md-screenshot.png",
               "directusId": "1667b9c7-552e-4c1f-af04-6f4475bd3e2c"
-            },
-            {
-              "fileName": "baltimore-md-screenshot2.png",
-              "directusId": "9ff294c9-3616-48dd-a933-04c7e47caa20"
             }
           ]
         }
       ]
-    }
+    },
+    "add_max": [
+      {
+        "reporter": null,
+        "requirements": ["by right"],
+        "citations": [
+          {
+            "description": "Baltimore Zoning Code",
+            "url": "https://legislativereference.baltimorecity.gov/sites/default/files/Art%2032%20-%20Zoning.pdf",
+            "notes": "§ 16-205.\nPage 356 of pdf, page 338 of original document",
+            "attachments": [],
+            "screenshots": [
+              {
+                "fileName": "baltimore-md-add-max-screenshot.png",
+                "directusId": "1667b9c7-552e-4c1f-af04-6f4475bd3e2c"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "reduce_min": [
+      {
+        "reporter": "Samuel Deetz",
+        "requirements": [
+          "affordable housing",
+          "bike parking",
+          "size of project",
+          "supportive housing"
+        ],
+        "citations": [
+          {
+            "description": "Baltimore Zoning Code",
+            "url": "https://legislativereference.baltimorecity.gov/sites/default/files/Art%2032%20-%20Zoning.pdf",
+            "notes": "§ 16-601.(g);\n§ 16-601.(h);\n§ 16-601.(i);\n§ 16-705.(e)\nPages 368-369, 375 of pdf, pages 350-351, 357 of original document",
+            "attachments": [],
+            "screenshots": [
+              {
+                "fileName": "baltimore-md-reduce-min-screenshot1.png",
+                "directusId": "8ea5035e-9737-4558-bfcd-b992c55b2be3"
+              },
+              {
+                "fileName": "baltimore-md-reduce-min-screenshot2.png",
+                "directusId": "453ab6d0-e23c-4b15-8263-77d310d1db85"
+              },
+              {
+                "fileName": "baltimore-md-reduce-min-screenshot3.png",
+                "directusId": "480ced06-c11a-427a-8abe-32f6508dc6dd"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "rm_min": [
+      {
+        "reporter": null,
+        "requirements": [
+          "by right",
+          "historic preservation",
+          "size of project"
+        ],
+        "citations": [
+          {
+            "description": "Baltimore Zoning Code",
+            "url": "https://legislativereference.baltimorecity.gov/sites/default/files/Art%2032%20-%20Zoning.pdf",
+            "notes": "§ 16-205.;\n§ 16-601.;\nPages 356, 367-368 of pdf, pages 338, 349-350 of original document",
+            "attachments": [],
+            "screenshots": [
+              {
+                "fileName": "baltimore-md-remove-min-screenshot1.png",
+                "directusId": "14997e12-a6bb-4bf1-9a8c-b40278d461d8"
+              },
+              {
+                "fileName": "baltimore-md-remove-min-screenshot2.png",
+                "directusId": "d892cee9-1a8c-48a6-92e0-61eec73e6498"
+              },
+              {
+                "fileName": "baltimore-md-remove-min-screenshot3.png",
+                "directusId": "d6d370e6-38be-44cf-8423-f5da57cc165b"
+              },
+              {
+                "fileName": "baltimore-md-remove-min-screenshot4.png",
+                "directusId": "eee3c84f-6004-41fe-8f63-5723cb5d210d"
+              }
+            ]
+          }
+        ]
+      }
+    ]
   },
   "Baltimore, OH": {
     "rm_min": [
@@ -7423,21 +7508,57 @@
         {
           "description": "Bel Air Zoning Code",
           "url": "https://ecode360.com/14974861#14974861",
-          "notes": "§ 165-51Parking and loading.\nB.(2)\nC.(2)",
+          "notes": "§ 165-51.C.(2)",
           "attachments": [],
           "screenshots": [
             {
-              "fileName": "bel-air-md-screenshot1.png",
-              "directusId": "314adce3-e4c1-4ca1-a5bd-b81e4ef74ef8"
-            },
-            {
-              "fileName": "bel-air-md-screenshot2.png",
+              "fileName": "bel-air-md-screenshot.png",
               "directusId": "91394241-56fb-479b-8d4c-681dc88b7f11"
             }
           ]
         }
       ]
-    }
+    },
+    "reduce_min": [
+      {
+        "reporter": "Samuel Deetz",
+        "requirements": ["in-lieu fees"],
+        "citations": [
+          {
+            "description": "Bel Air Zoning Code",
+            "url": "https://ecode360.com/14974861#14974861",
+            "notes": "§ 165-51.C.(2)",
+            "attachments": [],
+            "screenshots": [
+              {
+                "fileName": "bel-air-md-reduce-min-screenshot.png",
+                "directusId": "91394241-56fb-479b-8d4c-681dc88b7f11"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "rm_min": [
+      {
+        "reporter": "Samuel Deetz",
+        "requirements": ["by right", "size of project"],
+        "citations": [
+          {
+            "description": "Bel Air Zoning Code",
+            "url": "https://ecode360.com/14974861#14974861",
+            "notes": "§ 165-51.B.(2)",
+            "attachments": [],
+            "screenshots": [
+              {
+                "fileName": "bel-air-md-remove-min-screenshot.png",
+                "directusId": "612828a6-57df-4185-a14b-986417c5f9fb"
+              }
+            ]
+          }
+        ]
+      }
+    ]
   },
   "Belding, MI": {
     "add_max": [
@@ -8189,22 +8310,78 @@
       "citations": [
         {
           "description": "Belmont Land Development Code",
-          "url": "https://www.cityofbelmont.org/documents/ldc-chapter-9-parking/",
-          "notes": "9.0 PARKING\n9.2 GENERAL PARKING REQUIREMENTS\n1. MINIMUM PARKING RATIOS\nPages 2-3",
+          "url": "https://storage.googleapis.com/proudcity/belmontnc/uploads/2020/06/CH-9-Parking-Amended_5_4_20.pdf",
+          "notes": "9.2.1.\nPage 2",
           "attachments": [],
           "screenshots": [
             {
-              "fileName": "belmont-nc-screenshot1.png",
+              "fileName": "belmont-nc-screenshot.png",
               "directusId": "2af0a1d0-be16-48d6-8b1e-d8217334591e"
-            },
-            {
-              "fileName": "belmont-nc-screenshot2.png",
-              "directusId": "d72e9308-4c38-4df9-a959-7b561ae7a2d9"
             }
           ]
         }
       ]
-    }
+    },
+    "add_max": [
+      {
+        "reporter": "Samuel Deetz",
+        "requirements": ["by right", "other"],
+        "citations": [
+          {
+            "description": "Belmont Land Development Code",
+            "url": "https://storage.googleapis.com/proudcity/belmontnc/uploads/2020/06/CH-9-Parking-Amended_5_4_20.pdf",
+            "notes": "9.2.1.\nPage 3",
+            "attachments": [],
+            "screenshots": [
+              {
+                "fileName": "belmont-nc-add-max-screenshot.png",
+                "directusId": "05cd94d6-b92b-432d-8d7b-51467cbd3e41"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "reduce_min": [
+      {
+        "reporter": "Samuel Deetz",
+        "requirements": ["other"],
+        "citations": [
+          {
+            "description": "Belmont Land Development Code",
+            "url": "https://storage.googleapis.com/proudcity/belmontnc/uploads/2020/06/CH-9-Parking-Amended_5_4_20.pdf",
+            "notes": "9.2.1.\nPage 2",
+            "attachments": [],
+            "screenshots": [
+              {
+                "fileName": "belmont-nc-reduce-min-screenshot.png",
+                "directusId": "2af0a1d0-be16-48d6-8b1e-d8217334591e"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "rm_min": [
+      {
+        "reporter": "Samuel Deetz",
+        "requirements": ["by right", "size of project"],
+        "citations": [
+          {
+            "description": "Belmont Land Development Code",
+            "url": "https://storage.googleapis.com/proudcity/belmontnc/uploads/2020/06/CH-9-Parking-Amended_5_4_20.pdf",
+            "notes": "9.2.1.\nPage 2",
+            "attachments": [],
+            "screenshots": [
+              {
+                "fileName": "belmont-nc-remove-min-screenshot.png",
+                "directusId": "c2204929-08ac-4e13-b798-8a3d5e55952f"
+              }
+            ]
+          }
+        ]
+      }
+    ]
   },
   "Beloit, WI": {
     "rm_min": [
@@ -9382,7 +9559,7 @@
         {
           "description": "Bessemer City Land Development Code",
           "url": "https://library.municode.com/nc/bessemer_city/codes/land_development_code?nodeId=CH3DEST_3.6PALO",
-          "notes": "Chapter 3 - DESIGN STANDARDS\n3.6 - PARKING AND LOADING\n3.6.A. - General provisions.\n2.\n3.6.D. - Off-street parking space requirements.\n3.6.E. - Alternatives for compliance.\n1.On-street parking.",
+          "notes": "3.6.A.2.;\n3.6.E.1.",
           "attachments": [],
           "screenshots": [
             {
@@ -9391,16 +9568,56 @@
             },
             {
               "fileName": "bessemer-city-nc-screenshot2.png",
-              "directusId": "9fdeda9b-3794-4543-9060-2c67102e0c03"
-            },
-            {
-              "fileName": "bessemer-city-nc-screenshot3.png",
               "directusId": "46a418c1-235e-4eab-8321-25dee0e75de4"
             }
           ]
         }
       ]
-    }
+    },
+    "add_max": [
+      {
+        "reporter": "Samuel Deetz",
+        "requirements": ["by right"],
+        "citations": [
+          {
+            "description": "Bessemer City Land Development Code",
+            "url": "https://library.municode.com/nc/bessemer_city/codes/land_development_code?nodeId=CH3DEST_3.6PALO_3.6.DOREPASPRE",
+            "notes": "3.6.D.",
+            "attachments": [],
+            "screenshots": [
+              {
+                "fileName": "bessemer-city-nc-add-max-screenshot.png",
+                "directusId": "e51aeda9-013a-4c4a-8548-3bbd2de3eeb8"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "reduce_min": [
+      {
+        "reporter": "Samuel Deetz",
+        "requirements": ["other"],
+        "citations": [
+          {
+            "description": "Bessemer City Land Development Code",
+            "url": "https://library.municode.com/nc/bessemer_city/codes/land_development_code?nodeId=CH3DEST_3.6PALO",
+            "notes": "3.6.A.2.;\n3.6.E.1.",
+            "attachments": [],
+            "screenshots": [
+              {
+                "fileName": "bessemer-city-nc-reduce-min-screenshot1.png",
+                "directusId": "b395d1b4-254a-4174-ac93-555fcd447879"
+              },
+              {
+                "fileName": "bessemer-city-nc-reduce-min-screenshot2.png",
+                "directusId": "46a418c1-235e-4eab-8321-25dee0e75de4"
+              }
+            ]
+          }
+        ]
+      }
+    ]
   },
   "Bessemer, MI": {
     "add_max": [
@@ -11086,26 +11303,62 @@
       "citations": [
         {
           "description": "Boiling Springs Unified Development Ordinance",
-          "url": "https://library.municode.com/nc/boiling_springs/codes/unified_development_ordinance?nodeId=ART8DEST_8.2OREPALOST",
-          "notes": "8.2 - OFF-STREET PARKING, LOADING AND STACKING\nSec. 8.2.2. - Minimum parking requirements.\n(A)Exemption.\n(D)Minimum standards for certain uses.\nSec. 8.2.3. - Maximum parking standards.",
+          "url": "https://library.municode.com/nc/boiling_springs/codes/unified_development_ordinance?nodeId=ART8DEST_8.2OREPALOST_S8.2.3MAPAST",
+          "notes": "Sec. 8.2.3.",
           "attachments": [],
           "screenshots": [
             {
-              "fileName": "boiling-springs-nc-screenshot1.png",
-              "directusId": "1b86027b-4bcc-4ff9-8fc6-5923056b8ade"
-            },
-            {
-              "fileName": "boiling-springs-nc-screenshot2.png",
-              "directusId": "d64fd617-27e4-41db-9997-f3d5abcae3ab"
-            },
-            {
-              "fileName": "boiling-springs-nc-screenshot3.png",
+              "fileName": "boiling-springs-nc-screenshot.png",
               "directusId": "597bcda2-6f69-4be9-b0a8-44f1d5f3d910"
             }
           ]
         }
       ]
-    }
+    },
+    "add_max": [
+      {
+        "reporter": "Samuel Deetz",
+        "requirements": ["by right", "size of project"],
+        "citations": [
+          {
+            "description": "Boiling Springs Unified Development Ordinance",
+            "url": "https://library.municode.com/nc/boiling_springs/codes/unified_development_ordinance?nodeId=ART8DEST_8.2OREPALOST_S8.2.3MAPAST",
+            "notes": "Sec. 8.2.3.",
+            "attachments": [],
+            "screenshots": [
+              {
+                "fileName": "boiling-springs-nc-add-max-screenshot.png",
+                "directusId": "597bcda2-6f69-4be9-b0a8-44f1d5f3d910"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "rm_min": [
+      {
+        "reporter": "Samuel Deetz",
+        "requirements": ["by right"],
+        "citations": [
+          {
+            "description": "Boiling Springs Unified Development Ordinance",
+            "url": "https://library.municode.com/nc/boiling_springs/codes/unified_development_ordinance?nodeId=ART8DEST_8.2OREPALOST_S8.2.2MIPARE",
+            "notes": "Sec. 8.2.2.(A);\nSec. 8.2.2.(D)",
+            "attachments": [],
+            "screenshots": [
+              {
+                "fileName": "boiling-springs-nc-remove-min-screenshot1.png",
+                "directusId": "1b55dbd0-0fce-4fd1-bc04-cec75ef9d5dc"
+              },
+              {
+                "fileName": "boiling-springs-nc-remove-min-screenshot2.png",
+                "directusId": "275a0283-f356-4fe1-94da-2651cace823e"
+              }
+            ]
+          }
+        ]
+      }
+    ]
   },
   "Boise, ID": {
     "legacy": {
@@ -12567,7 +12820,47 @@
           ]
         }
       ]
-    }
+    },
+    "add_max": [
+      {
+        "reporter": "Aaron Bland",
+        "requirements": ["by right"],
+        "citations": [
+          {
+            "description": "Municipal code off-street parking requirements section (10.3)",
+            "url": "https://library.municode.com/nc/brevard/codes/code_of_ordinances?nodeId=UNDEOR_CH10PAST_10.3OREPARE",
+            "notes": null,
+            "attachments": [],
+            "screenshots": [
+              {
+                "fileName": "brevard-nc-add-max-screenshot.png",
+                "directusId": "625a0b98-0d18-4493-8cf4-5af0f5650f7a"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "rm_min": [
+      {
+        "reporter": "Aaron Bland",
+        "requirements": ["by right"],
+        "citations": [
+          {
+            "description": "Municipal code off-street parking requirements section (10.3)",
+            "url": "https://library.municode.com/nc/brevard/codes/code_of_ordinances?nodeId=UNDEOR_CH10PAST_10.3OREPARE",
+            "notes": null,
+            "attachments": [],
+            "screenshots": [
+              {
+                "fileName": "brevard-nc-remove-min-screenshot.png",
+                "directusId": "625a0b98-0d18-4493-8cf4-5af0f5650f7a"
+              }
+            ]
+          }
+        ]
+      }
+    ]
   },
   "Bridgeport Charter Township, MI": {
     "legacy": {
@@ -15038,21 +15331,57 @@
         {
           "description": "Calvert County Zoning Code",
           "url": "https://ecode360.com/29293124Z#29293125Z",
-          "notes": "6-3.01General Provisions\nF.\nI.1.",
+          "notes": "6-3.01.F.",
           "attachments": [],
           "screenshots": [
             {
-              "fileName": "calvert-county-md-screenshot1.png",
+              "fileName": "calvert-county-md-screenshot.png",
               "directusId": "be7257a5-3752-401c-8043-6cf7ce25868e"
-            },
-            {
-              "fileName": "calvert-county-md-screenshot2.png",
-              "directusId": "61a9c2c8-b60b-48b5-9b81-cc7f6063dde2"
             }
           ]
         }
       ]
-    }
+    },
+    "add_max": [
+      {
+        "reporter": "Samuel Deetz",
+        "requirements": ["by right"],
+        "citations": [
+          {
+            "description": "Calvert County Zoning Code",
+            "url": "https://ecode360.com/29293124Z#29293125Z",
+            "notes": "6-3.01.F.",
+            "attachments": [],
+            "screenshots": [
+              {
+                "fileName": "calvert-county-md-add-max-screenshot.png",
+                "directusId": "be7257a5-3752-401c-8043-6cf7ce25868e"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "reduce_min": [
+      {
+        "reporter": "Samuel Deetz",
+        "requirements": ["other", "size of project"],
+        "citations": [
+          {
+            "description": "Calvert County Zoning Code",
+            "url": "https://ecode360.com/29293124Z#29293125Z",
+            "notes": "6-3.01.I.1.",
+            "attachments": [],
+            "screenshots": [
+              {
+                "fileName": "calvert-county-md-reduce-min-screenshot.png",
+                "directusId": "8ce77f0f-373c-4843-a432-8153218edeca"
+              }
+            ]
+          }
+        ]
+      }
+    ]
   },
   "Cambridge, IA": {
     "rm_min": [
@@ -15116,7 +15445,47 @@
           ]
         }
       ]
-    }
+    },
+    "add_max": [
+      {
+        "reporter": "Samuel Deetz",
+        "requirements": ["by right"],
+        "citations": [
+          {
+            "description": "Cambridge Unified Development Code",
+            "url": "https://www.choosecambridge.com/DocumentCenter/View/1891/Cambridge-UDC-with-signed-ordinances-10122",
+            "notes": "§ 6.3 Parking and Loading\nPages 174-177",
+            "attachments": [],
+            "screenshots": [
+              {
+                "fileName": "cambridge-md-add-max-screenshot.png",
+                "directusId": "e2cdcd45-59f2-4ad6-9701-7c4321dd0b72"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "rm_min": [
+      {
+        "reporter": "Samuel Deetz",
+        "requirements": ["by right"],
+        "citations": [
+          {
+            "description": "Cambridge Unified Development Code",
+            "url": "https://www.choosecambridge.com/DocumentCenter/View/1891/Cambridge-UDC-with-signed-ordinances-10122",
+            "notes": "§ 6.3 Parking and Loading\nPages 174-177",
+            "attachments": [],
+            "screenshots": [
+              {
+                "fileName": "cambridge-md-remove-min-screenshot.png",
+                "directusId": "e2cdcd45-59f2-4ad6-9701-7c4321dd0b72"
+              }
+            ]
+          }
+        ]
+      }
+    ]
   },
   "Cambridge, MN": {
     "reduce_min": [
@@ -16376,7 +16745,59 @@
           ]
         }
       ]
-    }
+    },
+    "add_max": [
+      {
+        "reporter": "Patrick McDonough",
+        "requirements": ["by right"],
+        "citations": [
+          {
+            "description": "Carrboro Draft Ordinance",
+            "url": "https://carrboro.legistar.com/View.ashx?M=F&ID=12387850&GUID=B51DA8AD-EAA0-4032-A1A8-61B1EE11D40F",
+            "notes": "Page 1",
+            "attachments": [],
+            "screenshots": [
+              {
+                "fileName": "carrboro-nc-add-max-screenshot.png",
+                "directusId": "b3b76652-9913-44e1-b855-d1b3dc805d47"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "rm_min": [
+      {
+        "reporter": "Patrick McDonough",
+        "requirements": ["by right"],
+        "citations": [
+          {
+            "description": "CityBeautiful21 blog",
+            "url": "https://citybeautiful21.com/2023/10/25/residential-parking-reforms-come-to-carrboro/",
+            "notes": null,
+            "attachments": [],
+            "screenshots": [
+              {
+                "fileName": "carrboro-nc-remove-min-citation1-screenshot.png",
+                "directusId": "44c99139-7a0f-4b8e-9565-246665a53041"
+              }
+            ]
+          },
+          {
+            "description": "Carrboro Draft Ordinance",
+            "url": "https://carrboro.legistar.com/View.ashx?M=F&ID=12387850&GUID=B51DA8AD-EAA0-4032-A1A8-61B1EE11D40F",
+            "notes": "Page 1",
+            "attachments": [],
+            "screenshots": [
+              {
+                "fileName": "carrboro-nc-remove-min-citation2-screenshot.png",
+                "directusId": "b3b76652-9913-44e1-b855-d1b3dc805d47"
+              }
+            ]
+          }
+        ]
+      }
+    ]
   },
   "Carrington, ND": {
     "reduce_min": [
@@ -16748,7 +17169,51 @@
           ]
         }
       ]
-    }
+    },
+    "add_max": [
+      {
+        "reporter": "Samuel Deetz",
+        "requirements": ["by right"],
+        "citations": [
+          {
+            "description": "Cary Zoning Code",
+            "url": "https://codelibrary.amlegal.com/codes/cary/latest/cary_nc/0-0-0-71666",
+            "notes": "7.8.2(C)(4)",
+            "attachments": [],
+            "screenshots": [
+              {
+                "fileName": "cary-nc-add-max-screenshot.png",
+                "directusId": "20ba6bbe-516c-40dd-bfc9-96f2037d46c0"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "rm_min": [
+      {
+        "reporter": "Samuel Deetz",
+        "requirements": ["by right"],
+        "citations": [
+          {
+            "description": "Cary Zoning Code",
+            "url": "https://codelibrary.amlegal.com/codes/cary/latest/cary_nc/0-0-0-71666",
+            "notes": "Chapter 7:   DEVELOPMENT AND DESIGN STANDARDS\n7.8   OFF-STREET PARKING AND LOADING\n   7.8.2   Off-Street Parking Space Requirements\n      (A)(2)\n      (C)(4)",
+            "attachments": [],
+            "screenshots": [
+              {
+                "fileName": "cary-nc-remove-min-screenshot1.png",
+                "directusId": "f680edde-1ffc-44cc-a8a0-c5242cb972f6"
+              },
+              {
+                "fileName": "cary-nc-remove-min-screenshot2.png",
+                "directusId": "00999aa1-030e-443b-84fe-4583cb883141"
+              }
+            ]
+          }
+        ]
+      }
+    ]
   },
   "Casa Grande, AZ": {
     "add_max": [
@@ -18340,8 +18805,8 @@
       "citations": [
         {
           "description": "Chapel Hill Land Use Management",
-          "url": "https://library.municode.com/nc/chapel_hill/codes/code_of_ordinances?nodeId=CO_APXALAUSMA_ART5DEDEST_5.9PALO",
-          "notes": "ARTICLE 5. - DESIGN AND DEVELOPMENT STANDARDS\n5.9. - Parking and loading.\n5.9.2. Methods of Providing Required Parking and Loading.\n(b)\n(2)\n(3)\n5.9.7. Minimum and Maximum Off-Street Parking Space Requirements.",
+          "url": "https://library.municode.com/nc/chapel_hill/codes/code_of_ordinances?nodeId=PTIICO_APXALAUSMA_ART5DEDEST_5.9PALO",
+          "notes": "5.9.2.(b)(2);\n5.9.2.(b)(3);\n5.9.7.",
           "attachments": [],
           "screenshots": [
             {
@@ -18351,23 +18816,83 @@
             {
               "fileName": "chapel-hill-nc-screenshot2.png",
               "directusId": "42fead8e-10ef-4fb4-bdfb-3771e7644e15"
-            },
-            {
-              "fileName": "chapel-hill-nc-screenshot3.png",
-              "directusId": "83e446a8-eb5a-44f9-a4e0-58daf12a0bdb"
-            },
-            {
-              "fileName": "chapel-hill-nc-screenshot4.png",
-              "directusId": "3b328ebe-0bdd-4357-9e5c-db3cd357262f"
-            },
-            {
-              "fileName": "chapel-hill-nc-screenshot5.png",
-              "directusId": "5716a7fe-1d6b-4cbc-81b1-14110bf661aa"
             }
           ]
         }
       ]
-    }
+    },
+    "add_max": [
+      {
+        "reporter": null,
+        "requirements": ["by right"],
+        "citations": [
+          {
+            "description": "Chapel Hill Land Use Management",
+            "url": "https://library.municode.com/nc/chapel_hill/codes/code_of_ordinances?nodeId=PTIICO_APXALAUSMA_ART5DEDEST_5.9PALO",
+            "notes": "5.9.7.",
+            "attachments": [],
+            "screenshots": [
+              {
+                "fileName": "chapel-hill-nc-add-max-screenshot.png",
+                "directusId": "6c1458f8-4e94-45ff-b3bd-e3017b2304a4"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "reduce_min": [
+      {
+        "reporter": null,
+        "requirements": [
+          "by right",
+          "in-lieu fees",
+          "transportation demand management"
+        ],
+        "citations": [
+          {
+            "description": "Chapel Hill Land Use Management",
+            "url": "https://library.municode.com/nc/chapel_hill/codes/code_of_ordinances?nodeId=PTIICO_APXALAUSMA_ART5DEDEST_5.9PALO",
+            "notes": "5.9.2.(b)(2);\n5.9.2.(b)(3);\n5.9.7.",
+            "attachments": [],
+            "screenshots": [
+              {
+                "fileName": "chapel-hill-nc-reduce-min-screenshot1.png",
+                "directusId": "37ec0e1a-e313-402f-baf5-16a233eae768"
+              },
+              {
+                "fileName": "chapel-hill-nc-reduce-min-screenshot2.png",
+                "directusId": "42fead8e-10ef-4fb4-bdfb-3771e7644e15"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "rm_min": [
+      {
+        "reporter": null,
+        "requirements": ["by right"],
+        "citations": [
+          {
+            "description": "Chapel Hill Land Use Management",
+            "url": "https://library.municode.com/nc/chapel_hill/codes/code_of_ordinances?nodeId=PTIICO_APXALAUSMA_ART5DEDEST_5.9PALO",
+            "notes": "5.9.7.",
+            "attachments": [],
+            "screenshots": [
+              {
+                "fileName": "chapel-hill-nc-remove-min-screenshot1.png",
+                "directusId": "fc0e9ca8-d1f4-422c-8a97-d5bab53ba25e"
+              },
+              {
+                "fileName": "chapel-hill-nc-remove-min-screenshot2.png",
+                "directusId": "183ee1e9-6e0a-420a-8b76-698ba318e103"
+              }
+            ]
+          }
+        ]
+      }
+    ]
   },
   "Chardon, OH": {
     "add_max": [
@@ -18485,25 +19010,61 @@
         {
           "description": "Charles County Zoning Code",
           "url": "https://ecode360.com/27248481#27248482",
-          "notes": "§ 297-95Core Mixed-Use Zones.\nC.(9)\n§ 297-99Hughesville Village Zone (HV)\nH.(7)(b)\n§ 297-335Number of parking spaces required.\nA.(1)",
+          "notes": "§ 297-335.A.(1)",
           "attachments": [],
           "screenshots": [
             {
-              "fileName": "charles-county-md-screenshot1.png",
-              "directusId": "c2e31b7c-ebe5-4c93-8b66-53c8f485d4d7"
-            },
-            {
-              "fileName": "charles-county-md-screenshot2.png",
-              "directusId": "ff1c4f28-f8c5-43bf-bb37-48dc9100bbc2"
-            },
-            {
-              "fileName": "charles-county-md-screenshot3.png",
+              "fileName": "charles-county-md-screenshot.png",
               "directusId": "2b8df41e-2ec4-4845-8915-e44e9c210245"
             }
           ]
         }
       ]
-    }
+    },
+    "add_max": [
+      {
+        "reporter": "Samuel Deetz",
+        "requirements": ["by right"],
+        "citations": [
+          {
+            "description": "Charles County Zoning Code",
+            "url": "https://ecode360.com/27248481#27248482",
+            "notes": "§ 297-335.A.(1)",
+            "attachments": [],
+            "screenshots": [
+              {
+                "fileName": "charles-county-md-add-max-screenshot.png",
+                "directusId": "2b8df41e-2ec4-4845-8915-e44e9c210245"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "reduce_min": [
+      {
+        "reporter": "Samuel Deetz",
+        "requirements": ["other"],
+        "citations": [
+          {
+            "description": "Charles County Zoning Code",
+            "url": "https://ecode360.com/27245857#27245857",
+            "notes": "§ 297-95.C.(9);\n§ 297-99.H.(7)(b)",
+            "attachments": [],
+            "screenshots": [
+              {
+                "fileName": "charles-county-md-reduce-min-screenshot1.png",
+                "directusId": "baf54c9b-a5ae-470e-a31f-17c8c0d43367"
+              },
+              {
+                "fileName": "charles-county-md-reduce-min-screenshot2.png",
+                "directusId": "efce8d64-3f37-4953-999b-2fc518925bc6"
+              }
+            ]
+          }
+        ]
+      }
+    ]
   },
   "Charleston, IL": {
     "rm_min": [
@@ -18556,22 +19117,58 @@
       "citations": [
         {
           "description": "Charleston Zoning Code",
-          "url": "https://library.municode.com/sc/charleston/codes/zoning?nodeId=ART3SIRE_PT4OREPARE_S54-316APRE",
-          "notes": "ARTICLE 3 - SITE REGULATIONS\n  PART 4 - OFF-STREET PARKING REQUIREMENTS\n    Sec. 54-316. - Applicability of requirements.\nARTICLE 5 - EXCEPTIONS AND MODIFICATIONS\n  PART 4 - EXCEPTIONS TO PARKING AND LOADING REQUIREMENTS\n    Sec. 54-511. - Exceptions to off-street parking requirements.\n      c.",
+          "url": "https://library.municode.com/sc/charleston/codes/zoning?nodeId=ART5EXMO_PT4EXPALORE_S54-511EXOREPARE",
+          "notes": "Sec. 54-511. c.",
           "attachments": [],
           "screenshots": [
             {
-              "fileName": "charleston-sc-screenshot1.png",
-              "directusId": "593a6267-571c-4012-8536-9855a1993bc3"
-            },
-            {
-              "fileName": "charleston-sc-screenshot2.png",
+              "fileName": "charleston-sc-screenshot.png",
               "directusId": "c1af651f-5673-4371-be30-1db263293a82"
             }
           ]
         }
       ]
-    }
+    },
+    "reduce_min": [
+      {
+        "reporter": "Jim Hemphill",
+        "requirements": ["other"],
+        "citations": [
+          {
+            "description": "Charleston Zoning Code",
+            "url": "https://library.municode.com/sc/charleston/codes/zoning?nodeId=ART5EXMO_PT4EXPALORE_S54-511EXOREPARE",
+            "notes": "Sec. 54-511. c.",
+            "attachments": [],
+            "screenshots": [
+              {
+                "fileName": "charleston-sc-reduce-min-screenshot.png",
+                "directusId": "c1af651f-5673-4371-be30-1db263293a82"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "rm_min": [
+      {
+        "reporter": "Jim Hemphill",
+        "requirements": ["by right"],
+        "citations": [
+          {
+            "description": "Charleston Zoning Code",
+            "url": "https://library.municode.com/sc/charleston/codes/zoning?nodeId=ART3SIRE_PT4OREPARE_S54-316APRE",
+            "notes": "Sec. 54-316.",
+            "attachments": [],
+            "screenshots": [
+              {
+                "fileName": "charleston-sc-remove-min-screenshot.png",
+                "directusId": "d91a1bc6-e195-4057-99b6-6751efa2963d"
+              }
+            ]
+          }
+        ]
+      }
+    ]
   },
   "Charleston, WV": {
     "legacy": {
@@ -22341,33 +22938,93 @@
         {
           "description": "Columbia Unified Development Ordinance",
           "url": "https://planninganddevelopment.columbiasc.gov/wp-content/uploads/2023/12/2023_UDO.pdf",
-          "notes": "ARTICLE 5: DEVELOPMENT STANDARDS\nSec. 17-5.2 Off-Street Parking, Bicycle Parking, and Loading\n(d) Off-Street Parking Space Standards\n  (1) Minimum Number of Off-Street Parking Spaces\n    TABLE 17-5.2(D)(1): MINIMUM NUMBER OF OFF-STREET PARKING SPACES\n      NOTES\n  (4) Reduction for Existing Conditions\n  (5) Maximum Number of Off-Street Parking Spaces\n    (g) Reduced Parking Standards for Parking Demand Reduction Strategies\nPages 344-350, 359-362",
+          "notes": "Sec. 17-5.2(d)(5)\nPage 350",
           "attachments": [],
           "screenshots": [
             {
-              "fileName": "columbia-sc-screenshot1.png",
-              "directusId": "02fb2061-e633-4665-b5ff-09656c8eb465"
-            },
-            {
-              "fileName": "columbia-sc-screenshot2.png",
-              "directusId": "c2ae0be6-6164-4c06-81b5-dcafeffdd454"
-            },
-            {
-              "fileName": "columbia-sc-screenshot3.png",
-              "directusId": "de10e4d0-44d0-4c19-83f2-69b449da3501"
-            },
-            {
-              "fileName": "columbia-sc-screenshot4.png",
-              "directusId": "d424a001-2213-4292-883c-3db5b0a83a7a"
-            },
-            {
-              "fileName": "columbia-sc-screenshot5.png",
-              "directusId": "655e88c5-83f3-4c94-abf8-b8b7617db5a6"
+              "fileName": "columbia-sc-screenshot.png",
+              "directusId": "d670a72b-3513-43b1-b599-5ae6ba32f12e"
             }
           ]
         }
       ]
-    }
+    },
+    "add_max": [
+      {
+        "reporter": "Samuel Deetz",
+        "requirements": ["by right"],
+        "citations": [
+          {
+            "description": "Columbia Unified Development Ordinance",
+            "url": "https://planninganddevelopment.columbiasc.gov/wp-content/uploads/2023/12/2023_UDO.pdf",
+            "notes": "Sec. 17-5.2(d)(5)\nPage 350",
+            "attachments": [],
+            "screenshots": [
+              {
+                "fileName": "columbia-sc-add-max-screenshot.png",
+                "directusId": "d670a72b-3513-43b1-b599-5ae6ba32f12e"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "reduce_min": [
+      {
+        "reporter": "Samuel Deetz",
+        "requirements": [
+          "bike parking",
+          "frequent transit",
+          "transportation demand management"
+        ],
+        "citations": [
+          {
+            "description": "Columbia Unified Development Ordinance",
+            "url": "https://planninganddevelopment.columbiasc.gov/wp-content/uploads/2023/12/2023_UDO.pdf",
+            "notes": "Sec. 17-5.2(d)(4);\nSec. 17-5.2(g);\nPages 350, 359-362",
+            "attachments": [],
+            "screenshots": [
+              {
+                "fileName": "columbia-sc-reduce-min-screenshot1.png",
+                "directusId": "a37801a7-178c-4dd9-8334-b3a3dc536a12"
+              },
+              {
+                "fileName": "columbia-sc-reduce-min-screenshot2.png",
+                "directusId": "d0253473-755a-416a-9267-d5a21cde7467"
+              },
+              {
+                "fileName": "columbia-sc-reduce-min-screenshot3.png",
+                "directusId": "623733e3-d4e2-45f7-bd10-96e48e33c2ff"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "rm_min": [
+      {
+        "reporter": "Samuel Deetz",
+        "requirements": ["by right", "size of project"],
+        "citations": [
+          {
+            "description": "Columbia Unified Development Ordinance",
+            "url": "https://planninganddevelopment.columbiasc.gov/wp-content/uploads/2023/12/2023_UDO.pdf",
+            "notes": "Sec. 17-5.2(d)(1);\nTABLE 17-5.2(D)(1) NOTES [3];\nPages 344-349",
+            "attachments": [],
+            "screenshots": [
+              {
+                "fileName": "columbia-sc-remove-min-screenshot1.png",
+                "directusId": "48c54b66-30e2-451a-be3c-9babf62fbdec"
+              },
+              {
+                "fileName": "columbia-sc-remove-min-screenshot2.png",
+                "directusId": "954314a2-f8d4-400d-afff-8445cfc2c594"
+              }
+            ]
+          }
+        ]
+      }
+    ]
   },
   "Columbus, GA": {
     "legacy": {
@@ -22905,7 +23562,51 @@
           ]
         }
       ]
-    }
+    },
+    "add_max": [
+      {
+        "reporter": "Samuel Deetz",
+        "requirements": ["by right", "other"],
+        "citations": [
+          {
+            "description": "Concord Development Ordinance",
+            "url": "https://apps.concordnc.gov/legacy/planningweb/CDO/Article%2010.pdf",
+            "notes": "10.3.2.\nPages 22, 25-27",
+            "attachments": [],
+            "screenshots": [
+              {
+                "fileName": "concord-nc-add-max-screenshot1.png",
+                "directusId": "c2fdb96c-4c2d-4891-b994-0946c75ce5de"
+              },
+              {
+                "fileName": "concord-nc-add-max-screenshot2.png",
+                "directusId": "fff0ccd7-f64c-4e6b-962d-05321d162105"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "rm_min": [
+      {
+        "reporter": "Samuel Deetz",
+        "requirements": ["by right"],
+        "citations": [
+          {
+            "description": "Concord Development Ordinance",
+            "url": "https://apps.concordnc.gov/legacy/planningweb/CDO/Article%2010.pdf",
+            "notes": "ARTICLE 10 DEVELOPMENT AND DESIGN STANDARDS\n10.3. PARKING AND LOADING\n10.3.2.Required Amount of Off-Street Parking\nB. Exemption from Required Number of Spaces\nPage 22",
+            "attachments": [],
+            "screenshots": [
+              {
+                "fileName": "concord-nc-remove-min-screenshot.png",
+                "directusId": "ac3f720b-61eb-47d0-84a9-27f11a656cde"
+              }
+            ]
+          }
+        ]
+      }
+    ]
   },
   "Concord, NH": {
     "rm_min": [
@@ -23665,7 +24366,7 @@
       "citations": [
         {
           "description": "Cornelius Land Development Code",
-          "url": "https://www.cornelius.org/DocumentCenter/View/1606/CH-07-Streets-Parking-Lighting?bidId=",
+          "url": "https://cms2.revize.com/revize/cornelius/Document%20Center/Government/Departments/Planning/LDC/CH%2007%20Streets,%20Parking,%20&%20Lighting.pdf",
           "notes": "CHAPTER 7 : STREETS , PARKING & LIGHTING\nSECTION 7.4: GENERAL PARKING REQUIREMENTS\n7.4.1: Minimum Parking Ratios\nPage 7",
           "attachments": [],
           "screenshots": [
@@ -23676,7 +24377,47 @@
           ]
         }
       ]
-    }
+    },
+    "add_max": [
+      {
+        "reporter": "Samuel Deetz",
+        "requirements": ["by right"],
+        "citations": [
+          {
+            "description": "Cornelius Land Development Code",
+            "url": "https://cms2.revize.com/revize/cornelius/Document%20Center/Government/Departments/Planning/LDC/CH%2007%20Streets,%20Parking,%20&%20Lighting.pdf",
+            "notes": "CHAPTER 7 : STREETS , PARKING & LIGHTING\nSECTION 7.4: GENERAL PARKING REQUIREMENTS\n7.4.1: Minimum Parking Ratios\nPage 7",
+            "attachments": [],
+            "screenshots": [
+              {
+                "fileName": "cornelius-nc-add-max-screenshot.png",
+                "directusId": "bf64ec5a-f47a-434a-a016-a8504d90f6e9"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "reduce_min": [
+      {
+        "reporter": "Samuel Deetz",
+        "requirements": ["by right", "other"],
+        "citations": [
+          {
+            "description": "Cornelius Land Development Code",
+            "url": "https://cms2.revize.com/revize/cornelius/Document%20Center/Government/Departments/Planning/LDC/CH%2007%20Streets,%20Parking,%20&%20Lighting.pdf",
+            "notes": "CHAPTER 7 : STREETS , PARKING & LIGHTING\nSECTION 7.4: GENERAL PARKING REQUIREMENTS\n7.4.1: Minimum Parking Ratios\nPage 7",
+            "attachments": [],
+            "screenshots": [
+              {
+                "fileName": "cornelius-nc-reduce-min-screenshot.png",
+                "directusId": "bf64ec5a-f47a-434a-a016-a8504d90f6e9"
+              }
+            ]
+          }
+        ]
+      }
+    ]
   },
   "Corning, IA": {
     "rm_min": [
@@ -26010,21 +26751,57 @@
         {
           "description": "Davidson Zoning Code",
           "url": "https://www.townofdavidson.org/DocumentCenter/View/8995/Section-8-Parking-Driveways-20180822",
-          "notes": "Section 8 PARKING & DRIVEWAYS\n8.3 TYPE & AMOUNT OF PARKING\n8.3.1 AMOUNT REQUIRED\n8.3.2 EXCEPTIONS TO PARKING REQUIREMENTS\nA.\nB.\nC.\n8.3.3 PAYMENTS IN LIEU\nPages 2-3",
+          "notes": "8.3.2;\n8.3.3;\nPage 3",
           "attachments": [],
           "screenshots": [
             {
-              "fileName": "davidson-nc-screenshot1.png",
-              "directusId": "b41fa32c-b904-45ca-8845-f6abf2ff1d6d"
-            },
-            {
-              "fileName": "davidson-nc-screenshot2.png",
+              "fileName": "davidson-nc-screenshot.png",
               "directusId": "34a3a43e-87aa-43ed-85ea-8aed5b85e8e5"
             }
           ]
         }
       ]
-    }
+    },
+    "add_max": [
+      {
+        "reporter": "Samuel Deetz",
+        "requirements": ["by right"],
+        "citations": [
+          {
+            "description": "Davidson Zoning Code",
+            "url": "https://www.townofdavidson.org/DocumentCenter/View/8995/Section-8-Parking-Driveways-20180822",
+            "notes": "8.3.1\nPage 2",
+            "attachments": [],
+            "screenshots": [
+              {
+                "fileName": "davidson-nc-add-max-screenshot.png",
+                "directusId": "f24ee64b-b549-4497-a769-fe46787f634c"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "reduce_min": [
+      {
+        "reporter": "Samuel Deetz",
+        "requirements": ["by right", "in-lieu fees", "other"],
+        "citations": [
+          {
+            "description": "Davidson Zoning Code",
+            "url": "https://www.townofdavidson.org/DocumentCenter/View/8995/Section-8-Parking-Driveways-20180822",
+            "notes": "8.3.2;\n8.3.3;\nPage 3",
+            "attachments": [],
+            "screenshots": [
+              {
+                "fileName": "davidson-nc-reduce-min-screenshot.png",
+                "directusId": "34a3a43e-87aa-43ed-85ea-8aed5b85e8e5"
+              }
+            ]
+          }
+        ]
+      }
+    ]
   },
   "Davis, OK": {
     "legacy": {
@@ -30021,7 +30798,59 @@
           ]
         }
       ]
-    }
+    },
+    "add_max": [
+      {
+        "reporter": null,
+        "requirements": ["by right"],
+        "citations": [
+          {
+            "description": "Durham Unified Development Code",
+            "url": "https://udo.durhamnc.gov/udo/10_03_Required%20Parking.htm#10.3.1",
+            "notes": "10.3.1.B.",
+            "attachments": [],
+            "screenshots": [
+              {
+                "fileName": "durham-nc-add-max-screenshot.png",
+                "directusId": "1961bffe-5338-4dd5-b4fb-071a435140a5"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "rm_min": [
+      {
+        "reporter": null,
+        "requirements": ["by right"],
+        "citations": [
+          {
+            "description": "Durham City Code",
+            "url": "https://durham.municipal.codes/UDO/10.3.1",
+            "notes": "Durham UDO paragraph 10.3.1, Required Motorized Vehicle and Bicycle Parking",
+            "attachments": [],
+            "screenshots": [
+              {
+                "fileName": "durham-nc-remove-min-citation1-screenshot.png",
+                "directusId": "c07dd88c-f199-44a1-a332-4df60a2b9433"
+              }
+            ]
+          },
+          {
+            "description": "The News & Observer",
+            "url": "https://www.newsobserver.com/news/local/counties/durham-county/article281897928.html",
+            "notes": null,
+            "attachments": [],
+            "screenshots": [
+              {
+                "fileName": "durham-nc-remove-min-citation2-screenshot.png",
+                "directusId": "5b510cc5-57d0-4de4-8775-38ec3f1396d2"
+              }
+            ]
+          }
+        ]
+      }
+    ]
   },
   "Dyersburg, TN": {
     "rm_min": [
@@ -30956,21 +31785,57 @@
         {
           "description": "Easton Zoning Code",
           "url": "https://eastonmd.gov/DocumentCenter/View/1239/2021-Zoning-Code",
-          "notes": "28 – 1001.3 PARKING REQUIREMENTS\nA. \nJ.\nPages 231-233, 235",
+          "notes": "28 – 1001.3.A.\nPages 231-233",
           "attachments": [],
           "screenshots": [
             {
-              "fileName": "easton-md-screenshot1.png",
-              "directusId": "9594c19c-7bc4-42ee-b2c7-f58bb088ae31"
-            },
-            {
-              "fileName": "easton-md-screenshot2.png",
+              "fileName": "easton-md-screenshot.png",
               "directusId": "0fc91cf1-38cc-4bf7-a839-675b63ccbe2a"
             }
           ]
         }
       ]
-    }
+    },
+    "add_max": [
+      {
+        "reporter": "Samuel Deetz",
+        "requirements": ["by right"],
+        "citations": [
+          {
+            "description": "Easton Zoning Code",
+            "url": "https://eastonmd.gov/DocumentCenter/View/1239/2021-Zoning-Code",
+            "notes": "28 – 1001.3.A.\nPages 231-233",
+            "attachments": [],
+            "screenshots": [
+              {
+                "fileName": "easton-md-add-max-screenshot.png",
+                "directusId": "0fc91cf1-38cc-4bf7-a839-675b63ccbe2a"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "rm_min": [
+      {
+        "reporter": "Samuel Deetz",
+        "requirements": ["by right"],
+        "citations": [
+          {
+            "description": "Easton Zoning Code",
+            "url": "https://eastonmd.gov/DocumentCenter/View/1239/2021-Zoning-Code",
+            "notes": "28 – 1001.3.J. \nPage 235",
+            "attachments": [],
+            "screenshots": [
+              {
+                "fileName": "easton-md-remove-min-screenshot.png",
+                "directusId": "6e975aba-bfb3-4757-ab18-e27cadc13e54"
+              }
+            ]
+          }
+        ]
+      }
+    ]
   },
   "Easton, PA": {
     "legacy": {
@@ -35396,26 +36261,86 @@
       "citations": [
         {
           "description": "Fayetteville Unified Development Ordinance",
-          "url": "https://online.encodeplus.com/regs/fayetteville-nc/doc-viewer.aspx#secid-10449",
-          "notes": "Article 30-5: Development Standards\n30-5.A. Off-Street Parking, Loading, and Circulation\n30-5.A.2. Applicability\n   c. Parking and Loading in the DT-1 and DT-2 Districts\n30-5.A.4. Off-Street Parking Standards\n   b. Minimum Number of Spaces Required\n30-5.A.8. Alternative Parking Plan\n   h. In-Lieu Fee",
+          "url": "https://online.encodeplus.com/regs/fayetteville-nc/doc-viewer.aspx#secid-10453",
+          "notes": "30-5.A.2.c.2.;\n30-5.A.4.b.",
           "attachments": [],
           "screenshots": [
             {
               "fileName": "fayetteville-nc-screenshot1.png",
-              "directusId": "26db2426-14fa-4fb5-a580-fadcc03a5967"
+              "directusId": "3ad8aaad-0bbd-4838-8182-f35e977d38f3"
             },
             {
               "fileName": "fayetteville-nc-screenshot2.png",
-              "directusId": "47924fa7-aa68-4007-b26a-398a2908df22"
-            },
-            {
-              "fileName": "fayetteville-nc-screenshot3.png",
-              "directusId": "3ad8aaad-0bbd-4838-8182-f35e977d38f3"
+              "directusId": "7b4ae0fa-8d2f-4221-a204-66c7accc37b8"
             }
           ]
         }
       ]
-    }
+    },
+    "add_max": [
+      {
+        "reporter": "Samuel Deetz",
+        "requirements": ["by right"],
+        "citations": [
+          {
+            "description": "Fayetteville Unified Development Ordinance",
+            "url": "https://online.encodeplus.com/regs/fayetteville-nc/doc-viewer.aspx#secid-10453",
+            "notes": "30-5.A.2.c.2.;\n30-5.A.4.b.",
+            "attachments": [],
+            "screenshots": [
+              {
+                "fileName": "fayetteville-nc-add-max-screenshot1.png",
+                "directusId": "3ad8aaad-0bbd-4838-8182-f35e977d38f3"
+              },
+              {
+                "fileName": "fayetteville-nc-add-max-screenshot2.png",
+                "directusId": "7b4ae0fa-8d2f-4221-a204-66c7accc37b8"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "reduce_min": [
+      {
+        "reporter": "Samuel Deetz",
+        "requirements": ["in-lieu fees"],
+        "citations": [
+          {
+            "description": "Fayetteville Unified Development Ordinance",
+            "url": "https://online.encodeplus.com/regs/fayetteville-nc/doc-viewer.aspx#secid-10457",
+            "notes": "30-5.A.8.h.",
+            "attachments": [],
+            "screenshots": [
+              {
+                "fileName": "fayetteville-nc-reduce-min-screenshot.png",
+                "directusId": "865e2b90-26ac-46da-99c6-64265cb3d628"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "rm_min": [
+      {
+        "reporter": "Samuel Deetz",
+        "requirements": ["by right"],
+        "citations": [
+          {
+            "description": "Fayetteville Unified Development Ordinance",
+            "url": "https://online.encodeplus.com/regs/fayetteville-nc/doc-viewer.aspx#secid-10451",
+            "notes": "30-5.A.2.c.",
+            "attachments": [],
+            "screenshots": [
+              {
+                "fileName": "fayetteville-nc-remove-min-screenshot.png",
+                "directusId": "bcbe1796-ef13-42c9-938a-17f6da7df630"
+              }
+            ]
+          }
+        ]
+      }
+    ]
   },
   "Federalsburg, MD": {
     "rm_min": [
@@ -37445,21 +38370,61 @@
         {
           "description": "Fort Mill Zoning Code",
           "url": "https://library.municode.com/sc/fort_mill/codes/zoning?nodeId=ZOOR_ARTIINGE_S7GEPR",
-          "notes": "ARTICLE I. - IN GENERAL\nSec. 7. - General provisions.\nI.Off-street parking and off-street loading requirements:\n1)Parking:\n  A)\n5)On-street parking:\n6)Historic or downtown district parking:",
+          "notes": "Sec. 7.I.5)",
           "attachments": [],
           "screenshots": [
             {
-              "fileName": "fort-mill-sc-screenshot1.png",
-              "directusId": "a3c10241-291d-48ea-bdb9-72dbf51707bf"
-            },
-            {
-              "fileName": "fort-mill-sc-screenshot2.png",
-              "directusId": "b9e7d4c4-439b-417c-a80b-0645e0008bd2"
+              "fileName": "fort-mill-sc-screenshot.png",
+              "directusId": "6baa9554-5747-4aa4-b0c0-f7cdfd1fc7d6"
             }
           ]
         }
       ]
-    }
+    },
+    "reduce_min": [
+      {
+        "reporter": "Samuel Deetz",
+        "requirements": ["other"],
+        "citations": [
+          {
+            "description": "Fort Mill Zoning Code",
+            "url": "https://library.municode.com/sc/fort_mill/codes/zoning?nodeId=ZOOR_ARTIINGE_S7GEPR",
+            "notes": "Sec. 7.I.5)",
+            "attachments": [],
+            "screenshots": [
+              {
+                "fileName": "fort-mill-sc-reduce-min-screenshot.png",
+                "directusId": "6baa9554-5747-4aa4-b0c0-f7cdfd1fc7d6"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "rm_min": [
+      {
+        "reporter": "Samuel Deetz",
+        "requirements": ["accessory dwelling units", "by right"],
+        "citations": [
+          {
+            "description": "Fort Mill Zoning Code",
+            "url": "https://library.municode.com/sc/fort_mill/codes/zoning?nodeId=ZOOR_ARTIINGE_S7GEPR",
+            "notes": "Sec. 7.I.1)A);\nSec. 7.I.6)",
+            "attachments": [],
+            "screenshots": [
+              {
+                "fileName": "fort-mill-sc-remove-min-screenshot1.png",
+                "directusId": "f676bdf3-191d-4691-b310-18d9a1d7bd6f"
+              },
+              {
+                "fileName": "fort-mill-sc-remove-min-screenshot2.png",
+                "directusId": "8891ae42-1cbe-4dd7-afd6-42a8070283ef"
+              }
+            ]
+          }
+        ]
+      }
+    ]
   },
   "Fort Mitchell, KY": {
     "reduce_min": [
@@ -38692,29 +39657,90 @@
         {
           "description": "Frederick Land Management Code",
           "url": "https://library.municode.com/md/frederick/codes/land_management_code?nodeId=ART6DEIMST_S607PALOST",
-          "notes": "Sec. 607 - PARKING AND LOADING STANDARDS\t\n  Table 607-1 Parking Schedule\n  (c)Downtown Parking Regulations.",
+          "notes": "Sec. 607 Table 607-1",
           "attachments": [],
           "screenshots": [
             {
-              "fileName": "frederick-md-screenshot1.png",
-              "directusId": "aa00cb2f-a814-471d-a23a-3112f4c8ecc8"
-            },
-            {
-              "fileName": "frederick-md-screenshot2.png",
-              "directusId": "1621bc03-e318-4c13-b282-648b4b596b95"
-            },
-            {
-              "fileName": "frederick-md-screenshot3.png",
-              "directusId": "82c5bb25-9e72-4ddf-b6d7-7c5f7699cb40"
-            },
-            {
-              "fileName": "frederick-md-screenshot4.png",
+              "fileName": "frederick-md-screenshot.png",
               "directusId": "72e7a7ad-f274-4dc7-bc63-f61c4ecfa2b0"
             }
           ]
         }
       ]
-    }
+    },
+    "add_max": [
+      {
+        "reporter": "Samuel Deetz",
+        "requirements": ["by right"],
+        "citations": [
+          {
+            "description": "Frederick Land Management Code",
+            "url": "https://library.municode.com/md/frederick/codes/land_management_code?nodeId=ART6DEIMST_S607PALOST",
+            "notes": "Sec. 607 Table 607-1",
+            "attachments": [],
+            "screenshots": [
+              {
+                "fileName": "frederick-md-add-max-screenshot.png",
+                "directusId": "72e7a7ad-f274-4dc7-bc63-f61c4ecfa2b0"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "reduce_min": [
+      {
+        "reporter": "Samuel Deetz",
+        "requirements": [
+          "by right",
+          "frequent transit",
+          "in-lieu fees",
+          "size of project"
+        ],
+        "citations": [
+          {
+            "description": "Frederick Land Management Code",
+            "url": "https://library.municode.com/md/frederick/codes/land_management_code?nodeId=ART6DEIMST_S607PALOST",
+            "notes": "Sec. 607(c)",
+            "attachments": [],
+            "screenshots": [
+              {
+                "fileName": "frederick-md-reduce-min-screenshot1.png",
+                "directusId": "e5213171-9299-4251-aee7-811c803ec243"
+              },
+              {
+                "fileName": "frederick-md-reduce-min-screenshot2.png",
+                "directusId": "146cbbb0-0b5f-43be-b8ef-373ec639ec80"
+              },
+              {
+                "fileName": "frederick-md-reduce-min-screenshot3.png",
+                "directusId": "a42ca4ac-0cc6-487c-a616-ef258ad1acd8"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "rm_min": [
+      {
+        "reporter": "Samuel Deetz",
+        "requirements": ["by right", "size of project"],
+        "citations": [
+          {
+            "description": "Frederick Land Management Code",
+            "url": "https://library.municode.com/md/frederick/codes/land_management_code?nodeId=ART6DEIMST_S607PALOST",
+            "notes": "Sec. 607(c)(2)",
+            "attachments": [],
+            "screenshots": [
+              {
+                "fileName": "frederick-md-remove-min-screenshot.png",
+                "directusId": "7b62d9cb-1b9f-4846-988a-4e9b78c8ecf8"
+              }
+            ]
+          }
+        ]
+      }
+    ]
   },
   "Fredericktown, OH": {
     "rm_min": [
@@ -39391,7 +40417,47 @@
           ]
         }
       ]
-    }
+    },
+    "reduce_min": [
+      {
+        "reporter": "Samuel Deetz",
+        "requirements": ["by right"],
+        "citations": [
+          {
+            "description": "Frostburg Zoning Code",
+            "url": "https://library.municode.com/md/frostburg/codes/code_of_ordinances?nodeId=PTIICOOR_APXAZOOR_PT6GEPRPA_S6.12OREPARE",
+            "notes": "PART 6. - GENERAL PROVISIONS & PARKING\nSec. 6.12. - Off-street parking requirements.\nB.Town Center Parking Requirements.\nC.University Corridor Parking Requirements.",
+            "attachments": [],
+            "screenshots": [
+              {
+                "fileName": "frostburg-md-reduce-min-screenshot.png",
+                "directusId": "ef53a7b1-4ba8-409c-aae5-4e4bed93091b"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "rm_min": [
+      {
+        "reporter": "Samuel Deetz",
+        "requirements": ["by right", "size of project"],
+        "citations": [
+          {
+            "description": "Frostburg Zoning Code",
+            "url": "https://library.municode.com/md/frostburg/codes/code_of_ordinances?nodeId=PTIICOOR_APXAZOOR_PT6GEPRPA_S6.12OREPARE",
+            "notes": "PART 6. - GENERAL PROVISIONS & PARKING\nSec. 6.12. - Off-street parking requirements.\nB.Town Center Parking Requirements.\nC.University Corridor Parking Requirements.",
+            "attachments": [],
+            "screenshots": [
+              {
+                "fileName": "frostburg-md-remove-min-screenshot.png",
+                "directusId": "ef53a7b1-4ba8-409c-aae5-4e4bed93091b"
+              }
+            ]
+          }
+        ]
+      }
+    ]
   },
   "Fruita, CO": {
     "reduce_min": [
@@ -40242,7 +41308,47 @@
           ]
         }
       ]
-    }
+    },
+    "add_max": [
+      {
+        "reporter": "Brian Burnham",
+        "requirements": ["by right"],
+        "citations": [
+          {
+            "description": "Gastonia Unified Development Ordinance",
+            "url": "https://library.municode.com/nc/gastonia/codes/unified_development_ordinance?nodeId=CH10OREPALO_S10.11USDEREVEBIPASTTA",
+            "notes": "SECTION 10.11 - USE DEFINITIONS AND REQUIRED VEHICLE AND BICYCLE PARKING STANDARDS TABLES (Tables A and B)",
+            "attachments": [],
+            "screenshots": [
+              {
+                "fileName": "gastonia-nc-add-max-screenshot.png",
+                "directusId": "0b11e0a3-411f-48ff-a9bd-43cba08442b5"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "rm_min": [
+      {
+        "reporter": "Brian Burnham",
+        "requirements": ["by right"],
+        "citations": [
+          {
+            "description": "Gastonia Unified Development Ordinance",
+            "url": "https://library.municode.com/nc/gastonia/codes/unified_development_ordinance?nodeId=CH10OREPALO_S10.11USDEREVEBIPASTTA",
+            "notes": "SECTION 10.11 - USE DEFINITIONS AND REQUIRED VEHICLE AND BICYCLE PARKING STANDARDS TABLES (Tables A and B)",
+            "attachments": [],
+            "screenshots": [
+              {
+                "fileName": "gastonia-nc-remove-min-screenshot.png",
+                "directusId": "0b11e0a3-411f-48ff-a9bd-43cba08442b5"
+              }
+            ]
+          }
+        ]
+      }
+    ]
   },
   "Gaylord, MN": {
     "rm_min": [
@@ -42126,7 +43232,55 @@
           ]
         }
       ]
-    }
+    },
+    "add_max": [
+      {
+        "reporter": null,
+        "requirements": ["by right"],
+        "citations": [
+          {
+            "description": "Graham Development Ordinances",
+            "url": "https://www.cityofgraham.com/wp-content/uploads/2021/05/2021_Development-Ordinance-Administrative-edits-adopted-10-12-2021.pdf",
+            "notes": "Pages 96-98 of pdf, pages 91-93 of original document",
+            "attachments": [],
+            "screenshots": [
+              {
+                "fileName": "graham-nc-add-max-screenshot1.jpg",
+                "directusId": "f5b05d00-c6df-4c81-a4e2-0767ecfa41ee"
+              },
+              {
+                "fileName": "graham-nc-add-max-screenshot2.jpg",
+                "directusId": "da885347-5598-47d2-bf3b-e9e6b2da0da9"
+              },
+              {
+                "fileName": "graham-nc-add-max-screenshot3.jpg",
+                "directusId": "2472025c-8543-4331-a58a-dd268b3dbe50"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "rm_min": [
+      {
+        "reporter": null,
+        "requirements": ["by right"],
+        "citations": [
+          {
+            "description": "Graham Development Ordinances",
+            "url": "https://www.cityofgraham.com/wp-content/uploads/2021/05/2021_Development-Ordinance-Administrative-edits-adopted-10-12-2021.pdf",
+            "notes": "Section 10.240(A)\nPage 95 of pdf, page 90 of original document",
+            "attachments": [],
+            "screenshots": [
+              {
+                "fileName": "graham-nc-remove-min-screenshot.jpg",
+                "directusId": "c0c9c635-1daa-4afa-aa8b-eb78bb02c159"
+              }
+            ]
+          }
+        ]
+      }
+    ]
   },
   "Grain Valley, MO": {
     "reduce_min": [
@@ -44129,33 +45283,93 @@
         {
           "description": "Greensboro Zoning Code",
           "url": "https://online.encodeplus.com/regs/greensboro-nc/doc-viewer.aspx#secid-122",
-          "notes": "Article 11. Off-Street Parking and Loading\n30-11-4 Exemptions and Reductions\n30-11-5 Parking Ratios\nNotes",
+          "notes": "30-11-4;\n30-11-5 Notes",
           "attachments": [],
           "screenshots": [
             {
               "fileName": "greensboro-nc-screenshot1.png",
-              "directusId": "60fc7c21-b4f0-4520-abd5-6121a3031f1c"
-            },
-            {
-              "fileName": "greensboro-nc-screenshot2.png",
               "directusId": "2fd312c6-a551-48c2-8ea0-e1ecb3143205"
             },
             {
-              "fileName": "greensboro-nc-screenshot3.png",
+              "fileName": "greensboro-nc-screenshot2.png",
               "directusId": "3489e91e-fc55-4b8b-a751-9f086fd0cc4b"
             },
             {
-              "fileName": "greensboro-nc-screenshot4.png",
+              "fileName": "greensboro-nc-screenshot3.png",
               "directusId": "befcbc5c-c761-4d8f-932c-bac2b4b25479"
             },
             {
-              "fileName": "greensboro-nc-screenshot5.png",
+              "fileName": "greensboro-nc-screenshot4.png",
               "directusId": "5d5bd531-b700-4c9b-a191-61e510d13f49"
+            },
+            {
+              "fileName": "greensboro-nc-screenshot5.png",
+              "directusId": "4c1b333e-440e-4183-9780-7b0cde2ab503"
             }
           ]
         }
       ]
-    }
+    },
+    "reduce_min": [
+      {
+        "reporter": "Samuel Deetz",
+        "requirements": ["by right", "other"],
+        "citations": [
+          {
+            "description": "Greensboro Zoning Code",
+            "url": "https://online.encodeplus.com/regs/greensboro-nc/doc-viewer.aspx#secid-122",
+            "notes": "30-11-4;\n30-11-5 Notes",
+            "attachments": [],
+            "screenshots": [
+              {
+                "fileName": "greensboro-nc-reduce-min-screenshot1.png",
+                "directusId": "2fd312c6-a551-48c2-8ea0-e1ecb3143205"
+              },
+              {
+                "fileName": "greensboro-nc-reduce-min-screenshot2.png",
+                "directusId": "3489e91e-fc55-4b8b-a751-9f086fd0cc4b"
+              },
+              {
+                "fileName": "greensboro-nc-reduce-min-screenshot3.png",
+                "directusId": "befcbc5c-c761-4d8f-932c-bac2b4b25479"
+              },
+              {
+                "fileName": "greensboro-nc-reduce-min-screenshot4.png",
+                "directusId": "5d5bd531-b700-4c9b-a191-61e510d13f49"
+              },
+              {
+                "fileName": "greensboro-nc-reduce-min-screenshot5.png",
+                "directusId": "4c1b333e-440e-4183-9780-7b0cde2ab503"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "rm_min": [
+      {
+        "reporter": "Samuel Deetz",
+        "requirements": [
+          "by right",
+          "historic preservation",
+          "size of project"
+        ],
+        "citations": [
+          {
+            "description": "Greensboro Zoning Code",
+            "url": "https://online.encodeplus.com/regs/greensboro-nc/doc-viewer.aspx#secid-126",
+            "notes": "30-11-4.1;\n30-11-4.2;\n30-11-4.4",
+            "attachments": [],
+            "screenshots": [
+              {
+                "fileName": "greensboro-nc-remove-min-screenshot.png",
+                "directusId": "751f326c-00e4-46bf-91a2-a2cb44cc4921"
+              }
+            ]
+          }
+        ]
+      }
+    ]
   },
   "Greensburg, IN": {
     "rm_min": [
@@ -45931,30 +47145,90 @@
       "citations": [
         {
           "description": "Harrisburg Unified Development Ordinance",
-          "url": "https://online.encodeplus.com/regs/harrisburg-nc/doc-viewer.aspx#secid-3504",
-          "notes": "Chapter 141: Building and Site Design \n§ 141.03 Parking, Loading, Stacking, and Access\n141.03.01 General Provisions\nB. Exemption. \n  1. Generally\n    b.\n141.03.02 Parking Ratios & Design\nA. Generally.\nC. Mixed-Use District.\nH. Electric Vehicle Charging Station.\nI. Proximity to Greenway or Bicycle Path.",
+          "url": "https://online.encodeplus.com/regs/harrisburg-nc/doc-viewer.aspx#secid-3506",
+          "notes": "§141.03.02.C.;\n§141.03.02.H.;\n§141.03.02.I.",
           "attachments": [],
           "screenshots": [
             {
               "fileName": "harrisburg-nc-screenshot1.png",
-              "directusId": "e4bcedf2-0b67-4a0e-9708-5a5582887667"
-            },
-            {
-              "fileName": "harrisburg-nc-screenshot2.png",
-              "directusId": "ae443217-3103-419e-9dac-961eb89959e0"
-            },
-            {
-              "fileName": "harrisburg-nc-screenshot3.png",
               "directusId": "46c4468a-9459-45fe-a3c4-3937d922f644"
             },
             {
-              "fileName": "harrisburg-nc-screenshot4.png",
+              "fileName": "harrisburg-nc-screenshot2.png",
               "directusId": "3516d089-e32f-43d3-bc97-20fbaf85698d"
             }
           ]
         }
       ]
-    }
+    },
+    "add_max": [
+      {
+        "reporter": "Samuel Deetz",
+        "requirements": ["by right"],
+        "citations": [
+          {
+            "description": "Harrisburg Unified Development Ordinance",
+            "url": "https://online.encodeplus.com/regs/harrisburg-nc/doc-viewer.aspx#secid-3506",
+            "notes": "§141.03.02.A.;\n§141.03.02.C.",
+            "attachments": [],
+            "screenshots": [
+              {
+                "fileName": "harrisburg-nc-add-max-screenshot1.png",
+                "directusId": "6347b63d-3fde-46a9-b3fb-b85aeae77d18"
+              },
+              {
+                "fileName": "harrisburg-nc-add-max-screenshot2.png",
+                "directusId": "1e5ad865-bfbb-40f7-84bb-d59352d04deb"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "reduce_min": [
+      {
+        "reporter": "Samuel Deetz",
+        "requirements": ["by right", "other"],
+        "citations": [
+          {
+            "description": "Harrisburg Unified Development Ordinance",
+            "url": "https://online.encodeplus.com/regs/harrisburg-nc/doc-viewer.aspx#secid-3506",
+            "notes": "§141.03.02.C.;\n§141.03.02.H.;\n§141.03.02.I.",
+            "attachments": [],
+            "screenshots": [
+              {
+                "fileName": "harrisburg-nc-reduce-min-screenshot1.png",
+                "directusId": "46c4468a-9459-45fe-a3c4-3937d922f644"
+              },
+              {
+                "fileName": "harrisburg-nc-reduce-min-screenshot2.png",
+                "directusId": "3516d089-e32f-43d3-bc97-20fbaf85698d"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "rm_min": [
+      {
+        "reporter": "Samuel Deetz",
+        "requirements": ["by right"],
+        "citations": [
+          {
+            "description": "Harrisburg Unified Development Ordinance",
+            "url": "https://online.encodeplus.com/regs/harrisburg-nc/doc-viewer.aspx#secid-3505",
+            "notes": "§141.03.01.B.1.b.",
+            "attachments": [],
+            "screenshots": [
+              {
+                "fileName": "harrisburg-nc-remove-min-screenshot.png",
+                "directusId": "b10c8daa-efa1-4b13-bef0-f28fe3610e57"
+              }
+            ]
+          }
+        ]
+      }
+    ]
   },
   "Harrisburg, PA": {
     "rm_min": [
@@ -49593,21 +50867,57 @@
         {
           "description": "Huntersville Zoning Ordinances",
           "url": "https://huntersville.municipalcodeonline.com/book?type=zoning#name=6.1_Off-Street_Parking_Design",
-          "notes": "6.1 Off-Street Parking Design\nAmount Required.\nExceptions.\nA.\nB.",
+          "notes": "6.1 Exceptions. A.;\n6.1 Exceptions. B.",
           "attachments": [],
           "screenshots": [
             {
-              "fileName": "huntersville-nc-screenshot1.png",
-              "directusId": "33d14350-4f3d-4fed-9806-2e0b140fac97"
-            },
-            {
-              "fileName": "huntersville-nc-screenshot2.png",
+              "fileName": "huntersville-nc-screenshot.png",
               "directusId": "88e1784d-b0d6-4972-85b2-4c7c6d194381"
             }
           ]
         }
       ]
-    }
+    },
+    "reduce_min": [
+      {
+        "reporter": "Samuel Deetz",
+        "requirements": ["other"],
+        "citations": [
+          {
+            "description": "Huntersville Zoning Ordinances",
+            "url": "https://huntersville.municipalcodeonline.com/book?type=zoning#name=6.1_Off-Street_Parking_Design",
+            "notes": "6.1 Exceptions. A.;\n6.1 Exceptions. B.",
+            "attachments": [],
+            "screenshots": [
+              {
+                "fileName": "huntersville-nc-reduce-min-screenshot.png",
+                "directusId": "88e1784d-b0d6-4972-85b2-4c7c6d194381"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "rm_min": [
+      {
+        "reporter": "Samuel Deetz",
+        "requirements": ["by right"],
+        "citations": [
+          {
+            "description": "Huntersville Zoning Code",
+            "url": "https://huntersville.municipalcodeonline.com/book?type=zoning#name=6.1_Off-Street_Parking_Design",
+            "notes": "6.1 Amount Required",
+            "attachments": [],
+            "screenshots": [
+              {
+                "fileName": "huntersville-nc-remove-min-screenshot.png",
+                "directusId": "518979d3-585f-4d7e-9d87-d304a44578dd"
+              }
+            ]
+          }
+        ]
+      }
+    ]
   },
   "Huntertown, IN": {
     "legacy": {
@@ -50489,26 +51799,62 @@
       "citations": [
         {
           "description": "Indian Trail Development Code",
-          "url": "https://indiantrail.municipalcodeonline.com/book?type=development#name=Chapter_1010_General_Requirements",
-          "notes": "Chapter 1010 General Requirements\n1010.010 Applicability And Basic Requirements\nD.\n1010.020 Exemptions, Reductions, And Special Area Standards\nA.\nC.",
+          "url": "https://indiantrail.municipalcodeonline.com/book?type=development#name=1010.010_Applicability_And_Basic_Requirements",
+          "notes": "1010.010.D.",
           "attachments": [],
           "screenshots": [
             {
-              "fileName": "indian-trail-nc-screenshot1.png",
+              "fileName": "indian-trail-nc-screenshot.png",
               "directusId": "bf336e8f-fc33-4fed-a6f6-46557f61ccfe"
-            },
-            {
-              "fileName": "indian-trail-nc-screenshot2.png",
-              "directusId": "80805586-7ebf-4162-98bf-316e717c3e8a"
-            },
-            {
-              "fileName": "indian-trail-nc-screenshot3.png",
-              "directusId": "edc84344-5e89-4f5b-9c5d-11f224c24154"
             }
           ]
         }
       ]
-    }
+    },
+    "add_max": [
+      {
+        "reporter": "Samuel Deetz",
+        "requirements": ["by right"],
+        "citations": [
+          {
+            "description": "Indian Trail Development Code",
+            "url": "https://indiantrail.municipalcodeonline.com/book?type=development#name=1010.010_Applicability_And_Basic_Requirements",
+            "notes": "1010.010.D.",
+            "attachments": [],
+            "screenshots": [
+              {
+                "fileName": "indian-trail-nc-add-max-screenshot.png",
+                "directusId": "bf336e8f-fc33-4fed-a6f6-46557f61ccfe"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "reduce_min": [
+      {
+        "reporter": "Samuel Deetz",
+        "requirements": ["bike parking", "by right", "size of project"],
+        "citations": [
+          {
+            "description": "Indian Trail Development Code",
+            "url": "https://indiantrail.municipalcodeonline.com/book?type=development#name=1010.020_Exemptions,_Reductions,_And_Special_Area_Standards",
+            "notes": "1010.020.A.;\n1010.020.C.",
+            "attachments": [],
+            "screenshots": [
+              {
+                "fileName": "indian-trail-nc-reduce-min-screenshot1.png",
+                "directusId": "ea37ae09-8ace-49b0-be95-a856000e7fd6"
+              },
+              {
+                "fileName": "indian-trail-nc-reduce-min-screenshot2.png",
+                "directusId": "bdbee499-2c49-4f5f-b6cd-7773b87394da"
+              }
+            ]
+          }
+        ]
+      }
+    ]
   },
   "Indiana, PA": {
     "rm_min": [
@@ -54518,22 +55864,78 @@
       "citations": [
         {
           "description": "Kings Mountain Unified Development Ordinance",
-          "url": "https://online.encodeplus.com/regs/kingsmountain-nc-update/doc-viewer.aspx?secid=37#secid-37",
-          "notes": "§ 156.60 Site Development Standards\n§ 156.60.01 Parking, Loading, Stacking, and Access\n156.60.01.A General Provisions\n  C. Exemptions.\n    1. Single-family and Duplexes on Single Lots.\n156.60.01.B Parking Spaces Required\n  B. Exemptions.\n    1. Mixed-Use District.\n    2. Central Business District.",
+          "url": "https://online.encodeplus.com/regs/kingsmountain-nc-update/doc-viewer.aspx?secid=37#secid-39",
+          "notes": "§156.60.01.B",
           "attachments": [],
           "screenshots": [
             {
-              "fileName": "kings-mountain-nc-screenshot1.png",
-              "directusId": "70d21042-ad01-430e-ab35-da7f1128a6f4"
-            },
-            {
-              "fileName": "kings-mountain-nc-screenshot2.png",
+              "fileName": "kings-mountain-nc-screenshot.png",
               "directusId": "abe6357c-1430-4859-8845-bfc30686fa39"
             }
           ]
         }
       ]
-    }
+    },
+    "add_max": [
+      {
+        "reporter": "Samuel Deetz",
+        "requirements": ["by right", "other"],
+        "citations": [
+          {
+            "description": "Kings Mountain Unified Development Ordinance",
+            "url": "https://online.encodeplus.com/regs/kingsmountain-nc-update/doc-viewer.aspx?secid=37#secid-39",
+            "notes": "§156.60.01.B",
+            "attachments": [],
+            "screenshots": [
+              {
+                "fileName": "kings-mountain-nc-add-max-screenshot.png",
+                "directusId": "abe6357c-1430-4859-8845-bfc30686fa39"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "reduce_min": [
+      {
+        "reporter": "Samuel Deetz",
+        "requirements": ["by right"],
+        "citations": [
+          {
+            "description": "Kings Mountain Unified Development Ordinance",
+            "url": "https://online.encodeplus.com/regs/kingsmountain-nc-update/doc-viewer.aspx?secid=37#secid-39",
+            "notes": "156.60.01.B.B.1.",
+            "attachments": [],
+            "screenshots": [
+              {
+                "fileName": "kings-mountain-nc-reduce-min-screenshot.png",
+                "directusId": "0bb00ced-24fa-4db3-9b45-52fa00ae9f34"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "rm_min": [
+      {
+        "reporter": "Samuel Deetz",
+        "requirements": ["by right"],
+        "citations": [
+          {
+            "description": "Kings Mountain Unified Development Ordinance",
+            "url": "https://online.encodeplus.com/regs/kingsmountain-nc-update/doc-viewer.aspx?secid=37#secid-39",
+            "notes": "156.60.01.B.B.2.",
+            "attachments": [],
+            "screenshots": [
+              {
+                "fileName": "kings-mountain-nc-remove-min-screenshot.png",
+                "directusId": "57e0d758-5cce-4eaf-ba70-4e4ba16bf134"
+              }
+            ]
+          }
+        ]
+      }
+    ]
   },
   "Kingsford, MI": {
     "rm_min": [
@@ -57222,7 +58624,7 @@
         {
           "description": "Landis Zoning Code",
           "url": "https://townoflandisnc.gov/wp-content/uploads/2022/05/Landis-Article-12-Parking-Loading-amended-20220110.pdf",
-          "notes": "ARTICLE 12 OFF-STREET PARKING, STACKING, AND LOADING AREAS\n12.3 Standards for Parking in Residential Districts\n12.3-6 On-Street Parking Meeting Residential Parking Requirement.\n12.12 Off-Street Parking Requirements and Bicycle Alternative as an Incentive\n12.13 Off-Street Parking Exceptions\n12.13-1 Existing Buildings in the MS District.\n12.13-2 Parking Reduction in MS District.\n12.13-3 Fee in Lieu in MS District. \n12.13-4 On-Street Parking for Multi-Family Residential Buildings.\nPages 2, 7, 8, 12, 13",
+          "notes": "12.3-6;\n12.12;\n12.13-1;\n12.13-2;\n12.13-3;\n12.13-4;\nPages 2, 7, 8, 12, 13",
           "attachments": [],
           "screenshots": [
             {
@@ -57244,7 +58646,59 @@
           ]
         }
       ]
-    }
+    },
+    "add_max": [
+      {
+        "reporter": "Samuel Deetz",
+        "requirements": ["by right"],
+        "citations": [
+          {
+            "description": "Landis Zoning Code",
+            "url": "https://townoflandisnc.gov/wp-content/uploads/2022/05/Landis-Article-12-Parking-Loading-amended-20220110.pdf",
+            "notes": "12.12\nPages 8-12",
+            "attachments": [],
+            "screenshots": [
+              {
+                "fileName": "landis-nc-add-max-screenshot.png",
+                "directusId": "1bd30dde-7292-424a-a91e-326c4ce32c5f"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "reduce_min": [
+      {
+        "reporter": "Samuel Deetz",
+        "requirements": ["bike parking", "in-lieu fees", "other"],
+        "citations": [
+          {
+            "description": "Landis Zoning Code",
+            "url": "https://townoflandisnc.gov/wp-content/uploads/2022/05/Landis-Article-12-Parking-Loading-amended-20220110.pdf",
+            "notes": "12.3-6;\n12.12;\n12.13-1;\n12.13-2;\n12.13-3;\n12.13-4;\nPages 2, 7, 8, 12, 13",
+            "attachments": [],
+            "screenshots": [
+              {
+                "fileName": "landis-nc-reduce-min-screenshot1.png",
+                "directusId": "db128247-1ed9-4061-aea4-61dc2826d9da"
+              },
+              {
+                "fileName": "landis-nc-reduce-min-screenshot2.png",
+                "directusId": "149ed255-e927-40b6-b7ed-4f1e32b5356f"
+              },
+              {
+                "fileName": "landis-nc-reduce-min-screenshot3.png",
+                "directusId": "02472433-0533-44dc-ada1-9b07a6cfa0c3"
+              },
+              {
+                "fileName": "landis-nc-reduce-min-screenshot4.png",
+                "directusId": "74aa3e51-e64b-4759-8507-e1873d8aa9c7"
+              }
+            ]
+          }
+        ]
+      }
+    ]
   },
   "Landshut, BY": {
     "reduce_min": [
@@ -61987,8 +63441,8 @@
       "citations": [
         {
           "description": "Lowell Development Ordinance",
-          "url": "https://www.lowellnc.com/documents/article-12-parking-loading/",
-          "notes": "ARTICLE 12 OFF-STREET PARKING, STACKING, AND LOADING AREAS\n12.3 Standards for Parking in Residential Districts\n12.3-6 On-Street Parking Meeting Residential Parking Requirement.\n12.12 Off-Street Parking Requirements and Bicycle Alternative as an Incentive\n12.13 Off-Street Parking Exceptions\n12.13-1 Existing Buildings in the MS District.\n12.13-2 Parking Reduction in MS District.\n12.13-3 Fee in Lieu in MS District. \n12.13-4 On-Street Parking for Multi-Family Residential Buildings.\nPages 2, 7, 8, 12, 13",
+          "url": "https://storage.googleapis.com/proudcity/lowellnc/uploads/2022/08/Lowell-Article-12-Parking-Loading.pdf",
+          "notes": "12.3-6;\n12.12;\n12.13-1;\n12.13-2;\n12.13-3;\n12.13-4;\nPages 2, 7, 8, 12, 13",
           "attachments": [],
           "screenshots": [
             {
@@ -62010,7 +63464,59 @@
           ]
         }
       ]
-    }
+    },
+    "add_max": [
+      {
+        "reporter": "Samuel Deetz",
+        "requirements": ["by right"],
+        "citations": [
+          {
+            "description": "Lowell Development Ordinance",
+            "url": "https://storage.googleapis.com/proudcity/lowellnc/uploads/2022/08/Lowell-Article-12-Parking-Loading.pdf",
+            "notes": "12.12.\nPages 8-12",
+            "attachments": [],
+            "screenshots": [
+              {
+                "fileName": "lowell-nc-add-max-screenshot.png",
+                "directusId": "3de97b43-7fd4-4948-ab7c-5453a141cd74"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "reduce_min": [
+      {
+        "reporter": "Samuel Deetz",
+        "requirements": ["bike parking", "in-lieu fees", "other"],
+        "citations": [
+          {
+            "description": "Lowell Development Ordinance",
+            "url": "https://storage.googleapis.com/proudcity/lowellnc/uploads/2022/08/Lowell-Article-12-Parking-Loading.pdf",
+            "notes": "12.3-6;\n12.12;\n12.13-1;\n12.13-2;\n12.13-3;\n12.13-4;\nPages 2, 7, 8, 12, 13",
+            "attachments": [],
+            "screenshots": [
+              {
+                "fileName": "lowell-nc-reduce-min-screenshot1.png",
+                "directusId": "03666fb0-20d8-4de1-a83e-949017ff4659"
+              },
+              {
+                "fileName": "lowell-nc-reduce-min-screenshot2.png",
+                "directusId": "e32dc131-7358-434a-a87f-339f006d7aaa"
+              },
+              {
+                "fileName": "lowell-nc-reduce-min-screenshot3.png",
+                "directusId": "9c05ae39-5abf-4856-a014-098b2b79cc64"
+              },
+              {
+                "fileName": "lowell-nc-reduce-min-screenshot4.png",
+                "directusId": "7bb0b79a-53e7-4655-8682-1484c9dc7259"
+              }
+            ]
+          }
+        ]
+      }
+    ]
   },
   "Lower Burrell, PA": {
     "reduce_min": [
@@ -64796,7 +66302,7 @@
         {
           "description": "Marshville Zoning Code",
           "url": "https://www.marshville.org/sites/g/files/vyhlif6096/f/uploads/marshville_-_article_12_-_parking_loading.pdf",
-          "notes": "ARTICLE 12 OFF-STREET PARKING, STACKING, AND LOADING AREAS\n12.3 Standards for Parking in Residential Districts\n12.3-6 On-Street Parking Meeting Residential Parking Requirement.\n12.12 Off-Street Parking Requirements and Bicycle Alternative as an Incentive\n12.13 Off-Street Parking Exceptions\n12.13-1 Existing Buildings in the MS District.\n12.13-2 Parking Reduction in MS District.\n12.13-3 Fee in Lieu in MS District. \n12.13-4 On-Street Parking for Multi-Family Residential Buildings.\nPages 2, 7, 8, 15",
+          "notes": "12.3-6;\n12.12;\n12.13-1;\n12.13-2;\n12.13-3;\n12.13-4;\nPages 2, 7, 8, 15",
           "attachments": [],
           "screenshots": [
             {
@@ -64814,7 +66320,55 @@
           ]
         }
       ]
-    }
+    },
+    "add_max": [
+      {
+        "reporter": "Samuel Deetz",
+        "requirements": ["by right"],
+        "citations": [
+          {
+            "description": "Marshville Zoning Code",
+            "url": "https://www.marshville.org/sites/g/files/vyhlif6096/f/uploads/marshville_-_article_12_-_parking_loading.pdf",
+            "notes": "12.12\nPages 8-14",
+            "attachments": [],
+            "screenshots": [
+              {
+                "fileName": "marshville-nc-add-max-screenshot.png",
+                "directusId": "a956177d-0f24-4314-a3ca-5de0139c88ff"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "reduce_min": [
+      {
+        "reporter": "Samuel Deetz",
+        "requirements": ["bike parking", "in-lieu fees", "other"],
+        "citations": [
+          {
+            "description": "Marshville Zoning Code",
+            "url": "https://www.marshville.org/sites/g/files/vyhlif6096/f/uploads/marshville_-_article_12_-_parking_loading.pdf",
+            "notes": "12.3-6;\n12.12;\n12.13-1;\n12.13-2;\n12.13-3;\n12.13-4;\nPages 2, 7, 8, 15",
+            "attachments": [],
+            "screenshots": [
+              {
+                "fileName": "marshville-nc-reduce-min-screenshot1.png",
+                "directusId": "7f607433-4a39-48ca-a7bf-e03c87e09124"
+              },
+              {
+                "fileName": "marshville-nc-reduce-min-screenshot2.png",
+                "directusId": "9ef71557-34ca-44a8-baaf-4de555068f4b"
+              },
+              {
+                "fileName": "marshville-nc-reduce-min-screenshot3.png",
+                "directusId": "029e3d9c-b821-4f21-a4c5-6991c26c2c35"
+              }
+            ]
+          }
+        ]
+      }
+    ]
   },
   "Marysville, OH": {
     "rm_min": [
@@ -65082,7 +66636,7 @@
         {
           "description": "Matthews Unified Development Ordinance",
           "url": "https://www.matthewsnc.gov/files/documents/UDOChapter607Off-StreetParkingandLoadingRequirementsindividualsection1318014120051322PM.pdf",
-          "notes": "155.607. Off-Street Parking and Loading Requirements\n155.607.6 Parking Standards for Other Vehicles.\nC. MOTORCYCLE PARKING.\n155.607.7 Required Parking.\nC. ASSIGNMENTS, ADDITIONS, AND REDUCTIONS OF REQUIRED PARKING.\n3. REDUCTION FOR CARPOOL SPACES. \n6. HUC DISTRICT EXCEPTIONS\nPages 12, 20, 22",
+          "notes": "155.607.6.C.;\n155.607.7.C.3.;\n155.607.7.C.6.b.;\nPages 12, 20, 22",
           "attachments": [],
           "screenshots": [
             {
@@ -65095,12 +66649,60 @@
             },
             {
               "fileName": "matthews-nc-screenshot3.png",
-              "directusId": "8e6a7b60-9759-4d72-be72-c7d7a1a78a5c"
+              "directusId": "da590ca9-f21c-4c99-99e3-8a95bb75a4b1"
             }
           ]
         }
       ]
-    }
+    },
+    "reduce_min": [
+      {
+        "reporter": "Samuel Deetz",
+        "requirements": ["by right", "other", "size of project"],
+        "citations": [
+          {
+            "description": "Matthews Unified Development Ordinance",
+            "url": "https://www.matthewsnc.gov/files/documents/UDOChapter607Off-StreetParkingandLoadingRequirementsindividualsection1318014120051322PM.pdf",
+            "notes": "155.607.6.C.;\n155.607.7.C.3.;\n155.607.7.C.6.b.;\nPages 12, 20, 22",
+            "attachments": [],
+            "screenshots": [
+              {
+                "fileName": "matthews-nc-reduce-min-screenshot1.png",
+                "directusId": "9ce4d18d-a687-4313-89f2-ee56fb98c9e5"
+              },
+              {
+                "fileName": "matthews-nc-reduce-min-screenshot2.png",
+                "directusId": "d833babd-ff30-4b19-9f7a-b42abbd6247f"
+              },
+              {
+                "fileName": "matthews-nc-reduce-min-screenshot3.png",
+                "directusId": "da590ca9-f21c-4c99-99e3-8a95bb75a4b1"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "rm_min": [
+      {
+        "reporter": "Samuel Deetz",
+        "requirements": ["by right", "other"],
+        "citations": [
+          {
+            "description": "Matthews Unified Development Ordinance",
+            "url": "https://www.matthewsnc.gov/files/documents/UDOChapter607Off-StreetParkingandLoadingRequirementsindividualsection1318014120051322PM.pdf",
+            "notes": "155.607.7.C.6.a.\nPage 22",
+            "attachments": [],
+            "screenshots": [
+              {
+                "fileName": "matthews-nc-remove-min-screenshot.png",
+                "directusId": "1c8dc257-c62a-4e20-ab0b-163e70acfd3a"
+              }
+            ]
+          }
+        ]
+      }
+    ]
   },
   "Mattoon, IL": {
     "rm_min": [
@@ -65454,25 +67056,77 @@
         {
           "description": "McAdenville Unified Development Ordinance",
           "url": "https://townofmcadenville.org/wp-content/uploads/2022/03/McAdenville-UDO-Consolidated-04-22-2021.pdf",
-          "notes": "Chapter 10 – Parking Regulations \nSECTION 10.1 GENERAL PROVISIONS\nD.\n  5.\nG.\nSECTION 10.5 OFF-STREET PARKING SPACE REQUIREMENTS\nC. ON-STREET PARKING\nPages 388-389, 392-393",
+          "notes": "SECTION 10.5.C.\nPages 392-393",
           "attachments": [],
           "screenshots": [
             {
-              "fileName": "mc-adenville-nc-screenshot1.png",
-              "directusId": "651c68df-590e-4d2d-8745-3b1b3863db59"
-            },
-            {
-              "fileName": "mc-adenville-nc-screenshot2.png",
-              "directusId": "d5de9eec-edf6-435c-911f-a52b835bd3a4"
-            },
-            {
-              "fileName": "mc-adenville-nc-screenshot3.png",
+              "fileName": "mc-adenville-nc-screenshot.png",
               "directusId": "b0b38225-373e-4cd1-8bca-2b411a4f5822"
             }
           ]
         }
       ]
-    }
+    },
+    "add_max": [
+      {
+        "reporter": "Samuel Deetz",
+        "requirements": ["by right"],
+        "citations": [
+          {
+            "description": "McAdenville Unified Development Ordinance",
+            "url": "https://townofmcadenville.org/wp-content/uploads/2022/03/McAdenville-UDO-Consolidated-04-22-2021.pdf",
+            "notes": "SECTION 10.1.D.5.\nPage 388",
+            "attachments": [],
+            "screenshots": [
+              {
+                "fileName": "mc-adenville-nc-add-max-screenshot.png",
+                "directusId": "6ea8bfe8-15d0-413b-a36a-db17f1ead83e"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "reduce_min": [
+      {
+        "reporter": "Samuel Deetz",
+        "requirements": ["other"],
+        "citations": [
+          {
+            "description": "McAdenville Unified Development Ordinance",
+            "url": "https://townofmcadenville.org/wp-content/uploads/2022/03/McAdenville-UDO-Consolidated-04-22-2021.pdf",
+            "notes": "SECTION 10.5.C.\nPages 392-393",
+            "attachments": [],
+            "screenshots": [
+              {
+                "fileName": "mc-adenville-nc-reduce-min-screenshot.png",
+                "directusId": "b0b38225-373e-4cd1-8bca-2b411a4f5822"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "rm_min": [
+      {
+        "reporter": "Samuel Deetz",
+        "requirements": ["by right"],
+        "citations": [
+          {
+            "description": "McAdenville Unified Development Ordinance",
+            "url": "https://townofmcadenville.org/wp-content/uploads/2022/03/McAdenville-UDO-Consolidated-04-22-2021.pdf",
+            "notes": "SECTION 10.1.G.\nPage 389",
+            "attachments": [],
+            "screenshots": [
+              {
+                "fileName": "mc-adenville-nc-remove-min-screenshot.png",
+                "directusId": "612f6f95-3456-4a33-a84b-a4b69b1c16bb"
+              }
+            ]
+          }
+        ]
+      }
+    ]
   },
   "McAllen, TX": {
     "reduce_min": [
@@ -67233,7 +68887,149 @@
           "screenshots": []
         }
       ]
-    }
+    },
+    "add_max": [
+      {
+        "reporter": "Samuel Deetz",
+        "requirements": ["by right", "size of project"],
+        "citations": [
+          {
+            "description": "Miami Zoning Code",
+            "url": "https://codehub.gridics.com/us/fl/miami#/cc66de11-c6ed-4007-a7b8-3a10fbb320c6/65be9c85-89a8-409b-ab54-049d2efbe1c9/92917552-3eb1-4e06-8d23-eb0881e92295",
+            "notes": "TABLE 4 DENSITY, INTENSITY AND PARKING (T5);\nTABLE 4 DENSITY, INTENSITY AND PARKING (T6)",
+            "attachments": [],
+            "screenshots": [
+              {
+                "fileName": "miami-fl-add-max-screenshot.png",
+                "directusId": "d70d9e22-7d3f-493e-b3de-f8ca985edd32"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "reduce_min": [
+      {
+        "reporter": "Maggie Kochman",
+        "requirements": ["by right", "frequent transit"],
+        "citations": [
+          {
+            "description": "Miami's Parking Deregulation Will Reduce Housing Costs",
+            "url": "https://www.forbes.com/sites/scottbeyer/2016/07/15/miamis-parking-deregulation-will-reduce-housing-costs/?sh=f7517ee2ca6d",
+            "notes": "\"when the city passed Miami 21, a form-based code that, among other things, waived minimum parking requirements for newly-constructed buildings downtown.\"",
+            "attachments": [],
+            "screenshots": [
+              {
+                "fileName": "miami-fl-reduce-min1-citation1-screenshot.png",
+                "directusId": "14e47986-ae74-4341-adc1-27732ca99af6"
+              }
+            ]
+          },
+          {
+            "description": "Video of City Council Hearing from April 28. 2022",
+            "url": "https://miamifl.granicus.com/MediaPlayer.php?view_id=1&clip_id=879&meta_id=30507",
+            "notes": "Watch segment PZ.8 not clear what exactly what got carved out did but significant repeal of administrative waivers for TOD.",
+            "attachments": [],
+            "screenshots": []
+          },
+          {
+            "description": "Miami 04/28/22 Minutes",
+            "url": "https://miamifl.iqm2.com/Citizens/FileOpen.aspx?Type=12&ID=2628&Inline=True",
+            "notes": "Page 59",
+            "attachments": [],
+            "screenshots": [
+              {
+                "fileName": "miami-fl-reduce-min1-citation3-screenshot.png",
+                "directusId": "7edc40f6-0418-4744-8209-57b677a067a6"
+              }
+            ]
+          },
+          {
+            "description": "Miami 04/28/22 Agenda",
+            "url": "https://miamifl.iqm2.com/Citizens/FileOpen.aspx?Type=1&ID=2776&Inline=True",
+            "notes": "Pages 127-182",
+            "attachments": [],
+            "screenshots": [
+              {
+                "fileName": "miami-fl-reduce-min1-citation4-screenshot.png",
+                "directusId": "1d8a4fe9-e021-4fea-8d29-b7de969e2bf2"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "reporter": null,
+        "requirements": [
+          "affordable housing",
+          "bike parking",
+          "frequent transit",
+          "other"
+        ],
+        "citations": [
+          {
+            "description": "Miami Zoning Code",
+            "url": "https://codehub.gridics.com/us/fl/miami#/cc66de11-c6ed-4007-a7b8-3a10fbb320c6/65be9c85-89a8-409b-ab54-049d2efbe1c9/a43cff47-923f-4983-a590-8390bcdc5c1a",
+            "notes": "3.6.7;\nTABLE 4 DENSITY, INTENSITY AND PARKING (T4);\nTABLE 4 DENSITY, INTENSITY AND PARKING (T5);\nTABLE 4 DENSITY, INTENSITY AND PARKING (T6);\nTABLE 4 DENSITY, INTENSITY AND PARKING (C);\nAppendix D Section 11 (b)",
+            "attachments": [],
+            "screenshots": [
+              {
+                "fileName": "miami-fl-reduce-min2-screenshot1.png",
+                "directusId": "f563cd7f-d4c0-4805-bd42-77750360bc83"
+              },
+              {
+                "fileName": "miami-fl-reduce-min2-screenshot2.png",
+                "directusId": "d656b409-5cbd-4ed8-8775-4abbcd2616a5"
+              },
+              {
+                "fileName": "miami-fl-reduce-min2-screenshot3.png",
+                "directusId": "0b83148b-dd8e-4b09-8230-ad4f1d1693c0"
+              },
+              {
+                "fileName": "miami-fl-reduce-min2-screenshot4.png",
+                "directusId": "4ed88464-a3ed-4489-833e-8510ae31d44c"
+              },
+              {
+                "fileName": "miami-fl-reduce-min2-screenshot5.png",
+                "directusId": "db97ce61-4e1f-4bfb-872a-0fa998a66754"
+              },
+              {
+                "fileName": "miami-fl-reduce-min2-screenshot6.png",
+                "directusId": "32704d23-dad2-45b4-88f9-098401636184"
+              },
+              {
+                "fileName": "miami-fl-reduce-min2-screenshot7.png",
+                "directusId": "34ec251d-6786-4864-b64b-af14207a7e88"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "rm_min": [
+      {
+        "reporter": null,
+        "requirements": ["frequent transit"],
+        "citations": [
+          {
+            "description": "Miami Zoning Code",
+            "url": "https://codehub.gridics.com/us/fl/miami#/cc66de11-c6ed-4007-a7b8-3a10fbb320c6/65be9c85-89a8-409b-ab54-049d2efbe1c9/38186033-61e6-4f1d-aa46-f02decd4354b",
+            "notes": "TABLE 4 DENSITY, INTENSITY AND PARKING (T6);\nAppendix D Section 11 (c)",
+            "attachments": [],
+            "screenshots": [
+              {
+                "fileName": "miami-fl-remove-min-screenshot1.png",
+                "directusId": "bfd833c9-6457-4ffd-b785-2349f193e15f"
+              },
+              {
+                "fileName": "miami-fl-remove-min-screenshot2.png",
+                "directusId": "f28a0b3a-ed32-4ce7-848c-4cd59c059a28"
+              }
+            ]
+          }
+        ]
+      }
+    ]
   },
   "Michigan City, IN": {
     "legacy": {
@@ -67585,7 +69381,7 @@
         {
           "description": "Midland Zoning Code",
           "url": "https://cms1files.revize.com/midlandnc/Midland%20Article%2012%20-%20Parking%20%20Loading.pdf",
-          "notes": "ARTICLE 12 OFF-STREET PARKING, STACKING, AND LOADING AREAS\n12.11 Off-Street Parking Requirements and Bicycle Incentive. \n12.12 Off-Street Parking Exceptions.\n12.12-1 Existing Buildings and Infill Housing in the MS and OM Districts. \n12.12-2 Parking Reduction in MS and OM Districts.\n12.12-3 Fee in Lieu in MS and OM Districts.\n12.12-4 On-Street Parking for Residential Buildings.\nPages 6, 12",
+          "notes": "12.11;\n12.12-1;\n12.12-2;\n12.12-3;\n12.12-4;\nPages 6, 12",
           "attachments": [],
           "screenshots": [
             {
@@ -67599,7 +69395,51 @@
           ]
         }
       ]
-    }
+    },
+    "add_max": [
+      {
+        "reporter": "Samuel Deetz",
+        "requirements": ["by right"],
+        "citations": [
+          {
+            "description": "Midland Zoning Code",
+            "url": "https://cms1files.revize.com/midlandnc/Midland%20Article%2012%20-%20Parking%20%20Loading.pdf",
+            "notes": "12.11\nPages 6-11",
+            "attachments": [],
+            "screenshots": [
+              {
+                "fileName": "midland-nc-add-max-screenshot.png",
+                "directusId": "dbb9f56e-ebc9-42e7-a35c-e646accacd3c"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "reduce_min": [
+      {
+        "reporter": "Samuel Deetz",
+        "requirements": ["bike parking", "by right", "in-lieu fees", "other"],
+        "citations": [
+          {
+            "description": "Midland Zoning Code",
+            "url": "https://cms1files.revize.com/midlandnc/Midland%20Article%2012%20-%20Parking%20%20Loading.pdf",
+            "notes": "12.11;\n12.12-1;\n12.12-2;\n12.12-3;\n12.12-4;\nPages 6, 12",
+            "attachments": [],
+            "screenshots": [
+              {
+                "fileName": "midland-nc-reduce-min-screenshot1.png",
+                "directusId": "542c6d73-f047-4b0b-ae89-0dee9c325656"
+              },
+              {
+                "fileName": "midland-nc-reduce-min-screenshot2.png",
+                "directusId": "427dde56-8037-4773-b7e3-405dd2938bc6"
+              }
+            ]
+          }
+        ]
+      }
+    ]
   },
   "Midland, TX": {
     "rm_min": [
@@ -70214,7 +72054,47 @@
           ]
         }
       ]
-    }
+    },
+    "add_max": [
+      {
+        "reporter": "David Cole",
+        "requirements": ["by right"],
+        "citations": [
+          {
+            "description": "Mooresville Unified Development Ordinance",
+            "url": "https://cms5.revize.com/revize/mooresvillenc/Site%20Documents/Planning/UDO%20Adopted%20October%207%202024%20(2).pdf",
+            "notes": "5.2.5.C.\nPage 296 of pdf, page 284 of original document",
+            "attachments": [],
+            "screenshots": [
+              {
+                "fileName": "mooresville-nc-add-max-screenshot.png",
+                "directusId": "29635ba6-ca4d-4e9d-8240-0a3754410ca2"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "rm_min": [
+      {
+        "reporter": "David Cole",
+        "requirements": ["by right"],
+        "citations": [
+          {
+            "description": "Mooresville City code",
+            "url": "https://cms5.revize.com/revize/mooresvillenc/Site%20Documents/Planning/Unified%20Development%20Ordinance.pdf",
+            "notes": "5.2.5. Off-Street Parking Standards\nA. MINIMUM NUMBER OF OFF-STREET VEHICULAR PARKING SPACES",
+            "attachments": [],
+            "screenshots": [
+              {
+                "fileName": "mooresville-nc-remove-min-screenshot.png",
+                "directusId": "89398fca-7c94-4e7a-a4e4-3f6f0c133ade"
+              }
+            ]
+          }
+        ]
+      }
+    ]
   },
   "Moorhead, MN": {
     "rm_min": [
@@ -70652,7 +72532,7 @@
         {
           "description": "Morven Zoning Code",
           "url": "https://www.townofmorven.org/_files/ugd/c28175_f8b827ed86b544b5b9c9e3a66aedda2a.pdf",
-          "notes": "ARTICLE 12 OFF-STREET PARKING, STACKING, AND LOADING AREAS\n12.3 Standards for Parking in Residential Districts\n12.3-7 On-Street Parking Meeting Residential Parking Requirement.\n12.12 Off-Street Parking Requirements and Bicycle Alternative as an Incentive\n12.13 Off-Street Parking Exceptions\n12.13-1 Existing Buildings in the MS District.\n12.13-2 Parking Reduction in MS District.\n12.13-3 Fee in Lieu in MS District. \n12.13-4 On-Street Parking for Multi-Family Residential Buildings.\nPages 2, 8, 12, 13",
+          "notes": "12.3-7;\n12.12;\n12.13-1;\n12.13-2;\n12.13-3; \n12.13-4;\nPages 2, 8, 12, 13",
           "attachments": [],
           "screenshots": [
             {
@@ -70670,7 +72550,55 @@
           ]
         }
       ]
-    }
+    },
+    "add_max": [
+      {
+        "reporter": "Samuel Deetz",
+        "requirements": ["by right"],
+        "citations": [
+          {
+            "description": "Morven Zoning Code",
+            "url": "https://www.townofmorven.org/_files/ugd/c28175_f8b827ed86b544b5b9c9e3a66aedda2a.pdf",
+            "notes": "12.12\nPages 8-12",
+            "attachments": [],
+            "screenshots": [
+              {
+                "fileName": "morven-nc-add-max-screenshot.png",
+                "directusId": "8429d504-2022-41e5-bd98-478209621255"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "reduce_min": [
+      {
+        "reporter": "Samuel Deetz",
+        "requirements": ["bike parking", "in-lieu fees", "other"],
+        "citations": [
+          {
+            "description": "Morven Zoning Code",
+            "url": "https://www.townofmorven.org/_files/ugd/c28175_f8b827ed86b544b5b9c9e3a66aedda2a.pdf",
+            "notes": "12.3-7;\n12.12;\n12.13-1;\n12.13-2;\n12.13-3; \n12.13-4;\nPages 2, 8, 12, 13",
+            "attachments": [],
+            "screenshots": [
+              {
+                "fileName": "morven-nc-reduce-min-screenshot1.png",
+                "directusId": "62661ef5-fc3b-463b-bc24-7db14b59c9a7"
+              },
+              {
+                "fileName": "morven-nc-reduce-min-screenshot2.png",
+                "directusId": "bb60acd4-57db-4776-bb4e-164a23d13671"
+              },
+              {
+                "fileName": "morven-nc-reduce-min-screenshot3.png",
+                "directusId": "4d882944-28b9-431a-9003-2c14de0d50de"
+              }
+            ]
+          }
+        ]
+      }
+    ]
   },
   "Moscow, PA": {
     "rm_min": [
@@ -71621,19 +73549,63 @@
       "requirements": ["by right"],
       "citations": [
         {
-          "description": "Mt. Pleasant Unified Development Ordinance",
-          "url": "https://www.mtpleasantnc.org/wp-content/uploads/MPDO-Amended-7-12-2021.pdf",
-          "notes": "ARTICLE 8 OFF-STREET PARKING AND PRIVATE DRIVEWAY STANDARDS\n8.3 OFF-STREET PARKING STANDARDS\n8.3.1. REQUIRED AMOUNT OF OFF-STREET PARKING\n8.3.1.2. Exemption from Required Number of Spaces\nPage 217",
+          "description": "Mt. Pleasant Development Ordinance",
+          "url": "https://mtpleasantnc.gov/Portals/0/Mount%20Pleasant/Code%20Enforcement/Documents/MPDO%2020230911-Web.pdf?ver=jmyQIwC7099-1BTmldWRSg%3d%3d",
+          "notes": "8.3.1.2.\nPage 224",
           "attachments": [],
           "screenshots": [
             {
               "fileName": "mt-pleasant-nc-screenshot.png",
-              "directusId": "96a491dd-d8d4-4baf-b562-d41c7f3a61b3"
+              "directusId": "743cb728-6505-4b2b-a3c5-c69fd624095d"
             }
           ]
         }
       ]
-    }
+    },
+    "add_max": [
+      {
+        "reporter": "Samuel Deetz",
+        "requirements": ["by right", "other"],
+        "citations": [
+          {
+            "description": "Mt. Pleasant Development Ordinance",
+            "url": "https://mtpleasantnc.gov/Portals/0/Mount%20Pleasant/Code%20Enforcement/Documents/MPDO%2020230911-Web.pdf?ver=jmyQIwC7099-1BTmldWRSg%3d%3d",
+            "notes": "8.3.1.1.;\nTable 8.3-1;\nPages 224, 226-231",
+            "attachments": [],
+            "screenshots": [
+              {
+                "fileName": "mt-pleasant-nc-add-max-screenshot1.png",
+                "directusId": "613b7ee9-a073-4fa8-a7dd-47a65935526d"
+              },
+              {
+                "fileName": "mt-pleasant-nc-add-max-screenshot2.png",
+                "directusId": "7265ade7-6151-4421-8056-8f09716af165"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "rm_min": [
+      {
+        "reporter": "Samuel Deetz",
+        "requirements": ["by right"],
+        "citations": [
+          {
+            "description": "Mt. Pleasant Development Ordinance",
+            "url": "https://mtpleasantnc.gov/Portals/0/Mount%20Pleasant/Code%20Enforcement/Documents/MPDO%2020230911-Web.pdf?ver=jmyQIwC7099-1BTmldWRSg%3d%3d",
+            "notes": "8.3.1.2.\nPage 224",
+            "attachments": [],
+            "screenshots": [
+              {
+                "fileName": "mt-pleasant-nc-remove-min-screenshot.png",
+                "directusId": "743cb728-6505-4b2b-a3c5-c69fd624095d"
+              }
+            ]
+          }
+        ]
+      }
+    ]
   },
   "Mt. Pleasant, WI": {
     "legacy": {
@@ -74439,7 +76411,47 @@
           ]
         }
       ]
-    }
+    },
+    "add_max": [
+      {
+        "reporter": "Samuel Deetz",
+        "requirements": ["by right"],
+        "citations": [
+          {
+            "description": "New Market Land Development Code",
+            "url": "https://www.townofnewmarket.org/sites/g/files/vyhlif6386/f/uploads/zoning_ordinance_1.pdf",
+            "notes": "9.3 Computation of Off-Street Parking Requirements\n  9.3.4\nPage 103 of pdf, page 102 of original document",
+            "attachments": [],
+            "screenshots": [
+              {
+                "fileName": "new-market-md-add-max-screenshot.png",
+                "directusId": "6941c469-4852-4a67-b89f-63c95c812c55"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "rm_min": [
+      {
+        "reporter": "Samuel Deetz",
+        "requirements": ["by right"],
+        "citations": [
+          {
+            "description": "New Market Land Development Code",
+            "url": "https://www.townofnewmarket.org/sites/g/files/vyhlif6386/f/uploads/zoning_ordinance_1.pdf",
+            "notes": "9.3 Computation of Off-Street Parking Requirements\n  9.3.4\nPage 103 of pdf, page 102 of original document",
+            "attachments": [],
+            "screenshots": [
+              {
+                "fileName": "new-market-md-remove-min-screenshot.png",
+                "directusId": "6941c469-4852-4a67-b89f-63c95c812c55"
+              }
+            ]
+          }
+        ]
+      }
+    ]
   },
   "New Morgan, PA": {
     "reduce_min": [
@@ -83370,7 +85382,7 @@
       "citations": [
         {
           "description": "Pineville Zoning Code",
-          "url": "https://www.pinevillenc.gov/wp-content/uploads/2023/02/Pineville-Zoning-Ordinance-2021-PDF.pdf",
+          "url": "https://www.pinevillenc.gov/wp-content/uploads/2024/12/Pineville-Zoning-Ordinance-2024.pdf",
           "notes": "CHAPTER 4 PARKING\n4.1 OFF-STREET PARKING\n4.1.1 Applicability\nB) Downtown Exemption\nPage 86",
           "attachments": [],
           "screenshots": [
@@ -83381,7 +85393,47 @@
           ]
         }
       ]
-    }
+    },
+    "reduce_min": [
+      {
+        "reporter": "Samuel Deetz",
+        "requirements": ["other"],
+        "citations": [
+          {
+            "description": "Pineville Zoning Code",
+            "url": "https://www.pinevillenc.gov/wp-content/uploads/2024/12/Pineville-Zoning-Ordinance-2024.pdf",
+            "notes": "CHAPTER 4 PARKING\n4.1 OFF-STREET PARKING\n4.1.1 Applicability\nB) Downtown Exemption\nPage 86",
+            "attachments": [],
+            "screenshots": [
+              {
+                "fileName": "pineville-nc-reduce-min-screenshot.png",
+                "directusId": "351845bb-4d74-4305-8b20-742aaeadbf28"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "rm_min": [
+      {
+        "reporter": "Samuel Deetz",
+        "requirements": ["by right", "historic preservation"],
+        "citations": [
+          {
+            "description": "Pineville Zoning Code",
+            "url": "https://www.pinevillenc.gov/wp-content/uploads/2024/12/Pineville-Zoning-Ordinance-2024.pdf",
+            "notes": "CHAPTER 4 PARKING\n4.1 OFF-STREET PARKING\n4.1.1 Applicability\nB) Downtown Exemption\nPage 86",
+            "attachments": [],
+            "screenshots": [
+              {
+                "fileName": "pineville-nc-remove-min-screenshot.png",
+                "directusId": "351845bb-4d74-4305-8b20-742aaeadbf28"
+              }
+            ]
+          }
+        ]
+      }
+    ]
   },
   "Piqua, OH": {
     "legacy": {
@@ -85885,34 +87937,94 @@
       "citations": [
         {
           "description": "Prince George's County Zoning Code",
-          "url": "https://online.encodeplus.com/regs/princegeorgescounty-md/doc-viewer.aspx#secid-679",
-          "notes": "27-6305. Off-Street Parking Space Standards\n  (a)\n  (d)\n27-6308. Reduced Parking Standards for Parking Demand Reduction Strategies",
+          "url": "https://online.encodeplus.com/regs/princegeorgescounty-md/doc-viewer.aspx#secid-684",
+          "notes": "27-6305.(d)",
           "attachments": [],
           "screenshots": [
             {
-              "fileName": "prince-georges-county-md-screenshot1.png",
-              "directusId": "6a77fdba-1c8f-4ef5-8b32-1160a40775bf"
-            },
-            {
-              "fileName": "prince-georges-county-md-screenshot2.png",
-              "directusId": "5737aa80-b29c-4ef5-a581-5a97a7a3da53"
-            },
-            {
-              "fileName": "prince-georges-county-md-screenshot3.png",
-              "directusId": "ca830382-3e5f-4584-9355-a2d06b1fd3b2"
-            },
-            {
-              "fileName": "prince-georges-county-md-screenshot4.png",
+              "fileName": "prince-georges-county-md-screenshot.png",
               "directusId": "6032c5b5-cf94-41f3-aa3f-9e1290a74fdb"
-            },
-            {
-              "fileName": "prince-georges-county-md-screenshot5.png",
-              "directusId": "2840e35d-a324-4bf4-b0bc-dc866c77c75c"
             }
           ]
         }
       ]
-    }
+    },
+    "add_max": [
+      {
+        "reporter": "Samuel Deetz",
+        "requirements": ["by right"],
+        "citations": [
+          {
+            "description": "Prince George's County Zoning Code",
+            "url": "https://online.encodeplus.com/regs/princegeorgescounty-md/doc-viewer.aspx#secid-684",
+            "notes": "27-6305.(d)",
+            "attachments": [],
+            "screenshots": [
+              {
+                "fileName": "prince-georges-county-md-add-max-screenshot.png",
+                "directusId": "6032c5b5-cf94-41f3-aa3f-9e1290a74fdb"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "reduce_min": [
+      {
+        "reporter": "Samuel Deetz",
+        "requirements": [
+          "bike parking",
+          "frequent transit",
+          "transportation demand management"
+        ],
+        "citations": [
+          {
+            "description": "Prince George's County Zoning Code",
+            "url": "https://online.encodeplus.com/regs/princegeorgescounty-md/doc-viewer.aspx#secid-687",
+            "notes": "27-6308.",
+            "attachments": [],
+            "screenshots": [
+              {
+                "fileName": "prince-georges-county-md-reduce-min-screenshot1.png",
+                "directusId": "0f30607b-e187-4529-8994-10ebf2ede01f"
+              },
+              {
+                "fileName": "prince-georges-county-md-reduce-min-screenshot2.png",
+                "directusId": "819e938a-8597-4d95-9c4d-2ea25af0b1ad"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "rm_min": [
+      {
+        "reporter": "Samuel Deetz",
+        "requirements": ["by right"],
+        "citations": [
+          {
+            "description": "Prince George's County Zoning Code",
+            "url": "https://online.encodeplus.com/regs/princegeorgescounty-md/doc-viewer.aspx#secid-684",
+            "notes": "27-6305.(a)",
+            "attachments": [],
+            "screenshots": [
+              {
+                "fileName": "prince-georges-county-md-remove-min-screenshot1.png",
+                "directusId": "cc1609b5-7e29-461b-abd8-4ad58e7c5b18"
+              },
+              {
+                "fileName": "prince-georges-county-md-remove-min-screenshot2.png",
+                "directusId": "95561d13-30a1-47db-993d-49b0ad30264a"
+              },
+              {
+                "fileName": "prince-georges-county-md-remove-min-screenshot3.png",
+                "directusId": "be714770-9fb9-4dc5-80c2-f18f565aa3ad"
+              }
+            ]
+          }
+        ]
+      }
+    ]
   },
   "Princess Anne, MD": {
     "reduce_min": [
@@ -86725,7 +88837,110 @@
           "screenshots": []
         }
       ]
-    }
+    },
+    "add_max": [
+      {
+        "reporter": "Keegan McDonald",
+        "requirements": ["by right"],
+        "citations": [
+          {
+            "description": "Raleigh Unified Development Ordinance",
+            "url": "https://user-2081353526.cld.bz/UnifiedDevelopmentOrdinance/220/",
+            "notes": "Sec. 7.1.2.C.",
+            "attachments": [],
+            "screenshots": [
+              {
+                "fileName": "raleigh-nc-add-max-screenshot.png",
+                "directusId": "04eb367a-ea60-4432-aa69-c7f6ee768663"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "rm_min": [
+      {
+        "reporter": "Keegan McDonald",
+        "requirements": ["by right"],
+        "citations": [
+          {
+            "description": "Article - Planners Working on Parking Reform Legislation in Raleigh",
+            "url": "https://www.planetizen.com/news/2021/06/113551-planners-working-parking-reform-legislation-raleigh",
+            "notes": "\"The Raleigh City Council voted 6-to-1 Tuesday to begin a process to remove parking minimums and change parking maximums throughout the city,\" reports Anna Johnson...",
+            "attachments": [],
+            "screenshots": []
+          },
+          {
+            "description": "Raleigh Zoning Code regarding Downtown District and Transit related minimums waivers.",
+            "url": "https://user-2081353526.cld.bz/UnifiedDevelopmentOrdinance",
+            "notes": "Sec. 7.1.3. Specialized Vehicle Parking Requirements A & B also see Sec. 7.1.4. Vehicle Parking Reductions A. Proximity to Transit -",
+            "attachments": [],
+            "screenshots": [
+              {
+                "fileName": "raleigh-nc-remove-min-citation2-screenshot1.png",
+                "directusId": "b9a7f41e-42e0-43cf-8742-9ae582c5d4f0"
+              },
+              {
+                "fileName": "raleigh-nc-remove-min-citation2-screenshot2.png",
+                "directusId": "793da0b3-58b0-4b09-8dd5-481c0438ec44"
+              },
+              {
+                "fileName": "raleigh-nc-remove-min-citation2-screenshot3.png",
+                "directusId": "1b50fc26-bd61-4f32-9f5c-32bfb022ec5a"
+              }
+            ]
+          },
+          {
+            "description": "Agenda and Materials for January 18th Text Change Hearing",
+            "url": "https://go.boarddocs.com/nc/raleigh/Board.nsf/goto?open&id=CAKQ466473F0",
+            "notes": "https://go.boarddocs.com/nc/raleigh/Board.nsf/goto?open&id=CAKQ466473F0",
+            "attachments": [
+              {
+                "fileName": "raleigh-nc-remove-min-citation3-attachment.pdf",
+                "directusId": "ea7cf035-1ad3-4dc7-b890-33a9b2c79e40"
+              }
+            ],
+            "screenshots": [
+              {
+                "fileName": "raleigh-nc-remove-min-citation3-screenshot.png",
+                "directusId": "771231c7-1749-497c-8f06-33b99edb10f0"
+              }
+            ]
+          },
+          {
+            "description": "Planning Commission Hearing Video",
+            "url": "https://youtu.be/79HC_zBHJEo?t=1807",
+            "notes": "Removal of parking mandates is early on the agenda and the motion vote happens right around minute 30.",
+            "attachments": [],
+            "screenshots": []
+          },
+          {
+            "description": "City Council Meeting Agenda and Minutes",
+            "url": "https://go.boarddocs.com/nc/raleigh/Board.nsf/goto?open&id=CBHQ4A636E3A",
+            "notes": "https://go.boarddocs.com/nc/raleigh/Board.nsf/goto?open&id=CC5KXL52207F",
+            "attachments": [],
+            "screenshots": [
+              {
+                "fileName": "raleigh-nc-remove-min-citation5-screenshot.png",
+                "directusId": "faec3e3e-3c96-43e8-8865-9176fa940b8e"
+              }
+            ]
+          },
+          {
+            "description": "Staff Report and draft ordinance (passed on 3/15/22)",
+            "url": null,
+            "notes": null,
+            "attachments": [
+              {
+                "fileName": "raleigh-nc-remove-min-citation6-attachment.pdf",
+                "directusId": "4bac562a-e613-43ba-9fc6-47425a7f173c"
+              }
+            ],
+            "screenshots": []
+          }
+        ]
+      }
+    ]
   },
   "Ralston, NE": {
     "rm_min": [
@@ -86850,25 +89065,65 @@
         {
           "description": "Ranlo Zoning Code",
           "url": "https://townofranlo.org/wp2/wp-content/uploads/2022/08/Ranlo-Article-12-Parking-Loading.pdf",
-          "notes": "ARTICLE 12 OFF-STREET PARKING, STACKING, AND LOADING AREAS\n12.3 Standards for Parking in Residential Districts\n12.3-7 On-Street Parking Meeting Residential Parking Requirement.\n12.12 Off-Street Parking Requirements and Bicycle Alternative as an Incentive\n12.13 Off-Street Parking Exceptions\n12.13-1 Existing Buildings in the MS District.\n12.13-2 Parking Reduction in MS District.\n12.13-3 Fee in Lieu in MS District. \n12.13-4 On-Street Parking for Multi-Family Residential Buildings.\nPages 2, 8, 12, 13",
+          "notes": "12.12\nPages 8-12",
           "attachments": [],
           "screenshots": [
             {
-              "fileName": "ranlo-nc-screenshot1.png",
-              "directusId": "c9eb6db5-c7fc-4738-b754-45c167a8f56d"
-            },
-            {
-              "fileName": "ranlo-nc-screenshot2.png",
-              "directusId": "340f1efa-2d93-4c28-a7fa-ea15a2e431c4"
-            },
-            {
-              "fileName": "ranlo-nc-screenshot3.png",
-              "directusId": "92099672-44d6-4075-9310-6715d9848b32"
+              "fileName": "ranlo-nc-screenshot.png",
+              "directusId": "2b2916b0-39e7-4233-a7ea-820dd9e1fd3b"
             }
           ]
         }
       ]
-    }
+    },
+    "add_max": [
+      {
+        "reporter": "Samuel Deetz",
+        "requirements": ["by right"],
+        "citations": [
+          {
+            "description": "Ranlo Zoning Code",
+            "url": "https://townofranlo.org/wp2/wp-content/uploads/2022/08/Ranlo-Article-12-Parking-Loading.pdf",
+            "notes": "12.12\nPages 8-12",
+            "attachments": [],
+            "screenshots": [
+              {
+                "fileName": "ranlo-nc-add-max-screenshot.png",
+                "directusId": "2b2916b0-39e7-4233-a7ea-820dd9e1fd3b"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "reduce_min": [
+      {
+        "reporter": "Samuel Deetz",
+        "requirements": ["bike parking", "in-lieu fees", "other"],
+        "citations": [
+          {
+            "description": "Ranlo Zoning Code",
+            "url": "https://townofranlo.org/wp2/wp-content/uploads/2022/08/Ranlo-Article-12-Parking-Loading.pdf",
+            "notes": "12.3-7;\n12.12;\n12.13-1;\n12.13-2;\n12.13-3;\n12.13-4;\nPages 2, 8, 12, 13",
+            "attachments": [],
+            "screenshots": [
+              {
+                "fileName": "ranlo-nc-reduce-min-screenshot1.png",
+                "directusId": "5f804438-b84f-4459-b665-d8be174df018"
+              },
+              {
+                "fileName": "ranlo-nc-reduce-min-screenshot2.png",
+                "directusId": "b33e8f08-d1d7-4f1b-9c9b-a326945af68c"
+              },
+              {
+                "fileName": "ranlo-nc-reduce-min-screenshot3.png",
+                "directusId": "a757dd61-e210-4477-922a-66d7e04c673d"
+              }
+            ]
+          }
+        ]
+      }
+    ]
   },
   "Rantoul, IL": {
     "add_max": [
@@ -89264,7 +91519,7 @@
       "requirements": ["by right", "other"],
       "citations": [
         {
-          "description": "Rock Hill Zoning Code",
+          "description": "Rock Hill Zoning Code (Former)",
           "url": "https://www.cityofrockhill.com/home/showpublisheddocument/2065/638138729035270000",
           "notes": "8.8 PARKING STANDARDS\n8.8.2 APPLICABILITY\nC. Parking in the Downtown Parking Management Plan District:\n8.8.6 REQUIRED NUMBER OF PARKING SPACES\nB. Required Minimum Number of Parking Spaces\nC. Maximum Number of Spaces Permitted\n8.8.13 ALTERNATIVE PARKING PLAN\nG. On-Street Parking:\nPages 270, 271, 274, 278, 286 of pdf",
           "attachments": [],
@@ -89288,7 +91543,91 @@
           ]
         }
       ]
-    }
+    },
+    "add_max": [
+      {
+        "reporter": "Samuel Deetz",
+        "requirements": ["by right"],
+        "citations": [
+          {
+            "description": "Rock Hill Zoning Code",
+            "url": "https://www.cityofrockhill.com/home/showpublisheddocument/2065/638138729035270000",
+            "notes": "8.8.6.C.;\nPage 284",
+            "attachments": [],
+            "screenshots": [
+              {
+                "fileName": "rock-hill-sc-add-max-screenshot.png",
+                "directusId": "60b0c065-bfd8-463b-af49-2941ea82b022"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "reduce_min": [
+      {
+        "reporter": "Samuel Deetz",
+        "requirements": ["by right", "other"],
+        "citations": [
+          {
+            "description": "Rock Hill Zoning Code (Former)",
+            "url": "https://www.cityofrockhill.com/home/showpublisheddocument/2065/638138729035270000",
+            "notes": "8.8 PARKING STANDARDS\n8.8.2 APPLICABILITY\nC. Parking in the Downtown Parking Management Plan District:\n8.8.6 REQUIRED NUMBER OF PARKING SPACES\nB. Required Minimum Number of Parking Spaces\nC. Maximum Number of Spaces Permitted\n8.8.13 ALTERNATIVE PARKING PLAN\nG. On-Street Parking:\nPages 270, 271, 274, 278, 286 of pdf",
+            "attachments": [],
+            "screenshots": [
+              {
+                "fileName": "rock-hill-sc-reduce-min-citation1-screenshot1.png",
+                "directusId": "e67f9b12-de23-43f5-a4bf-0d6046c7bb6c"
+              },
+              {
+                "fileName": "rock-hill-sc-reduce-min-citation1-screenshot2.png",
+                "directusId": "dec2f899-b27a-422f-956d-f96c4f86fcff"
+              },
+              {
+                "fileName": "rock-hill-sc-reduce-min-citation1-screenshot3.png",
+                "directusId": "a21bf68a-b2bd-40e9-aa5c-23b2da3acb05"
+              },
+              {
+                "fileName": "rock-hill-sc-reduce-min-citation1-screenshot4.png",
+                "directusId": "ac02376d-a787-4464-b5ab-772a5a27692d"
+              }
+            ]
+          },
+          {
+            "description": "Rock Hill T-2024-01 Proposed Parking Amendment Report",
+            "url": "https://legistarweb-production.s3.amazonaws.com/uploads/attachment/pdf/2773721/T-2024-01_CC_Staff_Report.pdf",
+            "notes": null,
+            "attachments": [],
+            "screenshots": [
+              {
+                "fileName": "rock-hill-sc-reduce-min-citation2-screenshot.png",
+                "directusId": "f64d40f4-4626-44a5-bec6-6bdddd2af7b4"
+              }
+            ]
+          },
+          {
+            "description": "Rock Hill Zoning Code",
+            "url": "https://www.cityofrockhill.com/home/showpublisheddocument/2065/638138729035270000",
+            "notes": "8.8.2.C.;\n8.8.6.B.;\n8.8.13.G.;\nPages 276, 280, 292",
+            "attachments": [],
+            "screenshots": [
+              {
+                "fileName": "rock-hill-sc-reduce-min-citation3-screenshot1.png",
+                "directusId": "7a5c5ec4-317a-41d3-846c-0a1518b3a148"
+              },
+              {
+                "fileName": "rock-hill-sc-reduce-min-citation3-screenshot2.png",
+                "directusId": "408a7824-06d2-48e6-949f-cd22d6a208c4"
+              },
+              {
+                "fileName": "rock-hill-sc-reduce-min-citation3-screenshot3.png",
+                "directusId": "40a0ae55-16d2-4ba6-aacc-0a1967291999"
+              }
+            ]
+          }
+        ]
+      }
+    ]
   },
   "Rock Island County, IL": {
     "rm_min": [
@@ -91628,22 +93967,78 @@
       "citations": [
         {
           "description": "Salisbury Land Development Ordinance",
-          "url": "https://library.municode.com/nc/salisbury/codes/land_development_ordinance?nodeId=CH10PA_S10.2GEPAPR",
-          "notes": "Chapter 10 - PARKING\nSec. 10.2. - General Parking Provisions.\nA.District Exceptions.\nB.On-Street Parking\nSec. 10.3. - Required Vehicle and Bicycle Parking.",
+          "url": "https://library.municode.com/nc/salisbury/codes/land_development_ordinance?nodeId=CH10PA_S10.3REVEBIPA",
+          "notes": "Sec. 10.3.",
           "attachments": [],
           "screenshots": [
             {
-              "fileName": "salisbury-nc-screenshot1.png",
-              "directusId": "13677990-d9dd-462a-a6d8-02a6fb51706e"
-            },
-            {
-              "fileName": "salisbury-nc-screenshot2.png",
-              "directusId": "407c3b10-10f6-4ed1-9e6c-4be4b5609f15"
+              "fileName": "salisbury-nc-screenshot.png",
+              "directusId": "2ab7b109-6f46-4ed5-b486-59173bce4b14"
             }
           ]
         }
       ]
-    }
+    },
+    "add_max": [
+      {
+        "reporter": "Samuel Deetz",
+        "requirements": ["by right"],
+        "citations": [
+          {
+            "description": "Salisbury Land Development Ordinance",
+            "url": "https://library.municode.com/nc/salisbury/codes/land_development_ordinance?nodeId=CH10PA_S10.3REVEBIPA",
+            "notes": "Sec. 10.3.",
+            "attachments": [],
+            "screenshots": [
+              {
+                "fileName": "salisbury-nc-add-max-screenshot.png",
+                "directusId": "2ab7b109-6f46-4ed5-b486-59173bce4b14"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "reduce_min": [
+      {
+        "reporter": "Samuel Deetz",
+        "requirements": ["other"],
+        "citations": [
+          {
+            "description": "Salisbury Zoning Code",
+            "url": "https://library.municode.com/nc/salisbury/codes/land_development_ordinance?nodeId=CH10PA_S10.2GEPAPR",
+            "notes": "Sec. 10.2.B.",
+            "attachments": [],
+            "screenshots": [
+              {
+                "fileName": "salisbury-nc-reduce-min-screenshot.png",
+                "directusId": "14ec0c77-85e1-4e11-b21c-cdf21a5eef6c"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "rm_min": [
+      {
+        "reporter": "Samuel Deetz",
+        "requirements": ["by right"],
+        "citations": [
+          {
+            "description": "Salisbury Land Development Ordinance",
+            "url": "https://library.municode.com/nc/salisbury/codes/land_development_ordinance?nodeId=CH10PA_S10.2GEPAPR",
+            "notes": "Sec. 10.2.A.",
+            "attachments": [],
+            "screenshots": [
+              {
+                "fileName": "salisbury-nc-remove-min-screenshot.png",
+                "directusId": "ceab62de-44ba-4943-a553-130b8ff28a0c"
+              }
+            ]
+          }
+        ]
+      }
+    ]
   },
   "Salix, IA": {
     "rm_min": [
@@ -92491,7 +94886,84 @@
           ]
         }
       ]
-    }
+    },
+    "add_max": [
+      {
+        "reporter": "Derrick Arndt",
+        "requirements": ["by right"],
+        "citations": [
+          {
+            "description": "Sandy Springs Development Code",
+            "url": "https://library.municode.com/ga/sandy_springs/codes/development_code?nodeId=ART8SIDE_DIV._8.2PA_S8.2.3PECESPDI",
+            "notes": "Sec. 8.2.3.B.",
+            "attachments": [],
+            "screenshots": [
+              {
+                "fileName": "sandy-springs-ga-add-max-screenshot.png",
+                "directusId": "826f50e2-1cf8-4124-a8c1-df22c0e1bf8d"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "reduce_min": [
+      {
+        "reporter": "Derrick Arndt",
+        "requirements": [
+          "affordable housing",
+          "carshare",
+          "frequent transit",
+          "other"
+        ],
+        "citations": [
+          {
+            "description": "Sandy Springs Development Code",
+            "url": "https://library.municode.com/ga/sandy_springs/codes/development_code?nodeId=ART8SIDE_DIV._8.2PA_S8.2.4PARE",
+            "notes": "Sec. 8.2.4.",
+            "attachments": [],
+            "screenshots": [
+              {
+                "fileName": "sandy-springs-ga-reduce-min-screenshot.png",
+                "directusId": "18dde30b-ad62-421f-a555-b1748fccce0c"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "rm_min": [
+      {
+        "reporter": "Derrick Arndt",
+        "requirements": ["by right"],
+        "citations": [
+          {
+            "description": "Sandy Springs Development Code",
+            "url": "https://library.municode.com/ga/sandy_springs/codes/development_code?nodeId=ART8SIDE_DIV._8.2PA_S8.2.3PECESPDI",
+            "notes": "Sec. 8.2.3.A.",
+            "attachments": [],
+            "screenshots": [
+              {
+                "fileName": "sandy-springs-ga-remove-min-citation1-screenshot.png",
+                "directusId": "a0466f09-b62b-4e29-925d-0bc960ac04dd"
+              }
+            ]
+          },
+          {
+            "description": "Sandy Springs Development Code",
+            "url": "https://library.municode.com/ga/sandy_springs/codes/development_code?nodeId=ART8SIDE_DIV._8.2PA_S8.2.6UNPAPECE",
+            "notes": "Sec. 8.2.6.",
+            "attachments": [],
+            "screenshots": [
+              {
+                "fileName": "sandy-springs-ga-remove-min-citation2-screenshot.png",
+                "directusId": "d261fa37-eff8-4a36-901e-f8af3a8ee28c"
+              }
+            ]
+          }
+        ]
+      }
+    ]
   },
   "Santa Ana, CA": {
     "legacy": {
@@ -93427,7 +95899,7 @@
         {
           "description": "Savannah Zoning Code",
           "url": "https://online.encodeplus.com/regs/savannah-ga/doc-viewer.aspx#secid-5777",
-          "notes": "DIVISION II\nPART 8- PLANNING AND REGULATION OF DEVELOPMENT\nCHAPTER 3. - ZONING\nARTICLE 9.0 GENERAL SITE STANDARDS\nSec. 9.3 Off-Street Parking and Loading\n9.3.4 Off-Street Parking Requirements\n   b. Bicycle Parking\n      ii. Off-Street Vehicle Parking Credit for Bicycle Parking\n   c. Motorcycle and Moped Parking\n      ii. Off-Street Parking Vehicle Credit for Motorcycle/Moped Parking\n9.3.6 Downtown Savannah Parking District\n9.3.7 Victorian and Streetcar Parking District",
+          "notes": "9.3.4.b.ii.;\n9.3.4.c.ii.;\n9.3.6;\n9.3.7",
           "attachments": [],
           "screenshots": [
             {
@@ -93444,20 +95916,84 @@
             },
             {
               "fileName": "savannah-ga-screenshot4.png",
-              "directusId": "1af93bff-4ba5-4989-9783-bd52b727e41c"
+              "directusId": "7ad649e0-76ae-4291-823c-47e63f418695"
             },
             {
               "fileName": "savannah-ga-screenshot5.png",
-              "directusId": "58c3be33-4c8c-408f-98ee-748a8ff69429"
+              "directusId": "4ee24111-7102-4649-bd9a-77c2e8c8fc03"
             },
             {
               "fileName": "savannah-ga-screenshot6.png",
-              "directusId": "45934172-644e-4685-9deb-e6a4effae5e2"
+              "directusId": "650c5278-7186-4654-9a87-818b82e0cf57"
             }
           ]
         }
       ]
-    }
+    },
+    "reduce_min": [
+      {
+        "reporter": "Samuel Deetz",
+        "requirements": ["bike parking", "by right", "other"],
+        "citations": [
+          {
+            "description": "Savannah Zoning Code",
+            "url": "https://online.encodeplus.com/regs/savannah-ga/doc-viewer.aspx#secid-5777",
+            "notes": "9.3.4.b.ii.;\n9.3.4.c.ii.;\n9.3.6;\n9.3.7",
+            "attachments": [],
+            "screenshots": [
+              {
+                "fileName": "savannah-ga-reduce-min-screenshot1.png",
+                "directusId": "ce4348a2-129a-4f83-baff-1b50f90d7b3d"
+              },
+              {
+                "fileName": "savannah-ga-reduce-min-screenshot2.png",
+                "directusId": "81be360b-f518-46b1-ba66-18c5c47d4209"
+              },
+              {
+                "fileName": "savannah-ga-reduce-min-screenshot3.png",
+                "directusId": "29128a3c-331c-4e66-a6d3-d1d0862a9123"
+              },
+              {
+                "fileName": "savannah-ga-reduce-min-screenshot4.png",
+                "directusId": "7ad649e0-76ae-4291-823c-47e63f418695"
+              },
+              {
+                "fileName": "savannah-ga-reduce-min-screenshot5.png",
+                "directusId": "4ee24111-7102-4649-bd9a-77c2e8c8fc03"
+              },
+              {
+                "fileName": "savannah-ga-reduce-min-screenshot6.png",
+                "directusId": "650c5278-7186-4654-9a87-818b82e0cf57"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "rm_min": [
+      {
+        "reporter": "Samuel Deetz",
+        "requirements": ["by right"],
+        "citations": [
+          {
+            "description": "Savannah Zoning Code",
+            "url": "https://online.encodeplus.com/regs/savannah-ga/doc-viewer.aspx#secid-5783",
+            "notes": "9.3.6.c.",
+            "attachments": [],
+            "screenshots": [
+              {
+                "fileName": "savannah-ga-remove-min-screenshot1.png",
+                "directusId": "38d6e697-4756-469f-88de-14a92799efe8"
+              },
+              {
+                "fileName": "savannah-ga-remove-min-screenshot2.png",
+                "directusId": "dfc95222-66e2-4196-bea0-88b28b8b138f"
+              }
+            ]
+          }
+        ]
+      }
+    ]
   },
   "Savannah, MO": {
     "rm_min": [
@@ -100393,7 +102929,55 @@
           ]
         }
       ]
-    }
+    },
+    "add_max": [
+      {
+        "reporter": "Samuel Deetz",
+        "requirements": ["by right"],
+        "citations": [
+          {
+            "description": "Stallings Development Ordinance",
+            "url": "https://www.stallingsnc.org/LinkClick.aspx?fileticket=HvL5UBBq2dQ%3d&portalid=0",
+            "notes": "12.12\nPages 8-12",
+            "attachments": [],
+            "screenshots": [
+              {
+                "fileName": "stallings-nc-add-max-screenshot.png",
+                "directusId": "3189fa02-58a8-44c8-92d6-67599b84f2ec"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "reduce_min": [
+      {
+        "reporter": "Samuel Deetz",
+        "requirements": ["bike parking", "in-lieu fees", "other"],
+        "citations": [
+          {
+            "description": "Stallings Development Ordinance",
+            "url": "https://www.stallingsnc.org/LinkClick.aspx?fileticket=HvL5UBBq2dQ%3d&portalid=0",
+            "notes": "12.3-6;\n12.12; \n12.13-1;\n12.13-2;\n12.13-3;\n12.13-4;\nPages 2, 8, 12, 13",
+            "attachments": [],
+            "screenshots": [
+              {
+                "fileName": "stallings-nc-reduce-min-screenshot1.png",
+                "directusId": "abccaefb-5ac3-4c5d-b187-d4a1f63e429a"
+              },
+              {
+                "fileName": "stallings-nc-reduce-min-screenshot2.png",
+                "directusId": "779d1019-c1df-4e36-9057-ac3d5993d473"
+              },
+              {
+                "fileName": "stallings-nc-reduce-min-screenshot3.png",
+                "directusId": "98f51282-b543-4640-948b-18ca33d4127e"
+              }
+            ]
+          }
+        ]
+      }
+    ]
   },
   "Stamford, CT": {
     "reduce_min": [
@@ -104574,7 +107158,7 @@
       "requirements": ["by right"],
       "citations": [
         {
-          "description": "City Code",
+          "description": "Thomasville Zoning Code (Former)",
           "url": "https://thomasville.org/documents/City_Ordinances/Chapter_22_Zoning/Chapter_22_Zoning_MCC.pdf",
           "notes": "Section 22-250",
           "attachments": [],
@@ -104610,7 +107194,135 @@
           ]
         }
       ]
-    }
+    },
+    "add_max": [
+      {
+        "reporter": null,
+        "requirements": ["by right"],
+        "citations": [
+          {
+            "description": "Thomasville Zoning Code",
+            "url": "https://library.municode.com/ga/thomasville/codes/code_of_ordinances?nodeId=PTIICOOR_CH22ZO_ARTXVSPDI_DIV1DODI_S22-594NELOST",
+            "notes": "Sec. 22-367.;\nSec. 22-594.9(a);\nSec. 22-624.",
+            "attachments": [],
+            "screenshots": [
+              {
+                "fileName": "thomasville-ga-add-max-screenshot1.png",
+                "directusId": "dd5d25f8-227e-4dae-b2ee-621d3a6e5f93"
+              },
+              {
+                "fileName": "thomasville-ga-add-max-screenshot2.png",
+                "directusId": "bb60fb98-0dc6-4488-a40f-ff87806645b7"
+              },
+              {
+                "fileName": "thomasville-ga-add-max-screenshot3.png",
+                "directusId": "cff61689-f8c1-435d-9abb-dedc0b6b3622"
+              },
+              {
+                "fileName": "thomasville-ga-add-max-screenshot4.png",
+                "directusId": "3e11ef98-5436-4e4c-9006-b50c9113914c"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "reduce_min": [
+      {
+        "reporter": null,
+        "requirements": ["other"],
+        "citations": [
+          {
+            "description": "Thomasville Zoning Code",
+            "url": "https://library.municode.com/ga/thomasville/codes/code_of_ordinances?nodeId=PTIICOOR_CH22ZO_ARTXVSPDI_DIV1DODI_S22-594NELOST",
+            "notes": "Sec. 22-367.;\nSec. 22-435.(a);\nSec. 22-594.9(a)(1);\nSec. 22-594.9(a)(3);\nSec. 22-624.",
+            "attachments": [],
+            "screenshots": [
+              {
+                "fileName": "thomasville-ga-reduce-min-citation1-screenshot1.png",
+                "directusId": "c1d86faa-ed7f-45c1-bcec-c6e6a94ac41c"
+              },
+              {
+                "fileName": "thomasville-ga-reduce-min-citation1-screenshot2.png",
+                "directusId": "605d6e6a-592c-42d3-af5f-a0f4ebe3dee6"
+              },
+              {
+                "fileName": "thomasville-ga-reduce-min-citation1-screenshot3.png",
+                "directusId": "6ee39800-b466-45a5-bbc7-96d604f0137e"
+              },
+              {
+                "fileName": "thomasville-ga-reduce-min-citation1-screenshot4.png",
+                "directusId": "2d121886-0f33-42a9-b119-a0c5b9ab6d28"
+              },
+              {
+                "fileName": "thomasville-ga-reduce-min-citation1-screenshot5.png",
+                "directusId": "ff338c16-3a09-423a-b87f-12ea7f98f233"
+              }
+            ]
+          },
+          {
+            "description": "Thomasville Zoning Code (Former)",
+            "url": "https://thomasville.org/documents/City_Ordinances/Chapter_22_Zoning/Chapter_22_Zoning_MCC.pdf",
+            "notes": "Section 22-250",
+            "attachments": [],
+            "screenshots": [
+              {
+                "fileName": "thomasville-ga-reduce-min-citation2-screenshot1.jpg",
+                "directusId": "53aa8a71-4047-4cf9-82ca-5cba6c58f953"
+              },
+              {
+                "fileName": "thomasville-ga-reduce-min-citation2-screenshot2.jpg",
+                "directusId": "e2f88c7a-6cd8-4564-b74f-2d9a81266a03"
+              },
+              {
+                "fileName": "thomasville-ga-reduce-min-citation2-screenshot3.jpg",
+                "directusId": "d3300a75-dcdd-48f8-8255-61135af4eaf6"
+              },
+              {
+                "fileName": "thomasville-ga-reduce-min-citation2-screenshot4.jpg",
+                "directusId": "3528227b-04b8-40f0-8b54-0500a32a0aa0"
+              },
+              {
+                "fileName": "thomasville-ga-reduce-min-citation2-screenshot5.jpg",
+                "directusId": "ae1dac14-fc88-4f91-95b9-901360fc4d89"
+              },
+              {
+                "fileName": "thomasville-ga-reduce-min-citation2-screenshot6.jpg",
+                "directusId": "cab7c911-a896-4662-9d16-d4df09446d0d"
+              },
+              {
+                "fileName": "thomasville-ga-reduce-min-citation2-screenshot7.jpg",
+                "directusId": "2c0cb26e-df8e-4eb3-96fd-44cb89f35008"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "rm_min": [
+      {
+        "reporter": null,
+        "requirements": ["by right"],
+        "citations": [
+          {
+            "description": "Thomasville Zoning Code",
+            "url": "https://library.municode.com/ga/thomasville/codes/code_of_ordinances?nodeId=PTIICOOR_CH22ZO_ARTXOREPASERE_S22-437OREPAST",
+            "notes": "Sec. 22-437.7.g.;\nSec. 22-594.9(a)(2)",
+            "attachments": [],
+            "screenshots": [
+              {
+                "fileName": "thomasville-ga-remove-min-screenshot1.png",
+                "directusId": "57aaf3a2-718e-44e8-8a51-4d7d2d5bc7ee"
+              },
+              {
+                "fileName": "thomasville-ga-remove-min-screenshot2.png",
+                "directusId": "5f6d04ae-b3fd-4a9e-be1a-164d6e247f5f"
+              }
+            ]
+          }
+        ]
+      }
+    ]
   },
   "Thornapple Township, MI": {
     "add_max": [
@@ -111154,7 +113866,47 @@
           ]
         }
       ]
-    }
+    },
+    "reduce_min": [
+      {
+        "reporter": "Samuel Deetz",
+        "requirements": ["by right", "other"],
+        "citations": [
+          {
+            "description": "Waxhaw Land Development Code",
+            "url": "https://www.waxhaw.com/home/showpublisheddocument/2238/638011012767000000",
+            "notes": "Chapter 7 Streets, Driveways and Parking\nSection 7.5 Parking\nSection 7.5.3 Off -Street Parking Requirements\nF. Parking Minimums. \n2.\n3.\nPage 148",
+            "attachments": [],
+            "screenshots": [
+              {
+                "fileName": "waxhaw-nc-reduce-min-screenshot.png",
+                "directusId": "1ec314cd-b936-416f-830d-a6a57fffacfb"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "rm_min": [
+      {
+        "reporter": "Samuel Deetz",
+        "requirements": ["by right"],
+        "citations": [
+          {
+            "description": "Waxhaw Land Development Code",
+            "url": "https://www.waxhaw.com/home/showpublisheddocument/2238/638011012767000000",
+            "notes": "Chapter 7 Streets, Driveways and Parking\nSection 7.5 Parking\nSection 7.5.3 Off -Street Parking Requirements\nF. Parking Minimums. \n2.\n3.\nPage 148",
+            "attachments": [],
+            "screenshots": [
+              {
+                "fileName": "waxhaw-nc-remove-min-screenshot.png",
+                "directusId": "1ec314cd-b936-416f-830d-a6a57fffacfb"
+              }
+            ]
+          }
+        ]
+      }
+    ]
   },
   "Wayland, IA": {
     "rm_min": [
@@ -112487,7 +115239,112 @@
           ]
         }
       ]
-    }
+    },
+    "add_max": [
+      {
+        "reporter": null,
+        "requirements": ["by right", "other"],
+        "citations": [
+          {
+            "description": "West Palm Beach Zoning Code",
+            "url": "https://online.encodeplus.com/regs/westpalmbeach-fl/doc-viewer.aspx#secid-417",
+            "notes": "Sec. 94-111.t.;\nTABLE IV-9;\nTABLE IV-9a",
+            "attachments": [],
+            "screenshots": [
+              {
+                "fileName": "west-palm-beach-fl-add-max-screenshot1.png",
+                "directusId": "5648bbdb-1187-4030-9d76-ea6daca7960d"
+              },
+              {
+                "fileName": "west-palm-beach-fl-add-max-screenshot2.png",
+                "directusId": "f6bee3eb-f89c-40af-9749-62d8ddc21f23"
+              },
+              {
+                "fileName": "west-palm-beach-fl-add-max-screenshot3.png",
+                "directusId": "0eee06f4-6fb7-4d76-9c9c-dc4d6a0590d6"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "reduce_min": [
+      {
+        "reporter": "Jesse Bailey",
+        "requirements": [
+          "by right",
+          "in-lieu fees",
+          "other",
+          "supportive housing"
+        ],
+        "citations": [
+          {
+            "description": "West Palm Beach Zoning and Land Development Code",
+            "url": "https://online.encodeplus.com/regs/westpalmbeach-fl/doc-viewer.aspx?secid=714#secid-714",
+            "notes": "Sec. 94-111.f.;\nSec. 94-111.h.;\nSec. 94-111.j.;\nSec. 94-481.f.;\nSec. 94-485.i.;\nSec. 94-485.k.;\nSec. 94-486.",
+            "attachments": [],
+            "screenshots": [
+              {
+                "fileName": "west-palm-beach-fl-reduce-min-screenshot1.png",
+                "directusId": "87586080-6b5a-4e79-b253-1b91b48c563b"
+              },
+              {
+                "fileName": "west-palm-beach-fl-reduce-min-screenshot2.png",
+                "directusId": "0aa871a7-f2b9-425e-aeb6-108573ab4cd1"
+              },
+              {
+                "fileName": "west-palm-beach-fl-reduce-min-screenshot3.png",
+                "directusId": "12ef8e5b-9388-4a6b-9206-61f5ba0492fb"
+              },
+              {
+                "fileName": "west-palm-beach-fl-reduce-min-screenshot4.png",
+                "directusId": "a9deb802-095f-4079-a75c-51c9142a781a"
+              },
+              {
+                "fileName": "west-palm-beach-fl-reduce-min-screenshot5.png",
+                "directusId": "ef4ab079-55c7-47ad-b112-597cfbbed12b"
+              },
+              {
+                "fileName": "west-palm-beach-fl-reduce-min-screenshot6.png",
+                "directusId": "66453c51-c03f-49c7-954f-c97ed53672a5"
+              },
+              {
+                "fileName": "west-palm-beach-fl-reduce-min-screenshot7.png",
+                "directusId": "01e34199-2092-4dbb-937b-e61a9d0ee7bf"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "rm_min": [
+      {
+        "reporter": "Jesse Bailey",
+        "requirements": ["by right", "size of project"],
+        "citations": [
+          {
+            "description": "West Palm Beach Zoning Code",
+            "url": "https://online.encodeplus.com/regs/westpalmbeach-fl/doc-viewer.aspx#secid-417",
+            "notes": "Sec. 94-111.b.5.;\nSec. 94-111.t.;\nTABLE IV-9;",
+            "attachments": [],
+            "screenshots": [
+              {
+                "fileName": "west-palm-beach-fl-remove-min-screenshot1.png",
+                "directusId": "aeca3dbf-086f-4dd8-89cc-68cb6ca049d2"
+              },
+              {
+                "fileName": "west-palm-beach-fl-remove-min-screenshot2.png",
+                "directusId": "c20781d0-8946-4a05-86a0-e8237c0e9f78"
+              },
+              {
+                "fileName": "west-palm-beach-fl-remove-min-screenshot3.png",
+                "directusId": "b411d4f6-0826-4035-b44f-f6392989be13"
+              }
+            ]
+          }
+        ]
+      }
+    ]
   },
   "West Plains, MO": {
     "rm_min": [
@@ -114288,7 +117145,71 @@
           ]
         }
       ]
-    }
+    },
+    "add_max": [
+      {
+        "reporter": null,
+        "requirements": ["by right"],
+        "citations": [
+          {
+            "description": "Wilson Unified Development Ordinance",
+            "url": "https://www.wilsonnc.org/home/showpublisheddocument/34/637577079871070000",
+            "notes": "9.4.2\nPage 4",
+            "attachments": [],
+            "screenshots": [
+              {
+                "fileName": "wilson-nc-add-max-screenshot.png",
+                "directusId": "0f3368a1-c453-499a-9d79-898a81a24e4d"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "reduce_min": [
+      {
+        "reporter": null,
+        "requirements": ["by right", "supportive housing", "tree preservation"],
+        "citations": [
+          {
+            "description": "Wilson Unified Development Ordinance",
+            "url": "https://www.wilsonnc.org/home/showpublisheddocument/34/637577079871070000",
+            "notes": "9.4.3\nPage 4",
+            "attachments": [],
+            "screenshots": [
+              {
+                "fileName": "wilson-nc-reduce-min-screenshot.png",
+                "directusId": "8a4f2d1f-7f0d-4522-93b9-43a65ed14f13"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "rm_min": [
+      {
+        "reporter": null,
+        "requirements": ["by right"],
+        "citations": [
+          {
+            "description": "Wilson Unified Development Ordinance",
+            "url": "https://www.wilsonnc.org/home/showpublisheddocument/34/637577079871070000",
+            "notes": "9.4.1;\n9.4.3.A.1.\nPages 3-4",
+            "attachments": [],
+            "screenshots": [
+              {
+                "fileName": "wilson-nc-remove-min-screenshot1.jpg",
+                "directusId": "a3290214-3254-426f-b5b1-b60545c71622"
+              },
+              {
+                "fileName": "wilson-nc-remove-min-screenshot2.png",
+                "directusId": "68bd2e89-7ccd-4dba-99e1-5a081951b369"
+              }
+            ]
+          }
+        ]
+      }
+    ]
   },
   "Winchester, KY": {
     "rm_min": [
