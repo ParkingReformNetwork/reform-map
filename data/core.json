@@ -15609,7 +15609,7 @@
         "status": "adopted",
         "scope": ["city center / business district"],
         "land": ["all uses"],
-        "date": null
+        "date": "2019"
       }
     ]
   },
@@ -21777,7 +21777,7 @@
         "status": "adopted",
         "scope": ["citywide"],
         "land": ["all uses"],
-        "date": null
+        "date": "2022-07-25"
       }
     ],
     "reduce_min": [
@@ -21793,7 +21793,7 @@
         "status": "adopted",
         "scope": ["city center / business district"],
         "land": ["all uses"],
-        "date": null
+        "date": "2022-07-25"
       }
     ]
   },
@@ -22698,7 +22698,7 @@
         "status": "adopted",
         "scope": ["citywide"],
         "land": ["all uses"],
-        "date": null
+        "date": "2006"
       }
     ],
     "rm_min": [
@@ -22706,7 +22706,7 @@
         "status": "adopted",
         "scope": ["city center / business district"],
         "land": ["all uses", "commercial", "industrial"],
-        "date": null
+        "date": "1940"
       }
     ]
   },
@@ -23844,7 +23844,7 @@
         "status": "adopted",
         "scope": ["city center / business district"],
         "land": ["all uses"],
-        "date": null
+        "date": "2015"
       }
     ]
   },
@@ -28443,7 +28443,7 @@
         "status": "adopted",
         "scope": ["transit-oriented"],
         "land": ["all uses"],
-        "date": null
+        "date": "2020"
       }
     ]
   },
@@ -34430,6 +34430,48 @@
       }
     ]
   },
+  "Lakeland, FL": {
+    "place": {
+      "name": "Lakeland",
+      "state": "FL",
+      "country": "US",
+      "type": "city",
+      "pop": 112641,
+      "coord": [-81.9498042, 28.0394654],
+      "repeal": false
+    },
+    "add_max": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["all uses"],
+        "date": null
+      }
+    ],
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": [
+          "all uses",
+          "commercial",
+          "industrial",
+          "medical",
+          "other",
+          "residential, multi-family"
+        ],
+        "date": "2014-07-21"
+      }
+    ],
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["all uses"],
+        "date": null
+      }
+    ]
+  },
   "Lakeland, TN": {
     "place": {
       "name": "Lakeland",
@@ -38107,7 +38149,7 @@
         "status": "adopted",
         "scope": ["city center / business district"],
         "land": ["all uses"],
-        "date": null
+        "date": "2022"
       }
     ]
   },
@@ -40371,7 +40413,7 @@
         "status": "adopted",
         "scope": ["city center / business district"],
         "land": ["all uses"],
-        "date": null
+        "date": "1984"
       }
     ]
   },
@@ -43626,9 +43668,17 @@
     "rm_min": [
       {
         "status": "adopted",
-        "scope": ["main street / special"],
-        "land": ["all uses"],
-        "date": null
+        "scope": ["citywide", "main street / special", "transit-oriented"],
+        "land": [
+          "all uses",
+          "commercial",
+          "industrial",
+          "medical",
+          "other",
+          "residential, all uses",
+          "residential, low-density"
+        ],
+        "date": "2024-01-23"
       }
     ]
   },
@@ -44478,6 +44528,12 @@
         "scope": ["city center / business district", "transit-oriented"],
         "land": ["commercial", "other", "residential, all uses"],
         "date": "2024-05-06"
+      },
+      {
+        "status": "proposed",
+        "scope": ["city center / business district"],
+        "land": ["all uses"],
+        "date": null
       }
     ]
   },
@@ -46322,7 +46378,7 @@
         "status": "adopted",
         "scope": ["citywide"],
         "land": ["commercial", "other", "residential, all uses"],
-        "date": null
+        "date": "2021-11-09"
       }
     ]
   },
@@ -47467,6 +47523,25 @@
         "scope": ["citywide"],
         "land": ["commercial", "other", "residential, all uses"],
         "date": null
+      }
+    ]
+  },
+  "Oakmont, PA": {
+    "place": {
+      "name": "Oakmont",
+      "state": "PA",
+      "country": "US",
+      "type": "city",
+      "pop": 6758,
+      "coord": [-79.8422719, 40.5217347],
+      "repeal": false
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["all uses"],
+        "date": "2023-03-20"
       }
     ]
   },
@@ -55825,6 +55900,25 @@
       }
     ]
   },
+  "Saipan, MP": {
+    "place": {
+      "name": "Saipan",
+      "state": "MP",
+      "country": "US",
+      "type": "county",
+      "pop": 43385,
+      "coord": [145.746743003024, 15.1909825],
+      "repeal": false
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["all uses"],
+        "date": null
+      }
+    ]
+  },
   "Salaberry-de-Valleyfield, QC": {
     "place": {
       "name": "Salaberry-de-Valleyfield",
@@ -56164,6 +56258,25 @@
         "status": "adopted",
         "scope": ["city center / business district"],
         "land": ["all uses"],
+        "date": null
+      }
+    ]
+  },
+  "San Anselmo, CA": {
+    "place": {
+      "name": "San Anselmo",
+      "state": "CA",
+      "country": "US",
+      "type": "city",
+      "pop": 12830,
+      "coord": [-122.561503, 37.9744323],
+      "repeal": false
+    },
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["residential, low-density"],
         "date": null
       }
     ]
@@ -60401,7 +60514,7 @@
         "status": "adopted",
         "scope": ["city center / business district"],
         "land": ["all uses"],
-        "date": null
+        "date": "2013"
       }
     ]
   },
@@ -64759,7 +64872,7 @@
         "status": "adopted",
         "scope": ["city center / business district"],
         "land": ["residential, all uses"],
-        "date": null
+        "date": "2020"
       }
     ]
   },
@@ -65281,6 +65394,25 @@
         "status": "adopted",
         "scope": ["city center / business district"],
         "land": ["commercial", "other", "residential, all uses"],
+        "date": null
+      }
+    ]
+  },
+  "US Virgin Islands, VI": {
+    "place": {
+      "name": "US Virgin Islands",
+      "state": "VI",
+      "country": "US",
+      "type": "state",
+      "pop": 87146,
+      "coord": [-64.94610250230508, 18.343352334669596],
+      "repeal": false
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["other"],
         "date": null
       }
     ]
