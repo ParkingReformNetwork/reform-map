@@ -22,6 +22,33 @@
       }
     ]
   },
+  "Aalborg, Region Nordjylland": {
+    "reduce_min": [
+      {
+        "summary": "Parking requirements are reduced in the city center.",
+        "reporter": "Samuel Deetz",
+        "requirements": ["by right"],
+        "citations": [
+          {
+            "description": "Aalborg Parkeringsnormer",
+            "url": "http://www.aalborgkommuneplan.dk/bilag/bilag-f0.aspx",
+            "notes": "Bilag F",
+            "attachments": [],
+            "screenshots": [
+              {
+                "fileName": "aalborg-region-nordjylland-screenshot1.png",
+                "directusId": "49a189e9-dab4-444f-8110-32b09b266087"
+              },
+              {
+                "fileName": "aalborg-region-nordjylland-screenshot2.png",
+                "directusId": "70703e4f-ba83-4d9d-b8a9-b22548bfe7d1"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
   "Abbottstown, PA": {
     "add_max": [
       {
@@ -2405,6 +2432,54 @@
       }
     ]
   },
+  "Andover, CT": {
+    "add_max": [
+      {
+        "summary": "Parking maximums apply to all nonresidential and multi-family uses.",
+        "reporter": "Samuel Deetz",
+        "requirements": ["by right"],
+        "citations": [
+          {
+            "description": "Andover Zoning Code",
+            "url": "https://www.andoverconnecticut.org/sites/g/files/vyhlif5346/f/uploads/zoning_regulations_effective_10.1.22_0.pdf",
+            "notes": "12.8\nPages 119-121",
+            "attachments": [],
+            "screenshots": [
+              {
+                "fileName": "andover-ct-add-max-screenshot.png",
+                "directusId": "0b2b24a2-59e5-47f6-ad62-c9b085c62f6a"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "reduce_min": [
+      {
+        "summary": "Parking requirements may be reduced with bike parking at the commission's discretion. Up to 25% of the required parking may be deferred.",
+        "reporter": "Samuel Deetz",
+        "requirements": ["bike parking", "other"],
+        "citations": [
+          {
+            "description": "Andover Zoning Code",
+            "url": "https://www.andoverconnecticut.org/sites/g/files/vyhlif5346/f/uploads/zoning_regulations_effective_10.1.22_0.pdf",
+            "notes": "12.7.3.;\n12.8.6;\nPages 119, 123",
+            "attachments": [],
+            "screenshots": [
+              {
+                "fileName": "andover-ct-reduce-min-screenshot1.png",
+                "directusId": "300aa909-88ee-475b-a2df-b77283717827"
+              },
+              {
+                "fileName": "andover-ct-reduce-min-screenshot2.png",
+                "directusId": "9f5ed976-815b-4d24-a61e-de536da463fb"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
   "Angola, IN": {
     "add_max": [
       {
@@ -4557,6 +4632,29 @@
               {
                 "fileName": "avon-co-screenshot.png",
                 "directusId": "16de1367-305a-4c9c-92fc-907d2093e5bc"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "Avon, CT": {
+    "reduce_min": [
+      {
+        "summary": "A portion of the required parking for a restaurant may be deferred.",
+        "reporter": "Samuel Deetz",
+        "requirements": ["other"],
+        "citations": [
+          {
+            "description": "Avon Zoning Code",
+            "url": "https://library.municode.com/ct/avon/codes/charter,_ordinances_and_selected_regulations?nodeId=PTIICOOR_APXDZO_SVIILAUSSIDERE",
+            "notes": "Section VII.B.2.",
+            "attachments": [],
+            "screenshots": [
+              {
+                "fileName": "avon-ct-screenshot.png",
+                "directusId": "4c6f576f-6255-42d9-9cd6-186ccc424c6c"
               }
             ]
           }
@@ -7855,6 +7953,45 @@
       }
     ]
   },
+  "Berlin, CT": {
+    "reduce_min": [
+      {
+        "summary": "Within the Kensington Overlay Zone, the Commission may reduce the parking requirements. A portion of the required parking for office parks may be deferred. Parking requirements were reduced for workforce housing in 2020.",
+        "reporter": "Samuel Deetz",
+        "requirements": ["by right", "other"],
+        "citations": [
+          {
+            "description": "Berlin Zoning Code",
+            "url": "https://www.berlinct.gov/egov/documents/1570046240_93286.pdf",
+            "notes": "SECTION IX.B.2.g.;\nSECTION IX.B.13.;\nPages 139, 144 of pdf, page 137, 142 of original document",
+            "attachments": [],
+            "screenshots": [
+              {
+                "fileName": "berlin-ct-citation1-screenshot1.png",
+                "directusId": "d2d5e984-a430-441f-820f-2de53afc0ead"
+              },
+              {
+                "fileName": "berlin-ct-citation1-screenshot2.png",
+                "directusId": "788d2f7b-434c-4f29-a45f-b6aabf8623d1"
+              }
+            ]
+          },
+          {
+            "description": "Berlin Zoning Amendment",
+            "url": "https://www.berlinct.gov/egov/documents/1600781953_1386.pdf",
+            "notes": "Page 5",
+            "attachments": [],
+            "screenshots": [
+              {
+                "fileName": "berlin-ct-citation2-screenshot.png",
+                "directusId": "ad9ba1e9-350f-4354-a072-6d5eab204e06"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
   "Berlin, MD": {
     "reduce_min": [
       {
@@ -9176,6 +9313,50 @@
       }
     ]
   },
+  "Bloomfield, CT": {
+    "add_max": [
+      {
+        "summary": "Parking maximums apply to retail uses.",
+        "reporter": "Samuel Deetz",
+        "requirements": ["by right"],
+        "citations": [
+          {
+            "description": "Bloomfield Zoning Code",
+            "url": "https://bloomfieldct.gov/DocumentCenter/View/3374/Zoning-Regulations-PDF-",
+            "notes": "6.2.D.1.\nPage 134 of pdf, page 126 of original document",
+            "attachments": [],
+            "screenshots": [
+              {
+                "fileName": "bloomfield-ct-add-max-screenshot.png",
+                "directusId": "74a30dd8-03ce-42b8-9c3c-75e5643687dc"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "reduce_min": [
+      {
+        "summary": "Up to 25% of required parking may be deferred.",
+        "reporter": "Samuel Deetz",
+        "requirements": ["other"],
+        "citations": [
+          {
+            "description": "Bloomfield Zoning Code",
+            "url": "https://bloomfieldct.gov/DocumentCenter/View/3374/Zoning-Regulations-PDF-",
+            "notes": "6.2.H.2.\nPage 138 of pdf, page 130 of original document",
+            "attachments": [],
+            "screenshots": [
+              {
+                "fileName": "bloomfield-ct-reduce-min-screenshot.png",
+                "directusId": "0c499a14-76c5-4acd-98e2-ff58af313617"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
   "Bloomfield, IA": {
     "rm_min": [
       {
@@ -9785,6 +9966,50 @@
               {
                 "fileName": "bolivar-oh-screenshot.png",
                 "directusId": "d367f748-28cf-4ceb-ab64-44472b9864ac"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "Bolton, CT": {
+    "add_max": [
+      {
+        "summary": "Parking maximums apply to all uses.",
+        "reporter": "Samuel Deetz",
+        "requirements": ["by right"],
+        "citations": [
+          {
+            "description": "Bolton Zoning Code",
+            "url": "https://ecode360.com/36986892#36986933",
+            "notes": "§ 450-15.15",
+            "attachments": [],
+            "screenshots": [
+              {
+                "fileName": "bolton-ct-add-max-screenshot.png",
+                "directusId": "059a7765-208f-40a4-90b5-d5ebcc7f89bd"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "reduce_min": [
+      {
+        "summary": "Up to 25% of the required parking may be deferred.",
+        "reporter": "Samuel Deetz",
+        "requirements": ["other"],
+        "citations": [
+          {
+            "description": "Bolton Zoning Code",
+            "url": "https://ecode360.com/36986892#36986941",
+            "notes": "§ 450-15.17.B.(5)",
+            "attachments": [],
+            "screenshots": [
+              {
+                "fileName": "bolton-ct-reduce-min-screenshot.png",
+                "directusId": "12318560-4ed6-4ee8-ac99-eba92db20e3b"
               }
             ]
           }
@@ -13666,6 +13891,58 @@
               {
                 "fileName": "canonsburg-pa-screenshot.png",
                 "directusId": "1ea283e7-3e9b-4a35-a8c9-8a897fc25e6a"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "Canton, CT": {
+    "add_max": [
+      {
+        "summary": "Parking maximums are set at 115% of the minimums.",
+        "reporter": "Samuel Deetz",
+        "requirements": ["by right"],
+        "citations": [
+          {
+            "description": "Canton Zoning Code",
+            "url": "https://ecode360.com/41259585#41259708",
+            "notes": "§ 470-702.C.(3)",
+            "attachments": [],
+            "screenshots": [
+              {
+                "fileName": "canton-ct-add-max-screenshot.png",
+                "directusId": "4e7b9400-05db-41bc-8b5e-37068b4c7550"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "reduce_min": [
+      {
+        "summary": "Required parking may be deferred. A change in use within the Collinsville Business Overlay District is exempt from parking mandates. On-street parking may count towards requirements in the Canton Village Districts.",
+        "reporter": "Samuel Deetz",
+        "requirements": ["other"],
+        "citations": [
+          {
+            "description": "Canton Zoning Code",
+            "url": "https://ecode360.com/41259585#41259708",
+            "notes": "§ 470-1602.A.;\n§ 470-702.B.(3);\n§ 470-702.C.(10)",
+            "attachments": [],
+            "screenshots": [
+              {
+                "fileName": "canton-ct-reduce-min-screenshot1.png",
+                "directusId": "29b01847-3871-4093-8d0a-e2b65c5f5992"
+              },
+              {
+                "fileName": "canton-ct-reduce-min-screenshot2.png",
+                "directusId": "c9288140-03b8-4ef5-80e4-2cc6feb6d014"
+              },
+              {
+                "fileName": "canton-ct-reduce-min-screenshot3.png",
+                "directusId": "ffe24a78-752d-4d52-b5eb-ff4545a1fd25"
               }
             ]
           }
@@ -47041,6 +47318,33 @@
       }
     ]
   },
+  "Jönköping, Jönköping": {
+    "reduce_min": [
+      {
+        "summary": "Parking requirements may be reduced for transportation demand management measures.",
+        "reporter": "Samuel Deetz",
+        "requirements": ["transportation demand management"],
+        "citations": [
+          {
+            "description": "Jönköping Parkeringstal",
+            "url": "https://www.jonkoping.se/download/18.56ac98861555437aa26b1f9/1467895766294/Parkeringstal_2016.pdf",
+            "notes": "Page 9",
+            "attachments": [],
+            "screenshots": [
+              {
+                "fileName": "jonkoping-jonkoping-screenshot1.png",
+                "directusId": "b06418d9-b5a7-4090-8876-fe5efb2755bb"
+              },
+              {
+                "fileName": "jonkoping-jonkoping-screenshot2.png",
+                "directusId": "684a69de-0b1b-477e-888d-8c9fc80ed449"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
   "Kalamazoo Charter Township, MI": {
     "add_max": [
       {
@@ -48872,6 +49176,33 @@
               {
                 "fileName": "kokomo-in-screenshot.png",
                 "directusId": "584d56cc-faba-4f48-bb8b-c27c122a379e"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "Konstanz, BW": {
+    "reduce_min": [
+      {
+        "summary": "Parking requirements may be reduced for residential uses through bike parking or carsharing.",
+        "reporter": "Samuel Deetz",
+        "requirements": ["bike parking", "carshare"],
+        "citations": [
+          {
+            "description": "Konstanz Stellplatzsatzung",
+            "url": "https://www.konstanz.de/site/Konstanz/get/documents_E-1922340050/konstanz/Dateien/Service/Ortsrecht/VI%20Bauwesen/VI_06%20Stellplatzsatzung.pdf",
+            "notes": "Section 5.1)b);\nSection 5.1)c);\nPages 4-5",
+            "attachments": [],
+            "screenshots": [
+              {
+                "fileName": "konstanz-bw-screenshot1.png",
+                "directusId": "4cbe0f9a-01e1-49d2-aca0-f36c3063bddf"
+              },
+              {
+                "fileName": "konstanz-bw-screenshot2.png",
+                "directusId": "aa497acf-d801-4b90-916b-ba329db9ffe6"
               }
             ]
           }
@@ -55793,6 +56124,54 @@
               {
                 "fileName": "magnolia-ar-screenshot.png",
                 "directusId": "057d3c55-f744-499a-9d90-2dbf3a38c8e4"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "Maharashtra, MH": {
+    "add_max": [
+      {
+        "summary": "Parking maximums are set at 150% of the minimums, except for public and semi-public uses.",
+        "reporter": "Samuel Deetz",
+        "requirements": ["by right"],
+        "citations": [
+          {
+            "description": "Maharashtra Unified Development control and Promotion Regulations",
+            "url": "http://autodcr.pmc.gov.in/swc.client/Downloads/Building%20regulations%20&%20related%20notifications/Updated-UDCPR-2022.pdf",
+            "notes": "8.2.1 Note v)\nPage 177 of pdf, page 161 of original document",
+            "attachments": [],
+            "screenshots": [
+              {
+                "fileName": "maharashtra-mh-add-max-screenshot.png",
+                "directusId": "1d4f86b9-6c7c-4383-be9f-e0cf55d2de40"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "rm_min": [
+      {
+        "summary": "Parking is not required for small restaurants, shops or residential uses.",
+        "reporter": "Samuel Deetz",
+        "requirements": ["by right", "size of project"],
+        "citations": [
+          {
+            "description": "Maharashtra Unified Development control and Promotion Regulations",
+            "url": "http://autodcr.pmc.gov.in/swc.client/Downloads/Building%20regulations%20&%20related%20notifications/Updated-UDCPR-2022.pdf",
+            "notes": "8.2.1\nPages 174, 177 of pdf, pages 158, 161 of original document",
+            "attachments": [],
+            "screenshots": [
+              {
+                "fileName": "maharashtra-mh-remove-min-screenshot1.png",
+                "directusId": "ed92fb56-1eca-4f96-b1be-856b69ab9dea"
+              },
+              {
+                "fileName": "maharashtra-mh-remove-min-screenshot2.png",
+                "directusId": "90a87637-f3d6-441d-80c9-8a36320528b9"
               }
             ]
           }
@@ -65608,6 +65987,130 @@
               {
                 "fileName": "new-brighton-pa-screenshot.png",
                 "directusId": "4415b55c-c33c-438a-bf93-d26f98182c15"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "New Britain, CT": {
+    "add_max": [
+      {
+        "summary": "Parking maximums apply to residential uses in the Central Business District.",
+        "reporter": "Samuel Deetz",
+        "requirements": ["by right"],
+        "citations": [
+          {
+            "description": "New Britain Zoning Code",
+            "url": "https://library.municode.com/ct/new_Britain/codes/zoning_ordinances?nodeId=ZOORNEBRCO_S170CEBUDICEBU.A6-26-08IT30065-3_170-50SUREA6-26-08IT30065-3_170-50-90PA",
+            "notes": "170-50-90",
+            "attachments": [],
+            "screenshots": [
+              {
+                "fileName": "new-britain-ct-add-max-screenshot.png",
+                "directusId": "d7cc44d6-d763-4d4f-a460-0bc3cac1f388"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "reduce_min": [
+      {
+        "summary": "Since October 2014 within the ARUD District (Adaptive Reuse), parking requirements are reduced for residential uses by right and may be further reduced when located near transit or by providing bike parking. Parking requirements are reduced for all uses in the Central Business District since October 2022, for residential uses in the OP District since March 2023, for residential uses in the RO District since June 2023, for residential uses in the B-3 District since May 2024, and for residential uses in the A-2 District since October 2024. Residential uses in the IHZ/TOD-1 District may have reduced requirements when in a Municipal Parking District or for adaptive reuse projects. Since September 2023, parking requirements in the TOD-EM-1, TOD-EM-2, TOD-ES-1 and TOD-ES-2 zones have reduced requirements which may be reduced further through transit, bike parking, mixed-uses or counting public parking. Uses which are not exempt in a Municipal Parking District may count public parking. Large nonresidential uses citywide may defer a portion of their required parking since 2012.",
+        "reporter": "Samuel Deetz",
+        "requirements": [
+          "bike parking",
+          "by right",
+          "frequent transit",
+          "historic preservation",
+          "other",
+          "size of project"
+        ],
+        "citations": [
+          {
+            "description": "New Britain Zoning Code",
+            "url": "https://library.municode.com/ct/new_Britain/codes/zoning_ordinances?nodeId=ZOORNEBRCO_S175ARDIADRENEDUNILINBU.A10-19-14IT32840-3_175-30OREPARE",
+            "notes": "110-50-10;\n130-50-10;\n135-50-10;\n160-60-10;\n170-50-90;\n175-30;\n216-50;\n217-50;\n218-50;\n240-80-20.10;\n240-80-40",
+            "attachments": [],
+            "screenshots": [
+              {
+                "fileName": "new-britain-ct-reduce-min-screenshot1.png",
+                "directusId": "4af96978-71f6-4e60-a6e7-4f86f387d804"
+              },
+              {
+                "fileName": "new-britain-ct-reduce-min-screenshot2.png",
+                "directusId": "8ec5debc-4dc5-4c8b-b1fd-d9a802fc4552"
+              },
+              {
+                "fileName": "new-britain-ct-reduce-min-screenshot3.png",
+                "directusId": "72519cd2-b9d7-4b32-9430-fab92386a4da"
+              },
+              {
+                "fileName": "new-britain-ct-reduce-min-screenshot4.png",
+                "directusId": "be2ed990-a5b0-435d-a707-5b7440864d0e"
+              },
+              {
+                "fileName": "new-britain-ct-reduce-min-screenshot5.png",
+                "directusId": "5f32a1b4-b344-4c4a-bb72-f2fe39aaf6a8"
+              },
+              {
+                "fileName": "new-britain-ct-reduce-min-screenshot6.png",
+                "directusId": "951e7da4-ca88-4ad0-940d-ea07d52a537e"
+              },
+              {
+                "fileName": "new-britain-ct-reduce-min-screenshot7.png",
+                "directusId": "d4b81f49-6790-4c99-97b2-f46ce40fe282"
+              },
+              {
+                "fileName": "new-britain-ct-reduce-min-screenshot8.png",
+                "directusId": "5c8f3291-4ab5-4c5d-a5c0-5c6b004260f4"
+              },
+              {
+                "fileName": "new-britain-ct-reduce-min-screenshot9.png",
+                "directusId": "68fdcaa9-c108-420e-8964-f33243b72f46"
+              },
+              {
+                "fileName": "new-britain-ct-reduce-min-screenshot10.png",
+                "directusId": "7af1e8d2-3f40-40ad-8dd3-c278cfe3245c"
+              },
+              {
+                "fileName": "new-britain-ct-reduce-min-screenshot11.png",
+                "directusId": "0cb1af81-a8b5-4564-9308-0812614e2b76"
+              },
+              {
+                "fileName": "new-britain-ct-reduce-min-screenshot12.png",
+                "directusId": "5cd164ef-dcee-4756-b15a-6754769f53d0"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "rm_min": [
+      {
+        "summary": "Nonresidential uses within a Municipal Parking District in the CBD (1986), or the IHZ/TOD-1 (2024) are exempt from parking mandates. Nonresidential uses less than 1 acre are exempt citywide when located in a Municipal Parking District (1986).",
+        "reporter": "Samuel Deetz",
+        "requirements": ["by right", "size of project"],
+        "citations": [
+          {
+            "description": "New Britain Zoning Code",
+            "url": "https://library.municode.com/ct/new_Britain/codes/zoning_ordinances?nodeId=ZOORNEBRCO_S170CEBUDICEBU.A6-26-08IT30065-3_170-50SUREA6-26-08IT30065-3_170-50-90PA_170-50-90.10",
+            "notes": "170-50-90.10;\n216-50-10;\n240-80-20",
+            "attachments": [],
+            "screenshots": [
+              {
+                "fileName": "new-britain-ct-remove-min-screenshot1.png",
+                "directusId": "d5e2de13-cb92-4457-8e2c-8bc96465b860"
+              },
+              {
+                "fileName": "new-britain-ct-remove-min-screenshot2.png",
+                "directusId": "9115bca1-0ced-44e4-9bbb-1bb22e278c5f"
+              },
+              {
+                "fileName": "new-britain-ct-remove-min-screenshot3.png",
+                "directusId": "ee6a718a-01a4-45cb-b61e-2f9b3c060b94"
               }
             ]
           }
@@ -104751,6 +105254,33 @@
       }
     ]
   },
+  "Zuid-Holland, ZH": {
+    "add_max": [
+      {
+        "summary": "Residential uses in station areas (light rail (800m) and heavy rail (1000m)) have a parking maximum of 0.7 spaces per unit.",
+        "reporter": "Barend Jansen",
+        "requirements": ["by right"],
+        "citations": [
+          {
+            "description": "Zuid-Hollandse Omgevingsverordening (ZHOV)/ Zuid-Holland Environment Ordinance",
+            "url": "https://www.zuid-holland.nl/onderwerpen/omgevingsbeleid/zuid-hollandse-omgevingsverordening/",
+            "notes": "Open \"ZHOV (pdf, 9.9 MB)\";\nArtikel 7.45e;\nArtikel 7.45f;\nPage 64",
+            "attachments": [],
+            "screenshots": [
+              {
+                "fileName": "zuid-holland-zh-screenshot1.png",
+                "directusId": "32d79228-6638-47de-a7bc-9b8257c481b5"
+              },
+              {
+                "fileName": "zuid-holland-zh-screenshot2.png",
+                "directusId": "f8894a0f-2461-40cc-a3d9-e76851acafba"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
   "Zumbro Falls, MN": {
     "rm_min": [
       {
@@ -104790,6 +105320,78 @@
               {
                 "fileName": "zumbrota-mn-screenshot.png",
                 "directusId": "3f57d38d-bfa9-487e-908f-085ec84a0b25"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "Örebro, Örebro": {
+    "add_max": [
+      {
+        "summary": "Parking maximums apply to surface parking for apartments and nonresidential uses.",
+        "reporter": "Samuel Deetz",
+        "requirements": ["by right", "other"],
+        "citations": [
+          {
+            "description": "Örebro Parkeringsnorm",
+            "url": "https://www.orebro.se/download/18.242f1fb1556288bfbf1814a/1543841657433/Flexibla%20parkeringstal.%20Parkeringsnorm%20f%C3%B6r%20%C3%96rebro%20kommun.pdf",
+            "notes": "2.4\nPages 11-15",
+            "attachments": [],
+            "screenshots": [
+              {
+                "fileName": "orebro-orebro-add-max-screenshot1.png",
+                "directusId": "d66bfb4d-a759-4f30-9a0a-9e021d054ea0"
+              },
+              {
+                "fileName": "orebro-orebro-add-max-screenshot2.png",
+                "directusId": "34782335-95e9-466e-9cf9-afdefb986ad9"
+              },
+              {
+                "fileName": "orebro-orebro-add-max-screenshot3.png",
+                "directusId": "3c0c32be-1910-44ad-9a01-dd0f8895dbfc"
+              },
+              {
+                "fileName": "orebro-orebro-add-max-screenshot4.png",
+                "directusId": "074763a1-fbda-43fb-a488-44295ae07081"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "reduce_min": [
+      {
+        "summary": "Parking requirements are reduced for residential uses through carsharing, and for all uses through underground parking or transportation demand management.",
+        "reporter": "Samuel Deetz",
+        "requirements": [
+          "carshare",
+          "other",
+          "transportation demand management"
+        ],
+        "citations": [
+          {
+            "description": "Örebro Parkeringsnorm",
+            "url": "https://www.orebro.se/download/18.242f1fb1556288bfbf1814a/1543841657433/Flexibla%20parkeringstal.%20Parkeringsnorm%20f%C3%B6r%20%C3%96rebro%20kommun.pdf",
+            "notes": "2.3\nPages 9-10",
+            "attachments": [],
+            "screenshots": [
+              {
+                "fileName": "orebro-orebro-reduce-min-screenshot1.png",
+                "directusId": "dfaeb589-c268-4c9c-a8ff-c98c10fb48ff"
+              },
+              {
+                "fileName": "orebro-orebro-reduce-min-screenshot2.png",
+                "directusId": "47d6e0f1-5279-41f5-8cb3-adb45407d41b"
+              },
+              {
+                "fileName": "orebro-orebro-reduce-min-screenshot3.png",
+                "directusId": "027ee817-077b-4da8-a613-a8e52bc4bba8"
+              },
+              {
+                "fileName": "orebro-orebro-reduce-min-screenshot4.png",
+                "directusId": "0331200e-1f40-44af-8a69-c0007c6af469"
               }
             ]
           }

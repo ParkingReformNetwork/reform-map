@@ -18,6 +18,25 @@
       }
     ]
   },
+  "Aalborg, Region Nordjylland": {
+    "place": {
+      "name": "Aalborg",
+      "state": "Region Nordjylland",
+      "country": "DK",
+      "type": "city",
+      "pop": 119862,
+      "coord": [9.9215263, 57.0462626],
+      "repeal": false
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["all uses"],
+        "date": null
+      }
+    ]
+  },
   "Abbottstown, PA": {
     "place": {
       "name": "Abbottstown",
@@ -1539,6 +1558,39 @@
       }
     ]
   },
+  "Andover, CT": {
+    "place": {
+      "name": "Andover",
+      "state": "CT",
+      "country": "US",
+      "type": "city",
+      "pop": 3151,
+      "coord": [-72.37036, 41.7373212],
+      "repeal": false
+    },
+    "add_max": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": [
+          "commercial",
+          "industrial",
+          "medical",
+          "other",
+          "residential, multi-family"
+        ],
+        "date": null
+      }
+    ],
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["all uses"],
+        "date": null
+      }
+    ]
+  },
   "Angola, IN": {
     "place": {
       "name": "Angola",
@@ -2949,6 +3001,25 @@
         "status": "adopted",
         "scope": ["citywide"],
         "land": ["commercial", "industrial"],
+        "date": null
+      }
+    ]
+  },
+  "Avon, CT": {
+    "place": {
+      "name": "Avon",
+      "state": "CT",
+      "country": "US",
+      "type": "city",
+      "pop": 19795,
+      "coord": [-72.8306541, 41.8098209],
+      "repeal": false
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["commercial"],
         "date": null
       }
     ]
@@ -5188,6 +5259,25 @@
       }
     ]
   },
+  "Berlin, CT": {
+    "place": {
+      "name": "Berlin",
+      "state": "CT",
+      "country": "US",
+      "type": "city",
+      "pop": 20175,
+      "coord": [-72.7456519, 41.621488],
+      "repeal": false
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district", "citywide"],
+        "land": ["all uses", "other", "residential, all uses"],
+        "date": "2020-08-20"
+      }
+    ]
+  },
   "Berlin, MD": {
     "place": {
       "name": "Berlin",
@@ -6052,6 +6142,33 @@
       }
     ]
   },
+  "Bloomfield, CT": {
+    "place": {
+      "name": "Bloomfield",
+      "state": "CT",
+      "country": "US",
+      "type": "city",
+      "pop": 21535,
+      "coord": [-72.7300945, 41.826488],
+      "repeal": false
+    },
+    "add_max": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["commercial"],
+        "date": null
+      }
+    ],
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["all uses"],
+        "date": null
+      }
+    ]
+  },
   "Bloomfield, IA": {
     "place": {
       "name": "Bloomfield",
@@ -6408,6 +6525,33 @@
         "status": "adopted",
         "scope": ["citywide"],
         "land": ["commercial", "other", "residential, all uses"],
+        "date": null
+      }
+    ]
+  },
+  "Bolton, CT": {
+    "place": {
+      "name": "Bolton",
+      "state": "CT",
+      "country": "US",
+      "type": "city",
+      "pop": 4858,
+      "coord": [-72.4334173, 41.7689878],
+      "repeal": false
+    },
+    "add_max": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["all uses"],
+        "date": null
+      }
+    ],
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["all uses"],
         "date": null
       }
     ]
@@ -9031,6 +9175,33 @@
       {
         "status": "adopted",
         "scope": ["city center / business district"],
+        "land": ["all uses"],
+        "date": null
+      }
+    ]
+  },
+  "Canton, CT": {
+    "place": {
+      "name": "Canton",
+      "state": "CT",
+      "country": "US",
+      "type": "city",
+      "pop": 10124,
+      "coord": [-72.8937122, 41.8245424],
+      "repeal": false
+    },
+    "add_max": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["all uses"],
+        "date": null
+      }
+    ],
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district", "citywide"],
         "land": ["all uses"],
         "date": null
       }
@@ -32208,6 +32379,25 @@
       }
     ]
   },
+  "Jönköping, Jönköping": {
+    "place": {
+      "name": "Jönköping",
+      "state": "Jönköping",
+      "country": "SE",
+      "type": "city",
+      "pop": 112766,
+      "coord": [14.165719, 57.7825634],
+      "repeal": false
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["all uses"],
+        "date": null
+      }
+    ]
+  },
   "Kalamazoo Charter Township, MI": {
     "place": {
       "name": "Kalamazoo Charter Township",
@@ -33438,6 +33628,25 @@
         "status": "adopted",
         "scope": ["city center / business district"],
         "land": ["all uses"],
+        "date": null
+      }
+    ]
+  },
+  "Konstanz, BW": {
+    "place": {
+      "name": "Konstanz",
+      "state": "BW",
+      "country": "DE",
+      "type": "city",
+      "pop": 85859,
+      "coord": [9.1750718, 47.659216],
+      "repeal": false
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["residential, all uses"],
         "date": null
       }
     ]
@@ -38187,6 +38396,37 @@
         "status": "adopted",
         "scope": ["city center / business district"],
         "land": ["all uses"],
+        "date": null
+      }
+    ]
+  },
+  "Maharashtra, MH": {
+    "place": {
+      "name": "Maharashtra",
+      "state": "MH",
+      "country": "IN",
+      "type": "state",
+      "pop": 112374333,
+      "coord": [74.58622221140698, 19.1194345],
+      "repeal": false
+    },
+    "add_max": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["commercial", "industrial", "residential, all uses"],
+        "date": null
+      }
+    ],
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["regional"],
+        "land": [
+          "commercial",
+          "residential, low-density",
+          "residential, multi-family"
+        ],
         "date": null
       }
     ]
@@ -45139,6 +45379,51 @@
         "scope": ["city center / business district"],
         "land": ["all uses"],
         "date": null
+      }
+    ]
+  },
+  "New Britain, CT": {
+    "place": {
+      "name": "New Britain",
+      "state": "CT",
+      "country": "US",
+      "type": "city",
+      "pop": 74135,
+      "coord": [-72.7795419, 41.6612104],
+      "repeal": false
+    },
+    "add_max": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["residential, all uses"],
+        "date": "2022-10-27"
+      }
+    ],
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": [
+          "city center / business district",
+          "citywide",
+          "main street / special",
+          "transit-oriented"
+        ],
+        "land": [
+          "all uses",
+          "commercial",
+          "residential, all uses",
+          "residential, multi-family"
+        ],
+        "date": "2023-09-29"
+      }
+    ],
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district", "transit-oriented"],
+        "land": ["commercial", "other"],
+        "date": "1986-11-21"
       }
     ]
   },
@@ -71757,6 +72042,25 @@
       }
     ]
   },
+  "Zuid-Holland, ZH": {
+    "place": {
+      "name": "Zuid-Holland",
+      "state": "ZH",
+      "country": "NL",
+      "type": "state",
+      "pop": 3804906,
+      "coord": [4.100160336309779, 51.74944829197647],
+      "repeal": false
+    },
+    "add_max": [
+      {
+        "status": "adopted",
+        "scope": ["transit-oriented"],
+        "land": ["residential, all uses"],
+        "date": null
+      }
+    ]
+  },
   "Zumbro Falls, MN": {
     "place": {
       "name": "Zumbro Falls",
@@ -71791,6 +72095,39 @@
         "status": "adopted",
         "scope": ["city center / business district"],
         "land": ["all uses"],
+        "date": null
+      }
+    ]
+  },
+  "Örebro, Örebro": {
+    "place": {
+      "name": "Örebro",
+      "state": "Örebro",
+      "country": "SE",
+      "type": "city",
+      "pop": 155989,
+      "coord": [15.2151181, 59.2747287],
+      "repeal": false
+    },
+    "add_max": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": [
+          "commercial",
+          "industrial",
+          "medical",
+          "other",
+          "residential, multi-family"
+        ],
+        "date": null
+      }
+    ],
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["all uses", "residential, all uses"],
         "date": null
       }
     ]
