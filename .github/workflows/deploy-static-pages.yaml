@@ -26,7 +26,7 @@ jobs:
           username: ${{ secrets.PRN_SERVER_USERNAME }}
           key: ${{ secrets.PRN_SERVER_PRIVATE_KEY }}
           source: data/generated/mandates-map-data.zip
-          target: /var/www/${{ secrets.PRN_SERVER_HOST }}/mandates-map
+          target: /var/www/${{ secrets.PRN_SERVER_HOST }}/mandates-map/data
           strip_components: 2
 
       - name: Generate HTML pages
