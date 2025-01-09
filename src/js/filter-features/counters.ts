@@ -6,7 +6,11 @@ import {
   PolicyTypeFilter,
 } from "../state/FilterState";
 import { PlaceId, PlaceType, PolicyType } from "../model/types";
-import { joinWithConjunction, placeIdToUrl } from "../model/data";
+import {
+  joinWithConjunction,
+  placeIdToUrl,
+  COUNTRIES_PREFIXED_BY_THE,
+} from "../model/data";
 import type { ViewState } from "../layout/viewToggle";
 
 export function determinePlaceDescription(
@@ -18,7 +22,7 @@ export function determinePlaceDescription(
     matchedCountries.size === 1
       ? Array.from(matchedCountries)[0]
       : `${matchedCountries.size} countries`;
-  if (country === "United States" || country === "United Kingdom") {
+  if (COUNTRIES_PREFIXED_BY_THE.has(country)) {
     country = `the ${country}`;
   }
 
