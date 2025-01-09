@@ -11,6 +11,12 @@ import {
   ReformStatus,
 } from "./types";
 
+export const COUNTRIES_PREFIXED_BY_THE = new Set([
+  "United States",
+  "United Kingdom",
+  "Netherlands",
+]);
+
 export const COUNTRY_MAPPING: Partial<Record<string, string>> = {
   AU: "Australia",
   AT: "Austria",
@@ -20,11 +26,15 @@ export const COUNTRY_MAPPING: Partial<Record<string, string>> = {
   CK: "Cook Islands",
   CN: "China",
   DE: "Germany",
+  DK: "Denmark",
   FR: "France",
   IE: "Ireland",
+  IN: "India",
   IL: "Israel",
+  IS: "Iceland",
   KR: "Korea",
   MX: "Mexico",
+  NL: "Netherlands",
   NZ: "New Zealand",
   SE: "Sweden",
   SG: "Singapore",
