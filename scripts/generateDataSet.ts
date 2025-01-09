@@ -181,7 +181,7 @@ async function main(): Promise<void> {
 
   const files = await glob("data/generated/*");
   await $`zip -j data/generated/mandates-map-data.zip ${files}`;
-  console.log("Generated CSV at data/generated/mandates-map-data.zip");
+  console.log("Generated zip at data/generated/mandates-map-data.zip");
 }
 
 if (process.env.NODE_ENV !== "test") {
