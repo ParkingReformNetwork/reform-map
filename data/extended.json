@@ -5632,6 +5632,33 @@
       }
     ]
   },
+  "Basel, BS": {
+    "add_max": [
+      {
+        "summary": "Parking maximums apply to all uses based on number of jobs, floor space, and transit access.",
+        "reporter": "Samuel Deetz",
+        "requirements": ["by right"],
+        "citations": [
+          {
+            "description": "Basel Parkplatzverordnung",
+            "url": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/730.310",
+            "notes": "730.310",
+            "attachments": [],
+            "screenshots": [
+              {
+                "fileName": "basel-bs-screenshot1.png",
+                "directusId": "d899da70-1170-4096-a4e0-16df803e0d9d"
+              },
+              {
+                "fileName": "basel-bs-screenshot2.png",
+                "directusId": "f10049a5-5f0d-49cf-998d-ed1e8dcbcf40"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
   "Basin, WY": {
     "rm_min": [
       {
@@ -27248,6 +27275,33 @@
       }
     ]
   },
+  "East Granby, CT": {
+    "reduce_min": [
+      {
+        "summary": "On-street parking in the Village Center zone may count towards requirements upon approval of the commission. Parking may be deferred citywide.",
+        "reporter": "Samuel Deetz",
+        "requirements": ["other"],
+        "citations": [
+          {
+            "description": "East Granby Zoning Code",
+            "url": "https://eastgranbyct.org/wp-content/uploads/2025/01/Zoning-Regulation_December282024.pdf",
+            "notes": "VII.B.2.;\nVII.B.4.a.;\nPages 69-70 of pdf, pages 65-66 of original document",
+            "attachments": [],
+            "screenshots": [
+              {
+                "fileName": "east-granby-ct-screenshot1.png",
+                "directusId": "05634c02-30fa-4f32-8ad0-61340ff93d38"
+              },
+              {
+                "fileName": "east-granby-ct-screenshot2.png",
+                "directusId": "6a04e347-62a5-4b76-89d6-b8f655c35cf0"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
   "East Grand Forks, MN": {
     "reduce_min": [
       {
@@ -27358,6 +27412,29 @@
               {
                 "fileName": "east-greenwich-ri-screenshot2.png",
                 "directusId": "acaa6d38-4d90-4005-b86b-0e91aadd84c4"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "East Hartford, CT": {
+    "reduce_min": [
+      {
+        "summary": "A change of use in an existing building in the B-5 District (downtown) is exempt from parking mandates. Parking may be deferred citywide.",
+        "reporter": "Samuel Deetz",
+        "requirements": ["other"],
+        "citations": [
+          {
+            "description": "East Hartford Zoning Code",
+            "url": "https://www.easthartfordct.gov/sites/g/files/vyhlif9241/f/uploads/eh_zoning_regulations_9-13-24_final.pdf",
+            "notes": "Section 7.2.F.5.;\nSection 7.2.F.6.;\nPage 144 of pdf, page 140 of original document",
+            "attachments": [],
+            "screenshots": [
+              {
+                "fileName": "east-hartford-ct-screenshot.png",
+                "directusId": "3cc67f8f-e4bc-4baa-963f-0cb5e60ab0b2"
               }
             ]
           }
@@ -27816,6 +27893,29 @@
               {
                 "fileName": "east-washington-pa-screenshot.png",
                 "directusId": "417bcfa1-9f9e-45d0-85f4-a36b400d4f0d"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "East Windsor, CT": {
+    "reduce_min": [
+      {
+        "summary": "Up to 35% of the required parking may be deferred.",
+        "reporter": "Samuel Deetz",
+        "requirements": ["other"],
+        "citations": [
+          {
+            "description": "East Windsor Zoning Code",
+            "url": "https://www.eastwindsor-ct.gov/sites/g/files/vyhlif4381/f/uploads/ew_zoning_regs_revised_to_9-5-2024.pdf",
+            "notes": "601.4.b.\nPage 70",
+            "attachments": [],
+            "screenshots": [
+              {
+                "fileName": "east-windsor-ct-screenshot.png",
+                "directusId": "d84dcefb-e978-4b0c-ad74-355c58af9ae5"
               }
             ]
           }
@@ -29980,6 +30080,50 @@
               {
                 "fileName": "emporia-ks-screenshot.png",
                 "directusId": "c84d0b30-247a-4045-b5c9-93e0b734a3fe"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "Enfield, CT": {
+    "reduce_min": [
+      {
+        "summary": "Within the Thompsonville Districts, on-street and public parking may count towards requirements.",
+        "reporter": "Samuel Deetz",
+        "requirements": ["other"],
+        "citations": [
+          {
+            "description": "Enfield Zoning Code",
+            "url": "https://www.enfield-ct.gov/DocumentCenter/View/19006/Zoning-Regulations-",
+            "notes": "Section 8.124.6.\nPage 110 of pdf, page 108 of original document",
+            "attachments": [],
+            "screenshots": [
+              {
+                "fileName": "enfield-ct-reduce-min-screenshot.png",
+                "directusId": "4fb20e4f-cb88-45f4-98c7-b0a010eaac4d"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "rm_min": [
+      {
+        "summary": "Where three or fewer parking spaces would be required in a business district for nonresidential uses, those spaces need not be provided.",
+        "reporter": "Samuel Deetz",
+        "requirements": ["by right", "size of project"],
+        "citations": [
+          {
+            "description": "Enfield Zoning Code",
+            "url": "https://www.enfield-ct.gov/DocumentCenter/View/19006/Zoning-Regulations-",
+            "notes": "10.10.1.F.\nPage 123 of pdf, page 121 of original document",
+            "attachments": [],
+            "screenshots": [
+              {
+                "fileName": "enfield-ct-remove-min-screenshot.png",
+                "directusId": "0b929e04-bb7d-4774-a8e4-3282b4783ded"
               }
             ]
           }

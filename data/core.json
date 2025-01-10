@@ -3654,6 +3654,25 @@
       }
     ]
   },
+  "Basel, BS": {
+    "place": {
+      "name": "Basel",
+      "state": "BS",
+      "country": "CH",
+      "type": "city",
+      "pop": 177595,
+      "coord": [7.5878261, 47.5581077],
+      "repeal": false
+    },
+    "add_max": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["all uses"],
+        "date": null
+      }
+    ]
+  },
   "Basin, WY": {
     "place": {
       "name": "Basin",
@@ -18423,6 +18442,25 @@
       }
     ]
   },
+  "East Granby, CT": {
+    "place": {
+      "name": "East Granby",
+      "state": "CT",
+      "country": "US",
+      "type": "city",
+      "pop": 5214,
+      "coord": [-72.7273158, 41.9412081],
+      "repeal": false
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district", "citywide"],
+        "land": ["all uses"],
+        "date": null
+      }
+    ]
+  },
   "East Grand Forks, MN": {
     "place": {
       "name": "East Grand Forks",
@@ -18503,6 +18541,25 @@
         "status": "adopted",
         "scope": ["city center / business district"],
         "land": ["commercial", "residential, all uses"],
+        "date": null
+      }
+    ]
+  },
+  "East Hartford, CT": {
+    "place": {
+      "name": "East Hartford",
+      "state": "CT",
+      "country": "US",
+      "type": "city",
+      "pop": 51045,
+      "coord": [-72.644512, 41.767914],
+      "repeal": false
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district", "citywide"],
+        "land": ["all uses"],
         "date": null
       }
     ]
@@ -18833,6 +18890,25 @@
       {
         "status": "adopted",
         "scope": ["city center / business district"],
+        "land": ["all uses"],
+        "date": null
+      }
+    ]
+  },
+  "East Windsor, CT": {
+    "place": {
+      "name": "East Windsor",
+      "state": "CT",
+      "country": "US",
+      "type": "city",
+      "pop": 11190,
+      "coord": [-72.6130726, 41.9156316],
+      "repeal": false
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
         "land": ["all uses"],
         "date": null
       }
@@ -20369,6 +20445,33 @@
         "status": "adopted",
         "scope": ["city center / business district"],
         "land": ["all uses"],
+        "date": null
+      }
+    ]
+  },
+  "Enfield, CT": {
+    "place": {
+      "name": "Enfield",
+      "state": "CT",
+      "country": "US",
+      "type": "city",
+      "pop": 42141,
+      "coord": [-72.5755109, 41.9789387],
+      "repeal": false
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["all uses"],
+        "date": null
+      }
+    ],
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["commercial", "other"],
         "date": null
       }
     ]
@@ -66957,7 +67060,7 @@
       "country": "AT",
       "type": "state",
       "pop": 401674,
-      "coord": [9.5957585, 47.2365297],
+      "coord": [9.894458, 47.230877],
       "repeal": false
     },
     "add_max": [
