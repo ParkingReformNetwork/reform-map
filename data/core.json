@@ -1759,6 +1759,33 @@
       }
     ]
   },
+  "Ansonia, CT": {
+    "place": {
+      "name": "Ansonia",
+      "state": "CT",
+      "country": "US",
+      "type": "city",
+      "pop": 18918,
+      "coord": [-73.0787468, 41.3429922],
+      "repeal": false
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["all uses"],
+        "date": null
+      }
+    ],
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["all uses"],
+        "date": null
+      }
+    ]
+  },
   "Antigo, WI": {
     "place": {
       "name": "Antigo",
@@ -6756,6 +6783,12 @@
         "scope": ["citywide"],
         "land": ["residential, all uses"],
         "date": null
+      },
+      {
+        "status": "proposed",
+        "scope": ["citywide"],
+        "land": ["residential, all uses"],
+        "date": null
       }
     ]
   },
@@ -7523,6 +7556,25 @@
         "status": "proposed",
         "scope": ["city center / business district"],
         "land": ["residential, all uses"],
+        "date": null
+      }
+    ]
+  },
+  "Bristol, CT": {
+    "place": {
+      "name": "Bristol",
+      "state": "CT",
+      "country": "US",
+      "type": "city",
+      "pop": 61844,
+      "coord": [-72.9464859, 41.6735209],
+      "repeal": false
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district", "citywide"],
+        "land": ["all uses", "commercial", "residential, multi-family"],
         "date": null
       }
     ]
@@ -16915,6 +16967,33 @@
       }
     ]
   },
+  "Derby, CT": {
+    "place": {
+      "name": "Derby",
+      "state": "CT",
+      "country": "US",
+      "type": "city",
+      "pop": 12325,
+      "coord": [-73.0890324, 41.3223611],
+      "repeal": false
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["all uses"],
+        "date": null
+      }
+    ],
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["commercial", "other"],
+        "date": null
+      }
+    ]
+  },
   "Derby, KS": {
     "place": {
       "name": "Derby",
@@ -18903,6 +18982,25 @@
       "type": "city",
       "pop": 11190,
       "coord": [-72.6130726, 41.9156316],
+      "repeal": false
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["all uses"],
+        "date": null
+      }
+    ]
+  },
+  "Easton, CT": {
+    "place": {
+      "name": "Easton",
+      "state": "CT",
+      "country": "US",
+      "type": "city",
+      "pop": 7605,
+      "coord": [-73.2973394, 41.2528738],
       "repeal": false
     },
     "reduce_min": [
@@ -21324,6 +21422,29 @@
       }
     ]
   },
+  "Fairfield, CT": {
+    "place": {
+      "name": "Fairfield",
+      "state": "CT",
+      "country": "US",
+      "type": "city",
+      "pop": 61512,
+      "coord": [-73.2637258, 41.1412078],
+      "repeal": false
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": [
+          "city center / business district",
+          "main street / special",
+          "transit-oriented"
+        ],
+        "land": ["residential, all uses"],
+        "date": null
+      }
+    ]
+  },
   "Fairfield, IL": {
     "place": {
       "name": "Fairfield",
@@ -21509,6 +21630,25 @@
       {
         "status": "adopted",
         "scope": ["city center / business district"],
+        "land": ["all uses"],
+        "date": null
+      }
+    ]
+  },
+  "Farmington, CT": {
+    "place": {
+      "name": "Farmington",
+      "state": "CT",
+      "country": "US",
+      "type": "city",
+      "pop": 26712,
+      "coord": [-72.8320435, 41.7198216],
+      "repeal": false
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
         "land": ["all uses"],
         "date": null
       }
@@ -25079,6 +25219,25 @@
       }
     ]
   },
+  "Glastonbury, CT": {
+    "place": {
+      "name": "Glastonbury",
+      "state": "CT",
+      "country": "US",
+      "type": "city",
+      "pop": 35159,
+      "coord": [-72.608146, 41.7123218],
+      "repeal": false
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["commercial"],
+        "date": null
+      }
+    ]
+  },
   "Glen Carbon, IL": {
     "place": {
       "name": "Glen Carbon",
@@ -25882,6 +26041,25 @@
         "status": "adopted",
         "scope": ["city center / business district"],
         "land": ["all uses", "commercial", "other"],
+        "date": null
+      }
+    ]
+  },
+  "Granby, CT": {
+    "place": {
+      "name": "Granby",
+      "state": "CT",
+      "country": "US",
+      "type": "city",
+      "pop": 10903,
+      "coord": [-72.789313, 41.9538298],
+      "repeal": false
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["all uses"],
         "date": null
       }
     ]
@@ -28845,6 +29023,33 @@
         "status": "adopted",
         "scope": ["city center / business district"],
         "land": ["commercial"],
+        "date": null
+      }
+    ]
+  },
+  "Hebron, CT": {
+    "place": {
+      "name": "Hebron",
+      "state": "CT",
+      "country": "US",
+      "type": "city",
+      "pop": 9098,
+      "coord": [-72.3659161, 41.6578767],
+      "repeal": false
+    },
+    "add_max": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["commercial", "industrial", "medical", "other"],
+        "date": null
+      }
+    ],
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["all uses"],
         "date": null
       }
     ]
@@ -41504,6 +41709,25 @@
       }
     ]
   },
+  "Middletown, CT": {
+    "place": {
+      "name": "Middletown",
+      "state": "CT",
+      "country": "US",
+      "type": "city",
+      "pop": 47717,
+      "coord": [-72.6509061, 41.5623178],
+      "repeal": false
+    },
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["commercial", "residential, multi-family"],
+        "date": null
+      }
+    ]
+  },
   "Middletown, OH": {
     "place": {
       "name": "Middletown",
@@ -42667,6 +42891,25 @@
         "status": "adopted",
         "scope": ["citywide"],
         "land": ["residential, all uses"],
+        "date": null
+      }
+    ]
+  },
+  "Monroe, CT": {
+    "place": {
+      "name": "Monroe",
+      "state": "CT",
+      "country": "US",
+      "type": "city",
+      "pop": 18825,
+      "coord": [-73.2073358, 41.3325962],
+      "repeal": false
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["all uses"],
         "date": null
       }
     ]
@@ -58798,6 +59041,25 @@
       }
     ]
   },
+  "Shelton, CT": {
+    "place": {
+      "name": "Shelton",
+      "state": "CT",
+      "country": "US",
+      "type": "city",
+      "pop": 40869,
+      "coord": [-73.0931641, 41.3164856],
+      "repeal": false
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district", "citywide"],
+        "land": ["all uses"],
+        "date": null
+      }
+    ]
+  },
   "Shenandoah, IA": {
     "place": {
       "name": "Shenandoah",
@@ -62501,6 +62763,33 @@
       }
     ]
   },
+  "Stratford, CT": {
+    "place": {
+      "name": "Stratford",
+      "state": "CT",
+      "country": "US",
+      "type": "city",
+      "pop": 52355,
+      "coord": [-73.1331651, 41.1845415],
+      "repeal": false
+    },
+    "add_max": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["other"],
+        "date": null
+      }
+    ],
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["transit-oriented"],
+        "land": ["all uses"],
+        "date": null
+      }
+    ]
+  },
   "Stratford, WI": {
     "place": {
       "name": "Stratford",
@@ -64950,6 +65239,33 @@
         "status": "adopted",
         "scope": ["citywide", "transit-oriented"],
         "land": ["residential, low-density"],
+        "date": null
+      }
+    ]
+  },
+  "Torrington, CT": {
+    "place": {
+      "name": "Torrington",
+      "state": "CT",
+      "country": "US",
+      "type": "city",
+      "pop": 35515,
+      "coord": [-73.1212214, 41.8006523],
+      "repeal": false
+    },
+    "add_max": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["commercial", "other"],
+        "date": null
+      }
+    ],
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["all uses"],
         "date": null
       }
     ]
@@ -67971,6 +68287,39 @@
         "scope": ["regional"],
         "land": ["all uses", "residential, all uses"],
         "date": "2024-03-27"
+      },
+      {
+        "status": "proposed",
+        "scope": ["regional"],
+        "land": ["commercial", "residential, all uses"],
+        "date": null
+      }
+    ],
+    "rm_min": [
+      {
+        "status": "proposed",
+        "scope": ["regional"],
+        "land": ["commercial", "other", "residential, all uses"],
+        "date": null
+      }
+    ]
+  },
+  "Waterbury, CT": {
+    "place": {
+      "name": "Waterbury",
+      "state": "CT",
+      "country": "US",
+      "type": "city",
+      "pop": 114403,
+      "coord": [-73.0438362, 41.5538091],
+      "repeal": false
+    },
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["all uses"],
+        "date": null
       }
     ]
   },

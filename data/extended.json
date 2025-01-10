@@ -2758,6 +2758,50 @@
       }
     ]
   },
+  "Ansonia, CT": {
+    "reduce_min": [
+      {
+        "summary": "Within the Commercial “C”, HI and LI Districts comprising downtown, uses located between 300 and 600 feet of a municipal parking facility may have reduced parking requirements as granted by the Commission.",
+        "reporter": "Samuel Deetz",
+        "requirements": ["other"],
+        "citations": [
+          {
+            "description": "Ansonia Zoning Code",
+            "url": "https://cityofansonia.com/filestorage/8192/8194/8247/City_of_Ansonia_Zoning_Regulations_20240218.pdf",
+            "notes": "410.9\nPages 75-76",
+            "attachments": [],
+            "screenshots": [
+              {
+                "fileName": "ansonia-ct-reduce-min-screenshot.png",
+                "directusId": "885c1d57-e650-4e26-892d-2829ebe598af"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "rm_min": [
+      {
+        "summary": "Within the Commercial “C”, HI and LI Districts comprising downtown, uses located with 300 feet of a municipal parking facility are exempt from parking mandates.",
+        "reporter": "Samuel Deetz",
+        "requirements": ["other"],
+        "citations": [
+          {
+            "description": "Ansonia Zoning Code",
+            "url": "https://cityofansonia.com/filestorage/8192/8194/8247/City_of_Ansonia_Zoning_Regulations_20240218.pdf",
+            "notes": "410.9.1\nPage 75",
+            "attachments": [],
+            "screenshots": [
+              {
+                "fileName": "ansonia-ct-remove-min-screenshot.png",
+                "directusId": "051873cc-6fde-4e3a-aa44-53f14f365f4f"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
   "Antigo, WI": {
     "add_max": [
       {
@@ -10291,7 +10335,7 @@
             "attachments": [],
             "screenshots": [
               {
-                "fileName": "boston-ma-remove-min-citation1-screenshot.png",
+                "fileName": "boston-ma-remove-min1-citation1-screenshot.png",
                 "directusId": "3bd25451-e54b-4f4d-8618-956ebc49307f"
               }
             ]
@@ -10302,7 +10346,7 @@
             "notes": "Comprehensive site with explanations and graphics why ratios are needed. ",
             "attachments": [
               {
-                "fileName": "boston-ma-remove-min-citation2-attachment.pdf",
+                "fileName": "boston-ma-remove-min1-citation2-attachment.pdf",
                 "directusId": "f74fc37e-67f2-486b-8577-fe66f36cb7da"
               }
             ],
@@ -10315,12 +10359,31 @@
             "attachments": [],
             "screenshots": [
               {
-                "fileName": "boston-ma-remove-min-citation3-screenshot1.png",
+                "fileName": "boston-ma-remove-min1-citation3-screenshot1.png",
                 "directusId": "40923021-f83c-4b44-96f1-90f259da07e5"
               },
               {
-                "fileName": "boston-ma-remove-min-citation3-screenshot2.png",
+                "fileName": "boston-ma-remove-min1-citation3-screenshot2.png",
                 "directusId": "fb1ef7f5-f8b4-4514-a615-9b74045645bb"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "summary": "Boston is considering eliminating parking mandates for residential uses in 2025.",
+        "reporter": "Tony Jordan",
+        "requirements": ["by right"],
+        "citations": [
+          {
+            "description": "Boston Universal Hub article",
+            "url": "https://www.universalhub.com/2025/boston-city-council-consider-eliminating-parking",
+            "notes": null,
+            "attachments": [],
+            "screenshots": [
+              {
+                "fileName": "boston-ma-remove-min2-screenshot.png",
+                "directusId": "599c5b50-0f9b-42de-86b9-dccd21e39cc6"
               }
             ]
           }
@@ -11510,6 +11573,41 @@
               {
                 "fileName": "brisbane-qld-screenshot.png",
                 "directusId": "a906dd17-34a1-435e-940c-58d0c875eb4d"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "Bristol, CT": {
+    "reduce_min": [
+      {
+        "summary": "Parking requirements are reduced for multi-family and business uses in the BD District. All uses citywide may defer up to 50% of the required parking.",
+        "reporter": "Samuel Deetz",
+        "requirements": ["by right", "other"],
+        "citations": [
+          {
+            "description": "Bristol Zoning Code",
+            "url": "https://ct-bristol2.civicplus.com/DocumentCenter/View/19065/Zoning-Regulations---effective-51324?bidId=",
+            "notes": "13.2.D.;\n13.5;\nPages 64-67 of pdf, pages 63-66 of original document",
+            "attachments": [],
+            "screenshots": [
+              {
+                "fileName": "bristol-ct-screenshot1.png",
+                "directusId": "0b17b0f5-5a04-4dff-89d1-ddb7ced53e61"
+              },
+              {
+                "fileName": "bristol-ct-screenshot2.png",
+                "directusId": "b7ca0e11-eef4-4059-8f98-afc1310d2b3b"
+              },
+              {
+                "fileName": "bristol-ct-screenshot3.png",
+                "directusId": "f9dadf0b-be3c-46c7-8793-664abc009252"
+              },
+              {
+                "fileName": "bristol-ct-screenshot4.png",
+                "directusId": "15d57be5-7e62-4607-874d-9157146915be"
               }
             ]
           }
@@ -25061,6 +25159,50 @@
       }
     ]
   },
+  "Derby, CT": {
+    "reduce_min": [
+      {
+        "summary": "Up to 50% of required parking may be deferred.",
+        "reporter": "Samuel Deetz",
+        "requirements": ["other"],
+        "citations": [
+          {
+            "description": "Derby Zoning Code",
+            "url": "https://www.derbyct.gov/media/Government/Planning%20&%20Zoning/PZC%20-%20Zoning%20Regulations%20-%20Updated%20to%2002-08-2022.pdf",
+            "notes": "§ 195-60.\nPage 127 of pdf, page 126 of original document",
+            "attachments": [],
+            "screenshots": [
+              {
+                "fileName": "derby-ct-reduce-min-screenshot.png",
+                "directusId": "9f5ce340-9939-4861-8efc-903cf212a195"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "rm_min": [
+      {
+        "summary": "Nonresidential uses within 300 feet of a municipal parking facility are exempt from parking mandates.",
+        "reporter": "Samuel Deetz",
+        "requirements": ["by right", "other"],
+        "citations": [
+          {
+            "description": "Derby Zoning Code",
+            "url": "https://www.derbyct.gov/media/Government/Planning%20&%20Zoning/PZC%20-%20Zoning%20Regulations%20-%20Updated%20to%2002-08-2022.pdf",
+            "notes": "§ 195-54.B.(4)\nPage 123 of pdf, page 122 of original document",
+            "attachments": [],
+            "screenshots": [
+              {
+                "fileName": "derby-ct-remove-min-screenshot.png",
+                "directusId": "4d80522a-b045-48c2-97ca-5baa177fa946"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
   "Derby, KS": {
     "reduce_min": [
       {
@@ -27916,6 +28058,29 @@
               {
                 "fileName": "east-windsor-ct-screenshot.png",
                 "directusId": "d84dcefb-e978-4b0c-ad74-355c58af9ae5"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "Easton, CT": {
+    "reduce_min": [
+      {
+        "summary": "Up to 25% of the required parking may be deferred.",
+        "reporter": "Samuel Deetz",
+        "requirements": ["other"],
+        "citations": [
+          {
+            "description": "Easton Zoning Code",
+            "url": "https://www.eastonct.gov/sites/g/files/vyhlif3071/f/pages/easton_zoning_regulations_-_effective_july_7_2024.pdf",
+            "notes": "6222.3.\nPage 82 of pdf, page 71 of original document",
+            "attachments": [],
+            "screenshots": [
+              {
+                "fileName": "easton-ct-screenshot.png",
+                "directusId": "06c31863-d603-49df-a448-637ebf1e0822"
               }
             ]
           }
@@ -31390,6 +31555,29 @@
       }
     ]
   },
+  "Fairfield, CT": {
+    "reduce_min": [
+      {
+        "summary": "Parking requirements are reduced for residential uses in the Transit Oriented Design\nOverlay or as part of the Fairfield Housing Authority Pine Tree development. A reduction is also possible for residential uses in a Commercial District at the Commission's discretion.",
+        "reporter": "Samuel Deetz",
+        "requirements": ["by right", "other"],
+        "citations": [
+          {
+            "description": "Fairfield Zoning Code",
+            "url": "https://cms3.revize.com/revize/fairfield/Document%20Center/Service/Town%20Plan%20and%20Zoning/RegulationsMaster_for_Posting_-_Revised_to_May_9,_2023.pdf",
+            "notes": "28.6.1\nPage 127 of pdf, page 117 of original document",
+            "attachments": [],
+            "screenshots": [
+              {
+                "fileName": "fairfield-ct-screenshot.png",
+                "directusId": "e38ce063-d4cf-4c4c-8cd7-7729d24ae009"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
   "Fairfield, IL": {
     "rm_min": [
       {
@@ -31613,6 +31801,29 @@
               {
                 "fileName": "farmerville-la-screenshot.png",
                 "directusId": "665a0c4e-8234-4c38-905c-40b9d1b11695"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "Farmington, CT": {
+    "reduce_min": [
+      {
+        "summary": "Up to 25% of required parking may be deferred.",
+        "reporter": "Samuel Deetz",
+        "requirements": ["other"],
+        "citations": [
+          {
+            "description": "Farmington Zoning Code",
+            "url": "https://www.farmington-ct.org/home/showpublisheddocument/31906/638714961349800000",
+            "notes": "Section 8.A.8.\nPages 167-168",
+            "attachments": [],
+            "screenshots": [
+              {
+                "fileName": "farmington-ct-screenshot.png",
+                "directusId": "e2eb3ed5-9803-4636-9eb8-3b730e65eeba"
               }
             ]
           }
@@ -36861,6 +37072,29 @@
       }
     ]
   },
+  "Glastonbury, CT": {
+    "reduce_min": [
+      {
+        "summary": "Commercial uses may defer up to 30% of the required parking.",
+        "reporter": "Samuel Deetz",
+        "requirements": ["other"],
+        "citations": [
+          {
+            "description": "Glastonbury Zoning Code",
+            "url": "https://www.glastonburyct.gov/home/showpublisheddocument/36463/638695049237070000",
+            "notes": "9.8\nPage 153 of pdf, page 148 of original document",
+            "attachments": [],
+            "screenshots": [
+              {
+                "fileName": "glastonbury-ct-screenshot.png",
+                "directusId": "599e4a77-24a8-4bc7-9470-8e5abfaaea3d"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
   "Glen Carbon, IL": {
     "reduce_min": [
       {
@@ -37959,6 +38193,29 @@
               {
                 "fileName": "granby-co-screenshot5.png",
                 "directusId": "d682330c-ee1b-4c22-a4f9-fbae69540218"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "Granby, CT": {
+    "reduce_min": [
+      {
+        "summary": "Up to 25% of the required parking may be deferred.",
+        "reporter": "Samuel Deetz",
+        "requirements": ["other"],
+        "citations": [
+          {
+            "description": "Granby Zoning Code",
+            "url": "https://www.granby-ct.gov/DocumentCenter/View/612/Zoning-Regulations",
+            "notes": "7.9.2\nPage 71",
+            "attachments": [],
+            "screenshots": [
+              {
+                "fileName": "granby-ct-screenshot.png",
+                "directusId": "acb17081-6028-456d-8537-0ba8f2394abd"
               }
             ]
           }
@@ -42264,6 +42521,54 @@
               {
                 "fileName": "healdsburg-ca-screenshot.png",
                 "directusId": "e5f60b29-33de-49df-bcfc-6bfec4ecb418"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "Hebron, CT": {
+    "add_max": [
+      {
+        "summary": "Parking maximums apply to most nonresidential uses, but may be exceeded with pervious paving.",
+        "reporter": "Samuel Deetz",
+        "requirements": ["by right", "other"],
+        "citations": [
+          {
+            "description": "Hebron Zoning Code",
+            "url": "https://hebronct.com/uploads/2018/04/Hebron-Zoning-Regulations-Effective-040918-RFS-Hyperlinked-TOC.pdf",
+            "notes": "5.C.2.2;\n5.C.3.;\nPages 135, 137-139 of pdf, pages 125, 127-129 of original document",
+            "attachments": [],
+            "screenshots": [
+              {
+                "fileName": "hebron-ct-add-max-screenshot1.png",
+                "directusId": "2e1f2600-15a3-4261-949f-849c5cf1ae8f"
+              },
+              {
+                "fileName": "hebron-ct-add-max-screenshot2.png",
+                "directusId": "0d74cd23-9162-4f1d-a759-68b9397bde94"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "reduce_min": [
+      {
+        "summary": "Parking requirements may be reduced by providing walkways and vehicular access to adjacent properties or where on-street or public parking is nearby.",
+        "reporter": "Samuel Deetz",
+        "requirements": ["other"],
+        "citations": [
+          {
+            "description": "Hebron Zoning Code",
+            "url": "https://hebronct.com/uploads/2018/04/Hebron-Zoning-Regulations-Effective-040918-RFS-Hyperlinked-TOC.pdf",
+            "notes": "5.C.2.5.b.;\n5.C.2.5.c.;\nPage 136 of pdf, page 126 of original document",
+            "attachments": [],
+            "screenshots": [
+              {
+                "fileName": "hebron-ct-reduce-min-screenshot.png",
+                "directusId": "73322e62-f84f-4064-bf75-340f4f2f0716"
               }
             ]
           }
@@ -60483,6 +60788,33 @@
       }
     ]
   },
+  "Middletown, CT": {
+    "rm_min": [
+      {
+        "summary": "Commercial uses and care/nursing homes in the B-1 Central Business Zone are exempt from parking mandates.",
+        "reporter": "Samuel Deetz",
+        "requirements": ["by right"],
+        "citations": [
+          {
+            "description": "Middletown Zoning Code",
+            "url": "https://www.middletownct.gov/DocumentCenter/View/25872/Zoning-Code-Effective-11272024?bidId=",
+            "notes": "§4.19.4.\nPages 131-132",
+            "attachments": [],
+            "screenshots": [
+              {
+                "fileName": "middletown-ct-screenshot1.png",
+                "directusId": "882f762f-f3c6-4c75-adaa-cc74adb3a586"
+              },
+              {
+                "fileName": "middletown-ct-screenshot2.png",
+                "directusId": "d4328a6c-18f5-4603-9101-3d992b2e694d"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
   "Middletown, OH": {
     "rm_min": [
       {
@@ -62181,6 +62513,29 @@
               {
                 "fileName": "monona-wi-screenshot.png",
                 "directusId": "99a35976-2473-4248-bceb-1df69702fde7"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "Monroe, CT": {
+    "reduce_min": [
+      {
+        "summary": "Up to 25% of parking may be deferred.",
+        "reporter": "Samuel Deetz",
+        "requirements": ["other"],
+        "citations": [
+          {
+            "description": "Monroe Zoning Code",
+            "url": "https://monroect.gov/Home/DownloadDocument?docId=d56512e2-4315-4ab6-a37f-698d0145974a",
+            "notes": "§6.1.11\nPage 127",
+            "attachments": [],
+            "screenshots": [
+              {
+                "fileName": "monroe-ct-screenshot.png",
+                "directusId": "b9cdd24c-8824-4560-9222-9f835e701068"
               }
             ]
           }
@@ -86208,6 +86563,33 @@
       }
     ]
   },
+  "Shelton, CT": {
+    "reduce_min": [
+      {
+        "summary": "A fee in lieu of parking may be provided in the Central Business Core area (CBCA) / Central Business District overlay zone. Up to 25% of parking may be deferred citywide.",
+        "reporter": "Samuel Deetz",
+        "requirements": ["in-lieu fees", "other"],
+        "citations": [
+          {
+            "description": "Shelton Zoning Code",
+            "url": "https://shelton.qscendcms.com/ckfinder/connector?command=Proxy&lang=en&type=Files&currentFolder=%2FZoning%2F&hash=c245c263ce0eced480effe66bbede6b4d46c15ae&fileName=2024%20SPZC%20Regulations.pdf",
+            "notes": "42.4.1;\n42.8;\nPages 116, 120",
+            "attachments": [],
+            "screenshots": [
+              {
+                "fileName": "shelton-ct-screenshot1.png",
+                "directusId": "9082d16c-d653-4e08-8894-b27220127b6b"
+              },
+              {
+                "fileName": "shelton-ct-screenshot2.png",
+                "directusId": "67507656-5dc0-4b43-8c8f-c06d4cf35129"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
   "Shenandoah, IA": {
     "reduce_min": [
       {
@@ -91751,6 +92133,50 @@
       }
     ]
   },
+  "Stratford, CT": {
+    "add_max": [
+      {
+        "summary": "Parking maximums apply to home-based businesses.",
+        "reporter": "Samuel Deetz",
+        "requirements": ["by right"],
+        "citations": [
+          {
+            "description": "Stratford Zoning Code",
+            "url": "https://core-docs.s3.us-east-1.amazonaws.com/documents/asset/uploaded_file/3632/Stratford/5145527/Final_Adopted_Zoning_Regulations.pdf",
+            "notes": "6.8.4.A.\nPage 158 of pdf, page 157 of original document",
+            "attachments": [],
+            "screenshots": [
+              {
+                "fileName": "stratford-ct-add-max-screenshot.png",
+                "directusId": "0c0e5d07-0fc2-495a-a885-53f3703231b7"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "reduce_min": [
+      {
+        "summary": "Parking requirements are reduced for uses in the TOD Transit-Oriented Development District.",
+        "reporter": "Samuel Deetz",
+        "requirements": ["by right"],
+        "citations": [
+          {
+            "description": "Stratford Zoning Code",
+            "url": "https://core-docs.s3.us-east-1.amazonaws.com/documents/asset/uploaded_file/3632/Stratford/5145527/Final_Adopted_Zoning_Regulations.pdf",
+            "notes": "6.8.4.B.\nPage 159 of pdf, page 158 of original document",
+            "attachments": [],
+            "screenshots": [
+              {
+                "fileName": "stratford-ct-reduce-min-screenshot.png",
+                "directusId": "dbd71ba5-6d85-47d0-bc46-c9465a69a831"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
   "Stratford, WI": {
     "rm_min": [
       {
@@ -95351,6 +95777,58 @@
               {
                 "fileName": "torrance-ca-screenshot.png",
                 "directusId": "3b8e26bb-b026-4efd-bcdb-c1607edd6766"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "Torrington, CT": {
+    "add_max": [
+      {
+        "summary": "Parking maximums apply to commercial, office, and various other uses.",
+        "reporter": "Samuel Deetz",
+        "requirements": ["by right"],
+        "citations": [
+          {
+            "description": "Torrington Zoning Code",
+            "url": "https://www.torringtonct.org/sites/g/files/vyhlif12226/f/uploads/section_5_rev_12-29-22.pdf",
+            "notes": "5.13.4.A.\nPages 34-37",
+            "attachments": [],
+            "screenshots": [
+              {
+                "fileName": "torrington-ct-add-max-screenshot1.png",
+                "directusId": "714842db-4c98-48f6-ab44-f359de7077e6"
+              },
+              {
+                "fileName": "torrington-ct-add-max-screenshot2.png",
+                "directusId": "ba138616-e4c7-4d6b-95bc-638b07a55647"
+              },
+              {
+                "fileName": "torrington-ct-add-max-screenshot3.png",
+                "directusId": "21f59a57-e3be-4723-955b-290eb35d97dc"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "reduce_min": [
+      {
+        "summary": "Required parking may be deferred.",
+        "reporter": "Samuel Deetz",
+        "requirements": ["other"],
+        "citations": [
+          {
+            "description": "Torrington Zoning Code",
+            "url": "https://www.torringtonct.org/sites/g/files/vyhlif12226/f/uploads/section_5_rev_12-29-22.pdf",
+            "notes": "5.13.4.C.\nPages 37-38",
+            "attachments": [],
+            "screenshots": [
+              {
+                "fileName": "torrington-ct-reduce-min-screenshot.png",
+                "directusId": "4f1cee66-5774-4b4b-9ff2-187c367a8859"
               }
             ]
           }
@@ -99505,7 +99983,7 @@
             "attachments": [],
             "screenshots": [
               {
-                "fileName": "washington-wa-citation1-screenshot.png",
+                "fileName": "washington-wa-reduce-min1-citation1-screenshot.png",
                 "directusId": "1306b58d-5107-4214-a458-44605b85a0a4"
               }
             ]
@@ -99517,8 +99995,77 @@
             "attachments": [],
             "screenshots": [
               {
-                "fileName": "washington-wa-citation2-screenshot.png",
+                "fileName": "washington-wa-reduce-min1-citation2-screenshot.png",
                 "directusId": "5b713a2d-2570-4d24-ad74-e50a7b14d4d7"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "summary": "Senate Bill 5184 would not allow cities to require more than 0.5 parking spaces per dwelling unit or more than one parking space per 1,000 square feet of commercial space.",
+        "reporter": "Tony Jordan",
+        "requirements": ["by right"],
+        "citations": [
+          {
+            "description": "Washington Senate Bill 5184",
+            "url": "https://lawfilesext.leg.wa.gov/biennium/2025-26/Pdf/Bills/Senate%20Bills/5184.pdf?q=20250108161448",
+            "notes": "Page 1",
+            "attachments": [],
+            "screenshots": [
+              {
+                "fileName": "washington-wa-reduce-min2-screenshot.png",
+                "directusId": "bd7ca761-f9e6-4e4f-9536-5b15d1e7315e"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "rm_min": [
+      {
+        "summary": "Senate Bill 5184, introduced in January 2025, would exempt existing buildings undergoing change of use, residences under 1,200 square feet, commercial spaces under 5,000 square feet, affordable housing, senior housing, housing for people with disabilities, facilities that serve alcohol, child care facilities, or commercial spaces in mixed-use projects.",
+        "reporter": "Tony Jordan",
+        "requirements": [
+          "affordable housing",
+          "by right",
+          "other",
+          "size of project",
+          "supportive housing"
+        ],
+        "citations": [
+          {
+            "description": "Washington Senate Bill 5184",
+            "url": "https://lawfilesext.leg.wa.gov/biennium/2025-26/Pdf/Bills/Senate%20Bills/5184.pdf?q=20250108161448",
+            "notes": "Page 2",
+            "attachments": [],
+            "screenshots": [
+              {
+                "fileName": "washington-wa-remove-min-screenshot.png",
+                "directusId": "d7c9c1d7-1653-47d2-b890-4fde84832430"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "Waterbury, CT": {
+    "rm_min": [
+      {
+        "summary": "The CBD is exempt from parking mandates, however, no existing parking may be removed.",
+        "reporter": "Samuel Deetz",
+        "requirements": ["by right", "other"],
+        "citations": [
+          {
+            "description": "Waterbury Zoning Code",
+            "url": "https://www.waterburyct.org/filestorage/103431/108302/108357/108359/Waterbury_Zoning_Regs_Revised_to_December_1%2C_2023.pdf",
+            "notes": "9.03.05(ii)\nPage 97 of pdf, page 91 of original document",
+            "attachments": [],
+            "screenshots": [
+              {
+                "fileName": "waterbury-ct-screenshot.png",
+                "directusId": "20991d50-817f-49e3-b447-cda5316589ff"
               }
             ]
           }
