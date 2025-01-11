@@ -15584,6 +15584,25 @@
       }
     ]
   },
+  "Danbury, CT": {
+    "place": {
+      "name": "Danbury",
+      "state": "CT",
+      "country": "US",
+      "type": "city",
+      "pop": 86518,
+      "coord": [-73.4540111, 41.394817],
+      "repeal": false
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["commercial", "other", "residential, all uses"],
+        "date": null
+      }
+    ]
+  },
   "Danby, NY": {
     "place": {
       "name": "Danby",
@@ -41300,6 +41319,50 @@
       }
     ]
   },
+  "Meriden, CT": {
+    "place": {
+      "name": "Meriden",
+      "state": "CT",
+      "country": "US",
+      "type": "city",
+      "pop": 60850,
+      "coord": [-72.8070435, 41.5381535],
+      "repeal": false
+    },
+    "add_max": [
+      {
+        "status": "adopted",
+        "scope": ["transit-oriented"],
+        "land": ["all uses"],
+        "date": null
+      }
+    ],
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": [
+          "city center / business district",
+          "citywide",
+          "transit-oriented"
+        ],
+        "land": [
+          "all uses",
+          "commercial",
+          "other",
+          "residential, multi-family"
+        ],
+        "date": null
+      }
+    ],
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["transit-oriented"],
+        "land": ["commercial", "other"],
+        "date": null
+      }
+    ]
+  },
   "Meridian Charter Township, MI": {
     "place": {
       "name": "Meridian Charter Township",
@@ -42031,6 +42094,25 @@
         "status": "adopted",
         "scope": ["citywide"],
         "land": ["all uses"],
+        "date": null
+      }
+    ]
+  },
+  "Milford, CT": {
+    "place": {
+      "name": "Milford",
+      "state": "CT",
+      "country": "US",
+      "type": "city",
+      "pop": 50558,
+      "coord": [-73.0570603, 41.2222218],
+      "repeal": false
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district", "main street / special"],
+        "land": ["commercial", "residential, multi-family"],
         "date": null
       }
     ]
@@ -46168,6 +46250,25 @@
       "repeal": false
     },
     "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["all uses"],
+        "date": null
+      }
+    ]
+  },
+  "New London, CT": {
+    "place": {
+      "name": "New London",
+      "state": "CT",
+      "country": "US",
+      "type": "city",
+      "pop": 27367,
+      "coord": [-72.0997804, 41.3556187],
+      "repeal": false
+    },
+    "reduce_min": [
       {
         "status": "adopted",
         "scope": ["city center / business district"],
@@ -69454,6 +69555,41 @@
       {
         "status": "adopted",
         "scope": ["city center / business district"],
+        "land": ["all uses"],
+        "date": null
+      }
+    ]
+  },
+  "West Haven, CT": {
+    "place": {
+      "name": "West Haven",
+      "state": "CT",
+      "country": "US",
+      "type": "city",
+      "pop": 55584,
+      "coord": [-72.9470471, 41.2706527],
+      "repeal": false
+    },
+    "add_max": [
+      {
+        "status": "adopted",
+        "scope": ["transit-oriented"],
+        "land": ["commercial", "other", "residential, multi-family"],
+        "date": null
+      }
+    ],
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide", "transit-oriented"],
+        "land": ["all uses"],
+        "date": null
+      }
+    ],
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["transit-oriented"],
         "land": ["all uses"],
         "date": null
       }

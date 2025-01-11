@@ -23164,6 +23164,33 @@
       }
     ]
   },
+  "Danbury, CT": {
+    "reduce_min": [
+      {
+        "summary": "Parking requirements are reduced for retail, personal service uses, business and professional offices, and for medical offices in the C-CBD District when located near public parking. Within the DRZ Downtown Revitalization Zone, parking requirements are reduced for residential uses by right and for nonresidential uses when employers purchase parking permits for public parking.",
+        "reporter": "Samuel Deetz",
+        "requirements": ["by right", "other"],
+        "citations": [
+          {
+            "description": "Danbury Zoning Code",
+            "url": "https://www.danbury-ct.gov/DocumentCenter/View/318/Section-8---Supplemental-Regulations-PDF?bidId=",
+            "notes": "8.C.1.b.(2);\n8.C.1.b.(5);\nPages 10-11",
+            "attachments": [],
+            "screenshots": [
+              {
+                "fileName": "danbury-ct-screenshot1.png",
+                "directusId": "4a49533a-8296-403e-a27e-59122609c5c2"
+              },
+              {
+                "fileName": "danbury-ct-screenshot2.png",
+                "directusId": "d004dcea-5630-4218-9f83-5e45fa5b3036"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
   "Danby, NY": {
     "rm_min": [
       {
@@ -60119,6 +60146,79 @@
       }
     ]
   },
+  "Meriden, CT": {
+    "add_max": [
+      {
+        "summary": "Parking maximums apply to surface parking in the Transit Oriented Development (TOD) District.",
+        "reporter": "Samuel Deetz",
+        "requirements": ["by right", "other"],
+        "citations": [
+          {
+            "description": "Meriden Zoning Code",
+            "url": "https://ecode360.com/13397144#13397144",
+            "notes": "§ 213-27.J.(1)(d)[1];\n§ 213-27.J.(1)(d)[2]",
+            "attachments": [],
+            "screenshots": [
+              {
+                "fileName": "meriden-ct-add-max-screenshot1.png",
+                "directusId": "cc5338ec-b14b-4aac-b9ac-6d7e0f6f5424"
+              },
+              {
+                "fileName": "meriden-ct-add-max-screenshot2.png",
+                "directusId": "e8a79252-0200-4974-bf6c-44de55a53bd4"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "reduce_min": [
+      {
+        "summary": "Parking requirements in the Transit Oriented Development (TOD) District may be reduced for mixed-uses and on-street parking. Parking requirements citywide may be reduced when a use is located near public parking.",
+        "reporter": "Samuel Deetz",
+        "requirements": ["other"],
+        "citations": [
+          {
+            "description": "Meriden Zoning Code",
+            "url": "https://ecode360.com/13398302#13398302",
+            "notes": "§ 213-27.J.(1)(d)[3];\n§ 213-27.J.(1)(d)[4];\n§ 213-55.I.",
+            "attachments": [],
+            "screenshots": [
+              {
+                "fileName": "meriden-ct-reduce-min-screenshot1.png",
+                "directusId": "77343454-e5e7-46a7-952a-901f11ed166c"
+              },
+              {
+                "fileName": "meriden-ct-reduce-min-screenshot2.png",
+                "directusId": "611e1023-9603-4f51-a15f-c7a112d2dd87"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "rm_min": [
+      {
+        "summary": "Various uses are exempt from parking mandates in the Historic-Commercial and Park/Civic Sub-Districts of the Transit Oriented Development (TOD) District. This includes day cares, elderly living facilities, colleges, and most commercial uses.",
+        "reporter": "Samuel Deetz",
+        "requirements": ["by right"],
+        "citations": [
+          {
+            "description": "Meriden Zoning Code",
+            "url": "https://ecode360.com/13397144#13397144",
+            "notes": "§ 213-27.J.(1)(d)[1]",
+            "attachments": [],
+            "screenshots": [
+              {
+                "fileName": "meriden-ct-remove-min-screenshot.png",
+                "directusId": "971c838d-0b33-4ced-8322-f96eae8582f1"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
   "Meridian Charter Township, MI": {
     "add_max": [
       {
@@ -61232,6 +61332,33 @@
               {
                 "fileName": "milford-center-oh-screenshot.png",
                 "directusId": "eeaf9740-a43c-4c6b-8103-b7434f9c64a9"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "Milford, CT": {
+    "reduce_min": [
+      {
+        "summary": "Parking requirements for multi-family dwellings are reduced in the MCDD, CDD-1 and CDD-2 districts. General business and professional offices in the DO-10 or DO-25 districts may defer up to 25% of the required parking.",
+        "reporter": "Samuel Deetz",
+        "requirements": ["by right", "other"],
+        "citations": [
+          {
+            "description": "Milford Zoning Code",
+            "url": "https://www.ci.milford.ct.us/sites/g/files/vyhlif9226/f/pages/zoning_regulations_march_2019.pdf",
+            "notes": "5.1.4\nPages 190-191",
+            "attachments": [],
+            "screenshots": [
+              {
+                "fileName": "milford-ct-screenshot1.png",
+                "directusId": "a0476b46-2355-4711-8503-77404ffa6046"
+              },
+              {
+                "fileName": "milford-ct-screenshot2.png",
+                "directusId": "fa259527-8014-445f-9cbb-7f04e857cb18"
               }
             ]
           }
@@ -67292,6 +67419,33 @@
               {
                 "fileName": "new-kensington-pa-screenshot.png",
                 "directusId": "8d58c29c-4f3f-45bf-bd2d-4b1378df8860"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "New London, CT": {
+    "reduce_min": [
+      {
+        "summary": "A change of use in an existing building in the CBD-1 and CBD-2 districts is exempt from parking mandates. Parking requirements may be reduced for other uses when located near public parking or for carpool or vanpool service.",
+        "reporter": "Samuel Deetz",
+        "requirements": ["other"],
+        "citations": [
+          {
+            "description": "New London Zoning Code",
+            "url": "https://newlondonct.gov/filestorage/7495/7518/30382/30414/Zoning_Regulations_effective_11-26-24.pdf",
+            "notes": "Section 614.E.\nPages 213-214",
+            "attachments": [],
+            "screenshots": [
+              {
+                "fileName": "new-london-ct-screenshot1.png",
+                "directusId": "b9b9c839-8d32-4e9c-832a-0a84f40b3671"
+              },
+              {
+                "fileName": "new-london-ct-screenshot2.png",
+                "directusId": "5ba73acf-dada-482e-a14b-5db77b2e6dd3"
               }
             ]
           }
@@ -101683,6 +101837,79 @@
               {
                 "fileName": "west-grove-pa-screenshot.png",
                 "directusId": "380b2614-9b51-430f-8a3b-e052d7569a6c"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "West Haven, CT": {
+    "add_max": [
+      {
+        "summary": "Parking maximums apply to multi-family dwellings, offices and retail uses in the TOD Transit-Oriented Development District.",
+        "reporter": "Samuel Deetz",
+        "requirements": ["by right"],
+        "citations": [
+          {
+            "description": "West Haven Zoning Code",
+            "url": "https://www.cityofwesthaven.com/DocumentCenter/View/6706/Zoning-Regulations-Revised-to-08-08-24-PDF",
+            "notes": "35.9.4\nPage 101",
+            "attachments": [],
+            "screenshots": [
+              {
+                "fileName": "west-haven-ct-add-max-screenshot.png",
+                "directusId": "83f29b3d-d4b0-46fe-87e0-09795b307094"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "reduce_min": [
+      {
+        "summary": "Within the TOD district, on-street parking may count towards parking requirements. Up to 25% of parking may be deferred citywide for large uses.",
+        "reporter": "Samuel Deetz",
+        "requirements": ["other", "size of project"],
+        "citations": [
+          {
+            "description": "West Haven Zoning Code",
+            "url": "https://www.cityofwesthaven.com/DocumentCenter/View/6706/Zoning-Regulations-Revised-to-08-08-24-PDF",
+            "notes": "35.9.2;\n35.9.4.b.;\n60.16;\nPages 101-102, 166",
+            "attachments": [],
+            "screenshots": [
+              {
+                "fileName": "west-haven-ct-reduce-min-screenshot1.png",
+                "directusId": "1a3ceff5-7082-46b9-8100-7b95013a6dae"
+              },
+              {
+                "fileName": "west-haven-ct-reduce-min-screenshot2.png",
+                "directusId": "65bf157f-e10c-4fdf-b1b8-612cb076dbdb"
+              },
+              {
+                "fileName": "west-haven-ct-reduce-min-screenshot3.png",
+                "directusId": "ff769f0f-e52e-4f3e-8f3c-487f2358cd26"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "rm_min": [
+      {
+        "summary": "Liner uses that line parking structures or lots, with a depth of 30 feet or less in the TOD district are exempt from parking mandates.",
+        "reporter": "Samuel Deetz",
+        "requirements": ["by right", "other"],
+        "citations": [
+          {
+            "description": "West Haven Zoning Code",
+            "url": "https://www.cityofwesthaven.com/DocumentCenter/View/6706/Zoning-Regulations-Revised-to-08-08-24-PDF",
+            "notes": "35.9.4.c.\nPage 102",
+            "attachments": [],
+            "screenshots": [
+              {
+                "fileName": "west-haven-ct-remove-min-screenshot.png",
+                "directusId": "4f59426d-349d-4bf6-b9c2-6a3c90903b85"
               }
             ]
           }
