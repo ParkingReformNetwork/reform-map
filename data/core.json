@@ -5584,6 +5584,25 @@
       }
     ]
   },
+  "Bethel, CT": {
+    "place": {
+      "name": "Bethel",
+      "state": "CT",
+      "country": "US",
+      "type": "city",
+      "pop": 20358,
+      "coord": [-73.4140097, 41.3712063],
+      "repeal": false
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["all uses"],
+        "date": null
+      }
+    ]
+  },
   "Bethel, MN": {
     "place": {
       "name": "Bethel",
@@ -8450,6 +8469,25 @@
         "status": "adopted",
         "scope": ["city center / business district"],
         "land": ["all uses"],
+        "date": null
+      }
+    ]
+  },
+  "Burnie, TAS": {
+    "place": {
+      "name": "Burnie",
+      "state": "TAS",
+      "country": "AU",
+      "type": "city",
+      "pop": 19348,
+      "coord": [145.9064073, -41.0523688],
+      "repeal": false
+    },
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["commercial", "other"],
         "date": null
       }
     ]
@@ -17064,6 +17102,25 @@
       }
     ]
   },
+  "Derwent Valley, TAS": {
+    "place": {
+      "name": "Derwent Valley",
+      "state": "TAS",
+      "country": "AU",
+      "type": "city",
+      "pop": 10290,
+      "coord": [146.54404049209268, -42.803101999999996],
+      "repeal": false
+    },
+    "add_max": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["all uses"],
+        "date": null
+      }
+    ]
+  },
   "Des Moines, IA": {
     "place": {
       "name": "Des Moines",
@@ -17551,6 +17608,25 @@
         "status": "adopted",
         "scope": ["citywide"],
         "land": ["all uses"],
+        "date": null
+      }
+    ]
+  },
+  "Dorset, TAS": {
+    "place": {
+      "name": "Dorset",
+      "state": "TAS",
+      "country": "AU",
+      "type": "city",
+      "pop": 6652,
+      "coord": [147.6579004278306, -41.0591915],
+      "repeal": false
+    },
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["commercial", "other"],
         "date": null
       }
     ]
@@ -27241,6 +27317,25 @@
       }
     ]
   },
+  "Greenwich, CT": {
+    "place": {
+      "name": "Greenwich",
+      "state": "CT",
+      "country": "US",
+      "type": "city",
+      "pop": 63518,
+      "coord": [-73.6284598, 41.0264862],
+      "repeal": false
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["commercial"],
+        "date": null
+      }
+    ]
+  },
   "Greenwood, IN": {
     "place": {
       "name": "Greenwood",
@@ -29886,6 +29981,33 @@
         "status": "adopted",
         "scope": ["city center / business district"],
         "land": ["all uses"],
+        "date": null
+      }
+    ]
+  },
+  "Hobart, TAS": {
+    "place": {
+      "name": "Hobart",
+      "state": "TAS",
+      "country": "AU",
+      "type": "city",
+      "pop": 53684,
+      "coord": [147.3281233, -42.8825088],
+      "repeal": false
+    },
+    "add_max": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district", "citywide"],
+        "land": ["all uses", "commercial", "residential, all uses"],
+        "date": null
+      }
+    ],
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district", "main street / special"],
+        "land": ["all uses", "commercial", "residential, all uses"],
         "date": null
       }
     ]
@@ -39320,6 +39442,25 @@
       }
     ]
   },
+  "Mansfield, CT": {
+    "place": {
+      "name": "Mansfield",
+      "state": "CT",
+      "country": "US",
+      "type": "city",
+      "pop": 25892,
+      "coord": [-72.2131565, 41.7782147],
+      "repeal": false
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district", "citywide"],
+        "land": ["all uses", "commercial", "residential, multi-family"],
+        "date": null
+      }
+    ]
+  },
   "Mansfield, OH": {
     "place": {
       "name": "Mansfield",
@@ -39832,6 +39973,33 @@
       {
         "status": "adopted",
         "scope": ["city center / business district"],
+        "land": ["all uses"],
+        "date": null
+      }
+    ]
+  },
+  "Marlborough, CT": {
+    "place": {
+      "name": "Marlborough",
+      "state": "CT",
+      "country": "US",
+      "type": "city",
+      "pop": 6133,
+      "coord": [-72.459808, 41.631488],
+      "repeal": false
+    },
+    "add_max": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["all uses"],
+        "date": null
+      }
+    ],
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
         "land": ["all uses"],
         "date": null
       }
@@ -45893,6 +46061,25 @@
       }
     ]
   },
+  "New Canaan, CT": {
+    "place": {
+      "name": "New Canaan",
+      "state": "CT",
+      "country": "US",
+      "type": "city",
+      "pop": 20622,
+      "coord": [-73.4948446, 41.146763],
+      "repeal": false
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district", "citywide"],
+        "land": ["all uses"],
+        "date": null
+      }
+    ]
+  },
   "New Carlisle, IN": {
     "place": {
       "name": "New Carlisle",
@@ -46043,6 +46230,33 @@
         "status": "adopted",
         "scope": ["city center / business district"],
         "land": ["residential, all uses"],
+        "date": null
+      }
+    ]
+  },
+  "New Fairfield, CT": {
+    "place": {
+      "name": "New Fairfield",
+      "state": "CT",
+      "country": "US",
+      "type": "city",
+      "pop": 13579,
+      "coord": [-73.4856789, 41.4664832],
+      "repeal": false
+    },
+    "add_max": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["residential, low-density"],
+        "date": null
+      }
+    ],
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["all uses"],
         "date": null
       }
     ]
@@ -46881,6 +47095,25 @@
       }
     ]
   },
+  "Newtown, CT": {
+    "place": {
+      "name": "Newtown",
+      "state": "CT",
+      "country": "US",
+      "type": "city",
+      "pop": 27173,
+      "coord": [-73.3086445, 41.4134764],
+      "repeal": false
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["all uses"],
+        "date": null
+      }
+    ]
+  },
   "Newville, PA": {
     "place": {
       "name": "Newville",
@@ -47684,6 +47917,25 @@
         "status": "adopted",
         "scope": ["city center / business district", "citywide"],
         "land": ["commercial", "other"],
+        "date": null
+      }
+    ]
+  },
+  "Northern Territory, NT": {
+    "place": {
+      "name": "Northern Territory",
+      "state": "NT",
+      "country": "AU",
+      "type": "state",
+      "pop": 228833,
+      "coord": [130.86848336511576, -12.37137375],
+      "repeal": false
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["all uses"],
         "date": null
       }
     ]
@@ -54211,6 +54463,25 @@
       }
     ]
   },
+  "Redding, CT": {
+    "place": {
+      "name": "Redding",
+      "state": "CT",
+      "country": "US",
+      "type": "city",
+      "pop": 8765,
+      "coord": [-73.3834532, 41.3025956],
+      "repeal": false
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district", "citywide"],
+        "land": ["all uses", "commercial", "other"],
+        "date": null
+      }
+    ]
+  },
   "Redfield, IA": {
     "place": {
       "name": "Redfield",
@@ -54758,6 +55029,25 @@
         "status": "adopted",
         "scope": ["citywide"],
         "land": ["all uses"],
+        "date": null
+      }
+    ]
+  },
+  "Ridgefield, CT": {
+    "place": {
+      "name": "Ridgefield",
+      "state": "CT",
+      "country": "US",
+      "type": "city",
+      "pop": 25033,
+      "coord": [-73.4981792, 41.2814842],
+      "repeal": false
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["all uses", "commercial", "other"],
         "date": null
       }
     ]
@@ -64005,6 +64295,25 @@
       }
     ]
   },
+  "Tasmania, TAS": {
+    "place": {
+      "name": "Tasmania",
+      "state": "TAS",
+      "country": "AU",
+      "type": "state",
+      "pop": 573479,
+      "coord": [147.32180827127462, -42.906822],
+      "repeal": false
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["main street / special"],
+        "land": ["commercial"],
+        "date": null
+      }
+    ]
+  },
   "Tatamy, PA": {
     "place": {
       "name": "Tatamy",
@@ -70218,6 +70527,25 @@
       }
     ]
   },
+  "Westport, CT": {
+    "place": {
+      "name": "Westport",
+      "state": "CT",
+      "country": "US",
+      "type": "city",
+      "pop": 27141,
+      "coord": [-73.3578955, 41.1414855],
+      "repeal": false
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["all uses"],
+        "date": null
+      }
+    ]
+  },
   "Westwood, KS": {
     "place": {
       "name": "Westwood",
@@ -70986,6 +71314,25 @@
         "status": "adopted",
         "scope": ["city center / business district", "citywide"],
         "land": ["all uses", "industrial", "other"],
+        "date": null
+      }
+    ]
+  },
+  "Wilton, CT": {
+    "place": {
+      "name": "Wilton",
+      "state": "CT",
+      "country": "US",
+      "type": "city",
+      "pop": 18503,
+      "coord": [-73.4378988, 41.1953739],
+      "repeal": false
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["all uses"],
         "date": null
       }
     ]
