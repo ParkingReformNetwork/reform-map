@@ -8444,6 +8444,37 @@
       }
     ]
   },
+  "Bethel, CT": {
+    "reduce_min": [
+      {
+        "summary": "Parking requirements are reduced for mixed-use development, a fee in lieu of parking, or a deferral of the required parking.",
+        "reporter": "Samuel Deetz",
+        "requirements": ["in-lieu fees", "other"],
+        "citations": [
+          {
+            "description": "Bethel Zoning Code",
+            "url": "https://bethel-ct.gov/vertical/sites/%7B90B1B948-C443-4CA6-8B88-90B1EEA9B1E2%7D/uploads/Zoning_Regulations.pdf",
+            "notes": "SECTION 6.2.C.7.;\nSECTION 6.2.D.3.;\nSECTION 6.2.D.4.;\nPages 130-132 of pdf, pages 120-122 of original document",
+            "attachments": [],
+            "screenshots": [
+              {
+                "fileName": "bethel-ct-screenshot1.png",
+                "directusId": "bae1fed9-af78-4550-a886-864a44862818"
+              },
+              {
+                "fileName": "bethel-ct-screenshot2.png",
+                "directusId": "cf06b965-3f2d-4bbb-b1cb-b088ef358560"
+              },
+              {
+                "fileName": "bethel-ct-screenshot3.png",
+                "directusId": "129c6eaa-1117-4bca-b875-047f447232b0"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
   "Bethel, MN": {
     "reduce_min": [
       {
@@ -12912,6 +12943,29 @@
               {
                 "fileName": "burlington-wi-screenshot.png",
                 "directusId": "ea6e4763-8556-42fa-bc6b-8b7df1fee2e2"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "Burnie, TAS": {
+    "rm_min": [
+      {
+        "summary": "The Burnie Town Centre is exempt from parking mandates except for residential and visitor accommodation uses.",
+        "reporter": "Samuel Deetz",
+        "requirements": ["by right"],
+        "citations": [
+          {
+            "description": "Burnie Planning Scheme Local Provisions",
+            "url": "https://tpso.planning.tas.gov.au/tpso/external/planning-scheme-viewer/5/section/883?effectiveForDate=2025-01-12",
+            "notes": "BUR-S2.1.1",
+            "attachments": [],
+            "screenshots": [
+              {
+                "fileName": "burnie-tas-screenshot.png",
+                "directusId": "11838554-9167-4609-a9b4-2008704617e6"
               }
             ]
           }
@@ -25297,6 +25351,29 @@
       }
     ]
   },
+  "Derwent Valley, TAS": {
+    "add_max": [
+      {
+        "summary": "Parking maximums are set at 100% of the minimums.",
+        "reporter": "Samuel Deetz",
+        "requirements": ["by right"],
+        "citations": [
+          {
+            "description": "Derwent Valley Interim Planning Scheme",
+            "url": "https://www.planning.tas.gov.au/__data/assets/pdf_file/0009/710973/Derwent-Valley-Interim-Planning-Scheme-2015-26-November-2024.pdf",
+            "notes": "E6.6.1\nPage 356",
+            "attachments": [],
+            "screenshots": [
+              {
+                "fileName": "derwent-valley-tas-screenshot.png",
+                "directusId": "983c82db-90f1-44a5-bb75-172f300887a9"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
   "Des Moines, IA": {
     "add_max": [
       {
@@ -25961,6 +26038,29 @@
               {
                 "fileName": "dormont-pa-screenshot.png",
                 "directusId": "6c5791a9-1f71-4ef7-9c4c-e01ef3f95fcb"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "Dorset, TAS": {
+    "rm_min": [
+      {
+        "summary": "The town centres of Bridport, Scottsdale, and Derby are exempt from parking mandates, except for residential and visitor accommodation uses.",
+        "reporter": "Samuel Deetz",
+        "requirements": ["by right"],
+        "citations": [
+          {
+            "description": "Dorset Planning Scheme Local Provisions",
+            "url": "https://tpso.planning.tas.gov.au/tpso/external/planning-scheme-viewer/11/section/1747?effectiveForDate=2025-01-12",
+            "notes": "DOR-S4.1.1",
+            "attachments": [],
+            "screenshots": [
+              {
+                "fileName": "dorset-tas-screenshot.png",
+                "directusId": "633808bb-722b-44b7-8daf-6b1d95992908"
               }
             ]
           }
@@ -40054,6 +40154,29 @@
       }
     ]
   },
+  "Greenwich, CT": {
+    "reduce_min": [
+      {
+        "summary": "Restaurants may defer up to 20% of the required parking.",
+        "reporter": "Samuel Deetz",
+        "requirements": ["other"],
+        "citations": [
+          {
+            "description": "Greenwich Zoning Code",
+            "url": "https://www.greenwichct.gov/DocumentCenter/View/37834/19-PZ-Regs-Division-15-August-2023",
+            "notes": "Sec. 6-158.(b)\nPage 6",
+            "attachments": [],
+            "screenshots": [
+              {
+                "fileName": "greenwich-ct-screenshot.png",
+                "directusId": "0b4d9b64-fb46-46e8-a1bf-9c21b20e1109"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
   "Greenwood, IN": {
     "reduce_min": [
       {
@@ -43709,6 +43832,66 @@
               {
                 "fileName": "hixton-wi-screenshot.png",
                 "directusId": "04bc183b-97c7-4aac-8517-f7099ef59196"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "Hobart, TAS": {
+    "add_max": [
+      {
+        "summary": "Parking maximums are set at 100% of the minimums and are lowered in the Central Business Zone for residential and commercial uses.",
+        "reporter": "Samuel Deetz",
+        "requirements": ["by right"],
+        "citations": [
+          {
+            "description": "Hobart Interim Planning Scheme",
+            "url": "https://www.planning.tas.gov.au/__data/assets/pdf_file/0019/712108/Hobart-Interim-Planning-Scheme-2015-22-March-2024.pdf",
+            "notes": "E6.6.1;\nE6.6.5;\nPages 460, 463",
+            "attachments": [],
+            "screenshots": [
+              {
+                "fileName": "hobart-tas-add-max-screenshot1.png",
+                "directusId": "ecdbefe3-a41d-4995-8f78-992ab562d68b"
+              },
+              {
+                "fileName": "hobart-tas-add-max-screenshot2.png",
+                "directusId": "e86d6b4e-c7e9-43cb-951a-f863c00f3678"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "rm_min": [
+      {
+        "summary": "Commercial and residential uses in the Central Business Zone are exempt from parking mandates. All uses in Particular Purpose Zones 8 & 10 (university and city center) and small commercial uses in Residential Zones are also exempt.",
+        "reporter": "Samuel Deetz",
+        "requirements": ["by right", "size of project"],
+        "citations": [
+          {
+            "description": "Hobart Interim Planning Scheme",
+            "url": "https://www.planning.tas.gov.au/__data/assets/pdf_file/0019/712108/Hobart-Interim-Planning-Scheme-2015-22-March-2024.pdf",
+            "notes": "E6.6.5;\nE6.6.8;\nE6.6.9;\nE6.6.10;\nPages 463, 465-466",
+            "attachments": [],
+            "screenshots": [
+              {
+                "fileName": "hobart-tas-remove-min-screenshot1.png",
+                "directusId": "3d208762-0524-49c1-88f9-6b09c2b462b9"
+              },
+              {
+                "fileName": "hobart-tas-remove-min-screenshot2.png",
+                "directusId": "82b11b7c-dff0-4874-9ce4-f9b53400986e"
+              },
+              {
+                "fileName": "hobart-tas-remove-min-screenshot3.png",
+                "directusId": "66020a2e-5926-4c3a-8825-441ace195af1"
+              },
+              {
+                "fileName": "hobart-tas-remove-min-screenshot4.png",
+                "directusId": "0e5fb56c-333c-4c87-9399-673f1e7326f4"
               }
             ]
           }
@@ -57369,6 +57552,48 @@
       }
     ]
   },
+  "Mansfield, CT": {
+    "reduce_min": [
+      {
+        "summary": "Parking requirements are reduced by 20% for commercial uses located within PB-2 and PB-4 zones. Parking requirements may be reduced for multi-family dwellings where parking is unbundled and there is bike parking, transit availability, carshare, or affordable housing associated with the project. Parking may be deferred in the Planned Business Zone.",
+        "reporter": "Samuel Deetz",
+        "requirements": [
+          "affordable housing",
+          "bike parking",
+          "by right",
+          "carshare",
+          "frequent transit",
+          "other"
+        ],
+        "citations": [
+          {
+            "description": "Mansfield Zoning Code",
+            "url": "https://ecode360.com/42441556#42441556",
+            "notes": "§ 190-78.G.;\n§ 190-78.U.",
+            "attachments": [],
+            "screenshots": [
+              {
+                "fileName": "mansfield-ct-screenshot1.png",
+                "directusId": "f98c3208-2cd9-4ee5-a01d-38cbfe04acc2"
+              },
+              {
+                "fileName": "mansfield-ct-screenshot2.png",
+                "directusId": "5247aeaf-fbfc-4508-bcde-61ad413a4759"
+              },
+              {
+                "fileName": "mansfield-ct-screenshot3.png",
+                "directusId": "cd46249d-5923-4290-b8bf-0a572edbc779"
+              },
+              {
+                "fileName": "mansfield-ct-screenshot4.png",
+                "directusId": "4c9c0650-3cc3-4732-bfae-de2d9da1bd92"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
   "Mansfield, OH": {
     "rm_min": [
       {
@@ -58092,6 +58317,62 @@
               {
                 "fileName": "markesan-wi-screenshot.png",
                 "directusId": "e1207e02-d3b5-4248-a4cc-ce2ac822870b"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "Marlborough, CT": {
+    "add_max": [
+      {
+        "summary": "Parking maximums are set at 125% of the minimums with impervious surfaces, and 150% with pervious surfaces.",
+        "reporter": "Samuel Deetz",
+        "requirements": ["by right", "other"],
+        "citations": [
+          {
+            "description": "Marlborough Zoning Code",
+            "url": "https://ecode360.com/30894992#30894992",
+            "notes": "§ 340-13.H.",
+            "attachments": [],
+            "screenshots": [
+              {
+                "fileName": "marlborough-ct-add-max-screenshot.png",
+                "directusId": "915e05be-f4f5-432f-8cec-a2af2be10800"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "reduce_min": [
+      {
+        "summary": "Parking requirements may be reduced for bike parking, tree preservation or mixed-uses. Parking may be deferred",
+        "reporter": "Samuel Deetz",
+        "requirements": ["bike parking", "other", "tree preservation"],
+        "citations": [
+          {
+            "description": "Marlborough Zoning Code",
+            "url": "https://ecode360.com/30894992#30894992",
+            "notes": "§ 340-13.D.(1)(j);\n§ 340-13.E.(2)(h);\n§ 340-13.I.;\n§ 340-13.M.",
+            "attachments": [],
+            "screenshots": [
+              {
+                "fileName": "marlborough-ct-reduce-min-screenshot1.png",
+                "directusId": "a0b262a6-d256-4c28-8a31-bd644032da4c"
+              },
+              {
+                "fileName": "marlborough-ct-reduce-min-screenshot2.png",
+                "directusId": "a916111b-d6ab-431e-940b-825f52c9b4df"
+              },
+              {
+                "fileName": "marlborough-ct-reduce-min-screenshot3.png",
+                "directusId": "02511292-b067-426b-9659-440831c4e321"
+              },
+              {
+                "fileName": "marlborough-ct-reduce-min-screenshot4.png",
+                "directusId": "7dd3118c-e421-4192-bf52-69f9d4d67433"
               }
             ]
           }
@@ -66794,6 +67075,33 @@
       }
     ]
   },
+  "New Canaan, CT": {
+    "reduce_min": [
+      {
+        "summary": "A fee in lieu of required parking may be provided in the Retail B, Business A, Business B, Business C or Business D zones. Parking reductions may be reduced citywide through curb cut removal or a deferral of the required parking.",
+        "reporter": "Samuel Deetz",
+        "requirements": ["in-lieu fees", "other"],
+        "citations": [
+          {
+            "description": "New Canaan Zoning Code",
+            "url": "https://cms3.revize.com/revize/canaan/Departments/Land%20Use/Pending%20P&Z%20Commission%20Applications/Zoning%20Regulations%20-%20Effective%2012.06.24.pdf",
+            "notes": "SECTION 6.2.E.\nPages 150-151 of pdf, pages 140-141 of original document",
+            "attachments": [],
+            "screenshots": [
+              {
+                "fileName": "new-canaan-ct-screenshot1.png",
+                "directusId": "aedca466-a3e9-47da-bcb6-851c53cb890e"
+              },
+              {
+                "fileName": "new-canaan-ct-screenshot2.png",
+                "directusId": "4886bba4-85b5-4764-8c40-266b137227ff"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
   "New Carlisle, IN": {
     "reduce_min": [
       {
@@ -67047,6 +67355,50 @@
               {
                 "fileName": "new-cumberland-pa-remove-min-screenshot.png",
                 "directusId": "061b09cf-1e94-45a2-a08a-36c5112eaf48"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "New Fairfield, CT": {
+    "add_max": [
+      {
+        "summary": "Parking maximums apply to single-family dwellings.",
+        "reporter": "Samuel Deetz",
+        "requirements": ["by right"],
+        "citations": [
+          {
+            "description": "New Fairfield Zoning Code",
+            "url": "https://www.newfairfield.org/home/showpublisheddocument/18828/638307964035800000",
+            "notes": "6.2.9.A.\nPage 108 of pdf, page 100 of original document",
+            "attachments": [],
+            "screenshots": [
+              {
+                "fileName": "new-fairfield-ct-add-max-screenshot.png",
+                "directusId": "ffc731ef-07f3-4ec6-b550-ad379265a219"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "reduce_min": [
+      {
+        "summary": "Half of the required parking may be deferred.",
+        "reporter": "Samuel Deetz",
+        "requirements": ["other"],
+        "citations": [
+          {
+            "description": "New Fairfield Zoning Code",
+            "url": "https://www.newfairfield.org/home/showpublisheddocument/18828/638307964035800000",
+            "notes": "6.2.10.\nPages 110-111 of pdf, pages 102-103 of original document",
+            "attachments": [],
+            "screenshots": [
+              {
+                "fileName": "new-fairfield-ct-reduce-min-screenshot.png",
+                "directusId": "66daeb44-4c07-4e51-9666-73801e72c82b"
               }
             ]
           }
@@ -68491,6 +68843,29 @@
       }
     ]
   },
+  "Newtown, CT": {
+    "reduce_min": [
+      {
+        "summary": "On-street parking may count towards parking requirements.",
+        "reporter": "Samuel Deetz",
+        "requirements": ["other"],
+        "citations": [
+          {
+            "description": "Newtown Zoning Code",
+            "url": "https://ecode360.com/9878268#9878601",
+            "notes": "§ B70-7.01.",
+            "attachments": [],
+            "screenshots": [
+              {
+                "fileName": "newtown-ct-screenshot.png",
+                "directusId": "8a9c57c6-f228-4507-bdb8-4602112df62e"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
   "Newville, PA": {
     "reduce_min": [
       {
@@ -69600,6 +69975,51 @@
               {
                 "fileName": "north-wales-pa-screenshot2.png",
                 "directusId": "76895a44-fe48-45b9-99e3-f30e0467c105"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "Northern Territory, NT": {
+    "reduce_min": [
+      {
+        "summary": "Parking requirements are reduced by right in the Darwin City Centre. Requirements there may be further reduced through motorcycle parking, bike parking, transit access, public parking, vertical landscaping, underground parking or historic preservation.",
+        "reporter": "Samuel Deetz",
+        "requirements": [
+          "bike parking",
+          "by right",
+          "frequent transit",
+          "historic preservation",
+          "other"
+        ],
+        "citations": [
+          {
+            "description": "Northern Territory Planning Scheme",
+            "url": "https://nt.gov.au/__data/assets/pdf_file/0004/914872/nt-planning-scheme-part-5-development-requirements.pdf",
+            "notes": "5.9.2.11;\n5.9.2.12.;\nPages 121-126",
+            "attachments": [],
+            "screenshots": [
+              {
+                "fileName": "northern-territory-nt-screenshot1.png",
+                "directusId": "ad85fa05-a073-4b39-8098-de984b31ecf2"
+              },
+              {
+                "fileName": "northern-territory-nt-screenshot2.png",
+                "directusId": "bc8fc661-aa55-4c07-bda7-a7c18f3f67ab"
+              },
+              {
+                "fileName": "northern-territory-nt-screenshot3.png",
+                "directusId": "5176ec78-b43a-483c-aa8b-b6c8f4197a08"
+              },
+              {
+                "fileName": "northern-territory-nt-screenshot4.png",
+                "directusId": "ae093960-6d0d-4251-bcbf-4d1826a34dbc"
+              },
+              {
+                "fileName": "northern-territory-nt-screenshot5.png",
+                "directusId": "72412493-c788-471d-9465-17667cdb45f1"
               }
             ]
           }
@@ -79167,6 +79587,29 @@
       }
     ]
   },
+  "Redding, CT": {
+    "reduce_min": [
+      {
+        "summary": "Parking requirements may be reduced upon approval for nonresidential uses in Historic Buildings or Historic Structures located in the HMC Zone. Parking may be deferred citywide.",
+        "reporter": "Samuel Deetz",
+        "requirements": ["other"],
+        "citations": [
+          {
+            "description": "Redding Zoning Code",
+            "url": "https://townofreddingct.org/wp-content/uploads/2020/08/Redding-Zoning-Regulations-8.18.20.pdf",
+            "notes": "5.6.2\nPage 81 of pdf, page 80 of original document",
+            "attachments": [],
+            "screenshots": [
+              {
+                "fileName": "redding-ct-screenshot.png",
+                "directusId": "20862f83-a9b1-431b-83ed-29164017a82c"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
   "Redfield, IA": {
     "rm_min": [
       {
@@ -80014,6 +80457,37 @@
               {
                 "fileName": "richton-park-il-screenshot.png",
                 "directusId": "b110f26d-fce5-459f-9398-66d90d7cec69"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "Ridgefield, CT": {
+    "reduce_min": [
+      {
+        "summary": "Within the CBD, parking requirements are reduced for new nonresidential uses and a nonresidential change of use is exempt from parking mandates. In a business zone other than the CBD Zone, parking may be deferred. In the CBD or B-1 districts, a fee in lieu of parking may be provided.",
+        "reporter": "Samuel Deetz",
+        "requirements": ["by right", "in-lieu fees", "other"],
+        "citations": [
+          {
+            "description": "Ridgefield Zoning Code",
+            "url": "https://www.ridgefieldct.gov/sites/g/files/vyhlif4916/f/uploads/2023.08.01_regs_07_ev_charging_stations.a-23-1_0.pdf",
+            "notes": "7.3.C.1.;\n7.3.C.4.;\n7.3.F.;\nPages 13, 16",
+            "attachments": [],
+            "screenshots": [
+              {
+                "fileName": "ridgefield-ct-screenshot1.png",
+                "directusId": "ade4b329-d6bd-4044-b389-bb9be271f415"
+              },
+              {
+                "fileName": "ridgefield-ct-screenshot2.png",
+                "directusId": "ffd98084-cfb2-41cf-9afa-5e235508c0cf"
+              },
+              {
+                "fileName": "ridgefield-ct-screenshot3.png",
+                "directusId": "e6883223-2c80-4d03-a9e6-a467c9f922fe"
               }
             ]
           }
@@ -93911,6 +94385,29 @@
       }
     ]
   },
+  "Tasmania, TAS": {
+    "reduce_min": [
+      {
+        "summary": "Small commercial uses in an existing building in the General Residential Zone and Inner Residential Zone are exempt from parking mandates.",
+        "reporter": "Samuel Deetz",
+        "requirements": ["other"],
+        "citations": [
+          {
+            "description": "Tasmania Planning Scheme",
+            "url": "https://tpso.planning.tas.gov.au/tpso/external/planning-scheme-viewer/30/section/423?effectiveForDate=2025-01-12",
+            "notes": "C2.5.5",
+            "attachments": [],
+            "screenshots": [
+              {
+                "fileName": "tasmania-tas-screenshot.png",
+                "directusId": "b83cff6f-1fb2-4866-91de-6d3c2b459625"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
   "Tatamy, PA": {
     "reduce_min": [
       {
@@ -102836,6 +103333,29 @@
       }
     ]
   },
+  "Westport, CT": {
+    "reduce_min": [
+      {
+        "summary": "Parking may be deferred.",
+        "reporter": "Samuel Deetz",
+        "requirements": ["other"],
+        "citations": [
+          {
+            "description": "Westport Zoning Code",
+            "url": "https://online.encodeplus.com/regs/westport-ct/#secid-7152",
+            "notes": "34-11.12",
+            "attachments": [],
+            "screenshots": [
+              {
+                "fileName": "westport-ct-screenshot.png",
+                "directusId": "4c4d93cc-2c2a-4bf9-b834-8a63026abf71"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
   "Westwood, KS": {
     "reduce_min": [
       {
@@ -103965,6 +104485,29 @@
               {
                 "fileName": "wilson-nc-remove-min-screenshot2.png",
                 "directusId": "68bd2e89-7ccd-4dba-99e1-5a081951b369"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "Wilton, CT": {
+    "reduce_min": [
+      {
+        "summary": "Parking may be deferred.",
+        "reporter": "Samuel Deetz",
+        "requirements": ["other"],
+        "citations": [
+          {
+            "description": "Wilton Zoning Code",
+            "url": "https://www.wiltonct.gov/sites/g/files/vyhlif10026/f/uploads/complete.pdf",
+            "notes": "29-8.B.13.\nPage 236",
+            "attachments": [],
+            "screenshots": [
+              {
+                "fileName": "wilton-ct-screenshot.png",
+                "directusId": "ac9eb8f4-4978-4f6f-a7e9-7a6215d82a62"
               }
             ]
           }
