@@ -1195,6 +1195,33 @@
       }
     ]
   },
+  "Altona, MB": {
+    "place": {
+      "name": "Altona",
+      "state": "MB",
+      "country": "CA",
+      "type": "city",
+      "pop": 4267,
+      "coord": [-97.5583611, 49.1031109],
+      "repeal": false
+    },
+    "add_max": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["all uses"],
+        "date": null
+      }
+    ],
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["commercial", "other", "residential, multi-family"],
+        "date": null
+      }
+    ]
+  },
   "Altoona, IA": {
     "place": {
       "name": "Altoona",
@@ -2209,6 +2236,25 @@
       }
     ]
   },
+  "Arran-Elderslie, ON": {
+    "place": {
+      "name": "Arran-Elderslie",
+      "state": "ON",
+      "country": "CA",
+      "type": "city",
+      "pop": 6913,
+      "coord": [-81.2000689260308, 44.398078350000006],
+      "repeal": false
+    },
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["commercial", "other"],
+        "date": null
+      }
+    ]
+  },
   "Arvada, CO": {
     "place": {
       "name": "Arvada",
@@ -2563,6 +2609,25 @@
         "status": "adopted",
         "scope": ["citywide"],
         "land": ["all uses"],
+        "date": null
+      }
+    ]
+  },
+  "Atikokan, ON": {
+    "place": {
+      "name": "Atikokan",
+      "state": "ON",
+      "country": "CA",
+      "type": "city",
+      "pop": 2642,
+      "coord": [-91.624603, 48.762526],
+      "repeal": false
+    },
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["commercial"],
         "date": null
       }
     ]
@@ -3559,6 +3624,45 @@
       }
     ]
   },
+  "Barrie, ON": {
+    "place": {
+      "name": "Barrie",
+      "state": "ON",
+      "country": "CA",
+      "type": "city",
+      "pop": 147829,
+      "coord": [-79.6901302, 44.3893208],
+      "repeal": false
+    },
+    "add_max": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district", "main street / special"],
+        "land": [
+          "commercial",
+          "industrial",
+          "medical",
+          "other",
+          "residential, all uses"
+        ],
+        "date": null
+      }
+    ],
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["commercial", "other"],
+        "date": null
+      },
+      {
+        "status": "proposed",
+        "scope": ["city center / business district", "transit-oriented"],
+        "land": ["all uses", "commercial", "other"],
+        "date": null
+      }
+    ]
+  },
   "Barrington Hills, IL": {
     "place": {
       "name": "Barrington Hills",
@@ -3612,6 +3716,32 @@
         "status": "adopted",
         "scope": ["city center / business district"],
         "land": ["all uses"],
+        "date": null
+      }
+    ]
+  },
+  "Barry, IL": {
+    "place": {
+      "name": "Barry",
+      "state": "IL",
+      "country": "US",
+      "type": "city",
+      "pop": 1303,
+      "coord": [-91.0390246, 39.6942135],
+      "repeal": false
+    },
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": [
+          "commercial",
+          "industrial",
+          "medical",
+          "other",
+          "residential, low-density",
+          "residential, multi-family"
+        ],
         "date": null
       }
     ]
@@ -4173,6 +4303,25 @@
         "status": "adopted",
         "scope": ["city center / business district"],
         "land": ["all uses"],
+        "date": null
+      }
+    ]
+  },
+  "Beausejour, MB": {
+    "place": {
+      "name": "Beausejour",
+      "state": "MB",
+      "country": "CA",
+      "type": "city",
+      "pop": 3307,
+      "coord": [-96.5140821, 50.0619312],
+      "repeal": false
+    },
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["main street / special"],
+        "land": ["commercial"],
         "date": null
       }
     ]
@@ -6272,6 +6421,25 @@
       }
     ]
   },
+  "Bloomingdale, IL": {
+    "place": {
+      "name": "Bloomingdale",
+      "state": "IL",
+      "country": "US",
+      "type": "city",
+      "pop": 22382,
+      "coord": [-88.0809036, 41.9575285],
+      "repeal": false
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["all uses"],
+        "date": "2014-10-27"
+      }
+    ]
+  },
   "Bloomington, IL": {
     "place": {
       "name": "Bloomington",
@@ -6484,6 +6652,25 @@
         "status": "adopted",
         "scope": ["city center / business district"],
         "land": ["all uses"],
+        "date": null
+      }
+    ]
+  },
+  "Bluewater, ON": {
+    "place": {
+      "name": "Bluewater",
+      "state": "ON",
+      "country": "CA",
+      "type": "city",
+      "pop": 7540,
+      "coord": [-81.61287622487282, 43.4679793],
+      "repeal": false
+    },
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["commercial", "other"],
         "date": null
       }
     ]
@@ -6854,6 +7041,31 @@
         "scope": ["city center / business district"],
         "land": ["commercial", "other", "residential, all uses"],
         "date": null
+      },
+      {
+        "status": "proposed",
+        "scope": ["citywide"],
+        "land": ["all uses"],
+        "date": null
+      }
+    ]
+  },
+  "Bountiful, UT": {
+    "place": {
+      "name": "Bountiful",
+      "state": "UT",
+      "country": "US",
+      "type": "city",
+      "pop": 45762,
+      "coord": [-111.8804817, 40.8894611],
+      "repeal": false
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["residential, multi-family"],
+        "date": null
       }
     ]
   },
@@ -7017,6 +7229,25 @@
       }
     ]
   },
+  "Bracebridge, ON": {
+    "place": {
+      "name": "Bracebridge",
+      "state": "ON",
+      "country": "CA",
+      "type": "city",
+      "pop": 17305,
+      "coord": [-79.310989, 45.041508],
+      "repeal": false
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["commercial", "other"],
+        "date": null
+      }
+    ]
+  },
   "Braceville, IL": {
     "place": {
       "name": "Braceville",
@@ -7032,6 +7263,25 @@
         "status": "adopted",
         "scope": ["citywide"],
         "land": ["residential, all uses"],
+        "date": null
+      }
+    ]
+  },
+  "Bradford West Gwillimbury, ON": {
+    "place": {
+      "name": "Bradford West Gwillimbury",
+      "state": "ON",
+      "country": "CA",
+      "type": "city",
+      "pop": 42880,
+      "coord": [-79.5647069, 44.1143279],
+      "repeal": false
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district", "citywide"],
+        "land": ["all uses", "commercial", "other"],
         "date": null
       }
     ]
@@ -7147,6 +7397,25 @@
       }
     ]
   },
+  "Brandon, MB": {
+    "place": {
+      "name": "Brandon",
+      "state": "MB",
+      "country": "CA",
+      "type": "city",
+      "pop": 51313,
+      "coord": [-99.9608924, 49.8511143],
+      "repeal": false
+    },
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["all uses", "commercial"],
+        "date": null
+      }
+    ]
+  },
   "Brandon, MS": {
     "place": {
       "name": "Brandon",
@@ -7200,6 +7469,41 @@
         "status": "adopted",
         "scope": ["city center / business district"],
         "land": ["all uses"],
+        "date": null
+      }
+    ]
+  },
+  "Branford, CT": {
+    "place": {
+      "name": "Branford",
+      "state": "CT",
+      "country": "US",
+      "type": "city",
+      "pop": 28273,
+      "coord": [-72.8150989, 41.2795414],
+      "repeal": false
+    },
+    "add_max": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["commercial"],
+        "date": null
+      }
+    ],
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide", "main street / special"],
+        "land": ["all uses", "commercial", "other"],
+        "date": null
+      }
+    ],
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["main street / special"],
+        "land": ["commercial"],
         "date": null
       }
     ]
@@ -7468,6 +7772,33 @@
       }
     ]
   },
+  "Brigham City, UT": {
+    "place": {
+      "name": "Brigham City",
+      "state": "UT",
+      "country": "US",
+      "type": "city",
+      "pop": 19650,
+      "coord": [-112.0154991, 41.5110434],
+      "repeal": false
+    },
+    "add_max": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["all uses"],
+        "date": null
+      }
+    ],
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["all uses"],
+        "date": null
+      }
+    ]
+  },
   "Brighton Charter Township, MI": {
     "place": {
       "name": "Brighton Charter Township",
@@ -7667,6 +7998,25 @@
         "status": "adopted",
         "scope": ["city center / business district"],
         "land": ["commercial"],
+        "date": "2006-05-01"
+      }
+    ]
+  },
+  "Brockton, ON": {
+    "place": {
+      "name": "Brockton",
+      "state": "ON",
+      "country": "CA",
+      "type": "city",
+      "pop": 9784,
+      "coord": [-81.22181375972701, 44.186126650000006],
+      "repeal": false
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["all uses"],
         "date": null
       }
     ]
@@ -7762,6 +8112,25 @@
         "status": "adopted",
         "scope": ["citywide"],
         "land": ["commercial", "other", "residential, all uses"],
+        "date": null
+      }
+    ]
+  },
+  "Brooke-Alvinston, ON": {
+    "place": {
+      "name": "Brooke-Alvinston",
+      "state": "ON",
+      "country": "CA",
+      "type": "city",
+      "pop": 2359,
+      "coord": [-81.8975070722232, 42.84477855],
+      "repeal": false
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["all uses"],
         "date": null
       }
     ]
@@ -8351,6 +8720,25 @@
       }
     ]
   },
+  "Burk's Falls, ON": {
+    "place": {
+      "name": "Burk's Falls",
+      "state": "ON",
+      "country": "CA",
+      "type": "city",
+      "pop": 957,
+      "coord": [-79.408916, 45.6202244],
+      "repeal": false
+    },
+    "reduce_min": [
+      {
+        "status": "proposed",
+        "scope": ["citywide"],
+        "land": ["commercial"],
+        "date": null
+      }
+    ]
+  },
   "Burlington, CO": {
     "place": {
       "name": "Burlington",
@@ -8598,6 +8986,25 @@
       {
         "status": "adopted",
         "scope": ["city center / business district"],
+        "land": ["commercial", "other"],
+        "date": null
+      }
+    ]
+  },
+  "Byron, IL": {
+    "place": {
+      "name": "Byron",
+      "state": "IL",
+      "country": "US",
+      "type": "city",
+      "pop": 3784,
+      "coord": [-89.2556618, 42.1269692],
+      "repeal": false
+    },
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
         "land": ["commercial", "other"],
         "date": null
       }
@@ -9723,6 +10130,25 @@
       }
     ]
   },
+  "Carman, MB": {
+    "place": {
+      "name": "Carman",
+      "state": "MB",
+      "country": "CA",
+      "type": "city",
+      "pop": 3114,
+      "coord": [-98.0016853, 49.5082995],
+      "repeal": false
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["all uses"],
+        "date": null
+      }
+    ]
+  },
   "Carmel, IN": {
     "place": {
       "name": "Carmel",
@@ -9970,6 +10396,25 @@
       {
         "status": "adopted",
         "scope": ["citywide"],
+        "land": ["all uses"],
+        "date": null
+      }
+    ]
+  },
+  "Carson City, NV": {
+    "place": {
+      "name": "Carson City",
+      "state": "NV",
+      "country": "US",
+      "type": "city",
+      "pop": 58639,
+      "coord": [-119.7670374, 39.1663259],
+      "repeal": false
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
         "land": ["all uses"],
         "date": null
       }
@@ -10374,6 +10819,25 @@
       {
         "status": "adopted",
         "scope": ["city center / business district"],
+        "land": ["all uses"],
+        "date": null
+      }
+    ]
+  },
+  "Catlin, IL": {
+    "place": {
+      "name": "Catlin",
+      "state": "IL",
+      "country": "US",
+      "type": "city",
+      "pop": 1983,
+      "coord": [-87.7019675, 40.0650363],
+      "repeal": false
+    },
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
         "land": ["all uses"],
         "date": null
       }
@@ -10786,6 +11250,33 @@
       }
     ]
   },
+  "Central Huron, ON": {
+    "place": {
+      "name": "Central Huron",
+      "state": "ON",
+      "country": "CA",
+      "type": "city",
+      "pop": 7799,
+      "coord": [-81.54332585139252, 43.6600733],
+      "repeal": false
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["residential, all uses"],
+        "date": null
+      }
+    ],
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["commercial", "other"],
+        "date": null
+      }
+    ]
+  },
   "Central Point, OR": {
     "place": {
       "name": "Central Point",
@@ -10992,6 +11483,32 @@
       }
     ]
   },
+  "Chama, NM": {
+    "place": {
+      "name": "Chama",
+      "state": "NM",
+      "country": "US",
+      "type": "city",
+      "pop": 917,
+      "coord": [-106.579887, 36.9036557],
+      "repeal": false
+    },
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": [
+          "commercial",
+          "industrial",
+          "medical",
+          "other",
+          "residential, low-density",
+          "residential, multi-family"
+        ],
+        "date": null
+      }
+    ]
+  },
   "Chambersburg, PA": {
     "place": {
       "name": "Chambersburg",
@@ -11134,6 +11651,25 @@
         "status": "adopted",
         "scope": ["city center / business district", "citywide"],
         "land": ["all uses", "commercial", "other", "residential, low-density"],
+        "date": null
+      }
+    ]
+  },
+  "Chapleau, ON": {
+    "place": {
+      "name": "Chapleau",
+      "state": "ON",
+      "country": "CA",
+      "type": "city",
+      "pop": 1942,
+      "coord": [-83.4036099, 47.8416702],
+      "repeal": false
+    },
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["commercial", "other"],
         "date": null
       }
     ]
@@ -11485,6 +12021,33 @@
       }
     ]
   },
+  "Chatham-Kent, ON": {
+    "place": {
+      "name": "Chatham-Kent",
+      "state": "ON",
+      "country": "CA",
+      "type": "city",
+      "pop": 103988,
+      "coord": [-82.0898417, 42.41833],
+      "repeal": false
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["all uses"],
+        "date": null
+      }
+    ],
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["commercial"],
+        "date": null
+      }
+    ]
+  },
   "Chattahoochee Hills, GA": {
     "place": {
       "name": "Chattahoochee Hills",
@@ -11690,6 +12253,44 @@
         "status": "adopted",
         "scope": ["city center / business district"],
         "land": ["commercial"],
+        "date": null
+      }
+    ]
+  },
+  "Cheshire, CT": {
+    "place": {
+      "name": "Cheshire",
+      "state": "CT",
+      "country": "US",
+      "type": "city",
+      "pop": 28733,
+      "coord": [-72.900658, 41.4989861],
+      "repeal": false
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["all uses"],
+        "date": null
+      }
+    ]
+  },
+  "Chester, CT": {
+    "place": {
+      "name": "Chester",
+      "state": "CT",
+      "country": "US",
+      "type": "city",
+      "pop": 3749,
+      "coord": [-72.4509204, 41.4031547],
+      "repeal": false
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["all uses"],
         "date": null
       }
     ]
@@ -12067,6 +12668,25 @@
         "status": "adopted",
         "scope": ["city center / business district"],
         "land": ["all uses"],
+        "date": null
+      }
+    ]
+  },
+  "Chubbuck, ID": {
+    "place": {
+      "name": "Chubbuck",
+      "state": "ID",
+      "country": "US",
+      "type": "city",
+      "pop": 15570,
+      "coord": [-112.47315011566246, 42.92765095],
+      "repeal": false
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["all uses", "commercial", "other"],
         "date": null
       }
     ]
@@ -12559,6 +13179,52 @@
       }
     ]
   },
+  "Clearfield, UT": {
+    "place": {
+      "name": "Clearfield",
+      "state": "UT",
+      "country": "US",
+      "type": "city",
+      "pop": 31909,
+      "coord": [-112.0244841, 41.1135837],
+      "repeal": false
+    },
+    "add_max": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["all uses"],
+        "date": null
+      }
+    ],
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["all uses"],
+        "date": null
+      }
+    ]
+  },
+  "Clearview, ON": {
+    "place": {
+      "name": "Clearview",
+      "state": "ON",
+      "country": "CA",
+      "type": "city",
+      "pop": 14814,
+      "coord": [-80.06694727187954, 44.36827245],
+      "repeal": false
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["all uses"],
+        "date": null
+      }
+    ]
+  },
   "Clearwater, FL": {
     "place": {
       "name": "Clearwater",
@@ -12824,6 +13490,39 @@
         "status": "adopted",
         "scope": ["city center / business district"],
         "land": ["all uses"],
+        "date": null
+      }
+    ]
+  },
+  "Clinton, CT": {
+    "place": {
+      "name": "Clinton",
+      "state": "CT",
+      "country": "US",
+      "type": "city",
+      "pop": 13185,
+      "coord": [-72.5275904, 41.2787104],
+      "repeal": false
+    },
+    "add_max": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": [
+          "commercial",
+          "industrial",
+          "medical",
+          "other",
+          "residential, multi-family"
+        ],
+        "date": null
+      }
+    ],
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district", "citywide"],
+        "land": ["commercial", "industrial", "medical", "other"],
         "date": null
       }
     ]
@@ -13118,6 +13817,25 @@
       }
     ]
   },
+  "Cobalt, ON": {
+    "place": {
+      "name": "Cobalt",
+      "state": "ON",
+      "country": "CA",
+      "type": "city",
+      "pop": 989,
+      "coord": [-79.6856668, 47.3962288],
+      "repeal": false
+    },
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["commercial"],
+        "date": null
+      }
+    ]
+  },
   "Cody, WY": {
     "place": {
       "name": "Cody",
@@ -13328,6 +14046,25 @@
         "status": "adopted",
         "scope": ["city center / business district"],
         "land": ["commercial", "residential, multi-family"],
+        "date": null
+      }
+    ]
+  },
+  "Collingwood, ON": {
+    "place": {
+      "name": "Collingwood",
+      "state": "ON",
+      "country": "CA",
+      "type": "city",
+      "pop": 24811,
+      "coord": [-80.2172379, 44.5027226],
+      "repeal": false
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["all uses"],
         "date": null
       }
     ]
@@ -14749,6 +15486,25 @@
       }
     ]
   },
+  "Council, ID": {
+    "place": {
+      "name": "Council",
+      "state": "ID",
+      "country": "US",
+      "type": "city",
+      "pop": 867,
+      "coord": [-116.438198, 44.7298876],
+      "repeal": false
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["commercial", "industrial", "medical", "other"],
+        "date": null
+      }
+    ]
+  },
   "Country Club Hills, IL": {
     "place": {
       "name": "Country Club Hills",
@@ -15194,6 +15950,33 @@
         "status": "adopted",
         "scope": ["city center / business district"],
         "land": ["all uses"],
+        "date": null
+      }
+    ]
+  },
+  "Cromwell, CT": {
+    "place": {
+      "name": "Cromwell",
+      "state": "CT",
+      "country": "US",
+      "type": "city",
+      "pop": 14225,
+      "coord": [-72.6455665, 41.5949942],
+      "repeal": false
+    },
+    "add_max": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["commercial"],
+        "date": null
+      }
+    ],
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district", "citywide"],
+        "land": ["all uses", "commercial"],
         "date": null
       }
     ]
@@ -16023,6 +16806,44 @@
       }
     ]
   },
+  "Dawn-Euphemia, ON": {
+    "place": {
+      "name": "Dawn-Euphemia",
+      "state": "ON",
+      "country": "CA",
+      "type": "city",
+      "pop": 1968,
+      "coord": [-82.03907375849955, 42.693970500000006],
+      "repeal": false
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["all uses"],
+        "date": null
+      }
+    ]
+  },
+  "Dawson City, YT": {
+    "place": {
+      "name": "Dawson City",
+      "state": "YT",
+      "country": "CA",
+      "type": "city",
+      "pop": 1577,
+      "coord": [-139.431695, 64.0606605],
+      "repeal": false
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["all uses"],
+        "date": null
+      }
+    ]
+  },
   "Dayton, MN": {
     "place": {
       "name": "Dayton",
@@ -16530,6 +17351,39 @@
       {
         "status": "adopted",
         "scope": ["city center / business district"],
+        "land": ["all uses"],
+        "date": null
+      }
+    ]
+  },
+  "Deep River, CT": {
+    "place": {
+      "name": "Deep River",
+      "state": "CT",
+      "country": "US",
+      "type": "city",
+      "pop": 4415,
+      "coord": [-72.4356422, 41.3856546],
+      "repeal": false
+    },
+    "add_max": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["all uses"],
+        "date": null
+      }
+    ],
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["all uses"],
+        "date": null
+      },
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
         "land": ["all uses"],
         "date": null
       }
@@ -17428,6 +18282,25 @@
       {
         "status": "adopted",
         "scope": ["city center / business district"],
+        "land": ["all uses"],
+        "date": null
+      }
+    ]
+  },
+  "Divernon, IL": {
+    "place": {
+      "name": "Divernon",
+      "state": "IL",
+      "country": "US",
+      "type": "city",
+      "pop": 1139,
+      "coord": [-89.6573192, 39.5656082],
+      "repeal": false
+    },
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
         "land": ["all uses"],
         "date": null
       }
@@ -18516,6 +19389,25 @@
       }
     ]
   },
+  "Eagle, ID": {
+    "place": {
+      "name": "Eagle",
+      "state": "ID",
+      "country": "US",
+      "type": "city",
+      "pop": 30346,
+      "coord": [-116.3540138, 43.6954424],
+      "repeal": false
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["all uses", "commercial", "other"],
+        "date": null
+      }
+    ]
+  },
   "Eagle, WI": {
     "place": {
       "name": "Eagle",
@@ -18719,6 +19611,66 @@
       }
     ]
   },
+  "East Haddam, CT": {
+    "place": {
+      "name": "East Haddam",
+      "state": "CT",
+      "country": "US",
+      "type": "city",
+      "pop": 8875,
+      "coord": [-72.4613902, 41.4529215],
+      "repeal": false
+    },
+    "add_max": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["all uses"],
+        "date": null
+      }
+    ],
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["all uses", "commercial", "industrial", "medical", "other"],
+        "date": null
+      }
+    ]
+  },
+  "East Hampton, CT": {
+    "place": {
+      "name": "East Hampton",
+      "state": "CT",
+      "country": "US",
+      "type": "city",
+      "pop": 12717,
+      "coord": [-72.5024804, 41.5758442],
+      "repeal": false
+    },
+    "add_max": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": [
+          "commercial",
+          "industrial",
+          "medical",
+          "other",
+          "residential, multi-family"
+        ],
+        "date": null
+      }
+    ],
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["all uses"],
+        "date": null
+      }
+    ]
+  },
   "East Hartford, CT": {
     "place": {
       "name": "East Hartford",
@@ -18733,6 +19685,25 @@
       {
         "status": "adopted",
         "scope": ["city center / business district", "citywide"],
+        "land": ["all uses"],
+        "date": null
+      }
+    ]
+  },
+  "East Haven, CT": {
+    "place": {
+      "name": "East Haven",
+      "state": "CT",
+      "country": "US",
+      "type": "city",
+      "pop": 27923,
+      "coord": [-72.8684337, 41.2762081],
+      "repeal": false
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
         "land": ["all uses"],
         "date": null
       }
@@ -20235,6 +21206,25 @@
       }
     ]
   },
+  "Ellsworth, IL": {
+    "place": {
+      "name": "Ellsworth",
+      "state": "IL",
+      "country": "US",
+      "type": "city",
+      "pop": 184,
+      "coord": [-88.7167336, 40.4503125],
+      "repeal": false
+    },
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["commercial"],
+        "date": null
+      }
+    ]
+  },
   "Ellsworth, KS": {
     "place": {
       "name": "Ellsworth",
@@ -20359,6 +21349,25 @@
         "status": "adopted",
         "scope": ["city center / business district"],
         "land": ["commercial"],
+        "date": null
+      }
+    ]
+  },
+  "Elmwood, IL": {
+    "place": {
+      "name": "Elmwood",
+      "state": "IL",
+      "country": "US",
+      "type": "city",
+      "pop": 2058,
+      "coord": [-89.9665017, 40.7778151],
+      "repeal": false
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["all uses"],
         "date": null
       }
     ]
@@ -20748,6 +21757,25 @@
       }
     ]
   },
+  "Enniskillen, ON": {
+    "place": {
+      "name": "Enniskillen",
+      "state": "ON",
+      "country": "CA",
+      "type": "city",
+      "pop": 2825,
+      "coord": [-82.12092093321893, 42.84490035],
+      "repeal": false
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["all uses"],
+        "date": null
+      }
+    ]
+  },
   "Enterprise, AL": {
     "place": {
       "name": "Enterprise",
@@ -20931,6 +21959,44 @@
         "status": "adopted",
         "scope": ["citywide"],
         "land": ["residential, low-density"],
+        "date": null
+      }
+    ]
+  },
+  "Essex, CT": {
+    "place": {
+      "name": "Essex",
+      "state": "CT",
+      "country": "US",
+      "type": "city",
+      "pop": 6733,
+      "coord": [-72.3906406, 41.353432],
+      "repeal": false
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["all uses"],
+        "date": null
+      }
+    ]
+  },
+  "Essex, ON": {
+    "place": {
+      "name": "Essex",
+      "state": "ON",
+      "country": "CA",
+      "type": "city",
+      "pop": 21216,
+      "coord": [-82.7120106, 42.2354142],
+      "repeal": false
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["commercial", "other", "residential, all uses"],
         "date": null
       }
     ]
@@ -21168,6 +22234,14 @@
         "status": "adopted",
         "scope": ["city center / business district"],
         "land": ["commercial", "other"],
+        "date": null
+      }
+    ],
+    "rm_min": [
+      {
+        "status": "proposed",
+        "scope": ["citywide"],
+        "land": ["all uses"],
         "date": null
       }
     ]
@@ -21616,6 +22690,25 @@
       }
     ]
   },
+  "Fallon, NV": {
+    "place": {
+      "name": "Fallon",
+      "state": "NV",
+      "country": "US",
+      "type": "city",
+      "pop": 9327,
+      "coord": [-118.777895, 39.4745166],
+      "repeal": false
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["all uses"],
+        "date": null
+      }
+    ]
+  },
   "Falls City, NE": {
     "place": {
       "name": "Falls City",
@@ -21798,6 +22891,44 @@
       "repeal": false
     },
     "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["all uses"],
+        "date": null
+      }
+    ]
+  },
+  "Farmington, UT": {
+    "place": {
+      "name": "Farmington",
+      "state": "UT",
+      "country": "US",
+      "type": "city",
+      "pop": 24531,
+      "coord": [-111.8874688, 40.9804423],
+      "repeal": false
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["all uses"],
+        "date": null
+      }
+    ]
+  },
+  "Faro, YT": {
+    "place": {
+      "name": "Faro",
+      "state": "YT",
+      "country": "CA",
+      "type": "city",
+      "pop": 440,
+      "coord": [-133.355315, 62.2295409],
+      "repeal": false
+    },
+    "reduce_min": [
       {
         "status": "adopted",
         "scope": ["city center / business district"],
@@ -22930,6 +24061,25 @@
       }
     ]
   },
+  "Fort Frances, ON": {
+    "place": {
+      "name": "Fort Frances",
+      "state": "ON",
+      "country": "CA",
+      "type": "city",
+      "pop": 7470,
+      "coord": [-93.3967615, 48.6114425],
+      "repeal": false
+    },
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["commercial", "other"],
+        "date": null
+      }
+    ]
+  },
   "Fort Lauderdale, FL": {
     "place": {
       "name": "Fort Lauderdale",
@@ -23122,6 +24272,25 @@
       }
     ]
   },
+  "Fort Simpson, NT": {
+    "place": {
+      "name": "Fort Simpson",
+      "state": "NT",
+      "country": "CA",
+      "type": "city",
+      "pop": 1100,
+      "coord": [-121.354276, 61.8631427],
+      "repeal": false
+    },
+    "reduce_min": [
+      {
+        "status": "proposed",
+        "scope": ["city center / business district", "citywide"],
+        "land": ["all uses"],
+        "date": null
+      }
+    ]
+  },
   "Fort Smith, AR": {
     "place": {
       "name": "Fort Smith",
@@ -23154,6 +24323,33 @@
         "scope": ["city center / business district"],
         "land": ["all uses", "commercial"],
         "date": "2022-11-01"
+      }
+    ]
+  },
+  "Fort St. John, BC": {
+    "place": {
+      "name": "Fort St. John",
+      "state": "BC",
+      "country": "CA",
+      "type": "city",
+      "pop": 21465,
+      "coord": [-120.846943, 56.2524039],
+      "repeal": false
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["commercial", "industrial", "medical", "other"],
+        "date": null
+      }
+    ],
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["commercial"],
+        "date": null
       }
     ]
   },
@@ -24013,6 +25209,25 @@
         "status": "adopted",
         "scope": ["city center / business district"],
         "land": ["commercial", "residential, all uses"],
+        "date": null
+      }
+    ]
+  },
+  "French River, ON": {
+    "place": {
+      "name": "French River",
+      "state": "ON",
+      "country": "CA",
+      "type": "city",
+      "pop": 2828,
+      "coord": [-80.478969, 46.137975],
+      "repeal": false
+    },
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["main street / special"],
+        "land": ["all uses"],
         "date": null
       }
     ]
@@ -25078,6 +26293,63 @@
       }
     ]
   },
+  "Georgetown, ID": {
+    "place": {
+      "name": "Georgetown",
+      "state": "ID",
+      "country": "US",
+      "type": "city",
+      "pop": 503,
+      "coord": [-111.3703902, 42.4764425],
+      "repeal": false
+    },
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["main street / special"],
+        "land": ["all uses"],
+        "date": null
+      }
+    ]
+  },
+  "Georgian Bay, ON": {
+    "place": {
+      "name": "Georgian Bay",
+      "state": "ON",
+      "country": "CA",
+      "type": "city",
+      "pop": 3441,
+      "coord": [-79.849792, 45.001216],
+      "repeal": false
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide", "main street / special"],
+        "land": ["all uses", "commercial"],
+        "date": null
+      }
+    ]
+  },
+  "Georgian Bluffs, ON": {
+    "place": {
+      "name": "Georgian Bluffs",
+      "state": "ON",
+      "country": "CA",
+      "type": "city",
+      "pop": 11100,
+      "coord": [-81.00872535041186, 44.68872225],
+      "repeal": false
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["all uses"],
+        "date": null
+      }
+    ]
+  },
   "Gerald, MO": {
     "place": {
       "name": "Gerald",
@@ -25712,6 +26984,25 @@
       }
     ]
   },
+  "Goderich, ON": {
+    "place": {
+      "name": "Goderich",
+      "state": "ON",
+      "country": "CA",
+      "type": "city",
+      "pop": 7881,
+      "coord": [-81.7110949, 43.7430924],
+      "repeal": false
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["all uses", "residential, all uses"],
+        "date": null
+      }
+    ]
+  },
   "Goehner, NE": {
     "place": {
       "name": "Goehner",
@@ -25962,6 +27253,25 @@
           "other",
           "residential, multi-family"
         ],
+        "date": null
+      }
+    ]
+  },
+  "Gore Bay, ON": {
+    "place": {
+      "name": "Gore Bay",
+      "state": "ON",
+      "country": "CA",
+      "type": "city",
+      "pop": 808,
+      "coord": [-82.4640868, 45.9167876],
+      "repeal": false
+    },
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["commercial"],
         "date": null
       }
     ]
@@ -26709,6 +28019,33 @@
       }
     ]
   },
+  "Gravenhurst, ON": {
+    "place": {
+      "name": "Gravenhurst",
+      "state": "ON",
+      "country": "CA",
+      "type": "city",
+      "pop": 13157,
+      "coord": [-79.373131, 44.91741],
+      "repeal": false
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["all uses"],
+        "date": null
+      }
+    ],
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["main street / special"],
+        "land": ["all uses"],
+        "date": null
+      }
+    ]
+  },
   "Grayling Charter Township, MI": {
     "place": {
       "name": "Grayling Charter Township",
@@ -26955,6 +28292,25 @@
         "status": "adopted",
         "scope": ["city center / business district"],
         "land": ["commercial"],
+        "date": null
+      }
+    ]
+  },
+  "Green Oaks, IL": {
+    "place": {
+      "name": "Green Oaks",
+      "state": "IL",
+      "country": "US",
+      "type": "city",
+      "pop": 4128,
+      "coord": [-87.91311828063661, 42.2979712],
+      "repeal": false
+    },
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["main street / special"],
+        "land": ["residential, low-density", "residential, multi-family"],
         "date": null
       }
     ]
@@ -27412,6 +28768,25 @@
       }
     ]
   },
+  "Grey Highlands, ON": {
+    "place": {
+      "name": "Grey Highlands",
+      "state": "ON",
+      "country": "CA",
+      "type": "city",
+      "pop": 10424,
+      "coord": [-80.46038959610259, 44.35654685],
+      "repeal": false
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["all uses"],
+        "date": null
+      }
+    ]
+  },
   "Gridley, IL": {
     "place": {
       "name": "Gridley",
@@ -27563,6 +28938,33 @@
       "coord": [-92.7685327, 42.3616501],
       "repeal": false
     },
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["all uses"],
+        "date": null
+      }
+    ]
+  },
+  "Guilford, CT": {
+    "place": {
+      "name": "Guilford",
+      "state": "CT",
+      "country": "US",
+      "type": "city",
+      "pop": 22073,
+      "coord": [-72.6816365, 41.2827593],
+      "repeal": false
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["all uses"],
+        "date": null
+      }
+    ],
     "rm_min": [
       {
         "status": "adopted",
@@ -27830,6 +29232,25 @@
       {
         "status": "proposed",
         "scope": ["main street / special"],
+        "land": ["all uses"],
+        "date": null
+      }
+    ]
+  },
+  "Hamden, CT": {
+    "place": {
+      "name": "Hamden",
+      "state": "CT",
+      "country": "US",
+      "type": "city",
+      "pop": 61169,
+      "coord": [-72.8968574, 41.3959302],
+      "repeal": false
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
         "land": ["all uses"],
         "date": null
       }
@@ -28172,6 +29593,25 @@
         "scope": ["citywide"],
         "land": ["all uses"],
         "date": "2024-12-03"
+      }
+    ]
+  },
+  "Hanover, ON": {
+    "place": {
+      "name": "Hanover",
+      "state": "ON",
+      "country": "CA",
+      "type": "city",
+      "pop": 7967,
+      "coord": [-81.0279572, 44.1520712],
+      "repeal": false
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["all uses"],
+        "date": null
       }
     ]
   },
@@ -29141,6 +30581,25 @@
       }
     ]
   },
+  "Hearst, ON": {
+    "place": {
+      "name": "Hearst",
+      "state": "ON",
+      "country": "CA",
+      "type": "city",
+      "pop": 4794,
+      "coord": [-83.666382, 49.690732],
+      "repeal": false
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["all uses"],
+        "date": null
+      }
+    ]
+  },
   "Hebron, CT": {
     "place": {
       "name": "Hebron",
@@ -29233,6 +30692,25 @@
       {
         "status": "adopted",
         "scope": ["city center / business district"],
+        "land": ["all uses"],
+        "date": null
+      }
+    ]
+  },
+  "Helper, UT": {
+    "place": {
+      "name": "Helper",
+      "state": "UT",
+      "country": "US",
+      "type": "city",
+      "pop": 2112,
+      "coord": [-110.854605, 39.6841305],
+      "repeal": false
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district", "citywide"],
         "land": ["all uses"],
         "date": null
       }
@@ -29928,6 +31406,25 @@
       }
     ]
   },
+  "Hilton Beach, ON": {
+    "place": {
+      "name": "Hilton Beach",
+      "state": "ON",
+      "country": "CA",
+      "type": "city",
+      "pop": 198,
+      "coord": [-83.888585, 46.256732],
+      "repeal": false
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["all uses"],
+        "date": null
+      }
+    ]
+  },
   "Hinckley, MN": {
     "place": {
       "name": "Hinckley",
@@ -30470,6 +31967,25 @@
       }
     ]
   },
+  "Howick, ON": {
+    "place": {
+      "name": "Howick",
+      "state": "ON",
+      "country": "CA",
+      "type": "city",
+      "pop": 4045,
+      "coord": [-81.06960637633733, 43.89460115],
+      "repeal": false
+    },
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["commercial", "other"],
+        "date": null
+      }
+    ]
+  },
   "Huachuca City, AZ": {
     "place": {
       "name": "Huachuca City",
@@ -30909,6 +32425,25 @@
       }
     ]
   },
+  "Huntsville, ON": {
+    "place": {
+      "name": "Huntsville",
+      "state": "ON",
+      "country": "CA",
+      "type": "city",
+      "pop": 21147,
+      "coord": [-79.218434, 45.3263919],
+      "repeal": false
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["all uses"],
+        "date": null
+      }
+    ]
+  },
   "Hurley, SD": {
     "place": {
       "name": "Hurley",
@@ -30943,6 +32478,25 @@
         "status": "adopted",
         "scope": ["city center / business district"],
         "land": ["commercial", "other"],
+        "date": null
+      }
+    ]
+  },
+  "Huron East, ON": {
+    "place": {
+      "name": "Huron East",
+      "state": "ON",
+      "country": "CA",
+      "type": "city",
+      "pop": 9512,
+      "coord": [-81.29221638447679, 43.6213738],
+      "repeal": false
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["commercial"],
         "date": null
       }
     ]
@@ -31394,6 +32948,25 @@
         "status": "adopted",
         "scope": ["city center / business district"],
         "land": ["commercial"],
+        "date": null
+      }
+    ]
+  },
+  "Innisfil, ON": {
+    "place": {
+      "name": "Innisfil",
+      "state": "ON",
+      "country": "CA",
+      "type": "city",
+      "pop": 43326,
+      "coord": [-79.5461073, 44.3150892],
+      "repeal": false
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["main street / special"],
+        "land": ["commercial", "other"],
         "date": null
       }
     ]
@@ -32495,6 +34068,25 @@
       }
     ]
   },
+  "Jocelyn, ON": {
+    "place": {
+      "name": "Jocelyn",
+      "state": "ON",
+      "country": "CA",
+      "type": "city",
+      "pop": 314,
+      "coord": [-83.93914730776659, 46.1394948],
+      "repeal": false
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["all uses"],
+        "date": null
+      }
+    ]
+  },
   "Johannesburg, GP": {
     "place": {
       "name": "Johannesburg",
@@ -33111,6 +34703,25 @@
       }
     ]
   },
+  "Kaysville, UT": {
+    "place": {
+      "name": "Kaysville",
+      "state": "UT",
+      "country": "US",
+      "type": "city",
+      "pop": 32945,
+      "coord": [-111.9383931, 41.0349847],
+      "repeal": false
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["main street / special"],
+        "land": ["all uses"],
+        "date": null
+      }
+    ]
+  },
   "Kearney, NE": {
     "place": {
       "name": "Kearney",
@@ -33547,6 +35158,25 @@
       }
     ]
   },
+  "Killarney, ON": {
+    "place": {
+      "name": "Killarney",
+      "state": "ON",
+      "country": "CA",
+      "type": "city",
+      "pop": 397,
+      "coord": [-81.41292673215838, 46.1020936],
+      "repeal": false
+    },
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["main street / special"],
+        "land": ["all uses"],
+        "date": null
+      }
+    ]
+  },
   "Killeen, TX": {
     "place": {
       "name": "Killeen",
@@ -33561,6 +35191,25 @@
       {
         "status": "adopted",
         "scope": ["city center / business district"],
+        "land": ["all uses"],
+        "date": null
+      }
+    ]
+  },
+  "Killingworth, CT": {
+    "place": {
+      "name": "Killingworth",
+      "state": "CT",
+      "country": "US",
+      "type": "city",
+      "pop": 6174,
+      "coord": [-72.5637023, 41.3581545],
+      "repeal": false
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
         "land": ["all uses"],
         "date": null
       }
@@ -33600,6 +35249,25 @@
         "status": "adopted",
         "scope": ["main street / special"],
         "land": ["commercial", "other"],
+        "date": null
+      }
+    ]
+  },
+  "Kincardine, ON": {
+    "place": {
+      "name": "Kincardine",
+      "state": "ON",
+      "country": "CA",
+      "type": "city",
+      "pop": 12268,
+      "coord": [-81.6348713, 44.1776378],
+      "repeal": false
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["all uses"],
         "date": null
       }
     ]
@@ -33801,6 +35469,25 @@
       }
     ]
   },
+  "Kingsville, ON": {
+    "place": {
+      "name": "Kingsville",
+      "state": "ON",
+      "country": "CA",
+      "type": "city",
+      "pop": 22119,
+      "coord": [-82.7396606, 42.0378963],
+      "repeal": false
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["commercial", "other"],
+        "date": null
+      }
+    ]
+  },
   "Kiowa, KS": {
     "place": {
       "name": "Kiowa",
@@ -33816,6 +35503,25 @@
         "status": "adopted",
         "scope": ["city center / business district"],
         "land": ["all uses"],
+        "date": null
+      }
+    ]
+  },
+  "Kirkland Lake, ON": {
+    "place": {
+      "name": "Kirkland Lake",
+      "state": "ON",
+      "country": "CA",
+      "type": "city",
+      "pop": 7750,
+      "coord": [-80.031281, 48.154177],
+      "repeal": false
+    },
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["commercial", "other"],
         "date": null
       }
     ]
@@ -34166,6 +35872,29 @@
           "other",
           "residential, multi-family"
         ],
+        "date": null
+      }
+    ]
+  },
+  "Kuna, ID": {
+    "place": {
+      "name": "Kuna",
+      "state": "ID",
+      "country": "US",
+      "type": "city",
+      "pop": 24011,
+      "coord": [-116.420122, 43.4918307],
+      "repeal": false
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": [
+          "city center / business district",
+          "citywide",
+          "main street / special"
+        ],
+        "land": ["all uses"],
         "date": null
       }
     ]
@@ -35107,6 +36836,25 @@
       }
     ]
   },
+  "Lake of Bays, ON": {
+    "place": {
+      "name": "Lake of Bays",
+      "state": "ON",
+      "country": "CA",
+      "type": "city",
+      "pop": 3759,
+      "coord": [-79.005432, 45.327048],
+      "repeal": false
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["main street / special"],
+        "land": ["commercial"],
+        "date": null
+      }
+    ]
+  },
   "Lakeland, FL": {
     "place": {
       "name": "Lakeland",
@@ -35172,6 +36920,25 @@
         "status": "adopted",
         "scope": ["city center / business district"],
         "land": ["commercial", "industrial", "other"],
+        "date": null
+      }
+    ]
+  },
+  "Lakeshore, ON": {
+    "place": {
+      "name": "Lakeshore",
+      "state": "ON",
+      "country": "CA",
+      "type": "city",
+      "pop": 40410,
+      "coord": [-82.8189267, 42.3038299],
+      "repeal": false
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["commercial", "other"],
         "date": null
       }
     ]
@@ -35328,6 +37095,25 @@
       "repeal": false
     },
     "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["all uses"],
+        "date": null
+      }
+    ]
+  },
+  "Lambton Shores, ON": {
+    "place": {
+      "name": "Lambton Shores",
+      "state": "ON",
+      "country": "CA",
+      "type": "city",
+      "pop": 11876,
+      "coord": [-81.90202425000001, 43.19264175],
+      "repeal": false
+    },
+    "reduce_min": [
       {
         "status": "adopted",
         "scope": ["city center / business district"],
@@ -35701,6 +37487,25 @@
         "status": "adopted",
         "scope": ["city center / business district"],
         "land": ["commercial"],
+        "date": null
+      }
+    ]
+  },
+  "Larder Lake, ON": {
+    "place": {
+      "name": "Larder Lake",
+      "state": "ON",
+      "country": "CA",
+      "type": "city",
+      "pop": 745,
+      "coord": [-79.712342, 48.099217],
+      "repeal": false
+    },
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["main street / special"],
+        "land": ["commercial", "other"],
         "date": null
       }
     ]
@@ -36079,6 +37884,33 @@
       }
     ]
   },
+  "Layton, UT": {
+    "place": {
+      "name": "Layton",
+      "state": "UT",
+      "country": "US",
+      "type": "city",
+      "pop": 81773,
+      "coord": [-111.9741925, 41.0751048],
+      "repeal": false
+    },
+    "add_max": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["all uses"],
+        "date": null
+      }
+    ],
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district", "citywide"],
+        "land": ["all uses"],
+        "date": null
+      }
+    ]
+  },
   "Le Claire, IA": {
     "place": {
       "name": "Le Claire",
@@ -36140,6 +37972,25 @@
         "status": "adopted",
         "scope": ["citywide"],
         "land": ["residential, low-density"],
+        "date": null
+      }
+    ]
+  },
+  "Leamington, ON": {
+    "place": {
+      "name": "Leamington",
+      "state": "ON",
+      "country": "CA",
+      "type": "city",
+      "pop": 29680,
+      "coord": [-82.5996998, 42.0531166],
+      "repeal": false
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["all uses"],
         "date": null
       }
     ]
@@ -37154,6 +39005,25 @@
       }
     ]
   },
+  "Lindsay, ON": {
+    "place": {
+      "name": "Lindsay",
+      "state": "ON",
+      "country": "CA",
+      "type": "city",
+      "pop": 22367,
+      "coord": [-78.7369939, 44.3551266],
+      "repeal": false
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["all uses"],
+        "date": null
+      }
+    ]
+  },
   "Lindstrom, MN": {
     "place": {
       "name": "Lindstrom",
@@ -37491,6 +39361,33 @@
         "status": "adopted",
         "scope": ["city center / business district"],
         "land": ["all uses"],
+        "date": null
+      }
+    ]
+  },
+  "Logan, UT": {
+    "place": {
+      "name": "Logan",
+      "state": "UT",
+      "country": "US",
+      "type": "city",
+      "pop": 52778,
+      "coord": [-111.834914, 41.7313063],
+      "repeal": false
+    },
+    "add_max": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["all uses"],
+        "date": null
+      }
+    ],
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district", "citywide"],
+        "land": ["all uses", "commercial"],
         "date": null
       }
     ]
@@ -38539,7 +40436,7 @@
       "country": "US",
       "type": "county",
       "pop": 59235,
-      "coord": [-119.1822042, 38.9887898],
+      "coord": [-119.198223, 39.135398],
       "repeal": false
     },
     "add_max": [
@@ -38845,6 +40742,25 @@
         "status": "adopted",
         "scope": ["city center / business district"],
         "land": ["all uses"],
+        "date": null
+      }
+    ]
+  },
+  "Magnetawan, ON": {
+    "place": {
+      "name": "Magnetawan",
+      "state": "ON",
+      "country": "CA",
+      "type": "city",
+      "pop": 1753,
+      "coord": [-79.6438541, 45.6651963],
+      "repeal": false
+    },
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["commercial"],
         "date": null
       }
     ]
@@ -39978,6 +41894,25 @@
       }
     ]
   },
+  "Markstay-Warren, ON": {
+    "place": {
+      "name": "Markstay-Warren",
+      "state": "ON",
+      "country": "CA",
+      "type": "city",
+      "pop": 2708,
+      "coord": [-80.49241648711632, 46.493508750000004],
+      "repeal": false
+    },
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["main street / special"],
+        "land": ["all uses"],
+        "date": null
+      }
+    ]
+  },
   "Marlborough, CT": {
     "place": {
       "name": "Marlborough",
@@ -40424,6 +42359,44 @@
         "status": "adopted",
         "scope": ["city center / business district"],
         "land": ["commercial", "other"],
+        "date": null
+      }
+    ]
+  },
+  "Matherville, IL": {
+    "place": {
+      "name": "Matherville",
+      "state": "IL",
+      "country": "US",
+      "type": "city",
+      "pop": 707,
+      "coord": [-90.6079133, 41.2597571],
+      "repeal": false
+    },
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["all uses"],
+        "date": null
+      }
+    ]
+  },
+  "Mattawa, ON": {
+    "place": {
+      "name": "Mattawa",
+      "state": "ON",
+      "country": "CA",
+      "type": "city",
+      "pop": 1881,
+      "coord": [-78.703308, 46.317296],
+      "repeal": false
+    },
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["commercial"],
         "date": null
       }
     ]
@@ -40894,6 +42867,25 @@
       }
     ]
   },
+  "McGarry, ON": {
+    "place": {
+      "name": "McGarry",
+      "state": "ON",
+      "country": "CA",
+      "type": "city",
+      "pop": 579,
+      "coord": [-79.58429076884471, 48.14980105],
+      "repeal": false
+    },
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["commercial", "other"],
+        "date": null
+      }
+    ]
+  },
   "McGregor, IA": {
     "place": {
       "name": "McGregor",
@@ -41051,6 +43043,25 @@
         "scope": ["city center / business district", "citywide"],
         "land": ["commercial", "other"],
         "date": "2024-02-06"
+      }
+    ]
+  },
+  "Meaford, ON": {
+    "place": {
+      "name": "Meaford",
+      "state": "ON",
+      "country": "CA",
+      "type": "city",
+      "pop": 11485,
+      "coord": [-80.5916531, 44.6069298],
+      "repeal": false
+    },
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["commercial", "other"],
+        "date": null
       }
     ]
   },
@@ -41558,6 +43569,29 @@
       }
     ]
   },
+  "Meridian, ID": {
+    "place": {
+      "name": "Meridian",
+      "state": "ID",
+      "country": "US",
+      "type": "city",
+      "pop": 117635,
+      "coord": [-116.392326, 43.6086295],
+      "repeal": false
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": [
+          "city center / business district",
+          "citywide",
+          "main street / special"
+        ],
+        "land": ["all uses"],
+        "date": null
+      }
+    ]
+  },
   "Meridian, MS": {
     "place": {
       "name": "Meridian",
@@ -41940,6 +43974,25 @@
       }
     ]
   },
+  "Middlebury, CT": {
+    "place": {
+      "name": "Middlebury",
+      "state": "CT",
+      "country": "US",
+      "type": "city",
+      "pop": 7574,
+      "coord": [-73.1276107, 41.5278742],
+      "repeal": false
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["all uses"],
+        "date": null
+      }
+    ]
+  },
   "Middletown, CT": {
     "place": {
       "name": "Middletown",
@@ -42121,6 +44174,25 @@
           "residential, all uses",
           "residential, multi-family"
         ],
+        "date": null
+      }
+    ]
+  },
+  "Midland, ON": {
+    "place": {
+      "name": "Midland",
+      "state": "ON",
+      "country": "CA",
+      "type": "city",
+      "pop": 17817,
+      "coord": [-79.885712, 44.750147],
+      "repeal": false
+    },
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["all uses"],
         "date": null
       }
     ]
@@ -42358,6 +44430,25 @@
         "scope": ["citywide", "main street / special"],
         "land": ["all uses", "residential, low-density"],
         "date": "1999-05-04"
+      }
+    ]
+  },
+  "Milford, UT": {
+    "place": {
+      "name": "Milford",
+      "state": "UT",
+      "country": "US",
+      "type": "city",
+      "pop": 1431,
+      "coord": [-113.010789, 38.3969108],
+      "repeal": false
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["all uses"],
+        "date": null
       }
     ]
   },
@@ -43631,6 +45722,25 @@
       }
     ]
   },
+  "Montpelier, ID": {
+    "place": {
+      "name": "Montpelier",
+      "state": "ID",
+      "country": "US",
+      "type": "city",
+      "pop": 2643,
+      "coord": [-111.2977044, 42.3221498],
+      "repeal": false
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["commercial"],
+        "date": null
+      }
+    ]
+  },
   "Montpelier, VT": {
     "place": {
       "name": "Montpelier",
@@ -44721,6 +46831,25 @@
       }
     ]
   },
+  "Mt. Morris, IL": {
+    "place": {
+      "name": "Mt. Morris",
+      "state": "IL",
+      "country": "US",
+      "type": "city",
+      "pop": 2861,
+      "coord": [-89.4312201, 42.0503062],
+      "repeal": false
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["commercial"],
+        "date": null
+      }
+    ]
+  },
   "Mt. Olive, MS": {
     "place": {
       "name": "Mt. Olive",
@@ -45285,6 +47414,25 @@
       {
         "status": "adopted",
         "scope": ["city center / business district"],
+        "land": ["all uses"],
+        "date": null
+      }
+    ]
+  },
+  "Muskoka Lakes, ON": {
+    "place": {
+      "name": "Muskoka Lakes",
+      "state": "ON",
+      "country": "CA",
+      "type": "city",
+      "pop": 7652,
+      "coord": [-79.56598810161641, 45.1178146],
+      "repeal": false
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["main street / special"],
         "land": ["all uses"],
         "date": null
       }
@@ -45867,6 +48015,25 @@
       }
     ],
     "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["all uses"],
+        "date": null
+      }
+    ]
+  },
+  "New Athens, IL": {
+    "place": {
+      "name": "New Athens",
+      "state": "IL",
+      "country": "US",
+      "type": "city",
+      "pop": 1955,
+      "coord": [-89.8770468, 38.3264383],
+      "repeal": false
+    },
+    "rm_min": [
       {
         "status": "adopted",
         "scope": ["citywide"],
@@ -46556,6 +48723,25 @@
       }
     ]
   },
+  "New Milford, IL": {
+    "place": {
+      "name": "New Milford",
+      "state": "IL",
+      "country": "US",
+      "type": "city",
+      "pop": 794,
+      "coord": [-89.05669931869377, 42.1798043],
+      "repeal": false
+    },
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["all uses"],
+        "date": null
+      }
+    ]
+  },
   "New Morgan, PA": {
     "place": {
       "name": "New Morgan",
@@ -46734,6 +48920,33 @@
       "coord": [-95.7419311, 38.2625197],
       "repeal": false
     },
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["commercial"],
+        "date": null
+      }
+    ]
+  },
+  "New Tecumseth, ON": {
+    "place": {
+      "name": "New Tecumseth",
+      "state": "ON",
+      "country": "CA",
+      "type": "city",
+      "pop": 43948,
+      "coord": [-79.77443058053504, 44.0818996],
+      "repeal": false
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["all uses", "commercial"],
+        "date": null
+      }
+    ],
     "rm_min": [
       {
         "status": "adopted",
@@ -47217,6 +49430,25 @@
       }
     ]
   },
+  "Nipigon, ON": {
+    "place": {
+      "name": "Nipigon",
+      "state": "ON",
+      "country": "CA",
+      "type": "city",
+      "pop": 1473,
+      "coord": [-88.2662307, 49.0149827],
+      "repeal": false
+    },
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["commercial"],
+        "date": null
+      }
+    ]
+  },
   "Noble, IL": {
     "place": {
       "name": "Noble",
@@ -47436,6 +49668,33 @@
       }
     ]
   },
+  "North Bay, ON": {
+    "place": {
+      "name": "North Bay",
+      "state": "ON",
+      "country": "CA",
+      "type": "city",
+      "pop": 52662,
+      "coord": [-79.4607617, 46.3092115],
+      "repeal": false
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["all uses"],
+        "date": null
+      }
+    ],
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["commercial", "other", "residential, all uses"],
+        "date": null
+      }
+    ]
+  },
   "North Beach, MD": {
     "place": {
       "name": "North Beach",
@@ -47592,6 +49851,25 @@
         "status": "adopted",
         "scope": ["city center / business district"],
         "land": ["all uses"],
+        "date": null
+      }
+    ]
+  },
+  "North Huron, ON": {
+    "place": {
+      "name": "North Huron",
+      "state": "ON",
+      "country": "CA",
+      "type": "city",
+      "pop": 5052,
+      "coord": [-81.42655978902513, 43.8249172],
+      "repeal": false
+    },
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["commercial", "other"],
         "date": null
       }
     ]
@@ -48855,6 +51133,25 @@
       }
     ]
   },
+  "Oil Springs, ON": {
+    "place": {
+      "name": "Oil Springs",
+      "state": "ON",
+      "country": "CA",
+      "type": "city",
+      "pop": 647,
+      "coord": [-82.126915, 42.7838172],
+      "repeal": false
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["all uses", "commercial", "other"],
+        "date": null
+      }
+    ]
+  },
   "Okemah, OK": {
     "place": {
       "name": "Okemah",
@@ -48907,6 +51204,44 @@
       {
         "status": "adopted",
         "scope": ["city center / business district"],
+        "land": ["all uses"],
+        "date": null
+      }
+    ]
+  },
+  "Old Lyme, CT": {
+    "place": {
+      "name": "Old Lyme",
+      "state": "CT",
+      "country": "US",
+      "type": "city",
+      "pop": 7628,
+      "coord": [-72.3289715, 41.3159315],
+      "repeal": false
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["main street / special"],
+        "land": ["commercial"],
+        "date": null
+      }
+    ]
+  },
+  "Old Saybrook, CT": {
+    "place": {
+      "name": "Old Saybrook",
+      "state": "CT",
+      "country": "US",
+      "type": "city",
+      "pop": 10481,
+      "coord": [-72.3761956, 41.2917652],
+      "repeal": false
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide", "main street / special"],
         "land": ["all uses"],
         "date": null
       }
@@ -49050,6 +51385,25 @@
         "scope": ["city center / business district", "transit-oriented"],
         "land": ["all uses"],
         "date": null
+      }
+    ]
+  },
+  "Onalaska, WI": {
+    "place": {
+      "name": "Onalaska",
+      "state": "WI",
+      "country": "US",
+      "type": "city",
+      "pop": 18803,
+      "coord": [-91.2343539, 43.8830606],
+      "repeal": false
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["commercial", "other"],
+        "date": "2022-07-12"
       }
     ]
   },
@@ -49264,6 +51618,25 @@
       }
     ]
   },
+  "Orange, CT": {
+    "place": {
+      "name": "Orange",
+      "state": "CT",
+      "country": "US",
+      "type": "city",
+      "pop": 14280,
+      "coord": [-73.0256609, 41.2784304],
+      "repeal": false
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["all uses"],
+        "date": null
+      }
+    ]
+  },
   "Oregon, IL": {
     "place": {
       "name": "Oregon",
@@ -49343,6 +51716,33 @@
       }
     ]
   },
+  "Orillia, ON": {
+    "place": {
+      "name": "Orillia",
+      "state": "ON",
+      "country": "CA",
+      "type": "city",
+      "pop": 33411,
+      "coord": [-79.4169256, 44.6066135],
+      "repeal": false
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district", "citywide"],
+        "land": ["all uses", "residential, all uses"],
+        "date": null
+      }
+    ],
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["main street / special"],
+        "land": ["commercial", "other", "residential, all uses"],
+        "date": null
+      }
+    ]
+  },
   "Orion, IL": {
     "place": {
       "name": "Orion",
@@ -49412,6 +51812,25 @@
         "status": "adopted",
         "scope": ["citywide"],
         "land": ["commercial", "industrial", "medical", "other"],
+        "date": null
+      }
+    ]
+  },
+  "Oro-Medonte, ON": {
+    "place": {
+      "name": "Oro-Medonte",
+      "state": "ON",
+      "country": "CA",
+      "type": "city",
+      "pop": 23017,
+      "coord": [-79.54891085886374, 44.5445701],
+      "repeal": false
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["all uses"],
         "date": null
       }
     ]
@@ -49868,6 +52287,33 @@
       }
     ]
   },
+  "Owen Sound, ON": {
+    "place": {
+      "name": "Owen Sound",
+      "state": "ON",
+      "country": "CA",
+      "type": "city",
+      "pop": 21612,
+      "coord": [-80.9430094, 44.5678105],
+      "repeal": false
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["commercial", "other", "residential, all uses"],
+        "date": null
+      }
+    ],
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["other"],
+        "date": null
+      }
+    ]
+  },
   "Owensboro, KY": {
     "place": {
       "name": "Owensboro",
@@ -49936,6 +52382,25 @@
       "repeal": false
     },
     "add_max": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["all uses"],
+        "date": null
+      }
+    ]
+  },
+  "Oxford, CT": {
+    "place": {
+      "name": "Oxford",
+      "state": "CT",
+      "country": "US",
+      "type": "city",
+      "pop": 12706,
+      "coord": [-73.1172769, 41.4351795],
+      "repeal": false
+    },
+    "reduce_min": [
       {
         "status": "adopted",
         "scope": ["citywide"],
@@ -50619,6 +53084,25 @@
       }
     ]
   },
+  "Parry Sound, ON": {
+    "place": {
+      "name": "Parry Sound",
+      "state": "ON",
+      "country": "CA",
+      "type": "city",
+      "pop": 6879,
+      "coord": [-80.033903, 45.343613],
+      "repeal": false
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district", "citywide"],
+        "land": ["all uses", "commercial", "other"],
+        "date": null
+      }
+    ]
+  },
   "Parsons, KS": {
     "place": {
       "name": "Parsons",
@@ -50761,6 +53245,25 @@
         "status": "adopted",
         "scope": ["city center / business district"],
         "land": ["commercial", "other", "residential, all uses"],
+        "date": null
+      }
+    ]
+  },
+  "Patagonia, AZ": {
+    "place": {
+      "name": "Patagonia",
+      "state": "AZ",
+      "country": "US",
+      "type": "city",
+      "pop": 804,
+      "coord": [-110.753927, 31.5402016],
+      "repeal": false
+    },
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["all uses"],
         "date": null
       }
     ]
@@ -50976,6 +53479,25 @@
       }
     ]
   },
+  "Peace River, AB": {
+    "place": {
+      "name": "Peace River",
+      "state": "AB",
+      "country": "CA",
+      "type": "city",
+      "pop": 6619,
+      "coord": [-117.2910839, 56.2337111],
+      "repeal": false
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district", "citywide"],
+        "land": ["all uses"],
+        "date": null
+      }
+    ]
+  },
   "Peachtree Corners, GA": {
     "place": {
       "name": "Peachtree Corners",
@@ -51162,12 +53684,20 @@
       "coord": [-79.9339487, 44.7688035],
       "repeal": false
     },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district", "citywide"],
+        "land": ["commercial", "other", "residential, multi-family"],
+        "date": null
+      }
+    ],
     "rm_min": [
       {
         "status": "adopted",
         "scope": ["city center / business district"],
-        "land": ["commercial", "industrial", "other"],
-        "date": null
+        "land": ["commercial", "other"],
+        "date": "2014-06-11"
       }
     ]
   },
@@ -51620,6 +54150,25 @@
         "status": "adopted",
         "scope": ["city center / business district"],
         "land": ["all uses"],
+        "date": null
+      }
+    ]
+  },
+  "Petrolia, ON": {
+    "place": {
+      "name": "Petrolia",
+      "state": "ON",
+      "country": "CA",
+      "type": "city",
+      "pop": 6013,
+      "coord": [-82.149582, 42.882002],
+      "repeal": false
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["all uses", "commercial", "other"],
         "date": null
       }
     ]
@@ -52487,6 +55036,25 @@
       }
     ]
   },
+  "Plummer, ID": {
+    "place": {
+      "name": "Plummer",
+      "state": "ID",
+      "country": "US",
+      "type": "city",
+      "pop": 1015,
+      "coord": [-116.888509, 47.3351803],
+      "repeal": false
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["commercial"],
+        "date": null
+      }
+    ]
+  },
   "Plymouth Township, PA": {
     "place": {
       "name": "Plymouth Township",
@@ -52533,6 +55101,25 @@
       "type": "city",
       "pop": 8932,
       "coord": [-87.977038, 43.7486054],
+      "repeal": false
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["all uses"],
+        "date": null
+      }
+    ]
+  },
+  "Plympton-Wyoming, ON": {
+    "place": {
+      "name": "Plympton-Wyoming",
+      "state": "ON",
+      "country": "CA",
+      "type": "city",
+      "pop": 8308,
+      "coord": [-82.1529152, 43.0699736],
       "repeal": false
     },
     "reduce_min": [
@@ -52592,6 +55179,33 @@
       "coord": [-75.5679832, 38.075684],
       "repeal": false
     },
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["all uses"],
+        "date": null
+      }
+    ]
+  },
+  "Point Edward, ON": {
+    "place": {
+      "name": "Point Edward",
+      "state": "ON",
+      "country": "CA",
+      "type": "city",
+      "pop": 1930,
+      "coord": [-82.4132944, 42.997903],
+      "repeal": false
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["commercial", "other"],
+        "date": null
+      }
+    ],
     "rm_min": [
       {
         "status": "adopted",
@@ -53128,6 +55742,33 @@
       }
     ]
   },
+  "Portland, CT": {
+    "place": {
+      "name": "Portland",
+      "state": "CT",
+      "country": "US",
+      "type": "city",
+      "pop": 9384,
+      "coord": [-72.6406905, 41.5728924],
+      "repeal": false
+    },
+    "add_max": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["all uses"],
+        "date": null
+      }
+    ],
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district", "main street / special"],
+        "land": ["all uses"],
+        "date": null
+      }
+    ]
+  },
   "Portland, ME": {
     "place": {
       "name": "Portland",
@@ -53559,6 +56200,25 @@
         "status": "adopted",
         "scope": ["citywide"],
         "land": ["all uses"],
+        "date": null
+      }
+    ]
+  },
+  "Princeton, BC": {
+    "place": {
+      "name": "Princeton",
+      "state": "BC",
+      "country": "CA",
+      "type": "city",
+      "pop": 2894,
+      "coord": [-120.507973, 49.460459],
+      "repeal": false
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district", "main street / special"],
+        "land": ["all uses", "residential, all uses"],
         "date": null
       }
     ]
@@ -55410,6 +58070,25 @@
       }
     ]
   },
+  "River Heights, UT": {
+    "place": {
+      "name": "River Heights",
+      "state": "UT",
+      "country": "US",
+      "type": "city",
+      "pop": 2144,
+      "coord": [-111.821417, 41.7218845],
+      "repeal": false
+    },
+    "add_max": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["all uses"],
+        "date": null
+      }
+    ]
+  },
   "River Rouge, MI": {
     "place": {
       "name": "River Rouge",
@@ -56637,6 +59316,32 @@
         "scope": ["city center / business district"],
         "land": ["all uses", "commercial"],
         "date": "2021-10-05"
+      }
+    ]
+  },
+  "Roxana, IL": {
+    "place": {
+      "name": "Roxana",
+      "state": "IL",
+      "country": "US",
+      "type": "city",
+      "pop": 1454,
+      "coord": [-90.0768875, 38.8482602],
+      "repeal": false
+    },
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": [
+          "commercial",
+          "industrial",
+          "medical",
+          "other",
+          "residential, low-density",
+          "residential, multi-family"
+        ],
+        "date": null
       }
     ]
   },
@@ -58201,6 +60906,25 @@
       }
     ]
   },
+  "Saugeen Shores, ON": {
+    "place": {
+      "name": "Saugeen Shores",
+      "state": "ON",
+      "country": "CA",
+      "type": "city",
+      "pop": 15908,
+      "coord": [-81.3713261, 44.4952483],
+      "repeal": false
+    },
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["commercial", "other"],
+        "date": null
+      }
+    ]
+  },
   "Sauk City, WI": {
     "place": {
       "name": "Sauk City",
@@ -58812,6 +61536,25 @@
       }
     ]
   },
+  "Seguin, ON": {
+    "place": {
+      "name": "Seguin",
+      "state": "ON",
+      "country": "CA",
+      "type": "city",
+      "pop": 5280,
+      "coord": [-79.85287932874844, 45.321133599999996],
+      "repeal": false
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["all uses"],
+        "date": null
+      }
+    ]
+  },
   "Seligman, MO": {
     "place": {
       "name": "Seligman",
@@ -59098,6 +61841,25 @@
         "status": "adopted",
         "scope": ["main street / special"],
         "land": ["commercial", "other"],
+        "date": null
+      }
+    ]
+  },
+  "Seymour, CT": {
+    "place": {
+      "name": "Seymour",
+      "state": "CT",
+      "country": "US",
+      "type": "city",
+      "pop": 16748,
+      "coord": [-73.0741697, 41.3943578],
+      "repeal": false
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["all uses"],
         "date": null
       }
     ]
@@ -60256,6 +63018,25 @@
       }
     ]
   },
+  "Sioux Lookout, ON": {
+    "place": {
+      "name": "Sioux Lookout",
+      "state": "ON",
+      "country": "CA",
+      "type": "city",
+      "pop": 5839,
+      "coord": [-91.9190268, 50.1000964],
+      "repeal": false
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district", "citywide"],
+        "land": ["all uses", "commercial", "other", "residential, all uses"],
+        "date": null
+      }
+    ]
+  },
   "Siren, WI": {
     "place": {
       "name": "Siren",
@@ -60459,6 +63240,25 @@
       }
     ]
   },
+  "Smithfield, UT": {
+    "place": {
+      "name": "Smithfield",
+      "state": "UT",
+      "country": "US",
+      "type": "city",
+      "pop": 13571,
+      "coord": [-111.832804, 41.838429],
+      "repeal": false
+    },
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["main street / special"],
+        "land": ["commercial", "other"],
+        "date": null
+      }
+    ]
+  },
   "Smithsburg, MD": {
     "place": {
       "name": "Smithsburg",
@@ -60512,6 +63312,25 @@
         "status": "adopted",
         "scope": ["city center / business district"],
         "land": ["all uses"],
+        "date": null
+      }
+    ]
+  },
+  "Smooth Rock Falls, ON": {
+    "place": {
+      "name": "Smooth Rock Falls",
+      "state": "ON",
+      "country": "CA",
+      "type": "city",
+      "pop": 1200,
+      "coord": [-81.6311885, 49.2768],
+      "repeal": false
+    },
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["main street / special"],
+        "land": ["commercial"],
         "date": null
       }
     ]
@@ -60825,6 +63644,44 @@
       }
     ]
   },
+  "South Bruce Peninsula, ON": {
+    "place": {
+      "name": "South Bruce Peninsula",
+      "state": "ON",
+      "country": "CA",
+      "type": "city",
+      "pop": 9137,
+      "coord": [-81.268759, 44.6310905],
+      "repeal": false
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["all uses"],
+        "date": null
+      }
+    ]
+  },
+  "South Bruce, ON": {
+    "place": {
+      "name": "South Bruce",
+      "state": "ON",
+      "country": "CA",
+      "type": "city",
+      "pop": 5880,
+      "coord": [-81.19888638182067, 44.0319668],
+      "repeal": false
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["all uses"],
+        "date": null
+      }
+    ]
+  },
   "South Burlington, VT": {
     "place": {
       "name": "South Burlington",
@@ -60981,6 +63838,25 @@
       }
     ]
   },
+  "South Huron, ON": {
+    "place": {
+      "name": "South Huron",
+      "state": "ON",
+      "country": "CA",
+      "type": "city",
+      "pop": 10063,
+      "coord": [-81.52918451168405, 43.33238105],
+      "repeal": false
+    },
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["commercial", "other"],
+        "date": null
+      }
+    ]
+  },
   "South Kingstown, RI": {
     "place": {
       "name": "South Kingstown",
@@ -61072,6 +63948,25 @@
         "status": "adopted",
         "scope": ["city center / business district"],
         "land": ["residential, all uses"],
+        "date": null
+      }
+    ]
+  },
+  "South River, ON": {
+    "place": {
+      "name": "South River",
+      "state": "ON",
+      "country": "CA",
+      "type": "city",
+      "pop": 1101,
+      "coord": [-79.380341, 45.841238],
+      "repeal": false
+    },
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["commercial", "other"],
         "date": null
       }
     ]
@@ -61232,6 +64127,52 @@
         "status": "adopted",
         "scope": ["citywide"],
         "land": ["all uses"],
+        "date": null
+      }
+    ]
+  },
+  "Southwest Middlesex, ON": {
+    "place": {
+      "name": "Southwest Middlesex",
+      "state": "ON",
+      "country": "CA",
+      "type": "city",
+      "pop": 5893,
+      "coord": [-81.70352321815045, 42.74257325],
+      "repeal": false
+    },
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["all uses"],
+        "date": null
+      }
+    ]
+  },
+  "Sparks, NV": {
+    "place": {
+      "name": "Sparks",
+      "state": "NV",
+      "country": "US",
+      "type": "city",
+      "pop": 108445,
+      "coord": [-119.7487235, 39.5404679],
+      "repeal": false
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district", "main street / special"],
+        "land": ["all uses", "commercial", "other"],
+        "date": null
+      }
+    ],
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["commercial"],
         "date": null
       }
     ]
@@ -61892,6 +64833,52 @@
       }
     ]
   },
+  "St. Charles, ON": {
+    "place": {
+      "name": "St. Charles",
+      "state": "ON",
+      "country": "CA",
+      "type": "city",
+      "pop": 1357,
+      "coord": [-80.417175, 46.363041],
+      "repeal": false
+    },
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["main street / special"],
+        "land": ["all uses"],
+        "date": null
+      }
+    ]
+  },
+  "St. Clair Township, ON": {
+    "place": {
+      "name": "St. Clair Township",
+      "state": "ON",
+      "country": "CA",
+      "type": "city",
+      "pop": 14659,
+      "coord": [-82.46408292671435, 42.8427145],
+      "repeal": false
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["commercial", "other"],
+        "date": null
+      }
+    ],
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["main street / special"],
+        "land": ["residential, all uses"],
+        "date": null
+      }
+    ]
+  },
   "St. Clair, MI": {
     "place": {
       "name": "St. Clair",
@@ -62289,6 +65276,25 @@
         "status": "adopted",
         "scope": ["city center / business district"],
         "land": ["all uses"],
+        "date": null
+      }
+    ]
+  },
+  "St. Maries, ID": {
+    "place": {
+      "name": "St. Maries",
+      "state": "ID",
+      "country": "US",
+      "type": "city",
+      "pop": 2357,
+      "coord": [-116.562667, 47.3143542],
+      "repeal": false
+    },
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["commercial", "other", "residential, all uses"],
         "date": null
       }
     ]
@@ -62777,6 +65783,25 @@
         "status": "adopted",
         "scope": ["city center / business district"],
         "land": ["commercial"],
+        "date": null
+      }
+    ]
+  },
+  "Star, ID": {
+    "place": {
+      "name": "Star",
+      "state": "ID",
+      "country": "US",
+      "type": "city",
+      "pop": 11117,
+      "coord": [-116.493463, 43.6921071],
+      "repeal": false
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["all uses", "commercial", "other"],
         "date": null
       }
     ]
@@ -63414,6 +66439,25 @@
       }
     ]
   },
+  "Strathroy-Caradoc, ON": {
+    "place": {
+      "name": "Strathroy-Caradoc",
+      "state": "ON",
+      "country": "CA",
+      "type": "city",
+      "pop": 23871,
+      "coord": [-81.55485268973419, 42.9064729],
+      "repeal": false
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["all uses"],
+        "date": null
+      }
+    ]
+  },
   "Stratton, CO": {
     "place": {
       "name": "Stratton",
@@ -63447,6 +66491,25 @@
       {
         "status": "adopted",
         "scope": ["city center / business district"],
+        "land": ["all uses"],
+        "date": null
+      }
+    ]
+  },
+  "Stronghurst, IL": {
+    "place": {
+      "name": "Stronghurst",
+      "state": "IL",
+      "country": "US",
+      "type": "city",
+      "pop": 833,
+      "coord": [-90.9080173, 40.7452012],
+      "repeal": false
+    },
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
         "land": ["all uses"],
         "date": null
       }
@@ -63666,6 +66729,12 @@
         "scope": ["citywide"],
         "land": ["commercial", "residential, multi-family"],
         "date": "2021-10-12"
+      },
+      {
+        "status": "adopted",
+        "scope": ["city center / business district", "citywide"],
+        "land": ["all uses", "commercial", "residential, all uses"],
+        "date": null
       }
     ]
   },
@@ -63878,6 +66947,25 @@
       }
     ]
   },
+  "Sundridge, ON": {
+    "place": {
+      "name": "Sundridge",
+      "state": "ON",
+      "country": "CA",
+      "type": "city",
+      "pop": 938,
+      "coord": [-79.39576851875972, 45.771078900000006],
+      "repeal": false
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["all uses"],
+        "date": null
+      }
+    ]
+  },
   "Sunnyvale, CA": {
     "place": {
       "name": "Sunnyvale",
@@ -63914,6 +67002,25 @@
           "residential, all uses",
           "residential, low-density"
         ],
+        "date": null
+      }
+    ]
+  },
+  "Sunset, UT": {
+    "place": {
+      "name": "Sunset",
+      "state": "UT",
+      "country": "US",
+      "type": "city",
+      "pop": 5475,
+      "coord": [-112.031066, 41.1363376],
+      "repeal": false
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["commercial"],
         "date": null
       }
     ]
@@ -64535,7 +67642,7 @@
       "country": "AU",
       "type": "state",
       "pop": 573479,
-      "coord": [147.32180827127462, -42.906822],
+      "coord": [146.459774, -41.989346],
       "repeal": false
     },
     "reduce_min": [
@@ -64870,6 +67977,25 @@
       }
     ]
   },
+  "Temagami, ON": {
+    "place": {
+      "name": "Temagami",
+      "state": "ON",
+      "country": "CA",
+      "type": "city",
+      "pop": 862,
+      "coord": [-79.789581, 47.062638],
+      "repeal": false
+    },
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["main street / special"],
+        "land": ["all uses"],
+        "date": null
+      }
+    ]
+  },
   "Temecula, CA": {
     "place": {
       "name": "Temecula",
@@ -64878,6 +68004,25 @@
       "type": "city",
       "pop": 114761,
       "coord": [-117.1473661, 33.4946353],
+      "repeal": false
+    },
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["commercial"],
+        "date": null
+      }
+    ]
+  },
+  "Temiskaming Shores, ON": {
+    "place": {
+      "name": "Temiskaming Shores",
+      "state": "ON",
+      "country": "CA",
+      "type": "city",
+      "pop": 9634,
+      "coord": [-79.675598, 47.512563],
       "repeal": false
     },
     "rm_min": [
@@ -65027,6 +68172,44 @@
       }
     ]
   },
+  "The Archipelago, ON": {
+    "place": {
+      "name": "The Archipelago",
+      "state": "ON",
+      "country": "CA",
+      "type": "city",
+      "pop": 979,
+      "coord": [-80.384511, 45.596382],
+      "repeal": false
+    },
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["main street / special"],
+        "land": ["all uses"],
+        "date": null
+      }
+    ]
+  },
+  "The Blue Mountains, ON": {
+    "place": {
+      "name": "The Blue Mountains",
+      "state": "ON",
+      "country": "CA",
+      "type": "city",
+      "pop": 9390,
+      "coord": [-80.388065, 44.489559],
+      "repeal": false
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district", "citywide"],
+        "land": ["all uses", "commercial", "other"],
+        "date": null
+      }
+    ]
+  },
   "The Village, OK": {
     "place": {
       "name": "The Village",
@@ -65096,6 +68279,25 @@
         "date": null
       }
     ],
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["all uses"],
+        "date": null
+      }
+    ]
+  },
+  "Thessalon, ON": {
+    "place": {
+      "name": "Thessalon",
+      "state": "ON",
+      "country": "CA",
+      "type": "city",
+      "pop": 1260,
+      "coord": [-83.5483478, 46.2638311],
+      "repeal": false
+    },
     "rm_min": [
       {
         "status": "adopted",
@@ -68359,6 +71561,25 @@
       }
     ]
   },
+  "Wallingford, CT": {
+    "place": {
+      "name": "Wallingford",
+      "state": "CT",
+      "country": "US",
+      "type": "city",
+      "pop": 44396,
+      "coord": [-72.8231552, 41.4570418],
+      "repeal": false
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["all uses"],
+        "date": null
+      }
+    ]
+  },
   "Walnut Creek, CA": {
     "place": {
       "name": "Walnut Creek",
@@ -68719,6 +71940,25 @@
       }
     ]
   },
+  "Warwick Township, ON": {
+    "place": {
+      "name": "Warwick Township",
+      "state": "ON",
+      "country": "CA",
+      "type": "city",
+      "pop": 3641,
+      "coord": [-81.897345, 43.002173],
+      "repeal": false
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["all uses"],
+        "date": null
+      }
+    ]
+  },
   "Warwick, RI": {
     "place": {
       "name": "Warwick",
@@ -68742,6 +71982,25 @@
         "status": "adopted",
         "scope": ["city center / business district"],
         "land": ["commercial", "industrial", "other"],
+        "date": null
+      }
+    ]
+  },
+  "Wasaga Beach, ON": {
+    "place": {
+      "name": "Wasaga Beach",
+      "state": "ON",
+      "country": "CA",
+      "type": "city",
+      "pop": 24862,
+      "coord": [-80.0203156, 44.5224813],
+      "repeal": false
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["commercial"],
         "date": null
       }
     ]
@@ -69273,6 +72532,25 @@
         "status": "adopted",
         "scope": ["city center / business district"],
         "land": ["commercial"],
+        "date": null
+      }
+    ]
+  },
+  "Watson Lake, YT": {
+    "place": {
+      "name": "Watson Lake",
+      "state": "YT",
+      "country": "CA",
+      "type": "city",
+      "pop": 1133,
+      "coord": [-128.7068037, 60.0624306],
+      "repeal": false
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["all uses"],
         "date": null
       }
     ]
@@ -69877,6 +73155,25 @@
       }
     ]
   },
+  "Wellsville, UT": {
+    "place": {
+      "name": "Wellsville",
+      "state": "UT",
+      "country": "US",
+      "type": "city",
+      "pop": 4060,
+      "coord": [-111.933834, 41.6385432],
+      "repeal": false
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["all uses"],
+        "date": null
+      }
+    ]
+  },
   "Welsh, LA": {
     "place": {
       "name": "Welsh",
@@ -69976,6 +73273,25 @@
         "status": "adopted",
         "scope": ["city center / business district"],
         "land": ["all uses"],
+        "date": null
+      }
+    ]
+  },
+  "West Bountiful, UT": {
+    "place": {
+      "name": "West Bountiful",
+      "state": "UT",
+      "country": "US",
+      "type": "city",
+      "pop": 5917,
+      "coord": [-111.901786, 40.8938148],
+      "repeal": false
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["residential, all uses"],
         "date": null
       }
     ]
@@ -70152,6 +73468,25 @@
         "status": "adopted",
         "scope": ["citywide"],
         "land": ["residential, low-density"],
+        "date": null
+      }
+    ]
+  },
+  "West Grey, ON": {
+    "place": {
+      "name": "West Grey",
+      "state": "ON",
+      "country": "CA",
+      "type": "city",
+      "pop": 13131,
+      "coord": [-80.88357696068783, 44.15537915],
+      "repeal": false
+    },
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["commercial", "other"],
         "date": null
       }
     ]
@@ -70438,6 +73773,25 @@
       }
     ]
   },
+  "West Nipissing, ON": {
+    "place": {
+      "name": "West Nipissing",
+      "state": "ON",
+      "country": "CA",
+      "type": "city",
+      "pop": 14583,
+      "coord": [-80.123348, 46.4112427],
+      "repeal": false
+    },
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["commercial"],
+        "date": null
+      }
+    ]
+  },
   "West Palm Beach, FL": {
     "place": {
       "name": "West Palm Beach",
@@ -70618,6 +73972,25 @@
         "status": "adopted",
         "scope": ["city center / business district"],
         "land": ["commercial"],
+        "date": null
+      }
+    ]
+  },
+  "Westbrook, CT": {
+    "place": {
+      "name": "Westbrook",
+      "state": "CT",
+      "country": "US",
+      "type": "city",
+      "pop": 6769,
+      "coord": [-72.4487866, 41.2860314],
+      "repeal": false
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district", "citywide"],
+        "land": ["all uses"],
         "date": null
       }
     ]
@@ -71119,6 +74492,25 @@
       }
     ]
   },
+  "Whitestone, ON": {
+    "place": {
+      "name": "Whitestone",
+      "state": "ON",
+      "country": "CA",
+      "type": "city",
+      "pop": 1075,
+      "coord": [-80.05555377570082, 45.6857252],
+      "repeal": false
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["all uses"],
+        "date": null
+      }
+    ]
+  },
   "Whitewater, WI": {
     "place": {
       "name": "Whitewater",
@@ -71247,6 +74639,25 @@
       {
         "status": "adopted",
         "scope": ["city center / business district"],
+        "land": ["all uses"],
+        "date": null
+      }
+    ]
+  },
+  "Willard, UT": {
+    "place": {
+      "name": "Willard",
+      "state": "UT",
+      "country": "US",
+      "type": "city",
+      "pop": 1978,
+      "coord": [-112.03819, 41.4085496],
+      "repeal": false
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["transit-oriented"],
         "land": ["all uses"],
         "date": null
       }
@@ -71811,6 +75222,39 @@
       }
     ]
   },
+  "Windsor, ON": {
+    "place": {
+      "name": "Windsor",
+      "state": "ON",
+      "country": "CA",
+      "type": "city",
+      "pop": 229660,
+      "coord": [-82.9780695, 42.2858536],
+      "repeal": false
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["all uses"],
+        "date": null
+      }
+    ],
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": [
+          "commercial",
+          "medical",
+          "other",
+          "residential, low-density",
+          "residential, multi-family"
+        ],
+        "date": null
+      }
+    ]
+  },
   "Winfield, IA": {
     "place": {
       "name": "Winfield",
@@ -71944,6 +75388,25 @@
       }
     ]
   },
+  "Winnemucca, NV": {
+    "place": {
+      "name": "Winnemucca",
+      "state": "NV",
+      "country": "US",
+      "type": "city",
+      "pop": 8431,
+      "coord": [-117.734802, 40.9724295],
+      "repeal": false
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["commercial"],
+        "date": null
+      }
+    ]
+  },
   "Winnetka, IL": {
     "place": {
       "name": "Winnetka",
@@ -71984,9 +75447,23 @@
     "reduce_min": [
       {
         "status": "adopted",
-        "scope": ["citywide"],
+        "scope": ["citywide", "main street / special"],
+        "land": ["all uses", "residential, multi-family"],
+        "date": "2008"
+      }
+    ],
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
         "land": ["all uses"],
         "date": null
+      },
+      {
+        "status": "adopted",
+        "scope": ["main street / special"],
+        "land": ["all uses"],
+        "date": "2024-07-18"
       }
     ]
   },
@@ -72296,6 +75773,25 @@
       }
     ]
   },
+  "Wolcott, CT": {
+    "place": {
+      "name": "Wolcott",
+      "state": "CT",
+      "country": "US",
+      "type": "city",
+      "pop": 16142,
+      "coord": [-72.9867718, 41.6023196],
+      "repeal": false
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["all uses"],
+        "date": null
+      }
+    ]
+  },
   "Wolf Point, MT": {
     "place": {
       "name": "Wolf Point",
@@ -72376,6 +75872,25 @@
         "status": "adopted",
         "scope": ["city center / business district"],
         "land": ["commercial"],
+        "date": null
+      }
+    ]
+  },
+  "Woodbridge, CT": {
+    "place": {
+      "name": "Woodbridge",
+      "state": "CT",
+      "country": "US",
+      "type": "city",
+      "pop": 9087,
+      "coord": [-73.0084385, 41.352597],
+      "repeal": false
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["all uses"],
         "date": null
       }
     ]
@@ -72479,6 +75994,25 @@
         "status": "adopted",
         "scope": ["citywide"],
         "land": ["commercial", "industrial", "residential, multi-family"],
+        "date": null
+      }
+    ]
+  },
+  "Woods Cross, UT": {
+    "place": {
+      "name": "Woods Cross",
+      "state": "UT",
+      "country": "US",
+      "type": "city",
+      "pop": 11410,
+      "coord": [-111.892159, 40.8716501],
+      "repeal": false
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["transit-oriented"],
+        "land": ["residential, multi-family"],
         "date": null
       }
     ]
@@ -72994,12 +76528,20 @@
       "coord": [-114.377385, 62.4540807],
       "repeal": false
     },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["all uses", "residential, all uses"],
+        "date": "2014-03-10"
+      }
+    ],
     "rm_min": [
       {
         "status": "adopted",
         "scope": ["city center / business district"],
         "land": ["commercial", "residential, all uses"],
-        "date": null
+        "date": "2022-03-14"
       }
     ]
   },
@@ -73018,6 +76560,25 @@
         "status": "adopted",
         "scope": ["city center / business district"],
         "land": ["all uses"],
+        "date": null
+      }
+    ]
+  },
+  "Yerington, NV": {
+    "place": {
+      "name": "Yerington",
+      "state": "NV",
+      "country": "US",
+      "type": "city",
+      "pop": 3121,
+      "coord": [-119.162989, 38.9855429],
+      "repeal": false
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["commercial"],
         "date": null
       }
     ]
