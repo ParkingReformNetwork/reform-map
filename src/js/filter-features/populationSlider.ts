@@ -103,7 +103,9 @@ function updateSlidersUI(
 ): void {
   const [leftIndex, rightIndex] = populationSliderIndexes;
 
+  // eslint-disable-next-line no-param-reassign
   sliders.left.value = leftIndex.toString();
+  // eslint-disable-next-line no-param-reassign
   sliders.right.value = rightIndex.toString();
   sliders.left.setAttribute("value", leftIndex.toString());
   sliders.right.setAttribute("value", rightIndex.toString());
@@ -121,15 +123,19 @@ function updateSlidersUI(
   );
   const leftWidth = newLeftMax * intervalSizePx;
   const rightWidth = (POPULATION_MAX_INDEX - newRightMin) * intervalSizePx;
+  // eslint-disable-next-line no-param-reassign
   sliders.left.style.width = `${leftWidth + THUMBSIZE / 2}px`;
+  // eslint-disable-next-line no-param-reassign
   sliders.right.style.width = `${rightWidth + THUMBSIZE / 2}px`;
 
   // The left slider has a fixed anchor. However, the right slider has to move
   // everytime the range of the slider changes.
+  // eslint-disable-next-line no-param-reassign
   sliders.right.style.left = `${leftWidth + THUMBSIZE}px`;
 
   const leftLabel = POPULATION_INTERVALS[leftIndex][0];
   const rightLabel = POPULATION_INTERVALS[rightIndex][0];
+  // eslint-disable-next-line no-param-reassign
   sliders.label.innerHTML = `${leftLabel} - ${rightLabel} residents`;
 }
 
@@ -137,8 +143,7 @@ export function initPopulationSlider(
   filterManager: PlaceFilterManager,
   filterPopup: HTMLFormElement,
 ): void {
-  const populationSliderIndexes =
-    filterManager.getState().populationSliderIndexes;
+  const { populationSliderIndexes } = filterManager.getState();
   const [sliders, accordionStateObservable] = generateSliders(
     populationSliderIndexes,
     filterPopup,

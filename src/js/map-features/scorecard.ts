@@ -92,6 +92,8 @@ function updateScorecardUI(state: ScorecardState): void {
       scorecardContainer.hidden = false;
       break;
     }
+    default:
+      throw new Error(`Unexpected state.type: ${state}`);
   }
 }
 

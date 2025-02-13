@@ -1,3 +1,5 @@
+/* eslint-disable no-underscore-dangle */
+
 const SLOW_CALLBACK_THRESHOLD_MS = 2;
 
 export interface Subscriber<T> {
@@ -67,6 +69,7 @@ export default class Observable<T> {
 
       if (duration < SLOW_CALLBACK_THRESHOLD_MS) return;
       const callbackLabel = id ?? "anonymous";
+      // eslint-disable-next-line no-console
       console.warn(
         `Slow callback detected: Observable(${this.id}) - Subscriber(${callbackLabel}) (${duration.toFixed(0)}ms)`,
       );

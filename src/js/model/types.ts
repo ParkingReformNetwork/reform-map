@@ -2,6 +2,7 @@ import { DateTime } from "luxon";
 
 export class Date {
   readonly raw: string;
+
   readonly parsed: DateTime<true>;
 
   constructor(raw: string) {

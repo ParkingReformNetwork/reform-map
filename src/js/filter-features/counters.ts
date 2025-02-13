@@ -29,18 +29,20 @@ export function determinePlaceDescription(
   if (isEqual(matchedPlaceTypes, new Set(["city"]))) {
     const label = numPlaces === 1 ? "city" : "cities";
     return `${numPlaces} ${label} in ${country}`;
-  } else if (isEqual(matchedPlaceTypes, new Set(["county"]))) {
+  }
+  if (isEqual(matchedPlaceTypes, new Set(["county"]))) {
     const label = numPlaces === 1 ? "county" : "counties";
     return `${numPlaces} ${label} in ${country}`;
-  } else if (isEqual(matchedPlaceTypes, new Set(["state"]))) {
+  }
+  if (isEqual(matchedPlaceTypes, new Set(["state"]))) {
     const label = numPlaces === 1 ? "state" : "states";
     return `${numPlaces} ${label} in ${country}`;
-  } else if (isEqual(matchedPlaceTypes, new Set(["country"]))) {
-    return numPlaces === 1 ? "1 country" : `${numPlaces} countries`;
-  } else {
-    const label = numPlaces === 1 ? "place" : "places";
-    return `${numPlaces} ${label} in ${country}`;
   }
+  if (isEqual(matchedPlaceTypes, new Set(["country"]))) {
+    return numPlaces === 1 ? "1 country" : `${numPlaces} countries`;
+  }
+  const label = numPlaces === 1 ? "place" : "places";
+  return `${numPlaces} ${label} in ${country}`;
 }
 
 export const SEARCH_RESET_HTML = `<a class="counter-search-reset" role="button" aria-label="reset search">reset search</a>`;
@@ -68,6 +70,8 @@ export function determineSearch(
       return `Showing details about parking minimum reductions ${suffix}`;
     case "remove parking minimums":
       return `Showing details about parking minimum removals ${suffix}`;
+    default:
+      throw new Error(`Unexpected policy type: ${policyType}`);
   }
 }
 
@@ -199,6 +203,8 @@ export function determineHtml(
         placeDescription,
         state.allMinimumsRemovedToggle,
       );
+    default:
+      throw new Error(`Unexpected policy type: ${state.policyTypeFilter}`);
   }
 }
 
