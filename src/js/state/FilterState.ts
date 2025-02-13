@@ -152,7 +152,7 @@ export class PlaceFilterManager {
     const matchedCountries = new Set<string>();
     const matchedPolicyTypes = new Set<PolicyType>();
     const matchedPlaceTypes = new Set<PlaceType>();
-    for (const placeId in this.entries) {
+    for (const placeId of Object.keys(this.entries)) {
       const match = this.getPlaceMatch(placeId);
       if (!match) continue;
       matchedPlaces[placeId] = match;

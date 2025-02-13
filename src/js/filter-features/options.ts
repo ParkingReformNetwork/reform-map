@@ -219,7 +219,10 @@ function initFilterGroup(
   );
 
   accordionElements.checkAllButton.addEventListener("click", () => {
-    allCheckboxes.forEach((input) => (input.checked = true));
+    allCheckboxes.forEach((input) => {
+      // eslint-disable-next-line no-param-reassign
+      input.checked = true;
+    });
     updateCheckboxStats(accordionState, accordionElements.fieldSet);
     filterManager.update({
       [params.filterStateKey]: new Set(
@@ -229,7 +232,10 @@ function initFilterGroup(
   });
 
   accordionElements.uncheckAllButton.addEventListener("click", () => {
-    allCheckboxes.forEach((input) => (input.checked = false));
+    allCheckboxes.forEach((input) => {
+      // eslint-disable-next-line no-param-reassign
+      input.checked = false;
+    });
     updateCheckboxStats(accordionState, accordionElements.fieldSet);
     filterManager.update({
       [params.filterStateKey]: new Set(),

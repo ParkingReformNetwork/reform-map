@@ -44,7 +44,7 @@ function updatePlaceVisibility(
   // Remove markers no longer visible.
   for (const placeId of currentlyVisiblePlaceIds) {
     if (!newVisiblePlaceIds.has(placeId)) {
-      // @ts-ignore the API allows passing a LayerGroup, but the type hint doesn't show this.
+      // @ts-expect-error the API allows passing a LayerGroup, but the type hint doesn't show this.
       placesToMarkers[placeId].removeFrom(markerGroup);
     }
   }

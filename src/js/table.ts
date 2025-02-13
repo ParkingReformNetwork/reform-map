@@ -62,7 +62,7 @@ const PLACE_COLUMNS: ColumnDefinition[] = [
     field: "population",
     sorter: "number",
     sorterParams: {
-      // @ts-ignore
+      // @ts-expect-error type hint is wrong
       thousandSeparator: ",",
     },
     width: 90,
@@ -147,7 +147,7 @@ export default function initTable(
   const dataAddMax: any[] = [];
   Object.entries(filterManager.entries).forEach(([placeId, entry]) => {
     const common = {
-      placeId: placeId,
+      placeId,
       place: entry.place.name,
       state: entry.place.state,
       country: entry.place.country,
@@ -240,9 +240,9 @@ export default function initTable(
       table.refreshFilter();
     } else {
       currentPolicyTypeFilter = newPolicyTypeFilter;
-      const [columns, data] = policyTypeFilterToConfig[newPolicyTypeFilter];
-      table.setColumns(columns);
-      table.setData(data);
+      const [columns2, data2] = policyTypeFilterToConfig[newPolicyTypeFilter];
+      table.setColumns(columns2);
+      table.setData(data2);
     }
   };
 
