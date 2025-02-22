@@ -7672,6 +7672,25 @@
       }
     ]
   },
+  "Brian Head, UT": {
+    "place": {
+      "name": "Brian Head",
+      "state": "UT",
+      "country": "US",
+      "type": "city",
+      "pop": 151,
+      "coord": [-112.850776, 37.6927551],
+      "repeal": false
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["all uses", "commercial"],
+        "date": null
+      }
+    ]
+  },
   "Bridgeport Charter Township, MI": {
     "place": {
       "name": "Bridgeport Charter Township",
@@ -8861,6 +8880,25 @@
       }
     ]
   },
+  "Burnett County, WI": {
+    "place": {
+      "name": "Burnett County",
+      "state": "WI",
+      "country": "US",
+      "type": "county",
+      "pop": 16526,
+      "coord": [-92.2673161, 45.8652437],
+      "repeal": false
+    },
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["main street / special"],
+        "land": ["all uses"],
+        "date": null
+      }
+    ]
+  },
   "Burnie, TAS": {
     "place": {
       "name": "Burnie",
@@ -9823,6 +9861,25 @@
         "scope": ["city center / business district"],
         "land": ["all uses"],
         "date": null
+      }
+    ]
+  },
+  "Cape Breton Regional Municipality, NS": {
+    "place": {
+      "name": "Cape Breton Regional Municipality",
+      "state": "NS",
+      "country": "CA",
+      "type": "city",
+      "pop": 93694,
+      "coord": [-60.334048393102876, 46.03504935],
+      "repeal": true
+    },
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["all uses"],
+        "date": "2023-07-20"
       }
     ]
   },
@@ -13413,6 +13470,25 @@
       {
         "status": "adopted",
         "scope": ["city center / business district", "transit-oriented"],
+        "land": ["all uses"],
+        "date": null
+      }
+    ]
+  },
+  "Cleveland, UT": {
+    "place": {
+      "name": "Cleveland",
+      "state": "UT",
+      "country": "US",
+      "type": "city",
+      "pop": 497,
+      "coord": [-110.8517022, 39.3489213],
+      "repeal": false
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
         "land": ["all uses"],
         "date": null
       }
@@ -18962,6 +19038,18 @@
         "scope": ["city center / business district"],
         "land": ["all uses"],
         "date": "2009-10-19"
+      },
+      {
+        "status": "adopted",
+        "scope": ["main street / special"],
+        "land": ["all uses"],
+        "date": "2024-04-15"
+      },
+      {
+        "status": "proposed",
+        "scope": ["citywide"],
+        "land": ["all uses"],
+        "date": null
       }
     ]
   },
@@ -34589,6 +34677,25 @@
       }
     ]
   },
+  "Kanab, UT": {
+    "place": {
+      "name": "Kanab",
+      "state": "UT",
+      "country": "US",
+      "type": "city",
+      "pop": 4683,
+      "coord": [-112.5285237, 37.0481715],
+      "repeal": false
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district", "citywide"],
+        "land": ["all uses"],
+        "date": null
+      }
+    ]
+  },
   "Kane, PA": {
     "place": {
       "name": "Kane",
@@ -37791,12 +37898,26 @@
       "coord": [-95.2359496, 38.9719384],
       "repeal": false
     },
+    "add_max": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["commercial", "industrial", "medical", "other"],
+        "date": "2024-11-12"
+      }
+    ],
     "rm_min": [
       {
         "status": "adopted",
         "scope": ["city center / business district"],
         "land": ["commercial"],
         "date": "2012-04-28"
+      },
+      {
+        "status": "adopted",
+        "scope": ["main street / special"],
+        "land": ["commercial", "residential, all uses"],
+        "date": "2024-11-12"
       }
     ]
   },
@@ -44620,6 +44741,47 @@
       }
     ]
   },
+  "Milton, ON": {
+    "place": {
+      "name": "Milton",
+      "state": "ON",
+      "country": "CA",
+      "type": "city",
+      "pop": 132979,
+      "coord": [-79.882817, 43.513671],
+      "repeal": false
+    },
+    "add_max": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["all uses"],
+        "date": null
+      }
+    ],
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["commercial", "other"],
+        "date": "2025-01-27"
+      },
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["residential, all uses", "residential, multi-family"],
+        "date": "2025-01-27"
+      }
+    ],
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["transit-oriented"],
+        "land": ["all uses"],
+        "date": "2025-01-27"
+      }
+    ]
+  },
   "Milton, WI": {
     "place": {
       "name": "Milton",
@@ -44999,6 +45161,25 @@
         "status": "adopted",
         "scope": ["city center / business district"],
         "land": ["all uses"],
+        "date": null
+      }
+    ]
+  },
+  "Moab, UT": {
+    "place": {
+      "name": "Moab",
+      "state": "UT",
+      "country": "US",
+      "type": "city",
+      "pop": 5366,
+      "coord": [-109.546214, 38.5738096],
+      "repeal": false
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["all uses", "commercial"],
         "date": null
       }
     ]
@@ -49614,6 +49795,12 @@
         "scope": ["citywide"],
         "land": ["commercial", "other", "residential, all uses"],
         "date": "2021-11-09"
+      },
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["residential, low-density"],
+        "date": "2024-05-28"
       }
     ]
   },
@@ -53080,6 +53267,25 @@
         "status": "adopted",
         "scope": ["city center / business district"],
         "land": ["all uses"],
+        "date": null
+      }
+    ]
+  },
+  "Parowan, UT": {
+    "place": {
+      "name": "Parowan",
+      "state": "UT",
+      "country": "US",
+      "type": "city",
+      "pop": 2996,
+      "coord": [-112.8279996, 37.8421975],
+      "repeal": false
+    },
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["main street / special"],
+        "land": ["commercial"],
         "date": null
       }
     ]
@@ -65271,6 +65477,14 @@
       "coord": [-90.1995853, 38.6264256],
       "repeal": false
     },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["transit-oriented"],
+        "land": ["commercial", "other", "residential, all uses"],
+        "date": "2024-08-14"
+      }
+    ],
     "rm_min": [
       {
         "status": "adopted",
@@ -70985,6 +71199,33 @@
         "status": "adopted",
         "scope": ["city center / business district"],
         "land": ["commercial"],
+        "date": null
+      }
+    ]
+  },
+  "Victoria Park, WA": {
+    "place": {
+      "name": "Victoria Park",
+      "state": "WA",
+      "country": "AU",
+      "type": "city",
+      "pop": 36889,
+      "coord": [115.8954511, -31.9723554],
+      "repeal": false
+    },
+    "add_max": [
+      {
+        "status": "adopted",
+        "scope": ["transit-oriented"],
+        "land": ["all uses"],
+        "date": null
+      }
+    ],
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["commercial", "industrial", "medical", "other"],
         "date": null
       }
     ]
