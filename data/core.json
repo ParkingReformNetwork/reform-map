@@ -18860,6 +18860,33 @@
       }
     ]
   },
+  "Draper, UT": {
+    "place": {
+      "name": "Draper",
+      "state": "UT",
+      "country": "US",
+      "type": "city",
+      "pop": 51017,
+      "coord": [-111.8627989, 40.5247777],
+      "repeal": false
+    },
+    "add_max": [
+      {
+        "status": "adopted",
+        "scope": ["transit-oriented"],
+        "land": ["all uses"],
+        "date": null
+      }
+    ],
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["transit-oriented"],
+        "land": ["all uses"],
+        "date": null
+      }
+    ]
+  },
   "Dresden, SN": {
     "place": {
       "name": "Dresden",
@@ -19938,6 +19965,41 @@
         "scope": ["city center / business district"],
         "land": ["all uses"],
         "date": null
+      }
+    ]
+  },
+  "East Palo Alto, CA": {
+    "place": {
+      "name": "East Palo Alto",
+      "state": "CA",
+      "country": "US",
+      "type": "city",
+      "pop": 30034,
+      "coord": [-122.141075, 37.4688273],
+      "repeal": false
+    },
+    "add_max": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["all uses"],
+        "date": "2024-12-17"
+      }
+    ],
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["residential, multi-family"],
+        "date": "2025-02-18"
+      }
+    ],
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["all uses"],
+        "date": "2024-12-17"
       }
     ]
   },
@@ -23104,6 +23166,25 @@
       {
         "status": "adopted",
         "scope": ["city center / business district"],
+        "land": ["all uses"],
+        "date": null
+      }
+    ]
+  },
+  "Fayetteville, WV": {
+    "place": {
+      "name": "Fayetteville",
+      "state": "WV",
+      "country": "US",
+      "type": "city",
+      "pop": 2887,
+      "coord": [-81.1039858, 38.0531294],
+      "repeal": false
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
         "land": ["all uses"],
         "date": null
       }
@@ -38599,6 +38680,25 @@
       }
     ]
   },
+  "Lewisburg, WV": {
+    "place": {
+      "name": "Lewisburg",
+      "state": "WV",
+      "country": "US",
+      "type": "city",
+      "pop": 3930,
+      "coord": [-80.4456303, 37.8017879],
+      "repeal": false
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["all uses"],
+        "date": null
+      }
+    ]
+  },
   "Lewistown, IL": {
     "place": {
       "name": "Lewistown",
@@ -42325,6 +42425,33 @@
       }
     ]
   },
+  "Martinsburg, WV": {
+    "place": {
+      "name": "Martinsburg",
+      "state": "WV",
+      "country": "US",
+      "type": "city",
+      "pop": 18773,
+      "coord": [-77.9639604, 39.4562528],
+      "repeal": false
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["all uses"],
+        "date": null
+      }
+    ],
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["all uses"],
+        "date": null
+      }
+    ]
+  },
   "Marysville, OH": {
     "place": {
       "name": "Marysville",
@@ -45858,6 +45985,25 @@
       }
     ],
     "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["all uses"],
+        "date": null
+      }
+    ]
+  },
+  "Montgomery, WV": {
+    "place": {
+      "name": "Montgomery",
+      "state": "WV",
+      "country": "US",
+      "type": "city",
+      "pop": 1280,
+      "coord": [-81.3284452, 38.1803833],
+      "repeal": false
+    },
+    "rm_min": [
       {
         "status": "adopted",
         "scope": ["city center / business district"],
@@ -73352,6 +73498,29 @@
       }
     ]
   },
+  "Weirton, WV": {
+    "place": {
+      "name": "Weirton",
+      "state": "WV",
+      "country": "US",
+      "type": "city",
+      "pop": 19163,
+      "coord": [-80.5899788, 40.4002396],
+      "repeal": false
+    },
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": [
+          "city center / business district",
+          "citywide",
+          "main street / special"
+        ],
+        "land": ["all uses", "residential, low-density"],
+        "date": null
+      }
+    ]
+  },
   "Welcome, MN": {
     "place": {
       "name": "Welcome",
@@ -74734,6 +74903,25 @@
         "status": "adopted",
         "scope": ["city center / business district"],
         "land": ["commercial", "other", "residential, all uses"],
+        "date": null
+      }
+    ]
+  },
+  "White Sulphur Springs, WV": {
+    "place": {
+      "name": "White Sulphur Springs",
+      "state": "WV",
+      "country": "US",
+      "type": "city",
+      "pop": 2231,
+      "coord": [-80.2975734, 37.7965149],
+      "repeal": false
+    },
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["all uses"],
         "date": null
       }
     ]
