@@ -313,6 +313,9 @@ function initPolicyTypeFilterDropdown(
     select.append(element);
   });
 
+  // Set initial value.
+  select.value = filterManager.getState().policyTypeFilter;
+
   select.addEventListener("change", () => {
     const policyTypeFilter = select.value as PolicyTypeFilter;
     filterManager.update({ policyTypeFilter });

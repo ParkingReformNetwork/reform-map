@@ -29,7 +29,7 @@ export default async function initApp(): Promise<void> {
 
   const filterManager = new PlaceFilterManager(data, {
     searchInput: null,
-    policyTypeFilter: "any parking reform",
+    policyTypeFilter: "remove parking minimums",
     allMinimumsRemovedToggle: true,
     placeType: filterOptions.default("placeType"),
     includedPolicyChanges: filterOptions.default("includedPolicyChanges"),
