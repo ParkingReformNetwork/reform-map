@@ -175,7 +175,7 @@ for (const edgeCase of TESTS) {
       await deselectToggle(page);
     }
 
-    if (edgeCase.policyTypeFilter !== "any parking reform") {
+    if (edgeCase.policyTypeFilter !== "remove parking minimums") {
       await page
         .locator("#filter-policy-type-dropdown")
         .selectOption(edgeCase.policyTypeFilter);
