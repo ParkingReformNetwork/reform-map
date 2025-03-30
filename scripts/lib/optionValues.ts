@@ -5,8 +5,9 @@ import {
   ReformStatus,
   UNKNOWN_YEAR,
   Date,
+  RawPlace,
+  RawCoreEntry,
 } from "../../src/js/model/types";
-import { RawCompleteEntry } from "./data";
 
 export const ALL_POLICY_TYPE: PolicyType[] = [
   "add parking maximums",
@@ -16,36 +17,62 @@ export const ALL_POLICY_TYPE: PolicyType[] = [
 
 export const ALL_STATUS: ReformStatus[] = ["adopted", "proposed", "repealed"];
 
-export function determineOptionValues(entries: RawCompleteEntry[]) {
-  const placeType = new Set<string>();
-  const scope = new Set<string>();
-  const landUse = new Set<string>();
-  const country = new Set<string>();
-  const year = new Set<string>([UNKNOWN_YEAR]);
+/** The option values for a single dataset. */
+class OptionValues {
+  readonly placeType: Set<string>;
+  readonly country: Set<string>;
+  readonly scope: Set<string>;
+  readonly landUse: Set<string>;
+  readonly year: Set<string>;
 
-  const savePolicyRecord = (policyRecord: RawCorePolicy): void => {
-    policyRecord.scope.forEach((v) => scope.add(v));
-    policyRecord.land.forEach((v) => landUse.add(v));
+  constructor() {
+    this.placeType = new Set();
+    this.country = new Set();
+    this.scope = new Set();
+    this.landUse = new Set();
+    this.year = new Set([UNKNOWN_YEAR]);
+  }
+
+  add(place: RawPlace, policyRecord: RawCorePolicy): void {
+    this.placeType.add(place.type);
+    this.country.add(COUNTRY_MAPPING[place.country] ?? place.country);
+    policyRecord.scope.forEach((v) => this.scope.add(v));
+    policyRecord.land.forEach((v) => this.landUse.add(v));
     if (policyRecord.date) {
-      year.add(new Date(policyRecord.date).parsed.year.toString());
+      this.year.add(new Date(policyRecord.date).parsed.year.toString());
     }
-  };
+  }
+
+  export() {
+    return {
+      placeType: Array.from(this.placeType).sort(),
+      country: Array.from(this.country).sort(),
+      scope: Array.from(this.scope).sort(),
+      landUse: Array.from(this.landUse).sort(),
+      year: Array.from(this.year).sort().reverse(),
+    };
+  }
+}
+
+export function determineOptionValues(entries: RawCoreEntry[]) {
+  const mergedDataset = new OptionValues();
 
   entries.forEach((entry) => {
-    placeType.add(entry.place.type);
-    country.add(COUNTRY_MAPPING[entry.place.country] ?? entry.place.country);
-    entry.add_max?.forEach(savePolicyRecord);
-    entry.reduce_min?.forEach(savePolicyRecord);
-    entry.rm_min?.forEach(savePolicyRecord);
+    entry.add_max?.forEach((policyRecord) => {
+      mergedDataset.add(entry.place, policyRecord);
+    });
+    entry.reduce_min?.forEach((policyRecord) => {
+      mergedDataset.add(entry.place, policyRecord);
+    });
+    entry.rm_min?.forEach((policyRecord) => {
+      mergedDataset.add(entry.place, policyRecord);
+    });
   });
+
   const result = {
     policy: ALL_POLICY_TYPE,
     status: ALL_STATUS,
-    placeType: Array.from(placeType).sort(),
-    scope: Array.from(scope).sort(),
-    landUse: Array.from(landUse).sort(),
-    country: Array.from(country).sort(),
-    year: Array.from(year).sort().reverse(),
+    ...mergedDataset.export(),
   };
   return result;
 }
