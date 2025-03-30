@@ -44,11 +44,11 @@ export class FilterOptions {
     this.options = {
       includedPolicyChanges: optionValuesData.policy,
       status: optionValuesData.status,
-      placeType: optionValuesData.placeType,
-      scope: optionValuesData.scope,
-      landUse: optionValuesData.landUse,
-      country: optionValuesData.country,
-      year: optionValuesData.year,
+      placeType: optionValuesData.merged.placeType,
+      scope: optionValuesData.merged.scope,
+      landUse: optionValuesData.merged.landUse,
+      country: optionValuesData.merged.country,
+      year: optionValuesData.merged.year,
     };
   }
 
