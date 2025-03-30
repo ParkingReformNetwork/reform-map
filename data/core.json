@@ -9742,6 +9742,25 @@
       }
     ]
   },
+  "Canterbury, CT": {
+    "place": {
+      "name": "Canterbury",
+      "state": "CT",
+      "country": "US",
+      "type": "city",
+      "pop": 5045,
+      "coord": [-71.9709821, 41.6982056],
+      "repeal": false
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["all uses"],
+        "date": null
+      }
+    ]
+  },
   "Canton, CT": {
     "place": {
       "name": "Canton",
@@ -23239,6 +23258,25 @@
       {
         "status": "adopted",
         "scope": ["city center / business district"],
+        "land": ["all uses"],
+        "date": null
+      }
+    ]
+  },
+  "Fenwick, CT": {
+    "place": {
+      "name": "Fenwick",
+      "state": "CT",
+      "country": "US",
+      "type": "city",
+      "pop": 53,
+      "coord": [-72.35414810906835, 41.27090675],
+      "repeal": false
+    },
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
         "land": ["all uses"],
         "date": null
       }
@@ -62378,6 +62416,25 @@
       }
     ]
   },
+  "Sharon, CT": {
+    "place": {
+      "name": "Sharon",
+      "state": "CT",
+      "country": "US",
+      "type": "city",
+      "pop": 2680,
+      "coord": [-73.4767897, 41.8792599],
+      "repeal": false
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["all uses"],
+        "date": null
+      }
+    ]
+  },
   "Sharon, PA": {
     "place": {
       "name": "Sharon",
@@ -66442,6 +66499,25 @@
       }
     ]
   },
+  "Sterling, CT": {
+    "place": {
+      "name": "Sterling",
+      "state": "CT",
+      "country": "US",
+      "type": "city",
+      "pop": 3578,
+      "coord": [-71.828682, 41.707599],
+      "repeal": false
+    },
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["other", "residential, low-density"],
+        "date": null
+      }
+    ]
+  },
   "Sterling, IL": {
     "place": {
       "name": "Sterling",
@@ -68891,6 +68967,33 @@
         "scope": ["city center / business district", "citywide"],
         "land": ["all uses", "residential, low-density"],
         "date": null
+      }
+    ]
+  },
+  "Thompson, CT": {
+    "place": {
+      "name": "Thompson",
+      "state": "CT",
+      "country": "US",
+      "type": "city",
+      "pop": 9189,
+      "coord": [-71.8625715, 41.9587089],
+      "repeal": true
+    },
+    "add_max": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["all uses"],
+        "date": null
+      }
+    ],
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["all uses"],
+        "date": "2020-09-15"
       }
     ]
   },
@@ -76558,6 +76661,33 @@
         "status": "adopted",
         "scope": ["city center / business district"],
         "land": ["commercial"],
+        "date": null
+      }
+    ]
+  },
+  "Woodstock, CT": {
+    "place": {
+      "name": "Woodstock",
+      "state": "CT",
+      "country": "US",
+      "type": "city",
+      "pop": 8221,
+      "coord": [-71.9739626, 41.9484307],
+      "repeal": false
+    },
+    "add_max": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["other"],
+        "date": null
+      }
+    ],
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["other", "residential, low-density"],
         "date": null
       }
     ]
