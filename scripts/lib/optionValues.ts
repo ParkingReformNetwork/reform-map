@@ -55,24 +55,33 @@ class OptionValues {
 }
 
 export function determineOptionValues(entries: RawCoreEntry[]) {
-  const mergedDataset = new OptionValues();
+  const merged = new OptionValues();
+  const addMax = new OptionValues();
+  const reduceMin = new OptionValues();
+  const rmMin = new OptionValues();
 
   entries.forEach((entry) => {
     entry.add_max?.forEach((policyRecord) => {
-      mergedDataset.add(entry.place, policyRecord);
+      merged.add(entry.place, policyRecord);
+      addMax.add(entry.place, policyRecord);
     });
     entry.reduce_min?.forEach((policyRecord) => {
-      mergedDataset.add(entry.place, policyRecord);
+      merged.add(entry.place, policyRecord);
+      reduceMin.add(entry.place, policyRecord);
     });
     entry.rm_min?.forEach((policyRecord) => {
-      mergedDataset.add(entry.place, policyRecord);
+      merged.add(entry.place, policyRecord);
+      rmMin.add(entry.place, policyRecord);
     });
   });
 
   const result = {
     policy: ALL_POLICY_TYPE,
     status: ALL_STATUS,
-    ...mergedDataset.export(),
+    merged: merged.export(),
+    addMax: addMax.export(),
+    reduceMin: reduceMin.export(),
+    rmMin: rmMin.export(),
   };
   return result;
 }

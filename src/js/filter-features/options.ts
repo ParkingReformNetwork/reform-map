@@ -42,11 +42,11 @@ export class FilterOptions {
 
   constructor() {
     this.options = {
-      placeType: optionValuesData.placeType,
       includedPolicyChanges: optionValuesData.policy,
+      status: optionValuesData.status,
+      placeType: optionValuesData.placeType,
       scope: optionValuesData.scope,
       landUse: optionValuesData.landUse,
-      status: optionValuesData.status,
       country: optionValuesData.country,
       year: optionValuesData.year,
     };

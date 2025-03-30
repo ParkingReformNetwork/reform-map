@@ -64,22 +64,45 @@ test("determineOptionValues()", () => {
   const expected = {
     policy: ALL_POLICY_TYPE,
     status: ALL_STATUS,
-    placeType: ["city", "country"],
-    country: ["Brazil", "United States"],
-    landUse: [
-      "all uses",
-      "commercial",
-      "medical",
-      "other",
-      "residential, all uses",
-    ],
-    scope: [
-      "city center / business district",
-      "citywide",
-      "regional",
-      "transit-oriented",
-    ],
-    year: [UNKNOWN_YEAR, "2025", "2022"],
+    merged: {
+      placeType: ["city", "country"],
+      country: ["Brazil", "United States"],
+      landUse: [
+        "all uses",
+        "commercial",
+        "medical",
+        "other",
+        "residential, all uses",
+      ],
+      scope: [
+        "city center / business district",
+        "citywide",
+        "regional",
+        "transit-oriented",
+      ],
+      year: [UNKNOWN_YEAR, "2025", "2022"],
+    },
+    addMax: {
+      placeType: ["city"],
+      country: ["United States"],
+      landUse: ["other", "residential, all uses"],
+      scope: ["citywide"],
+      year: [UNKNOWN_YEAR, "2022"],
+    },
+    reduceMin: {
+      placeType: ["country"],
+      country: ["Brazil"],
+      landUse: ["commercial", "medical"],
+      scope: ["regional", "transit-oriented"],
+      year: [UNKNOWN_YEAR, "2025"],
+    },
+    rmMin: {
+      placeType: ["city"],
+      country: ["United States"],
+      landUse: ["all uses"],
+      scope: ["city center / business district"],
+      year: [UNKNOWN_YEAR],
+    },
   };
   expect(determineOptionValues(input)).toEqual(expected);
 });
