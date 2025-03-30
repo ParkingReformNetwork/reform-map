@@ -20,9 +20,13 @@ export const ALL_STATUS: ReformStatus[] = ["adopted", "proposed", "repealed"];
 /** The option values for a single dataset. */
 class OptionValues {
   readonly placeType: Set<string>;
+
   readonly country: Set<string>;
+
   readonly scope: Set<string>;
+
   readonly landUse: Set<string>;
+
   readonly year: Set<string>;
 
   constructor() {
