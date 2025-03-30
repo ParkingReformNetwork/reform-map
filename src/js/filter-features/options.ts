@@ -42,13 +42,13 @@ export class FilterOptions {
 
   constructor() {
     this.options = {
-      placeType: optionValuesData.placeType,
       includedPolicyChanges: optionValuesData.policy,
-      scope: optionValuesData.scope,
-      landUse: optionValuesData.landUse,
       status: optionValuesData.status,
-      country: optionValuesData.country,
-      year: optionValuesData.year,
+      placeType: optionValuesData.merged.placeType,
+      scope: optionValuesData.merged.scope,
+      landUse: optionValuesData.merged.landUse,
+      country: optionValuesData.merged.country,
+      year: optionValuesData.merged.year,
     };
   }
 
