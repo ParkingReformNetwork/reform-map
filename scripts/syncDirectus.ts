@@ -18,15 +18,10 @@ import {
   PolicyRecord,
 } from "./lib/directus";
 import {
-  Date,
   PlaceId as PlaceStringId,
-  PlaceType,
   PolicyType,
   RawCorePolicy,
-  ReformStatus,
-  UNKNOWN_YEAR,
 } from "../src/js/model/types";
-import { COUNTRY_MAPPING } from "../src/js/model/data";
 import { getLongLat, initGeocoder } from "./lib/geocoder";
 import {
   DirectusFile,
@@ -34,6 +29,7 @@ import {
   ExtendedPolicy,
   RawCompleteEntry,
 } from "./lib/data";
+import { determineOptionValues } from "./lib/optionValues";
 
 // --------------------------------------------------------------------------
 // Read Directus
@@ -473,42 +469,7 @@ async function saveExtendedData(
 }
 
 async function saveOptionValues(entries: RawCompleteEntry[]): Promise<void> {
-  const policy: PolicyType[] = [
-    "add parking maximums",
-    "reduce parking minimums",
-    "remove parking minimums",
-  ];
-  const placeType: PlaceType[] = ["city", "county", "state", "country"];
-  const status: ReformStatus[] = ["adopted", "proposed", "repealed"];
-
-  const scope = new Set<string>();
-  const landUse = new Set<string>();
-  const country = new Set<string>();
-  const year = new Set<string>([UNKNOWN_YEAR]);
-
-  const savePolicyRecord = (policyRecord: RawCorePolicy): void => {
-    policyRecord.scope.forEach((v) => scope.add(v));
-    policyRecord.land.forEach((v) => landUse.add(v));
-    if (policyRecord.date) {
-      year.add(new Date(policyRecord.date).parsed.year.toString());
-    }
-  };
-
-  entries.forEach((entry) => {
-    country.add(COUNTRY_MAPPING[entry.place.country] ?? entry.place.country);
-    entry.add_max?.forEach(savePolicyRecord);
-    entry.reduce_min?.forEach(savePolicyRecord);
-    entry.rm_min?.forEach(savePolicyRecord);
-  });
-  const result = {
-    placeType,
-    policy,
-    status,
-    scope: Array.from(scope).sort(),
-    landUse: Array.from(landUse).sort(),
-    country: Array.from(country).sort(),
-    year: Array.from(year).sort().reverse(),
-  };
+  const result = determineOptionValues(entries);
   const json = JSON.stringify(result, null, 2);
   console.log("Writing data/option-values.json");
   await fs.writeFile("data/option-values.json", json);
