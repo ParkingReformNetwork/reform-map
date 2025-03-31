@@ -16,6 +16,7 @@ import {
 import { initPopulationSlider } from "./populationSlider";
 
 import optionValuesData from "../../../data/option-values.json" with { type: "json" };
+import { ReformStatus } from "../model/types";
 
 // Keep in alignment with FilterState.
 type FilterGroupKey =
@@ -27,15 +28,9 @@ type FilterGroupKey =
   | "country"
   | "year";
 
-const DESELECTED_BY_DEFAULT: Record<FilterGroupKey, Set<string>> = {
-  placeType: new Set(),
-  includedPolicyChanges: new Set(),
-  scope: new Set(),
-  landUse: new Set(),
-  status: new Set(["proposed", "repealed"]),
-  country: new Set(),
-  year: new Set(),
-};
+// We only check `adopted` by default. (We should actually fix `status`
+// to be a radio selection rather than multiple choice.)
+const DEFAULT_REFORM_STATUS: ReformStatus = "adopted";
 
 export class FilterOptions {
   readonly options: Record<FilterGroupKey, string[]>;
@@ -53,11 +48,8 @@ export class FilterOptions {
   }
 
   default(groupKey: FilterGroupKey): Set<string> {
-    return new Set(
-      this.options[groupKey].filter(
-        (opt) => !DESELECTED_BY_DEFAULT[groupKey].has(opt),
-      ),
-    );
+    if (groupKey === "status") return new Set([DEFAULT_REFORM_STATUS]);
+    return new Set(this.all(groupKey));
   }
 
   all(groupKey: FilterGroupKey): string[] {
@@ -129,7 +121,8 @@ function generateAccordionForFilterGroup(
 
   filterOptions.all(params.filterStateKey).forEach((val, i) => {
     const inputId = `filter-${params.htmlName}-option-${i}`;
-    const checked = !DESELECTED_BY_DEFAULT[params.filterStateKey].has(val);
+    const checked =
+      params.filterStateKey !== "status" || val === DEFAULT_REFORM_STATUS;
     const description = params.preserveCapitalization ? val : capitalize(val);
     const [label] = generateCheckbox(
       inputId,
