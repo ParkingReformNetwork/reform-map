@@ -109,6 +109,7 @@ test.describe("PlaceFilterManager.matchedPolicyRecords()", () => {
 
     // The below filters should have no impact.
     manager.update({
+      allMinimumsRemovedToggle: true,
       scope: new Set(),
       landUse: new Set(),
       status: new Set(),
@@ -117,14 +118,6 @@ test.describe("PlaceFilterManager.matchedPolicyRecords()", () => {
     expect(manager.matchedPlaces).toEqual({
       "Place 1": expectedPlace1Match,
       "Place 2": expectedPlace2Match,
-    });
-
-    manager.update({ allMinimumsRemovedToggle: true });
-    expect(manager.matchedPlaces).toEqual({
-      "Place 2": expectedPlace2Match,
-    });
-    manager.update({
-      allMinimumsRemovedToggle: defaultState().allMinimumsRemovedToggle,
     });
 
     manager.update({
@@ -164,7 +157,7 @@ test.describe("PlaceFilterManager.matchedPolicyRecords()", () => {
     const manager = new PlaceFilterManager(defaultEntries(), {
       ...defaultState(),
       policyTypeFilter: "reduce parking minimums",
-      // This option should be ignored with 'reduce parking minimums'.
+      // Should be ignored.
       allMinimumsRemovedToggle: true,
       // Should be ignored.
       includedPolicyChanges: new Set(),
@@ -237,6 +230,7 @@ test.describe("PlaceFilterManager.matchedPolicyRecords()", () => {
     expect(manager.matchedPlaces).toEqual({});
     manager.update({ year: defaultState().year });
 
+    // `allMinimumsRemovedToggle` should not matter.
     const noRepealsEntries = defaultEntries();
     noRepealsEntries["Place 2"].place.repeal = false;
     const manager2 = new PlaceFilterManager(noRepealsEntries, {
@@ -244,7 +238,13 @@ test.describe("PlaceFilterManager.matchedPolicyRecords()", () => {
       policyTypeFilter: "add parking maximums",
       allMinimumsRemovedToggle: true,
     });
-    expect(manager2.matchedPlaces).toEqual({});
+    expect(manager2.matchedPlaces).toEqual({
+      "Place 2": {
+        type: "single policy",
+        policyType: "add parking maximums",
+        matchingIndexes: [0, 1],
+      },
+    });
   });
 
   test("remove minimums", () => {

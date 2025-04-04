@@ -87,7 +87,7 @@ const TESTS: EdgeCase[] = [
   },
   {
     desc: "all minimums removed",
-    policyTypeFilter: "any parking reform",
+    policyTypeFilter: "remove parking minimums",
     allMinimumsRemoved: true,
     expectedRange: DEFAULT_ALL_MINIMUMS_RANGE,
   },

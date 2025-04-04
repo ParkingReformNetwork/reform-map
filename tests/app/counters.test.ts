@@ -135,18 +135,11 @@ test("determineSearch()", () => {
 });
 
 test("determineAddMax()", () => {
-  expect(determineAddMax("map", "2 places in Mexico", false)).toEqual(
+  expect(determineAddMax("map", "2 places in Mexico")).toEqual(
     "Showing 2 places in Mexico with parking maximums added",
   );
-  expect(determineAddMax("map", "2 places in Mexico", true)).toEqual(
-    "Showing 2 places in Mexico with both all parking minimums removed and parking maximums added",
-  );
-
-  expect(determineAddMax("table", "2 places in Mexico", false)).toEqual(
+  expect(determineAddMax("table", "2 places in Mexico")).toEqual(
     "Showing details about parking maximums for 2 places in Mexico",
-  );
-  expect(determineAddMax("table", "2 places in Mexico", true)).toEqual(
-    "Showing details about parking maximums for 2 places in Mexico that have also removed all parking minimums",
   );
 });
 
@@ -180,7 +173,6 @@ test("determineAnyReform()", () => {
     args: {
       view: ViewState;
       matched: PolicyType[];
-      allMinimums: boolean;
       statePolicy: PolicyType[];
     },
     expected: string,
@@ -189,7 +181,6 @@ test("determineAnyReform()", () => {
       args.view,
       "5 places in Mexico",
       new Set(args.matched),
-      args.allMinimums,
       new Set(args.statePolicy),
     );
     expect(result).toEqual(expected);
@@ -201,14 +192,9 @@ test("determineAnyReform()", () => {
     "remove parking minimums",
   ];
 
-  // For table view, the text only depends on allMinimumsRemovedToggle.
   assert(
-    { view: "table", matched: [], statePolicy: [], allMinimums: false },
+    { view: "table", matched: [], statePolicy: [] },
     "Showing an overview of adopted parking reforms in 5 places in Mexico",
-  );
-  assert(
-    { view: "table", matched: [], statePolicy: [], allMinimums: true },
-    "Showing an overview of adopted parking reforms in 5 places in Mexico with all parking minimums removed",
   );
 
   // For map view, we only show policy types that are both present in the matched places &
@@ -218,7 +204,6 @@ test("determineAnyReform()", () => {
       view: "map",
       matched: everyPolicyType,
       statePolicy: everyPolicyType,
-      allMinimums: false,
     },
     "Showing 5 places in Mexico with parking minimums removed, parking minimums reduced, or parking maximums added",
   );
@@ -227,7 +212,6 @@ test("determineAnyReform()", () => {
       view: "map",
       matched: ["add parking maximums", "remove parking minimums"],
       statePolicy: everyPolicyType,
-      allMinimums: false,
     },
     "Showing 5 places in Mexico with parking minimums removed or parking maximums added",
   );
@@ -236,7 +220,6 @@ test("determineAnyReform()", () => {
       view: "map",
       matched: everyPolicyType,
       statePolicy: ["add parking maximums", "remove parking minimums"],
-      allMinimums: false,
     },
     "Showing 5 places in Mexico with parking minimums removed or parking maximums added",
   );
@@ -245,7 +228,6 @@ test("determineAnyReform()", () => {
       view: "map",
       matched: ["add parking maximums"],
       statePolicy: everyPolicyType,
-      allMinimums: false,
     },
     "Showing 5 places in Mexico with parking maximums added",
   );
@@ -254,27 +236,7 @@ test("determineAnyReform()", () => {
       view: "map",
       matched: everyPolicyType,
       statePolicy: ["add parking maximums"],
-      allMinimums: false,
     },
     "Showing 5 places in Mexico with parking maximums added",
-  );
-
-  assert(
-    {
-      view: "map",
-      matched: everyPolicyType,
-      statePolicy: everyPolicyType,
-      allMinimums: true,
-    },
-    "Showing 5 places in Mexico with all parking minimums removed",
-  );
-  assert(
-    {
-      view: "map",
-      matched: everyPolicyType,
-      statePolicy: ["add parking maximums"],
-      allMinimums: true,
-    },
-    "Showing 5 places in Mexico with both all parking minimums removed and parking maximums added",
   );
 });

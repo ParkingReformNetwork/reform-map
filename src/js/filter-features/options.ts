@@ -274,7 +274,7 @@ function initAllMinimumsToggle(
   filterManager.subscribe(
     `possibly hide all minimums toggle`,
     ({ policyTypeFilter }) => {
-      outerContainer.hidden = policyTypeFilter === "reduce parking minimums";
+      outerContainer.hidden = policyTypeFilter !== "remove parking minimums";
     },
   );
 }

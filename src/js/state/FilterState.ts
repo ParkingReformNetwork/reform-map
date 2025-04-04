@@ -186,12 +186,11 @@ export class PlaceFilterManager {
     if (!isCountry) return false;
 
     const isAllMinimumsRepealed =
+      // We only care about the option if the policy is "remove parking minimums"
+      filterState.policyTypeFilter !== "remove parking minimums" ||
       // If the toggle is false, we don't care.
       !filterState.allMinimumsRemovedToggle ||
-      // If the policy type is "reduce parking minimums", we don't care about
-      // `allMinimumsRemovedToggle` because no places have that toggle set &
-      // also have parking minimum reductions.
-      filterState.policyTypeFilter === "reduce parking minimums" ||
+      // Else, we do care that the place has total repeals.
       place.repeal;
     if (!isAllMinimumsRepealed) return false;
 

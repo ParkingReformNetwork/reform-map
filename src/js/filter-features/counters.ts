@@ -79,26 +79,13 @@ export function determineAnyReform(
   view: ViewState,
   placeDescription: string,
   matchedPolicyTypes: Set<PolicyType>,
-  allMinimumsRemovedToggle: boolean,
   statePolicyTypes: Set<string>,
 ): string {
   if (view === "table") {
-    const prefix = `Showing an overview of adopted parking reforms in ${placeDescription}`;
-    const suffix = allMinimumsRemovedToggle
-      ? " with all parking minimums removed"
-      : "";
-    return `${prefix}${suffix}`;
+    return `Showing an overview of adopted parking reforms in ${placeDescription}`;
   }
 
   const prefix = `Showing ${placeDescription} with`;
-
-  if (allMinimumsRemovedToggle) {
-    const suffix = isEqual(statePolicyTypes, new Set(["add parking maximums"]))
-      ? "both all parking minimums removed and parking maximums added"
-      : "all parking minimums removed";
-    return `${prefix} ${suffix}`;
-  }
-
   const policyDescriptionMap: Record<PolicyType, string> = {
     "add parking maximums": "parking maximums added",
     "reduce parking minimums": "parking minimums reduced",
@@ -128,18 +115,10 @@ export function determineReduceMin(
 export function determineAddMax(
   view: ViewState,
   placeDescription: string,
-  allMinimumsRemovedToggle: boolean,
 ): string {
-  if (view === "map") {
-    const suffix = allMinimumsRemovedToggle
-      ? "both all parking minimums removed and parking maximums added"
-      : "parking maximums added";
-    return `Showing ${placeDescription} with ${suffix}`;
-  }
-  const prefix = `Showing details about parking maximums for ${placeDescription}`;
-  return allMinimumsRemovedToggle
-    ? `${prefix} that have also removed all parking minimums`
-    : prefix;
+  return view === "map"
+    ? `Showing ${placeDescription} with parking maximums added`
+    : `Showing details about parking maximums for ${placeDescription}`;
 }
 
 export function determineRmMin(
@@ -186,17 +165,12 @@ export function determineHtml(
         view,
         placeDescription,
         matchedPolicyTypes,
-        state.allMinimumsRemovedToggle,
         state.includedPolicyChanges,
       );
     case "reduce parking minimums":
       return determineReduceMin(view, placeDescription);
     case "add parking maximums":
-      return determineAddMax(
-        view,
-        placeDescription,
-        state.allMinimumsRemovedToggle,
-      );
+      return determineAddMax(view, placeDescription);
     case "remove parking minimums":
       return determineRmMin(
         view,
