@@ -881,6 +881,25 @@
       }
     ]
   },
+  "Alfred, NY": {
+    "place": {
+      "name": "Alfred",
+      "state": "NY",
+      "country": "US",
+      "type": "city",
+      "pop": 4026,
+      "coord": [-77.7906062, 42.2542334],
+      "repeal": false
+    },
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["commercial"],
+        "date": null
+      }
+    ]
+  },
   "Algona, IA": {
     "place": {
       "name": "Algona",
@@ -1172,6 +1191,25 @@
         "status": "adopted",
         "scope": ["city center / business district"],
         "land": ["all uses"],
+        "date": null
+      }
+    ]
+  },
+  "Altamont, NY": {
+    "place": {
+      "name": "Altamont",
+      "state": "NY",
+      "country": "US",
+      "type": "city",
+      "pop": 1675,
+      "coord": [-74.0337382, 42.7006324],
+      "repeal": false
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["commercial", "industrial", "medical", "other"],
         "date": null
       }
     ]
@@ -5003,6 +5041,25 @@
         "status": "adopted",
         "scope": ["city center / business district"],
         "land": ["all uses"],
+        "date": null
+      }
+    ]
+  },
+  "Belmont, NY": {
+    "place": {
+      "name": "Belmont",
+      "state": "NY",
+      "country": "US",
+      "type": "city",
+      "pop": 856,
+      "coord": [-78.0344506, 42.2231241],
+      "repeal": false
+    },
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["commercial"],
         "date": null
       }
     ]
@@ -14010,6 +14067,59 @@
       }
     ]
   },
+  "Cohoes, NY": {
+    "place": {
+      "name": "Cohoes",
+      "state": "NY",
+      "country": "US",
+      "type": "city",
+      "pop": 18174,
+      "coord": [-73.7001187, 42.7742446],
+      "repeal": false
+    },
+    "add_max": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["all uses"],
+        "date": null
+      },
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["residential, all uses"],
+        "date": null
+      }
+    ],
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district", "citywide"],
+        "land": ["all uses", "residential, multi-family"],
+        "date": null
+      },
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["all uses"],
+        "date": null
+      }
+    ],
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["all uses"],
+        "date": null
+      },
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["all uses"],
+        "date": null
+      }
+    ]
+  },
   "Cokato, MN": {
     "place": {
       "name": "Cokato",
@@ -16261,6 +16371,25 @@
       }
     ]
   },
+  "Cuba, NY": {
+    "place": {
+      "name": "Cuba",
+      "state": "NY",
+      "country": "US",
+      "type": "city",
+      "pop": 1517,
+      "coord": [-78.2752927, 42.2175668],
+      "repeal": false
+    },
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["all uses"],
+        "date": null
+      }
+    ]
+  },
   "Culver City, CA": {
     "place": {
       "name": "Culver City",
@@ -17566,6 +17695,25 @@
       "type": "city",
       "pop": 1458,
       "coord": [-106.353368, 37.6788919],
+      "repeal": false
+    },
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["all uses"],
+        "date": null
+      }
+    ]
+  },
+  "Del Rio, TX": {
+    "place": {
+      "name": "Del Rio",
+      "state": "TX",
+      "country": "US",
+      "type": "city",
+      "pop": 34673,
+      "coord": [-100.8987707, 29.357515],
       "repeal": false
     },
     "rm_min": [
@@ -19952,6 +20100,45 @@
       {
         "status": "adopted",
         "scope": ["city center / business district"],
+        "land": ["all uses"],
+        "date": null
+      }
+    ]
+  },
+  "East Lyme, CT": {
+    "place": {
+      "name": "East Lyme",
+      "state": "CT",
+      "country": "US",
+      "type": "city",
+      "pop": 18693,
+      "coord": [-72.2258709, 41.3569909],
+      "repeal": false
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["all uses", "commercial"],
+        "date": null
+      }
+    ],
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["main street / special"],
+        "land": ["commercial", "other", "residential, low-density"],
+        "date": null
+      },
+      {
+        "status": "adopted",
+        "scope": ["main street / special"],
+        "land": ["all uses"],
+        "date": null
+      },
+      {
+        "status": "adopted",
+        "scope": ["main street / special"],
         "land": ["all uses"],
         "date": null
       }
@@ -25312,6 +25499,25 @@
       }
     ]
   },
+  "Freeport, TX": {
+    "place": {
+      "name": "Freeport",
+      "state": "TX",
+      "country": "US",
+      "type": "city",
+      "pop": 10696,
+      "coord": [-95.3596617, 28.9541368],
+      "repeal": false
+    },
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["all uses"],
+        "date": null
+      }
+    ]
+  },
   "Fremantle, WA": {
     "place": {
       "name": "Fremantle",
@@ -25949,6 +26155,41 @@
         "status": "adopted",
         "scope": ["city center / business district"],
         "land": ["all uses"],
+        "date": null
+      }
+    ]
+  },
+  "Galveston, TX": {
+    "place": {
+      "name": "Galveston",
+      "state": "TX",
+      "country": "US",
+      "type": "city",
+      "pop": 53695,
+      "coord": [-94.992736, 29.3872254],
+      "repeal": false
+    },
+    "add_max": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["all uses"],
+        "date": null
+      }
+    ],
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["all uses"],
+        "date": null
+      }
+    ],
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district", "main street / special"],
+        "land": ["all uses", "commercial", "other", "residential, all uses"],
         "date": null
       }
     ]
@@ -43595,6 +43836,31 @@
       }
     ]
   },
+  "Menands, NY": {
+    "place": {
+      "name": "Menands",
+      "state": "NY",
+      "country": "US",
+      "type": "city",
+      "pop": 4554,
+      "coord": [-73.7245639, 42.6920233],
+      "repeal": false
+    },
+    "add_max": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": [
+          "commercial",
+          "industrial",
+          "medical",
+          "other",
+          "residential, multi-family"
+        ],
+        "date": null
+      }
+    ]
+  },
   "Menard County, IL": {
     "place": {
       "name": "Menard County",
@@ -47881,6 +48147,33 @@
       }
     ]
   },
+  "Nacogdoches, TX": {
+    "place": {
+      "name": "Nacogdoches",
+      "state": "TX",
+      "country": "US",
+      "type": "city",
+      "pop": 32147,
+      "coord": [-94.5927451, 31.5970503],
+      "repeal": false
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district", "citywide"],
+        "land": ["all uses"],
+        "date": null
+      }
+    ],
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["all uses"],
+        "date": null
+      }
+    ]
+  },
   "Nanaimo, BC": {
     "place": {
       "name": "Nanaimo",
@@ -49755,6 +50048,60 @@
         "scope": ["citywide"],
         "land": ["all uses"],
         "date": "2021-12-15"
+      }
+    ]
+  },
+  "Niagara Falls, NY": {
+    "place": {
+      "name": "Niagara Falls",
+      "state": "NY",
+      "country": "US",
+      "type": "city",
+      "pop": 48671,
+      "coord": [-79.0614686, 43.08436],
+      "repeal": false
+    },
+    "add_max": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["all uses"],
+        "date": null
+      }
+    ],
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["main street / special"],
+        "land": ["commercial", "other"],
+        "date": null
+      }
+    ],
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["commercial", "other", "residential, all uses"],
+        "date": null
+      }
+    ]
+  },
+  "Nibley, UT": {
+    "place": {
+      "name": "Nibley",
+      "state": "UT",
+      "country": "US",
+      "type": "city",
+      "pop": 7328,
+      "coord": [-111.833119, 41.6745591],
+      "repeal": false
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["all uses", "commercial", "other"],
+        "date": "2025-02-20"
       }
     ]
   },
@@ -51660,6 +52007,14 @@
       {
         "status": "adopted",
         "scope": ["citywide", "main street / special"],
+        "land": ["all uses"],
+        "date": null
+      }
+    ],
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["main street / special"],
         "land": ["all uses"],
         "date": null
       }
@@ -62882,6 +63237,25 @@
       }
     ]
   },
+  "Sherman, TX": {
+    "place": {
+      "name": "Sherman",
+      "state": "TX",
+      "country": "US",
+      "type": "city",
+      "pop": 43645,
+      "coord": [-101.8858689, 36.2452294],
+      "repeal": false
+    },
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["commercial"],
+        "date": null
+      }
+    ]
+  },
   "Sherwood, WI": {
     "place": {
       "name": "Sherwood",
@@ -64718,6 +65092,25 @@
         "scope": ["city center / business district"],
         "land": ["all uses"],
         "date": "2022-09-08"
+      }
+    ]
+  },
+  "Spartanburg, SC": {
+    "place": {
+      "name": "Spartanburg",
+      "state": "SC",
+      "country": "US",
+      "type": "city",
+      "pop": 38732,
+      "coord": [-81.9320157, 34.9498007],
+      "repeal": false
+    },
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["all uses"],
+        "date": null
       }
     ]
   },
@@ -70237,6 +70630,33 @@
       }
     ]
   },
+  "Trumbull, CT": {
+    "place": {
+      "name": "Trumbull",
+      "state": "CT",
+      "country": "US",
+      "type": "city",
+      "pop": 36827,
+      "coord": [-73.2006687, 41.2428742],
+      "repeal": false
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["all uses"],
+        "date": null
+      }
+    ],
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["residential, low-density"],
+        "date": null
+      }
+    ]
+  },
   "Tshwane, GP": {
     "place": {
       "name": "Tshwane",
@@ -71595,6 +72015,25 @@
       }
     ]
   },
+  "Victoria, TX": {
+    "place": {
+      "name": "Victoria",
+      "state": "TX",
+      "country": "US",
+      "type": "city",
+      "pop": 65534,
+      "coord": [-96.9766308, 28.8026443],
+      "repeal": false
+    },
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["commercial", "other", "residential, multi-family"],
+        "date": null
+      }
+    ]
+  },
   "Vidalia, LA": {
     "place": {
       "name": "Vidalia",
@@ -71850,6 +72289,25 @@
       {
         "status": "adopted",
         "scope": ["city center / business district"],
+        "land": ["all uses"],
+        "date": null
+      }
+    ]
+  },
+  "Voorheesville, NY": {
+    "place": {
+      "name": "Voorheesville",
+      "state": "NY",
+      "country": "US",
+      "type": "city",
+      "pop": 2841,
+      "coord": [-73.9287366, 42.653967],
+      "repeal": false
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district", "citywide"],
         "land": ["all uses"],
         "date": null
       }
@@ -73081,6 +73539,41 @@
         "status": "adopted",
         "scope": ["city center / business district"],
         "land": ["all uses"],
+        "date": null
+      }
+    ]
+  },
+  "Watervliet, NY": {
+    "place": {
+      "name": "Watervliet",
+      "state": "NY",
+      "country": "US",
+      "type": "city",
+      "pop": 10375,
+      "coord": [-73.7012299, 42.7300784],
+      "repeal": false
+    },
+    "add_max": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["commercial", "industrial", "medical", "other"],
+        "date": null
+      }
+    ],
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["commercial", "industrial", "medical", "other"],
+        "date": null
+      }
+    ],
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district", "citywide"],
+        "land": ["all uses", "residential, low-density"],
         "date": null
       }
     ]
@@ -76496,10 +76989,10 @@
       "coord": [-73.0084385, 41.352597],
       "repeal": false
     },
-    "reduce_min": [
+    "rm_min": [
       {
         "status": "adopted",
-        "scope": ["city center / business district"],
+        "scope": ["citywide"],
         "land": ["all uses"],
         "date": null
       }
