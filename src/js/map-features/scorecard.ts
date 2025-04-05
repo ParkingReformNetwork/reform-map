@@ -5,10 +5,7 @@ import type { ProcessedCoreEntry, PlaceId } from "../model/types";
 import Observable from "../state/Observable";
 import { PlaceFilterManager } from "../state/FilterState";
 import { ViewStateObservable } from "../layout/viewToggle";
-import {
-  determinePolicyTypeStatuses,
-  joinWithConjunction,
-} from "../model/data";
+import { determinePolicyTypeStatuses } from "../model/data";
 
 export function generateScorecard(
   entry: ProcessedCoreEntry,
@@ -27,9 +24,8 @@ export function generateScorecard(
     .map(([policyType, statusesSet]) => {
       let suffix = "";
       if (needsStatusLabels) {
-        const statuses = joinWithConjunction(
+        const statuses = new Intl.ListFormat("en").format(
           Array.from(statusesSet).sort(),
-          "and",
         );
         suffix = ` (${statuses})`;
       }

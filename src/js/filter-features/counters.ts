@@ -6,11 +6,7 @@ import {
   PolicyTypeFilter,
 } from "../state/FilterState";
 import { PlaceId, PlaceType, PolicyType } from "../model/types";
-import {
-  joinWithConjunction,
-  placeIdToUrl,
-  COUNTRIES_PREFIXED_BY_THE,
-} from "../model/data";
+import { placeIdToUrl, COUNTRIES_PREFIXED_BY_THE } from "../model/data";
 import type { ViewState } from "../layout/viewToggle";
 
 export function determinePlaceDescription(
@@ -99,7 +95,9 @@ export function determineAnyReform(
   if (!policyDescriptions.length) {
     throw new Error(`Expected state.includedPolicyChanges to be set`);
   }
-  const suffix = joinWithConjunction(policyDescriptions, "or");
+  const suffix = new Intl.ListFormat("en", { type: "disjunction" }).format(
+    policyDescriptions,
+  );
   return `${prefix} ${suffix}`;
 }
 
