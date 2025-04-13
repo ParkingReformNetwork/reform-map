@@ -5392,6 +5392,25 @@
       }
     ]
   },
+  "Benwood, WV": {
+    "place": {
+      "name": "Benwood",
+      "state": "WV",
+      "country": "US",
+      "type": "city",
+      "pop": 1269,
+      "coord": [-80.7347236, 40.0169542],
+      "repeal": false
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["other"],
+        "date": null
+      }
+    ]
+  },
   "Benzonia, MI": {
     "place": {
       "name": "Benzonia",
@@ -11907,6 +11926,25 @@
       }
     ]
   },
+  "Charles Town, WV": {
+    "place": {
+      "name": "Charles Town",
+      "state": "WV",
+      "country": "US",
+      "type": "city",
+      "pop": 6534,
+      "coord": [-77.859581, 39.2891836],
+      "repeal": false
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["all uses"],
+        "date": null
+      }
+    ]
+  },
   "Charleston, IL": {
     "place": {
       "name": "Charleston",
@@ -13093,6 +13131,25 @@
       "repeal": false
     },
     "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["all uses"],
+        "date": null
+      }
+    ]
+  },
+  "Clarksburg, WV": {
+    "place": {
+      "name": "Clarksburg",
+      "state": "WV",
+      "country": "US",
+      "type": "city",
+      "pop": 16039,
+      "coord": [-80.3445341, 39.2806451],
+      "repeal": false
+    },
+    "reduce_min": [
       {
         "status": "adopted",
         "scope": ["city center / business district"],
@@ -18143,6 +18200,25 @@
       }
     ]
   },
+  "Deposit, NY": {
+    "place": {
+      "name": "Deposit",
+      "state": "NY",
+      "country": "US",
+      "type": "city",
+      "pop": 1387,
+      "coord": [-75.4276769, 42.0600834],
+      "repeal": false
+    },
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["commercial"],
+        "date": null
+      }
+    ]
+  },
   "Derby, CT": {
     "place": {
       "name": "Derby",
@@ -22029,6 +22105,33 @@
       }
     ]
   },
+  "Endicott, NY": {
+    "place": {
+      "name": "Endicott",
+      "state": "NY",
+      "country": "US",
+      "type": "city",
+      "pop": 13667,
+      "coord": [-76.0493684, 42.098408],
+      "repeal": false
+    },
+    "add_max": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["other"],
+        "date": null
+      }
+    ],
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["all uses"],
+        "date": null
+      }
+    ]
+  },
   "Enfield, CT": {
     "place": {
       "name": "Enfield",
@@ -23002,6 +23105,33 @@
       "coord": [-88.3597684, 38.378937],
       "repeal": false
     },
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["all uses"],
+        "date": null
+      }
+    ]
+  },
+  "Fairmont, WV": {
+    "place": {
+      "name": "Fairmont",
+      "state": "WV",
+      "country": "US",
+      "type": "city",
+      "pop": 18313,
+      "coord": [-80.1425781, 39.4850848],
+      "repeal": false
+    },
+    "add_max": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["all uses"],
+        "date": null
+      }
+    ],
     "rm_min": [
       {
         "status": "adopted",
@@ -26166,7 +26296,7 @@
       "country": "US",
       "type": "city",
       "pop": 53695,
-      "coord": [-94.992736, 29.3872254],
+      "coord": [-94.79617956555118, 29.304782576375622],
       "repeal": false
     },
     "add_max": [
@@ -27071,6 +27201,25 @@
         "status": "adopted",
         "scope": ["citywide"],
         "land": ["all uses"],
+        "date": null
+      }
+    ]
+  },
+  "Glen Dale, WV": {
+    "place": {
+      "name": "Glen Dale",
+      "state": "WV",
+      "country": "US",
+      "type": "city",
+      "pop": 1514,
+      "coord": [-80.7542517, 39.9492409],
+      "repeal": false
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["other"],
         "date": null
       }
     ]
@@ -34557,6 +34706,33 @@
       }
     ],
     "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["all uses"],
+        "date": null
+      }
+    ]
+  },
+  "Johnson City, NY": {
+    "place": {
+      "name": "Johnson City",
+      "state": "NY",
+      "country": "US",
+      "type": "city",
+      "pop": 15343,
+      "coord": [-75.9587873, 42.1157038],
+      "repeal": false
+    },
+    "add_max": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["other"],
+        "date": null
+      }
+    ],
+    "reduce_min": [
       {
         "status": "adopted",
         "scope": ["city center / business district"],
@@ -46978,6 +47154,25 @@
       }
     ]
   },
+  "Moundsville, WV": {
+    "place": {
+      "name": "Moundsville",
+      "state": "WV",
+      "country": "US",
+      "type": "city",
+      "pop": 8122,
+      "coord": [-80.7432124, 39.920425],
+      "repeal": false
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["all uses"],
+        "date": null
+      }
+    ]
+  },
   "Mount Airy, NC": {
     "place": {
       "name": "Mount Airy",
@@ -48154,7 +48349,7 @@
       "country": "US",
       "type": "city",
       "pop": 32147,
-      "coord": [-94.5927451, 31.5970503],
+      "coord": [-94.65596905128348, 31.603928038722238],
       "repeal": false
     },
     "reduce_min": [
@@ -51274,6 +51469,25 @@
         "status": "adopted",
         "scope": ["city center / business district"],
         "land": ["all uses"],
+        "date": null
+      }
+    ]
+  },
+  "Nutter Fort, WV": {
+    "place": {
+      "name": "Nutter Fort",
+      "state": "WV",
+      "country": "US",
+      "type": "city",
+      "pop": 1497,
+      "coord": [-80.3197283, 39.2634213],
+      "repeal": false
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["other"],
         "date": null
       }
     ]
@@ -55030,6 +55244,25 @@
         "status": "adopted",
         "scope": ["city center / business district"],
         "land": ["commercial", "residential, all uses"],
+        "date": null
+      }
+    ]
+  },
+  "Philippi, WV": {
+    "place": {
+      "name": "Philippi",
+      "state": "WV",
+      "country": "US",
+      "type": "city",
+      "pop": 2929,
+      "coord": [-80.03949, 39.1523474],
+      "repeal": false
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["other"],
         "date": null
       }
     ]
@@ -63167,9 +63400,9 @@
       "state": "QC",
       "country": "CA",
       "type": "city",
-      "pop": 167000,
+      "pop": 172950,
       "coord": [-71.889038, 45.403271],
-      "repeal": false
+      "repeal": true
     },
     "rm_min": [
       {
@@ -63177,6 +63410,12 @@
         "scope": ["city center / business district"],
         "land": ["all uses"],
         "date": "2017-05-09"
+      },
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["all uses"],
+        "date": "2025-04-08"
       }
     ]
   },
@@ -63244,7 +63483,7 @@
       "country": "US",
       "type": "city",
       "pop": 43645,
-      "coord": [-101.8858689, 36.2452294],
+      "coord": [-96.60931672750198, 33.63651475768539],
       "repeal": false
     },
     "rm_min": [
@@ -65559,6 +65798,25 @@
       {
         "status": "adopted",
         "scope": ["citywide"],
+        "land": ["all uses"],
+        "date": null
+      }
+    ]
+  },
+  "St. Albans, WV": {
+    "place": {
+      "name": "St. Albans",
+      "state": "WV",
+      "country": "US",
+      "type": "city",
+      "pop": 10861,
+      "coord": [-81.836241, 38.3856488],
+      "repeal": false
+    },
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
         "land": ["all uses"],
         "date": null
       }
@@ -75431,6 +75689,25 @@
         "status": "adopted",
         "scope": ["citywide"],
         "land": ["all uses"],
+        "date": null
+      }
+    ]
+  },
+  "Wheeling, WV": {
+    "place": {
+      "name": "Wheeling",
+      "state": "WV",
+      "country": "US",
+      "type": "city",
+      "pop": 27062,
+      "coord": [-80.7209149, 40.0639616],
+      "repeal": false
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district", "citywide"],
+        "land": ["all uses", "other"],
         "date": null
       }
     ]
