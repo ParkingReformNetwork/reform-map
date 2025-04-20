@@ -46802,6 +46802,41 @@
       }
     ]
   },
+  "Morgantown, WV": {
+    "place": {
+      "name": "Morgantown",
+      "state": "WV",
+      "country": "US",
+      "type": "city",
+      "pop": 30347,
+      "coord": [-79.9559437, 39.6296809],
+      "repeal": false
+    },
+    "add_max": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["commercial", "industrial", "medical", "other"],
+        "date": null
+      }
+    ],
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["all uses"],
+        "date": null
+      }
+    ],
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["commercial", "other", "residential, all uses"],
+        "date": null
+      }
+    ]
+  },
   "Moriarty, NM": {
     "place": {
       "name": "Moriarty",
