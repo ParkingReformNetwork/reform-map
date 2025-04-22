@@ -4421,6 +4421,25 @@
       }
     ]
   },
+  "Beckley, WV": {
+    "place": {
+      "name": "Beckley",
+      "state": "WV",
+      "country": "US",
+      "type": "city",
+      "pop": 17286,
+      "coord": [-81.1881557, 37.7781702],
+      "repeal": false
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district", "citywide"],
+        "land": ["all uses", "other"],
+        "date": null
+      }
+    ]
+  },
   "Bedford Township, MI": {
     "place": {
       "name": "Bedford Township",
@@ -54045,6 +54064,33 @@
       }
     ]
   },
+  "Parkersburg, WV": {
+    "place": {
+      "name": "Parkersburg",
+      "state": "WV",
+      "country": "US",
+      "type": "city",
+      "pop": 29749,
+      "coord": [-81.5620755, 39.2667309],
+      "repeal": false
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["all uses"],
+        "date": null
+      }
+    ],
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["all uses"],
+        "date": null
+      }
+    ]
+  },
   "Parkesburg, PA": {
     "place": {
       "name": "Parkesburg",
@@ -65426,6 +65472,25 @@
       }
     ]
   },
+  "Spencer, WV": {
+    "place": {
+      "name": "Spencer",
+      "state": "WV",
+      "country": "US",
+      "type": "city",
+      "pop": 2062,
+      "coord": [-81.3509777, 38.8021446],
+      "repeal": false
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["other"],
+        "date": null
+      }
+    ]
+  },
   "Spencerville, OH": {
     "place": {
       "name": "Spencerville",
@@ -72346,6 +72411,25 @@
       }
     ]
   },
+  "Vienna, WV": {
+    "place": {
+      "name": "Vienna",
+      "state": "WV",
+      "country": "US",
+      "type": "city",
+      "pop": 10676,
+      "coord": [-81.5512639, 39.3208866],
+      "repeal": false
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["commercial", "other", "residential, all uses"],
+        "date": null
+      }
+    ]
+  },
   "Vilas County, WI": {
     "place": {
       "name": "Vilas County",
@@ -76237,6 +76321,25 @@
         "status": "adopted",
         "scope": ["citywide"],
         "land": ["commercial", "industrial", "other", "residential, all uses"],
+        "date": null
+      }
+    ]
+  },
+  "Williamstown, WV": {
+    "place": {
+      "name": "Williamstown",
+      "state": "WV",
+      "country": "US",
+      "type": "city",
+      "pop": 2997,
+      "coord": [-81.4488545, 39.4000046],
+      "repeal": false
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["all uses", "other"],
         "date": null
       }
     ]
