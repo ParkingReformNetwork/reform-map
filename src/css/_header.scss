@@ -1,6 +1,7 @@
 @use "theme/borders";
 @use "theme/breakpoints";
 @use "theme/colors";
+@use "theme/hover";
 @use "theme/spacing";
 @use "theme/icons";
 @use "theme/typography";
@@ -43,7 +44,7 @@ $header-height: calc(
     width: icons.$icon-size-md;
   }
 
-  &:hover {
+  @include hover.enabled {
     background-color: colors.$gray-hover;
   }
 }

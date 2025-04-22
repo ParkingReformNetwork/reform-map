@@ -29,10 +29,12 @@ div.leaflet-control-zoom.leaflet-bar {
     align-items: center;
     justify-content: center;
 
-    &:hover,
-    &:focus {
-      color: unset;
-      text-decoration: none;
+    @media (hover: hover) {
+      &:hover,
+      &:focus {
+        color: unset;
+        text-decoration: none;
+      }
     }
 
     &:first-child {

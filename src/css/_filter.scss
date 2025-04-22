@@ -1,6 +1,7 @@
 @use "theme/borders";
 @use "theme/colors";
 @use "theme/icons";
+@use "theme/hover";
 @use "theme/spacing";
 @use "theme/typography";
 @use "theme/zindex";
@@ -51,7 +52,7 @@ $filter-inner-width: calc(
   background-color: colors.$filter-medium-gray;
   border-top: borders.$component-inner-divider;
 
-  &:hover {
+  @include hover.enabled {
     background-color: colors.$filter-medium-gray-hover;
   }
 
@@ -96,7 +97,7 @@ $filter-inner-width: calc(
 
   background-color: colors.$white;
 
-  &:hover {
+  @include hover.enabled {
     background-color: colors.$white-hover;
   }
 
@@ -164,7 +165,7 @@ $filter-inner-width: calc(
       margin-right: spacing.$container-edge-spacing;
     }
 
-    &:hover {
+    @include hover.enabled {
       background-color: colors.$white-hover;
     }
   }
@@ -216,7 +217,7 @@ $filter-inner-width: calc(
     background-position: right spacing.$element-gap center;
     background-size: icons.$icon-size-md;
 
-    &:hover {
+    @include hover.enabled {
       background-color: colors.$white-hover;
     }
   }
