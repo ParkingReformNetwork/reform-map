@@ -21,8 +21,9 @@ $filter-inner-width: calc(
   max-height: min(600px, 75vh);
   overflow-y: auto;
 
-  background-color: colors.$white;
+  background-color: colors.$filter-light-gray;
   border: borders.$component-border;
+  border-color: black;
   border-radius: borders.$border-radius;
 
   fieldset {
@@ -47,10 +48,11 @@ $filter-inner-width: calc(
   align-items: center;
   justify-content: space-between;
 
+  background-color: colors.$filter-medium-gray;
   border-top: borders.$component-inner-divider;
 
   &:hover {
-    background-color: colors.$hover-white;
+    background-color: colors.$filter-medium-gray-hover;
   }
 
   .filter-accordion-title {
@@ -82,7 +84,7 @@ $filter-inner-width: calc(
   cursor: pointer;
   font-size: typography.$font-size-base;
 
-  border: borders.$component-border;
+  border: borders.$component-inner-divider;
   border-radius: borders.$border-radius;
 
   min-height: spacing.$min-touch-target;
@@ -92,8 +94,10 @@ $filter-inner-width: calc(
   align-items: center;
   justify-content: space-between;
 
+  background-color: colors.$white;
+
   &:hover {
-    background-color: colors.$hover-white;
+    background-color: colors.$white-hover;
   }
 
   input {
@@ -145,9 +149,11 @@ $filter-inner-width: calc(
     height: spacing.$min-touch-target;
     cursor: pointer;
 
-    border: borders.$component-border;
+    border: borders.$component-inner-divider;
     border-radius: borders.$border-radius;
     margin-top: spacing.$container-edge-spacing;
+
+    background-color: colors.$white;
 
     &:first-child {
       margin-left: spacing.$container-edge-spacing;
@@ -159,7 +165,7 @@ $filter-inner-width: calc(
     }
 
     &:hover {
-      background-color: colors.$hover-white;
+      background-color: colors.$white-hover;
     }
   }
 }
@@ -198,7 +204,7 @@ $filter-inner-width: calc(
 
     padding-left: spacing.$element-gap;
 
-    border: borders.$component-border;
+    border: borders.$component-inner-divider;
     border-radius: borders.$border-radius;
 
     color: colors.$black;
@@ -211,7 +217,7 @@ $filter-inner-width: calc(
     background-size: icons.$icon-size-md;
 
     &:hover {
-      background-color: colors.$hover-white;
+      background-color: colors.$white-hover;
     }
   }
 }
