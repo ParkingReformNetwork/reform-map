@@ -2,18 +2,22 @@ a {
   color: #337ab7;
   text-decoration: none;
 
-  &:hover,
-  &:focus {
-    color: #23527c;
-    text-decoration: underline;
+  @media (hover: hover) {
+    &:hover,
+    &:focus {
+      color: #23527c;
+      text-decoration: underline;
+    }
   }
 }
 
 .external-link {
-  &:hover {
-    // We disable underlining because the font awesome icon won't
-    // have underlining on hover, which looks weird.
-    text-decoration: none;
+  @media (hover: hover) {
+    &:hover {
+      // We disable underlining because the font awesome icon won't
+      // have underlining on hover, which looks weird.
+      text-decoration: none;
+    }
   }
 
   svg {

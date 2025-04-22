@@ -1,6 +1,7 @@
 @use "theme/borders";
 @use "theme/breakpoints";
 @use "theme/colors";
+@use "theme/hover";
 @use "theme/spacing";
 @use "theme/icons";
 @use "theme/typography";
@@ -71,7 +72,7 @@
   align-items: center;
   justify-content: center;
 
-  &:hover {
+  @include hover.enabled {
     background-color: colors.$white-hover;
   }
 
