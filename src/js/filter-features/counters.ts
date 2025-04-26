@@ -81,24 +81,42 @@ export function determineAnyReform(
     return `Showing an overview of adopted parking reforms in ${placeDescription}`;
   }
 
+  interface Description {
+    singlePolicy: string;
+    multiplePolicies: string;
+  }
+
   const prefix = `Showing ${placeDescription} with`;
-  const policyDescriptionMap: Record<PolicyType, string> = {
-    "add parking maximums": "parking maximums added",
-    "reduce parking minimums": "parking minimums reduced",
-    "remove parking minimums": "parking minimums removed",
+  const policyDescriptionMap: Record<PolicyType, Description> = {
+    "add parking maximums": {
+      singlePolicy: "parking maximums added",
+      multiplePolicies: "maximums added",
+    },
+    "reduce parking minimums": {
+      singlePolicy: "parking minimums reduced",
+      multiplePolicies: "minimums reduced",
+    },
+    "remove parking minimums": {
+      singlePolicy: "parking minimums removed",
+      multiplePolicies: "minimums removed",
+    },
   };
   const policyDescriptions = Array.from(statePolicyTypes)
     .filter((policy) => matchedPolicyTypes.has(policy as PolicyType))
-    .map((policy) => policyDescriptionMap[policy as PolicyType])
-    .sort()
-    .reverse();
+    .map((policy) => policyDescriptionMap[policy as PolicyType]);
   if (!policyDescriptions.length) {
     throw new Error(`Expected state.includedPolicyChanges to be set`);
   }
-  const suffix = new Intl.ListFormat("en", { type: "disjunction" }).format(
-    policyDescriptions,
-  );
-  return `${prefix} ${suffix}`;
+  if (policyDescriptions.length === 1) {
+    return `${prefix} ${policyDescriptions[0].singlePolicy}`;
+  }
+
+  // Else, multiple policies. Format as a list.
+  const listItems = policyDescriptions
+    .map((description) => `<li>${description.multiplePolicies}</li>`)
+    .sort()
+    .join("");
+  return `${prefix} 1+ parking reform:<ul>${listItems}</ul>`;
 }
 
 export function determineReduceMin(

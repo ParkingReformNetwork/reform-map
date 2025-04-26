@@ -205,7 +205,7 @@ test("determineAnyReform()", () => {
       matched: everyPolicyType,
       statePolicy: everyPolicyType,
     },
-    "Showing 5 places in Mexico with parking minimums removed, parking minimums reduced, or parking maximums added",
+    "Showing 5 places in Mexico with 1+ parking reform:<ul><li>maximums added</li><li>minimums reduced</li><li>minimums removed</li></ul>",
   );
   assert(
     {
@@ -213,7 +213,7 @@ test("determineAnyReform()", () => {
       matched: ["add parking maximums", "remove parking minimums"],
       statePolicy: everyPolicyType,
     },
-    "Showing 5 places in Mexico with parking minimums removed or parking maximums added",
+    "Showing 5 places in Mexico with 1+ parking reform:<ul><li>maximums added</li><li>minimums removed</li></ul>",
   );
   assert(
     {
@@ -221,7 +221,7 @@ test("determineAnyReform()", () => {
       matched: everyPolicyType,
       statePolicy: ["add parking maximums", "remove parking minimums"],
     },
-    "Showing 5 places in Mexico with parking minimums removed or parking maximums added",
+    "Showing 5 places in Mexico with 1+ parking reform:<ul><li>maximums added</li><li>minimums removed</li></ul>",
   );
   assert(
     {

@@ -9,18 +9,16 @@
 @use "zoom";
 
 .map-counter {
-  $font-size: typography.$font-size-md;
-
   z-index: zindex.$map-counter;
   position: fixed;
   left: calc(zoom.$total-width + spacing.$map-controls-margin-x);
   top: calc(header.$header-height + spacing.$map-controls-margin-top);
 
-  font-size: $font-size;
+  font-size: typography.$font-size-base;
   line-height: 1.3;
 
   padding: spacing.$element-gap spacing.$container-edge-spacing;
-  min-height: calc($font-size * 2 + spacing.$element-gap * 2);
+  min-height: 40px; // This is for when the counter is not yet populated.
   width: 260px;
 
   background-color: colors.$white;
@@ -30,12 +28,18 @@
 
   @include breakpoints.gt-xxs {
     width: 280px;
+    font-size: typography.$font-size-md;
   }
   @include breakpoints.gt-xs {
     width: 300px;
   }
   @include breakpoints.gt-md {
     width: 340px;
+  }
+
+  ul {
+    margin-top: 5px;
+    margin-bottom: 0px;
   }
 }
 
