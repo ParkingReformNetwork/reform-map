@@ -1805,6 +1805,33 @@
       }
     ]
   },
+  "Anniston, AL": {
+    "place": {
+      "name": "Anniston",
+      "state": "AL",
+      "country": "US",
+      "type": "city",
+      "pop": 21564,
+      "coord": [-85.8283224, 33.6624824],
+      "repeal": false
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["other", "residential, multi-family"],
+        "date": null
+      }
+    ],
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["commercial", "other"],
+        "date": null
+      }
+    ]
+  },
   "Anoka, MN": {
     "place": {
       "name": "Anoka",
@@ -2347,6 +2374,25 @@
       "type": "city",
       "pop": 92870,
       "coord": [-82.5540161, 35.6009498],
+      "repeal": false
+    },
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["all uses"],
+        "date": null
+      }
+    ]
+  },
+  "Ashland, AL": {
+    "place": {
+      "name": "Ashland",
+      "state": "AL",
+      "country": "US",
+      "type": "city",
+      "pop": 1984,
+      "coord": [-85.8360741, 33.2737256],
       "repeal": false
     },
     "rm_min": [
@@ -9284,6 +9330,41 @@
       }
     ]
   },
+  "Calera, AL": {
+    "place": {
+      "name": "Calera",
+      "state": "AL",
+      "country": "US",
+      "type": "city",
+      "pop": 16494,
+      "coord": [-86.7505733, 33.1035045],
+      "repeal": false
+    },
+    "add_max": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["other"],
+        "date": null
+      }
+    ],
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["all uses"],
+        "date": null
+      }
+    ],
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["all uses"],
+        "date": null
+      }
+    ]
+  },
   "Calgary, AB": {
     "place": {
       "name": "Calgary",
@@ -11564,6 +11645,25 @@
         "scope": ["city center / business district"],
         "land": ["all uses"],
         "date": "2022-06-09"
+      }
+    ]
+  },
+  "Centreville, AL": {
+    "place": {
+      "name": "Centreville",
+      "state": "AL",
+      "country": "US",
+      "type": "city",
+      "pop": 2800,
+      "coord": [-87.1386067, 32.9445682],
+      "repeal": false
+    },
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["all uses"],
+        "date": null
       }
     ]
   },
@@ -14383,6 +14483,25 @@
       }
     ]
   },
+  "Collinsville, AL": {
+    "place": {
+      "name": "Collinsville",
+      "state": "AL",
+      "country": "US",
+      "type": "city",
+      "pop": 2059,
+      "coord": [-85.8608643, 34.2648308],
+      "repeal": false
+    },
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["all uses"],
+        "date": null
+      }
+    ]
+  },
   "Collinsville, IL": {
     "place": {
       "name": "Collinsville",
@@ -16933,6 +17052,25 @@
       "repeal": false
     },
     "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["all uses"],
+        "date": null
+      }
+    ]
+  },
+  "Daphne, AL": {
+    "place": {
+      "name": "Daphne",
+      "state": "AL",
+      "country": "US",
+      "type": "city",
+      "pop": 27462,
+      "coord": [-87.9036047, 30.6035255],
+      "repeal": false
+    },
+    "reduce_min": [
       {
         "status": "adopted",
         "scope": ["city center / business district"],
@@ -21121,6 +21259,25 @@
       }
     ]
   },
+  "Elba, AL": {
+    "place": {
+      "name": "Elba",
+      "state": "AL",
+      "country": "US",
+      "type": "city",
+      "pop": 3508,
+      "coord": [-86.0677243, 31.4146108],
+      "repeal": false
+    },
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["all uses"],
+        "date": null
+      }
+    ]
+  },
   "Elberta, MI": {
     "place": {
       "name": "Elberta",
@@ -23133,6 +23290,41 @@
       }
     ]
   },
+  "Fairhope, AL": {
+    "place": {
+      "name": "Fairhope",
+      "state": "AL",
+      "country": "US",
+      "type": "city",
+      "pop": 22477,
+      "coord": [-87.9028458, 30.5231647],
+      "repeal": false
+    },
+    "add_max": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["all uses"],
+        "date": null
+      }
+    ],
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["all uses"],
+        "date": null
+      }
+    ],
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["commercial", "other"],
+        "date": null
+      }
+    ]
+  },
   "Fairmont, WV": {
     "place": {
       "name": "Fairmont",
@@ -24182,6 +24374,25 @@
         "status": "adopted",
         "scope": ["city center / business district"],
         "land": ["all uses"],
+        "date": null
+      }
+    ]
+  },
+  "Foley, AL": {
+    "place": {
+      "name": "Foley",
+      "state": "AL",
+      "country": "US",
+      "type": "city",
+      "pop": 20335,
+      "coord": [-87.6835974, 30.4065868],
+      "repeal": false
+    },
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["commercial", "other", "residential, all uses"],
         "date": null
       }
     ]
@@ -29194,6 +29405,25 @@
       }
     ]
   },
+  "Greenville, AL": {
+    "place": {
+      "name": "Greenville",
+      "state": "AL",
+      "country": "US",
+      "type": "city",
+      "pop": 7374,
+      "coord": [-86.6177517, 31.8295972],
+      "repeal": false
+    },
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["all uses"],
+        "date": null
+      }
+    ]
+  },
   "Greenville, IL": {
     "place": {
       "name": "Greenville",
@@ -29589,6 +29819,33 @@
         "status": "adopted",
         "scope": ["city center / business district"],
         "land": ["all uses"],
+        "date": null
+      }
+    ]
+  },
+  "Gulf Shores, AL": {
+    "place": {
+      "name": "Gulf Shores",
+      "state": "AL",
+      "country": "US",
+      "type": "city",
+      "pop": 15014,
+      "coord": [-87.6893826, 30.2711224],
+      "repeal": false
+    },
+    "add_max": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["all uses"],
+        "date": null
+      }
+    ],
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["commercial", "other", "residential, multi-family"],
         "date": null
       }
     ]
@@ -31261,6 +31518,25 @@
         "status": "adopted",
         "scope": ["citywide"],
         "land": ["commercial", "industrial"],
+        "date": null
+      }
+    ]
+  },
+  "Heflin, AL": {
+    "place": {
+      "name": "Heflin",
+      "state": "AL",
+      "country": "US",
+      "type": "city",
+      "pop": 3431,
+      "coord": [-85.5874584, 33.6489948],
+      "repeal": false
+    },
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["all uses"],
         "date": null
       }
     ]
@@ -33930,6 +34206,25 @@
       }
     ]
   },
+  "Jackson, AL": {
+    "place": {
+      "name": "Jackson",
+      "state": "AL",
+      "country": "US",
+      "type": "city",
+      "pop": 4748,
+      "coord": [-85.9867941, 34.7692447],
+      "repeal": false
+    },
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["commercial", "other"],
+        "date": null
+      }
+    ]
+  },
   "Jackson, MI": {
     "place": {
       "name": "Jackson",
@@ -34019,6 +34314,33 @@
         "scope": ["citywide"],
         "land": ["all uses"],
         "date": "2021-10-01"
+      }
+    ]
+  },
+  "Jacksonville, AL": {
+    "place": {
+      "name": "Jacksonville",
+      "state": "AL",
+      "country": "US",
+      "type": "city",
+      "pop": 14385,
+      "coord": [-85.7612872, 33.8137919],
+      "repeal": false
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district", "main street / special"],
+        "land": ["all uses"],
+        "date": null
+      }
+    ],
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["commercial", "other"],
+        "date": null
       }
     ]
   },
@@ -34463,6 +34785,39 @@
       }
     ],
     "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["all uses"],
+        "date": null
+      }
+    ]
+  },
+  "Jemison, AL": {
+    "place": {
+      "name": "Jemison",
+      "state": "AL",
+      "country": "US",
+      "type": "city",
+      "pop": 2642,
+      "coord": [-86.7452105, 32.9596424],
+      "repeal": false
+    },
+    "add_max": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": [
+          "commercial",
+          "industrial",
+          "medical",
+          "other",
+          "residential, multi-family"
+        ],
+        "date": null
+      }
+    ],
+    "reduce_min": [
       {
         "status": "adopted",
         "scope": ["city center / business district"],
@@ -41459,6 +41814,33 @@
         "status": "adopted",
         "scope": ["city center / business district"],
         "land": ["commercial"],
+        "date": null
+      }
+    ]
+  },
+  "Magnolia Springs, AL": {
+    "place": {
+      "name": "Magnolia Springs",
+      "state": "AL",
+      "country": "US",
+      "type": "city",
+      "pop": 811,
+      "coord": [-87.7761001, 30.3996424],
+      "repeal": false
+    },
+    "add_max": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["all uses"],
+        "date": null
+      }
+    ],
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["all uses"],
         "date": null
       }
     ]
@@ -57198,6 +57580,32 @@
       }
     ]
   },
+  "Prattville, AL": {
+    "place": {
+      "name": "Prattville",
+      "state": "AL",
+      "country": "US",
+      "type": "city",
+      "pop": 37781,
+      "coord": [-86.4753174, 32.4600136],
+      "repeal": false
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district", "citywide"],
+        "land": [
+          "all uses",
+          "commercial",
+          "industrial",
+          "medical",
+          "other",
+          "residential, multi-family"
+        ],
+        "date": null
+      }
+    ]
+  },
   "Prescott, AZ": {
     "place": {
       "name": "Prescott",
@@ -65293,6 +65701,25 @@
       }
     ]
   },
+  "Southside, AL": {
+    "place": {
+      "name": "Southside",
+      "state": "AL",
+      "country": "US",
+      "type": "city",
+      "pop": 9426,
+      "coord": [-86.0224718, 33.9245425],
+      "repeal": false
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["all uses"],
+        "date": null
+      }
+    ]
+  },
   "Southwest Greensburg, PA": {
     "place": {
       "name": "Southwest Greensburg",
@@ -68117,6 +68544,25 @@
       }
     ]
   },
+  "Summerdale, AL": {
+    "place": {
+      "name": "Summerdale",
+      "state": "AL",
+      "country": "US",
+      "type": "city",
+      "pop": 1468,
+      "coord": [-87.6997094, 30.4876954],
+      "repeal": false
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["commercial"],
+        "date": null
+      }
+    ]
+  },
   "Summerset, SD": {
     "place": {
       "name": "Summerset",
@@ -69770,6 +70216,39 @@
       {
         "status": "adopted",
         "scope": ["transit-oriented"],
+        "land": ["all uses"],
+        "date": null
+      }
+    ]
+  },
+  "Thorsby, AL": {
+    "place": {
+      "name": "Thorsby",
+      "state": "AL",
+      "country": "US",
+      "type": "city",
+      "pop": 2064,
+      "coord": [-86.7158178, 32.9156796],
+      "repeal": false
+    },
+    "add_max": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": [
+          "commercial",
+          "industrial",
+          "medical",
+          "other",
+          "residential, multi-family"
+        ],
+        "date": null
+      }
+    ],
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
         "land": ["all uses"],
         "date": null
       }
@@ -73294,6 +73773,25 @@
           "residential, all uses"
         ],
         "date": "2023-07-17"
+      }
+    ]
+  },
+  "Warrior, AL": {
+    "place": {
+      "name": "Warrior",
+      "state": "AL",
+      "country": "US",
+      "type": "city",
+      "pop": 3224,
+      "coord": [-86.8094394, 33.8142682],
+      "repeal": false
+    },
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["all uses"],
+        "date": null
       }
     ]
   },
