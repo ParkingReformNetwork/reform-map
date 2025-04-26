@@ -1,6 +1,7 @@
 import { expect, test } from "@playwright/test";
 
 import {
+  sortCountries,
   determineOptionValues,
   ALL_POLICY_TYPE,
   ALL_STATUS,
@@ -66,7 +67,7 @@ test("determineOptionValues()", () => {
     status: ALL_STATUS,
     merged: {
       placeType: ["city", "country"],
-      country: ["Brazil", "United States"],
+      country: ["United States", "Brazil"],
       landUse: [
         "all uses",
         "commercial",
@@ -105,4 +106,17 @@ test("determineOptionValues()", () => {
     },
   };
   expect(determineOptionValues(input)).toEqual(expected);
+});
+
+test("sortCountries", () => {
+  const withUS = new Set(["Canada", "Brazil", "United States", "Argentina"]);
+  expect(sortCountries(withUS)).toEqual([
+    "United States",
+    "Argentina",
+    "Brazil",
+    "Canada",
+  ]);
+
+  const withoutUS = new Set(["Canada", "Brazil", "Argentina"]);
+  expect(sortCountries(withoutUS)).toEqual(["Argentina", "Brazil", "Canada"]);
 });

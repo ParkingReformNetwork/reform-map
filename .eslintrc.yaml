@@ -11,6 +11,7 @@ parserOptions:
   sourceType: module
 overrides: []
 rules:
+  no-use-before-define: off
   no-restricted-syntax: off
   import/no-unresolved: off
   import/extensions: off
