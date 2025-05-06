@@ -1604,6 +1604,25 @@
       }
     ]
   },
+  "Andalusia, AL": {
+    "place": {
+      "name": "Andalusia",
+      "state": "AL",
+      "country": "US",
+      "type": "city",
+      "pop": 8805,
+      "coord": [-86.482424, 31.3080607],
+      "repeal": false
+    },
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["commercial", "other"],
+        "date": null
+      }
+    ]
+  },
   "Anderson, IN": {
     "place": {
       "name": "Anderson",
@@ -1974,6 +1993,33 @@
         "status": "adopted",
         "scope": ["city center / business district"],
         "land": ["all uses"],
+        "date": null
+      }
+    ]
+  },
+  "Arab, AL": {
+    "place": {
+      "name": "Arab",
+      "state": "AL",
+      "country": "US",
+      "type": "city",
+      "pop": 8461,
+      "coord": [-86.4958219, 34.3181497],
+      "repeal": false
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["all uses"],
+        "date": null
+      }
+    ],
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["commercial", "other"],
         "date": null
       }
     ]
@@ -7681,6 +7727,25 @@
         "scope": ["citywide"],
         "land": ["all uses"],
         "date": "2018-04-10"
+      }
+    ]
+  },
+  "Brantley, AL": {
+    "place": {
+      "name": "Brantley",
+      "state": "AL",
+      "country": "US",
+      "type": "city",
+      "pop": 825,
+      "coord": [-86.2571786, 31.5823832],
+      "repeal": false
+    },
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["commercial", "other"],
+        "date": null
       }
     ]
   },
@@ -16585,6 +16650,33 @@
       }
     ]
   },
+  "Cullman, AL": {
+    "place": {
+      "name": "Cullman",
+      "state": "AL",
+      "country": "US",
+      "type": "city",
+      "pop": 18213,
+      "coord": [-86.8779268, 34.1335332],
+      "repeal": false
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["main street / special"],
+        "land": ["commercial", "other", "residential, multi-family"],
+        "date": null
+      }
+    ],
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["main street / special"],
+        "land": ["residential, multi-family"],
+        "date": null
+      }
+    ]
+  },
   "Culver City, CA": {
     "place": {
       "name": "Culver City",
@@ -17682,7 +17774,7 @@
       "country": "US",
       "type": "city",
       "pop": 57938,
-      "coord": [-87.0579187281271, 34.6240205],
+      "coord": [-86.98245499377428, 34.60997287495394],
       "repeal": false
     },
     "rm_min": [
@@ -63671,6 +63763,25 @@
         "scope": ["citywide"],
         "land": ["commercial", "industrial", "other", "residential, all uses"],
         "date": null
+      }
+    ]
+  },
+  "Sheffield, AL": {
+    "place": {
+      "name": "Sheffield",
+      "state": "AL",
+      "country": "US",
+      "type": "city",
+      "pop": 9403,
+      "coord": [-87.6986407, 34.7650888],
+      "repeal": false
+    },
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["commercial", "other"],
+        "date": "1998-09-21"
       }
     ]
   },
