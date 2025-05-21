@@ -37,6 +37,25 @@
       }
     ]
   },
+  "Abbeville, AL": {
+    "place": {
+      "name": "Abbeville",
+      "state": "AL",
+      "country": "US",
+      "type": "city",
+      "pop": 2358,
+      "coord": [-85.2503315, 31.5702088],
+      "repeal": false
+    },
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["all uses"],
+        "date": null
+      }
+    ]
+  },
   "Abbottstown, PA": {
     "place": {
       "name": "Abbottstown",
@@ -1604,6 +1623,25 @@
       }
     ]
   },
+  "Andalusia, AL": {
+    "place": {
+      "name": "Andalusia",
+      "state": "AL",
+      "country": "US",
+      "type": "city",
+      "pop": 8805,
+      "coord": [-86.482424, 31.3080607],
+      "repeal": false
+    },
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["commercial", "other"],
+        "date": null
+      }
+    ]
+  },
   "Anderson, IN": {
     "place": {
       "name": "Anderson",
@@ -1974,6 +2012,33 @@
         "status": "adopted",
         "scope": ["city center / business district"],
         "land": ["all uses"],
+        "date": null
+      }
+    ]
+  },
+  "Arab, AL": {
+    "place": {
+      "name": "Arab",
+      "state": "AL",
+      "country": "US",
+      "type": "city",
+      "pop": 8461,
+      "coord": [-86.4958219, 34.3181497],
+      "repeal": false
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["all uses"],
+        "date": null
+      }
+    ],
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["commercial", "other"],
         "date": null
       }
     ]
@@ -2374,6 +2439,25 @@
       "type": "city",
       "pop": 92870,
       "coord": [-82.5540161, 35.6009498],
+      "repeal": false
+    },
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["all uses"],
+        "date": null
+      }
+    ]
+  },
+  "Ashford, AL": {
+    "place": {
+      "name": "Ashford",
+      "state": "AL",
+      "country": "US",
+      "type": "city",
+      "pop": 2246,
+      "coord": [-85.2358439, 31.1838319],
       "repeal": false
     },
     "rm_min": [
@@ -6816,6 +6900,25 @@
       }
     ]
   },
+  "Boaz, AL": {
+    "place": {
+      "name": "Boaz",
+      "state": "AL",
+      "country": "US",
+      "type": "city",
+      "pop": 10107,
+      "coord": [-86.1649421, 34.1983281],
+      "repeal": false
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district", "citywide"],
+        "land": ["all uses"],
+        "date": null
+      }
+    ]
+  },
   "Boiling Springs, NC": {
     "place": {
       "name": "Boiling Springs",
@@ -7684,6 +7787,25 @@
       }
     ]
   },
+  "Brantley, AL": {
+    "place": {
+      "name": "Brantley",
+      "state": "AL",
+      "country": "US",
+      "type": "city",
+      "pop": 825,
+      "coord": [-86.2571786, 31.5823832],
+      "repeal": false
+    },
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["commercial", "other"],
+        "date": null
+      }
+    ]
+  },
   "Brattleboro, VT": {
     "place": {
       "name": "Brattleboro",
@@ -7771,6 +7893,25 @@
         "status": "adopted",
         "scope": ["city center / business district", "citywide"],
         "land": ["commercial", "industrial", "other"],
+        "date": null
+      }
+    ]
+  },
+  "Bremerton, WA": {
+    "place": {
+      "name": "Bremerton",
+      "state": "WA",
+      "country": "US",
+      "type": "city",
+      "pop": 43505,
+      "coord": [-122.6246836, 47.5653663],
+      "repeal": false
+    },
+    "rm_min": [
+      {
+        "status": "proposed",
+        "scope": ["citywide"],
+        "land": ["all uses"],
         "date": null
       }
     ]
@@ -16474,6 +16615,25 @@
       }
     ]
   },
+  "Crossville, AL": {
+    "place": {
+      "name": "Crossville",
+      "state": "AL",
+      "country": "US",
+      "type": "city",
+      "pop": 1830,
+      "coord": [-85.99414, 34.2875925],
+      "repeal": false
+    },
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["all uses"],
+        "date": null
+      }
+    ]
+  },
   "Crowley, LA": {
     "place": {
       "name": "Crowley",
@@ -16581,6 +16741,33 @@
         "status": "adopted",
         "scope": ["city center / business district"],
         "land": ["all uses"],
+        "date": null
+      }
+    ]
+  },
+  "Cullman, AL": {
+    "place": {
+      "name": "Cullman",
+      "state": "AL",
+      "country": "US",
+      "type": "city",
+      "pop": 18213,
+      "coord": [-86.8437095211558, 34.17492256493664],
+      "repeal": false
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["main street / special"],
+        "land": ["commercial", "other", "residential, multi-family"],
+        "date": null
+      }
+    ],
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["main street / special"],
+        "land": ["residential, multi-family"],
         "date": null
       }
     ]
@@ -16831,6 +17018,14 @@
       "coord": [-96.7968559, 32.7762719],
       "repeal": false
     },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["commercial", "residential, all uses"],
+        "date": "2025-05-14"
+      }
+    ],
     "rm_min": [
       {
         "status": "adopted",
@@ -16839,10 +17034,14 @@
         "date": null
       },
       {
-        "status": "proposed",
-        "scope": ["citywide"],
-        "land": ["all uses"],
-        "date": null
+        "status": "adopted",
+        "scope": [
+          "city center / business district",
+          "citywide",
+          "transit-oriented"
+        ],
+        "land": ["all uses", "commercial", "industrial"],
+        "date": "2025-05-14"
       }
     ]
   },
@@ -17682,7 +17881,7 @@
       "country": "US",
       "type": "city",
       "pop": 57938,
-      "coord": [-87.0579187281271, 34.6240205],
+      "coord": [-86.98245499377428, 34.60997287495394],
       "repeal": false
     },
     "rm_min": [
@@ -23656,6 +23855,25 @@
       }
     ]
   },
+  "Fayette, AL": {
+    "place": {
+      "name": "Fayette",
+      "state": "AL",
+      "country": "US",
+      "type": "city",
+      "pop": 4285,
+      "coord": [-87.8309399444082, 33.68464047847105],
+      "repeal": false
+    },
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["all uses"],
+        "date": null
+      }
+    ]
+  },
   "Fayetteville, AR": {
     "place": {
       "name": "Fayetteville",
@@ -25006,6 +25224,25 @@
         "status": "adopted",
         "scope": ["main street / special"],
         "land": ["commercial"],
+        "date": null
+      }
+    ]
+  },
+  "Fort Payne, AL": {
+    "place": {
+      "name": "Fort Payne",
+      "state": "AL",
+      "country": "US",
+      "type": "city",
+      "pop": 14877,
+      "coord": [-85.7196893, 34.4442547],
+      "repeal": false
+    },
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["commercial", "other", "residential, low-density"],
         "date": null
       }
     ]
@@ -31438,6 +31675,25 @@
       }
     ]
   },
+  "Headland, AL": {
+    "place": {
+      "name": "Headland",
+      "state": "AL",
+      "country": "US",
+      "type": "city",
+      "pop": 4973,
+      "coord": [-85.3421559, 31.351284],
+      "repeal": false
+    },
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["commercial", "other"],
+        "date": null
+      }
+    ]
+  },
   "Healdsburg, CA": {
     "place": {
       "name": "Healdsburg",
@@ -31607,6 +31863,25 @@
         "status": "adopted",
         "scope": ["city center / business district", "citywide"],
         "land": ["all uses"],
+        "date": null
+      }
+    ]
+  },
+  "Helsinki, Uusimaa": {
+    "place": {
+      "name": "Helsinki",
+      "state": "Uusimaa",
+      "country": "Finland",
+      "type": "city",
+      "pop": 686595,
+      "coord": [24.9427473, 60.1674881],
+      "repeal": false
+    },
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["residential, all uses"],
         "date": null
       }
     ]
@@ -34213,7 +34488,7 @@
       "country": "US",
       "type": "city",
       "pop": 4748,
-      "coord": [-85.9867941, 34.7692447],
+      "coord": [-87.89440041842762, 31.508942038956448],
       "repeal": false
     },
     "rm_min": [
@@ -35662,6 +35937,25 @@
         "status": "adopted",
         "scope": ["city center / business district"],
         "land": ["commercial"],
+        "date": null
+      }
+    ]
+  },
+  "Kansas City, KS": {
+    "place": {
+      "name": "Kansas City",
+      "state": "KS",
+      "country": "US",
+      "type": "city",
+      "pop": 156607,
+      "coord": [-94.626497, 39.1134562],
+      "repeal": false
+    },
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["commercial", "other"],
         "date": null
       }
     ]
@@ -51137,6 +51431,25 @@
       }
     ]
   },
+  "North Carolina, NC": {
+    "place": {
+      "name": "North Carolina",
+      "state": "NC",
+      "country": "US",
+      "type": "state",
+      "pop": 10439388,
+      "coord": [-79.52708508522043, 35.67688645584902],
+      "repeal": false
+    },
+    "rm_min": [
+      {
+        "status": "proposed",
+        "scope": ["regional"],
+        "land": ["all uses"],
+        "date": null
+      }
+    ]
+  },
   "North Chicago, IL": {
     "place": {
       "name": "North Chicago",
@@ -52624,6 +52937,33 @@
       }
     ]
   },
+  "Olathe, KS": {
+    "place": {
+      "name": "Olathe",
+      "state": "KS",
+      "country": "US",
+      "type": "city",
+      "pop": 141290,
+      "coord": [-94.81887, 38.8838856],
+      "repeal": false
+    },
+    "add_max": [
+      {
+        "status": "adopted",
+        "scope": ["transit-oriented"],
+        "land": ["all uses"],
+        "date": null
+      }
+    ],
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["all uses"],
+        "date": null
+      }
+    ]
+  },
   "Old Lyme, CT": {
     "place": {
       "name": "Old Lyme",
@@ -53992,6 +54332,25 @@
         "status": "adopted",
         "scope": ["citywide"],
         "land": ["residential, low-density"],
+        "date": null
+      }
+    ]
+  },
+  "Ozark, AL": {
+    "place": {
+      "name": "Ozark",
+      "state": "AL",
+      "country": "US",
+      "type": "city",
+      "pop": 14368,
+      "coord": [-85.6405865, 31.4584764],
+      "repeal": false
+    },
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["commercial", "other"],
         "date": null
       }
     ]
@@ -61088,6 +61447,25 @@
       }
     ]
   },
+  "Russellville, AL": {
+    "place": {
+      "name": "Russellville",
+      "state": "AL",
+      "country": "US",
+      "type": "city",
+      "pop": 10855,
+      "coord": [-87.7332823, 34.5042652],
+      "repeal": false
+    },
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["all uses"],
+        "date": null
+      }
+    ]
+  },
   "Russellville, AR": {
     "place": {
       "name": "Russellville",
@@ -63674,6 +64052,25 @@
       }
     ]
   },
+  "Sheffield, AL": {
+    "place": {
+      "name": "Sheffield",
+      "state": "AL",
+      "country": "US",
+      "type": "city",
+      "pop": 9403,
+      "coord": [-87.6986407, 34.7650888],
+      "repeal": false
+    },
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["commercial", "other"],
+        "date": "1998-09-21"
+      }
+    ]
+  },
   "Shelby County, IL": {
     "place": {
       "name": "Shelby County",
@@ -64786,6 +65183,25 @@
       {
         "status": "adopted",
         "scope": ["city center / business district"],
+        "land": ["all uses"],
+        "date": null
+      }
+    ]
+  },
+  "Slocomb, AL": {
+    "place": {
+      "name": "Slocomb",
+      "state": "AL",
+      "country": "US",
+      "type": "city",
+      "pop": 2082,
+      "coord": [-85.5936401, 31.1070277],
+      "repeal": false
+    },
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["main street / special"],
         "land": ["all uses"],
         "date": null
       }
@@ -69189,6 +69605,33 @@
       }
     ]
   },
+  "Tallassee, AL": {
+    "place": {
+      "name": "Tallassee",
+      "state": "AL",
+      "country": "US",
+      "type": "city",
+      "pop": 4763,
+      "coord": [-85.8922974, 32.5348568],
+      "repeal": false
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["all uses"],
+        "date": null
+      }
+    ],
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["commercial", "other"],
+        "date": null
+      }
+    ]
+  },
   "Tallmadge, OH": {
     "place": {
       "name": "Tallmadge",
@@ -69414,6 +69857,25 @@
       "repeal": false
     },
     "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["all uses"],
+        "date": null
+      }
+    ]
+  },
+  "Taylor, AL": {
+    "place": {
+      "name": "Taylor",
+      "state": "AL",
+      "country": "US",
+      "type": "city",
+      "pop": 2262,
+      "coord": [-85.468267, 31.164899],
+      "repeal": false
+    },
+    "add_max": [
       {
         "status": "adopted",
         "scope": ["citywide"],
@@ -72308,6 +72770,25 @@
       }
     ]
   },
+  "Valley Head, AL": {
+    "place": {
+      "name": "Valley Head",
+      "state": "AL",
+      "country": "US",
+      "type": "city",
+      "pop": 577,
+      "coord": [-85.6149654, 34.5689732],
+      "repeal": false
+    },
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["all uses"],
+        "date": null
+      }
+    ]
+  },
   "Valley Springs, SD": {
     "place": {
       "name": "Valley Springs",
@@ -74165,18 +74646,18 @@
         "date": "2024-03-27"
       },
       {
-        "status": "proposed",
+        "status": "adopted",
         "scope": ["regional"],
         "land": ["commercial", "residential, all uses"],
-        "date": null
+        "date": "2025-07-27"
       }
     ],
     "rm_min": [
       {
-        "status": "proposed",
+        "status": "adopted",
         "scope": ["regional"],
         "land": ["commercial", "other", "residential, all uses"],
-        "date": null
+        "date": "2025-07-27"
       }
     ]
   },
@@ -75523,6 +76004,25 @@
       }
     ]
   },
+  "West Hollywood, CA": {
+    "place": {
+      "name": "West Hollywood",
+      "state": "CA",
+      "country": "US",
+      "type": "city",
+      "pop": 35757,
+      "coord": [-118.3692894, 34.0923014],
+      "repeal": false
+    },
+    "rm_min": [
+      {
+        "status": "proposed",
+        "scope": ["citywide"],
+        "land": ["all uses"],
+        "date": null
+      }
+    ]
+  },
   "West Homestead, PA": {
     "place": {
       "name": "West Homestead",
@@ -76237,6 +76737,25 @@
         "status": "adopted",
         "scope": ["city center / business district", "citywide"],
         "land": ["all uses"],
+        "date": null
+      }
+    ]
+  },
+  "Wetumpka, AL": {
+    "place": {
+      "name": "Wetumpka",
+      "state": "AL",
+      "country": "US",
+      "type": "city",
+      "pop": 7220,
+      "coord": [-86.2045442, 32.5378668],
+      "repeal": false
+    },
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["commercial", "other"],
         "date": null
       }
     ]
