@@ -27,6 +27,7 @@ export const COUNTRY_MAPPING: Partial<Record<string, string>> = {
   CN: "China",
   DE: "Germany",
   DK: "Denmark",
+  FI: "Finland",
   FR: "France",
   IE: "Ireland",
   IN: "India",
