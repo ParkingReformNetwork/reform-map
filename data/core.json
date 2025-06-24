@@ -446,6 +446,25 @@
       }
     ]
   },
+  "Alabaster, AL": {
+    "place": {
+      "name": "Alabaster",
+      "state": "AL",
+      "country": "US",
+      "type": "city",
+      "pop": 33284,
+      "coord": [-86.8163773, 33.2442813],
+      "repeal": false
+    },
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["all uses"],
+        "date": null
+      }
+    ]
+  },
   "Alameda County, CA": {
     "place": {
       "name": "Alameda County",
@@ -2735,6 +2754,39 @@
       }
     ]
   },
+  "Athens, AL": {
+    "place": {
+      "name": "Athens",
+      "state": "AL",
+      "country": "US",
+      "type": "city",
+      "pop": 25406,
+      "coord": [-86.9711698, 34.8045487],
+      "repeal": false
+    },
+    "add_max": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": [
+          "commercial",
+          "industrial",
+          "medical",
+          "other",
+          "residential, multi-family"
+        ],
+        "date": null
+      }
+    ],
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district", "citywide"],
+        "land": ["all uses", "residential, low-density"],
+        "date": null
+      }
+    ]
+  },
   "Athens, OH": {
     "place": {
       "name": "Athens",
@@ -3631,6 +3683,12 @@
           "residential, all uses",
           "residential, low-density"
         ],
+        "date": null
+      },
+      {
+        "status": "proposed",
+        "scope": ["citywide"],
+        "land": ["all uses"],
         "date": null
       }
     ]
@@ -12625,6 +12683,39 @@
       }
     ]
   },
+  "Chelsea, AL": {
+    "place": {
+      "name": "Chelsea",
+      "state": "AL",
+      "country": "US",
+      "type": "city",
+      "pop": 14982,
+      "coord": [-86.6302625, 33.3401108],
+      "repeal": false
+    },
+    "add_max": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": [
+          "commercial",
+          "industrial",
+          "medical",
+          "other",
+          "residential, multi-family"
+        ],
+        "date": null
+      }
+    ],
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["all uses"],
+        "date": null
+      }
+    ]
+  },
   "Chelsea, MI": {
     "place": {
       "name": "Chelsea",
@@ -13293,6 +13384,25 @@
       }
     ]
   },
+  "Citronelle, AL": {
+    "place": {
+      "name": "Citronelle",
+      "state": "AL",
+      "country": "US",
+      "type": "city",
+      "pop": 3946,
+      "coord": [-88.234284, 31.0937841],
+      "repeal": false
+    },
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["all uses"],
+        "date": null
+      }
+    ]
+  },
   "Clairton, PA": {
     "place": {
       "name": "Clairton",
@@ -13609,7 +13719,7 @@
       "country": "US",
       "type": "city",
       "pop": 10291,
-      "coord": [-85.819651, 33.2423393],
+      "coord": [-86.60629532442134, 33.69925340933071],
       "repeal": false
     },
     "add_max": [
@@ -17456,6 +17566,25 @@
         "status": "adopted",
         "scope": ["city center / business district"],
         "land": ["commercial"],
+        "date": null
+      }
+    ]
+  },
+  "Dauphin Island, AL": {
+    "place": {
+      "name": "Dauphin Island",
+      "state": "AL",
+      "country": "US",
+      "type": "city",
+      "pop": 1778,
+      "coord": [-88.1124817, 30.2542022],
+      "repeal": false
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["all uses"],
         "date": null
       }
     ]
@@ -23752,6 +23881,25 @@
       }
     ]
   },
+  "Falkville, AL": {
+    "place": {
+      "name": "Falkville",
+      "state": "AL",
+      "country": "US",
+      "type": "city",
+      "pop": 1197,
+      "coord": [-86.908616, 34.3684295],
+      "repeal": false
+    },
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["commercial", "other"],
+        "date": "2024-08-05"
+      }
+    ]
+  },
   "Fallon, NV": {
     "place": {
       "name": "Fallon",
@@ -25911,6 +26059,25 @@
         "status": "adopted",
         "scope": ["citywide"],
         "land": ["residential, low-density"],
+        "date": null
+      }
+    ]
+  },
+  "Franklin, AL": {
+    "place": {
+      "name": "Franklin",
+      "state": "AL",
+      "country": "US",
+      "type": "city",
+      "pop": 590,
+      "coord": [-87.8339064, 34.440962],
+      "repeal": false
+    },
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["commercial", "other"],
         "date": null
       }
     ]
@@ -30269,6 +30436,44 @@
       }
     ]
   },
+  "Guntersville, AL": {
+    "place": {
+      "name": "Guntersville",
+      "state": "AL",
+      "country": "US",
+      "type": "city",
+      "pop": 8553,
+      "coord": [-86.2947041, 34.3581474],
+      "repeal": false
+    },
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["all uses"],
+        "date": null
+      }
+    ]
+  },
+  "Gurley, AL": {
+    "place": {
+      "name": "Gurley",
+      "state": "AL",
+      "country": "US",
+      "type": "city",
+      "pop": 816,
+      "coord": [-86.3758201, 34.7017558],
+      "repeal": false
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["all uses"],
+        "date": null
+      }
+    ]
+  },
   "Gurnee, IL": {
     "place": {
       "name": "Gurnee",
@@ -30402,6 +30607,25 @@
       }
     ]
   },
+  "Haleyville, AL": {
+    "place": {
+      "name": "Haleyville",
+      "state": "AL",
+      "country": "US",
+      "type": "city",
+      "pop": 4361,
+      "coord": [-87.6214133, 34.226488],
+      "repeal": false
+    },
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["all uses"],
+        "date": null
+      }
+    ]
+  },
   "Halifax, NS": {
     "place": {
       "name": "Halifax",
@@ -30505,6 +30729,25 @@
       "repeal": false
     },
     "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["all uses"],
+        "date": null
+      }
+    ]
+  },
+  "Hamilton, AL": {
+    "place": {
+      "name": "Hamilton",
+      "state": "AL",
+      "country": "US",
+      "type": "city",
+      "pop": 7042,
+      "coord": [-87.9890206, 34.1420861],
+      "repeal": false
+    },
+    "rm_min": [
       {
         "status": "adopted",
         "scope": ["city center / business district"],
@@ -31374,6 +31617,25 @@
       }
     ]
   },
+  "Hartselle, AL": {
+    "place": {
+      "name": "Hartselle",
+      "state": "AL",
+      "country": "US",
+      "type": "city",
+      "pop": 15455,
+      "coord": [-86.9352842, 34.4434282],
+      "repeal": false
+    },
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["all uses"],
+        "date": null
+      }
+    ]
+  },
   "Harvard, IL": {
     "place": {
       "name": "Harvard",
@@ -32042,7 +32304,7 @@
     "place": {
       "name": "Helsinki",
       "state": "Uusimaa",
-      "country": "Finland",
+      "country": "FI",
       "type": "city",
       "pop": 686595,
       "coord": [24.9427473, 60.1674881],
@@ -33117,7 +33379,7 @@
       "country": "US",
       "type": "city",
       "pop": 92606,
-      "coord": [-86.851123, 33.350293],
+      "coord": [-86.80658186185164, 33.387754551602434],
       "repeal": false
     },
     "reduce_min": [
@@ -34668,6 +34930,12 @@
         ],
         "land": ["commercial", "residential, all uses"],
         "date": "2023-07-05"
+      },
+      {
+        "status": "proposed",
+        "scope": ["main street / special"],
+        "land": ["all uses"],
+        "date": null
       }
     ]
   },
@@ -40364,6 +40632,25 @@
       }
     ]
   },
+  "Lincoln, AL": {
+    "place": {
+      "name": "Lincoln",
+      "state": "AL",
+      "country": "US",
+      "type": "city",
+      "pop": 6845,
+      "coord": [-86.1183061, 33.6131588],
+      "repeal": false
+    },
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["commercial", "other"],
+        "date": null
+      }
+    ]
+  },
   "Lincoln, AR": {
     "place": {
       "name": "Lincoln",
@@ -42171,6 +42458,39 @@
       "coord": [-84.3635507, 39.1908926],
       "repeal": false
     },
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["all uses"],
+        "date": null
+      }
+    ]
+  },
+  "Madison, AL": {
+    "place": {
+      "name": "Madison",
+      "state": "AL",
+      "country": "US",
+      "type": "city",
+      "pop": 56933,
+      "coord": [-86.5675095, 34.7736807],
+      "repeal": false
+    },
+    "add_max": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": [
+          "commercial",
+          "industrial",
+          "medical",
+          "other",
+          "residential, multi-family"
+        ],
+        "date": null
+      }
+    ],
     "rm_min": [
       {
         "status": "adopted",
@@ -47184,6 +47504,25 @@
       }
     ]
   },
+  "Montevallo, AL": {
+    "place": {
+      "name": "Montevallo",
+      "state": "AL",
+      "country": "US",
+      "type": "city",
+      "pop": 7229,
+      "coord": [-86.8641558, 33.1006746],
+      "repeal": false
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["all uses", "commercial", "other"],
+        "date": null
+      }
+    ]
+  },
   "Montevideo, MN": {
     "place": {
       "name": "Montevideo",
@@ -48724,6 +49063,25 @@
       "type": "city",
       "pop": 2308,
       "coord": [-77.8822199, 40.3845217],
+      "repeal": false
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["all uses"],
+        "date": null
+      }
+    ]
+  },
+  "Mt. Vernon, AL": {
+    "place": {
+      "name": "Mt. Vernon",
+      "state": "AL",
+      "country": "US",
+      "type": "city",
+      "pop": 1354,
+      "coord": [-88.0133325, 31.0851775],
       "repeal": false
     },
     "reduce_min": [
@@ -50347,6 +50705,41 @@
       "coord": [-91.2190416, 38.6083822],
       "repeal": false
     },
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["all uses"],
+        "date": null
+      }
+    ]
+  },
+  "New Hope, AL": {
+    "place": {
+      "name": "New Hope",
+      "state": "AL",
+      "country": "US",
+      "type": "city",
+      "pop": 2889,
+      "coord": [-86.3944308, 34.5370339],
+      "repeal": false
+    },
+    "add_max": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["all uses"],
+        "date": null
+      }
+    ],
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["all uses"],
+        "date": null
+      }
+    ],
     "rm_min": [
       {
         "status": "adopted",
@@ -54003,6 +54396,14 @@
         "date": null
       }
     ],
+    "reduce_min": [
+      {
+        "status": "proposed",
+        "scope": ["main street / special"],
+        "land": ["all uses"],
+        "date": null
+      }
+    ],
     "rm_min": [
       {
         "status": "adopted",
@@ -55666,6 +56067,33 @@
       }
     ]
   },
+  "Pelham, AL": {
+    "place": {
+      "name": "Pelham",
+      "state": "AL",
+      "country": "US",
+      "type": "city",
+      "pop": 24318,
+      "coord": [-86.8099884, 33.285669],
+      "repeal": false
+    },
+    "add_max": [
+      {
+        "status": "adopted",
+        "scope": ["main street / special"],
+        "land": ["all uses"],
+        "date": null
+      }
+    ],
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["main street / special"],
+        "land": ["residential, low-density"],
+        "date": null
+      }
+    ]
+  },
   "Pella, IA": {
     "place": {
       "name": "Pella",
@@ -56256,6 +56684,25 @@
         "status": "adopted",
         "scope": ["citywide"],
         "land": ["all uses"],
+        "date": null
+      }
+    ]
+  },
+  "Phenix City, AL": {
+    "place": {
+      "name": "Phenix City",
+      "state": "AL",
+      "country": "US",
+      "type": "city",
+      "pop": 38817,
+      "coord": [-85.0007653, 32.4709761],
+      "repeal": false
+    },
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["commercial", "other"],
         "date": null
       }
     ]
@@ -58268,6 +58715,25 @@
         "status": "adopted",
         "scope": ["city center / business district"],
         "land": ["commercial"],
+        "date": null
+      }
+    ]
+  },
+  "Priceville, AL": {
+    "place": {
+      "name": "Priceville",
+      "state": "AL",
+      "country": "US",
+      "type": "city",
+      "pop": 3513,
+      "coord": [-86.8947271, 34.5250932],
+      "repeal": false
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["all uses"],
         "date": null
       }
     ]
@@ -60362,6 +60828,25 @@
       "type": "city",
       "pop": 3532,
       "coord": [-89.5395417, 39.8442164],
+      "repeal": false
+    },
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["all uses"],
+        "date": null
+      }
+    ]
+  },
+  "Roanoke, AL": {
+    "place": {
+      "name": "Roanoke",
+      "state": "AL",
+      "country": "US",
+      "type": "city",
+      "pop": 5311,
+      "coord": [-85.3748173, 33.1522422],
       "repeal": false
     },
     "rm_min": [
@@ -66988,6 +67473,25 @@
       }
     ]
   },
+  "Springville, AL": {
+    "place": {
+      "name": "Springville",
+      "state": "AL",
+      "country": "US",
+      "type": "city",
+      "pop": 4786,
+      "coord": [-86.4716512, 33.7750997],
+      "repeal": false
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["commercial", "other"],
+        "date": null
+      }
+    ]
+  },
   "St. Albans, WV": {
     "place": {
       "name": "St. Albans",
@@ -69714,6 +70218,25 @@
       }
     ]
   },
+  "Sylacauga, AL": {
+    "place": {
+      "name": "Sylacauga",
+      "state": "AL",
+      "country": "US",
+      "type": "city",
+      "pop": 12578,
+      "coord": [-86.2514099, 33.170482],
+      "repeal": false
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district", "citywide"],
+        "land": ["all uses", "commercial", "other"],
+        "date": null
+      }
+    ]
+  },
   "Sylvania, OH": {
     "place": {
       "name": "Sylvania",
@@ -69817,6 +70340,25 @@
       "type": "city",
       "pop": 16209,
       "coord": [-94.969956, 35.91537],
+      "repeal": false
+    },
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["all uses"],
+        "date": null
+      }
+    ]
+  },
+  "Talladega, AL": {
+    "place": {
+      "name": "Talladega",
+      "state": "AL",
+      "country": "US",
+      "type": "city",
+      "pop": 15861,
+      "coord": [-86.1597137, 33.3967079],
       "repeal": false
     },
     "rm_min": [
@@ -77944,6 +78486,25 @@
         "status": "adopted",
         "scope": ["city center / business district", "citywide"],
         "land": ["all uses", "industrial", "other"],
+        "date": null
+      }
+    ]
+  },
+  "Wilsonville, AL": {
+    "place": {
+      "name": "Wilsonville",
+      "state": "AL",
+      "country": "US",
+      "type": "city",
+      "pop": 1857,
+      "coord": [-86.4835916, 33.234281],
+      "repeal": false
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["commercial", "other"],
         "date": null
       }
     ]
