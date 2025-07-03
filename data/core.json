@@ -823,6 +823,25 @@
       }
     ]
   },
+  "Alexander City, AL": {
+    "place": {
+      "name": "Alexander City",
+      "state": "AL",
+      "country": "US",
+      "type": "city",
+      "pop": 14843,
+      "coord": [-85.9538532, 32.944012],
+      "repeal": false
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["all uses"],
+        "date": null
+      }
+    ]
+  },
   "Alexandria, IN": {
     "place": {
       "name": "Alexandria",
@@ -3046,6 +3065,25 @@
         "status": "adopted",
         "scope": ["city center / business district"],
         "land": ["all uses"],
+        "date": null
+      }
+    ]
+  },
+  "Auburn, NY": {
+    "place": {
+      "name": "Auburn",
+      "state": "NY",
+      "country": "US",
+      "type": "city",
+      "pop": 26866,
+      "coord": [-76.5672029, 42.9320202],
+      "repeal": false
+    },
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["commercial", "other"],
         "date": null
       }
     ]
@@ -12586,6 +12624,25 @@
       {
         "status": "adopted",
         "scope": ["city center / business district"],
+        "land": ["all uses"],
+        "date": null
+      }
+    ]
+  },
+  "Chatham, NY": {
+    "place": {
+      "name": "Chatham",
+      "state": "NY",
+      "country": "US",
+      "type": "city",
+      "pop": 1529,
+      "coord": [-73.5948391, 42.3642517],
+      "repeal": false
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district", "citywide"],
         "land": ["all uses"],
         "date": null
       }
@@ -22379,6 +22436,25 @@
       }
     ]
   },
+  "Elmira Heights, NY": {
+    "place": {
+      "name": "Elmira Heights",
+      "state": "NY",
+      "country": "US",
+      "type": "city",
+      "pop": 3916,
+      "coord": [-76.8213544, 42.1296903],
+      "repeal": false
+    },
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["all uses"],
+        "date": null
+      }
+    ]
+  },
   "Elmira, NY": {
     "place": {
       "name": "Elmira",
@@ -25257,6 +25333,40 @@
       }
     ]
   },
+  "Fort Bragg, CA": {
+    "place": {
+      "name": "Fort Bragg",
+      "state": "CA",
+      "country": "US",
+      "type": "city",
+      "pop": 6983,
+      "coord": [-123.8057607, 39.4436579],
+      "repeal": false
+    },
+    "add_max": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": [
+          "commercial",
+          "industrial",
+          "medical",
+          "other",
+          "residential, low-density",
+          "residential, multi-family"
+        ],
+        "date": null
+      }
+    ],
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["all uses"],
+        "date": null
+      }
+    ]
+  },
   "Fort Calhoun, NE": {
     "place": {
       "name": "Fort Calhoun",
@@ -26070,7 +26180,7 @@
       "country": "US",
       "type": "city",
       "pop": 590,
-      "coord": [-87.8339064, 34.440962],
+      "coord": [-85.79493023785146, 32.44536618144399],
       "repeal": false
     },
     "rm_min": [
@@ -26154,6 +26264,52 @@
         "status": "adopted",
         "scope": ["city center / business district"],
         "land": ["commercial", "other"],
+        "date": null
+      }
+    ]
+  },
+  "Franklin, WI": {
+    "place": {
+      "name": "Franklin",
+      "state": "WI",
+      "country": "US",
+      "type": "city",
+      "pop": 36816,
+      "coord": [-88.0384183, 42.888627],
+      "repeal": true
+    },
+    "add_max": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["commercial", "industrial", "medical", "other"],
+        "date": "2025-05-06"
+      }
+    ],
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["all uses"],
+        "date": "2025-05-06"
+      }
+    ]
+  },
+  "Franklinville, NY": {
+    "place": {
+      "name": "Franklinville",
+      "state": "NY",
+      "country": "US",
+      "type": "city",
+      "pop": 1652,
+      "coord": [-78.4580762, 42.3370091],
+      "repeal": false
+    },
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["all uses"],
         "date": null
       }
     ]
@@ -33452,6 +33608,25 @@
         "status": "adopted",
         "scope": ["city center / business district"],
         "land": ["all uses"],
+        "date": null
+      }
+    ]
+  },
+  "Horseheads, NY": {
+    "place": {
+      "name": "Horseheads",
+      "state": "NY",
+      "country": "US",
+      "type": "city",
+      "pop": 6606,
+      "coord": [-76.8202973, 42.1669832],
+      "repeal": false
+    },
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["commercial"],
         "date": null
       }
     ]
@@ -42474,7 +42649,7 @@
       "country": "US",
       "type": "city",
       "pop": 56933,
-      "coord": [-86.5675095, 34.7736807],
+      "coord": [-86.75131124920155, 34.693193262630174],
       "repeal": false
     },
     "add_max": [
@@ -47961,6 +48136,25 @@
       }
     ]
   },
+  "Moravia, NY": {
+    "place": {
+      "name": "Moravia",
+      "state": "NY",
+      "country": "US",
+      "type": "city",
+      "pop": 1224,
+      "coord": [-76.4216025, 42.7125702],
+      "repeal": false
+    },
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["all uses"],
+        "date": null
+      }
+    ]
+  },
   "Morenci, MI": {
     "place": {
       "name": "Morenci",
@@ -52610,6 +52804,41 @@
       }
     ]
   },
+  "Northport, AL": {
+    "place": {
+      "name": "Northport",
+      "state": "AL",
+      "country": "US",
+      "type": "city",
+      "pop": 31125,
+      "coord": [-87.5771286, 33.2292976],
+      "repeal": false
+    },
+    "add_max": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["all uses"],
+        "date": null
+      }
+    ],
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["all uses", "commercial", "other"],
+        "date": null
+      }
+    ],
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["commercial", "other"],
+        "date": null
+      }
+    ]
+  },
   "Northville Charter Township, MI": {
     "place": {
       "name": "Northville Charter Township",
@@ -52743,6 +52972,33 @@
       {
         "status": "adopted",
         "scope": ["city center / business district"],
+        "land": ["all uses"],
+        "date": null
+      }
+    ]
+  },
+  "Norwich, NY": {
+    "place": {
+      "name": "Norwich",
+      "state": "NY",
+      "country": "US",
+      "type": "city",
+      "pop": 7051,
+      "coord": [-75.5235149, 42.5311809],
+      "repeal": false
+    },
+    "add_max": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["commercial", "other"],
+        "date": null
+      }
+    ],
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
         "land": ["all uses"],
         "date": null
       }
@@ -54858,6 +55114,25 @@
         "date": null
       }
     ],
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["commercial", "other"],
+        "date": null
+      }
+    ]
+  },
+  "Oxford, NY": {
+    "place": {
+      "name": "Oxford",
+      "state": "NY",
+      "country": "US",
+      "type": "city",
+      "pop": 1330,
+      "coord": [-75.5976855, 42.4420181],
+      "repeal": false
+    },
     "rm_min": [
       {
         "status": "adopted",
@@ -61947,6 +62222,25 @@
         "scope": ["city center / business district"],
         "land": ["all uses", "commercial"],
         "date": "2021-10-05"
+      }
+    ]
+  },
+  "Rouses Point, NY": {
+    "place": {
+      "name": "Rouses Point",
+      "state": "NY",
+      "country": "US",
+      "type": "city",
+      "pop": 2195,
+      "coord": [-73.3645221, 44.9939829],
+      "repeal": false
+    },
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["commercial", "other"],
+        "date": null
       }
     ]
   },
@@ -70358,7 +70652,7 @@
       "country": "US",
       "type": "city",
       "pop": 15861,
-      "coord": [-86.1597137, 33.3967079],
+      "coord": [-86.10234329907128, 33.43552756767986],
       "repeal": false
     },
     "rm_min": [
@@ -73319,6 +73613,25 @@
       }
     ]
   },
+  "Union Springs, NY": {
+    "place": {
+      "name": "Union Springs",
+      "state": "NY",
+      "country": "US",
+      "type": "city",
+      "pop": 1075,
+      "coord": [-76.6932818, 42.8397906],
+      "repeal": false
+    },
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["commercial", "other", "residential, multi-family"],
+        "date": null
+      }
+    ]
+  },
   "Union, MO": {
     "place": {
       "name": "Union",
@@ -73529,6 +73842,25 @@
         "status": "adopted",
         "scope": ["city center / business district", "citywide"],
         "land": ["commercial", "other", "residential, all uses"],
+        "date": null
+      }
+    ]
+  },
+  "Valatie, NY": {
+    "place": {
+      "name": "Valatie",
+      "state": "NY",
+      "country": "US",
+      "type": "city",
+      "pop": 1785,
+      "coord": [-73.6731749, 42.4134168],
+      "repeal": false
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["all uses"],
         "date": null
       }
     ]
@@ -76302,6 +76634,25 @@
       }
     ]
   },
+  "Weedsport, NY": {
+    "place": {
+      "name": "Weedsport",
+      "state": "NY",
+      "country": "US",
+      "type": "city",
+      "pop": 1788,
+      "coord": [-76.5627197, 43.048677],
+      "repeal": false
+    },
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["commercial", "other"],
+        "date": null
+      }
+    ]
+  },
   "Weirton, WV": {
     "place": {
       "name": "Weirton",
@@ -77390,6 +77741,33 @@
         "scope": ["city center / business district"],
         "land": ["commercial"],
         "date": "2015-02-23"
+      }
+    ]
+  },
+  "Westfield, NY": {
+    "place": {
+      "name": "Westfield",
+      "state": "NY",
+      "country": "US",
+      "type": "city",
+      "pop": 2993,
+      "coord": [-79.578103, 42.32228],
+      "repeal": false
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["commercial", "other"],
+        "date": null
+      }
+    ],
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["all uses"],
+        "date": null
       }
     ]
   },
