@@ -57,12 +57,17 @@ export class FilterOptions {
   }
 }
 
-function determineSupplementalTitle(fieldset: HTMLFieldSetElement): string {
-  const checkboxes = fieldset.querySelectorAll<HTMLInputElement>(
+export function determineSupplementalTitle(
+  fieldset: HTMLFieldSetElement,
+): string {
+  const allCheckboxes = fieldset.querySelectorAll<HTMLInputElement>(
     'input[type="checkbox"]',
   );
-  const total = checkboxes.length;
-  const checked = Array.from(checkboxes).filter(
+  const visibleCheckboxes = Array.from(allCheckboxes).filter(
+    (checkbox) => !checkbox.parentElement?.hidden,
+  );
+  const total = visibleCheckboxes.length;
+  const checked = visibleCheckboxes.filter(
     (checkbox) => checkbox.checked,
   ).length;
   return ` (${checked}/${total})`;
@@ -212,11 +217,13 @@ function initFilterGroup(
   );
 
   accordionElements.checkAllButton.addEventListener("click", () => {
+    // TODO: only check if visible
     allCheckboxes.forEach((input) => {
       // eslint-disable-next-line no-param-reassign
       input.checked = true;
     });
     updateCheckboxStats(accordionState, accordionElements.fieldSet);
+    // TODO: should be the intersection of prior values plus new checked values
     filterManager.update({
       [params.filterStateKey]: new Set(
         filterOptions.all(params.filterStateKey),
@@ -225,11 +232,13 @@ function initFilterGroup(
   });
 
   accordionElements.uncheckAllButton.addEventListener("click", () => {
+    // TODO: only uncheck if visible
     allCheckboxes.forEach((input) => {
       // eslint-disable-next-line no-param-reassign
       input.checked = false;
     });
     updateCheckboxStats(accordionState, accordionElements.fieldSet);
+    // TODO: should be only prior values that are not in the unchecked values
     filterManager.update({
       [params.filterStateKey]: new Set(),
     });
