@@ -57,15 +57,35 @@ export class FilterOptions {
   }
 }
 
-export function determineSupplementalTitle(
+function getVisibleCheckboxes(
   fieldset: HTMLFieldSetElement,
-): string {
+): Array<HTMLInputElement> {
   const allCheckboxes = fieldset.querySelectorAll<HTMLInputElement>(
     'input[type="checkbox"]',
   );
-  const visibleCheckboxes = Array.from(allCheckboxes).filter(
+  return Array.from(allCheckboxes).filter(
     (checkbox) => !checkbox.parentElement?.hidden,
   );
+}
+
+export function determineCheckedLabels(
+  fieldset: HTMLFieldSetElement,
+  preserveCapitalization?: boolean,
+): Set<string> {
+  return new Set(
+    Array.from(fieldset.querySelectorAll('input[type="checkbox"]:checked'))
+      .map((input) => {
+        const text = input.parentElement?.textContent?.trim();
+        return preserveCapitalization ? text : text?.toLowerCase();
+      })
+      .filter((x) => x !== undefined),
+  );
+}
+
+export function determineSupplementalTitle(
+  fieldset: HTMLFieldSetElement,
+): string {
+  const visibleCheckboxes = getVisibleCheckboxes(fieldset);
   const total = visibleCheckboxes.length;
   const checked = visibleCheckboxes.filter(
     (checkbox) => checkbox.checked,
@@ -196,51 +216,46 @@ function initFilterGroup(
 
   accordionElements.fieldSet.addEventListener("change", () => {
     updateCheckboxStats(accordionState, accordionElements.fieldSet);
-
-    const checkedLabels = Array.from(
-      accordionElements.fieldSet.querySelectorAll(
-        'input[type="checkbox"]:checked',
-      ),
-    )
-      .map((input) => {
-        const text = input.parentElement?.textContent?.trim();
-        return params.preserveCapitalization ? text : text?.toLowerCase();
-      })
-      .filter((x) => x !== undefined);
-    filterManager.update({ [params.filterStateKey]: new Set(checkedLabels) });
+    const checkedLabels = determineCheckedLabels(
+      accordionElements.fieldSet,
+      params.preserveCapitalization,
+    );
+    filterManager.update({ [params.filterStateKey]: checkedLabels });
   });
 
-  const allCheckboxes = Array.from(
-    accordionElements.fieldSet.querySelectorAll<HTMLInputElement>(
-      'input[type="checkbox"]',
-    ),
-  );
+  // For the "Check all" and "Uncheck all" buttons, we first need to get all
+  // visible checkboxes. The buttons should only change what is visible for the current
+  // data set because we want to preserve state for other datasets that do not
+  // have overlapping values.
+  const visibleCheckboxes = getVisibleCheckboxes(accordionElements.fieldSet);
 
   accordionElements.checkAllButton.addEventListener("click", () => {
-    // TODO: only check if visible
-    allCheckboxes.forEach((input) => {
+    visibleCheckboxes.forEach((input) => {
       // eslint-disable-next-line no-param-reassign
       input.checked = true;
     });
     updateCheckboxStats(accordionState, accordionElements.fieldSet);
-    // TODO: should be the intersection of prior values plus new checked values
+    const checkedLabels = determineCheckedLabels(
+      accordionElements.fieldSet,
+      params.preserveCapitalization,
+    );
     filterManager.update({
-      [params.filterStateKey]: new Set(
-        filterOptions.all(params.filterStateKey),
-      ),
+      [params.filterStateKey]: checkedLabels,
     });
   });
 
   accordionElements.uncheckAllButton.addEventListener("click", () => {
-    // TODO: only uncheck if visible
-    allCheckboxes.forEach((input) => {
+    visibleCheckboxes.forEach((input) => {
       // eslint-disable-next-line no-param-reassign
       input.checked = false;
     });
     updateCheckboxStats(accordionState, accordionElements.fieldSet);
-    // TODO: should be only prior values that are not in the unchecked values
+    const checkedLabels = determineCheckedLabels(
+      accordionElements.fieldSet,
+      params.preserveCapitalization,
+    );
     filterManager.update({
-      [params.filterStateKey]: new Set(),
+      [params.filterStateKey]: checkedLabels,
     });
   });
 

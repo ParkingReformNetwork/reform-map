@@ -1,7 +1,10 @@
 import { expect, test } from "@playwright/test";
 import { Window } from "happy-dom";
 
-import { determineSupplementalTitle } from "../../src/js/filter-features/options";
+import {
+  determineSupplementalTitle,
+  determineCheckedLabels,
+} from "../../src/js/filter-features/options";
 
 function createFieldset(childrenHTML: string): HTMLFieldSetElement {
   const window = new Window();
@@ -22,4 +25,24 @@ test("determineSupplementalTitle", () => {
       <label hidden><input type="checkbox"></label>
     `);
   expect(determineSupplementalTitle(fieldset)).toEqual(" (2/3)");
+});
+
+test("determineCheckedLabels should return labels of checked checkboxes", () => {
+  const fieldset = createFieldset(`
+    <div><input type="checkbox" checked>First Option</div>
+    <div><input type="checkbox">Second Option</div>
+    <div><input type="checkbox" checked>Third Option</div>
+    <div hidden><input type="checkbox" checked>Hidden Checked</div>
+    <div hidden><input type="checkbox">Hidden Unchecked</div>
+  `);
+
+  const result = determineCheckedLabels(fieldset);
+  expect(result).toEqual(
+    new Set(["first option", "third option", "hidden checked"]),
+  );
+
+  const preserveCapitalization = determineCheckedLabels(fieldset, true);
+  expect(preserveCapitalization).toEqual(
+    new Set(["First Option", "Third Option", "Hidden Checked"]),
+  );
 });
