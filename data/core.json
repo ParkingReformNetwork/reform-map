@@ -1732,6 +1732,25 @@
       }
     ]
   },
+  "Andover, KS": {
+    "place": {
+      "name": "Andover",
+      "state": "KS",
+      "country": "US",
+      "type": "city",
+      "pop": 14892,
+      "coord": [-97.1364294, 37.7139041],
+      "repeal": false
+    },
+    "reduce_min": [
+      {
+        "status": "proposed",
+        "scope": ["citywide"],
+        "land": ["all uses"],
+        "date": null
+      }
+    ]
+  },
   "Angola, IN": {
     "place": {
       "name": "Angola",
@@ -3145,6 +3164,25 @@
       }
     ]
   },
+  "Augusta, KS": {
+    "place": {
+      "name": "Augusta",
+      "state": "KS",
+      "country": "US",
+      "type": "city",
+      "pop": 9256,
+      "coord": [-96.9771177, 37.6809165],
+      "repeal": false
+    },
+    "reduce_min": [
+      {
+        "status": "proposed",
+        "scope": ["citywide"],
+        "land": ["residential, all uses"],
+        "date": null
+      }
+    ]
+  },
   "Augusta, ME": {
     "place": {
       "name": "Augusta",
@@ -4541,6 +4579,41 @@
         "scope": ["city center / business district"],
         "land": ["all uses"],
         "date": "2008-08-26"
+      }
+    ]
+  },
+  "Beacon, NY": {
+    "place": {
+      "name": "Beacon",
+      "state": "NY",
+      "country": "US",
+      "type": "city",
+      "pop": 13769,
+      "coord": [-73.9695409, 41.5048402],
+      "repeal": false
+    },
+    "add_max": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["all uses"],
+        "date": null
+      }
+    ],
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district", "citywide"],
+        "land": ["all uses"],
+        "date": null
+      }
+    ],
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["all uses"],
+        "date": null
       }
     ]
   },
@@ -16143,6 +16216,33 @@
       }
     ]
   },
+  "Cortland, NY": {
+    "place": {
+      "name": "Cortland",
+      "state": "NY",
+      "country": "US",
+      "type": "city",
+      "pop": 17515,
+      "coord": [-76.0704906, 42.5842136],
+      "repeal": false
+    },
+    "add_max": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["all uses"],
+        "date": null
+      }
+    ],
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["all uses"],
+        "date": null
+      }
+    ]
+  },
   "Cortland, OH": {
     "place": {
       "name": "Cortland",
@@ -18909,6 +19009,12 @@
         "status": "adopted",
         "scope": ["city center / business district"],
         "land": ["all uses"],
+        "date": null
+      },
+      {
+        "status": "proposed",
+        "scope": ["citywide"],
+        "land": ["residential, all uses"],
         "date": null
       }
     ],
@@ -24626,6 +24732,25 @@
       {
         "status": "adopted",
         "scope": ["citywide"],
+        "land": ["all uses"],
+        "date": null
+      }
+    ]
+  },
+  "Fishkill, NY": {
+    "place": {
+      "name": "Fishkill",
+      "state": "NY",
+      "country": "US",
+      "type": "city",
+      "pop": 2166,
+      "coord": [-73.898702, 41.5355745],
+      "repeal": false
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide", "main street / special"],
         "land": ["all uses"],
         "date": null
       }
@@ -34399,6 +34524,12 @@
         "scope": ["city center / business district"],
         "land": ["commercial"],
         "date": null
+      },
+      {
+        "status": "proposed",
+        "scope": ["citywide"],
+        "land": ["all uses"],
+        "date": null
       }
     ]
   },
@@ -34534,6 +34665,14 @@
       "coord": [-95.7083131, 37.2242358],
       "repeal": false
     },
+    "reduce_min": [
+      {
+        "status": "proposed",
+        "scope": ["citywide"],
+        "land": ["residential, all uses"],
+        "date": null
+      }
+    ],
     "rm_min": [
       {
         "status": "adopted",
@@ -36589,6 +36728,12 @@
         "status": "adopted",
         "scope": ["city center / business district"],
         "land": ["commercial", "other"],
+        "date": null
+      },
+      {
+        "status": "proposed",
+        "scope": ["citywide"],
+        "land": ["all uses"],
         "date": null
       }
     ]
@@ -40265,6 +40410,33 @@
       }
     ]
   },
+  "Lenexa, KS": {
+    "place": {
+      "name": "Lenexa",
+      "state": "KS",
+      "country": "US",
+      "type": "city",
+      "pop": 57434,
+      "coord": [-94.7845837, 38.9697458],
+      "repeal": false
+    },
+    "add_max": [
+      {
+        "status": "proposed",
+        "scope": ["main street / special"],
+        "land": ["all uses"],
+        "date": null
+      }
+    ],
+    "reduce_min": [
+      {
+        "status": "proposed",
+        "scope": ["citywide", "main street / special"],
+        "land": ["all uses", "residential, all uses"],
+        "date": null
+      }
+    ]
+  },
   "Lennon, MI": {
     "place": {
       "name": "Lennon",
@@ -43191,6 +43363,24 @@
       "coord": [-96.5716694, 39.1836082],
       "repeal": false
     },
+    "reduce_min": [
+      {
+        "status": "proposed",
+        "scope": [
+          "city center / business district",
+          "citywide",
+          "main street / special"
+        ],
+        "land": ["all uses", "residential, low-density"],
+        "date": null
+      },
+      {
+        "status": "proposed",
+        "scope": ["city center / business district", "main street / special"],
+        "land": ["residential, multi-family"],
+        "date": null
+      }
+    ],
     "rm_min": [
       {
         "status": "adopted",
@@ -45728,6 +45918,25 @@
       }
     ]
   },
+  "Merriam, KS": {
+    "place": {
+      "name": "Merriam",
+      "state": "KS",
+      "country": "US",
+      "type": "city",
+      "pop": 11098,
+      "coord": [-94.689947, 39.0168058],
+      "repeal": false
+    },
+    "reduce_min": [
+      {
+        "status": "proposed",
+        "scope": ["city center / business district"],
+        "land": ["all uses"],
+        "date": null
+      }
+    ]
+  },
   "Merrill, WI": {
     "place": {
       "name": "Merrill",
@@ -47138,6 +47347,25 @@
         "status": "adopted",
         "scope": ["city center / business district"],
         "land": ["all uses"],
+        "date": null
+      }
+    ]
+  },
+  "Mission, KS": {
+    "place": {
+      "name": "Mission",
+      "state": "KS",
+      "country": "US",
+      "type": "city",
+      "pop": 9954,
+      "coord": [-94.6557914, 39.0277832],
+      "repeal": false
+    },
+    "reduce_min": [
+      {
+        "status": "proposed",
+        "scope": ["citywide"],
+        "land": ["all uses", "residential, multi-family"],
         "date": null
       }
     ]
@@ -58832,6 +59060,59 @@
       }
     ]
   },
+  "Poughkeepsie, NY": {
+    "place": {
+      "name": "Poughkeepsie",
+      "state": "NY",
+      "country": "US",
+      "type": "city",
+      "pop": 31577,
+      "coord": [-73.9283672, 41.7065539],
+      "repeal": false
+    },
+    "add_max": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["all uses"],
+        "date": null
+      },
+      {
+        "status": "adopted",
+        "scope": ["transit-oriented"],
+        "land": ["all uses"],
+        "date": null
+      }
+    ],
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["main street / special"],
+        "land": ["all uses"],
+        "date": null
+      },
+      {
+        "status": "adopted",
+        "scope": ["transit-oriented"],
+        "land": ["all uses"],
+        "date": null
+      },
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["all uses"],
+        "date": null
+      }
+    ],
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["all uses", "commercial", "other"],
+        "date": null
+      }
+    ]
+  },
   "Poynette, WI": {
     "place": {
       "name": "Poynette",
@@ -65003,6 +65284,25 @@
       {
         "status": "adopted",
         "scope": ["city center / business district"],
+        "land": ["all uses"],
+        "date": null
+      }
+    ]
+  },
+  "Shawnee, KS": {
+    "place": {
+      "name": "Shawnee",
+      "state": "KS",
+      "country": "US",
+      "type": "city",
+      "pop": 67311,
+      "coord": [-95.7627535, 39.0273676],
+      "repeal": false
+    },
+    "reduce_min": [
+      {
+        "status": "proposed",
+        "scope": ["city center / business district", "citywide"],
         "land": ["all uses"],
         "date": null
       }
