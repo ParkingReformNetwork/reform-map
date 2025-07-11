@@ -400,6 +400,25 @@
       }
     ]
   },
+  "Akron, NY": {
+    "place": {
+      "name": "Akron",
+      "state": "NY",
+      "country": "US",
+      "type": "city",
+      "pop": 2888,
+      "coord": [-78.4953015, 43.0208924],
+      "repeal": false
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["all uses"],
+        "date": null
+      }
+    ]
+  },
   "Akron, OH": {
     "place": {
       "name": "Akron",
@@ -1778,6 +1797,25 @@
       }
     ]
   },
+  "Angola, NY": {
+    "place": {
+      "name": "Angola",
+      "state": "NY",
+      "country": "US",
+      "type": "city",
+      "pop": 2046,
+      "coord": [-79.027816, 42.638393],
+      "repeal": false
+    },
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["commercial"],
+        "date": null
+      }
+    ]
+  },
   "Ankeny, IA": {
     "place": {
       "name": "Ankeny",
@@ -2068,6 +2106,12 @@
       {
         "status": "adopted",
         "scope": ["city center / business district"],
+        "land": ["all uses"],
+        "date": null
+      },
+      {
+        "status": "proposed",
+        "scope": ["citywide"],
         "land": ["all uses"],
         "date": null
       }
@@ -7489,6 +7533,25 @@
         "scope": ["citywide"],
         "land": ["residential, all uses"],
         "date": null
+      }
+    ]
+  },
+  "Bothell, WA": {
+    "place": {
+      "name": "Bothell",
+      "state": "WA",
+      "country": "US",
+      "type": "city",
+      "pop": 48161,
+      "coord": [-122.2054035, 47.7623204],
+      "repeal": true
+    },
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["all uses"],
+        "date": "2025-07-08"
       }
     ]
   },
@@ -16223,7 +16286,7 @@
       "country": "US",
       "type": "city",
       "pop": 17515,
-      "coord": [-76.0704906, 42.5842136],
+      "coord": [-76.18054214267319, 42.60125676442263],
       "repeal": false
     },
     "add_max": [
@@ -25137,11 +25200,33 @@
       "coord": [-88.4458033, 43.7748763],
       "repeal": false
     },
+    "add_max": [
+      {
+        "status": "proposed",
+        "scope": ["citywide"],
+        "land": ["all uses"],
+        "date": null
+      }
+    ],
+    "reduce_min": [
+      {
+        "status": "proposed",
+        "scope": ["citywide"],
+        "land": ["all uses"],
+        "date": null
+      }
+    ],
     "rm_min": [
       {
         "status": "adopted",
         "scope": ["city center / business district"],
         "land": ["commercial"],
+        "date": null
+      },
+      {
+        "status": "proposed",
+        "scope": ["citywide"],
+        "land": ["other"],
         "date": null
       }
     ]
@@ -29908,6 +29993,14 @@
       "coord": [-88.0125794, 44.5126379],
       "repeal": false
     },
+    "reduce_min": [
+      {
+        "status": "proposed",
+        "scope": ["transit-oriented"],
+        "land": ["residential, multi-family"],
+        "date": null
+      }
+    ],
     "rm_min": [
       {
         "status": "adopted",
@@ -43528,6 +43621,14 @@
       "coord": [-87.6575841, 44.0886059],
       "repeal": false
     },
+    "reduce_min": [
+      {
+        "status": "proposed",
+        "scope": ["citywide"],
+        "land": ["residential, all uses"],
+        "date": null
+      }
+    ],
     "rm_min": [
       {
         "status": "adopted",
@@ -46313,6 +46414,47 @@
     "reduce_min": [
       {
         "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["all uses"],
+        "date": null
+      }
+    ]
+  },
+  "Middleton, WI": {
+    "place": {
+      "name": "Middleton",
+      "state": "WI",
+      "country": "US",
+      "type": "city",
+      "pop": 21827,
+      "coord": [-89.5119565, 43.0962919],
+      "repeal": false
+    },
+    "add_max": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["all uses"],
+        "date": "2024"
+      }
+    ],
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["commercial", "industrial", "medical", "other"],
+        "date": "2024"
+      },
+      {
+        "status": "proposed",
+        "scope": ["main street / special"],
+        "land": ["all uses"],
+        "date": null
+      }
+    ],
+    "rm_min": [
+      {
+        "status": "proposed",
         "scope": ["citywide"],
         "land": ["all uses"],
         "date": null
@@ -50095,10 +50237,10 @@
         "date": "2024-05-06"
       },
       {
-        "status": "proposed",
+        "status": "adopted",
         "scope": ["city center / business district"],
         "land": ["all uses"],
-        "date": null
+        "date": "2025-07-07"
       }
     ]
   },
@@ -52983,6 +53125,14 @@
         "land": ["all uses"],
         "date": null
       }
+    ],
+    "rm_min": [
+      {
+        "status": "proposed",
+        "scope": ["citywide"],
+        "land": ["all uses"],
+        "date": null
+      }
     ]
   },
   "Northglenn, CO": {
@@ -54234,6 +54384,18 @@
         "scope": ["city center / business district"],
         "land": ["commercial", "other"],
         "date": "2022-07-12"
+      },
+      {
+        "status": "proposed",
+        "scope": ["city center / business district"],
+        "land": ["commercial"],
+        "date": null
+      },
+      {
+        "status": "proposed",
+        "scope": ["citywide"],
+        "land": ["all uses"],
+        "date": null
       }
     ]
   },
@@ -55672,6 +55834,14 @@
       {
         "status": "adopted",
         "scope": ["city center / business district"],
+        "land": ["all uses"],
+        "date": null
+      }
+    ],
+    "rm_min": [
+      {
+        "status": "proposed",
+        "scope": ["citywide"],
         "land": ["all uses"],
         "date": null
       }
@@ -60639,6 +60809,33 @@
       }
     ]
   },
+  "Rhinebeck, NY": {
+    "place": {
+      "name": "Rhinebeck",
+      "state": "NY",
+      "country": "US",
+      "type": "city",
+      "pop": 2697,
+      "coord": [-73.912763, 41.9267604],
+      "repeal": false
+    },
+    "add_max": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["all uses"],
+        "date": null
+      }
+    ],
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["all uses"],
+        "date": null
+      }
+    ]
+  },
   "Rhinelander, WI": {
     "place": {
       "name": "Rhinelander",
@@ -65296,7 +65493,7 @@
       "country": "US",
       "type": "city",
       "pop": 67311,
-      "coord": [-95.7627535, 39.0273676],
+      "coord": [-94.71457129941408, 39.02291690836717],
       "repeal": false
     },
     "reduce_min": [
@@ -75600,6 +75797,25 @@
         "status": "adopted",
         "scope": ["city center / business district"],
         "land": ["all uses"],
+        "date": null
+      }
+    ]
+  },
+  "Wappingers Falls, NY": {
+    "place": {
+      "name": "Wappingers Falls",
+      "state": "NY",
+      "country": "US",
+      "type": "city",
+      "pop": 6103,
+      "coord": [-73.9112103, 41.5965635],
+      "repeal": false
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["commercial", "other"],
         "date": null
       }
     ]
