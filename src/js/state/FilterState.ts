@@ -36,7 +36,7 @@ export type PolicyTypeFilter = PolicyType | "any parking reform";
 // of the total set of countries across all datsets. Nevertheless,
 // we unify the state so that it persists when changing the policy type.
 //
-// Keep key names in alignment with FilterGroupKey in filter-features/options.ts
+// Keep key names in alignment with DataSetSpecificOptions in filter-features/options.ts
 export interface FilterState {
   searchInput: string | null;
   policyTypeFilter: PolicyTypeFilter;

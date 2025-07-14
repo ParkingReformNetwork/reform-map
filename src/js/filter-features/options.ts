@@ -18,42 +18,74 @@ import { initPopulationSlider } from "./populationSlider";
 import optionValuesData from "../../../data/option-values.json" with { type: "json" };
 import { ReformStatus } from "../model/types";
 
-// Keep in alignment with FilterState.
-type FilterGroupKey =
-  | "placeType"
-  | "includedPolicyChanges"
-  | "scope"
-  | "landUse"
-  | "status"
-  | "country"
-  | "year";
+/** These option values change depending on which dataset is loaded.
+ *
+ * Note that some datasets may not actually use a particular option group, but
+ * we still include it to make the modeling simpler.
+ *
+ * Keep in alignment with FilterState.
+ */
+type DataSetSpecificOptions = {
+  includedPolicyChanges: string[];
+  status: string[];
+  scope: string[];
+  landUse: string[];
+  country: string[];
+  year: string[];
+  placeType: string[];
+};
 
 // We only check `adopted` by default. (We should actually fix `status`
 // to be a radio selection rather than multiple choice.)
-const DEFAULT_REFORM_STATUS: ReformStatus = "adopted";
+export const DEFAULT_REFORM_STATUS: ReformStatus = "adopted";
 
 export class FilterOptions {
-  readonly options: Record<FilterGroupKey, string[]>;
+  readonly anyReform: DataSetSpecificOptions;
+  readonly addMax: DataSetSpecificOptions;
+  readonly rmMin: DataSetSpecificOptions;
+  readonly reduceMin: DataSetSpecificOptions;
 
-  constructor() {
-    this.options = {
+  /// We cache the dataset to know when we must update the UI to hide/show
+  /// DataSetSpecificOptions based on the dataset changing.
+  currentDataSet: PolicyTypeFilter;
+
+  constructor(initialDataSet: PolicyTypeFilter) {
+    this.anyReform = {
       includedPolicyChanges: optionValuesData.policy,
       status: optionValuesData.status,
-      placeType: optionValuesData.merged.placeType,
-      scope: optionValuesData.merged.scope,
-      landUse: optionValuesData.merged.landUse,
-      country: optionValuesData.merged.country,
-      year: optionValuesData.merged.year,
+      ...optionValuesData.merged,
     };
+    this.addMax = {
+      includedPolicyChanges: [],
+      status: optionValuesData.status,
+      ...optionValuesData.addMax,
+    };
+    this.rmMin = {
+      includedPolicyChanges: [],
+      status: optionValuesData.status,
+      ...optionValuesData.rmMin,
+    };
+    this.reduceMin = {
+      includedPolicyChanges: [],
+      status: optionValuesData.status,
+      ...optionValuesData.reduceMin,
+    };
+    this.currentDataSet = initialDataSet;
   }
 
-  default(groupKey: FilterGroupKey): Set<string> {
-    if (groupKey === "status") return new Set([DEFAULT_REFORM_STATUS]);
-    return new Set(this.all(groupKey));
-  }
-
-  all(groupKey: FilterGroupKey): string[] {
-    return this.options[groupKey];
+  getOptions(policyType: PolicyTypeFilter): DataSetSpecificOptions {
+    switch (policyType) {
+      case "any parking reform":
+        return this.anyReform;
+      case "remove parking minimums":
+        return this.rmMin;
+      case "reduce parking minimums":
+        return this.reduceMin;
+      case "add parking maximums":
+        return this.addMax;
+      default:
+        throw new Error(`Unrecognized policy type: ${policyType}`);
+    }
   }
 }
 
@@ -68,16 +100,28 @@ function getVisibleCheckboxes(
   );
 }
 
+function extractLabel(
+  input: HTMLInputElement,
+  preserveCapitalization?: boolean,
+): string | undefined {
+  const text = input.parentElement?.textContent?.trim();
+  return preserveCapitalization ? text : text?.toLowerCase();
+}
+
+/**
+ * Get all options that are checked, regardless of if they are hidden.
+ */
 export function determineCheckedLabels(
   fieldset: HTMLFieldSetElement,
   preserveCapitalization?: boolean,
 ): Set<string> {
   return new Set(
-    Array.from(fieldset.querySelectorAll('input[type="checkbox"]:checked'))
-      .map((input) => {
-        const text = input.parentElement?.textContent?.trim();
-        return preserveCapitalization ? text : text?.toLowerCase();
-      })
+    Array.from(
+      fieldset.querySelectorAll<HTMLInputElement>(
+        'input[type="checkbox"]:checked',
+      ),
+    )
+      .map((input) => extractLabel(input, preserveCapitalization))
       .filter((x) => x !== undefined),
   );
 }
@@ -101,7 +145,7 @@ type FilterGroupAccordionElements = BaseAccordionElements & {
 
 type FilterGroupParams = {
   htmlName: string;
-  filterStateKey: FilterGroupKey;
+  filterStateKey: keyof DataSetSpecificOptions;
   legend: string | ((state: FilterState) => string);
   /// If not set to true, the option will use Lodash's `capitalize()`. This
   /// only impacts the UI and not the underlying data.
@@ -144,7 +188,9 @@ function generateAccordionForFilterGroup(
   }
   fieldSet.appendChild(filterOptionsContainer);
 
-  filterOptions.all(params.filterStateKey).forEach((val, i) => {
+  // When setting up the filter group, we use anyReform to add every option in the universe.
+  // (anyReform uses a dataset that merges all the other datasets' values.)
+  filterOptions.anyReform[params.filterStateKey].forEach((val, i) => {
     const inputId = `filter-${params.htmlName}-option-${i}`;
     const checked =
       params.filterStateKey !== "status" || val === DEFAULT_REFORM_STATUS;
@@ -223,13 +269,8 @@ function initFilterGroup(
     filterManager.update({ [params.filterStateKey]: checkedLabels });
   });
 
-  // For the "Check all" and "Uncheck all" buttons, we first need to get all
-  // visible checkboxes. The buttons should only change what is visible for the current
-  // data set because we want to preserve state for other datasets that do not
-  // have overlapping values.
-  const visibleCheckboxes = getVisibleCheckboxes(accordionElements.fieldSet);
-
   accordionElements.checkAllButton.addEventListener("click", () => {
+    const visibleCheckboxes = getVisibleCheckboxes(accordionElements.fieldSet);
     visibleCheckboxes.forEach((input) => {
       // eslint-disable-next-line no-param-reassign
       input.checked = true;
@@ -245,6 +286,7 @@ function initFilterGroup(
   });
 
   accordionElements.uncheckAllButton.addEventListener("click", () => {
+    const visibleCheckboxes = getVisibleCheckboxes(accordionElements.fieldSet);
     visibleCheckboxes.forEach((input) => {
       // eslint-disable-next-line no-param-reassign
       input.checked = false;
@@ -262,6 +304,23 @@ function initFilterGroup(
   filterManager.subscribe(
     `possibly update ${params.htmlName} filter UI`,
     (state) => {
+      if (filterOptions.currentDataSet !== state.policyTypeFilter) {
+        const optionsInDataSet = new Set(
+          filterOptions.getOptions(state.policyTypeFilter)[
+            params.filterStateKey
+          ],
+        );
+        accordionElements.fieldSet
+          .querySelectorAll<HTMLInputElement>('input[type="checkbox"]')
+          .forEach((checkbox) => {
+            const label = extractLabel(checkbox, params.preserveCapitalization);
+            // TODO: fix initial loading of state
+            checkbox.parentElement!.hidden =
+              !label || !optionsInDataSet.has(label);
+          });
+        updateCheckboxStats(accordionState, accordionElements.fieldSet);
+      }
+
       const priorAccordionState = accordionState.getValue();
       const hidden = params.hide ? params.hide(state) : false;
       const title =
