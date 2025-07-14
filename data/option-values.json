@@ -8,6 +8,7 @@
   "merged": {
     "placeType": ["city", "country", "county", "state"],
     "country": [
+      "United States",
       "Australia",
       "Austria",
       "Brazil",
@@ -15,6 +16,7 @@
       "China",
       "Cook Islands",
       "Denmark",
+      "Finland",
       "France",
       "Germany",
       "Iceland",
@@ -29,8 +31,7 @@
       "South Africa",
       "Sweden",
       "Switzerland",
-      "United Kingdom",
-      "United States"
+      "United Kingdom"
     ],
     "scope": [
       "city center / business district",
@@ -106,6 +107,7 @@
   "addMax": {
     "placeType": ["city", "country", "county", "state"],
     "country": [
+      "United States",
       "Australia",
       "Austria",
       "Brazil",
@@ -123,8 +125,7 @@
       "Singapore",
       "Sweden",
       "Switzerland",
-      "United Kingdom",
-      "United States"
+      "United Kingdom"
     ],
     "scope": [
       "city center / business district",
@@ -145,6 +146,7 @@
     ],
     "year": [
       "unknown",
+      "2025",
       "2024",
       "2023",
       "2022",
@@ -171,6 +173,7 @@
   "reduceMin": {
     "placeType": ["city", "country", "county", "state"],
     "country": [
+      "United States",
       "Australia",
       "Austria",
       "Canada",
@@ -184,8 +187,7 @@
       "Singapore",
       "South Africa",
       "Sweden",
-      "Switzerland",
-      "United States"
+      "Switzerland"
     ],
     "scope": [
       "city center / business district",
@@ -240,10 +242,12 @@
   "rmMin": {
     "placeType": ["city", "country", "county", "state"],
     "country": [
+      "United States",
       "Australia",
       "Brazil",
       "Canada",
       "China",
+      "Finland",
       "France",
       "Germany",
       "India",
@@ -255,8 +259,7 @@
       "South Africa",
       "Sweden",
       "Switzerland",
-      "United Kingdom",
-      "United States"
+      "United Kingdom"
     ],
     "scope": [
       "city center / business district",

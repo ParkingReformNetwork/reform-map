@@ -1,3 +1,5 @@
+import { sortBy, without } from "lodash-es";
+
 import { COUNTRY_MAPPING } from "../../src/js/model/data";
 import {
   PolicyType,
@@ -50,7 +52,7 @@ class OptionValues {
   export() {
     return {
       placeType: Array.from(this.placeType).sort(),
-      country: Array.from(this.country).sort(),
+      country: sortCountries(this.country),
       scope: Array.from(this.scope).sort(),
       landUse: Array.from(this.landUse).sort(),
       year: Array.from(this.year).sort().reverse(),
@@ -88,4 +90,18 @@ export function determineOptionValues(entries: RawCoreEntry[]) {
     rmMin: rmMin.export(),
   };
   return result;
+}
+
+/**
+ * Sort alphabetically, but ensure the US is at the top.
+ *
+ * @param countries the fully normalized country names.
+ */
+export function sortCountries(countries: Set<string>): string[] {
+  const sortedWithoutUS = sortBy(
+    without(Array.from(countries), "United States"),
+  );
+  return countries.has("United States")
+    ? ["United States", ...sortedWithoutUS]
+    : sortedWithoutUS;
 }
