@@ -245,6 +245,24 @@ function updateCheckboxStats(
   });
 }
 
+/**
+ * Hide all options not in the dataset.
+ */
+function updateCheckboxVisibility(
+  optionsInDataset: string[],
+  fieldSet: HTMLFieldSetElement,
+  preserveCapitalization?: boolean,
+): void {
+  const validOptions = new Set(optionsInDataset);
+  fieldSet
+    .querySelectorAll<HTMLInputElement>('input[type="checkbox"]')
+    .forEach((checkbox) => {
+      const label = extractLabel(checkbox, preserveCapitalization);
+      // eslint-disable-next-line no-param-reassign
+      checkbox.parentElement!.hidden = !label || !validOptions.has(label);
+    });
+}
+
 function initFilterGroup(
   filterManager: PlaceFilterManager,
   filterOptions: FilterOptions,
@@ -302,17 +320,11 @@ function initFilterGroup(
   filterManager.subscribe(
     `possibly update ${params.htmlName} filter UI`,
     (state) => {
-      const optionsInDataSet = new Set(
+      updateCheckboxVisibility(
         filterOptions.getOptions(state.policyTypeFilter)[params.filterStateKey],
+        accordionElements.fieldSet,
+        params.preserveCapitalization,
       );
-      accordionElements.fieldSet
-        .querySelectorAll<HTMLInputElement>('input[type="checkbox"]')
-        .forEach((checkbox) => {
-          const label = extractLabel(checkbox, params.preserveCapitalization);
-          // eslint-disable-next-line no-param-reassign
-          checkbox.parentElement!.hidden =
-            !label || !optionsInDataSet.has(label);
-        });
       updateCheckboxStats(accordionState, accordionElements.fieldSet);
 
       const priorAccordionState = accordionState.getValue();
