@@ -8,7 +8,7 @@ import {
 
 function createFieldset(childrenHTML: string): HTMLFieldSetElement {
   const window = new Window();
-  const document = window.document;
+  const {document} = window;
   document.body.innerHTML = `<fieldset>${childrenHTML}</fieldset>`;
   return document.querySelector("fieldset")! as unknown as HTMLFieldSetElement;
 }

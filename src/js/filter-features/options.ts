@@ -41,15 +41,14 @@ export const DEFAULT_REFORM_STATUS: ReformStatus = "adopted";
 
 export class FilterOptions {
   readonly anyReform: DataSetSpecificOptions;
+
   readonly addMax: DataSetSpecificOptions;
+
   readonly rmMin: DataSetSpecificOptions;
+
   readonly reduceMin: DataSetSpecificOptions;
 
-  /// We cache the dataset to know when we must update the UI to hide/show
-  /// DataSetSpecificOptions based on the dataset changing.
-  currentDataSet: PolicyTypeFilter;
-
-  constructor(initialDataSet: PolicyTypeFilter) {
+  constructor() {
     this.anyReform = {
       includedPolicyChanges: optionValuesData.policy,
       status: optionValuesData.status,
@@ -70,7 +69,6 @@ export class FilterOptions {
       status: optionValuesData.status,
       ...optionValuesData.reduceMin,
     };
-    this.currentDataSet = initialDataSet;
   }
 
   getOptions(policyType: PolicyTypeFilter): DataSetSpecificOptions {
@@ -304,22 +302,18 @@ function initFilterGroup(
   filterManager.subscribe(
     `possibly update ${params.htmlName} filter UI`,
     (state) => {
-      if (filterOptions.currentDataSet !== state.policyTypeFilter) {
-        const optionsInDataSet = new Set(
-          filterOptions.getOptions(state.policyTypeFilter)[
-            params.filterStateKey
-          ],
-        );
-        accordionElements.fieldSet
-          .querySelectorAll<HTMLInputElement>('input[type="checkbox"]')
-          .forEach((checkbox) => {
-            const label = extractLabel(checkbox, params.preserveCapitalization);
-            // TODO: fix initial loading of state
-            checkbox.parentElement!.hidden =
-              !label || !optionsInDataSet.has(label);
-          });
-        updateCheckboxStats(accordionState, accordionElements.fieldSet);
-      }
+      const optionsInDataSet = new Set(
+        filterOptions.getOptions(state.policyTypeFilter)[params.filterStateKey],
+      );
+      accordionElements.fieldSet
+        .querySelectorAll<HTMLInputElement>('input[type="checkbox"]')
+        .forEach((checkbox) => {
+          const label = extractLabel(checkbox, params.preserveCapitalization);
+          // eslint-disable-next-line no-param-reassign
+          checkbox.parentElement!.hidden =
+            !label || !optionsInDataSet.has(label);
+        });
+      updateCheckboxStats(accordionState, accordionElements.fieldSet);
 
       const priorAccordionState = accordionState.getValue();
       const hidden = params.hide ? params.hide(state) : false;

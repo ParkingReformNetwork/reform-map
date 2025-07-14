@@ -5,7 +5,7 @@ import maybeDisableFullScreenIcon from "./layout/iframe";
 import initAbout from "./layout/about";
 import { initViewToggle, addViewToggleSubscribers } from "./layout/viewToggle";
 import readData from "./model/data";
-import { PlaceFilterManager, PolicyTypeFilter } from "./state/FilterState";
+import { PlaceFilterManager } from "./state/FilterState";
 import { POPULATION_MAX_INDEX } from "./filter-features/populationSlider";
 import {
   DEFAULT_REFORM_STATUS,
@@ -19,8 +19,6 @@ import initScorecard from "./map-features/scorecard";
 import initSearch from "./search";
 import initTable from "./table";
 
-const INITIAL_POLICY_TYPE: PolicyTypeFilter = "remove parking minimums";
-
 export default async function initApp(): Promise<void> {
   initIcons();
   maybeDisableFullScreenIcon();
@@ -29,13 +27,13 @@ export default async function initApp(): Promise<void> {
 
   const viewToggle = initViewToggle();
 
-  const filterOptions = new FilterOptions(INITIAL_POLICY_TYPE);
+  const filterOptions = new FilterOptions();
   const map = createMap();
   const data = await readData();
 
   const filterManager = new PlaceFilterManager(data, {
     searchInput: null,
-    policyTypeFilter: INITIAL_POLICY_TYPE,
+    policyTypeFilter: "remove parking minimums",
     allMinimumsRemovedToggle: true,
     placeType: new Set(filterOptions.anyReform.placeType),
     includedPolicyChanges: new Set(
