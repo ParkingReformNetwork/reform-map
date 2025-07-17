@@ -188,7 +188,8 @@ $filter-inner-width: calc(
 }
 
 // Inspired by https://designsystem.digital.gov/components/select/.
-.filter-policy-type-dropdown-container {
+.filter-policy-type-dropdown-container,
+.filter-status-dropdown-container {
   margin: spacing.$element-gap spacing.$container-edge-spacing;
 
   label {

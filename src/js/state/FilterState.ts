@@ -7,10 +7,11 @@ import {
   ProcessedCoreEntry,
   ProcessedCorePolicy,
   ProcessedPlace,
+  ReformStatus,
   UNKNOWN_YEAR,
 } from "../model/types";
 import Observable from "./Observable";
-import { determineAdoptedPolicyTypes, getFilteredIndexes } from "../model/data";
+import { determineAllPolicyTypes, getFilteredIndexes } from "../model/data";
 
 export const POPULATION_INTERVALS: Array<[string, number]> = [
   ["100", 100],
@@ -45,12 +46,12 @@ export type PolicyTypeFilter = (typeof ALL_POLICY_TYPE_FILTER)[number];
 export interface FilterState {
   searchInput: string | null;
   policyTypeFilter: PolicyTypeFilter;
+  status: ReformStatus;
   allMinimumsRemovedToggle: boolean;
   placeType: Set<string>;
   includedPolicyChanges: Set<string>;
   scope: Set<string>;
   landUse: Set<string>;
-  status: Set<string>;
   country: Set<string>;
   year: Set<string>;
   populationSliderIndexes: [number, number];
@@ -87,6 +88,35 @@ interface CacheEntry {
   matchedCountries: Set<string>;
   matchedPolicyTypesForAnyPolicy: Set<PolicyType>;
   matchedPlaceTypes: Set<PlaceType>;
+}
+
+/**
+ * Return whether the 'only places with all minimums removed' toggle
+ * is shown to the user, which is based on the current dataset.
+ */
+export function isAllMinimumsRemovedToggleShown(
+  filterState: Pick<FilterState, "policyTypeFilter" | "status">,
+): boolean {
+  return (
+    filterState.policyTypeFilter === "remove parking minimums" &&
+    filterState.status === "adopted"
+  );
+}
+
+/**
+ * Return whether the 'only places with all minimums removed' toggle
+ * is activated and relevant to the current dataset.
+ */
+export function isAllMinimumsRemovedToggleInEffect(
+  filterState: Pick<
+    FilterState,
+    "allMinimumsRemovedToggle" | "policyTypeFilter" | "status"
+  >,
+): boolean {
+  return (
+    filterState.allMinimumsRemovedToggle &&
+    isAllMinimumsRemovedToggleShown(filterState)
+  );
 }
 
 export class PlaceFilterManager {
@@ -196,12 +226,7 @@ export class PlaceFilterManager {
     if (!isCountry) return false;
 
     const isAllMinimumsRepealed =
-      // We only care about the option if the policy is "remove parking minimums"
-      filterState.policyTypeFilter !== "remove parking minimums" ||
-      // If the toggle is false, we don't care.
-      !filterState.allMinimumsRemovedToggle ||
-      // Else, we do care that the place has total repeals.
-      place.repeal;
+      !isAllMinimumsRemovedToggleInEffect(filterState) || place.repeal;
     if (!isAllMinimumsRepealed) return false;
 
     const [sliderLeftIndex, sliderRightIndex] =
@@ -218,7 +243,7 @@ export class PlaceFilterManager {
   ): boolean {
     const filterState = this.state.getValue();
 
-    const isStatus = filterState.status.has(policyRecord.status);
+    const isStatus = policyRecord.status === filterState.status;
     if (!isStatus) return false;
 
     const isYear = filterState.year.has(
@@ -256,7 +281,7 @@ export class PlaceFilterManager {
     if (!isPlace) return null;
 
     if (filterState.policyTypeFilter === "any parking reform") {
-      const policyTypes = determineAdoptedPolicyTypes(entry);
+      const policyTypes = determineAllPolicyTypes(entry, filterState.status);
       const isPolicyType = policyTypes.some((v) =>
         filterState.includedPolicyChanges.has(v),
       );
@@ -299,12 +324,14 @@ export class PlaceFilterManager {
     }
 
     if (filterState.policyTypeFilter === "remove parking minimums") {
-      // If 'all minimums removed' is checked, then 'land use' and 'scope' are irrelevent:
+      // If 'all minimums removed' is in effect, then 'land use' and 'scope' are irrelevent:
       //  - the place will only have a single policy record for minimum removal
       //  - that policy record must be set to "All uses" and "Citywide"
+      const allMinimumsInEffect =
+        isAllMinimumsRemovedToggleInEffect(filterState);
       const options = {
-        ignoreScope: filterState.allMinimumsRemovedToggle,
-        ignoreLand: filterState.allMinimumsRemovedToggle,
+        ignoreScope: allMinimumsInEffect,
+        ignoreLand: allMinimumsInEffect,
       };
       const matchingPolicies = getFilteredIndexes(
         entry.rm_min ?? [],

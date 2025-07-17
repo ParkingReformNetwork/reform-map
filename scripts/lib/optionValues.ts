@@ -54,27 +54,47 @@ class OptionValues {
 
 export function determineOptionValues(entries: RawCoreEntry[]) {
   const merged = new OptionValues();
-  const any = new OptionValues();
-  const addMax = new OptionValues();
-  const reduceMin = new OptionValues();
-  const rmMin = new OptionValues();
+  const anyAdopted = new OptionValues();
+  const anyProposed = new OptionValues();
+  const anyRepealed = new OptionValues();
+  const addMaxAdopted = new OptionValues();
+  const addMaxProposed = new OptionValues();
+  const addMaxRepealed = new OptionValues();
+  const reduceMinAdopted = new OptionValues();
+  const reduceMinProposed = new OptionValues();
+  const reduceMinRepealed = new OptionValues();
+  const rmMinAdopted = new OptionValues();
+  const rmMinProposed = new OptionValues();
+  const rmMinRepealed = new OptionValues();
 
   entries.forEach((entry) => {
     entry.add_max?.forEach((policyRecord) => {
       merged.add(entry.place, policyRecord);
-      const policy = addMax;
+      const [any, policy] = {
+        adopted: [anyAdopted, addMaxAdopted],
+        proposed: [anyProposed, addMaxProposed],
+        repealed: [anyRepealed, addMaxRepealed],
+      }[policyRecord.status];
       any.add(entry.place, policyRecord);
       policy.add(entry.place, policyRecord);
     });
     entry.reduce_min?.forEach((policyRecord) => {
       merged.add(entry.place, policyRecord);
-      const policy = reduceMin;
+      const [any, policy] = {
+        adopted: [anyAdopted, reduceMinAdopted],
+        proposed: [anyProposed, reduceMinProposed],
+        repealed: [anyRepealed, reduceMinRepealed],
+      }[policyRecord.status];
       any.add(entry.place, policyRecord);
       policy.add(entry.place, policyRecord);
     });
     entry.rm_min?.forEach((policyRecord) => {
       merged.add(entry.place, policyRecord);
-      const policy = rmMin;
+      const [any, policy] = {
+        adopted: [anyAdopted, rmMinAdopted],
+        proposed: [anyProposed, rmMinProposed],
+        repealed: [anyRepealed, rmMinRepealed],
+      }[policyRecord.status];
       any.add(entry.place, policyRecord);
       policy.add(entry.place, policyRecord);
     });
@@ -82,10 +102,18 @@ export function determineOptionValues(entries: RawCoreEntry[]) {
 
   const result = {
     merged: merged.export(),
-    any: any.export(),
-    addMax: addMax.export(),
-    reduceMin: reduceMin.export(),
-    rmMin: rmMin.export(),
+    anyAdopted: anyAdopted.export(),
+    anyProposed: anyProposed.export(),
+    anyRepealed: anyRepealed.export(),
+    addMaxAdopted: addMaxAdopted.export(),
+    addMaxProposed: addMaxProposed.export(),
+    addMaxRepealed: addMaxRepealed.export(),
+    reduceMinAdopted: reduceMinAdopted.export(),
+    reduceMinProposed: reduceMinProposed.export(),
+    reduceMinRepealed: reduceMinRepealed.export(),
+    rmMinAdopted: rmMinAdopted.export(),
+    rmMinProposed: rmMinProposed.export(),
+    rmMinRepealed: rmMinRepealed.export(),
   };
   return result;
 }

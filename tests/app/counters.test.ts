@@ -14,7 +14,12 @@ import {
   ALL_POLICY_TYPE_FILTER,
   FilterState,
 } from "../../src/js/state/FilterState";
-import { ALL_POLICY_TYPE, PolicyType } from "../../src/js/model/types";
+import {
+  ALL_POLICY_TYPE,
+  ALL_REFORM_STATUS,
+  PolicyType,
+  ReformStatus,
+} from "../../src/js/model/types";
 import { ViewState } from "../../src/js/layout/viewToggle";
 
 test.describe("determineHtml", () => {
@@ -27,7 +32,7 @@ test.describe("determineHtml", () => {
     placeType: new Set(),
     scope: new Set(),
     landUse: new Set(),
-    status: new Set(),
+    status: "adopted",
     country: new Set(),
     year: new Set(),
     populationSliderIndexes: [0, 0],
@@ -101,64 +106,119 @@ test("determineSearch()", () => {
 
   // Map view always has the same text.
   for (const policyType of ALL_POLICY_TYPE_FILTER) {
-    expect(determineSearch("map", "Baltimore, MD", policyType)).toEqual(
-      `Showing ${placeLink} — ${SEARCH_RESET_HTML}`,
-    );
+    for (const status of ALL_REFORM_STATUS) {
+      expect(
+        determineSearch("map", "Baltimore, MD", policyType, status),
+      ).toEqual(`Showing ${placeLink} — ${SEARCH_RESET_HTML}`);
+    }
   }
 
   expect(
-    determineSearch("table", "Baltimore, MD", "any parking reform"),
+    determineSearch("table", "Baltimore, MD", "any parking reform", "adopted"),
   ).toEqual(
     `Showing an overview of adopted parking reforms in ${placeLink} — ${SEARCH_RESET_HTML}`,
   );
   expect(
-    determineSearch("table", "Baltimore, MD", "add parking maximums"),
+    determineSearch(
+      "table",
+      "Baltimore, MD",
+      "add parking maximums",
+      "proposed",
+    ),
   ).toEqual(
-    `Showing details about parking maximums in ${placeLink} — ${SEARCH_RESET_HTML}`,
+    `Showing details about proposed parking maximums in ${placeLink} — ${SEARCH_RESET_HTML}`,
   );
   expect(
-    determineSearch("table", "Baltimore, MD", "reduce parking minimums"),
+    determineSearch(
+      "table",
+      "Baltimore, MD",
+      "reduce parking minimums",
+      "adopted",
+    ),
   ).toEqual(
-    `Showing details about parking minimum reductions in ${placeLink} — ${SEARCH_RESET_HTML}`,
+    `Showing details about adopted parking minimum reductions in ${placeLink} — ${SEARCH_RESET_HTML}`,
   );
   expect(
-    determineSearch("table", "Baltimore, MD", "remove parking minimums"),
+    determineSearch(
+      "table",
+      "Baltimore, MD",
+      "remove parking minimums",
+      "repealed",
+    ),
   ).toEqual(
-    `Showing details about parking minimum removals in ${placeLink} — ${SEARCH_RESET_HTML}`,
+    `Showing details about repealed parking minimum removals in ${placeLink} — ${SEARCH_RESET_HTML}`,
   );
 });
 
 test("determineAddMax()", () => {
-  expect(determineAddMax("map", "2 places in Mexico")).toEqual(
-    "Showing 2 places in Mexico with parking maximums added",
+  expect(determineAddMax("map", "2 places in Mexico", "adopted")).toEqual(
+    "Showing 2 places in Mexico with adopted parking maximums",
   );
-  expect(determineAddMax("table", "2 places in Mexico")).toEqual(
-    "Showing details about parking maximums for 2 places in Mexico",
+  expect(determineAddMax("map", "2 places in Mexico", "repealed")).toEqual(
+    "Showing 2 places in Mexico with repealed parking maximums",
+  );
+
+  expect(determineAddMax("table", "2 places in Mexico", "adopted")).toEqual(
+    "Showing details about adopted parking maximums for 2 places in Mexico",
+  );
+  expect(determineAddMax("table", "2 places in Mexico", "repealed")).toEqual(
+    "Showing details about repealed parking maximums for 2 places in Mexico",
   );
 });
 
 test("determineReduceMinimums()", () => {
-  expect(determineReduceMin("map", "2 places in Mexico")).toEqual(
-    "Showing 2 places in Mexico with parking minimums reduced",
+  expect(determineReduceMin("map", "2 places in Mexico", "adopted")).toEqual(
+    "Showing 2 places in Mexico with adopted parking minimum reductions",
   );
-  expect(determineReduceMin("table", "2 places in Mexico")).toEqual(
-    "Showing details about parking minimum reductions for 2 places in Mexico",
+  expect(determineReduceMin("map", "2 places in Mexico", "repealed")).toEqual(
+    "Showing 2 places in Mexico with repealed parking minimum reductions",
+  );
+
+  expect(determineReduceMin("table", "2 places in Mexico", "adopted")).toEqual(
+    "Showing details about adopted parking minimum reductions for 2 places in Mexico",
+  );
+  expect(determineReduceMin("table", "2 places in Mexico", "repealed")).toEqual(
+    "Showing details about repealed parking minimum reductions for 2 places in Mexico",
   );
 });
 
 test("determineRemoveMin()", () => {
-  expect(determineRmMin("map", "2 places in Mexico", false)).toEqual(
-    "Showing 2 places in Mexico with parking minimums removed",
+  expect(determineRmMin("map", "2 places in Mexico", false, "adopted")).toEqual(
+    "Showing 2 places in Mexico with adopted parking minimum removals",
   );
-  expect(determineRmMin("map", "2 places in Mexico", true)).toEqual(
-    "Showing 2 places in Mexico with all parking minimums removed",
+  expect(
+    determineRmMin("map", "2 places in Mexico", false, "repealed"),
+  ).toEqual(
+    "Showing 2 places in Mexico with repealed parking minimum removals",
   );
 
-  expect(determineRmMin("table", "2 places in Mexico", false)).toEqual(
-    "Showing details about parking minimum removals for 2 places in Mexico",
+  expect(determineRmMin("map", "2 places in Mexico", true, "adopted")).toEqual(
+    "Showing 2 places in Mexico with all parking minimums removed",
   );
-  expect(determineRmMin("table", "2 places in Mexico", true)).toEqual(
-    "Showing details about parking minimum removals for 2 places in Mexico that removed all parking minimums",
+  expect(determineRmMin("map", "2 places in Mexico", true, "repealed")).toEqual(
+    "Showing 2 places in Mexico with repealed parking minimum removals",
+  );
+
+  expect(
+    determineRmMin("table", "2 places in Mexico", false, "adopted"),
+  ).toEqual(
+    "Showing details about adopted parking minimum removals for 2 places in Mexico",
+  );
+  expect(
+    determineRmMin("table", "2 places in Mexico", false, "repealed"),
+  ).toEqual(
+    "Showing details about repealed parking minimum removals for 2 places in Mexico",
+  );
+
+  expect(
+    determineRmMin("table", "2 places in Mexico", true, "adopted"),
+  ).toEqual(
+    "Showing details about adopted parking minimum removals for 2 places in Mexico that removed all parking minimums",
+  );
+  expect(
+    determineRmMin("table", "2 places in Mexico", true, "repealed"),
+  ).toEqual(
+    "Showing details about repealed parking minimum removals for 2 places in Mexico",
   );
 });
 
@@ -168,6 +228,7 @@ test("determineAnyReform()", () => {
       view: ViewState;
       matched: readonly PolicyType[];
       statePolicy: readonly PolicyType[];
+      state: ReformStatus;
     },
     expected: string,
   ): void => {
@@ -176,13 +237,18 @@ test("determineAnyReform()", () => {
       "5 places in Mexico",
       new Set(args.matched),
       new Set(args.statePolicy),
+      args.state,
     );
     expect(result).toEqual(expected);
   };
 
   assert(
-    { view: "table", matched: [], statePolicy: [] },
+    { view: "table", matched: [], statePolicy: [], state: "adopted" },
     "Showing an overview of adopted parking reforms in 5 places in Mexico",
+  );
+  assert(
+    { view: "table", matched: [], statePolicy: [], state: "repealed" },
+    "Showing an overview of repealed parking reforms in 5 places in Mexico",
   );
 
   // For map view, we only show policy types that are both present in the matched places &
@@ -192,39 +258,73 @@ test("determineAnyReform()", () => {
       view: "map",
       matched: ALL_POLICY_TYPE,
       statePolicy: ALL_POLICY_TYPE,
+      state: "adopted",
     },
-    "Showing 5 places in Mexico with 1+ parking reform:<ul><li>maximums added</li><li>minimums reduced</li><li>minimums removed</li></ul>",
+    "Showing 5 places in Mexico with 1+ adopted parking reforms:<ul><li>maximums</li><li>minimum reductions</li><li>minimum removals</li></ul>",
   );
+  assert(
+    {
+      view: "map",
+      matched: ALL_POLICY_TYPE,
+      statePolicy: ALL_POLICY_TYPE,
+      state: "repealed",
+    },
+    "Showing 5 places in Mexico with 1+ repealed parking reforms:<ul><li>maximums</li><li>minimum reductions</li><li>minimum removals</li></ul>",
+  );
+
   assert(
     {
       view: "map",
       matched: ["add parking maximums", "remove parking minimums"],
       statePolicy: ALL_POLICY_TYPE,
+      state: "adopted",
     },
-    "Showing 5 places in Mexico with 1+ parking reform:<ul><li>maximums added</li><li>minimums removed</li></ul>",
+    "Showing 5 places in Mexico with 1+ adopted parking reforms:<ul><li>maximums</li><li>minimum removals</li></ul>",
   );
   assert(
     {
       view: "map",
       matched: ALL_POLICY_TYPE,
       statePolicy: ["add parking maximums", "remove parking minimums"],
+      state: "adopted",
     },
-    "Showing 5 places in Mexico with 1+ parking reform:<ul><li>maximums added</li><li>minimums removed</li></ul>",
+    "Showing 5 places in Mexico with 1+ adopted parking reforms:<ul><li>maximums</li><li>minimum removals</li></ul>",
   );
+
   assert(
     {
       view: "map",
       matched: ["add parking maximums"],
       statePolicy: ALL_POLICY_TYPE,
+      state: "adopted",
     },
-    "Showing 5 places in Mexico with parking maximums added",
+    "Showing 5 places in Mexico with adopted parking maximums",
   );
   assert(
     {
       view: "map",
       matched: ALL_POLICY_TYPE,
       statePolicy: ["add parking maximums"],
+      state: "adopted",
     },
-    "Showing 5 places in Mexico with parking maximums added",
+    "Showing 5 places in Mexico with adopted parking maximums",
+  );
+  assert(
+    {
+      view: "map",
+      matched: ALL_POLICY_TYPE,
+      statePolicy: ["reduce parking minimums"],
+      state: "repealed",
+    },
+    "Showing 5 places in Mexico with repealed parking minimum reductions",
+  );
+  assert(
+    {
+      view: "map",
+      matched: ALL_POLICY_TYPE,
+      statePolicy: ["remove parking minimums"],
+      state: "proposed",
+    },
+    "Showing 5 places in Mexico with proposed parking minimum removals",
   );
 });

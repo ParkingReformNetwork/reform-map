@@ -13,16 +13,17 @@ import {
   DEFAULT_ALL_MINIMUMS_RANGE,
 } from "./utils";
 import { PolicyTypeFilter } from "../../src/js/state/FilterState";
+import { ReformStatus } from "../../src/js/model/types";
 
 type StringArrayOption = string[] | "all";
 
 interface EdgeCase {
   desc: string;
   policyTypeFilter: PolicyTypeFilter;
+  status?: ReformStatus;
   scope?: StringArrayOption;
   includedPolicy?: StringArrayOption;
   land?: StringArrayOption;
-  status?: StringArrayOption;
   country?: StringArrayOption;
   year?: StringArrayOption;
   placeType?: StringArrayOption;
@@ -106,7 +107,7 @@ const TESTS: EdgeCase[] = [
   {
     desc: "status filter",
     policyTypeFilter: "remove parking minimums",
-    status: ["Repealed"],
+    status: "repealed",
     expectedRange: [2, 10],
   },
   {
@@ -181,10 +182,15 @@ for (const edgeCase of TESTS) {
         .selectOption(edgeCase.policyTypeFilter);
     }
 
+    if (edgeCase.status && edgeCase.status !== "adopted") {
+      await page
+        .locator("#filter-status-dropdown")
+        .selectOption(edgeCase.status);
+    }
+
     await selectIfSet(page, "scope", edgeCase.scope);
     await selectIfSet(page, "policy-change", edgeCase.includedPolicy);
     await selectIfSet(page, "land-use", edgeCase.land);
-    await selectIfSet(page, "status", edgeCase.status);
     await selectIfSet(page, "country", edgeCase.country);
     await selectIfSet(page, "year", edgeCase.year);
     await selectIfSet(page, "place-type", edgeCase.placeType);

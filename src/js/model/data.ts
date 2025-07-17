@@ -70,12 +70,13 @@ export function numberOfPolicyRecords(
   );
 }
 
-export function determineAdoptedPolicyTypes(
+export function determineAllPolicyTypes(
   entry: RawCoreEntry | ProcessedCoreEntry,
+  status: ReformStatus,
 ): PolicyType[] {
   const hasPolicy = (
     policies: ProcessedCorePolicy[] | RawCorePolicy[] | undefined,
-  ) => !!policies?.filter((policy) => policy.status === "adopted").length;
+  ) => !!policies?.filter((policy) => policy.status === status).length;
 
   const result: PolicyType[] = [];
   if (hasPolicy(entry.add_max)) result.push("add parking maximums");

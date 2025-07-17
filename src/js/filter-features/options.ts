@@ -1,8 +1,10 @@
-import { capitalize, isEqual } from "lodash-es";
+import { capitalize } from "lodash-es";
 
 import {
   ALL_POLICY_TYPE_FILTER,
   FilterState,
+  isAllMinimumsRemovedToggleShown,
+  isAllMinimumsRemovedToggleInEffect,
   PlaceFilterManager,
   PolicyTypeFilter,
 } from "../state/FilterState";
@@ -32,7 +34,6 @@ import {
  */
 type DataSetSpecificOptions = {
   includedPolicyChanges: readonly string[];
-  status: readonly string[];
   scope: string[];
   landUse: string[];
   country: string[];
@@ -40,47 +41,84 @@ type DataSetSpecificOptions = {
   placeType: string[];
 };
 
-// We only check `adopted` by default. (We should actually fix `status`
-// to be a radio selection rather than multiple choice.)
-export const DEFAULT_REFORM_STATUS: ReformStatus = "adopted";
-
 export class FilterOptions {
   readonly merged: DataSetSpecificOptions;
 
-  readonly datasets: Record<PolicyTypeFilter, DataSetSpecificOptions>;
+  readonly datasets: Record<
+    PolicyTypeFilter,
+    Record<ReformStatus, DataSetSpecificOptions>
+  >;
 
   constructor() {
     this.merged = {
       includedPolicyChanges: ALL_POLICY_TYPE,
-      status: ALL_REFORM_STATUS,
       ...optionValuesData.merged,
     };
     this.datasets = {
       "any parking reform": {
-        includedPolicyChanges: ALL_POLICY_TYPE,
-        status: ALL_REFORM_STATUS,
-        ...optionValuesData.any,
+        adopted: {
+          includedPolicyChanges: ALL_POLICY_TYPE,
+          ...optionValuesData.anyAdopted,
+        },
+        proposed: {
+          includedPolicyChanges: ALL_POLICY_TYPE,
+          ...optionValuesData.anyProposed,
+        },
+        repealed: {
+          includedPolicyChanges: ALL_POLICY_TYPE,
+          ...optionValuesData.anyRepealed,
+        },
       },
       "add parking maximums": {
-        includedPolicyChanges: [],
-        status: ALL_REFORM_STATUS,
-        ...optionValuesData.addMax,
-      },
-      "remove parking minimums": {
-        includedPolicyChanges: [],
-        status: ALL_REFORM_STATUS,
-        ...optionValuesData.rmMin,
+        adopted: {
+          includedPolicyChanges: [],
+          ...optionValuesData.addMaxAdopted,
+        },
+        proposed: {
+          includedPolicyChanges: [],
+          ...optionValuesData.addMaxProposed,
+        },
+        repealed: {
+          includedPolicyChanges: [],
+          ...optionValuesData.addMaxRepealed,
+        },
       },
       "reduce parking minimums": {
-        includedPolicyChanges: [],
-        status: ALL_REFORM_STATUS,
-        ...optionValuesData.reduceMin,
+        adopted: {
+          includedPolicyChanges: [],
+          ...optionValuesData.reduceMinAdopted,
+        },
+        proposed: {
+          includedPolicyChanges: [],
+          ...optionValuesData.reduceMinProposed,
+        },
+        repealed: {
+          includedPolicyChanges: [],
+          ...optionValuesData.reduceMinRepealed,
+        },
+      },
+      "remove parking minimums": {
+        adopted: {
+          includedPolicyChanges: [],
+          ...optionValuesData.rmMinAdopted,
+        },
+        proposed: {
+          includedPolicyChanges: [],
+          ...optionValuesData.rmMinProposed,
+        },
+        repealed: {
+          includedPolicyChanges: [],
+          ...optionValuesData.rmMinRepealed,
+        },
       },
     };
   }
 
-  getOptions(policyType: PolicyTypeFilter): DataSetSpecificOptions {
-    return this.datasets[policyType];
+  getOptions(
+    policyType: PolicyTypeFilter,
+    status: ReformStatus,
+  ): DataSetSpecificOptions {
+    return this.datasets[policyType][status];
   }
 }
 
@@ -186,8 +224,7 @@ function generateAccordionForFilterGroup(
   // When setting up the filter group, we use `merged` to add every option in the universe.
   filterOptions.merged[params.filterStateKey].forEach((val, i) => {
     const inputId = `filter-${params.htmlName}-option-${i}`;
-    const checked =
-      params.filterStateKey !== "status" || val === DEFAULT_REFORM_STATUS;
+    const checked = true;
     const description = params.preserveCapitalization ? val : capitalize(val);
     const [label] = generateCheckbox(
       inputId,
@@ -317,7 +354,9 @@ function initFilterGroup(
     `possibly update ${params.htmlName} filter UI`,
     (state) => {
       updateCheckboxVisibility(
-        filterOptions.getOptions(state.policyTypeFilter)[params.filterStateKey],
+        filterOptions.getOptions(state.policyTypeFilter, state.status)[
+          params.filterStateKey
+        ],
         accordionElements.fieldSet,
         params.preserveCapitalization,
       );
@@ -358,8 +397,8 @@ function initAllMinimumsToggle(
 
   filterManager.subscribe(
     `possibly hide all minimums toggle`,
-    ({ policyTypeFilter }) => {
-      outerContainer.hidden = policyTypeFilter !== "remove parking minimums";
+    (filterState) => {
+      outerContainer.hidden = !isAllMinimumsRemovedToggleShown(filterState);
     },
   );
 }
@@ -375,7 +414,7 @@ function initPolicyTypeFilterDropdown(
 
   const label = document.createElement("label");
   label.htmlFor = id;
-  label.textContent = "Policy type";
+  label.textContent = "Reform type";
 
   const select = document.createElement("select");
   select.id = id;
@@ -401,6 +440,43 @@ function initPolicyTypeFilterDropdown(
   filterPopup.append(container);
 }
 
+function initStatusDropdown(
+  filterManager: PlaceFilterManager,
+  filterPopup: HTMLFormElement,
+): void {
+  const id = "filter-status-dropdown";
+
+  const container = document.createElement("div");
+  container.className = "filter-status-dropdown-container";
+
+  const label = document.createElement("label");
+  label.htmlFor = id;
+  label.textContent = "Status";
+
+  const select = document.createElement("select");
+  select.id = id;
+  select.name = id;
+
+  ALL_REFORM_STATUS.forEach((option) => {
+    const element = document.createElement("option");
+    element.value = option;
+    element.textContent = capitalize(option);
+    select.append(element);
+  });
+
+  // Set initial value.
+  select.value = filterManager.getState().status;
+
+  select.addEventListener("change", () => {
+    const status = select.value as ReformStatus;
+    filterManager.update({ status });
+  });
+
+  container.append(label);
+  container.append(select);
+  filterPopup.append(container);
+}
+
 export function initFilterOptions(
   filterManager: PlaceFilterManager,
   filterOptions: FilterOptions,
@@ -411,47 +487,42 @@ export function initFilterOptions(
 
   // Top-level options that change profoundly the app.
   initPolicyTypeFilterDropdown(filterManager, filterPopup);
+  initStatusDropdown(filterManager, filterPopup);
   initAllMinimumsToggle(filterManager, filterPopup);
 
   // Options about the reform
   initFilterGroup(filterManager, filterOptions, filterPopup, {
     htmlName: "policy-change",
     filterStateKey: "includedPolicyChanges",
-    legend: "Policy change",
+    legend: "Reform types",
     hide: ({ policyTypeFilter }) => policyTypeFilter !== "any parking reform",
-  });
-  initFilterGroup(filterManager, filterOptions, filterPopup, {
-    htmlName: "status",
-    filterStateKey: "status",
-    legend: "Reform status",
-    hide: ({ policyTypeFilter }) => policyTypeFilter === "any parking reform",
   });
   initFilterGroup(filterManager, filterOptions, filterPopup, {
     htmlName: "scope",
     filterStateKey: "scope",
-    legend: "Reform scope",
-    hide: ({ policyTypeFilter, allMinimumsRemovedToggle }) =>
-      policyTypeFilter === "any parking reform" ||
-      (allMinimumsRemovedToggle &&
-        policyTypeFilter === "remove parking minimums"),
+    legend: "Reform scopes",
+    hide: (filterState) =>
+      filterState.policyTypeFilter === "any parking reform" ||
+      isAllMinimumsRemovedToggleInEffect(filterState),
   });
   initFilterGroup(filterManager, filterOptions, filterPopup, {
     htmlName: "land-use",
     filterStateKey: "landUse",
-    legend: "Affected land use",
-    hide: ({ policyTypeFilter, allMinimumsRemovedToggle }) =>
-      policyTypeFilter === "any parking reform" ||
-      (allMinimumsRemovedToggle &&
-        policyTypeFilter === "remove parking minimums"),
+    legend: "Affected land uses",
+    hide: (filterState) =>
+      filterState.policyTypeFilter === "any parking reform" ||
+      isAllMinimumsRemovedToggleInEffect(filterState),
   });
   initFilterGroup(filterManager, filterOptions, filterPopup, {
     htmlName: "year",
     filterStateKey: "year",
     legend: ({ status }) => {
-      if (isEqual(status, new Set(["adopted"]))) return "Adoption year";
-      if (isEqual(status, new Set(["proposed"]))) return "Proposal year";
-      if (isEqual(status, new Set(["repealed"]))) return "Repeal year";
-      return "Reform year";
+      const mapping: Record<ReformStatus, string> = {
+        adopted: "Adoption years",
+        proposed: "Proposal years",
+        repealed: "Repeal years",
+      };
+      return mapping[status];
     },
     useTwoColumns: true,
     hide: ({ policyTypeFilter }) => policyTypeFilter === "any parking reform",
@@ -461,13 +532,13 @@ export function initFilterOptions(
   initFilterGroup(filterManager, filterOptions, filterPopup, {
     htmlName: "country",
     filterStateKey: "country",
-    legend: "Country",
+    legend: "Countries",
     preserveCapitalization: true,
   });
   initFilterGroup(filterManager, filterOptions, filterPopup, {
     htmlName: "place-type",
     filterStateKey: "placeType",
-    legend: "Jurisdiction",
+    legend: "Jurisdictions",
     useTwoColumns: true,
   });
   initPopulationSlider(filterManager, filterPopup);
