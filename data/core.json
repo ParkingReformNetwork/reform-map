@@ -13300,6 +13300,12 @@
         "scope": ["citywide"],
         "land": ["all uses"],
         "date": null
+      },
+      {
+        "status": "adopted",
+        "scope": ["transit-oriented"],
+        "land": ["all uses"],
+        "date": "2025-07-16"
       }
     ]
   },
@@ -20682,6 +20688,33 @@
         "status": "adopted",
         "scope": ["citywide"],
         "land": ["commercial", "industrial"],
+        "date": null
+      }
+    ]
+  },
+  "East Aurora, NY": {
+    "place": {
+      "name": "East Aurora",
+      "state": "NY",
+      "country": "US",
+      "type": "city",
+      "pop": 5998,
+      "coord": [-78.6177611, 42.7689141],
+      "repeal": false
+    },
+    "add_max": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["all uses"],
+        "date": null
+      }
+    ],
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["main street / special"],
+        "land": ["all uses", "commercial"],
         "date": null
       }
     ]
@@ -31092,6 +31125,39 @@
       }
     ]
   },
+  "Hamburg, NY": {
+    "place": {
+      "name": "Hamburg",
+      "state": "NY",
+      "country": "US",
+      "type": "city",
+      "pop": 9696,
+      "coord": [-78.828717, 42.716293],
+      "repeal": false
+    },
+    "add_max": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": [
+          "commercial",
+          "industrial",
+          "medical",
+          "other",
+          "residential, multi-family"
+        ],
+        "date": null
+      }
+    ],
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["residential, low-density"],
+        "date": null
+      }
+    ]
+  },
   "Hamden, CT": {
     "place": {
       "name": "Hamden",
@@ -36828,6 +36894,18 @@
         "scope": ["citywide"],
         "land": ["all uses"],
         "date": null
+      },
+      {
+        "status": "adopted",
+        "scope": ["city center / business district", "main street / special"],
+        "land": [
+          "commercial",
+          "industrial",
+          "medical",
+          "other",
+          "residential, multi-family"
+        ],
+        "date": "2025-06-26"
       }
     ]
   },
@@ -38935,6 +39013,25 @@
         "status": "adopted",
         "scope": ["city center / business district"],
         "land": ["commercial"],
+        "date": null
+      }
+    ]
+  },
+  "Lake Placid, NY": {
+    "place": {
+      "name": "Lake Placid",
+      "state": "NY",
+      "country": "US",
+      "type": "city",
+      "pop": 2205,
+      "coord": [-73.9828318, 44.2831194],
+      "repeal": false
+    },
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["all uses"],
         "date": null
       }
     ]
@@ -47427,6 +47524,14 @@
       "coord": [-101.296273, 48.23251],
       "repeal": false
     },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["all uses"],
+        "date": null
+      }
+    ],
     "rm_min": [
       {
         "status": "adopted",
@@ -55895,6 +56000,14 @@
       "coord": [-96.0422378, 41.1544433],
       "repeal": false
     },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["residential, all uses"],
+        "date": null
+      }
+    ],
     "rm_min": [
       {
         "status": "adopted",
@@ -58639,6 +58752,14 @@
       "coord": [-90.3957115, 36.7568327],
       "repeal": false
     },
+    "reduce_min": [
+      {
+        "status": "proposed",
+        "scope": ["city center / business district"],
+        "land": ["all uses", "commercial"],
+        "date": null
+      }
+    ],
     "rm_min": [
       {
         "status": "adopted",
