@@ -7,11 +7,7 @@ import { initViewToggle, addViewToggleSubscribers } from "./layout/viewToggle";
 import readData from "./model/data";
 import { PlaceFilterManager } from "./state/FilterState";
 import { POPULATION_MAX_INDEX } from "./filter-features/populationSlider";
-import {
-  DEFAULT_REFORM_STATUS,
-  FilterOptions,
-  initFilterOptions,
-} from "./filter-features/options";
+import { FilterOptions, initFilterOptions } from "./filter-features/options";
 import initCounters from "./filter-features/counters";
 import subscribeSnapToPlace from "./map-features/position";
 import initPlaceMarkers from "./map-features/markers";
@@ -35,15 +31,13 @@ export default async function initApp(): Promise<void> {
     searchInput: null,
     policyTypeFilter: "remove parking minimums",
     allMinimumsRemovedToggle: true,
-    placeType: new Set(filterOptions.anyReform.placeType),
-    includedPolicyChanges: new Set(
-      filterOptions.anyReform.includedPolicyChanges,
-    ),
-    scope: new Set(filterOptions.anyReform.scope),
-    landUse: new Set(filterOptions.anyReform.landUse),
-    status: new Set([DEFAULT_REFORM_STATUS]),
-    country: new Set(filterOptions.anyReform.country),
-    year: new Set(filterOptions.anyReform.year),
+    placeType: filterOptions.default("placeType"),
+    includedPolicyChanges: filterOptions.default("includedPolicyChanges"),
+    scope: filterOptions.default("scope"),
+    landUse: filterOptions.default("landUse"),
+    status: filterOptions.default("status"),
+    country: filterOptions.default("country"),
+    year: filterOptions.default("year"),
     populationSliderIndexes: [0, POPULATION_MAX_INDEX],
   });
 
