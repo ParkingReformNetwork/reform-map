@@ -27,16 +27,11 @@ export type PolicyTypeFilter = PolicyType | "any parking reform";
 // Note that this only tracks state set by the user.
 // Computed values are handled elsewhere.
 //
-// This is a single unified global view of the state, even though we
-// have multiple datasets like 'remove parking minimums'. Some of the
-// option groups are not relevant to certain datasets; for example,
-// "any parking reform" will ignore `scope`. Likewise, certain values
-// within an option group are irrelevant to certain data sets; for example,
-// while all datasets have 'country', their entries usually only have a subset
-// of the total set of countries across all datsets. Nevertheless,
-// we unify the state so that it persists when changing the policy type.
+// Some of the values are not relevant to certain policy types.
+// For example, "any parking reform" will ignore `scope`. Still,
+// we preserve the state so it persists when changing the policy type.
 //
-// Keep key names in alignment with DataSetSpecificOptions in filter-features/options.ts
+// Keep key names in alignment with FilterGroupKey in filterOptions.ts
 export interface FilterState {
   searchInput: string | null;
   policyTypeFilter: PolicyTypeFilter;
