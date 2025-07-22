@@ -83,6 +83,24 @@ test("determineOptionValues()", () => {
       ],
       year: [UNKNOWN_YEAR, "2025", "2022"],
     },
+    any: {
+      placeType: ["city", "country"],
+      country: ["United States", "Brazil"],
+      landUse: [
+        "all uses",
+        "commercial",
+        "medical",
+        "other",
+        "residential, all uses",
+      ],
+      scope: [
+        "city center / business district",
+        "citywide",
+        "regional",
+        "transit-oriented",
+      ],
+      year: [UNKNOWN_YEAR, "2025", "2022"],
+    },
     addMax: {
       placeType: ["city"],
       country: ["United States"],
