@@ -35,15 +35,13 @@ export default async function initApp(): Promise<void> {
     searchInput: null,
     policyTypeFilter: "remove parking minimums",
     allMinimumsRemovedToggle: true,
-    placeType: new Set(filterOptions.anyReform.placeType),
-    includedPolicyChanges: new Set(
-      filterOptions.anyReform.includedPolicyChanges,
-    ),
-    scope: new Set(filterOptions.anyReform.scope),
-    landUse: new Set(filterOptions.anyReform.landUse),
+    placeType: new Set(filterOptions.merged.placeType),
+    includedPolicyChanges: new Set(filterOptions.merged.includedPolicyChanges),
+    scope: new Set(filterOptions.merged.scope),
+    landUse: new Set(filterOptions.merged.landUse),
     status: new Set([DEFAULT_REFORM_STATUS]),
-    country: new Set(filterOptions.anyReform.country),
-    year: new Set(filterOptions.anyReform.year),
+    country: new Set(filterOptions.merged.country),
+    year: new Set(filterOptions.merged.year),
     populationSliderIndexes: [0, POPULATION_MAX_INDEX],
   });
 

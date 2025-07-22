@@ -40,50 +40,42 @@ type DataSetSpecificOptions = {
 export const DEFAULT_REFORM_STATUS: ReformStatus = "adopted";
 
 export class FilterOptions {
-  readonly anyReform: DataSetSpecificOptions;
+  readonly merged: DataSetSpecificOptions;
 
-  readonly addMax: DataSetSpecificOptions;
-
-  readonly rmMin: DataSetSpecificOptions;
-
-  readonly reduceMin: DataSetSpecificOptions;
+  readonly datasets: Record<PolicyTypeFilter, DataSetSpecificOptions>;
 
   constructor() {
-    this.anyReform = {
+    this.merged = {
       includedPolicyChanges: optionValuesData.policy,
       status: optionValuesData.status,
       ...optionValuesData.merged,
     };
-    this.addMax = {
-      includedPolicyChanges: [],
-      status: optionValuesData.status,
-      ...optionValuesData.addMax,
-    };
-    this.rmMin = {
-      includedPolicyChanges: [],
-      status: optionValuesData.status,
-      ...optionValuesData.rmMin,
-    };
-    this.reduceMin = {
-      includedPolicyChanges: [],
-      status: optionValuesData.status,
-      ...optionValuesData.reduceMin,
+    this.datasets = {
+      "any parking reform": {
+        includedPolicyChanges: optionValuesData.policy,
+        status: optionValuesData.status,
+        ...optionValuesData.any,
+      },
+      "add parking maximums": {
+        includedPolicyChanges: [],
+        status: optionValuesData.status,
+        ...optionValuesData.addMax,
+      },
+      "remove parking minimums": {
+        includedPolicyChanges: [],
+        status: optionValuesData.status,
+        ...optionValuesData.rmMin,
+      },
+      "reduce parking minimums": {
+        includedPolicyChanges: [],
+        status: optionValuesData.status,
+        ...optionValuesData.reduceMin,
+      },
     };
   }
 
   getOptions(policyType: PolicyTypeFilter): DataSetSpecificOptions {
-    switch (policyType) {
-      case "any parking reform":
-        return this.anyReform;
-      case "remove parking minimums":
-        return this.rmMin;
-      case "reduce parking minimums":
-        return this.reduceMin;
-      case "add parking maximums":
-        return this.addMax;
-      default:
-        throw new Error(`Unrecognized policy type: ${policyType}`);
-    }
+    return this.datasets[policyType];
   }
 }
 
@@ -186,9 +178,8 @@ function generateAccordionForFilterGroup(
   }
   fieldSet.appendChild(filterOptionsContainer);
 
-  // When setting up the filter group, we use anyReform to add every option in the universe.
-  // (anyReform uses a dataset that merges all the other datasets' values.)
-  filterOptions.anyReform[params.filterStateKey].forEach((val, i) => {
+  // When setting up the filter group, we use `merged` to add every option in the universe.
+  filterOptions.merged[params.filterStateKey].forEach((val, i) => {
     const inputId = `filter-${params.htmlName}-option-${i}`;
     const checked =
       params.filterStateKey !== "status" || val === DEFAULT_REFORM_STATUS;
