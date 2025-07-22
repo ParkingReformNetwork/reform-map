@@ -2,8 +2,7 @@
 @use "theme/typography";
 
 #table-view {
-  // This is the default - it gets set to `flex` in viewToggle.ts
-  display: none;
+  display: flex;
   flex-direction: column;
 }
 
