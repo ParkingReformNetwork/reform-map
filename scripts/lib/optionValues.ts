@@ -1,3 +1,5 @@
+import fs from "fs/promises";
+
 import { sortBy, without } from "lodash-es";
 
 import { COUNTRY_MAPPING } from "../../src/js/model/data";
@@ -104,4 +106,11 @@ export function sortCountries(countries: Set<string>): string[] {
   return countries.has("United States")
     ? ["United States", ...sortedWithoutUS]
     : sortedWithoutUS;
+}
+
+export async function saveOptionValues(entries: RawCoreEntry[]): Promise<void> {
+  const result = determineOptionValues(entries);
+  const json = JSON.stringify(result, null, 2);
+  console.log("Writing data/option-values.json");
+  await fs.writeFile("data/option-values.json", json);
 }

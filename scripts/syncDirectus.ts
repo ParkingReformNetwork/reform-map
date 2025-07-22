@@ -29,7 +29,7 @@ import {
   ExtendedPolicy,
   RawCompleteEntry,
 } from "./lib/data";
-import { determineOptionValues } from "./lib/optionValues";
+import { saveOptionValues } from "./lib/optionValues";
 
 // --------------------------------------------------------------------------
 // Read Directus
@@ -466,13 +466,6 @@ async function saveExtendedData(
   const json = JSON.stringify(pruned, null, 2);
   console.log("Writing data/extended.json");
   await fs.writeFile("data/extended.json", json);
-}
-
-async function saveOptionValues(entries: RawCompleteEntry[]): Promise<void> {
-  const result = determineOptionValues(entries);
-  const json = JSON.stringify(result, null, 2);
-  console.log("Writing data/option-values.json");
-  await fs.writeFile("data/option-values.json", json);
 }
 
 // --------------------------------------------------------------------------
