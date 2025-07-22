@@ -29,14 +29,14 @@ function updateUI(table: Tabulator, state: ViewState): void {
   if (state === "map") {
     tableIcon.style.display = "inline-flex";
     mapIcon.style.display = "none";
-    tableView.style.display = "none";
+    tableView.hidden = true;
     mapView.hidden = false;
     mapCounter.hidden = false;
     prnLogo.hidden = false;
   } else {
     tableIcon.style.display = "none";
     mapIcon.style.display = "inline-flex";
-    tableView.style.display = "flex";
+    tableView.hidden = false;
     mapView.hidden = true;
     mapCounter.hidden = true;
     prnLogo.hidden = true;
