@@ -4,22 +4,12 @@ import { sortBy, without } from "lodash-es";
 
 import { COUNTRY_MAPPING } from "../../src/js/model/data";
 import {
-  PolicyType,
   RawCorePolicy,
-  ReformStatus,
   UNKNOWN_YEAR,
   Date,
   RawPlace,
   RawCoreEntry,
 } from "../../src/js/model/types";
-
-export const ALL_POLICY_TYPE: PolicyType[] = [
-  "add parking maximums",
-  "reduce parking minimums",
-  "remove parking minimums",
-];
-
-export const ALL_STATUS: ReformStatus[] = ["adopted", "proposed", "repealed"];
 
 /** The option values for a single dataset. */
 class OptionValues {
@@ -91,8 +81,6 @@ export function determineOptionValues(entries: RawCoreEntry[]) {
   });
 
   const result = {
-    policy: ALL_POLICY_TYPE,
-    status: ALL_STATUS,
     merged: merged.export(),
     any: any.export(),
     addMax: addMax.export(),

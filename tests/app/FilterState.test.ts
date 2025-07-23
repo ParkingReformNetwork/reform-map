@@ -5,7 +5,12 @@ import {
   PlaceFilterManager,
 } from "../../src/js/state/FilterState";
 import { POPULATION_MAX_INDEX } from "../../src/js/filter-features/populationSlider";
-import { PlaceId, ProcessedCoreEntry, Date } from "../../src/js/model/types";
+import {
+  PlaceId,
+  ProcessedCoreEntry,
+  Date,
+  ALL_POLICY_TYPE,
+} from "../../src/js/model/types";
 
 test.describe("PlaceFilterManager.matchedPolicyRecords()", () => {
   function defaultState(): FilterState {
@@ -13,11 +18,7 @@ test.describe("PlaceFilterManager.matchedPolicyRecords()", () => {
       searchInput: null,
       policyTypeFilter: "any parking reform",
       allMinimumsRemovedToggle: false,
-      includedPolicyChanges: new Set([
-        "add parking maximums",
-        "reduce parking minimums",
-        "remove parking minimums",
-      ]),
+      includedPolicyChanges: new Set(ALL_POLICY_TYPE),
       scope: new Set(["citywide", "city center / business district"]),
       landUse: new Set(["all uses", "commercial", "other"]),
       status: new Set(["adopted"]),

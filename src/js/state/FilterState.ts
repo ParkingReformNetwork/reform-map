@@ -1,5 +1,6 @@
 import { isEqual } from "lodash-es";
 import {
+  ALL_POLICY_TYPE,
   PlaceId,
   PlaceType,
   PolicyType,
@@ -22,7 +23,11 @@ export const POPULATION_INTERVALS: Array<[string, number]> = [
   ["75M", 750000000],
 ];
 
-export type PolicyTypeFilter = PolicyType | "any parking reform";
+export const ALL_POLICY_TYPE_FILTER = [
+  ...ALL_POLICY_TYPE,
+  "any parking reform",
+] as const;
+export type PolicyTypeFilter = (typeof ALL_POLICY_TYPE_FILTER)[number];
 
 // Note that this only tracks state set by the user.
 // Computed values are handled elsewhere.

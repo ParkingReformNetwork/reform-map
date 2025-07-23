@@ -16,7 +16,11 @@ import {
 import { initPopulationSlider } from "./populationSlider";
 
 import optionValuesData from "../../../data/option-values.json" with { type: "json" };
-import { ReformStatus } from "../model/types";
+import {
+  ALL_POLICY_TYPE,
+  ALL_REFORM_STATUS,
+  ReformStatus,
+} from "../model/types";
 
 /** These option values change depending on which dataset is loaded.
  *
@@ -26,8 +30,8 @@ import { ReformStatus } from "../model/types";
  * Keep in alignment with FilterState.
  */
 type DataSetSpecificOptions = {
-  includedPolicyChanges: string[];
-  status: string[];
+  includedPolicyChanges: readonly string[];
+  status: readonly string[];
   scope: string[];
   landUse: string[];
   country: string[];
@@ -46,29 +50,29 @@ export class FilterOptions {
 
   constructor() {
     this.merged = {
-      includedPolicyChanges: optionValuesData.policy,
-      status: optionValuesData.status,
+      includedPolicyChanges: ALL_POLICY_TYPE,
+      status: ALL_REFORM_STATUS,
       ...optionValuesData.merged,
     };
     this.datasets = {
       "any parking reform": {
-        includedPolicyChanges: optionValuesData.policy,
-        status: optionValuesData.status,
+        includedPolicyChanges: ALL_POLICY_TYPE,
+        status: ALL_REFORM_STATUS,
         ...optionValuesData.any,
       },
       "add parking maximums": {
         includedPolicyChanges: [],
-        status: optionValuesData.status,
+        status: ALL_REFORM_STATUS,
         ...optionValuesData.addMax,
       },
       "remove parking minimums": {
         includedPolicyChanges: [],
-        status: optionValuesData.status,
+        status: ALL_REFORM_STATUS,
         ...optionValuesData.rmMin,
       },
       "reduce parking minimums": {
         includedPolicyChanges: [],
-        status: optionValuesData.status,
+        status: ALL_REFORM_STATUS,
         ...optionValuesData.reduceMin,
       },
     };
@@ -240,7 +244,7 @@ function updateCheckboxStats(
  * Hide all options not in the dataset.
  */
 function updateCheckboxVisibility(
-  optionsInDataset: string[],
+  optionsInDataset: readonly string[],
   fieldSet: HTMLFieldSetElement,
   preserveCapitalization?: boolean,
 ): void {

@@ -3,8 +3,6 @@ import { expect, test } from "@playwright/test";
 import {
   sortCountries,
   determineOptionValues,
-  ALL_POLICY_TYPE,
-  ALL_STATUS,
 } from "../../scripts/lib/optionValues";
 import { RawCoreEntry, UNKNOWN_YEAR } from "../../src/js/model/types";
 
@@ -63,8 +61,6 @@ test("determineOptionValues()", () => {
     },
   ];
   const expected = {
-    policy: ALL_POLICY_TYPE,
-    status: ALL_STATUS,
     merged: {
       placeType: ["city", "country"],
       country: ["United States", "Brazil"],

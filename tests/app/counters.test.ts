@@ -10,8 +10,11 @@ import {
   determineSearch,
   SEARCH_RESET_HTML,
 } from "../../src/js/filter-features/counters";
-import { FilterState } from "../../src/js/state/FilterState";
-import { PolicyType } from "../../src/js/model/types";
+import {
+  ALL_POLICY_TYPE_FILTER,
+  FilterState,
+} from "../../src/js/state/FilterState";
+import { ALL_POLICY_TYPE, PolicyType } from "../../src/js/model/types";
 import { ViewState } from "../../src/js/layout/viewToggle";
 
 test.describe("determineHtml", () => {
@@ -19,11 +22,7 @@ test.describe("determineHtml", () => {
     searchInput: null,
     policyTypeFilter: "any parking reform",
     allMinimumsRemovedToggle: false,
-    includedPolicyChanges: new Set([
-      "add parking maximums",
-      "remove parking minimums",
-      "reduce parking minimums",
-    ]),
+    includedPolicyChanges: new Set(ALL_POLICY_TYPE),
     // The below values are ignored.
     placeType: new Set(),
     scope: new Set(),
@@ -101,12 +100,7 @@ test("determineSearch()", () => {
     '<a class="external-link" target="_blank" href=https://parkingreform.org/mandates-map/city_detail/Baltimore_MD.html>Baltimore, MD <i aria-hidden="true" class="fa-solid fa-arrow-right"></i></a>';
 
   // Map view always has the same text.
-  for (const policyType of [
-    "any parking reform",
-    "add parking maximums",
-    "remove parking minimums",
-    "reduce parking minimums",
-  ] as const) {
+  for (const policyType of ALL_POLICY_TYPE_FILTER) {
     expect(determineSearch("map", "Baltimore, MD", policyType)).toEqual(
       `Showing ${placeLink} — ${SEARCH_RESET_HTML}`,
     );
@@ -172,8 +166,8 @@ test("determineAnyReform()", () => {
   const assert = (
     args: {
       view: ViewState;
-      matched: PolicyType[];
-      statePolicy: PolicyType[];
+      matched: readonly PolicyType[];
+      statePolicy: readonly PolicyType[];
     },
     expected: string,
   ): void => {
@@ -186,12 +180,6 @@ test("determineAnyReform()", () => {
     expect(result).toEqual(expected);
   };
 
-  const everyPolicyType: PolicyType[] = [
-    "add parking maximums",
-    "reduce parking minimums",
-    "remove parking minimums",
-  ];
-
   assert(
     { view: "table", matched: [], statePolicy: [] },
     "Showing an overview of adopted parking reforms in 5 places in Mexico",
@@ -202,8 +190,8 @@ test("determineAnyReform()", () => {
   assert(
     {
       view: "map",
-      matched: everyPolicyType,
-      statePolicy: everyPolicyType,
+      matched: ALL_POLICY_TYPE,
+      statePolicy: ALL_POLICY_TYPE,
     },
     "Showing 5 places in Mexico with 1+ parking reform:<ul><li>maximums added</li><li>minimums reduced</li><li>minimums removed</li></ul>",
   );
@@ -211,14 +199,14 @@ test("determineAnyReform()", () => {
     {
       view: "map",
       matched: ["add parking maximums", "remove parking minimums"],
-      statePolicy: everyPolicyType,
+      statePolicy: ALL_POLICY_TYPE,
     },
     "Showing 5 places in Mexico with 1+ parking reform:<ul><li>maximums added</li><li>minimums removed</li></ul>",
   );
   assert(
     {
       view: "map",
-      matched: everyPolicyType,
+      matched: ALL_POLICY_TYPE,
       statePolicy: ["add parking maximums", "remove parking minimums"],
     },
     "Showing 5 places in Mexico with 1+ parking reform:<ul><li>maximums added</li><li>minimums removed</li></ul>",
@@ -227,14 +215,14 @@ test("determineAnyReform()", () => {
     {
       view: "map",
       matched: ["add parking maximums"],
-      statePolicy: everyPolicyType,
+      statePolicy: ALL_POLICY_TYPE,
     },
     "Showing 5 places in Mexico with parking maximums added",
   );
   assert(
     {
       view: "map",
-      matched: everyPolicyType,
+      matched: ALL_POLICY_TYPE,
       statePolicy: ["add parking maximums"],
     },
     "Showing 5 places in Mexico with parking maximums added",
