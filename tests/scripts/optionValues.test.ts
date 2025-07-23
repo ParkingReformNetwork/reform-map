@@ -4,12 +4,7 @@ import {
   sortCountries,
   determineOptionValues,
 } from "../../scripts/lib/optionValues";
-import {
-  ALL_POLICY_TYPE,
-  ALL_REFORM_STATUS,
-  RawCoreEntry,
-  UNKNOWN_YEAR,
-} from "../../src/js/model/types";
+import { RawCoreEntry, UNKNOWN_YEAR } from "../../src/js/model/types";
 
 test("determineOptionValues()", () => {
   const commonPlace = {
@@ -66,8 +61,6 @@ test("determineOptionValues()", () => {
     },
   ];
   const expected = {
-    policy: ALL_POLICY_TYPE,
-    status: ALL_REFORM_STATUS,
     merged: {
       placeType: ["city", "country"],
       country: ["United States", "Brazil"],
