@@ -30,7 +30,9 @@ export class Date {
 }
 
 export type PlaceId = string;
-export type PlaceType = "city" | "county" | "state" | "country";
+
+export const ALL_PLACE_TYPES = ["city", "county", "state", "country"] as const;
+export type PlaceType = (typeof ALL_PLACE_TYPES)[number];
 
 export interface RawPlace {
   // Full name of the town, city, county, province, state, or country.
@@ -46,12 +48,15 @@ export interface RawPlace {
 }
 export type ProcessedPlace = RawPlace & { url: string };
 
-export type PolicyType =
-  | "reduce parking minimums"
-  | "remove parking minimums"
-  | "add parking maximums";
+export const ALL_POLICY_TYPE = [
+  "add parking maximums",
+  "reduce parking minimums",
+  "remove parking minimums",
+] as const;
+export type PolicyType = (typeof ALL_POLICY_TYPE)[number];
 
-export type ReformStatus = "adopted" | "proposed" | "repealed";
+export const ALL_REFORM_STATUS = ["adopted", "proposed", "repealed"] as const;
+export type ReformStatus = (typeof ALL_REFORM_STATUS)[number];
 
 /// Every policy has these values. It is missing some fields like `date`.
 export interface BasePolicy {
