@@ -75,10 +75,6 @@ $filter-inner-width: calc(
 
 .filter-accordion-content {
   border-top: borders.$component-inner-divider;
-
-  .filter-checkbox:last-child {
-    margin-bottom: spacing.$container-edge-spacing;
-  }
 }
 
 .filter-checkbox {
@@ -171,6 +167,10 @@ $filter-inner-width: calc(
   }
 }
 
+.filter-checkbox-options-container {
+  margin-bottom: spacing.$container-edge-spacing;
+}
+
 .filter-checkbox-options-two-columns {
   display: flex;
   flex-wrap: wrap;
@@ -179,14 +179,11 @@ $filter-inner-width: calc(
   margin-top: spacing.$element-gap;
   margin-left: spacing.$container-edge-spacing;
   margin-right: spacing.$container-edge-spacing;
+  margin-bottom: spacing.$container-edge-spacing;
 
   .filter-checkbox {
     min-width: calc(50% - spacing.$element-gap / 2);
     margin: 0;
-
-    &:nth-last-child(2) {
-      margin-bottom: spacing.$container-edge-spacing;
-    }
   }
 }
 
