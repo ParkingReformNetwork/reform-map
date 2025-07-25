@@ -191,6 +191,10 @@ $filter-inner-width: calc(
 .filter-policy-type-dropdown-container {
   margin: spacing.$element-gap spacing.$container-edge-spacing;
 
+  label {
+    font-size: typography.$font-size-base;
+  }
+
   select {
     -webkit-appearance: none;
     -moz-appearance: none;
@@ -200,6 +204,7 @@ $filter-inner-width: calc(
     min-height: spacing.$min-touch-target;
     width: 100%;
 
+    margin-top: 5px;
     padding-left: spacing.$element-gap;
 
     border: borders.$component-inner-divider;

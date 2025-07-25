@@ -1,6 +1,7 @@
 import { capitalize, isEqual } from "lodash-es";
 
 import {
+  ALL_POLICY_TYPE_FILTER,
   FilterState,
   PlaceFilterManager,
   PolicyTypeFilter,
@@ -372,18 +373,15 @@ function initPolicyTypeFilterDropdown(
   const container = document.createElement("div");
   container.className = "filter-policy-type-dropdown-container";
 
+  const label = document.createElement("label");
+  label.htmlFor = id;
+  label.textContent = "Policy type";
+
   const select = document.createElement("select");
   select.id = id;
   select.name = id;
-  select.ariaLabel = "the policy type to focus on";
 
-  const options: PolicyTypeFilter[] = [
-    "any parking reform",
-    "add parking maximums",
-    "reduce parking minimums",
-    "remove parking minimums",
-  ];
-  options.forEach((option) => {
+  ALL_POLICY_TYPE_FILTER.forEach((option) => {
     const element = document.createElement("option");
     element.value = option;
     element.textContent = capitalize(option);
@@ -398,6 +396,7 @@ function initPolicyTypeFilterDropdown(
     filterManager.update({ policyTypeFilter });
   });
 
+  container.append(label);
   container.append(select);
   filterPopup.append(container);
 }
