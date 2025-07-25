@@ -25,7 +25,7 @@ export const POPULATION_INTERVALS: Array<[string, number]> = [
 
 export const ALL_POLICY_TYPE_FILTER = [
   "any parking reform",
-    ...ALL_POLICY_TYPE,
+  ...ALL_POLICY_TYPE,
 ] as const;
 export type PolicyTypeFilter = (typeof ALL_POLICY_TYPE_FILTER)[number];
 
