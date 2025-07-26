@@ -17,11 +17,11 @@ test.describe("PlaceFilterManager.matchedPolicyRecords()", () => {
     return {
       searchInput: null,
       policyTypeFilter: "any parking reform",
+      status: "adopted",
       allMinimumsRemovedToggle: false,
       includedPolicyChanges: new Set(ALL_POLICY_TYPE),
       scope: new Set(["citywide", "city center / business district"]),
       landUse: new Set(["all uses", "commercial", "other"]),
-      status: new Set(["adopted"]),
       country: new Set(["United States", "Brazil"]),
       placeType: new Set(["city", "county"]),
       year: new Set(["2023", "2024"]),
@@ -70,7 +70,7 @@ test.describe("PlaceFilterManager.matchedPolicyRecords()", () => {
             date: new Date("2023"),
           },
           {
-            status: "adopted",
+            status: "proposed",
             scope: ["citywide"],
             land: ["other"],
             date: new Date("2023"),
@@ -113,7 +113,6 @@ test.describe("PlaceFilterManager.matchedPolicyRecords()", () => {
       allMinimumsRemovedToggle: true,
       scope: new Set(),
       landUse: new Set(),
-      status: new Set(),
       year: new Set(),
     });
     expect(manager.matchedPlaces).toEqual({
@@ -152,6 +151,19 @@ test.describe("PlaceFilterManager.matchedPolicyRecords()", () => {
     manager.update({
       placeType: defaultState().placeType,
     });
+
+    manager.update({ status: "proposed" });
+    expect(manager.matchedPlaces).toEqual({
+      "Place 2": {
+        type: "any",
+        hasAddMax: true,
+        hasRmMin: false,
+        hasReduceMin: false,
+      },
+    });
+    manager.update({
+      status: defaultState().status,
+    });
   });
 
   test("reduce minimums", () => {
@@ -179,7 +191,7 @@ test.describe("PlaceFilterManager.matchedPolicyRecords()", () => {
     expect(manager.matchedPlaces).toEqual({});
     manager.update({ landUse: defaultState().landUse });
 
-    manager.update({ status: new Set(["repealed"]) });
+    manager.update({ status: "repealed" });
     expect(manager.matchedPlaces).toEqual({});
     manager.update({ status: defaultState().status });
 
@@ -199,7 +211,7 @@ test.describe("PlaceFilterManager.matchedPolicyRecords()", () => {
       "Place 2": {
         type: "single policy",
         policyType: "add parking maximums",
-        matchingIndexes: [0, 1],
+        matchingIndexes: [0],
       },
     });
 
@@ -223,8 +235,14 @@ test.describe("PlaceFilterManager.matchedPolicyRecords()", () => {
     });
     manager.update({ landUse: defaultState().landUse });
 
-    manager.update({ status: new Set(["repealed"]) });
-    expect(manager.matchedPlaces).toEqual({});
+    manager.update({ status: "proposed" });
+    expect(manager.matchedPlaces).toEqual({
+      "Place 2": {
+        type: "single policy",
+        policyType: "add parking maximums",
+        matchingIndexes: [1],
+      },
+    });
     manager.update({ status: defaultState().status });
 
     manager.update({ year: new Set(["2024"]) });
@@ -243,7 +261,7 @@ test.describe("PlaceFilterManager.matchedPolicyRecords()", () => {
       "Place 2": {
         type: "single policy",
         policyType: "add parking maximums",
-        matchingIndexes: [0, 1],
+        matchingIndexes: [0],
       },
     });
   });
@@ -285,7 +303,7 @@ test.describe("PlaceFilterManager.matchedPolicyRecords()", () => {
       allMinimumsRemovedToggle: false,
     });
 
-    manager.update({ status: new Set(["repealed"]) });
+    manager.update({ status: "repealed" });
     expect(manager.matchedPlaces).toEqual({});
     manager.update({ status: defaultState().status });
 

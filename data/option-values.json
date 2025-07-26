@@ -98,7 +98,7 @@
       "1940"
     ]
   },
-  "any": {
+  "anyAdopted": {
     "placeType": ["city", "country", "county", "state"],
     "country": [
       "United States",
@@ -107,9 +107,7 @@
       "Brazil",
       "Canada",
       "China",
-      "Cook Islands",
       "Denmark",
-      "Finland",
       "France",
       "Germany",
       "Iceland",
@@ -197,7 +195,45 @@
       "1940"
     ]
   },
-  "addMax": {
+  "anyProposed": {
+    "placeType": ["city", "country", "state"],
+    "country": [
+      "United States",
+      "Australia",
+      "Canada",
+      "Cook Islands",
+      "Finland"
+    ],
+    "scope": [
+      "city center / business district",
+      "citywide",
+      "main street / special",
+      "regional",
+      "transit-oriented"
+    ],
+    "landUse": [
+      "all uses",
+      "commercial",
+      "other",
+      "residential, all uses",
+      "residential, low-density",
+      "residential, multi-family"
+    ],
+    "year": ["unknown", "2024"]
+  },
+  "anyRepealed": {
+    "placeType": ["city", "state"],
+    "country": ["United States", "China"],
+    "scope": [
+      "city center / business district",
+      "citywide",
+      "main street / special",
+      "transit-oriented"
+    ],
+    "landUse": ["all uses", "residential, all uses"],
+    "year": ["unknown", "2023"]
+  },
+  "addMaxAdopted": {
     "placeType": ["city", "country", "county", "state"],
     "country": [
       "United States",
@@ -263,14 +299,32 @@
       "1958"
     ]
   },
-  "reduceMin": {
+  "addMaxProposed": {
+    "placeType": ["city"],
+    "country": ["United States"],
+    "scope": [
+      "city center / business district",
+      "citywide",
+      "main street / special",
+      "transit-oriented"
+    ],
+    "landUse": ["all uses", "commercial", "residential, all uses"],
+    "year": ["unknown"]
+  },
+  "addMaxRepealed": {
+    "placeType": ["city", "state"],
+    "country": ["United States", "China"],
+    "scope": ["citywide"],
+    "landUse": ["all uses", "residential, all uses"],
+    "year": ["unknown"]
+  },
+  "reduceMinAdopted": {
     "placeType": ["city", "country", "county", "state"],
     "country": [
       "United States",
       "Australia",
       "Austria",
       "Canada",
-      "Cook Islands",
       "Denmark",
       "France",
       "Germany",
@@ -332,7 +386,33 @@
       "1957"
     ]
   },
-  "rmMin": {
+  "reduceMinProposed": {
+    "placeType": ["city", "country"],
+    "country": ["United States", "Australia", "Canada", "Cook Islands"],
+    "scope": [
+      "city center / business district",
+      "citywide",
+      "main street / special",
+      "regional",
+      "transit-oriented"
+    ],
+    "landUse": [
+      "all uses",
+      "commercial",
+      "residential, all uses",
+      "residential, low-density",
+      "residential, multi-family"
+    ],
+    "year": ["unknown"]
+  },
+  "reduceMinRepealed": {
+    "placeType": ["city"],
+    "country": ["United States"],
+    "scope": ["city center / business district", "transit-oriented"],
+    "landUse": ["all uses"],
+    "year": ["unknown"]
+  },
+  "rmMinAdopted": {
     "placeType": ["city", "country", "county", "state"],
     "country": [
       "United States",
@@ -340,7 +420,6 @@
       "Brazil",
       "Canada",
       "China",
-      "Finland",
       "France",
       "Germany",
       "India",
@@ -416,5 +495,25 @@
       "1952",
       "1940"
     ]
+  },
+  "rmMinProposed": {
+    "placeType": ["city", "state"],
+    "country": ["United States", "Canada", "Finland"],
+    "scope": [
+      "city center / business district",
+      "citywide",
+      "main street / special",
+      "regional",
+      "transit-oriented"
+    ],
+    "landUse": ["all uses", "commercial", "other", "residential, all uses"],
+    "year": ["unknown", "2024"]
+  },
+  "rmMinRepealed": {
+    "placeType": ["city"],
+    "country": ["United States"],
+    "scope": ["citywide", "main street / special"],
+    "landUse": ["all uses", "residential, all uses"],
+    "year": ["unknown", "2023"]
   }
 }

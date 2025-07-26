@@ -12,9 +12,9 @@ import {
 } from "tabulator-tables";
 
 import { PlaceFilterManager, PolicyTypeFilter } from "./state/FilterState";
-import { Date, ProcessedCorePolicy } from "./model/types";
+import { Date, ProcessedCorePolicy, ReformStatus } from "./model/types";
 import { ViewStateObservable } from "./layout/viewToggle";
-import { determineAdoptedPolicyTypes } from "./model/data";
+import { determineAllPolicyTypes } from "./model/data";
 
 function formatBoolean(cell: CellComponent): string {
   const v = cell.getValue() as boolean;
@@ -91,11 +91,6 @@ const POLICY_COLUMNS: ColumnDefinition[] = [
     formatter: formatStringArrays,
     sorter: compareStringArrays,
   },
-  {
-    title: "Status",
-    field: "status",
-    width: 120,
-  },
 ];
 
 const SINGLE_POLICY_COLUMNS: ColumnDefinition[] = [
@@ -141,7 +136,13 @@ export default function initTable(
     PageModule,
   ]);
 
-  const dataAnyReform: any[] = [];
+  // For "any parking reform", we need distinct datasets for each ReformStatus because the
+  // column values change. Whereas for the SinglePolicy datasets, we can use a
+  // single dataset for all the statuses because the filter code (from FilterState)
+  // will already filter out records that don't match the current status.
+  const dataAnyAdopted: any[] = [];
+  const dataAnyProposed: any[] = [];
+  const dataAnyRepealed: any[] = [];
   const dataReduceMin: any[] = [];
   const dataRmMin: any[] = [];
   const dataAddMax: any[] = [];
@@ -156,12 +157,26 @@ export default function initTable(
       url: entry.place.url,
     };
 
-    const policyTypes = determineAdoptedPolicyTypes(entry);
-    dataAnyReform.push({
+    const adopted = determineAllPolicyTypes(entry, "adopted");
+    dataAnyAdopted.push({
       ...common,
-      reduceMin: policyTypes.includes("reduce parking minimums"),
-      rmMin: policyTypes.includes("remove parking minimums"),
-      addMax: policyTypes.includes("add parking maximums"),
+      reduceMin: adopted.includes("reduce parking minimums"),
+      rmMin: adopted.includes("remove parking minimums"),
+      addMax: adopted.includes("add parking maximums"),
+    });
+    const proposed = determineAllPolicyTypes(entry, "proposed");
+    dataAnyProposed.push({
+      ...common,
+      reduceMin: proposed.includes("reduce parking minimums"),
+      rmMin: proposed.includes("remove parking minimums"),
+      addMax: proposed.includes("add parking maximums"),
+    });
+    const repealed = determineAllPolicyTypes(entry, "repealed");
+    dataAnyRepealed.push({
+      ...common,
+      reduceMin: repealed.includes("reduce parking minimums"),
+      rmMin: repealed.includes("remove parking minimums"),
+      addMax: repealed.includes("add parking maximums"),
     });
 
     const savePolicies = (
@@ -184,21 +199,39 @@ export default function initTable(
     savePolicies(dataRmMin, entry.rm_min);
   });
 
-  const policyTypeFilterToConfig: Record<
+  const filterStateToConfig: Record<
     PolicyTypeFilter,
-    [ColumnDefinition[], any[]]
+    Record<ReformStatus, [ColumnDefinition[], any[]]>
   > = {
-    "any parking reform": [ANY_REFORM_COLUMNS, dataAnyReform],
-    "reduce parking minimums": [SINGLE_POLICY_COLUMNS, dataReduceMin],
-    "remove parking minimums": [SINGLE_POLICY_COLUMNS, dataRmMin],
-    "add parking maximums": [SINGLE_POLICY_COLUMNS, dataAddMax],
+    "any parking reform": {
+      adopted: [ANY_REFORM_COLUMNS, dataAnyAdopted],
+      proposed: [ANY_REFORM_COLUMNS, dataAnyProposed],
+      repealed: [ANY_REFORM_COLUMNS, dataAnyRepealed],
+    },
+    "reduce parking minimums": {
+      adopted: [SINGLE_POLICY_COLUMNS, dataReduceMin],
+      proposed: [SINGLE_POLICY_COLUMNS, dataReduceMin],
+      repealed: [SINGLE_POLICY_COLUMNS, dataReduceMin],
+    },
+    "remove parking minimums": {
+      adopted: [SINGLE_POLICY_COLUMNS, dataRmMin],
+      proposed: [SINGLE_POLICY_COLUMNS, dataRmMin],
+      repealed: [SINGLE_POLICY_COLUMNS, dataRmMin],
+    },
+    "add parking maximums": {
+      adopted: [SINGLE_POLICY_COLUMNS, dataAddMax],
+      proposed: [SINGLE_POLICY_COLUMNS, dataAddMax],
+      repealed: [SINGLE_POLICY_COLUMNS, dataAddMax],
+    },
   };
 
-  // We track what the table's policy type filter is currently set to. When the policy
-  // type filter changes, we need to load the new columns and data.
+  // We track what the filter is currently set to. When the filter changes,
+  // we need to load the new columns and data.
   let currentPolicyTypeFilter = filterManager.getState().policyTypeFilter;
+  let currentStatus = filterManager.getState().status;
 
-  const [columns, data] = policyTypeFilterToConfig[currentPolicyTypeFilter];
+  const [columns, data] =
+    filterStateToConfig[currentPolicyTypeFilter][currentStatus];
   const table = new Tabulator("#table", {
     data,
     columns,
@@ -227,20 +260,39 @@ export default function initTable(
     table.setFilter((row) => {
       const entry = filterManager.matchedPlaces[row.placeId];
       if (!entry) return false;
-      if (entry.type === "any" || entry.type === "search") {
+      if (entry.type === "any") {
         return true;
+      }
+      // With search, we ignore the normal filters like jurisdiction. However,
+      // we do still have to pay attention to what dataset is loaded
+      // (policy type x status).
+      if (entry.type === "search") {
+        // With 'any parking reform', each reform status has a different dataset already.
+        // So, it's safe to include the entry from search.
+        if (currentPolicyTypeFilter === "any parking reform") {
+          return true;
+        }
+        return row.status === currentStatus;
       }
       return entry.matchingIndexes.includes(row.policyIdx);
     });
   });
 
   // Either re-filter the data or load an entirely new dataset.
-  const updateData = (newPolicyTypeFilter: PolicyTypeFilter): void => {
-    if (newPolicyTypeFilter === currentPolicyTypeFilter) {
+  const updateData = (
+    newPolicyTypeFilter: PolicyTypeFilter,
+    newStatus: ReformStatus,
+  ): void => {
+    if (
+      newPolicyTypeFilter === currentPolicyTypeFilter &&
+      newStatus === currentStatus
+    ) {
       table.refreshFilter();
     } else {
       currentPolicyTypeFilter = newPolicyTypeFilter;
-      const [columns2, data2] = policyTypeFilterToConfig[newPolicyTypeFilter];
+      currentStatus = newStatus;
+      const [columns2, data2] =
+        filterStateToConfig[newPolicyTypeFilter][newStatus];
       table.setColumns(columns2);
       table.setData(data2);
     }
@@ -249,20 +301,24 @@ export default function initTable(
   // When on map view, we should only lazily update the table the next time
   // we switch to table view.
   let dataRefreshQueued = false;
-  filterManager.subscribe("update table's records", ({ policyTypeFilter }) => {
-    if (!tableBuilt) return;
-    if (viewToggle.getValue() === "map") {
-      dataRefreshQueued = true;
-      return;
-    }
+  filterManager.subscribe(
+    "update table's records",
+    ({ policyTypeFilter, status }) => {
+      if (!tableBuilt) return;
+      if (viewToggle.getValue() === "map") {
+        dataRefreshQueued = true;
+        return;
+      }
 
-    updateData(policyTypeFilter);
-  });
+      updateData(policyTypeFilter, status);
+    },
+  );
 
   viewToggle.subscribe((view) => {
     if (view === "map" || !dataRefreshQueued) return;
     dataRefreshQueued = false;
-    updateData(filterManager.getState().policyTypeFilter);
+    const state = filterManager.getState();
+    updateData(state.policyTypeFilter, state.status);
   }, "apply queued table data refresh");
 
   return table;
