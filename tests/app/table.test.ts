@@ -1,16 +1,15 @@
 import { expect, test } from "@playwright/test";
 
+import { ColumnComponent, RowComponent, SortDirection } from "tabulator-tables";
 import { compareDates } from "../../src/js/table";
 import { Date } from "../../src/js/model/types";
-import { ColumnComponent, RowComponent, SortDirection } from "tabulator-tables";
 
 test("compareDates handles descending and ascending", () => {
   const compare = (
     a: string | null,
     b: string | null,
     dir: SortDirection,
-  ): number => {
-    return compareDates(
+  ): number => compareDates(
       Date.fromNullable(a),
       Date.fromNullable(b),
       {} as RowComponent,
@@ -18,7 +17,6 @@ test("compareDates handles descending and ascending", () => {
       {} as ColumnComponent,
       dir,
     );
-  };
 
   // Asc = oldest to newest
   expect(compare("2024", "2025", "asc")).toBeLessThan(0);
