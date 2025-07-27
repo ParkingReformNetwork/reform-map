@@ -9,6 +9,9 @@ import {
   FrozenColumnsModule,
   PageModule,
   CellComponent,
+  RowComponent,
+  SortDirection,
+  ColumnComponent,
 } from "tabulator-tables";
 
 import { PlaceFilterManager, PolicyTypeFilter } from "./state/FilterState";
@@ -26,9 +29,22 @@ function formatDate(cell: CellComponent): string {
   return v ? v.format() : "";
 }
 
-function compareDates(a: Date | null, b: Date | null): number {
-  if (!a) return 1;
-  if (!b) return -1;
+export function compareDates(
+  a: Date | null,
+  b: Date | null,
+  _aRow: RowComponent,
+  _bRow: RowComponent,
+  _col: ColumnComponent,
+  dir: SortDirection,
+): number {
+  if (a === b) return 0;
+  if (dir === "asc") {
+    if (!a) return 1;
+    if (!b) return -1;
+  } else {
+    if (!a) return -1;
+    if (!b) return 1;
+  }
   return a.parsed.valueOf() - b.parsed.valueOf();
 }
 
