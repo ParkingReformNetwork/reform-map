@@ -9,7 +9,8 @@ test("compareDates handles descending and ascending", () => {
     a: string | null,
     b: string | null,
     dir: SortDirection,
-  ): number => compareDates(
+  ): number =>
+    compareDates(
       Date.fromNullable(a),
       Date.fromNullable(b),
       {} as RowComponent,
