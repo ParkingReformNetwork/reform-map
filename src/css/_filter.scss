@@ -225,3 +225,11 @@ $filter-inner-width: calc(
     }
   }
 }
+
+.filter-illegal-dataset-container {
+  margin-top: spacing.$container-edge-spacing;
+  margin-bottom: spacing.$element-gap;
+  margin-left: spacing.$container-edge-spacing;
+  margin-right: spacing.$container-edge-spacing;
+  line-height: 1.3;
+}
