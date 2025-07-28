@@ -1,6 +1,6 @@
-# Parking Mandates Map
+# Parking reform map
 
-This code runs the Mandates Map app for the Parking Reform Network: https://parkingreform.org/mandates-map/.
+This code runs the Reform Map app for the Parking Reform Network: https://parkingreform.org/mandates-map/.
 
 We do not use frameworks like React or Svelte to keep things simple. However, we do use these techniques:
 

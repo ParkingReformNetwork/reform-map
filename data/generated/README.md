@@ -1,4 +1,4 @@
-# Mandates Map data set
+# Parking Reform Map data set
 
 This folder contains the data used for https://parkingreform.org/resources/mandates-map/, which records places/governments that have implemented parking reform.
 
