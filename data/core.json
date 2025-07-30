@@ -18541,6 +18541,33 @@
       }
     ]
   },
+  "Deerfield, WI": {
+    "place": {
+      "name": "Deerfield",
+      "state": "WI",
+      "country": "US",
+      "type": "city",
+      "pop": 2540,
+      "coord": [-89.0749153, 43.0538156],
+      "repeal": false
+    },
+    "add_max": [
+      {
+        "status": "proposed",
+        "scope": ["citywide"],
+        "land": ["all uses"],
+        "date": "2024-06"
+      }
+    ],
+    "reduce_min": [
+      {
+        "status": "proposed",
+        "scope": ["citywide"],
+        "land": ["all uses"],
+        "date": "2024-06"
+      }
+    ]
+  },
   "Defiance, OH": {
     "place": {
       "name": "Defiance",
@@ -22629,6 +22656,25 @@
         "scope": ["citywide"],
         "land": ["all uses"],
         "date": null
+      }
+    ]
+  },
+  "Ellsworth, WI": {
+    "place": {
+      "name": "Ellsworth",
+      "state": "WI",
+      "country": "US",
+      "type": "city",
+      "pop": 3348,
+      "coord": [-92.4831218, 44.732122],
+      "repeal": false
+    },
+    "reduce_min": [
+      {
+        "status": "proposed",
+        "scope": ["citywide"],
+        "land": ["commercial", "residential, multi-family"],
+        "date": "2022-10-03"
       }
     ]
   },
@@ -33966,6 +34012,33 @@
       }
     ]
   },
+  "Hortonville, WI": {
+    "place": {
+      "name": "Hortonville",
+      "state": "WI",
+      "country": "US",
+      "type": "city",
+      "pop": 3028,
+      "coord": [-88.639343, 44.3350374],
+      "repeal": false
+    },
+    "add_max": [
+      {
+        "status": "proposed",
+        "scope": ["citywide"],
+        "land": ["all uses"],
+        "date": "2024-07"
+      }
+    ],
+    "reduce_min": [
+      {
+        "status": "proposed",
+        "scope": ["citywide"],
+        "land": ["all uses"],
+        "date": "2024-07"
+      }
+    ]
+  },
   "Hot Springs, AR": {
     "place": {
       "name": "Hot Springs",
@@ -38907,6 +38980,12 @@
           "residential, multi-family"
         ],
         "date": null
+      },
+      {
+        "status": "proposed",
+        "scope": ["citywide"],
+        "land": ["all uses"],
+        "date": "2023-11-07"
       }
     ],
     "reduce_min": [
@@ -38915,6 +38994,12 @@
         "scope": ["citywide"],
         "land": ["commercial", "industrial", "medical", "other"],
         "date": null
+      },
+      {
+        "status": "proposed",
+        "scope": ["citywide"],
+        "land": ["all uses"],
+        "date": "2023-11-07"
       }
     ],
     "rm_min": [
@@ -45690,6 +45775,25 @@
         "scope": ["city center / business district"],
         "land": ["all uses"],
         "date": null
+      }
+    ]
+  },
+  "Medford, WI": {
+    "place": {
+      "name": "Medford",
+      "state": "WI",
+      "country": "US",
+      "type": "city",
+      "pop": 4349,
+      "coord": [-90.3460806, 45.1391437],
+      "repeal": false
+    },
+    "reduce_min": [
+      {
+        "status": "proposed",
+        "scope": ["city center / business district", "main street / special"],
+        "land": ["all uses", "residential, all uses"],
+        "date": "2025-06-23"
       }
     ]
   },
@@ -66360,6 +66464,12 @@
         "scope": ["citywide"],
         "land": ["all uses"],
         "date": null
+      },
+      {
+        "status": "proposed",
+        "scope": ["citywide"],
+        "land": ["all uses"],
+        "date": "2021-04-19"
       }
     ]
   },
@@ -70495,6 +70605,14 @@
       "coord": [-87.377042, 44.8341639],
       "repeal": false
     },
+    "reduce_min": [
+      {
+        "status": "proposed",
+        "scope": ["main street / special"],
+        "land": ["all uses"],
+        "date": "2020-10-20"
+      }
+    ],
     "rm_min": [
       {
         "status": "adopted",
@@ -71114,6 +71232,25 @@
         "scope": ["city center / business district"],
         "land": ["commercial", "other"],
         "date": null
+      }
+    ]
+  },
+  "Sussex, WI": {
+    "place": {
+      "name": "Sussex",
+      "state": "WI",
+      "country": "US",
+      "type": "city",
+      "pop": 11487,
+      "coord": [-88.2220372, 43.1339001],
+      "repeal": false
+    },
+    "add_max": [
+      {
+        "status": "proposed",
+        "scope": ["city center / business district"],
+        "land": ["all uses"],
+        "date": "2011-07-26"
       }
     ]
   },
@@ -77059,6 +77196,14 @@
       "coord": [-89.0859464, 44.3580348],
       "repeal": false
     },
+    "reduce_min": [
+      {
+        "status": "proposed",
+        "scope": ["citywide"],
+        "land": ["commercial", "residential, all uses"],
+        "date": "2021-03"
+      }
+    ],
     "rm_min": [
       {
         "status": "adopted",
