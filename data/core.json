@@ -1766,7 +1766,7 @@
         "status": "proposed",
         "scope": ["citywide"],
         "land": ["all uses"],
-        "date": null
+        "date": "2023-08-29"
       }
     ]
   },
@@ -2113,7 +2113,7 @@
         "status": "proposed",
         "scope": ["citywide"],
         "land": ["all uses"],
-        "date": null
+        "date": "2025"
       }
     ]
   },
@@ -3223,7 +3223,7 @@
         "status": "proposed",
         "scope": ["citywide"],
         "land": ["residential, all uses"],
-        "date": null
+        "date": "2020-10-19"
       }
     ]
   },
@@ -3809,7 +3809,7 @@
         "status": "proposed",
         "scope": ["citywide"],
         "land": ["all uses"],
-        "date": null
+        "date": "2025-06"
       }
     ]
   },
@@ -4051,7 +4051,7 @@
         "status": "proposed",
         "scope": ["city center / business district", "transit-oriented"],
         "land": ["all uses", "commercial", "other"],
-        "date": null
+        "date": "2024-10"
       }
     ]
   },
@@ -5357,7 +5357,7 @@
         "status": "proposed",
         "scope": ["citywide"],
         "land": ["all uses"],
-        "date": null
+        "date": "2025-01-13"
       }
     ]
   },
@@ -7532,7 +7532,7 @@
         "status": "proposed",
         "scope": ["citywide"],
         "land": ["residential, all uses"],
-        "date": null
+        "date": "2025"
       }
     ]
   },
@@ -7582,7 +7582,7 @@
       "type": "city",
       "pop": 108250,
       "coord": [-105.270545, 40.0149856],
-      "repeal": false
+      "repeal": true
     },
     "add_max": [
       {
@@ -7595,15 +7595,9 @@
     "rm_min": [
       {
         "status": "adopted",
-        "scope": ["city center / business district"],
-        "land": ["commercial", "other", "residential, all uses"],
-        "date": null
-      },
-      {
-        "status": "proposed",
         "scope": ["citywide"],
         "land": ["all uses"],
-        "date": null
+        "date": "2025-07-24"
       }
     ]
   },
@@ -8520,7 +8514,7 @@
         "status": "proposed",
         "scope": ["city center / business district"],
         "land": ["residential, all uses"],
-        "date": null
+        "date": "2024"
       }
     ]
   },
@@ -9349,7 +9343,7 @@
         "status": "proposed",
         "scope": ["citywide"],
         "land": ["commercial"],
-        "date": null
+        "date": "2022-04"
       }
     ]
   },
@@ -13299,7 +13293,7 @@
         "status": "proposed",
         "scope": ["citywide"],
         "land": ["all uses"],
-        "date": null
+        "date": "2025"
       },
       {
         "status": "adopted",
@@ -15824,7 +15818,7 @@
         "status": "proposed",
         "scope": ["regional"],
         "land": ["all uses"],
-        "date": null
+        "date": "2025"
       }
     ]
   },
@@ -15943,7 +15937,7 @@
         "status": "proposed",
         "scope": ["regional"],
         "land": ["all uses"],
-        "date": null
+        "date": "2024"
       }
     ]
   },
@@ -16487,6 +16481,25 @@
         "status": "adopted",
         "scope": ["city center / business district"],
         "land": ["commercial"],
+        "date": null
+      }
+    ]
+  },
+  "Council Grove, KS": {
+    "place": {
+      "name": "Council Grove",
+      "state": "KS",
+      "country": "US",
+      "type": "city",
+      "pop": 2140,
+      "coord": [-96.491958, 38.6609239],
+      "repeal": false
+    },
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["all uses"],
         "date": null
       }
     ]
@@ -18994,7 +19007,7 @@
         "status": "proposed",
         "scope": ["citywide"],
         "land": ["all uses"],
-        "date": null
+        "date": "2025"
       }
     ]
   },
@@ -19084,7 +19097,7 @@
         "status": "proposed",
         "scope": ["citywide"],
         "land": ["residential, all uses"],
-        "date": null
+        "date": "2020-08-25"
       }
     ],
     "rm_min": [
@@ -19382,7 +19395,7 @@
         "status": "proposed",
         "scope": ["citywide"],
         "land": ["all uses"],
-        "date": null
+        "date": "2024-03"
       }
     ],
     "reduce_min": [
@@ -19390,7 +19403,7 @@
         "status": "proposed",
         "scope": ["citywide"],
         "land": ["all uses"],
-        "date": null
+        "date": "2024-03"
       }
     ]
   },
@@ -19408,6 +19421,25 @@
       {
         "status": "adopted",
         "scope": ["city center / business district"],
+        "land": ["all uses"],
+        "date": null
+      }
+    ]
+  },
+  "Dietzenbach, HE": {
+    "place": {
+      "name": "Dietzenbach",
+      "state": "HE",
+      "country": "DE",
+      "type": "city",
+      "pop": 35590,
+      "coord": [8.784277, 50.0171926],
+      "repeal": false
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
         "land": ["all uses"],
         "date": null
       }
@@ -20164,7 +20196,7 @@
         "status": "proposed",
         "scope": ["citywide"],
         "land": ["all uses"],
-        "date": null
+        "date": "2025"
       }
     ]
   },
@@ -23588,6 +23620,25 @@
       }
     ]
   },
+  "Eureka, KS": {
+    "place": {
+      "name": "Eureka",
+      "state": "KS",
+      "country": "US",
+      "type": "city",
+      "pop": 2332,
+      "coord": [-96.2891703, 37.8239167],
+      "repeal": false
+    },
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["all uses"],
+        "date": null
+      }
+    ]
+  },
   "Evanston, IL": {
     "place": {
       "name": "Evanston",
@@ -23611,7 +23662,7 @@
         "status": "proposed",
         "scope": ["citywide"],
         "land": ["all uses"],
-        "date": null
+        "date": "2025"
       }
     ]
   },
@@ -25238,7 +25289,7 @@
         "status": "proposed",
         "scope": ["citywide"],
         "land": ["all uses"],
-        "date": null
+        "date": "2021-01-27"
       }
     ],
     "reduce_min": [
@@ -25246,7 +25297,7 @@
         "status": "proposed",
         "scope": ["citywide"],
         "land": ["all uses"],
-        "date": null
+        "date": "2021-01-27"
       }
     ],
     "rm_min": [
@@ -25260,7 +25311,7 @@
         "status": "proposed",
         "scope": ["citywide"],
         "land": ["other"],
-        "date": null
+        "date": "2021-01-27"
       }
     ]
   },
@@ -25926,7 +25977,7 @@
         "status": "proposed",
         "scope": ["city center / business district", "citywide"],
         "land": ["all uses"],
-        "date": null
+        "date": "2024-02"
       }
     ]
   },
@@ -30031,7 +30082,7 @@
         "status": "proposed",
         "scope": ["transit-oriented"],
         "land": ["residential, multi-family"],
-        "date": null
+        "date": "2020-10-06"
       }
     ],
     "rm_min": [
@@ -31121,7 +31172,7 @@
         "status": "proposed",
         "scope": ["main street / special"],
         "land": ["all uses"],
-        "date": null
+        "date": "2024"
       }
     ]
   },
@@ -32755,7 +32806,7 @@
         "status": "proposed",
         "scope": ["city center / business district"],
         "land": ["residential, all uses"],
-        "date": null
+        "date": "2025-05"
       }
     ]
   },
@@ -34688,7 +34739,7 @@
         "status": "proposed",
         "scope": ["citywide"],
         "land": ["all uses"],
-        "date": null
+        "date": "2017-03-21"
       }
     ]
   },
@@ -34764,7 +34815,7 @@
         "status": "proposed",
         "scope": ["regional"],
         "land": ["all uses"],
-        "date": null
+        "date": "2024-01-31"
       }
     ]
   },
@@ -34829,7 +34880,7 @@
         "status": "proposed",
         "scope": ["citywide"],
         "land": ["residential, all uses"],
-        "date": null
+        "date": "2024-05-23"
       }
     ],
     "rm_min": [
@@ -35408,7 +35459,7 @@
         "status": "proposed",
         "scope": ["main street / special"],
         "land": ["all uses"],
-        "date": null
+        "date": "2025-06"
       }
     ]
   },
@@ -36893,7 +36944,7 @@
         "status": "proposed",
         "scope": ["citywide"],
         "land": ["all uses"],
-        "date": null
+        "date": "2023-11-30"
       },
       {
         "status": "adopted",
@@ -40615,15 +40666,27 @@
         "status": "proposed",
         "scope": ["main street / special"],
         "land": ["all uses"],
-        "date": null
+        "date": "2018-05"
       }
     ],
     "reduce_min": [
       {
         "status": "proposed",
-        "scope": ["citywide", "main street / special"],
-        "land": ["all uses", "residential, all uses"],
-        "date": null
+        "scope": ["citywide"],
+        "land": ["all uses"],
+        "date": "2024-07-02"
+      },
+      {
+        "status": "proposed",
+        "scope": ["main street / special"],
+        "land": ["all uses"],
+        "date": "2018-05"
+      },
+      {
+        "status": "proposed",
+        "scope": ["main street / special"],
+        "land": ["residential, all uses"],
+        "date": "2019"
       }
     ]
   },
@@ -41380,6 +41443,25 @@
       {
         "status": "adopted",
         "scope": ["citywide"],
+        "land": ["all uses"],
+        "date": null
+      }
+    ]
+  },
+  "Lindsborg, KS": {
+    "place": {
+      "name": "Lindsborg",
+      "state": "KS",
+      "country": "US",
+      "type": "city",
+      "pop": 3776,
+      "coord": [-97.6744838, 38.5736176],
+      "repeal": false
+    },
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
         "land": ["all uses"],
         "date": null
       }
@@ -42154,6 +42236,12 @@
       {
         "status": "adopted",
         "scope": ["city center / business district"],
+        "land": ["all uses"],
+        "date": null
+      },
+      {
+        "status": "proposed",
+        "scope": ["citywide"],
         "land": ["all uses"],
         "date": null
       }
@@ -43303,7 +43391,7 @@
         "status": "proposed",
         "scope": ["regional"],
         "land": ["all uses"],
-        "date": null
+        "date": "2025"
       }
     ]
   },
@@ -43556,19 +43644,33 @@
     "reduce_min": [
       {
         "status": "proposed",
-        "scope": [
-          "city center / business district",
-          "citywide",
-          "main street / special"
-        ],
-        "land": ["all uses", "residential, low-density"],
-        "date": null
+        "scope": ["city center / business district"],
+        "land": ["all uses"],
+        "date": "2015-03"
       },
       {
         "status": "proposed",
-        "scope": ["city center / business district", "main street / special"],
+        "scope": ["main street / special"],
         "land": ["residential, multi-family"],
-        "date": null
+        "date": "2017-03"
+      },
+      {
+        "status": "proposed",
+        "scope": ["city center / business district"],
+        "land": ["residential, multi-family"],
+        "date": "2024-05-21"
+      },
+      {
+        "status": "proposed",
+        "scope": ["citywide"],
+        "land": ["residential, low-density"],
+        "date": "2022-11-01"
+      },
+      {
+        "status": "proposed",
+        "scope": ["main street / special"],
+        "land": ["all uses"],
+        "date": "2017-03"
       }
     ],
     "rm_min": [
@@ -43723,7 +43825,7 @@
         "status": "proposed",
         "scope": ["citywide"],
         "land": ["residential, all uses"],
-        "date": null
+        "date": "2022-01"
       }
     ],
     "rm_min": [
@@ -46131,7 +46233,7 @@
         "status": "proposed",
         "scope": ["city center / business district"],
         "land": ["all uses"],
-        "date": null
+        "date": "2021-03-03"
       }
     ]
   },
@@ -46546,7 +46648,7 @@
         "status": "proposed",
         "scope": ["main street / special"],
         "land": ["all uses"],
-        "date": null
+        "date": "2022-05-03"
       }
     ],
     "rm_min": [
@@ -46554,7 +46656,7 @@
         "status": "proposed",
         "scope": ["citywide"],
         "land": ["all uses"],
-        "date": null
+        "date": "2023-11-21"
       }
     ]
   },
@@ -47373,6 +47475,25 @@
       }
     ]
   },
+  "Minneapolis, KS": {
+    "place": {
+      "name": "Minneapolis",
+      "state": "KS",
+      "country": "US",
+      "type": "city",
+      "pop": 1946,
+      "coord": [-97.7087076, 39.1223968],
+      "repeal": false
+    },
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["all uses"],
+        "date": null
+      }
+    ]
+  },
   "Minneapolis, MN": {
     "place": {
       "name": "Minneapolis",
@@ -47397,25 +47518,6 @@
         "scope": ["citywide"],
         "land": ["all uses"],
         "date": "2021-05-14"
-      }
-    ]
-  },
-  "Minnesota, MN": {
-    "place": {
-      "name": "Minnesota",
-      "state": "MN",
-      "country": "US",
-      "type": "state",
-      "pop": 5706494,
-      "coord": [-94.613542, 46.054351],
-      "repeal": false
-    },
-    "rm_min": [
-      {
-        "status": "proposed",
-        "scope": ["regional"],
-        "land": ["all uses"],
-        "date": null
       }
     ]
   },
@@ -47613,7 +47715,7 @@
         "status": "proposed",
         "scope": ["citywide"],
         "land": ["all uses", "residential, multi-family"],
-        "date": null
+        "date": "2023-12"
       }
     ]
   },
@@ -48485,7 +48587,7 @@
         "status": "proposed",
         "scope": ["citywide"],
         "land": ["commercial", "residential, all uses"],
-        "date": null
+        "date": "2025"
       }
     ]
   },
@@ -51290,7 +51392,7 @@
         "status": "proposed",
         "scope": ["regional"],
         "land": ["all uses"],
-        "date": null
+        "date": "2025"
       }
     ]
   },
@@ -52698,7 +52800,7 @@
         "status": "proposed",
         "scope": ["regional"],
         "land": ["all uses"],
-        "date": null
+        "date": "2025"
       }
     ]
   },
@@ -53236,7 +53338,7 @@
         "status": "proposed",
         "scope": ["citywide"],
         "land": ["all uses"],
-        "date": null
+        "date": "2019-11-05"
       }
     ]
   },
@@ -53356,6 +53458,32 @@
         "status": "adopted",
         "scope": ["city center / business district"],
         "land": ["all uses"],
+        "date": null
+      }
+    ]
+  },
+  "Norton, KS": {
+    "place": {
+      "name": "Norton",
+      "state": "KS",
+      "country": "US",
+      "type": "city",
+      "pop": 2747,
+      "coord": [-99.9100033, 39.7944702],
+      "repeal": false
+    },
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": [
+          "commercial",
+          "industrial",
+          "medical",
+          "other",
+          "residential, low-density",
+          "residential, multi-family"
+        ],
         "date": null
       }
     ]
@@ -54236,7 +54364,7 @@
         "status": "proposed",
         "scope": ["regional"],
         "land": ["all uses"],
-        "date": null
+        "date": "2025"
       }
     ]
   },
@@ -54494,13 +54622,13 @@
         "status": "proposed",
         "scope": ["city center / business district"],
         "land": ["commercial"],
-        "date": null
+        "date": "2019-03-28"
       },
       {
         "status": "proposed",
         "scope": ["citywide"],
         "land": ["all uses"],
-        "date": null
+        "date": "2024-10"
       }
     ]
   },
@@ -55152,7 +55280,7 @@
         "status": "proposed",
         "scope": ["main street / special"],
         "land": ["all uses"],
-        "date": null
+        "date": "2018-05"
       }
     ],
     "rm_min": [
@@ -55948,7 +56076,7 @@
         "status": "proposed",
         "scope": ["citywide"],
         "land": ["all uses"],
-        "date": null
+        "date": "2022"
       }
     ]
   },
@@ -58029,7 +58157,7 @@
         "status": "proposed",
         "scope": ["citywide"],
         "land": ["all uses"],
-        "date": null
+        "date": "2025"
       }
     ]
   },
@@ -58757,7 +58885,7 @@
         "status": "proposed",
         "scope": ["city center / business district"],
         "land": ["all uses", "commercial"],
-        "date": null
+        "date": "2008-06-02"
       }
     ],
     "rm_min": [
@@ -63226,7 +63354,7 @@
         "status": "proposed",
         "scope": ["city center / business district", "transit-oriented"],
         "land": ["commercial", "residential, all uses"],
-        "date": null
+        "date": "2025"
       }
     ],
     "rm_min": [
@@ -64369,7 +64497,7 @@
         "status": "proposed",
         "scope": ["citywide"],
         "land": ["all uses"],
-        "date": null
+        "date": "2025"
       }
     ]
   },
@@ -65622,7 +65750,7 @@
         "status": "proposed",
         "scope": ["city center / business district", "citywide"],
         "land": ["all uses"],
-        "date": null
+        "date": "2021-10-25"
       }
     ]
   },
@@ -66175,6 +66303,25 @@
         "scope": ["citywide"],
         "land": ["all uses"],
         "date": null
+      }
+    ]
+  },
+  "Shorewood Hills, WI": {
+    "place": {
+      "name": "Shorewood Hills",
+      "state": "WI",
+      "country": "US",
+      "type": "city",
+      "pop": 2169,
+      "coord": [-89.4463237, 43.0780946],
+      "repeal": false
+    },
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["main street / special"],
+        "land": ["all uses"],
+        "date": "2023-12-19"
       }
     ]
   },
@@ -73894,7 +74041,7 @@
         "status": "proposed",
         "scope": ["city center / business district"],
         "land": ["all uses"],
-        "date": null
+        "date": "2022-10"
       }
     ],
     "rm_min": [
@@ -77870,7 +78017,7 @@
         "status": "proposed",
         "scope": ["citywide"],
         "land": ["all uses"],
-        "date": null
+        "date": "2025-05-05"
       }
     ]
   },
@@ -80939,6 +81086,25 @@
       "type": "city",
       "pop": 15411,
       "coord": [-97.3967011, 42.8712938],
+      "repeal": false
+    },
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["all uses"],
+        "date": null
+      }
+    ]
+  },
+  "Yates Center, KS": {
+    "place": {
+      "name": "Yates Center",
+      "state": "KS",
+      "country": "US",
+      "type": "city",
+      "pop": 1352,
+      "coord": [-95.7326925, 37.881541],
       "repeal": false
     },
     "rm_min": [
