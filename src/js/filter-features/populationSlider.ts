@@ -27,7 +27,7 @@ function determineSupplementalTitle(
 
 function generateSliders(
   initialPopulationSliderIndexes: [number, number],
-  filterPopup: HTMLFormElement,
+  optionsContainer: HTMLDivElement,
 ): [Sliders, Observable<AccordionState>] {
   const accordionElements = generateAccordion("population-slider");
 
@@ -84,7 +84,7 @@ function generateSliders(
   });
 
   accordionElements.contentContainer.append(container);
-  filterPopup.append(accordionElements.outerContainer);
+  optionsContainer.append(accordionElements.outerContainer);
 
   return [
     {
@@ -141,12 +141,12 @@ function updateSlidersUI(
 
 export function initPopulationSlider(
   filterManager: PlaceFilterManager,
-  filterPopup: HTMLFormElement,
+  optionsContainer: HTMLDivElement,
 ): void {
   const { populationSliderIndexes } = filterManager.getState();
   const [sliders, accordionStateObservable] = generateSliders(
     populationSliderIndexes,
-    filterPopup,
+    optionsContainer,
   );
 
   // Set initial state.
@@ -167,7 +167,7 @@ export function initPopulationSlider(
   // Update UI whenever accordion is expanded. Note that the accordion
   // must be visible for the width calculations to work.
   accordionStateObservable.subscribe(({ hidden }) => {
-    if (!hidden) {
+    if (!hidden && !optionsContainer.hidden) {
       updateSlidersUI(
         filterManager.getState().populationSliderIndexes,
         sliders,
@@ -185,7 +185,10 @@ export function initPopulationSlider(
       ),
     });
 
-    if (!accordionStateObservable.getValue().hidden) {
+    if (
+      !accordionStateObservable.getValue().hidden &&
+      !optionsContainer.hidden
+    ) {
       updateSlidersUI(state.populationSliderIndexes, sliders);
     }
   });

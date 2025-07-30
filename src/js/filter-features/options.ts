@@ -120,6 +120,10 @@ export class FilterOptions {
   ): DataSetSpecificOptions {
     return this.datasets[policyType][status];
   }
+
+  enabled(policyType: PolicyTypeFilter, status: ReformStatus): boolean {
+    return this.datasets[policyType][status].placeType.length > 0;
+  }
 }
 
 function getVisibleCheckboxes(
@@ -299,7 +303,7 @@ function updateCheckboxVisibility(
 function initFilterGroup(
   filterManager: PlaceFilterManager,
   filterOptions: FilterOptions,
-  filterPopup: HTMLFormElement,
+  optionsContainer: HTMLDivElement,
   params: FilterGroupParams,
 ): void {
   const [accordionElements, accordionState] = generateAccordionForFilterGroup(
@@ -307,7 +311,7 @@ function initFilterGroup(
     params,
     filterOptions,
   );
-  filterPopup.appendChild(accordionElements.outerContainer);
+  optionsContainer.appendChild(accordionElements.outerContainer);
 
   accordionElements.fieldSet.addEventListener("change", () => {
     updateCheckboxStats(accordionState, accordionElements.fieldSet);
@@ -373,9 +377,51 @@ function initFilterGroup(
   );
 }
 
+function initOutermostContainers(
+  filterManager: PlaceFilterManager,
+  filterOptions: FilterOptions,
+  filterPopup: HTMLFormElement,
+): {
+  datasetDiv: HTMLDivElement;
+  optionsDiv: HTMLDivElement;
+} {
+  const datasetDiv = document.createElement("div");
+
+  const disabledDatasetDiv = document.createElement("div");
+  disabledDatasetDiv.classList.add("filter-illegal-dataset-container");
+  disabledDatasetDiv.hidden = true;
+  const warningIcon = document.createElement("i");
+  warningIcon.classList.add("fa-solid", "fa-triangle-exclamation");
+  warningIcon.ariaHidden = "true";
+  const warningText = document.createElement("span");
+  warningText.textContent =
+    " This dataset has no entries. To fix, change either the 'reform type' or 'status'.";
+  disabledDatasetDiv.append(warningIcon);
+  disabledDatasetDiv.append(warningText);
+
+  const optionsDiv = document.createElement("div");
+
+  filterManager.subscribe(
+    `possibly disable dataset`,
+    ({ policyTypeFilter, status }) => {
+      const enabled = filterOptions.enabled(policyTypeFilter, status);
+      disabledDatasetDiv.hidden = enabled;
+      optionsDiv.hidden = !enabled;
+    },
+  );
+
+  filterPopup.append(datasetDiv);
+  filterPopup.append(disabledDatasetDiv);
+  filterPopup.append(optionsDiv);
+  return {
+    datasetDiv,
+    optionsDiv,
+  };
+}
+
 function initAllMinimumsToggle(
   filterManager: PlaceFilterManager,
-  filterPopup: HTMLFormElement,
+  optionsContainer: HTMLDivElement,
 ): void {
   const outerContainer = document.createElement("div");
 
@@ -387,7 +433,7 @@ function initAllMinimumsToggle(
   );
   label.id = "filter-all-minimums-toggle-label";
   outerContainer.append(label);
-  filterPopup.append(outerContainer);
+  optionsContainer.append(outerContainer);
 
   input.addEventListener("change", () => {
     filterManager.update({
@@ -405,7 +451,7 @@ function initAllMinimumsToggle(
 
 function initPolicyTypeFilterDropdown(
   filterManager: PlaceFilterManager,
-  filterPopup: HTMLFormElement,
+  dropdownContainer: HTMLDivElement,
 ): void {
   const id = "filter-policy-type-dropdown";
 
@@ -437,12 +483,12 @@ function initPolicyTypeFilterDropdown(
 
   container.append(label);
   container.append(select);
-  filterPopup.append(container);
+  dropdownContainer.append(container);
 }
 
 function initStatusDropdown(
   filterManager: PlaceFilterManager,
-  filterPopup: HTMLFormElement,
+  dropdownContainer: HTMLDivElement,
 ): void {
   const id = "filter-status-dropdown";
 
@@ -474,7 +520,7 @@ function initStatusDropdown(
 
   container.append(label);
   container.append(select);
-  filterPopup.append(container);
+  dropdownContainer.append(container);
 }
 
 export function initFilterOptions(
@@ -485,19 +531,25 @@ export function initFilterOptions(
   const filterPopup = document.querySelector<HTMLFormElement>("#filter-popup");
   if (!filterPopup) return;
 
+  const { datasetDiv, optionsDiv } = initOutermostContainers(
+    filterManager,
+    filterOptions,
+    filterPopup,
+  );
+
   // Top-level options that change profoundly the app.
-  initPolicyTypeFilterDropdown(filterManager, filterPopup);
-  initStatusDropdown(filterManager, filterPopup);
-  initAllMinimumsToggle(filterManager, filterPopup);
+  initPolicyTypeFilterDropdown(filterManager, datasetDiv);
+  initStatusDropdown(filterManager, datasetDiv);
+  initAllMinimumsToggle(filterManager, optionsDiv);
 
   // Options about the reform
-  initFilterGroup(filterManager, filterOptions, filterPopup, {
+  initFilterGroup(filterManager, filterOptions, optionsDiv, {
     htmlName: "policy-change",
     filterStateKey: "includedPolicyChanges",
     legend: "Reform types",
     hide: ({ policyTypeFilter }) => policyTypeFilter !== "any parking reform",
   });
-  initFilterGroup(filterManager, filterOptions, filterPopup, {
+  initFilterGroup(filterManager, filterOptions, optionsDiv, {
     htmlName: "scope",
     filterStateKey: "scope",
     legend: "Reform scopes",
@@ -505,7 +557,7 @@ export function initFilterOptions(
       filterState.policyTypeFilter === "any parking reform" ||
       isAllMinimumsRemovedToggleInEffect(filterState),
   });
-  initFilterGroup(filterManager, filterOptions, filterPopup, {
+  initFilterGroup(filterManager, filterOptions, optionsDiv, {
     htmlName: "land-use",
     filterStateKey: "landUse",
     legend: "Affected land uses",
@@ -513,7 +565,7 @@ export function initFilterOptions(
       filterState.policyTypeFilter === "any parking reform" ||
       isAllMinimumsRemovedToggleInEffect(filterState),
   });
-  initFilterGroup(filterManager, filterOptions, filterPopup, {
+  initFilterGroup(filterManager, filterOptions, optionsDiv, {
     htmlName: "year",
     filterStateKey: "year",
     legend: ({ status }) => {
@@ -529,17 +581,17 @@ export function initFilterOptions(
   });
 
   // Options about the Place
-  initFilterGroup(filterManager, filterOptions, filterPopup, {
+  initFilterGroup(filterManager, filterOptions, optionsDiv, {
     htmlName: "country",
     filterStateKey: "country",
     legend: "Countries",
     preserveCapitalization: true,
   });
-  initFilterGroup(filterManager, filterOptions, filterPopup, {
+  initFilterGroup(filterManager, filterOptions, optionsDiv, {
     htmlName: "place-type",
     filterStateKey: "placeType",
     legend: "Jurisdictions",
     useTwoColumns: true,
   });
-  initPopulationSlider(filterManager, filterPopup);
+  initPopulationSlider(filterManager, optionsDiv);
 }

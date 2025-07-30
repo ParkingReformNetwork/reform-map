@@ -14,6 +14,7 @@ import {
   faSliders,
   faTable,
   faEarthAmericas,
+  faTriangleExclamation,
 } from "@fortawesome/free-solid-svg-icons";
 
 export default function initIcons(): void {
@@ -30,6 +31,7 @@ export default function initIcons(): void {
     faSliders,
     faTable,
     faEarthAmericas,
+    faTriangleExclamation,
   );
   dom.watch();
 }
