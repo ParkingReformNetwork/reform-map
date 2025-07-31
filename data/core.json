@@ -2654,6 +2654,25 @@
       }
     ]
   },
+  "Ashland, NE": {
+    "place": {
+      "name": "Ashland",
+      "state": "NE",
+      "country": "US",
+      "type": "city",
+      "pop": 3086,
+      "coord": [-96.3683917, 41.0391711],
+      "repeal": false
+    },
+    "reduce_min": [
+      {
+        "status": "proposed",
+        "scope": ["citywide"],
+        "land": ["all uses"],
+        "date": "2014-09"
+      }
+    ]
+  },
   "Ashland, OR": {
     "place": {
       "name": "Ashland",
@@ -16699,6 +16718,14 @@
       "coord": [-99.9858546, 40.8595822],
       "repeal": false
     },
+    "reduce_min": [
+      {
+        "status": "proposed",
+        "scope": ["citywide"],
+        "land": ["all uses"],
+        "date": "2016"
+      }
+    ],
     "rm_min": [
       {
         "status": "adopted",
@@ -27021,6 +27048,14 @@
       "coord": [-96.4960449, 41.4338363],
       "repeal": false
     },
+    "reduce_min": [
+      {
+        "status": "proposed",
+        "scope": ["city center / business district", "main street / special"],
+        "land": ["all uses", "commercial"],
+        "date": "2022-10-04"
+      }
+    ],
     "rm_min": [
       {
         "status": "adopted",
@@ -52420,6 +52455,12 @@
         "scope": ["citywide"],
         "land": ["residential, all uses"],
         "date": null
+      },
+      {
+        "status": "proposed",
+        "scope": ["city center / business district"],
+        "land": ["residential, all uses"],
+        "date": "2009-03-02"
       }
     ],
     "rm_min": [
@@ -54731,6 +54772,14 @@
       "coord": [-95.9383758, 41.2587459],
       "repeal": false
     },
+    "reduce_min": [
+      {
+        "status": "proposed",
+        "scope": ["citywide"],
+        "land": ["commercial", "industrial", "medical", "other"],
+        "date": "2011"
+      }
+    ],
     "rm_min": [
       {
         "status": "adopted",
@@ -77403,6 +77452,14 @@
       "coord": [-96.528167, 40.91742],
       "repeal": false
     },
+    "reduce_min": [
+      {
+        "status": "proposed",
+        "scope": ["citywide"],
+        "land": ["residential, multi-family"],
+        "date": "2023-05"
+      }
+    ],
     "rm_min": [
       {
         "status": "adopted",
