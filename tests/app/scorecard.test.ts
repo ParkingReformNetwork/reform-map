@@ -4,7 +4,7 @@ import { loadMap } from "./utils";
 import { generateScorecard } from "../../src/js/map-features/scorecard";
 import {
   ProcessedCoreEntry,
-  ProcessedCorePolicy,
+  ProcessedCoreLandUsePolicy,
   ProcessedPlace,
 } from "../../src/js/model/types";
 
@@ -54,7 +54,7 @@ test("generateScorecard()", () => {
     coord: [0, 0],
     url: "https://my-site.org",
   };
-  const policy: ProcessedCorePolicy = {
+  const landUsePolicy: ProcessedCoreLandUsePolicy = {
     status: "adopted",
     scope: [],
     land: [],
@@ -62,7 +62,7 @@ test("generateScorecard()", () => {
   };
   const entry: ProcessedCoreEntry = {
     place,
-    add_max: [policy],
+    add_max: [landUsePolicy],
   };
   expect(generateScorecard(entry, "My City, AZ")).toEqual(
     `
@@ -88,10 +88,10 @@ test("generateScorecard()", () => {
   const repealed: ProcessedCoreEntry = {
     place: { ...place, repeal: false },
     add_max: [
-      { ...policy, status: "repealed" },
-      { ...policy, status: "proposed" },
+      { ...landUsePolicy, status: "repealed" },
+      { ...landUsePolicy, status: "proposed" },
     ],
-    rm_min: [policy],
+    rm_min: [landUsePolicy],
   };
   expect(generateScorecard(repealed, "My City, AZ")).toEqual(
     `

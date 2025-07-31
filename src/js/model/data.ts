@@ -2,13 +2,14 @@ import {
   PlaceId,
   ProcessedCoreEntry,
   RawCoreEntry,
-  RawCorePolicy,
+  RawCoreLandUsePolicy,
   PolicyType,
   Date,
   RawPlace,
   ProcessedPlace,
-  ProcessedCorePolicy,
+  ProcessedCoreLandUsePolicy,
   ReformStatus,
+  BaseLandUsePolicy,
 } from "./types";
 
 export const COUNTRIES_PREFIXED_BY_THE = new Set([
@@ -74,9 +75,8 @@ export function determineAllPolicyTypes(
   entry: RawCoreEntry | ProcessedCoreEntry,
   status: ReformStatus,
 ): PolicyType[] {
-  const hasPolicy = (
-    policies: ProcessedCorePolicy[] | RawCorePolicy[] | undefined,
-  ) => !!policies?.filter((policy) => policy.status === status).length;
+  const hasPolicy = (policies: BaseLandUsePolicy[] | undefined) =>
+    !!policies?.filter((policy) => policy.status === status).length;
 
   const result: PolicyType[] = [];
   if (hasPolicy(entry.add_max)) result.push("add parking maximums");
@@ -88,9 +88,8 @@ export function determineAllPolicyTypes(
 export function determinePolicyTypeStatuses(
   entry: RawCoreEntry | ProcessedCoreEntry,
 ): Record<PolicyType, Set<ReformStatus>> {
-  const getStatuses = (
-    policies: ProcessedCorePolicy[] | RawCorePolicy[] | undefined,
-  ) => new Set(policies?.map((policy) => policy.status) ?? []);
+  const getStatuses = (policies: BaseLandUsePolicy[] | undefined) =>
+    new Set(policies?.map((policy) => policy.status) ?? []);
   return {
     "add parking maximums": getStatuses(entry.add_max),
     "reduce parking minimums": getStatuses(entry.reduce_min),
@@ -98,7 +97,9 @@ export function determinePolicyTypeStatuses(
   };
 }
 
-function processPolicy(raw: RawCorePolicy): ProcessedCorePolicy {
+function processLandUsePolicy(
+  raw: RawCoreLandUsePolicy,
+): ProcessedCoreLandUsePolicy {
   return {
     ...raw,
     date: Date.fromNullable(raw.date),
@@ -113,13 +114,13 @@ export function processRawCoreEntry(
     place: processPlace(placeId, raw.place),
   };
   if (raw.add_max) {
-    result.add_max = raw.add_max.map(processPolicy);
+    result.add_max = raw.add_max.map(processLandUsePolicy);
   }
   if (raw.reduce_min) {
-    result.reduce_min = raw.reduce_min.map(processPolicy);
+    result.reduce_min = raw.reduce_min.map(processLandUsePolicy);
   }
   if (raw.rm_min) {
-    result.rm_min = raw.rm_min.map(processPolicy);
+    result.rm_min = raw.rm_min.map(processLandUsePolicy);
   }
   return result;
 }

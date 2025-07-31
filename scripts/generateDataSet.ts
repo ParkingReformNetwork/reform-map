@@ -10,7 +10,7 @@ import Papa from "papaparse";
 
 import {
   ProcessedCompleteEntry,
-  ProcessedCompletePolicy,
+  ProcessedCompleteLandUsePolicy,
   readProcessedCompleteData,
 } from "./lib/data";
 import { ReformStatus } from "../src/js/model/types";
@@ -105,11 +105,11 @@ export function createAnyPolicyCsvs(data: ProcessedCompleteEntry[]): {
   };
 }
 
-export function createReformCsv(
+export function createLandUseCsv(
   data: ProcessedCompleteEntry[],
   getter: (
     entry: ProcessedCompleteEntry,
-  ) => ProcessedCompletePolicy[] | undefined,
+  ) => ProcessedCompleteLandUsePolicy[] | undefined,
 ): string {
   const entries = data.flatMap((entry) => {
     const policies = getter(entry);
@@ -170,13 +170,13 @@ async function main(): Promise<void> {
   await writeCsv(proposed, "data/generated/overview_proposed.csv");
   await writeCsv(repealed, "data/generated/overview_repealed.csv");
 
-  const addMax = createReformCsv(data, (entry) => entry.add_max);
+  const addMax = createLandUseCsv(data, (entry) => entry.add_max);
   await writeCsv(addMax, "data/generated/add_maximums.csv");
 
-  const reduceMin = createReformCsv(data, (entry) => entry.reduce_min);
+  const reduceMin = createLandUseCsv(data, (entry) => entry.reduce_min);
   await writeCsv(reduceMin, "data/generated/reduce_minimums.csv");
 
-  const rmMin = createReformCsv(data, (entry) => entry.rm_min);
+  const rmMin = createLandUseCsv(data, (entry) => entry.rm_min);
   await writeCsv(rmMin, "data/generated/remove_minimums.csv");
 
   const files = await glob("data/generated/*");

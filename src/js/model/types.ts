@@ -58,28 +58,30 @@ export type PolicyType = (typeof ALL_POLICY_TYPE)[number];
 export const ALL_REFORM_STATUS = ["adopted", "proposed", "repealed"] as const;
 export type ReformStatus = (typeof ALL_REFORM_STATUS)[number];
 
-/// Every policy has these values. It is missing some fields like `date`.
-export interface BasePolicy {
+/// Every land use policy has these values. It is missing some fields like `date`.
+export interface BaseLandUsePolicy {
   status: ReformStatus;
   scope: string[];
   land: string[];
 }
 
-export type RawCorePolicy = BasePolicy & { date: string | null };
-export type ProcessedCorePolicy = BasePolicy & { date: Date | null };
+export type RawCoreLandUsePolicy = BaseLandUsePolicy & { date: string | null };
+export type ProcessedCoreLandUsePolicy = BaseLandUsePolicy & {
+  date: Date | null;
+};
 
 export interface RawCoreEntry {
   place: RawPlace;
-  reduce_min?: RawCorePolicy[];
-  rm_min?: RawCorePolicy[];
-  add_max?: RawCorePolicy[];
+  reduce_min?: RawCoreLandUsePolicy[];
+  rm_min?: RawCoreLandUsePolicy[];
+  add_max?: RawCoreLandUsePolicy[];
 }
 
 export interface ProcessedCoreEntry {
   place: ProcessedPlace;
-  reduce_min?: ProcessedCorePolicy[];
-  rm_min?: ProcessedCorePolicy[];
-  add_max?: ProcessedCorePolicy[];
+  reduce_min?: ProcessedCoreLandUsePolicy[];
+  rm_min?: ProcessedCoreLandUsePolicy[];
+  add_max?: ProcessedCoreLandUsePolicy[];
 }
 export const UNKNOWN_YEAR = "unknown";
 

@@ -6,12 +6,12 @@ import { compileString as compileStringSass } from "sass";
 import { capitalize } from "lodash-es";
 
 import {
-  ProcessedCompletePolicy,
+  ProcessedCompleteLandUsePolicy,
   readProcessedCompleteData,
 } from "./scripts/lib/data.js";
 import { escapePlaceId } from "./src/js/model/data.js";
 
-function processPolicyRecord(policy: ProcessedCompletePolicy): object {
+function processLandUse(policy: ProcessedCompleteLandUsePolicy): object {
   return {
     summary: policy.summary,
     dateLabel:
@@ -53,9 +53,9 @@ export default async function (eleventyConfig: any) {
     escapedPlaceId: escapePlaceId(placeId),
     population: entry.place.pop.toLocaleString("en-us"),
     repeal: entry.place.repeal,
-    rmMin: entry.rm_min?.map(processPolicyRecord) || [],
-    reduceMin: entry.reduce_min?.map(processPolicyRecord) || [],
-    addMax: entry.add_max?.map(processPolicyRecord) || [],
+    rmMin: entry.rm_min?.map(processLandUse) || [],
+    reduceMin: entry.reduce_min?.map(processLandUse) || [],
+    addMax: entry.add_max?.map(processLandUse) || [],
   }));
 
   eleventyConfig.addGlobalData("entries", entries);

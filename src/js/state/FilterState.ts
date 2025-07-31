@@ -5,7 +5,7 @@ import {
   PlaceType,
   PolicyType,
   ProcessedCoreEntry,
-  ProcessedCorePolicy,
+  ProcessedCoreLandUsePolicy,
   ProcessedPlace,
   ReformStatus,
   UNKNOWN_YEAR,
@@ -237,8 +237,8 @@ export class PlaceFilterManager {
     return isPopulation;
   }
 
-  private matchesPolicyRecord(
-    policyRecord: ProcessedCorePolicy,
+  private matchesLandUsePolicy(
+    policyRecord: ProcessedCoreLandUsePolicy,
     options: { ignoreScope?: boolean; ignoreLand?: boolean },
   ): boolean {
     const filterState = this.state.getValue();
@@ -298,7 +298,7 @@ export class PlaceFilterManager {
     if (filterState.policyTypeFilter === "add parking maximums") {
       const matchingPolicies = getFilteredIndexes(
         entry.add_max ?? [],
-        (policyRecord) => this.matchesPolicyRecord(policyRecord, {}),
+        (policyRecord) => this.matchesLandUsePolicy(policyRecord, {}),
       );
       return matchingPolicies.length
         ? {
@@ -312,7 +312,7 @@ export class PlaceFilterManager {
     if (filterState.policyTypeFilter === "reduce parking minimums") {
       const matchingPolicies = getFilteredIndexes(
         entry.reduce_min ?? [],
-        (policyRecord) => this.matchesPolicyRecord(policyRecord, {}),
+        (policyRecord) => this.matchesLandUsePolicy(policyRecord, {}),
       );
       return matchingPolicies.length
         ? {
@@ -335,7 +335,7 @@ export class PlaceFilterManager {
       };
       const matchingPolicies = getFilteredIndexes(
         entry.rm_min ?? [],
-        (policyRecord) => this.matchesPolicyRecord(policyRecord, options),
+        (policyRecord) => this.matchesLandUsePolicy(policyRecord, options),
       );
       return matchingPolicies.length
         ? {

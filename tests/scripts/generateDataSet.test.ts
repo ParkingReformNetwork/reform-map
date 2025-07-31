@@ -2,7 +2,7 @@ import { expect, test } from "@playwright/test";
 
 import {
   createAnyPolicyCsvs,
-  createReformCsv,
+  createLandUseCsv,
 } from "../../scripts/generateDataSet";
 import type { Citation, ProcessedCompleteEntry } from "../../scripts/lib/data";
 import { Date } from "../../src/js/model/types";
@@ -94,6 +94,6 @@ test("generate CSVs", async ({}, testInfo) => {
   expect(normalize(proposed)).toMatchSnapshot("overview-proposed.csv");
   expect(normalize(repealed)).toMatchSnapshot("overview-repealed.csv");
 
-  const maximums = createReformCsv(entries, (entry) => entry.add_max);
+  const maximums = createLandUseCsv(entries, (entry) => entry.add_max);
   expect(normalize(maximums)).toMatchSnapshot("maximums.csv");
 });
