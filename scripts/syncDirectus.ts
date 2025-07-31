@@ -363,7 +363,7 @@ function combineData(
                   placeId,
                   hasDistinctPolicyTypes,
                   policyType: record.type!,
-                  policyRecordIdx: policyRecordIdx,
+                  policyRecordIdx,
                 },
               ),
             };
