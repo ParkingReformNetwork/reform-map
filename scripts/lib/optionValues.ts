@@ -4,7 +4,7 @@ import { sortBy, without } from "lodash-es";
 
 import { COUNTRY_MAPPING } from "../../src/js/model/data";
 import {
-  RawCorePolicy,
+  RawCoreLandUsePolicy,
   UNKNOWN_YEAR,
   Date,
   RawPlace,
@@ -31,13 +31,13 @@ class OptionValues {
     this.year = new Set([UNKNOWN_YEAR]);
   }
 
-  add(place: RawPlace, policyRecord: RawCorePolicy): void {
+  addLandUse(place: RawPlace, landUseRecord: RawCoreLandUsePolicy): void {
     this.placeType.add(place.type);
     this.country.add(COUNTRY_MAPPING[place.country] ?? place.country);
-    policyRecord.scope.forEach((v) => this.scope.add(v));
-    policyRecord.land.forEach((v) => this.landUse.add(v));
-    if (policyRecord.date) {
-      this.year.add(new Date(policyRecord.date).parsed.year.toString());
+    landUseRecord.scope.forEach((v) => this.scope.add(v));
+    landUseRecord.land.forEach((v) => this.landUse.add(v));
+    if (landUseRecord.date) {
+      this.year.add(new Date(landUseRecord.date).parsed.year.toString());
     }
   }
 
@@ -69,34 +69,34 @@ export function determineOptionValues(entries: RawCoreEntry[]) {
 
   entries.forEach((entry) => {
     entry.add_max?.forEach((policyRecord) => {
-      merged.add(entry.place, policyRecord);
+      merged.addLandUse(entry.place, policyRecord);
       const [any, policy] = {
         adopted: [anyAdopted, addMaxAdopted],
         proposed: [anyProposed, addMaxProposed],
         repealed: [anyRepealed, addMaxRepealed],
       }[policyRecord.status];
-      any.add(entry.place, policyRecord);
-      policy.add(entry.place, policyRecord);
+      any.addLandUse(entry.place, policyRecord);
+      policy.addLandUse(entry.place, policyRecord);
     });
     entry.reduce_min?.forEach((policyRecord) => {
-      merged.add(entry.place, policyRecord);
+      merged.addLandUse(entry.place, policyRecord);
       const [any, policy] = {
         adopted: [anyAdopted, reduceMinAdopted],
         proposed: [anyProposed, reduceMinProposed],
         repealed: [anyRepealed, reduceMinRepealed],
       }[policyRecord.status];
-      any.add(entry.place, policyRecord);
-      policy.add(entry.place, policyRecord);
+      any.addLandUse(entry.place, policyRecord);
+      policy.addLandUse(entry.place, policyRecord);
     });
     entry.rm_min?.forEach((policyRecord) => {
-      merged.add(entry.place, policyRecord);
+      merged.addLandUse(entry.place, policyRecord);
       const [any, policy] = {
         adopted: [anyAdopted, rmMinAdopted],
         proposed: [anyProposed, rmMinProposed],
         repealed: [anyRepealed, rmMinRepealed],
       }[policyRecord.status];
-      any.add(entry.place, policyRecord);
-      policy.add(entry.place, policyRecord);
+      any.addLandUse(entry.place, policyRecord);
+      policy.addLandUse(entry.place, policyRecord);
     });
   });
 

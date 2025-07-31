@@ -15,7 +15,7 @@ import {
 } from "tabulator-tables";
 
 import { PlaceFilterManager, PolicyTypeFilter } from "./state/FilterState";
-import { Date, ProcessedCorePolicy, ReformStatus } from "./model/types";
+import { Date, ProcessedCoreLandUsePolicy, ReformStatus } from "./model/types";
 import { ViewStateObservable } from "./layout/viewToggle";
 import { determineAllPolicyTypes } from "./model/data";
 
@@ -195,9 +195,9 @@ export default function initTable(
       addMax: repealed.includes("add parking maximums"),
     });
 
-    const savePolicies = (
+    const saveLandUsePolicies = (
       collection: any[],
-      policies: ProcessedCorePolicy[] | undefined,
+      policies: ProcessedCoreLandUsePolicy[] | undefined,
     ): void =>
       policies?.forEach((policy, i) =>
         collection.push({
@@ -210,9 +210,9 @@ export default function initTable(
         }),
       );
 
-    savePolicies(dataAddMax, entry.add_max);
-    savePolicies(dataReduceMin, entry.reduce_min);
-    savePolicies(dataRmMin, entry.rm_min);
+    saveLandUsePolicies(dataAddMax, entry.add_max);
+    saveLandUsePolicies(dataReduceMin, entry.reduce_min);
+    saveLandUsePolicies(dataRmMin, entry.rm_min);
   });
 
   const filterStateToConfig: Record<

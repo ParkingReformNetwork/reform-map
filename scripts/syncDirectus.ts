@@ -15,18 +15,18 @@ import {
   Citation as DirectusCitation,
   readItemsBatched,
   readCitationsFilesBatched,
-  PolicyRecord,
+  LandUseRecord,
 } from "./lib/directus";
 import {
   PlaceId as PlaceStringId,
   PolicyType,
-  RawCorePolicy,
+  RawCoreLandUsePolicy,
 } from "../src/js/model/types";
 import { getLongLat, initGeocoder } from "./lib/geocoder";
 import {
   DirectusFile,
   Citation,
-  ExtendedPolicy,
+  ExtendedLandUsePolicy,
   RawCompleteEntry,
 } from "./lib/data";
 import { saveOptionValues } from "./lib/optionValues";
@@ -90,10 +90,10 @@ async function readPlacesAndEnsureCoordinates(
   };
 }
 
-async function readPolicyRecords(
+async function readLandUseRecords(
   client: DirectusClient,
   placeDirectusIdToStringId: Record<number, PlaceStringId>,
-): Promise<Record<PlaceStringId, Array<Partial<PolicyRecord>>>> {
+): Promise<Record<PlaceStringId, Array<Partial<LandUseRecord>>>> {
   const records = await readItemsBatched(
     client,
     "policy_records",
@@ -136,7 +136,7 @@ async function readCitations(
   return Object.fromEntries(rawCitations.map((record) => [record.id, record]));
 }
 
-async function readCitationsByPolicyRecordJunctionId(
+async function readCitationsByLandUseJunctionId(
   client: DirectusClient,
   citations: Record<number, Partial<DirectusCitation>>,
 ): Promise<Record<number, Partial<DirectusCitation>>> {
@@ -218,7 +218,7 @@ interface AttachmentFileNameArgsBase {
   placeId: string;
   hasDistinctPolicyTypes: boolean;
   policyType: PolicyType;
-  /// The index of policy records for the current `policyType`. If
+  /// The index of land use records for the current `policyType`. If
   /// there is only one record for the `policyType`, this value should
   /// be set to `null`.
   policyRecordIdx: number | null;
@@ -314,8 +314,8 @@ function createCitations(
 
 function combineData(
   places: Record<PlaceStringId, Partial<DirectusPlace>>,
-  policyRecords: Record<PlaceStringId, Array<Partial<PolicyRecord>>>,
-  citationsByPolicyRecordJunctionId: Record<number, Partial<DirectusCitation>>,
+  landUseRecords: Record<PlaceStringId, Array<Partial<LandUseRecord>>>,
+  citationsByLandUseJunctionId: Record<number, Partial<DirectusCitation>>,
   filesByAttachmentJunctionId: Record<number, FileMetadata>,
 ): Record<PlaceStringId, RawCompleteEntry> {
   return Object.fromEntries(
@@ -324,8 +324,8 @@ function combineData(
         let numAddMax = 0;
         let numReduceMin = 0;
         let numRmMin = 0;
-        if (policyRecords[placeId]) {
-          policyRecords[placeId].forEach((record) => {
+        if (landUseRecords[placeId]) {
+          landUseRecords[placeId].forEach((record) => {
             if (record.type === "add parking maximums") numAddMax += 1;
             if (record.type === "reduce parking minimums") numReduceMin += 1;
             if (record.type === "remove parking minimums") numRmMin += 1;
@@ -334,11 +334,12 @@ function combineData(
         const hasDistinctPolicyTypes =
           [numAddMax, numReduceMin, numRmMin].filter(Boolean).length > 1;
 
-        const addMax: Array<RawCorePolicy & ExtendedPolicy> = [];
-        const reduceMin: Array<RawCorePolicy & ExtendedPolicy> = [];
-        const rmMin: Array<RawCorePolicy & ExtendedPolicy> = [];
-        if (policyRecords[placeId]) {
-          policyRecords[placeId].forEach((record) => {
+        const addMax: Array<RawCoreLandUsePolicy & ExtendedLandUsePolicy> = [];
+        const reduceMin: Array<RawCoreLandUsePolicy & ExtendedLandUsePolicy> =
+          [];
+        const rmMin: Array<RawCoreLandUsePolicy & ExtendedLandUsePolicy> = [];
+        if (landUseRecords[placeId]) {
+          landUseRecords[placeId].forEach((record) => {
             const [collection, numPolicyRecords] = {
               "add parking maximums": [addMax, numAddMax] as const,
               "reduce parking minimums": [reduceMin, numReduceMin] as const,
@@ -356,7 +357,7 @@ function combineData(
               requirements: record.requirements!,
               citations: createCitations(
                 record.citations!,
-                citationsByPolicyRecordJunctionId,
+                citationsByLandUseJunctionId,
                 filesByAttachmentJunctionId,
                 {
                   placeId,
@@ -404,7 +405,7 @@ function combineData(
 async function saveCoreData(
   result: Record<PlaceStringId, RawCompleteEntry>,
 ): Promise<void> {
-  const formatPolicy = (record: RawCorePolicy) => ({
+  const formatLandUse = (record: RawCoreLandUsePolicy) => ({
     status: record.status,
     scope: record.scope.sort(),
     land: record.land.sort(),
@@ -425,13 +426,13 @@ async function saveCoreData(
           repeal: entry.place.repeal,
         },
         ...(entry.add_max && {
-          add_max: entry.add_max.map(formatPolicy),
+          add_max: entry.add_max.map(formatLandUse),
         }),
         ...(entry.reduce_min && {
-          reduce_min: entry.reduce_min.map(formatPolicy),
+          reduce_min: entry.reduce_min.map(formatLandUse),
         }),
         ...(entry.rm_min && {
-          rm_min: entry.rm_min.map(formatPolicy),
+          rm_min: entry.rm_min.map(formatLandUse),
         }),
       },
     ]),
@@ -444,7 +445,7 @@ async function saveCoreData(
 async function saveExtendedData(
   result: Record<PlaceStringId, RawCompleteEntry>,
 ): Promise<void> {
-  const formatPolicy = (record: ExtendedPolicy) => ({
+  const formatLandUse = (record: ExtendedLandUsePolicy) => ({
     summary: record.summary,
     reporter: record.reporter,
     requirements: record.requirements.sort(),
@@ -455,11 +456,11 @@ async function saveExtendedData(
     Object.entries(result).map(([placeId, entry]) => [
       placeId,
       {
-        ...(entry.add_max && { add_max: entry.add_max.map(formatPolicy) }),
+        ...(entry.add_max && { add_max: entry.add_max.map(formatLandUse) }),
         ...(entry.reduce_min && {
-          reduce_min: entry.reduce_min.map(formatPolicy),
+          reduce_min: entry.reduce_min.map(formatLandUse),
         }),
-        ...(entry.rm_min && { rm_min: entry.rm_min.map(formatPolicy) }),
+        ...(entry.rm_min && { rm_min: entry.rm_min.map(formatLandUse) }),
       },
     ]),
   );
@@ -477,20 +478,22 @@ async function main(): Promise<void> {
   const geocoder = initGeocoder();
 
   const places = await readPlacesAndEnsureCoordinates(client, geocoder);
-  const policyRecords = await readPolicyRecords(
+  const landUseRecords = await readLandUseRecords(
     client,
     places.directusIdToStringId,
   );
   const citations = await readCitations(client);
-  const citationsByPolicyRecordJunctionId =
-    await readCitationsByPolicyRecordJunctionId(client, citations);
+  const citationsByLandUseJunctionId = await readCitationsByLandUseJunctionId(
+    client,
+    citations,
+  );
   const filesByAttachmentJunctionId =
     await readFilesByAttachmentJunctionId(client);
 
   const result = combineData(
     places.stringIdToPlace,
-    policyRecords,
-    citationsByPolicyRecordJunctionId,
+    landUseRecords,
+    citationsByLandUseJunctionId,
     filesByAttachmentJunctionId,
   );
 

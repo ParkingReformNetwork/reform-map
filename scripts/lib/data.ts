@@ -7,9 +7,9 @@ import {
   RawCoreEntry,
   PlaceId,
   RawPlace,
-  RawCorePolicy,
+  RawCoreLandUsePolicy,
   ProcessedPlace,
-  ProcessedCorePolicy,
+  ProcessedCoreLandUsePolicy,
 } from "../../src/js/model/types";
 import { processRawCoreEntry } from "../../src/js/model/data";
 
@@ -26,7 +26,7 @@ export interface Citation {
   screenshots: DirectusFile[];
 }
 
-export interface ExtendedPolicy {
+export interface ExtendedLandUsePolicy {
   summary: string;
   reporter: string | null;
   requirements: string[];
@@ -34,33 +34,35 @@ export interface ExtendedPolicy {
 }
 
 export type RawExtendedEntry = {
-  reduce_min?: ExtendedPolicy[];
-  rm_min?: ExtendedPolicy[];
-  add_max?: ExtendedPolicy[];
+  reduce_min?: ExtendedLandUsePolicy[];
+  rm_min?: ExtendedLandUsePolicy[];
+  add_max?: ExtendedLandUsePolicy[];
 };
 
-export type RawCompletePolicy = RawCorePolicy & ExtendedPolicy;
+export type RawCompleteLandUsePolicy = RawCoreLandUsePolicy &
+  ExtendedLandUsePolicy;
 
 export interface RawCompleteEntry {
   place: RawPlace;
-  reduce_min?: Array<RawCompletePolicy>;
-  rm_min?: Array<RawCompletePolicy>;
-  add_max?: Array<RawCompletePolicy>;
+  reduce_min?: Array<RawCompleteLandUsePolicy>;
+  rm_min?: Array<RawCompleteLandUsePolicy>;
+  add_max?: Array<RawCompleteLandUsePolicy>;
 }
 
 export interface ProcessedExtendedEntry {
-  reduce_min?: ExtendedPolicy[];
-  rm_min?: ExtendedPolicy[];
-  add_max?: ExtendedPolicy[];
+  reduce_min?: ExtendedLandUsePolicy[];
+  rm_min?: ExtendedLandUsePolicy[];
+  add_max?: ExtendedLandUsePolicy[];
 }
 
-export type ProcessedCompletePolicy = ProcessedCorePolicy & ExtendedPolicy;
+export type ProcessedCompleteLandUsePolicy = ProcessedCoreLandUsePolicy &
+  ExtendedLandUsePolicy;
 
 export interface ProcessedCompleteEntry {
   place: ProcessedPlace;
-  reduce_min?: Array<ProcessedCompletePolicy>;
-  rm_min?: Array<ProcessedCompletePolicy>;
-  add_max?: Array<ProcessedCompletePolicy>;
+  reduce_min?: Array<ProcessedCompleteLandUsePolicy>;
+  rm_min?: Array<ProcessedCompleteLandUsePolicy>;
+  add_max?: Array<ProcessedCompleteLandUsePolicy>;
 }
 
 export async function readRawCoreData(): Promise<
@@ -77,12 +79,12 @@ export async function readRawExtendedData(): Promise<
   return JSON.parse(raw);
 }
 
-function mergeRawPolicies(
-  corePolicies: RawCorePolicy[],
-  extendedPolicies: ExtendedPolicy[],
+function mergeRawLandUsePolicies(
+  corePolicies: RawCoreLandUsePolicy[],
+  extendedPolicies: ExtendedLandUsePolicy[],
   placeId: PlaceId,
   policyKeyName: string,
-): RawCompletePolicy[] {
+): RawCompleteLandUsePolicy[] {
   return zipWith(
     corePolicies,
     extendedPolicies,
@@ -116,7 +118,7 @@ export async function readRawCompleteData(): Promise<
           place: coreEntry.place,
           ...(coreEntry.reduce_min &&
             extendedEntry.reduce_min && {
-              reduce_min: mergeRawPolicies(
+              reduce_min: mergeRawLandUsePolicies(
                 coreEntry.reduce_min,
                 extendedEntry.reduce_min,
                 placeId,
@@ -125,7 +127,7 @@ export async function readRawCompleteData(): Promise<
             }),
           ...(coreEntry.rm_min &&
             extendedEntry.rm_min && {
-              rm_min: mergeRawPolicies(
+              rm_min: mergeRawLandUsePolicies(
                 coreEntry.rm_min,
                 extendedEntry.rm_min,
                 placeId,
@@ -134,7 +136,7 @@ export async function readRawCompleteData(): Promise<
             }),
           ...(coreEntry.add_max &&
             extendedEntry.add_max && {
-              add_max: mergeRawPolicies(
+              add_max: mergeRawLandUsePolicies(
                 coreEntry.add_max,
                 extendedEntry.add_max,
                 placeId,
@@ -147,9 +149,9 @@ export async function readRawCompleteData(): Promise<
   );
 }
 
-function processCompletePolicy(
-  policy: RawCompletePolicy,
-): ProcessedCompletePolicy {
+function processCompleteLandUsePolicy(
+  policy: RawCompleteLandUsePolicy,
+): ProcessedCompleteLandUsePolicy {
   return {
     ...policy,
     date: Date.fromNullable(policy.date),
@@ -167,13 +169,13 @@ export async function readProcessedCompleteData(): Promise<
         place: processed.place,
       };
       if (entry.add_max) {
-        result.add_max = entry.add_max.map(processCompletePolicy);
+        result.add_max = entry.add_max.map(processCompleteLandUsePolicy);
       }
       if (entry.reduce_min) {
-        result.reduce_min = entry.reduce_min.map(processCompletePolicy);
+        result.reduce_min = entry.reduce_min.map(processCompleteLandUsePolicy);
       }
       if (entry.rm_min) {
-        result.rm_min = entry.rm_min.map(processCompletePolicy);
+        result.rm_min = entry.rm_min.map(processCompleteLandUsePolicy);
       }
       return [placeId, result];
     }),
@@ -181,8 +183,9 @@ export async function readProcessedCompleteData(): Promise<
 }
 
 export function getCitations(entry: RawExtendedEntry): Citation[] {
-  const fromArray = (policies: ExtendedPolicy[] | undefined): Citation[] =>
-    policies?.flatMap((policy) => policy.citations) ?? [];
+  const fromArray = (
+    policies: ExtendedLandUsePolicy[] | undefined,
+  ): Citation[] => policies?.flatMap((policy) => policy.citations) ?? [];
 
   return [
     ...fromArray(entry.add_max),

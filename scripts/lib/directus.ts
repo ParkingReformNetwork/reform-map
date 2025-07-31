@@ -53,9 +53,9 @@ interface Coordinates {
 export interface Schema {
   places: Place[];
   citations: Citation[];
-  policy_records: PolicyRecord[];
+  policy_records: LandUseRecord[];
   citations_files: CitationsFileJunction[];
-  policy_records_citations: PolicyRecordCitationJunction[];
+  policy_records_citations: LandUseCitationJunction[];
 }
 
 export type Place = {
@@ -78,7 +78,7 @@ export type Citation = {
   attachments: number[];
 } & Metadata;
 
-export type PolicyRecord = {
+export type LandUseRecord = {
   place: number;
   type: PolicyType;
   last_verified_at: string | null;
@@ -99,7 +99,7 @@ export interface CitationsFileJunction {
   directus_files_id: string;
 }
 
-export interface PolicyRecordCitationJunction {
+export interface LandUseCitationJunction {
   id: number;
   policy_records_id: number;
   citations_id: number;
