@@ -28,7 +28,7 @@ class OptionValues {
     this.country = new Set();
     this.scope = new Set();
     this.landUse = new Set();
-    this.year = new Set([UNKNOWN_YEAR]);
+    this.year = new Set();
   }
 
   addLandUse(place: RawPlace, landUseRecord: RawCoreLandUsePolicy): void {
@@ -36,9 +36,11 @@ class OptionValues {
     this.country.add(COUNTRY_MAPPING[place.country] ?? place.country);
     landUseRecord.scope.forEach((v) => this.scope.add(v));
     landUseRecord.land.forEach((v) => this.landUse.add(v));
-    if (landUseRecord.date) {
-      this.year.add(new Date(landUseRecord.date).parsed.year.toString());
-    }
+    this.year.add(
+      landUseRecord.date
+        ? new Date(landUseRecord.date).parsed.year.toString()
+        : UNKNOWN_YEAR,
+    );
   }
 
   export() {
