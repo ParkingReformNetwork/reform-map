@@ -1751,25 +1751,6 @@
       }
     ]
   },
-  "Andover, KS": {
-    "place": {
-      "name": "Andover",
-      "state": "KS",
-      "country": "US",
-      "type": "city",
-      "pop": 14892,
-      "coord": [-97.1364294, 37.7139041],
-      "repeal": false
-    },
-    "reduce_min": [
-      {
-        "status": "proposed",
-        "scope": ["citywide"],
-        "land": ["all uses"],
-        "date": "2023-08-29"
-      }
-    ]
-  },
   "Angola, IN": {
     "place": {
       "name": "Angola",
@@ -2654,25 +2635,6 @@
       }
     ]
   },
-  "Ashland, NE": {
-    "place": {
-      "name": "Ashland",
-      "state": "NE",
-      "country": "US",
-      "type": "city",
-      "pop": 3086,
-      "coord": [-96.3683917, 41.0391711],
-      "repeal": false
-    },
-    "reduce_min": [
-      {
-        "status": "proposed",
-        "scope": ["citywide"],
-        "land": ["all uses"],
-        "date": "2014-09"
-      }
-    ]
-  },
   "Ashland, OR": {
     "place": {
       "name": "Ashland",
@@ -3224,25 +3186,6 @@
         "scope": ["city center / business district", "citywide"],
         "land": ["all uses"],
         "date": null
-      }
-    ]
-  },
-  "Augusta, KS": {
-    "place": {
-      "name": "Augusta",
-      "state": "KS",
-      "country": "US",
-      "type": "city",
-      "pop": 9256,
-      "coord": [-96.9771177, 37.6809165],
-      "repeal": false
-    },
-    "reduce_min": [
-      {
-        "status": "proposed",
-        "scope": ["citywide"],
-        "land": ["residential, all uses"],
-        "date": "2020-10-19"
       }
     ]
   },
@@ -10129,14 +10072,6 @@
         "date": "2023-11-28"
       }
     ],
-    "reduce_min": [
-      {
-        "status": "proposed",
-        "scope": ["citywide"],
-        "land": ["all uses"],
-        "date": "2023-11-28"
-      }
-    ],
     "rm_min": [
       {
         "status": "adopted",
@@ -16718,14 +16653,6 @@
       "coord": [-99.9858546, 40.8595822],
       "repeal": false
     },
-    "reduce_min": [
-      {
-        "status": "proposed",
-        "scope": ["citywide"],
-        "land": ["all uses"],
-        "date": "2016"
-      }
-    ],
     "rm_min": [
       {
         "status": "adopted",
@@ -18601,14 +18528,6 @@
         "land": ["all uses"],
         "date": "2024-06"
       }
-    ],
-    "reduce_min": [
-      {
-        "status": "proposed",
-        "scope": ["citywide"],
-        "land": ["all uses"],
-        "date": "2024-06"
-      }
     ]
   },
   "Defiance, OH": {
@@ -19040,44 +18959,22 @@
       "type": "city",
       "pop": 715522,
       "coord": [-104.984862, 39.7392364],
-      "repeal": false
+      "repeal": true
     },
     "add_max": [
       {
         "status": "adopted",
-        "scope": ["main street / special", "transit-oriented"],
+        "scope": ["city center / business district", "transit-oriented"],
         "land": ["all uses"],
-        "date": null
-      }
-    ],
-    "reduce_min": [
-      {
-        "status": "adopted",
-        "scope": [
-          "city center / business district",
-          "citywide",
-          "transit-oriented"
-        ],
-        "land": ["all uses", "residential, multi-family"],
         "date": null
       }
     ],
     "rm_min": [
       {
         "status": "adopted",
-        "scope": [
-          "city center / business district",
-          "citywide",
-          "transit-oriented"
-        ],
-        "land": ["all uses", "commercial", "residential, low-density"],
-        "date": null
-      },
-      {
-        "status": "proposed",
         "scope": ["citywide"],
         "land": ["all uses"],
-        "date": "2025"
+        "date": "2025-08-05"
       }
     ]
   },
@@ -19162,12 +19059,6 @@
         "scope": ["city center / business district"],
         "land": ["all uses"],
         "date": null
-      },
-      {
-        "status": "proposed",
-        "scope": ["citywide"],
-        "land": ["residential, all uses"],
-        "date": "2020-08-25"
       }
     ],
     "rm_min": [
@@ -22702,25 +22593,6 @@
       }
     ]
   },
-  "Ellsworth, WI": {
-    "place": {
-      "name": "Ellsworth",
-      "state": "WI",
-      "country": "US",
-      "type": "city",
-      "pop": 3348,
-      "coord": [-92.4831218, 44.732122],
-      "repeal": false
-    },
-    "reduce_min": [
-      {
-        "status": "proposed",
-        "scope": ["citywide"],
-        "land": ["commercial", "residential, multi-family"],
-        "date": "2022-10-03"
-      }
-    ]
-  },
   "Ellwood City, PA": {
     "place": {
       "name": "Ellwood City",
@@ -25381,14 +25253,6 @@
         "date": "2021-01-27"
       }
     ],
-    "reduce_min": [
-      {
-        "status": "proposed",
-        "scope": ["citywide"],
-        "land": ["all uses"],
-        "date": "2021-01-27"
-      }
-    ],
     "rm_min": [
       {
         "status": "adopted",
@@ -27048,14 +26912,6 @@
       "coord": [-96.4960449, 41.4338363],
       "repeal": false
     },
-    "reduce_min": [
-      {
-        "status": "proposed",
-        "scope": ["city center / business district", "main street / special"],
-        "land": ["all uses", "commercial"],
-        "date": "2022-10-04"
-      }
-    ],
     "rm_min": [
       {
         "status": "adopted",
@@ -30174,14 +30030,6 @@
       "coord": [-88.0125794, 44.5126379],
       "repeal": false
     },
-    "reduce_min": [
-      {
-        "status": "proposed",
-        "scope": ["transit-oriented"],
-        "land": ["residential, multi-family"],
-        "date": "2020-10-06"
-      }
-    ],
     "rm_min": [
       {
         "status": "adopted",
@@ -34080,14 +33928,6 @@
         "land": ["all uses"],
         "date": "2024-07"
       }
-    ],
-    "reduce_min": [
-      {
-        "status": "proposed",
-        "scope": ["citywide"],
-        "land": ["all uses"],
-        "date": "2024-07"
-      }
     ]
   },
   "Hot Springs, AR": {
@@ -34858,12 +34698,6 @@
         "scope": ["city center / business district"],
         "land": ["commercial"],
         "date": null
-      },
-      {
-        "status": "proposed",
-        "scope": ["citywide"],
-        "land": ["all uses"],
-        "date": "2017-03-21"
       }
     ]
   },
@@ -34999,14 +34833,6 @@
       "coord": [-95.7083131, 37.2242358],
       "repeal": false
     },
-    "reduce_min": [
-      {
-        "status": "proposed",
-        "scope": ["citywide"],
-        "land": ["residential, all uses"],
-        "date": "2024-05-23"
-      }
-    ],
     "rm_min": [
       {
         "status": "adopted",
@@ -39045,12 +38871,6 @@
         "scope": ["citywide"],
         "land": ["commercial", "industrial", "medical", "other"],
         "date": null
-      },
-      {
-        "status": "proposed",
-        "scope": ["citywide"],
-        "land": ["all uses"],
-        "date": "2023-11-07"
       }
     ],
     "rm_min": [
@@ -40516,25 +40336,6 @@
       }
     ]
   },
-  "Lebanon, MO": {
-    "place": {
-      "name": "Lebanon",
-      "state": "MO",
-      "country": "US",
-      "type": "city",
-      "pop": 15013,
-      "coord": [-92.6637835, 37.6806669],
-      "repeal": false
-    },
-    "reduce_min": [
-      {
-        "status": "proposed",
-        "scope": ["citywide"],
-        "land": ["all uses"],
-        "date": "2024-06"
-      }
-    ]
-  },
   "Lebanon, OH": {
     "place": {
       "name": "Lebanon",
@@ -40822,26 +40623,6 @@
         "scope": ["main street / special"],
         "land": ["all uses"],
         "date": "2018-05"
-      }
-    ],
-    "reduce_min": [
-      {
-        "status": "proposed",
-        "scope": ["citywide"],
-        "land": ["all uses"],
-        "date": "2024-07-02"
-      },
-      {
-        "status": "proposed",
-        "scope": ["main street / special"],
-        "land": ["all uses"],
-        "date": "2018-05"
-      },
-      {
-        "status": "proposed",
-        "scope": ["main street / special"],
-        "land": ["residential, all uses"],
-        "date": "2019"
       }
     ]
   },
@@ -43799,12 +43580,6 @@
     "reduce_min": [
       {
         "status": "proposed",
-        "scope": ["city center / business district"],
-        "land": ["all uses"],
-        "date": "2015-03"
-      },
-      {
-        "status": "proposed",
         "scope": ["main street / special"],
         "land": ["residential, multi-family"],
         "date": "2017-03"
@@ -43814,18 +43589,6 @@
         "scope": ["city center / business district"],
         "land": ["residential, multi-family"],
         "date": "2024-05-21"
-      },
-      {
-        "status": "proposed",
-        "scope": ["citywide"],
-        "land": ["residential, low-density"],
-        "date": "2022-11-01"
-      },
-      {
-        "status": "proposed",
-        "scope": ["main street / special"],
-        "land": ["all uses"],
-        "date": "2017-03"
       }
     ],
     "rm_min": [
@@ -43975,14 +43738,6 @@
       "coord": [-87.6575841, 44.0886059],
       "repeal": false
     },
-    "reduce_min": [
-      {
-        "status": "proposed",
-        "scope": ["citywide"],
-        "land": ["residential, all uses"],
-        "date": "2022-01"
-      }
-    ],
     "rm_min": [
       {
         "status": "adopted",
@@ -45848,25 +45603,6 @@
       }
     ]
   },
-  "Medford, WI": {
-    "place": {
-      "name": "Medford",
-      "state": "WI",
-      "country": "US",
-      "type": "city",
-      "pop": 4349,
-      "coord": [-90.3460806, 45.1391437],
-      "repeal": false
-    },
-    "reduce_min": [
-      {
-        "status": "proposed",
-        "scope": ["city center / business district", "main street / special"],
-        "land": ["all uses", "residential, all uses"],
-        "date": "2025-06-23"
-      }
-    ]
-  },
   "Mediapolis, IA": {
     "place": {
       "name": "Mediapolis",
@@ -46392,25 +46128,6 @@
       }
     ]
   },
-  "Merriam, KS": {
-    "place": {
-      "name": "Merriam",
-      "state": "KS",
-      "country": "US",
-      "type": "city",
-      "pop": 11098,
-      "coord": [-94.689947, 39.0168058],
-      "repeal": false
-    },
-    "reduce_min": [
-      {
-        "status": "proposed",
-        "scope": ["city center / business district"],
-        "land": ["all uses"],
-        "date": "2021-03-03"
-      }
-    ]
-  },
   "Merrill, WI": {
     "place": {
       "name": "Merrill",
@@ -46817,12 +46534,6 @@
         "scope": ["citywide"],
         "land": ["commercial", "industrial", "medical", "other"],
         "date": "2024"
-      },
-      {
-        "status": "proposed",
-        "scope": ["main street / special"],
-        "land": ["all uses"],
-        "date": "2022-05-03"
       }
     ],
     "rm_min": [
@@ -47871,25 +47582,6 @@
         "scope": ["city center / business district"],
         "land": ["all uses"],
         "date": null
-      }
-    ]
-  },
-  "Mission, KS": {
-    "place": {
-      "name": "Mission",
-      "state": "KS",
-      "country": "US",
-      "type": "city",
-      "pop": 9954,
-      "coord": [-94.6557914, 39.0277832],
-      "repeal": false
-    },
-    "reduce_min": [
-      {
-        "status": "proposed",
-        "scope": ["citywide"],
-        "land": ["all uses", "residential, multi-family"],
-        "date": "2023-12"
       }
     ]
   },
@@ -52455,12 +52147,6 @@
         "scope": ["citywide"],
         "land": ["residential, all uses"],
         "date": null
-      },
-      {
-        "status": "proposed",
-        "scope": ["city center / business district"],
-        "land": ["residential, all uses"],
-        "date": "2009-03-02"
       }
     ],
     "rm_min": [
@@ -54772,14 +54458,6 @@
       "coord": [-95.9383758, 41.2587459],
       "repeal": false
     },
-    "reduce_min": [
-      {
-        "status": "proposed",
-        "scope": ["citywide"],
-        "land": ["commercial", "industrial", "medical", "other"],
-        "date": "2011"
-      }
-    ],
     "rm_min": [
       {
         "status": "adopted",
@@ -54805,18 +54483,6 @@
         "scope": ["city center / business district"],
         "land": ["commercial", "other"],
         "date": "2022-07-12"
-      },
-      {
-        "status": "proposed",
-        "scope": ["city center / business district"],
-        "land": ["commercial"],
-        "date": "2019-03-28"
-      },
-      {
-        "status": "proposed",
-        "scope": ["citywide"],
-        "land": ["all uses"],
-        "date": "2024-10"
       }
     ]
   },
@@ -55355,25 +55021,6 @@
       }
     ]
   },
-  "Osage Beach, MO": {
-    "place": {
-      "name": "Osage Beach",
-      "state": "MO",
-      "country": "US",
-      "type": "city",
-      "pop": 4637,
-      "coord": [-92.6723254, 38.1259916],
-      "repeal": false
-    },
-    "reduce_min": [
-      {
-        "status": "proposed",
-        "scope": ["main street / special"],
-        "land": ["commercial"],
-        "date": "2006-12"
-      }
-    ]
-  },
   "Osakis, MN": {
     "place": {
       "name": "Osakis",
@@ -55480,14 +55127,6 @@
           "residential, multi-family"
         ],
         "date": null
-      }
-    ],
-    "reduce_min": [
-      {
-        "status": "proposed",
-        "scope": ["main street / special"],
-        "land": ["all uses"],
-        "date": "2018-05"
       }
     ],
     "rm_min": [
@@ -59087,14 +58726,6 @@
       "coord": [-90.3957115, 36.7568327],
       "repeal": false
     },
-    "reduce_min": [
-      {
-        "status": "proposed",
-        "scope": ["city center / business district"],
-        "land": ["all uses", "commercial"],
-        "date": "2008-06-02"
-      }
-    ],
     "rm_min": [
       {
         "status": "adopted",
@@ -63793,7 +63424,7 @@
       {
         "status": "adopted",
         "scope": ["citywide"],
-        "land": ["residential, all uses"],
+        "land": ["commercial", "residential, all uses"],
         "date": null
       }
     ],
@@ -63801,7 +63432,7 @@
       {
         "status": "adopted",
         "scope": ["city center / business district"],
-        "land": ["commercial"],
+        "land": ["commercial", "other"],
         "date": null
       }
     ]
@@ -65942,25 +65573,6 @@
       }
     ]
   },
-  "Shawnee, KS": {
-    "place": {
-      "name": "Shawnee",
-      "state": "KS",
-      "country": "US",
-      "type": "city",
-      "pop": 67311,
-      "coord": [-94.71457129941408, 39.02291690836717],
-      "repeal": false
-    },
-    "reduce_min": [
-      {
-        "status": "proposed",
-        "scope": ["city center / business district", "citywide"],
-        "land": ["all uses"],
-        "date": "2021-10-25"
-      }
-    ]
-  },
   "Shawnee, OK": {
     "place": {
       "name": "Shawnee",
@@ -66567,12 +66179,6 @@
         "scope": ["citywide"],
         "land": ["all uses"],
         "date": null
-      },
-      {
-        "status": "proposed",
-        "scope": ["citywide"],
-        "land": ["all uses"],
-        "date": "2021-04-19"
       }
     ]
   },
@@ -68929,12 +68535,6 @@
         "scope": ["citywide"],
         "land": ["all uses"],
         "date": null
-      },
-      {
-        "status": "proposed",
-        "scope": ["main street / special"],
-        "land": ["all uses"],
-        "date": "2012-04-24"
       }
     ]
   },
@@ -70529,14 +70129,6 @@
         "land": ["all uses"],
         "date": "2020-02-17"
       }
-    ],
-    "reduce_min": [
-      {
-        "status": "proposed",
-        "scope": ["city center / business district"],
-        "land": ["all uses"],
-        "date": "2020-02-17"
-      }
     ]
   },
   "Strasburg, OH": {
@@ -70747,14 +70339,6 @@
       "coord": [-87.377042, 44.8341639],
       "repeal": false
     },
-    "reduce_min": [
-      {
-        "status": "proposed",
-        "scope": ["main street / special"],
-        "land": ["all uses"],
-        "date": "2020-10-20"
-      }
-    ],
     "rm_min": [
       {
         "status": "adopted",
@@ -73400,14 +72984,6 @@
       "repeal": false
     },
     "add_max": [
-      {
-        "status": "proposed",
-        "scope": ["citywide"],
-        "land": ["all uses"],
-        "date": "2024-07-16"
-      }
-    ],
-    "reduce_min": [
       {
         "status": "proposed",
         "scope": ["citywide"],
@@ -77365,14 +76941,6 @@
       "coord": [-89.0859464, 44.3580348],
       "repeal": false
     },
-    "reduce_min": [
-      {
-        "status": "proposed",
-        "scope": ["citywide"],
-        "land": ["commercial", "residential, all uses"],
-        "date": "2021-03"
-      }
-    ],
     "rm_min": [
       {
         "status": "adopted",
@@ -77406,12 +76974,6 @@
         "scope": ["city center / business district", "citywide"],
         "land": ["all uses", "commercial", "industrial", "medical", "other"],
         "date": null
-      },
-      {
-        "status": "proposed",
-        "scope": ["city center / business district"],
-        "land": ["commercial"],
-        "date": "2017"
       }
     ],
     "rm_min": [
@@ -77452,14 +77014,6 @@
       "coord": [-96.528167, 40.91742],
       "repeal": false
     },
-    "reduce_min": [
-      {
-        "status": "proposed",
-        "scope": ["citywide"],
-        "land": ["residential, multi-family"],
-        "date": "2023-05"
-      }
-    ],
     "rm_min": [
       {
         "status": "adopted",
