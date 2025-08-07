@@ -18511,6 +18511,25 @@
       }
     ]
   },
+  "Deerfield, IL": {
+    "place": {
+      "name": "Deerfield",
+      "state": "IL",
+      "country": "US",
+      "type": "city",
+      "pop": 19196,
+      "coord": [-87.8445119, 42.1711365],
+      "repeal": false
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["all uses"],
+        "date": null
+      }
+    ]
+  },
   "Deerfield, WI": {
     "place": {
       "name": "Deerfield",
@@ -37157,6 +37176,25 @@
       {
         "status": "adopted",
         "scope": ["city center / business district"],
+        "land": ["all uses"],
+        "date": null
+      }
+    ]
+  },
+  "Kent County, DE": {
+    "place": {
+      "name": "Kent County",
+      "state": "DE",
+      "country": "US",
+      "type": "city",
+      "pop": 181851,
+      "coord": [-75.484116, 39.1156594],
+      "repeal": false
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
         "land": ["all uses"],
         "date": null
       }
@@ -63285,6 +63323,25 @@
         "scope": ["city center / business district"],
         "land": ["all uses"],
         "date": "2019-11-18"
+      }
+    ]
+  },
+  "Sainte-Adèle, QC": {
+    "place": {
+      "name": "Sainte-Adèle",
+      "state": "QC",
+      "country": "CA",
+      "type": "city",
+      "pop": 14010,
+      "coord": [-74.1359579, 45.951895],
+      "repeal": false
+    },
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["commercial", "industrial", "medical", "other"],
+        "date": "2021-07-19"
       }
     ]
   },
