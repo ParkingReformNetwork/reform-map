@@ -9,6 +9,7 @@ import {
   Date,
   RawPlace,
   RawCoreEntry,
+  RawCoreBenefitDistrict,
 } from "../../src/js/model/types";
 
 /** The option values for a single dataset. */
@@ -31,16 +32,28 @@ class OptionValues {
     this.year = new Set();
   }
 
-  addLandUse(place: RawPlace, landUseRecord: RawCoreLandUsePolicy): void {
+  #addPlace(place: RawPlace): void {
     this.placeType.add(place.type);
     this.country.add(COUNTRY_MAPPING[place.country] ?? place.country);
+  }
+
+  #addDate(date: string | null): void {
+    this.year.add(date ? new Date(date).parsed.year.toString() : UNKNOWN_YEAR);
+  }
+
+  addBenefitDistrict(
+    place: RawPlace,
+    benefitDistrict: RawCoreBenefitDistrict,
+  ): void {
+    this.#addPlace(place);
+    this.#addDate(benefitDistrict.date);
+  }
+
+  addLandUse(place: RawPlace, landUseRecord: RawCoreLandUsePolicy): void {
+    this.#addPlace(place);
+    this.#addDate(landUseRecord.date);
     landUseRecord.scope.forEach((v) => this.scope.add(v));
     landUseRecord.land.forEach((v) => this.landUse.add(v));
-    this.year.add(
-      landUseRecord.date
-        ? new Date(landUseRecord.date).parsed.year.toString()
-        : UNKNOWN_YEAR,
-    );
   }
 
   export() {
@@ -68,6 +81,9 @@ export function determineOptionValues(entries: RawCoreEntry[]) {
   const rmMinAdopted = new OptionValues();
   const rmMinProposed = new OptionValues();
   const rmMinRepealed = new OptionValues();
+  const benefitDistrictAdopted = new OptionValues();
+  const benefitDistrictProposed = new OptionValues();
+  const benefitDistrictRepealed = new OptionValues();
 
   entries.forEach((entry) => {
     entry.add_max?.forEach((policyRecord) => {
@@ -100,6 +116,16 @@ export function determineOptionValues(entries: RawCoreEntry[]) {
       any.addLandUse(entry.place, policyRecord);
       policy.addLandUse(entry.place, policyRecord);
     });
+    entry.benefit_district?.forEach((record) => {
+      merged.addBenefitDistrict(entry.place, record);
+      const [any, policy] = {
+        adopted: [anyAdopted, benefitDistrictAdopted],
+        proposed: [anyProposed, benefitDistrictProposed],
+        repealed: [anyRepealed, benefitDistrictRepealed],
+      }[record.status];
+      any.addBenefitDistrict(entry.place, record);
+      policy.addBenefitDistrict(entry.place, record);
+    });
   });
 
   const result = {
@@ -116,6 +142,9 @@ export function determineOptionValues(entries: RawCoreEntry[]) {
     rmMinAdopted: rmMinAdopted.export(),
     rmMinProposed: rmMinProposed.export(),
     rmMinRepealed: rmMinRepealed.export(),
+    benefitDistrictAdopted: benefitDistrictAdopted.export(),
+    benefitDistrictProposed: benefitDistrictProposed.export(),
+    benefitDistrictRepealed: benefitDistrictRepealed.export(),
   };
   return result;
 }

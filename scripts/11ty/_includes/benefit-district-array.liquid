@@ -1,0 +1,10 @@
+{%- if array.size == 1 -%}
+  {% render "benefit-district-body" record: array[0] %}
+{%- else -%}
+  {%- for item in array -%}
+    <section>
+      <h3>Policy record {{forloop.index}}</h3>
+      {% render "benefit-district-body" record: item %}
+    </section>
+  {%- endfor -%}
+{%- endif -%}

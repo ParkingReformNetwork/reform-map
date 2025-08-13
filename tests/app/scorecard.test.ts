@@ -3,6 +3,7 @@ import { expect, test } from "@playwright/test";
 import { loadMap } from "./utils";
 import { generateScorecard } from "../../src/js/map-features/scorecard";
 import {
+  ProcessedCoreBenefitDistrict,
   ProcessedCoreEntry,
   ProcessedCoreLandUsePolicy,
   ProcessedPlace,
@@ -60,11 +61,20 @@ test("generateScorecard()", () => {
     land: [],
     date: null,
   };
-  const entry: ProcessedCoreEntry = {
-    place,
-    add_max: [landUsePolicy],
+  const benefitDistrict: ProcessedCoreBenefitDistrict = {
+    status: "proposed",
+    date: null,
   };
-  expect(generateScorecard(entry, "My City, AZ")).toEqual(
+
+  expect(
+    generateScorecard(
+      {
+        place,
+        add_max: [landUsePolicy],
+      },
+      "My City, AZ",
+    ),
+  ).toEqual(
     `
     <header class="scorecard-header">
       <h2 class="scorecard-title">My City, AZ</h2>
@@ -92,6 +102,7 @@ test("generateScorecard()", () => {
       { ...landUsePolicy, status: "proposed" },
     ],
     rm_min: [landUsePolicy],
+    benefit_district: [benefitDistrict],
   };
   expect(generateScorecard(repealed, "My City, AZ")).toEqual(
     `
@@ -109,7 +120,7 @@ test("generateScorecard()", () => {
       <li>245,132 residents</li>
       
     </ul>
-    <div>Reform types:</div><ul><li>Add parking maximums (proposed and repealed)</li><li>Remove parking minimums (adopted)</li></ul>
+    <div>Reform types:</div><ul><li>Add parking maximums (proposed and repealed)</li><li>Remove parking minimums (adopted)</li><li>Parking benefit district (proposed)</li></ul>
     <a class="external-link" target="_blank" href=https://my-site.org>Details and citations <i aria-hidden="true" class="fa-solid fa-arrow-right"></i></a>
     `,
   );

@@ -27,6 +27,7 @@ interface AnyPolicySet {
     minimums_removal: string;
     minimums_reduction: string;
     maximums: string;
+    benefit_districts: string;
   };
 }
 
@@ -40,12 +41,15 @@ function determineAnyPolicySet(
     entry.reduce_min?.some((policy) => policy.status === status) ?? false;
   const hasMax =
     entry.add_max?.some((policy) => policy.status === status) ?? false;
+  const hasBenefitDistrict =
+    entry.benefit_district?.some((record) => record.status === status) ?? false;
   return {
-    hasReforms: hasRm || hasReduce || hasMax,
+    hasReforms: hasRm || hasReduce || hasMax || hasBenefitDistrict,
     csvValues: {
       minimums_removal: toBoolean(hasRm),
       minimums_reduction: toBoolean(hasReduce),
       maximums: toBoolean(hasMax),
+      benefit_districts: toBoolean(hasBenefitDistrict),
     },
   };
 }
@@ -105,6 +109,18 @@ export function createAnyPolicyCsvs(data: ProcessedCompleteEntry[]): {
   };
 }
 
+function validateNumEntries(
+  csv: string,
+  data: ProcessedCompleteEntry[],
+  getter: (entry: ProcessedCompleteEntry) => Array<any> | undefined,
+): void {
+  const numJson = sum(data.flatMap((entry) => getter(entry)?.length ?? 0));
+  const numCsv = csv.split("\r\n").length - 1;
+  if (numJson !== numCsv) {
+    throw new Error(`CSV has unequal entries to JSON: ${numCsv} vs ${numJson}`);
+  }
+}
+
 export function createLandUseCsv(
   data: ProcessedCompleteEntry[],
   getter: (
@@ -135,14 +151,34 @@ export function createLandUseCsv(
     }));
   });
   const csv = Papa.unparse(entries);
+  validateNumEntries(csv, data, getter);
+  return csv;
+}
 
-  // Validate expected number of entries (total # of matching policy records).
-  const numJson = sum(data.flatMap((entry) => getter(entry)?.length ?? 0));
-  const numCsv = csv.split("\r\n").length - 1;
-  if (numJson !== numCsv) {
-    throw new Error(`CSV has unequal entries to JSON: ${numCsv} vs ${numJson}`);
-  }
-
+export function createBenefitDistrictCsv(
+  data: ProcessedCompleteEntry[],
+): string {
+  const entries = data.flatMap((entry) => {
+    const records = entry.benefit_district;
+    if (!records) return [];
+    return records.map((record) => ({
+      place: entry.place.name,
+      state: entry.place.state,
+      country: entry.place.country,
+      population: entry.place.pop,
+      place_type: entry.place.type,
+      lat: entry.place.coord[1],
+      long: entry.place.coord[0],
+      status: record.status,
+      reform_date: record.date?.raw,
+      summary: record.summary,
+      num_citations: record.citations.length,
+      reporter: record.reporter,
+      prn_url: entry.place.url,
+    }));
+  });
+  const csv = Papa.unparse(entries);
+  validateNumEntries(csv, data, (entry) => entry.benefit_district);
   return csv;
 }
 
@@ -178,6 +214,9 @@ async function main(): Promise<void> {
 
   const rmMin = createLandUseCsv(data, (entry) => entry.rm_min);
   await writeCsv(rmMin, "data/generated/remove_minimums.csv");
+
+  const benefitDistrict = createBenefitDistrictCsv(data);
+  await writeCsv(benefitDistrict, "data/generated/benefit_districts.csv");
 
   const files = await glob("data/generated/*");
   await $`zip -j data/generated/mandates-map-data.zip ${files}`;

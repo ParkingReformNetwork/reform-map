@@ -15,7 +15,12 @@ import {
 } from "tabulator-tables";
 
 import { PlaceFilterManager, PolicyTypeFilter } from "./state/FilterState";
-import { Date, ProcessedCoreLandUsePolicy, ReformStatus } from "./model/types";
+import {
+  Date,
+  ProcessedCoreBenefitDistrict,
+  ProcessedCoreLandUsePolicy,
+  ReformStatus,
+} from "./model/types";
 import { ViewStateObservable } from "./layout/viewToggle";
 import { determineAllPolicyTypes } from "./model/data";
 
@@ -85,14 +90,22 @@ const PLACE_COLUMNS: ColumnDefinition[] = [
   },
 ];
 
-const POLICY_COLUMNS: ColumnDefinition[] = [
-  {
-    title: "Date",
-    field: "date",
-    width: 110,
-    formatter: formatDate,
-    sorter: compareDates,
-  },
+const DATE_COLUMN: ColumnDefinition = {
+  title: "Date",
+  field: "date",
+  width: 110,
+  formatter: formatDate,
+  sorter: compareDates,
+};
+
+const BENEFIT_DISTRICT_COLUMNS: ColumnDefinition[] = [
+  ...PLACE_COLUMNS,
+  DATE_COLUMN,
+];
+
+const LAND_USE_COLUMNS: ColumnDefinition[] = [
+  ...PLACE_COLUMNS,
+  DATE_COLUMN,
   {
     title: "Scope",
     field: "scope",
@@ -109,10 +122,6 @@ const POLICY_COLUMNS: ColumnDefinition[] = [
   },
 ];
 
-const SINGLE_POLICY_COLUMNS: ColumnDefinition[] = [
-  ...PLACE_COLUMNS,
-  ...POLICY_COLUMNS,
-];
 const ANY_REFORM_COLUMNS: ColumnDefinition[] = [
   ...PLACE_COLUMNS,
   {
@@ -136,6 +145,13 @@ const ANY_REFORM_COLUMNS: ColumnDefinition[] = [
     formatter: formatBoolean,
     hozAlign: "center",
   },
+  {
+    title: "Benefit district",
+    field: "benefitDistrict",
+    width: 120,
+    formatter: formatBoolean,
+    hozAlign: "center",
+  },
 ];
 
 export default function initTable(
@@ -153,7 +169,7 @@ export default function initTable(
   ]);
 
   // For "any parking reform", we need distinct datasets for each ReformStatus because the
-  // column values change. Whereas for the SinglePolicy datasets, we can use a
+  // column values change. Whereas for the policy record datasets, we can use a
   // single dataset for all the statuses because the filter code (from FilterState)
   // will already filter out records that don't match the current status.
   const dataAnyAdopted: any[] = [];
@@ -162,6 +178,7 @@ export default function initTable(
   const dataReduceMin: any[] = [];
   const dataRmMin: any[] = [];
   const dataAddMax: any[] = [];
+  const dataBenefitDistrict: any[] = [];
   Object.entries(filterManager.entries).forEach(([placeId, entry]) => {
     const common = {
       placeId,
@@ -179,6 +196,7 @@ export default function initTable(
       reduceMin: adopted.includes("reduce parking minimums"),
       rmMin: adopted.includes("remove parking minimums"),
       addMax: adopted.includes("add parking maximums"),
+      benefitDistrict: adopted.includes("parking benefit district"),
     });
     const proposed = determineAllPolicyTypes(entry, "proposed");
     dataAnyProposed.push({
@@ -186,6 +204,7 @@ export default function initTable(
       reduceMin: proposed.includes("reduce parking minimums"),
       rmMin: proposed.includes("remove parking minimums"),
       addMax: proposed.includes("add parking maximums"),
+      benefitDistrict: proposed.includes("parking benefit district"),
     });
     const repealed = determineAllPolicyTypes(entry, "repealed");
     dataAnyRepealed.push({
@@ -193,6 +212,7 @@ export default function initTable(
       reduceMin: repealed.includes("reduce parking minimums"),
       rmMin: repealed.includes("remove parking minimums"),
       addMax: repealed.includes("add parking maximums"),
+      benefitDistrict: repealed.includes("parking benefit district"),
     });
 
     const saveLandUsePolicies = (
@@ -210,9 +230,23 @@ export default function initTable(
         }),
       );
 
+    const saveParkingBenefit = (
+      collection: any[],
+      policies: ProcessedCoreBenefitDistrict[] | undefined,
+    ): void =>
+      policies?.forEach((policy, i) =>
+        collection.push({
+          ...common,
+          policyIdx: i,
+          date: policy.date,
+          status: policy.status,
+        }),
+      );
+
     saveLandUsePolicies(dataAddMax, entry.add_max);
     saveLandUsePolicies(dataReduceMin, entry.reduce_min);
     saveLandUsePolicies(dataRmMin, entry.rm_min);
+    saveParkingBenefit(dataBenefitDistrict, entry.benefit_district);
   });
 
   const filterStateToConfig: Record<
@@ -225,19 +259,24 @@ export default function initTable(
       repealed: [ANY_REFORM_COLUMNS, dataAnyRepealed],
     },
     "reduce parking minimums": {
-      adopted: [SINGLE_POLICY_COLUMNS, dataReduceMin],
-      proposed: [SINGLE_POLICY_COLUMNS, dataReduceMin],
-      repealed: [SINGLE_POLICY_COLUMNS, dataReduceMin],
+      adopted: [LAND_USE_COLUMNS, dataReduceMin],
+      proposed: [LAND_USE_COLUMNS, dataReduceMin],
+      repealed: [LAND_USE_COLUMNS, dataReduceMin],
     },
     "remove parking minimums": {
-      adopted: [SINGLE_POLICY_COLUMNS, dataRmMin],
-      proposed: [SINGLE_POLICY_COLUMNS, dataRmMin],
-      repealed: [SINGLE_POLICY_COLUMNS, dataRmMin],
+      adopted: [LAND_USE_COLUMNS, dataRmMin],
+      proposed: [LAND_USE_COLUMNS, dataRmMin],
+      repealed: [LAND_USE_COLUMNS, dataRmMin],
     },
     "add parking maximums": {
-      adopted: [SINGLE_POLICY_COLUMNS, dataAddMax],
-      proposed: [SINGLE_POLICY_COLUMNS, dataAddMax],
-      repealed: [SINGLE_POLICY_COLUMNS, dataAddMax],
+      adopted: [LAND_USE_COLUMNS, dataAddMax],
+      proposed: [LAND_USE_COLUMNS, dataAddMax],
+      repealed: [LAND_USE_COLUMNS, dataAddMax],
+    },
+    "parking benefit district": {
+      adopted: [BENEFIT_DISTRICT_COLUMNS, dataBenefitDistrict],
+      proposed: [BENEFIT_DISTRICT_COLUMNS, dataBenefitDistrict],
+      repealed: [BENEFIT_DISTRICT_COLUMNS, dataBenefitDistrict],
     },
   };
 

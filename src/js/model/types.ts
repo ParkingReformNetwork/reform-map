@@ -48,15 +48,26 @@ export interface RawPlace {
 }
 export type ProcessedPlace = RawPlace & { url: string };
 
-export const ALL_POLICY_TYPE = [
+const LAND_USE_POLICY_TYPE = [
   "add parking maximums",
   "reduce parking minimums",
   "remove parking minimums",
+] as const;
+export type LandUsePolicyType = (typeof LAND_USE_POLICY_TYPE)[number];
+
+export const ALL_POLICY_TYPE = [
+  ...LAND_USE_POLICY_TYPE,
+  "parking benefit district",
 ] as const;
 export type PolicyType = (typeof ALL_POLICY_TYPE)[number];
 
 export const ALL_REFORM_STATUS = ["adopted", "proposed", "repealed"] as const;
 export type ReformStatus = (typeof ALL_REFORM_STATUS)[number];
+
+/// Every benefit district record has these values. It is missing some fields like `date`.
+export interface BaseBenefitDistrict {
+  status: ReformStatus;
+}
 
 /// Every land use policy has these values. It is missing some fields like `date`.
 export interface BaseLandUsePolicy {
@@ -65,6 +76,13 @@ export interface BaseLandUsePolicy {
   land: string[];
 }
 
+export type RawCoreBenefitDistrict = BaseBenefitDistrict & {
+  date: string | null;
+};
+export type ProcessedCoreBenefitDistrict = BaseBenefitDistrict & {
+  date: Date | null;
+};
+
 export type RawCoreLandUsePolicy = BaseLandUsePolicy & { date: string | null };
 export type ProcessedCoreLandUsePolicy = BaseLandUsePolicy & {
   date: Date | null;
@@ -72,6 +90,7 @@ export type ProcessedCoreLandUsePolicy = BaseLandUsePolicy & {
 
 export interface RawCoreEntry {
   place: RawPlace;
+  benefit_district?: RawCoreBenefitDistrict[];
   reduce_min?: RawCoreLandUsePolicy[];
   rm_min?: RawCoreLandUsePolicy[];
   add_max?: RawCoreLandUsePolicy[];
@@ -79,6 +98,7 @@ export interface RawCoreEntry {
 
 export interface ProcessedCoreEntry {
   place: ProcessedPlace;
+  benefit_district?: ProcessedCoreBenefitDistrict[];
   reduce_min?: ProcessedCoreLandUsePolicy[];
   rm_min?: ProcessedCoreLandUsePolicy[];
   add_max?: ProcessedCoreLandUsePolicy[];

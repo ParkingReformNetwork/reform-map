@@ -24,7 +24,7 @@ test.describe("PlaceFilterManager.matchedPolicyRecords()", () => {
       landUse: new Set(["all uses", "commercial", "other"]),
       country: new Set(["United States", "Brazil"]),
       placeType: new Set(["city", "county"]),
-      year: new Set(["2023", "2024"]),
+      year: new Set(["1997", "2023", "2024"]),
       populationSliderIndexes: [0, POPULATION_MAX_INDEX],
     };
   }
@@ -84,6 +84,12 @@ test.describe("PlaceFilterManager.matchedPolicyRecords()", () => {
             date: new Date("2023"),
           },
         ],
+        benefit_district: [
+          {
+            status: "adopted",
+            date: new Date("1997"),
+          },
+        ],
       },
     };
   }
@@ -94,12 +100,14 @@ test.describe("PlaceFilterManager.matchedPolicyRecords()", () => {
       hasAddMax: false,
       hasRmMin: false,
       hasReduceMin: true,
+      hasBenefitDistrict: false,
     };
     const expectedPlace2Match = {
       type: "any",
       hasAddMax: true,
       hasRmMin: true,
       hasReduceMin: false,
+      hasBenefitDistrict: true,
     };
 
     const manager = new PlaceFilterManager(defaultEntries(), defaultState());
@@ -159,6 +167,7 @@ test.describe("PlaceFilterManager.matchedPolicyRecords()", () => {
         hasAddMax: true,
         hasRmMin: false,
         hasReduceMin: false,
+        hasBenefitDistrict: false,
       },
     });
     manager.update({
@@ -319,6 +328,48 @@ test.describe("PlaceFilterManager.matchedPolicyRecords()", () => {
       allMinimumsRemovedToggle: true,
     });
     expect(manager2.matchedPlaces).toEqual({});
+  });
+
+  test("benefit district", () => {
+    const manager = new PlaceFilterManager(defaultEntries(), {
+      ...defaultState(),
+      policyTypeFilter: "parking benefit district",
+      // Should be ignored.
+      includedPolicyChanges: new Set(),
+      scope: new Set(),
+      landUse: new Set(),
+    });
+    expect(manager.matchedPlaces).toEqual({
+      "Place 2": {
+        type: "single policy",
+        policyType: "parking benefit district",
+        matchingIndexes: [0],
+      },
+    });
+
+    manager.update({ status: "proposed" });
+    expect(manager.matchedPlaces).toEqual({});
+    manager.update({ status: defaultState().status });
+
+    manager.update({ year: new Set(["2024"]) });
+    expect(manager.matchedPlaces).toEqual({});
+    manager.update({ year: defaultState().year });
+
+    // `allMinimumsRemovedToggle` should not matter.
+    const noRepealsEntries = defaultEntries();
+    noRepealsEntries["Place 2"].place.repeal = false;
+    const manager2 = new PlaceFilterManager(noRepealsEntries, {
+      ...defaultState(),
+      policyTypeFilter: "parking benefit district",
+      allMinimumsRemovedToggle: true,
+    });
+    expect(manager2.matchedPlaces).toEqual({
+      "Place 2": {
+        type: "single policy",
+        policyType: "parking benefit district",
+        matchingIndexes: [0],
+      },
+    });
   });
 
   test("search", () => {

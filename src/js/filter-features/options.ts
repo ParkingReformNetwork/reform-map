@@ -111,6 +111,20 @@ export class FilterOptions {
           ...optionValuesData.rmMinRepealed,
         },
       },
+      "parking benefit district": {
+        adopted: {
+          includedPolicyChanges: [],
+          ...optionValuesData.benefitDistrictAdopted,
+        },
+        proposed: {
+          includedPolicyChanges: [],
+          ...optionValuesData.benefitDistrictProposed,
+        },
+        repealed: {
+          includedPolicyChanges: [],
+          ...optionValuesData.benefitDistrictRepealed,
+        },
+      },
     };
   }
 
@@ -555,6 +569,7 @@ export function initFilterOptions(
     legend: "Reform scopes",
     hide: (filterState) =>
       filterState.policyTypeFilter === "any parking reform" ||
+      filterState.policyTypeFilter === "parking benefit district" ||
       isAllMinimumsRemovedToggleInEffect(filterState),
   });
   initFilterGroup(filterManager, filterOptions, optionsDiv, {
@@ -563,6 +578,7 @@ export function initFilterOptions(
     legend: "Affected land uses",
     hide: (filterState) =>
       filterState.policyTypeFilter === "any parking reform" ||
+      filterState.policyTypeFilter === "parking benefit district" ||
       isAllMinimumsRemovedToggleInEffect(filterState),
   });
   initFilterGroup(filterManager, filterOptions, optionsDiv, {

@@ -58,6 +58,7 @@ test("determineOptionValues()", () => {
           date: "2025",
         },
       ],
+      benefit_district: [{ status: "adopted", date: "1997" }],
     },
   ];
   const expected = {
@@ -77,14 +78,14 @@ test("determineOptionValues()", () => {
         "other",
         "residential, all uses",
       ],
-      year: [UNKNOWN_YEAR, "2025", "2022"],
+      year: [UNKNOWN_YEAR, "2025", "2022", "1997"],
     },
     anyAdopted: {
       placeType: ["city", "country"],
       country: ["United States", "Brazil"],
       scope: ["city center / business district", "regional"],
       landUse: ["all uses", "commercial"],
-      year: [UNKNOWN_YEAR],
+      year: [UNKNOWN_YEAR, "1997"],
     },
     anyProposed: {
       placeType: ["country"],
@@ -157,6 +158,27 @@ test("determineOptionValues()", () => {
       year: [],
     },
     rmMinRepealed: {
+      placeType: [],
+      country: [],
+      scope: [],
+      landUse: [],
+      year: [],
+    },
+    benefitDistrictAdopted: {
+      placeType: ["country"],
+      country: ["Brazil"],
+      scope: [],
+      landUse: [],
+      year: ["1997"],
+    },
+    benefitDistrictProposed: {
+      placeType: [],
+      country: [],
+      scope: [],
+      landUse: [],
+      year: [],
+    },
+    benefitDistrictRepealed: {
       placeType: [],
       country: [],
       scope: [],

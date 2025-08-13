@@ -10,6 +10,8 @@ import {
   RawCoreLandUsePolicy,
   ProcessedPlace,
   ProcessedCoreLandUsePolicy,
+  RawCoreBenefitDistrict,
+  ProcessedCoreBenefitDistrict,
 } from "../../src/js/model/types";
 import { processRawCoreEntry } from "../../src/js/model/data";
 
@@ -26,6 +28,12 @@ export interface Citation {
   screenshots: DirectusFile[];
 }
 
+export interface ExtendedBenefitDistrict {
+  summary: string;
+  reporter: string | null;
+  citations: Citation[];
+}
+
 export interface ExtendedLandUsePolicy {
   summary: string;
   reporter: string | null;
@@ -33,33 +41,34 @@ export interface ExtendedLandUsePolicy {
   citations: Citation[];
 }
 
-export type RawExtendedEntry = {
+export type ExtendedEntry = {
+  benefit_district?: ExtendedBenefitDistrict[];
   reduce_min?: ExtendedLandUsePolicy[];
   rm_min?: ExtendedLandUsePolicy[];
   add_max?: ExtendedLandUsePolicy[];
 };
 
+export type RawCompleteBenefitDistrict = RawCoreBenefitDistrict &
+  ExtendedBenefitDistrict;
 export type RawCompleteLandUsePolicy = RawCoreLandUsePolicy &
   ExtendedLandUsePolicy;
 
 export interface RawCompleteEntry {
   place: RawPlace;
+  benefit_district?: Array<RawCompleteBenefitDistrict>;
   reduce_min?: Array<RawCompleteLandUsePolicy>;
   rm_min?: Array<RawCompleteLandUsePolicy>;
   add_max?: Array<RawCompleteLandUsePolicy>;
 }
 
-export interface ProcessedExtendedEntry {
-  reduce_min?: ExtendedLandUsePolicy[];
-  rm_min?: ExtendedLandUsePolicy[];
-  add_max?: ExtendedLandUsePolicy[];
-}
-
+export type ProcessedCompleteBenefitDistrict = ProcessedCoreBenefitDistrict &
+  ExtendedBenefitDistrict;
 export type ProcessedCompleteLandUsePolicy = ProcessedCoreLandUsePolicy &
   ExtendedLandUsePolicy;
 
 export interface ProcessedCompleteEntry {
   place: ProcessedPlace;
+  benefit_district?: Array<ProcessedCompleteBenefitDistrict>;
   reduce_min?: Array<ProcessedCompleteLandUsePolicy>;
   rm_min?: Array<ProcessedCompleteLandUsePolicy>;
   add_max?: Array<ProcessedCompleteLandUsePolicy>;
@@ -73,7 +82,7 @@ export async function readRawCoreData(): Promise<
 }
 
 export async function readRawExtendedData(): Promise<
-  Record<PlaceId, RawExtendedEntry>
+  Record<PlaceId, ExtendedEntry>
 > {
   const raw = await fs.readFile("data/extended.json", "utf8");
   return JSON.parse(raw);
@@ -92,6 +101,28 @@ function mergeRawLandUsePolicies(
       if (!corePolicy || !extendedPolicy) {
         throw new Error(
           `Unequal number of '${policyKeyName}' entries for '${placeId}' between data/core.json and data/extended.json`,
+        );
+      }
+      return {
+        ...corePolicy,
+        ...extendedPolicy,
+      };
+    },
+  );
+}
+
+function mergeRawBenefitDistrict(
+  corePolicies: RawCoreBenefitDistrict[],
+  extendedPolicies: ExtendedBenefitDistrict[],
+  placeId: PlaceId,
+): RawCompleteBenefitDistrict[] {
+  return zipWith(
+    corePolicies,
+    extendedPolicies,
+    (corePolicy, extendedPolicy) => {
+      if (!corePolicy || !extendedPolicy) {
+        throw new Error(
+          `Unequal number of 'benefit_district' entries for '${placeId}' between data/core.json and data/extended.json`,
         );
       }
       return {
@@ -143,10 +174,27 @@ export async function readRawCompleteData(): Promise<
                 "add_max",
               ),
             }),
+          ...(coreEntry.benefit_district &&
+            extendedEntry.benefit_district && {
+              benefit_district: mergeRawBenefitDistrict(
+                coreEntry.benefit_district,
+                extendedEntry.benefit_district,
+                placeId,
+              ),
+            }),
         },
       ];
     }),
   );
+}
+
+function processCompleteBenefitDistrict(
+  record: RawCompleteBenefitDistrict,
+): ProcessedCompleteBenefitDistrict {
+  return {
+    ...record,
+    date: Date.fromNullable(record.date),
+  };
 }
 
 function processCompleteLandUsePolicy(
@@ -177,17 +225,23 @@ export async function readProcessedCompleteData(): Promise<
       if (entry.rm_min) {
         result.rm_min = entry.rm_min.map(processCompleteLandUsePolicy);
       }
+      if (entry.benefit_district) {
+        result.benefit_district = entry.benefit_district.map(
+          processCompleteBenefitDistrict,
+        );
+      }
       return [placeId, result];
     }),
   );
 }
 
-export function getCitations(entry: RawExtendedEntry): Citation[] {
+export function getCitations(entry: ExtendedEntry): Citation[] {
   const fromArray = (
-    policies: ExtendedLandUsePolicy[] | undefined,
+    policies: Array<{ citations: Citation[] }> | undefined,
   ): Citation[] => policies?.flatMap((policy) => policy.citations) ?? [];
 
   return [
+    ...fromArray(entry.benefit_district),
     ...fromArray(entry.add_max),
     ...fromArray(entry.rm_min),
     ...fromArray(entry.reduce_min),

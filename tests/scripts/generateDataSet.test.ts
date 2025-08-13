@@ -2,6 +2,7 @@ import { expect, test } from "@playwright/test";
 
 import {
   createAnyPolicyCsvs,
+  createBenefitDistrictCsv,
   createLandUseCsv,
 } from "../../scripts/generateDataSet";
 import type { Citation, ProcessedCompleteEntry } from "../../scripts/lib/data";
@@ -88,6 +89,27 @@ test("generate CSVs", async ({}, testInfo) => {
         },
       ],
     },
+    {
+      place: {
+        name: "Place with PBD",
+        state: "GDL",
+        country: "MX",
+        type: "city",
+        repeal: false,
+        pop: 5141414,
+        coord: [90.3, 30.23],
+        url: "https://parkingreform.org/place-with-pbd.html",
+      },
+      benefit_district: [
+        {
+          summary: "A really cool district",
+          status: "proposed",
+          date: null,
+          reporter: "Donald Shoup",
+          citations: [],
+        },
+      ],
+    },
   ];
   const { adopted, proposed, repealed } = createAnyPolicyCsvs(entries);
   expect(normalize(adopted)).toMatchSnapshot("overview-adopted.csv");
@@ -96,4 +118,7 @@ test("generate CSVs", async ({}, testInfo) => {
 
   const maximums = createLandUseCsv(entries, (entry) => entry.add_max);
   expect(normalize(maximums)).toMatchSnapshot("maximums.csv");
+
+  const benefitDistrict = createBenefitDistrictCsv(entries);
+  expect(normalize(benefitDistrict)).toMatchSnapshot("benefit-district.csv");
 });

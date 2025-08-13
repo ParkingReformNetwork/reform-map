@@ -16,10 +16,12 @@ import {
   readItemsBatched,
   readCitationsFilesBatched,
   LandUseRecord,
+  BenefitDistrict,
 } from "./lib/directus";
 import {
   PlaceId as PlaceStringId,
   PolicyType,
+  RawCoreBenefitDistrict,
   RawCoreLandUsePolicy,
 } from "../src/js/model/types";
 import { getLongLat, initGeocoder } from "./lib/geocoder";
@@ -28,6 +30,9 @@ import {
   Citation,
   ExtendedLandUsePolicy,
   RawCompleteEntry,
+  RawCompleteLandUsePolicy,
+  RawCompleteBenefitDistrict,
+  ExtendedBenefitDistrict,
 } from "./lib/data";
 import { saveOptionValues } from "./lib/optionValues";
 
@@ -123,6 +128,35 @@ async function readLandUseRecords(
   return groupBy(records, (record) => placeDirectusIdToStringId[record.place]);
 }
 
+async function readBenefitDistrictRecords(
+  client: DirectusClient,
+  placeDirectusIdToStringId: Record<number, PlaceStringId>,
+): Promise<Record<PlaceStringId, Array<Partial<BenefitDistrict>>>> {
+  const records = await readItemsBatched(
+    client,
+    "benefit_districts",
+    [
+      "id",
+      "place",
+      "archived",
+      "last_verified_at",
+      "status",
+      "summary",
+      "reporter",
+      "reform_date",
+      "citations",
+    ],
+    100,
+    {
+      _and: [
+        { last_verified_at: { _nnull: true } },
+        { archived: { _eq: false } },
+      ],
+    },
+  );
+  return groupBy(records, (record) => placeDirectusIdToStringId[record.place]);
+}
+
 async function readCitations(
   client: DirectusClient,
 ): Promise<Record<number, Partial<DirectusCitation>>> {
@@ -136,13 +170,14 @@ async function readCitations(
   return Object.fromEntries(rawCitations.map((record) => [record.id, record]));
 }
 
-async function readCitationsByLandUseJunctionId(
+async function readCitationsByJunctionId(
   client: DirectusClient,
   citations: Record<number, Partial<DirectusCitation>>,
+  table: "land_use_citations" | "benefit_districts_citations",
 ): Promise<Record<number, Partial<DirectusCitation>>> {
   const junctionRecords = await readItemsBatched(
     client,
-    "land_use_citations",
+    table,
     ["id", "citations_id"],
     300,
   );
@@ -258,6 +293,7 @@ export function createAttachments(
       "add parking maximums": "add-max",
       "reduce parking minimums": "reduce-min",
       "remove parking minimums": "remove-min",
+      "parking benefit district": "benefit-district",
     }[fileNameArgs.policyType];
     const recordIdx =
       fileNameArgs.policyRecordIdx === null
@@ -315,7 +351,15 @@ function createCitations(
 function combineData(
   places: Record<PlaceStringId, Partial<DirectusPlace>>,
   landUseRecords: Record<PlaceStringId, Array<Partial<LandUseRecord>>>,
+  benefitDistrictRecords: Record<
+    PlaceStringId,
+    Array<Partial<BenefitDistrict>>
+  >,
   citationsByLandUseJunctionId: Record<number, Partial<DirectusCitation>>,
+  citationsByBenefitDistrictJunctionId: Record<
+    number,
+    Partial<DirectusCitation>
+  >,
   filesByAttachmentJunctionId: Record<number, FileMetadata>,
 ): Record<PlaceStringId, RawCompleteEntry> {
   return Object.fromEntries(
@@ -331,13 +375,15 @@ function combineData(
             if (record.type === "remove parking minimums") numRmMin += 1;
           });
         }
+        let numBenefitDistrict = benefitDistrictRecords[placeId]?.length ?? 0;
         const hasDistinctPolicyTypes =
-          [numAddMax, numReduceMin, numRmMin].filter(Boolean).length > 1;
+          [numAddMax, numReduceMin, numRmMin, numBenefitDistrict].filter(
+            Boolean,
+          ).length > 1;
 
-        const addMax: Array<RawCoreLandUsePolicy & ExtendedLandUsePolicy> = [];
-        const reduceMin: Array<RawCoreLandUsePolicy & ExtendedLandUsePolicy> =
-          [];
-        const rmMin: Array<RawCoreLandUsePolicy & ExtendedLandUsePolicy> = [];
+        const addMax: Array<RawCompleteLandUsePolicy> = [];
+        const reduceMin: Array<RawCompleteLandUsePolicy> = [];
+        const rmMin: Array<RawCompleteLandUsePolicy> = [];
         if (landUseRecords[placeId]) {
           landUseRecords[placeId].forEach((record) => {
             const [collection, numPolicyRecords] = {
@@ -371,6 +417,31 @@ function combineData(
           });
         }
 
+        const benefitDistricts: Array<RawCompleteBenefitDistrict> = [];
+        if (benefitDistrictRecords[placeId]) {
+          benefitDistrictRecords[placeId].forEach((record) => {
+            const policyRecordIdx =
+              numBenefitDistrict > 1 ? benefitDistricts.length : null;
+            benefitDistricts.push({
+              summary: record.summary!,
+              status: record.status!,
+              date: record.reform_date!,
+              reporter: record.reporter!,
+              citations: createCitations(
+                record.citations!,
+                citationsByBenefitDistrictJunctionId,
+                filesByAttachmentJunctionId,
+                {
+                  placeId,
+                  hasDistinctPolicyTypes,
+                  policyType: "parking benefit district",
+                  policyRecordIdx,
+                },
+              ),
+            });
+          });
+        }
+
         const result: RawCompleteEntry = {
           place: {
             name: place.name!,
@@ -384,6 +455,9 @@ function combineData(
           ...(addMax.length && { add_max: addMax }),
           ...(reduceMin.length && { reduce_min: reduceMin }),
           ...(rmMin.length && { rm_min: rmMin }),
+          ...(benefitDistricts.length && {
+            benefit_district: benefitDistricts,
+          }),
         };
         return [placeId, result];
       })
@@ -392,7 +466,8 @@ function combineData(
         ([, entry]) =>
           entry.add_max?.length ||
           entry.rm_min?.length ||
-          entry.reduce_min?.length,
+          entry.reduce_min?.length ||
+          entry.benefit_district?.length,
       )
       .sort(),
   );
@@ -409,6 +484,11 @@ async function saveCoreData(
     status: record.status,
     scope: record.scope.sort(),
     land: record.land.sort(),
+    date: record.date,
+  });
+
+  const formatBenefitDistrict = (record: RawCoreBenefitDistrict) => ({
+    status: record.status,
     date: record.date,
   });
 
@@ -434,6 +514,9 @@ async function saveCoreData(
         ...(entry.rm_min && {
           rm_min: entry.rm_min.map(formatLandUse),
         }),
+        ...(entry.benefit_district && {
+          benefit_district: entry.benefit_district.map(formatBenefitDistrict),
+        }),
       },
     ]),
   );
@@ -452,6 +535,12 @@ async function saveExtendedData(
     citations: record.citations,
   });
 
+  const formatBenefitDistrict = (record: ExtendedBenefitDistrict) => ({
+    summary: record.summary,
+    reporter: record.reporter,
+    citations: record.citations,
+  });
+
   const pruned = Object.fromEntries(
     Object.entries(result).map(([placeId, entry]) => [
       placeId,
@@ -461,6 +550,9 @@ async function saveExtendedData(
           reduce_min: entry.reduce_min.map(formatLandUse),
         }),
         ...(entry.rm_min && { rm_min: entry.rm_min.map(formatLandUse) }),
+        ...(entry.benefit_district && {
+          benefit_district: entry.benefit_district.map(formatBenefitDistrict),
+        }),
       },
     ]),
   );
@@ -482,10 +574,20 @@ async function main(): Promise<void> {
     client,
     places.directusIdToStringId,
   );
+  const benefitDistrictRecords = await readBenefitDistrictRecords(
+    client,
+    places.directusIdToStringId,
+  );
   const citations = await readCitations(client);
-  const citationsByLandUseJunctionId = await readCitationsByLandUseJunctionId(
+  const citationsByLandUseJunctionId = await readCitationsByJunctionId(
     client,
     citations,
+    "land_use_citations",
+  );
+  const citationsByBenefitDistrictJunctionId = await readCitationsByJunctionId(
+    client,
+    citations,
+    "benefit_districts_citations",
   );
   const filesByAttachmentJunctionId =
     await readFilesByAttachmentJunctionId(client);
@@ -493,7 +595,9 @@ async function main(): Promise<void> {
   const result = combineData(
     places.stringIdToPlace,
     landUseRecords,
+    benefitDistrictRecords,
     citationsByLandUseJunctionId,
+    citationsByBenefitDistrictJunctionId,
     filesByAttachmentJunctionId,
   );
 
