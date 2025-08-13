@@ -96,7 +96,7 @@ async function readLandUseRecords(
 ): Promise<Record<PlaceStringId, Array<Partial<LandUseRecord>>>> {
   const records = await readItemsBatched(
     client,
-    "policy_records",
+    "land_use",
     [
       "id",
       "place",
@@ -142,7 +142,7 @@ async function readCitationsByLandUseJunctionId(
 ): Promise<Record<number, Partial<DirectusCitation>>> {
   const junctionRecords = await readItemsBatched(
     client,
-    "policy_records_citations",
+    "land_use_citations",
     ["id", "citations_id"],
     300,
   );

@@ -50335,16 +50335,16 @@
     "reduce_min": [
       {
         "status": "adopted",
-        "scope": ["city center / business district", "main street / special"],
-        "land": ["all uses", "commercial", "other"],
+        "scope": ["main street / special"],
+        "land": ["all uses"],
         "date": null
       }
     ],
     "rm_min": [
       {
         "status": "adopted",
-        "scope": ["city center / business district", "transit-oriented"],
-        "land": ["commercial", "other", "residential, all uses"],
+        "scope": ["transit-oriented"],
+        "land": ["residential, all uses"],
         "date": "2024-05-06"
       },
       {

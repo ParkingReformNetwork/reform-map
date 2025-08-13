@@ -53,9 +53,9 @@ interface Coordinates {
 export interface Schema {
   places: Place[];
   citations: Citation[];
-  policy_records: LandUseRecord[];
+  land_use: LandUseRecord[];
   citations_files: CitationsFileJunction[];
-  policy_records_citations: LandUseCitationJunction[];
+  land_use_citations: LandUseCitationJunction[];
 }
 
 export type Place = {
