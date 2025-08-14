@@ -41,104 +41,109 @@ type DataSetSpecificOptions = {
   placeType: string[];
 };
 
-export class FilterOptions {
+export interface FilterOptions {
   readonly merged: DataSetSpecificOptions;
-
   readonly datasets: Record<
     PolicyTypeFilter,
     Record<ReformStatus, DataSetSpecificOptions>
   >;
+  getOptions(
+    policyType: PolicyTypeFilter,
+    status: ReformStatus,
+  ): DataSetSpecificOptions;
+  enabled(policyType: PolicyTypeFilter, status: ReformStatus): boolean;
+}
 
-  constructor() {
-    this.merged = {
-      includedPolicyChanges: ALL_POLICY_TYPE,
-      ...optionValuesData.merged,
-    };
-    this.datasets = {
-      "any parking reform": {
-        adopted: {
-          includedPolicyChanges: ALL_POLICY_TYPE,
-          ...optionValuesData.anyAdopted,
-        },
-        proposed: {
-          includedPolicyChanges: ALL_POLICY_TYPE,
-          ...optionValuesData.anyProposed,
-        },
-        repealed: {
-          includedPolicyChanges: ALL_POLICY_TYPE,
-          ...optionValuesData.anyRepealed,
-        },
+export const FILTER_OPTIONS: FilterOptions = {
+  merged: {
+    includedPolicyChanges: ALL_POLICY_TYPE,
+    ...optionValuesData.merged,
+  },
+
+  datasets: {
+    "any parking reform": {
+      adopted: {
+        includedPolicyChanges: ALL_POLICY_TYPE,
+        ...optionValuesData.anyAdopted,
       },
-      "add parking maximums": {
-        adopted: {
-          includedPolicyChanges: [],
-          ...optionValuesData.addMaxAdopted,
-        },
-        proposed: {
-          includedPolicyChanges: [],
-          ...optionValuesData.addMaxProposed,
-        },
-        repealed: {
-          includedPolicyChanges: [],
-          ...optionValuesData.addMaxRepealed,
-        },
+      proposed: {
+        includedPolicyChanges: ALL_POLICY_TYPE,
+        ...optionValuesData.anyProposed,
       },
-      "reduce parking minimums": {
-        adopted: {
-          includedPolicyChanges: [],
-          ...optionValuesData.reduceMinAdopted,
-        },
-        proposed: {
-          includedPolicyChanges: [],
-          ...optionValuesData.reduceMinProposed,
-        },
-        repealed: {
-          includedPolicyChanges: [],
-          ...optionValuesData.reduceMinRepealed,
-        },
+      repealed: {
+        includedPolicyChanges: ALL_POLICY_TYPE,
+        ...optionValuesData.anyRepealed,
       },
-      "remove parking minimums": {
-        adopted: {
-          includedPolicyChanges: [],
-          ...optionValuesData.rmMinAdopted,
-        },
-        proposed: {
-          includedPolicyChanges: [],
-          ...optionValuesData.rmMinProposed,
-        },
-        repealed: {
-          includedPolicyChanges: [],
-          ...optionValuesData.rmMinRepealed,
-        },
+    },
+    "add parking maximums": {
+      adopted: {
+        includedPolicyChanges: [],
+        ...optionValuesData.addMaxAdopted,
       },
-      "parking benefit district": {
-        adopted: {
-          includedPolicyChanges: [],
-          ...optionValuesData.benefitDistrictAdopted,
-        },
-        proposed: {
-          includedPolicyChanges: [],
-          ...optionValuesData.benefitDistrictProposed,
-        },
-        repealed: {
-          includedPolicyChanges: [],
-          ...optionValuesData.benefitDistrictRepealed,
-        },
+      proposed: {
+        includedPolicyChanges: [],
+        ...optionValuesData.addMaxProposed,
       },
-    };
-  }
+      repealed: {
+        includedPolicyChanges: [],
+        ...optionValuesData.addMaxRepealed,
+      },
+    },
+    "reduce parking minimums": {
+      adopted: {
+        includedPolicyChanges: [],
+        ...optionValuesData.reduceMinAdopted,
+      },
+      proposed: {
+        includedPolicyChanges: [],
+        ...optionValuesData.reduceMinProposed,
+      },
+      repealed: {
+        includedPolicyChanges: [],
+        ...optionValuesData.reduceMinRepealed,
+      },
+    },
+    "remove parking minimums": {
+      adopted: {
+        includedPolicyChanges: [],
+        ...optionValuesData.rmMinAdopted,
+      },
+      proposed: {
+        includedPolicyChanges: [],
+        ...optionValuesData.rmMinProposed,
+      },
+      repealed: {
+        includedPolicyChanges: [],
+        ...optionValuesData.rmMinRepealed,
+      },
+    },
+    "parking benefit district": {
+      adopted: {
+        includedPolicyChanges: [],
+        ...optionValuesData.benefitDistrictAdopted,
+      },
+      proposed: {
+        includedPolicyChanges: [],
+        ...optionValuesData.benefitDistrictProposed,
+      },
+      repealed: {
+        includedPolicyChanges: [],
+        ...optionValuesData.benefitDistrictRepealed,
+      },
+    },
+  },
 
   getOptions(
     policyType: PolicyTypeFilter,
     status: ReformStatus,
   ): DataSetSpecificOptions {
     return this.datasets[policyType][status];
-  }
+  },
 
   enabled(policyType: PolicyTypeFilter, status: ReformStatus): boolean {
     return this.datasets[policyType][status].placeType.length > 0;
-  }
-}
+  },
+} as const;
 
 function getVisibleCheckboxes(
   fieldset: HTMLFieldSetElement,
@@ -208,7 +213,6 @@ type FilterGroupParams = {
 function generateAccordionForFilterGroup(
   filterState: FilterState,
   params: FilterGroupParams,
-  filterOptions: FilterOptions,
 ): [FilterGroupAccordionElements, Observable<AccordionState>] {
   const baseElements = generateAccordion(params.htmlName);
 
@@ -240,7 +244,7 @@ function generateAccordionForFilterGroup(
   fieldSet.appendChild(filterOptionsContainer);
 
   // When setting up the filter group, we use `merged` to add every option in the universe.
-  filterOptions.merged[params.filterStateKey].forEach((val, i) => {
+  FILTER_OPTIONS.merged[params.filterStateKey].forEach((val, i) => {
     const inputId = `filter-${params.htmlName}-option-${i}`;
     const checked = true;
     const description = params.preserveCapitalization ? val : capitalize(val);
@@ -316,14 +320,12 @@ function updateCheckboxVisibility(
 
 function initFilterGroup(
   filterManager: PlaceFilterManager,
-  filterOptions: FilterOptions,
   optionsContainer: HTMLDivElement,
   params: FilterGroupParams,
 ): void {
   const [accordionElements, accordionState] = generateAccordionForFilterGroup(
     filterManager.getState(),
     params,
-    filterOptions,
   );
   optionsContainer.appendChild(accordionElements.outerContainer);
 
@@ -372,7 +374,7 @@ function initFilterGroup(
     `possibly update ${params.htmlName} filter UI`,
     (state) => {
       updateCheckboxVisibility(
-        filterOptions.getOptions(state.policyTypeFilter, state.status)[
+        FILTER_OPTIONS.getOptions(state.policyTypeFilter, state.status)[
           params.filterStateKey
         ],
         accordionElements.fieldSet,
@@ -393,7 +395,6 @@ function initFilterGroup(
 
 function initOutermostContainers(
   filterManager: PlaceFilterManager,
-  filterOptions: FilterOptions,
   filterPopup: HTMLFormElement,
 ): {
   datasetDiv: HTMLDivElement;
@@ -418,7 +419,7 @@ function initOutermostContainers(
   filterManager.subscribe(
     `possibly disable dataset`,
     ({ policyTypeFilter, status }) => {
-      const enabled = filterOptions.enabled(policyTypeFilter, status);
+      const enabled = FILTER_OPTIONS.enabled(policyTypeFilter, status);
       disabledDatasetDiv.hidden = enabled;
       optionsDiv.hidden = !enabled;
     },
@@ -537,17 +538,13 @@ function initStatusDropdown(
   dropdownContainer.append(container);
 }
 
-export function initFilterOptions(
-  filterManager: PlaceFilterManager,
-  filterOptions: FilterOptions,
-): void {
+export function initFilterOptions(filterManager: PlaceFilterManager): void {
   // Note that the order of this function determines the order of the filter.
   const filterPopup = document.querySelector<HTMLFormElement>("#filter-popup");
   if (!filterPopup) return;
 
   const { datasetDiv, optionsDiv } = initOutermostContainers(
     filterManager,
-    filterOptions,
     filterPopup,
   );
 
@@ -557,13 +554,13 @@ export function initFilterOptions(
   initAllMinimumsToggle(filterManager, optionsDiv);
 
   // Options about the reform
-  initFilterGroup(filterManager, filterOptions, optionsDiv, {
+  initFilterGroup(filterManager, optionsDiv, {
     htmlName: "policy-change",
     filterStateKey: "includedPolicyChanges",
     legend: "Reform types",
     hide: ({ policyTypeFilter }) => policyTypeFilter !== "any parking reform",
   });
-  initFilterGroup(filterManager, filterOptions, optionsDiv, {
+  initFilterGroup(filterManager, optionsDiv, {
     htmlName: "scope",
     filterStateKey: "scope",
     legend: "Reform scopes",
@@ -572,7 +569,7 @@ export function initFilterOptions(
       filterState.policyTypeFilter === "parking benefit district" ||
       isAllMinimumsRemovedToggleInEffect(filterState),
   });
-  initFilterGroup(filterManager, filterOptions, optionsDiv, {
+  initFilterGroup(filterManager, optionsDiv, {
     htmlName: "land-use",
     filterStateKey: "landUse",
     legend: "Affected land uses",
@@ -581,7 +578,7 @@ export function initFilterOptions(
       filterState.policyTypeFilter === "parking benefit district" ||
       isAllMinimumsRemovedToggleInEffect(filterState),
   });
-  initFilterGroup(filterManager, filterOptions, optionsDiv, {
+  initFilterGroup(filterManager, optionsDiv, {
     htmlName: "year",
     filterStateKey: "year",
     legend: ({ status }) => {
@@ -597,13 +594,13 @@ export function initFilterOptions(
   });
 
   // Options about the Place
-  initFilterGroup(filterManager, filterOptions, optionsDiv, {
+  initFilterGroup(filterManager, optionsDiv, {
     htmlName: "country",
     filterStateKey: "country",
     legend: "Countries",
     preserveCapitalization: true,
   });
-  initFilterGroup(filterManager, filterOptions, optionsDiv, {
+  initFilterGroup(filterManager, optionsDiv, {
     htmlName: "place-type",
     filterStateKey: "placeType",
     legend: "Jurisdictions",
