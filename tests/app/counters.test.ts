@@ -4,6 +4,7 @@ import {
   determineHtml,
   determineAnyReform,
   determineAddMax,
+  determineBenefitDistrict,
   determineReduceMin,
   determineRmMin,
   determinePlaceDescription,
@@ -222,6 +223,30 @@ test("determineRemoveMin()", () => {
   );
 });
 
+test("determineBenefitDistrict()", () => {
+  expect(
+    determineBenefitDistrict("map", "2 places in Mexico", "adopted"),
+  ).toEqual(
+    "Showing 2 places in Mexico with adopted parking benefit districts",
+  );
+  expect(
+    determineBenefitDistrict("map", "2 places in Mexico", "repealed"),
+  ).toEqual(
+    "Showing 2 places in Mexico with repealed parking benefit districts",
+  );
+
+  expect(
+    determineBenefitDistrict("table", "2 places in Mexico", "adopted"),
+  ).toEqual(
+    "Showing details about adopted parking benefit districts for 2 places in Mexico",
+  );
+  expect(
+    determineBenefitDistrict("table", "2 places in Mexico", "repealed"),
+  ).toEqual(
+    "Showing details about repealed parking benefit districts for 2 places in Mexico",
+  );
+});
+
 test("determineAnyReform()", () => {
   const assert = (
     args: {
@@ -260,7 +285,7 @@ test("determineAnyReform()", () => {
       statePolicy: ALL_POLICY_TYPE,
       state: "adopted",
     },
-    "Showing 5 places in Mexico with 1+ adopted parking reforms:<ul><li>maximums</li><li>minimum reductions</li><li>minimum removals</li></ul>",
+    "Showing 5 places in Mexico with 1+ adopted parking reforms:<ul><li>benefit district</li><li>maximums</li><li>minimum reductions</li><li>minimum removals</li></ul>",
   );
   assert(
     {
@@ -269,7 +294,7 @@ test("determineAnyReform()", () => {
       statePolicy: ALL_POLICY_TYPE,
       state: "repealed",
     },
-    "Showing 5 places in Mexico with 1+ repealed parking reforms:<ul><li>maximums</li><li>minimum reductions</li><li>minimum removals</li></ul>",
+    "Showing 5 places in Mexico with 1+ repealed parking reforms:<ul><li>benefit district</li><li>maximums</li><li>minimum reductions</li><li>minimum removals</li></ul>",
   );
 
   assert(

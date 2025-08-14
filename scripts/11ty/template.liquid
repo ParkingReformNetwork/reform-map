@@ -16,22 +16,28 @@ layout: layout.liquid
       <li>All parking minimums removed</li>
     {%- endif %}
   </ul>
+  {% if entry.benefitDistrict.size > 0 -%}
+    <section>
+      <h2>Parking benefit district{% if entry.rmMin.size > 1 %}s{% endif %}</h2>
+      {% render "benefit-district-array" array: entry.benefitDistrict %}
+    </section>
+  {%- endif %}
   {% if entry.rmMin.size > 0 -%}
     <section>
       <h2>Parking minimum removal{% if entry.rmMin.size > 1 %}s{% endif %}</h2>
-      {% render "policy-record-array" array: entry.rmMin %}
+      {% render "land-use-array" array: entry.rmMin %}
     </section>
   {%- endif %}
   {% if entry.reduceMin.size > 0 -%}
     <section>
       <h2>Parking minimum reduction{% if entry.addMax.size > 1 %}s{% endif %}</h2>
-      {% render "policy-record-array" array: entry.reduceMin %}
+      {% render "land-use-array" array: entry.reduceMin %}
     </section>
   {%- endif %}
   {% if entry.addMax.size > 0 -%}
     <section>
       <h2>Parking maximum{% if entry.addMax.size > 1 %}s{% endif %}</h2>
-      {% render "policy-record-array" array: entry.addMax %}
+      {% render "land-use-array" array: entry.addMax %}
     </section>
   {%- endif %}
 </main>

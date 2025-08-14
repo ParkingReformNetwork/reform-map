@@ -1,0 +1,24 @@
+<p class="summary">{{ record.summary }}</p>
+<dl>
+  <dt>Status</dt>
+  <dd>{{ record.status }}</dd>
+  {% if record.date -%}
+    <dt>{{ record.dateLabel }}</dt>
+    <dd>{{ record.date }}</dd>
+  {%- endif %}
+  <dt>Scope</dt>
+  <dd>{% render "string-array" array: record.scope %}</dd>
+  <dt>Affected land uses</dt>
+  <dd>{% render "string-array" array: record.landUse %}</dd>
+  {% if record.requirements.size > 0 -%}
+    <dt>Requirements</dt>
+    <dd>{% render "string-array" array: record.requirements %}</dd>
+  {%- endif %}
+  {% if record.reporter -%}
+    <dt>Reporter</dt>
+    <dd>{{ record.reporter }}</dd>
+  {%- endif %}
+</dl>
+{% for citation in record.citations -%}
+  {% render "citation" citation: citation numCitations: record.citations.size index: forloop.index %}
+{%- endfor %}

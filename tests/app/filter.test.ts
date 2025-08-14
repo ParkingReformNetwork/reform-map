@@ -57,6 +57,11 @@ const TESTS: EdgeCase[] = [
     expectedRange: EXPECTED_MAX_RANGE,
   },
   {
+    desc: "default: benefit district",
+    policyTypeFilter: "parking benefit district",
+    expectedRange: [3, 25],
+  },
+  {
     desc: "disabled filter",
     policyTypeFilter: "any parking reform",
     country: [],

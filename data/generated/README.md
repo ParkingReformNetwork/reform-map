@@ -4,7 +4,7 @@ This folder contains the data used for https://parkingreform.org/resources/manda
 
 ## CSV files
 
-There are six CSV files:
+There are seven CSV files. These CSVs only summarize the data; use the JSON file for the complete dataset.
 
 - `overview_adopted.csv`: an overview of all places that have adopted reforms
 - `overview_proposed.csv`: an overview of all places that have proposed new reforms, but not yet passed them
@@ -12,6 +12,7 @@ There are six CSV files:
 - `add_maximums.csv`: parking maximum policies
 - `reduce_minimums.csv`: parking minimum reductions
 - `remove_minimums.csv`: parking minimum removals
+- `benefit_districts.csv`: parking benefit districts
 
 ## JSON
 
@@ -21,4 +22,4 @@ For working with JSON data, we recommend using [`jq`](https://jqlang.github.io/j
 
 ## Attribution
 
-Please attribute to "Parking Reform Network" with a link to https://parkingreform.org/resources/mandates-map/ and include the data download date.
+Please attribute to "Parking Reform Network" with a link to https://parkingreform.org/resources/mandates-map/ and include the date of the data download.

@@ -4,6 +4,7 @@ import {
   PlaceId,
   PlaceType,
   PolicyType,
+  ProcessedCoreBenefitDistrict,
   ProcessedCoreEntry,
   ProcessedCoreLandUsePolicy,
   ProcessedPlace,
@@ -74,6 +75,7 @@ interface PlaceMatchAnyPolicy {
   hasRmMin: boolean;
   hasReduceMin: boolean;
   hasAddMax: boolean;
+  hasBenefitDistrict: boolean;
 }
 
 type PlaceMatch =
@@ -203,6 +205,8 @@ export class PlaceFilterManager {
         if (match.hasReduceMin)
           matchedPolicyTypes.add("reduce parking minimums");
         if (match.hasRmMin) matchedPolicyTypes.add("remove parking minimums");
+        if (match.hasBenefitDistrict)
+          matchedPolicyTypes.add("parking benefit district");
       }
     }
 
@@ -264,6 +268,22 @@ export class PlaceFilterManager {
     return true;
   }
 
+  private matchesBenefitDistrict(
+    record: ProcessedCoreBenefitDistrict,
+  ): boolean {
+    const filterState = this.state.getValue();
+
+    const isStatus = record.status === filterState.status;
+    if (!isStatus) return false;
+
+    const isYear = filterState.year.has(
+      record.date?.parsed.year.toString() || UNKNOWN_YEAR,
+    );
+    if (!isYear) return false;
+
+    return true;
+  }
+
   private getPlaceMatch(placeId: PlaceId): PlaceMatch | null {
     const filterState = this.state.getValue();
     const entry = this.entries[placeId];
@@ -291,6 +311,9 @@ export class PlaceFilterManager {
             hasAddMax: policyTypes.includes("add parking maximums"),
             hasReduceMin: policyTypes.includes("reduce parking minimums"),
             hasRmMin: policyTypes.includes("remove parking minimums"),
+            hasBenefitDistrict: policyTypes.includes(
+              "parking benefit district",
+            ),
           }
         : null;
     }
@@ -346,6 +369,20 @@ export class PlaceFilterManager {
         : null;
     }
 
-    throw new Error(`Unreachable code`);
+    if (filterState.policyTypeFilter === "parking benefit district") {
+      const matchingPolicies = getFilteredIndexes(
+        entry.benefit_district ?? [],
+        (record) => this.matchesBenefitDistrict(record),
+      );
+      return matchingPolicies.length
+        ? {
+            type: "single policy",
+            policyType: "parking benefit district",
+            matchingIndexes: matchingPolicies,
+          }
+        : null;
+    }
+
+    throw new Error(`Unrecognized policy type`);
   }
 }

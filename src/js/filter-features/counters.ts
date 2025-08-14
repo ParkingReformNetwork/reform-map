@@ -103,6 +103,10 @@ export function determineAnyReform(
       singlePolicy: "parking minimum removals",
       multiplePolicies: "minimum removals",
     },
+    "parking benefit district": {
+      singlePolicy: "parking benefit district",
+      multiplePolicies: "benefit district",
+    },
   };
   const policyDescriptions = Array.from(statePolicyTypes)
     .filter((policy) => matchedPolicyTypes.has(policy as PolicyType))
@@ -166,6 +170,16 @@ export function determineRmMin(
     : prefix;
 }
 
+export function determineBenefitDistrict(
+  view: ViewState,
+  placeDescription: string,
+  status: ReformStatus,
+): string {
+  return view === "map"
+    ? `Showing ${placeDescription} with ${status} parking benefit districts`
+    : `Showing details about ${status} parking benefit districts for ${placeDescription}`;
+}
+
 export function determineHtml(
   view: ViewState,
   state: FilterState,
@@ -212,6 +226,8 @@ export function determineHtml(
         state.allMinimumsRemovedToggle,
         state.status,
       );
+    case "parking benefit district":
+      return determineBenefitDistrict(view, placeDescription, state.status);
     default:
       throw new Error(`Unexpected policy type: ${state.policyTypeFilter}`);
   }

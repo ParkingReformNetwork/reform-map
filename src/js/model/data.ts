@@ -9,7 +9,8 @@ import {
   ProcessedPlace,
   ProcessedCoreLandUsePolicy,
   ReformStatus,
-  BaseLandUsePolicy,
+  RawCoreBenefitDistrict,
+  ProcessedCoreBenefitDistrict,
 } from "./types";
 
 export const COUNTRIES_PREFIXED_BY_THE = new Set([
@@ -61,45 +62,47 @@ export function processPlace(placeId: PlaceId, raw: RawPlace): ProcessedPlace {
   };
 }
 
-export function numberOfPolicyRecords(
-  entry: RawCoreEntry | ProcessedCoreEntry,
-): number {
-  return (
-    (entry.add_max?.length ?? 0) +
-    (entry.reduce_min?.length ?? 0) +
-    (entry.rm_min?.length ?? 0)
-  );
-}
-
 export function determineAllPolicyTypes(
   entry: RawCoreEntry | ProcessedCoreEntry,
   status: ReformStatus,
 ): PolicyType[] {
-  const hasPolicy = (policies: BaseLandUsePolicy[] | undefined) =>
+  const hasPolicy = (policies: Array<{ status: ReformStatus }> | undefined) =>
     !!policies?.filter((policy) => policy.status === status).length;
 
   const result: PolicyType[] = [];
   if (hasPolicy(entry.add_max)) result.push("add parking maximums");
   if (hasPolicy(entry.reduce_min)) result.push("reduce parking minimums");
   if (hasPolicy(entry.rm_min)) result.push("remove parking minimums");
+  if (hasPolicy(entry.benefit_district))
+    result.push("parking benefit district");
   return result;
 }
 
 export function determinePolicyTypeStatuses(
   entry: RawCoreEntry | ProcessedCoreEntry,
 ): Record<PolicyType, Set<ReformStatus>> {
-  const getStatuses = (policies: BaseLandUsePolicy[] | undefined) =>
+  const getStatuses = (policies: Array<{ status: ReformStatus }> | undefined) =>
     new Set(policies?.map((policy) => policy.status) ?? []);
   return {
     "add parking maximums": getStatuses(entry.add_max),
     "reduce parking minimums": getStatuses(entry.reduce_min),
     "remove parking minimums": getStatuses(entry.rm_min),
+    "parking benefit district": getStatuses(entry.benefit_district),
   };
 }
 
 function processLandUsePolicy(
   raw: RawCoreLandUsePolicy,
 ): ProcessedCoreLandUsePolicy {
+  return {
+    ...raw,
+    date: Date.fromNullable(raw.date),
+  };
+}
+
+function processBenefitDistrict(
+  raw: RawCoreBenefitDistrict,
+): ProcessedCoreBenefitDistrict {
   return {
     ...raw,
     date: Date.fromNullable(raw.date),
@@ -121,6 +124,9 @@ export function processRawCoreEntry(
   }
   if (raw.rm_min) {
     result.rm_min = raw.rm_min.map(processLandUsePolicy);
+  }
+  if (raw.benefit_district) {
+    result.benefit_district = raw.benefit_district.map(processBenefitDistrict);
   }
   return result;
 }
@@ -149,16 +155,4 @@ export function getFilteredIndexes<T>(
     }
     return indexes;
   }, []);
-}
-
-export function joinWithConjunction(
-  items: string[],
-  conjunction: "and" | "or",
-): string {
-  if (items.length <= 2) {
-    return items.join(` ${conjunction} `);
-  }
-  const lastItem = items[items.length - 1];
-  const priorItems = items.slice(0, -1);
-  return `${priorItems.join(", ")}, ${conjunction} ${lastItem}`;
 }

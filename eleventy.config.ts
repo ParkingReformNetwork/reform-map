@@ -6,30 +6,55 @@ import { compileString as compileStringSass } from "sass";
 import { capitalize } from "lodash-es";
 
 import {
+  Citation,
+  ProcessedCompleteBenefitDistrict,
   ProcessedCompleteLandUsePolicy,
   readProcessedCompleteData,
 } from "./scripts/lib/data.js";
 import { escapePlaceId } from "./src/js/model/data.js";
+import { ReformStatus } from "./src/js/model/types.js";
+
+function dateLabel(status: ReformStatus): string {
+  return (
+    {
+      adopted: "Adoption date",
+      proposed: "Proposal date",
+      repealed: "Repeal date",
+    }[status] ?? "Reform date"
+  );
+}
+
+function processCitations(citations: Citation[]): object[] {
+  return citations.map((citation) => ({
+    urlDomain: citation.url ? new URL(citation.url).hostname : null,
+    ...citation,
+  }));
+}
 
 function processLandUse(policy: ProcessedCompleteLandUsePolicy): object {
   return {
     summary: policy.summary,
-    dateLabel:
-      {
-        adopted: "Adoption date",
-        proposed: "Proposal date",
-        repealed: "Repeal date",
-      }[policy.status] ?? "Reform date",
+    dateLabel: dateLabel(policy.status),
     date: policy.date?.format(),
     status: capitalize(policy.status),
     scope: policy.scope.map(capitalize),
     landUse: policy.land.map(capitalize),
     requirements: policy.requirements.map(capitalize),
     reporter: policy.reporter,
-    citations: policy.citations.map((citation) => ({
-      urlDomain: citation.url ? new URL(citation.url).hostname : null,
-      ...citation,
-    })),
+    citations: processCitations(policy.citations),
+  };
+}
+
+function processBenefitDistrict(
+  policy: ProcessedCompleteBenefitDistrict,
+): object {
+  return {
+    summary: policy.summary,
+    dateLabel: dateLabel(policy.status),
+    date: policy.date?.format(),
+    status: capitalize(policy.status),
+    reporter: policy.reporter,
+    citations: processCitations(policy.citations),
   };
 }
 
@@ -56,6 +81,7 @@ export default async function (eleventyConfig: any) {
     rmMin: entry.rm_min?.map(processLandUse) || [],
     reduceMin: entry.reduce_min?.map(processLandUse) || [],
     addMax: entry.add_max?.map(processLandUse) || [],
+    benefitDistrict: entry.benefit_district?.map(processBenefitDistrict),
   }));
 
   eleventyConfig.addGlobalData("entries", entries);

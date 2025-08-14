@@ -22,4 +22,5 @@ test("generate html page", async ({}, testInfo) => {
   await assertPlace("Abbottstown_PA");
   await assertPlace("Basalt_CO");
   await assertPlace("Auburn_ME");
+  await assertPlace("Pasadena_CA"); // Benefit district
 });

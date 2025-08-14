@@ -22,8 +22,8 @@ import {
 } from "@directus/sdk";
 
 import {
+  LandUsePolicyType,
   PlaceType,
-  PolicyType,
   ReformStatus,
 } from "../../src/js/model/types.js";
 
@@ -41,6 +41,17 @@ interface Metadata {
   date_updated: "datetime";
 }
 
+type PolicyRecord = {
+  place: number;
+  last_verified_at: string | null;
+  status: ReformStatus;
+  summary: string;
+  reporter: string | null;
+  reform_date: string | null;
+  citations: number[];
+  archived: boolean;
+} & Metadata;
+
 interface Coordinates {
   type: "Point";
   coordinates: [number, number];
@@ -54,8 +65,10 @@ export interface Schema {
   places: Place[];
   citations: Citation[];
   land_use: LandUseRecord[];
+  benefit_districts: BenefitDistrict[];
   citations_files: CitationsFileJunction[];
   land_use_citations: LandUseCitationJunction[];
+  benefit_districts_citations: BenefitDistrictCitationJunction[];
 }
 
 export type Place = {
@@ -79,19 +92,13 @@ export type Citation = {
 } & Metadata;
 
 export type LandUseRecord = {
-  place: number;
-  type: PolicyType;
-  last_verified_at: string | null;
+  type: LandUsePolicyType;
   land_uses: string[];
   reform_scope: string[];
   requirements: string[];
-  status: ReformStatus;
-  summary: string;
-  reporter: string | null;
-  reform_date: string | null;
-  citations: number[];
-  archived: boolean;
-} & Metadata;
+} & PolicyRecord;
+
+export type BenefitDistrict = PolicyRecord;
 
 export interface CitationsFileJunction {
   id: number;
@@ -102,6 +109,12 @@ export interface CitationsFileJunction {
 export interface LandUseCitationJunction {
   id: number;
   policy_records_id: number;
+  citations_id: number;
+}
+
+export interface BenefitDistrictCitationJunction {
+  id: number;
+  benefit_districts_id: number;
   citations_id: number;
 }
 
