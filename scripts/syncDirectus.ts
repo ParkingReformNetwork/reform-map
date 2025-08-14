@@ -375,7 +375,7 @@ function combineData(
             if (record.type === "remove parking minimums") numRmMin += 1;
           });
         }
-        let numBenefitDistrict = benefitDistrictRecords[placeId]?.length ?? 0;
+        const numBenefitDistrict = benefitDistrictRecords[placeId]?.length ?? 0;
         const hasDistinctPolicyTypes =
           [numAddMax, numReduceMin, numRmMin, numBenefitDistrict].filter(
             Boolean,
