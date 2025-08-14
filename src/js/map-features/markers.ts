@@ -3,7 +3,8 @@ import { CircleMarker, FeatureGroup, Map } from "leaflet";
 import { NO_MANDATES_MARKERS_PANE } from "../layout/map";
 import { PlaceFilterManager } from "../state/FilterState";
 import { ViewStateObservable } from "../layout/viewToggle";
-import { PlaceId } from "../model/types";
+import type { PlaceId } from "../model/types";
+import { radiusGivenZoom, determineIsPrimary } from "./markerUtils";
 
 const PRIMARY_MARKER_STYLE = {
   weight: 1,
@@ -19,21 +20,6 @@ const SECONDARY_MARKER_STYLE = {
   fillColor: "#fdae61",
   fillOpacity: 1,
 } as const;
-
-function radiusGivenZoom(options: {
-  zoom: number;
-  isPrimary: boolean;
-}): number {
-  const { zoom, isPrimary } = options;
-  // This formula comes from Claude to go from radius 5 to 21 between zoom 3 to 10
-  // with roughly linear growth.
-  //
-  // 21px radius => 42px diameter + 2px stroke == 4px. That meets the accessibility
-  // requirement of 44px touch target size, while balancing the dot not being too big
-  // on the screen when zoomed out.
-  const base = Math.round(2.37 * zoom - 2.29);
-  return isPrimary ? base + 2 : base;
-}
 
 function updatePlaceVisibility(
   currentlyVisiblePlaceIds: Set<string>,
@@ -66,7 +52,7 @@ export default function initPlaceMarkers(
     filterManager.entries,
   ).reduce((acc: Record<string, CircleMarker>, [placeId, entry]) => {
     const [long, lat] = entry.place.coord;
-    const isPrimary = entry.place.repeal;
+    const isPrimary = determineIsPrimary(entry);
     const style = isPrimary ? PRIMARY_MARKER_STYLE : SECONDARY_MARKER_STYLE;
     const marker = new CircleMarker([lat, long], {
       ...style,
@@ -117,8 +103,10 @@ export default function initPlaceMarkers(
   map.addEventListener("zoomend", () => {
     const zoom = map.getZoom();
     Object.entries(placesToMarkers).forEach(([placeId, marker]) => {
-      const isPrimary = filterManager.entries[placeId].place.repeal;
-      const newRadius = radiusGivenZoom({ zoom, isPrimary });
+      const newRadius = radiusGivenZoom({
+        zoom,
+        isPrimary: determineIsPrimary(filterManager.entries[placeId]),
+      });
       marker.setRadius(newRadius);
     });
   });
