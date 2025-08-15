@@ -9,7 +9,7 @@ export function determinePlaceId(place: {
 }
 
 export function stripCountryFromPlaceId(placeId: PlaceId): string {
-  const [place, state, ..._rest] = placeId.split(", ");
+  const [place, state] = placeId.split(", ");
   return state ? `${place}, ${state}` : place;
 }
 
