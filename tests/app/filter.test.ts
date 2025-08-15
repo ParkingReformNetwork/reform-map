@@ -6,7 +6,7 @@ import { Page, test } from "@playwright/test";
 import {
   loadMap,
   assertNumPlaces,
-  deselectToggle,
+  selectToggle,
   DEFAULT_PLACE_RANGE,
   getTotalNumPlaces,
   openFilter,
@@ -174,14 +174,7 @@ for (const edgeCase of TESTS) {
     await loadMap(page);
     await openFilter(page);
 
-    if (
-      edgeCase.allMinimumsRemoved !== true &&
-      edgeCase.policyTypeFilter !== "reduce parking minimums"
-    ) {
-      await deselectToggle(page);
-    }
-
-    if (edgeCase.policyTypeFilter !== "remove parking minimums") {
+    if (edgeCase.policyTypeFilter !== "any parking reform") {
       await page
         .locator("#filter-policy-type-dropdown")
         .selectOption(edgeCase.policyTypeFilter);
@@ -191,6 +184,10 @@ for (const edgeCase of TESTS) {
       await page
         .locator("#filter-status-dropdown")
         .selectOption(edgeCase.status);
+    }
+
+    if (edgeCase.allMinimumsRemoved === true) {
+      await selectToggle(page);
     }
 
     await selectIfSet(page, "scope", edgeCase.scope);

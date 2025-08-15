@@ -27,10 +27,10 @@ test("scorecard pops up and closes", async ({ page }) => {
   expect(await scorecardIsVisible()).toBe(false);
 
   // click on marker
-  await page.locator("path:nth-child(4)").click({ force: true });
+  await page.locator("path:nth-child(4)").first().click({ force: true });
   expect(await scorecardIsVisible()).toBe(true);
   // click on another marker
-  await page.locator("path:nth-child(8)").click({ force: true });
+  await page.locator("path:nth-child(8)").first().click({ force: true });
   expect(await scorecardIsVisible()).toBe(true);
   // close popup
   await closeIcon.click();
@@ -40,7 +40,7 @@ test("scorecard pops up and closes", async ({ page }) => {
   await page.locator(".leaflet-interactive").first().click({ force: true });
   expect(await scorecardIsVisible()).toBe(true);
   // click outside of popup (not a marker either)
-  await page.click("#map");
+  await page.click("#map-counter");
   expect(await scorecardIsVisible()).toBe(false);
 });
 

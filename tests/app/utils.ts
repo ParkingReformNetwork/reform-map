@@ -5,8 +5,8 @@ import { readRawCoreData } from "../../scripts/lib/data";
 
 const PLACE_MARKER = "path.leaflet-interactive";
 
-export const DEFAULT_ALL_MINIMUMS_RANGE: [number, number] = [95, 135];
-export const DEFAULT_PLACE_RANGE: [number, number] = [3100, 4100];
+export const DEFAULT_ALL_MINIMUMS_RANGE: [number, number] = [105, 150];
+export const DEFAULT_PLACE_RANGE: [number, number] = [3700, 4500];
 
 export const loadMap = async (page: Page): Promise<void> => {
   await page.goto("");
@@ -42,6 +42,6 @@ export async function openFilter(page: Page): Promise<void> {
   await page.locator(".header-filter-icon-container").click();
 }
 
-export const deselectToggle = async (page: Page): Promise<void> => {
+export const selectToggle = async (page: Page): Promise<void> => {
   await page.locator("#filter-all-minimums-toggle-label").click();
 };
