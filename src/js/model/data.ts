@@ -57,7 +57,6 @@ export function placeIdToUrl(v: string): string {
 export function processPlace(placeId: PlaceId, raw: RawPlace): ProcessedPlace {
   return {
     ...raw,
-    country: COUNTRY_MAPPING[raw.country] ?? raw.country,
     url: placeIdToUrl(placeId),
   };
 }
