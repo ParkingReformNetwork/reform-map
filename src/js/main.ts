@@ -6,7 +6,7 @@ import initAbout from "./layout/about";
 import { initViewToggle, addViewToggleSubscribers } from "./layout/viewToggle";
 import readData from "./model/data";
 import { PlaceFilterManager } from "./state/FilterState";
-import { DEFAULT_FILTER_STATE } from "./state/urlEncoder";
+import { decodeFilterState } from "./state/urlEncoder";
 import { initFilterOptions } from "./filter-features/options";
 import initCounters from "./filter-features/counters";
 import subscribeSnapToPlace from "./map-features/position";
@@ -26,7 +26,8 @@ export default async function initApp(): Promise<void> {
   const map = createMap();
   const data = await readData();
 
-  const filterManager = new PlaceFilterManager(data, DEFAULT_FILTER_STATE);
+  const initialState = decodeFilterState(window.location.search);
+  const filterManager = new PlaceFilterManager(data, initialState);
 
   const markerGroup = initPlaceMarkers(filterManager, map, viewToggle);
   subscribeSnapToPlace(filterManager, map);

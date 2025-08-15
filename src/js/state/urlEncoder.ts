@@ -63,7 +63,7 @@ const STATUS_MAP = BidirectionalMap.from([
   ["repealed", "r"],
 ]);
 
-export function encode(filterState: FilterState): URLSearchParams {
+export function encodeFilterState(filterState: FilterState): URLSearchParams {
   const result = new URLSearchParams();
   if (filterState.policyTypeFilter !== DEFAULT_FILTER_STATE.policyTypeFilter) {
     result.append(
@@ -78,7 +78,7 @@ export function encode(filterState: FilterState): URLSearchParams {
   return result;
 }
 
-export function decode(queryString: string): FilterState {
+export function decodeFilterState(queryString: string): FilterState {
   const cleanQuery = queryString.startsWith("?")
     ? queryString.slice(1)
     : queryString;
