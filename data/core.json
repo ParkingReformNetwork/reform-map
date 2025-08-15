@@ -23706,6 +23706,31 @@
       }
     ]
   },
+  "Evansville, WI": {
+    "place": {
+      "name": "Evansville",
+      "state": "WI",
+      "country": "US",
+      "type": "city",
+      "pop": 5703,
+      "coord": [-89.2992249, 42.7803486],
+      "repeal": false
+    },
+    "add_max": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": [
+          "commercial",
+          "industrial",
+          "medical",
+          "other",
+          "residential, multi-family"
+        ],
+        "date": null
+      }
+    ]
+  },
   "Evart, MI": {
     "place": {
       "name": "Evart",
@@ -28576,6 +28601,25 @@
       }
     ]
   },
+  "Glendale, WI": {
+    "place": {
+      "name": "Glendale",
+      "state": "WI",
+      "country": "US",
+      "type": "city",
+      "pop": 13357,
+      "coord": [-87.9285922, 43.1250236],
+      "repeal": false
+    },
+    "add_max": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["all uses"],
+        "date": "2024-12-09"
+      }
+    ]
+  },
   "Glendive, MT": {
     "place": {
       "name": "Glendive",
@@ -32037,6 +32081,41 @@
         "scope": ["city center / business district"],
         "land": ["commercial"],
         "date": null
+      }
+    ]
+  },
+  "Hartford, WI": {
+    "place": {
+      "name": "Hartford",
+      "state": "WI",
+      "country": "US",
+      "type": "city",
+      "pop": 16000,
+      "coord": [-88.3788508, 43.317744],
+      "repeal": false
+    },
+    "add_max": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district", "main street / special"],
+        "land": ["all uses"],
+        "date": "2025-01-28"
+      }
+    ],
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["all uses"],
+        "date": "2025-01-28"
+      }
+    ],
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["all uses"],
+        "date": "2025-01-28"
       }
     ]
   },
@@ -51745,6 +51824,25 @@
       }
     ]
   },
+  "New Richmond, WI": {
+    "place": {
+      "name": "New Richmond",
+      "state": "WI",
+      "country": "US",
+      "type": "city",
+      "pop": 10079,
+      "coord": [-92.537502, 45.1227287],
+      "repeal": false
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["all uses"],
+        "date": null
+      }
+    ]
+  },
   "New Roads, LA": {
     "place": {
       "name": "New Roads",
@@ -54533,6 +54631,25 @@
         "scope": ["city center / business district"],
         "land": ["commercial", "other"],
         "date": "2022-07-12"
+      }
+    ]
+  },
+  "Onancock, VA": {
+    "place": {
+      "name": "Onancock",
+      "state": "VA",
+      "country": "US",
+      "type": "city",
+      "pop": 1169,
+      "coord": [-75.7491015, 37.7118],
+      "repeal": true
+    },
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["all uses"],
+        "date": "2024-06-24"
       }
     ]
   },
@@ -61486,6 +61603,25 @@
       }
     ]
   },
+  "Ripon, WI": {
+    "place": {
+      "name": "Ripon",
+      "state": "WI",
+      "country": "US",
+      "type": "city",
+      "pop": 7863,
+      "coord": [-88.8387158, 43.8442406],
+      "repeal": false
+    },
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["all uses"],
+        "date": null
+      }
+    ]
+  },
   "Rising Sun, IN": {
     "place": {
       "name": "Rising Sun",
@@ -66152,30 +66288,14 @@
       "type": "city",
       "pop": 58608,
       "coord": [-122.3437497, 47.7564667],
-      "repeal": false
+      "repeal": true
     },
-    "add_max": [
-      {
-        "status": "adopted",
-        "scope": ["citywide"],
-        "land": ["commercial", "industrial", "medical", "other"],
-        "date": null
-      }
-    ],
-    "reduce_min": [
-      {
-        "status": "adopted",
-        "scope": ["citywide"],
-        "land": ["all uses", "commercial", "residential, all uses"],
-        "date": null
-      }
-    ],
     "rm_min": [
       {
-        "status": "proposed",
+        "status": "adopted",
         "scope": ["citywide"],
         "land": ["all uses"],
-        "date": "2024-12-16"
+        "date": "2025-08-11"
       }
     ]
   },
@@ -72986,6 +73106,12 @@
         "scope": ["city center / business district"],
         "land": ["commercial", "other", "residential, all uses"],
         "date": "2022-11-22"
+      },
+      {
+        "status": "proposed",
+        "scope": ["citywide"],
+        "land": ["all uses"],
+        "date": "2025-09-09"
       }
     ]
   },
