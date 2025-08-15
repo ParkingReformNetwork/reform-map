@@ -4,7 +4,7 @@ import {
   assertNumPlaces,
   loadMap,
   openFilter,
-  DEFAULT_ALL_MINIMUMS_RANGE,
+  DEFAULT_PLACE_RANGE,
 } from "./utils";
 
 test("search changes what is shown", async ({ page }) => {
@@ -20,5 +20,5 @@ test("search changes what is shown", async ({ page }) => {
 
   // Removing the selected place, by closing scorecard, restores all.
   await page.locator(".scorecard-close-icon-container").click();
-  await assertNumPlaces(page, DEFAULT_ALL_MINIMUMS_RANGE);
+  await assertNumPlaces(page, DEFAULT_PLACE_RANGE);
 });

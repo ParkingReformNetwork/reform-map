@@ -39,7 +39,7 @@ test.describe("encodeFilterState", () => {
       ...DEFAULT_FILTER_STATE,
       policyTypeFilter: "reduce parking minimums",
       status: "repealed",
-      allMinimumsRemovedToggle: false,
+      allMinimumsRemovedToggle: true,
       year: new Set(["1997", UNKNOWN_YEAR]),
       includedPolicyChanges: new Set([
         "reduce parking minimums",
@@ -54,7 +54,7 @@ test.describe("encodeFilterState", () => {
     const result = encodeFilterState(state);
     expect(result.get("reform")).toEqual("rd");
     expect(result.get("status")).toEqual("r");
-    expect(result.get("repeal")).toEqual("n");
+    expect(result.get("repeal")).toEqual("y");
     expect(result.get("yr")).toEqual("1997.unknown");
     expect(result.get("reforms")).toEqual("rd.bd");
     expect(result.get("pop")).toEqual("2.4");
@@ -96,7 +96,7 @@ test.describe("decodeFilterState", () => {
     const url = [
       "reform=bd",
       "status=p",
-      "repeal=n",
+      "repeal=y",
       "yr=2024.2025",
       "reforms=rd.bd",
       "pop=1.4",
@@ -111,7 +111,7 @@ test.describe("decodeFilterState", () => {
         ...DEFAULT_FILTER_STATE,
         policyTypeFilter: "parking benefit district",
         status: "proposed",
-        allMinimumsRemovedToggle: false,
+        allMinimumsRemovedToggle: true,
         year: new Set(["2024", "2025"]),
         includedPolicyChanges: new Set([
           "reduce parking minimums",
