@@ -7,7 +7,7 @@ import { initViewToggle, addViewToggleSubscribers } from "./layout/viewToggle";
 import readData from "./model/data";
 import { PlaceFilterManager } from "./state/FilterState";
 import { POPULATION_MAX_INDEX } from "./filter-features/populationSlider";
-import { FilterOptions, initFilterOptions } from "./filter-features/options";
+import { FILTER_OPTIONS, initFilterOptions } from "./filter-features/options";
 import initCounters from "./filter-features/counters";
 import subscribeSnapToPlace from "./map-features/position";
 import initPlaceMarkers from "./map-features/markers";
@@ -23,7 +23,6 @@ export default async function initApp(): Promise<void> {
 
   const viewToggle = initViewToggle();
 
-  const filterOptions = new FilterOptions();
   const map = createMap();
   const data = await readData();
 
@@ -32,12 +31,12 @@ export default async function initApp(): Promise<void> {
     policyTypeFilter: "remove parking minimums",
     status: "adopted",
     allMinimumsRemovedToggle: true,
-    placeType: new Set(filterOptions.merged.placeType),
-    includedPolicyChanges: new Set(filterOptions.merged.includedPolicyChanges),
-    scope: new Set(filterOptions.merged.scope),
-    landUse: new Set(filterOptions.merged.landUse),
-    country: new Set(filterOptions.merged.country),
-    year: new Set(filterOptions.merged.year),
+    placeType: new Set(FILTER_OPTIONS.merged.placeType),
+    includedPolicyChanges: new Set(FILTER_OPTIONS.merged.includedPolicyChanges),
+    scope: new Set(FILTER_OPTIONS.merged.scope),
+    landUse: new Set(FILTER_OPTIONS.merged.landUse),
+    country: new Set(FILTER_OPTIONS.merged.country),
+    year: new Set(FILTER_OPTIONS.merged.year),
     populationSliderIndexes: [0, POPULATION_MAX_INDEX],
   });
 
@@ -45,7 +44,7 @@ export default async function initApp(): Promise<void> {
   subscribeSnapToPlace(filterManager, map);
   initCounters(filterManager);
   initSearch(filterManager);
-  initFilterOptions(filterManager, filterOptions);
+  initFilterOptions(filterManager);
 
   const table = initTable(filterManager, viewToggle);
   addViewToggleSubscribers(viewToggle, table);
