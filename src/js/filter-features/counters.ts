@@ -7,7 +7,8 @@ import {
   PolicyTypeFilter,
 } from "../state/FilterState";
 import { PlaceId, PlaceType, PolicyType, ReformStatus } from "../model/types";
-import { placeIdToUrl, COUNTRIES_PREFIXED_BY_THE } from "../model/data";
+import { COUNTRIES_PREFIXED_BY_THE } from "../model/data";
+import { placeIdToUrl } from "../model/placeId";
 import type { ViewState } from "../layout/viewToggle";
 
 export function determinePlaceDescription(

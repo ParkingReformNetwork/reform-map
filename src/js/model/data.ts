@@ -1,3 +1,4 @@
+import { placeIdToUrl } from "./placeId";
 import {
   PlaceId,
   ProcessedCoreEntry,
@@ -45,14 +46,6 @@ export const COUNTRY_MAPPING: Partial<Record<string, string>> = {
   US: "United States",
   ZA: "South Africa",
 };
-
-export function escapePlaceId(v: string): string {
-  return v.replace(/ /g, "").replace(",", "_");
-}
-
-export function placeIdToUrl(v: string): string {
-  return `https://parkingreform.org/mandates-map/city_detail/${escapePlaceId(v)}.html`;
-}
 
 export function processPlace(placeId: PlaceId, raw: RawPlace): ProcessedPlace {
   return {

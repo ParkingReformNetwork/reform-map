@@ -36,6 +36,7 @@ import {
 } from "./lib/data";
 import { saveOptionValues } from "./lib/optionValues";
 import { COUNTRY_MAPPING } from "../src/js/model/data";
+import { determinePlaceId } from "../src/js/model/placeId";
 
 // --------------------------------------------------------------------------
 // Read Directus
@@ -61,9 +62,7 @@ async function readPlacesAndEnsureCoordinates(
   const directusIdToStringId: Record<number, PlaceStringId> = {};
   const stringIdToPlace: Record<PlaceStringId, Partial<DirectusPlace>> = {};
   for (const record of records) {
-    const stringId = record.state
-      ? `${record.name}, ${record.state}`
-      : record.name;
+    const stringId = determinePlaceId(record);
 
     if (!record.coordinates) {
       console.log(`Getting coordinates for ${stringId}`);

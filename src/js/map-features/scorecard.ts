@@ -6,6 +6,7 @@ import Observable from "../state/Observable";
 import { PlaceFilterManager } from "../state/FilterState";
 import { ViewStateObservable } from "../layout/viewToggle";
 import { determinePolicyTypeStatuses } from "../model/data";
+import type { MarkerWithPlaceId } from "./markers";
 
 export function generateScorecard(
   entry: ProcessedCoreEntry,
@@ -109,7 +110,7 @@ export default function initScorecard(
 
   // Clicking a city marker opens up the scorecard.
   markerGroup.on("click", (e) => {
-    const placeId = e.sourceTarget.getTooltip().getContent();
+    const placeId = (e.sourceTarget as MarkerWithPlaceId).placeId;
     scorecardState.setValue({
       type: "visible",
       placeId,

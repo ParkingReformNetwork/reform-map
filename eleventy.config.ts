@@ -11,7 +11,7 @@ import {
   ProcessedCompleteLandUsePolicy,
   readProcessedCompleteData,
 } from "./scripts/lib/data.js";
-import { escapePlaceId } from "./src/js/model/data.js";
+import { escapePlaceId } from "./src/js/model/placeId.js";
 import { ReformStatus } from "./src/js/model/types.js";
 
 function dateLabel(status: ReformStatus): string {
