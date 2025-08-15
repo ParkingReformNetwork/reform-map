@@ -2,7 +2,6 @@ import fs from "fs/promises";
 
 import { sortBy, without } from "lodash-es";
 
-import { COUNTRY_MAPPING } from "../../src/js/model/data";
 import {
   RawCoreLandUsePolicy,
   UNKNOWN_YEAR,
@@ -34,7 +33,7 @@ class OptionValues {
 
   #addPlace(place: RawPlace): void {
     this.placeType.add(place.type);
-    this.country.add(COUNTRY_MAPPING[place.country] ?? place.country);
+    this.country.add(place.country);
   }
 
   #addDate(date: string | null): void {

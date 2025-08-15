@@ -18,7 +18,7 @@ test("determineOptionValues()", () => {
     {
       place: {
         ...commonPlace,
-        country: "US",
+        country: "United States",
         type: "city",
       },
       rm_min: [
@@ -41,7 +41,7 @@ test("determineOptionValues()", () => {
     {
       place: {
         ...commonPlace,
-        country: "BR",
+        country: "Brazil",
         type: "country",
       },
       reduce_min: [

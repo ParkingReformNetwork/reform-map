@@ -35,6 +35,7 @@ import {
   ExtendedBenefitDistrict,
 } from "./lib/data";
 import { saveOptionValues } from "./lib/optionValues";
+import { COUNTRY_MAPPING } from "../src/js/model/data";
 
 // --------------------------------------------------------------------------
 // Read Directus
@@ -446,7 +447,8 @@ function combineData(
           place: {
             name: place.name!,
             state: place.state!,
-            country: place.country_code!,
+            country:
+              COUNTRY_MAPPING[place.country_code!] ?? place.country_code!,
             type: place.type!,
             pop: place.population!,
             repeal: place.complete_minimums_repeal!,

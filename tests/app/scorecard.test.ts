@@ -48,7 +48,7 @@ test("generateScorecard()", () => {
   const place: ProcessedPlace = {
     name: "My City",
     state: "AZ",
-    country: "US",
+    country: "United States",
     type: "city",
     pop: 245132,
     repeal: true,

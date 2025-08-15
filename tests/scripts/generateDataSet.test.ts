@@ -35,7 +35,7 @@ test("generate CSVs", async ({}, testInfo) => {
       place: {
         name: "My City",
         state: "NY",
-        country: "US",
+        country: "United States",
         type: "city",
         repeal: true,
         pop: 24104,
@@ -69,7 +69,7 @@ test("generate CSVs", async ({}, testInfo) => {
       place: {
         name: "Another Place",
         state: "CA",
-        country: "US",
+        country: "United States",
         type: "county",
         repeal: false,
         pop: 414,
@@ -93,7 +93,7 @@ test("generate CSVs", async ({}, testInfo) => {
       place: {
         name: "Place with PBD",
         state: "GDL",
-        country: "MX",
+        country: "Mexico",
         type: "city",
         repeal: false,
         pop: 5141414,
