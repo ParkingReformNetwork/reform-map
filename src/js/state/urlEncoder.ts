@@ -16,9 +16,9 @@ export const MERGED_STRING_SET_OPTIONS = {
 
 export const DEFAULT_FILTER_STATE: FilterState = {
   searchInput: null,
-  policyTypeFilter: "remove parking minimums",
+  policyTypeFilter: "any parking reform",
   status: "adopted",
-  allMinimumsRemovedToggle: true,
+  allMinimumsRemovedToggle: false,
   ...MERGED_STRING_SET_OPTIONS,
   populationSliderIndexes: [0, POPULATION_MAX_INDEX],
 };
