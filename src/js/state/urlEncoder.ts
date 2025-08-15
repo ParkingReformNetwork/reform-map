@@ -20,7 +20,10 @@ class BidirectionalMap<K extends string, V extends string> {
   private constructor(
     private encodeMap: Record<K, V>,
     private decodeMap: Record<V, K>,
-  ) {}
+  ) {
+    this.encodeMap = encodeMap;
+    this.decodeMap = decodeMap;
+  }
 
   static from<const T extends ReadonlyArray<readonly [string, string]>>(
     entries: T,
