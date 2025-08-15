@@ -2,6 +2,7 @@ import initIcons from "./layout/fontAwesome";
 import createMap from "./layout/map";
 import initFilterPopup from "./layout/filterPopup";
 import maybeDisableFullScreenIcon from "./layout/iframe";
+import initShareLink from "./layout/share";
 import initAbout from "./layout/about";
 import { initViewToggle, addViewToggleSubscribers } from "./layout/viewToggle";
 import readData from "./model/data";
@@ -34,6 +35,7 @@ export default async function initApp(): Promise<void> {
   initCounters(filterManager);
   initSearch(filterManager);
   initFilterOptions(filterManager);
+  initShareLink(filterManager);
 
   const table = initTable(filterManager, viewToggle);
   addViewToggleSubscribers(viewToggle, table);

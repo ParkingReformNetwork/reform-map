@@ -6,10 +6,12 @@ import {
 } from "@fortawesome/free-regular-svg-icons";
 import {
   faArrowRight,
+  faCheck,
   faChevronDown,
   faChevronUp,
   faUpRightFromSquare,
   faMagnifyingGlass,
+  faLink,
   faSquareCheck,
   faSliders,
   faTable,
@@ -20,11 +22,13 @@ import {
 export default function initIcons(): void {
   library.add(
     faArrowRight,
+    faCheck,
     faChevronUp,
     faChevronDown,
     faCircleQuestion,
     faUpRightFromSquare,
     faCircleXmark,
+    faLink,
     faMagnifyingGlass,
     faSquare,
     faSquareCheck,
