@@ -150,10 +150,10 @@ export function initPopulationSlider(
   );
 
   // Set initial state.
-  const maxIndex = populationSliderIndexes[1].toString();
+  const maxIndex = POPULATION_MAX_INDEX.toString();
   sliders.left.setAttribute("max", maxIndex);
   sliders.right.setAttribute("max", maxIndex);
-  sliders.right.setAttribute("value", maxIndex);
+  sliders.right.setAttribute("value", populationSliderIndexes[1].toString());
 
   // Add event listeners.
   const onChange = (): void => {

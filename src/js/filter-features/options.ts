@@ -244,9 +244,10 @@ function generateAccordionForFilterGroup(
   fieldSet.appendChild(filterOptionsContainer);
 
   // When setting up the filter group, we use `merged` to add every option in the universe.
+  // However, we use the initial filterState to determine if it should be checked.
   FILTER_OPTIONS.merged[params.filterStateKey].forEach((val, i) => {
     const inputId = `filter-${params.htmlName}-option-${i}`;
-    const checked = true;
+    const checked = filterState[params.filterStateKey].has(val);
     const description = params.preserveCapitalization ? val : capitalize(val);
     const [label] = generateCheckbox(
       inputId,
