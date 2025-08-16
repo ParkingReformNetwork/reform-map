@@ -60,6 +60,10 @@
 
   font-weight: normal;
   font-size: typography.$font-size-xl;
+
+  .scorecard-supplemental-place-info {
+    font-size: typography.$font-size-lg;
+  }
 }
 
 .scorecard-close-icon-container {
