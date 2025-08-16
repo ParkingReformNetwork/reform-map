@@ -13,6 +13,7 @@
     "lint": "prettier --check . && eslint scripts/ tests/ src/",
     "gen-data-set": "tsx scripts/generateDataSet.ts",
     "gen-html": "tsx node_modules/@11ty/eleventy/cmd.cjs --config=eleventy.config.ts",
+    "gen-redirects": "tsx scripts/generateRedirects.ts",
     "sync-directus": "tsx scripts/syncDirectus.ts",
     "broken-links": "tsx scripts/brokenLinks.ts",
     "serve-dist": "cd dist; http-server",
