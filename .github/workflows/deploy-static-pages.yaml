@@ -31,6 +31,8 @@ jobs:
 
       - name: Generate HTML pages
         run: npm run gen-html
+      - name: Generate redirects
+        run: npm run gen-redirects
       - name: Archive city_detail/ contents
         run: |
           cd city_detail
