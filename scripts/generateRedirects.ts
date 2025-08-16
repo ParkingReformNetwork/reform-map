@@ -5,6 +5,16 @@ import * as path from "path";
 
 const REDIRECTS = {
   NewZealand_NZ: "NewZealand",
+  CityofMarysville_OH: "Marysville_OH",
+  Lewiston_IL: "Lewistown_IL",
+  London_GreaterLondon: "London_England",
+  MountPleasent_MI: "MountPleasant_MI",
+  MexicoCity_EM: "MexicoCity_DF",
+  NewYorkCIty_NY: "NewYorkCity_NY",
+  Roanoke_va: "Roanoke_VA.html",
+  Trelleborg_Scania: "Trelleborg_Skåne",
+  SaintCatharines_ON: "St.Catharines_ON",
+  WashingtonDC_DC: "WashingtonDC",
 } as const;
 
 const BASE_URL = "https://parkingreform.org/mandates-map/city_detail/";
