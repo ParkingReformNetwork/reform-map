@@ -67,12 +67,10 @@ test("generateScorecard()", () => {
   };
 
   expect(
-    generateScorecard(
-      {
-        place,
-        add_max: [landUsePolicy],
-      },
-    ),
+    generateScorecard({
+      place,
+      add_max: [landUsePolicy],
+    }),
   ).toEqual(
     `
     <header class="scorecard-header">
