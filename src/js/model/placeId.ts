@@ -1,11 +1,22 @@
+/* eslint-disable camelcase */
+import { COUNTRY_MAPPING } from "./data";
 import type { PlaceId, PlaceType } from "./types";
 
-export function determinePlaceId(place: {
+export function determinePlaceIdForDirectus(place: {
   name: string;
   state: string | null;
+  country_code: string;
+  type: PlaceType;
 }): PlaceId {
-  const { name, state } = place;
-  return state ? `${name}, ${state}` : name;
+  const { name, state, country_code, type } = place;
+  const country = COUNTRY_MAPPING[country_code];
+  if (!country) {
+    throw new Error(
+      `Missing country in COUNTRY_MAPPING in data.ts: ${country_code}`,
+    );
+  }
+  if (type === "country" && name === country) return name;
+  return state ? `${name}, ${state}, ${country}` : `${name}, ${country}`;
 }
 
 /** Get the additional info about the place beyond its `name`, if any.
@@ -14,12 +25,13 @@ export function determinePlaceId(place: {
  * supplemental info.
  */
 export function determinesupplementalPlaceInfo(place: {
+  name: string;
   state: string | null;
   country: string;
   type: PlaceType;
 }): string | null {
-  const { state, country, type } = place;
-  if (type === "country") return null;
+  const { name, state, country, type } = place;
+  if (type === "country" && name === country) return null;
   return state ? `${state}, ${country}` : country;
 }
 

@@ -19,7 +19,7 @@ div.choices[data-type*="select-one"] {
     line-height: 1.2; // To vertically center the text.
 
     min-height: spacing.$min-touch-target;
-    width: 260px;
+    width: 285px;
 
     border-top-left-radius: borders.$border-radius;
     border-top-right-radius: borders.$border-radius;
@@ -27,7 +27,7 @@ div.choices[data-type*="select-one"] {
     border-bottom-right-radius: 0;
 
     @include breakpoints.gt-xxs {
-      width: 280px;
+      width: 320px;
     }
   }
 
