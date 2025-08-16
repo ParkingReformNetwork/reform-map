@@ -3,21 +3,64 @@ import { expect, test } from "@playwright/test";
 import {
   escapePlaceId,
   placeIdToUrl,
-  determinePlaceId,
+  determinePlaceIdForDirectus,
   determinesupplementalPlaceInfo,
   stripCountryFromPlaceId,
 } from "../../src/js/model/placeId";
 
-test("determinePlaceId", () => {
-  expect(determinePlaceId({ name: "Tucson", state: "AZ" })).toEqual(
-    "Tucson, AZ",
-  );
-  expect(determinePlaceId({ name: "Tucson", state: null })).toEqual("Tucson");
+test.describe("determinePlaceIdForDirectus", () => {
+  test("valid IDs", () => {
+    expect(
+      determinePlaceIdForDirectus({
+        name: "Tucson",
+        state: "Arizona",
+        country_code: "US",
+        type: "city",
+      }),
+    ).toEqual("Tucson, Arizona, United States");
+    expect(
+      determinePlaceIdForDirectus({
+        name: "London",
+        state: null,
+        country_code: "UK",
+        type: "city",
+      }),
+    ).toEqual("London, United Kingdom");
+    expect(
+      determinePlaceIdForDirectus({
+        name: "Germany",
+        state: null,
+        country_code: "DE",
+        type: "country",
+      }),
+    ).toEqual("Germany");
+
+    expect(
+      determinePlaceIdForDirectus({
+        name: "Scotland",
+        state: null,
+        country_code: "UK",
+        type: "country",
+      }),
+    ).toEqual("Scotland, United Kingdom");
+  });
+
+  test("unrecognized country code", () => {
+    expect(() =>
+      determinePlaceIdForDirectus({
+        name: "Tucson",
+        state: "Arizona",
+        country_code: "BAD",
+        type: "city",
+      }),
+    ).toThrow();
+  });
 });
 
 test("determinesupplementalPlaceInfo", () => {
   expect(
     determinesupplementalPlaceInfo({
+      name: "Tucson",
       state: "Arizona",
       country: "United States",
       type: "city",
@@ -25,6 +68,7 @@ test("determinesupplementalPlaceInfo", () => {
   ).toEqual("Arizona, United States");
   expect(
     determinesupplementalPlaceInfo({
+      name: "Tucson",
       state: null,
       country: "United States",
       type: "city",
@@ -32,6 +76,15 @@ test("determinesupplementalPlaceInfo", () => {
   ).toEqual("United States");
   expect(
     determinesupplementalPlaceInfo({
+      name: "Scotland",
+      state: null,
+      country: "United Kingdom",
+      type: "country",
+    }),
+  ).toEqual("United Kingdom");
+  expect(
+    determinesupplementalPlaceInfo({
+      name: "United States",
       state: null,
       country: "United States",
       type: "country",
