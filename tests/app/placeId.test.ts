@@ -4,6 +4,7 @@ import {
   escapePlaceId,
   placeIdToUrl,
   determinePlaceId,
+  determinesupplementalPlaceInfo,
   stripCountryFromPlaceId,
 } from "../../src/js/model/placeId";
 
@@ -12,6 +13,30 @@ test("determinePlaceId", () => {
     "Tucson, AZ",
   );
   expect(determinePlaceId({ name: "Tucson", state: null })).toEqual("Tucson");
+});
+
+test("determinesupplementalPlaceInfo", () => {
+  expect(
+    determinesupplementalPlaceInfo({
+      state: "Arizona",
+      country: "United States",
+      type: "city",
+    }),
+  ).toEqual("Arizona, United States");
+  expect(
+    determinesupplementalPlaceInfo({
+      state: null,
+      country: "United States",
+      type: "city",
+    }),
+  ).toEqual("United States");
+  expect(
+    determinesupplementalPlaceInfo({
+      state: null,
+      country: "United States",
+      type: "country",
+    }),
+  ).toBeNull();
 });
 
 test("stripCountryFromPlaceId", () => {

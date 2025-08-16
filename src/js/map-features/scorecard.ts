@@ -7,11 +7,14 @@ import { PlaceFilterManager } from "../state/FilterState";
 import { ViewStateObservable } from "../layout/viewToggle";
 import { determinePolicyTypeStatuses } from "../model/data";
 import type { MarkerWithPlaceId } from "./markers";
+import { determinesupplementalPlaceInfo } from "../model/placeId";
 
-export function generateScorecard(
-  entry: ProcessedCoreEntry,
-  placeId: PlaceId,
-): string {
+export function generateScorecard(entry: ProcessedCoreEntry): string {
+  const supplementalPlace = determinesupplementalPlaceInfo(entry.place);
+  const titleContents = supplementalPlace
+    ? `${entry.place.name}<br/><span class="scorecard-supplemental-place-info">${supplementalPlace}`
+    : entry.place.name;
+
   const policyToStatuses = determinePolicyTypeStatuses(entry);
   // If at least one policy record is proposed or repealed, we mention
   // the ReformStatus with every policy type so that people don't incorrectly
@@ -42,7 +45,7 @@ export function generateScorecard(
 
   return `
     <header class="scorecard-header">
-      <h2 class="scorecard-title">${placeId}</h2>
+      <h2 class="scorecard-title">${titleContents}</h2>
       <button
         class="scorecard-close-icon-container"
         title="close the place details popup"
@@ -82,10 +85,7 @@ function updateScorecardUI(state: ScorecardState): void {
       break;
     }
     case "visible": {
-      scorecardContainer.innerHTML = generateScorecard(
-        state.entry,
-        state.placeId,
-      );
+      scorecardContainer.innerHTML = generateScorecard(state.entry);
       scorecardContainer.hidden = false;
       break;
     }
