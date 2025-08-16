@@ -11,7 +11,7 @@ const REDIRECTS = {
   MountPleasent_MI: "MountPleasant_MI",
   MexicoCity_EM: "MexicoCity_DF",
   NewYorkCIty_NY: "NewYorkCity_NY",
-  Roanoke_va: "Roanoke_VA.html",
+  Roanoke_va: "Roanoke_VA",
   Trelleborg_Scania: "Trelleborg_Skåne",
   SaintCatharines_ON: "St.Catharines_ON",
   WashingtonDC_DC: "WashingtonDC",
