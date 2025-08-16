@@ -12,7 +12,7 @@ import { determinesupplementalPlaceInfo } from "../model/placeId";
 export function generateScorecard(entry: ProcessedCoreEntry): string {
   const supplementalPlace = determinesupplementalPlaceInfo(entry.place);
   const titleContents = supplementalPlace
-    ? `${entry.place.name}<br/><span class="scorecard-supplemental-place-info">${supplementalPlace}`
+    ? `${entry.place.name}<br/><span class="scorecard-supplemental-place-info">${supplementalPlace}</span>`
     : entry.place.name;
 
   const policyToStatuses = determinePolicyTypeStatuses(entry);

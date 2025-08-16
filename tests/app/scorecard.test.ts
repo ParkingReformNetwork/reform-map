@@ -47,7 +47,7 @@ test("scorecard pops up and closes", async ({ page }) => {
 test("generateScorecard()", () => {
   const place: ProcessedPlace = {
     name: "My City",
-    state: "AZ",
+    state: "Arizona",
     country: "United States",
     type: "city",
     pop: 245132,
@@ -72,12 +72,11 @@ test("generateScorecard()", () => {
         place,
         add_max: [landUsePolicy],
       },
-      "My City, AZ",
     ),
   ).toEqual(
     `
     <header class="scorecard-header">
-      <h2 class="scorecard-title">My City, AZ</h2>
+      <h2 class="scorecard-title">My City<br/><span class="scorecard-supplemental-place-info">Arizona, United States</span></h2>
       <button
         class="scorecard-close-icon-container"
         title="close the place details popup"
@@ -104,10 +103,10 @@ test("generateScorecard()", () => {
     rm_min: [landUsePolicy],
     benefit_district: [benefitDistrict],
   };
-  expect(generateScorecard(repealed, "My City, AZ")).toEqual(
+  expect(generateScorecard(repealed)).toEqual(
     `
     <header class="scorecard-header">
-      <h2 class="scorecard-title">My City, AZ</h2>
+      <h2 class="scorecard-title">My City<br/><span class="scorecard-supplemental-place-info">Arizona, United States</span></h2>
       <button
         class="scorecard-close-icon-container"
         title="close the place details popup"
