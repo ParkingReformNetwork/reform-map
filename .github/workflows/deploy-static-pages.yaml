@@ -52,5 +52,11 @@ jobs:
           username: ${{ secrets.PRN_SERVER_USERNAME }}
           key: ${{ secrets.PRN_SERVER_PRIVATE_KEY }}
           script: |
-            tar -xzf /var/www/${{ secrets.PRN_SERVER_HOST }}/mandates-map/city_detail/city_details.tar.gz -C /var/www/${{ secrets.PRN_SERVER_HOST }}/mandates-map/city_detail
-            rm /var/www/${{ secrets.PRN_SERVER_HOST }}/mandates-map/city_detail/city_details.tar.gz
+            mkdir -p /tmp/city_detail_deploy
+            tar -xzf /var/www/${{ secrets.PRN_SERVER_HOST }}/mandates-map/city_detail/city_details.tar.gz -C /tmp/city_detail_deploy
+
+            rsync --archive --verbose --delete --no-times \
+              /tmp/city_detail_deploy/ \
+              /var/www/${{ secrets.PRN_SERVER_HOST }}/mandates-map/city_detail/
+
+            rm -rf /tmp/city_detail_deploy
