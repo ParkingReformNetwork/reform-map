@@ -104,9 +104,10 @@ test("stripCountryFromPlaceId", () => {
 });
 
 test("encodePlaceId", () => {
-  expect(encodePlaceId("Tucson, AZ")).toEqual("Tucson_AZ");
-  expect(encodePlaceId("St. Lucia, AZ")).toEqual("St.Lucia_AZ");
-  expect(encodePlaceId("St. Lucia, AZ, United States")).toEqual("St.Lucia_AZ");
+  expect(encodePlaceId("Tucson, Arizona, United States")).toEqual("tucson-arizona-united-states");
+  expect(encodePlaceId("São Paulo, Brazil")).toEqual("sao-paulo-brazil");
+  expect(encodePlaceId("Creek's Hill, Montréal")).toEqual("creeks-hill-montreal");
+  expect(encodePlaceId("Șäñțô  ,")).toEqual("santo");
 });
 
 test("encodedPlaceToUrl", () => {
