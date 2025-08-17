@@ -42,11 +42,15 @@ export function stripCountryFromPlaceId(placeId: PlaceId): string {
 
 /**
  * Normalize the place ID for being used in a URL.
- *
- * This strips the country so that our historical details pages keep working.
  */
 export function encodePlaceId(placeId: PlaceId): string {
-  return stripCountryFromPlaceId(placeId).replace(/ /g, "").replace(",", "_");
+  return placeId
+    .normalize("NFD") // Decompose characters (ã → a + ˜)
+    .replace(/[\u0300-\u036f]/g, "") // Remove combining diacritics
+    .toLowerCase()
+    .replace(/'/g, "") // Remove '
+    .replace(/[^a-z0-9]+/g, "-") // Replace non-alphanumeric with hyphens
+    .replace(/^-+|-+$/g, ""); // Trim hyphens
 }
 
 export function encodedPlaceToUrl(encodedPlace: string): string {
