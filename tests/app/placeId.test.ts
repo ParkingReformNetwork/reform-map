@@ -104,9 +104,13 @@ test("stripCountryFromPlaceId", () => {
 });
 
 test("encodePlaceId", () => {
-  expect(encodePlaceId("Tucson, Arizona, United States")).toEqual("tucson-arizona-united-states");
+  expect(encodePlaceId("Tucson, Arizona, United States")).toEqual(
+    "tucson-arizona-united-states",
+  );
   expect(encodePlaceId("São Paulo, Brazil")).toEqual("sao-paulo-brazil");
-  expect(encodePlaceId("Creek's Hill, Montréal")).toEqual("creeks-hill-montreal");
+  expect(encodePlaceId("Creek's Hill, Montréal")).toEqual(
+    "creeks-hill-montreal",
+  );
   expect(encodePlaceId("Șäñțô  ,")).toEqual("santo");
 });
 

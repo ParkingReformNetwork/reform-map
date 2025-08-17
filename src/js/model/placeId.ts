@@ -45,12 +45,12 @@ export function stripCountryFromPlaceId(placeId: PlaceId): string {
  */
 export function encodePlaceId(placeId: PlaceId): string {
   return placeId
-    .normalize('NFD')  // Decompose characters (ã → a + ˜)
-    .replace(/[\u0300-\u036f]/g, '')  // Remove combining diacritics
+    .normalize("NFD") // Decompose characters (ã → a + ˜)
+    .replace(/[\u0300-\u036f]/g, "") // Remove combining diacritics
     .toLowerCase()
-    .replace(/'/g, '') // Remove '
-    .replace(/[^a-z0-9]+/g, '-')  // Replace non-alphanumeric with hyphens
-    .replace(/^-+|-+$/g, '');  // Trim hyphens
+    .replace(/'/g, "") // Remove '
+    .replace(/[^a-z0-9]+/g, "-") // Replace non-alphanumeric with hyphens
+    .replace(/^-+|-+$/g, ""); // Trim hyphens
 }
 
 export function encodedPlaceToUrl(encodedPlace: string): string {
