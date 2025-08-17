@@ -2546,10 +2546,10 @@
       }
     ]
   },
-  "Armadale, WA, Australia": {
+  "Armadale, Western Australia, Australia": {
     "place": {
       "name": "Armadale",
-      "state": "WA",
+      "state": "Western Australia",
       "country": "Australia",
       "type": "city",
       "encoded": "Armadale_WA",
@@ -3274,10 +3274,10 @@
       }
     ]
   },
-  "Augsburg, BY, Germany": {
+  "Augsburg, Bavaria, Germany": {
     "place": {
       "name": "Augsburg",
-      "state": "BY",
+      "state": "Bavaria",
       "country": "Germany",
       "type": "city",
       "encoded": "Augsburg_BY",
@@ -4353,10 +4353,10 @@
       }
     ]
   },
-  "Basel, BS, Switzerland": {
+  "Basel, Basel-Stadt, Switzerland": {
     "place": {
       "name": "Basel",
-      "state": "BS",
+      "state": "Basel-Stadt",
       "country": "Switzerland",
       "type": "city",
       "encoded": "Basel_BS",
@@ -5047,10 +5047,10 @@
       }
     ]
   },
-  "Beijing, BJ, China": {
+  "Beijing, China": {
     "place": {
       "name": "Beijing",
-      "state": "BJ",
+      "state": null,
       "country": "China",
       "type": "city",
       "encoded": "Beijing_BJ",
@@ -6147,26 +6147,6 @@
       }
     ]
   },
-  "Berlin, BE, Germany": {
-    "place": {
-      "name": "Berlin",
-      "state": "BE",
-      "country": "Germany",
-      "type": "city",
-      "encoded": "Berlin_BE",
-      "pop": 3576873,
-      "coord": [13.4349112, 52.5103817],
-      "repeal": true
-    },
-    "rm_min": [
-      {
-        "status": "adopted",
-        "scope": ["citywide"],
-        "land": ["all uses"],
-        "date": "1997"
-      }
-    ]
-  },
   "Berlin, CT, United States": {
     "place": {
       "name": "Berlin",
@@ -6184,6 +6164,26 @@
         "scope": ["city center / business district", "citywide"],
         "land": ["all uses", "other", "residential, all uses"],
         "date": "2020-08-20"
+      }
+    ]
+  },
+  "Berlin, Germany": {
+    "place": {
+      "name": "Berlin",
+      "state": null,
+      "country": "Germany",
+      "type": "city",
+      "encoded": "Berlin_BE",
+      "pop": 3576873,
+      "coord": [13.4349112, 52.5103817],
+      "repeal": true
+    },
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["all uses"],
+        "date": "1997"
       }
     ]
   },
@@ -7657,10 +7657,10 @@
       }
     ]
   },
-  "Bonn, NW, Germany": {
+  "Bonn, North Rhine-Westphalia, Germany": {
     "place": {
       "name": "Bonn",
-      "state": "NW",
+      "state": "North Rhine-Westphalia",
       "country": "Germany",
       "type": "city",
       "encoded": "Bonn_NW",
@@ -8507,10 +8507,10 @@
       }
     ]
   },
-  "Bremerhaven, HB, Germany": {
+  "Bremerhaven, Bremen, Germany": {
     "place": {
       "name": "Bremerhaven",
-      "state": "HB",
+      "state": "Bremen",
       "country": "Germany",
       "type": "city",
       "encoded": "Bremerhaven_HB",
@@ -8843,10 +8843,10 @@
       }
     ]
   },
-  "Brisbane, QLD, Australia": {
+  "Brisbane, Queensland, Australia": {
     "place": {
       "name": "Brisbane",
-      "state": "QLD",
+      "state": "Queensland",
       "country": "Australia",
       "type": "city",
       "encoded": "Brisbane_QLD",
@@ -9880,10 +9880,10 @@
       }
     ]
   },
-  "Burnie, TAS, Australia": {
+  "Burnie, Tasmania, Australia": {
     "place": {
       "name": "Burnie",
-      "state": "TAS",
+      "state": "Tasmania",
       "country": "Australia",
       "type": "city",
       "encoded": "Burnie_TAS",
@@ -10232,10 +10232,10 @@
       }
     ]
   },
-  "California, CA, United States": {
+  "California, United States": {
     "place": {
       "name": "California",
-      "state": "CA",
+      "state": null,
       "country": "United States",
       "type": "state",
       "encoded": "California_CA",
@@ -11044,10 +11044,10 @@
       }
     ]
   },
-  "Cape Town, WC, South Africa": {
+  "Cape Town, Western Cape, South Africa": {
     "place": {
       "name": "Cape Town",
-      "state": "WC",
+      "state": "Western Cape",
       "country": "South Africa",
       "type": "city",
       "encoded": "CapeTown_WC",
@@ -14099,10 +14099,10 @@
       }
     ]
   },
-  "Chur, GR, Switzerland": {
+  "Chur, Grisons, Switzerland": {
     "place": {
       "name": "Chur",
-      "state": "GR",
+      "state": "Grisons",
       "country": "Switzerland",
       "type": "city",
       "encoded": "Chur_GR",
@@ -15879,10 +15879,10 @@
       }
     ]
   },
-  "Colorado, CO, United States": {
+  "Colorado, United States": {
     "place": {
       "name": "Colorado",
-      "state": "CO",
+      "state": null,
       "country": "United States",
       "type": "state",
       "encoded": "Colorado_CO",
@@ -16494,10 +16494,10 @@
       }
     ]
   },
-  "Connecticut, CT, United States": {
+  "Connecticut, United States": {
     "place": {
       "name": "Connecticut",
-      "state": "CT",
+      "state": null,
       "country": "United States",
       "type": "state",
       "encoded": "Connecticut_CT",
@@ -17147,10 +17147,10 @@
       }
     ]
   },
-  "Cottbus, BB, Germany": {
+  "Cottbus, Brandenburg, Germany": {
     "place": {
       "name": "Cottbus",
-      "state": "BB",
+      "state": "Brandenburg",
       "country": "Germany",
       "type": "city",
       "encoded": "Cottbus_BB",
@@ -19997,10 +19997,10 @@
       }
     ]
   },
-  "Derwent Valley, TAS, Australia": {
+  "Derwent Valley, Tasmania, Australia": {
     "place": {
       "name": "Derwent Valley",
-      "state": "TAS",
+      "state": "Tasmania",
       "country": "Australia",
       "type": "city",
       "encoded": "DerwentValley_TAS",
@@ -20303,10 +20303,10 @@
       }
     ]
   },
-  "Dietzenbach, HE, Germany": {
+  "Dietzenbach, Hesse, Germany": {
     "place": {
       "name": "Dietzenbach",
-      "state": "HE",
+      "state": "Hesse",
       "country": "Germany",
       "type": "city",
       "encoded": "Dietzenbach_HE",
@@ -20571,10 +20571,10 @@
       }
     ]
   },
-  "Dorset, TAS, Australia": {
+  "Dorset, Tasmania, Australia": {
     "place": {
       "name": "Dorset",
-      "state": "TAS",
+      "state": "Tasmania",
       "country": "Australia",
       "type": "city",
       "encoded": "Dorset_TAS",
@@ -20896,10 +20896,10 @@
       }
     ]
   },
-  "Dresden, SN, Germany": {
+  "Dresden, Saxony, Germany": {
     "place": {
       "name": "Dresden",
-      "state": "SN",
+      "state": "Saxony",
       "country": "Germany",
       "type": "city",
       "encoded": "Dresden_SN",
@@ -26134,10 +26134,10 @@
       }
     ]
   },
-  "Flensburg, SH, Germany": {
+  "Flensburg, Schleswig-Holstein, Germany": {
     "place": {
       "name": "Flensburg",
-      "state": "SH",
+      "state": "Schleswig-Holstein",
       "country": "Germany",
       "type": "city",
       "encoded": "Flensburg_SH",
@@ -26314,10 +26314,10 @@
       }
     ]
   },
-  "Florida, FL, United States": {
+  "Florida, United States": {
     "place": {
       "name": "Florida",
-      "state": "FL",
+      "state": null,
       "country": "United States",
       "type": "state",
       "encoded": "Florida_FL",
@@ -27621,10 +27621,10 @@
       }
     ]
   },
-  "Frankfurt, HE, Germany": {
+  "Frankfurt, Hesse, Germany": {
     "place": {
       "name": "Frankfurt",
-      "state": "HE",
+      "state": "Hesse",
       "country": "Germany",
       "type": "city",
       "encoded": "Frankfurt_HE",
@@ -28106,10 +28106,10 @@
       }
     ]
   },
-  "Fremantle, WA, Australia": {
+  "Fremantle, Western Australia, Australia": {
     "place": {
       "name": "Fremantle",
-      "state": "WA",
+      "state": "Western Australia",
       "country": "Australia",
       "type": "city",
       "encoded": "Fremantle_WA",
@@ -35162,10 +35162,10 @@
       }
     ]
   },
-  "Hobart, TAS, Australia": {
+  "Hobart, Tasmania, Australia": {
     "place": {
       "name": "Hobart",
-      "state": "TAS",
+      "state": "Tasmania",
       "country": "Australia",
       "type": "city",
       "encoded": "Hobart_TAS",
@@ -35422,10 +35422,10 @@
       }
     ]
   },
-  "Hong Kong, HK, China": {
+  "Hong Kong, China": {
     "place": {
       "name": "Hong Kong",
-      "state": "HK",
+      "state": null,
       "country": "China",
       "type": "state",
       "encoded": "HongKong_HK",
@@ -36721,10 +36721,10 @@
       }
     ]
   },
-  "Ingolstadt, BY, Germany": {
+  "Ingolstadt, Bavaria, Germany": {
     "place": {
       "name": "Ingolstadt",
-      "state": "BY",
+      "state": "Bavaria",
       "country": "Germany",
       "type": "city",
       "encoded": "Ingolstadt_BY",
@@ -38034,10 +38034,10 @@
       }
     ]
   },
-  "Johannesburg, GP, South Africa": {
+  "Johannesburg, Gauteng, South Africa": {
     "place": {
       "name": "Johannesburg",
-      "state": "GP",
+      "state": "Gauteng",
       "country": "South Africa",
       "type": "city",
       "encoded": "Johannesburg_GP",
@@ -38430,10 +38430,10 @@
       }
     ]
   },
-  "Jönköping, Jönköping, Sweden": {
+  "Jönköping, Jönköping County, Sweden": {
     "place": {
       "name": "Jönköping",
-      "state": "Jönköping",
+      "state": "Jönköping County",
       "country": "Sweden",
       "type": "city",
       "encoded": "Jönköping_Jönköping",
@@ -38724,10 +38724,10 @@
       }
     ]
   },
-  "Kassel, HE, Germany": {
+  "Kassel, Hesse, Germany": {
     "place": {
       "name": "Kassel",
-      "state": "HE",
+      "state": "Hesse",
       "country": "Germany",
       "type": "city",
       "encoded": "Kassel_HE",
@@ -38852,10 +38852,10 @@
       }
     ]
   },
-  "Kempten, BY, Germany": {
+  "Kempten, Bavaria, Germany": {
     "place": {
       "name": "Kempten",
-      "state": "BY",
+      "state": "Bavaria",
       "country": "Germany",
       "type": "city",
       "encoded": "Kempten_BY",
@@ -39860,10 +39860,10 @@
       }
     ]
   },
-  "Koblenz, RP, Germany": {
+  "Koblenz, Rhineland-Palatinate, Germany": {
     "place": {
       "name": "Koblenz",
-      "state": "RP",
+      "state": "Rhineland-Palatinate",
       "country": "Germany",
       "type": "city",
       "encoded": "Koblenz_RP",
@@ -39936,10 +39936,10 @@
       }
     ]
   },
-  "Konstanz, BW, Germany": {
+  "Konstanz, Baden-Württemberg, Germany": {
     "place": {
       "name": "Konstanz",
-      "state": "BW",
+      "state": "Baden-Württemberg",
       "country": "Germany",
       "type": "city",
       "encoded": "Konstanz_BW",
@@ -41517,10 +41517,10 @@
       }
     ]
   },
-  "Landshut, BY, Germany": {
+  "Landshut, Bavaria, Germany": {
     "place": {
       "name": "Landshut",
-      "state": "BY",
+      "state": "Bavaria",
       "country": "Germany",
       "type": "city",
       "encoded": "Landshut_BY",
@@ -43343,10 +43343,10 @@
       }
     ]
   },
-  "Lindau, BY, Germany": {
+  "Lindau, Bavaria, Germany": {
     "place": {
       "name": "Lindau",
-      "state": "BY",
+      "state": "Bavaria",
       "country": "Germany",
       "type": "city",
       "encoded": "Lindau_BY",
@@ -45336,10 +45336,10 @@
       }
     ]
   },
-  "Maharashtra, MH, India": {
+  "Maharashtra, India": {
     "place": {
       "name": "Maharashtra",
-      "state": "MH",
+      "state": null,
       "country": "India",
       "type": "state",
       "encoded": "Maharashtra_MH",
@@ -45408,10 +45408,10 @@
       }
     ]
   },
-  "Maine, ME, United States": {
+  "Maine, United States": {
     "place": {
       "name": "Maine",
-      "state": "ME",
+      "state": null,
       "country": "United States",
       "type": "state",
       "encoded": "Maine_ME",
@@ -48566,10 +48566,10 @@
       }
     ]
   },
-  "Mexico City, DF, Mexico": {
+  "Mexico City, Mexico": {
     "place": {
       "name": "Mexico City",
-      "state": "DF",
+      "state": null,
       "country": "Mexico",
       "type": "city",
       "encoded": "MexicoCity_DF",
@@ -50381,10 +50381,10 @@
       }
     ]
   },
-  "Montana, MT, United States": {
+  "Montana, United States": {
     "place": {
       "name": "Montana",
-      "state": "MT",
+      "state": null,
       "country": "United States",
       "type": "state",
       "encoded": "Montana_MT",
@@ -52646,10 +52646,10 @@
       }
     ]
   },
-  "München, BY, Germany": {
+  "München, Bavaria, Germany": {
     "place": {
       "name": "München",
-      "state": "BY",
+      "state": "Bavaria",
       "country": "Germany",
       "type": "city",
       "encoded": "München_BY",
@@ -52666,10 +52666,10 @@
       }
     ]
   },
-  "Münster, NW, Germany": {
+  "Münster, North Rhine-Westphalia, Germany": {
     "place": {
       "name": "Münster",
-      "state": "NW",
+      "state": "North Rhine-Westphalia",
       "country": "Germany",
       "type": "city",
       "encoded": "Münster_NW",
@@ -53720,10 +53720,10 @@
       }
     ]
   },
-  "New Hampshire, NH, United States": {
+  "New Hampshire, United States": {
     "place": {
       "name": "New Hampshire",
-      "state": "NH",
+      "state": null,
       "country": "United States",
       "type": "state",
       "encoded": "NewHampshire_NH",
@@ -55211,10 +55211,10 @@
       }
     ]
   },
-  "North Carolina, NC, United States": {
+  "North Carolina, United States": {
     "place": {
       "name": "North Carolina",
-      "state": "NC",
+      "state": null,
       "country": "United States",
       "type": "state",
       "encoded": "NorthCarolina_NC",
@@ -55712,10 +55712,10 @@
       }
     ]
   },
-  "Northern Territory, NT, Australia": {
+  "Northern Territory, Australia": {
     "place": {
       "name": "Northern Territory",
-      "state": "NT",
+      "state": null,
       "country": "Australia",
       "type": "state",
       "encoded": "NorthernTerritory_NT",
@@ -56158,10 +56158,10 @@
       }
     ]
   },
-  "Nürnberg, BY, Germany": {
+  "Nürnberg, Bavaria, Germany": {
     "place": {
       "name": "Nürnberg",
-      "state": "BY",
+      "state": "Bavaria",
       "country": "Germany",
       "type": "city",
       "encoded": "Nürnberg_BY",
@@ -56634,10 +56634,10 @@
       }
     ]
   },
-  "Ochtrup, NW, Germany": {
+  "Ochtrup, North Rhine-Westphalia, Germany": {
     "place": {
       "name": "Ochtrup",
-      "state": "NW",
+      "state": "North Rhine-Westphalia",
       "country": "Germany",
       "type": "city",
       "encoded": "Ochtrup_NW",
@@ -56848,10 +56848,10 @@
       }
     ]
   },
-  "Oklahoma, OK, United States": {
+  "Oklahoma, United States": {
     "place": {
       "name": "Oklahoma",
-      "state": "OK",
+      "state": null,
       "country": "United States",
       "type": "state",
       "encoded": "Oklahoma_OK",
@@ -57464,10 +57464,10 @@
       }
     ]
   },
-  "Oregon, OR, United States": {
+  "Oregon, United States": {
     "place": {
       "name": "Oregon",
-      "state": "OR",
+      "state": null,
       "country": "United States",
       "type": "state",
       "encoded": "Oregon_OR",
@@ -59219,10 +59219,10 @@
       }
     ]
   },
-  "Passau, BY, Germany": {
+  "Passau, Bavaria, Germany": {
     "place": {
       "name": "Passau",
-      "state": "BY",
+      "state": "Bavaria",
       "country": "Germany",
       "type": "city",
       "encoded": "Passau_BY",
@@ -60064,10 +60064,10 @@
       }
     ]
   },
-  "Perth, WA, Australia": {
+  "Perth, Western Australia, Australia": {
     "place": {
       "name": "Perth",
-      "state": "WA",
+      "state": "Western Australia",
       "country": "Australia",
       "type": "city",
       "encoded": "Perth_WA",
@@ -63673,10 +63673,10 @@
       }
     ]
   },
-  "Regensburg, BY, Germany": {
+  "Regensburg, Bavaria, Germany": {
     "place": {
       "name": "Regensburg",
-      "state": "BY",
+      "state": "Bavaria",
       "country": "Germany",
       "type": "city",
       "encoded": "Regensburg_BY",
@@ -63807,10 +63807,10 @@
       }
     ]
   },
-  "Reykjavík, Höfuðborgarsvæðið, Iceland": {
+  "Reykjavík, Iceland": {
     "place": {
       "name": "Reykjavík",
-      "state": "Höfuðborgarsvæðið",
+      "state": null,
       "country": "Iceland",
       "type": "city",
       "encoded": "Reykjavík_Höfuðborgarsvæðið",
@@ -64395,10 +64395,10 @@
       }
     ]
   },
-  "Rio de Janeiro, RJ, Brazil": {
+  "Rio de Janeiro, Rio de Janeiro, Brazil": {
     "place": {
       "name": "Rio de Janeiro",
-      "state": "RJ",
+      "state": "Rio de Janeiro",
       "country": "Brazil",
       "type": "city",
       "encoded": "RiodeJaneiro_RJ",
@@ -65615,10 +65615,10 @@
       }
     ]
   },
-  "Rosenheim, BY, Germany": {
+  "Rosenheim, Bavaria, Germany": {
     "place": {
       "name": "Rosenheim",
-      "state": "BY",
+      "state": "Bavaria",
       "country": "Germany",
       "type": "city",
       "encoded": "Rosenheim_BY",
@@ -65747,10 +65747,10 @@
       }
     ]
   },
-  "Rostock, MV, Germany": {
+  "Rostock, Mecklenburg-Vorpommern, Germany": {
     "place": {
       "name": "Rostock",
-      "state": "MV",
+      "state": "Mecklenburg-Vorpommern",
       "country": "Germany",
       "type": "city",
       "encoded": "Rostock_MV",
@@ -66994,10 +66994,10 @@
       }
     ]
   },
-  "San Pedro Garza García, NL, Mexico": {
+  "San Pedro Garza García, Nuevo León, Mexico": {
     "place": {
       "name": "San Pedro Garza García",
-      "state": "NL",
+      "state": "Nuevo León",
       "country": "Mexico",
       "type": "city",
       "encoded": "SanPedroGarzaGarcía_NL",
@@ -67529,10 +67529,10 @@
       }
     ]
   },
-  "Sassnitz, MV, Germany": {
+  "Sassnitz, Mecklenburg-Vorpommern, Germany": {
     "place": {
       "name": "Sassnitz",
-      "state": "MV",
+      "state": "Mecklenburg-Vorpommern",
       "country": "Germany",
       "type": "city",
       "encoded": "Sassnitz_MV",
@@ -68423,10 +68423,10 @@
       }
     ]
   },
-  "Seoul, Seoul Special Metropolitan City, Korea": {
+  "Seoul, Korea": {
     "place": {
       "name": "Seoul",
-      "state": "Seoul Special Metropolitan City",
+      "state": null,
       "country": "Korea",
       "type": "city",
       "encoded": "Seoul_SeoulSpecialMetropolitanCity",
@@ -70487,10 +70487,10 @@
       }
     ]
   },
-  "South Australia, SA, Australia": {
+  "South Australia, Australia": {
     "place": {
       "name": "South Australia",
-      "state": "SA",
+      "state": null,
       "country": "Australia",
       "type": "state",
       "encoded": "SouthAustralia_SA",
@@ -70846,10 +70846,10 @@
       }
     ]
   },
-  "South Perth, WA, Australia": {
+  "South Perth, Western Australia, Australia": {
     "place": {
       "name": "South Perth",
-      "state": "WA",
+      "state": "Western Australia",
       "country": "Australia",
       "type": "city",
       "encoded": "SouthPerth_WA",
@@ -73341,10 +73341,10 @@
       }
     ]
   },
-  "Stirling, WA, Australia": {
+  "Stirling, Western Australia, Australia": {
     "place": {
       "name": "Stirling",
-      "state": "WA",
+      "state": "Western Australia",
       "country": "Australia",
       "type": "city",
       "encoded": "Stirling_WA",
@@ -73823,10 +73823,10 @@
       }
     ]
   },
-  "Stuttgart, BW, Germany": {
+  "Stuttgart, Baden-Württemberg, Germany": {
     "place": {
       "name": "Stuttgart",
-      "state": "BW",
+      "state": "Baden-Württemberg",
       "country": "Germany",
       "type": "city",
       "encoded": "Stuttgart_BW",
@@ -73851,10 +73851,10 @@
       }
     ]
   },
-  "Subiaco, WA, Australia": {
+  "Subiaco, Western Australia, Australia": {
     "place": {
       "name": "Subiaco",
-      "state": "WA",
+      "state": "Western Australia",
       "country": "Australia",
       "type": "city",
       "encoded": "Subiaco_WA",
@@ -74693,10 +74693,10 @@
       }
     ]
   },
-  "São Paulo, SP, Brazil": {
+  "São Paulo, São Paulo, Brazil": {
     "place": {
       "name": "São Paulo",
-      "state": "SP",
+      "state": "São Paulo",
       "country": "Brazil",
       "type": "city",
       "encoded": "SãoPaulo_SP",
@@ -75019,10 +75019,10 @@
       }
     ]
   },
-  "Tasmania, TAS, Australia": {
+  "Tasmania, Australia": {
     "place": {
       "name": "Tasmania",
-      "state": "TAS",
+      "state": null,
       "country": "Australia",
       "type": "state",
       "encoded": "Tasmania_TAS",
@@ -75361,10 +75361,10 @@
       }
     ]
   },
-  "Tel Aviv, TA, Israel": {
+  "Tel Aviv, Tel Aviv District, Israel": {
     "place": {
       "name": "Tel Aviv",
-      "state": "TA",
+      "state": "Tel Aviv District",
       "country": "Israel",
       "type": "city",
       "encoded": "TelAviv_TA",
@@ -76306,10 +76306,10 @@
       }
     ]
   },
-  "Tirol, Tirol, Austria": {
+  "Tirol, Austria": {
     "place": {
       "name": "Tirol",
-      "state": "Tirol",
+      "state": null,
       "country": "Austria",
       "type": "state",
       "encoded": "Tirol_Tirol",
@@ -77098,10 +77098,10 @@
       }
     ]
   },
-  "Trelleborg, Skåne, Sweden": {
+  "Trelleborg, Skåne County, Sweden": {
     "place": {
       "name": "Trelleborg",
-      "state": "Skåne",
+      "state": "Skåne County",
       "country": "Sweden",
       "type": "city",
       "encoded": "Trelleborg_Skåne",
@@ -77314,10 +77314,10 @@
       }
     ]
   },
-  "Tshwane, GP, South Africa": {
+  "Tshwane, Gauteng, South Africa": {
     "place": {
       "name": "Tshwane",
-      "state": "GP",
+      "state": "Gauteng",
       "country": "South Africa",
       "type": "city",
       "encoded": "Tshwane_GP",
@@ -77720,10 +77720,10 @@
       }
     ]
   },
-  "US Virgin Islands, VI, United States": {
+  "U.S. Virgin Islands, United States": {
     "place": {
-      "name": "US Virgin Islands",
-      "state": "VI",
+      "name": "U.S. Virgin Islands",
+      "state": null,
       "country": "United States",
       "type": "state",
       "encoded": "USVirginIslands_VI",
@@ -78755,10 +78755,10 @@
       }
     ]
   },
-  "Victoria Park, WA, Australia": {
+  "Victoria Park, Western Australia, Australia": {
     "place": {
       "name": "Victoria Park",
-      "state": "WA",
+      "state": "Western Australia",
       "country": "Australia",
       "type": "city",
       "encoded": "VictoriaPark_WA",
@@ -79176,10 +79176,10 @@
       }
     ]
   },
-  "Vorarlberg, Vorarlberg, Austria": {
+  "Vorarlberg, Austria": {
     "place": {
       "name": "Vorarlberg",
-      "state": "Vorarlberg",
+      "state": null,
       "country": "Austria",
       "type": "state",
       "encoded": "Vorarlberg_Vorarlberg",
@@ -79196,10 +79196,10 @@
       }
     ]
   },
-  "Västerås, Västmanland, Sweden": {
+  "Västerås, Västmanland County, Sweden": {
     "place": {
       "name": "Västerås",
-      "state": "Västmanland",
+      "state": "Västmanland County",
       "country": "Sweden",
       "type": "city",
       "encoded": "Västerås_Västmanland",
@@ -80221,10 +80221,10 @@
       }
     ]
   },
-  "Washington, WA, United States": {
+  "Washington, United States": {
     "place": {
       "name": "Washington",
-      "state": "WA",
+      "state": null,
       "country": "United States",
       "type": "state",
       "encoded": "Washington_WA",
@@ -83977,10 +83977,10 @@
       }
     ]
   },
-  "Winterthur, ZH, Switzerland": {
+  "Winterthur, Zurich, Switzerland": {
     "place": {
       "name": "Winterthur",
-      "state": "ZH",
+      "state": "Zurich",
       "country": "Switzerland",
       "type": "city",
       "encoded": "Winterthur_ZH",
@@ -85481,10 +85481,10 @@
       }
     ]
   },
-  "Zingst, MV, Germany": {
+  "Zingst, Mecklenburg-Vorpommern, Germany": {
     "place": {
       "name": "Zingst",
-      "state": "MV",
+      "state": "Mecklenburg-Vorpommern",
       "country": "Germany",
       "type": "city",
       "encoded": "Zingst_MV",
@@ -85549,10 +85549,10 @@
       }
     ]
   },
-  "Zuid-Holland, ZH, Netherlands": {
+  "Zuid-Holland, Netherlands": {
     "place": {
       "name": "Zuid-Holland",
-      "state": "ZH",
+      "state": null,
       "country": "Netherlands",
       "type": "state",
       "encoded": "Zuid-Holland_ZH",
@@ -85609,10 +85609,10 @@
       }
     ]
   },
-  "Örebro, Örebro, Sweden": {
+  "Örebro, Örebro County, Sweden": {
     "place": {
       "name": "Örebro",
-      "state": "Örebro",
+      "state": "Örebro County",
       "country": "Sweden",
       "type": "city",
       "encoded": "Örebro_Örebro",
