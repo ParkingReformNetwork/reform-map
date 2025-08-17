@@ -43,6 +43,7 @@ test.describe("determineHtml", () => {
     const result = determineHtml(
       "map",
       DEFAULT_STATE,
+      {},
       0,
       new Set(),
       new Set(),
@@ -102,27 +103,35 @@ test("determinePlaceDescription()", () => {
 });
 
 test("determineSearch()", () => {
-  const placeLink =
-    '<a class="external-link" target="_blank" href=https://parkingreform.org/mandates-map/city_detail/Baltimore_MD.html>Baltimore, MD <i aria-hidden="true" class="fa-solid fa-arrow-right"></i></a>';
+  const placeId = "Baltimore, Maryland, United States";
+  const encodedPlace = "baltimore-maryland-united-states";
+  const placeLink = `<a class="external-link" target="_blank" href=https://parkingreform.org/mandates-map/city_detail/${encodedPlace}.html>${placeId} <i aria-hidden="true" class="fa-solid fa-arrow-right"></i></a>`;
 
   // Map view always has the same text.
   for (const policyType of ALL_POLICY_TYPE_FILTER) {
     for (const status of ALL_REFORM_STATUS) {
       expect(
-        determineSearch("map", "Baltimore, MD", policyType, status),
+        determineSearch("map", placeId, encodedPlace, policyType, status),
       ).toEqual(`Showing ${placeLink} — ${SEARCH_RESET_HTML}`);
     }
   }
 
   expect(
-    determineSearch("table", "Baltimore, MD", "any parking reform", "adopted"),
+    determineSearch(
+      "table",
+      placeId,
+      encodedPlace,
+      "any parking reform",
+      "adopted",
+    ),
   ).toEqual(
     `Showing an overview of adopted parking reforms in ${placeLink} — ${SEARCH_RESET_HTML}`,
   );
   expect(
     determineSearch(
       "table",
-      "Baltimore, MD",
+      placeId,
+      encodedPlace,
       "add parking maximums",
       "proposed",
     ),
@@ -132,7 +141,8 @@ test("determineSearch()", () => {
   expect(
     determineSearch(
       "table",
-      "Baltimore, MD",
+      placeId,
+      encodedPlace,
       "reduce parking minimums",
       "adopted",
     ),
@@ -142,7 +152,8 @@ test("determineSearch()", () => {
   expect(
     determineSearch(
       "table",
-      "Baltimore, MD",
+      placeId,
+      encodedPlace,
       "remove parking minimums",
       "repealed",
     ),

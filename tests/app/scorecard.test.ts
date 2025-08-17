@@ -50,6 +50,7 @@ test("generateScorecard()", () => {
     state: "Arizona",
     country: "United States",
     type: "city",
+    encoded: "",
     pop: 245132,
     repeal: true,
     coord: [0, 0],

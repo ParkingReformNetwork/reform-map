@@ -10,6 +10,7 @@ test("determineOptionValues()", () => {
   const commonPlace = {
     name: "n/a",
     state: "n/a",
+    encoded: "",
     pop: 0,
     coord: [0, 0] as [number, number],
     repeal: false,

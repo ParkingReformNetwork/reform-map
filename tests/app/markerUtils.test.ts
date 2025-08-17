@@ -12,6 +12,7 @@ test("determineIsPrimary", () => {
     state: "",
     country: "",
     type: "city",
+    encoded: "",
     pop: 0,
     repeal: false,
     coord: [0, 0],

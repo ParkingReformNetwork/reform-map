@@ -1,4 +1,4 @@
-import { placeIdToUrl } from "./placeId";
+import { encodedPlaceToUrl } from "./placeId";
 import {
   PlaceId,
   ProcessedCoreEntry,
@@ -47,10 +47,10 @@ export const COUNTRY_MAPPING: Partial<Record<string, string>> = {
   ZA: "South Africa",
 };
 
-export function processPlace(placeId: PlaceId, raw: RawPlace): ProcessedPlace {
+export function processPlace(raw: RawPlace): ProcessedPlace {
   return {
     ...raw,
-    url: placeIdToUrl(placeId),
+    url: encodedPlaceToUrl(raw.encoded),
   };
 }
 
@@ -101,12 +101,9 @@ function processBenefitDistrict(
   };
 }
 
-export function processRawCoreEntry(
-  placeId: PlaceId,
-  raw: RawCoreEntry,
-): ProcessedCoreEntry {
+export function processRawCoreEntry(raw: RawCoreEntry): ProcessedCoreEntry {
   const result: ProcessedCoreEntry = {
-    place: processPlace(placeId, raw.place),
+    place: processPlace(raw.place),
   };
   if (raw.add_max) {
     result.add_max = raw.add_max.map(processLandUsePolicy);
@@ -132,7 +129,7 @@ export default async function readData(): Promise<
   return Object.fromEntries(
     Object.entries(rawData).map(([placeId, entry]) => [
       placeId,
-      processRawCoreEntry(placeId, entry),
+      processRawCoreEntry(entry),
     ]),
   );
 }

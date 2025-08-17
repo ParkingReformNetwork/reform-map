@@ -36,7 +36,10 @@ import {
 } from "./lib/data";
 import { saveOptionValues } from "./lib/optionValues";
 import { COUNTRY_MAPPING } from "../src/js/model/data";
-import { determinePlaceIdForDirectus } from "../src/js/model/placeId";
+import {
+  determinePlaceIdForDirectus,
+  encodePlaceId,
+} from "../src/js/model/placeId";
 
 // --------------------------------------------------------------------------
 // Read Directus
@@ -449,6 +452,7 @@ function combineData(
             country:
               COUNTRY_MAPPING[place.country_code!] ?? place.country_code!,
             type: place.type!,
+            encoded: encodePlaceId(placeId),
             pop: place.population!,
             repeal: place.complete_minimums_repeal!,
             coord: place.coordinates!.coordinates,
@@ -502,6 +506,7 @@ async function saveCoreData(
           state: entry.place.state,
           country: entry.place.country,
           type: entry.place.type,
+          encoded: entry.place.encoded,
           pop: entry.place.pop,
           coord: entry.place.coord,
           repeal: entry.place.repeal,
