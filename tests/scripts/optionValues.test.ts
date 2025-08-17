@@ -27,7 +27,7 @@ test("determineOptionValues()", () => {
           status: "adopted",
           scope: ["city center / business district"],
           land: ["all uses"],
-          date: null,
+          date: undefined,
         },
       ],
       add_max: [
@@ -50,7 +50,7 @@ test("determineOptionValues()", () => {
           status: "adopted",
           scope: ["regional"],
           land: ["commercial"],
-          date: null,
+          date: undefined,
         },
         {
           status: "proposed",

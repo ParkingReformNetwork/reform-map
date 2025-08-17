@@ -35,8 +35,8 @@ function formatDate(cell: CellComponent): string {
 }
 
 export function compareDates(
-  a: Date | null,
-  b: Date | null,
+  a: Date | undefined,
+  b: Date | undefined,
   _aRow: RowComponent,
   _bRow: RowComponent,
   _col: ColumnComponent,

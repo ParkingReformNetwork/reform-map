@@ -17,7 +17,7 @@ import { ReformStatus } from "../src/js/model/types";
 
 const DELIMITER = "; ";
 
-function toBoolean(condition: boolean): string {
+function toBoolean(condition: boolean | undefined): string {
   return condition ? "TRUE" : "FALSE";
 }
 
