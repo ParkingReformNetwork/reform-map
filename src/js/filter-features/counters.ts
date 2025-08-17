@@ -6,9 +6,15 @@ import {
   PlaceFilterManager,
   PolicyTypeFilter,
 } from "../state/FilterState";
-import { PlaceId, PlaceType, PolicyType, ReformStatus } from "../model/types";
+import {
+  PlaceId,
+  PlaceType,
+  PolicyType,
+  ProcessedCoreEntry,
+  ReformStatus,
+} from "../model/types";
 import { COUNTRIES_PREFIXED_BY_THE } from "../model/data";
-import { placeIdToUrl } from "../model/placeId";
+import { encodedPlaceToUrl } from "../model/placeId";
 import type { ViewState } from "../layout/viewToggle";
 
 export function determinePlaceDescription(
@@ -47,12 +53,13 @@ export const SEARCH_RESET_HTML = `<a class="counter-search-reset" role="button" 
 
 export function determineSearch(
   view: ViewState,
-  placeId: PlaceId,
+  placeId: string,
+  encodedPlace: string,
   policyType: PolicyTypeFilter,
   status: ReformStatus,
 ): string {
-  const placeLink = `<a class="external-link" target="_blank" href=${placeIdToUrl(
-    placeId,
+  const placeLink = `<a class="external-link" target="_blank" href=${encodedPlaceToUrl(
+    encodedPlace,
   )}>${placeId} <i aria-hidden="true" class="fa-solid fa-arrow-right"></i></a>`;
 
   if (view === "map") {
@@ -184,6 +191,7 @@ export function determineBenefitDistrict(
 export function determineHtml(
   view: ViewState,
   state: FilterState,
+  entries: Record<PlaceId, ProcessedCoreEntry>,
   numPlaces: number,
   matchedPolicyTypes: Set<PolicyType>,
   matchedCountries: Set<string>,
@@ -193,9 +201,11 @@ export function determineHtml(
     return "No places selected — use the filter or search icons";
   }
   if (state.searchInput) {
+    const placeId = state.searchInput;
     return determineSearch(
       view,
-      state.searchInput,
+      placeId,
+      entries[placeId].place.encoded,
       state.policyTypeFilter,
       state.status,
     );
@@ -260,6 +270,7 @@ export default function initCounters(manager: PlaceFilterManager): void {
     mapCounter.innerHTML = determineHtml(
       "map",
       state,
+      manager.entries,
       manager.placeIds.size,
       manager.matchedPolicyTypes,
       manager.matchedCountries,
@@ -268,6 +279,7 @@ export default function initCounters(manager: PlaceFilterManager): void {
     tableCounter.innerHTML = determineHtml(
       "table",
       state,
+      manager.entries,
       manager.placeIds.size,
       manager.matchedPolicyTypes,
       manager.matchedCountries,

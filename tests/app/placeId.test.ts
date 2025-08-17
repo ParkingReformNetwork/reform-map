@@ -1,8 +1,8 @@
 import { expect, test } from "@playwright/test";
 
 import {
-  escapePlaceId,
-  placeIdToUrl,
+  encodePlaceId,
+  encodedPlaceToUrl,
   determinePlaceIdForDirectus,
   determinesupplementalPlaceInfo,
   stripCountryFromPlaceId,
@@ -103,14 +103,14 @@ test("stripCountryFromPlaceId", () => {
   ).toEqual("Tucson, AZ");
 });
 
-test("escapePlaceID", () => {
-  expect(escapePlaceId("Tucson, AZ")).toEqual("Tucson_AZ");
-  expect(escapePlaceId("St. Lucia, AZ")).toEqual("St.Lucia_AZ");
-  expect(escapePlaceId("St. Lucia, AZ, United States")).toEqual("St.Lucia_AZ");
+test("encodePlaceId", () => {
+  expect(encodePlaceId("Tucson, AZ")).toEqual("Tucson_AZ");
+  expect(encodePlaceId("St. Lucia, AZ")).toEqual("St.Lucia_AZ");
+  expect(encodePlaceId("St. Lucia, AZ, United States")).toEqual("St.Lucia_AZ");
 });
 
-test("placeIdToUrl", () => {
-  expect(placeIdToUrl("Tucson, AZ")).toEqual(
-    "https://parkingreform.org/mandates-map/city_detail/Tucson_AZ.html",
+test("encodedPlaceToUrl", () => {
+  expect(encodedPlaceToUrl("tucson-arizona-united-states")).toEqual(
+    "https://parkingreform.org/mandates-map/city_detail/tucson-arizona-united-states.html",
   );
 });

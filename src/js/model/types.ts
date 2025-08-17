@@ -41,6 +41,9 @@ export interface RawPlace {
   state: string | null;
   country: string;
   type: PlaceType;
+  // The value used for the URL. Note that this may be an outdated value
+  // so that we don't require a redirect.
+  encoded: string;
   pop: number;
   // [long, lat]
   coord: [number, number];

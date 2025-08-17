@@ -45,10 +45,10 @@ export function stripCountryFromPlaceId(placeId: PlaceId): string {
  *
  * This strips the country so that our historical details pages keep working.
  */
-export function escapePlaceId(placeId: PlaceId): string {
+export function encodePlaceId(placeId: PlaceId): string {
   return stripCountryFromPlaceId(placeId).replace(/ /g, "").replace(",", "_");
 }
 
-export function placeIdToUrl(placeId: PlaceId): string {
-  return `https://parkingreform.org/mandates-map/city_detail/${escapePlaceId(placeId)}.html`;
+export function encodedPlaceToUrl(encodedPlace: string): string {
+  return `https://parkingreform.org/mandates-map/city_detail/${encodedPlace}.html`;
 }
