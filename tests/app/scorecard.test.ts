@@ -60,11 +60,11 @@ test("generateScorecard()", () => {
     status: "adopted",
     scope: [],
     land: [],
-    date: null,
+    date: undefined,
   };
   const benefitDistrict: ProcessedCoreBenefitDistrict = {
     status: "proposed",
-    date: null,
+    date: undefined,
   };
 
   expect(

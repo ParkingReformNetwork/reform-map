@@ -14,8 +14,8 @@ export class Date {
     this.parsed = parsed;
   }
 
-  static fromNullable(dateStr?: string | null): Date | null {
-    return dateStr ? new this(dateStr) : null;
+  static fromNullable(dateStr: string | undefined): Date | undefined {
+    return dateStr ? new this(dateStr) : undefined;
   }
 
   format(): string {
@@ -47,7 +47,7 @@ export interface RawPlace {
   pop: number;
   // [long, lat]
   coord: [number, number];
-  repeal: boolean;
+  repeal: boolean | undefined;
 }
 export type ProcessedPlace = RawPlace & { url: string };
 
@@ -80,15 +80,17 @@ export interface BaseLandUsePolicy {
 }
 
 export type RawCoreBenefitDistrict = BaseBenefitDistrict & {
-  date: string | null;
+  date: string | undefined;
 };
 export type ProcessedCoreBenefitDistrict = BaseBenefitDistrict & {
-  date: Date | null;
+  date: Date | undefined;
 };
 
-export type RawCoreLandUsePolicy = BaseLandUsePolicy & { date: string | null };
+export type RawCoreLandUsePolicy = BaseLandUsePolicy & {
+  date: string | undefined;
+};
 export type ProcessedCoreLandUsePolicy = BaseLandUsePolicy & {
-  date: Date | null;
+  date: Date | undefined;
 };
 
 export interface RawCoreEntry {

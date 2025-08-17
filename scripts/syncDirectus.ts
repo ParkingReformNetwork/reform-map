@@ -419,7 +419,7 @@ function combineData(
               status: record.status!,
               scope: record.reform_scope!,
               land: record.land_uses!,
-              date: record.reform_date!,
+              date: record.reform_date! ?? undefined,
               reporter: record.reporter!,
               requirements: record.requirements!,
               citations: createCitations(
@@ -446,7 +446,7 @@ function combineData(
             benefitDistricts.push({
               summary: record.summary!,
               status: record.status!,
-              date: record.reform_date!,
+              date: record.reform_date! ?? undefined,
               reporter: record.reporter!,
               citations: createCitations(
                 record.citations!,
@@ -472,7 +472,7 @@ function combineData(
             type: place.type!,
             encoded: priorEncodedPlaceIds[placeId] ?? encodePlaceId(placeId),
             pop: place.population!,
-            repeal: place.complete_minimums_repeal!,
+            repeal: place.complete_minimums_repeal ? true : undefined,
             coord: place.coordinates!.coordinates,
           },
           ...(addMax.length && { add_max: addMax }),

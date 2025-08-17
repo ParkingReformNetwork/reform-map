@@ -36,7 +36,7 @@ class OptionValues {
     this.country.add(place.country);
   }
 
-  #addDate(date: string | null): void {
+  #addDate(date: string | undefined): void {
     this.year.add(date ? new Date(date).parsed.year.toString() : UNKNOWN_YEAR);
   }
 
