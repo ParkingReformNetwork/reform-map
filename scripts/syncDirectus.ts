@@ -33,6 +33,7 @@ import {
   RawCompleteLandUsePolicy,
   RawCompleteBenefitDistrict,
   ExtendedBenefitDistrict,
+  readRawCoreData,
 } from "./lib/data";
 import { saveOptionValues } from "./lib/optionValues";
 import { COUNTRY_MAPPING } from "../src/js/model/data";
@@ -40,6 +41,22 @@ import {
   determinePlaceIdForDirectus,
   encodePlaceId,
 } from "../src/js/model/placeId";
+
+// --------------------------------------------------------------------------
+// Read prior data
+// --------------------------------------------------------------------------
+
+async function readPriorEncodedPlaceIds(): Promise<
+  Partial<Record<PlaceStringId, string>>
+> {
+  const data = await readRawCoreData();
+  return Object.fromEntries(
+    Object.entries(data).map(([placeId, entry]) => [
+      placeId,
+      entry.place.encoded,
+    ]),
+  );
+}
 
 // --------------------------------------------------------------------------
 // Read Directus
@@ -352,6 +369,7 @@ function createCitations(
 }
 
 function combineData(
+  priorEncodedPlaceIds: Partial<Record<PlaceStringId, string>>,
   places: Record<PlaceStringId, Partial<DirectusPlace>>,
   landUseRecords: Record<PlaceStringId, Array<Partial<LandUseRecord>>>,
   benefitDistrictRecords: Record<
@@ -452,7 +470,7 @@ function combineData(
             country:
               COUNTRY_MAPPING[place.country_code!] ?? place.country_code!,
             type: place.type!,
-            encoded: encodePlaceId(placeId),
+            encoded: priorEncodedPlaceIds[placeId] ?? encodePlaceId(placeId),
             pop: place.population!,
             repeal: place.complete_minimums_repeal!,
             coord: place.coordinates!.coordinates,
@@ -575,6 +593,8 @@ async function main(): Promise<void> {
   const client = await initDirectus();
   const geocoder = initGeocoder();
 
+  const priorEncodedPlaceIds = await readPriorEncodedPlaceIds();
+
   const places = await readPlacesAndEnsureCoordinates(client, geocoder);
   const landUseRecords = await readLandUseRecords(
     client,
@@ -599,6 +619,7 @@ async function main(): Promise<void> {
     await readFilesByAttachmentJunctionId(client);
 
   const result = combineData(
+    priorEncodedPlaceIds,
     places.stringIdToPlace,
     landUseRecords,
     benefitDistrictRecords,
