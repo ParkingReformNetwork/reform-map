@@ -43,6 +43,15 @@ jobs:
         with:
           token: ${{ secrets.UPDATE_DATA_GITHUB_TOKEN }}
           commit-message: "Update data"
-          title: "Update data"
-          body: "This PR adds the latest data."
           branch: "automated-data-update"
+          title: "Update data"
+          body: |
+            ⚠️ Check if the PR deletes any places or renames place IDs
+            (the keys).
+
+            When a place is deleted, we also delete its details HTML page,
+            meaning it will 404.
+
+            When a place is renamed, you should update in `data/core.json`
+            the `encoded` field to use the prior URL value. This allows us
+            to reuse the prior HTML page.
