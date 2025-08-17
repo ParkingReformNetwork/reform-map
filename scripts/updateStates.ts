@@ -1,11 +1,6 @@
-import { updateItem } from "@directus/sdk";
+import fs from "fs/promises";
 
-import {
-  DirectusClient,
-  initDirectus,
-  Place,
-  readItemsBatched,
-} from "./lib/directus";
+import { readRawCoreData } from "./lib/data";
 
 const US_MAP: Partial<Record<string, string>> = {
   AL: "Alabama",
@@ -80,49 +75,34 @@ const CA_MAP: Partial<Record<string, string>> = {
 };
 
 async function main(): Promise<void> {
-  const client = await initDirectus();
-
-  const places = await readPlaces(client);
-  for (const place of places) {
-    const updatedState = determineState(place.state!, place.country_code!);
-    if (updatedState) {
-      console.log(`Updated '${place.state}' to '${updatedState}'`);
-      await client.request(
-        updateItem("places", place.id!, { state: updatedState }),
+  const rawData = await readRawCoreData();
+  const newData = Object.fromEntries(
+    Object.entries(rawData).map(([placeId, entry]) => {
+      const newState = determineState(entry.place.state, entry.place.country);
+      if (!newState) return [placeId, entry];
+      const newPlaceId = placeId.replace(
+        `, ${entry.place.state!}, `,
+        `, ${newState}, `,
       );
-    } else {
-      console.log(`⚠️ Unrecognized state '${place.state}'`);
-    }
-  }
+      return [newPlaceId, entry];
+    }),
+  );
 
+  const json = JSON.stringify(newData, null, 2);
+  console.log("Writing data/core.json");
+  await fs.writeFile("data/core.json", json);
   process.exit(0);
 }
 
-function determineState(state: string, country: string): string | null {
-  if (country === "US") {
+function determineState(state: string | null, country: string): string | null {
+  if (!state) return null;
+  if (country === "United States") {
     return US_MAP[state] ?? null;
   }
-  if (country === "CA") {
+  if (country === "Canada") {
     return CA_MAP[state] ?? null;
   }
-  throw new Error(`Unrecognized country: ${country}`);
-}
-
-async function readPlaces(
-  client: DirectusClient,
-): Promise<Array<Partial<Place>>> {
-  return readItemsBatched(
-    client,
-    "places",
-    ["id", "state", "country_code"],
-    300,
-    {
-      _and: [
-        { country_code: { _in: ["US", "CA"] } },
-        { state: { _nnull: true } },
-      ],
-    },
-  );
+  return null;
 }
 
 main().catch((error) => {
