@@ -5,6 +5,7 @@ import { PlaceFilterManager } from "../state/FilterState";
 import { ViewStateObservable } from "../layout/viewToggle";
 import type { PlaceId } from "../model/types";
 import { radiusGivenZoom, determineIsPrimary } from "./markerUtils";
+import { determinePlaceIdWithoutCountry } from "../model/placeId";
 
 const PRIMARY_MARKER_STYLE = {
   weight: 1,
@@ -21,10 +22,13 @@ const SECONDARY_MARKER_STYLE = {
   fillOpacity: 1,
 } as const;
 
+/** We store the placeId on the marker to know which place a Marker corresponds to. */
+export type MarkerWithPlaceId = CircleMarker & { placeId: PlaceId };
+
 function updatePlaceVisibility(
   currentlyVisiblePlaceIds: Set<string>,
   newVisiblePlaceIds: Set<PlaceId>,
-  placesToMarkers: Record<string, CircleMarker>,
+  placesToMarkers: Record<string, MarkerWithPlaceId>,
   markerGroup: FeatureGroup,
 ): void {
   // Remove markers no longer visible.
@@ -48,17 +52,21 @@ export default function initPlaceMarkers(
   map: Map,
   viewToggle: ViewStateObservable,
 ): FeatureGroup {
-  const placesToMarkers: Record<string, CircleMarker> = Object.entries(
+  const placesToMarkers: Record<string, MarkerWithPlaceId> = Object.entries(
     filterManager.entries,
-  ).reduce((acc: Record<string, CircleMarker>, [placeId, entry]) => {
+  ).reduce((acc: Record<string, MarkerWithPlaceId>, [placeId, entry]) => {
     const [long, lat] = entry.place.coord;
     const isPrimary = determineIsPrimary(entry);
     const style = isPrimary ? PRIMARY_MARKER_STYLE : SECONDARY_MARKER_STYLE;
     const marker = new CircleMarker([lat, long], {
       ...style,
       radius: radiusGivenZoom({ zoom: map.getZoom(), isPrimary }),
-    });
-    marker.bindTooltip(placeId);
+    }) as MarkerWithPlaceId;
+    marker.placeId = placeId;
+
+    // The tooltip is the text shown on hover. We strip the country
+    // to make it less verbose.
+    marker.bindTooltip(determinePlaceIdWithoutCountry(entry.place));
 
     acc[placeId] = marker;
     return acc;

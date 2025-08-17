@@ -11,7 +11,7 @@ import {
   ProcessedCompleteLandUsePolicy,
   readProcessedCompleteData,
 } from "./scripts/lib/data.js";
-import { escapePlaceId } from "./src/js/model/data.js";
+import { determinesupplementalPlaceInfo } from "./src/js/model/placeId.js";
 import { ReformStatus } from "./src/js/model/types.js";
 
 function dateLabel(status: ReformStatus): string {
@@ -75,7 +75,11 @@ export default async function (eleventyConfig: any) {
   const completeData = await readProcessedCompleteData();
   const entries = Object.entries(completeData).map(([placeId, entry]) => ({
     placeId,
-    escapedPlaceId: escapePlaceId(placeId),
+    escapedPlaceId: entry.place.encoded,
+    place: {
+      name: entry.place.name,
+      supplemental: determinesupplementalPlaceInfo(entry.place),
+    },
     population: entry.place.pop.toLocaleString("en-us"),
     repeal: entry.place.repeal,
     rmMin: entry.rm_min?.map(processLandUse) || [],

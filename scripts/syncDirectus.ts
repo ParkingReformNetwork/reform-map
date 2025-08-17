@@ -33,8 +33,30 @@ import {
   RawCompleteLandUsePolicy,
   RawCompleteBenefitDistrict,
   ExtendedBenefitDistrict,
+  readRawCoreData,
 } from "./lib/data";
 import { saveOptionValues } from "./lib/optionValues";
+import { COUNTRY_MAPPING } from "../src/js/model/data";
+import {
+  determinePlaceIdForDirectus,
+  encodePlaceId,
+} from "../src/js/model/placeId";
+
+// --------------------------------------------------------------------------
+// Read prior data
+// --------------------------------------------------------------------------
+
+async function readPriorEncodedPlaceIds(): Promise<
+  Partial<Record<PlaceStringId, string>>
+> {
+  const data = await readRawCoreData();
+  return Object.fromEntries(
+    Object.entries(data).map(([placeId, entry]) => [
+      placeId,
+      entry.place.encoded,
+    ]),
+  );
+}
 
 // --------------------------------------------------------------------------
 // Read Directus
@@ -60,9 +82,7 @@ async function readPlacesAndEnsureCoordinates(
   const directusIdToStringId: Record<number, PlaceStringId> = {};
   const stringIdToPlace: Record<PlaceStringId, Partial<DirectusPlace>> = {};
   for (const record of records) {
-    const stringId = record.state
-      ? `${record.name}, ${record.state}`
-      : record.name;
+    const stringId = determinePlaceIdForDirectus(record);
 
     if (!record.coordinates) {
       console.log(`Getting coordinates for ${stringId}`);
@@ -349,6 +369,7 @@ function createCitations(
 }
 
 function combineData(
+  priorEncodedPlaceIds: Partial<Record<PlaceStringId, string>>,
   places: Record<PlaceStringId, Partial<DirectusPlace>>,
   landUseRecords: Record<PlaceStringId, Array<Partial<LandUseRecord>>>,
   benefitDistrictRecords: Record<
@@ -398,7 +419,7 @@ function combineData(
               status: record.status!,
               scope: record.reform_scope!,
               land: record.land_uses!,
-              date: record.reform_date!,
+              date: record.reform_date! ?? undefined,
               reporter: record.reporter!,
               requirements: record.requirements!,
               citations: createCitations(
@@ -425,7 +446,7 @@ function combineData(
             benefitDistricts.push({
               summary: record.summary!,
               status: record.status!,
-              date: record.reform_date!,
+              date: record.reform_date! ?? undefined,
               reporter: record.reporter!,
               citations: createCitations(
                 record.citations!,
@@ -446,10 +467,12 @@ function combineData(
           place: {
             name: place.name!,
             state: place.state!,
-            country: place.country_code!,
+            country:
+              COUNTRY_MAPPING[place.country_code!] ?? place.country_code!,
             type: place.type!,
+            encoded: priorEncodedPlaceIds[placeId] ?? encodePlaceId(placeId),
             pop: place.population!,
-            repeal: place.complete_minimums_repeal!,
+            repeal: place.complete_minimums_repeal ? true : undefined,
             coord: place.coordinates!.coordinates,
           },
           ...(addMax.length && { add_max: addMax }),
@@ -501,6 +524,7 @@ async function saveCoreData(
           state: entry.place.state,
           country: entry.place.country,
           type: entry.place.type,
+          encoded: entry.place.encoded,
           pop: entry.place.pop,
           coord: entry.place.coord,
           repeal: entry.place.repeal,
@@ -569,6 +593,8 @@ async function main(): Promise<void> {
   const client = await initDirectus();
   const geocoder = initGeocoder();
 
+  const priorEncodedPlaceIds = await readPriorEncodedPlaceIds();
+
   const places = await readPlacesAndEnsureCoordinates(client, geocoder);
   const landUseRecords = await readLandUseRecords(
     client,
@@ -593,6 +619,7 @@ async function main(): Promise<void> {
     await readFilesByAttachmentJunctionId(client);
 
   const result = combineData(
+    priorEncodedPlaceIds,
     places.stringIdToPlace,
     landUseRecords,
     benefitDistrictRecords,

@@ -31,6 +31,8 @@ jobs:
 
       - name: Generate HTML pages
         run: npm run gen-html
+      - name: Generate redirects
+        run: npm run gen-redirects
       - name: Archive city_detail/ contents
         run: |
           cd city_detail
@@ -50,5 +52,13 @@ jobs:
           username: ${{ secrets.PRN_SERVER_USERNAME }}
           key: ${{ secrets.PRN_SERVER_PRIVATE_KEY }}
           script: |
-            tar -xzf /var/www/${{ secrets.PRN_SERVER_HOST }}/mandates-map/city_detail/city_details.tar.gz -C /var/www/${{ secrets.PRN_SERVER_HOST }}/mandates-map/city_detail
-            rm /var/www/${{ secrets.PRN_SERVER_HOST }}/mandates-map/city_detail/city_details.tar.gz
+            mkdir -p /var/www/${{ secrets.PRN_SERVER_HOST }}/mandates-map/details-tmp
+            tar -xzf \
+              /var/www/${{ secrets.PRN_SERVER_HOST }}/mandates-map/city_detail/city_details.tar.gz \
+              -C /var/www/${{ secrets.PRN_SERVER_HOST }}/mandates-map/details-tmp
+
+            rsync --archive --verbose --delete --no-times \
+              /var/www/${{ secrets.PRN_SERVER_HOST }}/mandates-map/details-tmp/ \
+              /var/www/${{ secrets.PRN_SERVER_HOST }}/mandates-map/city_detail/
+
+            rm -rf /var/www/${{ secrets.PRN_SERVER_HOST }}/mandates-map/details-tmp

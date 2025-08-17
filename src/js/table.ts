@@ -35,8 +35,8 @@ function formatDate(cell: CellComponent): string {
 }
 
 export function compareDates(
-  a: Date | null,
-  b: Date | null,
+  a: Date | undefined,
+  b: Date | undefined,
   _aRow: RowComponent,
   _bRow: RowComponent,
   _col: ColumnComponent,
@@ -75,8 +75,8 @@ const PLACE_COLUMNS: ColumnDefinition[] = [
       target: "_blank",
     },
   },
-  { title: "State", field: "state", width: 70 },
-  { title: "Country", field: "country", width: 110 },
+  { title: "State", field: "state", width: 120 },
+  { title: "Country", field: "country", width: 120 },
   { title: "Jurisdiction", field: "placeType", width: 80 },
   {
     title: "Population",

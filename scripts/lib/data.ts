@@ -212,7 +212,7 @@ export async function readProcessedCompleteData(): Promise<
   const raw = await readRawCompleteData();
   return Object.fromEntries(
     Object.entries(raw).map(([placeId, entry]) => {
-      const processed = processRawCoreEntry(placeId, entry);
+      const processed = processRawCoreEntry(entry);
       const result: ProcessedCompleteEntry = {
         place: processed.place,
       };

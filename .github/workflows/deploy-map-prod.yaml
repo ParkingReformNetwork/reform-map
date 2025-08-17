@@ -12,6 +12,7 @@ jobs:
           username: ${{ secrets.PRN_SERVER_USERNAME }}
           key: ${{ secrets.PRN_SERVER_PRIVATE_KEY }}
           script: |
-            rsync --archive --verbose --compress --no-times \
+            # We do not use `--delete` to avoid deleting subfolders.
+            rsync --archive --verbose --no-times \
               /var/www/${{ secrets.PRN_SERVER_HOST }}/mandates-map-staging/ \
               /var/www/${{ secrets.PRN_SERVER_HOST }}/mandates-map/

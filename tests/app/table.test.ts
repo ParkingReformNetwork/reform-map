@@ -6,8 +6,8 @@ import { Date } from "../../src/js/model/types";
 
 test("compareDates handles descending and ascending", () => {
   const compare = (
-    a: string | null,
-    b: string | null,
+    a: string | undefined,
+    b: string | undefined,
     dir: SortDirection,
   ): number =>
     compareDates(
@@ -23,15 +23,15 @@ test("compareDates handles descending and ascending", () => {
   expect(compare("2024", "2025", "asc")).toBeLessThan(0);
   expect(compare("2025", "2024", "asc")).toBeGreaterThan(0);
   expect(compare("2024", "2024", "asc")).toBe(0);
-  expect(compare(null, "2024", "asc")).toBeGreaterThan(0);
-  expect(compare("2024", null, "asc")).toBeLessThan(0);
-  expect(compare(null, null, "asc")).toBe(0);
+  expect(compare(undefined, "2024", "asc")).toBeGreaterThan(0);
+  expect(compare("2024", undefined, "asc")).toBeLessThan(0);
+  expect(compare(undefined, undefined, "asc")).toBe(0);
 
   // Desc = newest to oldest
   expect(compare("2024", "2025", "desc")).toBeLessThan(0);
   expect(compare("2025", "2024", "desc")).toBeGreaterThan(0);
   expect(compare("2024", "2024", "desc")).toBe(0);
-  expect(compare(null, "2024", "desc")).toBeLessThan(0);
-  expect(compare("2024", null, "desc")).toBeGreaterThan(0);
-  expect(compare(null, null, "desc")).toBe(0);
+  expect(compare(undefined, "2024", "desc")).toBeLessThan(0);
+  expect(compare("2024", undefined, "desc")).toBeGreaterThan(0);
+  expect(compare(undefined, undefined, "desc")).toBe(0);
 });

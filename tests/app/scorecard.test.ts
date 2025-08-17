@@ -47,9 +47,10 @@ test("scorecard pops up and closes", async ({ page }) => {
 test("generateScorecard()", () => {
   const place: ProcessedPlace = {
     name: "My City",
-    state: "AZ",
-    country: "US",
+    state: "Arizona",
+    country: "United States",
     type: "city",
+    encoded: "",
     pop: 245132,
     repeal: true,
     coord: [0, 0],
@@ -59,25 +60,22 @@ test("generateScorecard()", () => {
     status: "adopted",
     scope: [],
     land: [],
-    date: null,
+    date: undefined,
   };
   const benefitDistrict: ProcessedCoreBenefitDistrict = {
     status: "proposed",
-    date: null,
+    date: undefined,
   };
 
   expect(
-    generateScorecard(
-      {
-        place,
-        add_max: [landUsePolicy],
-      },
-      "My City, AZ",
-    ),
+    generateScorecard({
+      place,
+      add_max: [landUsePolicy],
+    }),
   ).toEqual(
     `
     <header class="scorecard-header">
-      <h2 class="scorecard-title">My City, AZ</h2>
+      <h2 class="scorecard-title">My City<br/><span class="scorecard-supplemental-place-info">Arizona, United States</span></h2>
       <button
         class="scorecard-close-icon-container"
         title="close the place details popup"
@@ -104,10 +102,10 @@ test("generateScorecard()", () => {
     rm_min: [landUsePolicy],
     benefit_district: [benefitDistrict],
   };
-  expect(generateScorecard(repealed, "My City, AZ")).toEqual(
+  expect(generateScorecard(repealed)).toEqual(
     `
     <header class="scorecard-header">
-      <h2 class="scorecard-title">My City, AZ</h2>
+      <h2 class="scorecard-title">My City<br/><span class="scorecard-supplemental-place-info">Arizona, United States</span></h2>
       <button
         class="scorecard-close-icon-container"
         title="close the place details popup"

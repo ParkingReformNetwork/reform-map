@@ -8,7 +8,11 @@ layout: layout.liquid
 ---
 <main>
   <header>
-    <h1>Parking reforms in {{ entry.placeId }}</h1>
+    {% if entry.place.supplemental -%}
+      <h1>Parking reforms in {{ entry.place.name }}<br/><span class="supplemental-place-info">{{ entry.place.supplemental }}</span></h1>
+    {%- else %}
+      <h1>Parking reforms in {{ entry.place.name }}</h1>
+    {%- endif %}
   </header>
   <ul class="place-details">
     <li>{{ entry.population }} residents</li>

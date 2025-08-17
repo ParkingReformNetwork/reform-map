@@ -10,6 +10,7 @@ test("determineOptionValues()", () => {
   const commonPlace = {
     name: "n/a",
     state: "n/a",
+    encoded: "",
     pop: 0,
     coord: [0, 0] as [number, number],
     repeal: false,
@@ -18,7 +19,7 @@ test("determineOptionValues()", () => {
     {
       place: {
         ...commonPlace,
-        country: "US",
+        country: "United States",
         type: "city",
       },
       rm_min: [
@@ -26,7 +27,7 @@ test("determineOptionValues()", () => {
           status: "adopted",
           scope: ["city center / business district"],
           land: ["all uses"],
-          date: null,
+          date: undefined,
         },
       ],
       add_max: [
@@ -41,7 +42,7 @@ test("determineOptionValues()", () => {
     {
       place: {
         ...commonPlace,
-        country: "BR",
+        country: "Brazil",
         type: "country",
       },
       reduce_min: [
@@ -49,7 +50,7 @@ test("determineOptionValues()", () => {
           status: "adopted",
           scope: ["regional"],
           land: ["commercial"],
-          date: null,
+          date: undefined,
         },
         {
           status: "proposed",
