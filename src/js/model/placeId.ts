@@ -35,9 +35,12 @@ export function determinesupplementalPlaceInfo(place: {
   return state ? `${state}, ${country}` : country;
 }
 
-export function stripCountryFromPlaceId(placeId: PlaceId): string {
-  const [place, state] = placeId.split(", ");
-  return state ? `${place}, ${state}` : place;
+export function determinePlaceIdWithoutCountry(place: {
+  name: string;
+  state: string | null;
+}): string {
+  const { name, state } = place;
+  return state ? `${name}, ${state}` : name;
 }
 
 /**

@@ -5,7 +5,7 @@ import { PlaceFilterManager } from "../state/FilterState";
 import { ViewStateObservable } from "../layout/viewToggle";
 import type { PlaceId } from "../model/types";
 import { radiusGivenZoom, determineIsPrimary } from "./markerUtils";
-import { stripCountryFromPlaceId } from "../model/placeId";
+import { determinePlaceIdWithoutCountry } from "../model/placeId";
 
 const PRIMARY_MARKER_STYLE = {
   weight: 1,
@@ -66,7 +66,7 @@ export default function initPlaceMarkers(
 
     // The tooltip is the text shown on hover. We strip the country
     // to make it less verbose.
-    marker.bindTooltip(stripCountryFromPlaceId(placeId));
+    marker.bindTooltip(determinePlaceIdWithoutCountry(entry.place));
 
     acc[placeId] = marker;
     return acc;
