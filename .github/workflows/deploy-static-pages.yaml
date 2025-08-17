@@ -58,7 +58,7 @@ jobs:
               -C /var/www/${{ secrets.PRN_SERVER_HOST }}/mandates-map/details-tmp
 
             rsync --archive --verbose --delete --no-times \
-              /var/www/${{ secrets.PRN_SERVER_HOST }}/mandates-map/details-tmp \
+              /var/www/${{ secrets.PRN_SERVER_HOST }}/mandates-map/details-tmp/ \
               /var/www/${{ secrets.PRN_SERVER_HOST }}/mandates-map/city_detail/
 
             rm -rf /var/www/${{ secrets.PRN_SERVER_HOST }}/mandates-map/details-tmp
