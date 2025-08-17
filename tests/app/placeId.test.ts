@@ -5,7 +5,7 @@ import {
   encodedPlaceToUrl,
   determinePlaceIdForDirectus,
   determinesupplementalPlaceInfo,
-  stripCountryFromPlaceId,
+  determinePlaceIdWithoutCountry,
 } from "../../src/js/model/placeId";
 
 test.describe("determinePlaceIdForDirectus", () => {
@@ -93,14 +93,18 @@ test("determinesupplementalPlaceInfo", () => {
 });
 
 test("stripCountryFromPlaceId", () => {
-  expect(stripCountryFromPlaceId("Tucson")).toEqual("Tucson");
-  expect(stripCountryFromPlaceId("Tucson, AZ")).toEqual("Tucson, AZ");
-  expect(stripCountryFromPlaceId("Tucson, AZ, United States")).toEqual(
-    "Tucson, AZ",
-  );
   expect(
-    stripCountryFromPlaceId("Tucson, AZ, United States, another string"),
-  ).toEqual("Tucson, AZ");
+    determinePlaceIdWithoutCountry({
+      name: "San Francisco",
+      state: "California",
+    }),
+  ).toEqual("San Francisco, California");
+  expect(
+    determinePlaceIdWithoutCountry({
+      name: "Berlin",
+      state: null,
+    }),
+  ).toEqual("Berlin");
 });
 
 test("encodePlaceId", () => {
