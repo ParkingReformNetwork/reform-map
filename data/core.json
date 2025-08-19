@@ -32744,11 +32744,25 @@
       "pop": 45110,
       "coord": [-82.445154, 38.4192496]
     },
+    "add_max": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["all uses"]
+      }
+    ],
     "reduce_min": [
       {
         "status": "adopted",
+        "scope": ["city center / business district", "citywide"],
+        "land": ["all uses", "commercial", "other", "residential, multi-family"]
+      }
+    ],
+    "rm_min": [
+      {
+        "status": "adopted",
         "scope": ["city center / business district"],
-        "land": ["commercial"]
+        "land": ["all uses", "commercial", "other"]
       }
     ]
   },
@@ -32878,6 +32892,24 @@
       }
     ],
     "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["all uses"]
+      }
+    ]
+  },
+  "Huron, South Dakota, United States": {
+    "place": {
+      "name": "Huron",
+      "state": "South Dakota",
+      "country": "United States",
+      "type": "city",
+      "encoded": "huron-south-dakota-united-states",
+      "pop": 14263,
+      "coord": [-98.214388, 44.36308]
+    },
+    "rm_min": [
       {
         "status": "adopted",
         "scope": ["city center / business district"],
@@ -36516,6 +36548,24 @@
       }
     ]
   },
+  "La Vista, Nebraska, United States": {
+    "place": {
+      "name": "La Vista",
+      "state": "Nebraska",
+      "country": "United States",
+      "type": "city",
+      "encoded": "la-vista-nebraska-united-states",
+      "pop": 16746,
+      "coord": [-96.0324044, 41.1832679]
+    },
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["all uses"]
+      }
+    ]
+  },
   "LaSalle County, Illinois, United States": {
     "place": {
       "name": "LaSalle County",
@@ -37554,6 +37604,24 @@
       "encoded": "Lancaster_SC",
       "pop": 8460,
       "coord": [-80.770012, 34.7189]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["all uses"]
+      }
+    ]
+  },
+  "Lander, Wyoming, United States": {
+    "place": {
+      "name": "Lander",
+      "state": "Wyoming",
+      "country": "United States",
+      "type": "city",
+      "encoded": "lander-wyoming-united-states",
+      "pop": 7546,
+      "coord": [-108.730702, 42.8330755]
     },
     "reduce_min": [
       {
@@ -38855,6 +38923,31 @@
         "status": "adopted",
         "scope": ["city center / business district"],
         "land": ["all uses"]
+      }
+    ]
+  },
+  "Lexington, Nebraska, United States": {
+    "place": {
+      "name": "Lexington",
+      "state": "Nebraska",
+      "country": "United States",
+      "type": "city",
+      "encoded": "lexington-nebraska-united-states",
+      "pop": 10348,
+      "coord": [-99.7414869, 40.7788486]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["other", "residential, all uses"]
+      }
+    ],
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["commercial", "other"]
       }
     ]
   },
@@ -56392,6 +56485,24 @@
       }
     ]
   },
+  "Powell, Wyoming, United States": {
+    "place": {
+      "name": "Powell",
+      "state": "Wyoming",
+      "country": "United States",
+      "type": "city",
+      "encoded": "powell-wyoming-united-states",
+      "pop": 6419,
+      "coord": [-108.75902, 44.752873]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["all uses"]
+      }
+    ]
+  },
   "Poynette, Wisconsin, United States": {
     "place": {
       "name": "Poynette",
@@ -58601,6 +58712,37 @@
       }
     ]
   },
+  "Riverton, Wyoming, United States": {
+    "place": {
+      "name": "Riverton",
+      "state": "Wyoming",
+      "country": "United States",
+      "type": "city",
+      "encoded": "riverton-wyoming-united-states",
+      "pop": 10682,
+      "coord": [-108.380727, 43.0247245]
+    },
+    "add_max": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["all uses"]
+      }
+    ],
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": [
+          "commercial",
+          "industrial",
+          "medical",
+          "other",
+          "residential, all uses"
+        ]
+      }
+    ]
+  },
   "Roanoke, Alabama, United States": {
     "place": {
       "name": "Roanoke",
@@ -58960,6 +59102,24 @@
       "coord": [-96.1674831, 43.4303235]
     },
     "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["all uses"]
+      }
+    ]
+  },
+  "Rock Springs, Wyoming, United States": {
+    "place": {
+      "name": "Rock Springs",
+      "state": "Wyoming",
+      "country": "United States",
+      "type": "city",
+      "encoded": "rock-springs-wyoming-united-states",
+      "pop": 23526,
+      "coord": [-109.2194544, 41.5860557]
+    },
+    "reduce_min": [
       {
         "status": "adopted",
         "scope": ["city center / business district"],
@@ -77105,6 +77265,24 @@
         "status": "adopted",
         "scope": ["citywide"],
         "land": ["all uses"]
+      }
+    ]
+  },
+  "York, Nebraska, United States": {
+    "place": {
+      "name": "York",
+      "state": "Nebraska",
+      "country": "United States",
+      "type": "city",
+      "encoded": "york-nebraska-united-states",
+      "pop": 8066,
+      "coord": [-97.6001401, 40.871617]
+    },
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["commercial", "other"]
       }
     ]
   },
