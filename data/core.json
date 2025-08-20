@@ -1404,6 +1404,24 @@
       }
     ]
   },
+  "Ambler, Pennsylvania, United States": {
+    "place": {
+      "name": "Ambler",
+      "state": "Pennsylvania",
+      "country": "United States",
+      "type": "city",
+      "encoded": "ambler-pennsylvania-united-states",
+      "pop": 6807,
+      "coord": [-75.2215651, 40.1545535]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["all uses"]
+      }
+    ]
+  },
   "Ambridge, Pennsylvania, United States": {
     "place": {
       "name": "Ambridge",
@@ -8676,6 +8694,24 @@
       }
     ]
   },
+  "Buckhannon, West Virginia, United States": {
+    "place": {
+      "name": "Buckhannon",
+      "state": "West Virginia",
+      "country": "United States",
+      "type": "city",
+      "encoded": "buckhannon-west-virginia-united-states",
+      "pop": 5299,
+      "coord": [-80.2322698, 38.9939426]
+    },
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["commercial", "other"]
+      }
+    ]
+  },
   "Buckley, Michigan, United States": {
     "place": {
       "name": "Buckley",
@@ -13027,6 +13063,24 @@
       }
     ]
   },
+  "Clarks Summit, Pennsylvania, United States": {
+    "place": {
+      "name": "Clarks Summit",
+      "state": "Pennsylvania",
+      "country": "United States",
+      "type": "city",
+      "encoded": "clarks-summit-pennsylvania-united-states",
+      "pop": 5108,
+      "coord": [-75.703413, 41.4941161]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["all uses"]
+      }
+    ]
+  },
   "Clarksburg, West Virginia, United States": {
     "place": {
       "name": "Clarksburg",
@@ -15009,6 +15063,24 @@
       }
     ]
   },
+  "Conshohocken, Pennsylvania, United States": {
+    "place": {
+      "name": "Conshohocken",
+      "state": "Pennsylvania",
+      "country": "United States",
+      "type": "city",
+      "encoded": "conshohocken-pennsylvania-united-states",
+      "pop": 9261,
+      "coord": [-75.3015714, 40.0792766]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["all uses"]
+      }
+    ]
+  },
   "Constantine, Michigan, United States": {
     "place": {
       "name": "Constantine",
@@ -15365,6 +15437,24 @@
         "status": "adopted",
         "scope": ["city center / business district"],
         "land": ["all uses"]
+      }
+    ]
+  },
+  "Corrales, New Mexico, United States": {
+    "place": {
+      "name": "Corrales",
+      "state": "New Mexico",
+      "country": "United States",
+      "type": "city",
+      "encoded": "corrales-new-mexico-united-states",
+      "pop": 8493,
+      "coord": [-106.6069727, 35.2382346]
+    },
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["residential, all uses"]
       }
     ]
   },
@@ -28212,6 +28302,24 @@
       }
     ]
   },
+  "Grants, New Mexico, United States": {
+    "place": {
+      "name": "Grants",
+      "state": "New Mexico",
+      "country": "United States",
+      "type": "city",
+      "encoded": "grants-new-mexico-united-states",
+      "pop": 9163,
+      "coord": [-107.851446, 35.14726]
+    },
+    "add_max": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["all uses"]
+      }
+    ]
+  },
   "Grantsville, Utah, United States": {
     "place": {
       "name": "Grantsville",
@@ -30620,6 +30728,24 @@
       }
     ]
   },
+  "Hatboro, Pennsylvania, United States": {
+    "place": {
+      "name": "Hatboro",
+      "state": "Pennsylvania",
+      "country": "United States",
+      "type": "city",
+      "encoded": "hatboro-pennsylvania-united-states",
+      "pop": 8238,
+      "coord": [-75.106825, 40.1746252]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["commercial", "other", "residential, multi-family"]
+      }
+    ]
+  },
   "Hatfield, Pennsylvania, United States": {
     "place": {
       "name": "Hatfield",
@@ -31073,6 +31199,24 @@
       {
         "status": "adopted",
         "scope": ["city center / business district"],
+        "land": ["all uses"]
+      }
+    ]
+  },
+  "Hellertown, Pennsylvania, United States": {
+    "place": {
+      "name": "Hellertown",
+      "state": "Pennsylvania",
+      "country": "United States",
+      "type": "city",
+      "encoded": "hellertown-pennsylvania-united-states",
+      "pop": 6131,
+      "coord": [-75.3405529, 40.5794426]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
         "land": ["all uses"]
       }
     ]
@@ -33769,6 +33913,31 @@
       }
     ]
   },
+  "Jackson, Wyoming, United States": {
+    "place": {
+      "name": "Jackson",
+      "state": "Wyoming",
+      "country": "United States",
+      "type": "city",
+      "encoded": "jackson-wyoming-united-states",
+      "pop": 10760,
+      "coord": [-110.761815, 43.479965]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district", "main street / special"],
+        "land": ["commercial", "industrial", "medical", "other"]
+      }
+    ],
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["main street / special"],
+        "land": ["commercial"]
+      }
+    ]
+  },
   "Jacksonville, Alabama, United States": {
     "place": {
       "name": "Jacksonville",
@@ -35269,6 +35438,24 @@
       {
         "status": "adopted",
         "scope": ["main street / special"],
+        "land": ["all uses"]
+      }
+    ]
+  },
+  "Kennett Square, Pennsylvania, United States": {
+    "place": {
+      "name": "Kennett Square",
+      "state": "Pennsylvania",
+      "country": "United States",
+      "type": "city",
+      "encoded": "kennett-square-pennsylvania-united-states",
+      "pop": 5943,
+      "coord": [-75.7116997, 39.8467414]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
         "land": ["all uses"]
       }
     ]
@@ -40146,6 +40333,24 @@
       }
     ]
   },
+  "Los Alamos County, New Mexico, United States": {
+    "place": {
+      "name": "Los Alamos County",
+      "state": "New Mexico",
+      "country": "United States",
+      "type": "county",
+      "encoded": "los-alamos-county-new-mexico-united-states",
+      "pop": 19419,
+      "coord": [-106.317166, 35.8585475]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["all uses", "commercial", "other"]
+      }
+    ]
+  },
   "Los Angeles, California, United States": {
     "place": {
       "name": "Los Angeles",
@@ -40374,6 +40579,24 @@
         "status": "adopted",
         "scope": ["city center / business district"],
         "land": ["commercial"]
+      }
+    ]
+  },
+  "Lovington, New Mexico, United States": {
+    "place": {
+      "name": "Lovington",
+      "state": "New Mexico",
+      "country": "United States",
+      "type": "city",
+      "encoded": "lovington-new-mexico-united-states",
+      "pop": 11668,
+      "coord": [-103.3487454, 32.9440685]
+    },
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["main street / special"],
+        "land": ["industrial"]
       }
     ]
   },
@@ -49051,6 +49274,24 @@
       }
     ]
   },
+  "New Martinsville, West Virginia, United States": {
+    "place": {
+      "name": "New Martinsville",
+      "state": "West Virginia",
+      "country": "United States",
+      "type": "city",
+      "encoded": "new-martinsville-west-virginia-united-states",
+      "pop": 5186,
+      "coord": [-80.8575993, 39.6445214]
+    },
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["all uses"]
+      }
+    ]
+  },
   "New Milford, Illinois, United States": {
     "place": {
       "name": "New Milford",
@@ -49805,6 +50046,24 @@
         "status": "adopted",
         "scope": ["city center / business district"],
         "land": ["commercial"]
+      }
+    ]
+  },
+  "Nitro, West Virginia, United States": {
+    "place": {
+      "name": "Nitro",
+      "state": "West Virginia",
+      "country": "United States",
+      "type": "city",
+      "encoded": "nitro-west-virginia-united-states",
+      "pop": 6618,
+      "coord": [-81.8405972, 38.4220757]
+    },
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["all uses"]
       }
     ]
   },
@@ -54400,6 +54659,24 @@
       }
     ]
   },
+  "Perkasie, Pennsylvania, United States": {
+    "place": {
+      "name": "Perkasie",
+      "state": "Pennsylvania",
+      "country": "United States",
+      "type": "city",
+      "encoded": "perkasie-pennsylvania-united-states",
+      "pop": 9120,
+      "coord": [-75.292676, 40.372048]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["commercial", "industrial", "medical", "other"]
+      }
+    ]
+  },
   "Perkins, Oklahoma, United States": {
     "place": {
       "name": "Perkins",
@@ -54893,6 +55170,24 @@
         "status": "adopted",
         "scope": ["city center / business district"],
         "land": ["commercial", "residential, low-density"]
+      }
+    ]
+  },
+  "Pike Road, Alabama, United States": {
+    "place": {
+      "name": "Pike Road",
+      "state": "Alabama",
+      "country": "United States",
+      "type": "city",
+      "encoded": "pike-road-alabama-united-states",
+      "pop": 9439,
+      "coord": [-86.1030169, 32.2843084]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["all uses"]
       }
     ]
   },
@@ -67960,6 +68255,24 @@
       {
         "status": "adopted",
         "scope": ["citywide"],
+        "land": ["all uses"]
+      }
+    ]
+  },
+  "Tamaqua, Pennsylvania, United States": {
+    "place": {
+      "name": "Tamaqua",
+      "state": "Pennsylvania",
+      "country": "United States",
+      "type": "city",
+      "encoded": "tamaqua-pennsylvania-united-states",
+      "pop": 6934,
+      "coord": [-75.9696186, 40.7974296]
+    },
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
         "land": ["all uses"]
       }
     ]
