@@ -1056,6 +1056,24 @@
       }
     ]
   },
+  "Alma, Arkansas, United States": {
+    "place": {
+      "name": "Alma",
+      "state": "Arkansas",
+      "country": "United States",
+      "type": "city",
+      "encoded": "alma-arkansas-united-states",
+      "pop": 5825,
+      "coord": [-94.2218752, 35.4778653]
+    },
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["all uses"]
+      }
+    ]
+  },
   "Alma, Michigan, United States": {
     "place": {
       "name": "Alma",
@@ -2180,6 +2198,24 @@
       }
     ]
   },
+  "Arkadelphia, Arkansas, United States": {
+    "place": {
+      "name": "Arkadelphia",
+      "state": "Arkansas",
+      "country": "United States",
+      "type": "city",
+      "encoded": "arkadelphia-arkansas-united-states",
+      "pop": 10380,
+      "coord": [-93.053784, 34.1209292]
+    },
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["all uses"]
+      }
+    ]
+  },
   "Arkansas City, Kansas, United States": {
     "place": {
       "name": "Arkansas City",
@@ -3031,6 +3067,24 @@
       {
         "status": "adopted",
         "scope": ["city center / business district", "citywide"],
+        "land": ["all uses"]
+      }
+    ]
+  },
+  "Augusta, Kansas, United States": {
+    "place": {
+      "name": "Augusta",
+      "state": "Kansas",
+      "country": "United States",
+      "type": "city",
+      "encoded": "augusta-kansas-united-states",
+      "pop": 9256,
+      "coord": [-96.9771177, 37.6809165]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
         "land": ["all uses"]
       }
     ]
@@ -4312,6 +4366,24 @@
       }
     ]
   },
+  "Bay St. Louis, Mississippi, United States": {
+    "place": {
+      "name": "Bay St. Louis",
+      "state": "Mississippi",
+      "country": "United States",
+      "type": "city",
+      "encoded": "bay-st-louis-mississippi-united-states",
+      "pop": 9284,
+      "coord": [-89.3275482, 30.3105666]
+    },
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["all uses"]
+      }
+    ]
+  },
   "Bayard, Iowa, United States": {
     "place": {
       "name": "Bayard",
@@ -4645,6 +4717,24 @@
       }
     ]
   },
+  "Bel Aire, Kansas, United States": {
+    "place": {
+      "name": "Bel Aire",
+      "state": "Kansas",
+      "country": "United States",
+      "type": "city",
+      "encoded": "bel-aire-kansas-united-states",
+      "pop": 8262,
+      "coord": [-97.266988, 37.7625125]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["industrial", "other"]
+      }
+    ]
+  },
   "Belding, Michigan, United States": {
     "place": {
       "name": "Belding",
@@ -4696,6 +4786,33 @@
         "status": "adopted",
         "scope": ["main street / special"],
         "land": ["all uses"]
+      }
+    ]
+  },
+  "Belgrade, Montana, United States": {
+    "place": {
+      "name": "Belgrade",
+      "state": "Montana",
+      "country": "United States",
+      "type": "city",
+      "encoded": "belgrade-montana-united-states",
+      "pop": 10460,
+      "coord": [-111.184535, 45.773279]
+    },
+    "add_max": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["commercial", "industrial", "medical", "other"],
+        "date": "2023-07-17"
+      }
+    ],
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["all uses"],
+        "date": "2023-07-17"
       }
     ]
   },
@@ -5900,6 +6017,24 @@
       }
     ]
   },
+  "Bethany, Oklahoma, United States": {
+    "place": {
+      "name": "Bethany",
+      "state": "Oklahoma",
+      "country": "United States",
+      "type": "city",
+      "encoded": "bethany-oklahoma-united-states",
+      "pop": 20831,
+      "coord": [-97.6322648, 35.5186728]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["all uses"]
+      }
+    ]
+  },
   "Bethel, Connecticut, United States": {
     "place": {
       "name": "Bethel",
@@ -6866,6 +7001,24 @@
       }
     ]
   },
+  "Bolingbrook, Illinois, United States": {
+    "place": {
+      "name": "Bolingbrook",
+      "state": "Illinois",
+      "country": "United States",
+      "type": "city",
+      "encoded": "bolingbrook-illinois-united-states",
+      "pop": 73922,
+      "coord": [-88.0717708, 41.7003302]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["all uses"]
+      }
+    ]
+  },
   "Bolivar, Missouri, United States": {
     "place": {
       "name": "Bolivar",
@@ -6968,6 +7121,24 @@
         "scope": ["city center / business district", "citywide"],
         "land": ["all uses"],
         "date": "2022-05-05"
+      }
+    ]
+  },
+  "Bonner Springs, Kansas, United States": {
+    "place": {
+      "name": "Bonner Springs",
+      "state": "Kansas",
+      "country": "United States",
+      "type": "city",
+      "encoded": "bonner-springs-kansas-united-states",
+      "pop": 7837,
+      "coord": [-94.8837597, 39.0597129]
+    },
+    "add_max": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["all uses"]
       }
     ]
   },
@@ -8124,6 +8295,24 @@
       }
     ]
   },
+  "Bristol, Virginia, United States": {
+    "place": {
+      "name": "Bristol",
+      "state": "Virginia",
+      "country": "United States",
+      "type": "city",
+      "encoded": "bristol-virginia-united-states",
+      "pop": 17219,
+      "coord": [-82.1885009, 36.5959685]
+    },
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["commercial", "other"]
+      }
+    ]
+  },
   "Broadview, Illinois, United States": {
     "place": {
       "name": "Broadview",
@@ -8658,6 +8847,24 @@
       }
     ]
   },
+  "Bryant, Arkansas, United States": {
+    "place": {
+      "name": "Bryant",
+      "state": "Arkansas",
+      "country": "United States",
+      "type": "city",
+      "encoded": "bryant-arkansas-united-states",
+      "pop": 20663,
+      "coord": [-92.488348, 34.5959045]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["main street / special"],
+        "land": ["all uses"]
+      }
+    ]
+  },
   "Buchanan, Michigan, United States": {
     "place": {
       "name": "Buchanan",
@@ -8795,6 +9002,24 @@
         "status": "adopted",
         "scope": ["city center / business district"],
         "land": ["all uses", "residential, low-density"]
+      }
+    ]
+  },
+  "Buena Vista, Virginia, United States": {
+    "place": {
+      "name": "Buena Vista",
+      "state": "Virginia",
+      "country": "United States",
+      "type": "city",
+      "encoded": "buena-vista-virginia-united-states",
+      "pop": 6641,
+      "coord": [-79.3539292, 37.7342962]
+    },
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["all uses"]
       }
     ]
   },
@@ -9067,6 +9292,24 @@
         "status": "adopted",
         "scope": ["city center / business district"],
         "land": ["commercial"]
+      }
+    ]
+  },
+  "Butler, Pennsylvania, United States": {
+    "place": {
+      "name": "Butler",
+      "state": "Pennsylvania",
+      "country": "United States",
+      "type": "city",
+      "encoded": "butler-pennsylvania-united-states",
+      "pop": 13502,
+      "coord": [-79.895197, 40.86108]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["all uses"]
       }
     ]
   },
@@ -10347,6 +10590,24 @@
       {
         "status": "adopted",
         "scope": ["citywide"],
+        "land": ["all uses"]
+      }
+    ]
+  },
+  "Carpentersville, Illinois, United States": {
+    "place": {
+      "name": "Carpentersville",
+      "state": "Illinois",
+      "country": "United States",
+      "type": "city",
+      "encoded": "carpentersville-illinois-united-states",
+      "pop": 37983,
+      "coord": [-88.2578582, 42.1211364]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
         "land": ["all uses"]
       }
     ]
@@ -14389,6 +14650,24 @@
       {
         "status": "adopted",
         "scope": ["city center / business district"],
+        "land": ["all uses"]
+      }
+    ]
+  },
+  "Colonial Heights, Virginia, United States": {
+    "place": {
+      "name": "Colonial Heights",
+      "state": "Virginia",
+      "country": "United States",
+      "type": "city",
+      "encoded": "colonial-heights-virginia-united-states",
+      "pop": 18170,
+      "coord": [-77.4112016, 37.2555718]
+    },
+    "add_max": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
         "land": ["all uses"]
       }
     ]
@@ -18438,18 +18717,18 @@
     },
     "add_max": [
       {
-        "status": "proposed",
+        "status": "adopted",
         "scope": ["citywide"],
         "land": ["all uses"],
-        "date": "2024-03"
+        "date": "2024-05-07"
       }
     ],
     "reduce_min": [
       {
-        "status": "proposed",
+        "status": "adopted",
         "scope": ["citywide"],
         "land": ["all uses"],
-        "date": "2024-03"
+        "date": "2024-05-07"
       }
     ]
   },
@@ -19335,6 +19614,24 @@
       "encoded": "Dunkirk_NY",
       "pop": 12743,
       "coord": [-79.333932, 42.479502]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["all uses"]
+      }
+    ]
+  },
+  "Dunmore, Pennsylvania, United States": {
+    "place": {
+      "name": "Dunmore",
+      "state": "Pennsylvania",
+      "country": "United States",
+      "type": "city",
+      "encoded": "dunmore-pennsylvania-united-states",
+      "pop": 14042,
+      "coord": [-75.6324112, 41.4198027]
     },
     "reduce_min": [
       {
@@ -24682,6 +24979,24 @@
       }
     ]
   },
+  "Fort Scott, Kansas, United States": {
+    "place": {
+      "name": "Fort Scott",
+      "state": "Kansas",
+      "country": "United States",
+      "type": "city",
+      "encoded": "fort-scott-kansas-united-states",
+      "pop": 7552,
+      "coord": [-94.7082882, 37.8399791]
+    },
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["commercial", "other"]
+      }
+    ]
+  },
   "Fort Simpson, Northwest Territories, Canada": {
     "place": {
       "name": "Fort Simpson",
@@ -29047,6 +29362,24 @@
       }
     ]
   },
+  "Greenwood, Arkansas, United States": {
+    "place": {
+      "name": "Greenwood",
+      "state": "Arkansas",
+      "country": "United States",
+      "type": "city",
+      "encoded": "greenwood-arkansas-united-states",
+      "pop": 9516,
+      "coord": [-94.2560266, 35.2167352]
+    },
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["all uses"]
+      }
+    ]
+  },
   "Greenwood, Indiana, United States": {
     "place": {
       "name": "Greenwood",
@@ -29267,6 +29600,31 @@
         "status": "adopted",
         "scope": ["city center / business district"],
         "land": ["commercial", "other"]
+      }
+    ]
+  },
+  "Grove, Oklahoma, United States": {
+    "place": {
+      "name": "Grove",
+      "state": "Oklahoma",
+      "country": "United States",
+      "type": "city",
+      "encoded": "grove-oklahoma-united-states",
+      "pop": 6956,
+      "coord": [-94.7685084, 36.5898616]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["all uses"]
+      }
+    ],
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["all uses"]
       }
     ]
   },
@@ -30890,6 +31248,24 @@
       }
     ]
   },
+  "Haysville, Kansas, United States": {
+    "place": {
+      "name": "Haysville",
+      "state": "Kansas",
+      "country": "United States",
+      "type": "city",
+      "encoded": "haysville-kansas-united-states",
+      "pop": 11262,
+      "coord": [-97.3522675, 37.5644615]
+    },
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["all uses"]
+      }
+    ]
+  },
   "Haysville, Pennsylvania, United States": {
     "place": {
       "name": "Haysville",
@@ -31074,6 +31450,24 @@
       }
     ]
   },
+  "Heber Springs, Arkansas, United States": {
+    "place": {
+      "name": "Heber Springs",
+      "state": "Arkansas",
+      "country": "United States",
+      "type": "city",
+      "encoded": "heber-springs-arkansas-united-states",
+      "pop": 6969,
+      "coord": [-92.0324875, 35.4976958]
+    },
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["all uses"]
+      }
+    ]
+  },
   "Hebron, Connecticut, United States": {
     "place": {
       "name": "Hebron",
@@ -31150,6 +31544,24 @@
         "status": "adopted",
         "scope": ["city center / business district", "main street / special"],
         "land": ["all uses", "commercial", "other", "residential, multi-family"]
+      }
+    ]
+  },
+  "Helena - West Helena, Arkansas, United States": {
+    "place": {
+      "name": "Helena - West Helena",
+      "state": "Arkansas",
+      "country": "United States",
+      "type": "city",
+      "encoded": "helena-west-helena-arkansas-united-states",
+      "pop": 9519,
+      "coord": [-90.6155926, 34.539412]
+    },
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["all uses"]
       }
     ]
   },
@@ -32012,6 +32424,24 @@
       }
     ]
   },
+  "Hoffman Estates, Illinois, United States": {
+    "place": {
+      "name": "Hoffman Estates",
+      "state": "Illinois",
+      "country": "United States",
+      "type": "city",
+      "encoded": "hoffman-estates-illinois-united-states",
+      "pop": 52530,
+      "coord": [-88.0792782, 42.0427256]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["all uses"]
+      }
+    ]
+  },
   "Holdrege, Nebraska, United States": {
     "place": {
       "name": "Holdrege",
@@ -32271,6 +32701,42 @@
         "status": "adopted",
         "scope": ["main street / special"],
         "land": ["commercial", "residential, all uses"]
+      }
+    ]
+  },
+  "Hope, Arkansas, United States": {
+    "place": {
+      "name": "Hope",
+      "state": "Arkansas",
+      "country": "United States",
+      "type": "city",
+      "encoded": "hope-arkansas-united-states",
+      "pop": 8952,
+      "coord": [-93.5915665, 33.6670616]
+    },
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["all uses"]
+      }
+    ]
+  },
+  "Hopewell, Virginia, United States": {
+    "place": {
+      "name": "Hopewell",
+      "state": "Virginia",
+      "country": "United States",
+      "type": "city",
+      "encoded": "hopewell-virginia-united-states",
+      "pop": 23033,
+      "coord": [-77.2872001, 37.3043154]
+    },
+    "add_max": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["commercial", "other", "residential, multi-family"]
       }
     ]
   },
@@ -38557,6 +39023,24 @@
       }
     ]
   },
+  "Leawood, Kansas, United States": {
+    "place": {
+      "name": "Leawood",
+      "state": "Kansas",
+      "country": "United States",
+      "type": "city",
+      "encoded": "leawood-kansas-united-states",
+      "pop": 33902,
+      "coord": [-94.6169012, 38.966673]
+    },
+    "add_max": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["all uses"]
+      }
+    ]
+  },
   "Lebanon, Indiana, United States": {
     "place": {
       "name": "Lebanon",
@@ -38846,6 +39330,24 @@
         "scope": ["main street / special"],
         "land": ["all uses"],
         "date": "2018-05"
+      },
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": [
+          "commercial",
+          "industrial",
+          "medical",
+          "other",
+          "residential, multi-family"
+        ]
+      }
+    ],
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district", "citywide"],
+        "land": ["all uses"]
       }
     ]
   },
@@ -39039,6 +39541,24 @@
       }
     ]
   },
+  "Lewistown, Montana, United States": {
+    "place": {
+      "name": "Lewistown",
+      "state": "Montana",
+      "country": "United States",
+      "type": "city",
+      "encoded": "lewistown-montana-united-states",
+      "pop": 5952,
+      "coord": [-109.428213, 47.0639275]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["all uses"]
+      }
+    ]
+  },
   "Lexington, Illinois, United States": {
     "place": {
       "name": "Lexington",
@@ -39135,6 +39655,24 @@
         "status": "adopted",
         "scope": ["city center / business district"],
         "land": ["commercial", "other"]
+      }
+    ]
+  },
+  "Lexington, Virginia, United States": {
+    "place": {
+      "name": "Lexington",
+      "state": "Virginia",
+      "country": "United States",
+      "type": "city",
+      "encoded": "lexington-virginia-united-states",
+      "pop": 7320,
+      "coord": [-79.4428157, 37.7840208]
+    },
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["all uses"]
       }
     ]
   },
@@ -41516,6 +42054,24 @@
       }
     ]
   },
+  "Malvern, Arkansas, United States": {
+    "place": {
+      "name": "Malvern",
+      "state": "Arkansas",
+      "country": "United States",
+      "type": "city",
+      "encoded": "malvern-arkansas-united-states",
+      "pop": 10867,
+      "coord": [-92.8092694, 34.3625823]
+    },
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["all uses"]
+      }
+    ]
+  },
   "Malvern, Iowa, United States": {
     "place": {
       "name": "Malvern",
@@ -41549,6 +42105,24 @@
         "status": "adopted",
         "scope": ["citywide"],
         "land": ["commercial", "industrial", "other", "residential, all uses"]
+      }
+    ]
+  },
+  "Manassas Park, Virginia, United States": {
+    "place": {
+      "name": "Manassas Park",
+      "state": "Virginia",
+      "country": "United States",
+      "type": "city",
+      "encoded": "manassas-park-virginia-united-states",
+      "pop": 17219,
+      "coord": [-77.4420075, 38.766802]
+    },
+    "add_max": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["all uses"]
       }
     ]
   },
@@ -45516,6 +46090,38 @@
       }
     ]
   },
+  "Mission, Kansas, United States": {
+    "place": {
+      "name": "Mission",
+      "state": "Kansas",
+      "country": "United States",
+      "type": "city",
+      "encoded": "mission-kansas-united-states",
+      "pop": 9954,
+      "coord": [-94.6557914, 39.0277832]
+    },
+    "add_max": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district", "citywide"],
+        "land": ["all uses", "commercial"]
+      }
+    ],
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["main street / special"],
+        "land": ["all uses"]
+      }
+    ],
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["main street / special"],
+        "land": ["all uses"]
+      }
+    ]
+  },
   "Missoula, Montana, United States": {
     "place": {
       "name": "Missoula",
@@ -45718,6 +46324,24 @@
       {
         "status": "adopted",
         "scope": ["city center / business district"],
+        "land": ["all uses"]
+      }
+    ]
+  },
+  "Monessen, Pennsylvania, United States": {
+    "place": {
+      "name": "Monessen",
+      "state": "Pennsylvania",
+      "country": "United States",
+      "type": "city",
+      "encoded": "monessen-pennsylvania-united-states",
+      "pop": 6876,
+      "coord": [-79.8876347, 40.1620497]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
         "land": ["all uses"]
       }
     ]
@@ -46398,6 +47022,24 @@
       }
     ]
   },
+  "Moore, Oklahoma, United States": {
+    "place": {
+      "name": "Moore",
+      "state": "Oklahoma",
+      "country": "United States",
+      "type": "city",
+      "encoded": "moore-oklahoma-united-states",
+      "pop": 62793,
+      "coord": [-97.4867045, 35.3383254]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["commercial", "industrial"]
+      }
+    ]
+  },
   "Mooresville , North Carolina, United States": {
     "place": {
       "name": "Mooresville ",
@@ -46625,6 +47267,24 @@
         "status": "adopted",
         "scope": ["main street / special"],
         "land": ["commercial", "other"]
+      }
+    ]
+  },
+  "Morrilton, Arkansas, United States": {
+    "place": {
+      "name": "Morrilton",
+      "state": "Arkansas",
+      "country": "United States",
+      "type": "city",
+      "encoded": "morrilton-arkansas-united-states",
+      "pop": 6992,
+      "coord": [-92.7429266, 35.154026]
+    },
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["all uses"]
       }
     ]
   },
@@ -47137,6 +47797,24 @@
       "encoded": "MountainGrove_MO",
       "pop": 4313,
       "coord": [-92.2634942, 37.1306078]
+    },
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["all uses"]
+      }
+    ]
+  },
+  "Mountain Home, Arkansas, United States": {
+    "place": {
+      "name": "Mountain Home",
+      "state": "Arkansas",
+      "country": "United States",
+      "type": "city",
+      "encoded": "mountain-home-arkansas-united-states",
+      "pop": 12825,
+      "coord": [-92.3801187, 36.3361391]
     },
     "rm_min": [
       {
@@ -47984,6 +48662,24 @@
         "status": "adopted",
         "scope": ["main street / special"],
         "land": ["all uses"]
+      }
+    ]
+  },
+  "Mustang, Oklahoma, United States": {
+    "place": {
+      "name": "Mustang",
+      "state": "Oklahoma",
+      "country": "United States",
+      "type": "city",
+      "encoded": "mustang-oklahoma-united-states",
+      "pop": 19879,
+      "coord": [-97.7244813, 35.384227]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["commercial", "industrial"]
       }
     ]
   },
@@ -49715,6 +50411,24 @@
       }
     ]
   },
+  "Newcastle, Oklahoma, United States": {
+    "place": {
+      "name": "Newcastle",
+      "state": "Oklahoma",
+      "country": "United States",
+      "type": "city",
+      "encoded": "newcastle-oklahoma-united-states",
+      "pop": 10984,
+      "coord": [-97.59976, 35.2472869]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["commercial", "industrial", "other"]
+      }
+    ]
+  },
   "Newhall, Iowa, United States": {
     "place": {
       "name": "Newhall",
@@ -50082,6 +50796,24 @@
         "status": "adopted",
         "scope": ["city center / business district"],
         "land": ["commercial"]
+      }
+    ]
+  },
+  "Noble, Oklahoma, United States": {
+    "place": {
+      "name": "Noble",
+      "state": "Oklahoma",
+      "country": "United States",
+      "type": "city",
+      "encoded": "noble-oklahoma-united-states",
+      "pop": 6985,
+      "coord": [-97.2681939, 36.4129621]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["commercial", "industrial"]
       }
     ]
   },
@@ -50815,6 +51547,36 @@
       }
     ]
   },
+  "Northbrook, Illinois, United States": {
+    "place": {
+      "name": "Northbrook",
+      "state": "Illinois",
+      "country": "United States",
+      "type": "city",
+      "encoded": "northbrook-illinois-united-states",
+      "pop": 35222,
+      "coord": [-87.8265089, 42.128704]
+    },
+    "add_max": [
+      {
+        "status": "proposed",
+        "scope": ["citywide"],
+        "land": ["all uses"]
+      }
+    ],
+    "reduce_min": [
+      {
+        "status": "proposed",
+        "scope": ["city center / business district", "citywide"],
+        "land": ["all uses"]
+      },
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["commercial", "other"]
+      }
+    ]
+  },
   "Northern Territory, Australia": {
     "place": {
       "name": "Northern Territory",
@@ -51025,6 +51787,24 @@
           "residential, low-density",
           "residential, multi-family"
         ]
+      }
+    ]
+  },
+  "Norton, Virginia, United States": {
+    "place": {
+      "name": "Norton",
+      "state": "Virginia",
+      "country": "United States",
+      "type": "city",
+      "encoded": "norton-virginia-united-states",
+      "pop": 3687,
+      "coord": [-82.6298965, 36.9336934]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["all uses"]
       }
     ]
   },
@@ -52502,6 +53282,24 @@
       }
     ]
   },
+  "Orland Park, Illinois, United States": {
+    "place": {
+      "name": "Orland Park",
+      "state": "Illinois",
+      "country": "United States",
+      "type": "city",
+      "encoded": "orland-park-illinois-united-states",
+      "pop": 58703,
+      "coord": [-87.8536288, 41.630663]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["all uses"]
+      }
+    ]
+  },
   "Orlando, Florida, United States": {
     "place": {
       "name": "Orlando",
@@ -52639,6 +53437,24 @@
         "status": "adopted",
         "scope": ["city center / business district"],
         "land": ["commercial"]
+      }
+    ]
+  },
+  "Osceola, Arkansas, United States": {
+    "place": {
+      "name": "Osceola",
+      "state": "Arkansas",
+      "country": "United States",
+      "type": "city",
+      "encoded": "osceola-arkansas-united-states",
+      "pop": 6976,
+      "coord": [-89.969532, 35.7050778]
+    },
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["all uses"]
       }
     ]
   },
@@ -54279,6 +55095,24 @@
       }
     ]
   },
+  "Pearl, Mississippi, United States": {
+    "place": {
+      "name": "Pearl",
+      "state": "Mississippi",
+      "country": "United States",
+      "type": "city",
+      "encoded": "pearl-mississippi-united-states",
+      "pop": 27115,
+      "coord": [-90.127881, 32.2735792]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["all uses"]
+      }
+    ]
+  },
   "Pearland, Texas, United States": {
     "place": {
       "name": "Pearland",
@@ -54846,6 +55680,24 @@
       "coord": [-132.9572288, 56.8133806]
     },
     "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["all uses"]
+      }
+    ]
+  },
+  "Petersburg, Virginia, United States": {
+    "place": {
+      "name": "Petersburg",
+      "state": "Virginia",
+      "country": "United States",
+      "type": "city",
+      "encoded": "petersburg-virginia-united-states",
+      "pop": 33458,
+      "coord": [-77.4019268, 37.227928]
+    },
+    "rm_min": [
       {
         "status": "adopted",
         "scope": ["city center / business district"],
@@ -55445,6 +56297,24 @@
       "coord": [-86.4669429, 39.8639329]
     },
     "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["all uses"]
+      }
+    ]
+  },
+  "Pittsburg, Kansas, United States": {
+    "place": {
+      "name": "Pittsburg",
+      "state": "Kansas",
+      "country": "United States",
+      "type": "city",
+      "encoded": "pittsburg-kansas-united-states",
+      "pop": 20646,
+      "coord": [-94.70496, 37.4108841]
+    },
+    "rm_min": [
       {
         "status": "adopted",
         "scope": ["city center / business district"],
@@ -56829,6 +57699,25 @@
       }
     ]
   },
+  "Prairie Grove, Arkansas, United States": {
+    "place": {
+      "name": "Prairie Grove",
+      "state": "Arkansas",
+      "country": "United States",
+      "type": "city",
+      "encoded": "prairie-grove-arkansas-united-states",
+      "pop": 7045,
+      "coord": [-94.3137353, 35.9774334]
+    },
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["all uses"],
+        "date": "2024-05-06"
+      }
+    ]
+  },
   "Prairie du Chien, Wisconsin, United States": {
     "place": {
       "name": "Prairie du Chien",
@@ -57491,6 +58380,24 @@
         "status": "adopted",
         "scope": ["city center / business district"],
         "land": ["all uses"]
+      }
+    ]
+  },
+  "Radford, Virginia, United States": {
+    "place": {
+      "name": "Radford",
+      "state": "Virginia",
+      "country": "United States",
+      "type": "city",
+      "encoded": "radford-virginia-united-states",
+      "pop": 16070,
+      "coord": [-80.5749169, 37.1343148]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["commercial", "other"]
       }
     ]
   },
@@ -59604,6 +60511,31 @@
         "status": "adopted",
         "scope": ["city center / business district"],
         "land": ["commercial", "other"]
+      }
+    ]
+  },
+  "Roeland Park, Kansas, United States": {
+    "place": {
+      "name": "Roeland Park",
+      "state": "Kansas",
+      "country": "United States",
+      "type": "city",
+      "encoded": "roeland-park-kansas-united-states",
+      "pop": 6871,
+      "coord": [-94.638918, 39.0358678]
+    },
+    "add_max": [
+      {
+        "status": "adopted",
+        "scope": ["main street / special"],
+        "land": ["all uses"]
+      }
+    ],
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district", "citywide"],
+        "land": ["all uses"]
       }
     ]
   },
@@ -62369,6 +63301,24 @@
       }
     ]
   },
+  "Seminole, Oklahoma, United States": {
+    "place": {
+      "name": "Seminole",
+      "state": "Oklahoma",
+      "country": "United States",
+      "type": "city",
+      "encoded": "seminole-oklahoma-united-states",
+      "pop": 7146,
+      "coord": [-96.6263487, 35.1705939]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["commercial", "industrial"]
+      }
+    ]
+  },
   "Senatobia, Mississippi, United States": {
     "place": {
       "name": "Senatobia",
@@ -62770,6 +63720,31 @@
       "coord": [-88.6089917, 44.7822064]
     },
     "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["all uses"]
+      }
+    ]
+  },
+  "Shawnee, Kansas, United States": {
+    "place": {
+      "name": "Shawnee",
+      "state": "Kansas",
+      "country": "United States",
+      "type": "city",
+      "encoded": "shawnee-kansas-united-states",
+      "pop": 67311,
+      "coord": [-94.71457129941408, 39.02291690836717]
+    },
+    "add_max": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["all uses"]
+      }
+    ],
+    "reduce_min": [
       {
         "status": "adopted",
         "scope": ["city center / business district"],
@@ -65731,6 +66706,42 @@
       }
     ]
   },
+  "St. George, Louisiana, United States": {
+    "place": {
+      "name": "St. George",
+      "state": "Louisiana",
+      "country": "United States",
+      "type": "city",
+      "encoded": "st-george-louisiana-united-states",
+      "pop": 86316,
+      "coord": [-91.0261515, 30.3652276]
+    },
+    "add_max": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["all uses"]
+      }
+    ],
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide", "main street / special"],
+        "land": ["all uses", "commercial", "industrial", "medical", "other"]
+      }
+    ],
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district", "citywide"],
+        "land": [
+          "all uses",
+          "residential, low-density",
+          "residential, multi-family"
+        ]
+      }
+    ]
+  },
   "St. Ignace, Michigan, United States": {
     "place": {
       "name": "St. Ignace",
@@ -67183,6 +68194,24 @@
       }
     ]
   },
+  "Streamwood, Illinois, United States": {
+    "place": {
+      "name": "Streamwood",
+      "state": "Illinois",
+      "country": "United States",
+      "type": "city",
+      "encoded": "streamwood-illinois-united-states",
+      "pop": 39577,
+      "coord": [-88.1784085, 42.0255827]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["all uses"]
+      }
+    ]
+  },
   "Streator, Illinois, United States": {
     "place": {
       "name": "Streator",
@@ -67450,6 +68479,24 @@
       }
     ]
   },
+  "Suffolk, Virginia, United States": {
+    "place": {
+      "name": "Suffolk",
+      "state": "Virginia",
+      "country": "United States",
+      "type": "city",
+      "encoded": "suffolk-virginia-united-states",
+      "pop": 94324,
+      "coord": [-76.5834683, 36.7281341]
+    },
+    "add_max": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["commercial", "medical", "other", "residential, multi-family"]
+      }
+    ]
+  },
   "Sugar Creek, Missouri, United States": {
     "place": {
       "name": "Sugar Creek",
@@ -67533,6 +68580,24 @@
       "coord": [-88.5881562, 43.0127852]
     },
     "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["all uses"]
+      }
+    ]
+  },
+  "Sulphur, Oklahoma, United States": {
+    "place": {
+      "name": "Sulphur",
+      "state": "Oklahoma",
+      "country": "United States",
+      "type": "city",
+      "encoded": "sulphur-oklahoma-united-states",
+      "pop": 5065,
+      "coord": [-96.974653, 34.5096839]
+    },
+    "reduce_min": [
       {
         "status": "adopted",
         "scope": ["city center / business district"],
@@ -69839,6 +70904,31 @@
         "status": "adopted",
         "scope": ["city center / business district"],
         "land": ["all uses"]
+      }
+    ]
+  },
+  "Tonganoxie, Kansas, United States": {
+    "place": {
+      "name": "Tonganoxie",
+      "state": "Kansas",
+      "country": "United States",
+      "type": "city",
+      "encoded": "tonganoxie-kansas-united-states",
+      "pop": 5573,
+      "coord": [-95.0877465, 39.109724]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["all uses"]
+      }
+    ],
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["commercial", "other"]
       }
     ]
   },
@@ -72492,6 +73582,24 @@
       }
     ]
   },
+  "Walnut Ridge, Arkansas, United States": {
+    "place": {
+      "name": "Walnut Ridge",
+      "state": "Arkansas",
+      "country": "United States",
+      "type": "city",
+      "encoded": "walnut-ridge-arkansas-united-states",
+      "pop": 5384,
+      "coord": [-90.9561004, 36.0680241]
+    },
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["all uses"]
+      }
+    ]
+  },
   "Walnut, Mississippi, United States": {
     "place": {
       "name": "Walnut",
@@ -72649,6 +73757,24 @@
       }
     ]
   },
+  "Warren, Arkansas, United States": {
+    "place": {
+      "name": "Warren",
+      "state": "Arkansas",
+      "country": "United States",
+      "type": "city",
+      "encoded": "warren-arkansas-united-states",
+      "pop": 5453,
+      "coord": [-92.0645831, 33.6126086]
+    },
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["all uses"]
+      }
+    ]
+  },
   "Warren, Michigan, United States": {
     "place": {
       "name": "Warren",
@@ -72681,6 +73807,24 @@
       {
         "status": "adopted",
         "scope": ["city center / business district"],
+        "land": ["all uses"]
+      }
+    ]
+  },
+  "Warren, Pennsylvania, United States": {
+    "place": {
+      "name": "Warren",
+      "state": "Pennsylvania",
+      "country": "United States",
+      "type": "city",
+      "encoded": "warren-pennsylvania-united-states",
+      "pop": 9404,
+      "coord": [-79.2654452, 41.8119602]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
         "land": ["all uses"]
       }
     ]
@@ -73611,6 +74755,24 @@
       }
     ]
   },
+  "Waveland, Mississippi, United States": {
+    "place": {
+      "name": "Waveland",
+      "state": "Mississippi",
+      "country": "United States",
+      "type": "city",
+      "encoded": "waveland-mississippi-united-states",
+      "pop": 7210,
+      "coord": [-89.3720685, 30.2853636]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["all uses"]
+      }
+    ]
+  },
   "Waverly, Iowa, United States": {
     "place": {
       "name": "Waverly",
@@ -73762,6 +74924,24 @@
         "status": "adopted",
         "scope": ["city center / business district"],
         "land": ["commercial"]
+      }
+    ]
+  },
+  "Waynesboro, Pennsylvania, United States": {
+    "place": {
+      "name": "Waynesboro",
+      "state": "Pennsylvania",
+      "country": "United States",
+      "type": "city",
+      "encoded": "waynesboro-pennsylvania-united-states",
+      "pop": 10951,
+      "coord": [-77.5776512, 39.7557827]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["all uses"]
       }
     ]
   },
@@ -74671,6 +75851,24 @@
       "encoded": "WestMilton_OH",
       "pop": 4697,
       "coord": [-84.3280022, 39.9625534]
+    },
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["all uses"]
+      }
+    ]
+  },
+  "West Monroe, Louisiana, United States": {
+    "place": {
+      "name": "West Monroe",
+      "state": "Louisiana",
+      "country": "United States",
+      "type": "city",
+      "encoded": "west-monroe-louisiana-united-states",
+      "pop": 13103,
+      "coord": [-92.1476353, 32.5184775]
     },
     "rm_min": [
       {
@@ -76909,6 +78107,24 @@
         "status": "adopted",
         "scope": ["citywide"],
         "land": ["commercial", "industrial", "residential, multi-family"]
+      }
+    ]
+  },
+  "Woodridge, Illinois, United States": {
+    "place": {
+      "name": "Woodridge",
+      "state": "Illinois",
+      "country": "United States",
+      "type": "city",
+      "encoded": "woodridge-illinois-united-states",
+      "pop": 34158,
+      "coord": [-88.045559, 41.7563344]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["all uses"]
       }
     ]
   },
