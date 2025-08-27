@@ -945,6 +945,24 @@
       }
     ]
   },
+  "Algonquin, Illinois, United States": {
+    "place": {
+      "name": "Algonquin",
+      "state": "Illinois",
+      "country": "United States",
+      "type": "city",
+      "encoded": "algonquin-illinois-united-states",
+      "pop": 29700,
+      "coord": [-88.2942493, 42.1655801]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["all uses"]
+      }
+    ]
+  },
   "Alleman, Iowa, United States": {
     "place": {
       "name": "Alleman",
@@ -5303,6 +5321,24 @@
       }
     ]
   },
+  "Belton, Missouri, United States": {
+    "place": {
+      "name": "Belton",
+      "state": "Missouri",
+      "country": "United States",
+      "type": "city",
+      "encoded": "belton-missouri-united-states",
+      "pop": 23953,
+      "coord": [-94.5313502, 38.8108097]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["all uses"]
+      }
+    ]
+  },
   "Belvidere, Illinois, United States": {
     "place": {
       "name": "Belvidere",
@@ -5680,6 +5716,25 @@
         "status": "adopted",
         "scope": ["citywide"],
         "land": ["residential, all uses"]
+      }
+    ]
+  },
+  "Berkeley, Missouri, United States": {
+    "place": {
+      "name": "Berkeley",
+      "state": "Missouri",
+      "country": "United States",
+      "type": "city",
+      "encoded": "berkeley-missouri-united-states",
+      "pop": 8228,
+      "coord": [-90.3312256, 38.7544952]
+    },
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["all uses"],
+        "date": "2023-05-01"
       }
     ]
   },
@@ -7201,6 +7256,24 @@
       }
     ]
   },
+  "Boonville, Missouri, United States": {
+    "place": {
+      "name": "Boonville",
+      "state": "Missouri",
+      "country": "United States",
+      "type": "city",
+      "encoded": "boonville-missouri-united-states",
+      "pop": 7964,
+      "coord": [-92.7440277, 38.9751547]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["all uses"]
+      }
+    ]
+  },
   "Bosque Farms, New Mexico, United States": {
     "place": {
       "name": "Bosque Farms",
@@ -7937,6 +8010,24 @@
         "scope": ["citywide"],
         "land": ["all uses"],
         "date": "2025-06-04"
+      }
+    ]
+  },
+  "Brentwood, Missouri, United States": {
+    "place": {
+      "name": "Brentwood",
+      "state": "Missouri",
+      "country": "United States",
+      "type": "city",
+      "encoded": "brentwood-missouri-united-states",
+      "pop": 8233,
+      "coord": [-90.3492829, 38.6175522]
+    },
+    "add_max": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["all uses"]
       }
     ]
   },
@@ -15914,6 +16005,24 @@
       }
     ]
   },
+  "Cottleville, Missouri, United States": {
+    "place": {
+      "name": "Cottleville",
+      "state": "Missouri",
+      "country": "United States",
+      "type": "city",
+      "encoded": "cottleville-missouri-united-states",
+      "pop": 5611,
+      "coord": [-90.6532316, 38.7489107]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["all uses"]
+      }
+    ]
+  },
   "Cottonwood, Arizona, United States": {
     "place": {
       "name": "Cottonwood",
@@ -16379,6 +16488,24 @@
         "status": "adopted",
         "scope": ["city center / business district"],
         "land": ["commercial"]
+      }
+    ]
+  },
+  "Creve Coeur, Missouri, United States": {
+    "place": {
+      "name": "Creve Coeur",
+      "state": "Missouri",
+      "country": "United States",
+      "type": "city",
+      "encoded": "creve-coeur-missouri-united-states",
+      "pop": 18834,
+      "coord": [-90.4423653, 38.6613007]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["all uses"]
       }
     ]
   },
@@ -21439,6 +21566,24 @@
       }
     ]
   },
+  "Elk Grove Village, Illinois, United States": {
+    "place": {
+      "name": "Elk Grove Village",
+      "state": "Illinois",
+      "country": "United States",
+      "type": "city",
+      "encoded": "elk-grove-village-illinois-united-states",
+      "pop": 32812,
+      "coord": [-87.9414608, 42.0087978]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["all uses"]
+      }
+    ]
+  },
   "Elk Grove, California, United States": {
     "place": {
       "name": "Elk Grove",
@@ -22764,6 +22909,24 @@
       {
         "status": "adopted",
         "scope": ["citywide"],
+        "land": ["all uses"]
+      }
+    ]
+  },
+  "Eureka, Missouri, United States": {
+    "place": {
+      "name": "Eureka",
+      "state": "Missouri",
+      "country": "United States",
+      "type": "city",
+      "encoded": "eureka-missouri-united-states",
+      "pop": 11646,
+      "coord": [-90.6279044, 38.5025537]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district", "citywide"],
         "land": ["all uses"]
       }
     ]
@@ -27253,6 +27416,31 @@
         "scope": ["citywide"],
         "land": ["all uses"],
         "date": "2011-06-01"
+      }
+    ]
+  },
+  "Gladstone, Missouri, United States": {
+    "place": {
+      "name": "Gladstone",
+      "state": "Missouri",
+      "country": "United States",
+      "type": "city",
+      "encoded": "gladstone-missouri-united-states",
+      "pop": 27063,
+      "coord": [-94.5719748, 39.2214765]
+    },
+    "add_max": [
+      {
+        "status": "adopted",
+        "scope": ["main street / special"],
+        "land": ["all uses"]
+      }
+    ],
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["main street / special"],
+        "land": ["all uses"]
       }
     ]
   },
@@ -33376,6 +33564,24 @@
       }
     ]
   },
+  "Huntley, Illinois, United States": {
+    "place": {
+      "name": "Huntley",
+      "state": "Illinois",
+      "country": "United States",
+      "type": "city",
+      "encoded": "huntley-illinois-united-states",
+      "pop": 27740,
+      "coord": [-88.42692, 42.1722503]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["all uses"]
+      }
+    ]
+  },
   "Huntsville, Alabama, United States": {
     "place": {
       "name": "Huntsville",
@@ -34376,6 +34582,31 @@
         "scope": ["citywide"],
         "land": ["all uses"],
         "date": "2021-10-01"
+      }
+    ]
+  },
+  "Jackson, Wisconsin, United States": {
+    "place": {
+      "name": "Jackson",
+      "state": "Wisconsin",
+      "country": "United States",
+      "type": "city",
+      "encoded": "jackson-wisconsin-united-states",
+      "pop": 7185,
+      "coord": [-90.8085198, 44.3016847]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["all uses"]
+      }
+    ],
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["main street / special"],
+        "land": ["commercial", "other"]
       }
     ]
   },
@@ -35782,6 +36013,24 @@
       {
         "status": "adopted",
         "scope": ["main street / special"],
+        "land": ["all uses"]
+      }
+    ]
+  },
+  "Kearney, Missouri, United States": {
+    "place": {
+      "name": "Kearney",
+      "state": "Missouri",
+      "country": "United States",
+      "type": "city",
+      "encoded": "kearney-missouri-united-states",
+      "pop": 10404,
+      "coord": [-94.3621376, 39.3731886]
+    },
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
         "land": ["all uses"]
       }
     ]
@@ -37266,6 +37515,24 @@
       "coord": [-76.1613189, 41.6459089]
     },
     "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["all uses"]
+      }
+    ]
+  },
+  "Ladue, Missouri, United States": {
+    "place": {
+      "name": "Ladue",
+      "state": "Missouri",
+      "country": "United States",
+      "type": "city",
+      "encoded": "ladue-missouri-united-states",
+      "pop": 8989,
+      "coord": [-90.3806725, 38.6497743]
+    },
+    "add_max": [
       {
         "status": "adopted",
         "scope": ["citywide"],
@@ -43267,6 +43534,24 @@
       }
     ]
   },
+  "Marshfield, Missouri, United States": {
+    "place": {
+      "name": "Marshfield",
+      "state": "Missouri",
+      "country": "United States",
+      "type": "city",
+      "encoded": "marshfield-missouri-united-states",
+      "pop": 7458,
+      "coord": [-92.9068984, 37.3302192]
+    },
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["commercial"]
+      }
+    ]
+  },
   "Marshville, North Carolina, United States": {
     "place": {
       "name": "Marshville",
@@ -43326,6 +43611,31 @@
       {
         "status": "adopted",
         "scope": ["city center / business district"],
+        "land": ["all uses"]
+      }
+    ]
+  },
+  "Maryland Heights, Missouri, United States": {
+    "place": {
+      "name": "Maryland Heights",
+      "state": "Missouri",
+      "country": "United States",
+      "type": "city",
+      "encoded": "maryland-heights-missouri-united-states",
+      "pop": 28284,
+      "coord": [-90.435999, 38.7150511]
+    },
+    "add_max": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["all uses"]
+      }
+    ],
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
         "land": ["all uses"]
       }
     ]
@@ -47403,6 +47713,24 @@
       }
     ]
   },
+  "Morton Grove, Illinois, United States": {
+    "place": {
+      "name": "Morton Grove",
+      "state": "Illinois",
+      "country": "United States",
+      "type": "city",
+      "encoded": "morton-grove-illinois-united-states",
+      "pop": 25297,
+      "coord": [-87.7825696, 42.0405857]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["all uses"]
+      }
+    ]
+  },
   "Morton, Illinois, United States": {
     "place": {
       "name": "Morton",
@@ -48363,6 +48691,38 @@
         "scope": ["citywide"],
         "land": ["all uses"],
         "date": "2023-12-16"
+      }
+    ]
+  },
+  "Mukwonago, Wisconsin, United States": {
+    "place": {
+      "name": "Mukwonago",
+      "state": "Wisconsin",
+      "country": "United States",
+      "type": "city",
+      "encoded": "mukwonago-wisconsin-united-states",
+      "pop": 8262,
+      "coord": [-88.3334274, 42.8666803]
+    },
+    "add_max": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["all uses"]
+      }
+    ],
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["all uses"]
+      }
+    ],
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["commercial"]
       }
     ]
   },
@@ -50720,6 +51080,24 @@
       }
     ]
   },
+  "Niles, Illinois, United States": {
+    "place": {
+      "name": "Niles",
+      "state": "Illinois",
+      "country": "United States",
+      "type": "city",
+      "encoded": "niles-illinois-united-states",
+      "pop": 30912,
+      "coord": [-87.8122348, 42.0289319]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["all uses", "commercial"]
+      }
+    ]
+  },
   "Niles, Michigan, United States": {
     "place": {
       "name": "Niles",
@@ -50777,6 +51155,24 @@
       {
         "status": "adopted",
         "scope": ["city center / business district"],
+        "land": ["all uses"]
+      }
+    ]
+  },
+  "Nixa, Missouri, United States": {
+    "place": {
+      "name": "Nixa",
+      "state": "Missouri",
+      "country": "United States",
+      "type": "city",
+      "encoded": "nixa-missouri-united-states",
+      "pop": 23257,
+      "coord": [-93.2986635, 37.0433856]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
         "land": ["all uses"]
       }
     ]
@@ -52045,6 +52441,24 @@
       }
     ]
   },
+  "O'Fallon, Missouri, United States": {
+    "place": {
+      "name": "O'Fallon",
+      "state": "Missouri",
+      "country": "United States",
+      "type": "city",
+      "encoded": "ofallon-missouri-united-states",
+      "pop": 91316,
+      "coord": [-90.7033292, 38.7902503]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["all uses"]
+      }
+    ]
+  },
   "O'Neill, Nebraska, United States": {
     "place": {
       "name": "O'Neill",
@@ -52095,6 +52509,31 @@
       {
         "status": "adopted",
         "scope": ["citywide"],
+        "land": ["all uses"]
+      }
+    ]
+  },
+  "Oak Forest, Illinois, United States": {
+    "place": {
+      "name": "Oak Forest",
+      "state": "Illinois",
+      "country": "United States",
+      "type": "city",
+      "encoded": "oak-forest-illinois-united-states",
+      "pop": 27478,
+      "coord": [-87.7439384, 41.6028116]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["all uses"]
+      }
+    ],
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
         "land": ["all uses"]
       }
     ]
@@ -55791,6 +56230,24 @@
       }
     ]
   },
+  "Pewaukee (Village), Wisconsin, United States": {
+    "place": {
+      "name": "Pewaukee (Village)",
+      "state": "Wisconsin",
+      "country": "United States",
+      "type": "city",
+      "encoded": "pewaukee-village-wisconsin-united-states",
+      "pop": 8238,
+      "coord": [-88.2612045, 43.0805651]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district", "citywide"],
+        "land": ["all uses", "commercial"]
+      }
+    ]
+  },
   "Phenix City, Alabama, United States": {
     "place": {
       "name": "Phenix City",
@@ -56647,6 +57104,24 @@
       "encoded": "Plattsmouth_NE",
       "pop": 6620,
       "coord": [-95.8862157, 41.0111979]
+    },
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["all uses"]
+      }
+    ]
+  },
+  "Pleasant Hill, Missouri, United States": {
+    "place": {
+      "name": "Pleasant Hill",
+      "state": "Missouri",
+      "country": "United States",
+      "type": "city",
+      "encoded": "pleasant-hill-missouri-united-states",
+      "pop": 8777,
+      "coord": [-94.2740923, 38.7862917]
     },
     "rm_min": [
       {
@@ -58653,6 +59128,24 @@
       }
     ]
   },
+  "Raymore, Missouri, United States": {
+    "place": {
+      "name": "Raymore",
+      "state": "Missouri",
+      "country": "United States",
+      "type": "city",
+      "encoded": "raymore-missouri-united-states",
+      "pop": 22941,
+      "coord": [-94.4676501, 38.810131]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["all uses"]
+      }
+    ]
+  },
   "Raytown, Missouri, United States": {
     "place": {
       "name": "Raytown",
@@ -59102,6 +59595,24 @@
       }
     ]
   },
+  "Republic, Missouri, United States": {
+    "place": {
+      "name": "Republic",
+      "state": "Missouri",
+      "country": "United States",
+      "type": "city",
+      "encoded": "republic-missouri-united-states",
+      "pop": 18750,
+      "coord": [-93.4803765, 37.1193808]
+    },
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["all uses"]
+      }
+    ]
+  },
   "Reykjavík, Iceland": {
     "place": {
       "name": "Reykjavík",
@@ -59252,6 +59763,31 @@
       {
         "status": "adopted",
         "scope": ["citywide"],
+        "land": ["all uses"]
+      }
+    ]
+  },
+  "Richfield, Wisconsin, United States": {
+    "place": {
+      "name": "Richfield",
+      "state": "Wisconsin",
+      "country": "United States",
+      "type": "city",
+      "encoded": "richfield-wisconsin-united-states",
+      "pop": 11739,
+      "coord": [-88.1939819, 43.256116]
+    },
+    "add_max": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["all uses"]
+      }
+    ],
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
         "land": ["all uses"]
       }
     ]
@@ -60973,6 +61509,24 @@
       }
     ]
   },
+  "Rothschild, Wisconsin, United States": {
+    "place": {
+      "name": "Rothschild",
+      "state": "Wisconsin",
+      "country": "United States",
+      "type": "city",
+      "encoded": "rothschild-wisconsin-united-states",
+      "pop": 5567,
+      "coord": [-89.6201218, 44.8871907]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["all uses"]
+      }
+    ]
+  },
   "Round Lake Beach, Illinois, United States": {
     "place": {
       "name": "Round Lake Beach",
@@ -61575,6 +62129,24 @@
       }
     ]
   },
+  "Salem Lakes, Wisconsin, United States": {
+    "place": {
+      "name": "Salem Lakes",
+      "state": "Wisconsin",
+      "country": "United States",
+      "type": "city",
+      "encoded": "salem-lakes-wisconsin-united-states",
+      "pop": 14601,
+      "coord": [-88.1015995, 42.5313995]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["all uses"]
+      }
+    ]
+  },
   "Salem, Massachusetts, United States": {
     "place": {
       "name": "Salem",
@@ -61590,6 +62162,24 @@
         "status": "adopted",
         "scope": ["city center / business district", "citywide"],
         "land": ["commercial", "other"]
+      }
+    ]
+  },
+  "Salem, Missouri, United States": {
+    "place": {
+      "name": "Salem",
+      "state": "Missouri",
+      "country": "United States",
+      "type": "city",
+      "encoded": "salem-missouri-united-states",
+      "pop": 4608,
+      "coord": [-91.5359808, 37.6455993]
+    },
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["all uses"]
       }
     ]
   },
@@ -67208,6 +67798,24 @@
       }
     ]
   },
+  "St. Peters, Missouri, United States": {
+    "place": {
+      "name": "St. Peters",
+      "state": "Missouri",
+      "country": "United States",
+      "type": "city",
+      "encoded": "st-peters-missouri-united-states",
+      "pop": 57732,
+      "coord": [-90.5958468, 38.791612]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["all uses"]
+      }
+    ]
+  },
   "St. Petersburg, Florida, United States": {
     "place": {
       "name": "St. Petersburg",
@@ -68356,6 +68964,24 @@
       }
     ]
   },
+  "Sturtevant, Wisconsin, United States": {
+    "place": {
+      "name": "Sturtevant",
+      "state": "Wisconsin",
+      "country": "United States",
+      "type": "city",
+      "encoded": "sturtevant-wisconsin-united-states",
+      "pop": 6919,
+      "coord": [-87.8945229, 42.6980749]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["all uses"]
+      }
+    ]
+  },
   "Stuttgart, Baden-Württemberg, Germany": {
     "place": {
       "name": "Stuttgart",
@@ -68569,6 +69195,24 @@
       }
     ]
   },
+  "Sullivan, Missouri, United States": {
+    "place": {
+      "name": "Sullivan",
+      "state": "Missouri",
+      "country": "United States",
+      "type": "city",
+      "encoded": "sullivan-missouri-united-states",
+      "pop": 6906,
+      "coord": [-93.1140993, 40.1993002]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["all uses"]
+      }
+    ]
+  },
   "Sullivan, Wisconsin, United States": {
     "place": {
       "name": "Sullivan",
@@ -68765,6 +69409,24 @@
           "residential, all uses",
           "residential, low-density"
         ]
+      }
+    ]
+  },
+  "Sunset Hills, Missouri, United States": {
+    "place": {
+      "name": "Sunset Hills",
+      "state": "Missouri",
+      "country": "United States",
+      "type": "city",
+      "encoded": "sunset-hills-missouri-united-states",
+      "pop": 9198,
+      "coord": [-90.407341, 38.5389423]
+    },
+    "add_max": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["all uses"]
       }
     ]
   },
@@ -71083,6 +71745,24 @@
       {
         "status": "adopted",
         "scope": ["city center / business district"],
+        "land": ["all uses"]
+      }
+    ]
+  },
+  "Town and Country, Missouri, United States": {
+    "place": {
+      "name": "Town and Country",
+      "state": "Missouri",
+      "country": "United States",
+      "type": "city",
+      "encoded": "town-and-country-missouri-united-states",
+      "pop": 11640,
+      "coord": [-90.4634532, 38.6122751]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
         "land": ["all uses"]
       }
     ]
@@ -74249,6 +74929,24 @@
       }
     ]
   },
+  "Washington, Missouri, United States": {
+    "place": {
+      "name": "Washington",
+      "state": "Missouri",
+      "country": "United States",
+      "type": "city",
+      "encoded": "washington-missouri-united-states",
+      "pop": 14500,
+      "coord": [-90.879099, 37.9559513]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["all uses"]
+      }
+    ]
+  },
   "Washington, Pennsylvania, United States": {
     "place": {
       "name": "Washington",
@@ -74358,6 +75056,24 @@
         "status": "adopted",
         "scope": ["citywide"],
         "land": ["commercial", "industrial", "other"]
+      }
+    ]
+  },
+  "Waterford, Wisconsin, United States": {
+    "place": {
+      "name": "Waterford",
+      "state": "Wisconsin",
+      "country": "United States",
+      "type": "city",
+      "encoded": "waterford-wisconsin-united-states",
+      "pop": 5542,
+      "coord": [-88.2142563, 42.7630722]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["all uses"]
       }
     ]
   },
@@ -75283,6 +75999,24 @@
       "encoded": "Welsh_LA",
       "pop": 3333,
       "coord": [-92.8221303, 30.2368977]
+    },
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["all uses"]
+      }
+    ]
+  },
+  "Wentzville, Missouri, United States": {
+    "place": {
+      "name": "Wentzville",
+      "state": "Missouri",
+      "country": "United States",
+      "type": "city",
+      "encoded": "wentzville-missouri-united-states",
+      "pop": 44372,
+      "coord": [-90.8683119, 38.8244136]
     },
     "rm_min": [
       {
@@ -77407,6 +78141,24 @@
       }
     ]
   },
+  "Windsor, Wisconsin, United States": {
+    "place": {
+      "name": "Windsor",
+      "state": "Wisconsin",
+      "country": "United States",
+      "type": "city",
+      "encoded": "windsor-wisconsin-united-states",
+      "pop": 8754,
+      "coord": [-89.3402046, 43.2165866]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["all uses"]
+      }
+    ]
+  },
   "Winfield, Iowa, United States": {
     "place": {
       "name": "Winfield",
@@ -78186,6 +78938,31 @@
         "status": "adopted",
         "scope": ["citywide"],
         "land": ["other", "residential, low-density"]
+      }
+    ]
+  },
+  "Woodstock, Illinois, United States": {
+    "place": {
+      "name": "Woodstock",
+      "state": "Illinois",
+      "country": "United States",
+      "type": "city",
+      "encoded": "woodstock-illinois-united-states",
+      "pop": 25630,
+      "coord": [-88.4474302, 42.3147529]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district", "main street / special"],
+        "land": [
+          "all uses",
+          "commercial",
+          "industrial",
+          "medical",
+          "other",
+          "residential, multi-family"
+        ]
       }
     ]
   },
