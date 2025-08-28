@@ -1501,6 +1501,24 @@
       }
     ]
   },
+  "Amherst, Virginia, United States": {
+    "place": {
+      "name": "Amherst",
+      "state": "Virginia",
+      "country": "United States",
+      "type": "city",
+      "encoded": "amherst-virginia-united-states",
+      "pop": 2110,
+      "coord": [-79.05215752451002, 37.58497755132264]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["all uses"]
+      }
+    ]
+  },
   "Amherst, Wisconsin, United States": {
     "place": {
       "name": "Amherst",
@@ -3910,6 +3928,24 @@
         "status": "adopted",
         "scope": ["citywide"],
         "land": ["residential, all uses"]
+      }
+    ]
+  },
+  "Barrington, Illinois, United States": {
+    "place": {
+      "name": "Barrington",
+      "state": "Illinois",
+      "country": "United States",
+      "type": "city",
+      "encoded": "barrington-illinois-united-states",
+      "pop": 10722,
+      "coord": [-88.1361888, 42.1539141]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["all uses"]
       }
     ]
   },
@@ -10985,6 +11021,31 @@
       }
     ]
   },
+  "Cary, Illinois, United States": {
+    "place": {
+      "name": "Cary",
+      "state": "Illinois",
+      "country": "United States",
+      "type": "city",
+      "encoded": "cary-illinois-united-states",
+      "pop": 17826,
+      "coord": [-88.2381381, 42.2119684]
+    },
+    "add_max": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["all uses"]
+      }
+    ],
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["all uses"]
+      }
+    ]
+  },
   "Cary, North Carolina, United States": {
     "place": {
       "name": "Cary",
@@ -17301,6 +17362,24 @@
       }
     ]
   },
+  "Darien, Illinois, United States": {
+    "place": {
+      "name": "Darien",
+      "state": "Illinois",
+      "country": "United States",
+      "type": "city",
+      "encoded": "darien-illinois-united-states",
+      "pop": 22011,
+      "coord": [-87.9739593, 41.7508713]
+    },
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["residential, low-density"]
+      }
+    ]
+  },
   "Darien, Wisconsin, United States": {
     "place": {
       "name": "Darien",
@@ -22043,6 +22122,38 @@
         "status": "adopted",
         "scope": ["city center / business district"],
         "land": ["commercial"]
+      }
+    ]
+  },
+  "Elmwood Park, Illinois, United States": {
+    "place": {
+      "name": "Elmwood Park",
+      "state": "Illinois",
+      "country": "United States",
+      "type": "city",
+      "encoded": "elmwood-park-illinois-united-states",
+      "pop": 24521,
+      "coord": [-87.8160169, 41.9205931]
+    },
+    "add_max": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["residential, low-density"]
+      }
+    ],
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["main street / special"],
+        "land": ["commercial"]
+      }
+    ],
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district", "main street / special"],
+        "land": ["commercial", "other"]
       }
     ]
   },
@@ -30316,6 +30427,24 @@
       }
     ]
   },
+  "Hamilton, Virginia, United States": {
+    "place": {
+      "name": "Hamilton",
+      "state": "Virginia",
+      "country": "United States",
+      "type": "city",
+      "encoded": "hamilton-virginia-united-states",
+      "pop": 619,
+      "coord": [-77.662492, 39.1342719]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["all uses"]
+      }
+    ]
+  },
   "Hammond, Indiana, United States": {
     "place": {
       "name": "Hammond",
@@ -32759,6 +32888,24 @@
       }
     ]
   },
+  "Homer Glen, Illinois, United States": {
+    "place": {
+      "name": "Homer Glen",
+      "state": "Illinois",
+      "country": "United States",
+      "type": "city",
+      "encoded": "homer-glen-illinois-united-states",
+      "pop": 24543,
+      "coord": [-87.9381112, 41.6000318]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["all uses"]
+      }
+    ]
+  },
   "Homer, Alaska, United States": {
     "place": {
       "name": "Homer",
@@ -34593,7 +34740,7 @@
       "type": "city",
       "encoded": "jackson-wisconsin-united-states",
       "pop": 7185,
-      "coord": [-90.8085198, 44.3016847]
+      "coord": [-88.16200067525641, 43.32391845330536]
     },
     "reduce_min": [
       {
@@ -40384,6 +40531,24 @@
       }
     ]
   },
+  "Lindenhurst, Illinois, United States": {
+    "place": {
+      "name": "Lindenhurst",
+      "state": "Illinois",
+      "country": "United States",
+      "type": "city",
+      "encoded": "lindenhurst-illinois-united-states",
+      "pop": 14406,
+      "coord": [-88.0261911, 42.4105765]
+    },
+    "add_max": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["other"]
+      }
+    ]
+  },
   "Lindsay, Ontario, Canada": {
     "place": {
       "name": "Lindsay",
@@ -41362,6 +41527,24 @@
       }
     ],
     "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["commercial", "other"]
+      }
+    ]
+  },
+  "Lovettsville, Virginia, United States": {
+    "place": {
+      "name": "Lovettsville",
+      "state": "Virginia",
+      "country": "United States",
+      "type": "city",
+      "encoded": "lovettsville-virginia-united-states",
+      "pop": 2694,
+      "coord": [-77.6393091, 39.2747722]
+    },
+    "reduce_min": [
       {
         "status": "adopted",
         "scope": ["city center / business district"],
@@ -43208,6 +43391,24 @@
       }
     ]
   },
+  "Marion, Illinois, United States": {
+    "place": {
+      "name": "Marion",
+      "state": "Illinois",
+      "country": "United States",
+      "type": "city",
+      "encoded": "marion-illinois-united-states",
+      "pop": 16855,
+      "coord": [-88.9232112, 38.6477381]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["residential, multi-family"]
+      }
+    ]
+  },
   "Marion, Indiana, United States": {
     "place": {
       "name": "Marion",
@@ -44608,6 +44809,24 @@
         "status": "adopted",
         "scope": ["city center / business district"],
         "land": ["residential, low-density"]
+      }
+    ]
+  },
+  "Melrose Park, Illinois, United States": {
+    "place": {
+      "name": "Melrose Park",
+      "state": "Illinois",
+      "country": "United States",
+      "type": "city",
+      "encoded": "melrose-park-illinois-united-states",
+      "pop": 24796,
+      "coord": [-87.8569745, 41.900299]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["all uses"]
       }
     ]
   },
@@ -47595,6 +47814,33 @@
         "status": "adopted",
         "scope": ["city center / business district"],
         "land": ["all uses"]
+      }
+    ]
+  },
+  "Morris, Illinois, United States": {
+    "place": {
+      "name": "Morris",
+      "state": "Illinois",
+      "country": "United States",
+      "type": "city",
+      "encoded": "morris-illinois-united-states",
+      "pop": 14163,
+      "coord": [-88.4215234, 41.3574135]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district", "citywide"],
+        "land": ["all uses"],
+        "date": "2024-10-21"
+      }
+    ],
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["commercial", "other"],
+        "date": "2024-10-21"
       }
     ]
   },
@@ -51203,7 +51449,7 @@
       "type": "city",
       "encoded": "noble-oklahoma-united-states",
       "pop": 6985,
-      "coord": [-97.2681939, 36.4129621]
+      "coord": [-97.3946750457035, 35.139285323918116]
     },
     "reduce_min": [
       {
@@ -52521,20 +52767,15 @@
       "type": "city",
       "encoded": "oak-forest-illinois-united-states",
       "pop": 27478,
-      "coord": [-87.7439384, 41.6028116]
+      "coord": [-87.7439384, 41.6028116],
+      "repeal": true
     },
-    "reduce_min": [
-      {
-        "status": "adopted",
-        "scope": ["citywide"],
-        "land": ["all uses"]
-      }
-    ],
     "rm_min": [
       {
         "status": "adopted",
-        "scope": ["city center / business district"],
-        "land": ["all uses"]
+        "scope": ["citywide"],
+        "land": ["all uses"],
+        "date": "2025-08-26"
       }
     ]
   },
@@ -53573,6 +53814,24 @@
       }
     ]
   },
+  "Orange, Virginia, United States": {
+    "place": {
+      "name": "Orange",
+      "state": "Virginia",
+      "country": "United States",
+      "type": "city",
+      "encoded": "orange-virginia-united-states",
+      "pop": 4880,
+      "coord": [-78.1111327323947, 38.24512519208545]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["all uses"]
+      }
+    ]
+  },
   "Oregon City, Oregon, United States": {
     "place": {
       "name": "Oregon City",
@@ -54107,6 +54366,24 @@
         "status": "adopted",
         "scope": ["citywide"],
         "land": ["all uses"]
+      }
+    ]
+  },
+  "Ottawa, Illinois, United States": {
+    "place": {
+      "name": "Ottawa",
+      "state": "Illinois",
+      "country": "United States",
+      "type": "city",
+      "encoded": "ottawa-illinois-united-states",
+      "pop": 18840,
+      "coord": [-88.845436, 41.3516628]
+    },
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["other"]
       }
     ]
   },
@@ -58380,6 +58657,24 @@
         "status": "adopted",
         "scope": ["city center / business district"],
         "land": ["commercial", "medical", "other", "residential, all uses"]
+      }
+    ]
+  },
+  "Prince William County, Virginia, United States": {
+    "place": {
+      "name": "Prince William County",
+      "state": "Virginia",
+      "country": "United States",
+      "type": "county",
+      "encoded": "prince-william-county-virginia-united-states",
+      "pop": 482204,
+      "coord": [-77.5536743, 38.7389846]
+    },
+    "add_max": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["all uses"]
       }
     ]
   },
@@ -63638,6 +63933,24 @@
       }
     ]
   },
+  "Scottsville, Virginia, United States": {
+    "place": {
+      "name": "Scottsville",
+      "state": "Virginia",
+      "country": "United States",
+      "type": "city",
+      "encoded": "scottsville-virginia-united-states",
+      "pop": 522,
+      "coord": [-78.4955662, 37.7987569]
+    },
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["commercial"]
+      }
+    ]
+  },
   "Scranton, Pennsylvania, United States": {
     "place": {
       "name": "Scranton",
@@ -63899,7 +64212,7 @@
       "type": "city",
       "encoded": "seminole-oklahoma-united-states",
       "pop": 7146,
-      "coord": [-96.6263487, 35.1705939]
+      "coord": [-96.66844048977809, 35.22446156186052]
     },
     "reduce_min": [
       {
@@ -64735,6 +65048,24 @@
         "status": "adopted",
         "scope": ["city center / business district"],
         "land": ["all uses"]
+      }
+    ]
+  },
+  "Shiloh, Illinois, United States": {
+    "place": {
+      "name": "Shiloh",
+      "state": "Illinois",
+      "country": "United States",
+      "type": "city",
+      "encoded": "shiloh-illinois-united-states",
+      "pop": 14098,
+      "coord": [-89.8973233, 38.5614383]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["other"]
       }
     ]
   },
@@ -66098,6 +66429,31 @@
       {
         "status": "adopted",
         "scope": ["city center / business district"],
+        "land": ["all uses"]
+      }
+    ]
+  },
+  "South Holland, Illinois, United States": {
+    "place": {
+      "name": "South Holland",
+      "state": "Illinois",
+      "country": "United States",
+      "type": "city",
+      "encoded": "south-holland-illinois-united-states",
+      "pop": 21465,
+      "coord": [-87.6069894, 41.6008681]
+    },
+    "add_max": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["commercial"]
+      }
+    ],
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
         "land": ["all uses"]
       }
     ]
@@ -69203,7 +69559,7 @@
       "type": "city",
       "encoded": "sullivan-missouri-united-states",
       "pop": 6906,
-      "coord": [-93.1140993, 40.1993002]
+      "coord": [-91.16001524845066, 38.209739006256875]
     },
     "reduce_min": [
       {
@@ -74499,7 +74855,7 @@
       "type": "city",
       "encoded": "warren-pennsylvania-united-states",
       "pop": 9404,
-      "coord": [-79.2654452, 41.8119602]
+      "coord": [-79.14503180198393, 41.84383838709296]
     },
     "reduce_min": [
       {
@@ -74937,7 +75293,7 @@
       "type": "city",
       "encoded": "washington-missouri-united-states",
       "pop": 14500,
-      "coord": [-90.879099, 37.9559513]
+      "coord": [-91.0131812992159, 38.56074969046272]
     },
     "reduce_min": [
       {
