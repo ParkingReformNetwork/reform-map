@@ -22441,6 +22441,38 @@
       }
     ]
   },
+  "Emporia, Virginia, United States": {
+    "place": {
+      "name": "Emporia",
+      "state": "Virginia",
+      "country": "United States",
+      "type": "city",
+      "encoded": "emporia-virginia-united-states",
+      "pop": 5766,
+      "coord": [-77.5357141, 36.6937606]
+    },
+    "add_max": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["all uses"]
+      }
+    ],
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["residential, all uses"]
+      }
+    ],
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["commercial", "other"]
+      }
+    ]
+  },
   "Endicott, New York, United States": {
     "place": {
       "name": "Endicott",
@@ -24536,6 +24568,24 @@
         "status": "adopted",
         "scope": ["citywide"],
         "land": ["commercial", "industrial", "medical", "other"]
+      }
+    ]
+  },
+  "Flossmoor, Illinois, United States": {
+    "place": {
+      "name": "Flossmoor",
+      "state": "Illinois",
+      "country": "United States",
+      "type": "city",
+      "encoded": "flossmoor-illinois-united-states",
+      "pop": 9704,
+      "coord": [-87.6847684, 41.5428123]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["all uses"]
       }
     ]
   },
@@ -27489,6 +27539,24 @@
         "status": "adopted",
         "scope": ["citywide"],
         "land": ["residential, all uses"]
+      }
+    ]
+  },
+  "Gilberts, Illinois, United States": {
+    "place": {
+      "name": "Gilberts",
+      "state": "Illinois",
+      "country": "United States",
+      "type": "city",
+      "encoded": "gilberts-illinois-united-states",
+      "pop": 8366,
+      "coord": [-88.3745145, 42.1034365]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["all uses"]
       }
     ]
   },
@@ -31547,6 +31615,25 @@
       }
     ]
   },
+  "Hawthorn Woods, Illinois, United States": {
+    "place": {
+      "name": "Hawthorn Woods",
+      "state": "Illinois",
+      "country": "United States",
+      "type": "city",
+      "encoded": "hawthorn-woods-illinois-united-states",
+      "pop": 9062,
+      "coord": [-88.0495211, 42.2169686]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["all uses"],
+        "date": "1987-06-09"
+      }
+    ]
+  },
   "Hays, Kansas, United States": {
     "place": {
       "name": "Hays",
@@ -32641,6 +32728,24 @@
         "status": "adopted",
         "scope": ["city center / business district"],
         "land": ["all uses"]
+      }
+    ]
+  },
+  "Hillside, Illinois, United States": {
+    "place": {
+      "name": "Hillside",
+      "state": "Illinois",
+      "country": "United States",
+      "type": "city",
+      "encoded": "hillside-illinois-united-states",
+      "pop": 8320,
+      "coord": [-87.9028398, 41.8778084]
+    },
+    "add_max": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["residential, low-density"]
       }
     ]
   },
@@ -34572,6 +34677,24 @@
       }
     ]
   },
+  "Island Lake, Illinois, United States": {
+    "place": {
+      "name": "Island Lake",
+      "state": "Illinois",
+      "country": "United States",
+      "type": "city",
+      "encoded": "island-lake-illinois-united-states",
+      "pop": 8051,
+      "coord": [-88.1920272, 42.2761341]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["all uses"]
+      }
+    ]
+  },
   "Israel": {
     "place": {
       "name": "Israel",
@@ -34594,6 +34717,24 @@
         "status": "adopted",
         "scope": ["regional"],
         "land": ["commercial", "industrial", "other", "residential, all uses"]
+      }
+    ]
+  },
+  "Itasca, Illinois, United States": {
+    "place": {
+      "name": "Itasca",
+      "state": "Illinois",
+      "country": "United States",
+      "type": "city",
+      "encoded": "itasca-illinois-united-states",
+      "pop": 9543,
+      "coord": [-88.0067509, 41.9751722]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district", "main street / special"],
+        "land": ["commercial", "other"]
       }
     ]
   },
@@ -40473,6 +40614,24 @@
       }
     ]
   },
+  "Lincolnshire, Illinois, United States": {
+    "place": {
+      "name": "Lincolnshire",
+      "state": "Illinois",
+      "country": "United States",
+      "type": "city",
+      "encoded": "lincolnshire-illinois-united-states",
+      "pop": 7940,
+      "coord": [-87.9084039, 42.1900249]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["all uses"]
+      }
+    ]
+  },
   "Lincolnwood, Illinois, United States": {
     "place": {
       "name": "Lincolnwood",
@@ -42730,6 +42889,24 @@
       }
     ]
   },
+  "Manhattan, Illinois, United States": {
+    "place": {
+      "name": "Manhattan",
+      "state": "Illinois",
+      "country": "United States",
+      "type": "city",
+      "encoded": "manhattan-illinois-united-states",
+      "pop": 9385,
+      "coord": [-87.9858863, 41.4225316]
+    },
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["all uses"]
+      }
+    ]
+  },
   "Manhattan, Kansas, United States": {
     "place": {
       "name": "Manhattan",
@@ -43399,7 +43576,7 @@
       "type": "city",
       "encoded": "marion-illinois-united-states",
       "pop": 16855,
-      "coord": [-88.9232112, 38.6477381]
+      "coord": [-88.92715626823758, 37.73083773664263]
     },
     "reduce_min": [
       {
@@ -53065,6 +53242,24 @@
         "status": "adopted",
         "scope": ["citywide"],
         "land": ["commercial", "other", "residential, all uses"]
+      }
+    ]
+  },
+  "Occoquan, Virginia, United States": {
+    "place": {
+      "name": "Occoquan",
+      "state": "Virginia",
+      "country": "United States",
+      "type": "city",
+      "encoded": "occoquan-virginia-united-states",
+      "pop": 1035,
+      "coord": [-77.260261, 38.6837271]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["commercial", "other"]
       }
     ]
   },
@@ -63653,6 +63848,39 @@
       }
     ]
   },
+  "Savoy, Illinois, United States": {
+    "place": {
+      "name": "Savoy",
+      "state": "Illinois",
+      "country": "United States",
+      "type": "city",
+      "encoded": "savoy-illinois-united-states",
+      "pop": 8857,
+      "coord": [-88.2517165, 40.054753]
+    },
+    "add_max": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": [
+          "commercial",
+          "industrial",
+          "medical",
+          "other",
+          "residential, multi-family"
+        ],
+        "date": "2025-02-12"
+      }
+    ],
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["all uses"],
+        "date": "2025-02-12"
+      }
+    ]
+  },
   "Schaumburg, Illinois, United States": {
     "place": {
       "name": "Schaumburg",
@@ -65483,6 +65711,24 @@
       }
     ]
   },
+  "Silvis, Illinois, United States": {
+    "place": {
+      "name": "Silvis",
+      "state": "Illinois",
+      "country": "United States",
+      "type": "city",
+      "encoded": "silvis-illinois-united-states",
+      "pop": 8003,
+      "coord": [-90.4151301, 41.5122561]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["all uses"]
+      }
+    ]
+  },
   "Simi Valley, California, United States": {
     "place": {
       "name": "Simi Valley",
@@ -65880,6 +66126,31 @@
       {
         "status": "adopted",
         "scope": ["main street / special"],
+        "land": ["commercial", "other"]
+      }
+    ]
+  },
+  "Smithfield, Virginia, United States": {
+    "place": {
+      "name": "Smithfield",
+      "state": "Virginia",
+      "country": "United States",
+      "type": "city",
+      "encoded": "smithfield-virginia-united-states",
+      "pop": 8533,
+      "coord": [-76.6310242, 36.9823313]
+    },
+    "add_max": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["commercial", "industrial", "medical", "other"]
+      }
+    ],
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
         "land": ["commercial", "other"]
       }
     ]
