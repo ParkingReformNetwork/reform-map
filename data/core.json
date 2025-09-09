@@ -270,6 +270,24 @@
       }
     ]
   },
+  "Adel, Iowa, United States": {
+    "place": {
+      "name": "Adel",
+      "state": "Iowa",
+      "country": "United States",
+      "type": "city",
+      "encoded": "adel-iowa-united-states",
+      "pop": 6153,
+      "coord": [-94.0185176, 41.6174123]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["all uses"]
+      }
+    ]
+  },
   "Adrian, Michigan, United States": {
     "place": {
       "name": "Adrian",
@@ -685,6 +703,24 @@
       }
     ],
     "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["all uses"]
+      }
+    ]
+  },
+  "Albertville, Minnesota, United States": {
+    "place": {
+      "name": "Albertville",
+      "state": "Minnesota",
+      "country": "United States",
+      "type": "city",
+      "encoded": "albertville-minnesota-united-states",
+      "pop": 7896,
+      "coord": [-93.6642199, 45.2347086]
+    },
+    "reduce_min": [
       {
         "status": "adopted",
         "scope": ["city center / business district"],
@@ -1728,6 +1764,24 @@
       }
     ]
   },
+  "Andover, Minnesota, United States": {
+    "place": {
+      "name": "Andover",
+      "state": "Minnesota",
+      "country": "United States",
+      "type": "city",
+      "encoded": "andover-minnesota-united-states",
+      "pop": 32601,
+      "coord": [-93.2913405, 45.2332985]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["all uses"]
+      }
+    ]
+  },
   "Angola, Indiana, United States": {
     "place": {
       "name": "Angola",
@@ -2014,6 +2068,24 @@
       }
     ]
   },
+  "Apple Valley, Minnesota, United States": {
+    "place": {
+      "name": "Apple Valley",
+      "state": "Minnesota",
+      "country": "United States",
+      "type": "city",
+      "encoded": "apple-valley-minnesota-united-states",
+      "pop": 56374,
+      "coord": [-93.21772, 44.7319094]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["all uses"]
+      }
+    ]
+  },
   "Appleton, Minnesota, United States": {
     "place": {
       "name": "Appleton",
@@ -2173,6 +2245,24 @@
       }
     ]
   },
+  "Arden Hills, Minnesota, United States": {
+    "place": {
+      "name": "Arden Hills",
+      "state": "Minnesota",
+      "country": "United States",
+      "type": "city",
+      "encoded": "arden-hills-minnesota-united-states",
+      "pop": 9939,
+      "coord": [-93.1666945, 45.0761409]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["all uses"]
+      }
+    ]
+  },
   "Ardmore, Oklahoma, United States": {
     "place": {
       "name": "Ardmore",
@@ -2267,6 +2357,63 @@
         "status": "adopted",
         "scope": ["city center / business district"],
         "land": ["all uses"]
+      }
+    ]
+  },
+  "Arlington County, Virginia, United States": {
+    "place": {
+      "name": "Arlington County",
+      "state": "Virginia",
+      "country": "United States",
+      "type": "county",
+      "encoded": "arlington-county-virginia-united-states",
+      "pop": 238643,
+      "coord": [-77.0893094, 38.8769326]
+    },
+    "add_max": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["commercial", "medical", "other", "residential, multi-family"]
+      },
+      {
+        "status": "adopted",
+        "scope": ["main street / special"],
+        "land": ["all uses"]
+      },
+      {
+        "status": "adopted",
+        "scope": ["main street / special"],
+        "land": ["all uses"]
+      }
+    ],
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["main street / special"],
+        "land": ["all uses"]
+      },
+      {
+        "status": "adopted",
+        "scope": ["main street / special"],
+        "land": ["all uses", "residential, all uses"]
+      }
+    ],
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["commercial"]
+      },
+      {
+        "status": "adopted",
+        "scope": ["transit-oriented"],
+        "land": ["commercial"]
+      },
+      {
+        "status": "adopted",
+        "scope": ["main street / special"],
+        "land": ["commercial", "medical", "other"]
       }
     ]
   },
@@ -2470,6 +2617,25 @@
         "status": "adopted",
         "scope": ["city center / business district", "transit-oriented"],
         "land": ["commercial"]
+      }
+    ]
+  },
+  "Asbury, Iowa, United States": {
+    "place": {
+      "name": "Asbury",
+      "state": "Iowa",
+      "country": "United States",
+      "type": "city",
+      "encoded": "asbury-iowa-united-states",
+      "pop": 5943,
+      "coord": [-90.7526948, 42.5136191]
+    },
+    "add_max": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["all uses"],
+        "date": "2024-05-14"
       }
     ]
   },
@@ -3257,6 +3423,24 @@
         "status": "adopted",
         "scope": ["citywide"],
         "land": ["all uses"]
+      }
+    ]
+  },
+  "Austin, Minnesota, United States": {
+    "place": {
+      "name": "Austin",
+      "state": "Minnesota",
+      "country": "United States",
+      "type": "city",
+      "encoded": "austin-minnesota-united-states",
+      "pop": 26174,
+      "coord": [-92.9746498, 43.6679992]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["commercial", "other", "residential, multi-family"]
       }
     ]
   },
@@ -4402,6 +4586,24 @@
       }
     ]
   },
+  "Baxter, Minnesota, United States": {
+    "place": {
+      "name": "Baxter",
+      "state": "Minnesota",
+      "country": "United States",
+      "type": "city",
+      "encoded": "baxter-minnesota-united-states",
+      "pop": 8612,
+      "coord": [-94.286666, 46.3433005]
+    },
+    "add_max": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["commercial", "industrial", "other"]
+      }
+    ]
+  },
   "Bay City, Michigan, United States": {
     "place": {
       "name": "Bay City",
@@ -5393,6 +5595,24 @@
       }
     ]
   },
+  "Bemidji, Minnesota, United States": {
+    "place": {
+      "name": "Bemidji",
+      "state": "Minnesota",
+      "country": "United States",
+      "type": "city",
+      "encoded": "bemidji-minnesota-united-states",
+      "pop": 14574,
+      "coord": [-94.8832791, 47.4723148]
+    },
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["all uses"]
+      }
+    ]
+  },
   "Ben Avon, Pennsylvania, United States": {
     "place": {
       "name": "Ben Avon",
@@ -5752,6 +5972,25 @@
         "status": "adopted",
         "scope": ["citywide"],
         "land": ["residential, all uses"]
+      }
+    ]
+  },
+  "Berkeley, Illinois, United States": {
+    "place": {
+      "name": "Berkeley",
+      "state": "Illinois",
+      "country": "United States",
+      "type": "city",
+      "encoded": "berkeley-illinois-united-states",
+      "pop": 5338,
+      "coord": [-87.9033956, 41.8889194]
+    },
+    "add_max": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["other"],
+        "date": "2024-09-17"
       }
     ]
   },
@@ -6841,6 +7080,36 @@
       }
     ]
   },
+  "Bloomington, Minnesota, United States": {
+    "place": {
+      "name": "Bloomington",
+      "state": "Minnesota",
+      "country": "United States",
+      "type": "city",
+      "encoded": "bloomington-minnesota-united-states",
+      "pop": 89987,
+      "coord": [-93.3204872, 44.8322405]
+    },
+    "add_max": [
+      {
+        "status": "adopted",
+        "scope": ["main street / special"],
+        "land": ["all uses"]
+      }
+    ],
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["main street / special"],
+        "land": ["residential, all uses"]
+      },
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["all uses"]
+      }
+    ]
+  },
   "Bloomsburg, Pennsylvania, United States": {
     "place": {
       "name": "Bloomsburg",
@@ -7189,6 +7458,24 @@
       "coord": [-88.4448243, 44.7402679]
     },
     "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["all uses"]
+      }
+    ]
+  },
+  "Bondurant, Iowa, United States": {
+    "place": {
+      "name": "Bondurant",
+      "state": "Iowa",
+      "country": "United States",
+      "type": "city",
+      "encoded": "bondurant-iowa-united-states",
+      "pop": 7365,
+      "coord": [-93.462157, 41.7005441]
+    },
+    "reduce_min": [
       {
         "status": "adopted",
         "scope": ["city center / business district"],
@@ -9150,6 +9437,24 @@
       }
     ]
   },
+  "Buffalo, Minnesota, United States": {
+    "place": {
+      "name": "Buffalo",
+      "state": "Minnesota",
+      "country": "United States",
+      "type": "city",
+      "encoded": "buffalo-minnesota-united-states",
+      "pop": 16168,
+      "coord": [-93.8746941, 45.1719084]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["all uses"]
+      }
+    ]
+  },
   "Buffalo, New York, United States": {
     "place": {
       "name": "Buffalo",
@@ -10377,6 +10682,32 @@
         "scope": ["citywide"],
         "land": ["commercial"],
         "date": "2023-12-19"
+      }
+    ]
+  },
+  "Cape Charles, Virginia, United States": {
+    "place": {
+      "name": "Cape Charles",
+      "state": "Virginia",
+      "country": "United States",
+      "type": "city",
+      "encoded": "cape-charles-virginia-united-states",
+      "pop": 1178,
+      "coord": [-76.0176986, 37.2671674]
+    },
+    "add_max": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["all uses"],
+        "date": "2020-02-06"
+      }
+    ],
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district", "citywide"],
+        "land": ["all uses", "residential, low-density"]
       }
     ]
   },
@@ -12094,6 +12425,24 @@
       {
         "status": "adopted",
         "scope": ["city center / business district"],
+        "land": ["all uses"]
+      }
+    ]
+  },
+  "Chanhassen, Minnesota, United States": {
+    "place": {
+      "name": "Chanhassen",
+      "state": "Minnesota",
+      "country": "United States",
+      "type": "city",
+      "encoded": "chanhassen-minnesota-united-states",
+      "pop": 25947,
+      "coord": [-93.5307207, 44.8618403]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
         "land": ["all uses"]
       }
     ]
@@ -14017,6 +14366,31 @@
       }
     ]
   },
+  "Clifton Forge, Virginia, United States": {
+    "place": {
+      "name": "Clifton Forge",
+      "state": "Virginia",
+      "country": "United States",
+      "type": "city",
+      "encoded": "clifton-forge-virginia-united-states",
+      "pop": 3555,
+      "coord": [-79.8245002, 37.8162324]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["all uses"]
+      }
+    ],
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["all uses"]
+      }
+    ]
+  },
   "Clinton , Iowa, United States": {
     "place": {
       "name": "Clinton ",
@@ -14208,6 +14582,24 @@
         "status": "adopted",
         "scope": ["city center / business district"],
         "land": ["commercial"]
+      }
+    ]
+  },
+  "Clive, Iowa, United States": {
+    "place": {
+      "name": "Clive",
+      "state": "Iowa",
+      "country": "United States",
+      "type": "city",
+      "encoded": "clive-iowa-united-states",
+      "pop": 18601,
+      "coord": [-93.7754644, 41.6096559]
+    },
+    "add_max": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["all uses"]
       }
     ]
   },
@@ -15589,6 +15981,31 @@
         "status": "adopted",
         "scope": ["city center / business district", "citywide"],
         "land": ["all uses", "residential, low-density"]
+      }
+    ]
+  },
+  "Coon Rapids, Minnesota, United States": {
+    "place": {
+      "name": "Coon Rapids",
+      "state": "Minnesota",
+      "country": "United States",
+      "type": "city",
+      "encoded": "coon-rapids-minnesota-united-states",
+      "pop": 63599,
+      "coord": [-93.3023898, 45.1728923]
+    },
+    "add_max": [
+      {
+        "status": "adopted",
+        "scope": ["transit-oriented"],
+        "land": ["commercial", "other"]
+      }
+    ],
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["transit-oriented"],
+        "land": ["all uses"]
       }
     ]
   },
@@ -19972,6 +20389,31 @@
       }
     ]
   },
+  "Durham, New Hampshire, United States": {
+    "place": {
+      "name": "Durham",
+      "state": "New Hampshire",
+      "country": "United States",
+      "type": "city",
+      "encoded": "durham-new-hampshire-united-states",
+      "pop": 15490,
+      "coord": [-70.927048, 43.134564]
+    },
+    "add_max": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["all uses"]
+      }
+    ],
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["all uses"]
+      }
+    ]
+  },
   "Durham, North Carolina, United States": {
     "place": {
       "name": "Durham",
@@ -20234,6 +20676,24 @@
         "status": "adopted",
         "scope": ["main street / special"],
         "land": ["all uses", "commercial"]
+      }
+    ]
+  },
+  "East Bethel, Minnesota, United States": {
+    "place": {
+      "name": "East Bethel",
+      "state": "Minnesota",
+      "country": "United States",
+      "type": "city",
+      "encoded": "east-bethel-minnesota-united-states",
+      "pop": 11786,
+      "coord": [-93.2024487, 45.3194095]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["all uses"]
       }
     ]
   },
@@ -22441,6 +22901,38 @@
       }
     ]
   },
+  "Emporia, Virginia, United States": {
+    "place": {
+      "name": "Emporia",
+      "state": "Virginia",
+      "country": "United States",
+      "type": "city",
+      "encoded": "emporia-virginia-united-states",
+      "pop": 5766,
+      "coord": [-77.5357141, 36.6937606]
+    },
+    "add_max": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["all uses"]
+      }
+    ],
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["residential, all uses"]
+      }
+    ],
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["commercial", "other"]
+      }
+    ]
+  },
   "Endicott, New York, United States": {
     "place": {
       "name": "Endicott",
@@ -23419,6 +23911,38 @@
       }
     ]
   },
+  "Fairfax, Virginia, United States": {
+    "place": {
+      "name": "Fairfax",
+      "state": "Virginia",
+      "country": "United States",
+      "type": "city",
+      "encoded": "fairfax-virginia-united-states",
+      "pop": 24146,
+      "coord": [-77.3063733, 38.8462236]
+    },
+    "add_max": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["commercial", "industrial"]
+      }
+    ],
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["all uses"]
+      }
+    ],
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["all uses"]
+      }
+    ]
+  },
   "Fairfield, Alabama, United States": {
     "place": {
       "name": "Fairfield",
@@ -23642,6 +24166,32 @@
         "status": "adopted",
         "scope": ["city center / business district"],
         "land": ["all uses"]
+      }
+    ]
+  },
+  "Falls Church, Virginia, United States": {
+    "place": {
+      "name": "Falls Church",
+      "state": "Virginia",
+      "country": "United States",
+      "type": "city",
+      "encoded": "falls-church-virginia-united-states",
+      "pop": 14658,
+      "coord": [-77.1710914, 38.882334]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["commercial", "other", "residential, multi-family"],
+        "date": "2016-02-08"
+      }
+    ],
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["commercial", "industrial", "medical", "other"]
       }
     ]
   },
@@ -24536,6 +25086,24 @@
         "status": "adopted",
         "scope": ["citywide"],
         "land": ["commercial", "industrial", "medical", "other"]
+      }
+    ]
+  },
+  "Flossmoor, Illinois, United States": {
+    "place": {
+      "name": "Flossmoor",
+      "state": "Illinois",
+      "country": "United States",
+      "type": "city",
+      "encoded": "flossmoor-illinois-united-states",
+      "pop": 9704,
+      "coord": [-87.6847684, 41.5428123]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["all uses"]
       }
     ]
   },
@@ -25839,6 +26407,38 @@
       }
     ]
   },
+  "Franklin, Virginia, United States": {
+    "place": {
+      "name": "Franklin",
+      "state": "Virginia",
+      "country": "United States",
+      "type": "city",
+      "encoded": "franklin-virginia-united-states",
+      "pop": 8180,
+      "coord": [-76.92269827497805, 36.677801419986984]
+    },
+    "add_max": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["commercial", "industrial", "medical", "other"]
+      }
+    ],
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["all uses"]
+      }
+    ],
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["all uses"]
+      }
+    ]
+  },
   "Franklin, Wisconsin, United States": {
     "place": {
       "name": "Franklin",
@@ -25992,6 +26592,48 @@
         "status": "adopted",
         "scope": ["city center / business district"],
         "land": ["all uses"]
+      }
+    ]
+  },
+  "Fredericksburg, Virginia, United States": {
+    "place": {
+      "name": "Fredericksburg",
+      "state": "Virginia",
+      "country": "United States",
+      "type": "city",
+      "encoded": "fredericksburg-virginia-united-states",
+      "pop": 27982,
+      "coord": [-77.4605399, 38.3031837]
+    },
+    "add_max": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["commercial", "industrial"]
+      }
+    ],
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["all uses"]
+      },
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["all uses"]
+      },
+      {
+        "status": "adopted",
+        "scope": ["city center / business district", "citywide"],
+        "land": ["all uses", "commercial", "other", "residential, all uses"]
+      }
+    ],
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["commercial"]
       }
     ]
   },
@@ -27489,6 +28131,24 @@
         "status": "adopted",
         "scope": ["citywide"],
         "land": ["residential, all uses"]
+      }
+    ]
+  },
+  "Gilberts, Illinois, United States": {
+    "place": {
+      "name": "Gilberts",
+      "state": "Illinois",
+      "country": "United States",
+      "type": "city",
+      "encoded": "gilberts-illinois-united-states",
+      "pop": 8366,
+      "coord": [-88.3745145, 42.1034365]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["all uses"]
       }
     ]
   },
@@ -31547,6 +32207,25 @@
       }
     ]
   },
+  "Hawthorn Woods, Illinois, United States": {
+    "place": {
+      "name": "Hawthorn Woods",
+      "state": "Illinois",
+      "country": "United States",
+      "type": "city",
+      "encoded": "hawthorn-woods-illinois-united-states",
+      "pop": 9062,
+      "coord": [-88.0495211, 42.2169686]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["all uses"],
+        "date": "1987-06-09"
+      }
+    ]
+  },
   "Hays, Kansas, United States": {
     "place": {
       "name": "Hays",
@@ -32168,6 +32847,31 @@
       }
     ]
   },
+  "Herndon, Virginia, United States": {
+    "place": {
+      "name": "Herndon",
+      "state": "Virginia",
+      "country": "United States",
+      "type": "city",
+      "encoded": "herndon-virginia-united-states",
+      "pop": 24655,
+      "coord": [-77.3859479, 38.9695316]
+    },
+    "add_max": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["commercial", "industrial", "other"]
+      }
+    ],
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["all uses"]
+      }
+    ]
+  },
   "Hesston, Kansas, United States": {
     "place": {
       "name": "Hesston",
@@ -32219,6 +32923,24 @@
         "status": "adopted",
         "scope": ["city center / business district"],
         "land": ["commercial"]
+      }
+    ]
+  },
+  "Hiawatha, Iowa, United States": {
+    "place": {
+      "name": "Hiawatha",
+      "state": "Iowa",
+      "country": "United States",
+      "type": "city",
+      "encoded": "hiawatha-iowa-united-states",
+      "pop": 7183,
+      "coord": [-91.6737592, 42.0385304]
+    },
+    "add_max": [
+      {
+        "status": "adopted",
+        "scope": ["main street / special"],
+        "land": ["all uses"]
       }
     ]
   },
@@ -32641,6 +33363,24 @@
         "status": "adopted",
         "scope": ["city center / business district"],
         "land": ["all uses"]
+      }
+    ]
+  },
+  "Hillside, Illinois, United States": {
+    "place": {
+      "name": "Hillside",
+      "state": "Illinois",
+      "country": "United States",
+      "type": "city",
+      "encoded": "hillside-illinois-united-states",
+      "pop": 8320,
+      "coord": [-87.9028398, 41.8778084]
+    },
+    "add_max": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["residential, low-density"]
       }
     ]
   },
@@ -33495,6 +34235,24 @@
       }
     ]
   },
+  "Hugo, Minnesota, United States": {
+    "place": {
+      "name": "Hugo",
+      "state": "Minnesota",
+      "country": "United States",
+      "type": "city",
+      "encoded": "hugo-minnesota-united-states",
+      "pop": 15766,
+      "coord": [-92.9932734, 45.159967]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["all uses"]
+      }
+    ]
+  },
   "Hugoton, Kansas, United States": {
     "place": {
       "name": "Hugoton",
@@ -33952,6 +34710,24 @@
       }
     ]
   },
+  "Hutchinson, Minnesota, United States": {
+    "place": {
+      "name": "Hutchinson",
+      "state": "Minnesota",
+      "country": "United States",
+      "type": "city",
+      "encoded": "hutchinson-minnesota-united-states",
+      "pop": 14599,
+      "coord": [-94.3697057, 44.8877401]
+    },
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["all uses"]
+      }
+    ]
+  },
   "Huxley, Iowa, United States": {
     "place": {
       "name": "Huxley",
@@ -34065,6 +34841,24 @@
         "status": "adopted",
         "scope": ["city center / business district"],
         "land": ["all uses"]
+      }
+    ]
+  },
+  "Independence, Iowa, United States": {
+    "place": {
+      "name": "Independence",
+      "state": "Iowa",
+      "country": "United States",
+      "type": "city",
+      "encoded": "independence-iowa-united-states",
+      "pop": 6064,
+      "coord": [-91.8891187, 42.4685661]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["residential, all uses"]
       }
     ]
   },
@@ -34330,6 +35124,31 @@
       }
     ]
   },
+  "Inver Grove Heights, Minnesota, United States": {
+    "place": {
+      "name": "Inver Grove Heights",
+      "state": "Minnesota",
+      "country": "United States",
+      "type": "city",
+      "encoded": "inver-grove-heights-minnesota-united-states",
+      "pop": 35801,
+      "coord": [-93.0428119, 44.8479039]
+    },
+    "add_max": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["all uses"]
+      }
+    ],
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["all uses"]
+      }
+    ]
+  },
   "Iola, Kansas, United States": {
     "place": {
       "name": "Iola",
@@ -34572,6 +35391,24 @@
       }
     ]
   },
+  "Island Lake, Illinois, United States": {
+    "place": {
+      "name": "Island Lake",
+      "state": "Illinois",
+      "country": "United States",
+      "type": "city",
+      "encoded": "island-lake-illinois-united-states",
+      "pop": 8051,
+      "coord": [-88.1920272, 42.2761341]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["all uses"]
+      }
+    ]
+  },
   "Israel": {
     "place": {
       "name": "Israel",
@@ -34594,6 +35431,24 @@
         "status": "adopted",
         "scope": ["regional"],
         "land": ["commercial", "industrial", "other", "residential, all uses"]
+      }
+    ]
+  },
+  "Itasca, Illinois, United States": {
+    "place": {
+      "name": "Itasca",
+      "state": "Illinois",
+      "country": "United States",
+      "type": "city",
+      "encoded": "itasca-illinois-united-states",
+      "pop": 9543,
+      "coord": [-88.0130584650315, 41.971862043644904]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district", "main street / special"],
+        "land": ["commercial", "other"]
       }
     ]
   },
@@ -35605,6 +36460,24 @@
       "coord": [-88.9275695, 37.8206053]
     },
     "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["all uses"]
+      }
+    ]
+  },
+  "Johnston, Iowa, United States": {
+    "place": {
+      "name": "Johnston",
+      "state": "Iowa",
+      "country": "United States",
+      "type": "city",
+      "encoded": "johnston-iowa-united-states",
+      "pop": 24064,
+      "coord": [-93.6973395, 41.6731523]
+    },
+    "reduce_min": [
       {
         "status": "adopted",
         "scope": ["city center / business district"],
@@ -37809,6 +38682,24 @@
       }
     ]
   },
+  "Lake Bluff, Illinois, United States": {
+    "place": {
+      "name": "Lake Bluff",
+      "state": "Illinois",
+      "country": "United States",
+      "type": "city",
+      "encoded": "lake-bluff-illinois-united-states",
+      "pop": 5616,
+      "coord": [-87.8342362, 42.2789117]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["commercial", "industrial", "medical", "other"]
+      }
+    ]
+  },
   "Lake Charter Township, Michigan, United States": {
     "place": {
       "name": "Lake Charter Township",
@@ -38370,6 +39261,31 @@
         "status": "adopted",
         "scope": ["city center / business district"],
         "land": ["commercial", "industrial", "other"]
+      }
+    ]
+  },
+  "Lakemoor, Illinois, United States": {
+    "place": {
+      "name": "Lakemoor",
+      "state": "Illinois",
+      "country": "United States",
+      "type": "city",
+      "encoded": "lakemoor-illinois-united-states",
+      "pop": 6182,
+      "coord": [-88.1989732, 42.3286331]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district", "citywide"],
+        "land": [
+          "all uses",
+          "commercial",
+          "industrial",
+          "medical",
+          "other",
+          "residential, multi-family"
+        ]
       }
     ]
   },
@@ -39584,6 +40500,41 @@
       }
     ]
   },
+  "Leesburg, Virginia, United States": {
+    "place": {
+      "name": "Leesburg",
+      "state": "Virginia",
+      "country": "United States",
+      "type": "city",
+      "encoded": "leesburg-virginia-united-states",
+      "pop": 48250,
+      "coord": [-77.5645607, 39.1154506]
+    },
+    "add_max": [
+      {
+        "status": "adopted",
+        "scope": ["main street / special"],
+        "land": ["all uses"]
+      }
+    ],
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["main street / special"],
+        "land": ["all uses"]
+      },
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["commercial", "residential, multi-family"]
+      },
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["all uses", "commercial", "other"]
+      }
+    ]
+  },
   "Leesport, Pennsylvania, United States": {
     "place": {
       "name": "Leesport",
@@ -40473,6 +41424,24 @@
       }
     ]
   },
+  "Lincolnshire, Illinois, United States": {
+    "place": {
+      "name": "Lincolnshire",
+      "state": "Illinois",
+      "country": "United States",
+      "type": "city",
+      "encoded": "lincolnshire-illinois-united-states",
+      "pop": 7940,
+      "coord": [-87.9084039, 42.1900249]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["all uses"]
+      }
+    ]
+  },
   "Lincolnwood, Illinois, United States": {
     "place": {
       "name": "Lincolnwood",
@@ -40600,6 +41569,24 @@
         "status": "adopted",
         "scope": ["city center / business district"],
         "land": ["commercial"]
+      }
+    ]
+  },
+  "Lino Lakes, Minnesota, United States": {
+    "place": {
+      "name": "Lino Lakes",
+      "state": "Minnesota",
+      "country": "United States",
+      "type": "city",
+      "encoded": "lino-lakes-minnesota-united-states",
+      "pop": 21399,
+      "coord": [-93.0888324, 45.1602442]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["all uses"]
       }
     ]
   },
@@ -41384,6 +42371,31 @@
         "status": "adopted",
         "scope": ["city center / business district"],
         "land": ["all uses"]
+      }
+    ]
+  },
+  "Loudoun County, Virginia, United States": {
+    "place": {
+      "name": "Loudoun County",
+      "state": "Virginia",
+      "country": "United States",
+      "type": "city",
+      "encoded": "loudoun-county-virginia-united-states",
+      "pop": 420959,
+      "coord": [-77.6705008, 39.0984586]
+    },
+    "add_max": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["commercial", "industrial", "medical", "other"]
+      }
+    ],
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["all uses", "residential, all uses"]
       }
     ]
   },
@@ -42576,6 +43588,38 @@
       }
     ]
   },
+  "Manassas, Virginia, United States": {
+    "place": {
+      "name": "Manassas",
+      "state": "Virginia",
+      "country": "United States",
+      "type": "city",
+      "encoded": "manassas-virginia-united-states",
+      "pop": 42772,
+      "coord": [-77.4752667, 38.7509488]
+    },
+    "add_max": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["commercial"]
+      }
+    ],
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district", "main street / special"],
+        "land": ["commercial", "industrial", "medical", "other"]
+      }
+    ],
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["commercial", "other", "residential, low-density"]
+      }
+    ]
+  },
   "Manawa, Wisconsin, United States": {
     "place": {
       "name": "Manawa",
@@ -42723,6 +43767,24 @@
       "coord": [-90.0657477, 30.3582305]
     },
     "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["all uses"]
+      }
+    ]
+  },
+  "Manhattan, Illinois, United States": {
+    "place": {
+      "name": "Manhattan",
+      "state": "Illinois",
+      "country": "United States",
+      "type": "city",
+      "encoded": "manhattan-illinois-united-states",
+      "pop": 9385,
+      "coord": [-87.9858863, 41.4225316]
+    },
+    "rm_min": [
       {
         "status": "adopted",
         "scope": ["city center / business district"],
@@ -43083,6 +44145,24 @@
       }
     ]
   },
+  "Maple Grove, Minnesota, United States": {
+    "place": {
+      "name": "Maple Grove",
+      "state": "Minnesota",
+      "country": "United States",
+      "type": "city",
+      "encoded": "maple-grove-minnesota-united-states",
+      "pop": 70253,
+      "coord": [-93.4419222, 45.0984983]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["all uses"]
+      }
+    ]
+  },
   "Maple Park, Illinois, United States": {
     "place": {
       "name": "Maple Park",
@@ -43399,7 +44479,7 @@
       "type": "city",
       "encoded": "marion-illinois-united-states",
       "pop": 16855,
-      "coord": [-88.9232112, 38.6477381]
+      "coord": [-88.92715626823758, 37.73083773664263]
     },
     "reduce_min": [
       {
@@ -43809,6 +44889,31 @@
       }
     ],
     "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["all uses"]
+      }
+    ]
+  },
+  "Martinsville, Virginia, United States": {
+    "place": {
+      "name": "Martinsville",
+      "state": "Virginia",
+      "country": "United States",
+      "type": "city",
+      "encoded": "martinsville-virginia-united-states",
+      "pop": 13485,
+      "coord": [-79.8725386, 36.6915262]
+    },
+    "add_max": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["commercial", "other"]
+      }
+    ],
+    "reduce_min": [
       {
         "status": "adopted",
         "scope": ["city center / business district"],
@@ -45571,6 +46676,24 @@
         "status": "adopted",
         "scope": ["citywide"],
         "land": ["commercial", "industrial", "other", "residential, all uses"]
+      }
+    ]
+  },
+  "Middleburg, Virginia, United States": {
+    "place": {
+      "name": "Middleburg",
+      "state": "Virginia",
+      "country": "United States",
+      "type": "city",
+      "encoded": "middleburg-virginia-united-states",
+      "pop": 669,
+      "coord": [-77.7355056, 38.9690189]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["all uses", "commercial", "other"]
       }
     ]
   },
@@ -48143,6 +49266,24 @@
       }
     ]
   },
+  "Mounds View, Minnesota, United States": {
+    "place": {
+      "name": "Mounds View",
+      "state": "Minnesota",
+      "country": "United States",
+      "type": "city",
+      "encoded": "mounds-view-minnesota-united-states",
+      "pop": 13249,
+      "coord": [-93.2075931, 45.1068949]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["all uses"]
+      }
+    ]
+  },
   "Moundsville, West Virginia, United States": {
     "place": {
       "name": "Moundsville",
@@ -49981,6 +51122,31 @@
       }
     ]
   },
+  "New Brighton, Minnesota, United States": {
+    "place": {
+      "name": "New Brighton",
+      "state": "Minnesota",
+      "country": "United States",
+      "type": "city",
+      "encoded": "new-brighton-minnesota-united-states",
+      "pop": 23454,
+      "coord": [-93.2060969, 45.0628999]
+    },
+    "add_max": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["commercial", "industrial", "medical", "other"]
+      }
+    ],
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["commercial", "industrial", "medical", "other"]
+      }
+    ]
+  },
   "New Brighton, Pennsylvania, United States": {
     "place": {
       "name": "New Brighton",
@@ -51718,6 +52884,24 @@
       }
     ]
   },
+  "North Branch, Minnesota, United States": {
+    "place": {
+      "name": "North Branch",
+      "state": "Minnesota",
+      "country": "United States",
+      "type": "city",
+      "encoded": "north-branch-minnesota-united-states",
+      "pop": 10787,
+      "coord": [-92.9802176, 45.5113515]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["all uses"]
+      }
+    ]
+  },
   "North Canton, Ohio, United States": {
     "place": {
       "name": "North Canton",
@@ -52484,6 +53668,24 @@
       }
     ]
   },
+  "Norwalk, Iowa, United States": {
+    "place": {
+      "name": "Norwalk",
+      "state": "Iowa",
+      "country": "United States",
+      "type": "city",
+      "encoded": "norwalk-iowa-united-states",
+      "pop": 12799,
+      "coord": [-93.6788876, 41.4755492]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["all uses"]
+      }
+    ]
+  },
   "Norwalk, Ohio, United States": {
     "place": {
       "name": "Norwalk",
@@ -53065,6 +54267,24 @@
         "status": "adopted",
         "scope": ["citywide"],
         "land": ["commercial", "other", "residential, all uses"]
+      }
+    ]
+  },
+  "Occoquan, Virginia, United States": {
+    "place": {
+      "name": "Occoquan",
+      "state": "Virginia",
+      "country": "United States",
+      "type": "city",
+      "encoded": "occoquan-virginia-united-states",
+      "pop": 1035,
+      "coord": [-77.260261, 38.6837271]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["commercial", "other"]
       }
     ]
   },
@@ -54369,6 +55589,29 @@
       }
     ]
   },
+  "Otsego, Minnesota, United States": {
+    "place": {
+      "name": "Otsego",
+      "state": "Minnesota",
+      "country": "United States",
+      "type": "city",
+      "encoded": "otsego-minnesota-united-states",
+      "pop": 19966,
+      "coord": [-93.614857, 45.2812733]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": [
+          "commercial",
+          "industrial",
+          "other",
+          "residential, multi-family"
+        ]
+      }
+    ]
+  },
   "Ottawa, Illinois, United States": {
     "place": {
       "name": "Ottawa",
@@ -54528,6 +55771,24 @@
         "status": "adopted",
         "scope": ["citywide"],
         "land": ["commercial", "industrial"]
+      }
+    ]
+  },
+  "Owatonna, Minnesota, United States": {
+    "place": {
+      "name": "Owatonna",
+      "state": "Minnesota",
+      "country": "United States",
+      "type": "city",
+      "encoded": "owatonna-minnesota-united-states",
+      "pop": 26420,
+      "coord": [-93.2261076, 44.0839937]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["all uses"]
       }
     ]
   },
@@ -56111,6 +57372,24 @@
       }
     ]
   },
+  "Peoria Heights, Illinois, United States": {
+    "place": {
+      "name": "Peoria Heights",
+      "state": "Illinois",
+      "country": "United States",
+      "type": "city",
+      "encoded": "peoria-heights-illinois-united-states",
+      "pop": 5908,
+      "coord": [-89.5740289, 40.7472744]
+    },
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["main street / special"],
+        "land": ["commercial"]
+      }
+    ]
+  },
   "Peoria, Arizona, United States": {
     "place": {
       "name": "Peoria",
@@ -57498,6 +58777,39 @@
       }
     ]
   },
+  "Plymouth, Minnesota, United States": {
+    "place": {
+      "name": "Plymouth",
+      "state": "Minnesota",
+      "country": "United States",
+      "type": "city",
+      "encoded": "plymouth-minnesota-united-states",
+      "pop": 81026,
+      "coord": [-93.46651, 45.0065149]
+    },
+    "add_max": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["all uses"],
+        "date": "2023-09-12"
+      }
+    ],
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["all uses"],
+        "date": "2024-09-24"
+      },
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["commercial", "other"],
+        "date": "2023-09-12"
+      }
+    ]
+  },
   "Plymouth, Wisconsin, United States": {
     "place": {
       "name": "Plymouth",
@@ -58264,6 +59576,31 @@
       }
     ]
   },
+  "Portsmouth, Virginia, United States": {
+    "place": {
+      "name": "Portsmouth",
+      "state": "Virginia",
+      "country": "United States",
+      "type": "city",
+      "encoded": "portsmouth-virginia-united-states",
+      "pop": 97915,
+      "coord": [-76.297699, 36.8320081]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["all uses"]
+      }
+    ],
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["all uses"]
+      }
+    ]
+  },
   "Postville, Iowa, United States": {
     "place": {
       "name": "Postville",
@@ -58786,6 +60123,24 @@
       }
     ]
   },
+  "Prior Lake, Minnesota, United States": {
+    "place": {
+      "name": "Prior Lake",
+      "state": "Minnesota",
+      "country": "United States",
+      "type": "city",
+      "encoded": "prior-lake-minnesota-united-states",
+      "pop": 27617,
+      "coord": [-93.4226873, 44.7133271]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["all uses"]
+      }
+    ]
+  },
   "Prompton, Pennsylvania, United States": {
     "place": {
       "name": "Prompton",
@@ -58996,6 +60351,25 @@
         "status": "adopted",
         "scope": ["city center / business district"],
         "land": ["all uses"]
+      }
+    ]
+  },
+  "Purcellville, Virginia, United States": {
+    "place": {
+      "name": "Purcellville",
+      "state": "Virginia",
+      "country": "United States",
+      "type": "city",
+      "encoded": "purcellville-virginia-united-states",
+      "pop": 8929,
+      "coord": [-77.7145945, 39.1366223]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district", "citywide"],
+        "land": ["all uses"],
+        "date": "2025-04-08"
       }
     ]
   },
@@ -59219,6 +60593,24 @@
         "status": "adopted",
         "scope": ["city center / business district"],
         "land": ["all uses"]
+      }
+    ]
+  },
+  "Ramsey, Minnesota, United States": {
+    "place": {
+      "name": "Ramsey",
+      "state": "Minnesota",
+      "country": "United States",
+      "type": "city",
+      "encoded": "ramsey-minnesota-united-states",
+      "pop": 27646,
+      "coord": [-93.0949501, 45.0165728]
+    },
+    "add_max": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["commercial", "industrial", "medical", "other"]
       }
     ]
   },
@@ -61232,6 +62624,24 @@
       }
     ]
   },
+  "Rockton, Illinois, United States": {
+    "place": {
+      "name": "Rockton",
+      "state": "Illinois",
+      "country": "United States",
+      "type": "city",
+      "encoded": "rockton-illinois-united-states",
+      "pop": 7863,
+      "coord": [-89.0723317, 42.4525157]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["all uses"]
+      }
+    ]
+  },
   "Rockville, Maryland, United States": {
     "place": {
       "name": "Rockville",
@@ -61459,6 +62869,12 @@
         "status": "adopted",
         "scope": ["city center / business district"],
         "land": ["all uses"]
+      },
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["commercial", "other"],
+        "date": "2025-05-27"
       }
     ]
   },
@@ -61813,6 +63229,24 @@
       "encoded": "rothschild-wisconsin-united-states",
       "pop": 5567,
       "coord": [-89.6201218, 44.8871907]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["all uses"]
+      }
+    ]
+  },
+  "Round Hill, Virginia, United States": {
+    "place": {
+      "name": "Round Hill",
+      "state": "Virginia",
+      "country": "United States",
+      "type": "city",
+      "encoded": "round-hill-virginia-united-states",
+      "pop": 693,
+      "coord": [-77.7686273, 39.132723]
     },
     "reduce_min": [
       {
@@ -62524,6 +63958,38 @@
       }
     ]
   },
+  "Salem, Virginia, United States": {
+    "place": {
+      "name": "Salem",
+      "state": "Virginia",
+      "country": "United States",
+      "type": "city",
+      "encoded": "salem-virginia-united-states",
+      "pop": 25346,
+      "coord": [-80.0556773, 37.293198]
+    },
+    "add_max": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["all uses"]
+      }
+    ],
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["all uses"]
+      }
+    ],
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["all uses"]
+      }
+    ]
+  },
   "Salida, Colorado, United States": {
     "place": {
       "name": "Salida",
@@ -63109,6 +64575,40 @@
       }
     ]
   },
+  "Sandy, Oregon, United States": {
+    "place": {
+      "name": "Sandy",
+      "state": "Oregon",
+      "country": "United States",
+      "type": "city",
+      "encoded": "sandy-oregon-united-states",
+      "pop": 12612,
+      "coord": [-122.2616283, 45.3969212]
+    },
+    "add_max": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["commercial", "industrial"]
+      }
+    ],
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district", "main street / special"],
+        "land": ["all uses", "residential, all uses"],
+        "date": "2024-02-20"
+      }
+    ],
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["commercial"],
+        "date": "2020-04-06"
+      }
+    ]
+  },
   "Santa Ana, California, United States": {
     "place": {
       "name": "Santa Ana",
@@ -63426,6 +64926,24 @@
       }
     ]
   },
+  "Sartell, Minnesota, United States": {
+    "place": {
+      "name": "Sartell",
+      "state": "Minnesota",
+      "country": "United States",
+      "type": "city",
+      "encoded": "sartell-minnesota-united-states",
+      "pop": 19351,
+      "coord": [-94.2069365, 45.6216319]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["all uses"]
+      }
+    ]
+  },
   "Saskatoon, Saskatchewan, Canada": {
     "place": {
       "name": "Saskatoon",
@@ -63588,6 +65106,38 @@
         "status": "adopted",
         "scope": ["city center / business district"],
         "land": ["all uses"]
+      },
+      {
+        "status": "adopted",
+        "scope": ["city center / business district", "citywide"],
+        "land": ["all uses"],
+        "date": "2025-09-02"
+      }
+    ],
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["commercial", "other", "residential, low-density"],
+        "date": "2025-09-02"
+      }
+    ]
+  },
+  "Savage, Minnesota, United States": {
+    "place": {
+      "name": "Savage",
+      "state": "Minnesota",
+      "country": "United States",
+      "type": "city",
+      "encoded": "savage-minnesota-united-states",
+      "pop": 32465,
+      "coord": [-93.3356204, 44.7779041]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district", "citywide"],
+        "land": ["all uses", "commercial"]
       }
     ]
   },
@@ -63650,6 +65200,39 @@
         "status": "adopted",
         "scope": ["city center / business district"],
         "land": ["all uses"]
+      }
+    ]
+  },
+  "Savoy, Illinois, United States": {
+    "place": {
+      "name": "Savoy",
+      "state": "Illinois",
+      "country": "United States",
+      "type": "city",
+      "encoded": "savoy-illinois-united-states",
+      "pop": 8857,
+      "coord": [-88.2517165, 40.054753]
+    },
+    "add_max": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": [
+          "commercial",
+          "industrial",
+          "medical",
+          "other",
+          "residential, multi-family"
+        ],
+        "date": "2025-02-12"
+      }
+    ],
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["all uses"],
+        "date": "2025-02-12"
       }
     ]
   },
@@ -65483,6 +67066,24 @@
       }
     ]
   },
+  "Silvis, Illinois, United States": {
+    "place": {
+      "name": "Silvis",
+      "state": "Illinois",
+      "country": "United States",
+      "type": "city",
+      "encoded": "silvis-illinois-united-states",
+      "pop": 8003,
+      "coord": [-90.4151301, 41.5122561]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["all uses"]
+      }
+    ]
+  },
   "Simi Valley, California, United States": {
     "place": {
       "name": "Simi Valley",
@@ -65880,6 +67481,31 @@
       {
         "status": "adopted",
         "scope": ["main street / special"],
+        "land": ["commercial", "other"]
+      }
+    ]
+  },
+  "Smithfield, Virginia, United States": {
+    "place": {
+      "name": "Smithfield",
+      "state": "Virginia",
+      "country": "United States",
+      "type": "city",
+      "encoded": "smithfield-virginia-united-states",
+      "pop": 8533,
+      "coord": [-76.6310242, 36.9823313]
+    },
+    "add_max": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["commercial", "industrial", "medical", "other"]
+      }
+    ],
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
         "land": ["commercial", "other"]
       }
     ]
@@ -67616,6 +69242,24 @@
       }
     ]
   },
+  "St. Francis, Minnesota, United States": {
+    "place": {
+      "name": "St. Francis",
+      "state": "Minnesota",
+      "country": "United States",
+      "type": "city",
+      "encoded": "st-francis-minnesota-united-states",
+      "pop": 8142,
+      "coord": [-93.3597084, 45.3864283]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["all uses"]
+      }
+    ]
+  },
   "St. Francisville, Louisiana, United States": {
     "place": {
       "name": "St. Francisville",
@@ -67872,6 +69516,24 @@
         "status": "adopted",
         "scope": ["city center / business district"],
         "land": ["commercial", "other"]
+      }
+    ]
+  },
+  "St. Joseph, Minnesota, United States": {
+    "place": {
+      "name": "St. Joseph",
+      "state": "Minnesota",
+      "country": "United States",
+      "type": "city",
+      "encoded": "st-joseph-minnesota-united-states",
+      "pop": 7029,
+      "coord": [-94.3180516, 45.5645229]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["all uses"]
       }
     ]
   },
@@ -68576,6 +70238,31 @@
         "status": "adopted",
         "scope": ["city center / business district"],
         "land": ["commercial"]
+      }
+    ]
+  },
+  "Staunton, Virginia, United States": {
+    "place": {
+      "name": "Staunton",
+      "state": "Virginia",
+      "country": "United States",
+      "type": "city",
+      "encoded": "staunton-virginia-united-states",
+      "pop": 25750,
+      "coord": [-79.072557, 38.1495947]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["all uses", "commercial", "other", "residential, all uses"]
+      }
+    ],
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district", "main street / special"],
+        "land": ["all uses", "commercial", "residential, low-density"]
       }
     ]
   },
@@ -73282,6 +74969,24 @@
       }
     ]
   },
+  "Urbandale, Iowa, United States": {
+    "place": {
+      "name": "Urbandale",
+      "state": "Iowa",
+      "country": "United States",
+      "type": "city",
+      "encoded": "urbandale-iowa-united-states",
+      "pop": 45580,
+      "coord": [-93.7380243, 41.6274511]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["all uses"]
+      }
+    ]
+  },
   "Utica, Nebraska, United States": {
     "place": {
       "name": "Utica",
@@ -74055,6 +75760,24 @@
         "status": "adopted",
         "scope": ["city center / business district"],
         "land": ["all uses", "commercial"]
+      }
+    ]
+  },
+  "Vienna, Virginia, United States": {
+    "place": {
+      "name": "Vienna",
+      "state": "Virginia",
+      "country": "United States",
+      "type": "city",
+      "encoded": "vienna-virginia-united-states",
+      "pop": 16473,
+      "coord": [-77.2651762, 38.9013729]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["main street / special"],
+        "land": ["all uses"]
       }
     ]
   },
@@ -76017,6 +77740,38 @@
       }
     ]
   },
+  "Waynesboro, Virginia, United States": {
+    "place": {
+      "name": "Waynesboro",
+      "state": "Virginia",
+      "country": "United States",
+      "type": "city",
+      "encoded": "waynesboro-virginia-united-states",
+      "pop": 22196,
+      "coord": [-78.8893999, 38.0686668]
+    },
+    "add_max": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["commercial", "industrial", "medical", "other"]
+      }
+    ],
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["all uses"]
+      }
+    ],
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["all uses"]
+      }
+    ]
+  },
   "Waynesburg, Pennsylvania, United States": {
     "place": {
       "name": "Waynesburg",
@@ -77604,11 +79359,28 @@
       "pop": 24883,
       "coord": [-93.0069304, 45.0838098]
     },
+    "add_max": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["commercial", "other"],
+        "date": "2025-07-22"
+      }
+    ],
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["all uses", "commercial", "industrial", "medical", "other"],
+        "date": "2025-07-22"
+      }
+    ],
     "rm_min": [
       {
         "status": "adopted",
         "scope": ["city center / business district"],
-        "land": ["all uses"]
+        "land": ["commercial", "medical", "other"],
+        "date": "2025-07-22"
       }
     ]
   },
@@ -77974,6 +79746,31 @@
         "status": "adopted",
         "scope": ["city center / business district"],
         "land": ["commercial"]
+      }
+    ]
+  },
+  "Williamsburg, Virginia, United States": {
+    "place": {
+      "name": "Williamsburg",
+      "state": "Virginia",
+      "country": "United States",
+      "type": "city",
+      "encoded": "williamsburg-virginia-united-states",
+      "pop": 15425,
+      "coord": [-76.7074042, 37.2708788]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["main street / special"],
+        "land": ["all uses"]
+      }
+    ],
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["commercial", "other"]
       }
     ]
   },
@@ -78354,6 +80151,31 @@
       "pop": 19134,
       "coord": [-84.1796503, 37.990079]
     },
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["all uses"]
+      }
+    ]
+  },
+  "Winchester, Virginia, United States": {
+    "place": {
+      "name": "Winchester",
+      "state": "Virginia",
+      "country": "United States",
+      "type": "city",
+      "encoded": "winchester-virginia-united-states",
+      "pop": 28120,
+      "coord": [-78.1652404, 39.1852184]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district", "citywide"],
+        "land": ["all uses"]
+      }
+    ],
     "rm_min": [
       {
         "status": "adopted",
