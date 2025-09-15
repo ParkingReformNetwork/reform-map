@@ -10522,6 +10522,24 @@
       }
     ]
   },
+  "Canton Charter Township, Michigan, United States": {
+    "place": {
+      "name": "Canton Charter Township",
+      "state": "Michigan",
+      "country": "United States",
+      "type": "city",
+      "encoded": "canton-charter-township-michigan-united-states",
+      "pop": 98659,
+      "coord": [-83.4868961, 42.3076547]
+    },
+    "add_max": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["all uses"]
+      }
+    ]
+  },
   "Canton, Connecticut, United States": {
     "place": {
       "name": "Canton",
@@ -16772,6 +16790,24 @@
       {
         "status": "adopted",
         "scope": ["city center / business district"],
+        "land": ["all uses"]
+      }
+    ]
+  },
+  "Credit River, Minnesota, United States": {
+    "place": {
+      "name": "Credit River",
+      "state": "Minnesota",
+      "country": "United States",
+      "type": "city",
+      "encoded": "credit-river-minnesota-united-states",
+      "pop": 5493,
+      "coord": [-93.3793925, 44.674208]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
         "land": ["all uses"]
       }
     ]
@@ -24301,6 +24337,30 @@
         "status": "adopted",
         "scope": ["city center / business district"],
         "land": ["all uses"]
+      }
+    ]
+  },
+  "Farmington Hills, Michigan, United States": {
+    "place": {
+      "name": "Farmington Hills",
+      "state": "Michigan",
+      "country": "United States",
+      "type": "city",
+      "encoded": "farmington-hills-michigan-united-states",
+      "pop": 83986,
+      "coord": [-83.3771553, 42.4853125]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": [
+          "commercial",
+          "industrial",
+          "medical",
+          "other",
+          "residential, multi-family"
+        ]
       }
     ]
   },
@@ -35373,6 +35433,24 @@
       }
     ]
   },
+  "Isanti, Minnesota, United States": {
+    "place": {
+      "name": "Isanti",
+      "state": "Minnesota",
+      "country": "United States",
+      "type": "city",
+      "encoded": "isanti-minnesota-united-states",
+      "pop": 6804,
+      "coord": [-93.24812013054411, 45.49050039949295]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["commercial"]
+      }
+    ]
+  },
   "Ishpeming, Michigan, United States": {
     "place": {
       "name": "Ishpeming",
@@ -36629,6 +36707,24 @@
         "status": "adopted",
         "scope": ["city center / business district"],
         "land": ["all uses"]
+      }
+    ]
+  },
+  "Jordan, Minnesota, United States": {
+    "place": {
+      "name": "Jordan",
+      "state": "Minnesota",
+      "country": "United States",
+      "type": "city",
+      "encoded": "jordan-minnesota-united-states",
+      "pop": 6656,
+      "coord": [-93.6261918, 44.6663146]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["commercial"]
       }
     ]
   },
@@ -45860,6 +45956,24 @@
       }
     ]
   },
+  "Medina, Minnesota, United States": {
+    "place": {
+      "name": "Medina",
+      "state": "Minnesota",
+      "country": "United States",
+      "type": "city",
+      "encoded": "medina-minnesota-united-states",
+      "pop": 6837,
+      "coord": [-93.574375, 45.0151361]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["all uses"]
+      }
+    ]
+  },
   "Medina, Ohio, United States": {
     "place": {
       "name": "Medina",
@@ -53373,6 +53487,33 @@
       }
     ]
   },
+  "Northampton, Massachusetts, United States": {
+    "place": {
+      "name": "Northampton",
+      "state": "Massachusetts",
+      "country": "United States",
+      "type": "city",
+      "encoded": "northampton-massachusetts-united-states",
+      "pop": 29571,
+      "coord": [-72.6311006, 42.3178989]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["residential, all uses"],
+        "date": "2025-09-04"
+      }
+    ],
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["all uses"],
+        "date": "2025-09-04"
+      }
+    ]
+  },
   "Northbrook, Illinois, United States": {
     "place": {
       "name": "Northbrook",
@@ -56331,6 +56472,25 @@
         "status": "adopted",
         "scope": ["city center / business district"],
         "land": ["all uses"]
+      }
+    ]
+  },
+  "Paragould, Arkansas, United States": {
+    "place": {
+      "name": "Paragould",
+      "state": "Arkansas",
+      "country": "United States",
+      "type": "city",
+      "encoded": "paragould-arkansas-united-states",
+      "pop": 29537,
+      "coord": [-90.4973286, 36.0584021]
+    },
+    "add_max": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["commercial", "industrial", "medical", "other"],
+        "date": "2025-08-25"
       }
     ]
   },
@@ -70331,6 +70491,24 @@
       "coord": [-89.6735637, 42.3503474]
     },
     "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["all uses"]
+      }
+    ]
+  },
+  "Sterling Heights, Michigan, United States": {
+    "place": {
+      "name": "Sterling Heights",
+      "state": "Michigan",
+      "country": "United States",
+      "type": "city",
+      "encoded": "sterling-heights-michigan-united-states",
+      "pop": 134346,
+      "coord": [-83.0302033, 42.5803122]
+    },
+    "reduce_min": [
       {
         "status": "adopted",
         "scope": ["city center / business district"],
