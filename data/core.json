@@ -1537,6 +1537,24 @@
       }
     ]
   },
+  "Amherst, Nova Scotia, Canada": {
+    "place": {
+      "name": "Amherst",
+      "state": "Nova Scotia",
+      "country": "Canada",
+      "type": "city",
+      "encoded": "amherst-nova-scotia-canada",
+      "pop": 9404,
+      "coord": [-64.2333504, 45.8192941]
+    },
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["all uses"]
+      }
+    ]
+  },
   "Amherst, Virginia, United States": {
     "place": {
       "name": "Amherst",
@@ -1907,6 +1925,30 @@
       }
     ]
   },
+  "Annapolis Royal, Nova Scotia, Canada": {
+    "place": {
+      "name": "Annapolis Royal",
+      "state": "Nova Scotia",
+      "country": "Canada",
+      "type": "city",
+      "encoded": "annapolis-royal-nova-scotia-canada",
+      "pop": 530,
+      "coord": [-65.5160971, 44.7419775]
+    },
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district", "main street / special"],
+        "land": [
+          "all uses",
+          "commercial",
+          "other",
+          "residential, low-density",
+          "residential, multi-family"
+        ]
+      }
+    ]
+  },
   "Annapolis, Maryland, United States": {
     "place": {
       "name": "Annapolis",
@@ -2033,6 +2075,31 @@
         "status": "adopted",
         "scope": ["city center / business district"],
         "land": ["commercial", "industrial", "other"]
+      }
+    ]
+  },
+  "Antigonish, Nova Scotia, Canada": {
+    "place": {
+      "name": "Antigonish",
+      "state": "Nova Scotia",
+      "country": "Canada",
+      "type": "city",
+      "encoded": "antigonish-nova-scotia-canada",
+      "pop": 4656,
+      "coord": [-61.9904928, 45.6213607]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["all uses"]
+      }
+    ],
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["all uses"]
       }
     ]
   },
@@ -6260,6 +6327,25 @@
       }
     ]
   },
+  "Berwick, Nova Scotia, Canada": {
+    "place": {
+      "name": "Berwick",
+      "state": "Nova Scotia",
+      "country": "Canada",
+      "type": "city",
+      "encoded": "berwick-nova-scotia-canada",
+      "pop": 2455,
+      "coord": [-64.7362073, 45.0455684]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["all uses"],
+        "date": "2025-07-08"
+      }
+    ]
+  },
   "Berwick, Pennsylvania, United States": {
     "place": {
       "name": "Berwick",
@@ -6606,6 +6692,30 @@
         "status": "adopted",
         "scope": ["city center / business district"],
         "land": ["all uses", "commercial"]
+      }
+    ]
+  },
+  "Biggar, Saskatchewan, Canada": {
+    "place": {
+      "name": "Biggar",
+      "state": "Saskatchewan",
+      "country": "Canada",
+      "type": "city",
+      "encoded": "biggar-saskatchewan-canada",
+      "pop": 2161,
+      "coord": [-107.984618, 52.0576499]
+    },
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": [
+          "commercial",
+          "medical",
+          "other",
+          "residential, low-density",
+          "residential, multi-family"
+        ]
       }
     ]
   },
@@ -8536,6 +8646,31 @@
       {
         "status": "adopted",
         "scope": ["main street / special"],
+        "land": ["commercial", "other"]
+      }
+    ]
+  },
+  "Bridgewater, Nova Scotia, Canada": {
+    "place": {
+      "name": "Bridgewater",
+      "state": "Nova Scotia",
+      "country": "Canada",
+      "type": "city",
+      "encoded": "bridgewater-nova-scotia-canada",
+      "pop": 8790,
+      "coord": [-64.5193946, 44.3774134]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["all uses"]
+      }
+    ],
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
         "land": ["commercial", "other"]
       }
     ]
@@ -17488,7 +17623,7 @@
       "type": "city",
       "encoded": "custer-south-dakota-united-states",
       "pop": 1919,
-      "coord": [-103.5101597, 43.6726477]
+      "coord": [-103.6003139449185, 43.76628945170245]
     },
     "rm_min": [
       {
@@ -19513,6 +19648,24 @@
       {
         "status": "adopted",
         "scope": ["citywide"],
+        "land": ["all uses"]
+      }
+    ]
+  },
+  "Digby, Nova Scotia, Canada": {
+    "place": {
+      "name": "Digby",
+      "state": "Nova Scotia",
+      "country": "Canada",
+      "type": "city",
+      "encoded": "digby-nova-scotia-canada",
+      "pop": 2001,
+      "coord": [-65.758575, 44.6194028]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
         "land": ["all uses"]
       }
     ]
@@ -33606,6 +33759,24 @@
       }
     ]
   },
+  "Hinton, Alberta, Canada": {
+    "place": {
+      "name": "Hinton",
+      "state": "Alberta",
+      "country": "Canada",
+      "type": "city",
+      "encoded": "hinton-alberta-canada",
+      "pop": 9817,
+      "coord": [-117.5886772, 53.3990512]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["all uses"]
+      }
+    ]
+  },
   "Hixton, Wisconsin, United States": {
     "place": {
       "name": "Hixton",
@@ -37547,6 +37718,24 @@
       }
     ]
   },
+  "Kentville, Nova Scotia, Canada": {
+    "place": {
+      "name": "Kentville",
+      "state": "Nova Scotia",
+      "country": "Canada",
+      "type": "city",
+      "encoded": "kentville-nova-scotia-canada",
+      "pop": 6630,
+      "coord": [-64.495212, 45.0784875]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["all uses"]
+      }
+    ]
+  },
   "Kenyon, Minnesota, United States": {
     "place": {
       "name": "Kenyon",
@@ -41046,6 +41235,31 @@
       }
     ]
   },
+  "Lethbridge, Alberta, Canada": {
+    "place": {
+      "name": "Lethbridge",
+      "state": "Alberta",
+      "country": "Canada",
+      "type": "city",
+      "encoded": "lethbridge-alberta-canada",
+      "pop": 98406,
+      "coord": [-112.8331033, 49.6945782]
+    },
+    "add_max": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["all uses"]
+      }
+    ],
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["all uses", "commercial"]
+      }
+    ]
+  },
   "Lewes, Delaware, United States": {
     "place": {
       "name": "Lewes",
@@ -42060,6 +42274,24 @@
         "status": "adopted",
         "scope": ["city center / business district"],
         "land": ["all uses"]
+      }
+    ]
+  },
+  "Lockeport, Nova Scotia, Canada": {
+    "place": {
+      "name": "Lockeport",
+      "state": "Nova Scotia",
+      "country": "Canada",
+      "type": "city",
+      "encoded": "lockeport-nova-scotia-canada",
+      "pop": 476,
+      "coord": [-65.1147163, 43.7003894]
+    },
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["commercial"]
       }
     ]
   },
@@ -43648,6 +43880,37 @@
           "residential, low-density",
           "residential, multi-family"
         ]
+      }
+    ]
+  },
+  "Mahone Bay, Nova Scotia, Canada": {
+    "place": {
+      "name": "Mahone Bay",
+      "state": "Nova Scotia",
+      "country": "Canada",
+      "type": "city",
+      "encoded": "mahone-bay-nova-scotia-canada",
+      "pop": 1064,
+      "coord": [-64.387173, 44.4488931]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": [
+          "commercial",
+          "industrial",
+          "medical",
+          "other",
+          "residential, multi-family"
+        ]
+      }
+    ],
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["commercial", "other"]
       }
     ]
   },
@@ -50389,6 +50652,24 @@
       }
     ]
   },
+  "Mulgrave, Nova Scotia, Canada": {
+    "place": {
+      "name": "Mulgrave",
+      "state": "Nova Scotia",
+      "country": "Canada",
+      "type": "city",
+      "encoded": "mulgrave-nova-scotia-canada",
+      "pop": 627,
+      "coord": [-61.3893897, 45.6063041]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["all uses"]
+      }
+    ]
+  },
   "Mulliken, Michigan, United States": {
     "place": {
       "name": "Mulliken",
@@ -51723,6 +52004,31 @@
         "status": "adopted",
         "scope": ["main street / special"],
         "land": ["all uses"]
+      }
+    ]
+  },
+  "New Glasgow, Nova Scotia, Canada": {
+    "place": {
+      "name": "New Glasgow",
+      "state": "Nova Scotia",
+      "country": "Canada",
+      "type": "city",
+      "encoded": "new-glasgow-nova-scotia-canada",
+      "pop": 9471,
+      "coord": [-62.6483547, 45.5869474]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["residential, all uses"]
+      }
+    ],
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["commercial"]
       }
     ]
   },
@@ -56296,6 +56602,24 @@
       }
     ]
   },
+  "Oxford, Nova Scotia, Canada": {
+    "place": {
+      "name": "Oxford",
+      "state": "Nova Scotia",
+      "country": "Canada",
+      "type": "city",
+      "encoded": "oxford-nova-scotia-canada",
+      "pop": 1170,
+      "coord": [-63.8593419, 45.7328222]
+    },
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["all uses"]
+      }
+    ]
+  },
   "Oxford, Ohio, United States": {
     "place": {
       "name": "Oxford",
@@ -58349,6 +58673,31 @@
       }
     ]
   },
+  "Pictou, Nova Scotia, Canada": {
+    "place": {
+      "name": "Pictou",
+      "state": "Nova Scotia",
+      "country": "Canada",
+      "type": "city",
+      "encoded": "pictou-nova-scotia-canada",
+      "pop": 3107,
+      "coord": [-62.7283219, 45.5855373]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["residential, all uses"]
+      }
+    ],
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["commercial"]
+      }
+    ]
+  },
   "Piedmont, Oklahoma, United States": {
     "place": {
       "name": "Piedmont",
@@ -59592,6 +59941,24 @@
       "coord": [-89.8654036, 44.3507979]
     },
     "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["all uses"]
+      }
+    ]
+  },
+  "Port Hawkesbury, Nova Scotia, Canada": {
+    "place": {
+      "name": "Port Hawkesbury",
+      "state": "Nova Scotia",
+      "country": "Canada",
+      "type": "city",
+      "encoded": "port-hawkesbury-nova-scotia-canada",
+      "pop": 3210,
+      "coord": [-61.3574589, 45.6180851]
+    },
+    "reduce_min": [
       {
         "status": "adopted",
         "scope": ["city center / business district"],
@@ -61563,6 +61930,37 @@
         "scope": ["citywide"],
         "land": ["all uses"],
         "date": "2024-02-14"
+      }
+    ]
+  },
+  "Region of Queens Municipality, Nova Scotia, Canada": {
+    "place": {
+      "name": "Region of Queens Municipality",
+      "state": "Nova Scotia",
+      "country": "Canada",
+      "type": "city",
+      "encoded": "region-of-queens-municipality-nova-scotia-canada",
+      "pop": 10422,
+      "coord": [-64.7834746, 44.1588807]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": [
+          "commercial",
+          "industrial",
+          "medical",
+          "other",
+          "residential, multi-family"
+        ]
+      }
+    ],
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["all uses"]
       }
     ]
   },
@@ -66703,6 +67101,24 @@
       }
     ]
   },
+  "Shelburne, Nova Scotia, Canada": {
+    "place": {
+      "name": "Shelburne",
+      "state": "Nova Scotia",
+      "country": "Canada",
+      "type": "city",
+      "encoded": "shelburne-nova-scotia-canada",
+      "pop": 1644,
+      "coord": [-65.321384, 43.7639539]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["commercial"]
+      }
+    ]
+  },
   "Shelby County, Illinois, United States": {
     "place": {
       "name": "Shelby County",
@@ -70703,6 +71119,31 @@
       }
     ]
   },
+  "Stellarton, Nova Scotia, Canada": {
+    "place": {
+      "name": "Stellarton",
+      "state": "Nova Scotia",
+      "country": "Canada",
+      "type": "city",
+      "encoded": "stellarton-nova-scotia-canada",
+      "pop": 4007,
+      "coord": [-62.6591139, 45.5574527]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["residential, all uses"]
+      }
+    ],
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["commercial"]
+      }
+    ]
+  },
   "Stephenson County, Illinois, United States": {
     "place": {
       "name": "Stephenson County",
@@ -70926,6 +71367,24 @@
       "encoded": "Stewartville_MN",
       "pop": 6687,
       "coord": [-92.4883221, 43.8554243]
+    },
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["commercial"]
+      }
+    ]
+  },
+  "Stewiacke, Nova Scotia, Canada": {
+    "place": {
+      "name": "Stewiacke",
+      "state": "Nova Scotia",
+      "country": "Canada",
+      "type": "city",
+      "encoded": "stewiacke-nova-scotia-canada",
+      "pop": 1557,
+      "coord": [-63.3483698, 45.1371295]
     },
     "rm_min": [
       {
@@ -73882,33 +74341,33 @@
       "type": "city",
       "encoded": "Toledo_OH",
       "pop": 270871,
-      "coord": [-83.5378173, 41.6529143]
+      "coord": [-83.5378173, 41.6529143],
+      "repeal": true
     },
     "add_max": [
       {
         "status": "adopted",
         "scope": ["city center / business district", "citywide"],
-        "land": ["all uses"],
-        "date": "2020-07-13"
-      }
-    ],
-    "reduce_min": [
-      {
-        "status": "adopted",
-        "scope": ["city center / business district", "main street / special"],
-        "land": ["all uses", "residential, multi-family"],
-        "date": "2020-07-13"
+        "land": [
+          "all uses",
+          "commercial",
+          "industrial",
+          "medical",
+          "other",
+          "residential, multi-family"
+        ],
+        "date": "2025-09-09"
       }
     ],
     "rm_min": [
       {
-        "status": "adopted",
+        "status": "repealed",
         "scope": ["city center / business district"],
         "land": ["commercial", "other", "residential, all uses"],
         "date": "2022-11-22"
       },
       {
-        "status": "proposed",
+        "status": "adopted",
         "scope": ["citywide"],
         "land": ["all uses"],
         "date": "2025-09-09"
@@ -74603,6 +75062,31 @@
       }
     ]
   },
+  "Trenton, Nova Scotia, Canada": {
+    "place": {
+      "name": "Trenton",
+      "state": "Nova Scotia",
+      "country": "Canada",
+      "type": "city",
+      "encoded": "trenton-nova-scotia-canada",
+      "pop": 2407,
+      "coord": [-62.6331223, 45.6140166]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["residential, all uses"]
+      }
+    ],
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["commercial"]
+      }
+    ]
+  },
   "Trenton, Ohio, United States": {
     "place": {
       "name": "Trenton",
@@ -74722,6 +75206,31 @@
         "status": "adopted",
         "scope": ["citywide"],
         "land": ["residential, low-density"]
+      }
+    ]
+  },
+  "Truro, Nova Scotia, Canada": {
+    "place": {
+      "name": "Truro",
+      "state": "Nova Scotia",
+      "country": "Canada",
+      "type": "city",
+      "encoded": "truro-nova-scotia-canada",
+      "pop": 12954,
+      "coord": [-63.2864971, 45.3656974]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["all uses", "residential, all uses"]
+      }
+    ],
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["commercial", "other"]
       }
     ]
   },
@@ -75277,6 +75786,24 @@
         "status": "adopted",
         "scope": ["city center / business district"],
         "land": ["all uses"]
+      }
+    ]
+  },
+  "Unity, Saskatchewan, Canada": {
+    "place": {
+      "name": "Unity",
+      "state": "Saskatchewan",
+      "country": "Canada",
+      "type": "city",
+      "encoded": "unity-saskatchewan-canada",
+      "pop": 2496,
+      "coord": [-109.1548985, 52.4428508]
+    },
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["commercial"]
       }
     ]
   },
@@ -76215,6 +76742,24 @@
         "status": "adopted",
         "scope": ["city center / business district"],
         "land": ["commercial", "other", "residential, all uses"]
+      }
+    ]
+  },
+  "Viking, Alberta, Canada": {
+    "place": {
+      "name": "Viking",
+      "state": "Alberta",
+      "country": "Canada",
+      "type": "city",
+      "encoded": "viking-alberta-canada",
+      "pop": 986,
+      "coord": [-111.7777884, 53.0925986]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["all uses"]
       }
     ]
   },
@@ -78893,6 +79438,31 @@
       }
     ]
   },
+  "West Hants Regional Municipality, Nova Scotia, Canada": {
+    "place": {
+      "name": "West Hants Regional Municipality",
+      "state": "Nova Scotia",
+      "country": "Canada",
+      "type": "city",
+      "encoded": "west-hants-regional-municipality-nova-scotia-canada",
+      "pop": 19509,
+      "coord": [-64.1024703, 44.9907655]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["all uses"]
+      }
+    ],
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["commercial", "medical", "other"]
+      }
+    ]
+  },
   "West Hartford, Connecticut, United States": {
     "place": {
       "name": "West Hartford",
@@ -79664,6 +80234,31 @@
         "status": "adopted",
         "scope": ["citywide"],
         "land": ["all uses"]
+      }
+    ]
+  },
+  "Westville, Nova Scotia, Canada": {
+    "place": {
+      "name": "Westville",
+      "state": "Nova Scotia",
+      "country": "Canada",
+      "type": "city",
+      "encoded": "westville-nova-scotia-canada",
+      "pop": 3540,
+      "coord": [-62.7085523, 45.5615392]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["residential, all uses"]
+      }
+    ],
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["commercial"]
       }
     ]
   },
@@ -81344,6 +81939,24 @@
       }
     ]
   },
+  "Wolfville, Nova Scotia, Canada": {
+    "place": {
+      "name": "Wolfville",
+      "state": "Nova Scotia",
+      "country": "Canada",
+      "type": "city",
+      "encoded": "wolfville-nova-scotia-canada",
+      "pop": 5057,
+      "coord": [-64.3645102, 45.0914073]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["all uses"]
+      }
+    ]
+  },
   "Wonder Lake, Illinois, United States": {
     "place": {
       "name": "Wonder Lake",
@@ -82029,6 +82642,30 @@
       "coord": [-97.3967011, 42.8712938]
     },
     "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["all uses"]
+      }
+    ]
+  },
+  "Yarmouth, Nova Scotia, Canada": {
+    "place": {
+      "name": "Yarmouth",
+      "state": "Nova Scotia",
+      "country": "Canada",
+      "type": "city",
+      "encoded": "yarmouth-nova-scotia-canada",
+      "pop": 6829,
+      "coord": [-66.1157, 43.8372648]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["residential, all uses"],
+        "date": "2018-04-04"
+      },
       {
         "status": "adopted",
         "scope": ["city center / business district"],
