@@ -245,8 +245,8 @@
       "main street / special",
       "transit-oriented"
     ],
-    "landUse": ["all uses", "residential, all uses"],
-    "year": ["unknown", "2023"]
+    "landUse": ["all uses", "commercial", "other", "residential, all uses"],
+    "year": ["unknown", "2023", "2022"]
   },
   "addMaxAdopted": {
     "placeType": ["city", "country", "county", "state"],
@@ -536,9 +536,13 @@
   "rmMinRepealed": {
     "placeType": ["city"],
     "country": ["United States"],
-    "scope": ["citywide", "main street / special"],
-    "landUse": ["all uses", "residential, all uses"],
-    "year": ["unknown", "2023"]
+    "scope": [
+      "city center / business district",
+      "citywide",
+      "main street / special"
+    ],
+    "landUse": ["all uses", "commercial", "other", "residential, all uses"],
+    "year": ["unknown", "2023", "2022"]
   },
   "benefitDistrictAdopted": {
     "placeType": ["city"],
