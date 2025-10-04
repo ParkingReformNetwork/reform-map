@@ -218,6 +218,8 @@
     "landUse": [
       "all uses",
       "commercial",
+      "industrial",
+      "medical",
       "other",
       "residential, all uses",
       "residential, multi-family"
@@ -245,8 +247,8 @@
       "main street / special",
       "transit-oriented"
     ],
-    "landUse": ["all uses", "commercial", "other", "residential, all uses"],
-    "year": ["unknown", "2023", "2022"]
+    "landUse": ["all uses", "residential, all uses"],
+    "year": ["unknown", "2023"]
   },
   "addMaxAdopted": {
     "placeType": ["city", "country", "county", "state"],
@@ -323,7 +325,15 @@
       "main street / special",
       "transit-oriented"
     ],
-    "landUse": ["all uses", "commercial", "residential, all uses"],
+    "landUse": [
+      "all uses",
+      "commercial",
+      "industrial",
+      "medical",
+      "other",
+      "residential, all uses",
+      "residential, multi-family"
+    ],
     "year": [
       "unknown",
       "2025",
@@ -424,10 +434,11 @@
     "landUse": [
       "all uses",
       "commercial",
+      "other",
       "residential, all uses",
       "residential, multi-family"
     ],
-    "year": ["unknown", "2024", "2022", "2017"]
+    "year": ["unknown", "2025", "2024", "2022", "2017"]
   },
   "reduceMinRepealed": {
     "placeType": ["city"],
@@ -536,13 +547,9 @@
   "rmMinRepealed": {
     "placeType": ["city"],
     "country": ["United States"],
-    "scope": [
-      "city center / business district",
-      "citywide",
-      "main street / special"
-    ],
-    "landUse": ["all uses", "commercial", "other", "residential, all uses"],
-    "year": ["unknown", "2023", "2022"]
+    "scope": ["citywide", "main street / special"],
+    "landUse": ["all uses", "residential, all uses"],
+    "year": ["unknown", "2023"]
   },
   "benefitDistrictAdopted": {
     "placeType": ["city"],
