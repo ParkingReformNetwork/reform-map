@@ -1042,6 +1042,24 @@
       }
     ]
   },
+  "Allendale Charter Township, Michigan, United States": {
+    "place": {
+      "name": "Allendale Charter Township",
+      "state": "Michigan",
+      "country": "United States",
+      "type": "city",
+      "encoded": "allendale-charter-township-michigan-united-states",
+      "pop": 26582,
+      "coord": [-85.9498141, 42.982786]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["all uses"]
+      }
+    ]
+  },
   "Allentown, Pennsylvania, United States": {
     "place": {
       "name": "Allentown",
@@ -11665,6 +11683,38 @@
           "other",
           "residential, multi-family"
         ]
+      }
+    ]
+  },
+  "Cascade Charter Township, Michigan, United States": {
+    "place": {
+      "name": "Cascade Charter Township",
+      "state": "Michigan",
+      "country": "United States",
+      "type": "city",
+      "encoded": "cascade-charter-township-michigan-united-states",
+      "pop": 19667,
+      "coord": [-85.501067, 42.9154212]
+    },
+    "add_max": [
+      {
+        "status": "proposed",
+        "scope": ["citywide"],
+        "land": [
+          "commercial",
+          "industrial",
+          "medical",
+          "other",
+          "residential, multi-family"
+        ]
+      }
+    ],
+    "reduce_min": [
+      {
+        "status": "proposed",
+        "scope": ["city center / business district"],
+        "land": ["commercial", "other"],
+        "date": "2025-10"
       }
     ]
   },
@@ -43809,6 +43859,31 @@
       }
     ]
   },
+  "Lyon Charter Township, Michigan, United States": {
+    "place": {
+      "name": "Lyon Charter Township",
+      "state": "Michigan",
+      "country": "United States",
+      "type": "city",
+      "encoded": "lyon-charter-township-michigan-united-states",
+      "pop": 23271,
+      "coord": [-83.6132578, 42.4764638]
+    },
+    "add_max": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["all uses"]
+      }
+    ],
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["all uses"]
+      }
+    ]
+  },
   "Lyon County, Nevada, United States": {
     "place": {
       "name": "Lyon County",
@@ -55102,6 +55177,24 @@
       {
         "status": "adopted",
         "scope": ["city center / business district"],
+        "land": ["all uses"]
+      }
+    ]
+  },
+  "Oakland Charter Township, Michigan, United States": {
+    "place": {
+      "name": "Oakland Charter Township",
+      "state": "Michigan",
+      "country": "United States",
+      "type": "city",
+      "encoded": "oakland-charter-township-michigan-united-states",
+      "pop": 20067,
+      "coord": [-83.1553213, 42.7562531]
+    },
+    "add_max": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
         "land": ["all uses"]
       }
     ]
@@ -74969,7 +75062,7 @@
     ],
     "rm_min": [
       {
-        "status": "repealed",
+        "status": "adopted",
         "scope": ["city center / business district"],
         "land": ["commercial", "other", "residential, all uses"],
         "date": "2022-11-22"
