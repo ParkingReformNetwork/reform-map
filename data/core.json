@@ -32058,6 +32058,30 @@
       }
     ]
   },
+  "Harper Woods, Michigan, United States": {
+    "place": {
+      "name": "Harper Woods",
+      "state": "Michigan",
+      "country": "United States",
+      "type": "city",
+      "encoded": "harper-woods-michigan-united-states",
+      "pop": 15492,
+      "coord": [-82.9238847, 42.4333367]
+    },
+    "add_max": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": [
+          "commercial",
+          "industrial",
+          "medical",
+          "other",
+          "residential, multi-family"
+        ]
+      }
+    ]
+  },
   "Harrington, Delaware, United States": {
     "place": {
       "name": "Harrington",
@@ -33645,6 +33669,24 @@
         "scope": ["citywide"],
         "land": ["all uses"],
         "date": "2015-01-01"
+      }
+    ]
+  },
+  "Highland Charter Township, Michigan, United States": {
+    "place": {
+      "name": "Highland Charter Township",
+      "state": "Michigan",
+      "country": "United States",
+      "type": "city",
+      "encoded": "highland-charter-township-michigan-united-states",
+      "pop": 19172,
+      "coord": [-83.6250193, 42.6524365]
+    },
+    "add_max": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["all uses"]
       }
     ]
   },
