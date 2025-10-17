@@ -82031,6 +82031,39 @@
       }
     ]
   },
+  "Wilsonville, Oregon, United States": {
+    "place": {
+      "name": "Wilsonville",
+      "state": "Oregon",
+      "country": "United States",
+      "type": "city",
+      "encoded": "wilsonville-oregon-united-states",
+      "pop": 26664,
+      "coord": [-122.76816, 45.3099218],
+      "repeal": true
+    },
+    "add_max": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": [
+          "commercial",
+          "industrial",
+          "medical",
+          "other",
+          "residential, multi-family"
+        ]
+      }
+    ],
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["all uses"],
+        "date": "2025-08-04"
+      }
+    ]
+  },
   "Wilton, Connecticut, United States": {
     "place": {
       "name": "Wilton",
