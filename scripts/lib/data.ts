@@ -21,6 +21,7 @@ export interface DirectusFile {
 }
 
 export interface Citation {
+  id: number;
   description: string;
   url: string | null;
   notes: string | null;

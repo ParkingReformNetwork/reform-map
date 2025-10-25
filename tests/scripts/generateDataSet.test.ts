@@ -23,6 +23,7 @@ test("generate CSVs", async ({}, testInfo) => {
   testInfo.snapshotSuffix = "";
 
   const citation: Citation = {
+    id: 0,
     description: "citation",
     url: null,
     notes: null,
