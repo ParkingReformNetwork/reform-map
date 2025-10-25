@@ -14,7 +14,8 @@ const REDIRECTS = {
   Roanoke_va: "Roanoke_VA",
   Trelleborg_Scania: "Trelleborg_Skåne",
   SaintCatharines_ON: "St.Catharines_ON",
-  WashingtonDC_DC: "WashingtonDC",
+  WashingtonDC_DC: "Washington_DC",
+  WashingtonDC: "Washington_DC",
 } as const;
 
 const BASE_URL = "https://parkingreform.org/mandates-map/city_detail/";
