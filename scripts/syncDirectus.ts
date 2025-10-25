@@ -185,6 +185,7 @@ async function readCitations(
     "source_description",
     "notes",
     "url",
+    "broken_url",
     "attachments",
   ]);
   return Object.fromEntries(rawCitations.map((record) => [record.id, record]));
@@ -358,10 +359,11 @@ function createCitations(
         citationIdx: citationJunctionIds.length === 1 ? null : citationIdx,
       },
     );
+    const url = citationRecord.broken_url === true ? null : citationRecord.url!;
     return {
       id: citationRecord.id!,
       description: citationRecord.source_description!,
-      url: citationRecord.url!,
+      url,
       notes: citationRecord.notes!,
       attachments,
       screenshots,
