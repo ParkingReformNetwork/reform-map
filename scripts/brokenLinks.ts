@@ -55,7 +55,7 @@ async function main(): Promise<void> {
     const deadLink = await findDeadLink(link);
     if (deadLink !== null) {
       const directusEntry = `https://mandates-map.directus.app/admin/content/citations/${id}`;
-      console.log(`${directusEntry}: ${link}`);
+      console.log(`${link} (${directusEntry})`);
     }
 
     if ((i + 1) % 10 === 0) {
