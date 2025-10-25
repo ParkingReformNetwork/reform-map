@@ -177,10 +177,9 @@ function updateCounterDownload(
 ): void {
   const button = document.querySelector(".counter-table-download");
   if (!button) return;
-  button.addEventListener("click", () => {
-    console.log("HERE");
-    table.download("csv", tableDownloadFileName(policyType, status));
-  });
+  button.addEventListener("click", () =>
+    table.download("csv", tableDownloadFileName(policyType, status)),
+  );
 }
 
 export default function initTable(
