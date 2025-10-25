@@ -3,7 +3,8 @@ import { mapPlaceToCitationLinks } from "../../scripts/brokenLinks";
 
 test("mapPlaceToCitationLinks correctly determines some example pages", async () => {
   // If the links get updated, then update the below tests.
-  const result = await mapPlaceToCitationLinks();
+  const rawResult = await mapPlaceToCitationLinks();
+  const result = Object.fromEntries(rawResult);
   expect(result["Abilene, Kansas, United States"]).toEqual([
     "https://abileneks.citycode.net/index.html#!artiOffStreParkLoadAndUnloRegu",
   ]);
