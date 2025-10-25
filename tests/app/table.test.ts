@@ -1,8 +1,32 @@
 import { expect, test } from "@playwright/test";
 
 import { ColumnComponent, RowComponent, SortDirection } from "tabulator-tables";
-import { compareDates } from "../../src/js/table";
+import { compareDates, tableDownloadFileName } from "../../src/js/table";
 import { Date } from "../../src/js/model/types";
+
+test("tableDownloadFileName()", () => {
+  expect(tableDownloadFileName("any parking reform", "adopted")).toEqual(
+    "parking-reforms--overview--adopted.csv",
+  );
+  expect(tableDownloadFileName("any parking reform", "proposed")).toEqual(
+    "parking-reforms--overview--proposed.csv",
+  );
+  expect(tableDownloadFileName("any parking reform", "repealed")).toEqual(
+    "parking-reforms--overview--repealed.csv",
+  );
+  expect(tableDownloadFileName("add parking maximums", "adopted")).toEqual(
+    "parking-reforms--maximums--adopted.csv",
+  );
+  expect(tableDownloadFileName("reduce parking minimums", "adopted")).toEqual(
+    "parking-reforms--reduce-minimums--adopted.csv",
+  );
+  expect(tableDownloadFileName("remove parking minimums", "adopted")).toEqual(
+    "parking-reforms--remove-minimums--adopted.csv",
+  );
+  expect(tableDownloadFileName("parking benefit district", "adopted")).toEqual(
+    "parking-reforms--benefit-district--adopted.csv",
+  );
+});
 
 test("compareDates handles descending and ascending", () => {
   const compare = (

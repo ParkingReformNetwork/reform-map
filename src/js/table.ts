@@ -5,6 +5,8 @@ import {
   SortModule,
   ResizeColumnsModule,
   MoveColumnsModule,
+  ExportModule,
+  DownloadModule,
   ColumnDefinition,
   FrozenColumnsModule,
   PageModule,
@@ -154,6 +156,32 @@ const ANY_REFORM_COLUMNS: ColumnDefinition[] = [
   },
 ];
 
+export function tableDownloadFileName(
+  policyType: PolicyTypeFilter,
+  status: ReformStatus,
+): string {
+  const policy = {
+    "any parking reform": "overview",
+    "add parking maximums": "maximums",
+    "remove parking minimums": "remove-minimums",
+    "reduce parking minimums": "reduce-minimums",
+    "parking benefit district": "benefit-district",
+  }[policyType];
+  return `parking-reforms--${policy}--${status}.csv`;
+}
+
+function updateCounterDownload(
+  table: Tabulator,
+  policyType: PolicyTypeFilter,
+  status: ReformStatus,
+): void {
+  const button = document.querySelector(".counter-table-download");
+  if (!button) return;
+  button.addEventListener("click", () =>
+    table.download("csv", tableDownloadFileName(policyType, status)),
+  );
+}
+
 export default function initTable(
   filterManager: PlaceFilterManager,
   viewToggle: ViewStateObservable,
@@ -166,6 +194,8 @@ export default function initTable(
     ResizeColumnsModule,
     MoveColumnsModule,
     PageModule,
+    ExportModule,
+    DownloadModule,
   ]);
 
   // For "any parking reform", we need distinct datasets for each ReformStatus because the
@@ -356,9 +386,11 @@ export default function initTable(
   // When on map view, we should only lazily update the table the next time
   // we switch to table view.
   let dataRefreshQueued = false;
+
   filterManager.subscribe(
     "update table's records",
     ({ policyTypeFilter, status }) => {
+      updateCounterDownload(table, policyTypeFilter, status);
       if (!tableBuilt) return;
       if (viewToggle.getValue() === "map") {
         dataRefreshQueued = true;
