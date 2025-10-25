@@ -11,6 +11,7 @@ import {
   ProcessedCompleteLandUsePolicy,
   readProcessedCompleteData,
 } from "./scripts/lib/data.js";
+import { generateSEO } from "./scripts/lib/staticPages.js";
 import { determinesupplementalPlaceInfo } from "./src/js/model/placeId.js";
 import { ReformStatus } from "./src/js/model/types.js";
 
@@ -76,6 +77,7 @@ export default async function (eleventyConfig: any) {
   const entries = Object.entries(completeData).map(([placeId, entry]) => ({
     placeId,
     escapedPlaceId: entry.place.encoded,
+    seo: generateSEO(placeId, entry),
     place: {
       name: entry.place.name,
       supplemental: determinesupplementalPlaceInfo(entry.place),
