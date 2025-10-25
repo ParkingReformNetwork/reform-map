@@ -2,6 +2,7 @@
 @use "theme/breakpoints";
 @use "theme/colors";
 @use "theme/icons";
+@use "theme/links";
 @use "theme/spacing";
 @use "theme/typography";
 @use "theme/zindex";
@@ -70,4 +71,10 @@
     width: icons.$icon-size-lg;
     height: icons.$icon-size-lg;
   }
+}
+
+.counter-search-reset,
+.counter-table-download {
+  display: inline;
+  @include links.link-styles;
 }

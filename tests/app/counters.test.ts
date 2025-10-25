@@ -10,6 +10,7 @@ import {
   determinePlaceDescription,
   determineSearch,
   SEARCH_RESET_HTML,
+  TABLE_DOWNLOAD_HTML,
 } from "../../src/js/filter-features/counters";
 import {
   ALL_POLICY_TYPE_FILTER,
@@ -171,10 +172,10 @@ test("determineAddMax()", () => {
   );
 
   expect(determineAddMax("table", "2 places in Mexico", "adopted")).toEqual(
-    "Showing details about adopted parking maximums for 2 places in Mexico",
+    `Showing details about adopted parking maximums for 2 places in Mexico - ${TABLE_DOWNLOAD_HTML}`,
   );
   expect(determineAddMax("table", "2 places in Mexico", "repealed")).toEqual(
-    "Showing details about repealed parking maximums for 2 places in Mexico",
+    `Showing details about repealed parking maximums for 2 places in Mexico - ${TABLE_DOWNLOAD_HTML}`,
   );
 });
 
@@ -187,10 +188,10 @@ test("determineReduceMinimums()", () => {
   );
 
   expect(determineReduceMin("table", "2 places in Mexico", "adopted")).toEqual(
-    "Showing details about adopted parking minimum reductions for 2 places in Mexico",
+    `Showing details about adopted parking minimum reductions for 2 places in Mexico - ${TABLE_DOWNLOAD_HTML}`,
   );
   expect(determineReduceMin("table", "2 places in Mexico", "repealed")).toEqual(
-    "Showing details about repealed parking minimum reductions for 2 places in Mexico",
+    `Showing details about repealed parking minimum reductions for 2 places in Mexico - ${TABLE_DOWNLOAD_HTML}`,
   );
 });
 
@@ -214,23 +215,23 @@ test("determineRemoveMin()", () => {
   expect(
     determineRmMin("table", "2 places in Mexico", false, "adopted"),
   ).toEqual(
-    "Showing details about adopted parking minimum removals for 2 places in Mexico",
+    `Showing details about adopted parking minimum removals for 2 places in Mexico - ${TABLE_DOWNLOAD_HTML}`,
   );
   expect(
     determineRmMin("table", "2 places in Mexico", false, "repealed"),
   ).toEqual(
-    "Showing details about repealed parking minimum removals for 2 places in Mexico",
+    `Showing details about repealed parking minimum removals for 2 places in Mexico - ${TABLE_DOWNLOAD_HTML}`,
   );
 
   expect(
     determineRmMin("table", "2 places in Mexico", true, "adopted"),
   ).toEqual(
-    "Showing details about adopted parking minimum removals for 2 places in Mexico that removed all parking minimums",
+    `Showing details about adopted parking minimum removals for 2 places in Mexico that removed all parking minimums - ${TABLE_DOWNLOAD_HTML}`,
   );
   expect(
     determineRmMin("table", "2 places in Mexico", true, "repealed"),
   ).toEqual(
-    "Showing details about repealed parking minimum removals for 2 places in Mexico",
+    `Showing details about repealed parking minimum removals for 2 places in Mexico - ${TABLE_DOWNLOAD_HTML}`,
   );
 });
 
@@ -249,12 +250,12 @@ test("determineBenefitDistrict()", () => {
   expect(
     determineBenefitDistrict("table", "2 places in Mexico", "adopted"),
   ).toEqual(
-    "Showing details about adopted parking benefit districts for 2 places in Mexico",
+    `Showing details about adopted parking benefit districts for 2 places in Mexico - ${TABLE_DOWNLOAD_HTML}`,
   );
   expect(
     determineBenefitDistrict("table", "2 places in Mexico", "repealed"),
   ).toEqual(
-    "Showing details about repealed parking benefit districts for 2 places in Mexico",
+    `Showing details about repealed parking benefit districts for 2 places in Mexico - ${TABLE_DOWNLOAD_HTML}`,
   );
 });
 
@@ -280,11 +281,11 @@ test("determineAnyReform()", () => {
 
   assert(
     { view: "table", matched: [], statePolicy: [], state: "adopted" },
-    "Showing an overview of adopted parking reforms in 5 places in Mexico",
+    `Showing an overview of adopted parking reforms in 5 places in Mexico - ${TABLE_DOWNLOAD_HTML}`,
   );
   assert(
     { view: "table", matched: [], statePolicy: [], state: "repealed" },
-    "Showing an overview of repealed parking reforms in 5 places in Mexico",
+    `Showing an overview of repealed parking reforms in 5 places in Mexico - ${TABLE_DOWNLOAD_HTML}`,
   );
 
   // For map view, we only show policy types that are both present in the matched places &

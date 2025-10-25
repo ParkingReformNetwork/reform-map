@@ -1,4 +1,4 @@
-a {
+@mixin link-styles {
   color: #337ab7;
   text-decoration: none;
 
@@ -9,6 +9,10 @@ a {
       text-decoration: underline;
     }
   }
+}
+
+a {
+  @include link-styles;
 }
 
 .external-link {

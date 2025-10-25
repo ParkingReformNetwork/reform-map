@@ -49,7 +49,8 @@ export function determinePlaceDescription(
   return `${numPlaces} ${label} in ${country}`;
 }
 
-export const SEARCH_RESET_HTML = `<a class="counter-search-reset" role="button" aria-label="reset search">reset search</a>`;
+export const SEARCH_RESET_HTML = `<button class="counter-search-reset" role="button" aria-label="reset search">reset search</button>`;
+export const TABLE_DOWNLOAD_HTML = `<button class="counter-table-download" role="button" aria-label="download table as CSV">download as CSV</button>`;
 
 export function determineSearch(
   view: ViewState,
@@ -89,7 +90,7 @@ export function determineAnyReform(
   state: ReformStatus,
 ): string {
   if (view === "table") {
-    return `Showing an overview of ${state} parking reforms in ${placeDescription}`;
+    return `Showing an overview of ${state} parking reforms in ${placeDescription} - ${TABLE_DOWNLOAD_HTML}`;
   }
 
   interface Description {
@@ -141,7 +142,7 @@ export function determineReduceMin(
 ): string {
   return view === "map"
     ? `Showing ${placeDescription} with ${status} parking minimum reductions`
-    : `Showing details about ${status} parking minimum reductions for ${placeDescription}`;
+    : `Showing details about ${status} parking minimum reductions for ${placeDescription} - ${TABLE_DOWNLOAD_HTML}`;
 }
 
 export function determineAddMax(
@@ -151,7 +152,7 @@ export function determineAddMax(
 ): string {
   return view === "map"
     ? `Showing ${placeDescription} with ${status} parking maximums`
-    : `Showing details about ${status} parking maximums for ${placeDescription}`;
+    : `Showing details about ${status} parking maximums for ${placeDescription} - ${TABLE_DOWNLOAD_HTML}`;
 }
 
 export function determineRmMin(
@@ -172,10 +173,12 @@ export function determineRmMin(
       : `${status} parking minimum removals`;
     return `Showing ${placeDescription} with ${suffix}`;
   }
+
   const prefix = `Showing details about ${status} parking minimum removals for ${placeDescription}`;
-  return allMinimumsInEffect
+  const summary = allMinimumsInEffect
     ? `${prefix} that removed all parking minimums`
     : prefix;
+  return `${summary} - ${TABLE_DOWNLOAD_HTML}`;
 }
 
 export function determineBenefitDistrict(
@@ -185,7 +188,7 @@ export function determineBenefitDistrict(
 ): string {
   return view === "map"
     ? `Showing ${placeDescription} with ${status} parking benefit districts`
-    : `Showing details about ${status} parking benefit districts for ${placeDescription}`;
+    : `Showing details about ${status} parking benefit districts for ${placeDescription} - ${TABLE_DOWNLOAD_HTML}`;
 }
 
 export function determineHtml(
