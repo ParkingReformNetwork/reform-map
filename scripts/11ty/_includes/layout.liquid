@@ -5,7 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     {% capture scss -%} {% render "style.scss" %} {%- endcapture -%}
     <style>{{ scss | scss_compile | cssmin }}</style>
-    <title>Parking reforms in {{ entry.placeId }} | Parking Reform Network</title>
+    <title>{{ entry.seo.title }}</title>
+    <meta name="description" content="{{ entry.seo.description }}" />
+    <meta name="og:title" content="{{ entry.seo.title }}" />
+    <meta name="og:description" content="{{ entry.seo.description }}" />
+    <meta name="og:type" content="website" />
     <script
       async
       src="https://www.googletagmanager.com/gtag/js?id=G-5MFS4ZVMY3"
