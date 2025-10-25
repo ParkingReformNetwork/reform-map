@@ -40,15 +40,18 @@ export function generateSEO(placeId: PlaceId, entry: ProcessedCoreEntry): SEO {
     );
     policyDescription = `proposed ${listFormatter.format(mapped)}`;
   } else if (repealed.length) {
-    policyDescription = listFormatter.format(repealed.map(
-      (v) =>
-        ({
-          "add parking maximums": "removed parking maximums",
-          "parking benefit district": "removed their parking benefit district",
-          "remove parking minimums": "reinstated parking minimums",
-          "reduce parking minimums": "reversed parking minimum reductions",
-        })[v],
-    ));
+    policyDescription = listFormatter.format(
+      repealed.map(
+        (v) =>
+          ({
+            "add parking maximums": "removed parking maximums",
+            "parking benefit district":
+              "removed their parking benefit district",
+            "remove parking minimums": "reinstated parking minimums",
+            "reduce parking minimums": "reversed parking minimum reductions",
+          })[v],
+      ),
+    );
   } else {
     throw new Error(`No reforms found for ${placeId}`);
   }
