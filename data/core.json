@@ -4016,6 +4016,24 @@
       }
     ]
   },
+  "Bangor Charter Township, Michigan, United States": {
+    "place": {
+      "name": "Bangor Charter Township",
+      "state": "Michigan",
+      "country": "United States",
+      "type": "city",
+      "encoded": "bangor-charter-township-michigan-united-states",
+      "pop": 14045,
+      "coord": [-83.8941713, 43.6482294]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["commercial", "industrial", "medical", "other"]
+      }
+    ]
+  },
   "Bangor, Maine, United States": {
     "place": {
       "name": "Bangor",
@@ -5005,6 +5023,31 @@
         "status": "adopted",
         "scope": ["city center / business district", "citywide"],
         "land": ["all uses", "other"]
+      }
+    ]
+  },
+  "Bedford Charter Township, Michigan, United States": {
+    "place": {
+      "name": "Bedford Charter Township",
+      "state": "Michigan",
+      "country": "United States",
+      "type": "city",
+      "encoded": "bedford-charter-township-michigan-united-states",
+      "pop": 9198,
+      "coord": [-85.2400174, 42.3805088]
+    },
+    "add_max": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": [
+          "commercial",
+          "industrial",
+          "medical",
+          "other",
+          "residential, multi-family"
+        ],
+        "date": "2025-01-09"
       }
     ]
   },
@@ -6174,6 +6217,24 @@
         "status": "adopted",
         "scope": ["citywide"],
         "land": ["commercial", "industrial", "other"]
+      }
+    ]
+  },
+  "Berlin Charter Township, Michigan, United States": {
+    "place": {
+      "name": "Berlin Charter Township",
+      "state": "Michigan",
+      "country": "United States",
+      "type": "city",
+      "encoded": "berlin-charter-township-michigan-united-states",
+      "pop": 9890,
+      "coord": [-83.2632737, 42.0213046]
+    },
+    "add_max": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["all uses"]
       }
     ]
   },
@@ -8258,6 +8319,24 @@
       {
         "status": "adopted",
         "scope": ["city center / business district"],
+        "land": ["all uses"]
+      }
+    ]
+  },
+  "Brandon Charter Township, Michigan, United States": {
+    "place": {
+      "name": "Brandon Charter Township",
+      "state": "Michigan",
+      "country": "United States",
+      "type": "city",
+      "encoded": "brandon-charter-township-michigan-united-states",
+      "pop": 15384,
+      "coord": [-83.3933198, 42.8377229]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
         "land": ["all uses"]
       }
     ]
@@ -12694,6 +12773,12 @@
         "status": "adopted",
         "scope": ["city center / business district", "main street / special"],
         "land": ["all uses"]
+      },
+      {
+        "status": "proposed",
+        "scope": ["citywide"],
+        "land": ["all uses"],
+        "date": "2025-06-20"
       }
     ]
   },
@@ -13057,6 +13142,36 @@
       {
         "status": "adopted",
         "scope": ["city center / business district", "main street / special"],
+        "land": ["all uses"]
+      }
+    ]
+  },
+  "Charlotte, Michigan, United States": {
+    "place": {
+      "name": "Charlotte",
+      "state": "Michigan",
+      "country": "United States",
+      "type": "city",
+      "encoded": "charlotte-michigan-united-states",
+      "pop": 9299,
+      "coord": [-84.8355792, 42.5637369]
+    },
+    "add_max": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["all uses"]
+      }
+    ],
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["commercial", "other"]
+      },
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
         "land": ["all uses"]
       }
     ]
@@ -16359,6 +16474,24 @@
       {
         "status": "adopted",
         "scope": ["city center / business district"],
+        "land": ["all uses"]
+      }
+    ]
+  },
+  "Cooper Charter Township, Michigan, United States": {
+    "place": {
+      "name": "Cooper Charter Township",
+      "state": "Michigan",
+      "country": "United States",
+      "type": "city",
+      "encoded": "cooper-charter-township-michigan-united-states",
+      "pop": 10418,
+      "coord": [-85.5903612, 42.3769015]
+    },
+    "add_max": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
         "land": ["all uses"]
       }
     ]
@@ -21156,6 +21289,31 @@
         "status": "adopted",
         "scope": ["main street / special"],
         "land": ["all uses", "commercial"]
+      }
+    ]
+  },
+  "East Bay Charter Township, Michigan, United States": {
+    "place": {
+      "name": "East Bay Charter Township",
+      "state": "Michigan",
+      "country": "United States",
+      "type": "city",
+      "encoded": "east-bay-charter-township-michigan-united-states",
+      "pop": 11589,
+      "coord": [-85.522725, 44.7070097]
+    },
+    "add_max": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": [
+          "commercial",
+          "industrial",
+          "medical",
+          "other",
+          "residential, multi-family"
+        ],
+        "date": "2024-12-09"
       }
     ]
   },
@@ -29940,6 +30098,24 @@
       }
     ]
   },
+  "Grand Rapids Charter Township, Michigan, United States": {
+    "place": {
+      "name": "Grand Rapids Charter Township",
+      "state": "Michigan",
+      "country": "United States",
+      "type": "city",
+      "encoded": "grand-rapids-charter-township-michigan-united-states",
+      "pop": 18905,
+      "coord": [-85.5708287, 42.9840261]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["all uses"]
+      }
+    ]
+  },
   "Grand Rapids, Michigan, United States": {
     "place": {
       "name": "Grand Rapids",
@@ -30825,6 +31001,24 @@
       }
     ]
   },
+  "Greenville, Michigan, United States": {
+    "place": {
+      "name": "Greenville",
+      "state": "Michigan",
+      "country": "United States",
+      "type": "city",
+      "encoded": "greenville-michigan-united-states",
+      "pop": 8816,
+      "coord": [-85.2527987, 43.1775314]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["commercial", "industrial", "medical", "other"]
+      }
+    ]
+  },
   "Greenville, Ohio, United States": {
     "place": {
       "name": "Greenville",
@@ -31081,6 +31275,33 @@
         "status": "adopted",
         "scope": ["city center / business district"],
         "land": ["all uses"]
+      }
+    ]
+  },
+  "Grosse Pointe Park, Michigan, United States": {
+    "place": {
+      "name": "Grosse Pointe Park",
+      "state": "Michigan",
+      "country": "United States",
+      "type": "city",
+      "encoded": "grosse-pointe-park-michigan-united-states",
+      "pop": 11595,
+      "coord": [-82.9313655, 42.3816896]
+    },
+    "add_max": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["all uses"],
+        "date": "2024-12-09"
+      }
+    ],
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["commercial", "other"],
+        "date": "2024-12-09"
       }
     ]
   },
@@ -31797,6 +32018,24 @@
         "status": "adopted",
         "scope": ["city center / business district"],
         "land": ["commercial", "other"]
+      }
+    ]
+  },
+  "Hampton Charter Township, Michigan, United States": {
+    "place": {
+      "name": "Hampton Charter Township",
+      "state": "Michigan",
+      "country": "United States",
+      "type": "city",
+      "encoded": "hampton-charter-township-michigan-united-states",
+      "pop": 9695,
+      "coord": [-83.7720056, 43.6097814]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["commercial", "industrial", "medical", "other"]
       }
     ]
   },
@@ -42127,6 +42366,24 @@
       }
     ]
   },
+  "Lincoln Charter Township, Michigan, United States": {
+    "place": {
+      "name": "Lincoln Charter Township",
+      "state": "Michigan",
+      "country": "United States",
+      "type": "city",
+      "encoded": "lincoln-charter-township-michigan-united-states",
+      "pop": 14929,
+      "coord": [-86.504967, 42.01789]
+    },
+    "add_max": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["all uses"]
+      }
+    ]
+  },
   "Lincoln Heights, Ohio, United States": {
     "place": {
       "name": "Lincoln Heights",
@@ -49069,6 +49326,24 @@
       }
     ]
   },
+  "Monitor Charter Township, Michigan, United States": {
+    "place": {
+      "name": "Monitor Charter Township",
+      "state": "Michigan",
+      "country": "United States",
+      "type": "city",
+      "encoded": "monitor-charter-township-michigan-united-states",
+      "pop": 10687,
+      "coord": [-83.9907805, 43.6115362]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["commercial", "industrial", "medical", "other"]
+      }
+    ]
+  },
   "Monona, Iowa, United States": {
     "place": {
       "name": "Monona",
@@ -49102,6 +49377,24 @@
         "status": "adopted",
         "scope": ["citywide"],
         "land": ["residential, all uses"]
+      }
+    ]
+  },
+  "Monroe Charter Township, Michigan, United States": {
+    "place": {
+      "name": "Monroe Charter Township",
+      "state": "Michigan",
+      "country": "United States",
+      "type": "city",
+      "encoded": "monroe-charter-township-michigan-united-states",
+      "pop": 14391,
+      "coord": [-83.4327289, 41.8961203]
+    },
+    "add_max": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["other"]
       }
     ]
   },
@@ -51278,6 +51571,24 @@
         "status": "adopted",
         "scope": ["city center / business district"],
         "land": ["commercial", "other"]
+      }
+    ]
+  },
+  "Mundy Charter Township, Michigan, United States": {
+    "place": {
+      "name": "Mundy Charter Township",
+      "state": "Michigan",
+      "country": "United States",
+      "type": "city",
+      "encoded": "mundy-charter-township-michigan-united-states",
+      "pop": 15281,
+      "coord": [-83.7504102, 42.9144355]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["all uses"]
       }
     ]
   },
@@ -53603,6 +53914,24 @@
         "status": "adopted",
         "scope": ["city center / business district"],
         "land": ["all uses"]
+      }
+    ]
+  },
+  "Niles Charter Township, Michigan, United States": {
+    "place": {
+      "name": "Niles Charter Township",
+      "state": "Michigan",
+      "country": "United States",
+      "type": "city",
+      "encoded": "niles-charter-township-michigan-united-states",
+      "pop": 14417,
+      "coord": [-86.2842991, 41.856198]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["commercial", "industrial", "medical", "other"]
       }
     ]
   },
@@ -58516,6 +58845,24 @@
         "scope": ["transit-oriented"],
         "land": ["commercial", "other", "residential, all uses"],
         "date": "2020-06-15"
+      }
+    ]
+  },
+  "Pennfield Charter Township, Michigan, United States": {
+    "place": {
+      "name": "Pennfield Charter Township",
+      "state": "Michigan",
+      "country": "United States",
+      "type": "city",
+      "encoded": "pennfield-charter-township-michigan-united-states",
+      "pop": 8781,
+      "coord": [-85.1225061, 42.3807918]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["all uses"]
       }
     ]
   },
@@ -63587,6 +63934,24 @@
           "other",
           "residential, all uses"
         ]
+      }
+    ]
+  },
+  "Riverview, Michigan, United States": {
+    "place": {
+      "name": "Riverview",
+      "state": "Michigan",
+      "country": "United States",
+      "type": "city",
+      "encoded": "riverview-michigan-united-states",
+      "pop": 12490,
+      "coord": [-83.1793697, 42.1742073]
+    },
+    "add_max": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["all uses"]
       }
     ]
   },
@@ -70246,6 +70611,30 @@
       }
     ]
   },
+  "Springfield Charter Township, Michigan, United States": {
+    "place": {
+      "name": "Springfield Charter Township",
+      "state": "Michigan",
+      "country": "United States",
+      "type": "city",
+      "encoded": "springfield-charter-township-michigan-united-states",
+      "pop": 14703,
+      "coord": [-83.508718, 42.7433313]
+    },
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": [
+          "commercial",
+          "medical",
+          "other",
+          "residential, low-density",
+          "residential, multi-family"
+        ]
+      }
+    ]
+  },
   "Springfield, Illinois, United States": {
     "place": {
       "name": "Springfield",
@@ -73604,6 +73993,24 @@
         "status": "adopted",
         "scope": ["city center / business district"],
         "land": ["commercial", "other"]
+      }
+    ]
+  },
+  "Tallmadge Charter Township, Michigan, United States": {
+    "place": {
+      "name": "Tallmadge Charter Township",
+      "state": "Michigan",
+      "country": "United States",
+      "type": "city",
+      "encoded": "tallmadge-charter-township-michigan-united-states",
+      "pop": 8802,
+      "coord": [-85.8308735, 42.971405]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["all uses"]
       }
     ]
   },
@@ -82974,6 +83381,24 @@
       "coord": [-84.7404532, 38.0686424]
     },
     "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["all uses"]
+      }
+    ]
+  },
+  "Woodhaven, Michigan, United States": {
+    "place": {
+      "name": "Woodhaven",
+      "state": "Michigan",
+      "country": "United States",
+      "type": "city",
+      "encoded": "woodhaven-michigan-united-states",
+      "pop": 12941,
+      "coord": [-83.2451066, 42.1370519]
+    },
+    "reduce_min": [
       {
         "status": "adopted",
         "scope": ["city center / business district"],
