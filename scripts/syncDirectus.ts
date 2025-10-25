@@ -359,6 +359,7 @@ function createCitations(
       },
     );
     return {
+      id: citationRecord.id!,
       description: citationRecord.source_description!,
       url: citationRecord.url!,
       notes: citationRecord.notes!,

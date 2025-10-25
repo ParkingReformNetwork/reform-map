@@ -84,6 +84,7 @@ export type Place = {
 type CitationType = "city code" | "media report" | "other";
 
 export type Citation = {
+  id: number;
   type: CitationType;
   source_description: string;
   notes: string | null;
