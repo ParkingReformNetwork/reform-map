@@ -17271,13 +17271,28 @@
       "type": "city",
       "encoded": "Cramerton_NC",
       "pop": 5296,
-      "coord": [-81.0750757, 35.2387504]
+      "coord": [-81.0750757, 35.2387504],
+      "repeal": true
     },
+    "add_max": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["all uses"],
+        "date": "2024-05-07"
+      }
+    ],
     "rm_min": [
       {
         "status": "adopted",
         "scope": ["city center / business district"],
         "land": ["all uses"]
+      },
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["all uses"],
+        "date": "2025-09-16"
       }
     ]
   },
@@ -22242,6 +22257,25 @@
       }
     ]
   },
+  "Edgewater, Colorado, United States": {
+    "place": {
+      "name": "Edgewater",
+      "state": "Colorado",
+      "country": "United States",
+      "type": "city",
+      "encoded": "edgewater-colorado-united-states",
+      "pop": 5005,
+      "coord": [-105.0621833, 39.7457238]
+    },
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["residential, all uses"],
+        "date": "2025-06-17"
+      }
+    ]
+  },
   "Edgewood, New Mexico, United States": {
     "place": {
       "name": "Edgewood",
@@ -23808,6 +23842,14 @@
         "scope": ["citywide"],
         "land": ["all uses"]
       }
+    ],
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["transit-oriented"],
+        "land": ["residential, multi-family"],
+        "date": "2025-06-10"
+      }
     ]
   },
   "Erie, Illinois, United States": {
@@ -25211,6 +25253,25 @@
       }
     ]
   },
+  "Federal Heights, Colorado, United States": {
+    "place": {
+      "name": "Federal Heights",
+      "state": "Colorado",
+      "country": "United States",
+      "type": "city",
+      "encoded": "federal-heights-colorado-united-states",
+      "pop": 14382,
+      "coord": [-105.015631, 39.8591279]
+    },
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["residential, multi-family"],
+        "date": "2025-07-01"
+      }
+    ]
+  },
   "Federalsburg, Maryland, United States": {
     "place": {
       "name": "Federalsburg",
@@ -26283,6 +26344,14 @@
         "status": "adopted",
         "scope": ["citywide", "transit-oriented"],
         "land": ["commercial", "other", "residential, all uses"]
+      }
+    ],
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["residential, multi-family"],
+        "date": "2025-02-04"
       }
     ]
   },
@@ -40473,6 +40542,13 @@
         "scope": ["citywide"],
         "land": ["all uses"]
       }
+    ],
+    "rm_min": [
+      {
+        "status": "proposed",
+        "scope": ["citywide", "transit-oriented"],
+        "land": ["residential, all uses"]
+      }
     ]
   },
   "Lakewood, New York, United States": {
@@ -42917,6 +42993,14 @@
           "residential, multi-family"
         ]
       }
+    ],
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["transit-oriented"],
+        "land": ["residential, all uses"],
+        "date": "2025-06-03"
+      }
     ]
   },
   "Livingston, Montana, United States": {
@@ -43614,6 +43698,12 @@
         "status": "adopted",
         "scope": ["city center / business district"],
         "land": ["all uses"]
+      },
+      {
+        "status": "adopted",
+        "scope": ["transit-oriented"],
+        "land": ["residential, multi-family"],
+        "date": "2025-07-08"
       }
     ]
   },
@@ -68373,6 +68463,25 @@
       }
     ]
   },
+  "Sheridan, Colorado, United States": {
+    "place": {
+      "name": "Sheridan",
+      "state": "Colorado",
+      "country": "United States",
+      "type": "city",
+      "encoded": "sheridan-colorado-united-states",
+      "pop": 6105,
+      "coord": [-105.025058, 39.6469285]
+    },
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["transit-oriented"],
+        "land": ["residential, multi-family"],
+        "date": "2025-06-23"
+      }
+    ]
+  },
   "Sheridan, Wyoming, United States": {
     "place": {
       "name": "Sheridan",
@@ -73516,6 +73625,25 @@
         "status": "adopted",
         "scope": ["city center / business district"],
         "land": ["all uses"]
+      }
+    ]
+  },
+  "Superior, Colorado, United States": {
+    "place": {
+      "name": "Superior",
+      "state": "Colorado",
+      "country": "United States",
+      "type": "city",
+      "encoded": "superior-colorado-united-states",
+      "pop": 13094,
+      "coord": [-105.1685977, 39.9527634]
+    },
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["transit-oriented"],
+        "land": ["residential, multi-family"],
+        "date": "2025-04-28"
       }
     ]
   },
@@ -81564,6 +81692,14 @@
           "transit-oriented"
         ],
         "land": ["all uses"]
+      }
+    ],
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["residential, multi-family"],
+        "date": "2025-06-23"
       }
     ]
   },
