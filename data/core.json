@@ -267,6 +267,12 @@
         "status": "adopted",
         "scope": ["transit-oriented"],
         "land": ["commercial", "industrial", "other"]
+      },
+      {
+        "status": "adopted",
+        "scope": ["transit-oriented"],
+        "land": ["residential, multi-family"],
+        "date": "2025-06-10"
       }
     ]
   },
@@ -279,6 +285,24 @@
       "encoded": "adel-iowa-united-states",
       "pop": 6153,
       "coord": [-94.0185176, 41.6174123]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["all uses"]
+      }
+    ]
+  },
+  "Adrian Charter Township, Michigan, United States": {
+    "place": {
+      "name": "Adrian Charter Township",
+      "state": "Michigan",
+      "country": "United States",
+      "type": "city",
+      "encoded": "adrian-charter-township-michigan-united-states",
+      "pop": 6401,
+      "coord": [-84.0673858, 41.9545519]
     },
     "reduce_min": [
       {
@@ -2253,6 +2277,25 @@
         "status": "adopted",
         "scope": ["city center / business district"],
         "land": ["commercial", "other"]
+      }
+    ]
+  },
+  "Arapahoe County, Colorado, United States": {
+    "place": {
+      "name": "Arapahoe County",
+      "state": "Colorado",
+      "country": "United States",
+      "type": "county",
+      "encoded": "arapahoe-county-colorado-united-states",
+      "pop": 655070,
+      "coord": [-104.3628567, 39.6416781]
+    },
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["residential, multi-family"],
+        "date": "2025-09-09"
       }
     ]
   },
@@ -5087,6 +5130,49 @@
       }
     ]
   },
+  "Beech Grove, Indiana, United States": {
+    "place": {
+      "name": "Beech Grove",
+      "state": "Indiana",
+      "country": "United States",
+      "type": "city",
+      "encoded": "beech-grove-indiana-united-states",
+      "pop": 14717,
+      "coord": [-86.0894158, 39.7221906]
+    },
+    "add_max": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["commercial", "industrial", "medical", "other"]
+      }
+    ],
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["main street / special"],
+        "land": ["all uses"]
+      },
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["all uses"]
+      }
+    ],
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": [
+          "commercial",
+          "industrial",
+          "medical",
+          "other",
+          "residential, multi-family"
+        ]
+      }
+    ]
+  },
   "Beijing, China": {
     "place": {
       "name": "Beijing",
@@ -7523,6 +7609,24 @@
       }
     ]
   },
+  "Bluffton, Indiana, United States": {
+    "place": {
+      "name": "Bluffton",
+      "state": "Indiana",
+      "country": "United States",
+      "type": "city",
+      "encoded": "bluffton-indiana-united-states",
+      "pop": 10308,
+      "coord": [-85.1716368, 40.7386579]
+    },
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["all uses"]
+      }
+    ]
+  },
   "Boaz, Alabama, United States": {
     "place": {
       "name": "Boaz",
@@ -9356,11 +9460,17 @@
         "land": ["all uses"]
       }
     ],
-    "reduce_min": [
+    "rm_min": [
       {
         "status": "adopted",
-        "scope": ["main street / special"],
-        "land": ["commercial", "industrial", "other", "residential, all uses"]
+        "scope": ["transit-oriented"],
+        "land": [
+          "commercial",
+          "industrial",
+          "other",
+          "residential, multi-family"
+        ],
+        "date": "2025-05-13"
       }
     ]
   },
@@ -16110,6 +16220,14 @@
         "scope": ["citywide"],
         "land": ["commercial", "industrial", "other", "residential, all uses"]
       }
+    ],
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide", "transit-oriented"],
+        "land": ["residential, low-density", "residential, multi-family"],
+        "date": "2025-11-03"
+      }
     ]
   },
   "Comstock Charter Township, Michigan, United States": {
@@ -17285,11 +17403,6 @@
     "rm_min": [
       {
         "status": "adopted",
-        "scope": ["city center / business district"],
-        "land": ["all uses"]
-      },
-      {
-        "status": "adopted",
         "scope": ["citywide"],
         "land": ["all uses"],
         "date": "2025-09-16"
@@ -17849,6 +17962,24 @@
       "coord": [-64.03992811716789, 45.71837742627231]
     },
     "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["commercial", "industrial", "medical", "other"]
+      }
+    ]
+  },
+  "Cumberland, Indiana, United States": {
+    "place": {
+      "name": "Cumberland",
+      "state": "Indiana",
+      "country": "United States",
+      "type": "city",
+      "encoded": "cumberland-indiana-united-states",
+      "pop": 5954,
+      "coord": [-85.9572036, 39.7761534]
+    },
+    "add_max": [
       {
         "status": "adopted",
         "scope": ["citywide"],
@@ -20431,6 +20562,24 @@
       "coord": [-81.4741475, 40.5213381]
     },
     "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["all uses"]
+      }
+    ]
+  },
+  "Dowagiac, Michigan, United States": {
+    "place": {
+      "name": "Dowagiac",
+      "state": "Michigan",
+      "country": "United States",
+      "type": "city",
+      "encoded": "dowagiac-michigan-united-states",
+      "pop": 5721,
+      "coord": [-86.1088809, 41.9824681]
+    },
+    "reduce_min": [
       {
         "status": "adopted",
         "scope": ["city center / business district"],
@@ -23054,6 +23203,24 @@
         "status": "adopted",
         "scope": ["city center / business district"],
         "land": ["commercial"]
+      }
+    ]
+  },
+  "Ellettsville, Indiana, United States": {
+    "place": {
+      "name": "Ellettsville",
+      "state": "Indiana",
+      "country": "United States",
+      "type": "city",
+      "encoded": "ellettsville-indiana-united-states",
+      "pop": 6712,
+      "coord": [-86.6250008, 39.2339348]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["all uses"]
       }
     ]
   },
@@ -27016,6 +27183,31 @@
       }
     ]
   },
+  "Frankfort, Indiana, United States": {
+    "place": {
+      "name": "Frankfort",
+      "state": "Indiana",
+      "country": "United States",
+      "type": "city",
+      "encoded": "frankfort-indiana-united-states",
+      "pop": 16715,
+      "coord": [-86.5108244, 40.2797657]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["all uses"]
+      }
+    ],
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["all uses"]
+      }
+    ]
+  },
   "Frankfort, Kentucky, United States": {
     "place": {
       "name": "Frankfort",
@@ -29754,6 +29946,24 @@
         "status": "adopted",
         "scope": ["city center / business district"],
         "land": ["commercial"]
+      }
+    ]
+  },
+  "Goshen, Indiana, United States": {
+    "place": {
+      "name": "Goshen",
+      "state": "Indiana",
+      "country": "United States",
+      "type": "city",
+      "encoded": "goshen-indiana-united-states",
+      "pop": 34517,
+      "coord": [-85.8344491, 41.5850394]
+    },
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["commercial", "other", "residential, multi-family"]
       }
     ]
   },
@@ -32671,6 +32881,24 @@
       }
     ]
   },
+  "Hartford City, Indiana, United States": {
+    "place": {
+      "name": "Hartford City",
+      "state": "Indiana",
+      "country": "United States",
+      "type": "city",
+      "encoded": "hartford-city-indiana-united-states",
+      "pop": 6086,
+      "coord": [-85.369972, 40.4511541]
+    },
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["all uses"]
+      }
+    ]
+  },
   "Hartford, Connecticut, United States": {
     "place": {
       "name": "Hartford",
@@ -32950,6 +33178,24 @@
         "status": "adopted",
         "scope": ["citywide"],
         "land": ["commercial", "industrial", "other"]
+      }
+    ]
+  },
+  "Hastings, Michigan, United States": {
+    "place": {
+      "name": "Hastings",
+      "state": "Michigan",
+      "country": "United States",
+      "type": "city",
+      "encoded": "hastings-michigan-united-states",
+      "pop": 7514,
+      "coord": [-85.2908404, 42.6458683]
+    },
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["all uses"]
       }
     ]
   },
@@ -36019,6 +36265,25 @@
       "pop": 876384,
       "coord": [-86.1583502, 39.7683331]
     },
+    "add_max": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["commercial", "industrial", "medical", "other"]
+      }
+    ],
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["main street / special"],
+        "land": ["all uses"]
+      },
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["all uses"]
+      }
+    ],
     "rm_min": [
       {
         "status": "adopted",
@@ -41265,6 +41530,49 @@
       }
     ]
   },
+  "Lawrence, Indiana, United States": {
+    "place": {
+      "name": "Lawrence",
+      "state": "Indiana",
+      "country": "United States",
+      "type": "city",
+      "encoded": "lawrence-indiana-united-states",
+      "pop": 49370,
+      "coord": [-86.02721088170708, 39.84047205635021]
+    },
+    "add_max": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["commercial", "industrial", "medical", "other"]
+      }
+    ],
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["main street / special"],
+        "land": ["all uses"]
+      },
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["all uses"]
+      }
+    ],
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": [
+          "commercial",
+          "industrial",
+          "medical",
+          "other",
+          "residential, multi-family"
+        ]
+      }
+    ]
+  },
   "Lawrence, Kansas, United States": {
     "place": {
       "name": "Lawrence",
@@ -44528,6 +44836,31 @@
         "status": "adopted",
         "scope": ["city center / business district"],
         "land": ["all uses"]
+      }
+    ]
+  },
+  "Madison, Indiana, United States": {
+    "place": {
+      "name": "Madison",
+      "state": "Indiana",
+      "country": "United States",
+      "type": "city",
+      "encoded": "madison-indiana-united-states",
+      "pop": 12357,
+      "coord": [-85.37723626091906, 38.73626445420329]
+    },
+    "add_max": [
+      {
+        "status": "adopted",
+        "scope": ["main street / special"],
+        "land": ["commercial"]
+      }
+    ],
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["main street / special"],
+        "land": ["commercial"]
       }
     ]
   },
@@ -49929,6 +50262,31 @@
       }
     ]
   },
+  "Monticello, Indiana, United States": {
+    "place": {
+      "name": "Monticello",
+      "state": "Indiana",
+      "country": "United States",
+      "type": "city",
+      "encoded": "monticello-indiana-united-states",
+      "pop": 5508,
+      "coord": [-86.761883, 40.7448704]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["all uses"]
+      }
+    ],
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["all uses"]
+      }
+    ]
+  },
   "Monticello, Minnesota, United States": {
     "place": {
       "name": "Monticello",
@@ -54888,6 +55246,31 @@
       }
     ]
   },
+  "North Vernon, Indiana, United States": {
+    "place": {
+      "name": "North Vernon",
+      "state": "Indiana",
+      "country": "United States",
+      "type": "city",
+      "encoded": "north-vernon-indiana-united-states",
+      "pop": 6608,
+      "coord": [-85.6235796, 39.006165]
+    },
+    "add_max": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["residential, all uses"]
+      }
+    ],
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["all uses"]
+      }
+    ]
+  },
   "North Wales, Pennsylvania, United States": {
     "place": {
       "name": "North Wales",
@@ -57123,6 +57506,24 @@
         "status": "adopted",
         "scope": ["city center / business district"],
         "land": ["commercial"]
+      }
+    ]
+  },
+  "Ossian, Indiana, United States": {
+    "place": {
+      "name": "Ossian",
+      "state": "Indiana",
+      "country": "United States",
+      "type": "city",
+      "encoded": "ossian-indiana-united-states",
+      "pop": 3266,
+      "coord": [-85.1663593, 40.880603]
+    },
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["all uses"]
       }
     ]
   },
@@ -63069,6 +63470,24 @@
       }
     ]
   },
+  "Rensselaer, Indiana, United States": {
+    "place": {
+      "name": "Rensselaer",
+      "state": "Indiana",
+      "country": "United States",
+      "type": "city",
+      "encoded": "rensselaer-indiana-united-states",
+      "pop": 5733,
+      "coord": [-87.1508562, 40.9367045]
+    },
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["all uses"]
+      }
+    ]
+  },
   "Renville, Minnesota, United States": {
     "place": {
       "name": "Renville",
@@ -64483,6 +64902,25 @@
       }
     ]
   },
+  "Rockford, Michigan, United States": {
+    "place": {
+      "name": "Rockford",
+      "state": "Michigan",
+      "country": "United States",
+      "type": "city",
+      "encoded": "rockford-michigan-united-states",
+      "pop": 6142,
+      "coord": [-85.559604, 43.119721]
+    },
+    "add_max": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["all uses"],
+        "date": "2025-02-10"
+      }
+    ]
+  },
   "Rockford, Minnesota, United States": {
     "place": {
       "name": "Rockford",
@@ -65627,11 +66065,28 @@
       "pop": 44202,
       "coord": [-83.9490365, 43.4200387]
     },
+    "add_max": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["all uses"],
+        "date": "2025-07-27"
+      }
+    ],
     "reduce_min": [
       {
         "status": "adopted",
         "scope": ["city center / business district"],
-        "land": ["all uses"]
+        "land": ["all uses"],
+        "date": "2025-07-27"
+      }
+    ],
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["commercial", "other", "residential, multi-family"],
+        "date": "2025-07-27"
       }
     ]
   },
@@ -65749,6 +66204,24 @@
       {
         "status": "adopted",
         "scope": ["citywide"],
+        "land": ["all uses"]
+      }
+    ]
+  },
+  "Salem, Indiana, United States": {
+    "place": {
+      "name": "Salem",
+      "state": "Indiana",
+      "country": "United States",
+      "type": "city",
+      "encoded": "salem-indiana-united-states",
+      "pop": 6371,
+      "coord": [-86.101089, 38.6056131]
+    },
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
         "land": ["all uses"]
       }
     ]
@@ -67381,6 +67854,24 @@
       }
     ]
   },
+  "Scottsburg, Indiana, United States": {
+    "place": {
+      "name": "Scottsburg",
+      "state": "Indiana",
+      "country": "United States",
+      "type": "city",
+      "encoded": "scottsburg-indiana-united-states",
+      "pop": 7345,
+      "coord": [-85.7702451, 38.685614]
+    },
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["main street / special"],
+        "land": ["all uses"]
+      }
+    ]
+  },
   "Scottsdale, Arizona, United States": {
     "place": {
       "name": "Scottsdale",
@@ -67904,6 +68395,24 @@
       {
         "status": "adopted",
         "scope": ["citywide"],
+        "land": ["all uses"]
+      }
+    ]
+  },
+  "Seymour, Indiana, United States": {
+    "place": {
+      "name": "Seymour",
+      "state": "Indiana",
+      "country": "United States",
+      "type": "city",
+      "encoded": "seymour-indiana-united-states",
+      "pop": 21569,
+      "coord": [-85.8902547, 38.9592201]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
         "land": ["all uses"]
       }
     ]
@@ -68788,27 +69297,15 @@
       "type": "city",
       "encoded": "Shreveport_LA",
       "pop": 187593,
-      "coord": [-93.7477839, 32.5135356]
+      "coord": [-93.7477839, 32.5135356],
+      "repeal": true
     },
-    "add_max": [
-      {
-        "status": "adopted",
-        "scope": ["citywide"],
-        "land": ["commercial", "industrial", "medical", "other"]
-      }
-    ],
-    "reduce_min": [
-      {
-        "status": "adopted",
-        "scope": ["citywide"],
-        "land": ["all uses"]
-      }
-    ],
     "rm_min": [
       {
         "status": "adopted",
-        "scope": ["city center / business district", "citywide"],
-        "land": ["all uses", "commercial", "industrial", "other"]
+        "scope": ["citywide"],
+        "land": ["all uses"],
+        "date": "2025-10-28"
       }
     ]
   },
@@ -70451,6 +70948,49 @@
       }
     ]
   },
+  "Speedway, Indiana, United States": {
+    "place": {
+      "name": "Speedway",
+      "state": "Indiana",
+      "country": "United States",
+      "type": "city",
+      "encoded": "speedway-indiana-united-states",
+      "pop": 13952,
+      "coord": [-86.2407144, 39.7881233]
+    },
+    "add_max": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["commercial", "industrial", "medical", "other"]
+      }
+    ],
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["main street / special"],
+        "land": ["all uses"]
+      },
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["all uses"]
+      }
+    ],
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": [
+          "commercial",
+          "industrial",
+          "medical",
+          "other",
+          "residential, multi-family"
+        ]
+      }
+    ]
+  },
   "Spencer, Iowa, United States": {
     "place": {
       "name": "Spencer",
@@ -71133,7 +71673,7 @@
       "type": "city",
       "encoded": "St.Clair_MI",
       "pop": 5464,
-      "coord": [-82.6283554, 42.9426715]
+      "coord": [-82.48747870885961, 42.82539906260304]
     },
     "rm_min": [
       {
@@ -78136,6 +78676,24 @@
       }
     ]
   },
+  "Vincennes, Indiana, United States": {
+    "place": {
+      "name": "Vincennes",
+      "state": "Indiana",
+      "country": "United States",
+      "type": "city",
+      "encoded": "vincennes-indiana-united-states",
+      "pop": 16759,
+      "coord": [-87.5286325, 38.6772691]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["all uses"]
+      }
+    ]
+  },
   "Vinita, Oklahoma, United States": {
     "place": {
       "name": "Vinita",
@@ -81587,6 +82145,31 @@
       }
     ]
   },
+  "Westville, Indiana, United States": {
+    "place": {
+      "name": "Westville",
+      "state": "Indiana",
+      "country": "United States",
+      "type": "city",
+      "encoded": "westville-indiana-united-states",
+      "pop": 5257,
+      "coord": [-86.8969236, 41.5463225]
+    },
+    "add_max": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["commercial", "industrial", "medical", "other"]
+      }
+    ],
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["commercial", "other"]
+      }
+    ]
+  },
   "Westville, Nova Scotia, Canada": {
     "place": {
       "name": "Westville",
@@ -81959,6 +82542,49 @@
       {
         "status": "adopted",
         "scope": ["citywide"],
+        "land": ["all uses"]
+      }
+    ]
+  },
+  "Whitestown, Indiana, United States": {
+    "place": {
+      "name": "Whitestown",
+      "state": "Indiana",
+      "country": "United States",
+      "type": "city",
+      "encoded": "whitestown-indiana-united-states",
+      "pop": 10178,
+      "coord": [-86.3458296, 39.9972626]
+    },
+    "add_max": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": [
+          "commercial",
+          "industrial",
+          "medical",
+          "other",
+          "residential, multi-family"
+        ]
+      }
+    ],
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["all uses", "commercial", "other"]
+      },
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["all uses"]
+      }
+    ],
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
         "land": ["all uses"]
       }
     ]
@@ -84368,6 +84994,38 @@
       }
     ]
   },
+  "Yorktown, Indiana, United States": {
+    "place": {
+      "name": "Yorktown",
+      "state": "Indiana",
+      "country": "United States",
+      "type": "city",
+      "encoded": "yorktown-indiana-united-states",
+      "pop": 11548,
+      "coord": [-85.4941396, 40.1736547]
+    },
+    "add_max": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["all uses"]
+      }
+    ],
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["all uses"]
+      }
+    ],
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["all uses"]
+      }
+    ]
+  },
   "Yorkville, Illinois, United States": {
     "place": {
       "name": "Yorkville",
@@ -84617,6 +85275,31 @@
       {
         "status": "adopted",
         "scope": ["citywide"],
+        "land": ["all uses"]
+      }
+    ]
+  },
+  "Zeeland, Michigan, United States": {
+    "place": {
+      "name": "Zeeland",
+      "state": "Michigan",
+      "country": "United States",
+      "type": "city",
+      "encoded": "zeeland-michigan-united-states",
+      "pop": 5719,
+      "coord": [-86.0165267, 42.8123375]
+    },
+    "add_max": [
+      {
+        "status": "adopted",
+        "scope": ["main street / special"],
+        "land": ["all uses"]
+      }
+    ],
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
         "land": ["all uses"]
       }
     ]
