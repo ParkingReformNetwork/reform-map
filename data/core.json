@@ -8132,6 +8132,24 @@
       }
     ]
   },
+  "Bowling Green, Kentucky, United States": {
+    "place": {
+      "name": "Bowling Green",
+      "state": "Kentucky",
+      "country": "United States",
+      "type": "city",
+      "encoded": "bowling-green-kentucky-united-states",
+      "pop": 72294,
+      "coord": [-86.4428677, 36.9929203]
+    },
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["commercial", "other"]
+      }
+    ]
+  },
   "Bowling Green, Missouri, United States": {
     "place": {
       "name": "Bowling Green",
@@ -18405,6 +18423,24 @@
       }
     ]
   },
+  "Danville, Kentucky, United States": {
+    "place": {
+      "name": "Danville",
+      "state": "Kentucky",
+      "country": "United States",
+      "type": "city",
+      "encoded": "danville-kentucky-united-states",
+      "pop": 17234,
+      "coord": [-84.7721823, 37.6456488]
+    },
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["all uses"]
+      }
+    ]
+  },
   "Danville, Pennsylvania, United States": {
     "place": {
       "name": "Danville",
@@ -25970,6 +26006,30 @@
       }
     ]
   },
+  "Florence, Kentucky, United States": {
+    "place": {
+      "name": "Florence",
+      "state": "Kentucky",
+      "country": "United States",
+      "type": "city",
+      "encoded": "florence-kentucky-united-states",
+      "pop": 31946,
+      "coord": [-84.6266111, 38.9989499]
+    },
+    "add_max": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": [
+          "commercial",
+          "industrial",
+          "medical",
+          "other",
+          "residential, multi-family"
+        ]
+      }
+    ]
+  },
   "Florida, United States": {
     "place": {
       "name": "Florida",
@@ -26865,6 +26925,24 @@
         "status": "adopted",
         "scope": ["city center / business district"],
         "land": ["commercial", "other"]
+      }
+    ]
+  },
+  "Fort Thomas, Kentucky, United States": {
+    "place": {
+      "name": "Fort Thomas",
+      "state": "Kentucky",
+      "country": "United States",
+      "type": "city",
+      "encoded": "fort-thomas-kentucky-united-states",
+      "pop": 17438,
+      "coord": [-84.4483432, 39.0786242]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["all uses"]
       }
     ]
   },
@@ -28915,6 +28993,24 @@
       {
         "status": "adopted",
         "scope": ["main street / special"],
+        "land": ["all uses"]
+      }
+    ]
+  },
+  "Georgetown, Kentucky, United States": {
+    "place": {
+      "name": "Georgetown",
+      "state": "Kentucky",
+      "country": "United States",
+      "type": "city",
+      "encoded": "georgetown-kentucky-united-states",
+      "pop": 37086,
+      "coord": [-84.5597128, 38.2099837]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
         "land": ["all uses"]
       }
     ]
@@ -44922,6 +45018,24 @@
         "status": "adopted",
         "scope": ["city center / business district", "main street / special"],
         "land": ["commercial", "residential, all uses"]
+      }
+    ]
+  },
+  "Madisonville, Kentucky, United States": {
+    "place": {
+      "name": "Madisonville",
+      "state": "Kentucky",
+      "country": "United States",
+      "type": "city",
+      "encoded": "madisonville-kentucky-united-states",
+      "pop": 19542,
+      "coord": [-87.4986989, 37.3280037]
+    },
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["all uses"]
       }
     ]
   },
@@ -63865,6 +63979,38 @@
       }
     ]
   },
+  "Richmond, Kentucky, United States": {
+    "place": {
+      "name": "Richmond",
+      "state": "Kentucky",
+      "country": "United States",
+      "type": "city",
+      "encoded": "richmond-kentucky-united-states",
+      "pop": 34585,
+      "coord": [-84.2946539, 37.7478572]
+    },
+    "add_max": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["all uses"]
+      }
+    ],
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": [
+          "all uses",
+          "commercial",
+          "industrial",
+          "medical",
+          "other",
+          "residential, multi-family"
+        ]
+      }
+    ]
+  },
   "Richmond, Michigan, United States": {
     "place": {
       "name": "Richmond",
@@ -68871,6 +69017,31 @@
         "status": "adopted",
         "scope": ["citywide"],
         "land": ["commercial", "industrial", "other"]
+      }
+    ]
+  },
+  "Shelbyville, Kentucky, United States": {
+    "place": {
+      "name": "Shelbyville",
+      "state": "Kentucky",
+      "country": "United States",
+      "type": "city",
+      "encoded": "shelbyville-kentucky-united-states",
+      "pop": 17282,
+      "coord": [-85.2235666, 38.2120144]
+    },
+    "add_max": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["all uses"]
+      }
+    ],
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["commercial", "other"]
       }
     ]
   },
