@@ -1127,6 +1127,24 @@
       }
     ]
   },
+  "Alliance, Ohio, United States": {
+    "place": {
+      "name": "Alliance",
+      "state": "Ohio",
+      "country": "United States",
+      "type": "city",
+      "encoded": "alliance-ohio-united-states",
+      "pop": 21672,
+      "coord": [-81.1059309, 40.9153362]
+    },
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["main street / special"],
+        "land": ["all uses"]
+      }
+    ]
+  },
   "Allouez, Wisconsin, United States": {
     "place": {
       "name": "Allouez",
@@ -3736,6 +3754,24 @@
       }
     ]
   },
+  "Avon, Ohio, United States": {
+    "place": {
+      "name": "Avon",
+      "state": "Ohio",
+      "country": "United States",
+      "type": "city",
+      "encoded": "avon-ohio-united-states",
+      "pop": 24847,
+      "coord": [-82.0350598, 41.4516512]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["all uses"]
+      }
+    ]
+  },
   "Avondale, Arizona, United States": {
     "place": {
       "name": "Avondale",
@@ -4156,6 +4192,31 @@
       "coord": [-81.6051221, 41.012833]
     },
     "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["all uses"]
+      }
+    ]
+  },
+  "Bardstown, Kentucky, United States": {
+    "place": {
+      "name": "Bardstown",
+      "state": "Kentucky",
+      "country": "United States",
+      "type": "city",
+      "encoded": "bardstown-kentucky-united-states",
+      "pop": 13567,
+      "coord": [-85.4669015, 37.8092463]
+    },
+    "add_max": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["all uses"]
+      }
+    ],
+    "reduce_min": [
       {
         "status": "adopted",
         "scope": ["city center / business district"],
@@ -5579,6 +5640,24 @@
       {
         "status": "adopted",
         "scope": ["city center / business district"],
+        "land": ["all uses"]
+      }
+    ]
+  },
+  "Bellevue, Kentucky, United States": {
+    "place": {
+      "name": "Bellevue",
+      "state": "Kentucky",
+      "country": "United States",
+      "type": "city",
+      "encoded": "bellevue-kentucky-united-states",
+      "pop": 5548,
+      "coord": [-84.4826482, 39.1067078]
+    },
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["main street / special"],
         "land": ["all uses"]
       }
     ]
@@ -17607,6 +17686,24 @@
       }
     ]
   },
+  "Crestwood, Kentucky, United States": {
+    "place": {
+      "name": "Crestwood",
+      "state": "Kentucky",
+      "country": "United States",
+      "type": "city",
+      "encoded": "crestwood-kentucky-united-states",
+      "pop": 6183,
+      "coord": [-85.4726215, 38.3235441]
+    },
+    "add_max": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["all uses"]
+      }
+    ]
+  },
   "Crestwood, Missouri, United States": {
     "place": {
       "name": "Crestwood",
@@ -18747,6 +18844,24 @@
       {
         "status": "adopted",
         "scope": ["citywide"],
+        "land": ["all uses"]
+      }
+    ]
+  },
+  "Dayton, Kentucky, United States": {
+    "place": {
+      "name": "Dayton",
+      "state": "Kentucky",
+      "country": "United States",
+      "type": "city",
+      "encoded": "dayton-kentucky-united-states",
+      "pop": 5666,
+      "coord": [-84.4727198, 39.1128377]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
         "land": ["all uses"]
       }
     ]
@@ -22461,6 +22576,24 @@
       }
     ]
   },
+  "Edgewood, Kentucky, United States": {
+    "place": {
+      "name": "Edgewood",
+      "state": "Kentucky",
+      "country": "United States",
+      "type": "city",
+      "encoded": "edgewood-kentucky-united-states",
+      "pop": 8435,
+      "coord": [-84.581888, 39.0186719]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["all uses"]
+      }
+    ]
+  },
   "Edgewood, New Mexico, United States": {
     "place": {
       "name": "Edgewood",
@@ -24266,6 +24399,24 @@
       {
         "status": "adopted",
         "scope": ["city center / business district", "citywide"],
+        "land": ["all uses"]
+      }
+    ]
+  },
+  "Euclid, Ohio, United States": {
+    "place": {
+      "name": "Euclid",
+      "state": "Ohio",
+      "country": "United States",
+      "type": "city",
+      "encoded": "euclid-ohio-united-states",
+      "pop": 49692,
+      "coord": [-81.5267873, 41.5931049]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
         "land": ["all uses"]
       }
     ]
@@ -28207,6 +28358,24 @@
       }
     ]
   },
+  "Gahanna, Ohio, United States": {
+    "place": {
+      "name": "Gahanna",
+      "state": "Ohio",
+      "country": "United States",
+      "type": "city",
+      "encoded": "gahanna-ohio-united-states",
+      "pop": 35726,
+      "coord": [-82.8791363, 40.0195625]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["commercial", "industrial", "medical", "other"]
+      }
+    ]
+  },
   "Gaines Charter Township, Michigan, United States": {
     "place": {
       "name": "Gaines Charter Township",
@@ -29316,6 +29485,24 @@
         "status": "adopted",
         "scope": ["main street / special"],
         "land": ["all uses", "industrial", "residential, all uses"]
+      }
+    ]
+  },
+  "Glasgow, Kentucky, United States": {
+    "place": {
+      "name": "Glasgow",
+      "state": "Kentucky",
+      "country": "United States",
+      "type": "city",
+      "encoded": "glasgow-kentucky-united-states",
+      "pop": 15014,
+      "coord": [-85.9124842, 36.995906]
+    },
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["commercial"]
       }
     ]
   },
@@ -31109,6 +31296,24 @@
         "status": "adopted",
         "scope": ["city center / business district"],
         "land": ["commercial"]
+      }
+    ]
+  },
+  "Green, Ohio, United States": {
+    "place": {
+      "name": "Green",
+      "state": "Ohio",
+      "country": "United States",
+      "type": "city",
+      "encoded": "green-ohio-united-states",
+      "pop": 27475,
+      "coord": [-81.4670631, 40.9468077]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["all uses"]
       }
     ]
   },
@@ -32959,6 +33164,24 @@
       }
     ]
   },
+  "Harrodsburg, Kentucky, United States": {
+    "place": {
+      "name": "Harrodsburg",
+      "state": "Kentucky",
+      "country": "United States",
+      "type": "city",
+      "encoded": "harrodsburg-kentucky-united-states",
+      "pop": 9064,
+      "coord": [-84.8432852, 37.762298]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["all uses"]
+      }
+    ]
+  },
   "Hart, Michigan, United States": {
     "place": {
       "name": "Hart",
@@ -34670,6 +34893,24 @@
       }
     ]
   },
+  "Hillview, Kentucky, United States": {
+    "place": {
+      "name": "Hillview",
+      "state": "Kentucky",
+      "country": "United States",
+      "type": "city",
+      "encoded": "hillview-kentucky-united-states",
+      "pop": 8622,
+      "coord": [-85.6855146, 38.0697889]
+    },
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["commercial"]
+      }
+    ]
+  },
   "Hilton Beach, Ontario, Canada": {
     "place": {
       "name": "Hilton Beach",
@@ -35438,6 +35679,24 @@
       {
         "status": "adopted",
         "scope": ["city center / business district"],
+        "land": ["all uses"]
+      }
+    ]
+  },
+  "Huber Heights, Ohio, United States": {
+    "place": {
+      "name": "Huber Heights",
+      "state": "Ohio",
+      "country": "United States",
+      "type": "city",
+      "encoded": "huber-heights-ohio-united-states",
+      "pop": 43439,
+      "coord": [-84.1112699, 39.8590241]
+    },
+    "add_max": [
+      {
+        "status": "adopted",
+        "scope": ["main street / special"],
         "land": ["all uses"]
       }
     ]
@@ -39866,6 +40125,24 @@
       }
     ]
   },
+  "La Grange, Kentucky, United States": {
+    "place": {
+      "name": "La Grange",
+      "state": "Kentucky",
+      "country": "United States",
+      "type": "city",
+      "encoded": "la-grange-kentucky-united-states",
+      "pop": 10067,
+      "coord": [-85.3788246, 38.4075527]
+    },
+    "add_max": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["all uses"]
+      }
+    ]
+  },
   "La Plata, Maryland, United States": {
     "place": {
       "name": "La Plata",
@@ -41940,6 +42217,24 @@
       }
     ]
   },
+  "Lebanon Junction, Kentucky, United States": {
+    "place": {
+      "name": "Lebanon Junction",
+      "state": "Kentucky",
+      "country": "United States",
+      "type": "city",
+      "encoded": "lebanon-junction-kentucky-united-states",
+      "pop": 1746,
+      "coord": [-85.7319042, 37.8345086]
+    },
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["commercial"]
+      }
+    ]
+  },
   "Lebanon, Indiana, United States": {
     "place": {
       "name": "Lebanon",
@@ -43703,6 +43998,24 @@
         "status": "adopted",
         "scope": ["citywide"],
         "land": ["all uses"]
+      }
+    ]
+  },
+  "London, Kentucky, United States": {
+    "place": {
+      "name": "London",
+      "state": "Kentucky",
+      "country": "United States",
+      "type": "city",
+      "encoded": "london-kentucky-united-states",
+      "pop": 7572,
+      "coord": [-84.0835576, 37.1283343]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["residential, multi-family"]
       }
     ]
   },
@@ -45949,6 +46262,24 @@
       }
     ]
   },
+  "Maple Heights, Ohio, United States": {
+    "place": {
+      "name": "Maple Heights",
+      "state": "Ohio",
+      "country": "United States",
+      "type": "city",
+      "encoded": "maple-heights-ohio-united-states",
+      "pop": 23701,
+      "coord": [-81.5655597, 41.4154413]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["all uses"]
+      }
+    ]
+  },
   "Maple Park, Illinois, United States": {
     "place": {
       "name": "Maple Park",
@@ -46840,6 +47171,24 @@
       "coord": [-84.443096, 42.57972]
     },
     "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["all uses"]
+      }
+    ]
+  },
+  "Mason, Ohio, United States": {
+    "place": {
+      "name": "Mason",
+      "state": "Ohio",
+      "country": "United States",
+      "type": "city",
+      "encoded": "mason-ohio-united-states",
+      "pop": 34792,
+      "coord": [-84.309939, 39.3600586]
+    },
+    "reduce_min": [
       {
         "status": "adopted",
         "scope": ["city center / business district"],
@@ -48569,6 +48918,42 @@
         "status": "adopted",
         "scope": ["city center / business district"],
         "land": ["commercial", "residential, multi-family"]
+      }
+    ]
+  },
+  "Middletown, Kentucky, United States": {
+    "place": {
+      "name": "Middletown",
+      "state": "Kentucky",
+      "country": "United States",
+      "type": "city",
+      "encoded": "middletown-kentucky-united-states",
+      "pop": 9706,
+      "coord": [-85.5395595, 38.2452668]
+    },
+    "add_max": [
+      {
+        "status": "adopted",
+        "scope": ["main street / special"],
+        "land": ["all uses"]
+      }
+    ],
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": [
+          "city center / business district",
+          "citywide",
+          "transit-oriented"
+        ],
+        "land": ["all uses", "commercial"]
+      }
+    ],
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["all uses", "residential, all uses"]
       }
     ]
   },
@@ -51408,6 +51793,24 @@
         "status": "adopted",
         "scope": ["main street / special"],
         "land": ["commercial"]
+      }
+    ]
+  },
+  "Mount Sterling, Kentucky, United States": {
+    "place": {
+      "name": "Mount Sterling",
+      "state": "Kentucky",
+      "country": "United States",
+      "type": "city",
+      "encoded": "mount-sterling-kentucky-united-states",
+      "pop": 7558,
+      "coord": [-83.9431961, 38.0561079]
+    },
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["all uses"]
       }
     ]
   },
@@ -55301,6 +55704,24 @@
       }
     ]
   },
+  "North Ridgeville, Ohio, United States": {
+    "place": {
+      "name": "North Ridgeville",
+      "state": "Ohio",
+      "country": "United States",
+      "type": "city",
+      "encoded": "north-ridgeville-ohio-united-states",
+      "pop": 35280,
+      "coord": [-82.0190321, 41.3894905]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["all uses"]
+      }
+    ]
+  },
   "North Riverside, Illinois, United States": {
     "place": {
       "name": "North Riverside",
@@ -56700,6 +57121,24 @@
       {
         "status": "adopted",
         "scope": ["main street / special"],
+        "land": ["all uses"]
+      }
+    ]
+  },
+  "Oldham County, Kentucky, United States": {
+    "place": {
+      "name": "Oldham County",
+      "state": "Kentucky",
+      "country": "United States",
+      "type": "county",
+      "encoded": "oldham-county-kentucky-united-states",
+      "pop": 67607,
+      "coord": [-85.4768315, 38.4047685]
+    },
+    "add_max": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
         "land": ["all uses"]
       }
     ]
@@ -58287,6 +58726,24 @@
       }
     ]
   },
+  "Painesville, Ohio, United States": {
+    "place": {
+      "name": "Painesville",
+      "state": "Ohio",
+      "country": "United States",
+      "type": "city",
+      "encoded": "painesville-ohio-united-states",
+      "pop": 20312,
+      "coord": [-81.245657, 41.7244885]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["main street / special"],
+        "land": ["industrial"]
+      }
+    ]
+  },
   "Palmdale, California, United States": {
     "place": {
       "name": "Palmdale",
@@ -58783,6 +59240,24 @@
       {
         "status": "adopted",
         "scope": ["city center / business district"],
+        "land": ["all uses"]
+      }
+    ]
+  },
+  "Parma, Ohio, United States": {
+    "place": {
+      "name": "Parma",
+      "state": "Ohio",
+      "country": "United States",
+      "type": "city",
+      "encoded": "parma-ohio-united-states",
+      "pop": 81146,
+      "coord": [-81.7355692, 41.3822398]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["main street / special"],
         "land": ["all uses"]
       }
     ]
@@ -59986,6 +60461,24 @@
         "status": "adopted",
         "scope": ["city center / business district", "citywide"],
         "land": ["all uses", "commercial"]
+      }
+    ]
+  },
+  "Pewee Valley, Kentucky, United States": {
+    "place": {
+      "name": "Pewee Valley",
+      "state": "Kentucky",
+      "country": "United States",
+      "type": "city",
+      "encoded": "pewee-valley-kentucky-united-states",
+      "pop": 1588,
+      "coord": [-85.4874595, 38.3106248]
+    },
+    "add_max": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["all uses"]
       }
     ]
   },
@@ -64536,6 +65029,31 @@
       "coord": [-91.5812739, 41.4797157]
     },
     "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["all uses"]
+      }
+    ]
+  },
+  "Riverside, Ohio, United States": {
+    "place": {
+      "name": "Riverside",
+      "state": "Ohio",
+      "country": "United States",
+      "type": "city",
+      "encoded": "riverside-ohio-united-states",
+      "pop": 24474,
+      "coord": [-84.1246358, 39.7793976]
+    },
+    "add_max": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["all uses"]
+      }
+    ],
+    "reduce_min": [
       {
         "status": "adopted",
         "scope": ["city center / business district"],
@@ -69117,6 +69635,24 @@
       }
     ]
   },
+  "Shepherdsville, Kentucky, United States": {
+    "place": {
+      "name": "Shepherdsville",
+      "state": "Kentucky",
+      "country": "United States",
+      "type": "city",
+      "encoded": "shepherdsville-kentucky-united-states",
+      "pop": 14201,
+      "coord": [-85.7158246, 37.9885936]
+    },
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["commercial"]
+      }
+    ]
+  },
   "Sherbrooke, Quebec, Canada": {
     "place": {
       "name": "Sherbrooke",
@@ -70260,6 +70796,24 @@
         "land": ["all uses"]
       }
     ],
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["all uses"]
+      }
+    ]
+  },
+  "Solon, Ohio, United States": {
+    "place": {
+      "name": "Solon",
+      "state": "Ohio",
+      "country": "United States",
+      "type": "city",
+      "encoded": "solon-ohio-united-states",
+      "pop": 24262,
+      "coord": [-81.4412259, 41.3897764]
+    },
     "reduce_min": [
       {
         "status": "adopted",
@@ -73494,6 +74048,24 @@
       {
         "status": "adopted",
         "scope": ["city center / business district"],
+        "land": ["all uses"]
+      }
+    ]
+  },
+  "Stow, Ohio, United States": {
+    "place": {
+      "name": "Stow",
+      "state": "Ohio",
+      "country": "United States",
+      "type": "city",
+      "encoded": "stow-ohio-united-states",
+      "pop": 34483,
+      "coord": [-81.4406258, 41.1596261]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
         "land": ["all uses"]
       }
     ]
@@ -77760,6 +78332,30 @@
       }
     ]
   },
+  "Union, Kentucky, United States": {
+    "place": {
+      "name": "Union",
+      "state": "Kentucky",
+      "country": "United States",
+      "type": "city",
+      "encoded": "union-kentucky-united-states",
+      "pop": 7416,
+      "coord": [-87.958036, 37.637247]
+    },
+    "add_max": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": [
+          "commercial",
+          "industrial",
+          "medical",
+          "other",
+          "residential, multi-family"
+        ]
+      }
+    ]
+  },
   "Union, Missouri, United States": {
     "place": {
       "name": "Union",
@@ -78522,6 +79118,24 @@
       }
     ]
   },
+  "Versailles, Kentucky, United States": {
+    "place": {
+      "name": "Versailles",
+      "state": "Kentucky",
+      "country": "United States",
+      "type": "city",
+      "encoded": "versailles-kentucky-united-states",
+      "pop": 10347,
+      "coord": [-84.7299464, 38.052576]
+    },
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["all uses"]
+      }
+    ]
+  },
   "Versailles, Missouri, United States": {
     "place": {
       "name": "Versailles",
@@ -79179,6 +79793,24 @@
       }
     ]
   },
+  "Wadsworth, Ohio, United States": {
+    "place": {
+      "name": "Wadsworth",
+      "state": "Ohio",
+      "country": "United States",
+      "type": "city",
+      "encoded": "wadsworth-ohio-united-states",
+      "pop": 24007,
+      "coord": [-81.7298519, 41.0256101]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["all uses"]
+      }
+    ]
+  },
   "Wagoner, Oklahoma, United States": {
     "place": {
       "name": "Wagoner",
@@ -79399,6 +80031,30 @@
         "status": "adopted",
         "scope": ["city center / business district"],
         "land": ["all uses"]
+      }
+    ]
+  },
+  "Walton, Kentucky, United States": {
+    "place": {
+      "name": "Walton",
+      "state": "Kentucky",
+      "country": "United States",
+      "type": "city",
+      "encoded": "walton-kentucky-united-states",
+      "pop": 5460,
+      "coord": [-84.6102213, 38.8756194]
+    },
+    "add_max": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": [
+          "commercial",
+          "industrial",
+          "medical",
+          "other",
+          "residential, multi-family"
+        ]
       }
     ]
   },
@@ -83162,6 +83818,24 @@
       }
     ],
     "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["all uses"]
+      }
+    ]
+  },
+  "Willoughby, Ohio, United States": {
+    "place": {
+      "name": "Willoughby",
+      "state": "Ohio",
+      "country": "United States",
+      "type": "city",
+      "encoded": "willoughby-ohio-united-states",
+      "pop": 23959,
+      "coord": [-81.4065011, 41.6397696]
+    },
+    "reduce_min": [
       {
         "status": "adopted",
         "scope": ["citywide"],
