@@ -879,6 +879,24 @@
       }
     ]
   },
+  "Alexandria Bay, New York, United States": {
+    "place": {
+      "name": "Alexandria Bay",
+      "state": "New York",
+      "country": "United States",
+      "type": "city",
+      "encoded": "alexandria-bay-new-york-united-states",
+      "pop": 924,
+      "coord": [-75.9180626, 44.3362411]
+    },
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["all uses"]
+      }
+    ]
+  },
   "Alexandria, Indiana, United States": {
     "place": {
       "name": "Alexandria",
@@ -4007,7 +4025,8 @@
       "type": "city",
       "encoded": "Baltimore_MD",
       "pop": 593490,
-      "coord": [-76.610759, 39.2908816]
+      "coord": [-76.610759, 39.2908816],
+      "repeal": true
     },
     "add_max": [
       {
@@ -4022,30 +4041,12 @@
         ]
       }
     ],
-    "reduce_min": [
-      {
-        "status": "adopted",
-        "scope": ["citywide"],
-        "land": ["all uses", "residential, all uses"]
-      }
-    ],
     "rm_min": [
       {
         "status": "adopted",
-        "scope": ["city center / business district", "citywide"],
-        "land": [
-          "all uses",
-          "commercial",
-          "other",
-          "residential, all uses",
-          "residential, low-density"
-        ]
-      },
-      {
-        "status": "proposed",
         "scope": ["citywide"],
         "land": ["all uses"],
-        "date": "2025-06"
+        "date": "2025-11-03"
       }
     ]
   },
@@ -4595,6 +4596,24 @@
       }
     ],
     "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["all uses"]
+      }
+    ]
+  },
+  "Batavia, New York, United States": {
+    "place": {
+      "name": "Batavia",
+      "state": "New York",
+      "country": "United States",
+      "type": "city",
+      "encoded": "batavia-new-york-united-states",
+      "pop": 15600,
+      "coord": [-78.1875515, 42.9980144]
+    },
+    "rm_min": [
       {
         "status": "adopted",
         "scope": ["city center / business district"],
@@ -6297,6 +6316,31 @@
       }
     ]
   },
+  "Bergen, New York, United States": {
+    "place": {
+      "name": "Bergen",
+      "state": "New York",
+      "country": "United States",
+      "type": "city",
+      "encoded": "bergen-new-york-united-states",
+      "pop": 1208,
+      "coord": [-77.9418857, 43.0852666]
+    },
+    "add_max": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["all uses"]
+      }
+    ],
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["all uses"]
+      }
+    ]
+  },
   "Berkeley, California, United States": {
     "place": {
       "name": "Berkeley",
@@ -7301,6 +7345,24 @@
         "scope": ["city center / business district"],
         "land": ["all uses"],
         "date": "2022-06-01"
+      }
+    ]
+  },
+  "Black River, New York, United States": {
+    "place": {
+      "name": "Black River",
+      "state": "New York",
+      "country": "United States",
+      "type": "city",
+      "encoded": "black-river-new-york-united-states",
+      "pop": 1348,
+      "coord": [-75.793991, 44.012571]
+    },
+    "add_max": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["commercial"]
       }
     ]
   },
@@ -11326,6 +11388,24 @@
       }
     ]
   },
+  "Cape Vincent, New York, United States": {
+    "place": {
+      "name": "Cape Vincent",
+      "state": "New York",
+      "country": "United States",
+      "type": "city",
+      "encoded": "cape-vincent-new-york-united-states",
+      "pop": 699,
+      "coord": [-76.3342941, 44.1289247]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["all uses"]
+      }
+    ]
+  },
   "Carbondale, Colorado, United States": {
     "place": {
       "name": "Carbondale",
@@ -11847,6 +11927,24 @@
         "status": "adopted",
         "scope": ["city center / business district"],
         "land": ["medical", "other", "residential, all uses"]
+      }
+    ]
+  },
+  "Carthage, New York, United States": {
+    "place": {
+      "name": "Carthage",
+      "state": "New York",
+      "country": "United States",
+      "type": "city",
+      "encoded": "carthage-new-york-united-states",
+      "pop": 3236,
+      "coord": [-75.609627, 43.97824]
+    },
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["all uses"]
       }
     ]
   },
@@ -13573,6 +13671,24 @@
       "encoded": "Chattanooga_TN",
       "pop": 182799,
       "coord": [-85.3094883, 35.0457219]
+    },
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["all uses"]
+      }
+    ]
+  },
+  "Chaumont, New York, United States": {
+    "place": {
+      "name": "Chaumont",
+      "state": "New York",
+      "country": "United States",
+      "type": "city",
+      "encoded": "chaumont-new-york-united-states",
+      "pop": 615,
+      "coord": [-76.130209, 44.066999]
     },
     "rm_min": [
       {
@@ -17442,6 +17558,24 @@
       }
     ]
   },
+  "Coxsackie, New York, United States": {
+    "place": {
+      "name": "Coxsackie",
+      "state": "New York",
+      "country": "United States",
+      "type": "city",
+      "encoded": "coxsackie-new-york-united-states",
+      "pop": 2746,
+      "coord": [-73.7973581, 42.3503724]
+    },
+    "add_max": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["all uses"]
+      }
+    ]
+  },
   "Cozad, Nebraska, United States": {
     "place": {
       "name": "Cozad",
@@ -20195,6 +20329,24 @@
       "coord": [-92.7045548, 43.7197096]
     },
     "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["all uses"]
+      }
+    ]
+  },
+  "Dexter, New York, United States": {
+    "place": {
+      "name": "Dexter",
+      "state": "New York",
+      "country": "United States",
+      "type": "city",
+      "encoded": "dexter-new-york-united-states",
+      "pop": 1004,
+      "coord": [-76.044371, 44.007835]
+    },
+    "reduce_min": [
       {
         "status": "adopted",
         "scope": ["city center / business district"],
@@ -29918,6 +30070,24 @@
       }
     ]
   },
+  "Gloversville, New York, United States": {
+    "place": {
+      "name": "Gloversville",
+      "state": "New York",
+      "country": "United States",
+      "type": "city",
+      "encoded": "gloversville-new-york-united-states",
+      "pop": 15131,
+      "coord": [-74.3457623, 43.0505021]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district", "citywide"],
+        "land": ["all uses", "commercial", "industrial", "medical", "other"]
+      }
+    ]
+  },
   "Goddard, Kansas, United States": {
     "place": {
       "name": "Goddard",
@@ -31740,6 +31910,39 @@
         "status": "adopted",
         "scope": ["city center / business district"],
         "land": ["all uses"]
+      }
+    ]
+  },
+  "Gresham, Oregon, United States": {
+    "place": {
+      "name": "Gresham",
+      "state": "Oregon",
+      "country": "United States",
+      "type": "city",
+      "encoded": "gresham-oregon-united-states",
+      "pop": 114247,
+      "coord": [-122.4329883, 45.4978623],
+      "repeal": true
+    },
+    "add_max": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": [
+          "commercial",
+          "industrial",
+          "medical",
+          "other",
+          "residential, multi-family"
+        ]
+      }
+    ],
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["all uses"],
+        "date": "2025-11-04"
       }
     ]
   },
@@ -35897,6 +36100,24 @@
       }
     ]
   },
+  "Hunter, New York, United States": {
+    "place": {
+      "name": "Hunter",
+      "state": "New York",
+      "country": "United States",
+      "type": "city",
+      "encoded": "hunter-new-york-united-states",
+      "pop": 429,
+      "coord": [-74.2187541, 42.2136987]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["all uses"]
+      }
+    ]
+  },
   "Huntersville, North Carolina, United States": {
     "place": {
       "name": "Huntersville",
@@ -38170,6 +38391,24 @@
         "status": "adopted",
         "scope": ["transit-oriented"],
         "land": ["residential, all uses"]
+      }
+    ]
+  },
+  "Johnstown, New York, United States": {
+    "place": {
+      "name": "Johnstown",
+      "state": "New York",
+      "country": "United States",
+      "type": "city",
+      "encoded": "johnstown-new-york-united-states",
+      "pop": 8204,
+      "coord": [-74.3705221, 43.0061613]
+    },
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["commercial", "other"]
       }
     ]
   },
@@ -67113,6 +67352,14 @@
       "pop": 32935,
       "coord": [-75.6009964, 38.366027]
     },
+    "add_max": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["all uses"],
+        "date": "2018-11-14"
+      }
+    ],
     "reduce_min": [
       {
         "status": "adopted",
@@ -75522,6 +75769,24 @@
       "coord": [-77.1756197, 39.6593585]
     },
     "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["all uses"]
+      }
+    ]
+  },
+  "Tannersville, New York, United States": {
+    "place": {
+      "name": "Tannersville",
+      "state": "New York",
+      "country": "United States",
+      "type": "city",
+      "encoded": "tannersville-new-york-united-states",
+      "pop": 568,
+      "coord": [-74.1337508, 42.1956438]
+    },
+    "rm_min": [
       {
         "status": "adopted",
         "scope": ["city center / business district"],
