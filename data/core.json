@@ -86,6 +86,24 @@
       }
     ]
   },
+  "Aberdeen, Maryland, United States": {
+    "place": {
+      "name": "Aberdeen",
+      "state": "Maryland",
+      "country": "United States",
+      "type": "city",
+      "encoded": "aberdeen-maryland-united-states",
+      "pop": 16254,
+      "coord": [-76.1643289, 39.5120347]
+    },
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["transit-oriented"],
+        "land": ["all uses"]
+      }
+    ]
+  },
   "Aberdeen, Mississippi, United States": {
     "place": {
       "name": "Aberdeen",
@@ -4631,11 +4649,26 @@
       "pop": 1972,
       "coord": [-84.1768795, 39.0770072]
     },
-    "rm_min": [
+    "add_max": [
       {
         "status": "adopted",
-        "scope": ["city center / business district"],
-        "land": ["all uses"]
+        "scope": ["citywide"],
+        "land": [
+          "commercial",
+          "industrial",
+          "medical",
+          "other",
+          "residential, multi-family"
+        ],
+        "date": "2024-10-23"
+      }
+    ],
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district", "citywide"],
+        "land": ["all uses"],
+        "date": "2024-10-23"
       }
     ]
   },
@@ -4877,6 +4910,24 @@
       "coord": [-89.3275482, 30.3105666]
     },
     "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["all uses"]
+      }
+    ]
+  },
+  "Bay Village, Ohio, United States": {
+    "place": {
+      "name": "Bay Village",
+      "state": "Ohio",
+      "country": "United States",
+      "type": "city",
+      "encoded": "bay-village-ohio-united-states",
+      "pop": 16163,
+      "coord": [-81.9208434, 41.484996]
+    },
+    "reduce_min": [
       {
         "status": "adopted",
         "scope": ["city center / business district"],
@@ -5171,6 +5222,24 @@
           "residential, multi-family"
         ],
         "date": "2025-01-09"
+      }
+    ]
+  },
+  "Bedford Heights, Ohio, United States": {
+    "place": {
+      "name": "Bedford Heights",
+      "state": "Ohio",
+      "country": "United States",
+      "type": "city",
+      "encoded": "bedford-heights-ohio-united-states",
+      "pop": 11020,
+      "coord": [-81.5061146, 41.4143826]
+    },
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["all uses"]
       }
     ]
   },
@@ -5898,6 +5967,24 @@
       "encoded": "Beloit_WI",
       "pop": 36609,
       "coord": [-89.031784, 42.5083272]
+    },
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["all uses"]
+      }
+    ]
+  },
+  "Belpre, Ohio, United States": {
+    "place": {
+      "name": "Belpre",
+      "state": "Ohio",
+      "country": "United States",
+      "type": "city",
+      "encoded": "belpre-ohio-united-states",
+      "pop": 6728,
+      "coord": [-81.5757932, 39.2772629]
     },
     "rm_min": [
       {
@@ -8822,6 +8909,24 @@
       }
     ]
   },
+  "Brecksville, Ohio, United States": {
+    "place": {
+      "name": "Brecksville",
+      "state": "Ohio",
+      "country": "United States",
+      "type": "city",
+      "encoded": "brecksville-ohio-united-states",
+      "pop": 13635,
+      "coord": [-81.6267904, 41.3197763]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["all uses"]
+      }
+    ]
+  },
   "Bremerhaven, Bremen, Germany": {
     "place": {
       "name": "Bremerhaven",
@@ -9294,6 +9399,24 @@
       }
     ]
   },
+  "Broadview Heights, Ohio, United States": {
+    "place": {
+      "name": "Broadview Heights",
+      "state": "Ohio",
+      "country": "United States",
+      "type": "city",
+      "encoded": "broadview-heights-ohio-united-states",
+      "pop": 19936,
+      "coord": [-81.6851271, 41.3139426]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["all uses"]
+      }
+    ]
+  },
   "Broadview, Illinois, United States": {
     "place": {
       "name": "Broadview",
@@ -9419,6 +9542,24 @@
         "status": "adopted",
         "scope": ["citywide"],
         "land": ["commercial", "other", "residential, all uses"]
+      }
+    ]
+  },
+  "Brook Park, Ohio, United States": {
+    "place": {
+      "name": "Brook Park",
+      "state": "Ohio",
+      "country": "United States",
+      "type": "city",
+      "encoded": "brook-park-ohio-united-states",
+      "pop": 18595,
+      "coord": [-81.8045788, 41.3983838]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["main street / special"],
+        "land": ["all uses"]
       }
     ]
   },
@@ -9581,6 +9722,42 @@
         "status": "adopted",
         "scope": ["city center / business district"],
         "land": ["all uses", "residential, all uses"]
+      }
+    ]
+  },
+  "Brooklyn, Ohio, United States": {
+    "place": {
+      "name": "Brooklyn",
+      "state": "Ohio",
+      "country": "United States",
+      "type": "city",
+      "encoded": "brooklyn-ohio-united-states",
+      "pop": 11359,
+      "coord": [-81.7405559, 41.439754]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["all uses"]
+      }
+    ]
+  },
+  "Brookville, Ohio, United States": {
+    "place": {
+      "name": "Brookville",
+      "state": "Ohio",
+      "country": "United States",
+      "type": "city",
+      "encoded": "brookville-ohio-united-states",
+      "pop": 5989,
+      "coord": [-84.4113366, 39.8367207]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["commercial"]
       }
     ]
   },
@@ -11538,6 +11715,24 @@
       {
         "status": "adopted",
         "scope": ["city center / business district"],
+        "land": ["all uses"]
+      }
+    ]
+  },
+  "Carlisle, Ohio, United States": {
+    "place": {
+      "name": "Carlisle",
+      "state": "Ohio",
+      "country": "United States",
+      "type": "city",
+      "encoded": "carlisle-ohio-united-states",
+      "pop": 5501,
+      "coord": [-84.3202194, 39.5820026]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
         "land": ["all uses"]
       }
     ]
@@ -14033,6 +14228,24 @@
       }
     ]
   },
+  "Cheviot, Ohio, United States": {
+    "place": {
+      "name": "Cheviot",
+      "state": "Ohio",
+      "country": "United States",
+      "type": "city",
+      "encoded": "cheviot-ohio-united-states",
+      "pop": 8658,
+      "coord": [-84.6132787, 39.1570028]
+    },
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["all uses"]
+      }
+    ]
+  },
   "Cheyenne, Wyoming, United States": {
     "place": {
       "name": "Cheyenne",
@@ -14796,6 +15009,24 @@
       {
         "status": "adopted",
         "scope": ["citywide"],
+        "land": ["all uses"]
+      }
+    ]
+  },
+  "Clayton, Ohio, United States": {
+    "place": {
+      "name": "Clayton",
+      "state": "Ohio",
+      "country": "United States",
+      "type": "city",
+      "encoded": "clayton-ohio-united-states",
+      "pop": 13310,
+      "coord": [-84.3605022, 39.8631101]
+    },
+    "add_max": [
+      {
+        "status": "adopted",
+        "scope": ["main street / special"],
         "land": ["all uses"]
       }
     ]
@@ -19830,6 +20061,57 @@
       }
     ]
   },
+  "Delta, British Columbia, Canada": {
+    "place": {
+      "name": "Delta",
+      "state": "British Columbia",
+      "country": "Canada",
+      "type": "city",
+      "encoded": "delta-british-columbia-canada",
+      "pop": 108455,
+      "coord": [-123.057938, 49.0846258]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["all uses"],
+        "date": "2025-03-03"
+      },
+      {
+        "status": "adopted",
+        "scope": ["main street / special"],
+        "land": ["commercial", "residential, multi-family"]
+      },
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["commercial", "other", "residential, multi-family"]
+      },
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["all uses"]
+      },
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["commercial", "other"]
+      }
+    ],
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["residential, low-density"]
+      },
+      {
+        "status": "adopted",
+        "scope": ["transit-oriented"],
+        "land": ["residential, low-density"]
+      }
+    ]
+  },
   "Delta, Colorado, United States": {
     "place": {
       "name": "Delta",
@@ -22426,6 +22708,24 @@
       }
     ]
   },
+  "Eastlake, Ohio, United States": {
+    "place": {
+      "name": "Eastlake",
+      "state": "Ohio",
+      "country": "United States",
+      "type": "city",
+      "encoded": "eastlake-ohio-united-states",
+      "pop": 17670,
+      "coord": [-81.4378991, 41.6490337]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["all uses"]
+      }
+    ]
+  },
   "Easton, Connecticut, United States": {
     "place": {
       "name": "Easton",
@@ -22555,6 +22855,24 @@
       {
         "status": "adopted",
         "scope": ["citywide"],
+        "land": ["all uses"]
+      }
+    ]
+  },
+  "Eaton, Ohio, United States": {
+    "place": {
+      "name": "Eaton",
+      "state": "Ohio",
+      "country": "United States",
+      "type": "city",
+      "encoded": "eaton-ohio-united-states",
+      "pop": 8375,
+      "coord": [-84.6364891, 39.7439398]
+    },
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
         "land": ["all uses"]
       }
     ]
@@ -24199,6 +24517,24 @@
       }
     ]
   },
+  "Englewood, Ohio, United States": {
+    "place": {
+      "name": "Englewood",
+      "state": "Ohio",
+      "country": "United States",
+      "type": "city",
+      "encoded": "englewood-ohio-united-states",
+      "pop": 13463,
+      "coord": [-84.3021673, 39.8775553]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["all uses"]
+      }
+    ]
+  },
   "Enid, Oklahoma, United States": {
     "place": {
       "name": "Enid",
@@ -25252,6 +25588,24 @@
         "status": "adopted",
         "scope": ["city center / business district"],
         "land": ["commercial", "other"]
+      }
+    ]
+  },
+  "Fairlawn, Ohio, United States": {
+    "place": {
+      "name": "Fairlawn",
+      "state": "Ohio",
+      "country": "United States",
+      "type": "city",
+      "encoded": "fairlawn-ohio-united-states",
+      "pop": 7710,
+      "coord": [-81.6262051, 41.1326644]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["all uses"]
       }
     ]
   },
@@ -27729,6 +28083,24 @@
       }
     ]
   },
+  "Franklin, Ohio, United States": {
+    "place": {
+      "name": "Franklin",
+      "state": "Ohio",
+      "country": "United States",
+      "type": "city",
+      "encoded": "franklin-ohio-united-states",
+      "pop": 11690,
+      "coord": [-84.3041074, 39.5589474]
+    },
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["all uses"]
+      }
+    ]
+  },
   "Franklin, Pennsylvania, United States": {
     "place": {
       "name": "Franklin",
@@ -28429,6 +28801,24 @@
       "encoded": "Fruita_CO",
       "pop": 13478,
       "coord": [-108.7289883, 39.1588697]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["all uses"]
+      }
+    ]
+  },
+  "Fruitland, Maryland, United States": {
+    "place": {
+      "name": "Fruitland",
+      "state": "Maryland",
+      "country": "United States",
+      "type": "city",
+      "encoded": "fruitland-maryland-united-states",
+      "pop": 5534,
+      "coord": [-75.620203, 38.3220633]
     },
     "reduce_min": [
       {
@@ -32804,6 +33194,24 @@
       }
     ]
   },
+  "Hampstead, Maryland, United States": {
+    "place": {
+      "name": "Hampstead",
+      "state": "Maryland",
+      "country": "United States",
+      "type": "city",
+      "encoded": "hampstead-maryland-united-states",
+      "pop": 6241,
+      "coord": [-76.8534845, 39.6028444]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["all uses"]
+      }
+    ]
+  },
   "Hampton Charter Township, Michigan, United States": {
     "place": {
       "name": "Hampton Charter Township",
@@ -34763,6 +35171,29 @@
         "status": "adopted",
         "scope": ["citywide"],
         "land": ["all uses"]
+      }
+    ]
+  },
+  "Highland Heights, Ohio, United States": {
+    "place": {
+      "name": "Highland Heights",
+      "state": "Ohio",
+      "country": "United States",
+      "type": "city",
+      "encoded": "highland-heights-ohio-united-states",
+      "pop": 8719,
+      "coord": [-81.478452, 41.551995]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": [
+          "commercial",
+          "industrial",
+          "other",
+          "residential, multi-family"
+        ]
       }
     ]
   },
@@ -36763,6 +37194,31 @@
       }
     ]
   },
+  "Indian Hill, Ohio, United States": {
+    "place": {
+      "name": "Indian Hill",
+      "state": "Ohio",
+      "country": "United States",
+      "type": "city",
+      "encoded": "indian-hill-ohio-united-states",
+      "pop": 6087,
+      "coord": [-84.3381286, 39.1892073]
+    },
+    "add_max": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["all uses"]
+      }
+    ],
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["all uses"]
+      }
+    ]
+  },
   "Indian Hills, Kentucky, United States": {
     "place": {
       "name": "Indian Hills",
@@ -37149,6 +37605,24 @@
       }
     ]
   },
+  "Ironton, Ohio, United States": {
+    "place": {
+      "name": "Ironton",
+      "state": "Ohio",
+      "country": "United States",
+      "type": "city",
+      "encoded": "ironton-ohio-united-states",
+      "pop": 10571,
+      "coord": [-82.6829406, 38.5367471]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["all uses"]
+      }
+    ]
+  },
   "Ironwood, Michigan, United States": {
     "place": {
       "name": "Ironwood",
@@ -37451,6 +37925,41 @@
       }
     ]
   },
+  "Jackson, Ohio, United States": {
+    "place": {
+      "name": "Jackson",
+      "state": "Ohio",
+      "country": "United States",
+      "type": "city",
+      "encoded": "jackson-ohio-united-states",
+      "pop": 6252,
+      "coord": [-82.63707402126045, 39.05199193746335]
+    },
+    "add_max": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["all uses"],
+        "date": "2025-03-24"
+      }
+    ],
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["all uses"],
+        "date": "2025-03-24"
+      }
+    ],
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["all uses"],
+        "date": "2025-03-24"
+      }
+    ]
+  },
   "Jackson, Tennessee, United States": {
     "place": {
       "name": "Jackson",
@@ -37574,6 +38083,14 @@
       "pop": 911507,
       "coord": [-81.655651, 30.3321838]
     },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["industrial"],
+        "date": "2025-10-28"
+      }
+    ],
     "rm_min": [
       {
         "status": "adopted",
@@ -39917,6 +40434,24 @@
         "status": "adopted",
         "scope": ["city center / business district"],
         "land": ["all uses"]
+      }
+    ]
+  },
+  "Kirtland, Ohio, United States": {
+    "place": {
+      "name": "Kirtland",
+      "state": "Ohio",
+      "country": "United States",
+      "type": "city",
+      "encoded": "kirtland-ohio-united-states",
+      "pop": 6937,
+      "coord": [-81.361499, 41.628937]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["commercial"]
       }
     ]
   },
@@ -44258,6 +44793,24 @@
       }
     ]
   },
+  "London, Ohio, United States": {
+    "place": {
+      "name": "London",
+      "state": "Ohio",
+      "country": "United States",
+      "type": "city",
+      "encoded": "london-ohio-united-states",
+      "pop": 10279,
+      "coord": [-83.448253, 39.8864493]
+    },
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["all uses"]
+      }
+    ]
+  },
   "London, Ontario, Canada": {
     "place": {
       "name": "London",
@@ -44757,6 +45310,24 @@
         "status": "adopted",
         "scope": ["city center / business district"],
         "land": ["commercial", "other"]
+      }
+    ]
+  },
+  "Loveland, Ohio, United States": {
+    "place": {
+      "name": "Loveland",
+      "state": "Ohio",
+      "country": "United States",
+      "type": "city",
+      "encoded": "loveland-ohio-united-states",
+      "pop": 13307,
+      "coord": [-84.263826, 39.2689476]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["main street / special"],
+        "land": ["all uses"]
       }
     ]
   },
@@ -52569,6 +53140,24 @@
       }
     ]
   },
+  "Mt. Vernon, Ohio, United States": {
+    "place": {
+      "name": "Mt. Vernon",
+      "state": "Ohio",
+      "country": "United States",
+      "type": "city",
+      "encoded": "mt-vernon-ohio-united-states",
+      "pop": 16956,
+      "coord": [-82.4857181, 40.3933956]
+    },
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["all uses"]
+      }
+    ]
+  },
   "Mt. Washington, Kentucky, United States": {
     "place": {
       "name": "Mt. Washington",
@@ -52830,6 +53419,24 @@
         "scope": ["citywide"],
         "land": ["all uses"],
         "date": "2023-04-05"
+      }
+    ]
+  },
+  "Munroe Falls, Ohio, United States": {
+    "place": {
+      "name": "Munroe Falls",
+      "state": "Ohio",
+      "country": "United States",
+      "type": "city",
+      "encoded": "munroe-falls-ohio-united-states",
+      "pop": 5044,
+      "coord": [-81.4400161, 41.139096]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["all uses"]
       }
     ]
   },
@@ -54054,6 +54661,24 @@
       }
     ]
   },
+  "New Franklin, Ohio, United States": {
+    "place": {
+      "name": "New Franklin",
+      "state": "Ohio",
+      "country": "United States",
+      "type": "city",
+      "encoded": "new-franklin-ohio-united-states",
+      "pop": 13877,
+      "coord": [-81.565937, 40.9526931]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["all uses"]
+      }
+    ]
+  },
   "New Glasgow, Nova Scotia, Canada": {
     "place": {
       "name": "New Glasgow",
@@ -54459,6 +55084,24 @@
       "encoded": "NewPalestine_IN",
       "pop": 2744,
       "coord": [-85.8891471, 39.7219882]
+    },
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["all uses"]
+      }
+    ]
+  },
+  "New Philadelphia, Ohio, United States": {
+    "place": {
+      "name": "New Philadelphia",
+      "state": "Ohio",
+      "country": "United States",
+      "type": "city",
+      "encoded": "new-philadelphia-ohio-united-states",
+      "pop": 17677,
+      "coord": [-81.4456706, 40.4897871]
     },
     "rm_min": [
       {
@@ -57023,6 +57666,24 @@
       }
     ]
   },
+  "Ocean City, Maryland, United States": {
+    "place": {
+      "name": "Ocean City",
+      "state": "Maryland",
+      "country": "United States",
+      "type": "city",
+      "encoded": "ocean-city-maryland-united-states",
+      "pop": 6844,
+      "coord": [-75.0847659, 38.3348728]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["commercial"]
+      }
+    ]
+  },
   "Ocean Springs, Mississippi, United States": {
     "place": {
       "name": "Ocean Springs",
@@ -57414,6 +58075,24 @@
       {
         "status": "adopted",
         "scope": ["city center / business district"],
+        "land": ["all uses"]
+      }
+    ]
+  },
+  "Olmsted Falls, Ohio, United States": {
+    "place": {
+      "name": "Olmsted Falls",
+      "state": "Ohio",
+      "country": "United States",
+      "type": "city",
+      "encoded": "olmsted-falls-ohio-united-states",
+      "pop": 8582,
+      "coord": [-81.9081937, 41.375049]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
         "land": ["all uses"]
       }
     ]
@@ -57832,6 +58511,19 @@
         ],
         "land": ["all uses"]
       }
+    ],
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide", "transit-oriented"],
+        "land": [
+          "all uses",
+          "commercial",
+          "residential, low-density",
+          "residential, multi-family"
+        ],
+        "date": "2025-06-18"
+      }
     ]
   },
   "Oregon, Illinois, United States": {
@@ -57848,6 +58540,24 @@
       {
         "status": "adopted",
         "scope": ["city center / business district"],
+        "land": ["all uses"]
+      }
+    ]
+  },
+  "Oregon, Ohio, United States": {
+    "place": {
+      "name": "Oregon",
+      "state": "Ohio",
+      "country": "United States",
+      "type": "city",
+      "encoded": "oregon-ohio-united-states",
+      "pop": 19950,
+      "coord": [-83.4868768, 41.6436603]
+    },
+    "add_max": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
         "land": ["all uses"]
       }
     ]
@@ -58072,6 +58782,24 @@
       {
         "status": "adopted",
         "scope": ["main street / special"],
+        "land": ["all uses"]
+      }
+    ]
+  },
+  "Orrville, Ohio, United States": {
+    "place": {
+      "name": "Orrville",
+      "state": "Ohio",
+      "country": "United States",
+      "type": "city",
+      "encoded": "orrville-ohio-united-states",
+      "pop": 8452,
+      "coord": [-81.7640212, 40.8436664]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
         "land": ["all uses"]
       }
     ]
@@ -62760,6 +63488,24 @@
       }
     ]
   },
+  "Powell, Ohio, United States": {
+    "place": {
+      "name": "Powell",
+      "state": "Ohio",
+      "country": "United States",
+      "type": "city",
+      "encoded": "powell-ohio-united-states",
+      "pop": 14163,
+      "coord": [-83.0751869, 40.1578403]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["all uses"]
+      }
+    ]
+  },
   "Powell, Wyoming, United States": {
     "place": {
       "name": "Powell",
@@ -67168,6 +67914,24 @@
         "status": "adopted",
         "scope": ["city center / business district"],
         "land": ["all uses"]
+      }
+    ]
+  },
+  "Salem, Ohio, United States": {
+    "place": {
+      "name": "Salem",
+      "state": "Ohio",
+      "country": "United States",
+      "type": "city",
+      "encoded": "salem-ohio-united-states",
+      "pop": 11915,
+      "coord": [-80.8567502, 40.9008923]
+    },
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["commercial"]
       }
     ]
   },
@@ -73151,6 +73915,24 @@
       }
     ]
   },
+  "St. Marys, Ohio, United States": {
+    "place": {
+      "name": "St. Marys",
+      "state": "Ohio",
+      "country": "United States",
+      "type": "city",
+      "encoded": "st-marys-ohio-united-states",
+      "pop": 8397,
+      "coord": [-84.3893962, 40.5422697]
+    },
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["commercial"]
+      }
+    ]
+  },
   "St. Matthews, Kentucky, United States": {
     "place": {
       "name": "St. Matthews",
@@ -74523,6 +75305,24 @@
       }
     ]
   },
+  "Struthers, Ohio, United States": {
+    "place": {
+      "name": "Struthers",
+      "state": "Ohio",
+      "country": "United States",
+      "type": "city",
+      "encoded": "struthers-ohio-united-states",
+      "pop": 10063,
+      "coord": [-80.5917707, 41.0543573]
+    },
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["commercial"]
+      }
+    ]
+  },
   "Stuart, Florida, United States": {
     "place": {
       "name": "Stuart",
@@ -74992,6 +75792,24 @@
         "status": "adopted",
         "scope": ["city center / business district"],
         "land": ["commercial"]
+      }
+    ]
+  },
+  "Sunbury, Ohio, United States": {
+    "place": {
+      "name": "Sunbury",
+      "state": "Ohio",
+      "country": "United States",
+      "type": "city",
+      "encoded": "sunbury-ohio-united-states",
+      "pop": 6614,
+      "coord": [-82.8590673, 40.2425623]
+    },
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["all uses"]
       }
     ]
   },
@@ -76846,6 +77664,24 @@
       }
     ]
   },
+  "Thurmont, Maryland, United States": {
+    "place": {
+      "name": "Thurmont",
+      "state": "Maryland",
+      "country": "United States",
+      "type": "city",
+      "encoded": "thurmont-maryland-united-states",
+      "pop": 6213,
+      "coord": [-77.4115401, 39.6236095]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["all uses"]
+      }
+    ]
+  },
   "Tiffin, Ohio, United States": {
     "place": {
       "name": "Tiffin",
@@ -78350,6 +79186,24 @@
       }
     ]
   },
+  "Twinsburg, Ohio, United States": {
+    "place": {
+      "name": "Twinsburg",
+      "state": "Ohio",
+      "country": "United States",
+      "type": "city",
+      "encoded": "twinsburg-ohio-united-states",
+      "pop": 19248,
+      "coord": [-81.4401129, 41.3125552]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["all uses"]
+      }
+    ]
+  },
   "Two Harbors, Minnesota, United States": {
     "place": {
       "name": "Two Harbors",
@@ -79157,6 +80011,24 @@
       "coord": [-89.0936778, 38.960601]
     },
     "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["all uses"]
+      }
+    ]
+  },
+  "Vandalia, Ohio, United States": {
+    "place": {
+      "name": "Vandalia",
+      "state": "Ohio",
+      "country": "United States",
+      "type": "city",
+      "encoded": "vandalia-ohio-united-states",
+      "pop": 15209,
+      "coord": [-84.1988308, 39.8906122]
+    },
+    "reduce_min": [
       {
         "status": "adopted",
         "scope": ["city center / business district"],
@@ -81514,6 +82386,24 @@
       }
     ]
   },
+  "Wauseon, Ohio, United States": {
+    "place": {
+      "name": "Wauseon",
+      "state": "Ohio",
+      "country": "United States",
+      "type": "city",
+      "encoded": "wauseon-ohio-united-states",
+      "pop": 7568,
+      "coord": [-84.1362047, 41.546069]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["all uses"]
+      }
+    ]
+  },
   "Waveland, Mississippi, United States": {
     "place": {
       "name": "Waveland",
@@ -83833,6 +84723,24 @@
       }
     ]
   },
+  "Willard, Ohio, United States": {
+    "place": {
+      "name": "Willard",
+      "state": "Ohio",
+      "country": "United States",
+      "type": "city",
+      "encoded": "willard-ohio-united-states",
+      "pop": 6197,
+      "coord": [-82.7262958, 41.0531134]
+    },
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["all uses"]
+      }
+    ]
+  },
   "Willard, Utah, United States": {
     "place": {
       "name": "Willard",
@@ -84083,6 +84991,24 @@
       }
     ],
     "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["all uses"]
+      }
+    ]
+  },
+  "Willoughby Hills, Ohio, United States": {
+    "place": {
+      "name": "Willoughby Hills",
+      "state": "Ohio",
+      "country": "United States",
+      "type": "city",
+      "encoded": "willoughby-hills-ohio-united-states",
+      "pop": 10019,
+      "coord": [-81.418447, 41.598382]
+    },
+    "reduce_min": [
       {
         "status": "adopted",
         "scope": ["citywide"],
