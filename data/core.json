@@ -4304,6 +4304,31 @@
       }
     ]
   },
+  "Barre, Vermont, United States": {
+    "place": {
+      "name": "Barre",
+      "state": "Vermont",
+      "country": "United States",
+      "type": "city",
+      "encoded": "barre-vermont-united-states",
+      "pop": 8491,
+      "coord": [-72.5007458, 44.1969042]
+    },
+    "add_max": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district", "citywide"],
+        "land": ["all uses"]
+      }
+    ],
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district", "citywide"],
+        "land": ["all uses", "commercial", "industrial", "medical", "other"]
+      }
+    ]
+  },
   "Barrie, Ontario, Canada": {
     "place": {
       "name": "Barrie",
@@ -9595,7 +9620,14 @@
       {
         "status": "adopted",
         "scope": ["city center / business district"],
-        "land": ["commercial"]
+        "land": ["commercial"],
+        "date": "2022-05-09"
+      },
+      {
+        "status": "proposed",
+        "scope": ["citywide"],
+        "land": ["all uses"],
+        "date": "2025-07"
       }
     ]
   },
@@ -14325,12 +14357,6 @@
         "land": ["commercial", "residential, all uses"]
       },
       {
-        "status": "proposed",
-        "scope": ["citywide"],
-        "land": ["all uses"],
-        "date": "2025"
-      },
-      {
         "status": "adopted",
         "scope": ["transit-oriented"],
         "land": ["all uses"],
@@ -15933,6 +15959,24 @@
       {
         "status": "adopted",
         "scope": ["city center / business district"],
+        "land": ["all uses"]
+      }
+    ]
+  },
+  "Colchester, Vermont, United States": {
+    "place": {
+      "name": "Colchester",
+      "state": "Vermont",
+      "country": "United States",
+      "type": "city",
+      "encoded": "colchester-vermont-united-states",
+      "pop": 17524,
+      "coord": [-73.1846098, 44.534084]
+    },
+    "add_max": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
         "land": ["all uses"]
       }
     ]
@@ -24776,6 +24820,38 @@
       }
     ]
   },
+  "Essex Junction, Vermont, United States": {
+    "place": {
+      "name": "Essex Junction",
+      "state": "Vermont",
+      "country": "United States",
+      "type": "city",
+      "encoded": "essex-junction-vermont-united-states",
+      "pop": 10590,
+      "coord": [-73.11136, 44.4906817]
+    },
+    "add_max": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["commercial", "other"]
+      }
+    ],
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["all uses"]
+      }
+    ],
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["all uses"]
+      }
+    ]
+  },
   "Essex, Connecticut, United States": {
     "place": {
       "name": "Essex",
@@ -28571,6 +28647,14 @@
       "pop": 27141,
       "coord": [-96.4960449, 41.4338363]
     },
+    "add_max": [
+      {
+        "status": "proposed",
+        "scope": ["city center / business district"],
+        "land": ["all uses"],
+        "date": "2025"
+      }
+    ],
     "rm_min": [
       {
         "status": "adopted",
@@ -37029,17 +37113,23 @@
       "name": "Illinois",
       "state": "Illinois",
       "country": "United States",
-      "type": "city",
+      "type": "state",
       "encoded": "Illinois_IL",
       "pop": 12812508,
       "coord": [-89.756643, 40.288802]
     },
     "rm_min": [
       {
-        "status": "proposed",
+        "status": "adopted",
         "scope": ["regional"],
-        "land": ["all uses"],
-        "date": "2024-01-31"
+        "land": [
+          "commercial",
+          "industrial",
+          "medical",
+          "other",
+          "residential, all uses"
+        ],
+        "date": "2025-10-30"
       }
     ]
   },
@@ -50419,6 +50509,27 @@
       "pop": 5716,
       "coord": [-88.943999, 42.7755645]
     },
+    "add_max": [
+      {
+        "status": "proposed",
+        "scope": ["citywide"],
+        "land": [
+          "commercial",
+          "industrial",
+          "medical",
+          "other",
+          "residential, multi-family"
+        ],
+        "date": "2025"
+      }
+    ],
+    "reduce_min": [
+      {
+        "status": "proposed",
+        "scope": ["citywide"],
+        "land": ["commercial", "industrial", "medical", "other"]
+      }
+    ],
     "rm_min": [
       {
         "status": "adopted",
@@ -55587,6 +55698,30 @@
         "status": "adopted",
         "scope": ["citywide"],
         "land": ["commercial", "medical", "residential, all uses"]
+      }
+    ]
+  },
+  "Newport, Vermont, United States": {
+    "place": {
+      "name": "Newport",
+      "state": "Vermont",
+      "country": "United States",
+      "type": "city",
+      "encoded": "newport-vermont-united-states",
+      "pop": 4455,
+      "coord": [-72.2055988, 44.9367172]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": [
+          "commercial",
+          "industrial",
+          "medical",
+          "other",
+          "residential, all uses"
+        ]
       }
     ]
   },
@@ -65285,6 +65420,12 @@
         "status": "adopted",
         "scope": ["citywide"],
         "land": ["all uses"]
+      },
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["commercial", "residential, multi-family"],
+        "date": "2024-07-23"
       }
     ]
   },
@@ -66828,6 +66969,14 @@
       "pop": 24200,
       "coord": [-88.0131275, 42.0841936]
     },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["all uses"],
+        "date": "2025-09-09"
+      }
+    ],
     "rm_min": [
       {
         "status": "adopted",
@@ -73196,6 +73345,24 @@
         "status": "adopted",
         "scope": ["city center / business district"],
         "land": ["commercial", "other"]
+      }
+    ]
+  },
+  "St. Albans, Vermont, United States": {
+    "place": {
+      "name": "St. Albans",
+      "state": "Vermont",
+      "country": "United States",
+      "type": "city",
+      "encoded": "st-albans-vermont-united-states",
+      "pop": 6877,
+      "coord": [-73.0833607, 44.8107911]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["residential, all uses"]
       }
     ]
   },
@@ -80145,6 +80312,24 @@
       }
     ]
   },
+  "Vergennes, Vermont, United States": {
+    "place": {
+      "name": "Vergennes",
+      "state": "Vermont",
+      "country": "United States",
+      "type": "city",
+      "encoded": "vergennes-vermont-united-states",
+      "pop": 2553,
+      "coord": [-73.2518037, 44.1681052]
+    },
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["all uses"]
+      }
+    ]
+  },
   "Vermillion, South Dakota, United States": {
     "place": {
       "name": "Vermillion",
@@ -84022,6 +84207,18 @@
         "status": "adopted",
         "scope": ["city center / business district"],
         "land": ["all uses"]
+      },
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": [
+          "commercial",
+          "industrial",
+          "medical",
+          "other",
+          "residential, multi-family"
+        ],
+        "date": "2025-08-07"
       }
     ],
     "rm_min": [
@@ -85718,6 +85915,38 @@
         "status": "adopted",
         "scope": ["city center / business district"],
         "land": ["all uses"]
+      }
+    ]
+  },
+  "Winooski, Vermont, United States": {
+    "place": {
+      "name": "Winooski",
+      "state": "Vermont",
+      "country": "United States",
+      "type": "city",
+      "encoded": "winooski-vermont-united-states",
+      "pop": 7997,
+      "coord": [-73.1861064, 44.4910402]
+    },
+    "add_max": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["all uses"]
+      }
+    ],
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district", "citywide"],
+        "land": ["all uses", "residential, all uses"]
+      }
+    ],
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["commercial", "other"]
       }
     ]
   },
