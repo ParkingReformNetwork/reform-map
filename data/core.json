@@ -6178,6 +6178,24 @@
       }
     ]
   },
+  "Bennington, Vermont, United States": {
+    "place": {
+      "name": "Bennington",
+      "state": "Vermont",
+      "country": "United States",
+      "type": "city",
+      "encoded": "bennington-vermont-united-states",
+      "pop": 15333,
+      "coord": [-73.1968205, 42.8788667]
+    },
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["all uses", "commercial", "other"]
+      }
+    ]
+  },
   "Bensenville, Illinois, United States": {
     "place": {
       "name": "Bensenville",
@@ -66726,6 +66744,33 @@
         "status": "adopted",
         "scope": ["city center / business district"],
         "land": ["all uses"]
+      }
+    ]
+  },
+  "Rockingham, Vermont, United States": {
+    "place": {
+      "name": "Rockingham",
+      "state": "Vermont",
+      "country": "United States",
+      "type": "city",
+      "encoded": "rockingham-vermont-united-states",
+      "pop": 4832,
+      "coord": [-72.444534, 43.134063]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district", "main street / special"],
+        "land": ["all uses", "residential, multi-family"],
+        "date": "2025-09-10"
+      }
+    ],
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["all uses"],
+        "date": "2025-09-10"
       }
     ]
   },
