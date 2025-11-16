@@ -232,12 +232,15 @@ export function decodePopulation(str: string | null): [number, number] {
   return isValid ? [left, right] : DEFAULT_FILTER_STATE.populationSliderIndexes;
 }
 
-export function decodeFilterState(queryString: string): FilterState {
+export function queryStringToParams(queryString: string): URLSearchParams {
   const cleanQuery = queryString.startsWith("?")
     ? queryString.slice(1)
     : queryString;
-  const params = new URLSearchParams(cleanQuery);
+  return new URLSearchParams(cleanQuery);
+}
 
+export function decodeFilterState(queryString: string): FilterState {
+  const params = queryStringToParams(queryString);
   return {
     searchInput: DEFAULT_FILTER_STATE.searchInput,
     policyTypeFilter:

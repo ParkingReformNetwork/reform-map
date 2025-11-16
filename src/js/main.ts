@@ -2,6 +2,7 @@ import initIcons from "./layout/fontAwesome";
 import createMap from "./layout/map";
 import initFilterPopup from "./layout/filterPopup";
 import maybeDisableFullScreenIcon from "./layout/iframe";
+import maybeHideMapOverlays from "./layout/hideMapOverlays";
 import initShareLink from "./layout/share";
 import initAbout from "./layout/about";
 import { initViewToggle, addViewToggleSubscribers } from "./layout/viewToggle";
@@ -25,6 +26,8 @@ export default async function initApp(): Promise<void> {
   const viewToggle = initViewToggle();
 
   const map = createMap();
+  maybeHideMapOverlays(window.location.search);
+
   const data = await readData();
 
   const initialState = decodeFilterState(window.location.search);
