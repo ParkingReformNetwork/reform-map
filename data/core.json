@@ -4341,7 +4341,7 @@
     },
     "add_max": [
       {
-        "status": "adopted",
+        "status": "proposed",
         "scope": ["city center / business district", "main street / special"],
         "land": [
           "commercial",
@@ -29548,6 +29548,24 @@
         "scope": ["citywide"],
         "land": ["all uses"],
         "date": "2021-08-18"
+      }
+    ]
+  },
+  "Gate City, Virginia, United States": {
+    "place": {
+      "name": "Gate City",
+      "state": "Virginia",
+      "country": "United States",
+      "type": "city",
+      "encoded": "gate-city-virginia-united-states",
+      "pop": 2043,
+      "coord": [-82.5809876, 36.6378774]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["all uses"]
       }
     ]
   },
@@ -78589,24 +78607,6 @@
       "encoded": "TownofFarmington_WI",
       "pop": 3645,
       "coord": [-88.100682, 43.498068]
-    },
-    "rm_min": [
-      {
-        "status": "adopted",
-        "scope": ["city center / business district"],
-        "land": ["all uses"]
-      }
-    ]
-  },
-  "Town of Lac du Flambeau, Wisconsin, United States": {
-    "place": {
-      "name": "Town of Lac du Flambeau",
-      "state": "Wisconsin",
-      "country": "United States",
-      "type": "city",
-      "encoded": "TownofLacduFlambeau_WI",
-      "pop": 3004,
-      "coord": [-89.8928015, 45.9702769]
     },
     "rm_min": [
       {
