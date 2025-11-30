@@ -96,6 +96,14 @@
       "pop": 16254,
       "coord": [-76.1643289, 39.5120347]
     },
+    "reduce_min": [
+      {
+        "status": "proposed",
+        "scope": ["citywide"],
+        "land": ["all uses"],
+        "date": "2025-11-12"
+      }
+    ],
     "rm_min": [
       {
         "status": "adopted",
@@ -4341,7 +4349,7 @@
     },
     "add_max": [
       {
-        "status": "adopted",
+        "status": "proposed",
         "scope": ["city center / business district", "main street / special"],
         "land": [
           "commercial",
@@ -7113,6 +7121,24 @@
       }
     ]
   },
+  "Big Stone Gap, Virginia, United States": {
+    "place": {
+      "name": "Big Stone Gap",
+      "state": "Virginia",
+      "country": "United States",
+      "type": "city",
+      "encoded": "big-stone-gap-virginia-united-states",
+      "pop": 5254,
+      "coord": [-82.7742267, 36.8677938]
+    },
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["all uses"]
+      }
+    ]
+  },
   "Big Timber, Montana, United States": {
     "place": {
       "name": "Big Timber",
@@ -7844,6 +7870,24 @@
       }
     ]
   },
+  "Bluefield, Virginia, United States": {
+    "place": {
+      "name": "Bluefield",
+      "state": "Virginia",
+      "country": "United States",
+      "type": "city",
+      "encoded": "bluefield-virginia-united-states",
+      "pop": 5096,
+      "coord": [-81.2713436, 37.2526133]
+    },
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["residential, multi-family"]
+      }
+    ]
+  },
   "Bluefield, West Virginia, United States": {
     "place": {
       "name": "Bluefield",
@@ -8471,6 +8515,24 @@
       {
         "status": "adopted",
         "scope": ["city center / business district"],
+        "land": ["all uses"]
+      }
+    ]
+  },
+  "Boyce, Virginia, United States": {
+    "place": {
+      "name": "Boyce",
+      "state": "Virginia",
+      "country": "United States",
+      "type": "city",
+      "encoded": "boyce-virginia-united-states",
+      "pop": 749,
+      "coord": [-78.0594426, 39.0931617]
+    },
+    "add_max": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
         "land": ["all uses"]
       }
     ]
@@ -9476,6 +9538,32 @@
         "scope": ["city center / business district"],
         "land": ["commercial"],
         "date": "2006-05-01"
+      }
+    ]
+  },
+  "Broadway, Virginia, United States": {
+    "place": {
+      "name": "Broadway",
+      "state": "Virginia",
+      "country": "United States",
+      "type": "city",
+      "encoded": "broadway-virginia-united-states",
+      "pop": 4170,
+      "coord": [-78.7993257, 38.6133035]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["commercial"],
+        "date": "2011-12-06"
+      }
+    ],
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["all uses"]
       }
     ]
   },
@@ -16265,6 +16353,31 @@
       }
     ]
   },
+  "Colonial Beach, Virginia, United States": {
+    "place": {
+      "name": "Colonial Beach",
+      "state": "Virginia",
+      "country": "United States",
+      "type": "city",
+      "encoded": "colonial-beach-virginia-united-states",
+      "pop": 3908,
+      "coord": [-76.9628158, 38.2512549]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district", "citywide"],
+        "land": ["all uses", "commercial"]
+      }
+    ],
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["commercial", "industrial", "medical", "other"]
+      }
+    ]
+  },
   "Colonial Heights, Virginia, United States": {
     "place": {
       "name": "Colonial Heights",
@@ -16903,10 +17016,10 @@
     ],
     "rm_min": [
       {
-        "status": "proposed",
+        "status": "adopted",
         "scope": ["regional"],
-        "land": ["all uses"],
-        "date": "2025"
+        "land": ["residential, all uses"],
+        "date": "2025-11-26"
       }
     ]
   },
@@ -18786,6 +18899,24 @@
         ],
         "land": ["all uses", "commercial", "industrial"],
         "date": "2025-05-14"
+      }
+    ]
+  },
+  "Damascus, Virginia, United States": {
+    "place": {
+      "name": "Damascus",
+      "state": "Virginia",
+      "country": "United States",
+      "type": "city",
+      "encoded": "damascus-virginia-united-states",
+      "pop": 788,
+      "coord": [-81.7887841, 36.6350101]
+    },
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["all uses"]
       }
     ]
   },
@@ -23889,6 +24020,24 @@
       }
     ]
   },
+  "Elkton, Virginia, United States": {
+    "place": {
+      "name": "Elkton",
+      "state": "Virginia",
+      "country": "United States",
+      "type": "city",
+      "encoded": "elkton-virginia-united-states",
+      "pop": 2941,
+      "coord": [-78.6236329, 38.4079075]
+    },
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["all uses"]
+      }
+    ]
+  },
   "Ellendale, Minnesota, United States": {
     "place": {
       "name": "Ellendale",
@@ -28665,19 +28814,12 @@
       "pop": 27141,
       "coord": [-96.4960449, 41.4338363]
     },
-    "add_max": [
-      {
-        "status": "proposed",
-        "scope": ["city center / business district"],
-        "land": ["all uses"],
-        "date": "2025"
-      }
-    ],
     "rm_min": [
       {
         "status": "adopted",
         "scope": ["city center / business district"],
-        "land": ["all uses"]
+        "land": ["commercial", "other", "residential, all uses"],
+        "date": "2025-11-25"
       }
     ]
   },
@@ -29551,6 +29693,24 @@
       }
     ]
   },
+  "Gate City, Virginia, United States": {
+    "place": {
+      "name": "Gate City",
+      "state": "Virginia",
+      "country": "United States",
+      "type": "city",
+      "encoded": "gate-city-virginia-united-states",
+      "pop": 2043,
+      "coord": [-82.5809876, 36.6378774]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["all uses"]
+      }
+    ]
+  },
   "Gaylord, Minnesota, United States": {
     "place": {
       "name": "Gaylord",
@@ -29633,11 +29793,20 @@
       "pop": 12812,
       "coord": [-76.9786122, 42.8690271]
     },
+    "add_max": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["all uses"],
+        "date": "2023-12-06"
+      }
+    ],
     "reduce_min": [
       {
         "status": "adopted",
-        "scope": ["city center / business district"],
-        "land": ["all uses"]
+        "scope": ["city center / business district", "citywide"],
+        "land": ["all uses"],
+        "date": "2023-12-06"
       }
     ]
   },
@@ -41995,11 +42164,20 @@
       "pop": 69490,
       "coord": [-93.2432791, 44.650051]
     },
-    "reduce_min": [
+    "add_max": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["all uses"],
+        "date": "2025-01-21"
+      }
+    ],
+    "rm_min": [
       {
         "status": "adopted",
         "scope": ["city center / business district"],
-        "land": ["all uses"]
+        "land": ["commercial"],
+        "date": "2025-01-21"
       }
     ]
   },
@@ -42065,9 +42243,10 @@
     ],
     "rm_min": [
       {
-        "status": "proposed",
+        "status": "adopted",
         "scope": ["citywide", "transit-oriented"],
-        "land": ["residential, all uses"]
+        "land": ["residential, all uses"],
+        "date": "2025-08-25"
       }
     ]
   },
@@ -50529,7 +50708,7 @@
     },
     "add_max": [
       {
-        "status": "proposed",
+        "status": "adopted",
         "scope": ["citywide"],
         "land": [
           "commercial",
@@ -50538,21 +50717,15 @@
           "other",
           "residential, multi-family"
         ],
-        "date": "2025"
+        "date": "2025-04-15"
       }
     ],
     "reduce_min": [
       {
-        "status": "proposed",
-        "scope": ["citywide"],
-        "land": ["commercial", "industrial", "medical", "other"]
-      }
-    ],
-    "rm_min": [
-      {
         "status": "adopted",
-        "scope": ["city center / business district"],
-        "land": ["all uses"]
+        "scope": ["citywide"],
+        "land": ["commercial", "industrial", "medical", "other"],
+        "date": "2025-04-15"
       }
     ]
   },
@@ -51884,6 +52057,24 @@
       {
         "status": "adopted",
         "scope": ["city center / business district"],
+        "land": ["all uses"]
+      }
+    ]
+  },
+  "Montross, Virginia, United States": {
+    "place": {
+      "name": "Montross",
+      "state": "Virginia",
+      "country": "United States",
+      "type": "city",
+      "encoded": "montross-virginia-united-states",
+      "pop": 553,
+      "coord": [-76.8277024, 38.0952616]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
         "land": ["all uses"]
       }
     ]
@@ -56898,21 +57089,18 @@
     },
     "add_max": [
       {
-        "status": "proposed",
+        "status": "adopted",
         "scope": ["citywide"],
-        "land": ["all uses"]
+        "land": ["all uses"],
+        "date": "2025-09-22"
       }
     ],
     "reduce_min": [
       {
-        "status": "proposed",
-        "scope": ["city center / business district", "citywide"],
-        "land": ["all uses"]
-      },
-      {
         "status": "adopted",
-        "scope": ["city center / business district"],
-        "land": ["commercial", "other"]
+        "scope": ["city center / business district", "citywide"],
+        "land": ["all uses"],
+        "date": "2025-09-22"
       }
     ]
   },
@@ -67375,6 +67563,12 @@
         "status": "adopted",
         "scope": ["city center / business district"],
         "land": ["all uses"]
+      },
+      {
+        "status": "adopted",
+        "scope": ["main street / special"],
+        "land": ["all uses"],
+        "date": "2022-03-10"
       }
     ]
   },
@@ -68690,11 +68884,30 @@
       "pop": 8931,
       "coord": [-116.5532476, 48.2765903]
     },
+    "add_max": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district", "citywide"],
+        "land": ["commercial", "other", "residential, all uses"]
+      }
+    ],
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district", "citywide"],
+        "land": [
+          "all uses",
+          "commercial",
+          "industrial",
+          "residential, multi-family"
+        ]
+      }
+    ],
     "rm_min": [
       {
         "status": "adopted",
         "scope": ["city center / business district"],
-        "land": ["all uses"]
+        "land": ["commercial", "other"]
       }
     ]
   },
@@ -72513,11 +72726,12 @@
       "pop": 20795,
       "coord": [-87.8606367, 42.9105722]
     },
-    "rm_min": [
+    "reduce_min": [
       {
         "status": "adopted",
-        "scope": ["city center / business district"],
-        "land": ["all uses"]
+        "scope": ["citywide"],
+        "land": ["all uses"],
+        "date": "2025-05-06"
       }
     ]
   },
@@ -74417,8 +74631,9 @@
     "reduce_min": [
       {
         "status": "adopted",
-        "scope": ["main street / special"],
-        "land": ["all uses"]
+        "scope": ["citywide"],
+        "land": ["commercial", "other"],
+        "date": "2024-08-02"
       }
     ]
   },
@@ -75562,6 +75777,24 @@
       "encoded": "Stuart_IA",
       "pop": 1782,
       "coord": [-94.3185737, 41.5033213]
+    },
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["all uses"]
+      }
+    ]
+  },
+  "Stuart, Virginia, United States": {
+    "place": {
+      "name": "Stuart",
+      "state": "Virginia",
+      "country": "United States",
+      "type": "city",
+      "encoded": "stuart-virginia-united-states",
+      "pop": 1431,
+      "coord": [-80.2698215, 36.6422078]
     },
     "rm_min": [
       {
@@ -78598,24 +78831,6 @@
       }
     ]
   },
-  "Town of Lac du Flambeau, Wisconsin, United States": {
-    "place": {
-      "name": "Town of Lac du Flambeau",
-      "state": "Wisconsin",
-      "country": "United States",
-      "type": "city",
-      "encoded": "TownofLacduFlambeau_WI",
-      "pop": 3004,
-      "coord": [-89.8928015, 45.9702769]
-    },
-    "rm_min": [
-      {
-        "status": "adopted",
-        "scope": ["city center / business district"],
-        "land": ["all uses"]
-      }
-    ]
-  },
   "Town of Ledgeview, Wisconsin, United States": {
     "place": {
       "name": "Town of Ledgeview",
@@ -79305,10 +79520,10 @@
     },
     "add_max": [
       {
-        "status": "proposed",
-        "scope": ["city center / business district"],
-        "land": ["all uses"],
-        "date": "2022-10"
+        "status": "adopted",
+        "scope": ["city center / business district", "citywide"],
+        "land": ["all uses", "residential, multi-family"],
+        "date": "2024-12-17"
       }
     ],
     "rm_min": [
@@ -86204,6 +86419,24 @@
         "land": ["all uses"]
       }
     ],
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["all uses"]
+      }
+    ]
+  },
+  "Wise, Virginia, United States": {
+    "place": {
+      "name": "Wise",
+      "state": "Virginia",
+      "country": "United States",
+      "type": "city",
+      "encoded": "wise-virginia-united-states",
+      "pop": 2970,
+      "coord": [-82.6103804, 37.0170633]
+    },
     "rm_min": [
       {
         "status": "adopted",

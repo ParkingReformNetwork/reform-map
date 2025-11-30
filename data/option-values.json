@@ -318,7 +318,7 @@
   },
   "addMaxProposed": {
     "placeType": ["city"],
-    "country": ["United States"],
+    "country": ["United States", "Canada"],
     "scope": [
       "city center / business district",
       "citywide",
@@ -334,17 +334,7 @@
       "residential, all uses",
       "residential, multi-family"
     ],
-    "year": [
-      "unknown",
-      "2025",
-      "2024",
-      "2023",
-      "2022",
-      "2021",
-      "2020",
-      "2018",
-      "2011"
-    ]
+    "year": ["unknown", "2025", "2024", "2023", "2021", "2020", "2018", "2011"]
   },
   "addMaxRepealed": {
     "placeType": ["city", "state"],
@@ -434,13 +424,11 @@
     "landUse": [
       "all uses",
       "commercial",
-      "industrial",
-      "medical",
       "other",
       "residential, all uses",
       "residential, multi-family"
     ],
-    "year": ["unknown", "2025", "2024", "2022", "2017"]
+    "year": ["2025", "2024", "2022", "2017"]
   },
   "reduceMinRepealed": {
     "placeType": ["city"],
