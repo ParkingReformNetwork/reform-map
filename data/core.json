@@ -1397,6 +1397,25 @@
       }
     ]
   },
+  "Altavista, Virginia, United States": {
+    "place": {
+      "name": "Altavista",
+      "state": "Virginia",
+      "country": "United States",
+      "type": "city",
+      "encoded": "altavista-virginia-united-states",
+      "pop": 3378,
+      "coord": [-79.285579, 37.1118094]
+    },
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["commercial"],
+        "date": "2021-07-13"
+      }
+    ]
+  },
   "Alton, Illinois, United States": {
     "place": {
       "name": "Alton",
@@ -2988,6 +3007,38 @@
       }
     ]
   },
+  "Ashland, Virginia, United States": {
+    "place": {
+      "name": "Ashland",
+      "state": "Virginia",
+      "country": "United States",
+      "type": "city",
+      "encoded": "ashland-virginia-united-states",
+      "pop": 7565,
+      "coord": [-77.4806603, 37.7594012]
+    },
+    "add_max": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["all uses"]
+      }
+    ],
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["main street / special"],
+        "land": ["all uses"]
+      }
+    ],
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["commercial"]
+      }
+    ]
+  },
   "Ashland, Wisconsin, United States": {
     "place": {
       "name": "Ashland",
@@ -3790,6 +3841,31 @@
       "pop": 1618,
       "coord": [-94.4516668, 45.6091313]
     },
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["all uses"]
+      }
+    ]
+  },
+  "Avon, New York, United States": {
+    "place": {
+      "name": "Avon",
+      "state": "New York",
+      "country": "United States",
+      "type": "city",
+      "encoded": "avon-new-york-united-states",
+      "pop": 3399,
+      "coord": [-77.7454567, 42.9119925]
+    },
+    "add_max": [
+      {
+        "status": "adopted",
+        "scope": ["main street / special"],
+        "land": ["all uses"]
+      }
+    ],
     "rm_min": [
       {
         "status": "adopted",
@@ -6556,14 +6632,15 @@
       {
         "status": "adopted",
         "scope": ["citywide"],
-        "land": ["all uses"]
+        "land": ["all uses", "commercial", "industrial"],
+        "date": "2025-03-17"
       }
     ],
     "rm_min": [
       {
         "status": "adopted",
-        "scope": ["citywide"],
-        "land": ["commercial", "industrial", "other"]
+        "scope": ["city center / business district"],
+        "land": ["commercial", "industrial", "medical", "other"]
       }
     ]
   },
@@ -7332,6 +7409,12 @@
         "land": ["all uses"],
         "date": "2024-05-07"
       }
+    ],
+    "benefit_district": [
+      {
+        "status": "proposed",
+        "date": "2025"
+      }
     ]
   },
   "Birmingham, Michigan, United States": {
@@ -7519,6 +7602,38 @@
         "status": "adopted",
         "scope": ["city center / business district"],
         "land": ["commercial"]
+      }
+    ]
+  },
+  "Blacksburg, Virginia, United States": {
+    "place": {
+      "name": "Blacksburg",
+      "state": "Virginia",
+      "country": "United States",
+      "type": "city",
+      "encoded": "blacksburg-virginia-united-states",
+      "pop": 44826,
+      "coord": [-80.4136767, 37.2296566]
+    },
+    "add_max": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["commercial", "industrial", "medical", "other"]
+      }
+    ],
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["all uses"]
+      }
+    ],
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["all uses"]
       }
     ]
   },
@@ -9674,6 +9789,13 @@
         "scope": ["citywide"],
         "land": ["commercial", "other", "residential, all uses"]
       }
+    ],
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["all uses"]
+      }
     ]
   },
   "Brook Park, Ohio, United States": {
@@ -9877,6 +9999,24 @@
       {
         "status": "adopted",
         "scope": ["citywide"],
+        "land": ["all uses"]
+      }
+    ]
+  },
+  "Brookneal, Virginia, United States": {
+    "place": {
+      "name": "Brookneal",
+      "state": "Virginia",
+      "country": "United States",
+      "type": "city",
+      "encoded": "brookneal-virginia-united-states",
+      "pop": 1090,
+      "coord": [-78.9441801, 37.0501416]
+    },
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
         "land": ["all uses"]
       }
     ]
@@ -11016,7 +11156,8 @@
       {
         "status": "adopted",
         "scope": ["citywide"],
-        "land": ["commercial", "industrial", "medical", "other"]
+        "land": ["commercial", "industrial", "medical", "other"],
+        "date": "2025-02-18"
       }
     ],
     "reduce_min": [
@@ -11370,6 +11511,24 @@
         "scope": ["citywide"],
         "land": ["all uses"],
         "date": "2020-11-16"
+      }
+    ]
+  },
+  "Canastota, New York, United States": {
+    "place": {
+      "name": "Canastota",
+      "state": "New York",
+      "country": "United States",
+      "type": "city",
+      "encoded": "canastota-new-york-united-states",
+      "pop": 4556,
+      "coord": [-75.751076, 43.079672]
+    },
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["commercial", "other"]
       }
     ]
   },
@@ -12734,6 +12893,31 @@
         "status": "adopted",
         "scope": ["main street / special"],
         "land": ["commercial", "industrial"]
+      }
+    ]
+  },
+  "Cazenovia, New York, United States": {
+    "place": {
+      "name": "Cazenovia",
+      "state": "New York",
+      "country": "United States",
+      "type": "city",
+      "encoded": "cazenovia-new-york-united-states",
+      "pop": 2767,
+      "coord": [-75.8526969, 42.9300668]
+    },
+    "add_max": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["residential, low-density"]
+      }
+    ],
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["all uses"]
       }
     ]
   },
@@ -14579,6 +14763,24 @@
       }
     ]
   },
+  "Chittenango, New York, United States": {
+    "place": {
+      "name": "Chittenango",
+      "state": "New York",
+      "country": "United States",
+      "type": "city",
+      "encoded": "chittenango-new-york-united-states",
+      "pop": 4896,
+      "coord": [-75.8692429, 43.0458574]
+    },
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["all uses"]
+      }
+    ]
+  },
   "Choteau, Montana, United States": {
     "place": {
       "name": "Choteau",
@@ -14611,6 +14813,24 @@
       {
         "status": "adopted",
         "scope": ["city center / business district"],
+        "land": ["all uses"]
+      }
+    ]
+  },
+  "Christiansburg, Virginia, United States": {
+    "place": {
+      "name": "Christiansburg",
+      "state": "Virginia",
+      "country": "United States",
+      "type": "city",
+      "encoded": "christiansburg-virginia-united-states",
+      "pop": 23348,
+      "coord": [-80.4089389, 37.1298517]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district", "citywide"],
         "land": ["all uses"]
       }
     ]
@@ -18475,24 +18695,6 @@
       }
     ]
   },
-  "Crown Point, Indiana, United States": {
-    "place": {
-      "name": "Crown Point",
-      "state": "Indiana",
-      "country": "United States",
-      "type": "city",
-      "encoded": "CrownPoint_IN",
-      "pop": 33899,
-      "coord": [-87.3653136, 41.4169806]
-    },
-    "rm_min": [
-      {
-        "status": "adopted",
-        "scope": ["city center / business district"],
-        "land": ["all uses"]
-      }
-    ]
-  },
   "Crystal Lake, Illinois, United States": {
     "place": {
       "name": "Crystal Lake",
@@ -18583,6 +18785,31 @@
         "status": "adopted",
         "scope": ["main street / special"],
         "land": ["residential, multi-family"]
+      }
+    ]
+  },
+  "Culpeper, Virginia, United States": {
+    "place": {
+      "name": "Culpeper",
+      "state": "Virginia",
+      "country": "United States",
+      "type": "city",
+      "encoded": "culpeper-virginia-united-states",
+      "pop": 20062,
+      "coord": [-77.9961275, 38.4733823]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["all uses", "commercial", "industrial", "medical", "other"]
+      }
+    ],
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["all uses"]
       }
     ]
   },
@@ -24600,11 +24827,12 @@
       "pop": 24139,
       "coord": [-96.181623, 38.4040054]
     },
-    "rm_min": [
+    "add_max": [
       {
         "status": "adopted",
-        "scope": ["city center / business district"],
-        "land": ["all uses"]
+        "scope": ["citywide"],
+        "land": ["all uses"],
+        "date": "2023-09-20"
       }
     ]
   },
@@ -25601,6 +25829,56 @@
       }
     ]
   },
+  "Fairbanks North Star Borough, Alaska, United States": {
+    "place": {
+      "name": "Fairbanks North Star Borough",
+      "state": "Alaska",
+      "country": "United States",
+      "type": "county",
+      "encoded": "fairbanks-north-star-borough-alaska-united-states",
+      "pop": 95655,
+      "coord": [-146.7751619, 64.8649039]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["commercial"]
+      }
+    ],
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["all uses"]
+      }
+    ]
+  },
+  "Fairbanks, Alaska, United States": {
+    "place": {
+      "name": "Fairbanks",
+      "state": "Alaska",
+      "country": "United States",
+      "type": "city",
+      "encoded": "fairbanks-alaska-united-states",
+      "pop": 32515,
+      "coord": [-147.716675, 64.837845]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["commercial"]
+      }
+    ],
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["all uses"]
+      }
+    ]
+  },
   "Fairborn, Ohio, United States": {
     "place": {
       "name": "Fairborn",
@@ -26234,6 +26512,24 @@
         "status": "adopted",
         "scope": ["citywide"],
         "land": ["all uses"]
+      }
+    ]
+  },
+  "Farmville, Virginia, United States": {
+    "place": {
+      "name": "Farmville",
+      "state": "Virginia",
+      "country": "United States",
+      "type": "city",
+      "encoded": "farmville-virginia-united-states",
+      "pop": 7473,
+      "coord": [-78.3923813, 37.3024713]
+    },
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["commercial", "other"]
       }
     ]
   },
@@ -26990,6 +27286,24 @@
         "status": "adopted",
         "scope": ["city center / business district"],
         "land": ["all uses"]
+      }
+    ]
+  },
+  "Floyd, Virginia, United States": {
+    "place": {
+      "name": "Floyd",
+      "state": "Virginia",
+      "country": "United States",
+      "type": "city",
+      "encoded": "floyd-virginia-united-states",
+      "pop": 448,
+      "coord": [-80.3876889, 36.9157056]
+    },
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["commercial", "other"]
       }
     ]
   },
@@ -29228,12 +29542,11 @@
       "pop": 67742,
       "coord": [-77.1929215, 39.1399187]
     },
-    "rm_min": [
+    "add_max": [
       {
         "status": "adopted",
-        "scope": ["city center / business district"],
-        "land": ["all uses"],
-        "date": "2015"
+        "scope": ["citywide"],
+        "land": ["commercial"]
       }
     ]
   },
@@ -29762,6 +30075,24 @@
         "status": "adopted",
         "scope": ["citywide"],
         "land": ["residential, all uses"]
+      }
+    ]
+  },
+  "Geneseo, New York, United States": {
+    "place": {
+      "name": "Geneseo",
+      "state": "New York",
+      "country": "United States",
+      "type": "city",
+      "encoded": "geneseo-new-york-united-states",
+      "pop": 7574,
+      "coord": [-77.816947, 42.795896]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["main street / special"],
+        "land": ["all uses"]
       }
     ]
   },
@@ -30429,24 +30760,6 @@
           "other",
           "residential, low-density"
         ]
-      }
-    ]
-  },
-  "Glendale, Arizona, United States": {
-    "place": {
-      "name": "Glendale",
-      "state": "Arizona",
-      "country": "United States",
-      "type": "city",
-      "encoded": "Glendale_AZ",
-      "pop": 248325,
-      "coord": [-112.185994, 33.5386858]
-    },
-    "add_max": [
-      {
-        "status": "adopted",
-        "scope": ["citywide"],
-        "land": ["commercial", "industrial"]
       }
     ]
   },
@@ -32311,8 +32624,9 @@
     "rm_min": [
       {
         "status": "adopted",
-        "scope": ["main street / special"],
-        "land": ["all uses"]
+        "scope": ["city center / business district"],
+        "land": ["all uses"],
+        "date": "2024-01-01"
       }
     ]
   },
@@ -33032,12 +33346,12 @@
       "pop": 10749,
       "coord": [-97.4252772, 35.8789231]
     },
-    "reduce_min": [
+    "rm_min": [
       {
         "status": "adopted",
-        "scope": ["city center / business district"],
-        "land": ["all uses"],
-        "date": "1997-10-31"
+        "scope": ["citywide"],
+        "land": ["commercial", "industrial", "medical", "other"],
+        "date": "2025-04-22"
       }
     ]
   },
@@ -33325,6 +33639,24 @@
         "status": "adopted",
         "scope": ["city center / business district", "citywide"],
         "land": ["all uses", "residential, all uses"]
+      }
+    ]
+  },
+  "Hamilton, New York, United States": {
+    "place": {
+      "name": "Hamilton",
+      "state": "New York",
+      "country": "United States",
+      "type": "city",
+      "encoded": "hamilton-new-york-united-states",
+      "pop": 4107,
+      "coord": [-74.4659275, 43.6307863]
+    },
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["commercial", "other"]
       }
     ]
   },
@@ -34432,6 +34764,13 @@
       {
         "status": "adopted",
         "scope": ["citywide"],
+        "land": ["all uses"]
+      }
+    ],
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
         "land": ["all uses"]
       }
     ]
@@ -38466,24 +38805,6 @@
       }
     ]
   },
-  "Jamestown, Rhode Island, United States": {
-    "place": {
-      "name": "Jamestown",
-      "state": "Rhode Island",
-      "country": "United States",
-      "type": "city",
-      "encoded": "Jamestown_RI",
-      "pop": 5559,
-      "coord": [-71.3672755, 41.4970465]
-    },
-    "reduce_min": [
-      {
-        "status": "adopted",
-        "scope": ["city center / business district"],
-        "land": ["commercial"]
-      }
-    ]
-  },
   "Janesville, Minnesota, United States": {
     "place": {
       "name": "Janesville",
@@ -40129,6 +40450,24 @@
       }
     ]
   },
+  "Ketchikan, Alaska, United States": {
+    "place": {
+      "name": "Ketchikan",
+      "state": "Alaska",
+      "country": "United States",
+      "type": "city",
+      "encoded": "ketchikan-alaska-united-states",
+      "pop": 8192,
+      "coord": [-131.6466819, 55.3430696]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["all uses"]
+      }
+    ]
+  },
   "Ketchum, Idaho, United States": {
     "place": {
       "name": "Ketchum",
@@ -40907,6 +41246,49 @@
         "status": "adopted",
         "scope": ["citywide"],
         "land": ["commercial", "industrial", "other", "residential, all uses"]
+      }
+    ]
+  },
+  "Kodiak Island Borough, Alaska, United States": {
+    "place": {
+      "name": "Kodiak Island Borough",
+      "state": "Alaska",
+      "country": "United States",
+      "type": "city",
+      "encoded": "kodiak-island-borough-alaska-united-states",
+      "pop": 13101,
+      "coord": [-153.3574124, 57.5433765]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["main street / special"],
+        "land": ["all uses"]
+      }
+    ],
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["main street / special"],
+        "land": ["all uses"]
+      }
+    ]
+  },
+  "Kodiak, Alaska, United States": {
+    "place": {
+      "name": "Kodiak",
+      "state": "Alaska",
+      "country": "United States",
+      "type": "city",
+      "encoded": "kodiak-alaska-united-states",
+      "pop": 5581,
+      "coord": [-152.4067073, 57.7901661]
+    },
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["all uses"]
       }
     ]
   },
@@ -44799,6 +45181,24 @@
       }
     ]
   },
+  "Livonia, New York, United States": {
+    "place": {
+      "name": "Livonia",
+      "state": "New York",
+      "country": "United States",
+      "type": "city",
+      "encoded": "livonia-new-york-united-states",
+      "pop": 1472,
+      "coord": [-77.6686097, 42.8214525]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["all uses"]
+      }
+    ]
+  },
   "Lock Haven, Pennsylvania, United States": {
     "place": {
       "name": "Lock Haven",
@@ -45844,6 +46244,24 @@
       }
     ]
   },
+  "Lowville, New York, United States": {
+    "place": {
+      "name": "Lowville",
+      "state": "New York",
+      "country": "United States",
+      "type": "city",
+      "encoded": "lowville-new-york-united-states",
+      "pop": 3272,
+      "coord": [-75.4921977, 43.7867132]
+    },
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["all uses"]
+      }
+    ]
+  },
   "Lubbock, Texas, United States": {
     "place": {
       "name": "Lubbock",
@@ -45969,6 +46387,24 @@
         "scope": ["citywide"],
         "land": ["all uses"],
         "date": "2021-09-22"
+      }
+    ]
+  },
+  "Luray, Virginia, United States": {
+    "place": {
+      "name": "Luray",
+      "state": "Virginia",
+      "country": "United States",
+      "type": "city",
+      "encoded": "luray-virginia-united-states",
+      "pop": 4831,
+      "coord": [-78.4600202, 38.6654653]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["all uses"]
       }
     ]
   },
@@ -50108,6 +50544,24 @@
       }
     ]
   },
+  "Middletown, Virginia, United States": {
+    "place": {
+      "name": "Middletown",
+      "state": "Virginia",
+      "country": "United States",
+      "type": "city",
+      "encoded": "middletown-virginia-united-states",
+      "pop": 1355,
+      "coord": [-78.280558, 39.0276078]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["commercial"]
+      }
+    ]
+  },
   "Middleville, Michigan, United States": {
     "place": {
       "name": "Middleville",
@@ -51017,13 +51471,6 @@
       "pop": 48377,
       "coord": [-101.296273, 48.23251]
     },
-    "reduce_min": [
-      {
-        "status": "adopted",
-        "scope": ["citywide"],
-        "land": ["all uses"]
-      }
-    ],
     "rm_min": [
       {
         "status": "adopted",
@@ -53248,6 +53695,24 @@
       }
     ]
   },
+  "Mt. Morris, New York, United States": {
+    "place": {
+      "name": "Mt. Morris",
+      "state": "New York",
+      "country": "United States",
+      "type": "city",
+      "encoded": "mt-morris-new-york-united-states",
+      "pop": 2898,
+      "coord": [-77.8741695, 42.7256184]
+    },
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["all uses"]
+      }
+    ]
+  },
   "Mt. Olive, Mississippi, United States": {
     "place": {
       "name": "Mt. Olive",
@@ -54187,6 +54652,32 @@
       }
     ]
   },
+  "Narrows, Virginia, United States": {
+    "place": {
+      "name": "Narrows",
+      "state": "Virginia",
+      "country": "United States",
+      "type": "city",
+      "encoded": "narrows-virginia-united-states",
+      "pop": 2093,
+      "coord": [-80.8111867, 37.3315103]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["commercial"],
+        "date": "2007-12-17"
+      }
+    ],
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["commercial", "other"]
+      }
+    ]
+  },
   "Nashville, Arkansas, United States": {
     "place": {
       "name": "Nashville",
@@ -54756,6 +55247,14 @@
         "status": "adopted",
         "scope": ["citywide"],
         "land": ["all uses"]
+      }
+    ],
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["commercial", "other"],
+        "date": "2024-08-19"
       }
     ]
   },
@@ -56154,18 +56653,20 @@
       "pop": 11988,
       "coord": [-86.2541768, 41.8297694]
     },
+    "add_max": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["all uses"],
+        "date": "2025-08-17"
+      }
+    ],
     "reduce_min": [
       {
         "status": "adopted",
         "scope": ["city center / business district"],
-        "land": ["commercial"]
-      }
-    ],
-    "rm_min": [
-      {
-        "status": "adopted",
-        "scope": ["city center / business district"],
-        "land": ["all uses"]
+        "land": ["all uses"],
+        "date": "2025-08-17"
       }
     ]
   },
@@ -59740,11 +60241,12 @@
       "pop": 14714,
       "coord": [-84.1720541, 42.9975968]
     },
-    "rm_min": [
+    "add_max": [
       {
         "status": "adopted",
-        "scope": ["city center / business district"],
-        "land": ["commercial", "other"]
+        "scope": ["citywide"],
+        "land": ["all uses"],
+        "date": "2024-03-18"
       }
     ]
   },
@@ -60067,6 +60569,24 @@
         "status": "adopted",
         "scope": ["citywide", "transit-oriented"],
         "land": ["residential, low-density"]
+      }
+    ]
+  },
+  "Palmer, Alaska, United States": {
+    "place": {
+      "name": "Palmer",
+      "state": "Alaska",
+      "country": "United States",
+      "type": "city",
+      "encoded": "palmer-alaska-united-states",
+      "pop": 5888,
+      "coord": [-149.11109, 61.5995703]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["all uses"]
       }
     ]
   },
@@ -60996,6 +61516,24 @@
         "status": "adopted",
         "scope": ["citywide"],
         "land": ["all uses"]
+      }
+    ]
+  },
+  "Pearisburg, Virginia, United States": {
+    "place": {
+      "name": "Pearisburg",
+      "state": "Virginia",
+      "country": "United States",
+      "type": "city",
+      "encoded": "pearisburg-virginia-united-states",
+      "pop": 2909,
+      "coord": [-80.7350712, 37.3265112]
+    },
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["commercial", "other"]
       }
     ]
   },
@@ -64408,6 +64946,31 @@
       }
     ]
   },
+  "Pulaski, Virginia, United States": {
+    "place": {
+      "name": "Pulaski",
+      "state": "Virginia",
+      "country": "United States",
+      "type": "city",
+      "encoded": "pulaski-virginia-united-states",
+      "pop": 8985,
+      "coord": [-80.77999487032574, 37.0477592240504]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["all uses"]
+      }
+    ],
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["commercial"]
+      }
+    ]
+  },
   "Pulaski, Wisconsin, United States": {
     "place": {
       "name": "Pulaski",
@@ -65376,6 +65939,24 @@
       }
     ]
   },
+  "Remington, Virginia, United States": {
+    "place": {
+      "name": "Remington",
+      "state": "Virginia",
+      "country": "United States",
+      "type": "city",
+      "encoded": "remington-virginia-united-states",
+      "pop": 627,
+      "coord": [-77.8084073, 38.5333517]
+    },
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["all uses"]
+      }
+    ]
+  },
   "Reno, Nevada, United States": {
     "place": {
       "name": "Reno",
@@ -65583,6 +66164,24 @@
         "status": "adopted",
         "scope": ["city center / business district"],
         "land": ["all uses"]
+      }
+    ]
+  },
+  "Rich Creek, Virginia, United States": {
+    "place": {
+      "name": "Rich Creek",
+      "state": "Virginia",
+      "country": "United States",
+      "type": "city",
+      "encoded": "rich-creek-virginia-united-states",
+      "pop": 749,
+      "coord": [-80.8224608, 37.3824263]
+    },
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["commercial", "other"]
       }
     ]
   },
@@ -67065,6 +67664,31 @@
         "scope": ["citywide"],
         "land": ["residential, multi-family"],
         "date": "2022-01-19"
+      }
+    ]
+  },
+  "Rocky Mount, Virginia, United States": {
+    "place": {
+      "name": "Rocky Mount",
+      "state": "Virginia",
+      "country": "United States",
+      "type": "city",
+      "encoded": "rocky-mount-virginia-united-states",
+      "pop": 4903,
+      "coord": [-79.8909474, 36.9962007]
+    },
+    "add_max": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["all uses"]
+      }
+    ],
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["commercial", "other"]
       }
     ]
   },
@@ -71858,6 +72482,42 @@
       }
     ]
   },
+  "Sitka, Alaska, United States": {
+    "place": {
+      "name": "Sitka",
+      "state": "Alaska",
+      "country": "United States",
+      "type": "city",
+      "encoded": "sitka-alaska-united-states",
+      "pop": 8458,
+      "coord": [-135.337612, 57.0524973]
+    },
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["all uses"]
+      }
+    ]
+  },
+  "Skagway, Alaska, United States": {
+    "place": {
+      "name": "Skagway",
+      "state": "Alaska",
+      "country": "United States",
+      "type": "city",
+      "encoded": "skagway-alaska-united-states",
+      "pop": 1240,
+      "coord": [-135.4094368, 59.6226362]
+    },
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["commercial", "other"]
+      }
+    ]
+  },
   "Skokie, Illinois, United States": {
     "place": {
       "name": "Skokie",
@@ -72454,6 +73114,24 @@
       }
     ]
   },
+  "South Boston, Virginia, United States": {
+    "place": {
+      "name": "South Boston",
+      "state": "Virginia",
+      "country": "United States",
+      "type": "city",
+      "encoded": "south-boston-virginia-united-states",
+      "pop": 7966,
+      "coord": [-78.9013987, 36.6987494]
+    },
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["commercial", "other"]
+      }
+    ]
+  },
   "South Bruce Peninsula, Ontario, Canada": {
     "place": {
       "name": "South Bruce Peninsula",
@@ -72634,6 +73312,24 @@
         "status": "adopted",
         "scope": ["city center / business district"],
         "land": ["all uses"]
+      }
+    ]
+  },
+  "South Hill, Virginia, United States": {
+    "place": {
+      "name": "South Hill",
+      "state": "Virginia",
+      "country": "United States",
+      "type": "city",
+      "encoded": "south-hill-virginia-united-states",
+      "pop": 4709,
+      "coord": [-78.1291308, 36.7265449]
+    },
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["all uses", "residential, all uses"]
       }
     ]
   },
@@ -80894,6 +81590,24 @@
       }
     ]
   },
+  "Victoria, Virginia, United States": {
+    "place": {
+      "name": "Victoria",
+      "state": "Virginia",
+      "country": "United States",
+      "type": "city",
+      "encoded": "victoria-virginia-united-states",
+      "pop": 1734,
+      "coord": [-78.2273673, 36.9948938]
+    },
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["commercial", "other"]
+      }
+    ]
+  },
   "Vidalia, Louisiana, United States": {
     "place": {
       "name": "Vidalia",
@@ -81107,11 +81821,23 @@
       "pop": 8104,
       "coord": [-79.8969819, 37.2809707]
     },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["all uses"]
+      }
+    ],
     "rm_min": [
       {
         "status": "adopted",
         "scope": ["city center / business district"],
         "land": ["all uses"]
+      },
+      {
+        "status": "adopted",
+        "scope": ["main street / special"],
+        "land": ["commercial"]
       }
     ]
   },
@@ -81903,6 +82629,31 @@
         "scope": ["main street / special"],
         "land": ["residential, all uses"],
         "date": "2020-11-04"
+      }
+    ]
+  },
+  "Warrenton, Virginia, United States": {
+    "place": {
+      "name": "Warrenton",
+      "state": "Virginia",
+      "country": "United States",
+      "type": "city",
+      "encoded": "warrenton-virginia-united-states",
+      "pop": 10057,
+      "coord": [-77.795367, 38.7135498]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["all uses"]
+      }
+    ],
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["commercial", "industrial", "medical", "other"]
       }
     ]
   },
@@ -84151,6 +84902,24 @@
       }
     ]
   },
+  "West Point, Virginia, United States": {
+    "place": {
+      "name": "West Point",
+      "state": "Virginia",
+      "country": "United States",
+      "type": "city",
+      "encoded": "west-point-virginia-united-states",
+      "pop": 3414,
+      "coord": [-76.7963566, 37.5315303]
+    },
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["all uses"]
+      }
+    ]
+  },
   "West Reading, Pennsylvania, United States": {
     "place": {
       "name": "West Reading",
@@ -84401,6 +85170,14 @@
       "pop": 85420,
       "coord": [-83.4005321, 42.3238056]
     },
+    "add_max": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["all uses"],
+        "date": "2024-10-21"
+      }
+    ],
     "reduce_min": [
       {
         "status": "adopted",
@@ -86435,7 +87212,7 @@
       "type": "city",
       "encoded": "wise-virginia-united-states",
       "pop": 2970,
-      "coord": [-82.6103804, 37.0170633]
+      "coord": [-82.58026060604332, 36.97782374785151]
     },
     "rm_min": [
       {
@@ -87205,6 +87982,24 @@
       {
         "status": "adopted",
         "scope": ["city center / business district"],
+        "land": ["all uses"]
+      }
+    ]
+  },
+  "Yakutat Borough, Alaska, United States": {
+    "place": {
+      "name": "Yakutat Borough",
+      "state": "Alaska",
+      "country": "United States",
+      "type": "county",
+      "encoded": "yakutat-borough-alaska-united-states",
+      "pop": 657,
+      "coord": [-139.7284502, 59.5486975]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["main street / special"],
         "land": ["all uses"]
       }
     ]
