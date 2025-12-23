@@ -78,6 +78,7 @@
       "1995",
       "1994",
       "1993",
+      "1992",
       "1989",
       "1988",
       "1987",
@@ -177,6 +178,7 @@
       "1995",
       "1994",
       "1993",
+      "1992",
       "1989",
       "1988",
       "1987",
@@ -247,7 +249,12 @@
       "main street / special",
       "transit-oriented"
     ],
-    "landUse": ["all uses", "residential, all uses"],
+    "landUse": [
+      "all uses",
+      "commercial",
+      "industrial",
+      "residential, all uses"
+    ],
     "year": ["unknown", "2023"]
   },
   "addMaxAdopted": {
@@ -307,8 +314,8 @@
       "2008",
       "2007",
       "2006",
-      "2003",
       "2000",
+      "1998",
       "1997",
       "1995",
       "1967",
@@ -340,7 +347,12 @@
     "placeType": ["city", "state"],
     "country": ["United States", "China"],
     "scope": ["citywide"],
-    "landUse": ["all uses", "residential, all uses"],
+    "landUse": [
+      "all uses",
+      "commercial",
+      "industrial",
+      "residential, all uses"
+    ],
     "year": ["unknown"]
   },
   "reduceMinAdopted": {
@@ -434,7 +446,7 @@
     "placeType": ["city"],
     "country": ["United States"],
     "scope": ["city center / business district", "transit-oriented"],
-    "landUse": ["all uses"],
+    "landUse": ["all uses", "commercial"],
     "year": ["unknown"]
   },
   "rmMinAdopted": {
@@ -505,6 +517,7 @@
       "1998",
       "1997",
       "1995",
+      "1992",
       "1989",
       "1988",
       "1986",
@@ -537,7 +550,11 @@
   "rmMinRepealed": {
     "placeType": ["city"],
     "country": ["United States"],
-    "scope": ["citywide", "main street / special"],
+    "scope": [
+      "city center / business district",
+      "citywide",
+      "main street / special"
+    ],
     "landUse": ["all uses", "residential, all uses"],
     "year": ["unknown", "2023"]
   },
