@@ -814,6 +814,24 @@
       }
     ]
   },
+  "Albion, New York, United States": {
+    "place": {
+      "name": "Albion",
+      "state": "New York",
+      "country": "United States",
+      "type": "city",
+      "encoded": "albion-new-york-united-states",
+      "pop": 5637,
+      "coord": [-78.1936501, 43.246318]
+    },
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["all uses"]
+      }
+    ]
+  },
   "Albion, Pennsylvania, United States": {
     "place": {
       "name": "Albion",
@@ -4073,6 +4091,31 @@
       {
         "status": "adopted",
         "scope": ["city center / business district"],
+        "land": ["all uses"]
+      }
+    ]
+  },
+  "Baldwinsville, New York, United States": {
+    "place": {
+      "name": "Baldwinsville",
+      "state": "New York",
+      "country": "United States",
+      "type": "city",
+      "encoded": "baldwinsville-new-york-united-states",
+      "pop": 7898,
+      "coord": [-76.33271, 43.158679]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["all uses"]
+      }
+    ],
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["main street / special"],
         "land": ["all uses"]
       }
     ]
@@ -7784,6 +7827,24 @@
       {
         "status": "adopted",
         "scope": ["citywide"],
+        "land": ["all uses"]
+      }
+    ]
+  },
+  "Bloomfield, New York, United States": {
+    "place": {
+      "name": "Bloomfield",
+      "state": "New York",
+      "country": "United States",
+      "type": "city",
+      "encoded": "bloomfield-new-york-united-states",
+      "pop": 1277,
+      "coord": [-77.4347128, 42.8950641]
+    },
+    "add_max": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
         "land": ["all uses"]
       }
     ]
@@ -11555,6 +11616,31 @@
       }
     ]
   },
+  "Canandaigua (City), New York, United States": {
+    "place": {
+      "name": "Canandaigua (City)",
+      "state": "New York",
+      "country": "United States",
+      "type": "city",
+      "encoded": "canandaigua-city-new-york-united-states",
+      "pop": 10576,
+      "coord": [-77.286641, 42.873181]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["all uses"]
+      }
+    ],
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["all uses"]
+      }
+    ]
+  },
   "Canandaigua, New York, United States": {
     "place": {
       "name": "Canandaigua",
@@ -11563,7 +11649,7 @@
       "type": "city",
       "encoded": "Canandaigua_NY",
       "pop": 10156,
-      "coord": [-77.2799761, 42.8858579],
+      "coord": [-77.32449674936801, 42.85120373373659],
       "repeal": true
     },
     "rm_min": [
@@ -15806,6 +15892,24 @@
         "status": "adopted",
         "scope": ["city center / business district"],
         "land": ["all uses"]
+      }
+    ]
+  },
+  "Clifton Springs, New York, United States": {
+    "place": {
+      "name": "Clifton Springs",
+      "state": "New York",
+      "country": "United States",
+      "type": "city",
+      "encoded": "clifton-springs-new-york-united-states",
+      "pop": 2209,
+      "coord": [-77.1399757, 42.9617304]
+    },
+    "add_max": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["other"]
       }
     ]
   },
@@ -24395,6 +24499,24 @@
       }
     ]
   },
+  "Ellenville, New York, United States": {
+    "place": {
+      "name": "Ellenville",
+      "state": "New York",
+      "country": "United States",
+      "type": "city",
+      "encoded": "ellenville-new-york-united-states",
+      "pop": 4167,
+      "coord": [-74.345361, 41.6975082]
+    },
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["commercial", "other"]
+      }
+    ]
+  },
   "Ellettsville, Indiana, United States": {
     "place": {
       "name": "Ellettsville",
@@ -29575,6 +29697,24 @@
       }
     ]
   },
+  "Fulton, New York, United States": {
+    "place": {
+      "name": "Fulton",
+      "state": "New York",
+      "country": "United States",
+      "type": "city",
+      "encoded": "fulton-new-york-united-states",
+      "pop": 11389,
+      "coord": [-74.4461771, 43.1061507]
+    },
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district", "main street / special"],
+        "land": ["commercial", "other"]
+      }
+    ]
+  },
   "Gadsden, Alabama, United States": {
     "place": {
       "name": "Gadsden",
@@ -31050,6 +31190,24 @@
       }
     ]
   },
+  "Glens Falls, New York, United States": {
+    "place": {
+      "name": "Glens Falls",
+      "state": "New York",
+      "country": "United States",
+      "type": "city",
+      "encoded": "glens-falls-new-york-united-states",
+      "pop": 14830,
+      "coord": [-73.644447, 43.309941]
+    },
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["commercial", "residential, all uses"]
+      }
+    ]
+  },
   "Glenview, Illinois, United States": {
     "place": {
       "name": "Glenview",
@@ -32241,6 +32399,24 @@
       {
         "status": "adopted",
         "scope": ["main street / special"],
+        "land": ["all uses"]
+      }
+    ]
+  },
+  "Granville, New York, United States": {
+    "place": {
+      "name": "Granville",
+      "state": "New York",
+      "country": "United States",
+      "type": "city",
+      "encoded": "granville-new-york-united-states",
+      "pop": 2404,
+      "coord": [-73.259583, 43.408041]
+    },
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
         "land": ["all uses"]
       }
     ]
@@ -36605,6 +36781,24 @@
       }
     ]
   },
+  "Holley, New York, United States": {
+    "place": {
+      "name": "Holley",
+      "state": "New York",
+      "country": "United States",
+      "type": "city",
+      "encoded": "holley-new-york-united-states",
+      "pop": 1754,
+      "coord": [-78.027155, 43.226806]
+    },
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["residential, all uses"]
+      }
+    ]
+  },
   "Holly, Michigan, United States": {
     "place": {
       "name": "Holly",
@@ -37196,6 +37390,24 @@
         "status": "adopted",
         "scope": ["main street / special"],
         "land": ["all uses"]
+      }
+    ]
+  },
+  "Hudson Falls, New York, United States": {
+    "place": {
+      "name": "Hudson Falls",
+      "state": "New York",
+      "country": "United States",
+      "type": "city",
+      "encoded": "hudson-falls-new-york-united-states",
+      "pop": 7428,
+      "coord": [-73.586082, 43.300697]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["commercial", "industrial", "medical", "other"]
       }
     ]
   },
@@ -38561,6 +38773,24 @@
       {
         "status": "adopted",
         "scope": ["city center / business district"],
+        "land": ["all uses"]
+      }
+    ]
+  },
+  "Irvington, New York, United States": {
+    "place": {
+      "name": "Irvington",
+      "state": "New York",
+      "country": "United States",
+      "type": "city",
+      "encoded": "irvington-new-york-united-states",
+      "pop": 6652,
+      "coord": [-73.872717, 41.0398662]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["main street / special"],
         "land": ["all uses"]
       }
     ]
@@ -43281,6 +43511,24 @@
         "scope": ["citywide"],
         "land": ["all uses"],
         "date": "2024-05-16"
+      }
+    ]
+  },
+  "Lansing, New York, United States": {
+    "place": {
+      "name": "Lansing",
+      "state": "New York",
+      "country": "United States",
+      "type": "city",
+      "encoded": "lansing-new-york-united-states",
+      "pop": 3648,
+      "coord": [-76.4779117, 42.4840418]
+    },
+    "add_max": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["all uses"]
       }
     ]
   },
@@ -49917,6 +50165,53 @@
         "status": "adopted",
         "scope": ["city center / business district"],
         "land": ["residential, low-density"]
+      }
+    ]
+  },
+  "Melbourne, Victoria, Australia": {
+    "place": {
+      "name": "Melbourne",
+      "state": "Victoria",
+      "country": "Australia",
+      "type": "city",
+      "encoded": "melbourne-victoria-australia",
+      "pop": 149615,
+      "coord": [144.9631732, -37.8142454]
+    },
+    "add_max": [
+      {
+        "status": "adopted",
+        "scope": [
+          "city center / business district",
+          "main street / special",
+          "transit-oriented"
+        ],
+        "land": ["all uses"],
+        "date": "2025-12-17"
+      }
+    ],
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": [
+          "city center / business district",
+          "main street / special",
+          "transit-oriented"
+        ],
+        "land": ["all uses"],
+        "date": "2025-12-17"
+      }
+    ],
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": [
+          "city center / business district",
+          "main street / special",
+          "transit-oriented"
+        ],
+        "land": ["all uses"],
+        "date": "2025-12-17"
       }
     ]
   },
@@ -56588,6 +56883,24 @@
       }
     ]
   },
+  "Newark, New York, United States": {
+    "place": {
+      "name": "Newark",
+      "state": "New York",
+      "country": "United States",
+      "type": "city",
+      "encoded": "newark-new-york-united-states",
+      "pop": 9017,
+      "coord": [-77.0952516, 43.0467301]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["all uses"]
+      }
+    ]
+  },
   "Newark, Ohio, United States": {
     "place": {
       "name": "Newark",
@@ -60556,6 +60869,31 @@
       }
     ]
   },
+  "Owego, New York, United States": {
+    "place": {
+      "name": "Owego",
+      "state": "New York",
+      "country": "United States",
+      "type": "city",
+      "encoded": "owego-new-york-united-states",
+      "pop": 3654,
+      "coord": [-76.2622669, 42.1034528]
+    },
+    "add_max": [
+      {
+        "status": "adopted",
+        "scope": ["main street / special"],
+        "land": ["all uses"]
+      }
+    ],
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["all uses"]
+      }
+    ]
+  },
   "Owen Sound, Ontario, Canada": {
     "place": {
       "name": "Owen Sound",
@@ -61012,6 +61350,24 @@
       }
     ]
   },
+  "Palmyra, New York, United States": {
+    "place": {
+      "name": "Palmyra",
+      "state": "New York",
+      "country": "United States",
+      "type": "city",
+      "encoded": "palmyra-new-york-united-states",
+      "pop": 3305,
+      "coord": [-77.2347245, 43.0623754]
+    },
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["all uses"]
+      }
+    ]
+  },
   "Palmyra, Pennsylvania, United States": {
     "place": {
       "name": "Palmyra",
@@ -61201,6 +61557,24 @@
       "coord": [-87.6961374, 39.611146]
     },
     "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["all uses"]
+      }
+    ]
+  },
+  "Parish, New York, United States": {
+    "place": {
+      "name": "Parish",
+      "state": "New York",
+      "country": "United States",
+      "type": "city",
+      "encoded": "parish-new-york-united-states",
+      "pop": 447,
+      "coord": [-76.125758, 43.406181]
+    },
+    "add_max": [
       {
         "status": "adopted",
         "scope": ["city center / business district"],
@@ -62725,6 +63099,24 @@
       "coord": [-85.4874595, 38.3106248]
     },
     "add_max": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["all uses"]
+      }
+    ]
+  },
+  "Phelps, New York, United States": {
+    "place": {
+      "name": "Phelps",
+      "state": "New York",
+      "country": "United States",
+      "type": "city",
+      "encoded": "phelps-new-york-united-states",
+      "pop": 1851,
+      "coord": [-77.057471, 42.957564]
+    },
+    "reduce_min": [
       {
         "status": "adopted",
         "scope": ["citywide"],
@@ -70547,6 +70939,24 @@
       }
     ]
   },
+  "Saugerties, New York, United States": {
+    "place": {
+      "name": "Saugerties",
+      "state": "New York",
+      "country": "United States",
+      "type": "city",
+      "encoded": "saugerties-new-york-united-states",
+      "pop": 3899,
+      "coord": [-73.9529126, 42.0775906]
+    },
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["commercial", "other"]
+      }
+    ]
+  },
   "Sauk City, Wisconsin, United States": {
     "place": {
       "name": "Sauk City",
@@ -72501,6 +72911,24 @@
         "status": "adopted",
         "scope": ["citywide"],
         "land": ["all uses"]
+      }
+    ]
+  },
+  "Shortsville, New York, United States": {
+    "place": {
+      "name": "Shortsville",
+      "state": "New York",
+      "country": "United States",
+      "type": "city",
+      "encoded": "shortsville-new-york-united-states",
+      "pop": 1400,
+      "coord": [-77.2206913, 42.9559145]
+    },
+    "add_max": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["other"]
       }
     ]
   },
@@ -78435,6 +78863,24 @@
       }
     ]
   },
+  "Tarrytown, New York, United States": {
+    "place": {
+      "name": "Tarrytown",
+      "state": "New York",
+      "country": "United States",
+      "type": "city",
+      "encoded": "tarrytown-new-york-united-states",
+      "pop": 11860,
+      "coord": [-73.8587461, 41.0762077]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["all uses"]
+      }
+    ]
+  },
   "Tasmania, Australia": {
     "place": {
       "name": "Tasmania",
@@ -80610,6 +81056,24 @@
       }
     ]
   },
+  "Trumansburg, New York, United States": {
+    "place": {
+      "name": "Trumansburg",
+      "state": "New York",
+      "country": "United States",
+      "type": "city",
+      "encoded": "trumansburg-new-york-united-states",
+      "pop": 1714,
+      "coord": [-76.6660589, 42.5422939]
+    },
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["all uses"]
+      }
+    ]
+  },
   "Trumbull, Connecticut, United States": {
     "place": {
       "name": "Trumbull",
@@ -81981,6 +82445,24 @@
       }
     ]
   },
+  "Vernon, New York, United States": {
+    "place": {
+      "name": "Vernon",
+      "state": "New York",
+      "country": "United States",
+      "type": "city",
+      "encoded": "vernon-new-york-united-states",
+      "pop": 1177,
+      "coord": [-75.539589, 43.079672]
+    },
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["all uses"]
+      }
+    ]
+  },
   "Verona, Pennsylvania, United States": {
     "place": {
       "name": "Verona",
@@ -82113,6 +82595,24 @@
         "status": "adopted",
         "scope": ["city center / business district"],
         "land": ["commercial"]
+      }
+    ]
+  },
+  "Victor, New York, United States": {
+    "place": {
+      "name": "Victor",
+      "state": "New York",
+      "country": "United States",
+      "type": "city",
+      "encoded": "victor-new-york-united-states",
+      "pop": 2744,
+      "coord": [-77.4088794, 42.9825634]
+    },
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["all uses"]
       }
     ]
   },
@@ -86418,6 +86918,24 @@
         "status": "adopted",
         "scope": ["citywide"],
         "land": ["commercial", "industrial", "other"]
+      }
+    ]
+  },
+  "Whitesboro, New York, United States": {
+    "place": {
+      "name": "Whitesboro",
+      "state": "New York",
+      "country": "United States",
+      "type": "city",
+      "encoded": "whitesboro-new-york-united-states",
+      "pop": 3612,
+      "coord": [-75.2999431, 43.1266875]
+    },
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["commercial", "other"]
       }
     ]
   },
