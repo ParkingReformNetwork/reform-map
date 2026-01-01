@@ -1516,7 +1516,7 @@
       {
         "status": "adopted",
         "scope": ["citywide"],
-        "land": ["commercial", "industrial", "other", "residential, all uses"]
+        "land": ["residential, all uses"]
       }
     ]
   },
@@ -1729,6 +1729,24 @@
         "status": "adopted",
         "scope": ["city center / business district"],
         "land": ["commercial"]
+      }
+    ]
+  },
+  "Amityville, New York, United States": {
+    "place": {
+      "name": "Amityville",
+      "state": "New York",
+      "country": "United States",
+      "type": "city",
+      "encoded": "amityville-new-york-united-states",
+      "pop": 9500,
+      "coord": [-73.4170673, 40.6789893]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["transit-oriented"],
+        "land": ["residential, multi-family"]
       }
     ]
   },
@@ -2537,6 +2555,24 @@
       "coord": [-97.1436254, 34.1742611]
     },
     "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["all uses"]
+      }
+    ]
+  },
+  "Ardsley, New York, United States": {
+    "place": {
+      "name": "Ardsley",
+      "state": "New York",
+      "country": "United States",
+      "type": "city",
+      "encoded": "ardsley-new-york-united-states",
+      "pop": 5079,
+      "coord": [-73.8437452, 41.0106531]
+    },
+    "reduce_min": [
       {
         "status": "adopted",
         "scope": ["city center / business district"],
@@ -4120,6 +4156,24 @@
       }
     ]
   },
+  "Ballston Spa, New York, United States": {
+    "place": {
+      "name": "Ballston Spa",
+      "state": "New York",
+      "country": "United States",
+      "type": "city",
+      "encoded": "ballston-spa-new-york-united-states",
+      "pop": 5111,
+      "coord": [-73.85095068128597, 43.002511563979276]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["all uses"]
+      }
+    ]
+  },
   "Ballwin, Missouri, United States": {
     "place": {
       "name": "Ballwin",
@@ -4930,6 +4984,24 @@
         "status": "adopted",
         "scope": ["city center / business district"],
         "land": ["commercial"]
+      }
+    ]
+  },
+  "Bath, New York, United States": {
+    "place": {
+      "name": "Bath",
+      "state": "New York",
+      "country": "United States",
+      "type": "city",
+      "encoded": "bath-new-york-united-states",
+      "pop": 5571,
+      "coord": [-77.3177577, 42.3370164]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["all uses"]
       }
     ]
   },
@@ -7961,8 +8033,9 @@
     "rm_min": [
       {
         "status": "adopted",
-        "scope": ["city center / business district"],
-        "land": ["all uses"]
+        "scope": ["city center / business district", "citywide"],
+        "land": ["all uses", "commercial", "industrial", "medical", "other"],
+        "date": "2024-06-03"
       }
     ]
   },
@@ -9365,6 +9438,24 @@
         "status": "adopted",
         "scope": ["city center / business district"],
         "land": ["commercial", "industrial", "other"]
+      }
+    ]
+  },
+  "Brewster, New York, United States": {
+    "place": {
+      "name": "Brewster",
+      "state": "New York",
+      "country": "United States",
+      "type": "city",
+      "encoded": "brewster-new-york-united-states",
+      "pop": 2508,
+      "coord": [-73.6165288, 41.3972985]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["all uses"]
       }
     ]
   },
@@ -11392,6 +11483,38 @@
       }
     ]
   },
+  "Cambridge, New York, United States": {
+    "place": {
+      "name": "Cambridge",
+      "state": "New York",
+      "country": "United States",
+      "type": "city",
+      "encoded": "cambridge-new-york-united-states",
+      "pop": 1788,
+      "coord": [-73.38097170307364, 43.02811115932607]
+    },
+    "add_max": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["all uses"]
+      }
+    ],
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["all uses"]
+      }
+    ],
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["commercial", "other"]
+      }
+    ]
+  },
   "Cambridge, Ohio, United States": {
     "place": {
       "name": "Cambridge",
@@ -11624,7 +11747,7 @@
       "type": "city",
       "encoded": "canandaigua-city-new-york-united-states",
       "pop": 10576,
-      "coord": [-77.286641, 42.873181]
+      "coord": [-77.27982286542915, 42.88500139759809]
     },
     "reduce_min": [
       {
@@ -11676,6 +11799,24 @@
         "status": "adopted",
         "scope": ["city center / business district"],
         "land": ["commercial", "other"]
+      }
+    ]
+  },
+  "Canisteo, New York, United States": {
+    "place": {
+      "name": "Canisteo",
+      "state": "New York",
+      "country": "United States",
+      "type": "city",
+      "encoded": "canisteo-new-york-united-states",
+      "pop": 2176,
+      "coord": [-77.6058225, 42.2703487]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["all uses"]
       }
     ]
   },
@@ -11800,6 +11941,31 @@
         "scope": ["city center / business district"],
         "land": ["all uses"],
         "date": "1976-11"
+      }
+    ]
+  },
+  "Canton, New York, United States": {
+    "place": {
+      "name": "Canton",
+      "state": "New York",
+      "country": "United States",
+      "type": "city",
+      "encoded": "canton-new-york-united-states",
+      "pop": 7155,
+      "coord": [-75.1690942, 44.5956163]
+    },
+    "add_max": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["all uses"]
+      }
+    ],
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["all uses"]
       }
     ]
   },
@@ -12950,6 +13116,24 @@
         "status": "adopted",
         "scope": ["citywide"],
         "land": ["all uses"]
+      }
+    ]
+  },
+  "Castleton-on-Hudson, New York, United States": {
+    "place": {
+      "name": "Castleton-on-Hudson",
+      "state": "New York",
+      "country": "United States",
+      "type": "city",
+      "encoded": "castleton-on-hudson-new-york-united-states",
+      "pop": 1477,
+      "coord": [-73.7553018, 42.5308134]
+    },
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["commercial", "other", "residential, all uses"]
       }
     ]
   },
@@ -14579,6 +14763,24 @@
         "status": "adopted",
         "scope": ["citywide"],
         "land": ["all uses"]
+      }
+    ]
+  },
+  "Chester, New York, United States": {
+    "place": {
+      "name": "Chester",
+      "state": "New York",
+      "country": "United States",
+      "type": "city",
+      "encoded": "chester-new-york-united-states",
+      "pop": 3993,
+      "coord": [-74.2714981, 41.3624533]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["commercial"]
       }
     ]
   },
@@ -16231,6 +16433,24 @@
       }
     ]
   },
+  "Clyde, New York, United States": {
+    "place": {
+      "name": "Clyde",
+      "state": "New York",
+      "country": "United States",
+      "type": "city",
+      "encoded": "clyde-new-york-united-states",
+      "pop": 2171,
+      "coord": [-76.869405, 43.084231]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["commercial", "other"]
+      }
+    ]
+  },
   "Clyman, Wisconsin, United States": {
     "place": {
       "name": "Clyman",
@@ -16307,6 +16527,31 @@
         "status": "adopted",
         "scope": ["city center / business district"],
         "land": ["commercial"]
+      }
+    ]
+  },
+  "Cobleskill, New York, United States": {
+    "place": {
+      "name": "Cobleskill",
+      "state": "New York",
+      "country": "United States",
+      "type": "city",
+      "encoded": "cobleskill-new-york-united-states",
+      "pop": 4173,
+      "coord": [-74.4854172, 42.677853]
+    },
+    "add_max": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["commercial"]
+      }
+    ],
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["all uses"]
       }
     ]
   },
@@ -16507,6 +16752,31 @@
       "pop": 4164,
       "coord": [-94.4288849, 45.4557973]
     },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["all uses"]
+      }
+    ]
+  },
+  "Cold Spring, New York, United States": {
+    "place": {
+      "name": "Cold Spring",
+      "state": "New York",
+      "country": "United States",
+      "type": "city",
+      "encoded": "cold-spring-new-york-united-states",
+      "pop": 1986,
+      "coord": [-73.9545831, 41.4200938]
+    },
+    "add_max": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["all uses"]
+      }
+    ],
     "reduce_min": [
       {
         "status": "adopted",
@@ -20998,6 +21268,24 @@
       }
     ]
   },
+  "Dering Harbor, New York, United States": {
+    "place": {
+      "name": "Dering Harbor",
+      "state": "New York",
+      "country": "United States",
+      "type": "city",
+      "encoded": "dering-harbor-new-york-united-states",
+      "pop": 100,
+      "coord": [-72.3467497, 41.092877]
+    },
+    "add_max": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["all uses"]
+      }
+    ]
+  },
   "Derry, Pennsylvania, United States": {
     "place": {
       "name": "Derry",
@@ -21422,6 +21710,24 @@
         "status": "adopted",
         "scope": ["city center / business district"],
         "land": ["commercial"]
+      }
+    ]
+  },
+  "Dobbs Ferry, New York, United States": {
+    "place": {
+      "name": "Dobbs Ferry",
+      "state": "New York",
+      "country": "United States",
+      "type": "city",
+      "encoded": "dobbs-ferry-new-york-united-states",
+      "pop": 11541,
+      "coord": [-73.872635, 41.0145418]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["all uses", "residential, all uses"]
       }
     ]
   },
@@ -24507,7 +24813,7 @@
       "type": "city",
       "encoded": "ellenville-new-york-united-states",
       "pop": 4167,
-      "coord": [-74.345361, 41.6975082]
+      "coord": [-74.39575388021501, 41.71710052103653]
     },
     "rm_min": [
       {
@@ -26635,6 +26941,24 @@
       }
     ]
   },
+  "Farmingdale, New York, United States": {
+    "place": {
+      "name": "Farmingdale",
+      "state": "New York",
+      "country": "United States",
+      "type": "city",
+      "encoded": "farmingdale-new-york-united-states",
+      "pop": 8466,
+      "coord": [-73.4458564, 40.7328811]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["commercial", "medical", "other"]
+      }
+    ]
+  },
   "Farmington Hills, Michigan, United States": {
     "place": {
       "name": "Farmington Hills",
@@ -27457,6 +27781,24 @@
           "other",
           "residential, multi-family"
         ]
+      }
+    ]
+  },
+  "Florida, New York, United States": {
+    "place": {
+      "name": "Florida",
+      "state": "New York",
+      "country": "United States",
+      "type": "city",
+      "encoded": "florida-new-york-united-states",
+      "pop": 3049,
+      "coord": [-74.35670891686833, 41.331962854431445]
+    },
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["commercial"]
       }
     ]
   },
@@ -29705,7 +30047,7 @@
       "type": "city",
       "encoded": "fulton-new-york-united-states",
       "pop": 11389,
-      "coord": [-74.4461771, 43.1061507]
+      "coord": [-76.41630979546142, 43.324342806350984]
     },
     "rm_min": [
       {
@@ -30961,6 +31303,24 @@
       }
     ]
   },
+  "Glen Cove, New York, United States": {
+    "place": {
+      "name": "Glen Cove",
+      "state": "New York",
+      "country": "United States",
+      "type": "city",
+      "encoded": "glen-cove-new-york-united-states",
+      "pop": 28365,
+      "coord": [-73.6317807, 40.8642028]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["all uses", "commercial", "other", "residential, multi-family"]
+      }
+    ]
+  },
   "Glen Dale, West Virginia, United States": {
     "place": {
       "name": "Glen Dale",
@@ -31702,6 +32062,24 @@
         "status": "adopted",
         "scope": ["city center / business district"],
         "land": ["commercial", "other", "residential, multi-family"]
+      }
+    ]
+  },
+  "Goshen, New York, United States": {
+    "place": {
+      "name": "Goshen",
+      "state": "New York",
+      "country": "United States",
+      "type": "city",
+      "encoded": "goshen-new-york-united-states",
+      "pop": 5777,
+      "coord": [-74.3242129, 41.4021497]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["all uses"]
       }
     ]
   },
@@ -33203,6 +33581,24 @@
       }
     ]
   },
+  "Greenwich, New York, United States": {
+    "place": {
+      "name": "Greenwich",
+      "state": "New York",
+      "country": "United States",
+      "type": "city",
+      "encoded": "greenwich-new-york-united-states",
+      "pop": 1651,
+      "coord": [-73.4993904, 43.0903515]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["commercial", "other"]
+      }
+    ]
+  },
   "Greenwood, Arkansas, United States": {
     "place": {
       "name": "Greenwood",
@@ -34133,6 +34529,24 @@
       }
     ]
   },
+  "Hammondsport, New York, United States": {
+    "place": {
+      "name": "Hammondsport",
+      "state": "New York",
+      "country": "United States",
+      "type": "city",
+      "encoded": "hammondsport-new-york-united-states",
+      "pop": 583,
+      "coord": [-77.2236302, 42.4079347]
+    },
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["commercial", "other"]
+      }
+    ]
+  },
   "Hampden, Maine, United States": {
     "place": {
       "name": "Hampden",
@@ -34662,6 +35076,24 @@
       }
     ]
   },
+  "Harrison, New York, United States": {
+    "place": {
+      "name": "Harrison",
+      "state": "New York",
+      "country": "United States",
+      "type": "city",
+      "encoded": "harrison-new-york-united-states",
+      "pop": 28218,
+      "coord": [-73.71263, 40.9689871]
+    },
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district", "main street / special"],
+        "land": ["all uses", "commercial", "other"]
+      }
+    ]
+  },
   "Harrison, Ohio, United States": {
     "place": {
       "name": "Harrison",
@@ -35159,6 +35591,31 @@
         "status": "adopted",
         "scope": ["city center / business district"],
         "land": ["all uses"]
+      }
+    ]
+  },
+  "Hastings-on-Hudson, New York, United States": {
+    "place": {
+      "name": "Hastings-on-Hudson",
+      "state": "New York",
+      "country": "United States",
+      "type": "city",
+      "encoded": "hastings-on-hudson-new-york-united-states",
+      "pop": 8590,
+      "coord": [-73.8785922, 40.9946622]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["all uses"]
+      }
+    ],
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["commercial"]
       }
     ]
   },
@@ -36171,6 +36628,25 @@
       }
     ]
   },
+  "Highland Falls, New York, United States": {
+    "place": {
+      "name": "Highland Falls",
+      "state": "New York",
+      "country": "United States",
+      "type": "city",
+      "encoded": "highland-falls-new-york-united-states",
+      "pop": 3684,
+      "coord": [-73.9662504, 41.3692605]
+    },
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["commercial", "other"],
+        "date": "2018-02-05"
+      }
+    ]
+  },
   "Highland Heights, Ohio, United States": {
     "place": {
       "name": "Highland Heights",
@@ -37025,6 +37501,24 @@
       }
     ]
   },
+  "Hoosick Falls, New York, United States": {
+    "place": {
+      "name": "Hoosick Falls",
+      "state": "New York",
+      "country": "United States",
+      "type": "city",
+      "encoded": "hoosick-falls-new-york-united-states",
+      "pop": 3216,
+      "coord": [-73.3516087, 42.9006863]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["commercial", "industrial", "other"]
+      }
+    ]
+  },
   "Hoover, Alabama, United States": {
     "place": {
       "name": "Hoover",
@@ -37802,6 +38296,24 @@
         "status": "adopted",
         "scope": ["city center / business district"],
         "land": ["all uses"]
+      }
+    ]
+  },
+  "Hunts Point, Washington, United States": {
+    "place": {
+      "name": "Hunts Point",
+      "state": "Washington",
+      "country": "United States",
+      "type": "city",
+      "encoded": "hunts-point-washington-united-states",
+      "pop": 457,
+      "coord": [-122.230124, 47.6434321]
+    },
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["transit-oriented"],
+        "land": ["residential, low-density", "residential, multi-family"]
       }
     ]
   },
@@ -42565,6 +43077,31 @@
       }
     ]
   },
+  "Lake George, New York, United States": {
+    "place": {
+      "name": "Lake George",
+      "state": "New York",
+      "country": "United States",
+      "type": "city",
+      "encoded": "lake-george-new-york-united-states",
+      "pop": 1008,
+      "coord": [-73.712425, 43.425996]
+    },
+    "add_max": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["all uses"]
+      }
+    ],
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["commercial", "other", "residential, multi-family"]
+      }
+    ]
+  },
   "Lake Havasu City, Arizona, United States": {
     "place": {
       "name": "Lake Havasu City",
@@ -43598,6 +44135,29 @@
         "status": "adopted",
         "scope": ["city center / business district"],
         "land": ["commercial"]
+      }
+    ]
+  },
+  "Larchmont, New York, United States": {
+    "place": {
+      "name": "Larchmont",
+      "state": "New York",
+      "country": "United States",
+      "type": "city",
+      "encoded": "larchmont-new-york-united-states",
+      "pop": 6630,
+      "coord": [-73.7517983, 40.9278769]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["all uses"]
+      },
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["all uses"]
       }
     ]
   },
@@ -45781,6 +46341,36 @@
       }
     ]
   },
+  "Lockport, New York, United States": {
+    "place": {
+      "name": "Lockport",
+      "state": "New York",
+      "country": "United States",
+      "type": "city",
+      "encoded": "lockport-new-york-united-states",
+      "pop": 20876,
+      "coord": [-78.696567, 43.1687104]
+    },
+    "add_max": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["commercial", "industrial", "medical", "other"]
+      }
+    ],
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["all uses"]
+      },
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["all uses"]
+      }
+    ]
+  },
   "Locust, North Carolina, United States": {
     "place": {
       "name": "Locust",
@@ -46954,6 +47544,24 @@
       }
     ]
   },
+  "Lyman, Washington, United States": {
+    "place": {
+      "name": "Lyman",
+      "state": "Washington",
+      "country": "United States",
+      "type": "city",
+      "encoded": "lyman-washington-united-states",
+      "pop": 423,
+      "coord": [-122.060895, 48.5251591]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["commercial", "other"]
+      }
+    ]
+  },
   "Lynchburg, Virginia, United States": {
     "place": {
       "name": "Lynchburg",
@@ -47730,6 +48338,49 @@
       }
     ]
   },
+  "Malverne, New York, United States": {
+    "place": {
+      "name": "Malverne",
+      "state": "New York",
+      "country": "United States",
+      "type": "city",
+      "encoded": "malverne-new-york-united-states",
+      "pop": 8560,
+      "coord": [-73.6740191, 40.6789916]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["all uses"]
+      }
+    ]
+  },
+  "Mamaroneck, New York, United States": {
+    "place": {
+      "name": "Mamaroneck",
+      "state": "New York",
+      "country": "United States",
+      "type": "city",
+      "encoded": "mamaroneck-new-york-united-states",
+      "pop": 20151,
+      "coord": [-73.7331416, 40.9487314]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["all uses"]
+      }
+    ],
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district", "main street / special"],
+        "land": ["commercial", "other"]
+      }
+    ]
+  },
   "Manassas Park, Virginia, United States": {
     "place": {
       "name": "Manassas Park",
@@ -48284,6 +48935,24 @@
         "scope": ["city center / business district"],
         "land": ["commercial", "other"],
         "date": "2011-01-12"
+      }
+    ]
+  },
+  "Mansfield, Washington, United States": {
+    "place": {
+      "name": "Mansfield",
+      "state": "Washington",
+      "country": "United States",
+      "type": "city",
+      "encoded": "mansfield-washington-united-states",
+      "pop": 326,
+      "coord": [-119.6367141, 47.8115323]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["all uses"]
       }
     ]
   },
@@ -49309,6 +49978,24 @@
         "status": "adopted",
         "scope": ["city center / business district"],
         "land": ["all uses"]
+      }
+    ]
+  },
+  "Massapequa Park, New York, United States": {
+    "place": {
+      "name": "Massapequa Park",
+      "state": "New York",
+      "country": "United States",
+      "type": "city",
+      "encoded": "massapequa-park-new-york-united-states",
+      "pop": 17109,
+      "coord": [-73.4551241, 40.6803785]
+    },
+    "add_max": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["residential, low-density"]
       }
     ]
   },
@@ -50995,6 +51682,24 @@
       }
     ]
   },
+  "Middleburgh, New York, United States": {
+    "place": {
+      "name": "Middleburgh",
+      "state": "New York",
+      "country": "United States",
+      "type": "city",
+      "encoded": "middleburgh-new-york-united-states",
+      "pop": 1131,
+      "coord": [-74.3329156, 42.598687]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["all uses"]
+      }
+    ]
+  },
   "Middlebury, Connecticut, United States": {
     "place": {
       "name": "Middlebury",
@@ -51099,6 +51804,24 @@
         "status": "adopted",
         "scope": ["city center / business district"],
         "land": ["all uses", "residential, all uses"]
+      }
+    ]
+  },
+  "Middletown, New York, United States": {
+    "place": {
+      "name": "Middletown",
+      "state": "New York",
+      "country": "United States",
+      "type": "city",
+      "encoded": "middletown-new-york-united-states",
+      "pop": 30345,
+      "coord": [-74.41931089678195, 41.44745534437011]
+    },
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["all uses"]
       }
     ]
   },
@@ -53008,6 +53731,24 @@
       }
     ]
   },
+  "Monticello, New York, United States": {
+    "place": {
+      "name": "Monticello",
+      "state": "New York",
+      "country": "United States",
+      "type": "city",
+      "encoded": "monticello-new-york-united-states",
+      "pop": 7173,
+      "coord": [-74.6893282, 41.6556465]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["all uses"]
+      }
+    ]
+  },
   "Monticello, Wisconsin, United States": {
     "place": {
       "name": "Monticello",
@@ -53023,6 +53764,24 @@
         "status": "adopted",
         "scope": ["city center / business district"],
         "land": ["all uses"]
+      }
+    ]
+  },
+  "Montour Falls, New York, United States": {
+    "place": {
+      "name": "Montour Falls",
+      "state": "New York",
+      "country": "United States",
+      "type": "city",
+      "encoded": "montour-falls-new-york-united-states",
+      "pop": 2714,
+      "coord": [-76.8452351, 42.3472958]
+    },
+    "add_max": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["commercial", "industrial", "medical", "other"]
       }
     ]
   },
@@ -54322,6 +55081,31 @@
       }
     ]
   },
+  "Mt. Kisco, New York, United States": {
+    "place": {
+      "name": "Mt. Kisco",
+      "state": "New York",
+      "country": "United States",
+      "type": "city",
+      "encoded": "mt-kisco-new-york-united-states",
+      "pop": 10959,
+      "coord": [-73.7270761, 41.2042616]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["all uses", "commercial", "other", "residential, multi-family"]
+      }
+    ],
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["all uses"]
+      }
+    ]
+  },
   "Mt. Morris, Illinois, United States": {
     "place": {
       "name": "Mt. Morris",
@@ -54566,6 +55350,34 @@
       {
         "status": "adopted",
         "scope": ["city center / business district"],
+        "land": ["all uses"]
+      }
+    ]
+  },
+  "Mt. Vernon, New York, United States": {
+    "place": {
+      "name": "Mt. Vernon",
+      "state": "New York",
+      "country": "United States",
+      "type": "city",
+      "encoded": "mt-vernon-new-york-united-states",
+      "pop": 73893,
+      "coord": [-73.8386504, 40.9125085]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["all uses"]
+      },
+      {
+        "status": "adopted",
+        "scope": ["transit-oriented"],
+        "land": ["commercial", "residential, all uses"]
+      },
+      {
+        "status": "adopted",
+        "scope": ["city center / business district", "transit-oriented"],
         "land": ["all uses"]
       }
     ]
@@ -56672,6 +57484,28 @@
       }
     ]
   },
+  "New Rochelle, New York, United States": {
+    "place": {
+      "name": "New Rochelle",
+      "state": "New York",
+      "country": "United States",
+      "type": "city",
+      "encoded": "new-rochelle-new-york-united-states",
+      "pop": 79726,
+      "coord": [-73.7826363, 40.9115386]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": [
+          "city center / business district",
+          "citywide",
+          "main street / special"
+        ],
+        "land": ["all uses", "commercial", "residential, all uses"]
+      }
+    ]
+  },
   "New Shoreham, Rhode Island, United States": {
     "place": {
       "name": "New Shoreham",
@@ -56952,6 +57786,24 @@
         "status": "adopted",
         "scope": ["main street / special"],
         "land": ["all uses"]
+      }
+    ]
+  },
+  "Newburgh, New York, United States": {
+    "place": {
+      "name": "Newburgh",
+      "state": "New York",
+      "country": "United States",
+      "type": "city",
+      "encoded": "newburgh-new-york-united-states",
+      "pop": 28856,
+      "coord": [-74.0098299, 41.5000767]
+    },
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["commercial", "other", "residential, all uses"]
       }
     ]
   },
@@ -58745,6 +59597,31 @@
       }
     ]
   },
+  "Nyack, New York, United States": {
+    "place": {
+      "name": "Nyack",
+      "state": "New York",
+      "country": "United States",
+      "type": "city",
+      "encoded": "nyack-new-york-united-states",
+      "pop": 7265,
+      "coord": [-73.9196794, 41.091121]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["all uses"]
+      }
+    ],
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["commercial", "residential, all uses"]
+      }
+    ]
+  },
   "Nürnberg, Bavaria, Germany": {
     "place": {
       "name": "Nürnberg",
@@ -59828,6 +60705,31 @@
       }
     ]
   },
+  "Oneonta, New York, United States": {
+    "place": {
+      "name": "Oneonta",
+      "state": "New York",
+      "country": "United States",
+      "type": "city",
+      "encoded": "oneonta-new-york-united-states",
+      "pop": 13079,
+      "coord": [-75.0629531, 42.453492]
+    },
+    "add_max": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["all uses"]
+      }
+    ],
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["all uses"]
+      }
+    ]
+  },
   "Ontario, California, United States": {
     "place": {
       "name": "Ontario",
@@ -60588,6 +61490,24 @@
       }
     ]
   },
+  "Ossining, New York, United States": {
+    "place": {
+      "name": "Ossining",
+      "state": "New York",
+      "country": "United States",
+      "type": "city",
+      "encoded": "ossining-new-york-united-states",
+      "pop": 27551,
+      "coord": [-73.8620367, 41.1613168]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["all uses", "commercial", "other"]
+      }
+    ]
+  },
   "Ostrander, Minnesota, United States": {
     "place": {
       "name": "Ostrander",
@@ -61275,6 +62195,24 @@
         "status": "adopted",
         "scope": ["main street / special"],
         "land": ["industrial"]
+      }
+    ]
+  },
+  "Painted Post, New York, United States": {
+    "place": {
+      "name": "Painted Post",
+      "state": "New York",
+      "country": "United States",
+      "type": "city",
+      "encoded": "painted-post-new-york-united-states",
+      "pop": 1768,
+      "coord": [-77.0941366, 42.1620186]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["all uses"]
       }
     ]
   },
@@ -62064,6 +63002,24 @@
       }
     ]
   },
+  "Patchogue, New York, United States": {
+    "place": {
+      "name": "Patchogue",
+      "state": "New York",
+      "country": "United States",
+      "type": "city",
+      "encoded": "patchogue-new-york-united-states",
+      "pop": 12408,
+      "coord": [-73.0151084, 40.7656539]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["all uses", "commercial", "other", "residential, multi-family"]
+      }
+    ]
+  },
   "Paterson, New Jersey, United States": {
     "place": {
       "name": "Paterson",
@@ -62374,6 +63330,24 @@
       }
     ]
   },
+  "Peekskill, New York, United States": {
+    "place": {
+      "name": "Peekskill",
+      "state": "New York",
+      "country": "United States",
+      "type": "city",
+      "encoded": "peekskill-new-york-united-states",
+      "pop": 25431,
+      "coord": [-73.9204922, 41.289811]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["all uses"]
+      }
+    ]
+  },
   "Pekin, Illinois, United States": {
     "place": {
       "name": "Pekin",
@@ -62414,6 +63388,24 @@
         "status": "adopted",
         "scope": ["main street / special"],
         "land": ["residential, low-density"]
+      }
+    ]
+  },
+  "Pelham, New York, United States": {
+    "place": {
+      "name": "Pelham",
+      "state": "New York",
+      "country": "United States",
+      "type": "city",
+      "encoded": "pelham-new-york-united-states",
+      "pop": 7326,
+      "coord": [-73.8079111, 40.9098215]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district", "citywide"],
+        "land": ["all uses", "residential, multi-family"]
       }
     ]
   },
@@ -63372,6 +64364,31 @@
       }
     ]
   },
+  "Piermont, New York, United States": {
+    "place": {
+      "name": "Piermont",
+      "state": "New York",
+      "country": "United States",
+      "type": "city",
+      "encoded": "piermont-new-york-united-states",
+      "pop": 2517,
+      "coord": [-73.918426, 41.0415342]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["commercial"]
+      }
+    ],
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["commercial"]
+      }
+    ]
+  },
   "Pierre, South Dakota, United States": {
     "place": {
       "name": "Pierre",
@@ -64129,6 +65146,29 @@
       }
     ]
   },
+  "Pleasantville, New York, United States": {
+    "place": {
+      "name": "Pleasantville",
+      "state": "New York",
+      "country": "United States",
+      "type": "city",
+      "encoded": "pleasantville-new-york-united-states",
+      "pop": 7513,
+      "coord": [-73.7926335, 41.1328736]
+    },
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["commercial"]
+      },
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["residential, all uses"]
+      }
+    ]
+  },
   "Plummer, Idaho, United States": {
     "place": {
       "name": "Plummer",
@@ -64693,6 +65733,24 @@
       "encoded": "PortHuron_MI",
       "pop": 28983,
       "coord": [-82.4333742, 42.9760854]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["all uses"]
+      }
+    ]
+  },
+  "Port Jefferson, New York, United States": {
+    "place": {
+      "name": "Port Jefferson",
+      "state": "New York",
+      "country": "United States",
+      "type": "city",
+      "encoded": "port-jefferson-new-york-united-states",
+      "pop": 7962,
+      "coord": [-73.0691257, 40.9465118]
     },
     "reduce_min": [
       {
@@ -66806,6 +67864,31 @@
       }
     ]
   },
+  "Rensselaer Falls, New York, United States": {
+    "place": {
+      "name": "Rensselaer Falls",
+      "state": "New York",
+      "country": "United States",
+      "type": "city",
+      "encoded": "rensselaer-falls-new-york-united-states",
+      "pop": 361,
+      "coord": [-75.319176, 44.592179]
+    },
+    "add_max": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["all uses"]
+      }
+    ],
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["all uses"]
+      }
+    ]
+  },
   "Rensselaer, Indiana, United States": {
     "place": {
       "name": "Rensselaer",
@@ -66820,6 +67903,24 @@
       {
         "status": "adopted",
         "scope": ["city center / business district"],
+        "land": ["all uses"]
+      }
+    ]
+  },
+  "Rensselaer, New York, United States": {
+    "place": {
+      "name": "Rensselaer",
+      "state": "New York",
+      "country": "United States",
+      "type": "city",
+      "encoded": "rensselaer-new-york-united-states",
+      "pop": 9210,
+      "coord": [-73.74603071714169, 42.639616432598785]
+    },
+    "add_max": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
         "land": ["all uses"]
       }
     ]
@@ -68688,6 +69789,43 @@
       }
     ]
   },
+  "Rome, New York, United States": {
+    "place": {
+      "name": "Rome",
+      "state": "New York",
+      "country": "United States",
+      "type": "city",
+      "encoded": "rome-new-york-united-states",
+      "pop": 32127,
+      "coord": [-75.4583956, 43.2102196]
+    },
+    "add_max": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["commercial", "industrial", "other"]
+      }
+    ],
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["all uses"]
+      },
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["commercial"]
+      }
+    ],
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["all uses", "commercial", "other"]
+      }
+    ]
+  },
   "Romeo, Michigan, United States": {
     "place": {
       "name": "Romeo",
@@ -69487,6 +70625,31 @@
       }
     ]
   },
+  "Rye, New York, United States": {
+    "place": {
+      "name": "Rye",
+      "state": "New York",
+      "country": "United States",
+      "type": "city",
+      "encoded": "rye-new-york-united-states",
+      "pop": 16592,
+      "coord": [-73.6840902, 40.9821371]
+    },
+    "add_max": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["other"]
+      }
+    ],
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["commercial"]
+      }
+    ]
+  },
   "Sabetha, Kansas, United States": {
     "place": {
       "name": "Sabetha",
@@ -69535,6 +70698,24 @@
         "scope": ["citywide"],
         "land": ["all uses"],
         "date": "2024-03-28"
+      }
+    ]
+  },
+  "Sag Harbor, New York, United States": {
+    "place": {
+      "name": "Sag Harbor",
+      "state": "New York",
+      "country": "United States",
+      "type": "city",
+      "encoded": "sag-harbor-new-york-united-states",
+      "pop": 2772,
+      "coord": [-72.2922292, 40.9978727]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["all uses"]
       }
     ]
   },
@@ -71123,6 +72304,24 @@
       }
     ]
   },
+  "Savona, New York, United States": {
+    "place": {
+      "name": "Savona",
+      "state": "New York",
+      "country": "United States",
+      "type": "city",
+      "encoded": "savona-new-york-united-states",
+      "pop": 672,
+      "coord": [-77.2183091, 42.2886844]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["all uses"]
+      }
+    ]
+  },
   "Savoy, Illinois, United States": {
     "place": {
       "name": "Savoy",
@@ -71153,6 +72352,24 @@
         "scope": ["citywide"],
         "land": ["all uses"],
         "date": "2025-02-12"
+      }
+    ]
+  },
+  "Scarsdale, New York, United States": {
+    "place": {
+      "name": "Scarsdale",
+      "state": "New York",
+      "country": "United States",
+      "type": "city",
+      "encoded": "scarsdale-new-york-united-states",
+      "pop": 18253,
+      "coord": [-73.80723451773319, 40.98867223130894]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["all uses", "commercial"]
       }
     ]
   },
@@ -71257,6 +72474,24 @@
       }
     ]
   },
+  "Schoharie, New York, United States": {
+    "place": {
+      "name": "Schoharie",
+      "state": "New York",
+      "country": "United States",
+      "type": "city",
+      "encoded": "schoharie-new-york-united-states",
+      "pop": 3107,
+      "coord": [-74.31133535814483, 42.66451950101833]
+    },
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["all uses"]
+      }
+    ]
+  },
   "Schoolcraft, Michigan, United States": {
     "place": {
       "name": "Schoolcraft",
@@ -71293,6 +72528,24 @@
       "coord": [-97.0572541, 41.4473547]
     },
     "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["all uses"]
+      }
+    ]
+  },
+  "Schuylerville, New York, United States": {
+    "place": {
+      "name": "Schuylerville",
+      "state": "New York",
+      "country": "United States",
+      "type": "city",
+      "encoded": "schuylerville-new-york-united-states",
+      "pop": 1370,
+      "coord": [-73.581963, 43.100231]
+    },
+    "reduce_min": [
       {
         "status": "adopted",
         "scope": ["city center / business district"],
@@ -71504,6 +72757,24 @@
       {
         "status": "adopted",
         "scope": ["city center / business district"],
+        "land": ["all uses"]
+      }
+    ]
+  },
+  "Sea Cliff, New York, United States": {
+    "place": {
+      "name": "Sea Cliff",
+      "state": "New York",
+      "country": "United States",
+      "type": "city",
+      "encoded": "sea-cliff-new-york-united-states",
+      "pop": 5062,
+      "coord": [-73.6471225, 40.849566]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
         "land": ["all uses"]
       }
     ]
@@ -73473,6 +74744,24 @@
       }
     ]
   },
+  "Skykomish, Washington, United States": {
+    "place": {
+      "name": "Skykomish",
+      "state": "Washington",
+      "country": "United States",
+      "type": "city",
+      "encoded": "skykomish-washington-united-states",
+      "pop": 161,
+      "coord": [-121.360568, 47.7092722]
+    },
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["all uses"]
+      }
+    ]
+  },
   "Slayton, Minnesota, United States": {
     "place": {
       "name": "Slayton",
@@ -73836,6 +75125,42 @@
       }
     ]
   },
+  "Sodus Point, New York, United States": {
+    "place": {
+      "name": "Sodus Point",
+      "state": "New York",
+      "country": "United States",
+      "type": "city",
+      "encoded": "sodus-point-new-york-united-states",
+      "pop": 822,
+      "coord": [-76.987993, 43.27245]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["commercial", "other"]
+      }
+    ]
+  },
+  "Sodus, New York, United States": {
+    "place": {
+      "name": "Sodus",
+      "state": "New York",
+      "country": "United States",
+      "type": "city",
+      "encoded": "sodus-new-york-united-states",
+      "pop": 1667,
+      "coord": [-77.061362, 43.237843]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["commercial", "other"]
+      }
+    ]
+  },
   "Solon, Ohio, United States": {
     "place": {
       "name": "Solon",
@@ -74086,6 +75411,24 @@
       }
     ]
   },
+  "South Blooming Grove, New York, United States": {
+    "place": {
+      "name": "South Blooming Grove",
+      "state": "New York",
+      "country": "United States",
+      "type": "city",
+      "encoded": "south-blooming-grove-new-york-united-states",
+      "pop": 3973,
+      "coord": [-74.1911809, 41.368032]
+    },
+    "add_max": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["industrial"]
+      }
+    ]
+  },
   "South Boston, Virginia, United States": {
     "place": {
       "name": "South Boston",
@@ -74212,6 +75555,24 @@
       }
     ]
   },
+  "South Corning, New York, United States": {
+    "place": {
+      "name": "South Corning",
+      "state": "New York",
+      "country": "United States",
+      "type": "city",
+      "encoded": "south-corning-new-york-united-states",
+      "pop": 1108,
+      "coord": [-77.0371895, 42.121741]
+    },
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["commercial", "residential, low-density"]
+      }
+    ]
+  },
   "South Elgin, Illinois, United States": {
     "place": {
       "name": "South Elgin",
@@ -74265,6 +75626,24 @@
       {
         "status": "adopted",
         "scope": ["citywide"],
+        "land": ["all uses"]
+      }
+    ]
+  },
+  "South Glens Falls, New York, United States": {
+    "place": {
+      "name": "South Glens Falls",
+      "state": "New York",
+      "country": "United States",
+      "type": "city",
+      "encoded": "south-glens-falls-new-york-united-states",
+      "pop": 3744,
+      "coord": [-73.635178, 43.299447]
+    },
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
         "land": ["all uses"]
       }
     ]
@@ -74439,6 +75818,24 @@
       }
     ]
   },
+  "South Prairie, Washington, United States": {
+    "place": {
+      "name": "South Prairie",
+      "state": "Washington",
+      "country": "United States",
+      "type": "city",
+      "encoded": "south-prairie-washington-united-states",
+      "pop": 373,
+      "coord": [-122.0981691, 47.1392684]
+    },
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["commercial", "other"]
+      }
+    ]
+  },
   "South River, Ontario, Canada": {
     "place": {
       "name": "South River",
@@ -74532,6 +75929,24 @@
       {
         "status": "adopted",
         "scope": ["citywide"],
+        "land": ["all uses"]
+      }
+    ]
+  },
+  "Southampton, New York, United States": {
+    "place": {
+      "name": "Southampton",
+      "state": "New York",
+      "country": "United States",
+      "type": "city",
+      "encoded": "southampton-new-york-united-states",
+      "pop": 4550,
+      "coord": [-72.3897131, 40.8842482]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
         "land": ["all uses"]
       }
     ]
@@ -74983,6 +76398,24 @@
         "scope": ["main street / special"],
         "land": ["commercial"],
         "date": "1984-11-20"
+      }
+    ]
+  },
+  "Spring Valley, New York, United States": {
+    "place": {
+      "name": "Spring Valley",
+      "state": "New York",
+      "country": "United States",
+      "type": "city",
+      "encoded": "spring-valley-new-york-united-states",
+      "pop": 33066,
+      "coord": [-74.0437839, 41.1130231]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["all uses"]
       }
     ]
   },
@@ -77002,6 +78435,24 @@
       }
     ]
   },
+  "Stillwater, New York, United States": {
+    "place": {
+      "name": "Stillwater",
+      "state": "New York",
+      "country": "United States",
+      "type": "city",
+      "encoded": "stillwater-new-york-united-states",
+      "pop": 1754,
+      "coord": [-73.6531731, 42.9384101]
+    },
+    "add_max": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["all uses"]
+      }
+    ]
+  },
   "Stillwater, Oklahoma, United States": {
     "place": {
       "name": "Stillwater",
@@ -77674,6 +79125,31 @@
         "status": "adopted",
         "scope": ["city center / business district", "citywide"],
         "land": ["all uses", "commercial", "residential, all uses"]
+      }
+    ]
+  },
+  "Suffern, New York, United States": {
+    "place": {
+      "name": "Suffern",
+      "state": "New York",
+      "country": "United States",
+      "type": "city",
+      "encoded": "suffern-new-york-united-states",
+      "pop": 11402,
+      "coord": [-74.1493948, 41.1151372]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["all uses"]
+      }
+    ],
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["commercial"]
       }
     ]
   },
@@ -81020,6 +82496,24 @@
       }
     ]
   },
+  "Troy, New York, United States": {
+    "place": {
+      "name": "Troy",
+      "state": "New York",
+      "country": "United States",
+      "type": "city",
+      "encoded": "troy-new-york-united-states",
+      "pop": 51401,
+      "coord": [-73.6917878, 42.7284117]
+    },
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["all uses"]
+      }
+    ]
+  },
   "Troy, Ohio, United States": {
     "place": {
       "name": "Troy",
@@ -81721,6 +83215,24 @@
       }
     ]
   },
+  "Uniontown, Washington, United States": {
+    "place": {
+      "name": "Uniontown",
+      "state": "Washington",
+      "country": "United States",
+      "type": "city",
+      "encoded": "uniontown-washington-united-states",
+      "pop": 389,
+      "coord": [-117.087662, 46.5393291]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["all uses"]
+      }
+    ]
+  },
   "Unity, Saskatchewan, Canada": {
     "place": {
       "name": "Unity",
@@ -81786,6 +83298,31 @@
       "coord": [-83.0624078, 39.9945084]
     },
     "add_max": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["all uses"]
+      }
+    ]
+  },
+  "Upper Nyack, New York, United States": {
+    "place": {
+      "name": "Upper Nyack",
+      "state": "New York",
+      "country": "United States",
+      "type": "city",
+      "encoded": "upper-nyack-new-york-united-states",
+      "pop": 2015,
+      "coord": [-73.9201371, 41.1070404]
+    },
+    "add_max": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["all uses"]
+      }
+    ],
+    "reduce_min": [
       {
         "status": "adopted",
         "scope": ["city center / business district"],
@@ -82060,6 +83597,24 @@
         "status": "adopted",
         "scope": ["city center / business district"],
         "land": ["all uses"]
+      }
+    ]
+  },
+  "Valley Stream, New York, United States": {
+    "place": {
+      "name": "Valley Stream",
+      "state": "New York",
+      "country": "United States",
+      "type": "city",
+      "encoded": "valley-stream-new-york-united-states",
+      "pop": 40634,
+      "coord": [-73.7056955, 40.6631362]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["commercial", "other"]
       }
     ]
   },
@@ -83321,6 +84876,24 @@
       }
     ]
   },
+  "Walden, New York, United States": {
+    "place": {
+      "name": "Walden",
+      "state": "New York",
+      "country": "United States",
+      "type": "city",
+      "encoded": "walden-new-york-united-states",
+      "pop": 6818,
+      "coord": [-74.1884806, 41.5612048]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["main street / special"],
+        "land": ["all uses"]
+      }
+    ]
+  },
   "Walker, Michigan, United States": {
     "place": {
       "name": "Walker",
@@ -84542,6 +86115,36 @@
       }
     ]
   },
+  "Watkins Glen, New York, United States": {
+    "place": {
+      "name": "Watkins Glen",
+      "state": "New York",
+      "country": "United States",
+      "type": "city",
+      "encoded": "watkins-glen-new-york-united-states",
+      "pop": 1829,
+      "coord": [-76.8705777, 42.3810555]
+    },
+    "add_max": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["all uses"]
+      }
+    ],
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["all uses"]
+      },
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["all uses"]
+      }
+    ]
+  },
   "Watseka, Illinois, United States": {
     "place": {
       "name": "Watseka",
@@ -85360,6 +86963,24 @@
       {
         "status": "adopted",
         "scope": ["city center / business district"],
+        "land": ["all uses"]
+      }
+    ]
+  },
+  "Wesley Hills, New York, United States": {
+    "place": {
+      "name": "Wesley Hills",
+      "state": "New York",
+      "country": "United States",
+      "type": "city",
+      "encoded": "wesley-hills-new-york-united-states",
+      "pop": 6116,
+      "coord": [-74.0700471, 41.1593749]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
         "land": ["all uses"]
       }
     ]
@@ -86337,6 +87958,30 @@
       }
     ]
   },
+  "Westhampton Beach, New York, United States": {
+    "place": {
+      "name": "Westhampton Beach",
+      "state": "New York",
+      "country": "United States",
+      "type": "city",
+      "encoded": "westhampton-beach-new-york-united-states",
+      "pop": 2150,
+      "coord": [-72.6448263, 40.808411]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district", "citywide"],
+        "land": [
+          "commercial",
+          "industrial",
+          "medical",
+          "other",
+          "residential, multi-family"
+        ]
+      }
+    ]
+  },
   "Westland, Michigan, United States": {
     "place": {
       "name": "Westland",
@@ -86822,6 +88467,24 @@
       }
     ]
   },
+  "White Plains, New York, United States": {
+    "place": {
+      "name": "White Plains",
+      "state": "New York",
+      "country": "United States",
+      "type": "city",
+      "encoded": "white-plains-new-york-united-states",
+      "pop": 59599,
+      "coord": [-73.7629097, 41.0339862]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["all uses"]
+      }
+    ]
+  },
   "White Sulphur Springs, West Virginia, United States": {
     "place": {
       "name": "White Sulphur Springs",
@@ -86929,7 +88592,7 @@
       "type": "city",
       "encoded": "whitesboro-new-york-united-states",
       "pop": 3612,
-      "coord": [-75.2999431, 43.1266875]
+      "coord": [-75.29510303856568, 43.12214557876837]
     },
     "rm_min": [
       {
@@ -87131,6 +88794,24 @@
         "status": "adopted",
         "scope": ["city center / business district"],
         "land": ["all uses"]
+      }
+    ]
+  },
+  "Wilkeson, Washington, United States": {
+    "place": {
+      "name": "Wilkeson",
+      "state": "Washington",
+      "country": "United States",
+      "type": "city",
+      "encoded": "wilkeson-washington-united-states",
+      "pop": 499,
+      "coord": [-122.045667, 47.1053802]
+    },
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["commercial", "other"]
       }
     ]
   },
@@ -88626,6 +90307,24 @@
         "status": "adopted",
         "scope": ["city center / business district"],
         "land": ["commercial"]
+      }
+    ]
+  },
+  "Woodbury, New York, United States": {
+    "place": {
+      "name": "Woodbury",
+      "state": "New York",
+      "country": "United States",
+      "type": "city",
+      "encoded": "woodbury-new-york-united-states",
+      "pop": 11526,
+      "coord": [-73.4706151, 40.8183265]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["transit-oriented"],
+        "land": ["all uses"]
       }
     ]
   },
