@@ -148,6 +148,31 @@
       }
     ]
   },
+  "Aberdeen, Washington, United States": {
+    "place": {
+      "name": "Aberdeen",
+      "state": "Washington",
+      "country": "United States",
+      "type": "city",
+      "encoded": "aberdeen-washington-united-states",
+      "pop": 17013,
+      "coord": [-123.815722, 46.975371]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["all uses"]
+      }
+    ],
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["all uses"]
+      }
+    ]
+  },
   "Abilene, Kansas, United States": {
     "place": {
       "name": "Abilene",
@@ -378,6 +403,24 @@
         "status": "adopted",
         "scope": ["city center / business district"],
         "land": ["all uses"]
+      }
+    ]
+  },
+  "Airway Heights, Washington, United States": {
+    "place": {
+      "name": "Airway Heights",
+      "state": "Washington",
+      "country": "United States",
+      "type": "city",
+      "encoded": "airway-heights-washington-united-states",
+      "pop": 10757,
+      "coord": [-117.593272, 47.644611]
+    },
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["transit-oriented"],
+        "land": ["residential, low-density"]
       }
     ]
   },
@@ -1064,6 +1107,24 @@
         "status": "adopted",
         "scope": ["city center / business district"],
         "land": ["all uses"]
+      }
+    ]
+  },
+  "Algona, Washington, United States": {
+    "place": {
+      "name": "Algona",
+      "state": "Washington",
+      "country": "United States",
+      "type": "city",
+      "encoded": "algona-washington-united-states",
+      "pop": 3290,
+      "coord": [-122.2542238, 47.2784027]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district", "transit-oriented"],
+        "land": ["residential, all uses", "residential, multi-family"]
       }
     ]
   },
@@ -2815,6 +2876,31 @@
       }
     ]
   },
+  "Arlington, Washington, United States": {
+    "place": {
+      "name": "Arlington",
+      "state": "Washington",
+      "country": "United States",
+      "type": "city",
+      "encoded": "arlington-washington-united-states",
+      "pop": 19868,
+      "coord": [-122.12650252876546, 48.19489689159063]
+    },
+    "add_max": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["all uses"]
+      }
+    ],
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district", "transit-oriented"],
+        "land": ["commercial", "other", "residential, low-density"]
+      }
+    ]
+  },
   "Armada, Michigan, United States": {
     "place": {
       "name": "Armada",
@@ -3550,6 +3636,45 @@
       }
     ]
   },
+  "Auburn, Washington, United States": {
+    "place": {
+      "name": "Auburn",
+      "state": "Washington",
+      "country": "United States",
+      "type": "city",
+      "encoded": "auburn-washington-united-states",
+      "pop": 87256,
+      "coord": [-122.2301808, 47.3075369]
+    },
+    "add_max": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district", "citywide"],
+        "land": ["all uses", "commercial", "industrial", "medical", "other"]
+      }
+    ],
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district", "citywide"],
+        "land": [
+          "all uses",
+          "commercial",
+          "industrial",
+          "medical",
+          "other",
+          "residential, multi-family"
+        ]
+      }
+    ],
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district", "transit-oriented"],
+        "land": ["commercial", "residential, low-density"]
+      }
+    ]
+  },
   "Augsburg, Bavaria, Germany": {
     "place": {
       "name": "Augsburg",
@@ -4029,6 +4154,35 @@
         "status": "adopted",
         "scope": ["city center / business district"],
         "land": ["all uses"]
+      }
+    ]
+  },
+  "Bainbridge Island, Washington, United States": {
+    "place": {
+      "name": "Bainbridge Island",
+      "state": "Washington",
+      "country": "United States",
+      "type": "city",
+      "encoded": "bainbridge-island-washington-united-states",
+      "pop": 24825,
+      "coord": [-122.5461103, 47.6476668]
+    },
+    "add_max": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["all uses"]
+      }
+    ],
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": [
+          "city center / business district",
+          "citywide",
+          "transit-oriented"
+        ],
+        "land": ["all uses", "residential, all uses"]
       }
     ]
   },
@@ -5079,6 +5233,24 @@
         "land": ["all uses"]
       }
     ],
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["all uses"]
+      }
+    ]
+  },
+  "Battle Ground, Washington, United States": {
+    "place": {
+      "name": "Battle Ground",
+      "state": "Washington",
+      "country": "United States",
+      "type": "city",
+      "encoded": "battle-ground-washington-united-states",
+      "pop": 20743,
+      "coord": [-122.5337433, 45.7813532]
+    },
     "rm_min": [
       {
         "status": "adopted",
@@ -7477,6 +7649,24 @@
       }
     ]
   },
+  "Bingen, Washington, United States": {
+    "place": {
+      "name": "Bingen",
+      "state": "Washington",
+      "country": "United States",
+      "type": "city",
+      "encoded": "bingen-washington-united-states",
+      "pop": 778,
+      "coord": [-121.464517, 45.7148416]
+    },
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["all uses"]
+      }
+    ]
+  },
   "Binghamton, New York, United States": {
     "place": {
       "name": "Binghamton",
@@ -7683,6 +7873,31 @@
       }
     ]
   },
+  "Black Diamond, Washington, United States": {
+    "place": {
+      "name": "Black Diamond",
+      "state": "Washington",
+      "country": "United States",
+      "type": "city",
+      "encoded": "black-diamond-washington-united-states",
+      "pop": 4697,
+      "coord": [-122.0037583, 47.3083078]
+    },
+    "add_max": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["all uses"]
+      }
+    ],
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["all uses"]
+      }
+    ]
+  },
   "Black Hawk County, Iowa, United States": {
     "place": {
       "name": "Black Hawk County",
@@ -7803,6 +8018,31 @@
         "status": "adopted",
         "scope": ["citywide"],
         "land": ["residential, all uses"]
+      }
+    ]
+  },
+  "Blaine, Washington, United States": {
+    "place": {
+      "name": "Blaine",
+      "state": "Washington",
+      "country": "United States",
+      "type": "city",
+      "encoded": "blaine-washington-united-states",
+      "pop": 5884,
+      "coord": [-122.743575, 48.9881108]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["residential, all uses"]
+      }
+    ],
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["commercial", "other"]
       }
     ]
   },
@@ -9566,6 +9806,24 @@
       }
     ]
   },
+  "Bridgeport, Washington, United States": {
+    "place": {
+      "name": "Bridgeport",
+      "state": "Washington",
+      "country": "United States",
+      "type": "city",
+      "encoded": "bridgeport-washington-united-states",
+      "pop": 2141,
+      "coord": [-119.671164, 48.0081999]
+    },
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["all uses"]
+      }
+    ]
+  },
   "Bridgewater, Nova Scotia, Canada": {
     "place": {
       "name": "Bridgewater",
@@ -9613,6 +9871,24 @@
         "status": "adopted",
         "scope": ["city center / business district"],
         "land": ["all uses"]
+      }
+    ]
+  },
+  "Brier, Washington, United States": {
+    "place": {
+      "name": "Brier",
+      "state": "Washington",
+      "country": "United States",
+      "type": "city",
+      "encoded": "brier-washington-united-states",
+      "pop": 6560,
+      "coord": [-122.274294, 47.7845419]
+    },
+    "add_max": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["residential, all uses"]
       }
     ]
   },
@@ -10592,6 +10868,24 @@
       }
     ]
   },
+  "Buckley, Washington, United States": {
+    "place": {
+      "name": "Buckley",
+      "state": "Washington",
+      "country": "United States",
+      "type": "city",
+      "encoded": "buckley-washington-united-states",
+      "pop": 5114,
+      "coord": [-122.027746, 47.1622483]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["all uses"]
+      }
+    ]
+  },
   "Bucyrus, Ohio, United States": {
     "place": {
       "name": "Bucyrus",
@@ -10734,6 +11028,31 @@
       }
     ]
   },
+  "Burien, Washington, United States": {
+    "place": {
+      "name": "Burien",
+      "state": "Washington",
+      "country": "United States",
+      "type": "city",
+      "encoded": "burien-washington-united-states",
+      "pop": 52066,
+      "coord": [-122.3485274, 47.469918]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["all uses"]
+      }
+    ],
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide", "transit-oriented"],
+        "land": ["residential, all uses", "residential, low-density"]
+      }
+    ]
+  },
   "Burk's Falls, Ontario, Canada": {
     "place": {
       "name": "Burk's Falls",
@@ -10850,6 +11169,38 @@
         "scope": ["citywide"],
         "land": ["all uses"],
         "date": "2023-01-09"
+      }
+    ]
+  },
+  "Burlington, Washington, United States": {
+    "place": {
+      "name": "Burlington",
+      "state": "Washington",
+      "country": "United States",
+      "type": "city",
+      "encoded": "burlington-washington-united-states",
+      "pop": 9152,
+      "coord": [-122.330453, 48.4738136]
+    },
+    "add_max": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["all uses"]
+      }
+    ],
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide", "transit-oriented"],
+        "land": ["all uses"]
+      }
+    ],
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["commercial", "other", "residential, low-density"]
       }
     ]
   },
@@ -11378,6 +11729,24 @@
         "status": "adopted",
         "scope": ["citywide"],
         "land": ["commercial", "industrial", "medical", "other"]
+      }
+    ]
+  },
+  "Camas, Washington, United States": {
+    "place": {
+      "name": "Camas",
+      "state": "Washington",
+      "country": "United States",
+      "type": "city",
+      "encoded": "camas-washington-united-states",
+      "pop": 26065,
+      "coord": [-122.403277, 45.5863014]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district", "citywide"],
+        "land": ["all uses"]
       }
     ]
   },
@@ -12441,6 +12810,24 @@
       }
     ]
   },
+  "Carnation, Washington, United States": {
+    "place": {
+      "name": "Carnation",
+      "state": "Washington",
+      "country": "United States",
+      "type": "city",
+      "encoded": "carnation-washington-united-states",
+      "pop": 2158,
+      "coord": [-121.9129419, 47.6475134]
+    },
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["commercial", "other"]
+      }
+    ]
+  },
   "Carnegie, Pennsylvania, United States": {
     "place": {
       "name": "Carnegie",
@@ -12943,6 +13330,24 @@
       }
     ]
   },
+  "Cashmere, Washington, United States": {
+    "place": {
+      "name": "Cashmere",
+      "state": "Washington",
+      "country": "United States",
+      "type": "city",
+      "encoded": "cashmere-washington-united-states",
+      "pop": 3248,
+      "coord": [-120.469039, 47.5223816]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["all uses"]
+      }
+    ]
+  },
   "Cashton, Wisconsin, United States": {
     "place": {
       "name": "Cashton",
@@ -13098,6 +13503,24 @@
         "status": "adopted",
         "scope": ["city center / business district"],
         "land": ["commercial", "other"]
+      }
+    ]
+  },
+  "Castle Rock, Washington, United States": {
+    "place": {
+      "name": "Castle Rock",
+      "state": "Washington",
+      "country": "United States",
+      "type": "city",
+      "encoded": "castle-rock-washington-united-states",
+      "pop": 2446,
+      "coord": [-122.904918, 46.2739907]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["all uses"]
       }
     ]
   },
@@ -13713,6 +14136,24 @@
         "status": "adopted",
         "scope": ["city center / business district"],
         "land": ["commercial"]
+      }
+    ]
+  },
+  "Centralia, Washington, United States": {
+    "place": {
+      "name": "Centralia",
+      "state": "Washington",
+      "country": "United States",
+      "type": "city",
+      "encoded": "centralia-washington-united-states",
+      "pop": 18183,
+      "coord": [-122.96143, 46.7204489]
+    },
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["all uses"]
       }
     ]
   },
@@ -14564,6 +15005,49 @@
       }
     ]
   },
+  "Chehalis, Washington, United States": {
+    "place": {
+      "name": "Chehalis",
+      "state": "Washington",
+      "country": "United States",
+      "type": "city",
+      "encoded": "chehalis-washington-united-states",
+      "pop": 7439,
+      "coord": [-122.963432, 46.6599653]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["all uses"]
+      }
+    ]
+  },
+  "Chelan, Washington, United States": {
+    "place": {
+      "name": "Chelan",
+      "state": "Washington",
+      "country": "United States",
+      "type": "city",
+      "encoded": "chelan-washington-united-states",
+      "pop": 4222,
+      "coord": [-120.01682415650127, 47.840793972429374]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["all uses"]
+      }
+    ],
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["all uses"]
+      }
+    ]
+  },
   "Chelsea, Alabama, United States": {
     "place": {
       "name": "Chelsea",
@@ -14648,6 +15132,31 @@
         "status": "adopted",
         "scope": ["city center / business district"],
         "land": ["commercial"]
+      }
+    ]
+  },
+  "Cheney, Washington, United States": {
+    "place": {
+      "name": "Cheney",
+      "state": "Washington",
+      "country": "United States",
+      "type": "city",
+      "encoded": "cheney-washington-united-states",
+      "pop": 13255,
+      "coord": [-117.579304, 47.4892246]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["all uses"]
+      }
+    ],
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["commercial", "industrial", "other"]
       }
     ]
   },
@@ -14914,6 +15423,24 @@
         "status": "adopted",
         "scope": ["city center / business district"],
         "land": ["all uses"]
+      }
+    ]
+  },
+  "Chewelah, Washington, United States": {
+    "place": {
+      "name": "Chewelah",
+      "state": "Washington",
+      "country": "United States",
+      "type": "city",
+      "encoded": "chewelah-washington-united-states",
+      "pop": 2470,
+      "coord": [-117.71552, 48.276287]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["commercial", "other"]
       }
     ]
   },
@@ -15574,6 +16101,24 @@
       }
     ]
   },
+  "Clarkston, Washington, United States": {
+    "place": {
+      "name": "Clarkston",
+      "state": "Washington",
+      "country": "United States",
+      "type": "city",
+      "encoded": "clarkston-washington-united-states",
+      "pop": 7161,
+      "coord": [-117.045179, 46.4162724]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["all uses"]
+      }
+    ]
+  },
   "Clarksville, Arkansas, United States": {
     "place": {
       "name": "Clarksville",
@@ -15772,6 +16317,38 @@
         "status": "adopted",
         "scope": ["city center / business district"],
         "land": ["all uses"]
+      }
+    ]
+  },
+  "Cle Elum, Washington, United States": {
+    "place": {
+      "name": "Cle Elum",
+      "state": "Washington",
+      "country": "United States",
+      "type": "city",
+      "encoded": "cle-elum-washington-united-states",
+      "pop": 2157,
+      "coord": [-120.940063, 47.1952417]
+    },
+    "add_max": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["all uses"]
+      }
+    ],
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["all uses"]
+      }
+    ],
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["all uses", "commercial", "other"]
       }
     ]
   },
@@ -16430,6 +17007,24 @@
         "status": "adopted",
         "scope": ["city center / business district"],
         "land": ["all uses"]
+      }
+    ]
+  },
+  "Clyde Hill, Washington, United States": {
+    "place": {
+      "name": "Clyde Hill",
+      "state": "Washington",
+      "country": "United States",
+      "type": "city",
+      "encoded": "clyde-hill-washington-united-states",
+      "pop": 3126,
+      "coord": [-122.2181054, 47.631569]
+    },
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["transit-oriented"],
+        "land": ["residential, all uses"]
       }
     ]
   },
@@ -17677,6 +18272,24 @@
       }
     ]
   },
+  "Concrete, Washington, United States": {
+    "place": {
+      "name": "Concrete",
+      "state": "Washington",
+      "country": "United States",
+      "type": "city",
+      "encoded": "concrete-washington-united-states",
+      "pop": 801,
+      "coord": [-121.746928, 48.5389326]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["commercial", "other"]
+      }
+    ]
+  },
   "Connecticut, United States": {
     "place": {
       "name": "Connecticut",
@@ -18520,6 +19133,24 @@
       }
     ]
   },
+  "Coupeville, Washington, United States": {
+    "place": {
+      "name": "Coupeville",
+      "state": "Washington",
+      "country": "United States",
+      "type": "city",
+      "encoded": "coupeville-washington-united-states",
+      "pop": 1942,
+      "coord": [-122.685807, 48.2181895]
+    },
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["all uses", "commercial"]
+      }
+    ]
+  },
   "Coventry, Rhode Island, United States": {
     "place": {
       "name": "Coventry",
@@ -18623,6 +19254,38 @@
         "status": "adopted",
         "scope": ["city center / business district"],
         "land": ["all uses"]
+      }
+    ]
+  },
+  "Covington, Washington, United States": {
+    "place": {
+      "name": "Covington",
+      "state": "Washington",
+      "country": "United States",
+      "type": "city",
+      "encoded": "covington-washington-united-states",
+      "pop": 20777,
+      "coord": [-122.100222, 47.3657791]
+    },
+    "add_max": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["all uses"]
+      }
+    ],
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["all uses", "commercial", "other", "residential, all uses"]
+      }
+    ],
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["transit-oriented"],
+        "land": ["residential, low-density"]
       }
     ]
   },
@@ -20661,6 +21324,24 @@
       }
     ]
   },
+  "Deer Park, Washington, United States": {
+    "place": {
+      "name": "Deer Park",
+      "state": "Washington",
+      "country": "United States",
+      "type": "city",
+      "encoded": "deer-park-washington-united-states",
+      "pop": 4383,
+      "coord": [-117.47697680205015, 47.954248535950676]
+    },
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["main street / special"],
+        "land": ["commercial"]
+      }
+    ]
+  },
   "Deerfield, Illinois, United States": {
     "place": {
       "name": "Deerfield",
@@ -21356,6 +22037,31 @@
         "status": "adopted",
         "scope": ["city center / business district"],
         "land": ["all uses"]
+      }
+    ]
+  },
+  "Des Moines, Washington, United States": {
+    "place": {
+      "name": "Des Moines",
+      "state": "Washington",
+      "country": "United States",
+      "type": "city",
+      "encoded": "des-moines-washington-united-states",
+      "pop": 32888,
+      "coord": [-122.3099093, 47.398829]
+    },
+    "add_max": [
+      {
+        "status": "adopted",
+        "scope": ["main street / special"],
+        "land": ["all uses"]
+      }
+    ],
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["residential, all uses", "residential, low-density"]
       }
     ]
   },
@@ -22304,6 +23010,24 @@
       }
     ]
   },
+  "DuPont, Washington, United States": {
+    "place": {
+      "name": "DuPont",
+      "state": "Washington",
+      "country": "United States",
+      "type": "city",
+      "encoded": "dupont-washington-united-states",
+      "pop": 10151,
+      "coord": [-122.637546, 47.0990689]
+    },
+    "add_max": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["commercial", "industrial", "medical", "other"]
+      }
+    ]
+  },
   "Dublin, County Dublin, Ireland": {
     "place": {
       "name": "Dublin",
@@ -22742,6 +23466,24 @@
         "scope": ["citywide"],
         "land": ["all uses"],
         "date": "2023-11-20"
+      }
+    ]
+  },
+  "Duvall, Washington, United States": {
+    "place": {
+      "name": "Duvall",
+      "state": "Washington",
+      "country": "United States",
+      "type": "city",
+      "encoded": "duvall-washington-united-states",
+      "pop": 8034,
+      "coord": [-121.9856782, 47.7423219]
+    },
+    "add_max": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["all uses"]
       }
     ]
   },
@@ -23632,6 +24374,31 @@
       }
     ]
   },
+  "East Wenatchee, Washington, United States": {
+    "place": {
+      "name": "East Wenatchee",
+      "state": "Washington",
+      "country": "United States",
+      "type": "city",
+      "encoded": "east-wenatchee-washington-united-states",
+      "pop": 14158,
+      "coord": [-120.293126, 47.4156824]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["transit-oriented"],
+        "land": ["all uses"]
+      }
+    ],
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["all uses"]
+      }
+    ]
+  },
   "East Windsor, Connecticut, United States": {
     "place": {
       "name": "East Windsor",
@@ -23816,6 +24583,24 @@
         "status": "adopted",
         "scope": ["city center / business district"],
         "land": ["all uses"]
+      }
+    ]
+  },
+  "Eatonville, Washington, United States": {
+    "place": {
+      "name": "Eatonville",
+      "state": "Washington",
+      "country": "United States",
+      "type": "city",
+      "encoded": "eatonville-washington-united-states",
+      "pop": 2845,
+      "coord": [-122.270068, 46.8682516]
+    },
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["commercial", "other"]
       }
     ]
   },
@@ -24042,6 +24827,24 @@
       }
     ]
   },
+  "Edgewood, Washington, United States": {
+    "place": {
+      "name": "Edgewood",
+      "state": "Washington",
+      "country": "United States",
+      "type": "city",
+      "encoded": "edgewood-washington-united-states",
+      "pop": 12327,
+      "coord": [-122.2843724, 47.2318245]
+    },
+    "add_max": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["all uses"]
+      }
+    ]
+  },
   "Edina, Minnesota, United States": {
     "place": {
       "name": "Edina",
@@ -24082,6 +24885,25 @@
         "status": "adopted",
         "scope": ["city center / business district"],
         "land": ["all uses"]
+      }
+    ]
+  },
+  "Edison, New Jersey, United States": {
+    "place": {
+      "name": "Edison",
+      "state": "New Jersey",
+      "country": "United States",
+      "type": "city",
+      "encoded": "edison-new-jersey-united-states",
+      "pop": 107588,
+      "coord": [-74.4113926, 40.518157]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["all uses"],
+        "date": "2007-06-13"
       }
     ]
   },
@@ -24136,6 +24958,40 @@
         "status": "adopted",
         "scope": ["citywide"],
         "land": ["all uses"]
+      }
+    ]
+  },
+  "Edmonds, Washington, United States": {
+    "place": {
+      "name": "Edmonds",
+      "state": "Washington",
+      "country": "United States",
+      "type": "city",
+      "encoded": "edmonds-washington-united-states",
+      "pop": 42853,
+      "coord": [-122.3774952, 47.8105738]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": [
+          "city center / business district",
+          "citywide",
+          "transit-oriented"
+        ],
+        "land": ["all uses", "commercial", "residential, multi-family"]
+      }
+    ],
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["commercial"]
+      },
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["commercial", "residential, all uses"]
       }
     ]
   },
@@ -24364,6 +25220,24 @@
         "status": "adopted",
         "scope": ["city center / business district"],
         "land": ["all uses"]
+      }
+    ]
+  },
+  "Electric City, Washington, United States": {
+    "place": {
+      "name": "Electric City",
+      "state": "Washington",
+      "country": "United States",
+      "type": "city",
+      "encoded": "electric-city-washington-united-states",
+      "pop": 956,
+      "coord": [-119.038078, 47.9323735]
+    },
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["commercial"]
       }
     ]
   },
@@ -24805,6 +25679,31 @@
       }
     ]
   },
+  "Ellensburg, Washington, United States": {
+    "place": {
+      "name": "Ellensburg",
+      "state": "Washington",
+      "country": "United States",
+      "type": "city",
+      "encoded": "ellensburg-washington-united-states",
+      "pop": 18666,
+      "coord": [-120.545122, 46.9970635]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["commercial", "industrial", "medical", "other"]
+      }
+    ],
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["commercial", "other", "residential, all uses"]
+      }
+    ]
+  },
   "Ellenville, New York, United States": {
     "place": {
       "name": "Ellenville",
@@ -24980,6 +25879,24 @@
       "coord": [-80.2864515, 40.8617303]
     },
     "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["all uses"]
+      }
+    ]
+  },
+  "Elma, Washington, United States": {
+    "place": {
+      "name": "Elma",
+      "state": "Washington",
+      "country": "United States",
+      "type": "city",
+      "encoded": "elma-washington-united-states",
+      "pop": 3438,
+      "coord": [-123.408769, 47.0034291]
+    },
+    "reduce_min": [
       {
         "status": "adopted",
         "scope": ["city center / business district"],
@@ -25586,6 +26503,42 @@
       }
     ]
   },
+  "Entiat, Washington, United States": {
+    "place": {
+      "name": "Entiat",
+      "state": "Washington",
+      "country": "United States",
+      "type": "city",
+      "encoded": "entiat-washington-united-states",
+      "pop": 1326,
+      "coord": [-120.20841, 47.6759636]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["all uses", "commercial", "residential, multi-family"]
+      }
+    ]
+  },
+  "Enumclaw, Washington, United States": {
+    "place": {
+      "name": "Enumclaw",
+      "state": "Washington",
+      "country": "United States",
+      "type": "city",
+      "encoded": "enumclaw-washington-united-states",
+      "pop": 12543,
+      "coord": [-121.9916371, 47.2047793]
+    },
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["all uses"]
+      }
+    ]
+  },
   "Ephrata, Pennsylvania, United States": {
     "place": {
       "name": "Ephrata",
@@ -25608,6 +26561,24 @@
         "status": "adopted",
         "scope": ["city center / business district"],
         "land": ["commercial", "other"]
+      }
+    ]
+  },
+  "Ephrata, Washington, United States": {
+    "place": {
+      "name": "Ephrata",
+      "state": "Washington",
+      "country": "United States",
+      "type": "city",
+      "encoded": "ephrata-washington-united-states",
+      "pop": 8477,
+      "coord": [-119.553649, 47.3176385]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["all uses"]
       }
     ]
   },
@@ -26213,6 +27184,35 @@
         "status": "adopted",
         "scope": ["citywide"],
         "land": ["commercial", "industrial", "other"]
+      }
+    ]
+  },
+  "Everett, Washington, United States": {
+    "place": {
+      "name": "Everett",
+      "state": "Washington",
+      "country": "United States",
+      "type": "city",
+      "encoded": "everett-washington-united-states",
+      "pop": 110629,
+      "coord": [-122.2127011, 47.9793437]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["transit-oriented"],
+        "land": ["all uses"]
+      }
+    ],
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": [
+          "city center / business district",
+          "citywide",
+          "transit-oriented"
+        ],
+        "land": ["all uses", "residential, all uses"]
       }
     ]
   },
@@ -27229,6 +28229,24 @@
       }
     ]
   },
+  "Federal Way, Washington, United States": {
+    "place": {
+      "name": "Federal Way",
+      "state": "Washington",
+      "country": "United States",
+      "type": "city",
+      "encoded": "federal-way-washington-united-states",
+      "pop": 101030,
+      "coord": [-122.33931, 47.313494]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["all uses"]
+      }
+    ]
+  },
   "Federalsburg, Maryland, United States": {
     "place": {
       "name": "Federalsburg",
@@ -27426,6 +28444,31 @@
       }
     ]
   },
+  "Fife, Washington, United States": {
+    "place": {
+      "name": "Fife",
+      "state": "Washington",
+      "country": "United States",
+      "type": "city",
+      "encoded": "fife-washington-united-states",
+      "pop": 10999,
+      "coord": [-122.3626381, 47.2359524]
+    },
+    "add_max": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["all uses"]
+      }
+    ],
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["transit-oriented"],
+        "land": ["residential, low-density"]
+      }
+    ]
+  },
   "Findlay, Ohio, United States": {
     "place": {
       "name": "Findlay",
@@ -27448,6 +28491,31 @@
         "status": "adopted",
         "scope": ["city center / business district"],
         "land": ["all uses"]
+      }
+    ]
+  },
+  "Fircrest, Washington, United States": {
+    "place": {
+      "name": "Fircrest",
+      "state": "Washington",
+      "country": "United States",
+      "type": "city",
+      "encoded": "fircrest-washington-united-states",
+      "pop": 7156,
+      "coord": [-122.514304, 47.2317185]
+    },
+    "add_max": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["commercial", "industrial", "residential, multi-family"]
+      }
+    ],
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["residential, low-density"]
       }
     ]
   },
@@ -29820,6 +30888,24 @@
       }
     ]
   },
+  "Friday Harbor, Washington, United States": {
+    "place": {
+      "name": "Friday Harbor",
+      "state": "Washington",
+      "country": "United States",
+      "type": "city",
+      "encoded": "friday-harbor-washington-united-states",
+      "pop": 2613,
+      "coord": [-123.017124, 48.5342662]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district", "citywide"],
+        "land": ["all uses", "commercial", "other", "residential, all uses"]
+      }
+    ]
+  },
   "Fridley, Minnesota, United States": {
     "place": {
       "name": "Fridley",
@@ -30873,6 +31959,24 @@
       }
     ]
   },
+  "George, Washington, United States": {
+    "place": {
+      "name": "George",
+      "state": "Washington",
+      "country": "United States",
+      "type": "city",
+      "encoded": "george-washington-united-states",
+      "pop": 809,
+      "coord": [-119.85709, 47.0807166]
+    },
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["commercial"]
+      }
+    ]
+  },
   "Georgetown Charter Township, Michigan, United States": {
     "place": {
       "name": "Georgetown Charter Township",
@@ -31098,6 +32202,24 @@
         "scope": ["city center / business district"],
         "land": ["all uses"],
         "date": "2007-12-20"
+      }
+    ]
+  },
+  "Gig Harbor, Washington, United States": {
+    "place": {
+      "name": "Gig Harbor",
+      "state": "Washington",
+      "country": "United States",
+      "type": "city",
+      "encoded": "gig-harbor-washington-united-states",
+      "pop": 12029,
+      "coord": [-122.5878659, 47.3259697]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["main street / special"],
+        "land": ["commercial", "other"]
       }
     ]
   },
@@ -31850,6 +32972,24 @@
       }
     ]
   },
+  "Goldendale, Washington, United States": {
+    "place": {
+      "name": "Goldendale",
+      "state": "Washington",
+      "country": "United States",
+      "type": "city",
+      "encoded": "goldendale-washington-united-states",
+      "pop": 3453,
+      "coord": [-120.821731, 45.8206794]
+    },
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["all uses"]
+      }
+    ]
+  },
   "Golf, Illinois, United States": {
     "place": {
       "name": "Golf",
@@ -32283,6 +33423,29 @@
       }
     ]
   },
+  "Grand Coulee, Washington, United States": {
+    "place": {
+      "name": "Grand Coulee",
+      "state": "Washington",
+      "country": "United States",
+      "type": "city",
+      "encoded": "grand-coulee-washington-united-states",
+      "pop": 972,
+      "coord": [-119.0033548, 47.9415408]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["main street / special"],
+        "land": ["all uses"]
+      },
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["all uses"]
+      }
+    ]
+  },
   "Grand Forks, North Dakota, United States": {
     "place": {
       "name": "Grand Forks",
@@ -32606,6 +33769,24 @@
       }
     ]
   },
+  "Grandview, Washington, United States": {
+    "place": {
+      "name": "Grandview",
+      "state": "Washington",
+      "country": "United States",
+      "type": "city",
+      "encoded": "grandview-washington-united-states",
+      "pop": 10907,
+      "coord": [-119.9017049, 46.2509653]
+    },
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["all uses"]
+      }
+    ]
+  },
   "Grandville, Michigan, United States": {
     "place": {
       "name": "Grandville",
@@ -32660,6 +33841,24 @@
       "coord": [-95.5455752, 44.8099575]
     },
     "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["all uses"]
+      }
+    ]
+  },
+  "Granite Falls, Washington, United States": {
+    "place": {
+      "name": "Granite Falls",
+      "state": "Washington",
+      "country": "United States",
+      "type": "city",
+      "encoded": "granite-falls-washington-united-states",
+      "pop": 4450,
+      "coord": [-121.96947, 48.0817561]
+    },
+    "reduce_min": [
       {
         "status": "adopted",
         "scope": ["city center / business district"],
@@ -37634,6 +38833,24 @@
       }
     ]
   },
+  "Hoquiam, Washington, United States": {
+    "place": {
+      "name": "Hoquiam",
+      "state": "Washington",
+      "country": "United States",
+      "type": "city",
+      "encoded": "hoquiam-washington-united-states",
+      "pop": 8776,
+      "coord": [-123.889335, 46.980929]
+    },
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["commercial", "other", "residential, multi-family"]
+      }
+    ]
+  },
   "Horseheads, New York, United States": {
     "place": {
       "name": "Horseheads",
@@ -38637,6 +39854,24 @@
       }
     ]
   },
+  "Ilwaco, Washington, United States": {
+    "place": {
+      "name": "Ilwaco",
+      "state": "Washington",
+      "country": "United States",
+      "type": "city",
+      "encoded": "ilwaco-washington-united-states",
+      "pop": 1087,
+      "coord": [-124.043664, 46.309036]
+    },
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["commercial", "other"]
+      }
+    ]
+  },
   "Imlay City, Michigan, United States": {
     "place": {
       "name": "Imlay City",
@@ -39401,6 +40636,49 @@
         "status": "adopted",
         "scope": ["regional"],
         "land": ["commercial", "industrial", "other", "residential, all uses"]
+      }
+    ]
+  },
+  "Issaquah, Washington, United States": {
+    "place": {
+      "name": "Issaquah",
+      "state": "Washington",
+      "country": "United States",
+      "type": "city",
+      "encoded": "issaquah-washington-united-states",
+      "pop": 40051,
+      "coord": [-122.043297, 47.5348778]
+    },
+    "add_max": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district", "citywide"],
+        "land": [
+          "commercial",
+          "industrial",
+          "other",
+          "residential, low-density",
+          "residential, multi-family"
+        ]
+      }
+    ],
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district", "citywide"],
+        "land": ["all uses", "commercial"]
+      }
+    ],
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["residential, all uses"]
+      },
+      {
+        "status": "adopted",
+        "scope": ["city center / business district", "citywide"],
+        "land": ["other", "residential, low-density"]
       }
     ]
   },
@@ -41234,6 +42512,47 @@
       }
     ]
   },
+  "Kenmore, Washington, United States": {
+    "place": {
+      "name": "Kenmore",
+      "state": "Washington",
+      "country": "United States",
+      "type": "city",
+      "encoded": "kenmore-washington-united-states",
+      "pop": 23914,
+      "coord": [-122.2496367, 47.7596715]
+    },
+    "add_max": [
+      {
+        "status": "adopted",
+        "scope": [
+          "city center / business district",
+          "citywide",
+          "transit-oriented"
+        ],
+        "land": ["all uses"]
+      }
+    ],
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["transit-oriented"],
+        "land": ["all uses", "commercial", "other", "residential, multi-family"]
+      },
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["all uses"]
+      }
+    ],
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["transit-oriented"],
+        "land": ["residential, low-density"]
+      }
+    ]
+  },
   "Kenner, Louisiana, United States": {
     "place": {
       "name": "Kenner",
@@ -41267,6 +42586,31 @@
         "status": "adopted",
         "scope": ["citywide"],
         "land": ["all uses"]
+      }
+    ]
+  },
+  "Kennewick, Washington, United States": {
+    "place": {
+      "name": "Kennewick",
+      "state": "Washington",
+      "country": "United States",
+      "type": "city",
+      "encoded": "kennewick-washington-united-states",
+      "pop": 83921,
+      "coord": [-119.119919, 46.2087066]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district", "citywide"],
+        "land": ["all uses", "commercial"]
+      }
+    ],
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["all uses", "commercial"]
       }
     ]
   },
@@ -41541,6 +42885,24 @@
         "status": "adopted",
         "scope": ["city center / business district", "citywide"],
         "land": ["commercial", "industrial", "other"]
+      }
+    ]
+  },
+  "Kettle Falls, Washington, United States": {
+    "place": {
+      "name": "Kettle Falls",
+      "state": "Washington",
+      "country": "United States",
+      "type": "city",
+      "encoded": "kettle-falls-washington-united-states",
+      "pop": 1636,
+      "coord": [-118.056337, 48.6105163]
+    },
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["commercial", "other"]
       }
     ]
   },
@@ -42026,6 +43388,31 @@
       }
     ]
   },
+  "Kirkland, Washington, United States": {
+    "place": {
+      "name": "Kirkland",
+      "state": "Washington",
+      "country": "United States",
+      "type": "city",
+      "encoded": "kirkland-washington-united-states",
+      "pop": 92175,
+      "coord": [-122.2070775, 47.6765382]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["transit-oriented"],
+        "land": ["residential, all uses", "residential, multi-family"]
+      }
+    ],
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["transit-oriented"],
+        "land": ["residential, multi-family"]
+      }
+    ]
+  },
   "Kirksville, Missouri, United States": {
     "place": {
       "name": "Kirksville",
@@ -42126,6 +43513,24 @@
         "status": "adopted",
         "scope": ["city center / business district"],
         "land": ["commercial", "residential, all uses"]
+      }
+    ]
+  },
+  "Kittitas, Washington, United States": {
+    "place": {
+      "name": "Kittitas",
+      "state": "Washington",
+      "country": "United States",
+      "type": "city",
+      "encoded": "kittitas-washington-united-states",
+      "pop": 1438,
+      "coord": [-120.41756640341404, 46.98423797251738]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district", "citywide"],
+        "land": ["all uses"]
       }
     ]
   },
@@ -42457,6 +43862,49 @@
       }
     ]
   },
+  "La Center, Washington, United States": {
+    "place": {
+      "name": "La Center",
+      "state": "Washington",
+      "country": "United States",
+      "type": "city",
+      "encoded": "la-center-washington-united-states",
+      "pop": 3424,
+      "coord": [-122.668577, 45.8638734]
+    },
+    "add_max": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["all uses"]
+      }
+    ],
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district", "citywide"],
+        "land": ["commercial", "industrial", "medical", "other"]
+      }
+    ]
+  },
+  "La Conner, Washington, United States": {
+    "place": {
+      "name": "La Conner",
+      "state": "Washington",
+      "country": "United States",
+      "type": "city",
+      "encoded": "la-conner-washington-united-states",
+      "pop": 965,
+      "coord": [-122.494248, 48.3918865]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["commercial"]
+      }
+    ]
+  },
   "La Crescent, Minnesota, United States": {
     "place": {
       "name": "La Crescent",
@@ -42757,6 +44205,31 @@
       }
     ]
   },
+  "Lacey, Washington, United States": {
+    "place": {
+      "name": "Lacey",
+      "state": "Washington",
+      "country": "United States",
+      "type": "city",
+      "encoded": "lacey-washington-united-states",
+      "pop": 53526,
+      "coord": [-122.8072257, 47.0263876]
+    },
+    "add_max": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["commercial", "industrial", "medical", "other"]
+      }
+    ],
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district", "main street / special"],
+        "land": ["all uses"]
+      }
+    ]
+  },
   "Laceyville, Pennsylvania, United States": {
     "place": {
       "name": "Laceyville",
@@ -43038,6 +44511,24 @@
         "status": "adopted",
         "scope": ["city center / business district"],
         "land": ["all uses"]
+      }
+    ]
+  },
+  "Lake Forest Park, Washington, United States": {
+    "place": {
+      "name": "Lake Forest Park",
+      "state": "Washington",
+      "country": "United States",
+      "type": "city",
+      "encoded": "lake-forest-park-washington-united-states",
+      "pop": 13630,
+      "coord": [-122.2809623, 47.7567679]
+    },
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["transit-oriented"],
+        "land": ["residential, low-density"]
       }
     ]
   },
@@ -43403,6 +44894,24 @@
       }
     ]
   },
+  "Lake Stevens, Washington, United States": {
+    "place": {
+      "name": "Lake Stevens",
+      "state": "Washington",
+      "country": "United States",
+      "type": "city",
+      "encoded": "lake-stevens-washington-united-states",
+      "pop": 35630,
+      "coord": [-122.0660914, 48.0197794]
+    },
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["all uses"]
+      }
+    ]
+  },
   "Lake View, Iowa, United States": {
     "place": {
       "name": "Lake View",
@@ -43715,6 +45224,46 @@
       }
     ]
   },
+  "Lakewood, Washington, United States": {
+    "place": {
+      "name": "Lakewood",
+      "state": "Washington",
+      "country": "United States",
+      "type": "city",
+      "encoded": "lakewood-washington-united-states",
+      "pop": 63612,
+      "coord": [-122.518458, 47.1717649]
+    },
+    "add_max": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["commercial", "industrial", "medical", "other"]
+      }
+    ],
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": [
+          "city center / business district",
+          "citywide",
+          "transit-oriented"
+        ],
+        "land": ["all uses", "commercial", "residential, multi-family"]
+      }
+    ],
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district", "transit-oriented"],
+        "land": [
+          "commercial",
+          "residential, low-density",
+          "residential, multi-family"
+        ]
+      }
+    ]
+  },
   "Lakin, Kansas, United States": {
     "place": {
       "name": "Lakin",
@@ -43956,6 +45505,31 @@
       "coord": [-74.9226665, 40.1745538]
     },
     "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["commercial", "other"]
+      }
+    ]
+  },
+  "Langley, Washington, United States": {
+    "place": {
+      "name": "Langley",
+      "state": "Washington",
+      "country": "United States",
+      "type": "city",
+      "encoded": "langley-washington-united-states",
+      "pop": 1147,
+      "coord": [-122.4094051, 48.0399806]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["main street / special"],
+        "land": ["all uses"]
+      }
+    ],
+    "rm_min": [
       {
         "status": "adopted",
         "scope": ["city center / business district"],
@@ -44730,6 +46304,31 @@
       }
     ]
   },
+  "Leavenworth, Washington, United States": {
+    "place": {
+      "name": "Leavenworth",
+      "state": "Washington",
+      "country": "United States",
+      "type": "city",
+      "encoded": "leavenworth-washington-united-states",
+      "pop": 2263,
+      "coord": [-120.661081, 47.5969138]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["transit-oriented"],
+        "land": ["residential, multi-family"]
+      }
+    ],
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["commercial", "other"]
+      }
+    ]
+  },
   "Leawood, Kansas, United States": {
     "place": {
       "name": "Leawood",
@@ -45494,6 +47093,24 @@
       {
         "status": "adopted",
         "scope": ["city center / business district"],
+        "land": ["all uses"]
+      }
+    ]
+  },
+  "Liberty Lake, Washington, United States": {
+    "place": {
+      "name": "Liberty Lake",
+      "state": "Washington",
+      "country": "United States",
+      "type": "city",
+      "encoded": "liberty-lake-washington-united-states",
+      "pop": 12003,
+      "coord": [-117.104865, 47.6681145]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
         "land": ["all uses"]
       }
     ]
@@ -46802,6 +48419,38 @@
       }
     ]
   },
+  "Longview, Washington, United States": {
+    "place": {
+      "name": "Longview",
+      "state": "Washington",
+      "country": "United States",
+      "type": "city",
+      "encoded": "longview-washington-united-states",
+      "pop": 37818,
+      "coord": [-122.934462, 46.1377048]
+    },
+    "add_max": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["commercial"]
+      }
+    ],
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["all uses", "residential, multi-family"]
+      }
+    ],
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["all uses"]
+      }
+    ]
+  },
   "Longville, Minnesota, United States": {
     "place": {
       "name": "Longville",
@@ -47580,6 +49229,24 @@
       }
     ]
   },
+  "Lynden, Washington, United States": {
+    "place": {
+      "name": "Lynden",
+      "state": "Washington",
+      "country": "United States",
+      "type": "city",
+      "encoded": "lynden-washington-united-states",
+      "pop": 15749,
+      "coord": [-122.4569315, 48.9466041]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["all uses", "commercial"]
+      }
+    ]
+  },
   "Lyndon, Kansas, United States": {
     "place": {
       "name": "Lyndon",
@@ -47631,6 +49298,31 @@
         "status": "adopted",
         "scope": ["city center / business district"],
         "land": ["all uses"]
+      }
+    ]
+  },
+  "Lynnwood, Washington, United States": {
+    "place": {
+      "name": "Lynnwood",
+      "state": "Washington",
+      "country": "United States",
+      "type": "city",
+      "encoded": "lynnwood-washington-united-states",
+      "pop": 38568,
+      "coord": [-122.3053932, 47.8278656]
+    },
+    "add_max": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district", "main street / special"],
+        "land": ["all uses", "residential, all uses"]
+      }
+    ],
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["main street / special"],
+        "land": ["commercial", "other"]
       }
     ]
   },
@@ -49065,6 +50757,31 @@
       }
     ]
   },
+  "Maple Valley, Washington, United States": {
+    "place": {
+      "name": "Maple Valley",
+      "state": "Washington",
+      "country": "United States",
+      "type": "city",
+      "encoded": "maple-valley-washington-united-states",
+      "pop": 28013,
+      "coord": [-122.0437127, 47.3664231]
+    },
+    "add_max": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["all uses"]
+      }
+    ],
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["transit-oriented"],
+        "land": ["residential, low-density"]
+      }
+    ]
+  },
   "Mapleton, Iowa, United States": {
     "place": {
       "name": "Mapleton",
@@ -50398,6 +52115,24 @@
       }
     ]
   },
+  "McCleary, Washington, United States": {
+    "place": {
+      "name": "McCleary",
+      "state": "Washington",
+      "country": "United States",
+      "type": "city",
+      "encoded": "mccleary-washington-united-states",
+      "pop": 1997,
+      "coord": [-123.26543, 47.053151]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["all uses"]
+      }
+    ]
+  },
   "McComb, Mississippi, United States": {
     "place": {
       "name": "McComb",
@@ -50753,6 +52488,24 @@
       "encoded": "Mediapolis_IA",
       "pop": 1688,
       "coord": [-91.1640201, 41.0079667]
+    },
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["all uses"]
+      }
+    ]
+  },
+  "Medical Lake, Washington, United States": {
+    "place": {
+      "name": "Medical Lake",
+      "state": "Washington",
+      "country": "United States",
+      "type": "city",
+      "encoded": "medical-lake-washington-united-states",
+      "pop": 4874,
+      "coord": [-117.682391, 47.5727104]
     },
     "rm_min": [
       {
@@ -51180,6 +52933,24 @@
         "status": "adopted",
         "scope": ["citywide"],
         "land": ["commercial", "industrial", "other", "residential, all uses"]
+      }
+    ]
+  },
+  "Mercer Island, Washington, United States": {
+    "place": {
+      "name": "Mercer Island",
+      "state": "Washington",
+      "country": "United States",
+      "type": "city",
+      "encoded": "mercer-island-washington-united-states",
+      "pop": 25748,
+      "coord": [-122.2276378, 47.5766324]
+    },
+    "add_max": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["commercial", "other", "residential, multi-family"]
       }
     ]
   },
@@ -52259,6 +54030,24 @@
       }
     ]
   },
+  "Mill Creek, Washington, United States": {
+    "place": {
+      "name": "Mill Creek",
+      "state": "Washington",
+      "country": "United States",
+      "type": "city",
+      "encoded": "mill-creek-washington-united-states",
+      "pop": 20926,
+      "coord": [-122.2210628, 47.8577455]
+    },
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["residential, low-density"]
+      }
+    ]
+  },
   "Millbourne, Pennsylvania, United States": {
     "place": {
       "name": "Millbourne",
@@ -52482,6 +54271,31 @@
         "scope": ["transit-oriented"],
         "land": ["all uses"],
         "date": "2025-01-27"
+      }
+    ]
+  },
+  "Milton, Washington, United States": {
+    "place": {
+      "name": "Milton",
+      "state": "Washington",
+      "country": "United States",
+      "type": "city",
+      "encoded": "milton-washington-united-states",
+      "pop": 8697,
+      "coord": [-122.312837, 47.2481166]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["residential, all uses"]
+      }
+    ],
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["transit-oriented"],
+        "land": ["residential, low-density", "residential, multi-family"]
       }
     ]
   },
@@ -53370,6 +55184,31 @@
       }
     ]
   },
+  "Monroe, Washington, United States": {
+    "place": {
+      "name": "Monroe",
+      "state": "Washington",
+      "country": "United States",
+      "type": "city",
+      "encoded": "monroe-washington-united-states",
+      "pop": 19699,
+      "coord": [-121.971335, 47.8552259]
+    },
+    "add_max": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["all uses"]
+      }
+    ],
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["commercial", "other"]
+      }
+    ]
+  },
   "Monroe, Wisconsin, United States": {
     "place": {
       "name": "Monroe",
@@ -53490,6 +55329,24 @@
         ]
       }
     ],
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["all uses"]
+      }
+    ]
+  },
+  "Montesano, Washington, United States": {
+    "place": {
+      "name": "Montesano",
+      "state": "Washington",
+      "country": "United States",
+      "type": "city",
+      "encoded": "montesano-washington-united-states",
+      "pop": 4138,
+      "coord": [-123.602662, 46.9812063]
+    },
     "rm_min": [
       {
         "status": "adopted",
@@ -54467,6 +56324,24 @@
       }
     ]
   },
+  "Moses Lake, Washington, United States": {
+    "place": {
+      "name": "Moses Lake",
+      "state": "Washington",
+      "country": "United States",
+      "type": "city",
+      "encoded": "moses-lake-washington-united-states",
+      "pop": 25146,
+      "coord": [-119.278077, 47.1301417]
+    },
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["all uses"]
+      }
+    ]
+  },
   "Mosinee, Wisconsin, United States": {
     "place": {
       "name": "Mosinee",
@@ -54933,6 +56808,31 @@
       }
     ]
   },
+  "Mountlake Terrace, Washington, United States": {
+    "place": {
+      "name": "Mountlake Terrace",
+      "state": "Washington",
+      "country": "United States",
+      "type": "city",
+      "encoded": "mountlake-terrace-washington-united-states",
+      "pop": 21286,
+      "coord": [-122.3066395, 47.7909667]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district", "citywide"],
+        "land": ["all uses", "commercial"]
+      }
+    ],
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["transit-oriented"],
+        "land": ["residential, low-density"]
+      }
+    ]
+  },
   "Moville, Iowa, United States": {
     "place": {
       "name": "Moville",
@@ -54942,6 +56842,24 @@
       "encoded": "Moville_IA",
       "pop": 1687,
       "coord": [-96.072453, 42.4888404]
+    },
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["all uses"]
+      }
+    ]
+  },
+  "Moxee, Washington, United States": {
+    "place": {
+      "name": "Moxee",
+      "state": "Washington",
+      "country": "United States",
+      "type": "city",
+      "encoded": "moxee-washington-united-states",
+      "pop": 4326,
+      "coord": [-120.383116, 46.5537388]
     },
     "rm_min": [
       {
@@ -55400,6 +57318,24 @@
       }
     ]
   },
+  "Mt. Vernon, Washington, United States": {
+    "place": {
+      "name": "Mt. Vernon",
+      "state": "Washington",
+      "country": "United States",
+      "type": "city",
+      "encoded": "mt-vernon-washington-united-states",
+      "pop": 35219,
+      "coord": [-122.32642, 48.4200462]
+    },
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["all uses"]
+      }
+    ]
+  },
   "Mt. Washington, Kentucky, United States": {
     "place": {
       "name": "Mt. Washington",
@@ -55459,6 +57395,31 @@
         "scope": ["citywide"],
         "land": ["all uses"],
         "date": "2023-12-16"
+      }
+    ]
+  },
+  "Mukilteo, Washington, United States": {
+    "place": {
+      "name": "Mukilteo",
+      "state": "Washington",
+      "country": "United States",
+      "type": "city",
+      "encoded": "mukilteo-washington-united-states",
+      "pop": 21538,
+      "coord": [-122.3036992, 47.9474034]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district", "citywide"],
+        "land": ["all uses"]
+      }
+    ],
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["transit-oriented"],
+        "land": ["residential, low-density"]
       }
     ]
   },
@@ -57825,6 +59786,31 @@
       }
     ]
   },
+  "Newcastle, Washington, United States": {
+    "place": {
+      "name": "Newcastle",
+      "state": "Washington",
+      "country": "United States",
+      "type": "city",
+      "encoded": "newcastle-washington-united-states",
+      "pop": 13017,
+      "coord": [-122.1563331, 47.5395736]
+    },
+    "add_max": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["all uses"]
+      }
+    ],
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["transit-oriented"],
+        "land": ["residential, low-density"]
+      }
+    ]
+  },
   "Newhall, Iowa, United States": {
     "place": {
       "name": "Newhall",
@@ -58441,6 +60427,37 @@
       }
     ]
   },
+  "Normandy Park, Washington, United States": {
+    "place": {
+      "name": "Normandy Park",
+      "state": "Washington",
+      "country": "United States",
+      "type": "city",
+      "encoded": "normandy-park-washington-united-states",
+      "pop": 6771,
+      "coord": [-122.339601, 47.4351528]
+    },
+    "add_max": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": [
+          "commercial",
+          "industrial",
+          "medical",
+          "other",
+          "residential, all uses"
+        ]
+      }
+    ],
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["all uses"]
+      }
+    ]
+  },
   "Norristown, Pennsylvania, United States": {
     "place": {
       "name": "Norristown",
@@ -58523,6 +60540,24 @@
       {
         "status": "adopted",
         "scope": ["citywide"],
+        "land": ["all uses"]
+      }
+    ]
+  },
+  "North Bend, Washington, United States": {
+    "place": {
+      "name": "North Bend",
+      "state": "Washington",
+      "country": "United States",
+      "type": "city",
+      "encoded": "north-bend-washington-united-states",
+      "pop": 7461,
+      "coord": [-121.784889, 47.4957757]
+    },
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
         "land": ["all uses"]
       }
     ]
@@ -59759,6 +61794,31 @@
       }
     ]
   },
+  "Oak Harbor, Washington, United States": {
+    "place": {
+      "name": "Oak Harbor",
+      "state": "Washington",
+      "country": "United States",
+      "type": "city",
+      "encoded": "oak-harbor-washington-united-states",
+      "pop": 24622,
+      "coord": [-122.643224, 48.2931559]
+    },
+    "add_max": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["all uses", "residential, multi-family"]
+      }
+    ],
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["commercial", "other"]
+      }
+    ]
+  },
   "Oak Lawn, Illinois, United States": {
     "place": {
       "name": "Oak Lawn",
@@ -59987,6 +62047,24 @@
       "coord": [-79.666672, 43.447436]
     },
     "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["all uses"]
+      }
+    ]
+  },
+  "Oakville, Washington, United States": {
+    "place": {
+      "name": "Oakville",
+      "state": "Washington",
+      "country": "United States",
+      "type": "city",
+      "encoded": "oakville-washington-united-states",
+      "pop": 715,
+      "coord": [-123.232772, 46.8408862]
+    },
+    "reduce_min": [
       {
         "status": "adopted",
         "scope": ["city center / business district"],
@@ -60609,6 +62687,24 @@
         "status": "adopted",
         "scope": ["city center / business district", "transit-oriented"],
         "land": ["all uses"]
+      }
+    ]
+  },
+  "Omak, Washington, United States": {
+    "place": {
+      "name": "Omak",
+      "state": "Washington",
+      "country": "United States",
+      "type": "city",
+      "encoded": "omak-washington-united-states",
+      "pop": 4860,
+      "coord": [-119.52755, 48.4109853]
+    },
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["commercial"]
       }
     ]
   },
@@ -61244,6 +63340,24 @@
         "status": "adopted",
         "scope": ["citywide"],
         "land": ["all uses"]
+      }
+    ]
+  },
+  "Orting, Washington, United States": {
+    "place": {
+      "name": "Orting",
+      "state": "Washington",
+      "country": "United States",
+      "type": "city",
+      "encoded": "orting-washington-united-states",
+      "pop": 9041,
+      "coord": [-122.204282, 47.0978795]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["commercial", "other"]
       }
     ]
   },
@@ -62123,6 +64237,28 @@
         "status": "adopted",
         "scope": ["city center / business district"],
         "land": ["all uses"]
+      }
+    ]
+  },
+  "Pacific, Washington, United States": {
+    "place": {
+      "name": "Pacific",
+      "state": "Washington",
+      "country": "United States",
+      "type": "city",
+      "encoded": "pacific-washington-united-states",
+      "pop": 7235,
+      "coord": [-122.2464662652867, 47.26461726356254]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["transit-oriented"],
+        "land": [
+          "residential, all uses",
+          "residential, low-density",
+          "residential, multi-family"
+        ]
       }
     ]
   },
@@ -63017,6 +65153,24 @@
         "status": "adopted",
         "scope": ["city center / business district"],
         "land": ["all uses", "commercial", "other", "residential, multi-family"]
+      }
+    ]
+  },
+  "Pateros, Washington, United States": {
+    "place": {
+      "name": "Pateros",
+      "state": "Washington",
+      "country": "United States",
+      "type": "city",
+      "encoded": "pateros-washington-united-states",
+      "pop": 593,
+      "coord": [-119.9033759, 48.0524342]
+    },
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["commercial"]
       }
     ]
   },
@@ -65634,6 +67788,24 @@
       }
     ]
   },
+  "Port Angeles, Washington, United States": {
+    "place": {
+      "name": "Port Angeles",
+      "state": "Washington",
+      "country": "United States",
+      "type": "city",
+      "encoded": "port-angeles-washington-united-states",
+      "pop": 19960,
+      "coord": [-123.430741, 48.118146]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district", "citywide"],
+        "land": ["all uses"]
+      }
+    ]
+  },
   "Port Austin, Michigan, United States": {
     "place": {
       "name": "Port Austin",
@@ -65757,6 +67929,24 @@
         "status": "adopted",
         "scope": ["city center / business district"],
         "land": ["all uses"]
+      }
+    ]
+  },
+  "Port Orchard, Washington, United States": {
+    "place": {
+      "name": "Port Orchard",
+      "state": "Washington",
+      "country": "United States",
+      "type": "city",
+      "encoded": "port-orchard-washington-united-states",
+      "pop": 15587,
+      "coord": [-122.6384056, 47.5315625]
+    },
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district", "citywide"],
+        "land": ["all uses", "commercial", "other", "residential, all uses"]
       }
     ]
   },
@@ -66244,6 +68434,24 @@
         "status": "adopted",
         "scope": ["city center / business district"],
         "land": ["all uses", "commercial", "other"]
+      }
+    ]
+  },
+  "Poulsbo, Washington, United States": {
+    "place": {
+      "name": "Poulsbo",
+      "state": "Washington",
+      "country": "United States",
+      "type": "city",
+      "encoded": "poulsbo-washington-united-states",
+      "pop": 11970,
+      "coord": [-122.63928, 47.7391366]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["commercial"]
       }
     ]
   },
@@ -66739,6 +68947,24 @@
       }
     ]
   },
+  "Prosser, Washington, United States": {
+    "place": {
+      "name": "Prosser",
+      "state": "Washington",
+      "country": "United States",
+      "type": "city",
+      "encoded": "prosser-washington-united-states",
+      "pop": 6062,
+      "coord": [-119.76916, 46.2067583]
+    },
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["all uses"]
+      }
+    ]
+  },
   "Providence, Rhode Island, United States": {
     "place": {
       "name": "Providence",
@@ -66869,6 +69095,24 @@
       }
     ]
   },
+  "Pullman, Washington, United States": {
+    "place": {
+      "name": "Pullman",
+      "state": "Washington",
+      "country": "United States",
+      "type": "city",
+      "encoded": "pullman-washington-united-states",
+      "pop": 32901,
+      "coord": [-117.173895, 46.7304268]
+    },
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["all uses"]
+      }
+    ]
+  },
   "Punta Gorda, Florida, United States": {
     "place": {
       "name": "Punta Gorda",
@@ -66921,6 +69165,38 @@
         "scope": ["city center / business district", "citywide"],
         "land": ["all uses"],
         "date": "2025-04-08"
+      }
+    ]
+  },
+  "Puyallup, Washington, United States": {
+    "place": {
+      "name": "Puyallup",
+      "state": "Washington",
+      "country": "United States",
+      "type": "city",
+      "encoded": "puyallup-washington-united-states",
+      "pop": 42973,
+      "coord": [-122.29214, 47.1849009]
+    },
+    "add_max": [
+      {
+        "status": "adopted",
+        "scope": ["main street / special"],
+        "land": ["all uses"]
+      }
+    ],
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["main street / special"],
+        "land": ["all uses"]
+      }
+    ],
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district", "transit-oriented"],
+        "land": ["commercial", "other", "residential, low-density"]
       }
     ]
   },
@@ -67093,6 +69369,24 @@
         "status": "adopted",
         "scope": ["city center / business district"],
         "land": ["commercial", "other"]
+      }
+    ]
+  },
+  "Rainier, Washington, United States": {
+    "place": {
+      "name": "Rainier",
+      "state": "Washington",
+      "country": "United States",
+      "type": "city",
+      "encoded": "rainier-washington-united-states",
+      "pop": 2369,
+      "coord": [-122.689346, 46.891055]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["all uses"]
       }
     ]
   },
@@ -67654,6 +69948,47 @@
       }
     ]
   },
+  "Redmond, Washington, United States": {
+    "place": {
+      "name": "Redmond",
+      "state": "Washington",
+      "country": "United States",
+      "type": "city",
+      "encoded": "redmond-washington-united-states",
+      "pop": 73256,
+      "coord": [-122.1238767, 47.6694141]
+    },
+    "add_max": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": [
+          "commercial",
+          "industrial",
+          "other",
+          "residential, multi-family"
+        ]
+      }
+    ],
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": [
+          "city center / business district",
+          "citywide",
+          "transit-oriented"
+        ],
+        "land": [
+          "commercial",
+          "industrial",
+          "medical",
+          "other",
+          "residential, all uses",
+          "residential, low-density"
+        ]
+      }
+    ]
+  },
   "Redwood Falls, Minnesota, United States": {
     "place": {
       "name": "Redwood Falls",
@@ -67922,6 +70257,38 @@
         "status": "adopted",
         "scope": ["citywide"],
         "land": ["all uses"]
+      }
+    ]
+  },
+  "Renton, Washington, United States": {
+    "place": {
+      "name": "Renton",
+      "state": "Washington",
+      "country": "United States",
+      "type": "city",
+      "encoded": "renton-washington-united-states",
+      "pop": 106785,
+      "coord": [-122.2034496, 47.4799078]
+    },
+    "add_max": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": [
+          "commercial",
+          "industrial",
+          "medical",
+          "other",
+          "residential, low-density",
+          "residential, multi-family"
+        ]
+      }
+    ],
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["commercial"]
       }
     ]
   },
@@ -68269,6 +70636,31 @@
         "status": "adopted",
         "scope": ["city center / business district", "citywide"],
         "land": ["all uses", "commercial"]
+      }
+    ]
+  },
+  "Richland, Washington, United States": {
+    "place": {
+      "name": "Richland",
+      "state": "Washington",
+      "country": "United States",
+      "type": "city",
+      "encoded": "richland-washington-united-states",
+      "pop": 60560,
+      "coord": [-119.275205, 46.2804298]
+    },
+    "add_max": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["all uses"]
+      }
+    ],
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district", "citywide"],
+        "land": ["all uses"]
       }
     ]
   },
@@ -68701,6 +71093,31 @@
       {
         "status": "adopted",
         "scope": ["city center / business district"],
+        "land": ["residential, all uses"]
+      }
+    ]
+  },
+  "Ritzville, Washington, United States": {
+    "place": {
+      "name": "Ritzville",
+      "state": "Washington",
+      "country": "United States",
+      "type": "city",
+      "encoded": "ritzville-washington-united-states",
+      "pop": 1767,
+      "coord": [-118.380847, 47.1268749]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["all uses"]
+      }
+    ],
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["main street / special"],
         "land": ["residential, all uses"]
       }
     ]
@@ -69457,6 +71874,24 @@
       }
     ]
   },
+  "Rockford, Washington, United States": {
+    "place": {
+      "name": "Rockford",
+      "state": "Washington",
+      "country": "United States",
+      "type": "city",
+      "encoded": "rockford-washington-united-states",
+      "pop": 522,
+      "coord": [-117.130747, 47.4521207]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["transit-oriented"],
+        "land": ["commercial", "industrial", "medical", "other"]
+      }
+    ]
+  },
   "Rockingham, Vermont, United States": {
     "place": {
       "name": "Rockingham",
@@ -70096,6 +72531,24 @@
       }
     ]
   },
+  "Roslyn, Washington, United States": {
+    "place": {
+      "name": "Roslyn",
+      "state": "Washington",
+      "country": "United States",
+      "type": "city",
+      "encoded": "roslyn-washington-united-states",
+      "pop": 950,
+      "coord": [-120.993359, 47.2230352]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["all uses"]
+      }
+    ]
+  },
   "Rossford, Ohio, United States": {
     "place": {
       "name": "Rossford",
@@ -70323,6 +72776,49 @@
           "residential, low-density",
           "residential, multi-family"
         ]
+      }
+    ]
+  },
+  "Roy, Washington, United States": {
+    "place": {
+      "name": "Roy",
+      "state": "Washington",
+      "country": "United States",
+      "type": "city",
+      "encoded": "roy-washington-united-states",
+      "pop": 816,
+      "coord": [-122.539846, 47.0042643]
+    },
+    "add_max": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["commercial", "industrial", "residential, multi-family"]
+      }
+    ]
+  },
+  "Royal City, Washington, United States": {
+    "place": {
+      "name": "Royal City",
+      "state": "Washington",
+      "country": "United States",
+      "type": "city",
+      "encoded": "royal-city-washington-united-states",
+      "pop": 1776,
+      "coord": [-119.630591, 46.9009701]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["all uses"]
+      }
+    ],
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["commercial"]
       }
     ]
   },
@@ -70604,6 +73100,25 @@
         "status": "adopted",
         "scope": ["city center / business district"],
         "land": ["commercial", "other"]
+      }
+    ]
+  },
+  "Ruston, Washington, United States": {
+    "place": {
+      "name": "Ruston",
+      "state": "Washington",
+      "country": "United States",
+      "type": "city",
+      "encoded": "ruston-washington-united-states",
+      "pop": 1055,
+      "coord": [-122.506947, 47.2994854]
+    },
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["transit-oriented"],
+        "land": ["residential, low-density"],
+        "date": "2025-06-17"
       }
     ]
   },
@@ -71277,6 +73792,31 @@
         "status": "adopted",
         "scope": ["transit-oriented"],
         "land": ["commercial", "industrial", "other", "residential, all uses"]
+      }
+    ]
+  },
+  "Sammamish, Washington, United States": {
+    "place": {
+      "name": "Sammamish",
+      "state": "Washington",
+      "country": "United States",
+      "type": "city",
+      "encoded": "sammamish-washington-united-states",
+      "pop": 67455,
+      "coord": [-122.0416844, 47.6017554]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["all uses"]
+      }
+    ],
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide", "transit-oriented"],
+        "land": ["residential, all uses", "residential, low-density"]
       }
     ]
   },
@@ -72779,6 +75319,38 @@
       }
     ]
   },
+  "SeaTac, Washington, United States": {
+    "place": {
+      "name": "SeaTac",
+      "state": "Washington",
+      "country": "United States",
+      "type": "city",
+      "encoded": "seatac-washington-united-states",
+      "pop": 31454,
+      "coord": [-122.283084, 47.4449086]
+    },
+    "add_max": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district", "transit-oriented"],
+        "land": ["all uses"]
+      }
+    ],
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["transit-oriented"],
+        "land": ["all uses"]
+      }
+    ],
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["transit-oriented"],
+        "land": ["residential, low-density"]
+      }
+    ]
+  },
   "Seabrook, New Hampshire, United States": {
     "place": {
       "name": "Seabrook",
@@ -72924,6 +75496,38 @@
       }
     ]
   },
+  "Sedro-Woolley, Washington, United States": {
+    "place": {
+      "name": "Sedro-Woolley",
+      "state": "Washington",
+      "country": "United States",
+      "type": "city",
+      "encoded": "sedro-woolley-washington-united-states",
+      "pop": 12421,
+      "coord": [-122.235109, 48.504994]
+    },
+    "add_max": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["residential, multi-family"]
+      }
+    ],
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district", "citywide"],
+        "land": ["commercial", "residential, multi-family"]
+      }
+    ],
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["commercial", "other", "residential, all uses"]
+      }
+    ]
+  },
   "Seguin, Ontario, Canada": {
     "place": {
       "name": "Seguin",
@@ -72938,6 +75542,24 @@
       {
         "status": "adopted",
         "scope": ["citywide"],
+        "land": ["all uses"]
+      }
+    ]
+  },
+  "Selah, Washington, United States": {
+    "place": {
+      "name": "Selah",
+      "state": "Washington",
+      "country": "United States",
+      "type": "city",
+      "encoded": "selah-washington-united-states",
+      "pop": 8153,
+      "coord": [-120.530272, 46.6540065]
+    },
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
         "land": ["all uses"]
       }
     ]
@@ -73116,6 +75738,31 @@
         "scope": ["city center / business district"],
         "land": ["all uses"],
         "date": "1997"
+      }
+    ]
+  },
+  "Sequim, Washington, United States": {
+    "place": {
+      "name": "Sequim",
+      "state": "Washington",
+      "country": "United States",
+      "type": "city",
+      "encoded": "sequim-washington-united-states",
+      "pop": 8024,
+      "coord": [-123.1096706, 48.0849312]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["all uses"]
+      }
+    ],
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["commercial", "other"]
       }
     ]
   },
@@ -73802,6 +76449,24 @@
       {
         "status": "adopted",
         "scope": ["city center / business district", "citywide"],
+        "land": ["all uses"]
+      }
+    ]
+  },
+  "Shelton, Washington, United States": {
+    "place": {
+      "name": "Shelton",
+      "state": "Washington",
+      "country": "United States",
+      "type": "city",
+      "encoded": "shelton-washington-united-states",
+      "pop": 10371,
+      "coord": [-123.100706, 47.2150945]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
         "land": ["all uses"]
       }
     ]
@@ -75082,6 +77747,62 @@
       }
     ]
   },
+  "Snohomish, Washington, United States": {
+    "place": {
+      "name": "Snohomish",
+      "state": "Washington",
+      "country": "United States",
+      "type": "city",
+      "encoded": "snohomish-washington-united-states",
+      "pop": 10126,
+      "coord": [-122.09588136217491, 47.91140869621623]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["all uses"]
+      }
+    ],
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["commercial", "other"]
+      }
+    ]
+  },
+  "Snoqualmie, Washington, United States": {
+    "place": {
+      "name": "Snoqualmie",
+      "state": "Washington",
+      "country": "United States",
+      "type": "city",
+      "encoded": "snoqualmie-washington-united-states",
+      "pop": 14121,
+      "coord": [-121.827093, 47.5289527]
+    },
+    "add_max": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": [
+          "commercial",
+          "industrial",
+          "medical",
+          "other",
+          "residential, multi-family"
+        ]
+      }
+    ],
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["industrial", "other"]
+      }
+    ]
+  },
   "Snow Hill, Maryland, United States": {
     "place": {
       "name": "Snow Hill",
@@ -75122,6 +77843,31 @@
         "status": "adopted",
         "scope": ["citywide"],
         "land": ["all uses"]
+      }
+    ]
+  },
+  "Soap Lake, Washington, United States": {
+    "place": {
+      "name": "Soap Lake",
+      "state": "Washington",
+      "country": "United States",
+      "type": "city",
+      "encoded": "soap-lake-washington-united-states",
+      "pop": 1691,
+      "coord": [-119.490493, 47.3893133]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["all uses"]
+      }
+    ],
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["commercial"]
       }
     ]
   },
@@ -75408,6 +78154,24 @@
         "scope": ["citywide"],
         "land": ["all uses"],
         "date": "2021-01-13"
+      }
+    ]
+  },
+  "South Bend, Washington, United States": {
+    "place": {
+      "name": "South Bend",
+      "state": "Washington",
+      "country": "United States",
+      "type": "city",
+      "encoded": "south-bend-washington-united-states",
+      "pop": 1746,
+      "coord": [-123.8044371, 46.6627902]
+    },
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["main street / special"],
+        "land": ["all uses"]
       }
     ]
   },
@@ -76305,6 +79069,24 @@
         "status": "adopted",
         "scope": ["city center / business district"],
         "land": ["all uses"]
+      }
+    ]
+  },
+  "Spokane Valley, Washington, United States": {
+    "place": {
+      "name": "Spokane Valley",
+      "state": "Washington",
+      "country": "United States",
+      "type": "city",
+      "encoded": "spokane-valley-washington-united-states",
+      "pop": 102976,
+      "coord": [-117.2613936, 47.6571104]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district", "transit-oriented"],
+        "land": ["all uses", "commercial", "other"]
       }
     ]
   },
@@ -77930,6 +80712,24 @@
       }
     ]
   },
+  "Stanwood, Washington, United States": {
+    "place": {
+      "name": "Stanwood",
+      "state": "Washington",
+      "country": "United States",
+      "type": "city",
+      "encoded": "stanwood-washington-united-states",
+      "pop": 7705,
+      "coord": [-122.3520327, 48.24216]
+    },
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["commercial"]
+      }
+    ]
+  },
   "Star Prairie, Wisconsin, United States": {
     "place": {
       "name": "Star Prairie",
@@ -78360,6 +81160,30 @@
         "scope": ["main street / special"],
         "land": ["all uses"],
         "date": "2023"
+      }
+    ]
+  },
+  "Stevenson, Washington, United States": {
+    "place": {
+      "name": "Stevenson",
+      "state": "Washington",
+      "country": "United States",
+      "type": "city",
+      "encoded": "stevenson-washington-united-states",
+      "pop": 1491,
+      "coord": [-121.88355, 45.6941611]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": [
+          "all uses",
+          "commercial",
+          "medical",
+          "residential, all uses",
+          "residential, multi-family"
+        ]
       }
     ]
   },
@@ -79315,6 +82139,24 @@
       }
     ]
   },
+  "Sultan, Washington, United States": {
+    "place": {
+      "name": "Sultan",
+      "state": "Washington",
+      "country": "United States",
+      "type": "city",
+      "encoded": "sultan-washington-united-states",
+      "pop": 5146,
+      "coord": [-121.814731, 47.862282]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["commercial", "other"]
+      }
+    ]
+  },
   "Summerdale, Alabama, United States": {
     "place": {
       "name": "Summerdale",
@@ -79391,6 +82233,24 @@
         "status": "adopted",
         "scope": ["citywide"],
         "land": ["commercial", "industrial", "other"]
+      }
+    ]
+  },
+  "Sumner, Washington, United States": {
+    "place": {
+      "name": "Sumner",
+      "state": "Washington",
+      "country": "United States",
+      "type": "city",
+      "encoded": "sumner-washington-united-states",
+      "pop": 10621,
+      "coord": [-122.2312383, 47.2061882]
+    },
+    "add_max": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["commercial", "industrial", "medical", "other"]
       }
     ]
   },
@@ -79477,6 +82337,24 @@
       "coord": [-79.39576851875972, 45.771078900000006]
     },
     "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["all uses"]
+      }
+    ]
+  },
+  "Sunnyside, Washington, United States": {
+    "place": {
+      "name": "Sunnyside",
+      "state": "Washington",
+      "country": "United States",
+      "type": "city",
+      "encoded": "sunnyside-washington-united-states",
+      "pop": 16375,
+      "coord": [-120.0081898, 46.3246419]
+    },
+    "rm_min": [
       {
         "status": "adopted",
         "scope": ["city center / business district"],
@@ -80828,6 +83706,37 @@
       }
     ]
   },
+  "Tenino, Washington, United States": {
+    "place": {
+      "name": "Tenino",
+      "state": "Washington",
+      "country": "United States",
+      "type": "city",
+      "encoded": "tenino-washington-united-states",
+      "pop": 1870,
+      "coord": [-122.8502933, 46.8567408]
+    },
+    "add_max": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": [
+          "commercial",
+          "industrial",
+          "medical",
+          "other",
+          "residential, low-density"
+        ]
+      }
+    ],
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["all uses"]
+      }
+    ]
+  },
   "Terre Haute, Indiana, United States": {
     "place": {
       "name": "Terre Haute",
@@ -81843,6 +84752,24 @@
       }
     ]
   },
+  "Toppenish, Washington, United States": {
+    "place": {
+      "name": "Toppenish",
+      "state": "Washington",
+      "country": "United States",
+      "type": "city",
+      "encoded": "toppenish-washington-united-states",
+      "pop": 8854,
+      "coord": [-120.308938, 46.3775015]
+    },
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["all uses"]
+      }
+    ]
+  },
   "Topton, Pennsylvania, United States": {
     "place": {
       "name": "Topton",
@@ -82699,6 +85626,30 @@
       }
     ]
   },
+  "Tukwila, Washington, United States": {
+    "place": {
+      "name": "Tukwila",
+      "state": "Washington",
+      "country": "United States",
+      "type": "city",
+      "encoded": "tukwila-washington-united-states",
+      "pop": 21798,
+      "coord": [-122.2559156, 47.4627356]
+    },
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide", "transit-oriented"],
+        "land": [
+          "all uses",
+          "commercial",
+          "industrial",
+          "other",
+          "residential, all uses"
+        ]
+      }
+    ]
+  },
   "Tulsa, Oklahoma, United States": {
     "place": {
       "name": "Tulsa",
@@ -82728,6 +85679,38 @@
         "status": "adopted",
         "scope": ["city center / business district", "citywide"],
         "land": ["all uses", "commercial"]
+      }
+    ]
+  },
+  "Tumwater, Washington, United States": {
+    "place": {
+      "name": "Tumwater",
+      "state": "Washington",
+      "country": "United States",
+      "type": "city",
+      "encoded": "tumwater-washington-united-states",
+      "pop": 25350,
+      "coord": [-122.910368, 47.0080655]
+    },
+    "add_max": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["all uses"]
+      }
+    ],
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide", "main street / special"],
+        "land": [
+          "all uses",
+          "commercial",
+          "industrial",
+          "medical",
+          "other",
+          "residential, multi-family"
+        ]
       }
     ]
   },
@@ -83155,6 +86138,24 @@
       }
     ]
   },
+  "Union Gap, Washington, United States": {
+    "place": {
+      "name": "Union Gap",
+      "state": "Washington",
+      "country": "United States",
+      "type": "city",
+      "encoded": "union-gap-washington-united-states",
+      "pop": 6568,
+      "coord": [-120.475063, 46.5573492]
+    },
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["all uses"]
+      }
+    ]
+  },
   "Union Springs, New York, United States": {
     "place": {
       "name": "Union Springs",
@@ -83284,6 +86285,31 @@
         "status": "adopted",
         "scope": ["city center / business district"],
         "land": ["commercial"]
+      }
+    ]
+  },
+  "University Place, Washington, United States": {
+    "place": {
+      "name": "University Place",
+      "state": "Washington",
+      "country": "United States",
+      "type": "city",
+      "encoded": "university-place-washington-united-states",
+      "pop": 34866,
+      "coord": [-122.5371325, 47.2258172]
+    },
+    "add_max": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["all uses"]
+      }
+    ],
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["all uses"]
       }
     ]
   },
@@ -83448,6 +86474,24 @@
       {
         "status": "adopted",
         "scope": ["city center / business district"],
+        "land": ["all uses"]
+      }
+    ]
+  },
+  "Vader, Washington, United States": {
+    "place": {
+      "name": "Vader",
+      "state": "Washington",
+      "country": "United States",
+      "type": "city",
+      "encoded": "vader-washington-united-states",
+      "pop": 629,
+      "coord": [-122.9580934, 46.4014233]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
         "land": ["all uses"]
       }
     ]
@@ -84876,6 +87920,24 @@
       }
     ]
   },
+  "Waitsburg, Washington, United States": {
+    "place": {
+      "name": "Waitsburg",
+      "state": "Washington",
+      "country": "United States",
+      "type": "city",
+      "encoded": "waitsburg-washington-united-states",
+      "pop": 1166,
+      "coord": [-118.153286, 46.2704176]
+    },
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["all uses"]
+      }
+    ]
+  },
   "Walden, New York, United States": {
     "place": {
       "name": "Walden",
@@ -85147,6 +88209,24 @@
       }
     ]
   },
+  "Wapato, Washington, United States": {
+    "place": {
+      "name": "Wapato",
+      "state": "Washington",
+      "country": "United States",
+      "type": "city",
+      "encoded": "wapato-washington-united-states",
+      "pop": 4607,
+      "coord": [-120.420338, 46.4476278]
+    },
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["all uses"]
+      }
+    ]
+  },
   "Wapella, Illinois, United States": {
     "place": {
       "name": "Wapella",
@@ -85198,6 +88278,24 @@
         "status": "adopted",
         "scope": ["city center / business district"],
         "land": ["commercial", "other"]
+      }
+    ]
+  },
+  "Warden, Washington, United States": {
+    "place": {
+      "name": "Warden",
+      "state": "Washington",
+      "country": "United States",
+      "type": "city",
+      "encoded": "warden-washington-united-states",
+      "pop": 2449,
+      "coord": [-119.039565, 46.9675537]
+    },
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["all uses"]
       }
     ]
   },
@@ -85823,6 +88921,31 @@
       }
     ]
   },
+  "Washougal, Washington, United States": {
+    "place": {
+      "name": "Washougal",
+      "state": "Washington",
+      "country": "United States",
+      "type": "city",
+      "encoded": "washougal-washington-united-states",
+      "pop": 17039,
+      "coord": [-122.3479921, 45.5819594]
+    },
+    "add_max": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["all uses"]
+      }
+    ],
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["all uses"]
+      }
+    ]
+  },
   "Waterbury, Connecticut, United States": {
     "place": {
       "name": "Waterbury",
@@ -86074,6 +89197,24 @@
       "encoded": "Waterville_OH",
       "pop": 6003,
       "coord": [-83.7182701, 41.5008859]
+    },
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["all uses"]
+      }
+    ]
+  },
+  "Waterville, Washington, United States": {
+    "place": {
+      "name": "Waterville",
+      "state": "Washington",
+      "country": "United States",
+      "type": "city",
+      "encoded": "waterville-washington-united-states",
+      "pop": 1134,
+      "coord": [-120.071394, 47.6473319]
     },
     "rm_min": [
       {
@@ -86949,6 +90090,31 @@
       }
     ]
   },
+  "Wenatchee, Washington, United States": {
+    "place": {
+      "name": "Wenatchee",
+      "state": "Washington",
+      "country": "United States",
+      "type": "city",
+      "encoded": "wenatchee-washington-united-states",
+      "pop": 35508,
+      "coord": [-120.310349, 47.4234599]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["all uses"]
+      }
+    ],
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["commercial", "other"]
+      }
+    ]
+  },
   "Wentzville, Missouri, United States": {
     "place": {
       "name": "Wentzville",
@@ -87740,6 +90906,24 @@
         "status": "adopted",
         "scope": ["city center / business district"],
         "land": ["all uses"]
+      }
+    ]
+  },
+  "West Richland, Washington, United States": {
+    "place": {
+      "name": "West Richland",
+      "state": "Washington",
+      "country": "United States",
+      "type": "city",
+      "encoded": "west-richland-washington-united-states",
+      "pop": 16295,
+      "coord": [-119.347312, 46.3003915]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["main street / special"],
+        "land": ["commercial", "industrial"]
       }
     ]
   },
@@ -90023,6 +93207,24 @@
       }
     ]
   },
+  "Winthrop, Washington, United States": {
+    "place": {
+      "name": "Winthrop",
+      "state": "Washington",
+      "country": "United States",
+      "type": "city",
+      "encoded": "winthrop-washington-united-states",
+      "pop": 504,
+      "coord": [-120.186195, 48.4779232]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district", "citywide"],
+        "land": ["all uses", "commercial", "other"]
+      }
+    ]
+  },
   "Wisconsin Dells, Wisconsin, United States": {
     "place": {
       "name": "Wisconsin Dells",
@@ -90382,6 +93584,42 @@
       }
     ]
   },
+  "Woodinville, Washington, United States": {
+    "place": {
+      "name": "Woodinville",
+      "state": "Washington",
+      "country": "United States",
+      "type": "city",
+      "encoded": "woodinville-washington-united-states",
+      "pop": 13069,
+      "coord": [-122.1588902, 47.7545827]
+    },
+    "add_max": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["all uses"]
+      }
+    ]
+  },
+  "Woodland, Washington, United States": {
+    "place": {
+      "name": "Woodland",
+      "state": "Washington",
+      "country": "United States",
+      "type": "city",
+      "encoded": "woodland-washington-united-states",
+      "pop": 6531,
+      "coord": [-122.7459664, 45.9018496]
+    },
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["all uses"]
+      }
+    ]
+  },
   "Woodlawn, Ohio, United States": {
     "place": {
       "name": "Woodlawn",
@@ -90555,6 +93793,25 @@
         "status": "adopted",
         "scope": ["city center / business district"],
         "land": ["all uses"]
+      }
+    ]
+  },
+  "Woodway, Washington, United States": {
+    "place": {
+      "name": "Woodway",
+      "state": "Washington",
+      "country": "United States",
+      "type": "city",
+      "encoded": "woodway-washington-united-states",
+      "pop": 1318,
+      "coord": [-122.382362, 47.7900365]
+    },
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["residential, low-density"],
+        "date": "2025-06-24"
       }
     ]
   },
@@ -90976,6 +94233,26 @@
       }
     ]
   },
+  "Yarrow Point, Washington, United States": {
+    "place": {
+      "name": "Yarrow Point",
+      "state": "Washington",
+      "country": "United States",
+      "type": "city",
+      "encoded": "yarrow-point-washington-united-states",
+      "pop": 1134,
+      "coord": [-122.2173461, 47.64621],
+      "repeal": true
+    },
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["all uses"],
+        "date": "2025-05-13"
+      }
+    ]
+  },
   "Yates Center, Kansas, United States": {
     "place": {
       "name": "Yates Center",
@@ -91079,6 +94356,24 @@
         "status": "adopted",
         "scope": ["city center / business district"],
         "land": ["all uses"]
+      }
+    ]
+  },
+  "Yelm, Washington, United States": {
+    "place": {
+      "name": "Yelm",
+      "state": "Washington",
+      "country": "United States",
+      "type": "city",
+      "encoded": "yelm-washington-united-states",
+      "pop": 10617,
+      "coord": [-122.60639, 46.9413877]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["transit-oriented"],
+        "land": ["residential, multi-family"]
       }
     ]
   },
