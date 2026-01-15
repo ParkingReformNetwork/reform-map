@@ -929,6 +929,24 @@
       }
     ]
   },
+  "Alcoa, Tennessee, United States": {
+    "place": {
+      "name": "Alcoa",
+      "state": "Tennessee",
+      "country": "United States",
+      "type": "city",
+      "encoded": "alcoa-tennessee-united-states",
+      "pop": 10978,
+      "coord": [-83.986599, 35.7847143]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["all uses"]
+      }
+    ]
+  },
   "Aledo, Illinois, United States": {
     "place": {
       "name": "Aledo",
@@ -1146,6 +1164,24 @@
       }
     ]
   },
+  "Algood, Tennessee, United States": {
+    "place": {
+      "name": "Algood",
+      "state": "Tennessee",
+      "country": "United States",
+      "type": "city",
+      "encoded": "algood-tennessee-united-states",
+      "pop": 3963,
+      "coord": [-85.4485849, 36.1958946]
+    },
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["all uses"]
+      }
+    ]
+  },
   "Alleman, Iowa, United States": {
     "place": {
       "name": "Alleman",
@@ -1198,6 +1234,42 @@
       "encoded": "allendale-charter-township-michigan-united-states",
       "pop": 26582,
       "coord": [-85.9498141, 42.982786]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["all uses"]
+      }
+    ]
+  },
+  "Allenhurst, New Jersey, United States": {
+    "place": {
+      "name": "Allenhurst",
+      "state": "New Jersey",
+      "country": "United States",
+      "type": "city",
+      "encoded": "allenhurst-new-jersey-united-states",
+      "pop": 472,
+      "coord": [-74.00058468666697, 40.23623988026534]
+    },
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["commercial"]
+      }
+    ]
+  },
+  "Allentown, New Jersey, United States": {
+    "place": {
+      "name": "Allentown",
+      "state": "New Jersey",
+      "country": "United States",
+      "type": "city",
+      "encoded": "allentown-new-jersey-united-states",
+      "pop": 1734,
+      "coord": [-74.5834887, 40.1778887]
     },
     "reduce_min": [
       {
@@ -3394,6 +3466,30 @@
       }
     ]
   },
+  "Athens, Tennessee, United States": {
+    "place": {
+      "name": "Athens",
+      "state": "Tennessee",
+      "country": "United States",
+      "type": "city",
+      "encoded": "athens-tennessee-united-states",
+      "pop": 14084,
+      "coord": [-84.5930113, 35.4428864]
+    },
+    "add_max": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": [
+          "commercial",
+          "industrial",
+          "medical",
+          "other",
+          "residential, multi-family"
+        ]
+      }
+    ]
+  },
   "Athens, Wisconsin, United States": {
     "place": {
       "name": "Athens",
@@ -4854,6 +4950,24 @@
       }
     ]
   },
+  "Bartlett, Tennessee, United States": {
+    "place": {
+      "name": "Bartlett",
+      "state": "Tennessee",
+      "country": "United States",
+      "type": "city",
+      "encoded": "bartlett-tennessee-united-states",
+      "pop": 57786,
+      "coord": [-89.8739753, 35.2045329]
+    },
+    "add_max": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["all uses"]
+      }
+    ]
+  },
   "Basalt, Colorado, United States": {
     "place": {
       "name": "Basalt",
@@ -5437,6 +5551,24 @@
         "scope": ["city center / business district"],
         "land": ["all uses"],
         "date": "2008-08-26"
+      }
+    ]
+  },
+  "Bayonne, New Jersey, United States": {
+    "place": {
+      "name": "Bayonne",
+      "state": "New Jersey",
+      "country": "United States",
+      "type": "city",
+      "encoded": "bayonne-new-jersey-united-states",
+      "pop": 71686,
+      "coord": [-74.1143091, 40.6687141]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["all uses"]
       }
     ]
   },
@@ -8602,6 +8734,24 @@
       }
     ]
   },
+  "Bolivar, Tennessee, United States": {
+    "place": {
+      "name": "Bolivar",
+      "state": "Tennessee",
+      "country": "United States",
+      "type": "city",
+      "encoded": "bolivar-tennessee-united-states",
+      "pop": 5205,
+      "coord": [-88.9878389, 35.2561937]
+    },
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["all uses"]
+      }
+    ]
+  },
   "Bolton, Connecticut, United States": {
     "place": {
       "name": "Bolton",
@@ -9656,6 +9806,24 @@
       }
     ]
   },
+  "Brentwood, Tennessee, United States": {
+    "place": {
+      "name": "Brentwood",
+      "state": "Tennessee",
+      "country": "United States",
+      "type": "city",
+      "encoded": "brentwood-tennessee-united-states",
+      "pop": 45373,
+      "coord": [-86.7825235, 36.0325687]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["all uses"]
+      }
+    ]
+  },
   "Brevard, North Carolina, United States": {
     "place": {
       "name": "Brevard",
@@ -10090,6 +10258,31 @@
       }
     ]
   },
+  "Bristol, Tennessee, United States": {
+    "place": {
+      "name": "Bristol",
+      "state": "Tennessee",
+      "country": "United States",
+      "type": "city",
+      "encoded": "bristol-tennessee-united-states",
+      "pop": 27147,
+      "coord": [-82.1885212, 36.5945034]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["main street / special"],
+        "land": ["commercial", "other"]
+      }
+    ],
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["all uses"]
+      }
+    ]
+  },
   "Bristol, Virginia, United States": {
     "place": {
       "name": "Bristol",
@@ -10398,6 +10591,24 @@
       {
         "status": "adopted",
         "scope": ["city center / business district"],
+        "land": ["all uses"]
+      }
+    ]
+  },
+  "Brooklawn, New Jersey, United States": {
+    "place": {
+      "name": "Brooklawn",
+      "state": "New Jersey",
+      "country": "United States",
+      "type": "city",
+      "encoded": "brooklawn-new-jersey-united-states",
+      "pop": 1815,
+      "coord": [-75.1205318, 39.8783062]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
         "land": ["all uses"]
       }
     ]
@@ -11939,6 +12150,42 @@
       "coord": [-92.8343294, 33.5845582]
     },
     "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["all uses"]
+      }
+    ]
+  },
+  "Camden, New Jersey, United States": {
+    "place": {
+      "name": "Camden",
+      "state": "New Jersey",
+      "country": "United States",
+      "type": "city",
+      "encoded": "camden-new-jersey-united-states",
+      "pop": 71791,
+      "coord": [-75.1198911, 39.9448402]
+    },
+    "add_max": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["all uses"]
+      }
+    ]
+  },
+  "Camden, Tennessee, United States": {
+    "place": {
+      "name": "Camden",
+      "state": "Tennessee",
+      "country": "United States",
+      "type": "city",
+      "encoded": "camden-tennessee-united-states",
+      "pop": 3674,
+      "coord": [-88.0978151, 36.0589486]
+    },
+    "reduce_min": [
       {
         "status": "adopted",
         "scope": ["city center / business district"],
@@ -16613,6 +16860,31 @@
       }
     ]
   },
+  "Cleveland, Tennessee, United States": {
+    "place": {
+      "name": "Cleveland",
+      "state": "Tennessee",
+      "country": "United States",
+      "type": "city",
+      "encoded": "cleveland-tennessee-united-states",
+      "pop": 47356,
+      "coord": [-84.8766115, 35.1595182]
+    },
+    "add_max": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["all uses"]
+      }
+    ],
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["all uses"]
+      }
+    ]
+  },
   "Cleveland, Utah, United States": {
     "place": {
       "name": "Cleveland",
@@ -16823,6 +17095,24 @@
       "encoded": "Clinton_MO",
       "pop": 8792,
       "coord": [-93.7782689, 38.3686325]
+    },
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["all uses"]
+      }
+    ]
+  },
+  "Clinton, Tennessee, United States": {
+    "place": {
+      "name": "Clinton",
+      "state": "Tennessee",
+      "country": "United States",
+      "type": "city",
+      "encoded": "clinton-tennessee-united-states",
+      "pop": 10056,
+      "coord": [-84.1318632, 36.1034126]
     },
     "rm_min": [
       {
@@ -17416,6 +17706,24 @@
       }
     ]
   },
+  "Collegedale, Tennessee, United States": {
+    "place": {
+      "name": "Collegedale",
+      "state": "Tennessee",
+      "country": "United States",
+      "type": "city",
+      "encoded": "collegedale-tennessee-united-states",
+      "pop": 11109,
+      "coord": [-85.0502277, 35.0531301]
+    },
+    "add_max": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["commercial", "other"]
+      }
+    ]
+  },
   "Collegeville, Pennsylvania, United States": {
     "place": {
       "name": "Collegeville",
@@ -17888,6 +18196,31 @@
         "status": "adopted",
         "scope": ["city center / business district", "citywide"],
         "land": ["all uses", "commercial", "industrial", "other"]
+      }
+    ]
+  },
+  "Columbia, Tennessee, United States": {
+    "place": {
+      "name": "Columbia",
+      "state": "Tennessee",
+      "country": "United States",
+      "type": "city",
+      "encoded": "columbia-tennessee-united-states",
+      "pop": 41690,
+      "coord": [-87.0338464, 35.6148165]
+    },
+    "add_max": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["all uses"]
+      }
+    ],
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["main street / special"],
+        "land": ["commercial", "other"]
       }
     ]
   },
@@ -18447,6 +18780,24 @@
       }
     ]
   },
+  "Cookeville, Tennessee, United States": {
+    "place": {
+      "name": "Cookeville",
+      "state": "Tennessee",
+      "country": "United States",
+      "type": "city",
+      "encoded": "cookeville-tennessee-united-states",
+      "pop": 34842,
+      "coord": [-85.4997057, 36.1623886]
+    },
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["all uses"]
+      }
+    ]
+  },
   "Coolidge, Arizona, United States": {
     "place": {
       "name": "Coolidge",
@@ -18645,6 +18996,24 @@
         "status": "adopted",
         "scope": ["city center / business district", "citywide"],
         "land": ["all uses", "commercial"]
+      }
+    ]
+  },
+  "Corbin City, New Jersey, United States": {
+    "place": {
+      "name": "Corbin City",
+      "state": "New Jersey",
+      "country": "United States",
+      "type": "city",
+      "encoded": "corbin-city-new-jersey-united-states",
+      "pop": 471,
+      "coord": [-74.7557193, 39.3034484]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["all uses"]
       }
     ]
   },
@@ -19800,6 +20169,24 @@
       }
     ]
   },
+  "Crossville, Tennessee, United States": {
+    "place": {
+      "name": "Crossville",
+      "state": "Tennessee",
+      "country": "United States",
+      "type": "city",
+      "encoded": "crossville-tennessee-united-states",
+      "pop": 12071,
+      "coord": [-85.0274835, 35.949684]
+    },
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["all uses"]
+      }
+    ]
+  },
   "Crowley, Louisiana, United States": {
     "place": {
       "name": "Crowley",
@@ -20835,6 +21222,24 @@
       }
     ]
   },
+  "Dayton, Tennessee, United States": {
+    "place": {
+      "name": "Dayton",
+      "state": "Tennessee",
+      "country": "United States",
+      "type": "city",
+      "encoded": "dayton-tennessee-united-states",
+      "pop": 7065,
+      "coord": [-85.0124535, 35.4939587]
+    },
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["all uses"]
+      }
+    ]
+  },
   "De Pere, Wisconsin, United States": {
     "place": {
       "name": "De Pere",
@@ -21098,6 +21503,24 @@
         "status": "adopted",
         "scope": ["city center / business district"],
         "land": ["all uses"]
+      }
+    ]
+  },
+  "Deal, New Jersey, United States": {
+    "place": {
+      "name": "Deal",
+      "state": "New Jersey",
+      "country": "United States",
+      "type": "city",
+      "encoded": "deal-new-jersey-united-states",
+      "pop": 900,
+      "coord": [-74.0006927, 40.243168]
+    },
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["main street / special"],
+        "land": ["residential, all uses"]
       }
     ]
   },
@@ -22311,6 +22734,24 @@
       }
     ]
   },
+  "Dickson, Tennessee, United States": {
+    "place": {
+      "name": "Dickson",
+      "state": "Tennessee",
+      "country": "United States",
+      "type": "city",
+      "encoded": "dickson-tennessee-united-states",
+      "pop": 16058,
+      "coord": [-87.38900043840326, 36.076000954440275]
+    },
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["all uses"]
+      }
+    ]
+  },
   "Dietzenbach, Hesse, Germany": {
     "place": {
       "name": "Dietzenbach",
@@ -23274,6 +23715,38 @@
       }
     ]
   },
+  "Dunlap, Tennessee, United States": {
+    "place": {
+      "name": "Dunlap",
+      "state": "Tennessee",
+      "country": "United States",
+      "type": "city",
+      "encoded": "dunlap-tennessee-united-states",
+      "pop": 5357,
+      "coord": [-85.3905209, 35.3714575]
+    },
+    "add_max": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["all uses"]
+      }
+    ],
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["all uses"]
+      }
+    ],
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["all uses"]
+      }
+    ]
+  },
   "Dunmore, Pennsylvania, United States": {
     "place": {
       "name": "Dunmore",
@@ -24129,6 +24602,31 @@
         "status": "adopted",
         "scope": ["city center / business district"],
         "land": ["all uses"]
+      }
+    ]
+  },
+  "East Orange, New Jersey, United States": {
+    "place": {
+      "name": "East Orange",
+      "state": "New Jersey",
+      "country": "United States",
+      "type": "city",
+      "encoded": "east-orange-new-jersey-united-states",
+      "pop": 69612,
+      "coord": [-74.215011, 40.7642404]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["transit-oriented"],
+        "land": ["all uses"]
+      }
+    ],
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["transit-oriented"],
+        "land": ["all uses", "commercial"]
       }
     ]
   },
@@ -25360,6 +25858,24 @@
         "status": "adopted",
         "scope": ["city center / business district"],
         "land": ["commercial"]
+      }
+    ]
+  },
+  "Elizabethton, Tennessee, United States": {
+    "place": {
+      "name": "Elizabethton",
+      "state": "Tennessee",
+      "country": "United States",
+      "type": "city",
+      "encoded": "elizabethton-tennessee-united-states",
+      "pop": 14546,
+      "coord": [-82.2107617, 36.3487756]
+    },
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["all uses"]
       }
     ]
   },
@@ -26873,6 +27389,25 @@
       }
     ]
   },
+  "Etowah, Tennessee, United States": {
+    "place": {
+      "name": "Etowah",
+      "state": "Tennessee",
+      "country": "United States",
+      "type": "city",
+      "encoded": "etowah-tennessee-united-states",
+      "pop": 3613,
+      "coord": [-84.5248279, 35.3236458]
+    },
+    "add_max": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["all uses"],
+        "date": "2015-09-18"
+      }
+    ]
+  },
   "Euclid, Ohio, United States": {
     "place": {
       "name": "Euclid",
@@ -27941,6 +28476,24 @@
       }
     ]
   },
+  "Farmingdale, New Jersey, United States": {
+    "place": {
+      "name": "Farmingdale",
+      "state": "New Jersey",
+      "country": "United States",
+      "type": "city",
+      "encoded": "farmingdale-new-jersey-united-states",
+      "pop": 1504,
+      "coord": [-74.1684757, 40.1965018]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["all uses"]
+      }
+    ]
+  },
   "Farmingdale, New York, United States": {
     "place": {
       "name": "Farmingdale",
@@ -28109,6 +28662,24 @@
       }
     ]
   },
+  "Farragut, Tennessee, United States": {
+    "place": {
+      "name": "Farragut",
+      "state": "Tennessee",
+      "country": "United States",
+      "type": "city",
+      "encoded": "farragut-tennessee-united-states",
+      "pop": 23506,
+      "coord": [-84.1535261, 35.8845238]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["all uses"]
+      }
+    ]
+  },
   "Fayette, Alabama, United States": {
     "place": {
       "name": "Fayette",
@@ -28184,6 +28755,24 @@
         "land": ["all uses"]
       }
     ],
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["all uses"]
+      }
+    ]
+  },
+  "Fayetteville, Tennessee, United States": {
+    "place": {
+      "name": "Fayetteville",
+      "state": "Tennessee",
+      "country": "United States",
+      "type": "city",
+      "encoded": "fayetteville-tennessee-united-states",
+      "pop": 7095,
+      "coord": [-86.5705509, 35.1520267]
+    },
     "rm_min": [
       {
         "status": "adopted",
@@ -29208,6 +29797,24 @@
         "status": "adopted",
         "scope": ["city center / business district"],
         "land": ["all uses"]
+      }
+    ]
+  },
+  "Forest Hills, Tennessee, United States": {
+    "place": {
+      "name": "Forest Hills",
+      "state": "Tennessee",
+      "country": "United States",
+      "type": "city",
+      "encoded": "forest-hills-tennessee-united-states",
+      "pop": 5038,
+      "coord": [-86.8452855, 36.0687185]
+    },
+    "add_max": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["commercial"]
       }
     ]
   },
@@ -30336,6 +30943,37 @@
       }
     ]
   },
+  "Franklin, Tennessee, United States": {
+    "place": {
+      "name": "Franklin",
+      "state": "Tennessee",
+      "country": "United States",
+      "type": "city",
+      "encoded": "franklin-tennessee-united-states",
+      "pop": 83454,
+      "coord": [-86.8689419, 35.925206]
+    },
+    "add_max": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": [
+          "commercial",
+          "industrial",
+          "medical",
+          "other",
+          "residential, multi-family"
+        ]
+      }
+    ],
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district", "citywide"],
+        "land": ["commercial", "industrial", "medical", "other"]
+      }
+    ]
+  },
   "Franklin, Virginia, United States": {
     "place": {
       "name": "Franklin",
@@ -31343,6 +31981,43 @@
       }
     ]
   },
+  "Gallatin, Tennessee, United States": {
+    "place": {
+      "name": "Gallatin",
+      "state": "Tennessee",
+      "country": "United States",
+      "type": "city",
+      "encoded": "gallatin-tennessee-united-states",
+      "pop": 44431,
+      "coord": [-86.4475898, 36.3883031]
+    },
+    "add_max": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district", "citywide"],
+        "land": ["all uses"]
+      },
+      {
+        "status": "proposed",
+        "scope": ["city center / business district"],
+        "land": ["all uses"]
+      }
+    ],
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["all uses"]
+      }
+    ],
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["all uses"]
+      }
+    ]
+  },
   "Gallipolis, Ohio, United States": {
     "place": {
       "name": "Gallipolis",
@@ -31724,6 +32399,24 @@
         "status": "adopted",
         "scope": ["city center / business district"],
         "land": ["all uses"]
+      }
+    ]
+  },
+  "Gatlinburg, Tennessee, United States": {
+    "place": {
+      "name": "Gatlinburg",
+      "state": "Tennessee",
+      "country": "United States",
+      "type": "city",
+      "encoded": "gatlinburg-tennessee-united-states",
+      "pop": 3577,
+      "coord": [-83.5101638, 35.714259]
+    },
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["commercial", "other"]
       }
     ]
   },
@@ -34487,6 +35180,31 @@
       }
     ]
   },
+  "Greeneville, Tennessee, United States": {
+    "place": {
+      "name": "Greeneville",
+      "state": "Tennessee",
+      "country": "United States",
+      "type": "city",
+      "encoded": "greeneville-tennessee-united-states",
+      "pop": 15479,
+      "coord": [-82.8309861, 36.1631575]
+    },
+    "add_max": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["all uses"]
+      }
+    ],
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["all uses"]
+      }
+    ]
+  },
   "Greenfield, Indiana, United States": {
     "place": {
       "name": "Greenfield",
@@ -35851,6 +36569,24 @@
       }
     ]
   },
+  "Hampton, New Jersey, United States": {
+    "place": {
+      "name": "Hampton",
+      "state": "New Jersey",
+      "country": "United States",
+      "type": "city",
+      "encoded": "hampton-new-jersey-united-states",
+      "pop": 1438,
+      "coord": [-74.9560032, 40.7070446]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["all uses"]
+      }
+    ]
+  },
   "Hampton, Virginia, United States": {
     "place": {
       "name": "Hampton",
@@ -36112,6 +36848,24 @@
           "other",
           "residential, multi-family"
         ]
+      }
+    ]
+  },
+  "Harriman, Tennessee, United States": {
+    "place": {
+      "name": "Harriman",
+      "state": "Tennessee",
+      "country": "United States",
+      "type": "city",
+      "encoded": "harriman-tennessee-united-states",
+      "pop": 5892,
+      "coord": [-84.5524359, 35.9339639]
+    },
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["all uses"]
       }
     ]
   },
@@ -37475,6 +38229,24 @@
       }
     ]
   },
+  "Hendersonville, Tennessee, United States": {
+    "place": {
+      "name": "Hendersonville",
+      "state": "Tennessee",
+      "country": "United States",
+      "type": "city",
+      "encoded": "hendersonville-tennessee-united-states",
+      "pop": 61753,
+      "coord": [-86.621443, 36.3049177]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["all uses"]
+      }
+    ]
+  },
   "Hendricks, Minnesota, United States": {
     "place": {
       "name": "Hendricks",
@@ -38354,6 +39126,31 @@
         "status": "adopted",
         "scope": ["city center / business district", "main street / special"],
         "land": ["all uses", "commercial", "residential, all uses"]
+      }
+    ]
+  },
+  "Hoboken, New Jersey, United States": {
+    "place": {
+      "name": "Hoboken",
+      "state": "New Jersey",
+      "country": "United States",
+      "type": "city",
+      "encoded": "hoboken-new-jersey-united-states",
+      "pop": 60419,
+      "coord": [-74.0323752, 40.7433066]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["main street / special"],
+        "land": ["commercial", "other"]
+      }
+    ],
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["other", "residential, low-density"]
       }
     ]
   },
@@ -40596,6 +41393,24 @@
       }
     ]
   },
+  "Island Heights, New Jersey, United States": {
+    "place": {
+      "name": "Island Heights",
+      "state": "New Jersey",
+      "country": "United States",
+      "type": "city",
+      "encoded": "island-heights-new-jersey-united-states",
+      "pop": 1650,
+      "coord": [-74.1498616, 39.9420626]
+    },
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["all uses"]
+      }
+    ]
+  },
   "Island Lake, Illinois, United States": {
     "place": {
       "name": "Island Lake",
@@ -41247,6 +42062,24 @@
         "status": "adopted",
         "scope": ["city center / business district", "citywide"],
         "land": ["commercial", "residential, all uses"]
+      }
+    ]
+  },
+  "Jefferson City, Tennessee, United States": {
+    "place": {
+      "name": "Jefferson City",
+      "state": "Tennessee",
+      "country": "United States",
+      "type": "city",
+      "encoded": "jefferson-city-tennessee-united-states",
+      "pop": 8419,
+      "coord": [-83.4923961, 36.122311]
+    },
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["commercial", "other"]
       }
     ]
   },
@@ -41908,6 +42741,24 @@
       "encoded": "Jonesboro_LA",
       "pop": 4106,
       "coord": [-92.7154376, 32.241538]
+    },
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["all uses"]
+      }
+    ]
+  },
+  "Jonesborough, Tennessee, United States": {
+    "place": {
+      "name": "Jonesborough",
+      "state": "Tennessee",
+      "country": "United States",
+      "type": "city",
+      "encoded": "jonesborough-tennessee-united-states",
+      "pop": 5860,
+      "coord": [-82.4734089, 36.2944928]
     },
     "rm_min": [
       {
@@ -43252,6 +44103,24 @@
       }
     ]
   },
+  "Kingsport, Tennessee, United States": {
+    "place": {
+      "name": "Kingsport",
+      "state": "Tennessee",
+      "country": "United States",
+      "type": "city",
+      "encoded": "kingsport-tennessee-united-states",
+      "pop": 55442,
+      "coord": [-82.5594293, 36.550238]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["all uses"]
+      }
+    ]
+  },
   "Kingston, New York, United States": {
     "place": {
       "name": "Kingston",
@@ -44169,6 +45038,24 @@
       }
     ]
   },
+  "LaFollette, Tennessee, United States": {
+    "place": {
+      "name": "LaFollette",
+      "state": "Tennessee",
+      "country": "United States",
+      "type": "city",
+      "encoded": "lafollette-tennessee-united-states",
+      "pop": 7430,
+      "coord": [-84.1199251, 36.3828571]
+    },
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["all uses"]
+      }
+    ]
+  },
   "LaSalle County, Illinois, United States": {
     "place": {
       "name": "LaSalle County",
@@ -44344,6 +45231,24 @@
         "land": ["all uses", "commercial", "other"]
       }
     ],
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["all uses"]
+      }
+    ]
+  },
+  "Lafayette, Tennessee, United States": {
+    "place": {
+      "name": "Lafayette",
+      "state": "Tennessee",
+      "country": "United States",
+      "type": "city",
+      "encoded": "lafayette-tennessee-united-states",
+      "pop": 5584,
+      "coord": [-86.0260366, 36.5208223]
+    },
     "rm_min": [
       {
         "status": "adopted",
@@ -46383,6 +47288,24 @@
       }
     ]
   },
+  "Lebanon, New Jersey, United States": {
+    "place": {
+      "name": "Lebanon",
+      "state": "New Jersey",
+      "country": "United States",
+      "type": "city",
+      "encoded": "lebanon-new-jersey-united-states",
+      "pop": 1665,
+      "coord": [-74.8359987, 40.6417683]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["all uses"]
+      }
+    ]
+  },
   "Lebanon, Ohio, United States": {
     "place": {
       "name": "Lebanon",
@@ -46746,6 +47669,24 @@
       }
     ]
   },
+  "Lenoir City, Tennessee, United States": {
+    "place": {
+      "name": "Lenoir City",
+      "state": "Tennessee",
+      "country": "United States",
+      "type": "city",
+      "encoded": "lenoir-city-tennessee-united-states",
+      "pop": 10117,
+      "coord": [-84.2560299, 35.7972998]
+    },
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["all uses"]
+      }
+    ]
+  },
   "Leon, Iowa, United States": {
     "place": {
       "name": "Leon",
@@ -47039,6 +47980,24 @@
         "status": "adopted",
         "scope": ["city center / business district"],
         "land": ["commercial", "other"]
+      }
+    ]
+  },
+  "Lexington, Tennessee, United States": {
+    "place": {
+      "name": "Lexington",
+      "state": "Tennessee",
+      "country": "United States",
+      "type": "city",
+      "encoded": "lexington-tennessee-united-states",
+      "pop": 7956,
+      "coord": [-88.3933796, 35.650903]
+    },
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["all uses"]
       }
     ]
   },
@@ -48401,6 +49360,24 @@
       }
     ]
   },
+  "Longport, New Jersey, United States": {
+    "place": {
+      "name": "Longport",
+      "state": "New Jersey",
+      "country": "United States",
+      "type": "city",
+      "encoded": "longport-new-jersey-united-states",
+      "pop": 893,
+      "coord": [-74.5248756, 39.3142827]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["all uses"]
+      }
+    ]
+  },
   "Longview, Texas, United States": {
     "place": {
       "name": "Longview",
@@ -48567,6 +49544,24 @@
       {
         "status": "adopted",
         "scope": ["transit-oriented"],
+        "land": ["all uses"]
+      }
+    ]
+  },
+  "Loudon, Tennessee, United States": {
+    "place": {
+      "name": "Loudon",
+      "state": "Tennessee",
+      "country": "United States",
+      "type": "city",
+      "encoded": "loudon-tennessee-united-states",
+      "pop": 6001,
+      "coord": [-84.3361716773681, 35.74196647956279]
+    },
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
         "land": ["all uses"]
       }
     ]
@@ -48972,6 +49967,24 @@
           "residential, all uses",
           "residential, multi-family"
         ]
+      }
+    ]
+  },
+  "Lower Alloways Creek Township, New Jersey, United States": {
+    "place": {
+      "name": "Lower Alloways Creek Township",
+      "state": "New Jersey",
+      "country": "United States",
+      "type": "city",
+      "encoded": "lower-alloways-creek-township-new-jersey-united-states",
+      "pop": 1717,
+      "coord": [-75.4367007, 39.5005387]
+    },
+    "add_max": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["all uses"]
       }
     ]
   },
@@ -49713,6 +50726,24 @@
       }
     ]
   },
+  "Madisonville, Tennessee, United States": {
+    "place": {
+      "name": "Madisonville",
+      "state": "Tennessee",
+      "country": "United States",
+      "type": "city",
+      "encoded": "madisonville-tennessee-united-states",
+      "pop": 5132,
+      "coord": [-84.3635338, 35.5197984]
+    },
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["all uses"]
+      }
+    ]
+  },
   "Madras, Oregon, United States": {
     "place": {
       "name": "Madras",
@@ -50214,6 +51245,24 @@
       "encoded": "Manchester_NH",
       "pop": 112673,
       "coord": [-71.4547891, 42.9956397]
+    },
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["all uses"]
+      }
+    ]
+  },
+  "Manchester, Tennessee, United States": {
+    "place": {
+      "name": "Manchester",
+      "state": "Tennessee",
+      "country": "United States",
+      "type": "city",
+      "encoded": "manchester-tennessee-united-states",
+      "pop": 12213,
+      "coord": [-86.0887296, 35.4832001]
     },
     "rm_min": [
       {
@@ -51601,6 +52650,24 @@
       }
     ]
   },
+  "Maryville, Tennessee, United States": {
+    "place": {
+      "name": "Maryville",
+      "state": "Tennessee",
+      "country": "United States",
+      "type": "city",
+      "encoded": "maryville-tennessee-united-states",
+      "pop": 31907,
+      "coord": [-83.9704593, 35.7564719]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["all uses"]
+      }
+    ]
+  },
   "Mascoutah, Illinois, United States": {
     "place": {
       "name": "Mascoutah",
@@ -52381,6 +53448,24 @@
       }
     ]
   },
+  "McMinnville, Tennessee, United States": {
+    "place": {
+      "name": "McMinnville",
+      "state": "Tennessee",
+      "country": "United States",
+      "type": "city",
+      "encoded": "mcminnville-tennessee-united-states",
+      "pop": 13788,
+      "coord": [-85.7699816, 35.683404]
+    },
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["all uses"]
+      }
+    ]
+  },
   "McPherson, Kansas, United States": {
     "place": {
       "name": "McPherson",
@@ -52580,6 +53665,24 @@
         "scope": ["city center / business district"],
         "land": ["all uses"],
         "date": "1984"
+      }
+    ]
+  },
+  "Medina, Tennessee, United States": {
+    "place": {
+      "name": "Medina",
+      "state": "Tennessee",
+      "country": "United States",
+      "type": "city",
+      "encoded": "medina-tennessee-united-states",
+      "pop": 5126,
+      "coord": [-88.7747808, 35.8028453]
+    },
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["all uses"]
       }
     ]
   },
@@ -54152,6 +55255,24 @@
         "status": "adopted",
         "scope": ["city center / business district", "main street / special"],
         "land": ["commercial", "other"]
+      }
+    ]
+  },
+  "Millersville, Tennessee, United States": {
+    "place": {
+      "name": "Millersville",
+      "state": "Tennessee",
+      "country": "United States",
+      "type": "city",
+      "encoded": "millersville-tennessee-united-states",
+      "pop": 6299,
+      "coord": [-86.7099966, 36.3711605]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["all uses"]
       }
     ]
   },
@@ -56188,6 +57309,24 @@
       }
     ]
   },
+  "Morristown, Tennessee, United States": {
+    "place": {
+      "name": "Morristown",
+      "state": "Tennessee",
+      "country": "United States",
+      "type": "city",
+      "encoded": "morristown-tennessee-united-states",
+      "pop": 30431,
+      "coord": [-83.2948923, 36.2139814]
+    },
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["all uses"]
+      }
+    ]
+  },
   "Morrisville, Pennsylvania, United States": {
     "place": {
       "name": "Morrisville",
@@ -56470,6 +57609,24 @@
       }
     ]
   },
+  "Mount Arlington, New Jersey, United States": {
+    "place": {
+      "name": "Mount Arlington",
+      "state": "New Jersey",
+      "country": "United States",
+      "type": "city",
+      "encoded": "mount-arlington-new-jersey-united-states",
+      "pop": 5909,
+      "coord": [-74.6348829, 40.9259319]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["all uses"]
+      }
+    ]
+  },
   "Mount Carmel, Illinois, United States": {
     "place": {
       "name": "Mount Carmel",
@@ -56577,6 +57734,24 @@
         "status": "adopted",
         "scope": ["main street / special"],
         "land": ["commercial"]
+      }
+    ]
+  },
+  "Mount Pleasant, Tennessee, United States": {
+    "place": {
+      "name": "Mount Pleasant",
+      "state": "Tennessee",
+      "country": "United States",
+      "type": "city",
+      "encoded": "mount-pleasant-tennessee-united-states",
+      "pop": 4784,
+      "coord": [-87.206954, 35.5342414]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["all uses"]
       }
     ]
   },
@@ -58650,6 +59825,24 @@
       }
     ]
   },
+  "New Brunswick, New Jersey, United States": {
+    "place": {
+      "name": "New Brunswick",
+      "state": "New Jersey",
+      "country": "United States",
+      "type": "city",
+      "encoded": "new-brunswick-new-jersey-united-states",
+      "pop": 55266,
+      "coord": [-74.4439254, 40.4951365]
+    },
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["commercial", "other"]
+      }
+    ]
+  },
   "New Buffalo, Michigan, United States": {
     "place": {
       "name": "New Buffalo",
@@ -59714,6 +60907,24 @@
       }
     ]
   },
+  "Newbern, Tennessee, United States": {
+    "place": {
+      "name": "Newbern",
+      "state": "Tennessee",
+      "country": "United States",
+      "type": "city",
+      "encoded": "newbern-tennessee-united-states",
+      "pop": 3349,
+      "coord": [-89.2617954, 36.1132437]
+    },
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["commercial", "other", "residential, all uses"]
+      }
+    ]
+  },
   "Newburg, Wisconsin, United States": {
     "place": {
       "name": "Newburg",
@@ -59925,6 +61136,24 @@
         "status": "adopted",
         "scope": ["citywide"],
         "land": ["commercial", "medical", "residential, all uses"]
+      }
+    ]
+  },
+  "Newport, Tennessee, United States": {
+    "place": {
+      "name": "Newport",
+      "state": "Tennessee",
+      "country": "United States",
+      "type": "city",
+      "encoded": "newport-tennessee-united-states",
+      "pop": 6868,
+      "coord": [-83.1876578, 35.9670412]
+    },
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["all uses"]
       }
     ]
   },
@@ -60312,6 +61541,24 @@
         "status": "adopted",
         "scope": ["citywide", "main street / special"],
         "land": ["all uses", "commercial", "industrial", "medical", "other"]
+      }
+    ]
+  },
+  "Nolensville, Tennessee, United States": {
+    "place": {
+      "name": "Nolensville",
+      "state": "Tennessee",
+      "country": "United States",
+      "type": "city",
+      "encoded": "nolensville-tennessee-united-states",
+      "pop": 13829,
+      "coord": [-86.6694413, 35.9522852]
+    },
+    "add_max": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["all uses"]
       }
     ]
   },
@@ -61578,6 +62825,24 @@
       }
     ]
   },
+  "Norwood, New Jersey, United States": {
+    "place": {
+      "name": "Norwood",
+      "state": "New Jersey",
+      "country": "United States",
+      "type": "city",
+      "encoded": "norwood-new-jersey-united-states",
+      "pop": 5641,
+      "coord": [-73.9618039, 40.9981532]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["all uses"]
+      }
+    ]
+  },
   "Norwood, Ohio, United States": {
     "place": {
       "name": "Norwood",
@@ -61881,6 +63146,31 @@
         "status": "adopted",
         "scope": ["citywide"],
         "land": ["all uses"]
+      }
+    ]
+  },
+  "Oak Ridge, Tennessee, United States": {
+    "place": {
+      "name": "Oak Ridge",
+      "state": "Tennessee",
+      "country": "United States",
+      "type": "city",
+      "encoded": "oak-ridge-tennessee-united-states",
+      "pop": 31402,
+      "coord": [-84.2696449, 36.0103562]
+    },
+    "add_max": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["all uses"]
+      }
+    ],
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["commercial", "other"]
       }
     ]
   },
@@ -62550,6 +63840,24 @@
       "coord": [-97.307846, 44.227471]
     },
     "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["all uses"]
+      }
+    ]
+  },
+  "Oliver Springs, Tennessee, United States": {
+    "place": {
+      "name": "Oliver Springs",
+      "state": "Tennessee",
+      "country": "United States",
+      "type": "city",
+      "encoded": "oliver-springs-tennessee-united-states",
+      "pop": 3297,
+      "coord": [-84.3432971, 36.0462576]
+    },
+    "reduce_min": [
       {
         "status": "adopted",
         "scope": ["city center / business district"],
@@ -64638,6 +65946,24 @@
       }
     ]
   },
+  "Paris, Tennessee, United States": {
+    "place": {
+      "name": "Paris",
+      "state": "Tennessee",
+      "country": "United States",
+      "type": "city",
+      "encoded": "paris-tennessee-united-states",
+      "pop": 10316,
+      "coord": [-88.3258578, 36.3019461]
+    },
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["all uses"]
+      }
+    ]
+  },
   "Parish, New York, United States": {
     "place": {
       "name": "Parish",
@@ -65081,6 +66407,24 @@
         "status": "adopted",
         "scope": ["citywide"],
         "land": ["commercial"]
+      }
+    ]
+  },
+  "Passaic, New Jersey, United States": {
+    "place": {
+      "name": "Passaic",
+      "state": "New Jersey",
+      "country": "United States",
+      "type": "city",
+      "encoded": "passaic-new-jersey-united-states",
+      "pop": 70537,
+      "coord": [-74.12605342766913, 40.861013473364345]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["all uses"]
       }
     ]
   },
@@ -67282,6 +68626,24 @@
       }
     ]
   },
+  "Pleasant View, Tennessee, United States": {
+    "place": {
+      "name": "Pleasant View",
+      "state": "Tennessee",
+      "country": "United States",
+      "type": "city",
+      "encoded": "pleasant-view-tennessee-united-states",
+      "pop": 4807,
+      "coord": [-87.0366685, 36.3942164]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["main street / special"],
+        "land": ["all uses"]
+      }
+    ]
+  },
   "Pleasantville, Iowa, United States": {
     "place": {
       "name": "Pleasantville",
@@ -68247,6 +69609,24 @@
       "coord": [-75.0979793, 40.9221629]
     },
     "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["main street / special"],
+        "land": ["all uses"]
+      }
+    ]
+  },
+  "Portland, Tennessee, United States": {
+    "place": {
+      "name": "Portland",
+      "state": "Tennessee",
+      "country": "United States",
+      "type": "city",
+      "encoded": "portland-tennessee-united-states",
+      "pop": 13156,
+      "coord": [-86.5163833, 36.5817089]
+    },
+    "reduce_min": [
       {
         "status": "adopted",
         "scope": ["main street / special"],
@@ -75827,6 +77207,24 @@
       }
     ]
   },
+  "Sevierville, Tennessee, United States": {
+    "place": {
+      "name": "Sevierville",
+      "state": "Tennessee",
+      "country": "United States",
+      "type": "city",
+      "encoded": "sevierville-tennessee-united-states",
+      "pop": 17889,
+      "coord": [-83.5657167, 35.8672932]
+    },
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["commercial", "other"]
+      }
+    ]
+  },
   "Seward, Alaska, United States": {
     "place": {
       "name": "Seward",
@@ -77729,6 +79127,24 @@
       }
     ]
   },
+  "Smyrna, Tennessee, United States": {
+    "place": {
+      "name": "Smyrna",
+      "state": "Tennessee",
+      "country": "United States",
+      "type": "city",
+      "encoded": "smyrna-tennessee-united-states",
+      "pop": 53070,
+      "coord": [-86.5199492, 35.9824598]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["main street / special"],
+        "land": ["all uses"]
+      }
+    ]
+  },
   "Snellville, Georgia, United States": {
     "place": {
       "name": "Snellville",
@@ -78059,6 +79475,24 @@
         "scope": ["citywide", "transit-oriented"],
         "land": ["all uses"],
         "date": "2024-12-12"
+      }
+    ]
+  },
+  "Somerville, Tennessee, United States": {
+    "place": {
+      "name": "Somerville",
+      "state": "Tennessee",
+      "country": "United States",
+      "type": "city",
+      "encoded": "somerville-tennessee-united-states",
+      "pop": 3415,
+      "coord": [-89.3500714, 35.2436969]
+    },
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["all uses"]
       }
     ]
   },
@@ -79138,6 +80572,38 @@
       "pop": 1544,
       "coord": [-90.0680478, 43.1769367]
     },
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["all uses"]
+      }
+    ]
+  },
+  "Spring Hill, Tennessee, United States": {
+    "place": {
+      "name": "Spring Hill",
+      "state": "Tennessee",
+      "country": "United States",
+      "type": "city",
+      "encoded": "spring-hill-tennessee-united-states",
+      "pop": 50005,
+      "coord": [-86.9300023, 35.751179]
+    },
+    "add_max": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["commercial", "industrial", "medical", "other"]
+      }
+    ],
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district", "citywide"],
+        "land": ["all uses", "commercial"]
+      }
+    ],
     "rm_min": [
       {
         "status": "adopted",
@@ -82509,6 +83975,24 @@
       }
     ]
   },
+  "Surf City, New Jersey, United States": {
+    "place": {
+      "name": "Surf City",
+      "state": "New Jersey",
+      "country": "United States",
+      "type": "city",
+      "encoded": "surf-city-new-jersey-united-states",
+      "pop": 1243,
+      "coord": [-74.168292, 39.6587349]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["all uses"]
+      }
+    ]
+  },
   "Surfside Beach, South Carolina, United States": {
     "place": {
       "name": "Surfside Beach",
@@ -82693,6 +84177,24 @@
       {
         "status": "adopted",
         "scope": ["citywide"],
+        "land": ["all uses"]
+      }
+    ]
+  },
+  "Sweetwater, Tennessee, United States": {
+    "place": {
+      "name": "Sweetwater",
+      "state": "Tennessee",
+      "country": "United States",
+      "type": "city",
+      "encoded": "sweetwater-tennessee-united-states",
+      "pop": 6312,
+      "coord": [-84.4610394, 35.6014636]
+    },
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
         "land": ["all uses"]
       }
     ]
@@ -84037,6 +85539,31 @@
         "status": "adopted",
         "scope": ["city center / business district", "citywide"],
         "land": ["all uses", "residential, low-density"]
+      }
+    ]
+  },
+  "Thompson's Station, Tennessee, United States": {
+    "place": {
+      "name": "Thompson's Station",
+      "state": "Tennessee",
+      "country": "United States",
+      "type": "city",
+      "encoded": "thompsons-station-tennessee-united-states",
+      "pop": 7485,
+      "coord": [-86.9113908, 35.802011]
+    },
+    "add_max": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["all uses"]
+      }
+    ],
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["all uses", "commercial", "other"]
       }
     ]
   },
@@ -85650,6 +87177,24 @@
       }
     ]
   },
+  "Tullahoma, Tennessee, United States": {
+    "place": {
+      "name": "Tullahoma",
+      "state": "Tennessee",
+      "country": "United States",
+      "type": "city",
+      "encoded": "tullahoma-tennessee-united-states",
+      "pop": 20339,
+      "coord": [-86.2099766, 35.3624915]
+    },
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["all uses"]
+      }
+    ]
+  },
   "Tulsa, Oklahoma, United States": {
     "place": {
       "name": "Tulsa",
@@ -86075,6 +87620,42 @@
       {
         "status": "adopted",
         "scope": ["city center / business district"],
+        "land": ["all uses"]
+      }
+    ]
+  },
+  "Unicoi, Tennessee, United States": {
+    "place": {
+      "name": "Unicoi",
+      "state": "Tennessee",
+      "country": "United States",
+      "type": "city",
+      "encoded": "unicoi-tennessee-united-states",
+      "pop": 3833,
+      "coord": [-82.35069805916959, 36.19593633332476]
+    },
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["commercial", "other"]
+      }
+    ]
+  },
+  "Union Beach, New Jersey, United States": {
+    "place": {
+      "name": "Union Beach",
+      "state": "New Jersey",
+      "country": "United States",
+      "type": "city",
+      "encoded": "union-beach-new-jersey-united-states",
+      "pop": 5723,
+      "coord": [-74.1781988, 40.4464962]
+    },
+    "add_max": [
+      {
+        "status": "adopted",
+        "scope": ["main street / special"],
         "land": ["all uses"]
       }
     ]
@@ -90319,6 +91900,24 @@
       }
     ]
   },
+  "West Cape May, New Jersey, United States": {
+    "place": {
+      "name": "West Cape May",
+      "state": "New Jersey",
+      "country": "United States",
+      "type": "city",
+      "encoded": "west-cape-may-new-jersey-united-states",
+      "pop": 1010,
+      "coord": [-74.9418404, 38.9387236]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district", "citywide"],
+        "land": ["all uses", "commercial", "other"]
+      }
+    ]
+  },
   "West Carrollton, Ohio, United States": {
     "place": {
       "name": "West Carrollton",
@@ -90429,8 +92028,8 @@
     "rm_min": [
       {
         "status": "adopted",
-        "scope": ["citywide"],
-        "land": ["residential, low-density"]
+        "scope": ["city center / business district", "citywide"],
+        "land": ["commercial", "other", "residential, low-density"]
       }
     ]
   },
@@ -90777,6 +92376,24 @@
         "status": "adopted",
         "scope": ["city center / business district"],
         "land": ["all uses"]
+      }
+    ]
+  },
+  "West New York, New Jersey, United States": {
+    "place": {
+      "name": "West New York",
+      "state": "New Jersey",
+      "country": "United States",
+      "type": "city",
+      "encoded": "west-new-york-new-jersey-united-states",
+      "pop": 52912,
+      "coord": [-74.0093129, 40.7856117]
+    },
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["main street / special"],
+        "land": ["commercial", "other"]
       }
     ]
   },
@@ -93451,6 +95068,24 @@
       }
     ]
   },
+  "Woodbridge Township, New Jersey, United States": {
+    "place": {
+      "name": "Woodbridge Township",
+      "state": "New Jersey",
+      "country": "United States",
+      "type": "city",
+      "encoded": "woodbridge-township-new-jersey-united-states",
+      "pop": 103639,
+      "coord": [-74.2845911, 40.5576045]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["all uses"]
+      }
+    ]
+  },
   "Woodbridge, Connecticut, United States": {
     "place": {
       "name": "Woodbridge",
@@ -94018,6 +95653,24 @@
       {
         "status": "adopted",
         "scope": ["city center / business district"],
+        "land": ["all uses"]
+      }
+    ]
+  },
+  "Wrightstown, New Jersey, United States": {
+    "place": {
+      "name": "Wrightstown",
+      "state": "New Jersey",
+      "country": "United States",
+      "type": "city",
+      "encoded": "wrightstown-new-jersey-united-states",
+      "pop": 720,
+      "coord": [-74.6179344, 40.0362241]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
         "land": ["all uses"]
       }
     ]
