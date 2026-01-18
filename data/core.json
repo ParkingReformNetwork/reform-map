@@ -3587,6 +3587,24 @@
       }
     ]
   },
+  "Atlantic City, New Jersey, United States": {
+    "place": {
+      "name": "Atlantic City",
+      "state": "New Jersey",
+      "country": "United States",
+      "type": "city",
+      "encoded": "atlantic-city-new-jersey-united-states",
+      "pop": 38497,
+      "coord": [-74.4229351, 39.3642852]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["residential, multi-family"]
+      }
+    ]
+  },
   "Auburn Hills, Michigan, United States": {
     "place": {
       "name": "Auburn Hills",
@@ -16964,6 +16982,31 @@
       }
     ]
   },
+  "Clifton, New Jersey, United States": {
+    "place": {
+      "name": "Clifton",
+      "state": "New Jersey",
+      "country": "United States",
+      "type": "city",
+      "encoded": "clifton-new-jersey-united-states",
+      "pop": 90296,
+      "coord": [-74.1637553, 40.8584328]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["main street / special"],
+        "land": ["all uses"]
+      }
+    ],
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["main street / special"],
+        "land": ["all uses"]
+      }
+    ]
+  },
   "Clinton , Iowa, United States": {
     "place": {
       "name": "Clinton ",
@@ -26929,6 +26972,31 @@
       }
     ]
   },
+  "Englewood, New Jersey, United States": {
+    "place": {
+      "name": "Englewood",
+      "state": "New Jersey",
+      "country": "United States",
+      "type": "city",
+      "encoded": "englewood-new-jersey-united-states",
+      "pop": 29308,
+      "coord": [-73.9726508, 40.8929329]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["all uses", "commercial", "other"]
+      }
+    ],
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["commercial", "other"]
+      }
+    ]
+  },
   "Englewood, Ohio, United States": {
     "place": {
       "name": "Englewood",
@@ -26940,6 +27008,24 @@
       "coord": [-84.3021673, 39.8775553]
     },
     "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["all uses"]
+      }
+    ]
+  },
+  "Englishtown, New Jersey, United States": {
+    "place": {
+      "name": "Englishtown",
+      "state": "New Jersey",
+      "country": "United States",
+      "type": "city",
+      "encoded": "englishtown-new-jersey-united-states",
+      "pop": 2346,
+      "coord": [-74.3582041, 40.2973319]
+    },
+    "rm_min": [
       {
         "status": "adopted",
         "scope": ["city center / business district"],
@@ -27239,6 +27325,24 @@
         "status": "adopted",
         "scope": ["citywide"],
         "land": ["residential, low-density"]
+      }
+    ]
+  },
+  "Essex Fells, New Jersey, United States": {
+    "place": {
+      "name": "Essex Fells",
+      "state": "New Jersey",
+      "country": "United States",
+      "type": "city",
+      "encoded": "essex-fells-new-jersey-united-states",
+      "pop": 2244,
+      "coord": [-74.28456175395334, 40.824776317262746]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["all uses"]
       }
     ]
   },
@@ -30108,6 +30212,24 @@
       }
     ]
   },
+  "Fort Lee, New Jersey, United States": {
+    "place": {
+      "name": "Fort Lee",
+      "state": "New Jersey",
+      "country": "United States",
+      "type": "city",
+      "encoded": "fort-lee-new-jersey-united-states",
+      "pop": 40191,
+      "coord": [-73.9701382, 40.8509333]
+    },
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["commercial", "other"]
+      }
+    ]
+  },
   "Fort Lupton, Colorado, United States": {
     "place": {
       "name": "Fort Lupton",
@@ -32234,6 +32356,24 @@
       }
     ]
   },
+  "Garfield, New Jersey, United States": {
+    "place": {
+      "name": "Garfield",
+      "state": "New Jersey",
+      "country": "United States",
+      "type": "city",
+      "encoded": "garfield-new-jersey-united-states",
+      "pop": 32655,
+      "coord": [-74.113198, 40.8814882]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["all uses"]
+      }
+    ]
+  },
   "Garland, Texas, United States": {
     "place": {
       "name": "Garland",
@@ -32876,6 +33016,24 @@
         "scope": ["city center / business district"],
         "land": ["commercial", "other"],
         "date": "2008-05-05"
+      }
+    ]
+  },
+  "Gibbsboro, New Jersey, United States": {
+    "place": {
+      "name": "Gibbsboro",
+      "state": "New Jersey",
+      "country": "United States",
+      "type": "city",
+      "encoded": "gibbsboro-new-jersey-united-states",
+      "pop": 2189,
+      "coord": [-74.9648887, 39.8381698]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["all uses"]
       }
     ]
   },
@@ -36091,6 +36249,24 @@
       }
     ]
   },
+  "Hackensack, New Jersey, United States": {
+    "place": {
+      "name": "Hackensack",
+      "state": "New Jersey",
+      "country": "United States",
+      "type": "city",
+      "encoded": "hackensack-new-jersey-united-states",
+      "pop": 46030,
+      "coord": [-74.0410667, 40.8870781]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["all uses"]
+      }
+    ]
+  },
   "Hagerstown, Maryland, United States": {
     "place": {
       "name": "Hagerstown",
@@ -37029,6 +37205,24 @@
       }
     ]
   },
+  "Harrison, New Jersey, United States": {
+    "place": {
+      "name": "Harrison",
+      "state": "New Jersey",
+      "country": "United States",
+      "type": "city",
+      "encoded": "harrison-new-jersey-united-states",
+      "pop": 19450,
+      "coord": [-74.1562551, 40.7464901]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["main street / special"],
+        "land": ["commercial", "other"]
+      }
+    ]
+  },
   "Harrison, New York, United States": {
     "place": {
       "name": "Harrison",
@@ -37732,6 +37926,31 @@
         "scope": ["citywide"],
         "land": ["all uses"],
         "date": "1987-06-09"
+      }
+    ]
+  },
+  "Hawthorne, New Jersey, United States": {
+    "place": {
+      "name": "Hawthorne",
+      "state": "New Jersey",
+      "country": "United States",
+      "type": "city",
+      "encoded": "hawthorne-new-jersey-united-states",
+      "pop": 19637,
+      "coord": [-74.1537549, 40.9492649]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["all uses"]
+      }
+    ],
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["commercial"]
       }
     ]
   },
@@ -48532,6 +48751,31 @@
       }
     ]
   },
+  "Linden, New Jersey, United States": {
+    "place": {
+      "name": "Linden",
+      "state": "New Jersey",
+      "country": "United States",
+      "type": "city",
+      "encoded": "linden-new-jersey-united-states",
+      "pop": 43738,
+      "coord": [-74.2445902, 40.6220478]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["transit-oriented"],
+        "land": ["commercial", "other"]
+      }
+    ],
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["all uses"]
+      }
+    ]
+  },
   "Lindenhurst, Illinois, United States": {
     "place": {
       "name": "Lindenhurst",
@@ -49288,6 +49532,24 @@
       {
         "status": "adopted",
         "scope": ["city center / business district"],
+        "land": ["commercial"]
+      }
+    ]
+  },
+  "Long Branch, New Jersey, United States": {
+    "place": {
+      "name": "Long Branch",
+      "state": "New Jersey",
+      "country": "United States",
+      "type": "city",
+      "encoded": "long-branch-new-jersey-united-states",
+      "pop": 31667,
+      "coord": [-73.9923596, 40.3042778]
+    },
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["main street / special"],
         "land": ["commercial"]
       }
     ]
@@ -55337,6 +55599,31 @@
       }
     ]
   },
+  "Millville, New Jersey, United States": {
+    "place": {
+      "name": "Millville",
+      "state": "New Jersey",
+      "country": "United States",
+      "type": "city",
+      "encoded": "millville-new-jersey-united-states",
+      "pop": 27491,
+      "coord": [-75.0393368, 39.4020593]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["all uses"]
+      }
+    ],
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["all uses"]
+      }
+    ]
+  },
   "Milton, Delaware, United States": {
     "place": {
       "name": "Milton",
@@ -57306,6 +57593,37 @@
         "status": "adopted",
         "scope": ["city center / business district"],
         "land": ["commercial"]
+      }
+    ]
+  },
+  "Morristown, New Jersey, United States": {
+    "place": {
+      "name": "Morristown",
+      "state": "New Jersey",
+      "country": "United States",
+      "type": "city",
+      "encoded": "morristown-new-jersey-united-states",
+      "pop": 20180,
+      "coord": [-74.4809868, 40.7970382]
+    },
+    "add_max": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": [
+          "commercial",
+          "industrial",
+          "medical",
+          "other",
+          "residential, multi-family"
+        ]
+      }
+    ],
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district", "citywide"],
+        "land": ["all uses"]
       }
     ]
   },
@@ -62210,6 +62528,24 @@
       }
     ]
   },
+  "North Plainfield, New Jersey, United States": {
+    "place": {
+      "name": "North Plainfield",
+      "state": "New Jersey",
+      "country": "United States",
+      "type": "city",
+      "encoded": "north-plainfield-new-jersey-united-states",
+      "pop": 22808,
+      "coord": [-74.4279801, 40.6208476]
+    },
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["all uses"]
+      }
+    ]
+  },
   "North Platte, Nebraska, United States": {
     "place": {
       "name": "North Platte",
@@ -63467,6 +63803,24 @@
         "status": "adopted",
         "scope": ["city center / business district"],
         "land": ["commercial"]
+      }
+    ]
+  },
+  "Ocean Gate, New Jersey, United States": {
+    "place": {
+      "name": "Ocean Gate",
+      "state": "New Jersey",
+      "country": "United States",
+      "type": "city",
+      "encoded": "ocean-gate-new-jersey-united-states",
+      "pop": 1932,
+      "coord": [-74.1337496, 39.9267851]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["all uses"]
       }
     ]
   },
@@ -65907,6 +66261,24 @@
         "scope": ["citywide"],
         "land": ["commercial", "industrial", "medical", "other"],
         "date": "2025-08-25"
+      }
+    ]
+  },
+  "Paramus, New Jersey, United States": {
+    "place": {
+      "name": "Paramus",
+      "state": "New Jersey",
+      "country": "United States",
+      "type": "city",
+      "encoded": "paramus-new-jersey-united-states",
+      "pop": 26698,
+      "coord": [-74.0735899, 40.9452911]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["all uses"]
       }
     ]
   },
@@ -68429,6 +68801,31 @@
       }
     ]
   },
+  "Plainfield, New Jersey, United States": {
+    "place": {
+      "name": "Plainfield",
+      "state": "New Jersey",
+      "country": "United States",
+      "type": "city",
+      "encoded": "plainfield-new-jersey-united-states",
+      "pop": 54586,
+      "coord": [-74.4222416, 40.6201412]
+    },
+    "add_max": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["commercial", "industrial", "medical", "other"]
+      }
+    ],
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district", "main street / special"],
+        "land": ["all uses"]
+      }
+    ]
+  },
   "Plainview, Minnesota, United States": {
     "place": {
       "name": "Plainview",
@@ -68658,6 +69055,24 @@
       {
         "status": "adopted",
         "scope": ["city center / business district"],
+        "land": ["all uses"]
+      }
+    ]
+  },
+  "Pleasantville, New Jersey, United States": {
+    "place": {
+      "name": "Pleasantville",
+      "state": "New Jersey",
+      "country": "United States",
+      "type": "city",
+      "encoded": "pleasantville-new-jersey-united-states",
+      "pop": 20629,
+      "coord": [-74.5240422, 39.3898388]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
         "land": ["all uses"]
       }
     ]
@@ -70752,6 +71167,24 @@
       }
     ]
   },
+  "Rahway, New Jersey, United States": {
+    "place": {
+      "name": "Rahway",
+      "state": "New Jersey",
+      "country": "United States",
+      "type": "city",
+      "encoded": "rahway-new-jersey-united-states",
+      "pop": 29556,
+      "coord": [-74.2776468, 40.6081591]
+    },
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["main street / special"],
+        "land": ["commercial"]
+      }
+    ]
+  },
   "Rainier, Washington, United States": {
     "place": {
       "name": "Rainier",
@@ -72294,6 +72727,24 @@
       }
     ]
   },
+  "Ridgewood, New Jersey, United States": {
+    "place": {
+      "name": "Ridgewood",
+      "state": "New Jersey",
+      "country": "United States",
+      "type": "city",
+      "encoded": "ridgewood-new-jersey-united-states",
+      "pop": 25979,
+      "coord": [-74.1194403, 40.9796683]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["all uses"]
+      }
+    ]
+  },
   "Ridgway, Colorado, United States": {
     "place": {
       "name": "Ridgway",
@@ -73789,6 +74240,24 @@
         "status": "adopted",
         "scope": ["city center / business district"],
         "land": ["commercial"]
+      }
+    ]
+  },
+  "Roselle, New Jersey, United States": {
+    "place": {
+      "name": "Roselle",
+      "state": "New Jersey",
+      "country": "United States",
+      "type": "city",
+      "encoded": "roselle-new-jersey-united-states",
+      "pop": 22695,
+      "coord": [-74.2579418, 40.6527033]
+    },
+    "add_max": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["all uses"]
       }
     ]
   },
@@ -76275,6 +76744,24 @@
       }
     ]
   },
+  "Sayreville, New Jersey, United States": {
+    "place": {
+      "name": "Sayreville",
+      "state": "New Jersey",
+      "country": "United States",
+      "type": "city",
+      "encoded": "sayreville-new-jersey-united-states",
+      "pop": 45345,
+      "coord": [-74.3618499, 40.4635362]
+    },
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["commercial"]
+      }
+    ]
+  },
   "Scarsdale, New York, United States": {
     "place": {
       "name": "Scarsdale",
@@ -76696,6 +77183,31 @@
         "status": "adopted",
         "scope": ["citywide"],
         "land": ["all uses"]
+      }
+    ]
+  },
+  "Sea Isle City, New Jersey, United States": {
+    "place": {
+      "name": "Sea Isle City",
+      "state": "New Jersey",
+      "country": "United States",
+      "type": "city",
+      "encoded": "sea-isle-city-new-jersey-united-states",
+      "pop": 2104,
+      "coord": [-74.6897791, 39.1548404]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["all uses"]
+      }
+    ],
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["commercial", "other"]
       }
     ]
   },
@@ -80013,6 +80525,24 @@
         "status": "adopted",
         "scope": ["city center / business district"],
         "land": ["residential, all uses"]
+      }
+    ]
+  },
+  "South Plainfield, New Jersey, United States": {
+    "place": {
+      "name": "South Plainfield",
+      "state": "New Jersey",
+      "country": "United States",
+      "type": "city",
+      "encoded": "south-plainfield-new-jersey-united-states",
+      "pop": 24338,
+      "coord": [-74.4115401, 40.5792701]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["all uses"]
       }
     ]
   },
@@ -83702,6 +84232,24 @@
       }
     ]
   },
+  "Summit, New Jersey, United States": {
+    "place": {
+      "name": "Summit",
+      "state": "New Jersey",
+      "country": "United States",
+      "type": "city",
+      "encoded": "summit-new-jersey-united-states",
+      "pop": 22719,
+      "coord": [-74.3592296, 40.7182356]
+    },
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["all uses"]
+      }
+    ]
+  },
   "Sumner, Washington, United States": {
     "place": {
       "name": "Sumner",
@@ -86217,6 +86765,24 @@
       }
     ]
   },
+  "Toms River Township, New Jersey, United States": {
+    "place": {
+      "name": "Toms River Township",
+      "state": "New Jersey",
+      "country": "United States",
+      "type": "city",
+      "encoded": "toms-river-township-new-jersey-united-states",
+      "pop": 95438,
+      "coord": [-74.1968257, 39.9526791]
+    },
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["other"]
+      }
+    ]
+  },
   "Tonganoxie, Kansas, United States": {
     "place": {
       "name": "Tonganoxie",
@@ -87680,6 +88246,31 @@
           "other",
           "residential, multi-family"
         ]
+      }
+    ]
+  },
+  "Union City, New Jersey, United States": {
+    "place": {
+      "name": "Union City",
+      "state": "New Jersey",
+      "country": "United States",
+      "type": "city",
+      "encoded": "union-city-new-jersey-united-states",
+      "pop": 68589,
+      "coord": [-74.0237512, 40.7795455]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["all uses", "commercial", "industrial", "medical", "other"]
+      }
+    ],
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide", "main street / special"],
+        "land": ["commercial", "industrial", "medical", "other"]
       }
     ]
   },
@@ -92734,6 +93325,24 @@
       }
     ]
   },
+  "Westfield, New Jersey, United States": {
+    "place": {
+      "name": "Westfield",
+      "state": "New Jersey",
+      "country": "United States",
+      "type": "city",
+      "encoded": "westfield-new-jersey-united-states",
+      "pop": 31032,
+      "coord": [-74.3483059, 40.651726]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["all uses"]
+      }
+    ]
+  },
   "Westfield, New York, United States": {
     "place": {
       "name": "Westfield",
@@ -95065,6 +95674,24 @@
         "status": "adopted",
         "scope": ["city center / business district"],
         "land": ["commercial"]
+      }
+    ]
+  },
+  "Woodbine, New Jersey, United States": {
+    "place": {
+      "name": "Woodbine",
+      "state": "New Jersey",
+      "country": "United States",
+      "type": "city",
+      "encoded": "woodbine-new-jersey-united-states",
+      "pop": 2128,
+      "coord": [-74.8151667, 39.2417813]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["all uses"]
       }
     ]
   },
