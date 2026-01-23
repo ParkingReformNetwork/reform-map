@@ -327,6 +327,31 @@
       }
     ]
   },
+  "Adams, Oregon, United States": {
+    "place": {
+      "name": "Adams",
+      "state": "Oregon",
+      "country": "United States",
+      "type": "city",
+      "encoded": "adams-oregon-united-states",
+      "pop": 389,
+      "coord": [-118.56287, 45.7678717]
+    },
+    "add_max": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["all uses"]
+      }
+    ],
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["all uses", "commercial"]
+      }
+    ]
+  },
   "Adel, Iowa, United States": {
     "place": {
       "name": "Adel",
@@ -3409,6 +3434,24 @@
       }
     ]
   },
+  "Athena, Oregon, United States": {
+    "place": {
+      "name": "Athena",
+      "state": "Oregon",
+      "country": "United States",
+      "type": "city",
+      "encoded": "athena-oregon-united-states",
+      "pop": 1209,
+      "coord": [-118.491336, 45.8119097]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["commercial"]
+      }
+    ]
+  },
   "Athens, Alabama, United States": {
     "place": {
       "name": "Athens",
@@ -4649,6 +4692,24 @@
       }
     ]
   },
+  "Banks, Oregon, United States": {
+    "place": {
+      "name": "Banks",
+      "state": "Oregon",
+      "country": "United States",
+      "type": "city",
+      "encoded": "banks-oregon-united-states",
+      "pop": 1837,
+      "coord": [-123.1143011, 45.6185986]
+    },
+    "add_max": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["all uses"]
+      }
+    ]
+  },
   "Baraboo, Wisconsin, United States": {
     "place": {
       "name": "Baraboo",
@@ -5454,6 +5515,24 @@
       "encoded": "BayCity_MI",
       "pop": 32661,
       "coord": [-83.8888648, 43.5944677]
+    },
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["all uses"]
+      }
+    ]
+  },
+  "Bay City, Oregon, United States": {
+    "place": {
+      "name": "Bay City",
+      "state": "Oregon",
+      "country": "United States",
+      "type": "city",
+      "encoded": "bay-city-oregon-united-states",
+      "pop": 1389,
+      "coord": [-123.889296, 45.522604]
     },
     "rm_min": [
       {
@@ -9903,6 +9982,24 @@
       }
     ]
   },
+  "Brick Township, New Jersey, United States": {
+    "place": {
+      "name": "Brick Township",
+      "state": "New Jersey",
+      "country": "United States",
+      "type": "city",
+      "encoded": "brick-township-new-jersey-united-states",
+      "pop": 73620,
+      "coord": [-74.1280562, 40.0707244]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["all uses"]
+      }
+    ]
+  },
   "Bridgeport Charter Township, Michigan, United States": {
     "place": {
       "name": "Bridgeport Charter Township",
@@ -12784,6 +12881,24 @@
       }
     ]
   },
+  "Cape May, New Jersey, United States": {
+    "place": {
+      "name": "Cape May",
+      "state": "New Jersey",
+      "country": "United States",
+      "type": "city",
+      "encoded": "cape-may-new-jersey-united-states",
+      "pop": 2768,
+      "coord": [-74.92322573891097, 38.933517517125736]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["all uses"]
+      }
+    ]
+  },
   "Cape Town, Western Cape, South Africa": {
     "place": {
       "name": "Cape Town",
@@ -13017,6 +13132,24 @@
           "citywide",
           "transit-oriented"
         ],
+        "land": ["all uses"]
+      }
+    ]
+  },
+  "Carlton, Oregon, United States": {
+    "place": {
+      "name": "Carlton",
+      "state": "Oregon",
+      "country": "United States",
+      "type": "city",
+      "encoded": "carlton-oregon-united-states",
+      "pop": 2135,
+      "coord": [-123.176494, 45.2942822]
+    },
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
         "land": ["all uses"]
       }
     ]
@@ -13556,6 +13689,24 @@
         "scope": ["city center / business district"],
         "land": ["commercial", "other"],
         "date": "2025-10"
+      }
+    ]
+  },
+  "Cascade Locks, Oregon, United States": {
+    "place": {
+      "name": "Cascade Locks",
+      "state": "Oregon",
+      "country": "United States",
+      "type": "city",
+      "encoded": "cascade-locks-oregon-united-states",
+      "pop": 1530,
+      "coord": [-121.890402, 45.669513]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["all uses"]
       }
     ]
   },
@@ -14710,7 +14861,8 @@
       "type": "city",
       "encoded": "ChapelHill_NC",
       "pop": 64051,
-      "coord": [-79.05578, 35.9131542]
+      "coord": [-79.05578, 35.9131542],
+      "repeal": true
     },
     "add_max": [
       {
@@ -14731,6 +14883,12 @@
         "status": "adopted",
         "scope": ["city center / business district", "citywide"],
         "land": ["all uses", "commercial", "other", "residential, low-density"]
+      },
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["all uses"],
+        "date": "2026-01-21"
       }
     ]
   },
@@ -15439,6 +15597,24 @@
       {
         "status": "adopted",
         "scope": ["city center / business district"],
+        "land": ["all uses"]
+      }
+    ]
+  },
+  "Cherry Hill Township, New Jersey, United States": {
+    "place": {
+      "name": "Cherry Hill Township",
+      "state": "New Jersey",
+      "country": "United States",
+      "type": "city",
+      "encoded": "cherry-hill-township-new-jersey-united-states",
+      "pop": 74553,
+      "coord": [-75.0307264, 39.9348351]
+    },
+    "add_max": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
         "land": ["all uses"]
       }
     ]
@@ -16439,6 +16615,24 @@
       }
     ]
   },
+  "Clatskanie, Oregon, United States": {
+    "place": {
+      "name": "Clatskanie",
+      "state": "Oregon",
+      "country": "United States",
+      "type": "city",
+      "encoded": "clatskanie-oregon-united-states",
+      "pop": 1716,
+      "coord": [-123.2048168, 46.1036879]
+    },
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["all uses"]
+      }
+    ]
+  },
   "Clawson, Michigan, United States": {
     "place": {
       "name": "Clawson",
@@ -17147,6 +17341,31 @@
       }
     ]
   },
+  "Clinton, New Jersey, United States": {
+    "place": {
+      "name": "Clinton",
+      "state": "New Jersey",
+      "country": "United States",
+      "type": "city",
+      "encoded": "clinton-new-jersey-united-states",
+      "pop": 2773,
+      "coord": [-74.9116603, 40.6362878]
+    },
+    "add_max": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["all uses"]
+      }
+    ],
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["all uses"]
+      }
+    ]
+  },
   "Clinton, Tennessee, United States": {
     "place": {
       "name": "Clinton",
@@ -17480,6 +17699,34 @@
         "status": "adopted",
         "scope": ["city center / business district"],
         "land": ["all uses"]
+      }
+    ]
+  },
+  "Coburg, Oregon, United States": {
+    "place": {
+      "name": "Coburg",
+      "state": "Oregon",
+      "country": "United States",
+      "type": "city",
+      "encoded": "coburg-oregon-united-states",
+      "pop": 1306,
+      "coord": [-123.066199, 44.1376283],
+      "repeal": true
+    },
+    "add_max": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["all uses"],
+        "date": "2025-11-12"
+      }
+    ],
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["all uses"],
+        "date": "2025-11-12"
       }
     ]
   },
@@ -22347,6 +22594,24 @@
       }
     ]
   },
+  "Depoe Bay, Oregon, United States": {
+    "place": {
+      "name": "Depoe Bay",
+      "state": "Oregon",
+      "country": "United States",
+      "type": "city",
+      "encoded": "depoe-bay-oregon-united-states",
+      "pop": 1515,
+      "coord": [-124.0620096, 44.8104233]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["all uses"]
+      }
+    ]
+  },
   "Deposit, New York, United States": {
     "place": {
       "name": "Deposit",
@@ -22596,6 +22861,31 @@
       "pop": 670031,
       "coord": [-83.0466403, 42.3315509]
     },
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["all uses"]
+      }
+    ]
+  },
+  "Detroit, Oregon, United States": {
+    "place": {
+      "name": "Detroit",
+      "state": "Oregon",
+      "country": "United States",
+      "type": "city",
+      "encoded": "detroit-oregon-united-states",
+      "pop": 203,
+      "coord": [-122.1511929, 44.7349139]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["all uses"]
+      }
+    ],
     "rm_min": [
       {
         "status": "adopted",
@@ -22997,6 +23287,31 @@
         "status": "adopted",
         "scope": ["city center / business district", "citywide"],
         "land": ["all uses"]
+      }
+    ]
+  },
+  "Donald, Oregon, United States": {
+    "place": {
+      "name": "Donald",
+      "state": "Oregon",
+      "country": "United States",
+      "type": "city",
+      "encoded": "donald-oregon-united-states",
+      "pop": 1009,
+      "coord": [-122.841394, 45.2222599]
+    },
+    "add_max": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["all uses"]
+      }
+    ],
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["commercial", "other"]
       }
     ]
   },
@@ -23985,6 +24300,24 @@
       }
     ]
   },
+  "Durham, Oregon, United States": {
+    "place": {
+      "name": "Durham",
+      "state": "Oregon",
+      "country": "United States",
+      "type": "city",
+      "encoded": "durham-oregon-united-states",
+      "pop": 1944,
+      "coord": [-122.756311, 45.3946871]
+    },
+    "add_max": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["other"]
+      }
+    ]
+  },
   "Duvall, Washington, United States": {
     "place": {
       "name": "Duvall",
@@ -24177,6 +24510,24 @@
           "other",
           "residential, low-density"
         ]
+      }
+    ]
+  },
+  "Eagleswood Township, New Jersey, United States": {
+    "place": {
+      "name": "Eagleswood Township",
+      "state": "New Jersey",
+      "country": "United States",
+      "type": "city",
+      "encoded": "eagleswood-township-new-jersey-united-states",
+      "pop": 1722,
+      "coord": [-74.291598, 39.6548979]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["all uses"]
       }
     ]
   },
@@ -25192,6 +25543,38 @@
         "status": "adopted",
         "scope": ["city center / business district"],
         "land": ["residential, multi-family"]
+      }
+    ]
+  },
+  "Echo, Oregon, United States": {
+    "place": {
+      "name": "Echo",
+      "state": "Oregon",
+      "country": "United States",
+      "type": "city",
+      "encoded": "echo-oregon-united-states",
+      "pop": 632,
+      "coord": [-119.194834, 45.7419049]
+    },
+    "add_max": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["all uses"]
+      }
+    ],
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["all uses"]
+      }
+    ],
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["all uses"]
       }
     ]
   },
@@ -27102,6 +27485,24 @@
         "status": "adopted",
         "scope": ["city center / business district"],
         "land": ["commercial"]
+      }
+    ]
+  },
+  "Enterprise, Oregon, United States": {
+    "place": {
+      "name": "Enterprise",
+      "state": "Oregon",
+      "country": "United States",
+      "type": "city",
+      "encoded": "enterprise-oregon-united-states",
+      "pop": 2052,
+      "coord": [-117.278012, 45.4258114]
+    },
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["commercial", "other"]
       }
     ]
   },
@@ -32374,6 +32775,38 @@
       }
     ]
   },
+  "Garibaldi, Oregon, United States": {
+    "place": {
+      "name": "Garibaldi",
+      "state": "Oregon",
+      "country": "United States",
+      "type": "city",
+      "encoded": "garibaldi-oregon-united-states",
+      "pop": 830,
+      "coord": [-123.911203, 45.559817]
+    },
+    "add_max": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["all uses"]
+      }
+    ],
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["all uses"]
+      }
+    ],
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district", "citywide"],
+        "land": ["commercial", "residential, low-density"]
+      }
+    ]
+  },
   "Garland, Texas, United States": {
     "place": {
       "name": "Garland",
@@ -32496,6 +32929,31 @@
       }
     ]
   },
+  "Gaston, Oregon, United States": {
+    "place": {
+      "name": "Gaston",
+      "state": "Oregon",
+      "country": "United States",
+      "type": "city",
+      "encoded": "gaston-oregon-united-states",
+      "pop": 676,
+      "coord": [-123.139236, 45.4362259]
+    },
+    "add_max": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["all uses"]
+      }
+    ],
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["all uses"]
+      }
+    ]
+  },
   "Gastonia, North Carolina, United States": {
     "place": {
       "name": "Gastonia",
@@ -32593,6 +33051,24 @@
         "status": "adopted",
         "scope": ["citywide"],
         "land": ["all uses"]
+      }
+    ]
+  },
+  "Gearhart, Oregon, United States": {
+    "place": {
+      "name": "Gearhart",
+      "state": "Oregon",
+      "country": "United States",
+      "type": "city",
+      "encoded": "gearhart-oregon-united-states",
+      "pop": 1793,
+      "coord": [-123.91125, 46.024275]
+    },
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["commercial", "other"]
       }
     ]
   },
@@ -33327,6 +33803,24 @@
         "status": "adopted",
         "scope": ["city center / business district"],
         "land": ["all uses"]
+      }
+    ]
+  },
+  "Glen Gardner, New Jersey, United States": {
+    "place": {
+      "name": "Glen Gardner",
+      "state": "New Jersey",
+      "country": "United States",
+      "type": "city",
+      "encoded": "glen-gardner-new-jersey-united-states",
+      "pop": 1682,
+      "coord": [-74.9407248, 40.6967671]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["commercial", "other"]
       }
     ]
   },
@@ -34910,6 +35404,24 @@
       }
     ]
   },
+  "Grass Valley, Oregon, United States": {
+    "place": {
+      "name": "Grass Valley",
+      "state": "Oregon",
+      "country": "United States",
+      "type": "city",
+      "encoded": "grass-valley-oregon-united-states",
+      "pop": 149,
+      "coord": [-120.7856114, 45.3601247]
+    },
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["all uses"]
+      }
+    ]
+  },
   "Gravenhurst, Ontario, Canada": {
     "place": {
       "name": "Gravenhurst",
@@ -36389,6 +36901,38 @@
       }
     ]
   },
+  "Halsey, Oregon, United States": {
+    "place": {
+      "name": "Halsey",
+      "state": "Oregon",
+      "country": "United States",
+      "type": "city",
+      "encoded": "halsey-oregon-united-states",
+      "pop": 962,
+      "coord": [-123.110065, 44.3796117]
+    },
+    "add_max": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["all uses"]
+      }
+    ],
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["all uses"]
+      }
+    ],
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["all uses"]
+      }
+    ]
+  },
   "Haltom City, Texas, United States": {
     "place": {
       "name": "Haltom City",
@@ -37594,6 +38138,24 @@
       }
     ]
   },
+  "Harvey Cedars, New Jersey, United States": {
+    "place": {
+      "name": "Harvey Cedars",
+      "state": "New Jersey",
+      "country": "United States",
+      "type": "city",
+      "encoded": "harvey-cedars-new-jersey-united-states",
+      "pop": 391,
+      "coord": [-74.1393253, 39.6974977]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["commercial"]
+      }
+    ]
+  },
   "Harvey, Illinois, United States": {
     "place": {
       "name": "Harvey",
@@ -38517,6 +39079,24 @@
         "status": "adopted",
         "scope": ["citywide"],
         "land": ["residential, all uses"]
+      }
+    ]
+  },
+  "Heppner, Oregon, United States": {
+    "place": {
+      "name": "Heppner",
+      "state": "Oregon",
+      "country": "United States",
+      "type": "city",
+      "encoded": "heppner-oregon-united-states",
+      "pop": 1187,
+      "coord": [-119.5528279, 45.3560636]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["all uses"]
       }
     ]
   },
@@ -41486,6 +42066,31 @@
       }
     ]
   },
+  "Irrigon, Oregon, United States": {
+    "place": {
+      "name": "Irrigon",
+      "state": "Oregon",
+      "country": "United States",
+      "type": "city",
+      "encoded": "irrigon-oregon-united-states",
+      "pop": 2011,
+      "coord": [-119.491411, 45.8956885]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["all uses"]
+      }
+    ],
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["residential, low-density"]
+      }
+    ]
+  },
   "Irvine, California, United States": {
     "place": {
       "name": "Irvine",
@@ -42714,6 +43319,31 @@
       }
     ]
   },
+  "John Day, Oregon, United States": {
+    "place": {
+      "name": "John Day",
+      "state": "Oregon",
+      "country": "United States",
+      "type": "city",
+      "encoded": "john-day-oregon-united-states",
+      "pop": 1664,
+      "coord": [-118.953431, 44.4158398]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["all uses"]
+      }
+    ],
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["all uses"]
+      }
+    ]
+  },
   "Johnson City, New York, United States": {
     "place": {
       "name": "Johnson City",
@@ -43511,6 +44141,33 @@
         "status": "adopted",
         "scope": ["citywide"],
         "land": ["all uses"]
+      }
+    ]
+  },
+  "Keizer, Oregon, United States": {
+    "place": {
+      "name": "Keizer",
+      "state": "Oregon",
+      "country": "United States",
+      "type": "city",
+      "encoded": "keizer-oregon-united-states",
+      "pop": 39376,
+      "coord": [-123.0266267, 44.9969],
+      "repeal": true
+    },
+    "add_max": [
+      {
+        "status": "adopted",
+        "scope": ["main street / special"],
+        "land": ["all uses"]
+      }
+    ],
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["all uses"],
+        "date": "2025-07-07"
       }
     ]
   },
@@ -45134,6 +45791,31 @@
       }
     ]
   },
+  "La Pine, Oregon, United States": {
+    "place": {
+      "name": "La Pine",
+      "state": "Oregon",
+      "country": "United States",
+      "type": "city",
+      "encoded": "la-pine-oregon-united-states",
+      "pop": 2512,
+      "coord": [-121.503636, 43.6703995]
+    },
+    "add_max": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["all uses"]
+      }
+    ],
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["all uses"]
+      }
+    ]
+  },
   "La Plata, Maryland, United States": {
     "place": {
       "name": "La Plata",
@@ -46213,6 +46895,24 @@
         "status": "adopted",
         "scope": ["city center / business district"],
         "land": ["all uses"]
+      }
+    ]
+  },
+  "Lakeview, Oregon, United States": {
+    "place": {
+      "name": "Lakeview",
+      "state": "Oregon",
+      "country": "United States",
+      "type": "city",
+      "encoded": "lakeview-oregon-united-states",
+      "pop": 2418,
+      "coord": [-120.345792, 42.1887721]
+    },
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district", "citywide"],
+        "land": ["all uses", "residential, low-density"]
       }
     ]
   },
@@ -50669,6 +51369,24 @@
       }
     ]
   },
+  "Lyons, Oregon, United States": {
+    "place": {
+      "name": "Lyons",
+      "state": "Oregon",
+      "country": "United States",
+      "type": "city",
+      "encoded": "lyons-oregon-united-states",
+      "pop": 1202,
+      "coord": [-122.615085, 44.7745664]
+    },
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["residential, low-density"]
+      }
+    ]
+  },
   "Mackinac Island, Michigan, United States": {
     "place": {
       "name": "Mackinac Island",
@@ -51265,6 +51983,24 @@
       {
         "status": "adopted",
         "scope": ["city center / business district"],
+        "land": ["all uses"]
+      }
+    ]
+  },
+  "Malin, Oregon, United States": {
+    "place": {
+      "name": "Malin",
+      "state": "Oregon",
+      "country": "United States",
+      "type": "city",
+      "encoded": "malin-oregon-united-states",
+      "pop": 731,
+      "coord": [-121.4083619, 42.012513]
+    },
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["main street / special"],
         "land": ["all uses"]
       }
     ]
@@ -52011,6 +52747,24 @@
         "status": "adopted",
         "scope": ["city center / business district", "citywide"],
         "land": ["all uses", "commercial"]
+      }
+    ]
+  },
+  "Manzanita, Oregon, United States": {
+    "place": {
+      "name": "Manzanita",
+      "state": "Oregon",
+      "country": "United States",
+      "type": "city",
+      "encoded": "manzanita-oregon-united-states",
+      "pop": 603,
+      "coord": [-123.9350384, 45.718616]
+    },
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["commercial", "other"]
       }
     ]
   },
@@ -53206,6 +53960,24 @@
       }
     ]
   },
+  "Maupin, Oregon, United States": {
+    "place": {
+      "name": "Maupin",
+      "state": "Oregon",
+      "country": "United States",
+      "type": "city",
+      "encoded": "maupin-oregon-united-states",
+      "pop": 427,
+      "coord": [-121.0807674, 45.1752755]
+    },
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["residential, low-density"]
+      }
+    ]
+  },
   "Mauston, Wisconsin, United States": {
     "place": {
       "name": "Mauston",
@@ -53293,6 +54065,24 @@
         "status": "adopted",
         "scope": ["city center / business district"],
         "land": ["all uses"]
+      }
+    ]
+  },
+  "Maywood Park, Oregon, United States": {
+    "place": {
+      "name": "Maywood Park",
+      "state": "Oregon",
+      "country": "United States",
+      "type": "city",
+      "encoded": "maywood-park-oregon-united-states",
+      "pop": 829,
+      "coord": [-122.561336, 45.5526736]
+    },
+    "add_max": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["other"]
       }
     ]
   },
@@ -53823,6 +54613,49 @@
         "status": "adopted",
         "scope": ["city center / business district"],
         "land": ["all uses"]
+      }
+    ]
+  },
+  "Medford, Oregon, United States": {
+    "place": {
+      "name": "Medford",
+      "state": "Oregon",
+      "country": "United States",
+      "type": "city",
+      "encoded": "medford-oregon-united-states",
+      "pop": 85824,
+      "coord": [-122.8718605, 42.3264181]
+    },
+    "add_max": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district", "citywide"],
+        "land": ["all uses", "commercial", "other"]
+      }
+    ],
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide", "transit-oriented"],
+        "land": ["all uses", "residential, all uses"]
+      }
+    ],
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": [
+          "city center / business district",
+          "citywide",
+          "main street / special",
+          "transit-oriented"
+        ],
+        "land": [
+          "all uses",
+          "commercial",
+          "other",
+          "residential, low-density",
+          "residential, multi-family"
+        ]
       }
     ]
   },
@@ -56159,6 +56992,24 @@
       }
     ]
   },
+  "Mitchell, Oregon, United States": {
+    "place": {
+      "name": "Mitchell",
+      "state": "Oregon",
+      "country": "United States",
+      "type": "city",
+      "encoded": "mitchell-oregon-united-states",
+      "pop": 138,
+      "coord": [-120.154054, 44.5667772]
+    },
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["all uses"]
+      }
+    ]
+  },
   "Moab, Utah, United States": {
     "place": {
       "name": "Moab",
@@ -56398,6 +57249,24 @@
         "status": "adopted",
         "scope": ["citywide"],
         "land": ["commercial", "industrial", "medical", "other"]
+      }
+    ]
+  },
+  "Monmouth Beach, New Jersey, United States": {
+    "place": {
+      "name": "Monmouth Beach",
+      "state": "New Jersey",
+      "country": "United States",
+      "type": "city",
+      "encoded": "monmouth-beach-new-jersey-united-states",
+      "pop": 3174,
+      "coord": [-73.9815262, 40.3303883]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["all uses"]
       }
     ]
   },
@@ -57434,6 +58303,24 @@
       "encoded": "MorningSun_IA",
       "pop": 752,
       "coord": [-91.2555771, 41.0959721]
+    },
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["all uses"]
+      }
+    ]
+  },
+  "Moro, Oregon, United States": {
+    "place": {
+      "name": "Moro",
+      "state": "Oregon",
+      "country": "United States",
+      "type": "city",
+      "encoded": "moro-oregon-united-states",
+      "pop": 367,
+      "coord": [-120.731168, 45.484036]
     },
     "rm_min": [
       {
@@ -59344,6 +60231,24 @@
       }
     ]
   },
+  "Myrtle Point, Oregon, United States": {
+    "place": {
+      "name": "Myrtle Point",
+      "state": "Oregon",
+      "country": "United States",
+      "type": "city",
+      "encoded": "myrtle-point-oregon-united-states",
+      "pop": 2475,
+      "coord": [-124.1392815, 43.0635936]
+    },
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["all uses"]
+      }
+    ]
+  },
   "München, Bavaria, Germany": {
     "place": {
       "name": "München",
@@ -59791,6 +60696,31 @@
         "status": "adopted",
         "scope": ["city center / business district"],
         "land": ["commercial"]
+      }
+    ]
+  },
+  "Nehalem, Oregon, United States": {
+    "place": {
+      "name": "Nehalem",
+      "state": "Oregon",
+      "country": "United States",
+      "type": "city",
+      "encoded": "nehalem-oregon-united-states",
+      "pop": 355,
+      "coord": [-123.8943831, 45.7178897]
+    },
+    "add_max": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["all uses"]
+      }
+    ],
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["main street / special"],
+        "land": ["all uses"]
       }
     ]
   },
@@ -63625,6 +64555,31 @@
       }
     ]
   },
+  "Oakland, Oregon, United States": {
+    "place": {
+      "name": "Oakland",
+      "state": "Oregon",
+      "country": "United States",
+      "type": "city",
+      "encoded": "oakland-oregon-united-states",
+      "pop": 934,
+      "coord": [-123.2983568, 43.4221522]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["main street / special"],
+        "land": ["commercial", "other"]
+      }
+    ],
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["commercial"]
+      }
+    ]
+  },
   "Oakley, Michigan, United States": {
     "place": {
       "name": "Oakley",
@@ -64118,6 +65073,24 @@
       {
         "status": "adopted",
         "scope": ["city center / business district"],
+        "land": ["all uses"]
+      }
+    ]
+  },
+  "Old Bridge Township, New Jersey, United States": {
+    "place": {
+      "name": "Old Bridge Township",
+      "state": "New Jersey",
+      "country": "United States",
+      "type": "city",
+      "encoded": "old-bridge-township-new-jersey-united-states",
+      "pop": 66876,
+      "coord": [-74.3042101, 40.414071]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
         "land": ["all uses"]
       }
     ]
@@ -66658,6 +67631,24 @@
       }
     ]
   },
+  "Parsippany-Troy Hills Township, New Jersey, United States": {
+    "place": {
+      "name": "Parsippany-Troy Hills Township",
+      "state": "New Jersey",
+      "country": "United States",
+      "type": "city",
+      "encoded": "parsippany-troy-hills-township-new-jersey-united-states",
+      "pop": 56162,
+      "coord": [-74.41620887237826, 40.86465255090053]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["all uses"]
+      }
+    ]
+  },
   "Parsons, Kansas, United States": {
     "place": {
       "name": "Parsons",
@@ -68553,6 +69544,24 @@
         "status": "adopted",
         "scope": ["citywide"],
         "land": ["all uses"]
+      }
+    ]
+  },
+  "Piscataway Township, New Jersey, United States": {
+    "place": {
+      "name": "Piscataway Township",
+      "state": "New Jersey",
+      "country": "United States",
+      "type": "city",
+      "encoded": "piscataway-township-new-jersey-united-states",
+      "pop": 60804,
+      "coord": [-74.4660542, 40.5464326]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["commercial"]
       }
     ]
   },
@@ -71185,6 +72194,24 @@
       }
     ]
   },
+  "Rainier, Oregon, United States": {
+    "place": {
+      "name": "Rainier",
+      "state": "Oregon",
+      "country": "United States",
+      "type": "city",
+      "encoded": "rainier-oregon-united-states",
+      "pop": 1911,
+      "coord": [-122.936017, 46.0889178]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["residential, all uses"]
+      }
+    ]
+  },
   "Rainier, Washington, United States": {
     "place": {
       "name": "Rainier",
@@ -73070,6 +74097,24 @@
       }
     ]
   },
+  "Rivergrove, Oregon, United States": {
+    "place": {
+      "name": "Rivergrove",
+      "state": "Oregon",
+      "country": "United States",
+      "type": "city",
+      "encoded": "rivergrove-oregon-united-states",
+      "pop": 545,
+      "coord": [-122.729739, 45.3845958]
+    },
+    "add_max": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["other"]
+      }
+    ]
+  },
   "Riverside, California, United States": {
     "place": {
       "name": "Riverside",
@@ -73177,6 +74222,24 @@
       {
         "status": "adopted",
         "scope": ["city center / business district"],
+        "land": ["all uses"]
+      }
+    ]
+  },
+  "Riverton, New Jersey, United States": {
+    "place": {
+      "name": "Riverton",
+      "state": "New Jersey",
+      "country": "United States",
+      "type": "city",
+      "encoded": "riverton-new-jersey-united-states",
+      "pop": 2764,
+      "coord": [-75.0148931, 40.0115009]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
         "land": ["all uses"]
       }
     ]
@@ -73632,6 +74695,24 @@
       }
     ]
   },
+  "Rockaway Beach, Oregon, United States": {
+    "place": {
+      "name": "Rockaway Beach",
+      "state": "Oregon",
+      "country": "United States",
+      "type": "city",
+      "encoded": "rockaway-beach-oregon-united-states",
+      "pop": 1441,
+      "coord": [-123.943147, 45.613598]
+    },
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["commercial"]
+      }
+    ]
+  },
   "Rockdale, Wisconsin, United States": {
     "place": {
       "name": "Rockdale",
@@ -73984,6 +75065,31 @@
         "status": "adopted",
         "scope": ["city center / business district"],
         "land": ["all uses"]
+      }
+    ]
+  },
+  "Rogue River, Oregon, United States": {
+    "place": {
+      "name": "Rogue River",
+      "state": "Oregon",
+      "country": "United States",
+      "type": "city",
+      "encoded": "rogue-river-oregon-united-states",
+      "pop": 2407,
+      "coord": [-123.16874110558858, 42.43351278648667]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["all uses", "residential, all uses"]
+      }
+    ],
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district", "citywide"],
+        "land": ["all uses", "other", "residential, all uses"]
       }
     ]
   },
@@ -77023,6 +78129,38 @@
       }
     ]
   },
+  "Scio, Oregon, United States": {
+    "place": {
+      "name": "Scio",
+      "state": "Oregon",
+      "country": "United States",
+      "type": "city",
+      "encoded": "scio-oregon-united-states",
+      "pop": 956,
+      "coord": [-122.848915, 44.7047792]
+    },
+    "add_max": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["all uses"]
+      }
+    ],
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["all uses"]
+      }
+    ],
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["commercial", "other"]
+      }
+    ]
+  },
   "Scotland, United Kingdom": {
     "place": {
       "name": "Scotland",
@@ -77057,6 +78195,31 @@
         "scope": ["city center / business district"],
         "land": ["all uses"],
         "date": "1985-03-21"
+      }
+    ]
+  },
+  "Scotts Mills, Oregon, United States": {
+    "place": {
+      "name": "Scotts Mills",
+      "state": "Oregon",
+      "country": "United States",
+      "type": "city",
+      "encoded": "scotts-mills-oregon-united-states",
+      "pop": 419,
+      "coord": [-122.668088, 45.0433165]
+    },
+    "add_max": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["all uses"]
+      }
+    ],
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["all uses"]
       }
     ]
   },
@@ -78921,6 +80084,24 @@
         "status": "adopted",
         "scope": ["city center / business district", "citywide"],
         "land": ["all uses", "commercial", "industrial", "other"]
+      }
+    ]
+  },
+  "Siletz, Oregon, United States": {
+    "place": {
+      "name": "Siletz",
+      "state": "Oregon",
+      "country": "United States",
+      "type": "city",
+      "encoded": "siletz-oregon-united-states",
+      "pop": 1230,
+      "coord": [-123.920113, 44.721784]
+    },
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["residential, low-density"]
       }
     ]
   },
@@ -82622,6 +83803,38 @@
       "coord": [-80.4270094, 35.2334772]
     },
     "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["all uses"]
+      }
+    ]
+  },
+  "Stanfield, Oregon, United States": {
+    "place": {
+      "name": "Stanfield",
+      "state": "Oregon",
+      "country": "United States",
+      "type": "city",
+      "encoded": "stanfield-oregon-united-states",
+      "pop": 2144,
+      "coord": [-119.217235, 45.7804098]
+    },
+    "add_max": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["all uses"]
+      }
+    ],
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["all uses"]
+      }
+    ],
+    "rm_min": [
       {
         "status": "adopted",
         "scope": ["city center / business district"],
@@ -87861,6 +89074,24 @@
       }
     ]
   },
+  "Turner, Oregon, United States": {
+    "place": {
+      "name": "Turner",
+      "state": "Oregon",
+      "country": "United States",
+      "type": "city",
+      "encoded": "turner-oregon-united-states",
+      "pop": 2454,
+      "coord": [-122.95287, 44.8431766]
+    },
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district", "citywide"],
+        "land": ["commercial", "residential, low-density"]
+      }
+    ]
+  },
   "Turtle Lake, Wisconsin, United States": {
     "place": {
       "name": "Turtle Lake",
@@ -89234,6 +90465,24 @@
       }
     ]
   },
+  "Vernonia, Oregon, United States": {
+    "place": {
+      "name": "Vernonia",
+      "state": "Oregon",
+      "country": "United States",
+      "type": "city",
+      "encoded": "vernonia-oregon-united-states",
+      "pop": 2374,
+      "coord": [-123.192892, 45.8587229]
+    },
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["all uses"]
+      }
+    ]
+  },
   "Verona, Pennsylvania, United States": {
     "place": {
       "name": "Verona",
@@ -90124,6 +91373,24 @@
       {
         "status": "adopted",
         "scope": ["main street / special"],
+        "land": ["all uses"]
+      }
+    ]
+  },
+  "Waldport, Oregon, United States": {
+    "place": {
+      "name": "Waldport",
+      "state": "Oregon",
+      "country": "United States",
+      "type": "city",
+      "encoded": "waldport-oregon-united-states",
+      "pop": 2249,
+      "coord": [-124.0672101, 44.4270215]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
         "land": ["all uses"]
       }
     ]
@@ -93516,6 +94783,38 @@
       }
     ]
   },
+  "Weston, Oregon, United States": {
+    "place": {
+      "name": "Weston",
+      "state": "Oregon",
+      "country": "United States",
+      "type": "city",
+      "encoded": "weston-oregon-united-states",
+      "pop": 706,
+      "coord": [-118.424221, 45.813723]
+    },
+    "add_max": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["all uses"]
+      }
+    ],
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["commercial"]
+      }
+    ],
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["all uses"]
+      }
+    ]
+  },
   "Weston, West Virginia, United States": {
     "place": {
       "name": "Weston",
@@ -93743,6 +95042,24 @@
       "encoded": "Wheaton_IL",
       "pop": 53126,
       "coord": [-88.1101709, 41.8646959]
+    },
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["all uses"]
+      }
+    ]
+  },
+  "Wheeler, Oregon, United States": {
+    "place": {
+      "name": "Wheeler",
+      "state": "Oregon",
+      "country": "United States",
+      "type": "city",
+      "encoded": "wheeler-oregon-united-states",
+      "pop": 422,
+      "coord": [-123.88162701921654, 45.69022343841659]
     },
     "rm_min": [
       {
@@ -94180,6 +95497,24 @@
       "encoded": "Wilder_KY",
       "pop": 3176,
       "coord": [-84.4867731, 39.0564732]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["all uses"]
+      }
+    ]
+  },
+  "Wildwood Crest, New Jersey, United States": {
+    "place": {
+      "name": "Wildwood Crest",
+      "state": "New Jersey",
+      "country": "United States",
+      "type": "city",
+      "encoded": "wildwood-crest-new-jersey-united-states",
+      "pop": 3101,
+      "coord": [-74.8335015, 38.9748351]
     },
     "reduce_min": [
       {
@@ -96450,6 +97785,24 @@
         "status": "adopted",
         "scope": ["city center / business district"],
         "land": ["all uses"]
+      }
+    ]
+  },
+  "Yamhill, Oregon, United States": {
+    "place": {
+      "name": "Yamhill",
+      "state": "Oregon",
+      "country": "United States",
+      "type": "city",
+      "encoded": "yamhill-oregon-united-states",
+      "pop": 1147,
+      "coord": [-123.18786072891567, 45.341449838025625]
+    },
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["commercial", "industrial", "other"]
       }
     ]
   },
