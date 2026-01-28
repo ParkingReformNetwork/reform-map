@@ -48,3 +48,7 @@ export default async function initApp(): Promise<void> {
   viewToggle.initialize();
   filterManager.initialize();
 }
+
+window.onload = async () => {
+  await initApp();
+};
