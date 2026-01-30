@@ -6728,11 +6728,25 @@
       "pop": 36609,
       "coord": [-89.031784, 42.5083272]
     },
+    "add_max": [
+      {
+        "status": "proposed",
+        "scope": ["citywide"],
+        "land": ["all uses"],
+        "date": "2024-08-19"
+      }
+    ],
     "rm_min": [
       {
         "status": "adopted",
         "scope": ["city center / business district"],
         "land": ["all uses"]
+      },
+      {
+        "status": "proposed",
+        "scope": ["citywide"],
+        "land": ["all uses"],
+        "date": "2024-08-19"
       }
     ]
   },
@@ -7266,6 +7280,12 @@
         "scope": ["city center / business district"],
         "land": ["all uses"],
         "date": "2023-05-01"
+      },
+      {
+        "status": "proposed",
+        "scope": ["citywide"],
+        "land": ["commercial"],
+        "date": "2009-01"
       }
     ]
   },
@@ -10816,6 +10836,31 @@
       }
     ]
   },
+  "Brookings, Oregon, United States": {
+    "place": {
+      "name": "Brookings",
+      "state": "Oregon",
+      "country": "United States",
+      "type": "city",
+      "encoded": "brookings-oregon-united-states",
+      "pop": 6744,
+      "coord": [-124.2832868, 42.0521298]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["commercial", "industrial", "medical", "other"]
+      }
+    ],
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["all uses"]
+      }
+    ]
+  },
   "Brookings, South Dakota, United States": {
     "place": {
       "name": "Brookings",
@@ -13144,6 +13189,14 @@
       "pop": 25083,
       "coord": [-89.216655, 37.7274692]
     },
+    "add_max": [
+      {
+        "status": "proposed",
+        "scope": ["citywide"],
+        "land": ["all uses"],
+        "date": "2025-10-28"
+      }
+    ],
     "reduce_min": [
       {
         "status": "adopted",
@@ -13156,6 +13209,12 @@
         "status": "adopted",
         "scope": ["city center / business district"],
         "land": ["all uses"]
+      },
+      {
+        "status": "proposed",
+        "scope": ["citywide"],
+        "land": ["all uses"],
+        "date": "2025-10-28"
       }
     ]
   },
@@ -19563,6 +19622,31 @@
       }
     ]
   },
+  "Cornelius, Oregon, United States": {
+    "place": {
+      "name": "Cornelius",
+      "state": "Oregon",
+      "country": "United States",
+      "type": "city",
+      "encoded": "cornelius-oregon-united-states",
+      "pop": 12694,
+      "coord": [-123.05562, 45.5198001]
+    },
+    "add_max": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["commercial", "industrial", "other"]
+      }
+    ],
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district", "main street / special"],
+        "land": ["all uses"]
+      }
+    ]
+  },
   "Corning, Iowa, United States": {
     "place": {
       "name": "Corning",
@@ -20494,6 +20578,38 @@
       }
     ]
   },
+  "Creswell, Oregon, United States": {
+    "place": {
+      "name": "Creswell",
+      "state": "Oregon",
+      "country": "United States",
+      "type": "city",
+      "encoded": "creswell-oregon-united-states",
+      "pop": 5641,
+      "coord": [-123.024526, 43.9179023]
+    },
+    "add_max": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["all uses"]
+      }
+    ],
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["all uses"]
+      }
+    ],
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district", "citywide"],
+        "land": ["all uses", "residential, low-density"]
+      }
+    ]
+  },
   "Crete, Nebraska, United States": {
     "place": {
       "name": "Crete",
@@ -21107,6 +21223,31 @@
         "status": "adopted",
         "scope": ["city center / business district"],
         "land": ["all uses"]
+      }
+    ]
+  },
+  "Dallas, Oregon, United States": {
+    "place": {
+      "name": "Dallas",
+      "state": "Oregon",
+      "country": "United States",
+      "type": "city",
+      "encoded": "dallas-oregon-united-states",
+      "pop": 16854,
+      "coord": [-123.315869, 44.9189206]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["all uses"]
+      }
+    ],
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district", "citywide"],
+        "land": ["all uses", "residential, low-density"]
       }
     ]
   },
@@ -24178,7 +24319,13 @@
         "status": "proposed",
         "scope": ["citywide"],
         "land": ["all uses"],
-        "date": "2025"
+        "date": "2026"
+      }
+    ],
+    "benefit_district": [
+      {
+        "status": "proposed",
+        "date": "2020"
       }
     ]
   },
@@ -25784,6 +25931,14 @@
         "status": "adopted",
         "scope": ["city center / business district", "citywide"],
         "land": ["all uses"]
+      }
+    ],
+    "rm_min": [
+      {
+        "status": "proposed",
+        "scope": ["city center / business district"],
+        "land": ["all uses"],
+        "date": "2015-09"
       }
     ]
   },
@@ -33976,6 +34131,35 @@
       }
     ]
   },
+  "Gladstone, Oregon, United States": {
+    "place": {
+      "name": "Gladstone",
+      "state": "Oregon",
+      "country": "United States",
+      "type": "city",
+      "encoded": "gladstone-oregon-united-states",
+      "pop": 12017,
+      "coord": [-122.5945507, 45.3803261]
+    },
+    "add_max": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["commercial", "other"]
+      }
+    ],
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": [
+          "city center / business district",
+          "citywide",
+          "main street / special"
+        ],
+        "land": ["all uses", "other", "residential, all uses"]
+      }
+    ]
+  },
   "Gladwin, Michigan, United States": {
     "place": {
       "name": "Gladwin",
@@ -37815,6 +37999,52 @@
       }
     ]
   },
+  "Happy Valley, Oregon, United States": {
+    "place": {
+      "name": "Happy Valley",
+      "state": "Oregon",
+      "country": "United States",
+      "type": "city",
+      "encoded": "happy-valley-oregon-united-states",
+      "pop": 23733,
+      "coord": [-122.497174, 45.428679]
+    },
+    "add_max": [
+      {
+        "status": "adopted",
+        "scope": [
+          "city center / business district",
+          "citywide",
+          "transit-oriented"
+        ],
+        "land": [
+          "commercial",
+          "industrial",
+          "medical",
+          "other",
+          "residential, multi-family"
+        ]
+      }
+    ],
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["all uses"]
+      }
+    ],
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": [
+          "city center / business district",
+          "citywide",
+          "transit-oriented"
+        ],
+        "land": ["all uses", "other", "residential, all uses"]
+      }
+    ]
+  },
   "Harford County, Maryland, United States": {
     "place": {
       "name": "Harford County",
@@ -40663,6 +40893,31 @@
         "status": "adopted",
         "scope": ["city center / business district", "transit-oriented"],
         "land": ["commercial"]
+      }
+    ]
+  },
+  "Hood River, Oregon, United States": {
+    "place": {
+      "name": "Hood River",
+      "state": "Oregon",
+      "country": "United States",
+      "type": "city",
+      "encoded": "hood-river-oregon-united-states",
+      "pop": 8313,
+      "coord": [-121.51232288556058, 45.70883699464683]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["commercial"]
+      }
+    ],
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["residential, low-density"]
       }
     ]
   },
@@ -44162,6 +44417,24 @@
       }
     ]
   },
+  "Junction City, Oregon, United States": {
+    "place": {
+      "name": "Junction City",
+      "state": "Oregon",
+      "country": "United States",
+      "type": "city",
+      "encoded": "junction-city-oregon-united-states",
+      "pop": 6747,
+      "coord": [-123.204785, 44.2191935]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["all uses", "commercial"]
+      }
+    ]
+  },
   "Juneau, Alaska, United States": {
     "place": {
       "name": "Juneau",
@@ -46610,6 +46883,31 @@
       }
     ],
     "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["all uses"]
+      }
+    ]
+  },
+  "Lafayette, Oregon, United States": {
+    "place": {
+      "name": "Lafayette",
+      "state": "Oregon",
+      "country": "United States",
+      "type": "city",
+      "encoded": "lafayette-oregon-united-states",
+      "pop": 4423,
+      "coord": [-123.1131631, 45.2441045]
+    },
+    "add_max": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["all uses"]
+      }
+    ],
+    "reduce_min": [
       {
         "status": "adopted",
         "scope": ["city center / business district"],
@@ -49848,6 +50146,12 @@
         "scope": ["city center / business district"],
         "land": ["all uses"]
       }
+    ],
+    "benefit_district": [
+      {
+        "status": "proposed",
+        "date": "2013"
+      }
     ]
   },
   "Lincoln, Michigan, United States": {
@@ -50426,6 +50730,12 @@
         "status": "adopted",
         "scope": ["city center / business district"],
         "land": ["commercial", "industrial", "other", "residential, all uses"]
+      }
+    ],
+    "benefit_district": [
+      {
+        "status": "proposed",
+        "date": "2009-02"
       }
     ]
   },
@@ -52248,11 +52558,31 @@
       "pop": 259680,
       "coord": [-89.3837613, 43.074761]
     },
+    "add_max": [
+      {
+        "status": "adopted",
+        "scope": ["citywide", "transit-oriented"],
+        "land": ["all uses"]
+      }
+    ],
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["all uses"]
+      }
+    ],
     "rm_min": [
       {
         "status": "adopted",
         "scope": ["city center / business district", "main street / special"],
         "land": ["commercial", "residential, all uses"]
+      },
+      {
+        "status": "proposed",
+        "scope": ["citywide"],
+        "land": ["residential, multi-family"],
+        "date": "2024-12-31"
       }
     ]
   },
@@ -54067,6 +54397,25 @@
       }
     ]
   },
+  "Marshfield, Wisconsin, United States": {
+    "place": {
+      "name": "Marshfield",
+      "state": "Wisconsin",
+      "country": "United States",
+      "type": "city",
+      "encoded": "marshfield-wisconsin-united-states",
+      "pop": 18929,
+      "coord": [-90.1740313, 44.6662287]
+    },
+    "rm_min": [
+      {
+        "status": "proposed",
+        "scope": ["city center / business district"],
+        "land": ["all uses"],
+        "date": "2017-07-11"
+      }
+    ]
+  },
   "Marshville, North Carolina, United States": {
     "place": {
       "name": "Marshville",
@@ -55700,6 +56049,14 @@
       "pop": 16843,
       "coord": [-91.9278716, 44.8765289]
     },
+    "add_max": [
+      {
+        "status": "proposed",
+        "scope": ["citywide"],
+        "land": ["all uses"],
+        "date": "2016"
+      }
+    ],
     "reduce_min": [
       {
         "status": "adopted",
@@ -57173,6 +57530,31 @@
       }
     ]
   },
+  "Milton-Freewater, Oregon, United States": {
+    "place": {
+      "name": "Milton-Freewater",
+      "state": "Oregon",
+      "country": "United States",
+      "type": "city",
+      "encoded": "milton-freewater-oregon-united-states",
+      "pop": 7151,
+      "coord": [-118.387755, 45.9329103]
+    },
+    "add_max": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["all uses"]
+      }
+    ],
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["commercial"]
+      }
+    ]
+  },
   "Milwaukee, Wisconsin, United States": {
     "place": {
       "name": "Milwaukee",
@@ -57183,11 +57565,25 @@
       "pop": 590157,
       "coord": [-87.922497, 43.0349931]
     },
+    "reduce_min": [
+      {
+        "status": "proposed",
+        "scope": ["citywide"],
+        "land": ["residential, all uses"],
+        "date": "2025"
+      }
+    ],
     "rm_min": [
       {
         "status": "adopted",
         "scope": ["city center / business district"],
         "land": ["all uses"]
+      },
+      {
+        "status": "proposed",
+        "scope": ["citywide"],
+        "land": ["all uses"],
+        "date": "2025"
       }
     ]
   },
@@ -57786,6 +58182,25 @@
       }
     ]
   },
+  "Momence, Illinois, United States": {
+    "place": {
+      "name": "Momence",
+      "state": "Illinois",
+      "country": "United States",
+      "type": "city",
+      "encoded": "momence-illinois-united-states",
+      "pop": 3117,
+      "coord": [-87.6625011, 41.1647379]
+    },
+    "rm_min": [
+      {
+        "status": "proposed",
+        "scope": ["city center / business district"],
+        "land": ["all uses"],
+        "date": "2012-05-21"
+      }
+    ]
+  },
   "Moncton, New Brunswick, Canada": {
     "place": {
       "name": "Moncton",
@@ -57948,6 +58363,14 @@
       "pop": 8624,
       "coord": [-89.3340068, 43.0622189]
     },
+    "reduce_min": [
+      {
+        "status": "proposed",
+        "scope": ["main street / special"],
+        "land": ["other"],
+        "date": "2015-08-03"
+      }
+    ],
     "rm_min": [
       {
         "status": "adopted",
@@ -62848,6 +63271,44 @@
       }
     ]
   },
+  "Newberg, Oregon, United States": {
+    "place": {
+      "name": "Newberg",
+      "state": "Oregon",
+      "country": "United States",
+      "type": "city",
+      "encoded": "newberg-oregon-united-states",
+      "pop": 25138,
+      "coord": [-122.972751, 45.300347]
+    },
+    "add_max": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": [
+          "commercial",
+          "industrial",
+          "medical",
+          "other",
+          "residential, multi-family"
+        ]
+      }
+    ],
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["main street / special"],
+        "land": ["commercial", "other"]
+      }
+    ],
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district", "main street / special"],
+        "land": ["commercial", "other"]
+      }
+    ]
+  },
   "Newbern, Tennessee, United States": {
     "place": {
       "name": "Newbern",
@@ -66630,6 +67091,12 @@
         "status": "adopted",
         "scope": ["city center / business district"],
         "land": ["all uses"]
+      },
+      {
+        "status": "proposed",
+        "scope": ["citywide"],
+        "land": ["all uses"],
+        "date": "2023-07-01"
       }
     ]
   },
@@ -67436,6 +67903,24 @@
       "encoded": "Owensboro_KY",
       "pop": 60183,
       "coord": [-87.1133304, 37.7742152]
+    },
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["all uses"]
+      }
+    ]
+  },
+  "Owensville, Missouri, United States": {
+    "place": {
+      "name": "Owensville",
+      "state": "Missouri",
+      "country": "United States",
+      "type": "city",
+      "encoded": "owensville-missouri-united-states",
+      "pop": 2757,
+      "coord": [-91.5015487, 38.3456023]
     },
     "rm_min": [
       {
@@ -69181,6 +69666,31 @@
       }
     ]
   },
+  "Pendleton, Oregon, United States": {
+    "place": {
+      "name": "Pendleton",
+      "state": "Oregon",
+      "country": "United States",
+      "type": "city",
+      "encoded": "pendleton-oregon-united-states",
+      "pop": 17107,
+      "coord": [-118.7885967, 45.672075]
+    },
+    "add_max": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["all uses"]
+      }
+    ],
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["all uses"]
+      }
+    ]
+  },
   "Penetanguishene, Ontario, Canada": {
     "place": {
       "name": "Penetanguishene",
@@ -69928,6 +70438,38 @@
         "status": "adopted",
         "scope": ["city center / business district"],
         "land": ["all uses"]
+      }
+    ]
+  },
+  "Philomath, Oregon, United States": {
+    "place": {
+      "name": "Philomath",
+      "state": "Oregon",
+      "country": "United States",
+      "type": "city",
+      "encoded": "philomath-oregon-united-states",
+      "pop": 5838,
+      "coord": [-123.367613, 44.5400013]
+    },
+    "add_max": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["all uses"]
+      }
+    ],
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["commercial", "industrial"]
+      }
+    ],
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["residential, low-density"]
       }
     ]
   },
@@ -76268,6 +76810,38 @@
       }
     ]
   },
+  "Roseburg, Oregon, United States": {
+    "place": {
+      "name": "Roseburg",
+      "state": "Oregon",
+      "country": "United States",
+      "type": "city",
+      "encoded": "roseburg-oregon-united-states",
+      "pop": 23683,
+      "coord": [-123.3417381, 43.216505]
+    },
+    "add_max": [
+      {
+        "status": "adopted",
+        "scope": ["main street / special"],
+        "land": ["all uses"]
+      }
+    ],
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district", "citywide"],
+        "land": ["all uses"]
+      }
+    ],
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["main street / special"],
+        "land": ["all uses"]
+      }
+    ]
+  },
   "Roselle, Illinois, United States": {
     "place": {
       "name": "Roselle",
@@ -78580,6 +79154,14 @@
       "pop": 3518,
       "coord": [-89.7226827, 43.2715944]
     },
+    "reduce_min": [
+      {
+        "status": "proposed",
+        "scope": ["citywide"],
+        "land": ["residential, multi-family"],
+        "date": "2017-04-11"
+      }
+    ],
     "rm_min": [
       {
         "status": "adopted",
@@ -80580,6 +81162,24 @@
       }
     ]
   },
+  "Sheridan, Oregon, United States": {
+    "place": {
+      "name": "Sheridan",
+      "state": "Oregon",
+      "country": "United States",
+      "type": "city",
+      "encoded": "sheridan-oregon-united-states",
+      "pop": 6233,
+      "coord": [-123.394829, 45.0992814]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["all uses"]
+      }
+    ]
+  },
   "Sheridan, Wyoming, United States": {
     "place": {
       "name": "Sheridan",
@@ -80729,11 +81329,27 @@
       "pop": 3277,
       "coord": [-88.2597625, 44.1736983]
     },
+    "add_max": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["all uses"],
+        "date": "2024-02-26"
+      }
+    ],
     "reduce_min": [
       {
         "status": "adopted",
         "scope": ["city center / business district"],
         "land": ["all uses"]
+      }
+    ],
+    "rm_min": [
+      {
+        "status": "proposed",
+        "scope": ["citywide"],
+        "land": ["all uses"],
+        "date": "2024-02-26"
       }
     ]
   },
@@ -83377,6 +83993,24 @@
       }
     ]
   },
+  "Spring Lake Heights, New Jersey, United States": {
+    "place": {
+      "name": "Spring Lake Heights",
+      "state": "New Jersey",
+      "country": "United States",
+      "type": "city",
+      "encoded": "spring-lake-heights-new-jersey-united-states",
+      "pop": 4890,
+      "coord": [-122.6400845, 45.4468258]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["all uses"]
+      }
+    ]
+  },
   "Spring Lake, Michigan, United States": {
     "place": {
       "name": "Spring Lake",
@@ -84163,6 +84797,24 @@
           "residential, low-density",
           "residential, multi-family"
         ]
+      }
+    ]
+  },
+  "St. Helens, Oregon, United States": {
+    "place": {
+      "name": "St. Helens",
+      "state": "Oregon",
+      "country": "United States",
+      "type": "city",
+      "encoded": "st-helens-oregon-united-states",
+      "pop": 13817,
+      "coord": [-122.8064922, 45.8640034]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["all uses"]
       }
     ]
   },
@@ -86570,6 +87222,14 @@
       "pop": 35967,
       "coord": [-89.2134359, 43.1834579]
     },
+    "add_max": [
+      {
+        "status": "proposed",
+        "scope": ["citywide"],
+        "land": ["all uses"],
+        "date": "2019"
+      }
+    ],
     "rm_min": [
       {
         "status": "adopted",
@@ -86949,6 +87609,38 @@
       }
     ]
   },
+  "Sutherlin, Oregon, United States": {
+    "place": {
+      "name": "Sutherlin",
+      "state": "Oregon",
+      "country": "United States",
+      "type": "city",
+      "encoded": "sutherlin-oregon-united-states",
+      "pop": 8524,
+      "coord": [-123.312359, 43.3896628]
+    },
+    "add_max": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["all uses"]
+      }
+    ],
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["all uses"]
+      }
+    ],
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["all uses"]
+      }
+    ]
+  },
   "Suwanee, Georgia, United States": {
     "place": {
       "name": "Suwanee",
@@ -87288,6 +87980,38 @@
         "status": "adopted",
         "scope": ["city center / business district"],
         "land": ["all uses"]
+      }
+    ]
+  },
+  "Talent, Oregon, United States": {
+    "place": {
+      "name": "Talent",
+      "state": "Oregon",
+      "country": "United States",
+      "type": "city",
+      "encoded": "talent-oregon-united-states",
+      "pop": 6282,
+      "coord": [-122.788924, 42.243808]
+    },
+    "add_max": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["all uses"]
+      }
+    ],
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district", "citywide"],
+        "land": ["all uses", "residential, all uses"]
+      }
+    ],
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["commercial", "other"]
       }
     ]
   },
@@ -88194,6 +88918,38 @@
       }
     ]
   },
+  "The Dalles, Oregon, United States": {
+    "place": {
+      "name": "The Dalles",
+      "state": "Oregon",
+      "country": "United States",
+      "type": "city",
+      "encoded": "the-dalles-oregon-united-states",
+      "pop": 16010,
+      "coord": [-121.1841587, 45.6015056]
+    },
+    "add_max": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["commercial", "industrial", "medical", "other"]
+      }
+    ],
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["commercial", "industrial", "medical", "other"]
+      }
+    ],
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["all uses"]
+      }
+    ]
+  },
   "The Village, Oklahoma, United States": {
     "place": {
       "name": "The Village",
@@ -88683,6 +89439,38 @@
         "status": "adopted",
         "scope": ["citywide"],
         "land": ["all uses"]
+      }
+    ]
+  },
+  "Tillamook, Oregon, United States": {
+    "place": {
+      "name": "Tillamook",
+      "state": "Oregon",
+      "country": "United States",
+      "type": "city",
+      "encoded": "tillamook-oregon-united-states",
+      "pop": 5231,
+      "coord": [-123.84390539942457, 45.4563407528802]
+    },
+    "add_max": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district", "citywide"],
+        "land": ["commercial", "residential, all uses"]
+      }
+    ],
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district", "main street / special"],
+        "land": ["all uses"]
+      }
+    ],
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["all uses", "commercial"]
       }
     ]
   },
@@ -89836,6 +90624,39 @@
       {
         "status": "adopted",
         "scope": ["city center / business district"],
+        "land": ["all uses"]
+      }
+    ]
+  },
+  "Troutdale, Oregon, United States": {
+    "place": {
+      "name": "Troutdale",
+      "state": "Oregon",
+      "country": "United States",
+      "type": "city",
+      "encoded": "troutdale-oregon-united-states",
+      "pop": 16300,
+      "coord": [-122.3873133, 45.5392862]
+    },
+    "add_max": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district", "citywide"],
+        "land": ["all uses", "commercial", "industrial", "medical", "other"]
+      }
+    ],
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["all uses"],
+        "date": "2025-06-24"
+      }
+    ],
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district", "transit-oriented"],
         "land": ["all uses"]
       }
     ]
@@ -98885,6 +99706,14 @@
         "status": "adopted",
         "scope": ["citywide"],
         "land": ["all uses"]
+      }
+    ],
+    "rm_min": [
+      {
+        "status": "proposed",
+        "scope": ["city center / business district"],
+        "land": ["all uses"],
+        "date": "2016-08-16"
       }
     ]
   },
