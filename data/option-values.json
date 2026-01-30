@@ -230,6 +230,7 @@
     ],
     "year": [
       "unknown",
+      "2026",
       "2025",
       "2024",
       "2023",
@@ -239,7 +240,12 @@
       "2019",
       "2018",
       "2017",
-      "2011"
+      "2016",
+      "2015",
+      "2013",
+      "2012",
+      "2011",
+      "2009"
     ]
   },
   "anyRepealed": {
@@ -343,7 +349,18 @@
       "residential, all uses",
       "residential, multi-family"
     ],
-    "year": ["unknown", "2025", "2024", "2023", "2021", "2020", "2018", "2011"]
+    "year": [
+      "unknown",
+      "2025",
+      "2024",
+      "2023",
+      "2021",
+      "2020",
+      "2019",
+      "2018",
+      "2016",
+      "2011"
+    ]
   },
   "addMaxRepealed": {
     "placeType": ["city", "state"],
@@ -442,7 +459,7 @@
       "residential, all uses",
       "residential, multi-family"
     ],
-    "year": ["2025", "2024", "2022", "2017"]
+    "year": ["2025", "2024", "2022", "2017", "2015"]
   },
   "reduceMinRepealed": {
     "placeType": ["city"],
@@ -547,8 +564,28 @@
       "regional",
       "transit-oriented"
     ],
-    "landUse": ["all uses", "commercial", "other", "residential, all uses"],
-    "year": ["unknown", "2025", "2024", "2023", "2022", "2021", "2019"]
+    "landUse": [
+      "all uses",
+      "commercial",
+      "other",
+      "residential, all uses",
+      "residential, multi-family"
+    ],
+    "year": [
+      "unknown",
+      "2026",
+      "2025",
+      "2024",
+      "2023",
+      "2022",
+      "2021",
+      "2019",
+      "2017",
+      "2016",
+      "2015",
+      "2012",
+      "2009"
+    ]
   },
   "rmMinRepealed": {
     "placeType": ["city"],
@@ -573,7 +610,7 @@
     "country": ["United States"],
     "scope": [],
     "landUse": [],
-    "year": ["2025", "2019"]
+    "year": ["2025", "2020", "2019", "2013", "2009"]
   },
   "benefitDistrictRepealed": {
     "placeType": [],
