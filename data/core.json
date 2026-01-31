@@ -5942,6 +5942,25 @@
       }
     ]
   },
+  "Becker, Minnesota, United States": {
+    "place": {
+      "name": "Becker",
+      "state": "Minnesota",
+      "country": "United States",
+      "type": "city",
+      "encoded": "becker-minnesota-united-states",
+      "pop": 4877,
+      "coord": [-95.6761851, 46.9298236]
+    },
+    "add_max": [
+      {
+        "status": "proposed",
+        "scope": ["main street / special"],
+        "land": ["all uses"],
+        "date": "2016-03-29"
+      }
+    ]
+  },
   "Beckley, West Virginia, United States": {
     "place": {
       "name": "Beckley",
@@ -36351,6 +36370,11 @@
         "status": "adopted",
         "scope": ["citywide"],
         "land": ["residential, low-density"]
+      },
+      {
+        "status": "proposed",
+        "scope": ["citywide"],
+        "land": ["all uses"]
       }
     ],
     "rm_min": [
@@ -36446,6 +36470,25 @@
         "status": "adopted",
         "scope": ["city center / business district"],
         "land": ["all uses"]
+      }
+    ]
+  },
+  "Greenfield, Wisconsin, United States": {
+    "place": {
+      "name": "Greenfield",
+      "state": "Wisconsin",
+      "country": "United States",
+      "type": "city",
+      "encoded": "greenfield-wisconsin-united-states",
+      "pop": 37803,
+      "coord": [-87.98132, 42.9596903]
+    },
+    "rm_min": [
+      {
+        "status": "proposed",
+        "scope": ["citywide"],
+        "land": ["all uses", "residential, multi-family"],
+        "date": "2020-12-15"
       }
     ]
   },
@@ -42630,6 +42673,11 @@
         "status": "adopted",
         "scope": ["city center / business district"],
         "land": ["all uses"]
+      },
+      {
+        "status": "proposed",
+        "scope": ["citywide"],
+        "land": ["all uses"]
       }
     ]
   },
@@ -46411,6 +46459,22 @@
       "coord": [-91.2395429, 43.8014053],
       "repeal": true
     },
+    "add_max": [
+      {
+        "status": "proposed",
+        "scope": ["city center / business district", "main street / special"],
+        "land": ["all uses"],
+        "date": "2015-02"
+      }
+    ],
+    "reduce_min": [
+      {
+        "status": "proposed",
+        "scope": ["citywide"],
+        "land": ["all uses", "residential, all uses"],
+        "date": "2022-12"
+      }
+    ],
     "rm_min": [
       {
         "status": "adopted",
@@ -55276,6 +55340,22 @@
       "pop": 8991,
       "coord": [-89.2897646, 43.0123487]
     },
+    "add_max": [
+      {
+        "status": "proposed",
+        "scope": ["citywide"],
+        "land": ["all uses"],
+        "date": "2021-07-06"
+      }
+    ],
+    "reduce_min": [
+      {
+        "status": "proposed",
+        "scope": ["citywide"],
+        "land": ["residential, multi-family"],
+        "date": "2023-05-04"
+      }
+    ],
     "rm_min": [
       {
         "status": "adopted",
@@ -62123,6 +62203,14 @@
         "status": "adopted",
         "scope": ["citywide"],
         "land": ["commercial", "industrial", "medical", "other"]
+      }
+    ],
+    "rm_min": [
+      {
+        "status": "proposed",
+        "scope": ["citywide"],
+        "land": ["all uses"],
+        "date": "2023-10"
       }
     ]
   },
@@ -84001,7 +84089,7 @@
       "type": "city",
       "encoded": "spring-lake-heights-new-jersey-united-states",
       "pop": 4890,
-      "coord": [-122.6400845, 45.4468258]
+      "coord": [-74.0428742257358, 40.15248257212801]
     },
     "reduce_min": [
       {
@@ -84677,6 +84765,14 @@
       "pop": 68881,
       "coord": [-94.1642004, 45.5616075]
     },
+    "add_max": [
+      {
+        "status": "proposed",
+        "scope": ["citywide"],
+        "land": ["all uses"],
+        "date": "2016-03"
+      }
+    ],
     "reduce_min": [
       {
         "status": "adopted",
@@ -94839,6 +94935,12 @@
         "status": "adopted",
         "scope": ["city center / business district"],
         "land": ["all uses"]
+      },
+      {
+        "status": "proposed",
+        "scope": ["citywide"],
+        "land": ["all uses", "residential, multi-family"],
+        "date": "2024-08"
       }
     ]
   },
@@ -94943,6 +95045,25 @@
         "status": "adopted",
         "scope": ["city center / business district"],
         "land": ["all uses"]
+      }
+    ]
+  },
+  "Wauwatosa, Wisconsin, United States": {
+    "place": {
+      "name": "Wauwatosa",
+      "state": "Wisconsin",
+      "country": "United States",
+      "type": "city",
+      "encoded": "wauwatosa-wisconsin-united-states",
+      "pop": 48387,
+      "coord": [-88.0079271, 43.0494122]
+    },
+    "add_max": [
+      {
+        "status": "proposed",
+        "scope": ["main street / special"],
+        "land": ["all uses"],
+        "date": "2018-12-18"
       }
     ]
   },
@@ -98577,6 +98698,12 @@
         "status": "adopted",
         "scope": ["city center / business district"],
         "land": ["all uses"]
+      },
+      {
+        "status": "proposed",
+        "scope": ["city center / business district", "citywide"],
+        "land": ["all uses", "residential, all uses"],
+        "date": "2024-05-06"
       }
     ]
   },
