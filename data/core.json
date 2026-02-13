@@ -4052,6 +4052,33 @@
       }
     ]
   },
+  "Aurora, Missouri, United States": {
+    "place": {
+      "name": "Aurora",
+      "state": "Missouri",
+      "country": "United States",
+      "type": "city",
+      "encoded": "aurora-missouri-united-states",
+      "pop": 7217,
+      "coord": [-93.7211623, 36.9724863]
+    },
+    "add_max": [
+      {
+        "status": "proposed",
+        "scope": ["main street / special"],
+        "land": ["all uses"],
+        "date": "2022"
+      }
+    ],
+    "rm_min": [
+      {
+        "status": "proposed",
+        "scope": ["main street / special"],
+        "land": ["all uses"],
+        "date": "2022"
+      }
+    ]
+  },
   "Aurora, Nebraska, United States": {
     "place": {
       "name": "Aurora",
@@ -4576,6 +4603,14 @@
       "pop": 31103,
       "coord": [-90.5387318, 38.5961694]
     },
+    "add_max": [
+      {
+        "status": "proposed",
+        "scope": ["main street / special"],
+        "land": ["all uses"],
+        "date": "2019-06"
+      }
+    ],
     "rm_min": [
       {
         "status": "adopted",
@@ -5551,6 +5586,25 @@
       }
     ]
   },
+  "Battlefield, Missouri, United States": {
+    "place": {
+      "name": "Battlefield",
+      "state": "Missouri",
+      "country": "United States",
+      "type": "city",
+      "encoded": "battlefield-missouri-united-states",
+      "pop": 5990,
+      "coord": [-93.3642696, 37.1154066]
+    },
+    "rm_min": [
+      {
+        "status": "proposed",
+        "scope": ["city center / business district"],
+        "land": ["all uses"],
+        "date": "2023-04-27"
+      }
+    ]
+  },
   "Baudette, Minnesota, United States": {
     "place": {
       "name": "Baudette",
@@ -5939,6 +5993,25 @@
         "scope": ["citywide"],
         "land": ["all uses"],
         "date": "2023-07-18"
+      }
+    ]
+  },
+  "Becker, Minnesota, United States": {
+    "place": {
+      "name": "Becker",
+      "state": "Minnesota",
+      "country": "United States",
+      "type": "city",
+      "encoded": "becker-minnesota-united-states",
+      "pop": 4877,
+      "coord": [-93.87707262486329, 45.39320199862858]
+    },
+    "add_max": [
+      {
+        "status": "proposed",
+        "scope": ["main street / special"],
+        "land": ["all uses"],
+        "date": "2016-03-29"
       }
     ]
   },
@@ -7299,6 +7372,14 @@
       "pop": 15194,
       "coord": [-83.1835389, 42.5030909]
     },
+    "add_max": [
+      {
+        "status": "proposed",
+        "scope": ["citywide"],
+        "land": ["all uses"],
+        "date": "2023-07-11"
+      }
+    ],
     "reduce_min": [
       {
         "status": "adopted",
@@ -8177,6 +8258,14 @@
       "pop": 73529,
       "coord": [-100.783739, 46.808327]
     },
+    "reduce_min": [
+      {
+        "status": "proposed",
+        "scope": ["citywide"],
+        "land": ["all uses"],
+        "date": "2017-02-28"
+      }
+    ],
     "rm_min": [
       {
         "status": "adopted",
@@ -9056,6 +9145,13 @@
     "reduce_min": [
       {
         "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["all uses"]
+      }
+    ],
+    "rm_min": [
+      {
+        "status": "proposed",
         "scope": ["city center / business district"],
         "land": ["all uses"]
       }
@@ -10876,6 +10972,12 @@
         "status": "adopted",
         "scope": ["city center / business district"],
         "land": ["all uses"]
+      },
+      {
+        "status": "proposed",
+        "scope": ["citywide"],
+        "land": ["residential, multi-family"],
+        "date": "2022-06-13"
       }
     ]
   },
@@ -11794,6 +11896,14 @@
         "scope": ["transit-oriented"],
         "land": ["all uses"]
       }
+    ],
+    "rm_min": [
+      {
+        "status": "proposed",
+        "scope": ["citywide"],
+        "land": ["all uses"],
+        "date": "2019-07-16"
+      }
     ]
   },
   "Burr Ridge, Illinois, United States": {
@@ -11847,6 +11957,33 @@
         "status": "adopted",
         "scope": ["city center / business district"],
         "land": ["commercial"]
+      }
+    ]
+  },
+  "Butler, Missouri, United States": {
+    "place": {
+      "name": "Butler",
+      "state": "Missouri",
+      "country": "United States",
+      "type": "city",
+      "encoded": "butler-missouri-united-states",
+      "pop": 4220,
+      "coord": [-94.33313608271777, 38.25848292123051]
+    },
+    "add_max": [
+      {
+        "status": "proposed",
+        "scope": ["citywide"],
+        "land": ["all uses"],
+        "date": "2024-06-11"
+      }
+    ],
+    "rm_min": [
+      {
+        "status": "proposed",
+        "scope": ["citywide"],
+        "land": ["all uses"],
+        "date": "2024-06-11"
       }
     ]
   },
@@ -14997,6 +15134,14 @@
       "pop": 88909,
       "coord": [-88.2430932, 40.1164841]
     },
+    "add_max": [
+      {
+        "status": "proposed",
+        "scope": ["citywide"],
+        "land": ["all uses"],
+        "date": "2021"
+      }
+    ],
     "rm_min": [
       {
         "status": "adopted",
@@ -19515,6 +19660,25 @@
       }
     ]
   },
+  "Coralville, Iowa, United States": {
+    "place": {
+      "name": "Coralville",
+      "state": "Iowa",
+      "country": "United States",
+      "type": "city",
+      "encoded": "coralville-iowa-united-states",
+      "pop": 22318,
+      "coord": [-91.580705, 41.6759977]
+    },
+    "add_max": [
+      {
+        "status": "proposed",
+        "scope": ["citywide"],
+        "land": ["all uses"],
+        "date": "2014"
+      }
+    ]
+  },
   "Coraopolis, Pennsylvania, United States": {
     "place": {
       "name": "Coraopolis",
@@ -23250,11 +23414,30 @@
       "pop": 670031,
       "coord": [-83.0466403, 42.3315509]
     },
+    "add_max": [
+      {
+        "status": "adopted",
+        "scope": ["main street / special"],
+        "land": [
+          "commercial",
+          "other",
+          "residential, low-density",
+          "residential, multi-family"
+        ],
+        "date": "2020"
+      }
+    ],
     "rm_min": [
       {
         "status": "adopted",
         "scope": ["city center / business district"],
         "land": ["all uses"]
+      },
+      {
+        "status": "adopted",
+        "scope": ["main street / special"],
+        "land": ["commercial", "other"],
+        "date": "2020"
       }
     ]
   },
@@ -23969,6 +24152,24 @@
         "scope": ["citywide"],
         "land": ["all uses"],
         "date": "2020-01-14"
+      }
+    ]
+  },
+  "Dover, New Jersey, United States": {
+    "place": {
+      "name": "Dover",
+      "state": "New Jersey",
+      "country": "United States",
+      "type": "city",
+      "encoded": "dover-new-jersey-united-states",
+      "pop": 18460,
+      "coord": [-74.5621025, 40.883988]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["commercial", "other", "residential, all uses"]
       }
     ]
   },
@@ -24795,6 +24996,14 @@
       "pop": 68855,
       "coord": [-93.1659179, 44.818173]
     },
+    "add_max": [
+      {
+        "status": "proposed",
+        "scope": ["citywide"],
+        "land": ["all uses"],
+        "date": "2021"
+      }
+    ],
     "reduce_min": [
       {
         "status": "adopted",
@@ -26396,6 +26605,24 @@
       }
     ]
   },
+  "Egg Harbor Township, New Jersey, United States": {
+    "place": {
+      "name": "Egg Harbor Township",
+      "state": "New Jersey",
+      "country": "United States",
+      "type": "city",
+      "encoded": "egg-harbor-township-new-jersey-united-states",
+      "pop": 47842,
+      "coord": [-74.6171489, 39.3820672]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["all uses"]
+      }
+    ]
+  },
   "Egg Harbor, Wisconsin, United States": {
     "place": {
       "name": "Egg Harbor",
@@ -27277,6 +27504,21 @@
       "pop": 45786,
       "coord": [-87.9403418, 41.8994745]
     },
+    "add_max": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["all uses"]
+      }
+    ],
+    "reduce_min": [
+      {
+        "status": "proposed",
+        "scope": ["city center / business district"],
+        "land": ["residential, all uses"],
+        "date": "2016-06-20"
+      }
+    ],
     "rm_min": [
       {
         "status": "adopted",
@@ -27368,6 +27610,12 @@
         "status": "adopted",
         "scope": ["city center / business district", "main street / special"],
         "land": ["commercial", "other"]
+      },
+      {
+        "status": "proposed",
+        "scope": ["main street / special"],
+        "land": ["all uses"],
+        "date": "2013-03-12"
       }
     ]
   },
@@ -29375,11 +29623,25 @@
       "pop": 124662,
       "coord": [-96.789821, 46.877229]
     },
+    "add_max": [
+      {
+        "status": "proposed",
+        "scope": ["citywide"],
+        "land": ["all uses"],
+        "date": "2012-05-24"
+      }
+    ],
     "rm_min": [
       {
         "status": "adopted",
         "scope": ["city center / business district"],
         "land": ["all uses"]
+      },
+      {
+        "status": "proposed",
+        "scope": ["citywide"],
+        "land": ["all uses"],
+        "date": "2023-07"
       }
     ]
   },
@@ -29935,6 +30197,14 @@
         "status": "adopted",
         "scope": ["city center / business district"],
         "land": ["all uses", "commercial", "other"]
+      }
+    ],
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district", "citywide"],
+        "land": ["commercial", "other", "residential, all uses"],
+        "date": "2024-12-16"
       }
     ]
   },
@@ -32942,6 +33212,14 @@
       "pop": 30052,
       "coord": [-90.3712169, 40.9475652]
     },
+    "add_max": [
+      {
+        "status": "proposed",
+        "scope": ["city center / business district"],
+        "land": ["all uses"],
+        "date": "2019-01"
+      }
+    ],
     "rm_min": [
       {
         "status": "adopted",
@@ -34309,6 +34587,14 @@
       "pop": 28846,
       "coord": [-88.0670118, 41.8775293]
     },
+    "reduce_min": [
+      {
+        "status": "proposed",
+        "scope": ["city center / business district"],
+        "land": ["residential, multi-family"],
+        "date": "2023-08-28"
+      }
+    ],
     "rm_min": [
       {
         "status": "adopted",
@@ -35544,7 +35830,8 @@
       {
         "status": "adopted",
         "scope": ["citywide"],
-        "land": ["all uses"]
+        "land": ["all uses"],
+        "date": "2007"
       }
     ],
     "reduce_min": [
@@ -36351,6 +36638,11 @@
         "status": "adopted",
         "scope": ["citywide"],
         "land": ["residential, low-density"]
+      },
+      {
+        "status": "proposed",
+        "scope": ["citywide"],
+        "land": ["all uses"]
       }
     ],
     "rm_min": [
@@ -36446,6 +36738,25 @@
         "status": "adopted",
         "scope": ["city center / business district"],
         "land": ["all uses"]
+      }
+    ]
+  },
+  "Greenfield, Wisconsin, United States": {
+    "place": {
+      "name": "Greenfield",
+      "state": "Wisconsin",
+      "country": "United States",
+      "type": "city",
+      "encoded": "greenfield-wisconsin-united-states",
+      "pop": 37803,
+      "coord": [-87.98132, 42.9596903]
+    },
+    "rm_min": [
+      {
+        "status": "proposed",
+        "scope": ["citywide"],
+        "land": ["all uses", "residential, multi-family"],
+        "date": "2020-12-15"
       }
     ]
   },
@@ -36817,6 +37128,25 @@
         "status": "adopted",
         "scope": ["citywide"],
         "land": ["all uses"]
+      }
+    ]
+  },
+  "Gretna, Nebraska, United States": {
+    "place": {
+      "name": "Gretna",
+      "state": "Nebraska",
+      "country": "United States",
+      "type": "city",
+      "encoded": "gretna-nebraska-united-states",
+      "pop": 5083,
+      "coord": [-96.2390053, 41.1469269]
+    },
+    "rm_min": [
+      {
+        "status": "proposed",
+        "scope": ["citywide"],
+        "land": ["residential, all uses"],
+        "date": "2025-02"
       }
     ]
   },
@@ -38260,6 +38590,12 @@
         "status": "adopted",
         "scope": ["city center / business district"],
         "land": ["all uses"]
+      },
+      {
+        "status": "proposed",
+        "scope": ["citywide"],
+        "land": ["residential, multi-family"],
+        "date": "2026"
       }
     ]
   },
@@ -38741,11 +39077,27 @@
       "pop": 20324,
       "coord": [-87.6467132, 41.6100344]
     },
+    "add_max": [
+      {
+        "status": "proposed",
+        "scope": ["citywide"],
+        "land": ["all uses"],
+        "date": "2025-02-24"
+      }
+    ],
     "reduce_min": [
       {
         "status": "adopted",
         "scope": ["citywide"],
         "land": ["all uses"]
+      }
+    ],
+    "rm_min": [
+      {
+        "status": "proposed",
+        "scope": ["citywide"],
+        "land": ["all uses"],
+        "date": "2025-02-24"
       }
     ]
   },
@@ -39205,6 +39557,25 @@
         "status": "adopted",
         "scope": ["citywide"],
         "land": ["all uses"]
+      }
+    ]
+  },
+  "Hazelwood, Missouri, United States": {
+    "place": {
+      "name": "Hazelwood",
+      "state": "Missouri",
+      "country": "United States",
+      "type": "city",
+      "encoded": "hazelwood-missouri-united-states",
+      "pop": 25485,
+      "coord": [-90.3715909, 38.7761446]
+    },
+    "rm_min": [
+      {
+        "status": "proposed",
+        "scope": ["citywide"],
+        "land": ["commercial", "industrial"],
+        "date": "2024"
       }
     ]
   },
@@ -42442,6 +42813,25 @@
       }
     ]
   },
+  "Inkster, Michigan, United States": {
+    "place": {
+      "name": "Inkster",
+      "state": "Michigan",
+      "country": "United States",
+      "type": "city",
+      "encoded": "inkster-michigan-united-states",
+      "pop": 26088,
+      "coord": [-83.3099303, 42.2942045]
+    },
+    "reduce_min": [
+      {
+        "status": "proposed",
+        "scope": ["main street / special"],
+        "land": ["residential, all uses"],
+        "date": "2017"
+      }
+    ]
+  },
   "Inman, Kansas, United States": {
     "place": {
       "name": "Inman",
@@ -42623,12 +43013,23 @@
         "status": "adopted",
         "scope": ["city center / business district", "citywide"],
         "land": ["all uses", "medical"]
+      },
+      {
+        "status": "proposed",
+        "scope": ["citywide"],
+        "land": ["all uses"],
+        "date": "2020-04"
       }
     ],
     "rm_min": [
       {
         "status": "adopted",
         "scope": ["city center / business district"],
+        "land": ["all uses"]
+      },
+      {
+        "status": "proposed",
+        "scope": ["citywide"],
         "land": ["all uses"]
       }
     ]
@@ -42993,6 +43394,14 @@
         "status": "adopted",
         "scope": ["city center / business district", "main street / special"],
         "land": ["commercial", "other"]
+      }
+    ],
+    "rm_min": [
+      {
+        "status": "proposed",
+        "scope": ["city center / business district"],
+        "land": ["commercial", "other"],
+        "date": "2022"
       }
     ]
   },
@@ -44759,6 +45168,14 @@
       "pop": 495327,
       "coord": [-94.5781416, 39.100105]
     },
+    "add_max": [
+      {
+        "status": "proposed",
+        "scope": ["citywide"],
+        "land": ["all uses"],
+        "date": "2008-07"
+      }
+    ],
     "rm_min": [
       {
         "status": "adopted",
@@ -45929,6 +46346,12 @@
           "other",
           "residential, multi-family"
         ]
+      },
+      {
+        "status": "proposed",
+        "scope": ["city center / business district"],
+        "land": ["all uses"],
+        "date": "2021-05"
       }
     ],
     "rm_min": [
@@ -45936,6 +46359,12 @@
         "status": "adopted",
         "scope": ["city center / business district"],
         "land": ["all uses"]
+      },
+      {
+        "status": "proposed",
+        "scope": ["citywide"],
+        "land": ["residential, low-density"],
+        "date": "2023-06"
       }
     ]
   },
@@ -46411,6 +46840,22 @@
       "coord": [-91.2395429, 43.8014053],
       "repeal": true
     },
+    "add_max": [
+      {
+        "status": "proposed",
+        "scope": ["city center / business district", "main street / special"],
+        "land": ["all uses"],
+        "date": "2015-02"
+      }
+    ],
+    "reduce_min": [
+      {
+        "status": "proposed",
+        "scope": ["citywide"],
+        "land": ["all uses", "residential, all uses"],
+        "date": "2022-12"
+      }
+    ],
     "rm_min": [
       {
         "status": "adopted",
@@ -46515,6 +46960,14 @@
       "pop": 16321,
       "coord": [-87.8748644, 41.8054577]
     },
+    "reduce_min": [
+      {
+        "status": "proposed",
+        "scope": ["main street / special"],
+        "land": ["commercial", "residential, all uses"],
+        "date": "2024-11-25"
+      }
+    ],
     "rm_min": [
       {
         "status": "adopted",
@@ -46801,6 +47254,14 @@
         "status": "adopted",
         "scope": ["citywide"],
         "land": ["all uses"]
+      }
+    ],
+    "rm_min": [
+      {
+        "status": "proposed",
+        "scope": ["main street / special"],
+        "land": ["all uses"],
+        "date": "2021-12-15"
       }
     ]
   },
@@ -47881,6 +48342,24 @@
       }
     ]
   },
+  "Lambertville, New Jersey, United States": {
+    "place": {
+      "name": "Lambertville",
+      "state": "New Jersey",
+      "country": "United States",
+      "type": "city",
+      "encoded": "lambertville-new-jersey-united-states",
+      "pop": 4139,
+      "coord": [-74.9454055, 40.3656188]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["all uses"]
+      }
+    ]
+  },
   "Lambton Shores, Ontario, Canada": {
     "place": {
       "name": "Lambton Shores",
@@ -48194,6 +48673,25 @@
         "status": "adopted",
         "scope": ["city center / business district"],
         "land": ["all uses"]
+      }
+    ]
+  },
+  "Lansing, Illinois, United States": {
+    "place": {
+      "name": "Lansing",
+      "state": "Illinois",
+      "country": "United States",
+      "type": "city",
+      "encoded": "lansing-illinois-united-states",
+      "pop": 29076,
+      "coord": [-87.5381569, 41.5662245]
+    },
+    "add_max": [
+      {
+        "status": "proposed",
+        "scope": ["city center / business district"],
+        "land": ["all uses"],
+        "date": "2014-07"
       }
     ]
   },
@@ -52194,6 +52692,12 @@
         "status": "adopted",
         "scope": ["city center / business district"],
         "land": ["all uses"]
+      },
+      {
+        "status": "proposed",
+        "scope": ["citywide"],
+        "land": ["all uses"],
+        "date": "2024-07-08"
       }
     ],
     "reduce_min": [
@@ -52201,6 +52705,14 @@
         "status": "adopted",
         "scope": ["city center / business district"],
         "land": ["all uses"]
+      }
+    ],
+    "rm_min": [
+      {
+        "status": "proposed",
+        "scope": ["citywide"],
+        "land": ["all uses"],
+        "date": "2024-07-08"
       }
     ]
   },
@@ -52502,6 +53014,39 @@
         "status": "adopted",
         "scope": ["main street / special"],
         "land": ["commercial"]
+      }
+    ]
+  },
+  "Madison, New Jersey, United States": {
+    "place": {
+      "name": "Madison",
+      "state": "New Jersey",
+      "country": "United States",
+      "type": "city",
+      "encoded": "madison-new-jersey-united-states",
+      "pop": 16937,
+      "coord": [-74.417097, 40.7598227]
+    },
+    "add_max": [
+      {
+        "status": "adopted",
+        "scope": ["main street / special"],
+        "land": ["all uses"]
+      }
+    ],
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district", "citywide"],
+        "land": ["all uses", "commercial", "other"]
+      }
+    ],
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["commercial", "other"],
+        "date": "2017-09-11"
       }
     ]
   },
@@ -53196,9 +53741,34 @@
       "pop": 24206,
       "coord": [-100.889704, 46.826415]
     },
+    "add_max": [
+      {
+        "status": "proposed",
+        "scope": ["citywide"],
+        "land": ["all uses"]
+      }
+    ],
+    "reduce_min": [
+      {
+        "status": "proposed",
+        "scope": ["citywide"],
+        "land": [
+          "all uses",
+          "commercial",
+          "other",
+          "residential, low-density",
+          "residential, multi-family"
+        ]
+      }
+    ],
     "rm_min": [
       {
         "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["all uses"]
+      },
+      {
+        "status": "proposed",
         "scope": ["city center / business district"],
         "land": ["all uses"]
       }
@@ -53232,6 +53802,14 @@
       "pop": 9385,
       "coord": [-87.9858863, 41.4225316]
     },
+    "add_max": [
+      {
+        "status": "proposed",
+        "scope": ["citywide"],
+        "land": ["all uses"],
+        "date": "2025-09"
+      }
+    ],
     "rm_min": [
       {
         "status": "adopted",
@@ -55276,6 +55854,22 @@
       "pop": 8991,
       "coord": [-89.2897646, 43.0123487]
     },
+    "add_max": [
+      {
+        "status": "proposed",
+        "scope": ["citywide"],
+        "land": ["all uses"],
+        "date": "2021-07-06"
+      }
+    ],
+    "reduce_min": [
+      {
+        "status": "proposed",
+        "scope": ["citywide"],
+        "land": ["residential, multi-family"],
+        "date": "2023-05-04"
+      }
+    ],
     "rm_min": [
       {
         "status": "adopted",
@@ -55371,6 +55965,12 @@
         "status": "adopted",
         "scope": ["city center / business district"],
         "land": ["all uses"]
+      },
+      {
+        "status": "proposed",
+        "scope": ["main street / special"],
+        "land": ["all uses"],
+        "date": "2024-10"
       }
     ]
   },
@@ -55561,6 +56161,24 @@
       {
         "status": "adopted",
         "scope": ["city center / business district"],
+        "land": ["all uses"]
+      }
+    ]
+  },
+  "Medford Lakes, New Jersey, United States": {
+    "place": {
+      "name": "Medford Lakes",
+      "state": "New Jersey",
+      "country": "United States",
+      "type": "city",
+      "encoded": "medford-lakes-new-jersey-united-states",
+      "pop": 4264,
+      "coord": [-74.8128639, 39.857984]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
         "land": ["all uses"]
       }
     ]
@@ -57978,13 +58596,20 @@
       "type": "city",
       "encoded": "Missoula_MT",
       "pop": 74994,
-      "coord": [-113.995267, 46.8701049]
+      "coord": [-113.995267, 46.8701049],
+      "repeal": true
     },
     "rm_min": [
       {
         "status": "adopted",
         "scope": ["city center / business district"],
         "land": ["all uses"]
+      },
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["all uses"],
+        "date": "2026-02-02"
       }
     ]
   },
@@ -58235,6 +58860,25 @@
         "status": "adopted",
         "scope": ["city center / business district"],
         "land": ["all uses"]
+      }
+    ]
+  },
+  "Monee, Illinois, United States": {
+    "place": {
+      "name": "Monee",
+      "state": "Illinois",
+      "country": "United States",
+      "type": "city",
+      "encoded": "monee-illinois-united-states",
+      "pop": 5128,
+      "coord": [-87.7447556, 41.4203482]
+    },
+    "rm_min": [
+      {
+        "status": "proposed",
+        "scope": ["city center / business district"],
+        "land": ["commercial", "other"],
+        "date": "2021-03-24"
       }
     ]
   },
@@ -59449,6 +60093,14 @@
       "pop": 14163,
       "coord": [-88.4215234, 41.3574135]
     },
+    "add_max": [
+      {
+        "status": "proposed",
+        "scope": ["citywide"],
+        "land": ["commercial"],
+        "date": "2024-09"
+      }
+    ],
     "reduce_min": [
       {
         "status": "adopted",
@@ -60199,6 +60851,24 @@
         "status": "adopted",
         "scope": ["city center / business district"],
         "land": ["commercial"]
+      }
+    ]
+  },
+  "Mountain Lakes, New Jersey, United States": {
+    "place": {
+      "name": "Mountain Lakes",
+      "state": "New Jersey",
+      "country": "United States",
+      "type": "city",
+      "encoded": "mountain-lakes-new-jersey-united-states",
+      "pop": 4472,
+      "coord": [-74.4329314, 40.8948212]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["all uses"]
       }
     ]
   },
@@ -62124,6 +62794,14 @@
         "scope": ["citywide"],
         "land": ["commercial", "industrial", "medical", "other"]
       }
+    ],
+    "rm_min": [
+      {
+        "status": "proposed",
+        "scope": ["citywide"],
+        "land": ["all uses"],
+        "date": "2023-10"
+      }
     ]
   },
   "New Brighton, Pennsylvania, United States": {
@@ -63619,6 +64297,25 @@
       }
     ]
   },
+  "Newton, Iowa, United States": {
+    "place": {
+      "name": "Newton",
+      "state": "Iowa",
+      "country": "United States",
+      "type": "city",
+      "encoded": "newton-iowa-united-states",
+      "pop": 15760,
+      "coord": [-93.0538852, 41.6997139]
+    },
+    "add_max": [
+      {
+        "status": "proposed",
+        "scope": ["citywide"],
+        "land": ["all uses"],
+        "date": "2022-12-05"
+      }
+    ]
+  },
   "Newton, Kansas, United States": {
     "place": {
       "name": "Newton",
@@ -63634,6 +64331,12 @@
         "status": "adopted",
         "scope": ["citywide"],
         "land": ["commercial", "industrial", "medical", "other"]
+      },
+      {
+        "status": "proposed",
+        "scope": ["city center / business district"],
+        "land": ["residential, all uses"],
+        "date": "2009-03-02"
       }
     ],
     "reduce_min": [
@@ -64490,6 +65193,12 @@
         "status": "adopted",
         "scope": ["city center / business district"],
         "land": ["commercial", "other"]
+      },
+      {
+        "status": "proposed",
+        "scope": ["citywide"],
+        "land": ["commercial", "industrial", "medical", "other"],
+        "date": "2016"
       }
     ]
   },
@@ -64916,6 +65625,14 @@
         "scope": ["city center / business district", "citywide"],
         "land": ["all uses"],
         "date": "2025-09-22"
+      }
+    ],
+    "rm_min": [
+      {
+        "status": "proposed",
+        "scope": ["citywide"],
+        "land": ["all uses"],
+        "date": "2021-07"
       }
     ]
   },
@@ -66599,6 +67316,14 @@
       "pop": 478192,
       "coord": [-95.9383758, 41.2587459]
     },
+    "add_max": [
+      {
+        "status": "proposed",
+        "scope": ["citywide"],
+        "land": ["all uses"],
+        "date": "2010"
+      }
+    ],
     "rm_min": [
       {
         "status": "adopted",
@@ -67710,11 +68435,31 @@
       "pop": 934243,
       "coord": [-75.6900574, 45.4211435]
     },
+    "add_max": [
+      {
+        "status": "adopted",
+        "scope": ["transit-oriented"],
+        "land": ["commercial", "other", "residential, multi-family"]
+      }
+    ],
     "rm_min": [
       {
         "status": "adopted",
         "scope": ["city center / business district"],
         "land": ["all uses"]
+      },
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": [
+          "commercial",
+          "industrial",
+          "medical",
+          "other",
+          "residential, low-density",
+          "residential, multi-family"
+        ],
+        "date": "2026-01-28"
       }
     ]
   },
@@ -69754,6 +70499,24 @@
       }
     ]
   },
+  "Penns Grove, New Jersey, United States": {
+    "place": {
+      "name": "Penns Grove",
+      "state": "New Jersey",
+      "country": "United States",
+      "type": "city",
+      "encoded": "penns-grove-new-jersey-united-states",
+      "pop": 4837,
+      "coord": [-75.4679734, 39.7295581]
+    },
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["commercial", "other"]
+      }
+    ]
+  },
   "Pensacola, Florida, United States": {
     "place": {
       "name": "Pensacola",
@@ -69850,6 +70613,14 @@
       "pop": 5908,
       "coord": [-89.5740289, 40.7472744]
     },
+    "add_max": [
+      {
+        "status": "proposed",
+        "scope": ["main street / special"],
+        "land": ["all uses"],
+        "date": "2021-05-18"
+      }
+    ],
     "rm_min": [
       {
         "status": "adopted",
@@ -69899,6 +70670,12 @@
         "scope": ["city center / business district", "citywide"],
         "land": ["commercial", "industrial", "medical", "other"],
         "date": "2015-07-28"
+      },
+      {
+        "status": "proposed",
+        "scope": ["city center / business district"],
+        "land": ["all uses"],
+        "date": "2002-06"
       }
     ]
   },
@@ -71740,6 +72517,24 @@
       }
     ]
   },
+  "Point Pleasant, New Jersey, United States": {
+    "place": {
+      "name": "Point Pleasant",
+      "state": "New Jersey",
+      "country": "United States",
+      "type": "city",
+      "encoded": "point-pleasant-new-jersey-united-states",
+      "pop": 18941,
+      "coord": [-74.0681931, 40.0831714]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["all uses"]
+      }
+    ]
+  },
   "Polk City, Iowa, United States": {
     "place": {
       "name": "Polk City",
@@ -71928,6 +72723,12 @@
         "status": "adopted",
         "scope": ["city center / business district"],
         "land": ["all uses"]
+      },
+      {
+        "status": "proposed",
+        "scope": ["citywide"],
+        "land": ["commercial"],
+        "date": "2008-06-02"
       }
     ]
   },
@@ -75141,6 +75942,14 @@
         "scope": ["citywide"],
         "land": ["all uses"]
       }
+    ],
+    "rm_min": [
+      {
+        "status": "proposed",
+        "scope": ["city center / business district"],
+        "land": ["all uses"],
+        "date": "2024"
+      }
     ]
   },
   "Ridgefield, Connecticut, United States": {
@@ -75659,6 +76468,25 @@
         "status": "adopted",
         "scope": ["city center / business district"],
         "land": ["all uses"]
+      }
+    ]
+  },
+  "Riverside, Missouri, United States": {
+    "place": {
+      "name": "Riverside",
+      "state": "Missouri",
+      "country": "United States",
+      "type": "city",
+      "encoded": "riverside-missouri-united-states",
+      "pop": 4013,
+      "coord": [-94.6130121, 39.1775032]
+    },
+    "rm_min": [
+      {
+        "status": "proposed",
+        "scope": ["citywide"],
+        "land": ["all uses"],
+        "date": "2024"
       }
     ]
   },
@@ -76588,6 +77416,14 @@
         "scope": ["city center / business district"],
         "land": ["all uses"]
       }
+    ],
+    "rm_min": [
+      {
+        "status": "proposed",
+        "scope": ["city center / business district"],
+        "land": ["all uses"],
+        "date": "2025-01-14"
+      }
     ]
   },
   "Rolling Meadows, Illinois, United States": {
@@ -76710,6 +77546,12 @@
         "status": "adopted",
         "scope": ["citywide"],
         "land": ["residential, all uses"]
+      },
+      {
+        "status": "proposed",
+        "scope": ["city center / business district"],
+        "land": ["all uses"],
+        "date": "2003-10-15"
       }
     ]
   },
@@ -76857,6 +77699,14 @@
         "status": "adopted",
         "scope": ["city center / business district"],
         "land": ["commercial"]
+      }
+    ],
+    "rm_min": [
+      {
+        "status": "proposed",
+        "scope": ["city center / business district"],
+        "land": ["commercial"],
+        "date": "2016-07-20"
       }
     ]
   },
@@ -78251,6 +79101,12 @@
         "scope": ["citywide", "transit-oriented"],
         "land": ["commercial", "industrial", "other", "residential, all uses"],
         "date": "2021-02-16"
+      },
+      {
+        "status": "adopted",
+        "scope": ["main street / special"],
+        "land": ["residential, multi-family"],
+        "date": "2025-12-09"
       }
     ],
     "rm_min": [
@@ -80580,11 +81436,25 @@
       "pop": 43698,
       "coord": [-93.5268986, 44.7980186]
     },
+    "add_max": [
+      {
+        "status": "proposed",
+        "scope": ["citywide"],
+        "land": ["all uses"],
+        "date": "2019"
+      }
+    ],
     "rm_min": [
       {
         "status": "adopted",
         "scope": ["city center / business district"],
         "land": ["all uses"]
+      },
+      {
+        "status": "proposed",
+        "scope": ["citywide"],
+        "land": ["all uses"],
+        "date": "2019"
       }
     ]
   },
@@ -81986,6 +82856,14 @@
       "pop": 85797,
       "coord": [-96.4058782, 42.4966815]
     },
+    "add_max": [
+      {
+        "status": "proposed",
+        "scope": ["main street / special"],
+        "land": ["all uses"],
+        "date": "2020-06-25"
+      }
+    ],
     "rm_min": [
       {
         "status": "adopted",
@@ -82155,6 +83033,14 @@
       "pop": 67824,
       "coord": [-87.7333972, 42.0333694]
     },
+    "add_max": [
+      {
+        "status": "proposed",
+        "scope": ["citywide"],
+        "land": ["all uses"],
+        "date": "2022-11"
+      }
+    ],
     "reduce_min": [
       {
         "status": "adopted",
@@ -82167,6 +83053,12 @@
         "status": "adopted",
         "scope": ["city center / business district"],
         "land": ["commercial"]
+      },
+      {
+        "status": "proposed",
+        "scope": ["citywide"],
+        "land": ["all uses"],
+        "date": "2022-11"
       }
     ]
   },
@@ -83008,6 +83900,24 @@
       }
     ]
   },
+  "South Bound Brook, New Jersey, United States": {
+    "place": {
+      "name": "South Bound Brook",
+      "state": "New Jersey",
+      "country": "United States",
+      "type": "city",
+      "encoded": "south-bound-brook-new-jersey-united-states",
+      "pop": 4863,
+      "coord": [-74.531544, 40.5534365]
+    },
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["all uses"]
+      }
+    ]
+  },
   "South Bruce Peninsula, Ontario, Canada": {
     "place": {
       "name": "South Bruce Peninsula",
@@ -83340,6 +84250,24 @@
         "scope": ["citywide"],
         "land": ["all uses"],
         "date": "2025-05-06"
+      }
+    ]
+  },
+  "South Orange, New Jersey, United States": {
+    "place": {
+      "name": "South Orange",
+      "state": "New Jersey",
+      "country": "United States",
+      "type": "city",
+      "encoded": "south-orange-new-jersey-united-states",
+      "pop": 18484,
+      "coord": [-74.2635376, 40.7474966]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["all uses"]
       }
     ]
   },
@@ -83752,6 +84680,14 @@
         "scope": ["citywide"],
         "land": ["commercial"]
       }
+    ],
+    "rm_min": [
+      {
+        "status": "proposed",
+        "scope": ["citywide"],
+        "land": ["commercial", "residential, all uses"],
+        "date": "2025-03-17"
+      }
     ]
   },
   "Speedway, Indiana, United States": {
@@ -84001,7 +84937,7 @@
       "type": "city",
       "encoded": "spring-lake-heights-new-jersey-united-states",
       "pop": 4890,
-      "coord": [-122.6400845, 45.4468258]
+      "coord": [-74.0428742257358, 40.15248257212801]
     },
     "reduce_min": [
       {
@@ -84191,6 +85127,12 @@
         "status": "adopted",
         "scope": ["city center / business district"],
         "land": ["all uses"]
+      },
+      {
+        "status": "proposed",
+        "scope": ["city center / business district", "main street / special"],
+        "land": ["all uses"],
+        "date": "2024"
       }
     ]
   },
@@ -84258,11 +85200,31 @@
       "pop": 169176,
       "coord": [-93.2946576, 37.1968298]
     },
+    "add_max": [
+      {
+        "status": "proposed",
+        "scope": ["main street / special"],
+        "land": ["all uses"],
+        "date": "2022-11-14"
+      }
+    ],
     "rm_min": [
       {
         "status": "adopted",
         "scope": ["city center / business district"],
         "land": ["all uses"]
+      },
+      {
+        "status": "proposed",
+        "scope": ["citywide"],
+        "land": ["residential, low-density"],
+        "date": "2024-01-08"
+      },
+      {
+        "status": "proposed",
+        "scope": ["main street / special"],
+        "land": ["all uses"],
+        "date": "2022-11-14"
       }
     ]
   },
@@ -84495,6 +85457,14 @@
       "pop": 33081,
       "coord": [-88.3128183, 41.9139808]
     },
+    "add_max": [
+      {
+        "status": "proposed",
+        "scope": ["main street / special"],
+        "land": ["all uses"],
+        "date": "2013-09"
+      }
+    ],
     "reduce_min": [
       {
         "status": "adopted",
@@ -84507,6 +85477,12 @@
         "status": "adopted",
         "scope": ["city center / business district"],
         "land": ["commercial", "other", "residential, all uses"]
+      },
+      {
+        "status": "proposed",
+        "scope": ["citywide"],
+        "land": ["all uses"],
+        "date": "2013-09"
       }
     ]
   },
@@ -84677,6 +85653,14 @@
       "pop": 68881,
       "coord": [-94.1642004, 45.5616075]
     },
+    "add_max": [
+      {
+        "status": "proposed",
+        "scope": ["citywide"],
+        "land": ["all uses"],
+        "date": "2016-03"
+      }
+    ],
     "reduce_min": [
       {
         "status": "adopted",
@@ -85094,6 +86078,14 @@
       "pop": 308174,
       "coord": [-90.1995853, 38.6264256]
     },
+    "add_max": [
+      {
+        "status": "proposed",
+        "scope": ["citywide"],
+        "land": ["all uses"],
+        "date": "2013-01-09"
+      }
+    ],
     "reduce_min": [
       {
         "status": "adopted",
@@ -85107,6 +86099,12 @@
         "status": "adopted",
         "scope": ["city center / business district"],
         "land": ["all uses"]
+      },
+      {
+        "status": "proposed",
+        "scope": ["citywide"],
+        "land": ["all uses"],
+        "date": "2013-01-09"
       }
     ]
   },
@@ -86587,6 +87585,14 @@
         "scope": ["citywide"],
         "land": ["all uses"]
       }
+    ],
+    "rm_min": [
+      {
+        "status": "proposed",
+        "scope": ["main street / special"],
+        "land": ["commercial"],
+        "date": "2018"
+      }
     ]
   },
   "Streator, Illinois, United States": {
@@ -86986,6 +87992,14 @@
         "status": "adopted",
         "scope": ["citywide"],
         "land": ["all uses"]
+      }
+    ],
+    "rm_min": [
+      {
+        "status": "proposed",
+        "scope": ["citywide"],
+        "land": ["residential, multi-family"],
+        "date": "2023-06-06"
       }
     ]
   },
@@ -90121,6 +91135,14 @@
       "pop": 11640,
       "coord": [-90.4634532, 38.6122751]
     },
+    "add_max": [
+      {
+        "status": "proposed",
+        "scope": ["citywide"],
+        "land": ["all uses"],
+        "date": "2020-02-19"
+      }
+    ],
     "reduce_min": [
       {
         "status": "adopted",
@@ -91639,6 +92661,14 @@
         "scope": ["citywide"],
         "land": ["all uses"]
       }
+    ],
+    "rm_min": [
+      {
+        "status": "proposed",
+        "scope": ["citywide"],
+        "land": ["all uses"],
+        "date": "2022-07"
+      }
     ]
   },
   "University Park, Texas, United States": {
@@ -91760,6 +92790,12 @@
         "status": "adopted",
         "scope": ["city center / business district"],
         "land": ["all uses"]
+      },
+      {
+        "status": "proposed",
+        "scope": ["citywide"],
+        "land": ["all uses"],
+        "date": "2025-07-28"
       }
     ]
   },
@@ -92213,6 +93249,12 @@
         "status": "adopted",
         "scope": ["city center / business district"],
         "land": ["all uses"]
+      },
+      {
+        "status": "proposed",
+        "scope": ["citywide"],
+        "land": ["all uses"],
+        "date": "2019-11"
       }
     ]
   },
@@ -93942,6 +94984,12 @@
           "residential, all uses"
         ],
         "date": "2023-07-17"
+      },
+      {
+        "status": "adopted",
+        "scope": ["main street / special"],
+        "land": ["all uses", "commercial", "other"],
+        "date": "2024-08-05"
       }
     ]
   },
@@ -94468,6 +95516,25 @@
       }
     ]
   },
+  "Waterloo, Illinois, United States": {
+    "place": {
+      "name": "Waterloo",
+      "state": "Illinois",
+      "country": "United States",
+      "type": "city",
+      "encoded": "waterloo-illinois-united-states",
+      "pop": 11013,
+      "coord": [-90.1498341, 38.3358857]
+    },
+    "rm_min": [
+      {
+        "status": "proposed",
+        "scope": ["city center / business district"],
+        "land": ["all uses"],
+        "date": "2018-10-15"
+      }
+    ]
+  },
   "Waterloo, Iowa, United States": {
     "place": {
       "name": "Waterloo",
@@ -94839,6 +95906,12 @@
         "status": "adopted",
         "scope": ["city center / business district"],
         "land": ["all uses"]
+      },
+      {
+        "status": "proposed",
+        "scope": ["citywide"],
+        "land": ["all uses", "residential, multi-family"],
+        "date": "2024-08"
       }
     ]
   },
@@ -94943,6 +96016,25 @@
         "status": "adopted",
         "scope": ["city center / business district"],
         "land": ["all uses"]
+      }
+    ]
+  },
+  "Wauwatosa, Wisconsin, United States": {
+    "place": {
+      "name": "Wauwatosa",
+      "state": "Wisconsin",
+      "country": "United States",
+      "type": "city",
+      "encoded": "wauwatosa-wisconsin-united-states",
+      "pop": 48387,
+      "coord": [-88.0079271, 43.0494122]
+    },
+    "add_max": [
+      {
+        "status": "proposed",
+        "scope": ["main street / special"],
+        "land": ["all uses"],
+        "date": "2018-12-18"
       }
     ]
   },
@@ -95859,6 +96951,25 @@
       }
     ]
   },
+  "West Dundee, Illinois, United States": {
+    "place": {
+      "name": "West Dundee",
+      "state": "Illinois",
+      "country": "United States",
+      "type": "city",
+      "encoded": "west-dundee-illinois-united-states",
+      "pop": 7686,
+      "coord": [-88.2828581, 42.0980812]
+    },
+    "rm_min": [
+      {
+        "status": "proposed",
+        "scope": ["city center / business district"],
+        "land": ["commercial"],
+        "date": "2015-04"
+      }
+    ]
+  },
   "West Fargo, North Dakota, United States": {
     "place": {
       "name": "West Fargo",
@@ -95874,6 +96985,14 @@
         "status": "adopted",
         "scope": ["city center / business district"],
         "land": ["all uses"]
+      }
+    ],
+    "rm_min": [
+      {
+        "status": "proposed",
+        "scope": ["citywide"],
+        "land": ["all uses"],
+        "date": "2023-07"
       }
     ]
   },
@@ -96740,6 +97859,12 @@
         "status": "adopted",
         "scope": ["citywide"],
         "land": ["residential, low-density"]
+      },
+      {
+        "status": "proposed",
+        "scope": ["citywide"],
+        "land": ["commercial"],
+        "date": "2013-02-19"
       }
     ],
     "reduce_min": [
@@ -98217,6 +99342,14 @@
       "pop": 5252,
       "coord": [-93.7087635, 41.6002144]
     },
+    "add_max": [
+      {
+        "status": "proposed",
+        "scope": ["main street / special"],
+        "land": ["all uses"],
+        "date": "2017-02"
+      }
+    ],
     "rm_min": [
       {
         "status": "adopted",
@@ -98497,6 +99630,14 @@
       "pop": 12744,
       "coord": [-87.7365286, 42.1080703]
     },
+    "add_max": [
+      {
+        "status": "proposed",
+        "scope": ["citywide"],
+        "land": ["all uses"],
+        "date": "2023-04-18"
+      }
+    ],
     "reduce_min": [
       {
         "status": "adopted",
@@ -98577,6 +99718,12 @@
         "status": "adopted",
         "scope": ["city center / business district"],
         "land": ["all uses"]
+      },
+      {
+        "status": "proposed",
+        "scope": ["city center / business district", "citywide"],
+        "land": ["all uses", "residential, all uses"],
+        "date": "2024-05-06"
       }
     ]
   },
