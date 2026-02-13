@@ -226,6 +226,7 @@
       "medical",
       "other",
       "residential, all uses",
+      "residential, low-density",
       "residential, multi-family"
     ],
     "year": [
@@ -242,10 +243,15 @@
       "2017",
       "2016",
       "2015",
+      "2014",
       "2013",
       "2012",
       "2011",
-      "2009"
+      "2010",
+      "2009",
+      "2008",
+      "2003",
+      "2002"
     ]
   },
   "anyRepealed": {
@@ -354,12 +360,22 @@
       "2025",
       "2024",
       "2023",
+      "2022",
       "2021",
       "2020",
       "2019",
       "2018",
+      "2017",
       "2016",
-      "2011"
+      "2015",
+      "2014",
+      "2013",
+      "2012",
+      "2011",
+      "2010",
+      "2009",
+      "2008",
+      "2003"
     ]
   },
   "addMaxRepealed": {
@@ -457,9 +473,21 @@
       "commercial",
       "other",
       "residential, all uses",
+      "residential, low-density",
       "residential, multi-family"
     ],
-    "year": ["2025", "2024", "2022", "2017", "2015"]
+    "year": [
+      "unknown",
+      "2026",
+      "2025",
+      "2024",
+      "2023",
+      "2022",
+      "2021",
+      "2017",
+      "2016",
+      "2015"
+    ]
   },
   "reduceMinRepealed": {
     "placeType": ["city"],
@@ -567,8 +595,11 @@
     "landUse": [
       "all uses",
       "commercial",
+      "industrial",
+      "medical",
       "other",
       "residential, all uses",
+      "residential, low-density",
       "residential, multi-family"
     ],
     "year": [
@@ -579,12 +610,17 @@
       "2023",
       "2022",
       "2021",
+      "2020",
       "2019",
+      "2018",
       "2017",
       "2016",
       "2015",
+      "2013",
       "2012",
-      "2009"
+      "2009",
+      "2008",
+      "2002"
     ]
   },
   "rmMinRepealed": {
