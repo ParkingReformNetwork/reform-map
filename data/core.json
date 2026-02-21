@@ -4930,6 +4930,25 @@
       }
     ]
   },
+  "Barnegat Township, New Jersey, United States": {
+    "place": {
+      "name": "Barnegat Township",
+      "state": "New Jersey",
+      "country": "United States",
+      "type": "city",
+      "encoded": "barnegat-township-new-jersey-united-states",
+      "pop": 24296,
+      "coord": [-74.2229179, 39.7531754]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["all uses"],
+        "date": "2022-11-01"
+      }
+    ]
+  },
   "Barnesville, Minnesota, United States": {
     "place": {
       "name": "Barnesville",
@@ -6493,6 +6512,41 @@
       }
     ]
   },
+  "Belleville Township, New Jersey, United States": {
+    "place": {
+      "name": "Belleville Township",
+      "state": "New Jersey",
+      "country": "United States",
+      "type": "city",
+      "encoded": "belleville-township-new-jersey-united-states",
+      "pop": 38222,
+      "coord": [-74.15018153318249, 40.793598070944576]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": [
+          "city center / business district",
+          "citywide",
+          "transit-oriented"
+        ],
+        "land": ["all uses", "commercial", "other"]
+      },
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["all uses"],
+        "date": "2022-04-12"
+      }
+    ],
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["commercial"]
+      }
+    ]
+  },
   "Belleville, Illinois, United States": {
     "place": {
       "name": "Belleville",
@@ -7290,6 +7344,38 @@
         "status": "adopted",
         "scope": ["city center / business district"],
         "land": ["all uses"]
+      }
+    ]
+  },
+  "Berkeley Township, New Jersey, United States": {
+    "place": {
+      "name": "Berkeley Township",
+      "state": "New Jersey",
+      "country": "United States",
+      "type": "city",
+      "encoded": "berkeley-township-new-jersey-united-states",
+      "pop": 43754,
+      "coord": [-74.1807001, 39.8979458]
+    },
+    "add_max": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district", "main street / special"],
+        "land": ["all uses"]
+      }
+    ],
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["all uses"]
+      }
+    ],
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["commercial", "other"]
       }
     ]
   },
@@ -8519,6 +8605,24 @@
       }
     ]
   },
+  "Bloomfield Township, New Jersey, United States": {
+    "place": {
+      "name": "Bloomfield Township",
+      "state": "New Jersey",
+      "country": "United States",
+      "type": "city",
+      "encoded": "bloomfield-township-new-jersey-united-states",
+      "pop": 53105,
+      "coord": [-74.2011633, 40.7923981]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["all uses"]
+      }
+    ]
+  },
   "Bloomfield, Connecticut, United States": {
     "place": {
       "name": "Bloomfield",
@@ -8627,11 +8731,25 @@
       "pop": 78680,
       "coord": [-88.9939147, 40.4797828]
     },
+    "add_max": [
+      {
+        "status": "proposed",
+        "scope": ["city center / business district", "main street / special"],
+        "land": ["all uses"],
+        "date": "2007-11"
+      }
+    ],
     "reduce_min": [
       {
         "status": "adopted",
         "scope": ["citywide"],
         "land": ["all uses", "commercial", "industrial", "medical", "other"]
+      },
+      {
+        "status": "proposed",
+        "scope": ["city center / business district"],
+        "land": ["all uses"],
+        "date": "2007-11"
       }
     ],
     "rm_min": [
@@ -8639,6 +8757,18 @@
         "status": "adopted",
         "scope": ["city center / business district", "citywide"],
         "land": ["commercial", "other"]
+      },
+      {
+        "status": "proposed",
+        "scope": ["city center / business district", "main street / special"],
+        "land": ["all uses"],
+        "date": "2007-11"
+      }
+    ],
+    "benefit_district": [
+      {
+        "status": "proposed",
+        "date": "2007-11"
       }
     ]
   },
@@ -11666,6 +11796,25 @@
         "scope": ["citywide"],
         "land": ["commercial"],
         "date": "2022-04"
+      }
+    ]
+  },
+  "Burlington Township, New Jersey, United States": {
+    "place": {
+      "name": "Burlington Township",
+      "state": "New Jersey",
+      "country": "United States",
+      "type": "city",
+      "encoded": "burlington-township-new-jersey-united-states",
+      "pop": 23983,
+      "coord": [-74.8870076, 40.072587]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["all uses"],
+        "date": "2022-10-11"
       }
     ]
   },
@@ -20513,6 +20662,31 @@
       }
     ]
   },
+  "Cranford Township, New Jersey, United States": {
+    "place": {
+      "name": "Cranford Township",
+      "state": "New Jersey",
+      "country": "United States",
+      "type": "city",
+      "encoded": "cranford-township-new-jersey-united-states",
+      "pop": 23847,
+      "coord": [-74.9926581, 39.873855]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["commercial", "industrial"]
+      }
+    ],
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district", "citywide"],
+        "land": ["commercial", "other"]
+      }
+    ]
+  },
   "Crawford, Nebraska, United States": {
     "place": {
       "name": "Crawford",
@@ -21537,6 +21711,24 @@
       {
         "status": "adopted",
         "scope": ["city center / business district"],
+        "land": ["all uses"]
+      }
+    ]
+  },
+  "Dansville, Michigan, United States": {
+    "place": {
+      "name": "Dansville",
+      "state": "Michigan",
+      "country": "United States",
+      "type": "city",
+      "encoded": "dansville-michigan-united-states",
+      "pop": 529,
+      "coord": [-84.3033013, 42.555869]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
         "land": ["all uses"]
       }
     ]
@@ -29114,6 +29306,30 @@
       }
     ]
   },
+  "Fair Lawn, New Jersey, United States": {
+    "place": {
+      "name": "Fair Lawn",
+      "state": "New Jersey",
+      "country": "United States",
+      "type": "city",
+      "encoded": "fair-lawn-new-jersey-united-states",
+      "pop": 34927,
+      "coord": [-74.1175058, 40.9358397]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["all uses"],
+        "date": "2022-06-28"
+      },
+      {
+        "status": "adopted",
+        "scope": ["main street / special", "transit-oriented"],
+        "land": ["all uses", "commercial", "other"]
+      }
+    ]
+  },
   "Fairbanks North Star Borough, Alaska, United States": {
     "place": {
       "name": "Fairbanks North Star Borough",
@@ -32060,6 +32276,24 @@
       }
     ]
   },
+  "Frankfort, Michigan, United States": {
+    "place": {
+      "name": "Frankfort",
+      "state": "Michigan",
+      "country": "United States",
+      "type": "city",
+      "encoded": "frankfort-michigan-united-states",
+      "pop": 1252,
+      "coord": [-86.234184, 44.633622]
+    },
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["commercial"]
+      }
+    ]
+  },
   "Frankfurt, Hesse, Germany": {
     "place": {
       "name": "Frankfurt",
@@ -32544,6 +32778,24 @@
       "coord": [-87.9470232, 43.4705105]
     },
     "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["all uses"]
+      }
+    ]
+  },
+  "Freehold, New Jersey, United States": {
+    "place": {
+      "name": "Freehold",
+      "state": "New Jersey",
+      "country": "United States",
+      "type": "city",
+      "encoded": "freehold-new-jersey-united-states",
+      "pop": 12538,
+      "coord": [-74.2737573, 40.2601096]
+    },
+    "reduce_min": [
       {
         "status": "adopted",
         "scope": ["city center / business district"],
@@ -33316,6 +33568,25 @@
         "status": "adopted",
         "scope": ["city center / business district"],
         "land": ["all uses"]
+      }
+    ]
+  },
+  "Galloway Township, New Jersey, United States": {
+    "place": {
+      "name": "Galloway Township",
+      "state": "New Jersey",
+      "country": "United States",
+      "type": "city",
+      "encoded": "galloway-township-new-jersey-united-states",
+      "pop": 37813,
+      "coord": [-74.4986142, 39.4646097]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["all uses"],
+        "date": "2022-02-08"
       }
     ]
   },
@@ -34618,6 +34889,25 @@
         "status": "adopted",
         "scope": ["city center / business district"],
         "land": ["commercial", "other"]
+      }
+    ]
+  },
+  "Glen Rock, New Jersey, United States": {
+    "place": {
+      "name": "Glen Rock",
+      "state": "New Jersey",
+      "country": "United States",
+      "type": "city",
+      "encoded": "glen-rock-new-jersey-united-states",
+      "pop": 12133,
+      "coord": [-74.1329208, 40.9628758]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["all uses"],
+        "date": "2021-11-10"
       }
     ]
   },
@@ -37584,6 +37874,24 @@
       }
     ]
   },
+  "Guttenberg, New Jersey, United States": {
+    "place": {
+      "name": "Guttenberg",
+      "state": "New Jersey",
+      "country": "United States",
+      "type": "city",
+      "encoded": "guttenberg-new-jersey-united-states",
+      "pop": 12017,
+      "coord": [-74.0037505, 40.7920454]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["all uses"]
+      }
+    ]
+  },
   "Guysborough, Nova Scotia, Canada": {
     "place": {
       "name": "Guysborough",
@@ -38416,6 +38724,24 @@
       }
     ]
   },
+  "Harmony Township, New Jersey, United States": {
+    "place": {
+      "name": "Harmony Township",
+      "state": "New Jersey",
+      "country": "United States",
+      "type": "city",
+      "encoded": "harmony-township-new-jersey-united-states",
+      "pop": 2503,
+      "coord": [-75.1373974, 40.746765]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["all uses"]
+      }
+    ]
+  },
   "Harmony, Pennsylvania, United States": {
     "place": {
       "name": "Harmony",
@@ -39141,6 +39467,24 @@
         "status": "adopted",
         "scope": ["city center / business district"],
         "land": ["all uses", "commercial"]
+      }
+    ]
+  },
+  "Hasbrouck Heights, New Jersey, United States": {
+    "place": {
+      "name": "Hasbrouck Heights",
+      "state": "New Jersey",
+      "country": "United States",
+      "type": "city",
+      "encoded": "hasbrouck-heights-new-jersey-united-states",
+      "pop": 12125,
+      "coord": [-74.0816693, 40.8579293]
+    },
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["all uses"]
       }
     ]
   },
@@ -40698,6 +41042,25 @@
       }
     ]
   },
+  "Hillsborough Township, New Jersey, United States": {
+    "place": {
+      "name": "Hillsborough Township",
+      "state": "New Jersey",
+      "country": "United States",
+      "type": "city",
+      "encoded": "hillsborough-township-new-jersey-united-states",
+      "pop": 43276,
+      "coord": [-74.6732941, 40.5052296]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["all uses"],
+        "date": "2024-06-11"
+      }
+    ]
+  },
   "Hillsdale, Michigan, United States": {
     "place": {
       "name": "Hillsdale",
@@ -41871,6 +42234,31 @@
         "status": "adopted",
         "scope": ["city center / business district"],
         "land": ["all uses"]
+      }
+    ]
+  },
+  "Humboldt, Saskatchewan, Canada": {
+    "place": {
+      "name": "Humboldt",
+      "state": "Saskatchewan",
+      "country": "Canada",
+      "type": "city",
+      "encoded": "humboldt-saskatchewan-canada",
+      "pop": 6033,
+      "coord": [-105.1230368, 52.202009]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["all uses"]
+      }
+    ],
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["commercial", "other"]
       }
     ]
   },
@@ -43185,6 +43573,24 @@
       }
     ]
   },
+  "Irvington Township, New Jersey, United States": {
+    "place": {
+      "name": "Irvington Township",
+      "state": "New Jersey",
+      "country": "United States",
+      "type": "city",
+      "encoded": "irvington-township-new-jersey-united-states",
+      "pop": 61176,
+      "coord": [-74.23047067121469, 40.72618274748614]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["all uses", "commercial", "other"]
+      }
+    ]
+  },
   "Irvington, Kentucky, United States": {
     "place": {
       "name": "Irvington",
@@ -44012,6 +44418,24 @@
       {
         "status": "adopted",
         "scope": ["main street / special"],
+        "land": ["all uses"]
+      }
+    ]
+  },
+  "Jefferson Township, New Jersey, United States": {
+    "place": {
+      "name": "Jefferson Township",
+      "state": "New Jersey",
+      "country": "United States",
+      "type": "city",
+      "encoded": "jefferson-township-new-jersey-united-states",
+      "pop": 20538,
+      "coord": [-74.5626018, 40.9935949]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
         "land": ["all uses"]
       }
     ]
@@ -46494,6 +46918,24 @@
       }
     ]
   },
+  "Knowlton Township, New Jersey, United States": {
+    "place": {
+      "name": "Knowlton Township",
+      "state": "New Jersey",
+      "country": "United States",
+      "type": "city",
+      "encoded": "knowlton-township-new-jersey-united-states",
+      "pop": 2894,
+      "coord": [-75.027952, 40.9303752]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["all uses"]
+      }
+    ]
+  },
   "Knoxville, Tennessee, United States": {
     "place": {
       "name": "Knoxville",
@@ -47196,6 +47638,25 @@
       }
     ]
   },
+  "Lacey Township, New Jersey, United States": {
+    "place": {
+      "name": "Lacey Township",
+      "state": "New Jersey",
+      "country": "United States",
+      "type": "city",
+      "encoded": "lacey-township-new-jersey-united-states",
+      "pop": 28655,
+      "coord": [-74.2083587, 39.8605724]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["all uses"],
+        "date": "2022-02-24"
+      }
+    ]
+  },
   "Lacey, Washington, United States": {
     "place": {
       "name": "Lacey",
@@ -47279,6 +47740,24 @@
       {
         "status": "adopted",
         "scope": ["city center / business district"],
+        "land": ["all uses"]
+      }
+    ]
+  },
+  "Lafayette Township, New Jersey, United States": {
+    "place": {
+      "name": "Lafayette Township",
+      "state": "New Jersey",
+      "country": "United States",
+      "type": "city",
+      "encoded": "lafayette-township-new-jersey-united-states",
+      "pop": 2358,
+      "coord": [-74.6884965, 41.0984301]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
         "land": ["all uses"]
       }
     ]
@@ -49866,12 +50345,6 @@
     },
     "add_max": [
       {
-        "status": "proposed",
-        "scope": ["main street / special"],
-        "land": ["all uses"],
-        "date": "2018-05"
-      },
-      {
         "status": "adopted",
         "scope": ["citywide"],
         "land": [
@@ -50323,6 +50796,24 @@
       "encoded": "liberty-lake-washington-united-states",
       "pop": 12003,
       "coord": [-117.104865, 47.6681145]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["all uses"]
+      }
+    ]
+  },
+  "Liberty Township, New Jersey, United States": {
+    "place": {
+      "name": "Liberty Township",
+      "state": "New Jersey",
+      "country": "United States",
+      "type": "city",
+      "encoded": "liberty-township-new-jersey-united-states",
+      "pop": 2670,
+      "coord": [-74.9517845, 40.871118]
     },
     "reduce_min": [
       {
@@ -51123,6 +51614,24 @@
       }
     ]
   },
+  "Livingston Township, New Jersey, United States": {
+    "place": {
+      "name": "Livingston Township",
+      "state": "New Jersey",
+      "country": "United States",
+      "type": "city",
+      "encoded": "livingston-township-new-jersey-united-states",
+      "pop": 31330,
+      "coord": [-74.31530049109315, 40.79575274748877]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["all uses"]
+      }
+    ]
+  },
   "Livingston, Montana, United States": {
     "place": {
       "name": "Livingston",
@@ -51174,6 +51683,24 @@
         "status": "adopted",
         "scope": ["city center / business district"],
         "land": ["all uses"]
+      }
+    ]
+  },
+  "Lloydminster, Saskatchewan, Canada": {
+    "place": {
+      "name": "Lloydminster",
+      "state": "Saskatchewan",
+      "country": "Canada",
+      "type": "city",
+      "encoded": "lloydminster-saskatchewan-canada",
+      "pop": 31582,
+      "coord": [-110.00550651701995, 53.28156457938993]
+    },
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["commercial", "other"]
       }
     ]
   },
@@ -53343,6 +53870,25 @@
       }
     ]
   },
+  "Mahwah Township, New Jersey, United States": {
+    "place": {
+      "name": "Mahwah Township",
+      "state": "New Jersey",
+      "country": "United States",
+      "type": "city",
+      "encoded": "mahwah-township-new-jersey-united-states",
+      "pop": 25487,
+      "coord": [-74.14539908446507, 41.08865641769354]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["all uses"],
+        "date": "2023-04-17"
+      }
+    ]
+  },
   "Maiden, North Carolina, United States": {
     "place": {
       "name": "Maiden",
@@ -53545,6 +54091,24 @@
       }
     ]
   },
+  "Manalapan Township, New Jersey, United States": {
+    "place": {
+      "name": "Manalapan Township",
+      "state": "New Jersey",
+      "country": "United States",
+      "type": "city",
+      "encoded": "manalapan-township-new-jersey-united-states",
+      "pop": 40905,
+      "coord": [-74.333495, 40.2852895]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["all uses"]
+      }
+    ]
+  },
   "Manassas Park, Virginia, United States": {
     "place": {
       "name": "Manassas Park",
@@ -53638,6 +54202,25 @@
         "scope": ["citywide"],
         "land": ["all uses"],
         "date": "2020-10-13"
+      }
+    ]
+  },
+  "Manchester Township, New Jersey, United States": {
+    "place": {
+      "name": "Manchester Township",
+      "state": "New Jersey",
+      "country": "United States",
+      "type": "city",
+      "encoded": "manchester-township-new-jersey-united-states",
+      "pop": 45115,
+      "coord": [-74.3816966, 39.9734957]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["all uses"],
+        "date": "2022-06-13"
       }
     ]
   },
@@ -54341,6 +54924,25 @@
       }
     ]
   },
+  "Maplewood Township, New Jersey, United States": {
+    "place": {
+      "name": "Maplewood Township",
+      "state": "New Jersey",
+      "country": "United States",
+      "type": "city",
+      "encoded": "maplewood-township-new-jersey-united-states",
+      "pop": 25684,
+      "coord": [-74.2753360433195, 40.73104428943368]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["all uses"],
+        "date": "2022-05-17"
+      }
+    ]
+  },
   "Maplewood, Minnesota, United States": {
     "place": {
       "name": "Maplewood",
@@ -54739,6 +55341,24 @@
       }
     ]
   },
+  "Marlboro Township, New Jersey, United States": {
+    "place": {
+      "name": "Marlboro Township",
+      "state": "New Jersey",
+      "country": "United States",
+      "type": "city",
+      "encoded": "marlboro-township-new-jersey-united-states",
+      "pop": 41502,
+      "coord": [-74.2462564, 40.3153877]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["all uses"]
+      }
+    ]
+  },
   "Marlborough, Connecticut, United States": {
     "place": {
       "name": "Marlborough",
@@ -55029,6 +55649,24 @@
           "residential, all uses",
           "residential, multi-family"
         ]
+      }
+    ]
+  },
+  "Martensville, Saskatchewan, Canada": {
+    "place": {
+      "name": "Martensville",
+      "state": "Saskatchewan",
+      "country": "Canada",
+      "type": "city",
+      "encoded": "martensville-saskatchewan-canada",
+      "pop": 10549,
+      "coord": [-106.662554, 52.2903172]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district", "citywide"],
+        "land": ["all uses", "commercial"]
       }
     ]
   },
@@ -55482,6 +56120,24 @@
       "encoded": "Mauston_WI",
       "pop": 4347,
       "coord": [-90.0773495, 43.7971946]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["all uses"]
+      }
+    ]
+  },
+  "Maybee, Michigan, United States": {
+    "place": {
+      "name": "Maybee",
+      "state": "Michigan",
+      "country": "United States",
+      "type": "city",
+      "encoded": "maybee-michigan-united-states",
+      "pop": 545,
+      "coord": [-83.5156525, 42.0043674]
     },
     "reduce_min": [
       {
@@ -56085,6 +56741,24 @@
       }
     ]
   },
+  "Meadow Lake, Saskatchewan, Canada": {
+    "place": {
+      "name": "Meadow Lake",
+      "state": "Saskatchewan",
+      "country": "Canada",
+      "type": "city",
+      "encoded": "meadow-lake-saskatchewan-canada",
+      "pop": 5322,
+      "coord": [-108.435059, 54.13026]
+    },
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["all uses"]
+      }
+    ]
+  },
   "Meadville, Pennsylvania, United States": {
     "place": {
       "name": "Meadville",
@@ -56420,6 +57094,31 @@
       }
     ]
   },
+  "Melfort, Saskatchewan, Canada": {
+    "place": {
+      "name": "Melfort",
+      "state": "Saskatchewan",
+      "country": "Canada",
+      "type": "city",
+      "encoded": "melfort-saskatchewan-canada",
+      "pop": 5955,
+      "coord": [-104.6135544, 52.8613707]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["all uses"]
+      }
+    ],
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["commercial", "other"]
+      }
+    ]
+  },
   "Melrose Park, Illinois, United States": {
     "place": {
       "name": "Melrose Park",
@@ -56429,6 +57128,24 @@
       "encoded": "melrose-park-illinois-united-states",
       "pop": 24796,
       "coord": [-87.8569745, 41.900299]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["all uses"]
+      }
+    ]
+  },
+  "Melville, Saskatchewan, Canada": {
+    "place": {
+      "name": "Melville",
+      "state": "Saskatchewan",
+      "country": "Canada",
+      "type": "city",
+      "encoded": "melville-saskatchewan-canada",
+      "pop": 4493,
+      "coord": [-102.807296, 50.9307241]
     },
     "reduce_min": [
       {
@@ -57294,6 +58011,24 @@
         "scope": ["citywide"],
         "land": ["all uses"],
         "date": "2023-11-21"
+      }
+    ]
+  },
+  "Middletown Township, New Jersey, United States": {
+    "place": {
+      "name": "Middletown Township",
+      "state": "New Jersey",
+      "country": "United States",
+      "type": "city",
+      "encoded": "middletown-township-new-jersey-united-states",
+      "pop": 67106,
+      "coord": [-74.089879, 40.384263]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["transit-oriented"],
+        "land": ["commercial", "other", "residential, multi-family"]
       }
     ]
   },
@@ -59421,6 +60156,25 @@
       }
     ]
   },
+  "Montgomery Township, New Jersey, United States": {
+    "place": {
+      "name": "Montgomery Township",
+      "state": "New Jersey",
+      "country": "United States",
+      "type": "city",
+      "encoded": "montgomery-township-new-jersey-united-states",
+      "pop": 23690,
+      "coord": [-74.6594773, 40.4564037]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["all uses"],
+        "date": "2021-12-02"
+      }
+    ]
+  },
   "Montgomery, Alabama, United States": {
     "place": {
       "name": "Montgomery",
@@ -59781,6 +60535,24 @@
       }
     ]
   },
+  "Montville Township, New Jersey, United States": {
+    "place": {
+      "name": "Montville Township",
+      "state": "New Jersey",
+      "country": "United States",
+      "type": "city",
+      "encoded": "montville-township-new-jersey-united-states",
+      "pop": 22450,
+      "coord": [-74.383763, 40.9148209]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["all uses"]
+      }
+    ]
+  },
   "Monument, Colorado, United States": {
     "place": {
       "name": "Monument",
@@ -59814,6 +60586,24 @@
         "status": "adopted",
         "scope": ["citywide"],
         "land": ["commercial", "industrial"]
+      }
+    ]
+  },
+  "Moorestown Township, New Jersey, United States": {
+    "place": {
+      "name": "Moorestown Township",
+      "state": "New Jersey",
+      "country": "United States",
+      "type": "city",
+      "encoded": "moorestown-township-new-jersey-united-states",
+      "pop": 21355,
+      "coord": [-74.9426677, 39.9670569]
+    },
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["commercial"]
       }
     ]
   },
@@ -59860,6 +60650,31 @@
         "scope": ["city center / business district"],
         "land": ["all uses"],
         "date": "2014-01-27"
+      }
+    ]
+  },
+  "Moose Jaw, Saskatchewan, Canada": {
+    "place": {
+      "name": "Moose Jaw",
+      "state": "Saskatchewan",
+      "country": "Canada",
+      "type": "city",
+      "encoded": "moose-jaw-saskatchewan-canada",
+      "pop": 33665,
+      "coord": [-105.535666, 50.3967209]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district", "citywide"],
+        "land": ["all uses", "commercial", "other", "residential, multi-family"]
+      }
+    ],
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["all uses", "commercial", "other"]
       }
     ]
   },
@@ -61172,6 +61987,25 @@
       }
     ]
   },
+  "Mt. Laurel Township, New Jersey, United States": {
+    "place": {
+      "name": "Mt. Laurel Township",
+      "state": "New Jersey",
+      "country": "United States",
+      "type": "city",
+      "encoded": "mt-laurel-township-new-jersey-united-states",
+      "pop": 44633,
+      "coord": [-74.8909988, 39.934002]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["all uses"],
+        "date": "2022-02-28"
+      }
+    ]
+  },
   "Mt. Morris, Illinois, United States": {
     "place": {
       "name": "Mt. Morris",
@@ -61205,6 +62039,25 @@
         "status": "adopted",
         "scope": ["city center / business district"],
         "land": ["all uses"]
+      }
+    ]
+  },
+  "Mt. Olive Township, New Jersey, United States": {
+    "place": {
+      "name": "Mt. Olive Township",
+      "state": "New Jersey",
+      "country": "United States",
+      "type": "city",
+      "encoded": "mt-olive-township-new-jersey-united-states",
+      "pop": 28886,
+      "coord": [-74.7432456, 40.8462043]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["all uses"],
+        "date": "2023-05-02"
       }
     ]
   },
@@ -62586,6 +63439,31 @@
         "status": "adopted",
         "scope": ["city center / business district"],
         "land": ["all uses"]
+      }
+    ]
+  },
+  "Neptune Township, New Jersey, United States": {
+    "place": {
+      "name": "Neptune Township",
+      "state": "New Jersey",
+      "country": "United States",
+      "type": "city",
+      "encoded": "neptune-township-new-jersey-united-states",
+      "pop": 28061,
+      "coord": [-74.0478216, 40.2239981]
+    },
+    "add_max": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["commercial", "industrial", "medical", "other"]
+      }
+    ],
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["all uses", "other"]
       }
     ]
   },
@@ -64762,6 +65640,12 @@
         "status": "adopted",
         "scope": ["citywide"],
         "land": ["residential, low-density"]
+      },
+      {
+        "status": "proposed",
+        "scope": ["city center / business district", "main street / special"],
+        "land": ["all uses"],
+        "date": "2015-10-19"
       }
     ],
     "rm_min": [
@@ -64769,6 +65653,18 @@
         "status": "adopted",
         "scope": ["city center / business district"],
         "land": ["commercial", "other"]
+      },
+      {
+        "status": "proposed",
+        "scope": ["citywide"],
+        "land": ["all uses"],
+        "date": "2017"
+      }
+    ],
+    "benefit_district": [
+      {
+        "status": "proposed",
+        "date": "2007-11"
       }
     ]
   },
@@ -64868,6 +65764,31 @@
         "status": "adopted",
         "scope": ["citywide"],
         "land": ["commercial", "other", "residential, all uses"]
+      }
+    ]
+  },
+  "North Battleford, Saskatchewan, Canada": {
+    "place": {
+      "name": "North Battleford",
+      "state": "Saskatchewan",
+      "country": "Canada",
+      "type": "city",
+      "encoded": "north-battleford-saskatchewan-canada",
+      "pop": 13836,
+      "coord": [-108.300476, 52.776186]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["all uses"]
+      }
+    ],
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["commercial", "other"]
       }
     ]
   },
@@ -65570,6 +66491,24 @@
       {
         "status": "adopted",
         "scope": ["city center / business district", "citywide"],
+        "land": ["commercial", "other"]
+      }
+    ]
+  },
+  "North Wildwood, New Jersey, United States": {
+    "place": {
+      "name": "North Wildwood",
+      "state": "New Jersey",
+      "country": "United States",
+      "type": "city",
+      "encoded": "north-wildwood-new-jersey-united-states",
+      "pop": 3621,
+      "coord": [-74.799333, 39.0006686]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
         "land": ["commercial", "other"]
       }
     ]
@@ -67619,6 +68558,25 @@
         "status": "adopted",
         "scope": ["city center / business district"],
         "land": ["all uses"]
+      }
+    ]
+  },
+  "Orange Township, New Jersey, United States": {
+    "place": {
+      "name": "Orange Township",
+      "state": "New Jersey",
+      "country": "United States",
+      "type": "city",
+      "encoded": "orange-township-new-jersey-united-states",
+      "pop": 34447,
+      "coord": [-74.2278617, 40.7703389]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["all uses"],
+        "date": "2025-05-20"
       }
     ]
   },
@@ -70242,6 +71200,24 @@
       }
     ]
   },
+  "Peck, Michigan, United States": {
+    "place": {
+      "name": "Peck",
+      "state": "Michigan",
+      "country": "United States",
+      "type": "city",
+      "encoded": "peck-michigan-united-states",
+      "pop": 593,
+      "coord": [-82.817433, 43.258636]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district", "citywide"],
+        "land": ["all uses"]
+      }
+    ]
+  },
   "Peculiar, Missouri, United States": {
     "place": {
       "name": "Peculiar",
@@ -70857,6 +71833,24 @@
         "scope": ["citywide"],
         "land": ["commercial", "industrial", "other"],
         "date": "2022-02-01"
+      }
+    ]
+  },
+  "Perth Amboy, New Jersey, United States": {
+    "place": {
+      "name": "Perth Amboy",
+      "state": "New Jersey",
+      "country": "United States",
+      "type": "city",
+      "encoded": "perth-amboy-new-jersey-united-states",
+      "pop": 55436,
+      "coord": [-74.2724241, 40.5133218]
+    },
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["all uses"]
       }
     ]
   },
@@ -72023,6 +73017,24 @@
       }
     ]
   },
+  "Plainsboro Township, New Jersey, United States": {
+    "place": {
+      "name": "Plainsboro Township",
+      "state": "New Jersey",
+      "country": "United States",
+      "type": "city",
+      "encoded": "plainsboro-township-new-jersey-united-states",
+      "pop": 24084,
+      "coord": [-74.6004341, 40.3334409]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["all uses"]
+      }
+    ]
+  },
   "Plainview, Minnesota, United States": {
     "place": {
       "name": "Plainview",
@@ -72958,11 +73970,12 @@
       "pop": 567,
       "coord": [-82.542424, 43.430858]
     },
-    "reduce_min": [
+    "rm_min": [
       {
         "status": "adopted",
         "scope": ["city center / business district"],
-        "land": ["commercial"]
+        "land": ["all uses"],
+        "date": "2024-05-07"
       }
     ]
   },
@@ -73715,6 +74728,24 @@
       }
     ]
   },
+  "Prince Albert, Saskatchewan, Canada": {
+    "place": {
+      "name": "Prince Albert",
+      "state": "Saskatchewan",
+      "country": "Canada",
+      "type": "city",
+      "encoded": "prince-albert-saskatchewan-canada",
+      "pop": 37756,
+      "coord": [-105.748901, 53.201097]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["residential, multi-family"]
+      }
+    ]
+  },
   "Prince George's County, Maryland, United States": {
     "place": {
       "name": "Prince George's County",
@@ -74304,6 +75335,12 @@
         "status": "adopted",
         "scope": ["city center / business district"],
         "land": ["all uses"]
+      },
+      {
+        "status": "proposed",
+        "scope": ["citywide"],
+        "land": ["residential, multi-family"],
+        "date": "2026-02"
       }
     ]
   },
@@ -74349,6 +75386,24 @@
         "scope": ["city center / business district"],
         "land": ["all uses"],
         "date": "2020-11-10"
+      }
+    ]
+  },
+  "Quinton Township, New Jersey, United States": {
+    "place": {
+      "name": "Quinton Township",
+      "state": "New Jersey",
+      "country": "United States",
+      "type": "city",
+      "encoded": "quinton-township-new-jersey-united-states",
+      "pop": 2580,
+      "coord": [-75.4124178, 39.5459466]
+    },
+    "add_max": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["all uses"]
       }
     ]
   },
@@ -74547,6 +75602,24 @@
       }
     ]
   },
+  "Randolph Township, New Jersey, United States": {
+    "place": {
+      "name": "Randolph Township",
+      "state": "New Jersey",
+      "country": "United States",
+      "type": "city",
+      "encoded": "randolph-township-new-jersey-united-states",
+      "pop": 26504,
+      "coord": [-74.5857218, 40.844265]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["all uses"]
+      }
+    ]
+  },
   "Randolph, Wisconsin, United States": {
     "place": {
       "name": "Randolph",
@@ -74673,6 +75746,25 @@
         "status": "adopted",
         "scope": ["city center / business district"],
         "land": ["all uses"]
+      }
+    ]
+  },
+  "Raritan Township, New Jersey, United States": {
+    "place": {
+      "name": "Raritan Township",
+      "state": "New Jersey",
+      "country": "United States",
+      "type": "city",
+      "encoded": "raritan-township-new-jersey-united-states",
+      "pop": 23447,
+      "coord": [-74.8948569, 40.5042326]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["all uses"],
+        "date": "2022-07-19"
       }
     ]
   },
@@ -75769,18 +76861,25 @@
       "pop": 60560,
       "coord": [-119.275205, 46.2804298]
     },
-    "add_max": [
-      {
-        "status": "adopted",
-        "scope": ["city center / business district"],
-        "land": ["all uses"]
-      }
-    ],
     "reduce_min": [
       {
         "status": "adopted",
-        "scope": ["city center / business district", "citywide"],
+        "scope": ["citywide"],
         "land": ["all uses"]
+      },
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["other", "residential, all uses"],
+        "date": "2026-01-20"
+      }
+    ],
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district", "citywide"],
+        "land": ["all uses", "commercial", "other", "residential, all uses"],
+        "date": "2026-01-20"
       }
     ]
   },
@@ -75949,6 +77048,24 @@
         "scope": ["city center / business district"],
         "land": ["all uses"],
         "date": "2024"
+      }
+    ]
+  },
+  "Ridgefield Park, New Jersey, United States": {
+    "place": {
+      "name": "Ridgefield Park",
+      "state": "New Jersey",
+      "country": "United States",
+      "type": "city",
+      "encoded": "ridgefield-park-new-jersey-united-states",
+      "pop": 13224,
+      "coord": [-74.0249191, 40.8563862]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["all uses"]
       }
     ]
   },
@@ -76265,6 +77382,25 @@
         "status": "adopted",
         "scope": ["main street / special"],
         "land": ["residential, all uses"]
+      }
+    ]
+  },
+  "River Edge, New Jersey, United States": {
+    "place": {
+      "name": "River Edge",
+      "state": "New Jersey",
+      "country": "United States",
+      "type": "city",
+      "encoded": "river-edge-new-jersey-united-states",
+      "pop": 12049,
+      "coord": [-74.0398622, 40.9287098]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["all uses"],
+        "date": "2022-06-13"
       }
     ]
   },
@@ -77017,6 +78153,24 @@
         "status": "adopted",
         "scope": ["city center / business district"],
         "land": ["commercial"]
+      }
+    ]
+  },
+  "Rockaway Township, New Jersey, United States": {
+    "place": {
+      "name": "Rockaway Township",
+      "state": "New Jersey",
+      "country": "United States",
+      "type": "city",
+      "encoded": "rockaway-township-new-jersey-united-states",
+      "pop": 25341,
+      "coord": [-74.4871818, 40.9302182]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["all uses"]
       }
     ]
   },
@@ -78092,6 +79246,24 @@
           "residential, low-density",
           "residential, multi-family"
         ]
+      }
+    ]
+  },
+  "Roxbury Township, New Jersey, United States": {
+    "place": {
+      "name": "Roxbury Township",
+      "state": "New Jersey",
+      "country": "United States",
+      "type": "city",
+      "encoded": "roxbury-township-new-jersey-united-states",
+      "pop": 22950,
+      "coord": [-74.6564721, 40.874768]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["all uses"]
       }
     ]
   },
@@ -79381,6 +80553,24 @@
       }
     ]
   },
+  "Sand Lake, Michigan, United States": {
+    "place": {
+      "name": "Sand Lake",
+      "state": "Michigan",
+      "country": "United States",
+      "type": "city",
+      "encoded": "sand-lake-michigan-united-states",
+      "pop": 522,
+      "coord": [-85.518073, 43.29238]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["all uses"]
+      }
+    ]
+  },
   "Sandpoint, Idaho, United States": {
     "place": {
       "name": "Sandpoint",
@@ -80551,6 +81741,30 @@
         "status": "adopted",
         "scope": ["city center / business district"],
         "land": ["commercial", "other"]
+      }
+    ]
+  },
+  "Scotch Plains Township, New Jersey, United States": {
+    "place": {
+      "name": "Scotch Plains Township",
+      "state": "New Jersey",
+      "country": "United States",
+      "type": "city",
+      "encoded": "scotch-plains-township-new-jersey-united-states",
+      "pop": 24968,
+      "coord": [-74.39176879072099, 40.65614096234739]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["commercial", "other"]
+      },
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["all uses"],
+        "date": "2023-03-21"
       }
     ]
   },
@@ -86422,6 +87636,25 @@
       }
     ]
   },
+  "Stafford Township, New Jersey, United States": {
+    "place": {
+      "name": "Stafford Township",
+      "state": "New Jersey",
+      "country": "United States",
+      "type": "city",
+      "encoded": "stafford-township-new-jersey-united-states",
+      "pop": 28617,
+      "coord": [-74.2779616, 39.7114651]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["all uses"],
+        "date": "2022-04-12"
+      }
+    ]
+  },
   "Stafford, Connecticut, United States": {
     "place": {
       "name": "Stafford",
@@ -88655,6 +89888,24 @@
       }
     ]
   },
+  "Suttons Bay, Michigan, United States": {
+    "place": {
+      "name": "Suttons Bay",
+      "state": "Michigan",
+      "country": "United States",
+      "type": "city",
+      "encoded": "suttons-bay-michigan-united-states",
+      "pop": 613,
+      "coord": [-85.6511429, 44.9763817]
+    },
+    "add_max": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["all uses"]
+      }
+    ]
+  },
   "Suwanee, Georgia, United States": {
     "place": {
       "name": "Suwanee",
@@ -88763,6 +90014,24 @@
       "coord": [-84.4610394, 35.6014636]
     },
     "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["all uses"]
+      }
+    ]
+  },
+  "Swift Current, Saskatchewan, Canada": {
+    "place": {
+      "name": "Swift Current",
+      "state": "Saskatchewan",
+      "country": "Canada",
+      "type": "city",
+      "encoded": "swift-current-saskatchewan-canada",
+      "pop": 16750,
+      "coord": [-107.7984496, 50.2849138]
+    },
+    "reduce_min": [
       {
         "status": "adopted",
         "scope": ["city center / business district"],
@@ -89561,6 +90830,32 @@
       {
         "status": "adopted",
         "scope": ["city center / business district"],
+        "land": ["all uses"]
+      }
+    ]
+  },
+  "Teaneck Township, New Jersey, United States": {
+    "place": {
+      "name": "Teaneck Township",
+      "state": "New Jersey",
+      "country": "United States",
+      "type": "city",
+      "encoded": "teaneck-township-new-jersey-united-states",
+      "pop": 41246,
+      "coord": [-74.0072568, 40.8860164]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["all uses"],
+        "date": "2024-03-19"
+      }
+    ],
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["main street / special"],
         "land": ["all uses"]
       }
     ]
@@ -92757,6 +94052,25 @@
       }
     ]
   },
+  "Upper Township, New Jersey, United States": {
+    "place": {
+      "name": "Upper Township",
+      "state": "New Jersey",
+      "country": "United States",
+      "type": "city",
+      "encoded": "upper-township-new-jersey-united-states",
+      "pop": 12539,
+      "coord": [-74.7068931, 39.217999]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["all uses"],
+        "date": "2022-11-28"
+      }
+    ]
+  },
   "Upsala, Minnesota, United States": {
     "place": {
       "name": "Upsala",
@@ -94459,6 +95773,24 @@
       }
     ]
   },
+  "Wall Township, New Jersey, United States": {
+    "place": {
+      "name": "Wall Township",
+      "state": "New Jersey",
+      "country": "United States",
+      "type": "city",
+      "encoded": "wall-township-new-jersey-united-states",
+      "pop": 26525,
+      "coord": [-74.0902219, 40.1743052]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["all uses"]
+      }
+    ]
+  },
   "Wall, South Dakota, United States": {
     "place": {
       "name": "Wall",
@@ -94510,6 +95842,25 @@
         "status": "adopted",
         "scope": ["city center / business district"],
         "land": ["all uses"]
+      }
+    ]
+  },
+  "Wallington, New Jersey, United States": {
+    "place": {
+      "name": "Wallington",
+      "state": "New Jersey",
+      "country": "United States",
+      "type": "city",
+      "encoded": "wallington-new-jersey-united-states",
+      "pop": 11868,
+      "coord": [-74.1137537, 40.8531553]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["all uses"],
+        "date": "2022-02-10"
       }
     ]
   },
@@ -94759,6 +96110,24 @@
       "coord": [-119.039565, 46.9675537]
     },
     "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["all uses"]
+      }
+    ]
+  },
+  "Warman, Saskatchewan, Canada": {
+    "place": {
+      "name": "Warman",
+      "state": "Saskatchewan",
+      "country": "Canada",
+      "type": "city",
+      "encoded": "warman-saskatchewan-canada",
+      "pop": 12419,
+      "coord": [-106.575623, 52.320232]
+    },
+    "reduce_min": [
       {
         "status": "adopted",
         "scope": ["city center / business district"],
@@ -96036,6 +97405,28 @@
         "land": ["all uses"],
         "date": "2018-12-18"
       }
+    ],
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["all uses"],
+        "date": "2025-11-18"
+      }
+    ],
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide", "transit-oriented"],
+        "land": [
+          "commercial",
+          "industrial",
+          "medical",
+          "other",
+          "residential, all uses"
+        ],
+        "date": "2025-11-18"
+      }
     ]
   },
   "Waveland, Mississippi, United States": {
@@ -96158,6 +97549,30 @@
         "status": "adopted",
         "scope": ["city center / business district"],
         "land": ["all uses"]
+      }
+    ]
+  },
+  "Wayne Township, New Jersey, United States": {
+    "place": {
+      "name": "Wayne Township",
+      "state": "New Jersey",
+      "country": "United States",
+      "type": "city",
+      "encoded": "wayne-township-new-jersey-united-states",
+      "pop": 54838,
+      "coord": [-74.23937653752125, 40.94972202681542]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["all uses"]
+      },
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["all uses"],
+        "date": "2022-09-21"
       }
     ]
   },
@@ -97414,6 +98829,32 @@
       }
     ]
   },
+  "West Orange Township, New Jersey, United States": {
+    "place": {
+      "name": "West Orange Township",
+      "state": "New Jersey",
+      "country": "United States",
+      "type": "city",
+      "encoded": "west-orange-township-new-jersey-united-states",
+      "pop": 48843,
+      "coord": [-74.23924987787923, 40.79852896906827]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["all uses"],
+        "date": "2021-12-14"
+      }
+    ],
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["commercial", "other"]
+      }
+    ]
+  },
   "West Palm Beach, Florida, United States": {
     "place": {
       "name": "West Palm Beach",
@@ -97621,6 +99062,32 @@
         "status": "adopted",
         "scope": ["citywide"],
         "land": ["residential, all uses"]
+      }
+    ]
+  },
+  "West Windsor Township, New Jersey, United States": {
+    "place": {
+      "name": "West Windsor Township",
+      "state": "New Jersey",
+      "country": "United States",
+      "type": "city",
+      "encoded": "west-windsor-township-new-jersey-united-states",
+      "pop": 29518,
+      "coord": [-74.6206496, 40.2971798]
+    },
+    "add_max": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["all uses"]
+      }
+    ],
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["all uses"],
+        "date": "2022-10-25"
       }
     ]
   },
@@ -98089,6 +99556,24 @@
       }
     ]
   },
+  "Westwood, New Jersey, United States": {
+    "place": {
+      "name": "Westwood",
+      "state": "New Jersey",
+      "country": "United States",
+      "type": "city",
+      "encoded": "westwood-new-jersey-united-states",
+      "pop": 11282,
+      "coord": [-74.0326395, 40.9912087]
+    },
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["commercial"]
+      }
+    ]
+  },
   "Wethersfield, Connecticut, United States": {
     "place": {
       "name": "Wethersfield",
@@ -98122,6 +99607,31 @@
         "status": "adopted",
         "scope": ["city center / business district"],
         "land": ["commercial", "other"]
+      }
+    ]
+  },
+  "Weyburn, Saskatchewan, Canada": {
+    "place": {
+      "name": "Weyburn",
+      "state": "Saskatchewan",
+      "country": "Canada",
+      "type": "city",
+      "encoded": "weyburn-saskatchewan-canada",
+      "pop": 11019,
+      "coord": [-103.854034, 49.6651238]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["all uses"]
+      }
+    ],
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["commercial", "medical", "other"]
       }
     ]
   },
@@ -99759,6 +101269,25 @@
       }
     ]
   },
+  "Winslow Township, New Jersey, United States": {
+    "place": {
+      "name": "Winslow Township",
+      "state": "New Jersey",
+      "country": "United States",
+      "type": "city",
+      "encoded": "winslow-township-new-jersey-united-states",
+      "pop": 39907,
+      "coord": [-74.8623868, 39.6573385]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["all uses"],
+        "date": "2022-09-27"
+      }
+    ]
+  },
   "Winslow, Arizona, United States": {
     "place": {
       "name": "Winslow",
@@ -100393,6 +101922,24 @@
       "coord": [-122.1588902, 47.7545827]
     },
     "add_max": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["all uses"]
+      }
+    ]
+  },
+  "Woodland Park, New Jersey, United States": {
+    "place": {
+      "name": "Woodland Park",
+      "state": "New Jersey",
+      "country": "United States",
+      "type": "city",
+      "encoded": "woodland-park-new-jersey-united-states",
+      "pop": 13484,
+      "coord": [-74.1969657, 40.8893288]
+    },
+    "reduce_min": [
       {
         "status": "adopted",
         "scope": ["citywide"],
