@@ -5,8 +5,8 @@ import { readRawCoreData } from "../../scripts/lib/data";
 
 const PLACE_MARKER = "path.leaflet-interactive";
 
-export const DEFAULT_ALL_MINIMUMS_RANGE: [number, number] = [110, 170];
-export const DEFAULT_PLACE_RANGE: [number, number] = [4100, 4900];
+export const DEFAULT_ALL_MINIMUMS_RANGE: [number, number] = [120, 200];
+export const DEFAULT_PLACE_RANGE: [number, number] = [4900, 6000];
 
 export const loadMap = async (page: Page): Promise<void> => {
   await page.goto("");
