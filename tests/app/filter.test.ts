@@ -32,7 +32,7 @@ interface EdgeCase {
   expectedRange: [number, number] | "all";
 }
 
-const EXPECTED_MAX_RANGE: [number, number] = [980, 1400];
+const EXPECTED_MAX_RANGE: [number, number] = [1200, 1600];
 
 // The expected ranges can be updated as the data is updated!
 const TESTS: EdgeCase[] = [
@@ -44,12 +44,12 @@ const TESTS: EdgeCase[] = [
   {
     desc: "default: reduce",
     policyTypeFilter: "reduce parking minimums",
-    expectedRange: [1680, 2400],
+    expectedRange: [1920, 2800],
   },
   {
     desc: "default: remove",
     policyTypeFilter: "remove parking minimums",
-    expectedRange: [2600, 3200],
+    expectedRange: [2800, 3400],
   },
   {
     desc: "default: max",
@@ -89,7 +89,7 @@ const TESTS: EdgeCase[] = [
     desc: "population slider",
     policyTypeFilter: "any parking reform",
     populationIntervals: [3, 6],
-    expectedRange: [600, 1000],
+    expectedRange: [600, 1200],
   },
   {
     desc: "all minimums removed",
@@ -101,13 +101,13 @@ const TESTS: EdgeCase[] = [
     desc: "scope filter",
     policyTypeFilter: "add parking maximums",
     scope: ["City center / business district"],
-    expectedRange: [150, 350],
+    expectedRange: [150, 400],
   },
   {
     desc: "land use filter",
     policyTypeFilter: "remove parking minimums",
     land: ["Residential, all uses"],
-    expectedRange: [150, 350],
+    expectedRange: [150, 400],
   },
   {
     desc: "status filter",

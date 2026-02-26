@@ -86,6 +86,24 @@
       }
     ]
   },
+  "Aberdeen Township, New Jersey, United States": {
+    "place": {
+      "name": "Aberdeen Township",
+      "state": "New Jersey",
+      "country": "United States",
+      "type": "city",
+      "encoded": "aberdeen-township-new-jersey-united-states",
+      "pop": 19329,
+      "coord": [-74.2216287, 40.4071138]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["all uses"]
+      }
+    ]
+  },
   "Aberdeen, Maryland, United States": {
     "place": {
       "name": "Aberdeen",
@@ -223,6 +241,24 @@
       {
         "status": "adopted",
         "scope": ["city center / business district"],
+        "land": ["all uses"]
+      }
+    ]
+  },
+  "Acworth, Georgia, United States": {
+    "place": {
+      "name": "Acworth",
+      "state": "Georgia",
+      "country": "United States",
+      "type": "city",
+      "encoded": "acworth-georgia-united-states",
+      "pop": 22440,
+      "coord": [-84.6768796, 34.0659329]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide", "main street / special"],
         "land": ["all uses"]
       }
     ]
@@ -662,6 +698,31 @@
         "status": "adopted",
         "scope": ["city center / business district"],
         "land": ["all uses"]
+      }
+    ]
+  },
+  "Albany, Georgia, United States": {
+    "place": {
+      "name": "Albany",
+      "state": "Georgia",
+      "country": "United States",
+      "type": "city",
+      "encoded": "albany-georgia-united-states",
+      "pop": 68089,
+      "coord": [-84.1556809, 31.5782062]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["all uses"]
+      }
+    ],
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["main street / special"],
+        "land": ["commercial", "other"]
       }
     ]
   },
@@ -1592,6 +1653,24 @@
       }
     ]
   },
+  "Alto, Georgia, United States": {
+    "place": {
+      "name": "Alto",
+      "state": "Georgia",
+      "country": "United States",
+      "type": "city",
+      "encoded": "alto-georgia-united-states",
+      "pop": 970,
+      "coord": [-83.5739356, 34.4631965]
+    },
+    "add_max": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["all uses"]
+      }
+    ]
+  },
   "Alton, Illinois, United States": {
     "place": {
       "name": "Alton",
@@ -1815,6 +1894,24 @@
         "status": "adopted",
         "scope": ["city center / business district"],
         "land": ["commercial", "other"]
+      }
+    ]
+  },
+  "Americus, Georgia, United States": {
+    "place": {
+      "name": "Americus",
+      "state": "Georgia",
+      "country": "United States",
+      "type": "city",
+      "encoded": "americus-georgia-united-states",
+      "pop": 16230,
+      "coord": [-84.2326876, 32.0723862]
+    },
+    "add_max": [
+      {
+        "status": "adopted",
+        "scope": ["main street / special"],
+        "land": ["all uses"]
       }
     ]
   },
@@ -3139,6 +3236,24 @@
       }
     ]
   },
+  "Ashburn, Georgia, United States": {
+    "place": {
+      "name": "Ashburn",
+      "state": "Georgia",
+      "country": "United States",
+      "type": "city",
+      "encoded": "ashburn-georgia-united-states",
+      "pop": 4291,
+      "coord": [-83.6535591, 31.7059751]
+    },
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["all uses"]
+      }
+    ]
+  },
   "Asheville, North Carolina, United States": {
     "place": {
       "name": "Asheville",
@@ -4115,6 +4230,24 @@
       }
     ]
   },
+  "Austell, Georgia, United States": {
+    "place": {
+      "name": "Austell",
+      "state": "Georgia",
+      "country": "United States",
+      "type": "city",
+      "encoded": "austell-georgia-united-states",
+      "pop": 7713,
+      "coord": [-84.6343783, 33.8126059]
+    },
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["all uses"]
+      }
+    ]
+  },
   "Austin, Minnesota, United States": {
     "place": {
       "name": "Austin",
@@ -4322,6 +4455,44 @@
       }
     ]
   },
+  "Avondale Estates, Georgia, United States": {
+    "place": {
+      "name": "Avondale Estates",
+      "state": "Georgia",
+      "country": "United States",
+      "type": "city",
+      "encoded": "avondale-estates-georgia-united-states",
+      "pop": 3567,
+      "coord": [-84.2671444, 33.771494]
+    },
+    "add_max": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": [
+          "commercial",
+          "industrial",
+          "medical",
+          "other",
+          "residential, multi-family"
+        ]
+      }
+    ],
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": [
+          "commercial",
+          "industrial",
+          "medical",
+          "other",
+          "residential, all uses"
+        ],
+        "date": "2021-07-28"
+      }
+    ]
+  },
   "Avondale, Arizona, United States": {
     "place": {
       "name": "Avondale",
@@ -4416,6 +4587,24 @@
           "transit-oriented"
         ],
         "land": ["all uses", "residential, all uses"]
+      }
+    ]
+  },
+  "Bainbridge, Georgia, United States": {
+    "place": {
+      "name": "Bainbridge",
+      "state": "Georgia",
+      "country": "United States",
+      "type": "city",
+      "encoded": "bainbridge-georgia-united-states",
+      "pop": 14468,
+      "coord": [-84.5754768, 30.9038252]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["all uses"]
       }
     ]
   },
@@ -4571,6 +4760,24 @@
       {
         "status": "adopted",
         "scope": ["main street / special"],
+        "land": ["all uses"]
+      }
+    ]
+  },
+  "Ball Ground, Georgia, United States": {
+    "place": {
+      "name": "Ball Ground",
+      "state": "Georgia",
+      "country": "United States",
+      "type": "city",
+      "encoded": "ball-ground-georgia-united-states",
+      "pop": 2560,
+      "coord": [-84.3765714, 34.3382257]
+    },
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
         "land": ["all uses"]
       }
     ]
@@ -8526,6 +8733,24 @@
       }
     ]
   },
+  "Blackshear, Georgia, United States": {
+    "place": {
+      "name": "Blackshear",
+      "state": "Georgia",
+      "country": "United States",
+      "type": "city",
+      "encoded": "blackshear-georgia-united-states",
+      "pop": 3506,
+      "coord": [-82.2404922, 31.3042798]
+    },
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["all uses"]
+      }
+    ]
+  },
   "Blaine, Minnesota, United States": {
     "place": {
       "name": "Blaine",
@@ -8915,6 +9140,24 @@
       {
         "status": "adopted",
         "scope": ["city center / business district", "transit-oriented"],
+        "land": ["commercial"]
+      }
+    ]
+  },
+  "Blue Ridge, Georgia, United States": {
+    "place": {
+      "name": "Blue Ridge",
+      "state": "Georgia",
+      "country": "United States",
+      "type": "city",
+      "encoded": "blue-ridge-georgia-united-states",
+      "pop": 1253,
+      "coord": [-84.324087, 34.863972]
+    },
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
         "land": ["commercial"]
       }
     ]
@@ -9604,6 +9847,24 @@
         "status": "adopted",
         "scope": ["city center / business district"],
         "land": ["commercial", "industrial"]
+      }
+    ]
+  },
+  "Bowdon, Georgia, United States": {
+    "place": {
+      "name": "Bowdon",
+      "state": "Georgia",
+      "country": "United States",
+      "type": "city",
+      "encoded": "bowdon-georgia-united-states",
+      "pop": 2161,
+      "coord": [-85.2532818, 33.5378885]
+    },
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["all uses"]
       }
     ]
   },
@@ -11044,6 +11305,31 @@
       }
     ]
   },
+  "Brookhaven, Georgia, United States": {
+    "place": {
+      "name": "Brookhaven",
+      "state": "Georgia",
+      "country": "United States",
+      "type": "city",
+      "encoded": "brookhaven-georgia-united-states",
+      "pop": 56795,
+      "coord": [-84.340203, 33.8584368]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["all uses", "commercial", "industrial", "medical", "other"]
+      }
+    ],
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide", "main street / special"],
+        "land": ["all uses", "commercial"]
+      }
+    ]
+  },
   "Brookhaven, Pennsylvania, United States": {
     "place": {
       "name": "Brookhaven",
@@ -11125,6 +11411,24 @@
       {
         "status": "adopted",
         "scope": ["citywide"],
+        "land": ["all uses"]
+      }
+    ]
+  },
+  "Brooklet, Georgia, United States": {
+    "place": {
+      "name": "Brooklet",
+      "state": "Georgia",
+      "country": "United States",
+      "type": "city",
+      "encoded": "brooklet-georgia-united-states",
+      "pop": 1704,
+      "coord": [-81.6631659, 32.3796294]
+    },
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
         "land": ["all uses"]
       }
     ]
@@ -11523,6 +11827,24 @@
       }
     ]
   },
+  "Buchanan, Georgia, United States": {
+    "place": {
+      "name": "Buchanan",
+      "state": "Georgia",
+      "country": "United States",
+      "type": "city",
+      "encoded": "buchanan-georgia-united-states",
+      "pop": 938,
+      "coord": [-85.1885607, 33.8026048]
+    },
+    "add_max": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["residential, low-density"]
+      }
+    ]
+  },
   "Buchanan, Michigan, United States": {
     "place": {
       "name": "Buchanan",
@@ -11807,7 +12129,7 @@
       "type": "city",
       "encoded": "burlington-township-new-jersey-united-states",
       "pop": 23983,
-      "coord": [-74.8870076, 40.072587]
+      "coord": [-74.84144640605778, 40.04800571643162]
     },
     "reduce_min": [
       {
@@ -20670,7 +20992,7 @@
       "type": "city",
       "encoded": "cranford-township-new-jersey-united-states",
       "pop": 23847,
-      "coord": [-74.9926581, 39.873855]
+      "coord": [-74.30423901347174, 40.655740758269935]
     },
     "reduce_min": [
       {
@@ -34968,6 +35290,13 @@
         "scope": ["citywide"],
         "land": ["commercial", "industrial"]
       }
+    ],
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["commercial"]
+      }
     ]
   },
   "Glendale, California, United States": {
@@ -39937,6 +40266,31 @@
       {
         "status": "adopted",
         "scope": ["city center / business district"],
+        "land": ["all uses"]
+      }
+    ]
+  },
+  "Hazlet Township, New Jersey, United States": {
+    "place": {
+      "name": "Hazlet Township",
+      "state": "New Jersey",
+      "country": "United States",
+      "type": "city",
+      "encoded": "hazlet-township-new-jersey-united-states",
+      "pop": 20125,
+      "coord": [-74.1648999, 40.4292165]
+    },
+    "add_max": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["commercial", "industrial", "medical", "other"]
+      }
+    ],
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["main street / special"],
         "land": ["all uses"]
       }
     ]
@@ -58571,6 +58925,30 @@
         "status": "adopted",
         "scope": ["city center / business district"],
         "land": ["all uses"]
+      }
+    ]
+  },
+  "Millburn Township, New Jersey, United States": {
+    "place": {
+      "name": "Millburn Township",
+      "state": "New Jersey",
+      "country": "United States",
+      "type": "city",
+      "encoded": "millburn-township-new-jersey-united-states",
+      "pop": 21710,
+      "coord": [-74.3098458, 40.7244919]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["all uses"]
+      },
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["all uses"],
+        "date": "2022-07-19"
       }
     ]
   },
