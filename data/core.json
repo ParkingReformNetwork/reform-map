@@ -148,6 +148,31 @@
       }
     ]
   },
+  "Aberdeen, Saskatchewan, Canada": {
+    "place": {
+      "name": "Aberdeen",
+      "state": "Saskatchewan",
+      "country": "Canada",
+      "type": "city",
+      "encoded": "aberdeen-saskatchewan-canada",
+      "pop": 716,
+      "coord": [-106.2900807, 52.3271538]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["all uses"]
+      }
+    ],
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["commercial"]
+      }
+    ]
+  },
   "Aberdeen, South Dakota, United States": {
     "place": {
       "name": "Aberdeen",
@@ -1598,6 +1623,31 @@
       }
     ]
   },
+  "Alpharetta, Georgia, United States": {
+    "place": {
+      "name": "Alpharetta",
+      "state": "Georgia",
+      "country": "United States",
+      "type": "city",
+      "encoded": "alpharetta-georgia-united-states",
+      "pop": 65818,
+      "coord": [-84.2945964, 34.0755962]
+    },
+    "add_max": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district", "main street / special"],
+        "land": ["all uses"]
+      }
+    ],
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district", "main street / special"],
+        "land": ["all uses"]
+      }
+    ]
+  },
   "Alta, Iowa, United States": {
     "place": {
       "name": "Alta",
@@ -1661,7 +1711,7 @@
       "type": "city",
       "encoded": "alto-georgia-united-states",
       "pop": 970,
-      "coord": [-83.5739356, 34.4631965]
+      "coord": [-83.57389224452821, 34.467235721515785]
     },
     "add_max": [
       {
@@ -3510,6 +3560,30 @@
         "status": "adopted",
         "scope": ["city center / business district", "citywide"],
         "land": ["all uses", "commercial", "other"]
+      }
+    ]
+  },
+  "Asquith, Saskatchewan, Canada": {
+    "place": {
+      "name": "Asquith",
+      "state": "Saskatchewan",
+      "country": "Canada",
+      "type": "city",
+      "encoded": "asquith-saskatchewan-canada",
+      "pop": 624,
+      "coord": [-107.2284917, 52.1345075]
+    },
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": [
+          "commercial",
+          "medical",
+          "other",
+          "residential, low-density",
+          "residential, multi-family"
+        ]
       }
     ]
   },
@@ -5828,6 +5902,24 @@
         "scope": ["city center / business district"],
         "land": ["all uses"],
         "date": "2023-04-27"
+      }
+    ]
+  },
+  "Battleford, Saskatchewan, Canada": {
+    "place": {
+      "name": "Battleford",
+      "state": "Saskatchewan",
+      "country": "Canada",
+      "type": "city",
+      "encoded": "battleford-saskatchewan-canada",
+      "pop": 4400,
+      "coord": [-108.303901, 52.7376973]
+    },
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["commercial", "other"]
       }
     ]
   },
@@ -8168,6 +8260,29 @@
       }
     ]
   },
+  "Bienfait, Saskatchewan, Canada": {
+    "place": {
+      "name": "Bienfait",
+      "state": "Saskatchewan",
+      "country": "Canada",
+      "type": "city",
+      "encoded": "bienfait-saskatchewan-canada",
+      "pop": 668,
+      "coord": [-102.8076095, 49.1430593]
+    },
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": [
+          "commercial",
+          "other",
+          "residential, low-density",
+          "residential, multi-family"
+        ]
+      }
+    ]
+  },
   "Big Lake, Minnesota, United States": {
     "place": {
       "name": "Big Lake",
@@ -8217,6 +8332,24 @@
         "land": ["all uses"]
       }
     ],
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["all uses"]
+      }
+    ]
+  },
+  "Big River, Saskatchewan, Canada": {
+    "place": {
+      "name": "Big River",
+      "state": "Saskatchewan",
+      "country": "Canada",
+      "type": "city",
+      "encoded": "big-river-saskatchewan-canada",
+      "pop": 666,
+      "coord": [-107.033333, 53.833333]
+    },
     "reduce_min": [
       {
         "status": "adopted",
@@ -8425,6 +8558,31 @@
         "scope": ["citywide"],
         "land": ["residential, multi-family"],
         "date": "2024-12-18"
+      }
+    ]
+  },
+  "Birch Hills, Saskatchewan, Canada": {
+    "place": {
+      "name": "Birch Hills",
+      "state": "Saskatchewan",
+      "country": "Canada",
+      "type": "city",
+      "encoded": "birch-hills-saskatchewan-canada",
+      "pop": 1066,
+      "coord": [-105.433044, 52.984204]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["all uses"]
+      }
+    ],
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["commercial", "other"]
       }
     ]
   },
@@ -13401,6 +13559,24 @@
       }
     ]
   },
+  "Canora, Saskatchewan, Canada": {
+    "place": {
+      "name": "Canora",
+      "state": "Saskatchewan",
+      "country": "Canada",
+      "type": "city",
+      "encoded": "canora-saskatchewan-canada",
+      "pop": 2092,
+      "coord": [-102.4313006, 51.636411]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["all uses"]
+      }
+    ]
+  },
   "Canterbury, Connecticut, United States": {
     "place": {
       "name": "Canterbury",
@@ -13999,6 +14175,24 @@
       }
     ]
   },
+  "Carlyle, Saskatchewan, Canada": {
+    "place": {
+      "name": "Carlyle",
+      "state": "Saskatchewan",
+      "country": "Canada",
+      "type": "city",
+      "encoded": "carlyle-saskatchewan-canada",
+      "pop": 1524,
+      "coord": [-102.2669689, 49.6337518]
+    },
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district", "main street / special"],
+        "land": ["all uses"]
+      }
+    ]
+  },
   "Carman, Manitoba, Canada": {
     "place": {
       "name": "Carman",
@@ -14050,6 +14244,29 @@
         "status": "adopted",
         "scope": ["city center / business district"],
         "land": ["commercial", "other"]
+      }
+    ]
+  },
+  "Carnduff, Saskatchewan, Canada": {
+    "place": {
+      "name": "Carnduff",
+      "state": "Saskatchewan",
+      "country": "Canada",
+      "type": "city",
+      "encoded": "carnduff-saskatchewan-canada",
+      "pop": 1150,
+      "coord": [-101.7972633, 49.1748399]
+    },
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": [
+          "commercial",
+          "other",
+          "residential, low-density",
+          "residential, multi-family"
+        ]
       }
     ]
   },
@@ -14271,6 +14488,24 @@
       {
         "status": "adopted",
         "scope": ["transit-oriented"],
+        "land": ["all uses"]
+      }
+    ]
+  },
+  "Carrot River, Saskatchewan, Canada": {
+    "place": {
+      "name": "Carrot River",
+      "state": "Saskatchewan",
+      "country": "Canada",
+      "type": "city",
+      "encoded": "carrot-river-saskatchewan-canada",
+      "pop": 946,
+      "coord": [-103.584595, 53.284101]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
         "land": ["all uses"]
       }
     ]
@@ -16926,6 +17161,24 @@
       "coord": [-75.8692429, 43.0458574]
     },
     "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["all uses"]
+      }
+    ]
+  },
+  "Choiceland, Saskatchewan, Canada": {
+    "place": {
+      "name": "Choiceland",
+      "state": "Saskatchewan",
+      "country": "Canada",
+      "type": "city",
+      "encoded": "choiceland-saskatchewan-canada",
+      "pop": 342,
+      "coord": [-104.4854246, 53.491781]
+    },
+    "reduce_min": [
       {
         "status": "adopted",
         "scope": ["city center / business district"],
@@ -20343,6 +20596,24 @@
       }
     ]
   },
+  "Coronach, Saskatchewan, Canada": {
+    "place": {
+      "name": "Coronach",
+      "state": "Saskatchewan",
+      "country": "Canada",
+      "type": "city",
+      "encoded": "coronach-saskatchewan-canada",
+      "pop": 612,
+      "coord": [-105.5170497, 49.1127927]
+    },
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["commercial", "other", "residential, multi-family"]
+      }
+    ]
+  },
   "Corpus Christi, Texas, United States": {
     "place": {
       "name": "Corpus Christi",
@@ -21752,6 +22023,24 @@
       }
     ]
   },
+  "Cupar, Saskatchewan, Canada": {
+    "place": {
+      "name": "Cupar",
+      "state": "Saskatchewan",
+      "country": "Canada",
+      "type": "city",
+      "encoded": "cupar-saskatchewan-canada",
+      "pop": 598,
+      "coord": [-104.2139781, 50.9476885]
+    },
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["commercial"]
+      }
+    ]
+  },
   "Curtiss, Wisconsin, United States": {
     "place": {
       "name": "Curtiss",
@@ -21785,6 +22074,24 @@
         "status": "adopted",
         "scope": ["city center / business district"],
         "land": ["all uses"]
+      }
+    ]
+  },
+  "Cut Knife, Saskatchewan, Canada": {
+    "place": {
+      "name": "Cut Knife",
+      "state": "Saskatchewan",
+      "country": "Canada",
+      "type": "city",
+      "encoded": "cut-knife-saskatchewan-canada",
+      "pop": 547,
+      "coord": [-109.0198342, 52.745723]
+    },
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["commercial", "other", "residential, all uses"]
       }
     ]
   },
@@ -21962,6 +22269,24 @@
         ],
         "land": ["all uses", "commercial", "industrial"],
         "date": "2025-05-14"
+      }
+    ]
+  },
+  "Dalmeny, Saskatchewan, Canada": {
+    "place": {
+      "name": "Dalmeny",
+      "state": "Saskatchewan",
+      "country": "Canada",
+      "type": "city",
+      "encoded": "dalmeny-saskatchewan-canada",
+      "pop": 1766,
+      "coord": [-106.7728666, 52.3448579]
+    },
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["commercial", "other", "residential, multi-family"]
       }
     ]
   },
@@ -22405,6 +22730,24 @@
         "status": "adopted",
         "scope": ["city center / business district", "citywide"],
         "land": ["commercial", "residential, all uses"]
+      }
+    ]
+  },
+  "Davidson, Saskatchewan, Canada": {
+    "place": {
+      "name": "Davidson",
+      "state": "Saskatchewan",
+      "country": "Canada",
+      "type": "city",
+      "encoded": "davidson-saskatchewan-canada",
+      "pop": 1044,
+      "coord": [-105.984596, 51.2647972]
+    },
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["commercial"]
       }
     ]
   },
@@ -23352,6 +23695,24 @@
       {
         "status": "adopted",
         "scope": ["city center / business district"],
+        "land": ["all uses"]
+      }
+    ]
+  },
+  "Delisle, Saskatchewan, Canada": {
+    "place": {
+      "name": "Delisle",
+      "state": "Saskatchewan",
+      "country": "Canada",
+      "type": "city",
+      "encoded": "delisle-saskatchewan-canada",
+      "pop": 1024,
+      "coord": [-107.1354, 51.9230936]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
         "land": ["all uses"]
       }
     ]
@@ -25044,6 +25405,24 @@
       }
     ]
   },
+  "Duck Lake, Saskatchewan, Canada": {
+    "place": {
+      "name": "Duck Lake",
+      "state": "Saskatchewan",
+      "country": "Canada",
+      "type": "city",
+      "encoded": "duck-lake-saskatchewan-canada",
+      "pop": 579,
+      "coord": [-106.229553, 52.811893]
+    },
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["commercial", "other", "residential, multi-family"]
+      }
+    ]
+  },
   "Duluth, Georgia, United States": {
     "place": {
       "name": "Duluth",
@@ -25162,6 +25541,24 @@
         "status": "adopted",
         "scope": ["city center / business district"],
         "land": ["commercial", "other"]
+      }
+    ]
+  },
+  "Dundurn, Saskatchewan, Canada": {
+    "place": {
+      "name": "Dundurn",
+      "state": "Saskatchewan",
+      "country": "Canada",
+      "type": "city",
+      "encoded": "dundurn-saskatchewan-canada",
+      "pop": 675,
+      "coord": [-106.5475015, 51.8453839]
+    },
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["all uses"]
       }
     ]
   },
@@ -26611,6 +27008,29 @@
         "status": "adopted",
         "scope": ["city center / business district"],
         "land": ["all uses"]
+      }
+    ]
+  },
+  "Eatonia, Saskatchewan, Canada": {
+    "place": {
+      "name": "Eatonia",
+      "state": "Saskatchewan",
+      "country": "Canada",
+      "type": "city",
+      "encoded": "eatonia-saskatchewan-canada",
+      "pop": 498,
+      "coord": [-109.3900359, 51.2241821]
+    },
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": [
+          "commercial",
+          "other",
+          "residential, low-density",
+          "residential, multi-family"
+        ]
       }
     ]
   },
@@ -29052,6 +29472,24 @@
       }
     ]
   },
+  "Esterhazy, Saskatchewan, Canada": {
+    "place": {
+      "name": "Esterhazy",
+      "state": "Saskatchewan",
+      "country": "Canada",
+      "type": "city",
+      "encoded": "esterhazy-saskatchewan-canada",
+      "pop": 2345,
+      "coord": [-102.0763357, 50.6536237]
+    },
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["commercial"]
+      }
+    ]
+  },
   "Estes Park, Colorado, United States": {
     "place": {
       "name": "Estes Park",
@@ -29085,6 +29523,29 @@
         "status": "adopted",
         "scope": ["city center / business district"],
         "land": ["all uses"]
+      }
+    ]
+  },
+  "Eston, Saskatchewan, Canada": {
+    "place": {
+      "name": "Eston",
+      "state": "Saskatchewan",
+      "country": "Canada",
+      "type": "city",
+      "encoded": "eston-saskatchewan-canada",
+      "pop": 972,
+      "coord": [-108.7530146, 51.1493598]
+    },
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": [
+          "commercial",
+          "other",
+          "residential, low-density",
+          "residential, multi-family"
+        ]
       }
     ]
   },
@@ -31350,6 +31811,31 @@
         "status": "adopted",
         "scope": ["city center / business district"],
         "land": ["all uses"]
+      }
+    ]
+  },
+  "Foam Lake, Saskatchewan, Canada": {
+    "place": {
+      "name": "Foam Lake",
+      "state": "Saskatchewan",
+      "country": "Canada",
+      "type": "city",
+      "encoded": "foam-lake-saskatchewan-canada",
+      "pop": 1183,
+      "coord": [-103.5315944, 51.647238]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["residential, all uses"]
+      }
+    ],
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["commercial", "other", "residential, multi-family"]
       }
     ]
   },
@@ -36839,6 +37325,29 @@
       }
     ]
   },
+  "Gravelbourg, Saskatchewan, Canada": {
+    "place": {
+      "name": "Gravelbourg",
+      "state": "Saskatchewan",
+      "country": "Canada",
+      "type": "city",
+      "encoded": "gravelbourg-saskatchewan-canada",
+      "pop": 986,
+      "coord": [-106.5557573, 49.8751033]
+    },
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": [
+          "commercial",
+          "other",
+          "residential, low-density",
+          "residential, multi-family"
+        ]
+      }
+    ]
+  },
   "Gravenhurst, Ontario, Canada": {
     "place": {
       "name": "Gravenhurst",
@@ -37699,6 +38208,25 @@
       }
     ]
   },
+  "Grenfell, Saskatchewan, Canada": {
+    "place": {
+      "name": "Grenfell",
+      "state": "Saskatchewan",
+      "country": "Canada",
+      "type": "city",
+      "encoded": "grenfell-saskatchewan-canada",
+      "pop": 1105,
+      "coord": [-102.9300253, 50.411344]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["all uses"],
+        "date": "2017"
+      }
+    ]
+  },
   "Gresham, Oregon, United States": {
     "place": {
       "name": "Gresham",
@@ -38272,6 +38800,29 @@
         "status": "adopted",
         "scope": ["city center / business district"],
         "land": ["all uses", "residential, all uses"]
+      }
+    ]
+  },
+  "Hague, Saskatchewan, Canada": {
+    "place": {
+      "name": "Hague",
+      "state": "Saskatchewan",
+      "country": "Canada",
+      "type": "city",
+      "encoded": "hague-saskatchewan-canada",
+      "pop": 889,
+      "coord": [-106.417694, 52.511206]
+    },
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": [
+          "commercial",
+          "other",
+          "residential, low-density",
+          "residential, multi-family"
+        ]
       }
     ]
   },
@@ -38857,6 +39408,24 @@
         "status": "adopted",
         "scope": ["city center / business district"],
         "land": ["all uses"]
+      }
+    ]
+  },
+  "Hanley, Saskatchewan, Canada": {
+    "place": {
+      "name": "Hanley",
+      "state": "Saskatchewan",
+      "country": "Canada",
+      "type": "city",
+      "encoded": "hanley-saskatchewan-canada",
+      "pop": 540,
+      "coord": [-106.4385372, 51.6290586]
+    },
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["commercial", "other"]
       }
     ]
   },
@@ -40723,6 +41292,29 @@
         "status": "adopted",
         "scope": ["citywide"],
         "land": ["residential, all uses"]
+      }
+    ]
+  },
+  "Hepburn, Saskatchewan, Canada": {
+    "place": {
+      "name": "Hepburn",
+      "state": "Saskatchewan",
+      "country": "Canada",
+      "type": "city",
+      "encoded": "hepburn-saskatchewan-canada",
+      "pop": 784,
+      "coord": [-106.732178, 52.524577]
+    },
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": [
+          "commercial",
+          "other",
+          "residential, low-density",
+          "residential, multi-family"
+        ]
       }
     ]
   },
@@ -43389,6 +43981,36 @@
       }
     ]
   },
+  "Indian Head, Saskatchewan, Canada": {
+    "place": {
+      "name": "Indian Head",
+      "state": "Saskatchewan",
+      "country": "Canada",
+      "type": "city",
+      "encoded": "indian-head-saskatchewan-canada",
+      "pop": 1902,
+      "coord": [-103.666667, 50.533333]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["commercial", "residential, multi-family"]
+      }
+    ],
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": [
+          "commercial",
+          "other",
+          "residential, low-density",
+          "residential, multi-family"
+        ]
+      }
+    ]
+  },
   "Indian Hill, Ohio, United States": {
     "place": {
       "name": "Indian Hill",
@@ -45238,6 +45860,31 @@
       }
     ],
     "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["all uses"]
+      }
+    ]
+  },
+  "Johns Creek, Georgia, United States": {
+    "place": {
+      "name": "Johns Creek",
+      "state": "Georgia",
+      "country": "United States",
+      "type": "city",
+      "encoded": "johns-creek-georgia-united-states",
+      "pop": 82453,
+      "coord": [-84.190196, 34.0181557]
+    },
+    "add_max": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["all uses"]
+      }
+    ],
+    "reduce_min": [
       {
         "status": "adopted",
         "scope": ["city center / business district"],
@@ -69835,6 +70482,24 @@
       }
     ]
   },
+  "Outlook, Saskatchewan, Canada": {
+    "place": {
+      "name": "Outlook",
+      "state": "Saskatchewan",
+      "country": "Canada",
+      "type": "city",
+      "encoded": "outlook-saskatchewan-canada",
+      "pop": 2336,
+      "coord": [-107.0610496, 51.4866125]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["all uses"]
+      }
+    ]
+  },
   "Overbrook, Kansas, United States": {
     "place": {
       "name": "Overbrook",
@@ -78300,6 +78965,12 @@
         "status": "adopted",
         "scope": ["city center / business district"],
         "land": ["all uses", "commercial", "medical"]
+      },
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["residential, multi-family"],
+        "date": "2026-01-05"
       }
     ]
   },
@@ -79448,6 +80119,31 @@
         "status": "adopted",
         "scope": ["city center / business district", "transit-oriented"],
         "land": ["commercial", "industrial", "other", "residential, all uses"]
+      }
+    ]
+  },
+  "Roswell, Georgia, United States": {
+    "place": {
+      "name": "Roswell",
+      "state": "Georgia",
+      "country": "United States",
+      "type": "city",
+      "encoded": "roswell-georgia-united-states",
+      "pop": 92883,
+      "coord": [-84.360022, 34.02332]
+    },
+    "add_max": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["commercial", "medical", "other"]
+      }
+    ],
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district", "citywide"],
+        "land": ["all uses"]
       }
     ]
   },
@@ -96510,6 +97206,24 @@
         "status": "adopted",
         "scope": ["city center / business district"],
         "land": ["all uses"]
+      }
+    ]
+  },
+  "Warner Robins, Georgia, United States": {
+    "place": {
+      "name": "Warner Robins",
+      "state": "Georgia",
+      "country": "United States",
+      "type": "city",
+      "encoded": "warner-robins-georgia-united-states",
+      "pop": 80308,
+      "coord": [-83.606568, 32.6200973]
+    },
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["commercial", "other"]
       }
     ]
   },
