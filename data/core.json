@@ -3249,6 +3249,25 @@
       }
     ]
   },
+  "Asbury Park, New Jersey, United States": {
+    "place": {
+      "name": "Asbury Park",
+      "state": "New Jersey",
+      "country": "United States",
+      "type": "city",
+      "encoded": "asbury-park-new-jersey-united-states",
+      "pop": 15188,
+      "coord": [-74.0120817, 40.2203907]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["all uses"],
+        "date": "2023-11-08"
+      }
+    ]
+  },
   "Asbury, Iowa, United States": {
     "place": {
       "name": "Asbury",
@@ -6140,6 +6159,25 @@
       }
     ]
   },
+  "Beachwood, New Jersey, United States": {
+    "place": {
+      "name": "Beachwood",
+      "state": "New Jersey",
+      "country": "United States",
+      "type": "city",
+      "encoded": "beachwood-new-jersey-united-states",
+      "pop": 10859,
+      "coord": [-74.1929188, 39.939007]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["all uses"],
+        "date": "2022-12-07"
+      }
+    ]
+  },
   "Beacon, New York, United States": {
     "place": {
       "name": "Beacon",
@@ -7642,6 +7680,24 @@
       {
         "status": "adopted",
         "scope": ["city center / business district"],
+        "land": ["all uses"]
+      }
+    ]
+  },
+  "Berkeley Heights Township, New Jersey, United States": {
+    "place": {
+      "name": "Berkeley Heights Township",
+      "state": "New Jersey",
+      "country": "United States",
+      "type": "city",
+      "encoded": "berkeley-heights-township-new-jersey-united-states",
+      "pop": 13285,
+      "coord": [-74.44273150509868, 40.683397346745835]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
         "land": ["all uses"]
       }
     ]
@@ -9838,6 +9894,25 @@
       }
     ]
   },
+  "Bordentown Township, New Jersey, United States": {
+    "place": {
+      "name": "Bordentown Township",
+      "state": "New Jersey",
+      "country": "United States",
+      "type": "city",
+      "encoded": "bordentown-township-new-jersey-united-states",
+      "pop": 11791,
+      "coord": [-74.6946311, 40.1480628]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["all uses"],
+        "date": "2022-03-28"
+      }
+    ]
+  },
   "Bosque Farms, New Mexico, United States": {
     "place": {
       "name": "Bosque Farms",
@@ -10364,6 +10439,24 @@
       }
     ]
   },
+  "Branchburg Township, New Jersey, United States": {
+    "place": {
+      "name": "Branchburg Township",
+      "state": "New Jersey",
+      "country": "United States",
+      "type": "city",
+      "encoded": "branchburg-township-new-jersey-united-states",
+      "pop": 14940,
+      "coord": [-74.7002739, 40.5688245]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["all uses"]
+      }
+    ]
+  },
   "Brandenburg, Kentucky, United States": {
     "place": {
       "name": "Brandenburg",
@@ -10547,6 +10640,31 @@
         "status": "adopted",
         "scope": ["city center / business district"],
         "land": ["commercial", "other"]
+      }
+    ]
+  },
+  "Braselton, Georgia, United States": {
+    "place": {
+      "name": "Braselton",
+      "state": "Georgia",
+      "country": "United States",
+      "type": "city",
+      "encoded": "braselton-georgia-united-states",
+      "pop": 13403,
+      "coord": [-83.7626729, 34.1092735]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["all uses"]
+      }
+    ],
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["all uses"]
       }
     ]
   },
@@ -12389,6 +12507,24 @@
       }
     ]
   },
+  "Burlington, New Jersey, United States": {
+    "place": {
+      "name": "Burlington",
+      "state": "New Jersey",
+      "country": "United States",
+      "type": "city",
+      "encoded": "burlington-new-jersey-united-states",
+      "pop": 9743,
+      "coord": [-74.85820842173102, 40.07759772357719]
+    },
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["all uses"]
+      }
+    ]
+  },
   "Burlington, North Dakota, United States": {
     "place": {
       "name": "Burlington",
@@ -12710,6 +12846,24 @@
         "status": "adopted",
         "scope": ["city center / business district"],
         "land": ["commercial", "other"]
+      }
+    ]
+  },
+  "Byron, Georgia, United States": {
+    "place": {
+      "name": "Byron",
+      "state": "Georgia",
+      "country": "United States",
+      "type": "city",
+      "encoded": "byron-georgia-united-states",
+      "pop": 5702,
+      "coord": [-83.7596294, 32.6537561]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["all uses"]
       }
     ]
   },
@@ -15304,6 +15458,24 @@
       }
     ]
   },
+  "Cedar Grove Township, New Jersey, United States": {
+    "place": {
+      "name": "Cedar Grove Township",
+      "state": "New Jersey",
+      "country": "United States",
+      "type": "city",
+      "encoded": "cedar-grove-township-new-jersey-united-states",
+      "pop": 12980,
+      "coord": [-74.22944418065724, 40.85166200658399]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["all uses"]
+      }
+    ]
+  },
   "Cedar Rapids, Iowa, United States": {
     "place": {
       "name": "Cedar Rapids",
@@ -15376,6 +15548,24 @@
         "status": "adopted",
         "scope": ["city center / business district"],
         "land": ["commercial", "other"]
+      }
+    ]
+  },
+  "Cedartown, Georgia, United States": {
+    "place": {
+      "name": "Cedartown",
+      "state": "Georgia",
+      "country": "United States",
+      "type": "city",
+      "encoded": "cedartown-georgia-united-states",
+      "pop": 10190,
+      "coord": [-85.2559398, 34.0124425]
+    },
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["residential, all uses"]
       }
     ]
   },
@@ -17623,6 +17813,24 @@
       }
     ]
   },
+  "Clark Township, New Jersey, United States": {
+    "place": {
+      "name": "Clark Township",
+      "state": "New Jersey",
+      "country": "United States",
+      "type": "city",
+      "encoded": "clark-township-new-jersey-united-states",
+      "pop": 15544,
+      "coord": [-74.31705335612455, 40.62597892836661]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["all uses"]
+      }
+    ]
+  },
   "Clark, South Dakota, United States": {
     "place": {
       "name": "Clark",
@@ -17709,6 +17917,24 @@
       {
         "status": "adopted",
         "scope": ["city center / business district"],
+        "land": ["all uses"]
+      }
+    ]
+  },
+  "Clarkston, Georgia, United States": {
+    "place": {
+      "name": "Clarkston",
+      "state": "Georgia",
+      "country": "United States",
+      "type": "city",
+      "encoded": "clarkston-georgia-united-states",
+      "pop": 14756,
+      "coord": [-84.2396434, 33.8095487]
+    },
+    "add_max": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
         "land": ["all uses"]
       }
     ]
@@ -19192,6 +19418,24 @@
       }
     ]
   },
+  "College Park, Georgia, United States": {
+    "place": {
+      "name": "College Park",
+      "state": "Georgia",
+      "country": "United States",
+      "type": "city",
+      "encoded": "college-park-georgia-united-states",
+      "pop": 13930,
+      "coord": [-84.4493725, 33.6534427]
+    },
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["all uses"]
+      }
+    ]
+  },
   "College Station, Texas, United States": {
     "place": {
       "name": "College Station",
@@ -19275,6 +19519,24 @@
         "status": "adopted",
         "scope": ["city center / business district"],
         "land": ["commercial", "residential, multi-family"]
+      }
+    ]
+  },
+  "Collingswood, New Jersey, United States": {
+    "place": {
+      "name": "Collingswood",
+      "state": "New Jersey",
+      "country": "United States",
+      "type": "city",
+      "encoded": "collingswood-new-jersey-united-states",
+      "pop": 14186,
+      "coord": [-75.071284, 39.9181686]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["main street / special"],
+        "land": ["all uses"]
       }
     ]
   },
@@ -19596,6 +19858,25 @@
         "status": "adopted",
         "scope": ["city center / business district"],
         "land": ["commercial"]
+      }
+    ]
+  },
+  "Colts Neck Township, New Jersey, United States": {
+    "place": {
+      "name": "Colts Neck Township",
+      "state": "New Jersey",
+      "country": "United States",
+      "type": "city",
+      "encoded": "colts-neck-township-new-jersey-united-states",
+      "pop": 9957,
+      "coord": [-74.1723652, 40.2876108]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["all uses"],
+        "date": "2022-07-20"
       }
     ]
   },
@@ -19976,6 +20257,25 @@
         "scope": ["citywide", "transit-oriented"],
         "land": ["residential, low-density", "residential, multi-family"],
         "date": "2025-11-03"
+      }
+    ]
+  },
+  "Commerce, Georgia, United States": {
+    "place": {
+      "name": "Commerce",
+      "state": "Georgia",
+      "country": "United States",
+      "type": "city",
+      "encoded": "commerce-georgia-united-states",
+      "pop": 7387,
+      "coord": [-83.4571058, 34.203997]
+    },
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["all uses"],
+        "date": "2023-09-18"
       }
     ]
   },
@@ -20629,6 +20929,31 @@
       }
     ]
   },
+  "Cornelia, Georgia, United States": {
+    "place": {
+      "name": "Cornelia",
+      "state": "Georgia",
+      "country": "United States",
+      "type": "city",
+      "encoded": "cornelia-georgia-united-states",
+      "pop": 4503,
+      "coord": [-83.5271166, 34.5114883]
+    },
+    "add_max": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["all uses"]
+      }
+    ],
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["all uses"]
+      }
+    ]
+  },
   "Cornelius, North Carolina, United States": {
     "place": {
       "name": "Cornelius",
@@ -21176,6 +21501,31 @@
         "status": "adopted",
         "scope": ["citywide"],
         "land": ["residential, all uses"]
+      }
+    ]
+  },
+  "Covington, Georgia, United States": {
+    "place": {
+      "name": "Covington",
+      "state": "Georgia",
+      "country": "United States",
+      "type": "city",
+      "encoded": "covington-georgia-united-states",
+      "pop": 14192,
+      "coord": [-83.8598742, 33.5966005]
+    },
+    "add_max": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["all uses"]
+      }
+    ],
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["all uses"]
       }
     ]
   },
@@ -22382,6 +22732,24 @@
       "encoded": "DallasCenter_IA",
       "pop": 1901,
       "coord": [-93.9622388, 41.6844045]
+    },
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["all uses"]
+      }
+    ]
+  },
+  "Dallas, Georgia, United States": {
+    "place": {
+      "name": "Dallas",
+      "state": "Georgia",
+      "country": "United States",
+      "type": "city",
+      "encoded": "dallas-georgia-united-states",
+      "pop": 14042,
+      "coord": [-84.8407732, 33.9237141]
     },
     "rm_min": [
       {
@@ -24300,6 +24668,24 @@
       }
     ]
   },
+  "Denville Township, New Jersey, United States": {
+    "place": {
+      "name": "Denville Township",
+      "state": "New Jersey",
+      "country": "United States",
+      "type": "city",
+      "encoded": "denville-township-new-jersey-united-states",
+      "pop": 17107,
+      "coord": [-74.4774255, 40.8922694]
+    },
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["all uses"]
+      }
+    ]
+  },
   "Depoe Bay, Oregon, United States": {
     "place": {
       "name": "Depoe Bay",
@@ -25076,6 +25462,24 @@
       }
     ]
   },
+  "Doraville, Georgia, United States": {
+    "place": {
+      "name": "Doraville",
+      "state": "Georgia",
+      "country": "United States",
+      "type": "city",
+      "encoded": "doraville-georgia-united-states",
+      "pop": 10623,
+      "coord": [-84.2832564, 33.8981579]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["transit-oriented"],
+        "land": ["residential, multi-family"]
+      }
+    ]
+  },
   "Dorchester, Wisconsin, United States": {
     "place": {
       "name": "Dorchester",
@@ -25477,6 +25881,32 @@
         "status": "adopted",
         "scope": ["citywide", "transit-oriented"],
         "land": ["all uses", "commercial", "industrial", "other"]
+      }
+    ]
+  },
+  "Drumheller, Alberta, Canada": {
+    "place": {
+      "name": "Drumheller",
+      "state": "Alberta",
+      "country": "Canada",
+      "type": "city",
+      "encoded": "drumheller-alberta-canada",
+      "pop": 7909,
+      "coord": [-112.70784945080052, 51.46382314060213]
+    },
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": [
+          "commercial",
+          "industrial",
+          "medical",
+          "other",
+          "residential, low-density",
+          "residential, multi-family"
+        ],
+        "date": "2020-12-07"
       }
     ]
   },
@@ -26967,6 +27397,25 @@
       }
     ]
   },
+  "East Rutherford, New Jersey, United States": {
+    "place": {
+      "name": "East Rutherford",
+      "state": "New Jersey",
+      "country": "United States",
+      "type": "city",
+      "encoded": "east-rutherford-new-jersey-united-states",
+      "pop": 10022,
+      "coord": [-74.0970865, 40.833989]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["all uses"],
+        "date": "2022-03-15"
+      }
+    ]
+  },
   "East St. Louis, Illinois, United States": {
     "place": {
       "name": "East St. Louis",
@@ -27309,6 +27758,24 @@
           "residential, low-density",
           "residential, multi-family"
         ]
+      }
+    ]
+  },
+  "Eatontown, New Jersey, United States": {
+    "place": {
+      "name": "Eatontown",
+      "state": "New Jersey",
+      "country": "United States",
+      "type": "city",
+      "encoded": "eatontown-new-jersey-united-states",
+      "pop": 13597,
+      "coord": [-74.0509725, 40.2962222]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["all uses"]
       }
     ]
   },
@@ -30753,6 +31220,30 @@
       }
     ]
   },
+  "Fairview, New Jersey, United States": {
+    "place": {
+      "name": "Fairview",
+      "state": "New Jersey",
+      "country": "United States",
+      "type": "city",
+      "encoded": "fairview-new-jersey-united-states",
+      "pop": 15025,
+      "coord": [-73.99929555885693, 40.8125861595164]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["main street / special"],
+        "land": ["all uses"]
+      },
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["all uses"],
+        "date": "2021-12-21"
+      }
+    ]
+  },
   "Fairview, Oregon, United States": {
     "place": {
       "name": "Fairview",
@@ -32029,6 +32520,25 @@
       }
     ]
   },
+  "Florham Park, New Jersey, United States": {
+    "place": {
+      "name": "Florham Park",
+      "state": "New Jersey",
+      "country": "United States",
+      "type": "city",
+      "encoded": "florham-park-new-jersey-united-states",
+      "pop": 12585,
+      "coord": [-74.38947671084928, 40.788094311754755]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["all uses"],
+        "date": "2022-11-14"
+      }
+    ]
+  },
   "Florida, New York, United States": {
     "place": {
       "name": "Florida",
@@ -32106,6 +32616,24 @@
       {
         "status": "adopted",
         "scope": ["city center / business district"],
+        "land": ["all uses"]
+      }
+    ]
+  },
+  "Flowery Branch, Georgia, United States": {
+    "place": {
+      "name": "Flowery Branch",
+      "state": "Georgia",
+      "country": "United States",
+      "type": "city",
+      "encoded": "flowery-branch-georgia-united-states",
+      "pop": 9391,
+      "coord": [-83.9251809, 34.1851017]
+    },
+    "add_max": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
         "land": ["all uses"]
       }
     ]
@@ -32518,6 +33046,38 @@
         "status": "adopted",
         "scope": ["city center / business district"],
         "land": ["all uses"]
+      }
+    ]
+  },
+  "Forsyth, Georgia, United States": {
+    "place": {
+      "name": "Forsyth",
+      "state": "Georgia",
+      "country": "United States",
+      "type": "city",
+      "encoded": "forsyth-georgia-united-states",
+      "pop": 4384,
+      "coord": [-83.93849165924668, 33.03494738384501]
+    },
+    "add_max": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["all uses"]
+      }
+    ],
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["main street / special"],
+        "land": ["all uses"]
+      }
+    ],
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["commercial", "other", "residential, low-density"]
       }
     ]
   },
@@ -33456,6 +34016,25 @@
         "status": "adopted",
         "scope": ["city center / business district", "transit-oriented"],
         "land": ["residential, all uses"]
+      }
+    ]
+  },
+  "Franklin Lakes, New Jersey, United States": {
+    "place": {
+      "name": "Franklin Lakes",
+      "state": "New Jersey",
+      "country": "United States",
+      "type": "city",
+      "encoded": "franklin-lakes-new-jersey-united-states",
+      "pop": 11079,
+      "coord": [-74.2057012, 41.0167639]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["all uses"],
+        "date": "2021-12-21"
       }
     ]
   },
@@ -39153,6 +39732,50 @@
       }
     ]
   },
+  "Haddon Township, New Jersey, United States": {
+    "place": {
+      "name": "Haddon Township",
+      "state": "New Jersey",
+      "country": "United States",
+      "type": "city",
+      "encoded": "haddon-township-new-jersey-united-states",
+      "pop": 15407,
+      "coord": [-75.0960074, 39.8976132]
+    },
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["main street / special"],
+        "land": ["commercial"],
+        "date": "2021-08-24"
+      }
+    ]
+  },
+  "Haddonfield, New Jersey, United States": {
+    "place": {
+      "name": "Haddonfield",
+      "state": "New Jersey",
+      "country": "United States",
+      "type": "city",
+      "encoded": "haddonfield-new-jersey-united-states",
+      "pop": 12550,
+      "coord": [-75.0376707, 39.8915022]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["all uses"],
+        "date": "2021-11-29"
+      },
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["residential, all uses"],
+        "date": "2008-06-10"
+      }
+    ]
+  },
   "Hagerstown, Maryland, United States": {
     "place": {
       "name": "Hagerstown",
@@ -39686,6 +40309,31 @@
       }
     ]
   },
+  "Hampton, Georgia, United States": {
+    "place": {
+      "name": "Hampton",
+      "state": "Georgia",
+      "country": "United States",
+      "type": "city",
+      "encoded": "hampton-georgia-united-states",
+      "pop": 8368,
+      "coord": [-84.2829784, 33.3870578]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["all uses"]
+      }
+    ],
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["commercial", "other", "residential, low-density"]
+      }
+    ]
+  },
   "Hampton, Minnesota, United States": {
     "place": {
       "name": "Hampton",
@@ -39848,6 +40496,24 @@
         "status": "adopted",
         "scope": ["city center / business district"],
         "land": ["commercial"]
+      }
+    ]
+  },
+  "Hanover Township, New Jersey, United States": {
+    "place": {
+      "name": "Hanover Township",
+      "state": "New Jersey",
+      "country": "United States",
+      "type": "city",
+      "encoded": "hanover-township-new-jersey-united-states",
+      "pop": 14677,
+      "coord": [-74.3954057, 40.8174216]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["all uses"]
       }
     ]
   },
@@ -40249,6 +40915,24 @@
         "scope": ["citywide"],
         "land": ["residential, multi-family"],
         "date": "2026"
+      }
+    ]
+  },
+  "Harrison Township, New Jersey, United States": {
+    "place": {
+      "name": "Harrison Township",
+      "state": "New Jersey",
+      "country": "United States",
+      "type": "city",
+      "encoded": "harrison-township-new-jersey-united-states",
+      "pop": 13641,
+      "coord": [-75.2016135, 39.7225865]
+    },
+    "add_max": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["all uses"]
       }
     ]
   },
@@ -42820,6 +43504,24 @@
         "status": "adopted",
         "scope": ["city center / business district"],
         "land": ["residential, all uses"]
+      }
+    ]
+  },
+  "Holly Springs, Georgia, United States": {
+    "place": {
+      "name": "Holly Springs",
+      "state": "Georgia",
+      "country": "United States",
+      "type": "city",
+      "encoded": "holly-springs-georgia-united-states",
+      "pop": 16213,
+      "coord": [-84.50135870555441, 34.17341690784499]
+    },
+    "add_max": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["commercial", "medical", "other"]
       }
     ]
   },
@@ -45962,6 +46664,24 @@
       }
     ]
   },
+  "Jefferson, Georgia, United States": {
+    "place": {
+      "name": "Jefferson",
+      "state": "Georgia",
+      "country": "United States",
+      "type": "city",
+      "encoded": "jefferson-georgia-united-states",
+      "pop": 13233,
+      "coord": [-83.5734825964517, 34.1175479546012]
+    },
+    "add_max": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["all uses"]
+      }
+    ]
+  },
   "Jefferson, Iowa, United States": {
     "place": {
       "name": "Jefferson",
@@ -46320,6 +47040,24 @@
       }
     ]
   },
+  "Jesup, Georgia, United States": {
+    "place": {
+      "name": "Jesup",
+      "state": "Georgia",
+      "country": "United States",
+      "type": "city",
+      "encoded": "jesup-georgia-united-states",
+      "pop": 9809,
+      "coord": [-81.8853924, 31.6074365]
+    },
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["all uses"]
+      }
+    ]
+  },
   "Jim Thorpe, Pennsylvania, United States": {
     "place": {
       "name": "Jim Thorpe",
@@ -46654,6 +47392,38 @@
         "status": "adopted",
         "scope": ["city center / business district"],
         "land": ["all uses"]
+      }
+    ]
+  },
+  "Jonesboro, Georgia, United States": {
+    "place": {
+      "name": "Jonesboro",
+      "state": "Georgia",
+      "country": "United States",
+      "type": "city",
+      "encoded": "jonesboro-georgia-united-states",
+      "pop": 4235,
+      "coord": [-84.3538128, 33.5215013]
+    },
+    "add_max": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["commercial", "other"]
+      }
+    ],
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["all uses"]
+      }
+    ],
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["residential, low-density"]
       }
     ]
   },
@@ -47218,6 +47988,24 @@
       {
         "status": "adopted",
         "scope": ["main street / special"],
+        "land": ["all uses"]
+      }
+    ]
+  },
+  "Keansburg, New Jersey, United States": {
+    "place": {
+      "name": "Keansburg",
+      "state": "New Jersey",
+      "country": "United States",
+      "type": "city",
+      "encoded": "keansburg-new-jersey-united-states",
+      "pop": 9755,
+      "coord": [-74.1298643, 40.4417743]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
         "land": ["all uses"]
       }
     ]
@@ -52955,7 +53743,8 @@
       {
         "status": "adopted",
         "scope": ["city center / business district", "main street / special"],
-        "land": ["all uses"]
+        "land": ["all uses"],
+        "date": "2024-02-27"
       }
     ]
   },
@@ -57824,6 +58613,24 @@
       }
     ]
   },
+  "Matawan, New Jersey, United States": {
+    "place": {
+      "name": "Matawan",
+      "state": "New Jersey",
+      "country": "United States",
+      "type": "city",
+      "encoded": "matawan-new-jersey-united-states",
+      "pop": 9565,
+      "coord": [-74.2295476202849, 40.414703158121945]
+    },
+    "add_max": [
+      {
+        "status": "adopted",
+        "scope": ["main street / special"],
+        "land": ["all uses"]
+      }
+    ]
+  },
   "Matherville, Illinois, United States": {
     "place": {
       "name": "Matherville",
@@ -58133,6 +58940,25 @@
         "status": "adopted",
         "scope": ["city center / business district"],
         "land": ["commercial", "other"]
+      }
+    ]
+  },
+  "Maywood, New Jersey, United States": {
+    "place": {
+      "name": "Maywood",
+      "state": "New Jersey",
+      "country": "United States",
+      "type": "city",
+      "encoded": "maywood-new-jersey-united-states",
+      "pop": 10080,
+      "coord": [-74.0618074, 40.902599]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["all uses"],
+        "date": "2021-11-09"
       }
     ]
   },
@@ -61710,6 +62536,38 @@
       }
     ]
   },
+  "Monroe, Georgia, United States": {
+    "place": {
+      "name": "Monroe",
+      "state": "Georgia",
+      "country": "United States",
+      "type": "city",
+      "encoded": "monroe-georgia-united-states",
+      "pop": 14928,
+      "coord": [-83.71328466106229, 33.79462785294269]
+    },
+    "add_max": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["all uses"]
+      }
+    ],
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["all uses"]
+      }
+    ],
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["commercial", "other", "residential, low-density"]
+      }
+    ]
+  },
   "Monroe, Louisiana, United States": {
     "place": {
       "name": "Monroe",
@@ -63067,6 +63925,24 @@
       }
     ]
   },
+  "Morrow, Georgia, United States": {
+    "place": {
+      "name": "Morrow",
+      "state": "Georgia",
+      "country": "United States",
+      "type": "city",
+      "encoded": "morrow-georgia-united-states",
+      "pop": 6569,
+      "coord": [-84.3393683, 33.5831662]
+    },
+    "add_max": [
+      {
+        "status": "adopted",
+        "scope": ["main street / special"],
+        "land": ["all uses", "commercial", "other"]
+      }
+    ]
+  },
   "Morton Grove, Illinois, United States": {
     "place": {
       "name": "Morton Grove",
@@ -63585,6 +64461,24 @@
       }
     ]
   },
+  "Mountain City, Tennessee, United States": {
+    "place": {
+      "name": "Mountain City",
+      "state": "Tennessee",
+      "country": "United States",
+      "type": "city",
+      "encoded": "mountain-city-tennessee-united-states",
+      "pop": 2415,
+      "coord": [-81.804838, 36.4745636]
+    },
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["commercial", "other", "residential, low-density"]
+      }
+    ]
+  },
   "Mountain Grove, Missouri, United States": {
     "place": {
       "name": "Mountain Grove",
@@ -63893,6 +64787,25 @@
         "status": "adopted",
         "scope": ["city center / business district"],
         "land": ["all uses"]
+      }
+    ]
+  },
+  "Mt. Holly Township, New Jersey, United States": {
+    "place": {
+      "name": "Mt. Holly Township",
+      "state": "New Jersey",
+      "country": "United States",
+      "type": "city",
+      "encoded": "mt-holly-township-new-jersey-united-states",
+      "pop": 9981,
+      "coord": [-74.7876624, 39.9928898]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["all uses"],
+        "date": "2023-05-15"
       }
     ]
   },
@@ -66388,6 +67301,25 @@
       }
     ]
   },
+  "New Milford, New Jersey, United States": {
+    "place": {
+      "name": "New Milford",
+      "state": "New Jersey",
+      "country": "United States",
+      "type": "city",
+      "encoded": "new-milford-new-jersey-united-states",
+      "pop": 16923,
+      "coord": [-74.0190281, 40.9350986]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["all uses"],
+        "date": "2021-11-29"
+      }
+    ]
+  },
   "New Morgan, Pennsylvania, United States": {
     "place": {
       "name": "New Morgan",
@@ -66481,6 +67413,24 @@
       {
         "status": "adopted",
         "scope": ["city center / business district"],
+        "land": ["all uses"]
+      }
+    ]
+  },
+  "New Providence, New Jersey, United States": {
+    "place": {
+      "name": "New Providence",
+      "state": "New Jersey",
+      "country": "United States",
+      "type": "city",
+      "encoded": "new-providence-new-jersey-united-states",
+      "pop": 13650,
+      "coord": [-74.4015405, 40.6984348]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
         "land": ["all uses"]
       }
     ]
@@ -67788,6 +68738,24 @@
         "status": "adopted",
         "scope": ["city center / business district"],
         "land": ["all uses"]
+      }
+    ]
+  },
+  "North Arlington, New Jersey, United States": {
+    "place": {
+      "name": "North Arlington",
+      "state": "New Jersey",
+      "country": "United States",
+      "type": "city",
+      "encoded": "north-arlington-new-jersey-united-states",
+      "pop": 16457,
+      "coord": [-74.1331988, 40.788434]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["main street / special"],
+        "land": ["commercial"]
       }
     ]
   },
@@ -69517,6 +70485,25 @@
       }
     ]
   },
+  "Oakland, New Jersey, United States": {
+    "place": {
+      "name": "Oakland",
+      "state": "New Jersey",
+      "country": "United States",
+      "type": "city",
+      "encoded": "oakland-new-jersey-united-states",
+      "pop": 12748,
+      "coord": [-74.2430988, 41.0220483]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["all uses"],
+        "date": "2022-08-17"
+      }
+    ]
+  },
   "Oakland, Oregon, United States": {
     "place": {
       "name": "Oakland",
@@ -69738,6 +70725,32 @@
         "status": "adopted",
         "scope": ["city center / business district"],
         "land": ["commercial"]
+      }
+    ]
+  },
+  "Ocean City, New Jersey, United States": {
+    "place": {
+      "name": "Ocean City",
+      "state": "New Jersey",
+      "country": "United States",
+      "type": "city",
+      "encoded": "ocean-city-new-jersey-united-states",
+      "pop": 11229,
+      "coord": [-74.5746001, 39.2776156]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["all uses"],
+        "date": "2022-04-07"
+      }
+    ],
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district", "main street / special"],
+        "land": ["all uses", "commercial"]
       }
     ]
   },
@@ -71588,6 +72601,19 @@
       "pop": 197238,
       "coord": [-94.6851702, 38.9742502]
     },
+    "add_max": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": [
+          "commercial",
+          "industrial",
+          "medical",
+          "other",
+          "residential, all uses"
+        ]
+      }
+    ],
     "reduce_min": [
       {
         "status": "adopted",
@@ -73097,6 +74123,24 @@
       }
     ]
   },
+  "Patterson, Georgia, United States": {
+    "place": {
+      "name": "Patterson",
+      "state": "Georgia",
+      "country": "United States",
+      "type": "city",
+      "encoded": "patterson-georgia-united-states",
+      "pop": 749,
+      "coord": [-82.1401193, 31.3874383]
+    },
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["all uses"]
+      }
+    ]
+  },
   "Paw Paw, Illinois, United States": {
     "place": {
       "name": "Paw Paw",
@@ -73746,6 +74790,24 @@
         "status": "adopted",
         "scope": ["city center / business district"],
         "land": ["all uses", "residential, all uses"]
+      }
+    ]
+  },
+  "Pense, Saskatchewan, Canada": {
+    "place": {
+      "name": "Pense",
+      "state": "Saskatchewan",
+      "country": "Canada",
+      "type": "city",
+      "encoded": "pense-saskatchewan-canada",
+      "pop": 603,
+      "coord": [-104.9828583, 50.4159384]
+    },
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["commercial", "other"]
       }
     ]
   },
@@ -74840,6 +75902,50 @@
         "status": "adopted",
         "scope": ["city center / business district"],
         "land": ["commercial"]
+      }
+    ]
+  },
+  "Pine Hill, New Jersey, United States": {
+    "place": {
+      "name": "Pine Hill",
+      "state": "New Jersey",
+      "country": "United States",
+      "type": "city",
+      "encoded": "pine-hill-new-jersey-united-states",
+      "pop": 10743,
+      "coord": [-74.9921108, 39.7842813]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["all uses"],
+        "date": "2024-05-20"
+      }
+    ]
+  },
+  "Pine Lake, Georgia, United States": {
+    "place": {
+      "name": "Pine Lake",
+      "state": "Georgia",
+      "country": "United States",
+      "type": "city",
+      "encoded": "pine-lake-georgia-united-states",
+      "pop": 752,
+      "coord": [-84.2060309, 33.7937162]
+    },
+    "add_max": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["all uses"]
+      }
+    ],
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["main street / special"],
+        "land": ["commercial", "other", "residential, multi-family"]
       }
     ]
   },
@@ -76287,6 +77393,24 @@
       }
     ]
   },
+  "Port Wentworth, Georgia, United States": {
+    "place": {
+      "name": "Port Wentworth",
+      "state": "Georgia",
+      "country": "United States",
+      "type": "city",
+      "encoded": "port-wentworth-georgia-united-states",
+      "pop": 10878,
+      "coord": [-81.1631681, 32.149092]
+    },
+    "add_max": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["all uses"]
+      }
+    ]
+  },
   "Portage, Indiana, United States": {
     "place": {
       "name": "Portage",
@@ -76859,6 +77983,25 @@
           "other",
           "residential, multi-family"
         ]
+      }
+    ]
+  },
+  "Preeceville, Saskatchewan, Canada": {
+    "place": {
+      "name": "Preeceville",
+      "state": "Saskatchewan",
+      "country": "Canada",
+      "type": "city",
+      "encoded": "preeceville-saskatchewan-canada",
+      "pop": 1062,
+      "coord": [-102.6666643, 51.9553325]
+    },
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["all uses"],
+        "date": "1986"
       }
     ]
   },
@@ -77492,6 +78635,24 @@
       {
         "status": "adopted",
         "scope": ["city center / business district", "transit-oriented"],
+        "land": ["commercial", "other", "residential, low-density"]
+      }
+    ]
+  },
+  "Qu'Appelle, Saskatchewan, Canada": {
+    "place": {
+      "name": "Qu'Appelle",
+      "state": "Saskatchewan",
+      "country": "Canada",
+      "type": "city",
+      "encoded": "quappelle-saskatchewan-canada",
+      "pop": 625,
+      "coord": [-103.8779412, 50.5413694]
+    },
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
         "land": ["commercial", "other", "residential, low-density"]
       }
     ]
@@ -78179,6 +79340,29 @@
       }
     ]
   },
+  "Red Bank, New Jersey, United States": {
+    "place": {
+      "name": "Red Bank",
+      "state": "New Jersey",
+      "country": "United States",
+      "type": "city",
+      "encoded": "red-bank-new-jersey-united-states",
+      "pop": 12936,
+      "coord": [-74.0643065, 40.3470543]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["transit-oriented"],
+        "land": ["all uses"]
+      },
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["all uses"]
+      }
+    ]
+  },
   "Red Cloud, Nebraska, United States": {
     "place": {
       "name": "Red Cloud",
@@ -78450,6 +79634,24 @@
       }
     ]
   },
+  "Redvers, Saskatchewan, Canada": {
+    "place": {
+      "name": "Redvers",
+      "state": "Saskatchewan",
+      "country": "Canada",
+      "type": "city",
+      "encoded": "redvers-saskatchewan-canada",
+      "pop": 1008,
+      "coord": [-101.6979903, 49.5727567]
+    },
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["commercial", "other", "residential, all uses"]
+      }
+    ]
+  },
   "Redwood Falls, Minnesota, United States": {
     "place": {
       "name": "Redwood Falls",
@@ -78543,6 +79745,24 @@
           "residential, all uses",
           "residential, multi-family"
         ]
+      }
+    ]
+  },
+  "Regina Beach, Saskatchewan, Canada": {
+    "place": {
+      "name": "Regina Beach",
+      "state": "Saskatchewan",
+      "country": "Canada",
+      "type": "city",
+      "encoded": "regina-beach-saskatchewan-canada",
+      "pop": 1292,
+      "coord": [-104.9857749, 50.7911888]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["all uses"]
       }
     ]
   },
@@ -79806,6 +81026,24 @@
       }
     ]
   },
+  "Riverdale, Georgia, United States": {
+    "place": {
+      "name": "Riverdale",
+      "state": "Georgia",
+      "country": "United States",
+      "type": "city",
+      "encoded": "riverdale-georgia-united-states",
+      "pop": 15129,
+      "coord": [-84.41259818230971, 33.57249419302146]
+    },
+    "add_max": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["commercial"]
+      }
+    ]
+  },
   "Riverdale, Illinois, United States": {
     "place": {
       "name": "Riverdale",
@@ -80100,6 +81338,25 @@
         "status": "adopted",
         "scope": ["city center / business district"],
         "land": ["all uses"]
+      }
+    ]
+  },
+  "Robbinsville Township, New Jersey, United States": {
+    "place": {
+      "name": "Robbinsville Township",
+      "state": "New Jersey",
+      "country": "United States",
+      "type": "city",
+      "encoded": "robbinsville-township-new-jersey-united-states",
+      "pop": 15476,
+      "coord": [-74.619833, 40.2162828]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["all uses"],
+        "date": "2022-09-08"
       }
     ]
   },
@@ -81265,6 +82522,24 @@
       }
     ]
   },
+  "Rosetown, Saskatchewan, Canada": {
+    "place": {
+      "name": "Rosetown",
+      "state": "Saskatchewan",
+      "country": "Canada",
+      "type": "city",
+      "encoded": "rosetown-saskatchewan-canada",
+      "pop": 2507,
+      "coord": [-107.9912859, 51.554815]
+    },
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["commercial"]
+      }
+    ]
+  },
   "Roseville, California, United States": {
     "place": {
       "name": "Roseville",
@@ -81417,6 +82692,31 @@
         "status": "adopted",
         "scope": ["city center / business district"],
         "land": ["all uses"]
+      }
+    ]
+  },
+  "Rosthern, Saskatchewan, Canada": {
+    "place": {
+      "name": "Rosthern",
+      "state": "Saskatchewan",
+      "country": "Canada",
+      "type": "city",
+      "encoded": "rosthern-saskatchewan-canada",
+      "pop": 1602,
+      "coord": [-106.335297, 52.663891]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["all uses"]
+      }
+    ],
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["commercial"]
       }
     ]
   },
@@ -82975,6 +84275,24 @@
       {
         "status": "adopted",
         "scope": ["citywide"],
+        "land": ["all uses"]
+      }
+    ]
+  },
+  "Sandersville, Georgia, United States": {
+    "place": {
+      "name": "Sandersville",
+      "state": "Georgia",
+      "country": "United States",
+      "type": "city",
+      "encoded": "sandersville-georgia-united-states",
+      "pop": 5813,
+      "coord": [-82.8116031, 32.9832812]
+    },
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
         "land": ["all uses"]
       }
     ]
@@ -84792,6 +86110,24 @@
       }
     ]
   },
+  "Senoia, Georgia, United States": {
+    "place": {
+      "name": "Senoia",
+      "state": "Georgia",
+      "country": "United States",
+      "type": "city",
+      "encoded": "senoia-georgia-united-states",
+      "pop": 5016,
+      "coord": [-84.5540046, 33.3011663]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["commercial", "other"]
+      }
+    ]
+  },
   "Seoul, Korea": {
     "place": {
       "name": "Seoul",
@@ -85171,6 +86507,24 @@
       }
     ]
   },
+  "Shaunavon, Saskatchewan, Canada": {
+    "place": {
+      "name": "Shaunavon",
+      "state": "Saskatchewan",
+      "country": "Canada",
+      "type": "city",
+      "encoded": "shaunavon-saskatchewan-canada",
+      "pop": 1784,
+      "coord": [-108.410021, 49.6507703]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["all uses"]
+      }
+    ]
+  },
   "Shawano County, Wisconsin, United States": {
     "place": {
       "name": "Shawano County",
@@ -85534,6 +86888,29 @@
         "status": "adopted",
         "scope": ["city center / business district"],
         "land": ["commercial", "residential, all uses"]
+      }
+    ]
+  },
+  "Shellbrook, Saskatchewan, Canada": {
+    "place": {
+      "name": "Shellbrook",
+      "state": "Saskatchewan",
+      "country": "Canada",
+      "type": "city",
+      "encoded": "shellbrook-saskatchewan-canada",
+      "pop": 1510,
+      "coord": [-106.387482, 53.22248]
+    },
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": [
+          "commercial",
+          "other",
+          "residential, low-density",
+          "residential, multi-family"
+        ]
       }
     ]
   },
@@ -87355,6 +88732,32 @@
       }
     ]
   },
+  "Somerville, New Jersey, United States": {
+    "place": {
+      "name": "Somerville",
+      "state": "New Jersey",
+      "country": "United States",
+      "type": "city",
+      "encoded": "somerville-new-jersey-united-states",
+      "pop": 12346,
+      "coord": [-74.60988, 40.5742696]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["all uses"],
+        "date": "2022-05-16"
+      }
+    ],
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["commercial", "other"]
+      }
+    ]
+  },
   "Somerville, Tennessee, United States": {
     "place": {
       "name": "Somerville",
@@ -87929,6 +89332,24 @@
       }
     ]
   },
+  "South Pittsburg, Tennessee, United States": {
+    "place": {
+      "name": "South Pittsburg",
+      "state": "Tennessee",
+      "country": "United States",
+      "type": "city",
+      "encoded": "south-pittsburg-tennessee-united-states",
+      "pop": 3106,
+      "coord": [-85.7058445, 35.0122635]
+    },
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["all uses"]
+      }
+    ]
+  },
   "South Plainfield, New Jersey, United States": {
     "place": {
       "name": "South Plainfield",
@@ -87962,6 +89383,32 @@
         "status": "adopted",
         "scope": ["city center / business district"],
         "land": ["commercial", "other"]
+      }
+    ]
+  },
+  "South River, New Jersey, United States": {
+    "place": {
+      "name": "South River",
+      "state": "New Jersey",
+      "country": "United States",
+      "type": "city",
+      "encoded": "south-river-new-jersey-united-states",
+      "pop": 16118,
+      "coord": [-74.3859831, 40.446495]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["all uses"],
+        "date": "2022-03-21"
+      }
+    ],
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["commercial"]
       }
     ]
   },
@@ -88058,6 +89505,30 @@
       {
         "status": "adopted",
         "scope": ["citywide"],
+        "land": ["all uses"]
+      }
+    ]
+  },
+  "Southampton Township, New Jersey, United States": {
+    "place": {
+      "name": "Southampton Township",
+      "state": "New Jersey",
+      "country": "United States",
+      "type": "city",
+      "encoded": "southampton-township-new-jersey-united-states",
+      "pop": 10317,
+      "coord": [-74.7380885, 39.931466]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["all uses"],
+        "date": "2021-11-23"
+      },
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
         "land": ["all uses"]
       }
     ]
@@ -88210,6 +89681,24 @@
         "status": "adopted",
         "scope": ["city center / business district"],
         "land": ["commercial"]
+      }
+    ]
+  },
+  "Sparta, Georgia, United States": {
+    "place": {
+      "name": "Sparta",
+      "state": "Georgia",
+      "country": "United States",
+      "type": "city",
+      "encoded": "sparta-georgia-united-states",
+      "pop": 1357,
+      "coord": [-82.9762589, 33.2757006]
+    },
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["all uses"]
       }
     ]
   },
@@ -90435,6 +91924,24 @@
       }
     ]
   },
+  "Statham, Georgia, United States": {
+    "place": {
+      "name": "Statham",
+      "state": "Georgia",
+      "country": "United States",
+      "type": "city",
+      "encoded": "statham-georgia-united-states",
+      "pop": 2813,
+      "coord": [-83.5964913, 33.9654884]
+    },
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["all uses"]
+      }
+    ]
+  },
   "Staunton, Virginia, United States": {
     "place": {
       "name": "Staunton",
@@ -92562,6 +94069,24 @@
       }
     ]
   },
+  "Sylvania, Georgia, United States": {
+    "place": {
+      "name": "Sylvania",
+      "state": "Georgia",
+      "country": "United States",
+      "type": "city",
+      "encoded": "sylvania-georgia-united-states",
+      "pop": 2634,
+      "coord": [-81.636776, 32.7504441]
+    },
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["commercial", "other", "residential, all uses"]
+      }
+    ]
+  },
   "Sylvania, Ohio, United States": {
     "place": {
       "name": "Sylvania",
@@ -93514,6 +95039,31 @@
       }
     ]
   },
+  "Tenafly, New Jersey, United States": {
+    "place": {
+      "name": "Tenafly",
+      "state": "New Jersey",
+      "country": "United States",
+      "type": "city",
+      "encoded": "tenafly-new-jersey-united-states",
+      "pop": 15409,
+      "coord": [-73.9629154, 40.9253766]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["all uses", "commercial"]
+      }
+    ],
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["all uses"]
+      }
+    ]
+  },
   "Tenino, Washington, United States": {
     "place": {
       "name": "Tenino",
@@ -93845,6 +95395,24 @@
         "status": "adopted",
         "scope": ["city center / business district"],
         "land": ["residential, multi-family"]
+      }
+    ]
+  },
+  "Thomaston, Georgia, United States": {
+    "place": {
+      "name": "Thomaston",
+      "state": "Georgia",
+      "country": "United States",
+      "type": "city",
+      "encoded": "thomaston-georgia-united-states",
+      "pop": 9816,
+      "coord": [-84.3265855, 32.8881879]
+    },
+    "add_max": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["commercial", "other", "residential, multi-family"]
       }
     ]
   },
@@ -94423,6 +95991,24 @@
       "coord": [-71.1982208877714, 41.64634515]
     },
     "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["all uses"]
+      }
+    ]
+  },
+  "Toccoa, Georgia, United States": {
+    "place": {
+      "name": "Toccoa",
+      "state": "Georgia",
+      "country": "United States",
+      "type": "city",
+      "encoded": "toccoa-georgia-united-states",
+      "pop": 9133,
+      "coord": [-83.332881, 34.5774368]
+    },
+    "rm_min": [
       {
         "status": "adopted",
         "scope": ["city center / business district"],
@@ -95749,6 +97335,31 @@
       }
     ]
   },
+  "Turin, Georgia, United States": {
+    "place": {
+      "name": "Turin",
+      "state": "Georgia",
+      "country": "United States",
+      "type": "city",
+      "encoded": "turin-georgia-united-states",
+      "pop": 347,
+      "coord": [-84.6357634, 33.3265068]
+    },
+    "add_max": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["all uses"]
+      }
+    ],
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["all uses"]
+      }
+    ]
+  },
   "Turner, Oregon, United States": {
     "place": {
       "name": "Turner",
@@ -95962,6 +97573,42 @@
       }
     ]
   },
+  "Ty Ty, Georgia, United States": {
+    "place": {
+      "name": "Ty Ty",
+      "state": "Georgia",
+      "country": "United States",
+      "type": "city",
+      "encoded": "ty-ty-georgia-united-states",
+      "pop": 641,
+      "coord": [-83.6488415, 31.4717166]
+    },
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["all uses"]
+      }
+    ]
+  },
+  "Tybee Island, Georgia, United States": {
+    "place": {
+      "name": "Tybee Island",
+      "state": "Georgia",
+      "country": "United States",
+      "type": "city",
+      "encoded": "tybee-island-georgia-united-states",
+      "pop": 3114,
+      "coord": [-80.8469427, 31.9987321]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["all uses"]
+      }
+    ]
+  },
   "Tyler, Texas, United States": {
     "place": {
       "name": "Tyler",
@@ -95976,6 +97623,24 @@
       {
         "status": "adopted",
         "scope": ["city center / business district"],
+        "land": ["all uses"]
+      }
+    ]
+  },
+  "Tyrone, Georgia, United States": {
+    "place": {
+      "name": "Tyrone",
+      "state": "Georgia",
+      "country": "United States",
+      "type": "city",
+      "encoded": "tyrone-georgia-united-states",
+      "pop": 7658,
+      "coord": [-84.5972005, 33.4713249]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
         "land": ["all uses"]
       }
     ]
@@ -96089,6 +97754,24 @@
       "coord": [-119.34268017638347, 45.917575666977385]
     },
     "add_max": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["commercial"]
+      }
+    ]
+  },
+  "Unadilla, Georgia, United States": {
+    "place": {
+      "name": "Unadilla",
+      "state": "Georgia",
+      "country": "United States",
+      "type": "city",
+      "encoded": "unadilla-georgia-united-states",
+      "pop": 3118,
+      "coord": [-83.7364358, 32.2617378]
+    },
+    "rm_min": [
       {
         "status": "adopted",
         "scope": ["citywide"],
@@ -97233,6 +98916,32 @@
       }
     ]
   },
+  "Verona Township, New Jersey, United States": {
+    "place": {
+      "name": "Verona Township",
+      "state": "New Jersey",
+      "country": "United States",
+      "type": "city",
+      "encoded": "verona-township-new-jersey-united-states",
+      "pop": 14572,
+      "coord": [-74.24497125780414, 40.83151180693042]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["all uses"],
+        "date": "2023-02-27"
+      }
+    ],
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["commercial", "other"]
+      }
+    ]
+  },
   "Verona, Pennsylvania, United States": {
     "place": {
       "name": "Verona",
@@ -97516,6 +99225,24 @@
         "status": "adopted",
         "scope": ["city center / business district"],
         "land": ["commercial", "other"]
+      }
+    ]
+  },
+  "Vidalia, Georgia, United States": {
+    "place": {
+      "name": "Vidalia",
+      "state": "Georgia",
+      "country": "United States",
+      "type": "city",
+      "encoded": "vidalia-georgia-united-states",
+      "pop": 10785,
+      "coord": [-82.4134614, 32.2176855]
+    },
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["all uses"]
       }
     ]
   },
@@ -98145,6 +99872,25 @@
       }
     ]
   },
+  "Waldwick, New Jersey, United States": {
+    "place": {
+      "name": "Waldwick",
+      "state": "New Jersey",
+      "country": "United States",
+      "type": "city",
+      "encoded": "waldwick-new-jersey-united-states",
+      "pop": 10058,
+      "coord": [-74.1182019, 41.0109281]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["all uses"],
+        "date": "2022-04-12"
+      }
+    ]
+  },
   "Walker, Michigan, United States": {
     "place": {
       "name": "Walker",
@@ -98558,6 +100304,25 @@
         "status": "adopted",
         "scope": ["city center / business district"],
         "land": ["commercial", "other"]
+      }
+    ]
+  },
+  "Warren Township, New Jersey, United States": {
+    "place": {
+      "name": "Warren Township",
+      "state": "New Jersey",
+      "country": "United States",
+      "type": "city",
+      "encoded": "warren-township-new-jersey-united-states",
+      "pop": 15923,
+      "coord": [-74.5226631, 40.6306572]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["all uses"],
+        "date": "2021-12-16"
       }
     ]
   },
@@ -99084,6 +100849,24 @@
       }
     ]
   },
+  "Washington, Georgia, United States": {
+    "place": {
+      "name": "Washington",
+      "state": "Georgia",
+      "country": "United States",
+      "type": "city",
+      "encoded": "washington-georgia-united-states",
+      "pop": 3754,
+      "coord": [-82.73954533415102, 33.73688328378948]
+    },
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["all uses"]
+      }
+    ]
+  },
   "Washington, Illinois, United States": {
     "place": {
       "name": "Washington",
@@ -99264,6 +101047,24 @@
       {
         "status": "adopted",
         "scope": ["city center / business district"],
+        "land": ["all uses"]
+      }
+    ]
+  },
+  "Waterford Township, New Jersey, United States": {
+    "place": {
+      "name": "Waterford Township",
+      "state": "New Jersey",
+      "country": "United States",
+      "type": "city",
+      "encoded": "waterford-township-new-jersey-united-states",
+      "pop": 10421,
+      "coord": [-74.82758804321499, 39.75463106097266]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
         "land": ["all uses"]
       }
     ]
@@ -99584,6 +101385,24 @@
         "scope": ["city center / business district"],
         "land": ["all uses"]
       },
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["all uses"]
+      }
+    ]
+  },
+  "Watkinsville, Georgia, United States": {
+    "place": {
+      "name": "Watkinsville",
+      "state": "Georgia",
+      "country": "United States",
+      "type": "city",
+      "encoded": "watkinsville-georgia-united-states",
+      "pop": 2896,
+      "coord": [-83.4087709, 33.8628959]
+    },
+    "rm_min": [
       {
         "status": "adopted",
         "scope": ["citywide"],
@@ -99957,6 +101776,24 @@
         "status": "adopted",
         "scope": ["city center / business district"],
         "land": ["all uses"]
+      }
+    ]
+  },
+  "Waycross, Georgia, United States": {
+    "place": {
+      "name": "Waycross",
+      "state": "Georgia",
+      "country": "United States",
+      "type": "city",
+      "encoded": "waycross-georgia-united-states",
+      "pop": 13942,
+      "coord": [-82.3540178, 31.2135511]
+    },
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["commercial", "other", "residential, all uses"]
       }
     ]
   },
@@ -100695,6 +102532,25 @@
       }
     ]
   },
+  "West Caldwell Township, New Jersey, United States": {
+    "place": {
+      "name": "West Caldwell Township",
+      "state": "New Jersey",
+      "country": "United States",
+      "type": "city",
+      "encoded": "west-caldwell-township-new-jersey-united-states",
+      "pop": 11012,
+      "coord": [-74.30192770120645, 40.841059572858725]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["all uses"],
+        "date": "2025-07-15"
+      }
+    ]
+  },
   "West Cape May, New Jersey, United States": {
     "place": {
       "name": "West Cape May",
@@ -101322,6 +103178,24 @@
       "encoded": "WestPlains_MO",
       "pop": 12184,
       "coord": [-91.8525756, 36.7281652]
+    },
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["all uses"]
+      }
+    ]
+  },
+  "West Point, Georgia, United States": {
+    "place": {
+      "name": "West Point",
+      "state": "Georgia",
+      "country": "United States",
+      "type": "city",
+      "encoded": "west-point-georgia-united-states",
+      "pop": 3719,
+      "coord": [-85.183728, 32.8772531]
     },
     "rm_min": [
       {
@@ -102286,6 +104160,24 @@
       "encoded": "WhiteSulphurSprings_WV",
       "pop": 2231,
       "coord": [-80.2975734, 37.7965149]
+    },
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["all uses"]
+      }
+    ]
+  },
+  "White, Georgia, United States": {
+    "place": {
+      "name": "White",
+      "state": "Georgia",
+      "country": "United States",
+      "type": "city",
+      "encoded": "white-georgia-united-states",
+      "pop": 661,
+      "coord": [-84.74532904755594, 34.282460568385794]
     },
     "rm_min": [
       {
@@ -104143,6 +106035,42 @@
       }
     ]
   },
+  "Wood-Ridge, New Jersey, United States": {
+    "place": {
+      "name": "Wood-Ridge",
+      "state": "New Jersey",
+      "country": "United States",
+      "type": "city",
+      "encoded": "wood-ridge-new-jersey-united-states",
+      "pop": 10137,
+      "coord": [-74.0879195, 40.8456555]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["all uses"]
+      }
+    ]
+  },
+  "Woodbine, Georgia, United States": {
+    "place": {
+      "name": "Woodbine",
+      "state": "Georgia",
+      "country": "United States",
+      "type": "city",
+      "encoded": "woodbine-georgia-united-states",
+      "pop": 1062,
+      "coord": [-81.7226063, 30.9638429]
+    },
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["commercial"]
+      }
+    ]
+  },
   "Woodbine, New Jersey, United States": {
     "place": {
       "name": "Woodbine",
@@ -104247,6 +106175,31 @@
       }
     ]
   },
+  "Woodbury, Georgia, United States": {
+    "place": {
+      "name": "Woodbury",
+      "state": "Georgia",
+      "country": "United States",
+      "type": "city",
+      "encoded": "woodbury-georgia-united-states",
+      "pop": 908,
+      "coord": [-84.5827031, 32.9837394]
+    },
+    "add_max": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["commercial", "industrial", "other"]
+      }
+    ],
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["all uses"]
+      }
+    ]
+  },
   "Woodbury, Minnesota, United States": {
     "place": {
       "name": "Woodbury",
@@ -104258,6 +106211,24 @@
       "coord": [-92.9339449, 44.919896]
     },
     "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["commercial"]
+      }
+    ]
+  },
+  "Woodbury, New Jersey, United States": {
+    "place": {
+      "name": "Woodbury",
+      "state": "New Jersey",
+      "country": "United States",
+      "type": "city",
+      "encoded": "woodbury-new-jersey-united-states",
+      "pop": 9963,
+      "coord": [-75.1526774, 39.8381691]
+    },
+    "rm_min": [
       {
         "status": "adopted",
         "scope": ["city center / business district"],
@@ -104586,6 +106557,24 @@
       }
     ]
   },
+  "Woolwich Township, New Jersey, United States": {
+    "place": {
+      "name": "Woolwich Township",
+      "state": "New Jersey",
+      "country": "United States",
+      "type": "city",
+      "encoded": "woolwich-township-new-jersey-united-states",
+      "pop": 12577,
+      "coord": [-75.32543934430632, 39.737188210219905]
+    },
+    "add_max": [
+      {
+        "status": "adopted",
+        "scope": ["main street / special"],
+        "land": ["residential, all uses"]
+      }
+    ]
+  },
   "Woonsocket, Rhode Island, United States": {
     "place": {
       "name": "Woonsocket",
@@ -104859,6 +106848,24 @@
         "status": "adopted",
         "scope": ["city center / business district"],
         "land": ["commercial", "other"]
+      }
+    ]
+  },
+  "Wyckoff Township, New Jersey, United States": {
+    "place": {
+      "name": "Wyckoff Township",
+      "state": "New Jersey",
+      "country": "United States",
+      "type": "city",
+      "encoded": "wyckoff-township-new-jersey-united-states",
+      "pop": 16585,
+      "coord": [-74.17310382832062, 41.0096985998429]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["all uses"]
       }
     ]
   },
