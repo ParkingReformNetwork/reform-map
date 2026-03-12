@@ -6249,6 +6249,24 @@
       }
     ]
   },
+  "Bazine, Kansas, United States": {
+    "place": {
+      "name": "Bazine",
+      "state": "Kansas",
+      "country": "United States",
+      "type": "city",
+      "encoded": "bazine-kansas-united-states",
+      "pop": 282,
+      "coord": [-99.6920585, 38.4445009]
+    },
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["all uses"]
+      }
+    ]
+  },
   "Beachwood, New Jersey, United States": {
     "place": {
       "name": "Beachwood",
@@ -12370,6 +12388,24 @@
       {
         "status": "adopted",
         "scope": ["city center / business district"],
+        "land": ["all uses"]
+      }
+    ]
+  },
+  "Bucklin, Kansas, United States": {
+    "place": {
+      "name": "Bucklin",
+      "state": "Kansas",
+      "country": "United States",
+      "type": "city",
+      "encoded": "bucklin-kansas-united-states",
+      "pop": 727,
+      "coord": [-99.6342901, 37.5472429]
+    },
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
         "land": ["all uses"]
       }
     ]
@@ -25594,6 +25630,24 @@
       }
     ]
   },
+  "Dighton, Kansas, United States": {
+    "place": {
+      "name": "Dighton",
+      "state": "Kansas",
+      "country": "United States",
+      "type": "city",
+      "encoded": "dighton-kansas-united-states",
+      "pop": 960,
+      "coord": [-100.467084, 38.4819612]
+    },
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["all uses"]
+      }
+    ]
+  },
   "Dillon, Colorado, United States": {
     "place": {
       "name": "Dillon",
@@ -29236,6 +29290,24 @@
         "status": "adopted",
         "scope": ["city center / business district"],
         "land": ["commercial", "other"]
+      }
+    ]
+  },
+  "Elkhart, Kansas, United States": {
+    "place": {
+      "name": "Elkhart",
+      "state": "Kansas",
+      "country": "United States",
+      "type": "city",
+      "encoded": "elkhart-kansas-united-states",
+      "pop": 1888,
+      "coord": [-101.89733, 37.0027644]
+    },
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["all uses"]
       }
     ]
   },
@@ -43793,6 +43865,24 @@
       }
     ]
   },
+  "Hinesville, Georgia, United States": {
+    "place": {
+      "name": "Hinesville",
+      "state": "Georgia",
+      "country": "United States",
+      "type": "city",
+      "encoded": "hinesville-georgia-united-states",
+      "pop": 34891,
+      "coord": [-81.5960705, 31.8477347]
+    },
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["all uses"]
+      }
+    ]
+  },
   "Hinsdale, Illinois, United States": {
     "place": {
       "name": "Hinsdale",
@@ -49456,6 +49546,24 @@
           "residential, all uses",
           "residential, multi-family"
         ]
+      }
+    ]
+  },
+  "Kingman, Kansas, United States": {
+    "place": {
+      "name": "Kingman",
+      "state": "Kansas",
+      "country": "United States",
+      "type": "city",
+      "encoded": "kingman-kansas-united-states",
+      "pop": 3105,
+      "coord": [-98.11321318568992, 37.64316332428817]
+    },
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["all uses"]
       }
     ]
   },
@@ -73251,6 +73359,24 @@
       }
     ]
   },
+  "Oswego, Kansas, United States": {
+    "place": {
+      "name": "Oswego",
+      "state": "Kansas",
+      "country": "United States",
+      "type": "city",
+      "encoded": "oswego-kansas-united-states",
+      "pop": 1668,
+      "coord": [-95.1099645, 37.1675652]
+    },
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["all uses"]
+      }
+    ]
+  },
   "Otsego, Michigan, United States": {
     "place": {
       "name": "Otsego",
@@ -74490,6 +74616,24 @@
         "status": "adopted",
         "scope": ["city center / business district"],
         "land": ["commercial", "other"]
+      }
+    ]
+  },
+  "Parker, Kansas, United States": {
+    "place": {
+      "name": "Parker",
+      "state": "Kansas",
+      "country": "United States",
+      "type": "city",
+      "encoded": "parker-kansas-united-states",
+      "pop": 241,
+      "coord": [-94.9919123, 38.3283548]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["commercial", "industrial", "medical", "other"]
       }
     ]
   },
@@ -89325,6 +89469,24 @@
       }
     ]
   },
+  "Smyrna, Georgia, United States": {
+    "place": {
+      "name": "Smyrna",
+      "state": "Georgia",
+      "country": "United States",
+      "type": "city",
+      "encoded": "smyrna-georgia-united-states",
+      "pop": 55663,
+      "coord": [-84.5147454, 33.883887]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["all uses"]
+      }
+    ]
+  },
   "Smyrna, Tennessee, United States": {
     "place": {
       "name": "Smyrna",
@@ -99507,6 +99669,31 @@
       "coord": [-73.6731749, 42.4134168]
     },
     "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["all uses"]
+      }
+    ]
+  },
+  "Valdosta, Georgia, United States": {
+    "place": {
+      "name": "Valdosta",
+      "state": "Georgia",
+      "country": "United States",
+      "type": "city",
+      "encoded": "valdosta-georgia-united-states",
+      "pop": 55378,
+      "coord": [-83.2784851, 30.8327022]
+    },
+    "add_max": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["all uses"]
+      }
+    ],
+    "rm_min": [
       {
         "status": "adopted",
         "scope": ["city center / business district"],
