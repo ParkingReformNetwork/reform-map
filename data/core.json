@@ -474,6 +474,24 @@
       }
     ]
   },
+  "Agoura Hills, California, United States": {
+    "place": {
+      "name": "Agoura Hills",
+      "state": "California",
+      "country": "United States",
+      "type": "city",
+      "encoded": "agoura-hills-california-united-states",
+      "pop": 20299,
+      "coord": [-118.7655456, 34.1481692]
+    },
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["residential, low-density"]
+      }
+    ]
+  },
   "Aiken, South Carolina, United States": {
     "place": {
       "name": "Aiken",
@@ -14081,6 +14099,31 @@
       }
     ]
   },
+  "Canton, Georgia, United States": {
+    "place": {
+      "name": "Canton",
+      "state": "Georgia",
+      "country": "United States",
+      "type": "city",
+      "encoded": "canton-georgia-united-states",
+      "pop": 32973,
+      "coord": [-84.4907621, 34.2367621]
+    },
+    "add_max": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["commercial", "industrial", "medical", "other"]
+      }
+    ],
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["all uses"]
+      }
+    ]
+  },
   "Canton, Illinois, United States": {
     "place": {
       "name": "Canton",
@@ -16359,6 +16402,38 @@
       {
         "status": "adopted",
         "scope": ["city center / business district"],
+        "land": ["all uses"]
+      }
+    ]
+  },
+  "Chamblee, Georgia, United States": {
+    "place": {
+      "name": "Chamblee",
+      "state": "Georgia",
+      "country": "United States",
+      "type": "city",
+      "encoded": "chamblee-georgia-united-states",
+      "pop": 30164,
+      "coord": [-84.2988296, 33.892176]
+    },
+    "add_max": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["all uses"]
+      }
+    ],
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["main street / special"],
+        "land": ["all uses"]
+      }
+    ],
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["transit-oriented"],
         "land": ["all uses"]
       }
     ]
@@ -20944,6 +21019,31 @@
       }
     ]
   },
+  "Conyers, Georgia, United States": {
+    "place": {
+      "name": "Conyers",
+      "state": "Georgia",
+      "country": "United States",
+      "type": "city",
+      "encoded": "conyers-georgia-united-states",
+      "pop": 17305,
+      "coord": [-84.0176904, 33.6676103]
+    },
+    "add_max": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["all uses"]
+      }
+    ],
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["commercial", "other", "residential, all uses"]
+      }
+    ]
+  },
   "Cook Islands": {
     "place": {
       "name": "Cook Islands",
@@ -23233,6 +23333,24 @@
         "status": "adopted",
         "scope": ["city center / business district"],
         "land": ["commercial", "other", "residential, multi-family"]
+      }
+    ]
+  },
+  "Dalton, Georgia, United States": {
+    "place": {
+      "name": "Dalton",
+      "state": "Georgia",
+      "country": "United States",
+      "type": "city",
+      "encoded": "dalton-georgia-united-states",
+      "pop": 34417,
+      "coord": [-84.9702475, 34.7691867]
+    },
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["all uses"]
       }
     ]
   },
@@ -26082,6 +26200,37 @@
       }
     ]
   },
+  "Douglasville, Georgia, United States": {
+    "place": {
+      "name": "Douglasville",
+      "state": "Georgia",
+      "country": "United States",
+      "type": "city",
+      "encoded": "douglasville-georgia-united-states",
+      "pop": 34650,
+      "coord": [-84.7477136, 33.7514966]
+    },
+    "add_max": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": [
+          "commercial",
+          "industrial",
+          "medical",
+          "other",
+          "residential, multi-family"
+        ]
+      }
+    ],
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district", "main street / special"],
+        "land": ["all uses", "commercial", "other"]
+      }
+    ]
+  },
   "Dover, Arkansas, United States": {
     "place": {
       "name": "Dover",
@@ -27811,6 +27960,24 @@
         "status": "adopted",
         "scope": ["city center / business district"],
         "land": ["commercial", "other"]
+      }
+    ]
+  },
+  "East Point, Georgia, United States": {
+    "place": {
+      "name": "East Point",
+      "state": "Georgia",
+      "country": "United States",
+      "type": "city",
+      "encoded": "east-point-georgia-united-states",
+      "pop": 38358,
+      "coord": [-84.4393724, 33.6795531]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["transit-oriented"],
+        "land": ["commercial", "other", "residential, multi-family"]
       }
     ]
   },
@@ -35687,6 +35854,31 @@
       }
     ]
   },
+  "Gainesville, Georgia, United States": {
+    "place": {
+      "name": "Gainesville",
+      "state": "Georgia",
+      "country": "United States",
+      "type": "city",
+      "encoded": "gainesville-georgia-united-states",
+      "pop": 42296,
+      "coord": [-83.8240663, 34.2978794]
+    },
+    "add_max": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["all uses"]
+      }
+    ],
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["all uses"]
+      }
+    ]
+  },
   "Gaithersburg, Maryland, United States": {
     "place": {
       "name": "Gaithersburg",
@@ -39840,6 +40032,38 @@
       "pop": 1456,
       "coord": [-88.8814578, 40.7433682]
     },
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["all uses"]
+      }
+    ]
+  },
+  "Griffin, Georgia, United States": {
+    "place": {
+      "name": "Griffin",
+      "state": "Georgia",
+      "country": "United States",
+      "type": "city",
+      "encoded": "griffin-georgia-united-states",
+      "pop": 23478,
+      "coord": [-84.2640904, 33.2467807]
+    },
+    "add_max": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["all uses"]
+      }
+    ],
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["transit-oriented"],
+        "land": ["all uses"]
+      }
+    ],
     "rm_min": [
       {
         "status": "adopted",
@@ -49642,6 +49866,24 @@
       }
     ]
   },
+  "Kingsland, Georgia, United States": {
+    "place": {
+      "name": "Kingsland",
+      "state": "Georgia",
+      "country": "United States",
+      "type": "city",
+      "encoded": "kingsland-georgia-united-states",
+      "pop": 18337,
+      "coord": [-81.6898261, 30.7999563]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["commercial", "other"]
+      }
+    ]
+  },
   "Kingsport, Tennessee, United States": {
     "place": {
       "name": "Kingsport",
@@ -50738,6 +50980,31 @@
       "pop": 7430,
       "coord": [-84.1199251, 36.3828571]
     },
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["all uses"]
+      }
+    ]
+  },
+  "LaGrange, Georgia, United States": {
+    "place": {
+      "name": "LaGrange",
+      "state": "Georgia",
+      "country": "United States",
+      "type": "city",
+      "encoded": "lagrange-georgia-united-states",
+      "pop": 30858,
+      "coord": [-85.0313269, 33.039291]
+    },
+    "add_max": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["commercial", "industrial", "medical", "other"]
+      }
+    ],
     "rm_min": [
       {
         "status": "adopted",
@@ -58626,6 +58893,31 @@
       }
     ]
   },
+  "Marietta, Georgia, United States": {
+    "place": {
+      "name": "Marietta",
+      "state": "Georgia",
+      "country": "United States",
+      "type": "city",
+      "encoded": "marietta-georgia-united-states",
+      "pop": 60972,
+      "coord": [-84.5496148, 33.9528472]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["all uses"]
+      }
+    ],
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["all uses"]
+      }
+    ]
+  },
   "Marietta, Pennsylvania, United States": {
     "place": {
       "name": "Marietta",
@@ -62405,6 +62697,24 @@
       {
         "status": "adopted",
         "scope": ["city center / business district"],
+        "land": ["all uses"]
+      }
+    ]
+  },
+  "Milton, Georgia, United States": {
+    "place": {
+      "name": "Milton",
+      "state": "Georgia",
+      "country": "United States",
+      "type": "city",
+      "encoded": "milton-georgia-united-states",
+      "pop": 41296,
+      "coord": [-84.2693745, 34.1134001]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
         "land": ["all uses"]
       }
     ]
@@ -68904,6 +69214,38 @@
       {
         "status": "adopted",
         "scope": ["citywide"],
+        "land": ["all uses"]
+      }
+    ]
+  },
+  "Newnan, Georgia, United States": {
+    "place": {
+      "name": "Newnan",
+      "state": "Georgia",
+      "country": "United States",
+      "type": "city",
+      "encoded": "newnan-georgia-united-states",
+      "pop": 42549,
+      "coord": [-84.7996573, 33.3806716]
+    },
+    "add_max": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["commercial", "industrial", "other"]
+      }
+    ],
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["all uses"]
+      }
+    ],
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
         "land": ["all uses"]
       }
     ]
@@ -76029,6 +76371,31 @@
       }
     ]
   },
+  "Perry, Georgia, United States": {
+    "place": {
+      "name": "Perry",
+      "state": "Georgia",
+      "country": "United States",
+      "type": "city",
+      "encoded": "perry-georgia-united-states",
+      "pop": 20624,
+      "coord": [-83.7319658, 32.4586695]
+    },
+    "add_max": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["all uses"]
+      }
+    ],
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["all uses"]
+      }
+    ]
+  },
   "Perry, Iowa, United States": {
     "place": {
       "name": "Perry",
@@ -78827,6 +79194,31 @@
         "status": "adopted",
         "scope": ["city center / business district"],
         "land": ["commercial"]
+      }
+    ]
+  },
+  "Powder Springs, Georgia, United States": {
+    "place": {
+      "name": "Powder Springs",
+      "state": "Georgia",
+      "country": "United States",
+      "type": "city",
+      "encoded": "powder-springs-georgia-united-states",
+      "pop": 16887,
+      "coord": [-84.683824, 33.8595492]
+    },
+    "add_max": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["all uses"]
+      }
+    ],
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["main street / special"],
+        "land": ["commercial", "other", "residential, multi-family"]
       }
     ]
   },
@@ -89647,6 +90039,39 @@
       }
     ]
   },
+  "Social Circle, Georgia, United States": {
+    "place": {
+      "name": "Social Circle",
+      "state": "Georgia",
+      "country": "United States",
+      "type": "city",
+      "encoded": "social-circle-georgia-united-states",
+      "pop": 4974,
+      "coord": [-83.7186389, 33.6563867],
+      "repeal": true
+    },
+    "add_max": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": [
+          "commercial",
+          "industrial",
+          "medical",
+          "other",
+          "residential, multi-family"
+        ]
+      }
+    ],
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["all uses"],
+        "date": "2023-06-20"
+      }
+    ]
+  },
   "Sodus Point, New York, United States": {
     "place": {
       "name": "Sodus Point",
@@ -93109,6 +93534,31 @@
       }
     ]
   },
+  "Statesboro, Georgia, United States": {
+    "place": {
+      "name": "Statesboro",
+      "state": "Georgia",
+      "country": "United States",
+      "type": "city",
+      "encoded": "statesboro-georgia-united-states",
+      "pop": 33438,
+      "coord": [-81.7832912, 32.4490141]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["all uses"]
+      }
+    ],
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["all uses"]
+      }
+    ]
+  },
   "Statesville, North Carolina, United States": {
     "place": {
       "name": "Statesville",
@@ -93652,6 +94102,31 @@
       {
         "status": "adopted",
         "scope": ["city center / business district", "transit-oriented"],
+        "land": ["all uses"]
+      }
+    ]
+  },
+  "Stonecrest, Georgia, United States": {
+    "place": {
+      "name": "Stonecrest",
+      "state": "Georgia",
+      "country": "United States",
+      "type": "city",
+      "encoded": "stonecrest-georgia-united-states",
+      "pop": 59194,
+      "coord": [-84.1358505, 33.6831296]
+    },
+    "add_max": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["all uses"]
+      }
+    ],
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
         "land": ["all uses"]
       }
     ]
@@ -96260,6 +96735,31 @@
       }
     ]
   },
+  "Temple, Georgia, United States": {
+    "place": {
+      "name": "Temple",
+      "state": "Georgia",
+      "country": "United States",
+      "type": "city",
+      "encoded": "temple-georgia-united-states",
+      "pop": 5089,
+      "coord": [-85.032445, 33.7370514]
+    },
+    "add_max": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["all uses"]
+      }
+    ],
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["all uses"]
+      }
+    ]
+  },
   "Temple, Texas, United States": {
     "place": {
       "name": "Temple",
@@ -98497,6 +98997,31 @@
         "scope": ["citywide"],
         "land": ["all uses"],
         "date": "2024-06-10"
+      }
+    ]
+  },
+  "Tucker, Georgia, United States": {
+    "place": {
+      "name": "Tucker",
+      "state": "Georgia",
+      "country": "United States",
+      "type": "city",
+      "encoded": "tucker-georgia-united-states",
+      "pop": 37005,
+      "coord": [-84.2200729, 33.8532701]
+    },
+    "add_max": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["all uses"]
+      }
+    ],
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["all uses"]
       }
     ]
   },
@@ -108062,6 +108587,44 @@
         "status": "adopted",
         "scope": ["citywide"],
         "land": ["other", "residential, low-density"]
+      }
+    ]
+  },
+  "Woodstock, Georgia, United States": {
+    "place": {
+      "name": "Woodstock",
+      "state": "Georgia",
+      "country": "United States",
+      "type": "city",
+      "encoded": "woodstock-georgia-united-states",
+      "pop": 35065,
+      "coord": [-84.5192192, 34.1014112]
+    },
+    "add_max": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": [
+          "commercial",
+          "industrial",
+          "medical",
+          "other",
+          "residential, multi-family"
+        ]
+      }
+    ],
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["other"]
+      }
+    ],
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district", "main street / special"],
+        "land": ["all uses", "commercial"]
       }
     ]
   },
