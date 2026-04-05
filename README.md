@@ -48,6 +48,10 @@ We write our code in TypeScript. The types are ignored when starting the server 
 
 If the tests are taking a long time to start or have unexpected failures, run `rm -rf .parcel-cache` and try the tests again.
 
+#### Update snapshot tests
+
+We use Playwright snapshot tests, which save a "snapshot" to the filesystem of the expected output, such as how our generated pages render. If the expected output ever changes, you can use Playwright to regenerate the snapshots with `npx playwright test -u`.
+
 ### Autoformat code
 
 We use Prettier to nicely format code.
@@ -185,3 +189,7 @@ graph TD
 ```
 
 We use reactive programming for state management. See https://github.com/ParkingReformNetwork/parking-lot-map/blob/main/README.md#state-diagram for an explanation.
+
+## Assets proxied with Cloudflare
+
+Our image assets are stored with Directus. However, we proxy all requests for the images through a Cloudflare Worker to get protection from scrapers etc. The worker blocks certain traffic, then forwards the request to Directus; it uses Cloudflare cache when possible. This worker is configured in the Cloudflare console.
