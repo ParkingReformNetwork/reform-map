@@ -192,7 +192,7 @@ We use reactive programming for state management. See https://github.com/Parking
 
 ## Assets proxied with Cloudflare
 
-Our image assets (screenshots and attachments) are stored in Directus at `mandates-map.directus.app`. However, we proxy all requests for these assets through a Cloudflare Worker at `assets.parkingreform.org` to protect against scrapers and reduce Directus bandwidth costs. Public access to the assets is restricted to requests containin an authorization token.
+Our image assets (screenshots and attachments) are stored in Directus at `mandates-map.directus.app`. However, we proxy all requests for these assets through a Cloudflare Worker at `assets.parkingreform.org` to protect against scrapers and reduce Directus bandwidth costs. Public access to the assets is restricted to requests containing an authorization token.
 
 The Worker:
 
