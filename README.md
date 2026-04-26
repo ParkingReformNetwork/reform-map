@@ -200,4 +200,3 @@ The Worker:
 - Checks Cloudflare's edge cache — if the asset is cached, Directus is never contacted
 - On a cache miss, fetches the asset from Directus using a service account token and caches it for 30 days
 - Passes through the response to the user
-
