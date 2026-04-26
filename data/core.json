@@ -467,6 +467,31 @@
       }
     ]
   },
+  "Admaston/Bromley, Ontario, Canada": {
+    "place": {
+      "name": "Admaston/Bromley",
+      "state": "Ontario",
+      "country": "Canada",
+      "type": "city",
+      "encoded": "admaston-bromley-ontario-canada",
+      "pop": 2995,
+      "coord": [-76.8553105, 45.4978051]
+    },
+    "reduce_min": [
+      {
+        "status": "proposed",
+        "scope": ["city center / business district", "citywide"],
+        "land": [
+          "commercial",
+          "industrial",
+          "medical",
+          "other",
+          "residential, multi-family"
+        ],
+        "date": "2026"
+      }
+    ]
+  },
   "Adrian Charter Township, Michigan, United States": {
     "place": {
       "name": "Adrian Charter Township",
@@ -2357,11 +2382,30 @@
       "pop": 18089,
       "coord": [-122.6237356, 48.5020123]
     },
+    "add_max": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["commercial", "industrial", "residential, multi-family"]
+      }
+    ],
     "reduce_min": [
       {
         "status": "adopted",
         "scope": ["citywide"],
         "land": ["all uses"]
+      },
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["all uses"]
+      }
+    ],
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["commercial", "residential, all uses"]
       }
     ]
   },
@@ -2412,6 +2456,13 @@
       "coord": [-149.894852, 61.2163129],
       "repeal": true
     },
+    "add_max": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["commercial", "other"]
+      }
+    ],
     "rm_min": [
       {
         "status": "adopted",
@@ -2496,6 +2547,24 @@
       {
         "status": "adopted",
         "scope": ["citywide"],
+        "land": ["all uses"]
+      }
+    ]
+  },
+  "Anderson, South Carolina, United States": {
+    "place": {
+      "name": "Anderson",
+      "state": "South Carolina",
+      "country": "United States",
+      "type": "city",
+      "encoded": "anderson-south-carolina-united-states",
+      "pop": 28106,
+      "coord": [-82.65158870898458, 34.50574853778689]
+    },
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
         "land": ["all uses"]
       }
     ]
@@ -3231,6 +3300,24 @@
       }
     ]
   },
+  "Argonia, Kansas, United States": {
+    "place": {
+      "name": "Argonia",
+      "state": "Kansas",
+      "country": "United States",
+      "type": "city",
+      "encoded": "argonia-kansas-united-states",
+      "pop": 456,
+      "coord": [-97.76551390726105, 37.26468429852148]
+    },
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["all uses"]
+      }
+    ]
+  },
   "Argyle, Wisconsin, United States": {
     "place": {
       "name": "Argyle",
@@ -3542,6 +3629,24 @@
         "status": "adopted",
         "scope": ["city center / business district"],
         "land": ["all uses"]
+      }
+    ]
+  },
+  "Arnprior, Ontario, Canada": {
+    "place": {
+      "name": "Arnprior",
+      "state": "Ontario",
+      "country": "Canada",
+      "type": "city",
+      "encoded": "arnprior-ontario-canada",
+      "pop": 9629,
+      "coord": [-76.3543692, 45.433515]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district", "main street / special"],
+        "land": ["all uses", "commercial", "other"]
       }
     ]
   },
@@ -4294,6 +4399,24 @@
         "status": "adopted",
         "scope": ["city center / business district"],
         "land": ["commercial", "other"]
+      }
+    ]
+  },
+  "Attleboro, Massachusetts, United States": {
+    "place": {
+      "name": "Attleboro",
+      "state": "Massachusetts",
+      "country": "United States",
+      "type": "city",
+      "encoded": "attleboro-massachusetts-united-states",
+      "pop": 46461,
+      "coord": [-71.2804301, 41.9439695]
+    },
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["transit-oriented"],
+        "land": ["residential, multi-family"]
       }
     ]
   },
@@ -6845,6 +6968,38 @@
       }
     ]
   },
+  "Beaufort, South Carolina, United States": {
+    "place": {
+      "name": "Beaufort",
+      "state": "South Carolina",
+      "country": "United States",
+      "type": "city",
+      "encoded": "beaufort-south-carolina-united-states",
+      "pop": 13607,
+      "coord": [-80.67094300642742, 32.43173495876773]
+    },
+    "add_max": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["all uses"]
+      }
+    ],
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["all uses"]
+      }
+    ],
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district", "citywide"],
+        "land": ["commercial", "other", "residential, multi-family"]
+      }
+    ]
+  },
   "Beaumont, Alberta, Canada": {
     "place": {
       "name": "Beaumont",
@@ -9358,6 +9513,24 @@
       }
     ]
   },
+  "Billerica, Massachusetts, United States": {
+    "place": {
+      "name": "Billerica",
+      "state": "Massachusetts",
+      "country": "United States",
+      "type": "city",
+      "encoded": "billerica-massachusetts-united-states",
+      "pop": 42119,
+      "coord": [-71.268947, 42.5584264]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["main street / special"],
+        "land": ["residential, multi-family"]
+      }
+    ]
+  },
   "Billings, Missouri, United States": {
     "place": {
       "name": "Billings",
@@ -9418,6 +9591,20 @@
       "pop": 49449,
       "coord": [-88.8893818, 30.4007626]
     },
+    "add_max": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["commercial"]
+      }
+    ],
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["all uses"]
+      }
+    ],
     "rm_min": [
       {
         "status": "adopted",
@@ -10393,6 +10580,24 @@
       }
     ]
   },
+  "Bluffton, South Carolina, United States": {
+    "place": {
+      "name": "Bluffton",
+      "state": "South Carolina",
+      "country": "United States",
+      "type": "city",
+      "encoded": "bluffton-south-carolina-united-states",
+      "pop": 27716,
+      "coord": [-80.8603868, 32.2371465]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["all uses", "commercial", "other", "residential, all uses"]
+      }
+    ]
+  },
   "Boardman, Oregon, United States": {
     "place": {
       "name": "Boardman",
@@ -10662,6 +10867,30 @@
         "scope": ["city center / business district", "citywide"],
         "land": ["all uses"],
         "date": "2022-05-05"
+      }
+    ]
+  },
+  "Bonnechere Valley, Ontario, Canada": {
+    "place": {
+      "name": "Bonnechere Valley",
+      "state": "Ontario",
+      "country": "Canada",
+      "type": "city",
+      "encoded": "bonnechere-valley-ontario-canada",
+      "pop": 3898,
+      "coord": [-77.138703, 45.4561721]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district", "citywide"],
+        "land": [
+          "commercial",
+          "industrial",
+          "medical",
+          "other",
+          "residential, multi-family"
+        ]
       }
     ]
   },
@@ -11500,6 +11729,13 @@
       "pop": 25138,
       "coord": [-89.9868058, 32.2731475]
     },
+    "add_max": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["all uses"]
+      }
+    ],
     "rm_min": [
       {
         "status": "adopted",
@@ -12487,6 +12723,31 @@
       }
     ]
   },
+  "Brockton, Massachusetts, United States": {
+    "place": {
+      "name": "Brockton",
+      "state": "Massachusetts",
+      "country": "United States",
+      "type": "city",
+      "encoded": "brockton-massachusetts-united-states",
+      "pop": 105643,
+      "coord": [-71.0183787, 42.0834335]
+    },
+    "add_max": [
+      {
+        "status": "adopted",
+        "scope": ["main street / special"],
+        "land": ["residential, all uses"]
+      }
+    ],
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["all uses"]
+      }
+    ]
+  },
   "Brockton, Ontario, Canada": {
     "place": {
       "name": "Brockton",
@@ -12789,6 +13050,24 @@
         "scope": ["citywide"],
         "land": ["residential, multi-family"],
         "date": "2022-06-13"
+      }
+    ]
+  },
+  "Brookland, Arkansas, United States": {
+    "place": {
+      "name": "Brookland",
+      "state": "Arkansas",
+      "country": "United States",
+      "type": "city",
+      "encoded": "brookland-arkansas-united-states",
+      "pop": 4064,
+      "coord": [-90.5820534, 35.900073]
+    },
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["all uses"]
       }
     ]
   },
@@ -13190,6 +13469,31 @@
           "residential, low-density",
           "residential, multi-family"
         ]
+      }
+    ]
+  },
+  "Brudenell, Lyndoch and Raglan, Ontario, Canada": {
+    "place": {
+      "name": "Brudenell, Lyndoch and Raglan",
+      "state": "Ontario",
+      "country": "Canada",
+      "type": "city",
+      "encoded": "brudenell-lyndoch-and-raglan-ontario-canada",
+      "pop": 1552,
+      "coord": [-77.3910399, 45.4610145]
+    },
+    "reduce_min": [
+      {
+        "status": "proposed",
+        "scope": ["city center / business district", "citywide"],
+        "land": [
+          "commercial",
+          "industrial",
+          "medical",
+          "other",
+          "residential, multi-family"
+        ],
+        "date": "2026"
       }
     ]
   },
@@ -16820,6 +17124,24 @@
       }
     ]
   },
+  "Castor, Alberta, Canada": {
+    "place": {
+      "name": "Castor",
+      "state": "Alberta",
+      "country": "Canada",
+      "type": "city",
+      "encoded": "castor-alberta-canada",
+      "pop": 803,
+      "coord": [-111.9, 52.216667]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["all uses"]
+      }
+    ]
+  },
   "Catasauqua, Pennsylvania, United States": {
     "place": {
       "name": "Catasauqua",
@@ -19331,6 +19653,24 @@
       }
     ]
   },
+  "Cimarron, Kansas, United States": {
+    "place": {
+      "name": "Cimarron",
+      "state": "Kansas",
+      "country": "United States",
+      "type": "city",
+      "encoded": "cimarron-kansas-united-states",
+      "pop": 1981,
+      "coord": [-100.3472559, 37.8064804]
+    },
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["all uses"]
+      }
+    ]
+  },
   "Cincinnati, Ohio, United States": {
     "place": {
       "name": "Cincinnati",
@@ -20842,6 +21182,24 @@
       }
     ]
   },
+  "Clyde, Kansas, United States": {
+    "place": {
+      "name": "Clyde",
+      "state": "Kansas",
+      "country": "United States",
+      "type": "city",
+      "encoded": "clyde-kansas-united-states",
+      "pop": 694,
+      "coord": [-97.39800855406708, 39.591182422105994]
+    },
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["all uses"]
+      }
+    ]
+  },
   "Clyde, New York, United States": {
     "place": {
       "name": "Clyde",
@@ -22102,6 +22460,13 @@
       "pop": 4832,
       "coord": [-117.905537, 48.5465695]
     },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["commercial", "industrial"]
+      }
+    ],
     "rm_min": [
       {
         "status": "adopted",
@@ -22550,6 +22915,44 @@
       }
     ]
   },
+  "Conway, South Carolina, United States": {
+    "place": {
+      "name": "Conway",
+      "state": "South Carolina",
+      "country": "United States",
+      "type": "city",
+      "encoded": "conway-south-carolina-united-states",
+      "pop": 24809,
+      "coord": [-79.0478143, 33.8360035]
+    },
+    "add_max": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": [
+          "commercial",
+          "industrial",
+          "medical",
+          "other",
+          "residential, multi-family"
+        ]
+      }
+    ],
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["commercial", "other"]
+      }
+    ],
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district", "citywide"],
+        "land": ["all uses", "residential, low-density"]
+      }
+    ]
+  },
   "Conyers, Georgia, United States": {
     "place": {
       "name": "Conyers",
@@ -22992,6 +23395,24 @@
       {
         "status": "adopted",
         "scope": ["city center / business district", "main street / special"],
+        "land": ["all uses"]
+      }
+    ]
+  },
+  "Corning, Arkansas, United States": {
+    "place": {
+      "name": "Corning",
+      "state": "Arkansas",
+      "country": "United States",
+      "type": "city",
+      "encoded": "corning-arkansas-united-states",
+      "pop": 3227,
+      "coord": [-90.5831267, 36.4092192]
+    },
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
         "land": ["all uses"]
       }
     ]
@@ -25236,11 +25657,18 @@
       "pop": 40668,
       "coord": [-79.3950228, 36.5859718]
     },
-    "rm_min": [
+    "reduce_min": [
       {
         "status": "adopted",
         "scope": ["city center / business district"],
         "land": ["all uses"]
+      }
+    ],
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["all uses", "commercial", "other"]
       }
     ]
   },
@@ -27452,6 +27880,31 @@
       }
     ]
   },
+  "Diamond Valley, Alberta, Canada": {
+    "place": {
+      "name": "Diamond Valley",
+      "state": "Alberta",
+      "country": "Canada",
+      "type": "city",
+      "encoded": "diamond-valley-alberta-canada",
+      "pop": 5361,
+      "coord": [-114.2328283565713, 50.682958055937995]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["all uses"]
+      }
+    ],
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["commercial", "industrial", "medical", "other"]
+      }
+    ]
+  },
   "Diamond, Missouri, United States": {
     "place": {
       "name": "Diamond",
@@ -29269,6 +29722,31 @@
       {
         "status": "adopted",
         "scope": ["city center / business district"],
+        "land": ["all uses"]
+      }
+    ]
+  },
+  "Easley, South Carolina, United States": {
+    "place": {
+      "name": "Easley",
+      "state": "South Carolina",
+      "country": "United States",
+      "type": "city",
+      "encoded": "easley-south-carolina-united-states",
+      "pop": 22921,
+      "coord": [-82.5817053, 34.8269276]
+    },
+    "add_max": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["all uses"]
+      }
+    ],
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
         "land": ["all uses"]
       }
     ]
@@ -31164,6 +31642,24 @@
       }
     ]
   },
+  "Elgin, Kansas, United States": {
+    "place": {
+      "name": "Elgin",
+      "state": "Kansas",
+      "country": "United States",
+      "type": "city",
+      "encoded": "elgin-kansas-united-states",
+      "pop": 100,
+      "coord": [-96.2803676, 37.0025129]
+    },
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["all uses"]
+      }
+    ]
+  },
   "Elgin, Minnesota, United States": {
     "place": {
       "name": "Elgin",
@@ -31620,6 +32116,24 @@
       }
     ]
   },
+  "Ellendale, North Dakota, United States": {
+    "place": {
+      "name": "Ellendale",
+      "state": "North Dakota",
+      "country": "United States",
+      "type": "city",
+      "encoded": "ellendale-north-dakota-united-states",
+      "pop": 1125,
+      "coord": [-98.527046, 46.00275]
+    },
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["all uses"]
+      }
+    ]
+  },
   "Ellensburg, Washington, United States": {
     "place": {
       "name": "Ellensburg",
@@ -31735,6 +32249,24 @@
       }
     ]
   },
+  "Ellis, Kansas, United States": {
+    "place": {
+      "name": "Ellis",
+      "state": "Kansas",
+      "country": "United States",
+      "type": "city",
+      "encoded": "ellis-kansas-united-states",
+      "pop": 1958,
+      "coord": [-99.56022721634588, 38.93674477490672]
+    },
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["all uses"]
+      }
+    ]
+  },
   "Ellisville, Missouri, United States": {
     "place": {
       "name": "Ellisville",
@@ -31841,6 +32373,31 @@
       {
         "status": "adopted",
         "scope": ["city center / business district"],
+        "land": ["all uses"]
+      }
+    ]
+  },
+  "Elm Springs, Arkansas, United States": {
+    "place": {
+      "name": "Elm Springs",
+      "state": "Arkansas",
+      "country": "United States",
+      "type": "city",
+      "encoded": "elm-springs-arkansas-united-states",
+      "pop": 2361,
+      "coord": [-94.2343657, 36.206183]
+    },
+    "add_max": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["all uses"]
+      }
+    ],
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
         "land": ["all uses"]
       }
     ]
@@ -32726,6 +33283,24 @@
       {
         "status": "adopted",
         "scope": ["city center / business district"],
+        "land": ["all uses"]
+      }
+    ]
+  },
+  "Erin, Ontario, Canada": {
+    "place": {
+      "name": "Erin",
+      "state": "Ontario",
+      "country": "Canada",
+      "type": "city",
+      "encoded": "erin-ontario-canada",
+      "pop": 11981,
+      "coord": [-80.070076, 43.77506]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district", "citywide"],
         "land": ["all uses"]
       }
     ]
@@ -35283,6 +35858,24 @@
       }
     ]
   },
+  "Flippin, Arkansas, United States": {
+    "place": {
+      "name": "Flippin",
+      "state": "Arkansas",
+      "country": "United States",
+      "type": "city",
+      "encoded": "flippin-arkansas-united-states",
+      "pop": 1345,
+      "coord": [-92.5954235, 36.2769948]
+    },
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["all uses"]
+      }
+    ]
+  },
   "Flora, Illinois, United States": {
     "place": {
       "name": "Flora",
@@ -35422,6 +36015,31 @@
         "status": "adopted",
         "scope": ["citywide"],
         "land": ["residential, low-density"]
+      }
+    ]
+  },
+  "Florence, South Carolina, United States": {
+    "place": {
+      "name": "Florence",
+      "state": "South Carolina",
+      "country": "United States",
+      "type": "city",
+      "encoded": "florence-south-carolina-united-states",
+      "pop": 39899,
+      "coord": [-79.7671658, 34.1984435]
+    },
+    "add_max": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["all uses"]
+      }
+    ],
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["all uses"]
       }
     ]
   },
@@ -37156,6 +37774,24 @@
       }
     ]
   },
+  "Franklin, Massachusetts, United States": {
+    "place": {
+      "name": "Franklin",
+      "state": "Massachusetts",
+      "country": "United States",
+      "type": "city",
+      "encoded": "franklin-massachusetts-united-states",
+      "pop": 33261,
+      "coord": [-71.39724808989358, 42.082584577514474]
+    },
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["commercial", "other"]
+      }
+    ]
+  },
   "Franklin, Nebraska, United States": {
     "place": {
       "name": "Franklin",
@@ -38768,6 +39404,24 @@
       }
     ]
   },
+  "Garnett, Kansas, United States": {
+    "place": {
+      "name": "Garnett",
+      "state": "Kansas",
+      "country": "United States",
+      "type": "city",
+      "encoded": "garnett-kansas-united-states",
+      "pop": 3242,
+      "coord": [-95.2419192, 38.2805772]
+    },
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["all uses"]
+      }
+    ]
+  },
   "Garrett, Indiana, United States": {
     "place": {
       "name": "Garrett",
@@ -38801,6 +39455,24 @@
         "status": "adopted",
         "scope": ["city center / business district", "main street / special"],
         "land": ["all uses", "commercial"]
+      }
+    ]
+  },
+  "Garrison, North Dakota, United States": {
+    "place": {
+      "name": "Garrison",
+      "state": "North Dakota",
+      "country": "United States",
+      "type": "city",
+      "encoded": "garrison-north-dakota-united-states",
+      "pop": 1462,
+      "coord": [-101.415717, 47.652223]
+    },
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["all uses"]
       }
     ]
   },
@@ -40574,6 +41246,31 @@
       }
     ]
   },
+  "Goose Creek, South Carolina, United States": {
+    "place": {
+      "name": "Goose Creek",
+      "state": "South Carolina",
+      "country": "United States",
+      "type": "city",
+      "encoded": "goose-creek-south-carolina-united-states",
+      "pop": 45946,
+      "coord": [-80.0387292, 32.9961038]
+    },
+    "add_max": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["all uses"]
+      }
+    ],
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["main street / special"],
+        "land": ["all uses"]
+      }
+    ]
+  },
   "Gordon, Nebraska, United States": {
     "place": {
       "name": "Gordon",
@@ -41592,6 +42289,25 @@
       }
     ]
   },
+  "Gravette, Arkansas, United States": {
+    "place": {
+      "name": "Gravette",
+      "state": "Arkansas",
+      "country": "United States",
+      "type": "city",
+      "encoded": "gravette-arkansas-united-states",
+      "pop": 3547,
+      "coord": [-94.4526535, 36.4208054]
+    },
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["all uses"],
+        "date": "2024-11-19"
+      }
+    ]
+  },
   "Grayling Charter Township, Michigan, United States": {
     "place": {
       "name": "Grayling Charter Township",
@@ -42463,6 +43179,42 @@
       }
     ]
   },
+  "Greenwood, South Carolina, United States": {
+    "place": {
+      "name": "Greenwood",
+      "state": "South Carolina",
+      "country": "United States",
+      "type": "city",
+      "encoded": "greenwood-south-carolina-united-states",
+      "pop": 22545,
+      "coord": [-82.112882, 34.1489805]
+    },
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["all uses"]
+      }
+    ]
+  },
+  "Greer, South Carolina, United States": {
+    "place": {
+      "name": "Greer",
+      "state": "South Carolina",
+      "country": "United States",
+      "type": "city",
+      "encoded": "greer-south-carolina-united-states",
+      "pop": 35308,
+      "coord": [-82.2272119, 34.9381361]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["residential, all uses"]
+      }
+    ]
+  },
   "Grenada, Mississippi, United States": {
     "place": {
       "name": "Grenada",
@@ -42834,6 +43586,56 @@
       "coord": [-92.7685327, 42.3616501]
     },
     "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["all uses"]
+      }
+    ]
+  },
+  "Guelph, Ontario, Canada": {
+    "place": {
+      "name": "Guelph",
+      "state": "Ontario",
+      "country": "Canada",
+      "type": "city",
+      "encoded": "guelph-ontario-canada",
+      "pop": 143740,
+      "coord": [-80.2493276, 43.5460516]
+    },
+    "add_max": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": [
+          "commercial",
+          "industrial",
+          "other",
+          "residential, multi-family"
+        ],
+        "date": "2023-04-18"
+      }
+    ],
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["all uses"],
+        "date": "2023-04-18"
+      }
+    ]
+  },
+  "Guelph/Eramosa, Ontario, Canada": {
+    "place": {
+      "name": "Guelph/Eramosa",
+      "state": "Ontario",
+      "country": "Canada",
+      "type": "city",
+      "encoded": "guelph-eramosa-ontario-canada",
+      "pop": 13904,
+      "coord": [-80.2567182, 43.5964593]
+    },
+    "reduce_min": [
       {
         "status": "adopted",
         "scope": ["city center / business district"],
@@ -45389,6 +46191,13 @@
       "pop": 48730,
       "coord": [-89.2903392, 31.3271189]
     },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["all uses"]
+      }
+    ],
     "rm_min": [
       {
         "status": "adopted",
@@ -47122,6 +47931,35 @@
       }
     ]
   },
+  "Hilton Head Island, South Carolina, United States": {
+    "place": {
+      "name": "Hilton Head Island",
+      "state": "South Carolina",
+      "country": "United States",
+      "type": "city",
+      "encoded": "hilton-head-island-south-carolina-united-states",
+      "pop": 37661,
+      "coord": [-80.7512616, 32.1618488]
+    },
+    "add_max": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["all uses"]
+      }
+    ],
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": [
+          "city center / business district",
+          "citywide",
+          "main street / special"
+        ],
+        "land": ["all uses"]
+      }
+    ]
+  },
   "Hilton, New York, United States": {
     "place": {
       "name": "Hilton",
@@ -47951,6 +48789,33 @@
         "status": "adopted",
         "scope": ["city center / business district"],
         "land": ["commercial", "other", "residential, multi-family"]
+      }
+    ]
+  },
+  "Horace, North Dakota, United States": {
+    "place": {
+      "name": "Horace",
+      "state": "North Dakota",
+      "country": "United States",
+      "type": "city",
+      "encoded": "horace-north-dakota-united-states",
+      "pop": 3085,
+      "coord": [-96.903697, 46.758855]
+    },
+    "add_max": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["all uses"],
+        "date": "2024-04-10"
+      }
+    ],
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["commercial", "other"],
+        "date": "2024-04-10"
       }
     ]
   },
@@ -49794,6 +50659,24 @@
       {
         "status": "adopted",
         "scope": ["citywide"],
+        "land": ["all uses"]
+      }
+    ]
+  },
+  "Irricana, Alberta, Canada": {
+    "place": {
+      "name": "Irricana",
+      "state": "Alberta",
+      "country": "Canada",
+      "type": "city",
+      "encoded": "irricana-alberta-canada",
+      "pop": 1179,
+      "coord": [-113.603134, 51.3200105]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
         "land": ["all uses"]
       }
     ]
@@ -52099,16 +52982,10 @@
     },
     "add_max": [
       {
-        "status": "proposed",
+        "status": "adopted",
         "scope": ["citywide"],
         "land": ["all uses"],
-        "date": "2008-07"
-      },
-      {
-        "status": "proposed",
-        "scope": ["citywide"],
-        "land": ["all uses"],
-        "date": "2026-03"
+        "date": "2026-04-09"
       }
     ],
     "rm_min": [
@@ -52118,10 +52995,10 @@
         "land": ["all uses"]
       },
       {
-        "status": "proposed",
+        "status": "adopted",
         "scope": ["city center / business district", "main street / special"],
         "land": ["all uses"],
-        "date": "2026-03"
+        "date": "2026-04-09"
       }
     ]
   },
@@ -52891,6 +53768,30 @@
         "status": "adopted",
         "scope": ["citywide"],
         "land": ["commercial", "industrial", "other"]
+      }
+    ]
+  },
+  "Killaloe, Hagarty and Richards, Ontario, Canada": {
+    "place": {
+      "name": "Killaloe, Hagarty and Richards",
+      "state": "Ontario",
+      "country": "Canada",
+      "type": "city",
+      "encoded": "killaloe-hagarty-and-richards-ontario-canada",
+      "pop": 2410,
+      "coord": [-77.4181237, 45.5563714]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district", "citywide"],
+        "land": [
+          "commercial",
+          "industrial",
+          "medical",
+          "other",
+          "residential, multi-family"
+        ]
       }
     ]
   },
@@ -57024,6 +57925,24 @@
       }
     ]
   },
+  "Lebo, Kansas, United States": {
+    "place": {
+      "name": "Lebo",
+      "state": "Kansas",
+      "country": "United States",
+      "type": "city",
+      "encoded": "lebo-kansas-united-states",
+      "pop": 885,
+      "coord": [-95.8530441, 38.4166818]
+    },
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["all uses"]
+      }
+    ]
+  },
   "Leduc, Alberta, Canada": {
     "place": {
       "name": "Leduc",
@@ -57682,6 +58601,24 @@
       }
     ]
   },
+  "Lexington, Massachusetts, United States": {
+    "place": {
+      "name": "Lexington",
+      "state": "Massachusetts",
+      "country": "United States",
+      "type": "city",
+      "encoded": "lexington-massachusetts-united-states",
+      "pop": 34454,
+      "coord": [-71.2245003, 42.4473175]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["commercial", "other"]
+      }
+    ]
+  },
   "Lexington, Michigan, United States": {
     "place": {
       "name": "Lexington",
@@ -57736,6 +58673,24 @@
       }
     ],
     "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["commercial", "other"]
+      }
+    ]
+  },
+  "Lexington, South Carolina, United States": {
+    "place": {
+      "name": "Lexington",
+      "state": "South Carolina",
+      "country": "United States",
+      "type": "city",
+      "encoded": "lexington-south-carolina-united-states",
+      "pop": 23568,
+      "coord": [-81.23593200993746, 33.98128256657944]
+    },
+    "reduce_min": [
       {
         "status": "adopted",
         "scope": ["city center / business district"],
@@ -58511,6 +59466,42 @@
       }
     ]
   },
+  "Linton, North Dakota, United States": {
+    "place": {
+      "name": "Linton",
+      "state": "North Dakota",
+      "country": "United States",
+      "type": "city",
+      "encoded": "linton-north-dakota-united-states",
+      "pop": 1071,
+      "coord": [-100.232892, 46.266657]
+    },
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["all uses"]
+      }
+    ]
+  },
+  "Lisbon, North Dakota, United States": {
+    "place": {
+      "name": "Lisbon",
+      "state": "North Dakota",
+      "country": "United States",
+      "type": "city",
+      "encoded": "lisbon-north-dakota-united-states",
+      "pop": 2204,
+      "coord": [-97.68121, 46.441634]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["all uses"]
+      }
+    ]
+  },
   "Lisle, Illinois, United States": {
     "place": {
       "name": "Lisle",
@@ -58672,6 +59663,20 @@
       "pop": 201998,
       "coord": [-92.2896267, 34.7465071]
     },
+    "add_max": [
+      {
+        "status": "adopted",
+        "scope": ["main street / special"],
+        "land": ["all uses", "commercial", "other", "residential, multi-family"]
+      }
+    ],
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["main street / special"],
+        "land": ["all uses"]
+      }
+    ],
     "rm_min": [
       {
         "status": "adopted",
@@ -60327,6 +61332,13 @@
       "pop": 80569,
       "coord": [-79.1422464, 37.4137536]
     },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["all uses"]
+      }
+    ],
     "rm_min": [
       {
         "status": "adopted",
@@ -61352,6 +62364,24 @@
         "status": "adopted",
         "scope": ["city center / business district"],
         "land": ["all uses"]
+      }
+    ]
+  },
+  "Malden, Massachusetts, United States": {
+    "place": {
+      "name": "Malden",
+      "state": "Massachusetts",
+      "country": "United States",
+      "type": "city",
+      "encoded": "malden-massachusetts-united-states",
+      "pop": 66263,
+      "coord": [-71.0683741, 42.4268484]
+    },
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["commercial", "other"]
       }
     ]
   },
@@ -62867,6 +63897,45 @@
       }
     ]
   },
+  "Markham, Ontario, Canada": {
+    "place": {
+      "name": "Markham",
+      "state": "Ontario",
+      "country": "Canada",
+      "type": "city",
+      "encoded": "markham-ontario-canada",
+      "pop": 338503,
+      "coord": [-79.3376825, 43.8563707]
+    },
+    "add_max": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": [
+          "commercial",
+          "industrial",
+          "medical",
+          "other",
+          "residential, multi-family"
+        ],
+        "date": "2024-01-31"
+      }
+    ],
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["main street / special", "transit-oriented"],
+        "land": ["all uses"]
+      }
+    ],
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["main street / special", "transit-oriented"],
+        "land": ["other", "residential, low-density"]
+      }
+    ]
+  },
   "Markstay-Warren, Ontario, Canada": {
     "place": {
       "name": "Markstay-Warren",
@@ -62955,6 +64024,24 @@
       "encoded": "Marlow_OK",
       "pop": 4385,
       "coord": [-97.9579447, 34.6477329]
+    },
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["all uses"]
+      }
+    ]
+  },
+  "Marmaduke, Arkansas, United States": {
+    "place": {
+      "name": "Marmaduke",
+      "state": "Arkansas",
+      "country": "United States",
+      "type": "city",
+      "encoded": "marmaduke-arkansas-united-states",
+      "pop": 1212,
+      "coord": [-90.3854641, 36.1883295]
     },
     "rm_min": [
       {
@@ -63341,6 +64428,13 @@
         "scope": ["citywide"],
         "land": ["all uses"]
       }
+    ],
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["transit-oriented"],
+        "land": ["residential, low-density"]
+      }
     ]
   },
   "Maryville, Missouri, United States": {
@@ -63641,6 +64735,24 @@
       {
         "status": "adopted",
         "scope": ["city center / business district"],
+        "land": ["all uses"]
+      }
+    ]
+  },
+  "Mauldin, South Carolina, United States": {
+    "place": {
+      "name": "Mauldin",
+      "state": "South Carolina",
+      "country": "United States",
+      "type": "city",
+      "encoded": "mauldin-south-carolina-united-states",
+      "pop": 24724,
+      "coord": [-82.310119, 34.77873]
+    },
+    "add_max": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
         "land": ["all uses"]
       }
     ]
@@ -64410,6 +65522,25 @@
         "status": "adopted",
         "scope": ["city center / business district"],
         "land": ["all uses"]
+      }
+    ]
+  },
+  "McNab/Braeside, Ontario, Canada": {
+    "place": {
+      "name": "McNab/Braeside",
+      "state": "Ontario",
+      "country": "Canada",
+      "type": "city",
+      "encoded": "mcnab-braeside-ontario-canada",
+      "pop": 7591,
+      "coord": [-76.5087317, 45.4132348]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["commercial", "other", "residential, multi-family"],
+        "date": "2025-06-17"
       }
     ]
   },
@@ -66361,6 +67492,24 @@
       }
     ]
   },
+  "Milford, Massachusetts, United States": {
+    "place": {
+      "name": "Milford",
+      "state": "Massachusetts",
+      "country": "United States",
+      "type": "city",
+      "encoded": "milford-massachusetts-united-states",
+      "pop": 30379,
+      "coord": [-71.5164618, 42.1428913]
+    },
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["all uses"]
+      }
+    ]
+  },
   "Milford, Michigan, United States": {
     "place": {
       "name": "Milford",
@@ -67663,6 +68812,24 @@
       }
     ]
   },
+  "Moncks Corner, South Carolina, United States": {
+    "place": {
+      "name": "Moncks Corner",
+      "state": "South Carolina",
+      "country": "United States",
+      "type": "city",
+      "encoded": "moncks-corner-south-carolina-united-states",
+      "pop": 13297,
+      "coord": [-80.0131374, 33.1960027]
+    },
+    "add_max": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["all uses"]
+      }
+    ]
+  },
   "Moncton, New Brunswick, Canada": {
     "place": {
       "name": "Moncton",
@@ -68497,6 +69664,24 @@
       {
         "status": "adopted",
         "scope": ["city center / business district"],
+        "land": ["all uses"]
+      }
+    ]
+  },
+  "Monticello, Arkansas, United States": {
+    "place": {
+      "name": "Monticello",
+      "state": "Arkansas",
+      "country": "United States",
+      "type": "city",
+      "encoded": "monticello-arkansas-united-states",
+      "pop": 8442,
+      "coord": [-91.7913004, 33.6293932]
+    },
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
         "land": ["all uses"]
       }
     ]
@@ -71296,6 +72481,31 @@
       }
     ]
   },
+  "Myrtle Beach, South Carolina, United States": {
+    "place": {
+      "name": "Myrtle Beach",
+      "state": "South Carolina",
+      "country": "United States",
+      "type": "city",
+      "encoded": "myrtle-beach-south-carolina-united-states",
+      "pop": 35682,
+      "coord": [-78.8900409, 33.6956461]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide", "main street / special"],
+        "land": ["all uses"]
+      }
+    ],
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district", "main street / special"],
+        "land": ["all uses"]
+      }
+    ]
+  },
   "Myrtle Creek, Oregon, United States": {
     "place": {
       "name": "Myrtle Creek",
@@ -73195,6 +74405,24 @@
       }
     ]
   },
+  "New Rockford, North Dakota, United States": {
+    "place": {
+      "name": "New Rockford",
+      "state": "North Dakota",
+      "country": "United States",
+      "type": "city",
+      "encoded": "new-rockford-north-dakota-united-states",
+      "pop": 1361,
+      "coord": [-99.137895, 47.679999]
+    },
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["all uses"]
+      }
+    ]
+  },
   "New Shoreham, Rhode Island, United States": {
     "place": {
       "name": "New Shoreham",
@@ -73631,6 +74859,40 @@
       }
     ]
   },
+  "Newmarket, Ontario, Canada": {
+    "place": {
+      "name": "Newmarket",
+      "state": "Ontario",
+      "country": "Canada",
+      "type": "city",
+      "encoded": "newmarket-ontario-canada",
+      "pop": 87942,
+      "coord": [-79.461708, 44.056258]
+    },
+    "add_max": [
+      {
+        "status": "adopted",
+        "scope": [
+          "city center / business district",
+          "main street / special",
+          "transit-oriented"
+        ],
+        "land": [
+          "commercial",
+          "industrial",
+          "other",
+          "residential, multi-family"
+        ]
+      }
+    ],
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district", "transit-oriented"],
+        "land": ["all uses", "residential, all uses"]
+      }
+    ]
+  },
   "Newnan, Georgia, United States": {
     "place": {
       "name": "Newnan",
@@ -74030,6 +75292,24 @@
       "encoded": "Nichols_WI",
       "pop": 288,
       "coord": [-88.4634342, 44.563042]
+    },
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["all uses"]
+      }
+    ]
+  },
+  "Nickerson, Kansas, United States": {
+    "place": {
+      "name": "Nickerson",
+      "state": "Kansas",
+      "country": "United States",
+      "type": "city",
+      "encoded": "nickerson-kansas-united-states",
+      "pop": 1058,
+      "coord": [-98.0836679, 38.1472334]
     },
     "rm_min": [
       {
@@ -74519,6 +75799,44 @@
         "status": "adopted",
         "scope": ["main street / special"],
         "land": ["commercial"]
+      }
+    ]
+  },
+  "North Augusta, South Carolina, United States": {
+    "place": {
+      "name": "North Augusta",
+      "state": "South Carolina",
+      "country": "United States",
+      "type": "city",
+      "encoded": "north-augusta-south-carolina-united-states",
+      "pop": 24379,
+      "coord": [-81.9705909, 33.4943487]
+    },
+    "add_max": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": [
+          "commercial",
+          "industrial",
+          "medical",
+          "other",
+          "residential, multi-family"
+        ]
+      }
+    ],
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["all uses"]
+      }
+    ],
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district", "citywide"],
+        "land": ["all uses", "commercial", "other", "residential, multi-family"]
       }
     ]
   },
@@ -75040,11 +76358,18 @@
       "pop": 64591,
       "coord": [-92.2670941, 34.769536]
     },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["residential, all uses"]
+      }
+    ],
     "rm_min": [
       {
         "status": "adopted",
         "scope": ["city center / business district"],
-        "land": ["commercial", "residential, all uses"]
+        "land": ["commercial", "other"]
       }
     ]
   },
@@ -75112,6 +76437,24 @@
       "encoded": "NorthMuskegon_MI",
       "pop": 4093,
       "coord": [-86.26756, 43.256125]
+    },
+    "add_max": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["all uses"]
+      }
+    ]
+  },
+  "North Myrtle Beach, South Carolina, United States": {
+    "place": {
+      "name": "North Myrtle Beach",
+      "state": "South Carolina",
+      "country": "United States",
+      "type": "city",
+      "encoded": "north-myrtle-beach-south-carolina-united-states",
+      "pop": 18790,
+      "coord": [-78.6800323, 33.8278405]
     },
     "add_max": [
       {
@@ -75509,7 +76852,8 @@
       "type": "city",
       "encoded": "Northfield_MN",
       "pop": 20790,
-      "coord": [-93.161159, 44.4582041]
+      "coord": [-93.161159, 44.4582041],
+      "repeal": true
     },
     "add_max": [
       {
@@ -75525,19 +76869,12 @@
         ]
       }
     ],
-    "reduce_min": [
-      {
-        "status": "adopted",
-        "scope": ["city center / business district"],
-        "land": ["all uses"]
-      }
-    ],
     "rm_min": [
       {
-        "status": "proposed",
+        "status": "adopted",
         "scope": ["citywide"],
         "land": ["all uses"],
-        "date": "2019-11-05"
+        "date": "2024-11-22"
       }
     ]
   },
@@ -76179,6 +77516,25 @@
       }
     ]
   },
+  "Oak Island, North Carolina, United States": {
+    "place": {
+      "name": "Oak Island",
+      "state": "North Carolina",
+      "country": "United States",
+      "type": "city",
+      "encoded": "oak-island-north-carolina-united-states",
+      "pop": 8396,
+      "coord": [-78.1116284, 33.9122506]
+    },
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["commercial"],
+        "date": "2026-03-17"
+      }
+    ]
+  },
   "Oak Lawn, Illinois, United States": {
     "place": {
       "name": "Oak Lawn",
@@ -76298,6 +77654,24 @@
       "coord": [-80.1856134, 40.3981246]
     },
     "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["all uses"]
+      }
+    ]
+  },
+  "Oakes, North Dakota, United States": {
+    "place": {
+      "name": "Oakes",
+      "state": "North Dakota",
+      "country": "United States",
+      "type": "city",
+      "encoded": "oakes-north-dakota-united-states",
+      "pop": 1798,
+      "coord": [-98.090379, 46.138579]
+    },
+    "reduce_min": [
       {
         "status": "adopted",
         "scope": ["city center / business district"],
@@ -77351,7 +78725,7 @@
     "rm_min": [
       {
         "status": "adopted",
-        "scope": ["city center / business district"],
+        "scope": ["city center / business district", "main street / special"],
         "land": ["commercial", "residential, all uses"]
       }
     ]
@@ -77766,6 +79140,24 @@
       {
         "status": "adopted",
         "scope": ["citywide"],
+        "land": ["all uses"]
+      }
+    ]
+  },
+  "Orangeburg, South Carolina, United States": {
+    "place": {
+      "name": "Orangeburg",
+      "state": "South Carolina",
+      "country": "United States",
+      "type": "city",
+      "encoded": "orangeburg-south-carolina-united-states",
+      "pop": 13240,
+      "coord": [-80.85670658789083, 33.49143245721864]
+    },
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
         "land": ["all uses"]
       }
     ]
@@ -80513,6 +81905,24 @@
       }
     ]
   },
+  "Pea Ridge, Arkansas, United States": {
+    "place": {
+      "name": "Pea Ridge",
+      "state": "Arkansas",
+      "country": "United States",
+      "type": "city",
+      "encoded": "pea-ridge-arkansas-united-states",
+      "pop": 6559,
+      "coord": [-94.1162147, 36.4515042]
+    },
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["residential, low-density"]
+      }
+    ]
+  },
   "Peace River, Alberta, Canada": {
     "place": {
       "name": "Peace River",
@@ -82126,6 +83536,24 @@
       }
     ]
   },
+  "Piggott, Arkansas, United States": {
+    "place": {
+      "name": "Piggott",
+      "state": "Arkansas",
+      "country": "United States",
+      "type": "city",
+      "encoded": "piggott-arkansas-united-states",
+      "pop": 3622,
+      "coord": [-90.1906542, 36.382839]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["all uses"]
+      }
+    ]
+  },
   "Pike Road, Alabama, United States": {
     "place": {
       "name": "Pike Road",
@@ -83155,6 +84583,24 @@
       }
     ]
   },
+  "Plymouth, Massachusetts, United States": {
+    "place": {
+      "name": "Plymouth",
+      "state": "Massachusetts",
+      "country": "United States",
+      "type": "city",
+      "encoded": "plymouth-massachusetts-united-states",
+      "pop": 61217,
+      "coord": [-70.66459588262138, 41.95657960445187]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["all uses"]
+      }
+    ]
+  },
   "Plymouth, Michigan, United States": {
     "place": {
       "name": "Plymouth",
@@ -83822,6 +85268,31 @@
         "status": "adopted",
         "scope": ["city center / business district", "citywide"],
         "land": ["all uses", "commercial", "other", "residential, all uses"]
+      }
+    ]
+  },
+  "Port Royal, South Carolina, United States": {
+    "place": {
+      "name": "Port Royal",
+      "state": "South Carolina",
+      "country": "United States",
+      "type": "city",
+      "encoded": "port-royal-south-carolina-united-states",
+      "pop": 14220,
+      "coord": [-80.6926069, 32.3790843]
+    },
+    "add_max": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["all uses"]
+      }
+    ],
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["all uses"]
       }
     ]
   },
@@ -84695,6 +86166,24 @@
         "status": "adopted",
         "scope": ["city center / business district"],
         "land": ["commercial"]
+      }
+    ]
+  },
+  "Pretty Prairie, Kansas, United States": {
+    "place": {
+      "name": "Pretty Prairie",
+      "state": "Kansas",
+      "country": "United States",
+      "type": "city",
+      "encoded": "pretty-prairie-kansas-united-states",
+      "pop": 660,
+      "coord": [-98.0197792, 37.7800136]
+    },
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["commercial", "other"]
       }
     ]
   },
@@ -85578,6 +87067,24 @@
         "status": "adopted",
         "scope": ["main street / special"],
         "land": ["commercial"]
+      }
+    ]
+  },
+  "Rainbow Lake, Alberta, Canada": {
+    "place": {
+      "name": "Rainbow Lake",
+      "state": "Alberta",
+      "country": "Canada",
+      "type": "city",
+      "encoded": "rainbow-lake-alberta-canada",
+      "pop": 495,
+      "coord": [-119.400279, 58.502505]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["all uses"]
       }
     ]
   },
@@ -87206,6 +88713,50 @@
       }
     ]
   },
+  "Richmond Hill, Ontario, Canada": {
+    "place": {
+      "name": "Richmond Hill",
+      "state": "Ontario",
+      "country": "Canada",
+      "type": "city",
+      "encoded": "richmond-hill-ontario-canada",
+      "pop": 202022,
+      "coord": [-79.4392925, 43.8801166]
+    },
+    "add_max": [
+      {
+        "status": "adopted",
+        "scope": [
+          "city center / business district",
+          "main street / special",
+          "transit-oriented"
+        ],
+        "land": ["all uses"]
+      }
+    ],
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": [
+          "city center / business district",
+          "main street / special",
+          "transit-oriented"
+        ],
+        "land": ["all uses"]
+      }
+    ],
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": [
+          "city center / business district",
+          "main street / special",
+          "transit-oriented"
+        ],
+        "land": ["all uses"]
+      }
+    ]
+  },
   "Richmond, Illinois, United States": {
     "place": {
       "name": "Richmond",
@@ -87420,6 +88971,13 @@
       "pop": 9153,
       "coord": [-122.7433775, 45.8167616]
     },
+    "add_max": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["commercial"]
+      }
+    ],
     "rm_min": [
       {
         "status": "adopted",
@@ -94302,6 +95860,24 @@
       }
     ]
   },
+  "Sheridan, Arkansas, United States": {
+    "place": {
+      "name": "Sheridan",
+      "state": "Arkansas",
+      "country": "United States",
+      "type": "city",
+      "encoded": "sheridan-arkansas-united-states",
+      "pop": 4920,
+      "coord": [-92.4013484, 34.3100971]
+    },
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["all uses"]
+      }
+    ]
+  },
   "Sheridan, Colorado, United States": {
     "place": {
       "name": "Sheridan",
@@ -95044,6 +96620,24 @@
         "status": "adopted",
         "scope": ["citywide", "transit-oriented"],
         "land": ["residential, low-density"]
+      }
+    ]
+  },
+  "Simpsonville, South Carolina, United States": {
+    "place": {
+      "name": "Simpsonville",
+      "state": "South Carolina",
+      "country": "United States",
+      "type": "city",
+      "encoded": "simpsonville-south-carolina-united-states",
+      "pop": 23354,
+      "coord": [-82.255371, 34.7373045]
+    },
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["all uses"]
       }
     ]
   },
@@ -96575,6 +98169,24 @@
       }
     ]
   },
+  "South Glengarry, Ontario, Canada": {
+    "place": {
+      "name": "South Glengarry",
+      "state": "Ontario",
+      "country": "Canada",
+      "type": "city",
+      "encoded": "south-glengarry-ontario-canada",
+      "pop": 13330,
+      "coord": [-74.5540059, 45.1869835]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["all uses"]
+      }
+    ]
+  },
   "South Glens Falls, New York, United States": {
     "place": {
       "name": "South Glens Falls",
@@ -97451,6 +99063,24 @@
       {
         "status": "adopted",
         "scope": ["city center / business district"],
+        "land": ["all uses"]
+      }
+    ]
+  },
+  "Spirit River, Alberta, Canada": {
+    "place": {
+      "name": "Spirit River",
+      "state": "Alberta",
+      "country": "Canada",
+      "type": "city",
+      "encoded": "spirit-river-alberta-canada",
+      "pop": 992,
+      "coord": [-118.8384244, 55.7811087]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
         "land": ["all uses"]
       }
     ]
@@ -99531,6 +101161,24 @@
       }
     ]
   },
+  "Stanley, North Dakota, United States": {
+    "place": {
+      "name": "Stanley",
+      "state": "North Dakota",
+      "country": "United States",
+      "type": "city",
+      "encoded": "stanley-north-dakota-united-states",
+      "pop": 2321,
+      "coord": [-102.390452, 48.317241]
+    },
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["all uses"]
+      }
+    ]
+  },
   "Stanton, Michigan, United States": {
     "place": {
       "name": "Stanton",
@@ -99700,6 +101348,24 @@
       }
     ]
   },
+  "Stark, Kansas, United States": {
+    "place": {
+      "name": "Stark",
+      "state": "Kansas",
+      "country": "United States",
+      "type": "city",
+      "encoded": "stark-kansas-united-states",
+      "pop": 100,
+      "coord": [-95.1430326, 37.6900455]
+    },
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["all uses"]
+      }
+    ]
+  },
   "Starkville, Mississippi, United States": {
     "place": {
       "name": "Starkville",
@@ -99844,6 +101510,24 @@
         "status": "adopted",
         "scope": ["city center / business district", "main street / special"],
         "land": ["all uses", "commercial", "residential, low-density"]
+      }
+    ]
+  },
+  "Stavely, Alberta, Canada": {
+    "place": {
+      "name": "Stavely",
+      "state": "Alberta",
+      "country": "Canada",
+      "type": "city",
+      "encoded": "stavely-alberta-canada",
+      "pop": 544,
+      "coord": [-113.6402944, 50.1621453]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["all uses"]
       }
     ]
   },
@@ -100283,6 +101967,24 @@
         "status": "adopted",
         "scope": ["city center / business district", "citywide"],
         "land": ["all uses", "commercial", "residential, all uses"]
+      }
+    ]
+  },
+  "Stirling, Alberta, Canada": {
+    "place": {
+      "name": "Stirling",
+      "state": "Alberta",
+      "country": "Canada",
+      "type": "city",
+      "encoded": "stirling-alberta-canada",
+      "pop": 1164,
+      "coord": [-112.525082, 49.503059]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["all uses"]
       }
     ]
   },
@@ -101390,6 +103092,31 @@
       }
     ]
   },
+  "Summerville, South Carolina, United States": {
+    "place": {
+      "name": "Summerville",
+      "state": "South Carolina",
+      "country": "United States",
+      "type": "city",
+      "encoded": "summerville-south-carolina-united-states",
+      "pop": 50915,
+      "coord": [-80.1762704, 33.0186699]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["all uses"]
+      }
+    ],
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district", "citywide"],
+        "land": ["all uses", "industrial"]
+      }
+    ]
+  },
   "Summit, Illinois, United States": {
     "place": {
       "name": "Summit",
@@ -101459,6 +103186,24 @@
         "status": "adopted",
         "scope": ["citywide"],
         "land": ["commercial", "industrial", "medical", "other"]
+      }
+    ]
+  },
+  "Sumter, South Carolina, United States": {
+    "place": {
+      "name": "Sumter",
+      "state": "South Carolina",
+      "country": "United States",
+      "type": "city",
+      "encoded": "sumter-south-carolina-united-states",
+      "pop": 43463,
+      "coord": [-80.3414693, 33.9204354]
+    },
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["commercial", "other"]
       }
     ]
   },
@@ -101927,6 +103672,24 @@
       }
     ]
   },
+  "Swan Hills, Alberta, Canada": {
+    "place": {
+      "name": "Swan Hills",
+      "state": "Alberta",
+      "country": "Canada",
+      "type": "city",
+      "encoded": "swan-hills-alberta-canada",
+      "pop": 1201,
+      "coord": [-115.4008258, 54.7180657]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["all uses"]
+      }
+    ]
+  },
   "Swanville, Minnesota, United States": {
     "place": {
       "name": "Swanville",
@@ -102322,12 +104085,31 @@
       "pop": 217827,
       "coord": [-122.4398746, 47.2495798]
     },
+    "add_max": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["commercial", "other"]
+      }
+    ],
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district", "citywide"],
+        "land": ["all uses"]
+      }
+    ],
     "rm_min": [
       {
         "status": "adopted",
         "scope": ["city center / business district"],
         "land": ["all uses"],
         "date": "2024-11-19"
+      },
+      {
+        "status": "adopted",
+        "scope": ["main street / special", "transit-oriented"],
+        "land": ["all uses", "commercial", "residential, low-density"]
       }
     ]
   },
@@ -104737,6 +106519,24 @@
         "scope": ["citywide"],
         "land": ["all uses"],
         "date": "1994-10-18"
+      }
+    ]
+  },
+  "Towanda, Kansas, United States": {
+    "place": {
+      "name": "Towanda",
+      "state": "Kansas",
+      "country": "United States",
+      "type": "city",
+      "encoded": "towanda-kansas-united-states",
+      "pop": 1447,
+      "coord": [-96.999758, 37.797517]
+    },
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["commercial", "other"]
       }
     ]
   },
@@ -107150,6 +108950,11 @@
         "status": "adopted",
         "scope": ["transit-oriented"],
         "land": ["all uses"]
+      },
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["all uses"]
       }
     ],
     "reduce_min": [
@@ -107161,6 +108966,13 @@
           "transit-oriented"
         ],
         "land": ["all uses", "commercial"]
+      }
+    ],
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["residential, all uses"]
       }
     ]
   },
@@ -107238,6 +109050,44 @@
       {
         "status": "adopted",
         "scope": ["citywide"],
+        "land": ["all uses"]
+      }
+    ]
+  },
+  "Vaughan, Ontario, Canada": {
+    "place": {
+      "name": "Vaughan",
+      "state": "Ontario",
+      "country": "Canada",
+      "type": "city",
+      "encoded": "vaughan-ontario-canada",
+      "pop": 323103,
+      "coord": [-79.5268023, 43.7941544]
+    },
+    "add_max": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district", "transit-oriented"],
+        "land": ["commercial", "other", "residential, multi-family"]
+      }
+    ],
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district", "citywide"],
+        "land": [
+          "commercial",
+          "industrial",
+          "medical",
+          "other",
+          "residential, multi-family"
+        ]
+      }
+    ],
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["transit-oriented"],
         "land": ["all uses"]
       }
     ]
@@ -108514,6 +110364,24 @@
       }
     ]
   },
+  "Walhalla, South Carolina, United States": {
+    "place": {
+      "name": "Walhalla",
+      "state": "South Carolina",
+      "country": "United States",
+      "type": "city",
+      "encoded": "walhalla-south-carolina-united-states",
+      "pop": 4072,
+      "coord": [-83.0640417, 34.7648176]
+    },
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["all uses"]
+      }
+    ]
+  },
   "Walker, Michigan, United States": {
     "place": {
       "name": "Walker",
@@ -108601,6 +110469,12 @@
         "status": "adopted",
         "scope": ["city center / business district"],
         "land": ["all uses"]
+      },
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["commercial", "other", "residential, all uses"],
+        "date": "2025-10-22"
       }
     ]
   },
@@ -108710,6 +110584,24 @@
         "status": "adopted",
         "scope": ["city center / business district"],
         "land": ["all uses"]
+      }
+    ]
+  },
+  "Waltham, Massachusetts, United States": {
+    "place": {
+      "name": "Waltham",
+      "state": "Massachusetts",
+      "country": "United States",
+      "type": "city",
+      "encoded": "waltham-massachusetts-united-states",
+      "pop": 65218,
+      "coord": [-71.2355644, 42.3762385]
+    },
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["commercial", "other"]
       }
     ]
   },
@@ -109794,6 +111686,24 @@
       }
     ]
   },
+  "Water Valley, Mississippi, United States": {
+    "place": {
+      "name": "Water Valley",
+      "state": "Mississippi",
+      "country": "United States",
+      "type": "city",
+      "encoded": "water-valley-mississippi-united-states",
+      "pop": 3380,
+      "coord": [-89.6314736, 34.1514989]
+    },
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["all uses"]
+      }
+    ]
+  },
   "Waterbury, Connecticut, United States": {
     "place": {
       "name": "Waterbury",
@@ -109931,6 +111841,31 @@
       {
         "status": "adopted",
         "scope": ["city center / business district"],
+        "land": ["all uses"]
+      }
+    ]
+  },
+  "Waterloo, Ontario, Canada": {
+    "place": {
+      "name": "Waterloo",
+      "state": "Ontario",
+      "country": "Canada",
+      "type": "city",
+      "encoded": "waterloo-ontario-canada",
+      "pop": 121436,
+      "coord": [-80.5222961, 43.4652699]
+    },
+    "add_max": [
+      {
+        "status": "adopted",
+        "scope": ["transit-oriented"],
+        "land": ["all uses"]
+      }
+    ],
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district", "transit-oriented"],
         "land": ["all uses"]
       }
     ]
@@ -110739,6 +112674,24 @@
       }
     ]
   },
+  "Waynesboro, Mississippi, United States": {
+    "place": {
+      "name": "Waynesboro",
+      "state": "Mississippi",
+      "country": "United States",
+      "type": "city",
+      "encoded": "waynesboro-mississippi-united-states",
+      "pop": 4567,
+      "coord": [-88.6461237, 31.6749854]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["all uses"]
+      }
+    ]
+  },
   "Waynesboro, Pennsylvania, United States": {
     "place": {
       "name": "Waynesboro",
@@ -110983,6 +112936,24 @@
       {
         "status": "adopted",
         "scope": ["city center / business district"],
+        "land": ["all uses"]
+      }
+    ]
+  },
+  "Weir, Kansas, United States": {
+    "place": {
+      "name": "Weir",
+      "state": "Kansas",
+      "country": "United States",
+      "type": "city",
+      "encoded": "weir-kansas-united-states",
+      "pop": 569,
+      "coord": [-94.7719043, 37.3100548]
+    },
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
         "land": ["all uses"]
       }
     ]
@@ -111560,6 +113531,24 @@
       }
     ]
   },
+  "West Columbia, South Carolina, United States": {
+    "place": {
+      "name": "West Columbia",
+      "state": "South Carolina",
+      "country": "United States",
+      "type": "city",
+      "encoded": "west-columbia-south-carolina-united-states",
+      "pop": 17416,
+      "coord": [-81.0640341, 33.991869]
+    },
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["all uses"]
+      }
+    ]
+  },
   "West Des Moines, Iowa, United States": {
     "place": {
       "name": "West Des Moines",
@@ -111638,6 +113627,31 @@
         "scope": ["citywide"],
         "land": ["all uses"],
         "date": "2023-07"
+      }
+    ]
+  },
+  "West Fork, Arkansas, United States": {
+    "place": {
+      "name": "West Fork",
+      "state": "Arkansas",
+      "country": "United States",
+      "type": "city",
+      "encoded": "west-fork-arkansas-united-states",
+      "pop": 2331,
+      "coord": [-94.1885387, 35.9242477]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["all uses"]
+      }
+    ],
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["commercial", "industrial", "medical", "other"]
       }
     ]
   },
@@ -113588,6 +115602,24 @@
       }
     ]
   },
+  "Whitewater, Ontario, Canada": {
+    "place": {
+      "name": "Whitewater",
+      "state": "Ontario",
+      "country": "Canada",
+      "type": "city",
+      "encoded": "whitewater-ontario-canada",
+      "pop": 7225,
+      "coord": [-76.8902669, 45.8197719]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["all uses"]
+      }
+    ]
+  },
   "Whitewater, Wisconsin, United States": {
     "place": {
       "name": "Whitewater",
@@ -113665,6 +115697,12 @@
         "status": "adopted",
         "scope": ["city center / business district"],
         "land": ["all uses"]
+      },
+      {
+        "status": "proposed",
+        "scope": ["citywide"],
+        "land": ["residential, low-density"],
+        "date": "2026-04"
       }
     ]
   },
@@ -114054,11 +116092,18 @@
       "pop": 29160,
       "coord": [-103.621814, 48.1465457]
     },
-    "rm_min": [
+    "reduce_min": [
       {
         "status": "adopted",
         "scope": ["city center / business district"],
         "land": ["all uses"]
+      }
+    ],
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["commercial"]
       }
     ]
   },
@@ -115264,6 +117309,24 @@
       }
     ]
   },
+  "Woburn, Massachusetts, United States": {
+    "place": {
+      "name": "Woburn",
+      "state": "Massachusetts",
+      "country": "United States",
+      "type": "city",
+      "encoded": "woburn-massachusetts-united-states",
+      "pop": 40876,
+      "coord": [-71.1522766, 42.4792618]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["commercial", "other", "residential, all uses"]
+      }
+    ]
+  },
   "Wolcott, Connecticut, United States": {
     "place": {
       "name": "Wolcott",
@@ -116047,6 +118110,24 @@
         "status": "adopted",
         "scope": ["main street / special"],
         "land": ["residential, all uses"]
+      }
+    ]
+  },
+  "Woolwich, Ontario, Canada": {
+    "place": {
+      "name": "Woolwich",
+      "state": "Ontario",
+      "country": "Canada",
+      "type": "city",
+      "encoded": "woolwich-ontario-canada",
+      "pop": 26999,
+      "coord": [-80.4995154, 43.5665497]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["all uses"]
       }
     ]
   },
