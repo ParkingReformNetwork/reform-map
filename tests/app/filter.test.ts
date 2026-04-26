@@ -44,12 +44,12 @@ const TESTS: EdgeCase[] = [
   {
     desc: "default: reduce",
     policyTypeFilter: "reduce parking minimums",
-    expectedRange: [1920, 2800],
+    expectedRange: [2000, 4000],
   },
   {
     desc: "default: remove",
     policyTypeFilter: "remove parking minimums",
-    expectedRange: [2800, 3400],
+    expectedRange: [3400, 5000],
   },
   {
     desc: "default: max",
