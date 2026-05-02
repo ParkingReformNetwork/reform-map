@@ -2257,6 +2257,30 @@
       }
     ]
   },
+  "Amherst, Massachusetts, United States": {
+    "place": {
+      "name": "Amherst",
+      "state": "Massachusetts",
+      "country": "United States",
+      "type": "city",
+      "encoded": "amherst-massachusetts-united-states",
+      "pop": 39263,
+      "coord": [-72.5198761, 42.3731948]
+    },
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": [
+          "commercial",
+          "industrial",
+          "other",
+          "residential, low-density",
+          "residential, multi-family"
+        ]
+      }
+    ]
+  },
   "Amherst, Nova Scotia, Canada": {
     "place": {
       "name": "Amherst",
@@ -5928,6 +5952,31 @@
       }
     ]
   },
+  "Barnstable, Massachusetts, United States": {
+    "place": {
+      "name": "Barnstable",
+      "state": "Massachusetts",
+      "country": "United States",
+      "type": "city",
+      "encoded": "barnstable-massachusetts-united-states",
+      "pop": 48916,
+      "coord": [-70.3036163, 41.7016936]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["commercial", "other", "residential, multi-family"]
+      }
+    ],
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["commercial"]
+      }
+    ]
+  },
   "Barre, Vermont, United States": {
     "place": {
       "name": "Barre",
@@ -9287,6 +9336,38 @@
       }
     ]
   },
+  "Beverly, Massachusetts, United States": {
+    "place": {
+      "name": "Beverly",
+      "state": "Massachusetts",
+      "country": "United States",
+      "type": "city",
+      "encoded": "beverly-massachusetts-united-states",
+      "pop": 42670,
+      "coord": [-70.8781883, 42.5489744]
+    },
+    "add_max": [
+      {
+        "status": "adopted",
+        "scope": ["main street / special"],
+        "land": ["all uses"]
+      }
+    ],
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["residential, all uses"]
+      }
+    ],
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["main street / special"],
+        "land": ["commercial", "other"]
+      }
+    ]
+  },
   "Bexley, Ohio, United States": {
     "place": {
       "name": "Bexley",
@@ -11622,6 +11703,24 @@
         "scope": ["city center / business district", "citywide"],
         "land": ["all uses", "commercial", "industrial", "medical", "other"],
         "date": "2023-10-16"
+      }
+    ]
+  },
+  "Braintree, Massachusetts, United States": {
+    "place": {
+      "name": "Braintree",
+      "state": "Massachusetts",
+      "country": "United States",
+      "type": "city",
+      "encoded": "braintree-massachusetts-united-states",
+      "pop": 39143,
+      "coord": [-71.0041229, 42.2205956]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide", "main street / special"],
+        "land": ["all uses"]
       }
     ]
   },
@@ -14024,6 +14123,30 @@
         "status": "adopted",
         "scope": ["city center / business district"],
         "land": ["commercial"]
+      }
+    ]
+  },
+  "Burlington, Massachusetts, United States": {
+    "place": {
+      "name": "Burlington",
+      "state": "Massachusetts",
+      "country": "United States",
+      "type": "city",
+      "encoded": "burlington-massachusetts-united-states",
+      "pop": 26377,
+      "coord": [-71.1956111, 42.5048167]
+    },
+    "add_max": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": [
+          "commercial",
+          "industrial",
+          "medical",
+          "other",
+          "residential, multi-family"
+        ]
       }
     ]
   },
@@ -34005,6 +34128,24 @@
       }
     ]
   },
+  "Everett, Massachusetts, United States": {
+    "place": {
+      "name": "Everett",
+      "state": "Massachusetts",
+      "country": "United States",
+      "type": "city",
+      "encoded": "everett-massachusetts-united-states",
+      "pop": 49075,
+      "coord": [-71.0542002, 42.4085897]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["main street / special"],
+        "land": ["commercial"]
+      }
+    ]
+  },
   "Everett, Washington, United States": {
     "place": {
       "name": "Everett",
@@ -40932,6 +41073,31 @@
       }
     ]
   },
+  "Gloucester, Massachusetts, United States": {
+    "place": {
+      "name": "Gloucester",
+      "state": "Massachusetts",
+      "country": "United States",
+      "type": "city",
+      "encoded": "gloucester-massachusetts-united-states",
+      "pop": 29729,
+      "coord": [-70.6624608, 42.6153595]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district", "citywide"],
+        "land": ["commercial", "other", "residential, all uses"]
+      }
+    ],
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["commercial", "other"]
+      }
+    ]
+  },
   "Gloversville, New York, United States": {
     "place": {
       "name": "Gloversville",
@@ -43187,7 +43353,7 @@
       "type": "city",
       "encoded": "greenwood-south-carolina-united-states",
       "pop": 22545,
-      "coord": [-82.112882, 34.1489805]
+      "coord": [-82.16053820273125, 34.19110694732739]
     },
     "rm_min": [
       {
@@ -46239,6 +46405,24 @@
         "status": "adopted",
         "scope": ["city center / business district"],
         "land": ["commercial"]
+      }
+    ]
+  },
+  "Haverhill, Massachusetts, United States": {
+    "place": {
+      "name": "Haverhill",
+      "state": "Massachusetts",
+      "country": "United States",
+      "type": "city",
+      "encoded": "haverhill-massachusetts-united-states",
+      "pop": 67787,
+      "coord": [-71.0767724, 42.7777829]
+    },
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district", "main street / special"],
+        "land": ["all uses", "commercial", "other"]
       }
     ]
   },
@@ -57501,6 +57685,31 @@
       }
     ]
   },
+  "Lawrence, Massachusetts, United States": {
+    "place": {
+      "name": "Lawrence",
+      "state": "Massachusetts",
+      "country": "United States",
+      "type": "city",
+      "encoded": "lawrence-massachusetts-united-states",
+      "pop": 89143,
+      "coord": [-71.1631137, 42.7070354]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["industrial", "other"]
+      }
+    ],
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["commercial", "other"]
+      }
+    ]
+  },
   "Lawrenceville, Georgia, United States": {
     "place": {
       "name": "Lawrenceville",
@@ -66012,6 +66221,38 @@
       }
     ]
   },
+  "Melrose, Massachusetts, United States": {
+    "place": {
+      "name": "Melrose",
+      "state": "Massachusetts",
+      "country": "United States",
+      "type": "city",
+      "encoded": "melrose-massachusetts-united-states",
+      "pop": 29817,
+      "coord": [-71.064182, 42.4564323]
+    },
+    "add_max": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["residential, low-density"]
+      }
+    ],
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["main street / special"],
+        "land": ["all uses"]
+      }
+    ],
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["residential, low-density"]
+      }
+    ]
+  },
   "Melville, Saskatchewan, Canada": {
     "place": {
       "name": "Melville",
@@ -66648,6 +66889,24 @@
         "status": "adopted",
         "scope": ["main street / special"],
         "land": ["residential, all uses"]
+      }
+    ]
+  },
+  "Methuen, Massachusetts, United States": {
+    "place": {
+      "name": "Methuen",
+      "state": "Massachusetts",
+      "country": "United States",
+      "type": "city",
+      "encoded": "methuen-massachusetts-united-states",
+      "pop": 53039,
+      "coord": [-71.1908924, 42.7262016]
+    },
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["commercial", "industrial", "other"]
       }
     ]
   },
@@ -75141,6 +75400,33 @@
       }
     ]
   },
+  "Newton, Massachusetts, United States": {
+    "place": {
+      "name": "Newton",
+      "state": "Massachusetts",
+      "country": "United States",
+      "type": "city",
+      "encoded": "newton-massachusetts-united-states",
+      "pop": 88923,
+      "coord": [-71.194862, 42.3300435]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["commercial"],
+        "date": "2025-11-17"
+      }
+    ],
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["commercial"],
+        "date": "2025-11-17"
+      }
+    ]
+  },
   "Newton, New Jersey, United States": {
     "place": {
       "name": "Newton",
@@ -75799,6 +76085,24 @@
         "status": "adopted",
         "scope": ["main street / special"],
         "land": ["commercial"]
+      }
+    ]
+  },
+  "North Attleboro, Massachusetts, United States": {
+    "place": {
+      "name": "North Attleboro",
+      "state": "Massachusetts",
+      "country": "United States",
+      "type": "city",
+      "encoded": "north-attleboro-massachusetts-united-states",
+      "pop": 30834,
+      "coord": [-71.3322798, 41.9841334]
+    },
+    "add_max": [
+      {
+        "status": "adopted",
+        "scope": ["main street / special"],
+        "land": ["residential, all uses"]
       }
     ]
   },
@@ -81923,6 +82227,37 @@
       }
     ]
   },
+  "Peabody, Massachusetts, United States": {
+    "place": {
+      "name": "Peabody",
+      "state": "Massachusetts",
+      "country": "United States",
+      "type": "city",
+      "encoded": "peabody-massachusetts-united-states",
+      "pop": 54481,
+      "coord": [-70.9286609, 42.5278731]
+    },
+    "add_max": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": [
+          "commercial",
+          "industrial",
+          "medical",
+          "other",
+          "residential, multi-family"
+        ]
+      }
+    ],
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["commercial", "other"]
+      }
+    ]
+  },
   "Peace River, Alberta, Canada": {
     "place": {
       "name": "Peace River",
@@ -87518,6 +87853,24 @@
         "status": "adopted",
         "scope": ["city center / business district"],
         "land": ["all uses"]
+      }
+    ]
+  },
+  "Reading, Massachusetts, United States": {
+    "place": {
+      "name": "Reading",
+      "state": "Massachusetts",
+      "country": "United States",
+      "type": "city",
+      "encoded": "reading-massachusetts-united-states",
+      "pop": 25518,
+      "coord": [-71.1020262, 42.5260297]
+    },
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["commercial", "other"]
       }
     ]
   },
@@ -93619,6 +93972,24 @@
       }
     ]
   },
+  "Saugus, Massachusetts, United States": {
+    "place": {
+      "name": "Saugus",
+      "state": "Massachusetts",
+      "country": "United States",
+      "type": "city",
+      "encoded": "saugus-massachusetts-united-states",
+      "pop": 28619,
+      "coord": [-71.010051, 42.4648183]
+    },
+    "add_max": [
+      {
+        "status": "adopted",
+        "scope": ["main street / special"],
+        "land": ["all uses"]
+      }
+    ]
+  },
   "Sauk City, Wisconsin, United States": {
     "place": {
       "name": "Sauk City",
@@ -96331,6 +96702,24 @@
         "scope": ["citywide"],
         "land": ["all uses"],
         "date": "2025-10-28"
+      }
+    ]
+  },
+  "Shrewsbury, Massachusetts, United States": {
+    "place": {
+      "name": "Shrewsbury",
+      "state": "Massachusetts",
+      "country": "United States",
+      "type": "city",
+      "encoded": "shrewsbury-massachusetts-united-states",
+      "pop": 38325,
+      "coord": [-71.71351, 42.2960187]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["all uses"]
       }
     ]
   },
@@ -104510,6 +104899,24 @@
       }
     ]
   },
+  "Taunton, Massachusetts, United States": {
+    "place": {
+      "name": "Taunton",
+      "state": "Massachusetts",
+      "country": "United States",
+      "type": "city",
+      "encoded": "taunton-massachusetts-united-states",
+      "pop": 59408,
+      "coord": [-71.0931485, 41.9019257]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district", "transit-oriented"],
+        "land": ["all uses", "residential, all uses"]
+      }
+    ]
+  },
   "Tawas City, Michigan, United States": {
     "place": {
       "name": "Tawas City",
@@ -105115,6 +105522,24 @@
       "encoded": "tewksbury-township-new-jersey-united-states",
       "pop": 5870,
       "coord": [-74.77873, 40.68446]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["all uses"]
+      }
+    ]
+  },
+  "Tewksbury, Massachusetts, United States": {
+    "place": {
+      "name": "Tewksbury",
+      "state": "Massachusetts",
+      "country": "United States",
+      "type": "city",
+      "encoded": "tewksbury-massachusetts-united-states",
+      "pop": 31342,
+      "coord": [-71.2342248, 42.6106479]
     },
     "reduce_min": [
       {
@@ -110266,6 +110691,24 @@
       }
     ]
   },
+  "Wakefield, Massachusetts, United States": {
+    "place": {
+      "name": "Wakefield",
+      "state": "Massachusetts",
+      "country": "United States",
+      "type": "city",
+      "encoded": "wakefield-massachusetts-united-states",
+      "pop": 27090,
+      "coord": [-71.0728306, 42.506484]
+    },
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide", "transit-oriented"],
+        "land": ["commercial", "other"]
+      }
+    ]
+  },
   "Walden, New York, United States": {
     "place": {
       "name": "Walden",
@@ -110566,6 +111009,31 @@
         "status": "adopted",
         "scope": ["city center / business district"],
         "land": ["residential, all uses"]
+      }
+    ]
+  },
+  "Walpole, Massachusetts, United States": {
+    "place": {
+      "name": "Walpole",
+      "state": "Massachusetts",
+      "country": "United States",
+      "type": "city",
+      "encoded": "walpole-massachusetts-united-states",
+      "pop": 26383,
+      "coord": [-71.2538759, 42.1459019]
+    },
+    "add_max": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["commercial", "other"]
+      }
+    ],
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district", "main street / special"],
+        "land": ["all uses"]
       }
     ]
   },
@@ -113023,6 +113491,24 @@
       }
     ]
   },
+  "Wellesley, Massachusetts, United States": {
+    "place": {
+      "name": "Wellesley",
+      "state": "Massachusetts",
+      "country": "United States",
+      "type": "city",
+      "encoded": "wellesley-massachusetts-united-states",
+      "pop": 29550,
+      "coord": [-71.2925571, 42.2964859]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["commercial"]
+      }
+    ]
+  },
   "Wellington North, Ontario, Canada": {
     "place": {
       "name": "Wellington North",
@@ -115054,6 +115540,24 @@
         "status": "adopted",
         "scope": ["city center / business district"],
         "land": ["commercial", "medical", "other"]
+      }
+    ]
+  },
+  "Weymouth, Massachusetts, United States": {
+    "place": {
+      "name": "Weymouth",
+      "state": "Massachusetts",
+      "country": "United States",
+      "type": "city",
+      "encoded": "weymouth-massachusetts-united-states",
+      "pop": 57437,
+      "coord": [-70.9391625, 42.2212188]
+    },
+    "add_max": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district", "transit-oriented"],
+        "land": ["all uses", "residential, all uses"]
       }
     ]
   },
