@@ -5793,6 +5793,24 @@
       }
     ]
   },
+  "Banks County, Georgia, United States": {
+    "place": {
+      "name": "Banks County",
+      "state": "Georgia",
+      "country": "United States",
+      "type": "county",
+      "encoded": "banks-county-georgia-united-states",
+      "pop": 18035,
+      "coord": [-83.4970026, 34.3378598]
+    },
+    "add_max": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["all uses"]
+      }
+    ]
+  },
   "Banks, Oregon, United States": {
     "place": {
       "name": "Banks",
@@ -6130,6 +6148,24 @@
       }
     ]
   },
+  "Barrow County, Georgia, United States": {
+    "place": {
+      "name": "Barrow County",
+      "state": "Georgia",
+      "country": "United States",
+      "type": "county",
+      "encoded": "barrow-county-georgia-united-states",
+      "pop": 83505,
+      "coord": [-83.6996482, 33.9848611]
+    },
+    "add_max": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["all uses"]
+      }
+    ]
+  },
   "Barry, Illinois, United States": {
     "place": {
       "name": "Barry",
@@ -6201,6 +6237,24 @@
       "encoded": "bartlett-tennessee-united-states",
       "pop": 57786,
       "coord": [-89.8739753, 35.2045329]
+    },
+    "add_max": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["all uses"]
+      }
+    ]
+  },
+  "Bartow County, Georgia, United States": {
+    "place": {
+      "name": "Bartow County",
+      "state": "Georgia",
+      "country": "United States",
+      "type": "county",
+      "encoded": "bartow-county-georgia-united-states",
+      "pop": 108901,
+      "coord": [-84.8406984, 34.2394683]
     },
     "add_max": [
       {
@@ -13650,6 +13704,24 @@
       }
     ]
   },
+  "Bryan County, Georgia, United States": {
+    "place": {
+      "name": "Bryan County",
+      "state": "Georgia",
+      "country": "United States",
+      "type": "county",
+      "encoded": "bryan-county-georgia-united-states",
+      "pop": 44738,
+      "coord": [-81.4241017, 32.0034889]
+    },
+    "add_max": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["all uses"]
+      }
+    ]
+  },
   "Bryan, Ohio, United States": {
     "place": {
       "name": "Bryan",
@@ -15185,6 +15257,24 @@
       {
         "status": "adopted",
         "scope": ["city center / business district"],
+        "land": ["all uses"]
+      }
+    ]
+  },
+  "Camden County, Georgia, United States": {
+    "place": {
+      "name": "Camden County",
+      "state": "Georgia",
+      "country": "United States",
+      "type": "county",
+      "encoded": "camden-county-georgia-united-states",
+      "pop": 54768,
+      "coord": [-81.6225075, 30.9298212]
+    },
+    "add_max": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
         "land": ["all uses"]
       }
     ]
@@ -17229,6 +17319,24 @@
       }
     ]
   },
+  "Castlegar, British Columbia, Canada": {
+    "place": {
+      "name": "Castlegar",
+      "state": "British Columbia",
+      "country": "Canada",
+      "type": "city",
+      "encoded": "castlegar-british-columbia-canada",
+      "pop": 8338,
+      "coord": [-117.663574, 49.316171]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["all uses"]
+      }
+    ]
+  },
   "Castleton-on-Hudson, New York, United States": {
     "place": {
       "name": "Castleton-on-Hudson",
@@ -18839,10 +18947,29 @@
       "pop": 182799,
       "coord": [-85.3094883, 35.0457219]
     },
+    "add_max": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["commercial", "industrial", "medical", "other"]
+      }
+    ],
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide", "main street / special"],
+        "land": ["all uses", "commercial", "other"]
+      }
+    ],
     "rm_min": [
       {
         "status": "adopted",
         "scope": ["city center / business district"],
+        "land": ["all uses"]
+      },
+      {
+        "status": "adopted",
+        "scope": ["main street / special"],
         "land": ["all uses"]
       }
     ]
@@ -20375,6 +20502,38 @@
         "status": "adopted",
         "scope": ["city center / business district"],
         "land": ["all uses"]
+      }
+    ]
+  },
+  "Clayton County, Georgia, United States": {
+    "place": {
+      "name": "Clayton County",
+      "state": "Georgia",
+      "country": "United States",
+      "type": "county",
+      "encoded": "clayton-county-georgia-united-states",
+      "pop": 297595,
+      "coord": [-84.3591713, 33.5204959]
+    },
+    "add_max": [
+      {
+        "status": "adopted",
+        "scope": ["transit-oriented"],
+        "land": ["all uses"]
+      }
+    ],
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["main street / special"],
+        "land": ["all uses"]
+      }
+    ],
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["transit-oriented"],
+        "land": ["commercial", "other", "residential, low-density"]
       }
     ]
   },
@@ -22291,6 +22450,30 @@
       }
     ]
   },
+  "Columbia County, Georgia, United States": {
+    "place": {
+      "name": "Columbia County",
+      "state": "Georgia",
+      "country": "United States",
+      "type": "county",
+      "encoded": "columbia-county-georgia-united-states",
+      "pop": 156010,
+      "coord": [-82.2563979, 33.5313102]
+    },
+    "add_max": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": [
+          "commercial",
+          "industrial",
+          "medical",
+          "other",
+          "residential, multi-family"
+        ]
+      }
+    ]
+  },
   "Columbia Falls, Montana, United States": {
     "place": {
       "name": "Columbia Falls",
@@ -23028,6 +23211,13 @@
         "status": "adopted",
         "scope": ["citywide"],
         "land": ["all uses"]
+      }
+    ],
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["residential, all uses"]
       }
     ],
     "rm_min": [
@@ -24221,6 +24411,24 @@
       }
     ]
   },
+  "Coweta County, Georgia, United States": {
+    "place": {
+      "name": "Coweta County",
+      "state": "Georgia",
+      "country": "United States",
+      "type": "county",
+      "encoded": "coweta-county-georgia-united-states",
+      "pop": 146158,
+      "coord": [-84.7545734, 33.3500656]
+    },
+    "add_max": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["all uses"]
+      }
+    ]
+  },
   "Cowley, Wyoming, United States": {
     "place": {
       "name": "Cowley",
@@ -24336,6 +24544,31 @@
         "scope": ["citywide"],
         "land": ["all uses"],
         "date": "2025-09-16"
+      }
+    ]
+  },
+  "Cranbrook, British Columbia, Canada": {
+    "place": {
+      "name": "Cranbrook",
+      "state": "British Columbia",
+      "country": "Canada",
+      "type": "city",
+      "encoded": "cranbrook-british-columbia-canada",
+      "pop": 20499,
+      "coord": [-115.7672772, 49.5107477]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["all uses"]
+      }
+    ],
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["all uses"]
       }
     ]
   },
@@ -26140,6 +26373,31 @@
       }
     ]
   },
+  "Dawson Creek, British Columbia, Canada": {
+    "place": {
+      "name": "Dawson Creek",
+      "state": "British Columbia",
+      "country": "Canada",
+      "type": "city",
+      "encoded": "dawson-creek-british-columbia-canada",
+      "pop": 12323,
+      "coord": [-120.2364453, 55.7605306]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district", "citywide"],
+        "land": ["all uses"]
+      }
+    ],
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["all uses", "commercial"]
+      }
+    ]
+  },
   "Dawsonville, Georgia, United States": {
     "place": {
       "name": "Dawsonville",
@@ -26412,6 +26670,31 @@
         "status": "adopted",
         "scope": ["citywide"],
         "land": ["residential, multi-family"]
+      }
+    ]
+  },
+  "DeKalb County, Georgia, United States": {
+    "place": {
+      "name": "DeKalb County",
+      "state": "Georgia",
+      "country": "United States",
+      "type": "county",
+      "encoded": "dekalb-county-georgia-united-states",
+      "pop": 764382,
+      "coord": [-84.2186508, 33.7575613]
+    },
+    "add_max": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["all uses"]
+      }
+    ],
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["all uses"]
       }
     ]
   },
@@ -28493,6 +28776,24 @@
           "residential, multi-family"
         ],
         "date": "2022-08-16"
+      }
+    ]
+  },
+  "Douglas County, Georgia, United States": {
+    "place": {
+      "name": "Douglas County",
+      "state": "Georgia",
+      "country": "United States",
+      "type": "county",
+      "encoded": "douglas-county-georgia-united-states",
+      "pop": 144237,
+      "coord": [-84.7622973, 33.6995565]
+    },
+    "add_max": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["all uses"]
       }
     ]
   },
@@ -35049,6 +35350,11 @@
         "scope": ["citywide"],
         "land": ["all uses"],
         "date": "2023-07"
+      },
+      {
+        "status": "adopted",
+        "scope": ["main street / special"],
+        "land": ["commercial", "other"]
       }
     ]
   },
@@ -36035,6 +36341,24 @@
       }
     ]
   },
+  "Flora, Mississippi, United States": {
+    "place": {
+      "name": "Flora",
+      "state": "Mississippi",
+      "country": "United States",
+      "type": "city",
+      "encoded": "flora-mississippi-united-states",
+      "pop": 1647,
+      "coord": [-90.3094672, 32.5432591]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["main street / special"],
+        "land": ["all uses"]
+      }
+    ]
+  },
   "Florence, Alabama, United States": {
     "place": {
       "name": "Florence",
@@ -36540,6 +36864,24 @@
       }
     ]
   },
+  "Foreman, Arkansas, United States": {
+    "place": {
+      "name": "Foreman",
+      "state": "Arkansas",
+      "country": "United States",
+      "type": "city",
+      "encoded": "foreman-arkansas-united-states",
+      "pop": 977,
+      "coord": [-94.39562, 33.7218256]
+    },
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["all uses"]
+      }
+    ]
+  },
   "Forest Grove, Oregon, United States": {
     "place": {
       "name": "Forest Grove",
@@ -36709,6 +37051,24 @@
       {
         "status": "adopted",
         "scope": ["city center / business district"],
+        "land": ["all uses"]
+      }
+    ]
+  },
+  "Forsyth County, Georgia, United States": {
+    "place": {
+      "name": "Forsyth County",
+      "state": "Georgia",
+      "country": "United States",
+      "type": "county",
+      "encoded": "forsyth-county-georgia-united-states",
+      "pop": 251283,
+      "coord": [-84.1335644, 34.235309]
+    },
+    "add_max": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
         "land": ["all uses"]
       }
     ]
@@ -38854,6 +39214,30 @@
         "status": "adopted",
         "scope": ["city center / business district"],
         "land": ["all uses"]
+      }
+    ]
+  },
+  "Fulton County, Georgia, United States": {
+    "place": {
+      "name": "Fulton County",
+      "state": "Georgia",
+      "country": "United States",
+      "type": "county",
+      "encoded": "fulton-county-georgia-united-states",
+      "pop": 1066710,
+      "coord": [-84.45505425951518, 33.763363009509916]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["transit-oriented"],
+        "land": [
+          "commercial",
+          "industrial",
+          "medical",
+          "other",
+          "residential, multi-family"
+        ]
       }
     ]
   },
@@ -41116,6 +41500,24 @@
       }
     ]
   },
+  "Glynn County, Georgia, United States": {
+    "place": {
+      "name": "Glynn County",
+      "state": "Georgia",
+      "country": "United States",
+      "type": "county",
+      "encoded": "glynn-county-georgia-united-states",
+      "pop": 84499,
+      "coord": [-81.5012681, 31.2171726]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["all uses"]
+      }
+    ]
+  },
   "Goddard, Kansas, United States": {
     "place": {
       "name": "Goddard",
@@ -41437,6 +41839,24 @@
       }
     ]
   },
+  "Gordon County, Georgia, United States": {
+    "place": {
+      "name": "Gordon County",
+      "state": "Georgia",
+      "country": "United States",
+      "type": "county",
+      "encoded": "gordon-county-georgia-united-states",
+      "pop": 57544,
+      "coord": [-84.8986308, 34.5019651]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["main street / special"],
+        "land": ["all uses"]
+      }
+    ]
+  },
   "Gordon, Nebraska, United States": {
     "place": {
       "name": "Gordon",
@@ -41728,6 +42148,24 @@
       {
         "status": "adopted",
         "scope": ["citywide"],
+        "land": ["all uses"]
+      }
+    ]
+  },
+  "Grand Forks, British Columbia, Canada": {
+    "place": {
+      "name": "Grand Forks",
+      "state": "British Columbia",
+      "country": "Canada",
+      "type": "city",
+      "encoded": "grand-forks-british-columbia-canada",
+      "pop": 4112,
+      "coord": [-118.4392039, 49.0312269]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
         "land": ["all uses"]
       }
     ]
@@ -42936,6 +43374,24 @@
       }
     ]
   },
+  "Greene County, Georgia, United States": {
+    "place": {
+      "name": "Greene County",
+      "state": "Georgia",
+      "country": "United States",
+      "type": "county",
+      "encoded": "greene-county-georgia-united-states",
+      "pop": 18915,
+      "coord": [-83.1660939, 33.5492988]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["main street / special"],
+        "land": ["all uses"]
+      }
+    ]
+  },
   "Greeneville, Tennessee, United States": {
     "place": {
       "name": "Greeneville",
@@ -43305,6 +43761,24 @@
       {
         "status": "adopted",
         "scope": ["city center / business district"],
+        "land": ["all uses"]
+      }
+    ]
+  },
+  "Greenwood, British Columbia, Canada": {
+    "place": {
+      "name": "Greenwood",
+      "state": "British Columbia",
+      "country": "Canada",
+      "type": "city",
+      "encoded": "greenwood-british-columbia-canada",
+      "pop": 702,
+      "coord": [-118.676876, 49.089585]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
         "land": ["all uses"]
       }
     ]
@@ -44058,6 +44532,38 @@
       }
     ]
   },
+  "Gwinnett County, Georgia, United States": {
+    "place": {
+      "name": "Gwinnett County",
+      "state": "Georgia",
+      "country": "United States",
+      "type": "county",
+      "encoded": "gwinnett-county-georgia-united-states",
+      "pop": 957062,
+      "coord": [-84.0227467, 33.9566869]
+    },
+    "add_max": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["all uses"]
+      }
+    ],
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["all uses"]
+      }
+    ],
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["main street / special"],
+        "land": ["all uses"]
+      }
+    ]
+  },
   "Hackensack, New Jersey, United States": {
     "place": {
       "name": "Hackensack",
@@ -44323,6 +44829,31 @@
         "status": "adopted",
         "scope": ["citywide"],
         "land": ["commercial"]
+      }
+    ]
+  },
+  "Hall County, Georgia, United States": {
+    "place": {
+      "name": "Hall County",
+      "state": "Georgia",
+      "country": "United States",
+      "type": "county",
+      "encoded": "hall-county-georgia-united-states",
+      "pop": 203136,
+      "coord": [-83.8194028, 34.2905901]
+    },
+    "add_max": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["all uses"]
+      }
+    ],
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["all uses"]
       }
     ]
   },
@@ -45206,6 +45737,24 @@
       }
     ]
   },
+  "Haralson County, Georgia, United States": {
+    "place": {
+      "name": "Haralson County",
+      "state": "Georgia",
+      "country": "United States",
+      "type": "county",
+      "encoded": "haralson-county-georgia-united-states",
+      "pop": 29919,
+      "coord": [-85.2001291, 33.7812701]
+    },
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["all uses"]
+      }
+    ]
+  },
   "Haralson, Georgia, United States": {
     "place": {
       "name": "Haralson",
@@ -45544,6 +46093,24 @@
         "scope": ["citywide"],
         "land": ["residential, multi-family"],
         "date": "2026"
+      }
+    ]
+  },
+  "Harrison County, Mississippi, United States": {
+    "place": {
+      "name": "Harrison County",
+      "state": "Mississippi",
+      "country": "United States",
+      "type": "county",
+      "encoded": "harrison-county-mississippi-united-states",
+      "pop": 208621,
+      "coord": [-89.1313136, 30.4553392]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["main street / special"],
+        "land": ["all uses", "commercial", "other"]
       }
     ]
   },
@@ -47185,6 +47752,24 @@
       {
         "status": "adopted",
         "scope": ["city center / business district"],
+        "land": ["all uses"]
+      }
+    ]
+  },
+  "Henry County, Georgia, United States": {
+    "place": {
+      "name": "Henry County",
+      "state": "Georgia",
+      "country": "United States",
+      "type": "county",
+      "encoded": "henry-county-georgia-united-states",
+      "pop": 240712,
+      "coord": [-84.1367771, 33.4519942]
+    },
+    "add_max": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district", "main street / special"],
         "land": ["all uses"]
       }
     ]
@@ -49068,11 +49653,31 @@
       "pop": 38797,
       "coord": [-93.0552437, 34.5038393]
     },
+    "add_max": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["commercial", "industrial", "other"],
+        "date": "2024-11-19"
+      }
+    ],
     "rm_min": [
       {
         "status": "adopted",
         "scope": ["city center / business district"],
         "land": ["commercial", "industrial"]
+      },
+      {
+        "status": "adopted",
+        "scope": ["city center / business district", "main street / special"],
+        "land": [
+          "commercial",
+          "industrial",
+          "medical",
+          "other",
+          "residential, all uses"
+        ],
+        "date": "2024-11-19"
       }
     ]
   },
@@ -49123,6 +49728,24 @@
       "coord": [-88.569012, 47.121872]
     },
     "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["all uses"]
+      }
+    ]
+  },
+  "Houston County, Georgia, United States": {
+    "place": {
+      "name": "Houston County",
+      "state": "Georgia",
+      "country": "United States",
+      "type": "county",
+      "encoded": "houston-county-georgia-united-states",
+      "pop": 163633,
+      "coord": [-83.631394, 32.4659752]
+    },
+    "reduce_min": [
       {
         "status": "adopted",
         "scope": ["city center / business district"],
@@ -51211,6 +51834,24 @@
       }
     ]
   },
+  "Jackson County, Georgia, United States": {
+    "place": {
+      "name": "Jackson County",
+      "state": "Georgia",
+      "country": "United States",
+      "type": "county",
+      "encoded": "jackson-county-georgia-united-states",
+      "pop": 75907,
+      "coord": [-83.56423926653135, 34.13424774826393]
+    },
+    "add_max": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["all uses"]
+      }
+    ]
+  },
   "Jackson County, Kansas, United States": {
     "place": {
       "name": "Jackson County",
@@ -52448,6 +53089,13 @@
       "pop": 71046,
       "coord": [-82.3534728, 36.3134398]
     },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["all uses"]
+      }
+    ],
     "rm_min": [
       {
         "status": "adopted",
@@ -54042,6 +54690,24 @@
       "encoded": "Kimball_NE",
       "pop": 2290,
       "coord": [-103.6629577, 41.2371713]
+    },
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["all uses"]
+      }
+    ]
+  },
+  "Kimberley, British Columbia, Canada": {
+    "place": {
+      "name": "Kimberley",
+      "state": "British Columbia",
+      "country": "Canada",
+      "type": "city",
+      "encoded": "kimberley-british-columbia-canada",
+      "pop": 8115,
+      "coord": [-115.9819477, 49.6850876]
     },
     "rm_min": [
       {
@@ -56736,6 +57402,30 @@
         "status": "adopted",
         "scope": ["city center / business district"],
         "land": ["commercial", "other"]
+      }
+    ]
+  },
+  "Lamar County, Mississippi, United States": {
+    "place": {
+      "name": "Lamar County",
+      "state": "Mississippi",
+      "country": "United States",
+      "type": "county",
+      "encoded": "lamar-county-mississippi-united-states",
+      "pop": 64222,
+      "coord": [-89.5152337, 31.2109862]
+    },
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": [
+          "commercial",
+          "industrial",
+          "medical",
+          "other",
+          "residential, low-density"
+        ]
       }
     ]
   },
@@ -61417,6 +62107,31 @@
       {
         "status": "adopted",
         "scope": ["city center / business district"],
+        "land": ["all uses"]
+      }
+    ]
+  },
+  "Lumpkin County, Georgia, United States": {
+    "place": {
+      "name": "Lumpkin County",
+      "state": "Georgia",
+      "country": "United States",
+      "type": "county",
+      "encoded": "lumpkin-county-georgia-united-states",
+      "pop": 33488,
+      "coord": [-83.9926806, 34.5546076]
+    },
+    "add_max": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["commercial", "industrial", "medical", "other"]
+      }
+    ],
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
         "land": ["all uses"]
       }
     ]
@@ -68647,6 +69362,14 @@
       "pop": 48377,
       "coord": [-101.296273, 48.23251]
     },
+    "add_max": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["commercial", "medical", "other"],
+        "date": "2021-04-05"
+      }
+    ],
     "rm_min": [
       {
         "status": "adopted",
@@ -70498,6 +71221,31 @@
         "status": "adopted",
         "scope": ["main street / special"],
         "land": ["commercial"]
+      }
+    ]
+  },
+  "Morgan County, Georgia, United States": {
+    "place": {
+      "name": "Morgan County",
+      "state": "Georgia",
+      "country": "United States",
+      "type": "county",
+      "encoded": "morgan-county-georgia-united-states",
+      "pop": 20097,
+      "coord": [-83.5051522, 33.5793193]
+    },
+    "add_max": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["commercial", "industrial", "medical", "other"]
+      }
+    ],
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["all uses"]
       }
     ]
   },
@@ -75322,6 +76070,24 @@
           "other",
           "residential, all uses"
         ]
+      }
+    ]
+  },
+  "Newton County, Georgia, United States": {
+    "place": {
+      "name": "Newton County",
+      "state": "Georgia",
+      "country": "United States",
+      "type": "county",
+      "encoded": "newton-county-georgia-united-states",
+      "pop": 112483,
+      "coord": [-83.8446101, 33.5715512]
+    },
+    "add_max": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["commercial", "industrial", "medical", "other"]
       }
     ]
   },
@@ -84643,6 +85409,30 @@
       }
     ]
   },
+  "Plantersville, Mississippi, United States": {
+    "place": {
+      "name": "Plantersville",
+      "state": "Mississippi",
+      "country": "United States",
+      "type": "city",
+      "encoded": "plantersville-mississippi-united-states",
+      "pop": 868,
+      "coord": [-88.6644957, 34.2134407]
+    },
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": [
+          "commercial",
+          "industrial",
+          "medical",
+          "other",
+          "residential, all uses"
+        ]
+      }
+    ]
+  },
   "Platte City, Missouri, United States": {
     "place": {
       "name": "Platte City",
@@ -85369,6 +86159,24 @@
         "status": "adopted",
         "scope": ["city center / business district"],
         "land": ["all uses"]
+      }
+    ]
+  },
+  "Port Alberni, British Columbia, Canada": {
+    "place": {
+      "name": "Port Alberni",
+      "state": "British Columbia",
+      "country": "Canada",
+      "type": "city",
+      "encoded": "port-alberni-british-columbia-canada",
+      "pop": 18259,
+      "coord": [-124.8056517, 49.2343668]
+    },
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district", "main street / special"],
+        "land": ["all uses", "commercial", "other"]
       }
     ]
   },
@@ -90573,6 +91381,31 @@
       }
     ]
   },
+  "Rockdale County, Georgia, United States": {
+    "place": {
+      "name": "Rockdale County",
+      "state": "Georgia",
+      "country": "United States",
+      "type": "county",
+      "encoded": "rockdale-county-georgia-united-states",
+      "pop": 93570,
+      "coord": [-84.0322064, 33.6430283]
+    },
+    "add_max": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["all uses"]
+      }
+    ],
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["all uses"]
+      }
+    ]
+  },
   "Rockdale, Wisconsin, United States": {
     "place": {
       "name": "Rockdale",
@@ -91095,6 +91928,13 @@
       "pop": 37713,
       "coord": [-85.1646726, 34.257038]
     },
+    "add_max": [
+      {
+        "status": "adopted",
+        "scope": ["main street / special"],
+        "land": ["commercial", "other"]
+      }
+    ],
     "rm_min": [
       {
         "status": "adopted",
@@ -105014,6 +105854,24 @@
       }
     ]
   },
+  "Taylor, Mississippi, United States": {
+    "place": {
+      "name": "Taylor",
+      "state": "Mississippi",
+      "country": "United States",
+      "type": "city",
+      "encoded": "taylor-mississippi-united-states",
+      "pop": 355,
+      "coord": [-89.5879974, 34.2725165]
+    },
+    "add_max": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["commercial"]
+      }
+    ]
+  },
   "Taylor, Pennsylvania, United States": {
     "place": {
       "name": "Taylor",
@@ -107504,6 +108362,24 @@
       {
         "status": "adopted",
         "scope": ["city center / business district"],
+        "land": ["all uses"]
+      }
+    ]
+  },
+  "Troup County, Georgia, United States": {
+    "place": {
+      "name": "Troup County",
+      "state": "Georgia",
+      "country": "United States",
+      "type": "county",
+      "encoded": "troup-county-georgia-united-states",
+      "pop": 69426,
+      "coord": [-85.02699735789781, 33.00737697040952]
+    },
+    "add_max": [
+      {
+        "status": "adopted",
+        "scope": ["main street / special"],
         "land": ["all uses"]
       }
     ]
@@ -111353,6 +112229,24 @@
       }
     ]
   },
+  "Warren County, Mississippi, United States": {
+    "place": {
+      "name": "Warren County",
+      "state": "Mississippi",
+      "country": "United States",
+      "type": "county",
+      "encoded": "warren-county-mississippi-united-states",
+      "pop": 44722,
+      "coord": [-90.7975574, 32.3649516]
+    },
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["all uses"]
+      }
+    ]
+  },
   "Warren Township, New Jersey, United States": {
     "place": {
       "name": "Warren Township",
@@ -114105,6 +114999,19 @@
         "status": "adopted",
         "scope": ["city center / business district"],
         "land": ["all uses"]
+      }
+    ],
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": [
+          "commercial",
+          "industrial",
+          "medical",
+          "other",
+          "residential, multi-family"
+        ]
       }
     ],
     "rm_min": [
