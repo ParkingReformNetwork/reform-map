@@ -54,6 +54,24 @@
       }
     ]
   },
+  "Abbeville, South Carolina, United States": {
+    "place": {
+      "name": "Abbeville",
+      "state": "South Carolina",
+      "country": "United States",
+      "type": "city",
+      "encoded": "abbeville-south-carolina-united-states",
+      "pop": 4874,
+      "coord": [-82.37897165687735, 34.1776313512596]
+    },
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["commercial", "other"]
+      }
+    ]
+  },
   "Abbottstown, Pennsylvania, United States": {
     "place": {
       "name": "Abbottstown",
@@ -285,6 +303,38 @@
         "status": "adopted",
         "scope": ["city center / business district"],
         "land": ["all uses"]
+      }
+    ]
+  },
+  "Acton, Massachusetts, United States": {
+    "place": {
+      "name": "Acton",
+      "state": "Massachusetts",
+      "country": "United States",
+      "type": "city",
+      "encoded": "acton-massachusetts-united-states",
+      "pop": 24021,
+      "coord": [-71.43284, 42.4850931]
+    },
+    "add_max": [
+      {
+        "status": "adopted",
+        "scope": ["citywide", "transit-oriented"],
+        "land": ["other", "residential, all uses"]
+      }
+    ],
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide", "main street / special"],
+        "land": ["all uses"]
+      }
+    ],
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["main street / special", "transit-oriented"],
+        "land": ["commercial", "other", "residential, all uses"]
       }
     ]
   },
@@ -3638,6 +3688,24 @@
       }
     ]
   },
+  "Armstrong, British Columbia, Canada": {
+    "place": {
+      "name": "Armstrong",
+      "state": "British Columbia",
+      "country": "Canada",
+      "type": "city",
+      "encoded": "armstrong-british-columbia-canada",
+      "pop": 5323,
+      "coord": [-119.1941593, 50.4445481]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["all uses", "commercial", "residential, multi-family"]
+      }
+    ]
+  },
   "Arnolds Park, Iowa, United States": {
     "place": {
       "name": "Arnolds Park",
@@ -4386,6 +4454,37 @@
       {
         "status": "adopted",
         "scope": ["city center / business district", "transit-oriented"],
+        "land": ["all uses"]
+      }
+    ]
+  },
+  "Atlantic Beach, South Carolina, United States": {
+    "place": {
+      "name": "Atlantic Beach",
+      "state": "South Carolina",
+      "country": "United States",
+      "type": "city",
+      "encoded": "atlantic-beach-south-carolina-united-states",
+      "pop": 195,
+      "coord": [-78.7167719, 33.802564]
+    },
+    "add_max": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": [
+          "commercial",
+          "industrial",
+          "medical",
+          "other",
+          "residential, multi-family"
+        ]
+      }
+    ],
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["main street / special"],
         "land": ["all uses"]
       }
     ]
@@ -5242,6 +5341,24 @@
       }
     ]
   },
+  "Aynor, South Carolina, United States": {
+    "place": {
+      "name": "Aynor",
+      "state": "South Carolina",
+      "country": "United States",
+      "type": "city",
+      "encoded": "aynor-south-carolina-united-states",
+      "pop": 974,
+      "coord": [-79.19993386764861, 33.99997505619766]
+    },
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["all uses"]
+      }
+    ]
+  },
   "Badin, North Carolina, United States": {
     "place": {
       "name": "Badin",
@@ -5793,6 +5910,24 @@
       }
     ]
   },
+  "Banks County, Georgia, United States": {
+    "place": {
+      "name": "Banks County",
+      "state": "Georgia",
+      "country": "United States",
+      "type": "county",
+      "encoded": "banks-county-georgia-united-states",
+      "pop": 18035,
+      "coord": [-83.4970026, 34.3378598]
+    },
+    "add_max": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["all uses"]
+      }
+    ]
+  },
   "Banks, Oregon, United States": {
     "place": {
       "name": "Banks",
@@ -5977,6 +6112,24 @@
       }
     ]
   },
+  "Barnwell, South Carolina, United States": {
+    "place": {
+      "name": "Barnwell",
+      "state": "South Carolina",
+      "country": "United States",
+      "type": "city",
+      "encoded": "barnwell-south-carolina-united-states",
+      "pop": 4652,
+      "coord": [-81.35873930281781, 33.24449878045653]
+    },
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["commercial", "other"]
+      }
+    ]
+  },
   "Barre, Vermont, United States": {
     "place": {
       "name": "Barre",
@@ -6130,6 +6283,24 @@
       }
     ]
   },
+  "Barrow County, Georgia, United States": {
+    "place": {
+      "name": "Barrow County",
+      "state": "Georgia",
+      "country": "United States",
+      "type": "county",
+      "encoded": "barrow-county-georgia-united-states",
+      "pop": 83505,
+      "coord": [-83.6996482, 33.9848611]
+    },
+    "add_max": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["all uses"]
+      }
+    ]
+  },
   "Barry, Illinois, United States": {
     "place": {
       "name": "Barry",
@@ -6201,6 +6372,24 @@
       "encoded": "bartlett-tennessee-united-states",
       "pop": 57786,
       "coord": [-89.8739753, 35.2045329]
+    },
+    "add_max": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["all uses"]
+      }
+    ]
+  },
+  "Bartow County, Georgia, United States": {
+    "place": {
+      "name": "Bartow County",
+      "state": "Georgia",
+      "country": "United States",
+      "type": "county",
+      "encoded": "bartow-county-georgia-united-states",
+      "pop": 108901,
+      "coord": [-84.8406984, 34.2394683]
     },
     "add_max": [
       {
@@ -7013,6 +7202,31 @@
       {
         "status": "adopted",
         "scope": ["city center / business district"],
+        "land": ["all uses"]
+      }
+    ]
+  },
+  "Beaufort County, South Carolina, United States": {
+    "place": {
+      "name": "Beaufort County",
+      "state": "South Carolina",
+      "country": "United States",
+      "type": "county",
+      "encoded": "beaufort-county-south-carolina-united-states",
+      "pop": 187117,
+      "coord": [-80.6923169, 32.3850708]
+    },
+    "add_max": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["all uses"]
+      }
+    ],
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["main street / special"],
         "land": ["all uses"]
       }
     ]
@@ -8281,6 +8495,24 @@
         "status": "adopted",
         "scope": ["city center / business district"],
         "land": ["commercial"]
+      }
+    ]
+  },
+  "Bennettsville, South Carolina, United States": {
+    "place": {
+      "name": "Bennettsville",
+      "state": "South Carolina",
+      "country": "United States",
+      "type": "city",
+      "encoded": "bennettsville-south-carolina-united-states",
+      "pop": 7020,
+      "coord": [-79.684768, 34.6173516]
+    },
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["all uses", "commercial", "other"]
       }
     ]
   },
@@ -9889,6 +10121,24 @@
       }
     ]
   },
+  "Bishopville, South Carolina, United States": {
+    "place": {
+      "name": "Bishopville",
+      "state": "South Carolina",
+      "country": "United States",
+      "type": "city",
+      "encoded": "bishopville-south-carolina-united-states",
+      "pop": 3024,
+      "coord": [-80.2484056, 34.2182107]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["residential, multi-family"]
+      }
+    ]
+  },
   "Bismarck, North Dakota, United States": {
     "place": {
       "name": "Bismarck",
@@ -10676,6 +10926,24 @@
         "status": "adopted",
         "scope": ["city center / business district"],
         "land": ["all uses", "commercial", "other", "residential, all uses"]
+      }
+    ]
+  },
+  "Blythewood, South Carolina, United States": {
+    "place": {
+      "name": "Blythewood",
+      "state": "South Carolina",
+      "country": "United States",
+      "type": "city",
+      "encoded": "blythewood-south-carolina-united-states",
+      "pop": 4772,
+      "coord": [-80.973977, 34.2143159]
+    },
+    "add_max": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["all uses"]
       }
     ]
   },
@@ -13650,6 +13918,24 @@
       }
     ]
   },
+  "Bryan County, Georgia, United States": {
+    "place": {
+      "name": "Bryan County",
+      "state": "Georgia",
+      "country": "United States",
+      "type": "county",
+      "encoded": "bryan-county-georgia-united-states",
+      "pop": 44738,
+      "coord": [-81.4241017, 32.0034889]
+    },
+    "add_max": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["all uses"]
+      }
+    ]
+  },
   "Bryan, Ohio, United States": {
     "place": {
       "name": "Bryan",
@@ -14301,6 +14587,31 @@
         "status": "adopted",
         "scope": ["city center / business district"],
         "land": ["all uses"]
+      }
+    ]
+  },
+  "Burnaby, British Columbia, Canada": {
+    "place": {
+      "name": "Burnaby",
+      "state": "British Columbia",
+      "country": "Canada",
+      "type": "city",
+      "encoded": "burnaby-british-columbia-canada",
+      "pop": 249125,
+      "coord": [-122.972545, 49.2433804]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["commercial", "industrial", "medical", "other"]
+      }
+    ],
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district", "transit-oriented"],
+        "land": ["commercial", "residential, all uses"]
       }
     ]
   },
@@ -15189,6 +15500,24 @@
       }
     ]
   },
+  "Camden County, Georgia, United States": {
+    "place": {
+      "name": "Camden County",
+      "state": "Georgia",
+      "country": "United States",
+      "type": "county",
+      "encoded": "camden-county-georgia-united-states",
+      "pop": 54768,
+      "coord": [-81.6225075, 30.9298212]
+    },
+    "add_max": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["all uses"]
+      }
+    ]
+  },
   "Camden, Arkansas, United States": {
     "place": {
       "name": "Camden",
@@ -15222,6 +15551,24 @@
         "status": "adopted",
         "scope": ["citywide"],
         "land": ["all uses"]
+      }
+    ]
+  },
+  "Camden, South Carolina, United States": {
+    "place": {
+      "name": "Camden",
+      "state": "South Carolina",
+      "country": "United States",
+      "type": "city",
+      "encoded": "camden-south-carolina-united-states",
+      "pop": 7788,
+      "coord": [-80.6070391, 34.2464886]
+    },
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["commercial", "other"]
       }
     ]
   },
@@ -15294,6 +15641,24 @@
         "status": "adopted",
         "scope": ["city center / business district"],
         "land": ["all uses"]
+      }
+    ]
+  },
+  "Campbell River, British Columbia, Canada": {
+    "place": {
+      "name": "Campbell River",
+      "state": "British Columbia",
+      "country": "Canada",
+      "type": "city",
+      "encoded": "campbell-river-british-columbia-canada",
+      "pop": 35519,
+      "coord": [-125.244153, 50.023071]
+    },
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["commercial", "other"]
       }
     ]
   },
@@ -15729,6 +16094,38 @@
         "status": "adopted",
         "scope": ["city center / business district"],
         "land": ["all uses"]
+      }
+    ]
+  },
+  "Canton, Massachusetts, United States": {
+    "place": {
+      "name": "Canton",
+      "state": "Massachusetts",
+      "country": "United States",
+      "type": "city",
+      "encoded": "canton-massachusetts-united-states",
+      "pop": 24370,
+      "coord": [-71.1447732, 42.1584324]
+    },
+    "add_max": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["all uses"]
+      }
+    ],
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district", "citywide"],
+        "land": ["all uses", "commercial", "other"]
+      }
+    ],
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district", "citywide"],
+        "land": ["all uses", "residential, low-density"]
       }
     ]
   },
@@ -17229,6 +17626,24 @@
       }
     ]
   },
+  "Castlegar, British Columbia, Canada": {
+    "place": {
+      "name": "Castlegar",
+      "state": "British Columbia",
+      "country": "Canada",
+      "type": "city",
+      "encoded": "castlegar-british-columbia-canada",
+      "pop": 8338,
+      "coord": [-117.663574, 49.316171]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["all uses"]
+      }
+    ]
+  },
   "Castleton-on-Hudson, New York, United States": {
     "place": {
       "name": "Castleton-on-Hudson",
@@ -17365,6 +17780,13 @@
       "pop": 14009,
       "coord": [-81.0739827, 33.9657091]
     },
+    "add_max": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["other"]
+      }
+    ],
     "rm_min": [
       {
         "status": "adopted",
@@ -17880,6 +18302,24 @@
       }
     ]
   },
+  "Central, South Carolina, United States": {
+    "place": {
+      "name": "Central",
+      "state": "South Carolina",
+      "country": "United States",
+      "type": "city",
+      "encoded": "central-south-carolina-united-states",
+      "pop": 5247,
+      "coord": [-82.7804999, 34.7257424]
+    },
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["all uses"]
+      }
+    ]
+  },
   "Centralia, Illinois, United States": {
     "place": {
       "name": "Centralia",
@@ -18311,6 +18751,31 @@
       }
     ]
   },
+  "Chapin, South Carolina, United States": {
+    "place": {
+      "name": "Chapin",
+      "state": "South Carolina",
+      "country": "United States",
+      "type": "city",
+      "encoded": "chapin-south-carolina-united-states",
+      "pop": 1809,
+      "coord": [-81.3498212, 34.1659795]
+    },
+    "add_max": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["all uses"]
+      }
+    ],
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district", "citywide"],
+        "land": ["all uses"]
+      }
+    ]
+  },
   "Chapleau, Ontario, Canada": {
     "place": {
       "name": "Chapleau",
@@ -18479,6 +18944,13 @@
       "pop": 150277,
       "coord": [-79.9399309, 32.7884363]
     },
+    "add_max": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["commercial"]
+      }
+    ],
     "reduce_min": [
       {
         "status": "adopted",
@@ -18839,10 +19311,29 @@
       "pop": 182799,
       "coord": [-85.3094883, 35.0457219]
     },
+    "add_max": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["commercial", "industrial", "medical", "other"]
+      }
+    ],
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide", "main street / special"],
+        "land": ["all uses", "commercial", "other"]
+      }
+    ],
     "rm_min": [
       {
         "status": "adopted",
         "scope": ["city center / business district"],
+        "land": ["all uses"]
+      },
+      {
+        "status": "adopted",
+        "scope": ["main street / special"],
         "land": ["all uses"]
       }
     ]
@@ -19304,6 +19795,24 @@
       }
     ]
   },
+  "Chesterfield, South Carolina, United States": {
+    "place": {
+      "name": "Chesterfield",
+      "state": "South Carolina",
+      "country": "United States",
+      "type": "city",
+      "encoded": "chesterfield-south-carolina-united-states",
+      "pop": 1357,
+      "coord": [-80.08846913316381, 34.736098098312965]
+    },
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["all uses"]
+      }
+    ]
+  },
   "Chestermere, Alberta, Canada": {
     "place": {
       "name": "Chestermere",
@@ -19532,6 +20041,31 @@
         "status": "adopted",
         "scope": ["city center / business district"],
         "land": ["commercial", "other"]
+      }
+    ]
+  },
+  "Chilliwack, British Columbia, Canada": {
+    "place": {
+      "name": "Chilliwack",
+      "state": "British Columbia",
+      "country": "Canada",
+      "type": "city",
+      "encoded": "chilliwack-british-columbia-canada",
+      "pop": 93203,
+      "coord": [-121.95255, 49.1709788]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district", "transit-oriented"],
+        "land": ["all uses"]
+      }
+    ],
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["commercial"]
       }
     ]
   },
@@ -20378,6 +20912,38 @@
       }
     ]
   },
+  "Clayton County, Georgia, United States": {
+    "place": {
+      "name": "Clayton County",
+      "state": "Georgia",
+      "country": "United States",
+      "type": "county",
+      "encoded": "clayton-county-georgia-united-states",
+      "pop": 297595,
+      "coord": [-84.3591713, 33.5204959]
+    },
+    "add_max": [
+      {
+        "status": "adopted",
+        "scope": ["transit-oriented"],
+        "land": ["all uses"]
+      }
+    ],
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["main street / special"],
+        "land": ["all uses"]
+      }
+    ],
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["transit-oriented"],
+        "land": ["commercial", "other", "residential, low-density"]
+      }
+    ]
+  },
   "Clayton, Illinois, United States": {
     "place": {
       "name": "Clayton",
@@ -21066,6 +21632,24 @@
       }
     ],
     "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["all uses"]
+      }
+    ]
+  },
+  "Clinton, South Carolina, United States": {
+    "place": {
+      "name": "Clinton",
+      "state": "South Carolina",
+      "country": "United States",
+      "type": "city",
+      "encoded": "clinton-south-carolina-united-states",
+      "pop": 7633,
+      "coord": [-81.8806562, 34.4726277]
+    },
+    "rm_min": [
       {
         "status": "adopted",
         "scope": ["city center / business district"],
@@ -22291,6 +22875,30 @@
       }
     ]
   },
+  "Columbia County, Georgia, United States": {
+    "place": {
+      "name": "Columbia County",
+      "state": "Georgia",
+      "country": "United States",
+      "type": "county",
+      "encoded": "columbia-county-georgia-united-states",
+      "pop": 156010,
+      "coord": [-82.2563979, 33.5313102]
+    },
+    "add_max": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": [
+          "commercial",
+          "industrial",
+          "medical",
+          "other",
+          "residential, multi-family"
+        ]
+      }
+    ]
+  },
   "Columbia Falls, Montana, United States": {
     "place": {
       "name": "Columbia Falls",
@@ -23030,6 +23638,13 @@
         "land": ["all uses"]
       }
     ],
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["residential, all uses"]
+      }
+    ],
     "rm_min": [
       {
         "status": "adopted",
@@ -23343,6 +23958,31 @@
         "status": "adopted",
         "scope": ["city center / business district"],
         "land": ["all uses"]
+      }
+    ]
+  },
+  "Coquitlam, British Columbia, Canada": {
+    "place": {
+      "name": "Coquitlam",
+      "state": "British Columbia",
+      "country": "Canada",
+      "type": "city",
+      "encoded": "coquitlam-british-columbia-canada",
+      "pop": 148625,
+      "coord": [-122.793281, 49.2842958]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["transit-oriented"],
+        "land": ["all uses", "residential, all uses"]
+      }
+    ],
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["transit-oriented"],
+        "land": ["residential, all uses"]
       }
     ]
   },
@@ -24058,6 +24698,24 @@
       }
     ]
   },
+  "Courtenay, British Columbia, Canada": {
+    "place": {
+      "name": "Courtenay",
+      "state": "British Columbia",
+      "country": "Canada",
+      "type": "city",
+      "encoded": "courtenay-british-columbia-canada",
+      "pop": 28420,
+      "coord": [-124.9954959, 49.6894061]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district", "main street / special"],
+        "land": ["all uses", "residential, multi-family"]
+      }
+    ]
+  },
   "Coventry, Rhode Island, United States": {
     "place": {
       "name": "Coventry",
@@ -24221,6 +24879,24 @@
       }
     ]
   },
+  "Coweta County, Georgia, United States": {
+    "place": {
+      "name": "Coweta County",
+      "state": "Georgia",
+      "country": "United States",
+      "type": "county",
+      "encoded": "coweta-county-georgia-united-states",
+      "pop": 146158,
+      "coord": [-84.7545734, 33.3500656]
+    },
+    "add_max": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["all uses"]
+      }
+    ]
+  },
   "Cowley, Wyoming, United States": {
     "place": {
       "name": "Cowley",
@@ -24336,6 +25012,31 @@
         "scope": ["citywide"],
         "land": ["all uses"],
         "date": "2025-09-16"
+      }
+    ]
+  },
+  "Cranbrook, British Columbia, Canada": {
+    "place": {
+      "name": "Cranbrook",
+      "state": "British Columbia",
+      "country": "Canada",
+      "type": "city",
+      "encoded": "cranbrook-british-columbia-canada",
+      "pop": 20499,
+      "coord": [-115.7672772, 49.5107477]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["all uses"]
+      }
+    ],
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["all uses"]
       }
     ]
   },
@@ -25641,6 +26342,31 @@
       }
     ]
   },
+  "Danvers, Massachusetts, United States": {
+    "place": {
+      "name": "Danvers",
+      "state": "Massachusetts",
+      "country": "United States",
+      "type": "city",
+      "encoded": "danvers-massachusetts-united-states",
+      "pop": 28087,
+      "coord": [-70.9362957, 42.5664984]
+    },
+    "add_max": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["all uses"]
+      }
+    ],
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["commercial", "other"]
+      }
+    ]
+  },
   "Danville, California, United States": {
     "place": {
       "name": "Danville",
@@ -25903,6 +26629,24 @@
       }
     ]
   },
+  "Darlington, South Carolina, United States": {
+    "place": {
+      "name": "Darlington",
+      "state": "South Carolina",
+      "country": "United States",
+      "type": "city",
+      "encoded": "darlington-south-carolina-united-states",
+      "pop": 6149,
+      "coord": [-79.87131746822922, 34.30280015133626]
+    },
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["all uses"]
+      }
+    ]
+  },
   "Dassel, Minnesota, United States": {
     "place": {
       "name": "Dassel",
@@ -26137,6 +26881,31 @@
           "other",
           "residential, all uses"
         ]
+      }
+    ]
+  },
+  "Dawson Creek, British Columbia, Canada": {
+    "place": {
+      "name": "Dawson Creek",
+      "state": "British Columbia",
+      "country": "Canada",
+      "type": "city",
+      "encoded": "dawson-creek-british-columbia-canada",
+      "pop": 12323,
+      "coord": [-120.2364453, 55.7605306]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district", "citywide"],
+        "land": ["all uses"]
+      }
+    ],
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["all uses", "commercial"]
       }
     ]
   },
@@ -26412,6 +27181,31 @@
         "status": "adopted",
         "scope": ["citywide"],
         "land": ["residential, multi-family"]
+      }
+    ]
+  },
+  "DeKalb County, Georgia, United States": {
+    "place": {
+      "name": "DeKalb County",
+      "state": "Georgia",
+      "country": "United States",
+      "type": "county",
+      "encoded": "dekalb-county-georgia-united-states",
+      "pop": 764382,
+      "coord": [-84.2186508, 33.7575613]
+    },
+    "add_max": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["all uses"]
+      }
+    ],
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["all uses"]
       }
     ]
   },
@@ -28188,6 +28982,24 @@
       }
     ]
   },
+  "Dillon, South Carolina, United States": {
+    "place": {
+      "name": "Dillon",
+      "state": "South Carolina",
+      "country": "United States",
+      "type": "city",
+      "encoded": "dillon-south-carolina-united-states",
+      "pop": 6384,
+      "coord": [-79.37109413185244, 34.41651905626765]
+    },
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["all uses"]
+      }
+    ]
+  },
   "Dillsburg, Pennsylvania, United States": {
     "place": {
       "name": "Dillsburg",
@@ -28364,6 +29176,24 @@
       }
     ]
   },
+  "Donalds, South Carolina, United States": {
+    "place": {
+      "name": "Donalds",
+      "state": "South Carolina",
+      "country": "United States",
+      "type": "city",
+      "encoded": "donalds-south-carolina-united-states",
+      "pop": 328,
+      "coord": [-82.3473448, 34.3770591]
+    },
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["all uses"]
+      }
+    ]
+  },
   "Donnelly, Idaho, United States": {
     "place": {
       "name": "Donnelly",
@@ -28493,6 +29323,24 @@
           "residential, multi-family"
         ],
         "date": "2022-08-16"
+      }
+    ]
+  },
+  "Douglas County, Georgia, United States": {
+    "place": {
+      "name": "Douglas County",
+      "state": "Georgia",
+      "country": "United States",
+      "type": "county",
+      "encoded": "douglas-county-georgia-united-states",
+      "pop": 144237,
+      "coord": [-84.7622973, 33.6995565]
+    },
+    "add_max": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["all uses"]
       }
     ]
   },
@@ -29211,6 +30059,31 @@
         "scope": ["citywide"],
         "land": ["all uses"],
         "date": "2023-12-11"
+      }
+    ]
+  },
+  "Duncan, British Columbia, Canada": {
+    "place": {
+      "name": "Duncan",
+      "state": "British Columbia",
+      "country": "Canada",
+      "type": "city",
+      "encoded": "duncan-british-columbia-canada",
+      "pop": 5047,
+      "coord": [-123.7080446, 48.7786872]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district", "citywide"],
+        "land": ["residential, all uses", "residential, multi-family"]
+      }
+    ],
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["commercial"]
       }
     ]
   },
@@ -30814,6 +31687,24 @@
       {
         "status": "adopted",
         "scope": ["city center / business district"],
+        "land": ["all uses"]
+      }
+    ]
+  },
+  "Eastover, South Carolina, United States": {
+    "place": {
+      "name": "Eastover",
+      "state": "South Carolina",
+      "country": "United States",
+      "type": "city",
+      "encoded": "eastover-south-carolina-united-states",
+      "pop": 614,
+      "coord": [-80.6922594, 33.8771147]
+    },
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
         "land": ["all uses"]
       }
     ]
@@ -33003,6 +33894,24 @@
       }
     ]
   },
+  "Enderby, British Columbia, Canada": {
+    "place": {
+      "name": "Enderby",
+      "state": "British Columbia",
+      "country": "Canada",
+      "type": "city",
+      "encoded": "enderby-british-columbia-canada",
+      "pop": 3028,
+      "coord": [-119.1397789, 50.5504793]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["all uses"]
+      }
+    ]
+  },
   "Endicott, New York, United States": {
     "place": {
       "name": "Endicott",
@@ -35049,6 +35958,11 @@
         "scope": ["citywide"],
         "land": ["all uses"],
         "date": "2023-07"
+      },
+      {
+        "status": "adopted",
+        "scope": ["main street / special"],
+        "land": ["commercial", "other"]
       }
     ]
   },
@@ -36035,6 +36949,24 @@
       }
     ]
   },
+  "Flora, Mississippi, United States": {
+    "place": {
+      "name": "Flora",
+      "state": "Mississippi",
+      "country": "United States",
+      "type": "city",
+      "encoded": "flora-mississippi-united-states",
+      "pop": 1647,
+      "coord": [-90.3094672, 32.5432591]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["main street / special"],
+        "land": ["all uses"]
+      }
+    ]
+  },
   "Florence, Alabama, United States": {
     "place": {
       "name": "Florence",
@@ -36417,6 +37349,38 @@
       }
     ]
   },
+  "Folly Beach, South Carolina, United States": {
+    "place": {
+      "name": "Folly Beach",
+      "state": "South Carolina",
+      "country": "United States",
+      "type": "city",
+      "encoded": "folly-beach-south-carolina-united-states",
+      "pop": 2078,
+      "coord": [-79.9407802, 32.6554848]
+    },
+    "add_max": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["commercial"]
+      }
+    ],
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["commercial", "other"]
+      }
+    ],
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["main street / special"],
+        "land": ["commercial", "other"]
+      }
+    ]
+  },
   "Fond du Lac, Wisconsin, United States": {
     "place": {
       "name": "Fond du Lac",
@@ -36537,6 +37501,42 @@
         "status": "adopted",
         "scope": ["citywide"],
         "land": ["commercial"]
+      }
+    ]
+  },
+  "Foreman, Arkansas, United States": {
+    "place": {
+      "name": "Foreman",
+      "state": "Arkansas",
+      "country": "United States",
+      "type": "city",
+      "encoded": "foreman-arkansas-united-states",
+      "pop": 977,
+      "coord": [-94.39562, 33.7218256]
+    },
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["all uses"]
+      }
+    ]
+  },
+  "Forest Acres, South Carolina, United States": {
+    "place": {
+      "name": "Forest Acres",
+      "state": "South Carolina",
+      "country": "United States",
+      "type": "city",
+      "encoded": "forest-acres-south-carolina-united-states",
+      "pop": 10617,
+      "coord": [-80.9898128, 34.0193221]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["all uses"]
       }
     ]
   },
@@ -36709,6 +37709,24 @@
       {
         "status": "adopted",
         "scope": ["city center / business district"],
+        "land": ["all uses"]
+      }
+    ]
+  },
+  "Forsyth County, Georgia, United States": {
+    "place": {
+      "name": "Forsyth County",
+      "state": "Georgia",
+      "country": "United States",
+      "type": "county",
+      "encoded": "forsyth-county-georgia-united-states",
+      "pop": 251283,
+      "coord": [-84.1335644, 34.235309]
+    },
+    "add_max": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
         "land": ["all uses"]
       }
     ]
@@ -37494,15 +38512,15 @@
         "status": "adopted",
         "scope": ["citywide"],
         "land": ["all uses"],
-        "date": "2025-12"
+        "date": "2026-02-12"
       }
     ],
     "rm_min": [
       {
-        "status": "proposed",
+        "status": "adopted",
         "scope": ["city center / business district"],
         "land": ["all uses", "commercial", "other"],
-        "date": "2025-12"
+        "date": "2026-02-12"
       }
     ]
   },
@@ -38857,6 +39875,30 @@
       }
     ]
   },
+  "Fulton County, Georgia, United States": {
+    "place": {
+      "name": "Fulton County",
+      "state": "Georgia",
+      "country": "United States",
+      "type": "county",
+      "encoded": "fulton-county-georgia-united-states",
+      "pop": 1066710,
+      "coord": [-84.45505425951518, 33.763363009509916]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["transit-oriented"],
+        "land": [
+          "commercial",
+          "industrial",
+          "medical",
+          "other",
+          "residential, multi-family"
+        ]
+      }
+    ]
+  },
   "Fulton, Missouri, United States": {
     "place": {
       "name": "Fulton",
@@ -38902,6 +39944,24 @@
       "encoded": "Gadsden_AL",
       "pop": 33945,
       "coord": [-86.0030251, 34.0128323]
+    },
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["commercial", "other"]
+      }
+    ]
+  },
+  "Gaffney, South Carolina, United States": {
+    "place": {
+      "name": "Gaffney",
+      "state": "South Carolina",
+      "country": "United States",
+      "type": "city",
+      "encoded": "gaffney-south-carolina-united-states",
+      "pop": 12764,
+      "coord": [-81.6498195, 35.0717945]
     },
     "rm_min": [
       {
@@ -39692,6 +40752,31 @@
       }
     ]
   },
+  "Gaston, South Carolina, United States": {
+    "place": {
+      "name": "Gaston",
+      "state": "South Carolina",
+      "country": "United States",
+      "type": "city",
+      "encoded": "gaston-south-carolina-united-states",
+      "pop": 1608,
+      "coord": [-81.1009286, 33.8170974]
+    },
+    "add_max": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["all uses"]
+      }
+    ],
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["all uses"]
+      }
+    ]
+  },
   "Gastonia, North Carolina, United States": {
     "place": {
       "name": "Gastonia",
@@ -40111,6 +41196,31 @@
         "status": "adopted",
         "scope": ["city center / business district"],
         "land": ["all uses"]
+      }
+    ]
+  },
+  "Georgetown, South Carolina, United States": {
+    "place": {
+      "name": "Georgetown",
+      "state": "South Carolina",
+      "country": "United States",
+      "type": "city",
+      "encoded": "georgetown-south-carolina-united-states",
+      "pop": 8403,
+      "coord": [-79.28877744843085, 33.373659262658684]
+    },
+    "add_max": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["commercial"]
+      }
+    ],
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["commercial", "other"]
       }
     ]
   },
@@ -41116,6 +42226,24 @@
       }
     ]
   },
+  "Glynn County, Georgia, United States": {
+    "place": {
+      "name": "Glynn County",
+      "state": "Georgia",
+      "country": "United States",
+      "type": "county",
+      "encoded": "glynn-county-georgia-united-states",
+      "pop": 84499,
+      "coord": [-81.5012681, 31.2171726]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["all uses"]
+      }
+    ]
+  },
   "Goddard, Kansas, United States": {
     "place": {
       "name": "Goddard",
@@ -41437,6 +42565,24 @@
       }
     ]
   },
+  "Gordon County, Georgia, United States": {
+    "place": {
+      "name": "Gordon County",
+      "state": "Georgia",
+      "country": "United States",
+      "type": "county",
+      "encoded": "gordon-county-georgia-united-states",
+      "pop": 57544,
+      "coord": [-84.8986308, 34.5019651]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["main street / special"],
+        "land": ["all uses"]
+      }
+    ]
+  },
   "Gordon, Nebraska, United States": {
     "place": {
       "name": "Gordon",
@@ -41728,6 +42874,24 @@
       {
         "status": "adopted",
         "scope": ["citywide"],
+        "land": ["all uses"]
+      }
+    ]
+  },
+  "Grand Forks, British Columbia, Canada": {
+    "place": {
+      "name": "Grand Forks",
+      "state": "British Columbia",
+      "country": "Canada",
+      "type": "city",
+      "encoded": "grand-forks-british-columbia-canada",
+      "pop": 4112,
+      "coord": [-118.4392039, 49.0312269]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
         "land": ["all uses"]
       }
     ]
@@ -42474,6 +43638,24 @@
       }
     ]
   },
+  "Gray Court, South Carolina, United States": {
+    "place": {
+      "name": "Gray Court",
+      "state": "South Carolina",
+      "country": "United States",
+      "type": "city",
+      "encoded": "gray-court-south-carolina-united-states",
+      "pop": 763,
+      "coord": [-82.113438, 34.6081774]
+    },
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["main street / special"],
+        "land": ["all uses"]
+      }
+    ]
+  },
   "Grayling Charter Township, Michigan, United States": {
     "place": {
       "name": "Grayling Charter Township",
@@ -42613,6 +43795,24 @@
         "land": ["all uses"]
       }
     ],
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["all uses"]
+      }
+    ]
+  },
+  "Great Falls, South Carolina, United States": {
+    "place": {
+      "name": "Great Falls",
+      "state": "South Carolina",
+      "country": "United States",
+      "type": "city",
+      "encoded": "great-falls-south-carolina-united-states",
+      "pop": 1951,
+      "coord": [-80.9020237, 34.5751447]
+    },
     "rm_min": [
       {
         "status": "adopted",
@@ -42936,6 +44136,24 @@
       }
     ]
   },
+  "Greene County, Georgia, United States": {
+    "place": {
+      "name": "Greene County",
+      "state": "Georgia",
+      "country": "United States",
+      "type": "county",
+      "encoded": "greene-county-georgia-united-states",
+      "pop": 18915,
+      "coord": [-83.1660939, 33.5492988]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["main street / special"],
+        "land": ["all uses"]
+      }
+    ]
+  },
   "Greeneville, Tennessee, United States": {
     "place": {
       "name": "Greeneville",
@@ -43247,10 +44465,29 @@
       "pop": 70635,
       "coord": [-82.3984882, 34.851354]
     },
+    "add_max": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["commercial", "industrial", "other"]
+      }
+    ],
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["all uses", "residential, all uses"]
+      }
+    ],
     "rm_min": [
       {
         "status": "adopted",
         "scope": ["main street / special"],
+        "land": ["all uses"]
+      },
+      {
+        "status": "adopted",
+        "scope": ["city center / business district", "citywide"],
         "land": ["all uses"]
       }
     ]
@@ -43305,6 +44542,24 @@
       {
         "status": "adopted",
         "scope": ["city center / business district"],
+        "land": ["all uses"]
+      }
+    ]
+  },
+  "Greenwood, British Columbia, Canada": {
+    "place": {
+      "name": "Greenwood",
+      "state": "British Columbia",
+      "country": "Canada",
+      "type": "city",
+      "encoded": "greenwood-british-columbia-canada",
+      "pop": 702,
+      "coord": [-118.676876, 49.089585]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
         "land": ["all uses"]
       }
     ]
@@ -44058,6 +45313,38 @@
       }
     ]
   },
+  "Gwinnett County, Georgia, United States": {
+    "place": {
+      "name": "Gwinnett County",
+      "state": "Georgia",
+      "country": "United States",
+      "type": "county",
+      "encoded": "gwinnett-county-georgia-united-states",
+      "pop": 957062,
+      "coord": [-84.0227467, 33.9566869]
+    },
+    "add_max": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["all uses"]
+      }
+    ],
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["all uses"]
+      }
+    ],
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["main street / special"],
+        "land": ["all uses"]
+      }
+    ]
+  },
   "Hackensack, New Jersey, United States": {
     "place": {
       "name": "Hackensack",
@@ -44323,6 +45610,31 @@
         "status": "adopted",
         "scope": ["citywide"],
         "land": ["commercial"]
+      }
+    ]
+  },
+  "Hall County, Georgia, United States": {
+    "place": {
+      "name": "Hall County",
+      "state": "Georgia",
+      "country": "United States",
+      "type": "county",
+      "encoded": "hall-county-georgia-united-states",
+      "pop": 203136,
+      "coord": [-83.79546948066366, 34.28781481827775]
+    },
+    "add_max": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["all uses"]
+      }
+    ],
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["all uses"]
       }
     ]
   },
@@ -44907,6 +46219,24 @@
       }
     ]
   },
+  "Hampton, South Carolina, United States": {
+    "place": {
+      "name": "Hampton",
+      "state": "South Carolina",
+      "country": "United States",
+      "type": "city",
+      "encoded": "hampton-south-carolina-united-states",
+      "pop": 2694,
+      "coord": [-81.1095967865992, 32.86705992326382]
+    },
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["all uses"]
+      }
+    ]
+  },
   "Hampton, Virginia, United States": {
     "place": {
       "name": "Hampton",
@@ -45206,6 +46536,24 @@
       }
     ]
   },
+  "Haralson County, Georgia, United States": {
+    "place": {
+      "name": "Haralson County",
+      "state": "Georgia",
+      "country": "United States",
+      "type": "county",
+      "encoded": "haralson-county-georgia-united-states",
+      "pop": 29919,
+      "coord": [-85.2001291, 33.7812701]
+    },
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["all uses"]
+      }
+    ]
+  },
   "Haralson, Georgia, United States": {
     "place": {
       "name": "Haralson",
@@ -45307,6 +46655,24 @@
           "industrial",
           "residential, all uses"
         ]
+      }
+    ]
+  },
+  "Harleyville, South Carolina, United States": {
+    "place": {
+      "name": "Harleyville",
+      "state": "South Carolina",
+      "country": "United States",
+      "type": "city",
+      "encoded": "harleyville-south-carolina-united-states",
+      "pop": 666,
+      "coord": [-80.4478745, 33.2146069]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["all uses"]
       }
     ]
   },
@@ -45544,6 +46910,24 @@
         "scope": ["citywide"],
         "land": ["residential, multi-family"],
         "date": "2026"
+      }
+    ]
+  },
+  "Harrison County, Mississippi, United States": {
+    "place": {
+      "name": "Harrison County",
+      "state": "Mississippi",
+      "country": "United States",
+      "type": "county",
+      "encoded": "harrison-county-mississippi-united-states",
+      "pop": 208621,
+      "coord": [-89.1313136, 30.4553392]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["main street / special"],
+        "land": ["all uses", "commercial", "other"]
       }
     ]
   },
@@ -46824,6 +48208,24 @@
       }
     ]
   },
+  "Heath Springs, South Carolina, United States": {
+    "place": {
+      "name": "Heath Springs",
+      "state": "South Carolina",
+      "country": "United States",
+      "type": "city",
+      "encoded": "heath-springs-south-carolina-united-states",
+      "pop": 742,
+      "coord": [-80.6761563, 34.5925625]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["all uses"]
+      }
+    ]
+  },
   "Heber Springs, Arkansas, United States": {
     "place": {
       "name": "Heber Springs",
@@ -47063,6 +48465,24 @@
       }
     ]
   },
+  "Hemingway, South Carolina, United States": {
+    "place": {
+      "name": "Hemingway",
+      "state": "South Carolina",
+      "country": "United States",
+      "type": "city",
+      "encoded": "hemingway-south-carolina-united-states",
+      "pop": 504,
+      "coord": [-79.4475566, 33.7537774]
+    },
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["all uses"]
+      }
+    ]
+  },
   "Henderson County, Kentucky, United States": {
     "place": {
       "name": "Henderson County",
@@ -47185,6 +48605,24 @@
       {
         "status": "adopted",
         "scope": ["city center / business district"],
+        "land": ["all uses"]
+      }
+    ]
+  },
+  "Henry County, Georgia, United States": {
+    "place": {
+      "name": "Henry County",
+      "state": "Georgia",
+      "country": "United States",
+      "type": "county",
+      "encoded": "henry-county-georgia-united-states",
+      "pop": 240712,
+      "coord": [-84.1367771, 33.4519942]
+    },
+    "add_max": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district", "main street / special"],
         "land": ["all uses"]
       }
     ]
@@ -48518,6 +49956,24 @@
       }
     ]
   },
+  "Holly Hill, South Carolina, United States": {
+    "place": {
+      "name": "Holly Hill",
+      "state": "South Carolina",
+      "country": "United States",
+      "type": "city",
+      "encoded": "holly-hill-south-carolina-united-states",
+      "pop": 1298,
+      "coord": [-80.4137038, 33.3226624]
+    },
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["residential, low-density"]
+      }
+    ]
+  },
   "Holly Springs, Georgia, United States": {
     "place": {
       "name": "Holly Springs",
@@ -49021,6 +50477,24 @@
       }
     ]
   },
+  "Horry County, South Carolina, United States": {
+    "place": {
+      "name": "Horry County",
+      "state": "South Carolina",
+      "country": "United States",
+      "type": "county",
+      "encoded": "horry-county-south-carolina-united-states",
+      "pop": 351029,
+      "coord": [-78.9578973, 33.9204504]
+    },
+    "add_max": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["all uses"]
+      }
+    ]
+  },
   "Horseheads, New York, United States": {
     "place": {
       "name": "Horseheads",
@@ -49068,11 +50542,31 @@
       "pop": 38797,
       "coord": [-93.0552437, 34.5038393]
     },
+    "add_max": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["commercial", "industrial", "other"],
+        "date": "2024-11-19"
+      }
+    ],
     "rm_min": [
       {
         "status": "adopted",
         "scope": ["city center / business district"],
         "land": ["commercial", "industrial"]
+      },
+      {
+        "status": "adopted",
+        "scope": ["city center / business district", "main street / special"],
+        "land": [
+          "commercial",
+          "industrial",
+          "medical",
+          "other",
+          "residential, all uses"
+        ],
+        "date": "2024-11-19"
       }
     ]
   },
@@ -49123,6 +50617,24 @@
       "coord": [-88.569012, 47.121872]
     },
     "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["all uses"]
+      }
+    ]
+  },
+  "Houston County, Georgia, United States": {
+    "place": {
+      "name": "Houston County",
+      "state": "Georgia",
+      "country": "United States",
+      "type": "county",
+      "encoded": "houston-county-georgia-united-states",
+      "pop": 163633,
+      "coord": [-83.631394, 32.4659752]
+    },
+    "reduce_min": [
       {
         "status": "adopted",
         "scope": ["city center / business district"],
@@ -50555,6 +52067,24 @@
       }
     ]
   },
+  "Inman, South Carolina, United States": {
+    "place": {
+      "name": "Inman",
+      "state": "South Carolina",
+      "country": "United States",
+      "type": "city",
+      "encoded": "inman-south-carolina-united-states",
+      "pop": 2990,
+      "coord": [-82.0906082, 35.047841]
+    },
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["commercial", "other"]
+      }
+    ]
+  },
   "Innisfail, Alberta, Canada": {
     "place": {
       "name": "Innisfail",
@@ -50771,6 +52301,31 @@
       {
         "status": "adopted",
         "scope": ["city center / business district"],
+        "land": ["all uses"]
+      }
+    ]
+  },
+  "Irmo, South Carolina, United States": {
+    "place": {
+      "name": "Irmo",
+      "state": "South Carolina",
+      "country": "United States",
+      "type": "city",
+      "encoded": "irmo-south-carolina-united-states",
+      "pop": 11569,
+      "coord": [-81.18348662584813, 34.086082833420626]
+    },
+    "add_max": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["all uses"]
+      }
+    ],
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
         "land": ["all uses"]
       }
     ]
@@ -51070,6 +52625,31 @@
       }
     ]
   },
+  "Isle of Palms, South Carolina, United States": {
+    "place": {
+      "name": "Isle of Palms",
+      "state": "South Carolina",
+      "country": "United States",
+      "type": "city",
+      "encoded": "isle-of-palms-south-carolina-united-states",
+      "pop": 4347,
+      "coord": [-79.7880359, 32.7867697]
+    },
+    "add_max": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["all uses"]
+      }
+    ],
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["all uses"]
+      }
+    ]
+  },
   "Israel": {
     "place": {
       "name": "Israel",
@@ -51208,6 +52788,24 @@
         "status": "adopted",
         "scope": ["city center / business district"],
         "land": ["commercial", "residential, all uses"]
+      }
+    ]
+  },
+  "Jackson County, Georgia, United States": {
+    "place": {
+      "name": "Jackson County",
+      "state": "Georgia",
+      "country": "United States",
+      "type": "county",
+      "encoded": "jackson-county-georgia-united-states",
+      "pop": 75907,
+      "coord": [-83.56423926653135, 34.13424774826393]
+    },
+    "add_max": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["all uses"]
       }
     ]
   },
@@ -51933,6 +53531,24 @@
       }
     ]
   },
+  "Jefferson, South Carolina, United States": {
+    "place": {
+      "name": "Jefferson",
+      "state": "South Carolina",
+      "country": "United States",
+      "type": "city",
+      "encoded": "jefferson-south-carolina-united-states",
+      "pop": 772,
+      "coord": [-80.3895397, 34.6498886]
+    },
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["all uses"]
+      }
+    ]
+  },
   "Jefferson, Wisconsin, United States": {
     "place": {
       "name": "Jefferson",
@@ -52448,6 +54064,13 @@
       "pop": 71046,
       "coord": [-82.3534728, 36.3134398]
     },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["all uses"]
+      }
+    ],
     "rm_min": [
       {
         "status": "adopted",
@@ -53779,6 +55402,42 @@
       }
     ]
   },
+  "Kershaw County, South Carolina, United States": {
+    "place": {
+      "name": "Kershaw County",
+      "state": "South Carolina",
+      "country": "United States",
+      "type": "county",
+      "encoded": "kershaw-county-south-carolina-united-states",
+      "pop": 65403,
+      "coord": [-80.54988977297509, 34.34464402868429]
+    },
+    "add_max": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["all uses"]
+      }
+    ]
+  },
+  "Kershaw, South Carolina, United States": {
+    "place": {
+      "name": "Kershaw",
+      "state": "South Carolina",
+      "country": "United States",
+      "type": "city",
+      "encoded": "kershaw-south-carolina-united-states",
+      "pop": 1693,
+      "coord": [-80.58229832507307, 34.54813559957065]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["all uses"]
+      }
+    ]
+  },
   "Ketchikan, Alaska, United States": {
     "place": {
       "name": "Ketchikan",
@@ -54042,6 +55701,24 @@
       "encoded": "Kimball_NE",
       "pop": 2290,
       "coord": [-103.6629577, 41.2371713]
+    },
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["all uses"]
+      }
+    ]
+  },
+  "Kimberley, British Columbia, Canada": {
+    "place": {
+      "name": "Kimberley",
+      "state": "British Columbia",
+      "country": "Canada",
+      "type": "city",
+      "encoded": "kimberley-british-columbia-canada",
+      "pop": 8115,
+      "coord": [-115.9819477, 49.6850876]
     },
     "rm_min": [
       {
@@ -54386,6 +56063,24 @@
       "coord": [-75.897197, 41.2620137]
     },
     "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["all uses"]
+      }
+    ]
+  },
+  "Kingstree, South Carolina, United States": {
+    "place": {
+      "name": "Kingstree",
+      "state": "South Carolina",
+      "country": "United States",
+      "type": "city",
+      "encoded": "kingstree-south-carolina-united-states",
+      "pop": 3244,
+      "coord": [-79.8306265, 33.6676643]
+    },
+    "reduce_min": [
       {
         "status": "adopted",
         "scope": ["city center / business district"],
@@ -56739,6 +58434,30 @@
       }
     ]
   },
+  "Lamar County, Mississippi, United States": {
+    "place": {
+      "name": "Lamar County",
+      "state": "Mississippi",
+      "country": "United States",
+      "type": "county",
+      "encoded": "lamar-county-mississippi-united-states",
+      "pop": 64222,
+      "coord": [-89.5152337, 31.2109862]
+    },
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": [
+          "commercial",
+          "industrial",
+          "medical",
+          "other",
+          "residential, low-density"
+        ]
+      }
+    ]
+  },
   "Lamar, Missouri, United States": {
     "place": {
       "name": "Lamar",
@@ -56827,6 +58546,37 @@
         "scope": ["city center / business district"],
         "land": ["all uses"],
         "date": "2022-06-07"
+      }
+    ]
+  },
+  "Lancaster County, South Carolina, United States": {
+    "place": {
+      "name": "Lancaster County",
+      "state": "South Carolina",
+      "country": "United States",
+      "type": "county",
+      "encoded": "lancaster-county-south-carolina-united-states",
+      "pop": 96016,
+      "coord": [-80.700546, 34.6628067]
+    },
+    "add_max": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": [
+          "commercial",
+          "industrial",
+          "medical",
+          "other",
+          "residential, multi-family"
+        ]
+      }
+    ],
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["main street / special"],
+        "land": ["all uses"]
       }
     ]
   },
@@ -56966,6 +58716,31 @@
           "residential, all uses",
           "residential, multi-family"
         ]
+      }
+    ]
+  },
+  "Landrum, South Carolina, United States": {
+    "place": {
+      "name": "Landrum",
+      "state": "South Carolina",
+      "country": "United States",
+      "type": "city",
+      "encoded": "landrum-south-carolina-united-states",
+      "pop": 2481,
+      "coord": [-82.1892007, 35.1751148]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["all uses"]
+      }
+    ],
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["commercial", "other"]
       }
     ]
   },
@@ -57499,6 +59274,24 @@
         "status": "adopted",
         "scope": ["city center / business district", "citywide"],
         "land": ["all uses", "commercial"]
+      }
+    ]
+  },
+  "Laurens, South Carolina, United States": {
+    "place": {
+      "name": "Laurens",
+      "state": "South Carolina",
+      "country": "United States",
+      "type": "city",
+      "encoded": "laurens-south-carolina-united-states",
+      "pop": 9335,
+      "coord": [-82.01449284435719, 34.49867489041381]
+    },
+    "add_max": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["all uses"]
       }
     ]
   },
@@ -59844,6 +61637,24 @@
       }
     ]
   },
+  "Little Mountain, South Carolina, United States": {
+    "place": {
+      "name": "Little Mountain",
+      "state": "South Carolina",
+      "country": "United States",
+      "type": "city",
+      "encoded": "little-mountain-south-carolina-united-states",
+      "pop": 249,
+      "coord": [-81.4123229, 34.1962557]
+    },
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["commercial", "other"]
+      }
+    ]
+  },
   "Little River, Kansas, United States": {
     "place": {
       "name": "Little River",
@@ -61417,6 +63228,31 @@
       {
         "status": "adopted",
         "scope": ["city center / business district"],
+        "land": ["all uses"]
+      }
+    ]
+  },
+  "Lumpkin County, Georgia, United States": {
+    "place": {
+      "name": "Lumpkin County",
+      "state": "Georgia",
+      "country": "United States",
+      "type": "county",
+      "encoded": "lumpkin-county-georgia-united-states",
+      "pop": 33488,
+      "coord": [-83.9926806, 34.5546076]
+    },
+    "add_max": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["commercial", "industrial", "medical", "other"]
+      }
+    ],
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
         "land": ["all uses"]
       }
     ]
@@ -63382,6 +65218,24 @@
         "status": "adopted",
         "scope": ["city center / business district", "citywide"],
         "land": ["all uses", "commercial", "residential, multi-family"]
+      }
+    ]
+  },
+  "Mansfield, Massachusetts, United States": {
+    "place": {
+      "name": "Mansfield",
+      "state": "Massachusetts",
+      "country": "United States",
+      "type": "city",
+      "encoded": "mansfield-massachusetts-united-states",
+      "pop": 23860,
+      "coord": [-71.2189405, 42.0334326]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["commercial", "residential, multi-family"]
       }
     ]
   },
@@ -65454,6 +67308,30 @@
         "status": "adopted",
         "scope": ["city center / business district"],
         "land": ["commercial"]
+      }
+    ]
+  },
+  "McCormick County, South Carolina, United States": {
+    "place": {
+      "name": "McCormick County",
+      "state": "South Carolina",
+      "country": "United States",
+      "type": "county",
+      "encoded": "mccormick-county-south-carolina-united-states",
+      "pop": 9526,
+      "coord": [-82.2797719, 33.8795325]
+    },
+    "add_max": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": [
+          "commercial",
+          "industrial",
+          "medical",
+          "other",
+          "residential, low-density"
+        ]
       }
     ]
   },
@@ -68647,6 +70525,14 @@
       "pop": 48377,
       "coord": [-101.296273, 48.23251]
     },
+    "add_max": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["commercial", "medical", "other"],
+        "date": "2021-04-05"
+      }
+    ],
     "rm_min": [
       {
         "status": "adopted",
@@ -68749,6 +70635,24 @@
         "status": "adopted",
         "scope": ["city center / business district"],
         "land": ["all uses"]
+      }
+    ]
+  },
+  "Mission, British Columbia, Canada": {
+    "place": {
+      "name": "Mission",
+      "state": "British Columbia",
+      "country": "Canada",
+      "type": "city",
+      "encoded": "mission-british-columbia-canada",
+      "pop": 41519,
+      "coord": [-122.283583, 49.1589351]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["commercial", "other"]
       }
     ]
   },
@@ -70501,6 +72405,31 @@
       }
     ]
   },
+  "Morgan County, Georgia, United States": {
+    "place": {
+      "name": "Morgan County",
+      "state": "Georgia",
+      "country": "United States",
+      "type": "county",
+      "encoded": "morgan-county-georgia-united-states",
+      "pop": 20097,
+      "coord": [-83.5051522, 33.5793193]
+    },
+    "add_max": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["commercial", "industrial", "medical", "other"]
+      }
+    ],
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["all uses"]
+      }
+    ]
+  },
   "Morgantown, West Virginia, United States": {
     "place": {
       "name": "Morgantown",
@@ -71332,10 +73261,17 @@
       "pop": 90801,
       "coord": [-79.8625851, 32.7940651]
     },
+    "add_max": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district", "main street / special"],
+        "land": ["all uses"]
+      }
+    ],
     "reduce_min": [
       {
         "status": "adopted",
-        "scope": ["main street / special"],
+        "scope": ["citywide"],
         "land": ["commercial"]
       }
     ]
@@ -73979,6 +75915,24 @@
       }
     ]
   },
+  "New Ellenton, South Carolina, United States": {
+    "place": {
+      "name": "New Ellenton",
+      "state": "South Carolina",
+      "country": "United States",
+      "type": "city",
+      "encoded": "new-ellenton-south-carolina-united-states",
+      "pop": 2210,
+      "coord": [-81.6856654, 33.421531]
+    },
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["commercial", "other"]
+      }
+    ]
+  },
   "New Fairfield, Connecticut, United States": {
     "place": {
       "name": "New Fairfield",
@@ -74985,6 +76939,31 @@
       }
     ]
   },
+  "Newberry, South Carolina, United States": {
+    "place": {
+      "name": "Newberry",
+      "state": "South Carolina",
+      "country": "United States",
+      "type": "city",
+      "encoded": "newberry-south-carolina-united-states",
+      "pop": 10691,
+      "coord": [-81.61892282072934, 34.274694878123874]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["residential, all uses"]
+      }
+    ],
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["residential, multi-family"]
+      }
+    ]
+  },
   "Newburg, Wisconsin, United States": {
     "place": {
       "name": "Newburg",
@@ -75322,6 +77301,24 @@
           "other",
           "residential, all uses"
         ]
+      }
+    ]
+  },
+  "Newton County, Georgia, United States": {
+    "place": {
+      "name": "Newton County",
+      "state": "Georgia",
+      "country": "United States",
+      "type": "county",
+      "encoded": "newton-county-georgia-united-states",
+      "pop": 112483,
+      "coord": [-83.8446101, 33.5715512]
+    },
+    "add_max": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["commercial", "industrial", "medical", "other"]
       }
     ]
   },
@@ -76986,6 +78983,31 @@
         "status": "adopted",
         "scope": ["city center / business district"],
         "land": ["all uses"]
+      }
+    ]
+  },
+  "North Vancouver, British Columbia, Canada": {
+    "place": {
+      "name": "North Vancouver",
+      "state": "British Columbia",
+      "country": "Canada",
+      "type": "city",
+      "encoded": "north-vancouver-british-columbia-canada",
+      "pop": 58120,
+      "coord": [-123.0737925, 49.3206294]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide", "transit-oriented"],
+        "land": [
+          "commercial",
+          "industrial",
+          "medical",
+          "other",
+          "residential, all uses",
+          "residential, multi-family"
+        ]
       }
     ]
   },
@@ -80938,6 +82960,24 @@
       }
     ]
   },
+  "Pacolet, South Carolina, United States": {
+    "place": {
+      "name": "Pacolet",
+      "state": "South Carolina",
+      "country": "United States",
+      "type": "city",
+      "encoded": "pacolet-south-carolina-united-states",
+      "pop": 2274,
+      "coord": [-81.7617679, 34.8990182]
+    },
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["all uses"]
+      }
+    ]
+  },
   "Paducah, Kentucky, United States": {
     "place": {
       "name": "Paducah",
@@ -81600,6 +83640,38 @@
         "status": "adopted",
         "scope": ["city center / business district"],
         "land": ["commercial"]
+      }
+    ]
+  },
+  "Parksville, British Columbia, Canada": {
+    "place": {
+      "name": "Parksville",
+      "state": "British Columbia",
+      "country": "Canada",
+      "type": "city",
+      "encoded": "parksville-british-columbia-canada",
+      "pop": 13642,
+      "coord": [-124.311739, 49.3179514]
+    },
+    "add_max": [
+      {
+        "status": "adopted",
+        "scope": ["main street / special"],
+        "land": ["all uses"]
+      }
+    ],
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["all uses", "commercial", "other"]
+      }
+    ],
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["commercial", "other"]
       }
     ]
   },
@@ -82668,6 +84740,24 @@
       }
     ]
   },
+  "Pendleton, South Carolina, United States": {
+    "place": {
+      "name": "Pendleton",
+      "state": "South Carolina",
+      "country": "United States",
+      "type": "city",
+      "encoded": "pendleton-south-carolina-united-states",
+      "pop": 3489,
+      "coord": [-82.7820663, 34.6508092]
+    },
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["all uses"]
+      }
+    ]
+  },
   "Penetanguishene, Ontario, Canada": {
     "place": {
       "name": "Penetanguishene",
@@ -83688,6 +85778,24 @@
       }
     ]
   },
+  "Pickens County, South Carolina, United States": {
+    "place": {
+      "name": "Pickens County",
+      "state": "South Carolina",
+      "country": "United States",
+      "type": "county",
+      "encoded": "pickens-county-south-carolina-united-states",
+      "pop": 131404,
+      "coord": [-82.7193824, 34.8882592]
+    },
+    "add_max": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["all uses"]
+      }
+    ]
+  },
   "Pickens, South Carolina, United States": {
     "place": {
       "name": "Pickens",
@@ -84212,6 +86320,31 @@
       }
     ]
   },
+  "Pitt Meadows, British Columbia, Canada": {
+    "place": {
+      "name": "Pitt Meadows",
+      "state": "British Columbia",
+      "country": "Canada",
+      "type": "city",
+      "encoded": "pitt-meadows-british-columbia-canada",
+      "pop": 19146,
+      "coord": [-122.690153, 49.2207623]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["all uses"]
+      }
+    ],
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["transit-oriented"],
+        "land": ["residential, all uses"]
+      }
+    ]
+  },
   "Pittsboro, Indiana, United States": {
     "place": {
       "name": "Pittsboro",
@@ -84640,6 +86773,30 @@
         "status": "adopted",
         "scope": ["city center / business district"],
         "land": ["all uses"]
+      }
+    ]
+  },
+  "Plantersville, Mississippi, United States": {
+    "place": {
+      "name": "Plantersville",
+      "state": "Mississippi",
+      "country": "United States",
+      "type": "city",
+      "encoded": "plantersville-mississippi-united-states",
+      "pop": 868,
+      "coord": [-88.6644957, 34.2134407]
+    },
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": [
+          "commercial",
+          "industrial",
+          "medical",
+          "other",
+          "residential, all uses"
+        ]
       }
     ]
   },
@@ -85369,6 +87526,24 @@
         "status": "adopted",
         "scope": ["city center / business district"],
         "land": ["all uses"]
+      }
+    ]
+  },
+  "Port Alberni, British Columbia, Canada": {
+    "place": {
+      "name": "Port Alberni",
+      "state": "British Columbia",
+      "country": "Canada",
+      "type": "city",
+      "encoded": "port-alberni-british-columbia-canada",
+      "pop": 18259,
+      "coord": [-124.8056517, 49.2343668]
+    },
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district", "main street / special"],
+        "land": ["all uses", "commercial", "other"]
       }
     ]
   },
@@ -86881,6 +89056,24 @@
         "status": "adopted",
         "scope": ["city center / business district"],
         "land": ["all uses", "residential, all uses"]
+      }
+    ]
+  },
+  "Prosperity, South Carolina, United States": {
+    "place": {
+      "name": "Prosperity",
+      "state": "South Carolina",
+      "country": "United States",
+      "type": "city",
+      "encoded": "prosperity-south-carolina-united-states",
+      "pop": 1178,
+      "coord": [-81.5338576, 34.2098669]
+    },
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["commercial", "other"]
       }
     ]
   },
@@ -88944,6 +91137,31 @@
       }
     ]
   },
+  "Richland County, South Carolina, United States": {
+    "place": {
+      "name": "Richland County",
+      "state": "South Carolina",
+      "country": "United States",
+      "type": "county",
+      "encoded": "richland-county-south-carolina-united-states",
+      "pop": 416147,
+      "coord": [-80.9176832, 34.0190006]
+    },
+    "add_max": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["all uses"]
+      }
+    ],
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district", "main street / special"],
+        "land": ["all uses", "commercial", "other"]
+      }
+    ]
+  },
   "Richland County, Wisconsin, United States": {
     "place": {
       "name": "Richland County",
@@ -89357,6 +91575,24 @@
       }
     ]
   },
+  "Ridgeland, South Carolina, United States": {
+    "place": {
+      "name": "Ridgeland",
+      "state": "South Carolina",
+      "country": "United States",
+      "type": "city",
+      "encoded": "ridgeland-south-carolina-united-states",
+      "pop": 3758,
+      "coord": [-80.980386, 32.4807435]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["all uses"]
+      }
+    ]
+  },
   "Ridgely, Maryland, United States": {
     "place": {
       "name": "Ridgely",
@@ -89368,6 +91604,24 @@
       "coord": [-75.8848665, 38.9480656]
     },
     "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["all uses"]
+      }
+    ]
+  },
+  "Ridgeway, South Carolina, United States": {
+    "place": {
+      "name": "Ridgeway",
+      "state": "South Carolina",
+      "country": "United States",
+      "type": "city",
+      "encoded": "ridgeway-south-carolina-united-states",
+      "pop": 266,
+      "coord": [-80.9603643, 34.3076471]
+    },
+    "rm_min": [
       {
         "status": "adopted",
         "scope": ["city center / business district"],
@@ -90573,6 +92827,31 @@
       }
     ]
   },
+  "Rockdale County, Georgia, United States": {
+    "place": {
+      "name": "Rockdale County",
+      "state": "Georgia",
+      "country": "United States",
+      "type": "county",
+      "encoded": "rockdale-county-georgia-united-states",
+      "pop": 93570,
+      "coord": [-84.0322064, 33.6430283]
+    },
+    "add_max": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["all uses"]
+      }
+    ],
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["all uses"]
+      }
+    ]
+  },
   "Rockdale, Wisconsin, United States": {
     "place": {
       "name": "Rockdale",
@@ -90743,6 +93022,24 @@
       {
         "status": "adopted",
         "scope": ["city center / business district"],
+        "land": ["all uses"]
+      }
+    ]
+  },
+  "Rockville, South Carolina, United States": {
+    "place": {
+      "name": "Rockville",
+      "state": "South Carolina",
+      "country": "United States",
+      "type": "city",
+      "encoded": "rockville-south-carolina-united-states",
+      "pop": 141,
+      "coord": [-80.1948193, 32.6007382]
+    },
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
         "land": ["all uses"]
       }
     ]
@@ -91095,6 +93392,13 @@
       "pop": 37713,
       "coord": [-85.1646726, 34.257038]
     },
+    "add_max": [
+      {
+        "status": "adopted",
+        "scope": ["main street / special"],
+        "land": ["commercial", "other"]
+      }
+    ],
     "rm_min": [
       {
         "status": "adopted",
@@ -93035,6 +95339,24 @@
       }
     ]
   },
+  "Saluda, South Carolina, United States": {
+    "place": {
+      "name": "Saluda",
+      "state": "South Carolina",
+      "country": "United States",
+      "type": "city",
+      "encoded": "saluda-south-carolina-united-states",
+      "pop": 3122,
+      "coord": [-81.7720522, 34.0015232]
+    },
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["all uses", "commercial", "other"]
+      }
+    ]
+  },
   "Sammamish, Washington, United States": {
     "place": {
       "name": "Sammamish",
@@ -94831,6 +97153,24 @@
       }
     ]
   },
+  "Seabrook Island, South Carolina, United States": {
+    "place": {
+      "name": "Seabrook Island",
+      "state": "South Carolina",
+      "country": "United States",
+      "type": "city",
+      "encoded": "seabrook-island-south-carolina-united-states",
+      "pop": 2050,
+      "coord": [-80.170652, 32.5771277]
+    },
+    "add_max": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["all uses"]
+      }
+    ]
+  },
   "Seabrook, New Hampshire, United States": {
     "place": {
       "name": "Seabrook",
@@ -95229,6 +97569,24 @@
       "encoded": "Seneca_KS",
       "pop": 2139,
       "coord": [-96.064168, 39.834165]
+    },
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["all uses"]
+      }
+    ]
+  },
+  "Seneca, South Carolina, United States": {
+    "place": {
+      "name": "Seneca",
+      "state": "South Carolina",
+      "country": "United States",
+      "type": "city",
+      "encoded": "seneca-south-carolina-united-states",
+      "pop": 8850,
+      "coord": [-82.9527288, 34.6865321]
     },
     "rm_min": [
       {
@@ -97268,6 +99626,24 @@
       "encoded": "sitka-alaska-united-states",
       "pop": 8458,
       "coord": [-135.337612, 57.0524973]
+    },
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["all uses"]
+      }
+    ]
+  },
+  "Six Mile, South Carolina, United States": {
+    "place": {
+      "name": "Six Mile",
+      "state": "South Carolina",
+      "country": "United States",
+      "type": "city",
+      "encoded": "six-mile-south-carolina-united-states",
+      "pop": 759,
+      "coord": [-82.8200507, 34.8073836]
     },
     "rm_min": [
       {
@@ -99764,6 +102140,24 @@
       }
     ]
   },
+  "Springdale, South Carolina, United States": {
+    "place": {
+      "name": "Springdale",
+      "state": "South Carolina",
+      "country": "United States",
+      "type": "city",
+      "encoded": "springdale-south-carolina-united-states",
+      "pop": 2744,
+      "coord": [-81.108984, 33.959319]
+    },
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["other"]
+      }
+    ]
+  },
   "Springfield Charter Township, Michigan, United States": {
     "place": {
       "name": "Springfield Charter Township",
@@ -101057,6 +103451,24 @@
       }
     ]
   },
+  "St. Matthews, South Carolina, United States": {
+    "place": {
+      "name": "St. Matthews",
+      "state": "South Carolina",
+      "country": "United States",
+      "type": "city",
+      "encoded": "st-matthews-south-carolina-united-states",
+      "pop": 1841,
+      "coord": [-80.7778681, 33.664876]
+    },
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["commercial", "other"]
+      }
+    ]
+  },
   "St. Michael, Minnesota, United States": {
     "place": {
       "name": "St. Michael",
@@ -101313,6 +103725,24 @@
         "status": "adopted",
         "scope": ["city center / business district"],
         "land": ["all uses", "residential, all uses"]
+      }
+    ]
+  },
+  "St. Stephen, South Carolina, United States": {
+    "place": {
+      "name": "St. Stephen",
+      "state": "South Carolina",
+      "country": "United States",
+      "type": "city",
+      "encoded": "st-stephen-south-carolina-united-states",
+      "pop": 1571,
+      "coord": [-79.92265446611368, 33.404919749316356]
+    },
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["all uses"]
       }
     ]
   },
@@ -103578,6 +106008,24 @@
       }
     ]
   },
+  "Sumter County, South Carolina, United States": {
+    "place": {
+      "name": "Sumter County",
+      "state": "South Carolina",
+      "country": "United States",
+      "type": "county",
+      "encoded": "sumter-county-south-carolina-united-states",
+      "pop": 105556,
+      "coord": [-80.3237032, 33.8998826]
+    },
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["all uses"]
+      }
+    ]
+  },
   "Sumter, South Carolina, United States": {
     "place": {
       "name": "Sumter",
@@ -103588,11 +106036,32 @@
       "pop": 43463,
       "coord": [-80.3414693, 33.9204354]
     },
+    "add_max": [
+      {
+        "status": "proposed",
+        "scope": ["citywide"],
+        "land": ["all uses"],
+        "date": "2026"
+      }
+    ],
+    "reduce_min": [
+      {
+        "status": "proposed",
+        "scope": ["citywide"],
+        "land": ["all uses"]
+      }
+    ],
     "rm_min": [
       {
         "status": "adopted",
         "scope": ["city center / business district"],
         "land": ["commercial", "other"]
+      },
+      {
+        "status": "proposed",
+        "scope": ["city center / business district"],
+        "land": ["all uses"],
+        "date": "2026"
       }
     ]
   },
@@ -105011,6 +107480,24 @@
         "status": "adopted",
         "scope": ["city center / business district"],
         "land": ["all uses"]
+      }
+    ]
+  },
+  "Taylor, Mississippi, United States": {
+    "place": {
+      "name": "Taylor",
+      "state": "Mississippi",
+      "country": "United States",
+      "type": "city",
+      "encoded": "taylor-mississippi-united-states",
+      "pop": 355,
+      "coord": [-89.5879974, 34.2725165]
+    },
+    "add_max": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["commercial"]
       }
     ]
   },
@@ -107308,6 +109795,13 @@
         "scope": ["citywide"],
         "land": ["all uses"]
       }
+    ],
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["all uses"]
+      }
     ]
   },
   "Traverse City, Michigan, United States": {
@@ -107504,6 +109998,24 @@
       {
         "status": "adopted",
         "scope": ["city center / business district"],
+        "land": ["all uses"]
+      }
+    ]
+  },
+  "Troup County, Georgia, United States": {
+    "place": {
+      "name": "Troup County",
+      "state": "Georgia",
+      "country": "United States",
+      "type": "county",
+      "encoded": "troup-county-georgia-united-states",
+      "pop": 69426,
+      "coord": [-85.02699735789781, 33.00737697040952]
+    },
+    "add_max": [
+      {
+        "status": "adopted",
+        "scope": ["main street / special"],
         "land": ["all uses"]
       }
     ]
@@ -111353,6 +113865,24 @@
       }
     ]
   },
+  "Warren County, Mississippi, United States": {
+    "place": {
+      "name": "Warren County",
+      "state": "Mississippi",
+      "country": "United States",
+      "type": "county",
+      "encoded": "warren-county-mississippi-united-states",
+      "pop": 44722,
+      "coord": [-90.7975574, 32.3649516]
+    },
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["all uses"]
+      }
+    ]
+  },
   "Warren Township, New Jersey, United States": {
     "place": {
       "name": "Warren Township",
@@ -113509,6 +116039,24 @@
       }
     ]
   },
+  "Wellford, South Carolina, United States": {
+    "place": {
+      "name": "Wellford",
+      "state": "South Carolina",
+      "country": "United States",
+      "type": "city",
+      "encoded": "wellford-south-carolina-united-states",
+      "pop": 3293,
+      "coord": [-82.1059416, 34.9509521]
+    },
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["all uses"]
+      }
+    ]
+  },
   "Wellington North, Ontario, Canada": {
     "place": {
       "name": "Wellington North",
@@ -114107,6 +116655,19 @@
         "land": ["all uses"]
       }
     ],
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": [
+          "commercial",
+          "industrial",
+          "medical",
+          "other",
+          "residential, multi-family"
+        ]
+      }
+    ],
     "rm_min": [
       {
         "status": "proposed",
@@ -114651,6 +117212,24 @@
         "status": "adopted",
         "scope": ["city center / business district"],
         "land": ["all uses", "residential, all uses"]
+      }
+    ]
+  },
+  "West Pelzer, South Carolina, United States": {
+    "place": {
+      "name": "West Pelzer",
+      "state": "South Carolina",
+      "country": "United States",
+      "type": "city",
+      "encoded": "west-pelzer-south-carolina-united-states",
+      "pop": 962,
+      "coord": [-82.4701272, 34.644837]
+    },
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["all uses"]
       }
     ]
   },
@@ -116825,6 +119404,31 @@
       }
     ]
   },
+  "Wilmington, Massachusetts, United States": {
+    "place": {
+      "name": "Wilmington",
+      "state": "Massachusetts",
+      "country": "United States",
+      "type": "city",
+      "encoded": "wilmington-massachusetts-united-states",
+      "pop": 23349,
+      "coord": [-71.1736669, 42.5464828]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district", "transit-oriented"],
+        "land": ["commercial", "other", "residential, all uses"]
+      }
+    ],
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["transit-oriented"],
+        "land": ["residential, low-density"]
+      }
+    ]
+  },
   "Wilmington, North Carolina, United States": {
     "place": {
       "name": "Wilmington",
@@ -117003,6 +119607,24 @@
       "coord": [-84.1796503, 37.990079]
     },
     "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["all uses"]
+      }
+    ]
+  },
+  "Winchester, Massachusetts, United States": {
+    "place": {
+      "name": "Winchester",
+      "state": "Massachusetts",
+      "country": "United States",
+      "type": "city",
+      "encoded": "winchester-massachusetts-united-states",
+      "pop": 22970,
+      "coord": [-71.1369982, 42.4523178]
+    },
+    "reduce_min": [
       {
         "status": "adopted",
         "scope": ["city center / business district"],
@@ -117459,6 +120081,14 @@
       "pop": 26594,
       "coord": [-91.6392294, 44.0500054]
     },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["residential, all uses", "residential, multi-family"],
+        "date": "2026-05-04"
+      }
+    ],
     "rm_min": [
       {
         "status": "adopted",
@@ -119368,6 +121998,37 @@
       }
     ]
   },
+  "York County, South Carolina, United States": {
+    "place": {
+      "name": "York County",
+      "state": "South Carolina",
+      "country": "United States",
+      "type": "county",
+      "encoded": "york-county-south-carolina-united-states",
+      "pop": 282090,
+      "coord": [-81.1655408, 34.9603293]
+    },
+    "add_max": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": [
+          "commercial",
+          "industrial",
+          "medical",
+          "other",
+          "residential, multi-family"
+        ]
+      }
+    ],
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["main street / special"],
+        "land": ["all uses"]
+      }
+    ]
+  },
   "York, England, United Kingdom": {
     "place": {
       "name": "York",
@@ -119422,6 +122083,24 @@
       "coord": [-76.727707, 39.9624624]
     },
     "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["all uses"]
+      }
+    ]
+  },
+  "York, South Carolina, United States": {
+    "place": {
+      "name": "York",
+      "state": "South Carolina",
+      "country": "United States",
+      "type": "city",
+      "encoded": "york-south-carolina-united-states",
+      "pop": 8503,
+      "coord": [-81.24268948812878, 34.9939508157925]
+    },
+    "reduce_min": [
       {
         "status": "adopted",
         "scope": ["city center / business district"],
