@@ -44,10 +44,17 @@ function initSearchPopup(): SearchPopupObservable {
 }
 
 export default function initSearch(filterManager: PlaceFilterManager): void {
-  const places = Object.entries(filterManager.entries).map(([placeId]) => ({
-    value: placeId,
-    label: placeId,
-  }));
+  const places = Object.entries(filterManager.entries).map(
+    ([placeId, entry]) => ({
+      value: placeId,
+      label: placeId,
+      customProperties: {
+        place: entry.place.name,
+        state: entry.place.state ?? "",
+        country: entry.place.country,
+      },
+    }),
+  );
   const htmlElement = document.querySelector(".search");
   if (!htmlElement) return;
 
@@ -60,7 +67,12 @@ export default function initSearch(filterManager: PlaceFilterManager): void {
     itemSelectText: "",
     searchEnabled: true,
     searchResultLimit: 10,
-    searchFields: ["label"],
+    searchFields: [
+      "label",
+      "customProperties.place",
+      "customProperties.state",
+      "customProperties.country",
+    ],
   });
 
   // Set initial state.
