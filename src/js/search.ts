@@ -66,7 +66,9 @@ export default function initSearch(filterManager: PlaceFilterManager): void {
     allowHTML: false,
     itemSelectText: "",
     searchEnabled: true,
+    searchResultLimit: 10,
     searchFields: [
+      "label",
       "customProperties.place",
       "customProperties.state",
       "customProperties.country",
