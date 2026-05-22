@@ -163,10 +163,10 @@
     },
     "reduce_min": [
       {
-        "status": "proposed",
+        "status": "adopted",
         "scope": ["citywide"],
         "land": ["all uses"],
-        "date": "2025-11-12"
+        "date": "2026-03-09"
       }
     ],
     "rm_min": [
@@ -2465,6 +2465,24 @@
         "status": "adopted",
         "scope": ["transit-oriented"],
         "land": ["residential, multi-family"]
+      }
+    ]
+  },
+  "Amory, Mississippi, United States": {
+    "place": {
+      "name": "Amory",
+      "state": "Mississippi",
+      "country": "United States",
+      "type": "city",
+      "encoded": "amory-mississippi-united-states",
+      "pop": 6666,
+      "coord": [-88.4856105, 33.9869898]
+    },
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["all uses"]
       }
     ]
   },
@@ -8547,12 +8565,6 @@
         "status": "adopted",
         "scope": ["city center / business district"],
         "land": ["all uses"]
-      },
-      {
-        "status": "proposed",
-        "scope": ["citywide"],
-        "land": ["all uses"],
-        "date": "2024-08-19"
       }
     ]
   },
@@ -9190,12 +9202,6 @@
         "scope": ["city center / business district"],
         "land": ["all uses"],
         "date": "2023-05-01"
-      },
-      {
-        "status": "proposed",
-        "scope": ["citywide"],
-        "land": ["commercial"],
-        "date": "2009-01"
       }
     ]
   },
@@ -13545,6 +13551,24 @@
       }
     ]
   },
+  "Brookfield, Missouri, United States": {
+    "place": {
+      "name": "Brookfield",
+      "state": "Missouri",
+      "country": "United States",
+      "type": "city",
+      "encoded": "brookfield-missouri-united-states",
+      "pop": 4111,
+      "coord": [-93.0735348, 39.7844687]
+    },
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["commercial", "other"]
+      }
+    ]
+  },
   "Brookfield, Wisconsin, United States": {
     "place": {
       "name": "Brookfield",
@@ -13646,12 +13670,6 @@
         "status": "adopted",
         "scope": ["city center / business district"],
         "land": ["all uses"]
-      },
-      {
-        "status": "proposed",
-        "scope": ["citywide"],
-        "land": ["residential, multi-family"],
-        "date": "2022-06-13"
       }
     ]
   },
@@ -15746,6 +15764,31 @@
       "pop": 10089,
       "coord": [-81.5884561, 40.031183]
     },
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["all uses"]
+      }
+    ]
+  },
+  "Cambridge, Ontario, Canada": {
+    "place": {
+      "name": "Cambridge",
+      "state": "Ontario",
+      "country": "Canada",
+      "type": "city",
+      "encoded": "cambridge-ontario-canada",
+      "pop": 138479,
+      "coord": [-80.3123023, 43.3600536]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["commercial", "other"]
+      }
+    ],
     "rm_min": [
       {
         "status": "adopted",
@@ -32572,22 +32615,23 @@
       {
         "status": "adopted",
         "scope": ["citywide"],
-        "land": ["commercial", "industrial", "medical", "other"]
+        "land": ["all uses"],
+        "date": "2025-10-01"
       }
     ],
     "reduce_min": [
       {
         "status": "adopted",
-        "scope": ["city center / business district", "citywide"],
-        "land": ["all uses"]
+        "scope": ["citywide"],
+        "land": ["all uses", "residential, all uses"]
       }
     ],
     "rm_min": [
       {
-        "status": "proposed",
+        "status": "adopted",
         "scope": ["city center / business district"],
-        "land": ["all uses"],
-        "date": "2015-09"
+        "land": ["commercial", "other"],
+        "date": "2025-10-01"
       }
     ]
   },
@@ -33193,6 +33237,24 @@
       {
         "status": "adopted",
         "scope": ["citywide"],
+        "land": ["all uses"]
+      }
+    ]
+  },
+  "El Dorado Springs, Missouri, United States": {
+    "place": {
+      "name": "El Dorado Springs",
+      "state": "Missouri",
+      "country": "United States",
+      "type": "city",
+      "encoded": "el-dorado-springs-missouri-united-states",
+      "pop": 3493,
+      "coord": [-94.0213303, 37.8769799]
+    },
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
         "land": ["all uses"]
       }
     ]
@@ -36762,12 +36824,6 @@
         "status": "adopted",
         "scope": ["city center / business district"],
         "land": ["all uses"]
-      },
-      {
-        "status": "proposed",
-        "scope": ["citywide"],
-        "land": ["all uses"],
-        "date": "2023-07"
       },
       {
         "status": "adopted",
@@ -45291,25 +45347,6 @@
       }
     ]
   },
-  "Greenfield, Wisconsin, United States": {
-    "place": {
-      "name": "Greenfield",
-      "state": "Wisconsin",
-      "country": "United States",
-      "type": "city",
-      "encoded": "greenfield-wisconsin-united-states",
-      "pop": 37803,
-      "coord": [-87.98132, 42.9596903]
-    },
-    "rm_min": [
-      {
-        "status": "proposed",
-        "scope": ["citywide"],
-        "land": ["all uses", "residential, multi-family"],
-        "date": "2020-12-15"
-      }
-    ]
-  },
   "Greensboro, North Carolina, United States": {
     "place": {
       "name": "Greensboro",
@@ -49143,25 +49180,6 @@
         "status": "adopted",
         "scope": ["citywide"],
         "land": ["all uses"]
-      }
-    ]
-  },
-  "Hazelwood, Missouri, United States": {
-    "place": {
-      "name": "Hazelwood",
-      "state": "Missouri",
-      "country": "United States",
-      "type": "city",
-      "encoded": "hazelwood-missouri-united-states",
-      "pop": 25485,
-      "coord": [-90.3715909, 38.7761446]
-    },
-    "rm_min": [
-      {
-        "status": "proposed",
-        "scope": ["citywide"],
-        "land": ["commercial", "industrial"],
-        "date": "2024"
       }
     ]
   },
@@ -53911,14 +53929,6 @@
         "status": "adopted",
         "scope": ["city center / business district", "main street / special"],
         "land": ["commercial", "other"]
-      }
-    ],
-    "rm_min": [
-      {
-        "status": "proposed",
-        "scope": ["city center / business district"],
-        "land": ["commercial", "other"],
-        "date": "2022"
       }
     ]
   },
@@ -65770,12 +65780,6 @@
         "scope": ["regional"],
         "land": ["residential, low-density"],
         "date": "2022-04-18"
-      },
-      {
-        "status": "proposed",
-        "scope": ["regional"],
-        "land": ["all uses"],
-        "date": "2025"
       }
     ]
   },
@@ -69032,12 +69036,6 @@
         "status": "adopted",
         "scope": ["city center / business district"],
         "land": ["all uses"]
-      },
-      {
-        "status": "proposed",
-        "scope": ["main street / special"],
-        "land": ["all uses"],
-        "date": "2024-10"
       }
     ]
   },
@@ -77711,25 +77709,6 @@
       }
     ]
   },
-  "New Hampshire, United States": {
-    "place": {
-      "name": "New Hampshire",
-      "state": null,
-      "country": "United States",
-      "type": "state",
-      "encoded": "NewHampshire_NH",
-      "pop": 1377529,
-      "coord": [-71.59341813757975, 43.659069756492634]
-    },
-    "rm_min": [
-      {
-        "status": "proposed",
-        "scope": ["regional"],
-        "land": ["all uses"],
-        "date": "2025"
-      }
-    ]
-  },
   "New Haven, Connecticut, United States": {
     "place": {
       "name": "New Haven",
@@ -80122,25 +80101,6 @@
       }
     ]
   },
-  "North Carolina, United States": {
-    "place": {
-      "name": "North Carolina",
-      "state": null,
-      "country": "United States",
-      "type": "state",
-      "encoded": "NorthCarolina_NC",
-      "pop": 10439388,
-      "coord": [-79.52708508522043, 35.67688645584902]
-    },
-    "rm_min": [
-      {
-        "status": "proposed",
-        "scope": ["regional"],
-        "land": ["all uses"],
-        "date": "2025"
-      }
-    ]
-  },
   "North Chicago, Illinois, United States": {
     "place": {
       "name": "North Chicago",
@@ -80898,14 +80858,6 @@
         "scope": ["city center / business district", "citywide"],
         "land": ["all uses"],
         "date": "2025-09-22"
-      }
-    ],
-    "rm_min": [
-      {
-        "status": "proposed",
-        "scope": ["citywide"],
-        "land": ["all uses"],
-        "date": "2021-07"
       }
     ]
   },
@@ -82518,25 +82470,6 @@
       }
     ]
   },
-  "Oklahoma, United States": {
-    "place": {
-      "name": "Oklahoma",
-      "state": null,
-      "country": "United States",
-      "type": "state",
-      "encoded": "Oklahoma_OK",
-      "pop": 3959353,
-      "coord": [-97.16894365762012, 35.215088157083706]
-    },
-    "rm_min": [
-      {
-        "status": "proposed",
-        "scope": ["regional"],
-        "land": ["all uses"],
-        "date": "2025"
-      }
-    ]
-  },
   "Okolona, Mississippi, United States": {
     "place": {
       "name": "Okolona",
@@ -83464,12 +83397,6 @@
         "status": "adopted",
         "scope": ["city center / business district"],
         "land": ["all uses"]
-      },
-      {
-        "status": "proposed",
-        "scope": ["citywide"],
-        "land": ["all uses"],
-        "date": "2023-07-01"
       }
     ]
   },
@@ -85088,14 +85015,6 @@
         "status": "adopted",
         "scope": ["city center / business district"],
         "land": ["all uses"]
-      }
-    ],
-    "rm_min": [
-      {
-        "status": "proposed",
-        "scope": ["citywide"],
-        "land": ["all uses"],
-        "date": "2022"
       }
     ]
   },
@@ -89381,12 +89300,6 @@
         "status": "adopted",
         "scope": ["city center / business district"],
         "land": ["all uses"]
-      },
-      {
-        "status": "proposed",
-        "scope": ["citywide"],
-        "land": ["commercial"],
-        "date": "2008-06-02"
       }
     ]
   },
@@ -93412,14 +93325,6 @@
         "scope": ["citywide"],
         "land": ["all uses"]
       }
-    ],
-    "rm_min": [
-      {
-        "status": "proposed",
-        "scope": ["city center / business district"],
-        "land": ["all uses"],
-        "date": "2024"
-      }
     ]
   },
   "Ridgefield Park, New Jersey, United States": {
@@ -94097,25 +94002,6 @@
         "status": "adopted",
         "scope": ["city center / business district"],
         "land": ["all uses"]
-      }
-    ]
-  },
-  "Riverside, Missouri, United States": {
-    "place": {
-      "name": "Riverside",
-      "state": "Missouri",
-      "country": "United States",
-      "type": "city",
-      "encoded": "riverside-missouri-united-states",
-      "pop": 4013,
-      "coord": [-94.6130121, 39.1775032]
-    },
-    "rm_min": [
-      {
-        "status": "proposed",
-        "scope": ["citywide"],
-        "land": ["all uses"],
-        "date": "2024"
       }
     ]
   },
@@ -95265,14 +95151,6 @@
         "status": "adopted",
         "scope": ["city center / business district"],
         "land": ["all uses"]
-      }
-    ],
-    "rm_min": [
-      {
-        "status": "proposed",
-        "scope": ["city center / business district"],
-        "land": ["all uses"],
-        "date": "2025-01-14"
       }
     ]
   },
@@ -99915,12 +99793,6 @@
         "status": "adopted",
         "scope": ["city center / business district"],
         "land": ["all uses"]
-      },
-      {
-        "status": "proposed",
-        "scope": ["citywide"],
-        "land": ["all uses"],
-        "date": "2019"
       }
     ]
   },
@@ -101741,12 +101613,6 @@
         "status": "adopted",
         "scope": ["city center / business district"],
         "land": ["commercial"]
-      },
-      {
-        "status": "proposed",
-        "scope": ["citywide"],
-        "land": ["all uses"],
-        "date": "2022-11"
       }
     ]
   },
@@ -103747,14 +103613,6 @@
         "scope": ["citywide"],
         "land": ["commercial"]
       }
-    ],
-    "rm_min": [
-      {
-        "status": "proposed",
-        "scope": ["citywide"],
-        "land": ["commercial", "residential, all uses"],
-        "date": "2025-03-17"
-      }
     ]
   },
   "Speedway, Indiana, United States": {
@@ -104348,10 +104206,17 @@
     },
     "add_max": [
       {
-        "status": "proposed",
-        "scope": ["main street / special"],
-        "land": ["all uses"],
-        "date": "2022-11-14"
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["commercial", "industrial", "medical", "other"],
+        "date": "2026-04-06"
+      }
+    ],
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["all uses"]
       }
     ],
     "rm_min": [
@@ -104365,12 +104230,6 @@
         "scope": ["citywide"],
         "land": ["residential, low-density"],
         "date": "2024-01-08"
-      },
-      {
-        "status": "proposed",
-        "scope": ["main street / special"],
-        "land": ["all uses"],
-        "date": "2022-11-14"
       }
     ]
   },
@@ -104713,12 +104572,6 @@
         "status": "adopted",
         "scope": ["city center / business district"],
         "land": ["commercial", "other", "residential, all uses"]
-      },
-      {
-        "status": "proposed",
-        "scope": ["citywide"],
-        "land": ["all uses"],
-        "date": "2013-09"
       }
     ]
   },
@@ -107406,14 +107259,6 @@
         "status": "adopted",
         "scope": ["citywide"],
         "land": ["all uses"]
-      }
-    ],
-    "rm_min": [
-      {
-        "status": "proposed",
-        "scope": ["main street / special"],
-        "land": ["commercial"],
-        "date": "2018"
       }
     ]
   },
@@ -114097,12 +113942,6 @@
         "status": "adopted",
         "scope": ["city center / business district"],
         "land": ["all uses"]
-      },
-      {
-        "status": "proposed",
-        "scope": ["citywide"],
-        "land": ["all uses"],
-        "date": "2019-11"
       }
     ]
   },
@@ -118906,14 +118745,6 @@
           "other",
           "residential, multi-family"
         ]
-      }
-    ],
-    "rm_min": [
-      {
-        "status": "proposed",
-        "scope": ["citywide"],
-        "land": ["all uses"],
-        "date": "2023-07"
       }
     ]
   },
@@ -123781,14 +123612,6 @@
         "status": "adopted",
         "scope": ["citywide"],
         "land": ["all uses"]
-      }
-    ],
-    "rm_min": [
-      {
-        "status": "proposed",
-        "scope": ["city center / business district"],
-        "land": ["all uses"],
-        "date": "2016-08-16"
       }
     ]
   },
