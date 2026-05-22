@@ -8,7 +8,7 @@ runs:
       uses: actions/setup-node@v4
       with:
         node-version: 20
-        cache: 'npm'
+        cache: "npm"
     - name: Cache Playwright browsers
       uses: actions/cache@v4
       id: playwright-cache
