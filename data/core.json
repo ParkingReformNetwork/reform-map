@@ -3171,6 +3171,38 @@
       }
     ]
   },
+  "Apex, North Carolina, United States": {
+    "place": {
+      "name": "Apex",
+      "state": "North Carolina",
+      "country": "United States",
+      "type": "city",
+      "encoded": "apex-north-carolina-united-states",
+      "pop": 58780,
+      "coord": [-78.8505516, 35.7325352]
+    },
+    "add_max": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["all uses"]
+      }
+    ],
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide", "main street / special"],
+        "land": ["commercial", "medical", "other", "residential, all uses"]
+      }
+    ],
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["commercial"]
+      }
+    ]
+  },
   "Apple Valley, Minnesota, United States": {
     "place": {
       "name": "Apple Valley",
@@ -3977,6 +4009,20 @@
       "pop": 92870,
       "coord": [-82.5540161, 35.6009498]
     },
+    "add_max": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["all uses"]
+      }
+    ],
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district", "main street / special"],
+        "land": ["all uses"]
+      }
+    ],
     "rm_min": [
       {
         "status": "adopted",
@@ -13420,6 +13466,20 @@
       "pop": 113540,
       "coord": [-95.7908195, 36.0525993]
     },
+    "add_max": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["commercial", "industrial"]
+      }
+    ],
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["main street / special"],
+        "land": ["all uses"]
+      }
+    ],
     "rm_min": [
       {
         "status": "adopted",
@@ -14173,6 +14233,38 @@
       }
     ]
   },
+  "Brunswick, Maine, United States": {
+    "place": {
+      "name": "Brunswick",
+      "state": "Maine",
+      "country": "United States",
+      "type": "city",
+      "encoded": "brunswick-maine-united-states",
+      "pop": 21756,
+      "coord": [-69.9659438, 43.9166529]
+    },
+    "add_max": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["commercial"]
+      }
+    ],
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["main street / special"],
+        "land": ["all uses"]
+      }
+    ],
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide", "main street / special"],
+        "land": ["all uses", "residential, low-density"]
+      }
+    ]
+  },
   "Brunswick, Maryland, United States": {
     "place": {
       "name": "Brunswick",
@@ -14737,6 +14829,38 @@
       "pop": 9743,
       "coord": [-74.85820842173102, 40.07759772357719]
     },
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["all uses"]
+      }
+    ]
+  },
+  "Burlington, North Carolina, United States": {
+    "place": {
+      "name": "Burlington",
+      "state": "North Carolina",
+      "country": "United States",
+      "type": "city",
+      "encoded": "burlington-north-carolina-united-states",
+      "pop": 57303,
+      "coord": [-79.4377991, 36.0956918]
+    },
+    "add_max": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["commercial"]
+      }
+    ],
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide", "main street / special"],
+        "land": ["all uses", "residential, low-density"]
+      }
+    ],
     "rm_min": [
       {
         "status": "adopted",
@@ -19459,6 +19583,20 @@
       "pop": 885708,
       "coord": [-80.8430827, 35.2272086]
     },
+    "add_max": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district", "transit-oriented"],
+        "land": ["all uses"]
+      }
+    ],
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["all uses"]
+      }
+    ],
     "rm_min": [
       {
         "status": "adopted",
@@ -36765,6 +36903,24 @@
       }
     ]
   },
+  "Falmouth, Maine, United States": {
+    "place": {
+      "name": "Falmouth",
+      "state": "Maine",
+      "country": "United States",
+      "type": "city",
+      "encoded": "falmouth-maine-united-states",
+      "pop": 12444,
+      "coord": [-70.2327055, 43.7219859]
+    },
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["residential, low-density"]
+      }
+    ]
+  },
   "Falmouth, Massachusetts, United States": {
     "place": {
       "name": "Falmouth",
@@ -37873,6 +38029,12 @@
         "status": "adopted",
         "scope": ["city center / business district", "main street / special"],
         "land": ["all uses"]
+      },
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["all uses"],
+        "date": "2015-09-15"
       }
     ]
   },
@@ -40388,6 +40550,31 @@
       }
     ]
   },
+  "Freeport, Maine, United States": {
+    "place": {
+      "name": "Freeport",
+      "state": "Maine",
+      "country": "United States",
+      "type": "city",
+      "encoded": "freeport-maine-united-states",
+      "pop": 8737,
+      "coord": [-70.1028336, 43.8573292]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["commercial", "other", "residential, multi-family"]
+      }
+    ],
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["other", "residential, low-density"]
+      }
+    ]
+  },
   "Freeport, Michigan, United States": {
     "place": {
       "name": "Freeport",
@@ -40927,6 +41114,31 @@
         "status": "adopted",
         "scope": ["city center / business district", "main street / special"],
         "land": ["commercial", "other"]
+      }
+    ]
+  },
+  "Fuquay-Varina, North Carolina, United States": {
+    "place": {
+      "name": "Fuquay-Varina",
+      "state": "North Carolina",
+      "country": "United States",
+      "type": "city",
+      "encoded": "fuquay-varina-north-carolina-united-states",
+      "pop": 34152,
+      "coord": [-78.7998691, 35.5843849]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["all uses"]
+      }
+    ],
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district", "main street / special"],
+        "land": ["all uses", "commercial", "other"]
       }
     ]
   },
@@ -41600,6 +41812,24 @@
       }
     ]
   },
+  "Garner, North Carolina, United States": {
+    "place": {
+      "name": "Garner",
+      "state": "North Carolina",
+      "country": "United States",
+      "type": "city",
+      "encoded": "garner-north-carolina-united-states",
+      "pop": 31159,
+      "coord": [-78.6141709, 35.7112642]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district", "citywide"],
+        "land": ["all uses", "commercial", "other"]
+      }
+    ]
+  },
   "Garnett, Kansas, United States": {
     "place": {
       "name": "Garnett",
@@ -41918,11 +42148,28 @@
       "pop": 7574,
       "coord": [-77.816947, 42.795896]
     },
+    "add_max": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["all uses"],
+        "date": "2025"
+      }
+    ],
     "reduce_min": [
       {
         "status": "adopted",
-        "scope": ["main street / special"],
-        "land": ["all uses"]
+        "scope": ["citywide"],
+        "land": ["all uses"],
+        "date": "2025"
+      }
+    ],
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide", "main street / special"],
+        "land": ["all uses"],
+        "date": "2025"
       }
     ]
   },
@@ -43423,6 +43670,37 @@
       }
     ]
   },
+  "Goldsboro, North Carolina, United States": {
+    "place": {
+      "name": "Goldsboro",
+      "state": "North Carolina",
+      "country": "United States",
+      "type": "city",
+      "encoded": "goldsboro-north-carolina-united-states",
+      "pop": 33657,
+      "coord": [-77.9927651, 35.3848841]
+    },
+    "add_max": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": [
+          "commercial",
+          "industrial",
+          "medical",
+          "other",
+          "residential, multi-family"
+        ]
+      }
+    ],
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["all uses"]
+      }
+    ]
+  },
   "Golf, Illinois, United States": {
     "place": {
       "name": "Golf",
@@ -43660,6 +43938,24 @@
         "status": "adopted",
         "scope": ["city center / business district"],
         "land": ["commercial"]
+      }
+    ]
+  },
+  "Gorham, Maine, United States": {
+    "place": {
+      "name": "Gorham",
+      "state": "Maine",
+      "country": "United States",
+      "type": "city",
+      "encoded": "gorham-maine-united-states",
+      "pop": 18336,
+      "coord": [-70.4429592, 43.6797334]
+    },
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["residential, low-density"]
       }
     ]
   },
@@ -45502,6 +45798,31 @@
         "status": "adopted",
         "scope": ["citywide"],
         "land": ["commercial", "industrial", "medical", "other"]
+      }
+    ]
+  },
+  "Greenville, North Carolina, United States": {
+    "place": {
+      "name": "Greenville",
+      "state": "North Carolina",
+      "country": "United States",
+      "type": "city",
+      "encoded": "greenville-north-carolina-united-states",
+      "pop": 87521,
+      "coord": [-77.3724593, 35.613224]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["commercial", "other", "residential, multi-family"]
+      }
+    ],
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["all uses"]
       }
     ]
   },
@@ -50067,6 +50388,13 @@
       "pop": 41171,
       "coord": [-81.3442915, 35.7333312]
     },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["all uses"]
+      }
+    ],
     "rm_min": [
       {
         "status": "adopted",
@@ -50108,6 +50436,35 @@
         "status": "adopted",
         "scope": ["city center / business district"],
         "land": ["commercial", "other"]
+      }
+    ]
+  },
+  "High Point, North Carolina, United States": {
+    "place": {
+      "name": "High Point",
+      "state": "North Carolina",
+      "country": "United States",
+      "type": "city",
+      "encoded": "high-point-north-carolina-united-states",
+      "pop": 114059,
+      "coord": [-80.0053176, 35.9556924]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["commercial", "industrial", "medical", "other"]
+      }
+    ],
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": [
+          "city center / business district",
+          "citywide",
+          "main street / special"
+        ],
+        "land": ["all uses", "residential, multi-family"]
       }
     ]
   },
@@ -51095,6 +51452,37 @@
       }
     ]
   },
+  "Holly Springs, North Carolina, United States": {
+    "place": {
+      "name": "Holly Springs",
+      "state": "North Carolina",
+      "country": "United States",
+      "type": "city",
+      "encoded": "holly-springs-north-carolina-united-states",
+      "pop": 41239,
+      "coord": [-78.8336218, 35.6512655]
+    },
+    "add_max": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": [
+          "commercial",
+          "industrial",
+          "medical",
+          "other",
+          "residential, multi-family"
+        ]
+      }
+    ],
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["all uses"]
+      }
+    ]
+  },
   "Holly, Michigan, United States": {
     "place": {
       "name": "Holly",
@@ -51240,6 +51628,12 @@
         "status": "adopted",
         "scope": ["city center / business district"],
         "land": ["all uses"]
+      },
+      {
+        "status": "proposed",
+        "scope": ["citywide"],
+        "land": ["all uses", "residential, all uses"],
+        "date": "2026"
       }
     ]
   },
@@ -51265,6 +51659,33 @@
         "status": "adopted",
         "scope": ["city center / business district"],
         "land": ["commercial", "other"]
+      }
+    ]
+  },
+  "Homewood, Alabama, United States": {
+    "place": {
+      "name": "Homewood",
+      "state": "Alabama",
+      "country": "United States",
+      "type": "city",
+      "encoded": "homewood-alabama-united-states",
+      "pop": 26414,
+      "coord": [-86.8084509, 33.4737098]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["main street / special"],
+        "land": ["all uses"],
+        "date": "2025-06-10"
+      }
+    ],
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["main street / special"],
+        "land": ["commercial"],
+        "date": "2025-06-10"
       }
     ]
   },
@@ -54336,6 +54757,38 @@
       }
     ]
   },
+  "Jacksonville, North Carolina, United States": {
+    "place": {
+      "name": "Jacksonville",
+      "state": "North Carolina",
+      "country": "United States",
+      "type": "city",
+      "encoded": "jacksonville-north-carolina-united-states",
+      "pop": 72723,
+      "coord": [-77.4309829, 34.7509962]
+    },
+    "add_max": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["commercial", "industrial"]
+      }
+    ],
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["all uses"]
+      }
+    ],
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["all uses"]
+      }
+    ]
+  },
   "Jacksonville, Oregon, United States": {
     "place": {
       "name": "Jacksonville",
@@ -54528,6 +54981,24 @@
         "status": "adopted",
         "scope": ["citywide"],
         "land": ["commercial", "industrial", "other"]
+      }
+    ]
+  },
+  "Jasper, Alabama, United States": {
+    "place": {
+      "name": "Jasper",
+      "state": "Alabama",
+      "country": "United States",
+      "type": "city",
+      "encoded": "jasper-alabama-united-states",
+      "pop": 14572,
+      "coord": [-87.2775053, 33.8312185]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["all uses"]
       }
     ]
   },
@@ -56003,6 +56474,38 @@
         "status": "adopted",
         "scope": ["city center / business district"],
         "land": ["commercial"]
+      }
+    ]
+  },
+  "Kannapolis, North Carolina, United States": {
+    "place": {
+      "name": "Kannapolis",
+      "state": "North Carolina",
+      "country": "United States",
+      "type": "city",
+      "encoded": "kannapolis-north-carolina-united-states",
+      "pop": 53114,
+      "coord": [-80.6240008, 35.4979605]
+    },
+    "add_max": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["all uses"]
+      }
+    ],
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district", "transit-oriented"],
+        "land": ["all uses"]
+      }
+    ],
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["transit-oriented"],
+        "land": ["all uses"]
       }
     ]
   },
@@ -66352,6 +66855,11 @@
         "scope": ["city center / business district"],
         "land": ["residential, multi-family"],
         "date": "2024-05-21"
+      },
+      {
+        "status": "adopted",
+        "scope": ["main street / special"],
+        "land": ["residential, all uses", "residential, multi-family"]
       }
     ],
     "rm_min": [
@@ -67983,6 +68491,25 @@
       }
     ]
   },
+  "Maryland, United States": {
+    "place": {
+      "name": "Maryland",
+      "state": null,
+      "country": "United States",
+      "type": "state",
+      "encoded": "maryland-united-states",
+      "pop": 6177224,
+      "coord": [-76.9382069, 39.5162401]
+    },
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["transit-oriented"],
+        "land": ["commercial", "other", "residential, all uses"],
+        "date": "2026-05-26"
+      }
+    ]
+  },
   "Marysville, Ohio, United States": {
     "place": {
       "name": "Marysville",
@@ -68462,6 +68989,33 @@
         "status": "adopted",
         "scope": ["city center / business district"],
         "land": ["commercial", "other", "residential, all uses"]
+      }
+    ]
+  },
+  "Mayflower, Arkansas, United States": {
+    "place": {
+      "name": "Mayflower",
+      "state": "Arkansas",
+      "country": "United States",
+      "type": "city",
+      "encoded": "mayflower-arkansas-united-states",
+      "pop": 1984,
+      "coord": [-92.4273785, 34.9570325]
+    },
+    "add_max": [
+      {
+        "status": "proposed",
+        "scope": ["citywide"],
+        "land": ["all uses"],
+        "date": "2026"
+      }
+    ],
+    "rm_min": [
+      {
+        "status": "proposed",
+        "scope": ["citywide"],
+        "land": ["all uses"],
+        "date": "2026"
       }
     ]
   },
@@ -72433,6 +72987,12 @@
         "status": "adopted",
         "scope": ["city center / business district"],
         "land": ["all uses"]
+      },
+      {
+        "status": "adopted",
+        "scope": ["main street / special"],
+        "land": ["all uses"],
+        "date": "2025-06-03"
       }
     ]
   },
@@ -77265,6 +77825,37 @@
         "status": "adopted",
         "scope": ["citywide"],
         "land": ["all uses"]
+      }
+    ]
+  },
+  "New Bern, North Carolina, United States": {
+    "place": {
+      "name": "New Bern",
+      "state": "North Carolina",
+      "country": "United States",
+      "type": "city",
+      "encoded": "new-bern-north-carolina-united-states",
+      "pop": 31291,
+      "coord": [-77.0398762, 35.1068428]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["all uses"]
+      }
+    ],
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": [
+          "commercial",
+          "industrial",
+          "medical",
+          "other",
+          "residential, all uses"
+        ]
       }
     ]
   },
@@ -82574,6 +83165,24 @@
         "status": "adopted",
         "scope": ["main street / special"],
         "land": ["commercial"]
+      }
+    ]
+  },
+  "Old Orchard Beach, Maine, United States": {
+    "place": {
+      "name": "Old Orchard Beach",
+      "state": "Maine",
+      "country": "United States",
+      "type": "city",
+      "encoded": "old-orchard-beach-maine-united-states",
+      "pop": 8960,
+      "coord": [-70.3561571, 43.5075575]
+    },
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["commercial", "other"]
       }
     ]
   },
@@ -94944,6 +95553,38 @@
       }
     ]
   },
+  "Rocky Mount, North Carolina, United States": {
+    "place": {
+      "name": "Rocky Mount",
+      "state": "North Carolina",
+      "country": "United States",
+      "type": "city",
+      "encoded": "rocky-mount-north-carolina-united-states",
+      "pop": 54341,
+      "coord": [-77.7956949, 35.9423833]
+    },
+    "add_max": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district", "citywide"],
+        "land": ["all uses", "commercial", "industrial", "medical", "other"]
+      }
+    ],
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district", "citywide"],
+        "land": ["all uses"]
+      }
+    ],
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["all uses"]
+      }
+    ]
+  },
   "Rocky Mount, Virginia, United States": {
     "place": {
       "name": "Rocky Mount",
@@ -98437,6 +99078,24 @@
       }
     ]
   },
+  "Scarborough, Maine, United States": {
+    "place": {
+      "name": "Scarborough",
+      "state": "Maine",
+      "country": "United States",
+      "type": "city",
+      "encoded": "scarborough-maine-united-states",
+      "pop": 22135,
+      "coord": [-70.3344722, 43.590148]
+    },
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["residential, low-density"]
+      }
+    ]
+  },
   "Scarsdale, New York, United States": {
     "place": {
       "name": "Scarsdale",
@@ -99627,13 +100286,15 @@
       "type": "city",
       "encoded": "Seward_AK",
       "pop": 2717,
-      "coord": [-149.4404281, 60.1013952]
+      "coord": [-149.4404281, 60.1013952],
+      "repeal": true
     },
     "rm_min": [
       {
         "status": "adopted",
-        "scope": ["city center / business district"],
-        "land": ["commercial"]
+        "scope": ["citywide"],
+        "land": ["all uses"],
+        "date": "2026-02-23"
       }
     ]
   },
@@ -105618,6 +106279,12 @@
         "scope": ["city center / business district", "main street / special"],
         "land": ["all uses", "residential, all uses"],
         "date": "2024-09-12"
+      },
+      {
+        "status": "adopted",
+        "scope": ["transit-oriented"],
+        "land": ["all uses"],
+        "date": "2026-05-14"
       }
     ]
   },
@@ -111249,6 +111916,13 @@
       "pop": 125963,
       "coord": [-95.677556, 39.049011]
     },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["all uses"]
+      }
+    ],
     "rm_min": [
       {
         "status": "adopted",
@@ -113581,6 +114255,24 @@
         "status": "adopted",
         "scope": ["city center / business district"],
         "land": ["all uses"]
+      }
+    ]
+  },
+  "Valdez, Alaska, United States": {
+    "place": {
+      "name": "Valdez",
+      "state": "Alaska",
+      "country": "United States",
+      "type": "city",
+      "encoded": "valdez-alaska-united-states",
+      "pop": 3985,
+      "coord": [-146.349363, 61.1299396]
+    },
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["commercial", "industrial", "medical", "other"]
       }
     ]
   },
@@ -116712,6 +117404,24 @@
       }
     ]
   },
+  "Wasilla, Alaska, United States": {
+    "place": {
+      "name": "Wasilla",
+      "state": "Alaska",
+      "country": "United States",
+      "type": "city",
+      "encoded": "wasilla-alaska-united-states",
+      "pop": 9054,
+      "coord": [-149.442563, 61.5824216]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["all uses"]
+      }
+    ]
+  },
   "Watchung, New Jersey, United States": {
     "place": {
       "name": "Watchung",
@@ -118205,6 +118915,24 @@
         "status": "adopted",
         "scope": ["city center / business district"],
         "land": ["all uses"]
+      }
+    ]
+  },
+  "Wells, Maine, United States": {
+    "place": {
+      "name": "Wells",
+      "state": "Maine",
+      "country": "United States",
+      "type": "city",
+      "encoded": "wells-maine-united-states",
+      "pop": 11314,
+      "coord": [-70.5807422, 43.3220487]
+    },
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["residential, low-density"]
       }
     ]
   },
@@ -121528,6 +122256,13 @@
       "pop": 123744,
       "coord": [-77.9447107, 34.2257282]
     },
+    "add_max": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["all uses"]
+      }
+    ],
     "rm_min": [
       {
         "status": "adopted",
@@ -122271,6 +123006,24 @@
       "pop": 247945,
       "coord": [-80.2440518, 36.0998131]
     },
+    "add_max": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["all uses"]
+      }
+    ],
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": [
+          "city center / business district",
+          "citywide",
+          "main street / special"
+        ],
+        "land": ["all uses", "commercial", "industrial", "medical", "other"]
+      }
+    ],
     "rm_min": [
       {
         "status": "adopted",
@@ -123836,6 +124589,24 @@
         "status": "adopted",
         "scope": ["citywide"],
         "land": ["all uses"]
+      }
+    ]
+  },
+  "Yarmouth, Maine, United States": {
+    "place": {
+      "name": "Yarmouth",
+      "state": "Maine",
+      "country": "United States",
+      "type": "city",
+      "encoded": "yarmouth-maine-united-states",
+      "pop": 8990,
+      "coord": [-70.187578, 43.8009132]
+    },
+    "add_max": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["residential, multi-family"]
       }
     ]
   },
