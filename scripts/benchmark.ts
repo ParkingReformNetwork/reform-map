@@ -11,7 +11,6 @@ import { chromium, type Browser, type CDPSession, type Page } from "playwright";
 const PORT = process.env.PORT || "8080";
 const BASE_URL = `http://127.0.0.1:${PORT}`;
 
-const MAP_COUNTER = "#map-counter";
 const TABLE_COUNTER = "#table-counter";
 const TABLE_TOGGLE = ".header-table-icon-container";
 const MAP_TOGGLE = ".header-map-icon-container";
@@ -24,6 +23,49 @@ const COUNTER_READY = (selector: string): boolean => {
   const el = document.querySelector(selector);
   return !!el && (el.textContent ?? "").trim().startsWith("Showing");
 };
+
+// Instrumentation installed BEFORE the app runs so we can capture two
+// app-specific moments on the browser's own clock (relative to navigation
+// start, same base as Navigation/Paint/Resource Timing):
+//   - counterReady: the counter text turns to "Showing ..." -- i.e. the app's
+//     synchronous filter+build work is done and markers have been inserted into
+//     the DOM (but not yet painted).
+//   - markersPainted: the frame containing those markers has actually painted,
+//     which is what the user perceives as "the map is ready". We detect the
+//     counter in a requestAnimationFrame (runs before that frame's paint) and
+//     then post a MessageChannel task (runs just after that frame's paint).
+// Passed to addInitScript as a raw string so tsx/esbuild never transpiles it
+// (which would reintroduce the browser-undefined `__name` helper).
+const INIT_LOAD_INSTRUMENTATION = `
+  window.__bench = { counterReady: null, markersPainted: null };
+  (function () {
+    function poll() {
+      var c = document.querySelector("#map-counter");
+      if (c && (c.textContent || "").trim().indexOf("Showing") === 0) {
+        window.__bench.counterReady = performance.now();
+        var ch = new MessageChannel();
+        ch.port1.onmessage = function () {
+          window.__bench.markersPainted = performance.now();
+        };
+        ch.port2.postMessage(0);
+        return;
+      }
+      requestAnimationFrame(poll);
+    }
+    requestAnimationFrame(poll);
+  })();
+`;
+
+interface InitialLoadMarks {
+  // Cumulative milliseconds from navigation start.
+  responseEndMs: number;
+  fcpMs: number;
+  dataFetchedMs: number;
+  dataUrl: string;
+  counterReadyMs: number;
+  paintedMs: number;
+  numPlaces: number;
+}
 
 interface Args {
   runs: number;
@@ -75,7 +117,14 @@ async function assertServerReachable(): Promise<void> {
 }
 
 interface RunResult {
-  initialLoadMs: number;
+  // Initial load broken into cumulative marks from navigation start, so a
+  // regression can be attributed to network, first paint, the (dominant) data
+  // download, JS build, or marker paint -- rather than a single opaque number.
+  initialResponseEndMs: number;
+  initialFcpMs: number;
+  initialDataFetchedMs: number;
+  initialCounterReadyMs: number;
+  initialPaintedMs: number;
   tableLoadMs: number;
   // "Ms" fields are time-to-paint (felt latency); "JsMs" fields are the
   // synchronous JS portion only, kept to show how much of the cost is paint.
@@ -157,6 +206,7 @@ async function runOnce(browser: Browser): Promise<RunResult> {
   await page.addInitScript(
     "globalThis.__name = globalThis.__name || function (f) { return f; };",
   );
+  await page.addInitScript(INIT_LOAD_INSTRUMENTATION);
 
   const client: CDPSession = await context.newCDPSession(page);
   await client.send("Network.enable");
@@ -177,16 +227,61 @@ async function runOnce(browser: Browser): Promise<RunResult> {
   });
 
   try {
-    // `waitUntil: "commit"` returns as soon as navigation commits so our timer
-    // spans the full download + parse + render, not just the load event.
-    const startInitial = performance.now();
+    // `waitUntil: "commit"` returns as soon as navigation commits; the in-page
+    // instrumentation (installed above, before any app code) records the load
+    // marks on the browser's own clock, so we don't measure across the
+    // Node<->browser boundary. Wait until the map has actually painted.
     await page.goto(BASE_URL, { waitUntil: "commit" });
-    await page.waitForFunction(COUNTER_READY, MAP_COUNTER, { timeout: 60_000 });
-    const initialLoadMs = performance.now() - startInitial;
+    await page.waitForFunction(
+      () => {
+        const w = window as unknown as {
+          __bench: { markersPainted: number | null };
+        };
+        // eslint-disable-next-line no-underscore-dangle
+        return w.__bench.markersPainted != null;
+      },
+      undefined,
+      { timeout: 60_000 },
+    );
 
-    const counterText = (await page.locator(MAP_COUNTER).innerText()).trim();
-    const match = counterText.match(/\d+/);
-    const numPlaces = match ? parseInt(match[0], 10) : 0;
+    // Collect the initial-load marks. Navigation/Paint/Resource Timing and
+    // performance.now() all share the same origin (navigation start), so these
+    // are directly comparable cumulative offsets. "data fetched" uses the
+    // largest resource by transfer size -- the ~3 MB data payload -- without
+    // hard-coding its hashed URL.
+    const initial: InitialLoadMarks = await page.evaluate(() => {
+      const nav = performance.getEntriesByType("navigation")[0] as
+        | PerformanceNavigationTiming
+        | undefined;
+      const fcp = performance
+        .getEntriesByType("paint")
+        .find((entry) => entry.name === "first-contentful-paint");
+      let largest: PerformanceResourceTiming | undefined;
+      for (const entry of performance.getEntriesByType(
+        "resource",
+      ) as PerformanceResourceTiming[]) {
+        if (!largest || entry.transferSize > largest.transferSize) {
+          largest = entry;
+        }
+      }
+      const counter = document.querySelector("#map-counter");
+      const digits = (counter?.textContent ?? "").match(/\d+/);
+      const w = window as unknown as {
+        __bench: { counterReady: number; markersPainted: number };
+      };
+      // eslint-disable-next-line no-underscore-dangle
+      const bench = w.__bench;
+      return {
+        responseEndMs: nav ? nav.responseEnd : 0,
+        fcpMs: fcp ? fcp.startTime : 0,
+        dataFetchedMs: largest ? largest.responseEnd : 0,
+        dataUrl: largest ? largest.name : "",
+        counterReadyMs: bench.counterReady,
+        paintedMs: bench.markersPainted,
+        numPlaces: digits ? parseInt(digits[0], 10) : 0,
+      };
+    });
+    const { numPlaces } = initial;
 
     const startTable = performance.now();
     await page.locator(TABLE_TOGGLE).click();
@@ -207,7 +302,11 @@ async function runOnce(browser: Browser): Promise<RunResult> {
     const totalBytes = Object.values(resources).reduce((a, b) => a + b, 0);
 
     return {
-      initialLoadMs,
+      initialResponseEndMs: initial.responseEndMs,
+      initialFcpMs: initial.fcpMs,
+      initialDataFetchedMs: initial.dataFetchedMs,
+      initialCounterReadyMs: initial.counterReadyMs,
+      initialPaintedMs: initial.paintedMs,
       tableLoadMs,
       filterReduceMinMs: forward.paintedMs,
       filterReduceMinJsMs: forward.jsMs,
@@ -267,8 +366,8 @@ async function main(): Promise<void> {
       runs.push(result);
       console.log(
         `Run ${i + 1}/${args.runs}: initial ${fmtMs(
-          result.initialLoadMs,
-        )}, table ${fmtMs(result.tableLoadMs)}, transfer ${fmtMb(
+          result.initialPaintedMs,
+        )} painted, table ${fmtMs(result.tableLoadMs)}, transfer ${fmtMb(
           result.totalBytes,
         )}`,
       );
@@ -278,7 +377,11 @@ async function main(): Promise<void> {
   }
 
   const { numPlaces } = runs[0];
-  const initial = summarize(runs.map((r) => r.initialLoadMs));
+  const responseEnd = summarize(runs.map((r) => r.initialResponseEndMs));
+  const fcp = summarize(runs.map((r) => r.initialFcpMs));
+  const dataFetched = summarize(runs.map((r) => r.initialDataFetchedMs));
+  const counterReady = summarize(runs.map((r) => r.initialCounterReadyMs));
+  const painted = summarize(runs.map((r) => r.initialPaintedMs));
   const table = summarize(runs.map((r) => r.tableLoadMs));
   const filterReduceMin = summarize(runs.map((r) => r.filterReduceMinMs));
   const filterReduceMinJs = summarize(runs.map((r) => r.filterReduceMinJsMs));
@@ -295,13 +398,25 @@ async function main(): Promise<void> {
     .sort((a, b) => b[1] - a[1])
     .slice(0, 5);
 
+  const markLine = (
+    label: string,
+    s: { median: number; min: number; max: number },
+    note = "",
+  ): void =>
+    console.log(
+      `  ${label.padEnd(16)}median ${fmtMs(s.median)} (min ${fmtMs(
+        s.min,
+      )}, max ${fmtMs(s.max)})${note}`,
+    );
+
   console.log(`\n===== Summary =====`);
   console.log(`Places shown:  ${numPlaces}`);
-  console.log(
-    `Initial load:  median ${fmtMs(initial.median)} (min ${fmtMs(
-      initial.min,
-    )}, max ${fmtMs(initial.max)})`,
-  );
+  console.log(`Initial load (cumulative ms from navigation start):`);
+  markLine("response end:", responseEnd, "  HTML downloaded");
+  markLine("first paint:", fcp, "  first pixels");
+  markLine("data fetched:", dataFetched, "  largest resource");
+  markLine("counter ready:", counterReady, "  JS filter/build done");
+  markLine("markers painted:", painted, "  map visible (felt load)");
   console.log(
     `Table load:    median ${fmtMs(table.median)} (min ${fmtMs(
       table.min,
@@ -338,7 +453,11 @@ async function main(): Promise<void> {
     url: BASE_URL,
     numPlaces,
     summary: {
-      initialLoadMs: initial,
+      initialResponseEndMs: responseEnd,
+      initialFcpMs: fcp,
+      initialDataFetchedMs: dataFetched,
+      initialCounterReadyMs: counterReady,
+      initialPaintedMs: painted,
       tableLoadMs: table,
       filterReduceMinMs: filterReduceMin,
       filterReduceMinJsMs: filterReduceMinJs,
@@ -347,7 +466,11 @@ async function main(): Promise<void> {
       totalBytes: transfer,
     },
     runs: runs.map((r) => ({
-      initialLoadMs: r.initialLoadMs,
+      initialResponseEndMs: r.initialResponseEndMs,
+      initialFcpMs: r.initialFcpMs,
+      initialDataFetchedMs: r.initialDataFetchedMs,
+      initialCounterReadyMs: r.initialCounterReadyMs,
+      initialPaintedMs: r.initialPaintedMs,
       tableLoadMs: r.tableLoadMs,
       filterReduceMinMs: r.filterReduceMinMs,
       filterReduceMinJsMs: r.filterReduceMinJsMs,
