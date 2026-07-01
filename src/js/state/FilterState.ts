@@ -86,6 +86,8 @@ type PlaceMatch =
 interface CacheEntry {
   version: number;
   matchedPlaces: Record<PlaceId, PlaceMatch>;
+  placeIds: Set<PlaceId>;
+  numMatchedPlaces: number;
   matchedCountries: Set<string>;
   matchedPolicyTypesForAnyPolicy: Set<PolicyType>;
   matchedPlaceTypes: Set<PlaceType>;
@@ -148,7 +150,11 @@ export class PlaceFilterManager {
   }
 
   get placeIds(): Set<PlaceId> {
-    return new Set(Object.keys(this.matchedPlaces));
+    return this.ensureCache().placeIds;
+  }
+
+  get numMatchedPlaces(): number {
+    return this.ensureCache().numMatchedPlaces;
   }
 
   get matchedCountries(): Set<string> {
@@ -194,13 +200,17 @@ export class PlaceFilterManager {
     }
 
     const matchedPlaces: Record<PlaceId, PlaceMatch> = {};
+    const placeIds = new Set<PlaceId>();
     const matchedCountries = new Set<string>();
     const matchedPolicyTypes = new Set<PolicyType>();
     const matchedPlaceTypes = new Set<PlaceType>();
+    let numMatchedPlaces = 0;
     for (const placeId of Object.keys(this.entries)) {
       const match = this.getPlaceMatch(placeId);
       if (!match) continue;
       matchedPlaces[placeId] = match;
+      placeIds.add(placeId);
+      numMatchedPlaces += 1;
       matchedCountries.add(this.entries[placeId].place.country);
       matchedPlaceTypes.add(this.entries[placeId].place.type);
       if (match.type === "any") {
@@ -216,6 +226,8 @@ export class PlaceFilterManager {
     this.cache = {
       version: this.stateVersion,
       matchedPlaces,
+      placeIds,
+      numMatchedPlaces,
       matchedCountries,
       matchedPolicyTypesForAnyPolicy: matchedPolicyTypes,
       matchedPlaceTypes,
