@@ -1965,6 +1965,24 @@
       }
     ]
   },
+  "Alpine, Utah, United States": {
+    "place": {
+      "name": "Alpine",
+      "state": "Utah",
+      "country": "United States",
+      "type": "city",
+      "encoded": "alpine-utah-united-states",
+      "pop": 10272,
+      "coord": [-111.7779596, 40.453253]
+    },
+    "add_max": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["other"]
+      }
+    ]
+  },
   "Alta Vista, Kansas, United States": {
     "place": {
       "name": "Alta Vista",
@@ -3260,6 +3278,11 @@
         "scope": ["citywide"],
         "land": ["all uses"],
         "date": "2025"
+      },
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["residential, low-density"]
       }
     ]
   },
@@ -3990,6 +4013,24 @@
       "encoded": "ashburn-georgia-united-states",
       "pop": 4291,
       "coord": [-83.6535591, 31.7059751]
+    },
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["all uses"]
+      }
+    ]
+  },
+  "Asheboro, North Carolina, United States": {
+    "place": {
+      "name": "Asheboro",
+      "state": "North Carolina",
+      "country": "United States",
+      "type": "city",
+      "encoded": "asheboro-north-carolina-united-states",
+      "pop": 27156,
+      "coord": [-79.8136446, 35.7079146]
     },
     "rm_min": [
       {
@@ -6893,14 +6934,26 @@
       "country": "United States",
       "type": "city",
       "encoded": "Bath_ME",
-      "pop": 8338,
+      "pop": 8766,
       "coord": [-69.820862, 43.910755]
     },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["all uses"]
+      }
+    ],
     "rm_min": [
       {
         "status": "adopted",
         "scope": ["city center / business district"],
         "land": ["commercial"]
+      },
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["residential, low-density"]
       }
     ]
   },
@@ -8600,10 +8653,9 @@
     },
     "add_max": [
       {
-        "status": "proposed",
+        "status": "adopted",
         "scope": ["citywide"],
-        "land": ["all uses"],
-        "date": "2024-08-19"
+        "land": ["residential, all uses"]
       }
     ],
     "rm_min": [
@@ -9894,6 +9946,24 @@
       }
     ]
   },
+  "Biddeford, Maine, United States": {
+    "place": {
+      "name": "Biddeford",
+      "state": "Maine",
+      "country": "United States",
+      "type": "city",
+      "encoded": "biddeford-maine-united-states",
+      "pop": 22552,
+      "coord": [-70.4533844, 43.4925843]
+    },
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["residential, low-density"]
+      }
+    ]
+  },
   "Bienfait, Saskatchewan, Canada": {
     "place": {
       "name": "Bienfait",
@@ -11162,6 +11232,24 @@
       }
     ]
   },
+  "Bluffdale, Utah, United States": {
+    "place": {
+      "name": "Bluffdale",
+      "state": "Utah",
+      "country": "United States",
+      "type": "city",
+      "encoded": "bluffdale-utah-united-states",
+      "pop": 18168,
+      "coord": [-111.939284, 40.4898176]
+    },
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["main street / special"],
+        "land": ["all uses"]
+      }
+    ]
+  },
   "Bluffton, Indiana, United States": {
     "place": {
       "name": "Bluffton",
@@ -11311,14 +11399,16 @@
       {
         "status": "adopted",
         "scope": ["citywide"],
-        "land": ["all uses", "commercial", "industrial"]
+        "land": ["all uses", "commercial", "industrial"],
+        "date": "2023-12"
       }
     ],
     "rm_min": [
       {
         "status": "adopted",
         "scope": ["city center / business district", "citywide"],
-        "land": ["all uses", "residential, low-density"]
+        "land": ["all uses", "residential, low-density"],
+        "date": "2023-12"
       }
     ]
   },
@@ -11586,6 +11676,38 @@
         "status": "adopted",
         "scope": ["city center / business district"],
         "land": ["all uses"]
+      }
+    ]
+  },
+  "Boone, North Carolina, United States": {
+    "place": {
+      "name": "Boone",
+      "state": "North Carolina",
+      "country": "United States",
+      "type": "city",
+      "encoded": "boone-north-carolina-united-states",
+      "pop": 19092,
+      "coord": [-81.684004, 36.2187873]
+    },
+    "add_max": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["all uses"]
+      }
+    ],
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide", "main street / special"],
+        "land": ["residential, multi-family"]
+      }
+    ],
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["commercial", "industrial", "medical", "other"]
       }
     ]
   },
@@ -14721,6 +14843,24 @@
       }
     ]
   },
+  "Burley, Idaho, United States": {
+    "place": {
+      "name": "Burley",
+      "state": "Idaho",
+      "country": "United States",
+      "type": "city",
+      "encoded": "burley-idaho-united-states",
+      "pop": 11704,
+      "coord": [-113.792794, 42.5357428]
+    },
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["all uses"]
+      }
+    ]
+  },
   "Burlington Township, New Jersey, United States": {
     "place": {
       "name": "Burlington Township",
@@ -15454,6 +15594,37 @@
         "status": "adopted",
         "scope": ["city center / business district"],
         "land": ["all uses"]
+      }
+    ]
+  },
+  "Caldwell, Idaho, United States": {
+    "place": {
+      "name": "Caldwell",
+      "state": "Idaho",
+      "country": "United States",
+      "type": "city",
+      "encoded": "caldwell-idaho-united-states",
+      "pop": 59996,
+      "coord": [-116.689415, 43.6678736]
+    },
+    "add_max": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": [
+          "commercial",
+          "industrial",
+          "medical",
+          "other",
+          "residential, low-density"
+        ]
+      }
+    ],
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["residential, low-density"]
       }
     ]
   },
@@ -17345,6 +17516,18 @@
         "scope": ["citywide"],
         "land": ["residential, all uses"],
         "date": "2023-10-24"
+      },
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["commercial", "industrial", "medical", "other"]
+      }
+    ],
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district", "citywide"],
+        "land": ["commercial", "industrial", "medical", "other"]
       }
     ],
     "rm_min": [
@@ -18650,6 +18833,24 @@
       "coord": [-84.1593818, 39.6283928]
     },
     "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["all uses"]
+      }
+    ]
+  },
+  "Centerville, Utah, United States": {
+    "place": {
+      "name": "Centerville",
+      "state": "Utah",
+      "country": "United States",
+      "type": "city",
+      "encoded": "centerville-utah-united-states",
+      "pop": 16692,
+      "coord": [-111.8721601, 40.9180005]
+    },
+    "reduce_min": [
       {
         "status": "adopted",
         "scope": ["city center / business district"],
@@ -20466,12 +20667,31 @@
       "pop": 65051,
       "coord": [-104.820246, 41.139981]
     },
+    "add_max": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["all uses"]
+      }
+    ],
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["all uses"]
+      }
+    ],
     "rm_min": [
       {
         "status": "adopted",
         "scope": ["city center / business district"],
         "land": ["all uses"],
         "date": "2012-01-01"
+      },
+      {
+        "status": "adopted",
+        "scope": ["main street / special"],
+        "land": ["all uses"]
       }
     ]
   },
@@ -20690,6 +20910,31 @@
       {
         "status": "adopted",
         "scope": ["city center / business district"],
+        "land": ["all uses"]
+      }
+    ]
+  },
+  "Choctaw, Oklahoma, United States": {
+    "place": {
+      "name": "Choctaw",
+      "state": "Oklahoma",
+      "country": "United States",
+      "type": "city",
+      "encoded": "choctaw-oklahoma-united-states",
+      "pop": 12182,
+      "coord": [-97.27088474015805, 35.49460825112998]
+    },
+    "add_max": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district", "citywide"],
+        "land": ["all uses", "commercial"]
+      }
+    ],
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
         "land": ["all uses"]
       }
     ]
@@ -21141,6 +21386,31 @@
       {
         "status": "adopted",
         "scope": ["city center / business district"],
+        "land": ["all uses"]
+      }
+    ]
+  },
+  "Clark County, Nevada, United States": {
+    "place": {
+      "name": "Clark County",
+      "state": "Nevada",
+      "country": "United States",
+      "type": "county",
+      "encoded": "clark-county-nevada-united-states",
+      "pop": 2265461,
+      "coord": [-115.090737, 36.3467726]
+    },
+    "add_max": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["commercial", "industrial", "medical", "other"]
+      }
+    ],
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
         "land": ["all uses"]
       }
     ]
@@ -21644,6 +21914,31 @@
       }
     ]
   },
+  "Clayton, North Carolina, United States": {
+    "place": {
+      "name": "Clayton",
+      "state": "North Carolina",
+      "country": "United States",
+      "type": "city",
+      "encoded": "clayton-north-carolina-united-states",
+      "pop": 26307,
+      "coord": [-78.4563914, 35.650711]
+    },
+    "add_max": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["commercial", "other"]
+      }
+    ],
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["all uses"]
+      }
+    ]
+  },
   "Clayton, Ohio, United States": {
     "place": {
       "name": "Clayton",
@@ -21877,6 +22172,38 @@
       {
         "status": "adopted",
         "scope": ["city center / business district"],
+        "land": ["all uses"]
+      }
+    ],
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["all uses"]
+      }
+    ]
+  },
+  "Clemmons, North Carolina, United States": {
+    "place": {
+      "name": "Clemmons",
+      "state": "North Carolina",
+      "country": "United States",
+      "type": "city",
+      "encoded": "clemmons-north-carolina-united-states",
+      "pop": 21163,
+      "coord": [-80.3819984, 36.0215258]
+    },
+    "add_max": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["commercial", "other"]
+      }
+    ],
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district", "citywide"],
         "land": ["all uses"]
       }
     ],
@@ -22772,6 +23099,38 @@
         "status": "adopted",
         "scope": ["city center / business district"],
         "land": ["all uses"]
+      }
+    ]
+  },
+  "Coeur d'Alene, Idaho, United States": {
+    "place": {
+      "name": "Coeur d'Alene",
+      "state": "Idaho",
+      "country": "United States",
+      "type": "city",
+      "encoded": "coeur-dalene-idaho-united-states",
+      "pop": 54628,
+      "coord": [-116.7811531, 47.6742994]
+    },
+    "add_max": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["all uses"]
+      }
+    ],
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["all uses"]
+      }
+    ],
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["commercial"]
       }
     ]
   },
@@ -27511,6 +27870,13 @@
       "pop": 102169,
       "coord": [-90.5776368, 41.5236436]
     },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["commercial", "other"]
+      }
+    ],
     "rm_min": [
       {
         "status": "adopted",
@@ -27877,6 +28243,13 @@
         "status": "adopted",
         "scope": ["city center / business district"],
         "land": ["commercial", "other"]
+      }
+    ],
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["all uses", "commercial", "industrial", "medical", "other"]
       }
     ],
     "rm_min": [
@@ -31457,6 +31830,24 @@
       }
     ]
   },
+  "Eagle Mountain, Utah, United States": {
+    "place": {
+      "name": "Eagle Mountain",
+      "state": "Utah",
+      "country": "United States",
+      "type": "city",
+      "encoded": "eagle-mountain-utah-united-states",
+      "pop": 49514,
+      "coord": [-112.0119825, 40.3093488]
+    },
+    "add_max": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["commercial"]
+      }
+    ]
+  },
   "Eagle Point, Oregon, United States": {
     "place": {
       "name": "Eagle Point",
@@ -33683,6 +34074,24 @@
         "land": ["all uses"]
       }
     ],
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["all uses"]
+      }
+    ]
+  },
+  "Elizabeth City, North Carolina, United States": {
+    "place": {
+      "name": "Elizabeth City",
+      "state": "North Carolina",
+      "country": "United States",
+      "type": "city",
+      "encoded": "elizabeth-city-north-carolina-united-states",
+      "pop": 18629,
+      "coord": [-76.2203699, 36.3010192]
+    },
     "rm_min": [
       {
         "status": "adopted",
@@ -41586,6 +41995,24 @@
       }
     ]
   },
+  "Garden City, Idaho, United States": {
+    "place": {
+      "name": "Garden City",
+      "state": "Idaho",
+      "country": "United States",
+      "type": "city",
+      "encoded": "garden-city-idaho-united-states",
+      "pop": 12316,
+      "coord": [-116.238178, 43.622111]
+    },
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["residential, low-density"]
+      }
+    ]
+  },
   "Garden City, Kansas, United States": {
     "place": {
       "name": "Garden City",
@@ -45297,9 +45724,22 @@
       "country": "United States",
       "type": "city",
       "encoded": "GreenBay_WI",
-      "pop": 104578,
+      "pop": 107395,
       "coord": [-88.0125794, 44.5126379]
     },
+    "add_max": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": [
+          "commercial",
+          "industrial",
+          "medical",
+          "other",
+          "residential, multi-family"
+        ]
+      }
+    ],
     "rm_min": [
       {
         "status": "adopted",
@@ -45639,6 +46079,24 @@
       {
         "status": "adopted",
         "scope": ["city center / business district"],
+        "land": ["all uses"]
+      }
+    ]
+  },
+  "Greenfield, Wisconsin, United States": {
+    "place": {
+      "name": "Greenfield",
+      "state": "Wisconsin",
+      "country": "United States",
+      "type": "city",
+      "encoded": "greenfield-wisconsin-united-states",
+      "pop": 37803,
+      "coord": [-87.98132, 42.9596903]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
         "land": ["all uses"]
       }
     ]
@@ -49369,6 +49827,24 @@
       }
     ]
   },
+  "Hayden, Idaho, United States": {
+    "place": {
+      "name": "Hayden",
+      "state": "Idaho",
+      "country": "United States",
+      "type": "city",
+      "encoded": "hayden-idaho-united-states",
+      "pop": 15570,
+      "coord": [-116.7866807, 47.7590638]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["commercial", "other"]
+      }
+    ]
+  },
   "Hays, Kansas, United States": {
     "place": {
       "name": "Hays",
@@ -50249,6 +50725,31 @@
         "status": "adopted",
         "scope": ["city center / business district"],
         "land": ["all uses"]
+      }
+    ]
+  },
+  "Herriman, Utah, United States": {
+    "place": {
+      "name": "Herriman",
+      "state": "Utah",
+      "country": "United States",
+      "type": "city",
+      "encoded": "herriman-utah-united-states",
+      "pop": 57336,
+      "coord": [-112.0329086, 40.5139784]
+    },
+    "add_max": [
+      {
+        "status": "adopted",
+        "scope": ["main street / special"],
+        "land": ["commercial", "other", "residential, multi-family"]
+      }
+    ],
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["main street / special"],
+        "land": ["commercial", "other", "residential, multi-family"]
       }
     ]
   },
@@ -51310,6 +51811,24 @@
       "coord": [-99.3698995, 40.4379956]
     },
     "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["all uses"]
+      }
+    ]
+  },
+  "Holladay, Utah, United States": {
+    "place": {
+      "name": "Holladay",
+      "state": "Utah",
+      "country": "United States",
+      "type": "city",
+      "encoded": "holladay-utah-united-states",
+      "pop": 31236,
+      "coord": [-111.8250278, 40.6710765]
+    },
+    "add_max": [
       {
         "status": "adopted",
         "scope": ["city center / business district"],
@@ -53150,6 +53669,24 @@
         "status": "adopted",
         "scope": ["city center / business district"],
         "land": ["all uses"]
+      }
+    ]
+  },
+  "Idaho Falls, Idaho, United States": {
+    "place": {
+      "name": "Idaho Falls",
+      "state": "Idaho",
+      "country": "United States",
+      "type": "city",
+      "encoded": "idaho-falls-idaho-united-states",
+      "pop": 64818,
+      "coord": [-112.03628, 43.4887907]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["commercial", "industrial", "medical", "other"]
       }
     ]
   },
@@ -55472,6 +56009,24 @@
       }
     ]
   },
+  "Jerome, Idaho, United States": {
+    "place": {
+      "name": "Jerome",
+      "state": "Idaho",
+      "country": "United States",
+      "type": "city",
+      "encoded": "jerome-idaho-united-states",
+      "pop": 12349,
+      "coord": [-114.51868208559712, 42.72383540674377]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["residential, multi-family"]
+      }
+    ]
+  },
   "Jerome, Illinois, United States": {
     "place": {
       "name": "Jerome",
@@ -56686,6 +57241,24 @@
       }
     ]
   },
+  "Kearns, Utah, United States": {
+    "place": {
+      "name": "Kearns",
+      "state": "Utah",
+      "country": "United States",
+      "type": "city",
+      "encoded": "kearns-utah-united-states",
+      "pop": 37058,
+      "coord": [-112.004618, 40.6528603]
+    },
+    "add_max": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["commercial", "medical", "other", "residential, all uses"]
+      }
+    ]
+  },
   "Keego Harbor, Michigan, United States": {
     "place": {
       "name": "Keego Harbor",
@@ -56913,6 +57486,24 @@
       }
     ]
   },
+  "Kennebunk, Maine, United States": {
+    "place": {
+      "name": "Kennebunk",
+      "state": "Maine",
+      "country": "United States",
+      "type": "city",
+      "encoded": "kennebunk-maine-united-states",
+      "pop": 11536,
+      "coord": [-70.54379457967386, 43.384456203513125]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["commercial", "other"]
+      }
+    ]
+  },
   "Kenner, Louisiana, United States": {
     "place": {
       "name": "Kenner",
@@ -57040,7 +57631,7 @@
       "name": "Kent County",
       "state": "Delaware",
       "country": "United States",
-      "type": "city",
+      "type": "county",
       "encoded": "KentCounty_DE",
       "pop": 181851,
       "coord": [-75.484116, 39.1156594]
@@ -57049,7 +57640,8 @@
       {
         "status": "adopted",
         "scope": ["citywide"],
-        "land": ["all uses"]
+        "land": ["all uses"],
+        "date": "2024-09"
       }
     ]
   },
@@ -57190,6 +57782,31 @@
       {
         "status": "adopted",
         "scope": ["city center / business district"],
+        "land": ["all uses"]
+      }
+    ]
+  },
+  "Kernersville, North Carolina, United States": {
+    "place": {
+      "name": "Kernersville",
+      "state": "North Carolina",
+      "country": "United States",
+      "type": "city",
+      "encoded": "kernersville-north-carolina-united-states",
+      "pop": 26449,
+      "coord": [-80.0736533, 36.1198589]
+    },
+    "add_max": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["commercial", "other"]
+      }
+    ],
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district", "citywide"],
         "land": ["all uses"]
       }
     ]
@@ -58253,6 +58870,36 @@
       {
         "status": "adopted",
         "scope": ["citywide"],
+        "land": ["all uses"]
+      }
+    ]
+  },
+  "Knightdale, North Carolina, United States": {
+    "place": {
+      "name": "Knightdale",
+      "state": "North Carolina",
+      "country": "United States",
+      "type": "city",
+      "encoded": "knightdale-north-carolina-united-states",
+      "pop": 19435,
+      "coord": [-78.4822938, 35.7878975]
+    },
+    "add_max": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": [
+          "commercial",
+          "industrial",
+          "other",
+          "residential, multi-family"
+        ]
+      }
+    ],
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
         "land": ["all uses"]
       }
     ]
@@ -60948,6 +61595,12 @@
         "status": "adopted",
         "scope": ["city center / business district"],
         "land": ["commercial"]
+      },
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["residential, low-density"],
+        "date": "2025-10-07"
       }
     ]
   },
@@ -62061,6 +62714,30 @@
       }
     ]
   },
+  "Leland, North Carolina, United States": {
+    "place": {
+      "name": "Leland",
+      "state": "North Carolina",
+      "country": "United States",
+      "type": "city",
+      "encoded": "leland-north-carolina-united-states",
+      "pop": 22908,
+      "coord": [-78.0040029, 34.236434]
+    },
+    "add_max": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": [
+          "commercial",
+          "industrial",
+          "medical",
+          "other",
+          "residential, multi-family"
+        ]
+      }
+    ]
+  },
   "Lemont, Illinois, United States": {
     "place": {
       "name": "Lemont",
@@ -62189,6 +62866,31 @@
       "pop": 10117,
       "coord": [-84.2560299, 35.7972998]
     },
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["all uses"]
+      }
+    ]
+  },
+  "Lenoir, North Carolina, United States": {
+    "place": {
+      "name": "Lenoir",
+      "state": "North Carolina",
+      "country": "United States",
+      "type": "city",
+      "encoded": "lenoir-north-carolina-united-states",
+      "pop": 18263,
+      "coord": [-77.6484879, 35.2590371]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["all uses"]
+      }
+    ],
     "rm_min": [
       {
         "status": "adopted",
@@ -62420,6 +63122,70 @@
       }
     ]
   },
+  "Lewiston, Idaho, United States": {
+    "place": {
+      "name": "Lewiston",
+      "state": "Idaho",
+      "country": "United States",
+      "type": "city",
+      "encoded": "lewiston-idaho-united-states",
+      "pop": 34203,
+      "coord": [-117.0216144, 46.4195913]
+    },
+    "add_max": [
+      {
+        "status": "repealed",
+        "scope": ["citywide"],
+        "land": [
+          "commercial",
+          "industrial",
+          "medical",
+          "other",
+          "residential, multi-family"
+        ],
+        "date": "2025-02-24"
+      }
+    ],
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["commercial", "other"]
+      }
+    ]
+  },
+  "Lewiston, Maine, United States": {
+    "place": {
+      "name": "Lewiston",
+      "state": "Maine",
+      "country": "United States",
+      "type": "city",
+      "encoded": "lewiston-maine-united-states",
+      "pop": 37121,
+      "coord": [-70.2177099, 44.0990717]
+    },
+    "add_max": [
+      {
+        "status": "adopted",
+        "scope": ["main street / special"],
+        "land": ["all uses"]
+      }
+    ],
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["all uses"]
+      }
+    ],
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district", "citywide"],
+        "land": ["commercial", "other"]
+      }
+    ]
+  },
   "Lewistown, Illinois, United States": {
     "place": {
       "name": "Lewistown",
@@ -62588,6 +63354,38 @@
         "status": "adopted",
         "scope": ["city center / business district"],
         "land": ["commercial", "other"]
+      }
+    ]
+  },
+  "Lexington, North Carolina, United States": {
+    "place": {
+      "name": "Lexington",
+      "state": "North Carolina",
+      "country": "United States",
+      "type": "city",
+      "encoded": "lexington-north-carolina-united-states",
+      "pop": 19632,
+      "coord": [-80.2533838, 35.8240265]
+    },
+    "add_max": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["commercial"]
+      }
+    ],
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["commercial", "industrial", "residential, multi-family"]
+      }
+    ],
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district", "citywide"],
+        "land": ["all uses", "commercial", "other"]
       }
     ]
   },
@@ -63392,6 +64190,38 @@
         "status": "adopted",
         "scope": ["citywide"],
         "land": ["all uses"]
+      }
+    ]
+  },
+  "Lisbon, Maine, United States": {
+    "place": {
+      "name": "Lisbon",
+      "state": "Maine",
+      "country": "United States",
+      "type": "city",
+      "encoded": "lisbon-maine-united-states",
+      "pop": 9711,
+      "coord": [-70.0606087, 43.9966919]
+    },
+    "add_max": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["residential, all uses"],
+        "date": "2025-02-27"
+      }
+    ],
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["all uses"]
+      },
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["residential, all uses"],
+        "date": "2025-02-27"
       }
     ]
   },
@@ -65148,6 +65978,24 @@
       }
     ]
   },
+  "Lumberton, North Carolina, United States": {
+    "place": {
+      "name": "Lumberton",
+      "state": "North Carolina",
+      "country": "United States",
+      "type": "city",
+      "encoded": "lumberton-north-carolina-united-states",
+      "pop": 19025,
+      "coord": [-79.008205, 34.6183305]
+    },
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["all uses"]
+      }
+    ]
+  },
   "Lumpkin County, Georgia, United States": {
     "place": {
       "name": "Lumpkin County",
@@ -66037,6 +66885,24 @@
         "status": "adopted",
         "scope": ["city center / business district"],
         "land": ["all uses"]
+      }
+    ]
+  },
+  "Magna, Utah, United States": {
+    "place": {
+      "name": "Magna",
+      "state": "Utah",
+      "country": "United States",
+      "type": "city",
+      "encoded": "magna-utah-united-states",
+      "pop": 29488,
+      "coord": [-112.081648, 40.7031629]
+    },
+    "add_max": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["commercial", "medical", "other", "residential, all uses"]
       }
     ]
   },
@@ -68351,6 +69217,13 @@
       "pop": 18929,
       "coord": [-90.1740313, 44.6662287]
     },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["all uses"]
+      }
+    ],
     "rm_min": [
       {
         "status": "proposed",
@@ -70492,6 +71365,24 @@
       }
     ]
   },
+  "Menomonee Falls, Wisconsin, United States": {
+    "place": {
+      "name": "Menomonee Falls",
+      "state": "Wisconsin",
+      "country": "United States",
+      "type": "city",
+      "encoded": "menomonee-falls-wisconsin-united-states",
+      "pop": 38527,
+      "coord": [-88.1170784, 43.1790768]
+    },
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["commercial"]
+      }
+    ]
+  },
   "Menomonie, Wisconsin, United States": {
     "place": {
       "name": "Menomonie",
@@ -70541,6 +71432,24 @@
         "status": "adopted",
         "scope": ["citywide"],
         "land": ["commercial", "industrial", "other", "residential, all uses"]
+      }
+    ]
+  },
+  "Mequon, Wisconsin, United States": {
+    "place": {
+      "name": "Mequon",
+      "state": "Wisconsin",
+      "country": "United States",
+      "type": "city",
+      "encoded": "mequon-wisconsin-united-states",
+      "pop": 25142,
+      "coord": [-87.9822969, 43.2219088]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["commercial", "industrial"]
       }
     ]
   },
@@ -71269,6 +72178,11 @@
         "scope": ["citywide"],
         "land": ["all uses"],
         "date": "2023-11-21"
+      },
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["residential, low-density"]
       }
     ]
   },
@@ -72331,15 +73245,38 @@
       "country": "United States",
       "type": "city",
       "encoded": "Milwaukee_WI",
-      "pop": 590157,
+      "pop": 577222,
       "coord": [-87.922497, 43.0349931]
     },
+    "add_max": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["residential, low-density"]
+      }
+    ],
     "reduce_min": [
       {
         "status": "proposed",
         "scope": ["citywide"],
         "land": ["residential, all uses"],
         "date": "2025"
+      },
+      {
+        "status": "adopted",
+        "scope": [
+          "city center / business district",
+          "citywide",
+          "transit-oriented"
+        ],
+        "land": [
+          "all uses",
+          "commercial",
+          "industrial",
+          "medical",
+          "other",
+          "residential, multi-family"
+        ]
       }
     ],
     "rm_min": [
@@ -72353,6 +73290,11 @@
         "scope": ["citywide"],
         "land": ["all uses"],
         "date": "2025"
+      },
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["other", "residential, low-density"]
       }
     ]
   },
@@ -72478,6 +73420,24 @@
         "scope": ["city center / business district"],
         "land": ["all uses"],
         "date": "2022-12-07"
+      }
+    ]
+  },
+  "Mineral County, Nevada, United States": {
+    "place": {
+      "name": "Mineral County",
+      "state": "Nevada",
+      "country": "United States",
+      "type": "county",
+      "encoded": "mineral-county-nevada-united-states",
+      "pop": 4554,
+      "coord": [-118.498262, 38.4815162]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["all uses"]
       }
     ]
   },
@@ -74942,6 +75902,31 @@
       }
     ]
   },
+  "Morrisville, North Carolina, United States": {
+    "place": {
+      "name": "Morrisville",
+      "state": "North Carolina",
+      "country": "United States",
+      "type": "city",
+      "encoded": "morrisville-north-carolina-united-states",
+      "pop": 29630,
+      "coord": [-78.8300321, 35.824341]
+    },
+    "add_max": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["commercial"]
+      }
+    ],
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["main street / special", "transit-oriented"],
+        "land": ["all uses", "commercial", "other"]
+      }
+    ]
+  },
   "Morrisville, Pennsylvania, United States": {
     "place": {
       "name": "Morrisville",
@@ -75075,6 +76060,38 @@
           "residential, all uses",
           "residential, multi-family"
         ]
+      }
+    ]
+  },
+  "Moscow, Idaho, United States": {
+    "place": {
+      "name": "Moscow",
+      "state": "Idaho",
+      "country": "United States",
+      "type": "city",
+      "encoded": "moscow-idaho-united-states",
+      "pop": 25435,
+      "coord": [-117.000165, 46.7323875]
+    },
+    "add_max": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["all uses"]
+      }
+    ],
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district", "citywide"],
+        "land": ["all uses", "other", "residential, all uses"]
+      }
+    ],
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district", "main street / special"],
+        "land": ["all uses", "commercial", "other"]
       }
     ]
   },
@@ -76131,6 +77148,13 @@
         "scope": ["citywide"],
         "land": ["all uses", "commercial", "industrial", "medical", "other"]
       }
+    ],
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["industrial", "other"]
+      }
     ]
   },
   "Mt. Union, Pennsylvania, United States": {
@@ -76673,6 +77697,24 @@
       }
     ]
   },
+  "Murray, Utah, United States": {
+    "place": {
+      "name": "Murray",
+      "state": "Utah",
+      "country": "United States",
+      "type": "city",
+      "encoded": "murray-utah-united-states",
+      "pop": 49904,
+      "coord": [-111.888417, 40.6667841]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["all uses", "residential, multi-family"]
+      }
+    ]
+  },
   "Muscatine, Iowa, United States": {
     "place": {
       "name": "Muscatine",
@@ -76979,6 +78021,24 @@
         "status": "adopted",
         "scope": ["city center / business district"],
         "land": ["all uses"]
+      }
+    ]
+  },
+  "Nampa, Idaho, United States": {
+    "place": {
+      "name": "Nampa",
+      "state": "Idaho",
+      "country": "United States",
+      "type": "city",
+      "encoded": "nampa-idaho-united-states",
+      "pop": 100200,
+      "coord": [-116.5616885, 43.5780381]
+    },
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district", "main street / special"],
+        "land": ["all uses", "commercial", "other"]
       }
     ]
   },
@@ -80990,6 +82050,24 @@
       }
     ]
   },
+  "North Logan, Utah, United States": {
+    "place": {
+      "name": "North Logan",
+      "state": "Utah",
+      "country": "United States",
+      "type": "city",
+      "encoded": "north-logan-utah-united-states",
+      "pop": 11228,
+      "coord": [-111.804665, 41.7693747]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["commercial", "other"]
+      }
+    ]
+  },
   "North Manchester, Indiana, United States": {
     "place": {
       "name": "North Manchester",
@@ -81240,6 +82318,24 @@
         "status": "adopted",
         "scope": ["citywide"],
         "land": ["residential, low-density"]
+      }
+    ]
+  },
+  "North Salt Lake, Utah, United States": {
+    "place": {
+      "name": "North Salt Lake",
+      "state": "Utah",
+      "country": "United States",
+      "type": "city",
+      "encoded": "north-salt-lake-utah-united-states",
+      "pop": 23239,
+      "coord": [-111.906882, 40.8485564]
+    },
+    "add_max": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["commercial"]
       }
     ]
   },
@@ -84009,6 +85105,24 @@
       }
     ]
   },
+  "Orem, Utah, United States": {
+    "place": {
+      "name": "Orem",
+      "state": "Utah",
+      "country": "United States",
+      "type": "city",
+      "encoded": "orem-utah-united-states",
+      "pop": 97048,
+      "coord": [-111.6944313, 40.2981599]
+    },
+    "add_max": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["commercial", "industrial", "medical", "other"]
+      }
+    ]
+  },
   "Orillia, Ontario, Canada": {
     "place": {
       "name": "Orillia",
@@ -84464,11 +85578,27 @@
       "pop": 11558,
       "coord": [-92.6448451, 41.2951037]
     },
+    "add_max": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district", "citywide"],
+        "land": ["commercial", "industrial", "residential, low-density"]
+      }
+    ],
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["all uses"],
+        "date": "2023-09-11"
+      }
+    ],
     "rm_min": [
       {
         "status": "adopted",
         "scope": ["city center / business district"],
-        "land": ["commercial"]
+        "land": ["commercial", "industrial", "medical", "other"],
+        "date": "2023-09-11"
       }
     ]
   },
@@ -85991,8 +87121,8 @@
     "rm_min": [
       {
         "status": "adopted",
-        "scope": ["city center / business district"],
-        "land": ["all uses"]
+        "scope": ["city center / business district", "citywide"],
+        "land": ["all uses", "residential, low-density"]
       }
     ]
   },
@@ -90611,6 +91741,24 @@
       }
     ]
   },
+  "Post Falls, Idaho, United States": {
+    "place": {
+      "name": "Post Falls",
+      "state": "Idaho",
+      "country": "United States",
+      "type": "city",
+      "encoded": "post-falls-idaho-united-states",
+      "pop": 38485,
+      "coord": [-116.9480877, 47.7110106]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["all uses"]
+      }
+    ]
+  },
   "Postville, Iowa, United States": {
     "place": {
       "name": "Postville",
@@ -91059,6 +92207,24 @@
         "status": "adopted",
         "scope": ["city center / business district"],
         "land": ["all uses"]
+      }
+    ]
+  },
+  "Presque Isle, Maine, United States": {
+    "place": {
+      "name": "Presque Isle",
+      "state": "Maine",
+      "country": "United States",
+      "type": "city",
+      "encoded": "presque-isle-maine-united-states",
+      "pop": 8797,
+      "coord": [-68.0154578, 46.6812216]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["residential, all uses"]
       }
     ]
   },
@@ -93153,12 +94319,24 @@
       "pop": 264165,
       "coord": [-119.8126581, 39.5261206]
     },
+    "add_max": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["all uses"]
+      }
+    ],
     "reduce_min": [
       {
         "status": "adopted",
         "scope": ["transit-oriented"],
         "land": ["all uses"],
         "date": "2021-01-13"
+      },
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["all uses", "residential, multi-family"]
       }
     ],
     "rm_min": [
@@ -93325,6 +94503,24 @@
           "transit-oriented"
         ],
         "land": ["all uses", "commercial", "residential, all uses"]
+      }
+    ]
+  },
+  "Rexburg, Idaho, United States": {
+    "place": {
+      "name": "Rexburg",
+      "state": "Idaho",
+      "country": "United States",
+      "type": "city",
+      "encoded": "rexburg-idaho-united-states",
+      "pop": 39409,
+      "coord": [-111.7837279, 43.826079]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["all uses"]
       }
     ]
   },
@@ -96635,6 +97831,24 @@
       }
     ]
   },
+  "Roy, Utah, United States": {
+    "place": {
+      "name": "Roy",
+      "state": "Utah",
+      "country": "United States",
+      "type": "city",
+      "encoded": "roy-utah-united-states",
+      "pop": 39021,
+      "coord": [-112.0273739, 41.1715361]
+    },
+    "add_max": [
+      {
+        "status": "adopted",
+        "scope": ["main street / special"],
+        "land": ["all uses"]
+      }
+    ]
+  },
   "Roy, Washington, United States": {
     "place": {
       "name": "Roy",
@@ -96930,6 +98144,13 @@
       "pop": 4401,
       "coord": [-98.859806, 38.895289]
     },
+    "add_max": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["residential, all uses"]
+      }
+    ],
     "rm_min": [
       {
         "status": "adopted",
@@ -98317,6 +99538,49 @@
       }
     ]
   },
+  "Sandy, Utah, United States": {
+    "place": {
+      "name": "Sandy",
+      "state": "Utah",
+      "country": "United States",
+      "type": "city",
+      "encoded": "sandy-utah-united-states",
+      "pop": 94723,
+      "coord": [-111.8953815, 40.5710454]
+    },
+    "add_max": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["all uses"]
+      }
+    ]
+  },
+  "Sanford, North Carolina, United States": {
+    "place": {
+      "name": "Sanford",
+      "state": "North Carolina",
+      "country": "United States",
+      "type": "city",
+      "encoded": "sanford-north-carolina-united-states",
+      "pop": 30261,
+      "coord": [-79.1802994, 35.4798757]
+    },
+    "add_max": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["commercial"]
+      }
+    ],
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district", "transit-oriented"],
+        "land": ["all uses"]
+      }
+    ]
+  },
   "Santa Ana, California, United States": {
     "place": {
       "name": "Santa Ana",
@@ -98570,6 +99834,24 @@
       {
         "status": "adopted",
         "scope": ["city center / business district"],
+        "land": ["all uses"]
+      }
+    ]
+  },
+  "Saratoga Springs, Utah, United States": {
+    "place": {
+      "name": "Saratoga Springs",
+      "state": "Utah",
+      "country": "United States",
+      "type": "city",
+      "encoded": "saratoga-springs-utah-united-states",
+      "pop": 44070,
+      "coord": [-111.9130188, 40.3862792]
+    },
+    "add_max": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
         "land": ["all uses"]
       }
     ]
@@ -103815,6 +105097,35 @@
       }
     ]
   },
+  "South Portland, Maine, United States": {
+    "place": {
+      "name": "South Portland",
+      "state": "Maine",
+      "country": "United States",
+      "type": "city",
+      "encoded": "south-portland-maine-united-states",
+      "pop": 26498,
+      "coord": [-70.2529189, 43.6382443]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": [
+          "city center / business district",
+          "citywide",
+          "main street / special"
+        ],
+        "land": ["all uses", "commercial"]
+      }
+    ],
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["residential, low-density"]
+      }
+    ]
+  },
   "South Prairie, Washington, United States": {
     "place": {
       "name": "South Prairie",
@@ -103899,6 +105210,31 @@
         "status": "adopted",
         "scope": ["citywide"],
         "land": ["all uses"]
+      }
+    ]
+  },
+  "South Salt Lake, Utah, United States": {
+    "place": {
+      "name": "South Salt Lake",
+      "state": "Utah",
+      "country": "United States",
+      "type": "city",
+      "encoded": "south-salt-lake-utah-united-states",
+      "pop": 26277,
+      "coord": [-111.88827, 40.7074741]
+    },
+    "add_max": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["commercial"]
+      }
+    ],
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district", "transit-oriented"],
+        "land": ["commercial", "residential, multi-family"]
       }
     ]
   },
@@ -104139,6 +105475,24 @@
         "status": "adopted",
         "scope": ["city center / business district"],
         "land": ["all uses"]
+      }
+    ]
+  },
+  "Spanish Fork, Utah, United States": {
+    "place": {
+      "name": "Spanish Fork",
+      "state": "Utah",
+      "country": "United States",
+      "type": "city",
+      "encoded": "spanish-fork-utah-united-states",
+      "pop": 43632,
+      "coord": [-111.6547774, 40.1150133]
+    },
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["commercial", "other"]
       }
     ]
   },
@@ -104499,6 +105853,13 @@
       "coord": [-117.42351, 47.6571934],
       "repeal": true
     },
+    "add_max": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district", "citywide"],
+        "land": ["all uses", "residential, all uses"]
+      }
+    ],
     "rm_min": [
       {
         "status": "adopted",
@@ -105037,6 +106398,24 @@
         "status": "adopted",
         "scope": ["city center / business district"],
         "land": ["commercial", "other"]
+      }
+    ]
+  },
+  "Springville, Utah, United States": {
+    "place": {
+      "name": "Springville",
+      "state": "Utah",
+      "country": "United States",
+      "type": "city",
+      "encoded": "springville-utah-united-states",
+      "pop": 35474,
+      "coord": [-111.6114726, 40.1652447]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["all uses"]
       }
     ]
   },
@@ -106469,6 +107848,24 @@
         "status": "adopted",
         "scope": ["city center / business district", "citywide"],
         "land": ["all uses", "residential, all uses"]
+      }
+    ]
+  },
+  "Standish, Maine, United States": {
+    "place": {
+      "name": "Standish",
+      "state": "Maine",
+      "country": "United States",
+      "type": "city",
+      "encoded": "standish-maine-united-states",
+      "pop": 10244,
+      "coord": [-70.551453, 43.735879]
+    },
+    "add_max": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["all uses"]
       }
     ]
   },
@@ -110177,6 +111574,24 @@
       }
     ]
   },
+  "Taylorsville, Utah, United States": {
+    "place": {
+      "name": "Taylorsville",
+      "state": "Utah",
+      "country": "United States",
+      "type": "city",
+      "encoded": "taylorsville-utah-united-states",
+      "pop": 59010,
+      "coord": [-111.9388027, 40.6676347]
+    },
+    "add_max": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["all uses"]
+      }
+    ]
+  },
   "Taylorville, Illinois, United States": {
     "place": {
       "name": "Taylorville",
@@ -111006,6 +112421,24 @@
         "status": "adopted",
         "scope": ["city center / business district", "citywide"],
         "land": ["all uses", "residential, low-density"]
+      }
+    ]
+  },
+  "Thomasville, North Carolina, United States": {
+    "place": {
+      "name": "Thomasville",
+      "state": "North Carolina",
+      "country": "United States",
+      "type": "city",
+      "encoded": "thomasville-north-carolina-united-states",
+      "pop": 27183,
+      "coord": [-80.081817, 35.8831786]
+    },
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["all uses"]
       }
     ]
   },
@@ -111903,6 +113336,24 @@
         "status": "adopted",
         "scope": ["city center / business district"],
         "land": ["all uses"]
+      }
+    ]
+  },
+  "Tooele, Utah, United States": {
+    "place": {
+      "name": "Tooele",
+      "state": "Utah",
+      "country": "United States",
+      "type": "city",
+      "encoded": "tooele-utah-united-states",
+      "pop": 37265,
+      "coord": [-113.1966394, 40.4062872]
+    },
+    "add_max": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["commercial", "industrial", "medical", "other"]
       }
     ]
   },
@@ -113269,11 +114720,24 @@
       "pop": 50197,
       "coord": [-114.4602554, 42.5704456]
     },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["all uses"]
+      }
+    ],
     "rm_min": [
       {
         "status": "adopted",
         "scope": ["city center / business district"],
         "land": ["all uses"]
+      },
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["industrial"],
+        "date": "2026-01-01"
       }
     ]
   },
@@ -114875,6 +116339,24 @@
       }
     ]
   },
+  "Vernal, Utah, United States": {
+    "place": {
+      "name": "Vernal",
+      "state": "Utah",
+      "country": "United States",
+      "type": "city",
+      "encoded": "vernal-utah-united-states",
+      "pop": 10254,
+      "coord": [-109.528474, 40.4556825]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["all uses"]
+      }
+    ]
+  },
   "Vernon Center, Minnesota, United States": {
     "place": {
       "name": "Vernon Center",
@@ -115444,6 +116926,24 @@
       }
     ]
   },
+  "Vineyard, Utah, United States": {
+    "place": {
+      "name": "Vineyard",
+      "state": "Utah",
+      "country": "United States",
+      "type": "city",
+      "encoded": "vineyard-utah-united-states",
+      "pop": 13510,
+      "coord": [-111.747841, 40.2983097]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["all uses"]
+      }
+    ]
+  },
   "Vinita, Oklahoma, United States": {
     "place": {
       "name": "Vinita",
@@ -115900,6 +117400,72 @@
         "status": "adopted",
         "scope": ["city center / business district"],
         "land": ["all uses"]
+      }
+    ]
+  },
+  "Wake Forest, North Carolina, United States": {
+    "place": {
+      "name": "Wake Forest",
+      "state": "North Carolina",
+      "country": "United States",
+      "type": "city",
+      "encoded": "wake-forest-north-carolina-united-states",
+      "pop": 47601,
+      "coord": [-78.5103731, 35.9803138]
+    },
+    "add_max": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["all uses"]
+      },
+      {
+        "status": "proposed",
+        "scope": ["citywide"],
+        "land": [
+          "commercial",
+          "industrial",
+          "medical",
+          "other",
+          "residential, multi-family"
+        ],
+        "date": "2025"
+      }
+    ],
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["all uses"]
+      },
+      {
+        "status": "proposed",
+        "scope": ["citywide"],
+        "land": ["residential, all uses"],
+        "date": "2025"
+      }
+    ],
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["all uses"]
+      },
+      {
+        "status": "proposed",
+        "scope": [
+          "city center / business district",
+          "citywide",
+          "transit-oriented"
+        ],
+        "land": [
+          "commercial",
+          "industrial",
+          "medical",
+          "other",
+          "residential, all uses"
+        ],
+        "date": "2025"
       }
     ]
   },
@@ -117375,6 +118941,24 @@
       {
         "status": "adopted",
         "scope": ["city center / business district"],
+        "land": ["all uses"]
+      }
+    ]
+  },
+  "Washoe County, Nevada, United States": {
+    "place": {
+      "name": "Washoe County",
+      "state": "Nevada",
+      "country": "United States",
+      "type": "county",
+      "encoded": "washoe-county-nevada-united-states",
+      "pop": 486492,
+      "coord": [-119.6131606, 40.5849048]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
         "land": ["all uses"]
       }
     ]
@@ -119685,6 +121269,31 @@
       }
     ]
   },
+  "West Jordan, Utah, United States": {
+    "place": {
+      "name": "West Jordan",
+      "state": "Utah",
+      "country": "United States",
+      "type": "city",
+      "encoded": "west-jordan-utah-united-states",
+      "pop": 116277,
+      "coord": [-111.9395211, 40.6061337]
+    },
+    "add_max": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district", "transit-oriented"],
+        "land": ["commercial", "other", "residential, multi-family"]
+      }
+    ],
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district", "transit-oriented"],
+        "land": ["all uses"]
+      }
+    ]
+  },
   "West Lafayette, Indiana, United States": {
     "place": {
       "name": "West Lafayette",
@@ -120228,6 +121837,24 @@
       }
     ]
   },
+  "West Valley City, Utah, United States": {
+    "place": {
+      "name": "West Valley City",
+      "state": "Utah",
+      "country": "United States",
+      "type": "city",
+      "encoded": "west-valley-city-utah-united-states",
+      "pop": 137955,
+      "coord": [-111.9866954, 40.6967891]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["all uses"]
+      }
+    ]
+  },
   "West Warwick, Rhode Island, United States": {
     "place": {
       "name": "West Warwick",
@@ -120349,6 +121976,24 @@
         "status": "adopted",
         "scope": ["city center / business district", "citywide"],
         "land": ["all uses"]
+      }
+    ]
+  },
+  "Westbrook, Maine, United States": {
+    "place": {
+      "name": "Westbrook",
+      "state": "Maine",
+      "country": "United States",
+      "type": "city",
+      "encoded": "westbrook-maine-united-states",
+      "pop": 20400,
+      "coord": [-70.3663874, 43.6763036]
+    },
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district", "citywide"],
+        "land": ["commercial", "other", "residential, low-density"]
       }
     ]
   },
@@ -122503,6 +124148,25 @@
         "status": "adopted",
         "scope": ["city center / business district"],
         "land": ["all uses"]
+      }
+    ]
+  },
+  "Windham, Maine, United States": {
+    "place": {
+      "name": "Windham",
+      "state": "Maine",
+      "country": "United States",
+      "type": "city",
+      "encoded": "windham-maine-united-states",
+      "pop": 18434,
+      "coord": [-70.4083434, 43.7894155]
+    },
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["all uses"],
+        "date": "2018-06-12"
       }
     ]
   },
@@ -125183,10 +126847,22 @@
       "pop": 23630,
       "coord": [-97.7625386, 35.5067259]
     },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["all uses"]
+      }
+    ],
     "rm_min": [
       {
         "status": "repealed",
         "scope": ["main street / special"],
+        "land": ["all uses"]
+      },
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
         "land": ["all uses"]
       }
     ]

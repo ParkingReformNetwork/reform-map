@@ -269,9 +269,12 @@
       "all uses",
       "commercial",
       "industrial",
-      "residential, all uses"
+      "medical",
+      "other",
+      "residential, all uses",
+      "residential, multi-family"
     ],
-    "year": ["unknown", "2023"]
+    "year": ["unknown", "2025", "2023"]
   },
   "addMaxAdopted": {
     "placeType": ["city", "country", "county", "state"],
@@ -355,7 +358,8 @@
       "industrial",
       "medical",
       "other",
-      "residential, all uses"
+      "residential, all uses",
+      "residential, multi-family"
     ],
     "year": [
       "unknown",
@@ -389,9 +393,12 @@
       "all uses",
       "commercial",
       "industrial",
-      "residential, all uses"
+      "medical",
+      "other",
+      "residential, all uses",
+      "residential, multi-family"
     ],
-    "year": ["unknown"]
+    "year": ["unknown", "2025"]
   },
   "reduceMinAdopted": {
     "placeType": ["city", "country", "county", "state"],
