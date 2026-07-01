@@ -1,4 +1,3 @@
-import { isEqual } from "lodash-es";
 import {
   ALL_POLICY_TYPE,
   PlaceId,
@@ -85,7 +84,7 @@ type PlaceMatch =
 
 // This allows us to avoid recomputing computed state when the FilterState has not changed.
 interface CacheEntry {
-  state: FilterState;
+  version: number;
   matchedPlaces: Record<PlaceId, PlaceMatch>;
   matchedCountries: Set<string>;
   matchedPolicyTypesForAnyPolicy: Set<PolicyType>;
@@ -127,6 +126,10 @@ export class PlaceFilterManager {
   readonly entries: Record<PlaceId, ProcessedCoreEntry>;
 
   private cache: CacheEntry | null = null;
+
+  // Bumped on every state change so the cache can be invalidated with a cheap
+  // integer comparison.
+  private stateVersion: number = 0;
 
   constructor(
     entries: Record<PlaceId, ProcessedCoreEntry>,
@@ -172,6 +175,7 @@ export class PlaceFilterManager {
 
   update(changes: Partial<FilterState>): void {
     const priorState = this.state.getValue();
+    this.stateVersion += 1;
     this.state.setValue({ ...priorState, ...changes });
   }
 
@@ -185,8 +189,7 @@ export class PlaceFilterManager {
 
   /// Recompute the CacheEntry if FilterState has changed.
   private ensureCache(): CacheEntry {
-    const currentState = this.state.getValue();
-    if (this.cache && isEqual(currentState, this.cache.state)) {
+    if (this.cache && this.cache.version === this.stateVersion) {
       return this.cache;
     }
 
@@ -211,7 +214,7 @@ export class PlaceFilterManager {
     }
 
     this.cache = {
-      state: currentState,
+      version: this.stateVersion,
       matchedPlaces,
       matchedCountries,
       matchedPolicyTypesForAnyPolicy: matchedPolicyTypes,
