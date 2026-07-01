@@ -76,6 +76,23 @@ You can preview what a build will look like by running `npm run build`. Then use
 
 `npm run test-dist` will be implemented soon, while `npm test` is the development equivalent.
 
+### Benchmark performance
+
+`npm run benchmark` measures initial map load, table-view load, and cold-load transfer size using a headless browser. It expects a production build to already be served, so in one terminal run:
+
+```bash
+❯ npm run build
+❯ npm run serve-dist
+```
+
+Then, in another terminal:
+
+```bash
+❯ npm run benchmark
+```
+
+It runs a few times with the browser cache disabled (so bundle size counts), prints a median/min/max summary, and writes `benchmark-results/latest.json` for before/after comparison. Options: `--runs N`, `--out <path>`, `--headed`, and `PORT` to override the port.
+
 ## Staging
 
 We use continuous deployment, meaning that we re-deploy the site every time we merge a pull request to staging at https://parkingreform.org/mandates-map-staging/. You can check how the site renders about ~1-2 minutes after your change merges.
