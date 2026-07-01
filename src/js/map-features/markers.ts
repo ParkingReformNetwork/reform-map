@@ -23,7 +23,10 @@ const SECONDARY_MARKER_STYLE = {
 } as const;
 
 /** We store the placeId on the marker to know which place a Marker corresponds to. */
-export type MarkerWithPlaceId = CircleMarker & { placeId: PlaceId };
+export type MarkerWithPlaceId = CircleMarker & {
+  placeId: PlaceId;
+  isPrimary: boolean;
+};
 
 function updatePlaceVisibility(
   currentlyVisiblePlaceIds: Set<string>,
@@ -63,6 +66,7 @@ export default function initPlaceMarkers(
       radius: radiusGivenZoom({ zoom: map.getZoom(), isPrimary }),
     }) as MarkerWithPlaceId;
     marker.placeId = placeId;
+    marker.isPrimary = isPrimary;
 
     // The tooltip is the text shown on hover. We strip the country
     // to make it less verbose.
@@ -110,10 +114,10 @@ export default function initPlaceMarkers(
   // Adjust marker size on zoom changes.
   map.addEventListener("zoomend", () => {
     const zoom = map.getZoom();
-    Object.entries(placesToMarkers).forEach(([placeId, marker]) => {
+    Object.values(placesToMarkers).forEach((marker) => {
       const newRadius = radiusGivenZoom({
         zoom,
-        isPrimary: determineIsPrimary(filterManager.entries[placeId]),
+        isPrimary: marker.isPrimary,
       });
       marker.setRadius(newRadius);
     });
