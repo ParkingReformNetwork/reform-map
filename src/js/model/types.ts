@@ -23,10 +23,6 @@ export class Date {
     if (this.raw.length === 7) return this.parsed.toFormat("LLL yyyy");
     return this.parsed.toFormat("LLL d, yyyy");
   }
-
-  preposition(): "in" | "on" {
-    return this.raw.length === 10 ? "on" : "in";
-  }
 }
 
 export type PlaceId = string;
