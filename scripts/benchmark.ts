@@ -376,6 +376,12 @@ async function runOnce(browser: Browser): Promise<RunResult> {
   }
 }
 
+interface Stat {
+  median: number;
+  min: number;
+  max: number;
+}
+
 function median(values: number[]): number {
   const sorted = [...values].sort((a, b) => a - b);
   const mid = Math.floor(sorted.length / 2);
@@ -384,16 +390,154 @@ function median(values: number[]): number {
     : sorted[mid];
 }
 
-function summarize(values: number[]): {
-  median: number;
-  min: number;
-  max: number;
-} {
+function summarize(values: number[]): Stat {
   return {
     median: median(values),
     min: Math.min(...values),
     max: Math.max(...values),
   };
+}
+
+// A high-level task is reported as one overall time plus granular stages that
+// sum to it. Rather than repeat a `summarize(runs.map(...))` per metric, we
+// describe each task once (how to read its total and each stage from a raw
+// RunResult) and drive the JSON, the console summary, and the per-run output off
+// this single list.
+interface StageDescriptor {
+  key: string;
+  label: string;
+  note?: string;
+  value: (r: RunResult) => number;
+}
+
+interface TaskDescriptor {
+  key: string;
+  label: string;
+  note?: string;
+  total: (r: RunResult) => number;
+  stages: StageDescriptor[];
+}
+
+interface TaskStat {
+  total: Stat;
+  stages: Record<string, Stat>;
+}
+
+// For the initial load the stages are the wall-clock gaps between consecutive
+// milestones (responseEnd -> fcp -> dataFetched -> counterReady -> painted).
+// Those milestones are captured as absolute marks on the browser's clock and
+// differenced here, so the stages add up exactly to `painted` (the total). The
+// interaction tasks split their felt time-to-paint into the synchronous JS
+// portion and the remaining paint.
+const TASKS: TaskDescriptor[] = [
+  {
+    key: "initialLoad",
+    label: "Initial page load",
+    total: (r) => r.initialPaintedMs,
+    stages: [
+      {
+        key: "network",
+        label: "network",
+        note: "HTML downloaded",
+        value: (r) => r.initialResponseEndMs,
+      },
+      {
+        key: "firstPaint",
+        label: "first paint",
+        note: "first pixels",
+        value: (r) => r.initialFcpMs - r.initialResponseEndMs,
+      },
+      {
+        key: "dataFetch",
+        label: "data fetch",
+        note: "largest resource",
+        value: (r) => r.initialDataFetchedMs - r.initialFcpMs,
+      },
+      {
+        key: "jsBuild",
+        label: "JS build",
+        note: "filter/build",
+        value: (r) => r.initialCounterReadyMs - r.initialDataFetchedMs,
+      },
+      {
+        key: "markerPaint",
+        label: "marker paint",
+        note: "map visible",
+        value: (r) => r.initialPaintedMs - r.initialCounterReadyMs,
+      },
+    ],
+  },
+  {
+    key: "tableView",
+    label: "Table view",
+    total: (r) => r.tableLoadMs,
+    stages: [],
+  },
+  {
+    key: "filterReduceMin",
+    label: "Filter → reduce min",
+    total: (r) => r.filterReduceMinMs,
+    stages: [
+      { key: "js", label: "JS", value: (r) => r.filterReduceMinJsMs },
+      {
+        key: "paint",
+        label: "paint",
+        value: (r) => r.filterReduceMinMs - r.filterReduceMinJsMs,
+      },
+    ],
+  },
+  {
+    key: "filterReset",
+    label: "Filter → any reform",
+    total: (r) => r.filterResetMs,
+    stages: [
+      { key: "js", label: "JS", value: (r) => r.filterResetJsMs },
+      {
+        key: "paint",
+        label: "paint",
+        value: (r) => r.filterResetMs - r.filterResetJsMs,
+      },
+    ],
+  },
+  {
+    key: "loadSearch",
+    label: "Load search",
+    note: "first click builds Choices.js",
+    total: (r) => r.searchInitMs,
+    stages: [
+      { key: "js", label: "JS", value: (r) => r.searchInitJsMs },
+      {
+        key: "paint",
+        label: "paint",
+        value: (r) => r.searchInitMs - r.searchInitJsMs,
+      },
+    ],
+  },
+];
+
+function summarizeTask(task: TaskDescriptor, runs: RunResult[]): TaskStat {
+  return {
+    total: summarize(runs.map(task.total)),
+    stages: Object.fromEntries(
+      task.stages.map((stage) => [stage.key, summarize(runs.map(stage.value))]),
+    ),
+  };
+}
+
+// One run reshaped into the same nested { total, stages } shape as the summary.
+function runToNested(r: RunResult): Record<string, unknown> {
+  const tasks = Object.fromEntries(
+    TASKS.map((task) => [
+      task.key,
+      {
+        total: task.total(r),
+        stages: Object.fromEntries(
+          task.stages.map((stage) => [stage.key, stage.value(r)]),
+        ),
+      },
+    ]),
+  );
+  return { ...tasks, totalBytes: r.totalBytes };
 }
 
 const fmtMs = (ms: number): string => `${ms.toFixed(0)} ms`;
@@ -432,18 +576,9 @@ async function main(): Promise<void> {
   }
 
   const { numPlaces } = runs[0];
-  const responseEnd = summarize(runs.map((r) => r.initialResponseEndMs));
-  const fcp = summarize(runs.map((r) => r.initialFcpMs));
-  const dataFetched = summarize(runs.map((r) => r.initialDataFetchedMs));
-  const counterReady = summarize(runs.map((r) => r.initialCounterReadyMs));
-  const painted = summarize(runs.map((r) => r.initialPaintedMs));
-  const table = summarize(runs.map((r) => r.tableLoadMs));
-  const filterReduceMin = summarize(runs.map((r) => r.filterReduceMinMs));
-  const filterReduceMinJs = summarize(runs.map((r) => r.filterReduceMinJsMs));
-  const filterReset = summarize(runs.map((r) => r.filterResetMs));
-  const filterResetJs = summarize(runs.map((r) => r.filterResetJsMs));
-  const searchInit = summarize(runs.map((r) => r.searchInitMs));
-  const searchInitJs = summarize(runs.map((r) => r.searchInitJsMs));
+  const tasks = Object.fromEntries(
+    TASKS.map((task) => [task.key, summarizeTask(task, runs)]),
+  );
   const transfer = summarize(runs.map((r) => r.totalBytes));
 
   // Largest resources, using the run with the median total transfer as
@@ -455,53 +590,30 @@ async function main(): Promise<void> {
     .sort((a, b) => b[1] - a[1])
     .slice(0, 5);
 
-  const markLine = (
-    label: string,
-    s: { median: number; min: number; max: number },
-    note = "",
-  ): void =>
-    console.log(
-      `  ${label.padEnd(16)}median ${fmtMs(s.median)} (min ${fmtMs(
-        s.min,
-      )}, max ${fmtMs(s.max)})${note}`,
-    );
-
   console.log(`\n===== Summary =====`);
-  console.log(`Places shown:  ${numPlaces}`);
-  console.log(`Initial load (cumulative ms from navigation start):`);
-  markLine("response end:", responseEnd, "  HTML downloaded");
-  markLine("first paint:", fcp, "  first pixels");
-  markLine("data fetched:", dataFetched, "  largest resource");
-  markLine("counter ready:", counterReady, "  JS filter/build done");
-  markLine("markers painted:", painted, "  map visible (felt load)");
+  console.log(`Places shown: ${numPlaces}\n`);
+
+  // One line per task with its overall time, then its granular stages indented
+  // underneath (stages sum to the total).
+  for (const task of TASKS) {
+    const stat = tasks[task.key];
+    const note = task.note ? `  ${task.note}` : "";
+    console.log(
+      `${task.label.padEnd(20)} median ${fmtMs(stat.total.median)} (min ${fmtMs(
+        stat.total.min,
+      )}, max ${fmtMs(stat.total.max)})${note}`,
+    );
+    for (const stage of task.stages) {
+      const s = stat.stages[stage.key];
+      const stageNote = stage.note ? `  ${stage.note}` : "";
+      console.log(
+        `  ${stage.label.padEnd(14)}${fmtMs(s.median).padStart(7)}${stageNote}`,
+      );
+    }
+  }
+
   console.log(
-    `Table load:    median ${fmtMs(table.median)} (min ${fmtMs(
-      table.min,
-    )}, max ${fmtMs(table.max)})`,
-  );
-  console.log(
-    `Filter → reduce min: median ${fmtMs(
-      filterReduceMin.median,
-    )} painted (min ${fmtMs(filterReduceMin.min)}, max ${fmtMs(
-      filterReduceMin.max,
-    )}); ${fmtMs(filterReduceMinJs.median)} JS-only`,
-  );
-  console.log(
-    `Filter → any reform: median ${fmtMs(
-      filterReset.median,
-    )} painted (min ${fmtMs(filterReset.min)}, max ${fmtMs(
-      filterReset.max,
-    )}); ${fmtMs(filterResetJs.median)} JS-only`,
-  );
-  console.log(
-    `Search init:   median ${fmtMs(searchInit.median)} painted (min ${fmtMs(
-      searchInit.min,
-    )}, max ${fmtMs(searchInit.max)}); ${fmtMs(
-      searchInitJs.median,
-    )} JS-only  first click builds Choices.js`,
-  );
-  console.log(
-    `Transfer:      median ${fmtMb(transfer.median)} (min ${fmtMb(
+    `\n${"Transfer".padEnd(20)} median ${fmtMb(transfer.median)} (min ${fmtMb(
       transfer.min,
     )}, max ${fmtMb(transfer.max)})`,
   );
@@ -516,36 +628,9 @@ async function main(): Promise<void> {
     gitCommit: gitCommit(),
     url: BASE_URL,
     numPlaces,
-    summary: {
-      initialResponseEndMs: responseEnd,
-      initialFcpMs: fcp,
-      initialDataFetchedMs: dataFetched,
-      initialCounterReadyMs: counterReady,
-      initialPaintedMs: painted,
-      tableLoadMs: table,
-      filterReduceMinMs: filterReduceMin,
-      filterReduceMinJsMs: filterReduceMinJs,
-      filterResetMs: filterReset,
-      filterResetJsMs: filterResetJs,
-      searchInitMs: searchInit,
-      searchInitJsMs: searchInitJs,
-      totalBytes: transfer,
-    },
-    runs: runs.map((r) => ({
-      initialResponseEndMs: r.initialResponseEndMs,
-      initialFcpMs: r.initialFcpMs,
-      initialDataFetchedMs: r.initialDataFetchedMs,
-      initialCounterReadyMs: r.initialCounterReadyMs,
-      initialPaintedMs: r.initialPaintedMs,
-      tableLoadMs: r.tableLoadMs,
-      filterReduceMinMs: r.filterReduceMinMs,
-      filterReduceMinJsMs: r.filterReduceMinJsMs,
-      filterResetMs: r.filterResetMs,
-      filterResetJsMs: r.filterResetJsMs,
-      searchInitMs: r.searchInitMs,
-      searchInitJsMs: r.searchInitJsMs,
-      totalBytes: r.totalBytes,
-    })),
+    tasks,
+    transfer,
+    runs: runs.map(runToNested),
   };
   fs.mkdirSync(path.dirname(args.out), { recursive: true });
   fs.writeFileSync(args.out, `${JSON.stringify(output, null, 2)}\n`);
