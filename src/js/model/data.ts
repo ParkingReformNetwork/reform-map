@@ -5,7 +5,7 @@ import {
   RawCoreEntry,
   RawCoreLandUsePolicy,
   PolicyType,
-  Date,
+  ReformDate,
   RawPlace,
   ProcessedPlace,
   ProcessedCoreLandUsePolicy,
@@ -88,7 +88,7 @@ function processLandUsePolicy(
 ): ProcessedCoreLandUsePolicy {
   return {
     ...raw,
-    date: Date.fromNullable(raw.date),
+    date: ReformDate.fromNullable(raw.date),
   };
 }
 
@@ -97,7 +97,7 @@ function processBenefitDistrict(
 ): ProcessedCoreBenefitDistrict {
   return {
     ...raw,
-    date: Date.fromNullable(raw.date),
+    date: ReformDate.fromNullable(raw.date),
   };
 }
 

@@ -3,7 +3,7 @@ import fs from "fs/promises";
 import { zipWith } from "lodash-es";
 
 import {
-  Date,
+  ReformDate,
   RawCoreEntry,
   PlaceId,
   RawPlace,
@@ -194,7 +194,7 @@ function processCompleteBenefitDistrict(
 ): ProcessedCompleteBenefitDistrict {
   return {
     ...record,
-    date: Date.fromNullable(record.date),
+    date: ReformDate.fromNullable(record.date),
   };
 }
 
@@ -203,7 +203,7 @@ function processCompleteLandUsePolicy(
 ): ProcessedCompleteLandUsePolicy {
   return {
     ...policy,
-    date: Date.fromNullable(policy.date),
+    date: ReformDate.fromNullable(policy.date),
   };
 }
 

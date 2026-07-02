@@ -5,7 +5,7 @@ import { sortBy, without } from "lodash-es";
 import {
   RawCoreLandUsePolicy,
   UNKNOWN_YEAR,
-  Date,
+  ReformDate,
   RawPlace,
   RawCoreEntry,
   RawCoreBenefitDistrict,
@@ -37,7 +37,7 @@ class OptionValues {
   }
 
   #addDate(date: string | undefined): void {
-    this.year.add(date ? new Date(date).year : UNKNOWN_YEAR);
+    this.year.add(date ? new ReformDate(date).year : UNKNOWN_YEAR);
   }
 
   addBenefitDistrict(

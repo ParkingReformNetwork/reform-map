@@ -2,7 +2,7 @@ import { expect, test } from "@playwright/test";
 
 import { ColumnComponent, RowComponent, SortDirection } from "tabulator-tables";
 import { compareDates, tableDownloadFileName } from "../../src/js/table";
-import { Date } from "../../src/js/model/types";
+import { ReformDate } from "../../src/js/model/types";
 
 test("tableDownloadFileName()", () => {
   expect(tableDownloadFileName("any parking reform", "adopted")).toEqual(
@@ -35,8 +35,8 @@ test("compareDates handles descending and ascending", () => {
     dir: SortDirection,
   ): number =>
     compareDates(
-      Date.fromNullable(a),
-      Date.fromNullable(b),
+      ReformDate.fromNullable(a),
+      ReformDate.fromNullable(b),
       {} as RowComponent,
       {} as RowComponent,
       {} as ColumnComponent,

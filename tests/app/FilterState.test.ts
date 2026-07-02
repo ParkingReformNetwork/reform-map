@@ -8,7 +8,7 @@ import { POPULATION_MAX_INDEX } from "../../src/js/filter-features/populationSli
 import {
   PlaceId,
   ProcessedCoreEntry,
-  Date,
+  ReformDate,
   ALL_POLICY_TYPE,
 } from "../../src/js/model/types";
 
@@ -48,7 +48,7 @@ test.describe("PlaceFilterManager.matchedPolicyRecords()", () => {
             status: "adopted",
             scope: ["citywide"],
             land: ["all uses"],
-            date: new Date("2024"),
+            date: new ReformDate("2024"),
           },
         ],
       },
@@ -69,13 +69,13 @@ test.describe("PlaceFilterManager.matchedPolicyRecords()", () => {
             status: "adopted",
             scope: ["city center / business district"],
             land: ["commercial"],
-            date: new Date("2023"),
+            date: new ReformDate("2023"),
           },
           {
             status: "proposed",
             scope: ["citywide"],
             land: ["other"],
-            date: new Date("2023"),
+            date: new ReformDate("2023"),
           },
         ],
         rm_min: [
@@ -83,13 +83,13 @@ test.describe("PlaceFilterManager.matchedPolicyRecords()", () => {
             status: "adopted",
             scope: ["citywide"],
             land: ["all uses"],
-            date: new Date("2023"),
+            date: new ReformDate("2023"),
           },
         ],
         benefit_district: [
           {
             status: "adopted",
-            date: new Date("1997"),
+            date: new ReformDate("1997"),
           },
         ],
       },

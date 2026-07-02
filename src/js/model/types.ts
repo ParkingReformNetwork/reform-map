@@ -1,36 +1,56 @@
-import { DateTime } from "luxon";
+const MONTH_ABBREVIATIONS = [
+  "Jan",
+  "Feb",
+  "Mar",
+  "Apr",
+  "May",
+  "Jun",
+  "Jul",
+  "Aug",
+  "Sep",
+  "Oct",
+  "Nov",
+  "Dec",
+];
 
-export class Date {
+/// Wraps a raw date string in the format `yyyy`, `yyyy-mm`, or `yyyy-mm-dd`.
+export class ReformDate {
   readonly raw: string;
 
-  #parsed: DateTime<true> | undefined;
+  // Memoized [month, day] (1-indexed, defaulting to 1 when raw omits them).
+  #monthDay: [number, number] | undefined;
 
   constructor(raw: string) {
     this.raw = raw;
   }
 
-  static fromNullable(dateStr: string | undefined): Date | undefined {
+  static fromNullable(dateStr: string | undefined): ReformDate | undefined {
     return dateStr ? new this(dateStr) : undefined;
-  }
-
-  get parsed(): DateTime<true> {
-    if (this.#parsed) return this.#parsed;
-    const parsed = DateTime.fromISO(this.raw);
-    if (!parsed.isValid) {
-      throw new Error(`Invalid date string: ${this.raw}`);
-    }
-    this.#parsed = parsed;
-    return parsed;
   }
 
   get year(): string {
     return this.raw.slice(0, 4);
   }
 
+  get #parsedMonthDay(): [number, number] {
+    if (this.#monthDay) return this.#monthDay;
+    const month = this.raw.length >= 7 ? Number(this.raw.slice(5, 7)) : 1;
+    const day = this.raw.length >= 10 ? Number(this.raw.slice(8, 10)) : 1;
+    this.#monthDay = [month, day];
+    return this.#monthDay;
+  }
+
+  valueOf(): number {
+    const [month, day] = this.#parsedMonthDay;
+    return Number(this.year) * 10000 + month * 100 + day;
+  }
+
   format(): string {
     if (this.raw.length === 4) return this.raw;
-    if (this.raw.length === 7) return this.parsed.toFormat("LLL yyyy");
-    return this.parsed.toFormat("LLL d, yyyy");
+    const [month, day] = this.#parsedMonthDay;
+    const monthName = MONTH_ABBREVIATIONS[month - 1];
+    if (this.raw.length === 7) return `${monthName} ${this.year}`;
+    return `${monthName} ${day}, ${this.year}`;
   }
 }
 
@@ -88,14 +108,14 @@ export type RawCoreBenefitDistrict = BaseBenefitDistrict & {
   date: string | undefined;
 };
 export type ProcessedCoreBenefitDistrict = BaseBenefitDistrict & {
-  date: Date | undefined;
+  date: ReformDate | undefined;
 };
 
 export type RawCoreLandUsePolicy = BaseLandUsePolicy & {
   date: string | undefined;
 };
 export type ProcessedCoreLandUsePolicy = BaseLandUsePolicy & {
-  date: Date | undefined;
+  date: ReformDate | undefined;
 };
 
 export interface RawCoreEntry {

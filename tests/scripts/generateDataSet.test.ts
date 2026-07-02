@@ -6,7 +6,7 @@ import {
   createLandUseCsv,
 } from "../../scripts/generateDataSet";
 import type { Citation, ProcessedCompleteEntry } from "../../scripts/lib/data";
-import { Date } from "../../src/js/model/types";
+import { ReformDate } from "../../src/js/model/types";
 
 // This test uses snapshot testing (https://jestjs.io/docs/snapshot-testing#updating-snapshots). If the tests fail and the changes
 // are valid, run `npm test -- --updateSnapshot`.
@@ -51,7 +51,7 @@ test("generate CSVs", async ({}, testInfo) => {
           scope: ["citywide"],
           land: ["commercial", "other"],
           requirements: ["by right"],
-          date: new Date("2022-02-13"),
+          date: new ReformDate("2022-02-13"),
           reporter: "Donald Shoup",
           citations: [citation, citation],
         },
