@@ -3,29 +3,34 @@ import { DateTime } from "luxon";
 export class Date {
   readonly raw: string;
 
-  readonly parsed: DateTime<true>;
+  #parsed: DateTime<true> | undefined;
 
   constructor(raw: string) {
     this.raw = raw;
-    const parsed = DateTime.fromISO(raw);
-    if (!parsed.isValid) {
-      throw new Error(`Invalid date string: ${raw}`);
-    }
-    this.parsed = parsed;
   }
 
   static fromNullable(dateStr: string | undefined): Date | undefined {
     return dateStr ? new this(dateStr) : undefined;
   }
 
+  get parsed(): DateTime<true> {
+    if (this.#parsed) return this.#parsed;
+    const parsed = DateTime.fromISO(this.raw);
+    if (!parsed.isValid) {
+      throw new Error(`Invalid date string: ${this.raw}`);
+    }
+    this.#parsed = parsed;
+    return parsed;
+  }
+
+  get year(): string {
+    return this.raw.slice(0, 4);
+  }
+
   format(): string {
     if (this.raw.length === 4) return this.raw;
     if (this.raw.length === 7) return this.parsed.toFormat("LLL yyyy");
     return this.parsed.toFormat("LLL d, yyyy");
-  }
-
-  preposition(): "in" | "on" {
-    return this.raw.length === 10 ? "on" : "in";
   }
 }
 
