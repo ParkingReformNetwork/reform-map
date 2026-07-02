@@ -76,6 +76,40 @@ You can preview what a build will look like by running `npm run build`. Then use
 
 `npm run test-dist` will be implemented soon, while `npm test` is the development equivalent.
 
+### Icons
+
+All icons are inlined as an SVG sprite in [index.html](index.html#L43) using symbols from Font Awesome Free 6.7.2 (CC BY 4.0).
+
+**Using an icon:**
+
+In TypeScript, import `iconHtml()` or `createIcon()` from [src/js/layout/icons.ts](src/js/layout/icons.ts):
+
+```typescript
+import { iconHtml, createIcon, type IconName } from "./layout/icons";
+
+// As HTML string (e.g., for setting innerHTML)
+const html = iconHtml("magnifying-glass");
+element.innerHTML = html;
+
+// As a DOM element
+const icon = createIcon("magnifying-glass", "my-class");
+element.appendChild(icon);
+```
+
+**Adding a new icon:**
+
+1. Choose an icon from [Font Awesome Free 6.7.2](https://fontawesome.com/icons) (only Free tier icons are permitted).
+2. Download or copy the SVG path data (the `d="..."` attribute).
+3. Add a new `<symbol>` in [index.html](index.html#L43) with `id="icon-{name}"`:
+
+   ```html
+   <symbol id="icon-my-icon" viewBox="0 0 512 512">
+     <path fill="currentColor" d="..." />
+   </symbol>
+   ```
+
+4. Add the icon name to the `IconName` type in [src/js/layout/icons.ts](src/js/layout/icons.ts).
+
 ### Benchmark performance
 
 `npm run benchmark` measures initial map load, table-view load, and cold-load transfer size using a headless browser. It expects a production build to already be served, so in one terminal run:
