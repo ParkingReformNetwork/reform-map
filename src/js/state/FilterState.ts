@@ -266,7 +266,7 @@ export class PlaceFilterManager {
     if (!isStatus) return false;
 
     const isYear = filterState.year.has(
-      policyRecord.date?.parsed.year.toString() || UNKNOWN_YEAR,
+      policyRecord.date?.year || UNKNOWN_YEAR,
     );
     if (!isYear) return false;
 
@@ -291,9 +291,7 @@ export class PlaceFilterManager {
     const isStatus = record.status === filterState.status;
     if (!isStatus) return false;
 
-    const isYear = filterState.year.has(
-      record.date?.parsed.year.toString() || UNKNOWN_YEAR,
-    );
+    const isYear = filterState.year.has(record.date?.year || UNKNOWN_YEAR);
     if (!isYear) return false;
 
     return true;

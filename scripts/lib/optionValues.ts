@@ -37,7 +37,7 @@ class OptionValues {
   }
 
   #addDate(date: string | undefined): void {
-    this.year.add(date ? new Date(date).parsed.year.toString() : UNKNOWN_YEAR);
+    this.year.add(date ? new Date(date).year : UNKNOWN_YEAR);
   }
 
   addBenefitDistrict(
