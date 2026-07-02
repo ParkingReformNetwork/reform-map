@@ -1,3 +1,5 @@
+import { createIcon } from "./icons";
+
 export interface BaseAccordionElements {
   outerContainer: HTMLDivElement;
   accordionTitle: HTMLSpanElement;
@@ -22,9 +24,9 @@ export function updateAccordionUI(
   elements.accordionTitle.textContent = `${state.title}${state.supplementalTitle ?? ""}`;
 
   const upIcon =
-    elements.accordionButton.querySelector<SVGElement>(".fa-chevron-up");
+    elements.accordionButton.querySelector<SVGElement>(".icon-chevron-up");
   const downIcon =
-    elements.accordionButton.querySelector<SVGElement>(".fa-chevron-down");
+    elements.accordionButton.querySelector<SVGElement>(".icon-chevron-down");
   if (!upIcon || !downIcon) return;
 
   elements.accordionButton.setAttribute(
@@ -53,12 +55,8 @@ export function generateCheckbox(
   input.id = inputId;
   input.checked = checked;
 
-  const squareIcon = document.createElement("i");
-  squareIcon.className = "fa-regular fa-square";
-  squareIcon.ariaHidden = "true";
-  const checkedIcon = document.createElement("i");
-  checkedIcon.className = "fa-solid fa-square-check";
-  checkedIcon.ariaHidden = "true";
+  const squareIcon = createIcon("square", "icon-square");
+  const checkedIcon = createIcon("square-check", "icon-square-check");
 
   const span = document.createElement("span");
   span.textContent = description;
@@ -99,12 +97,10 @@ export function generateAccordion(htmlName: string): BaseAccordionElements {
   const accordionIconContainer = document.createElement("div");
   accordionIconContainer.className = "filter-accordion-icon-container";
   accordionIconContainer.ariaHidden = "true";
-  const downIcon = document.createElement("i");
-  downIcon.className = "fa-solid fa-chevron-down";
-  downIcon.title = "expand option checkboxes";
-  const upIcon = document.createElement("i");
-  upIcon.className = "fa-solid fa-chevron-up";
-  upIcon.title = "collapse option checkboxes";
+  const downIcon = createIcon("chevron-down", "icon-chevron-down");
+  downIcon.setAttribute("title", "expand option checkboxes");
+  const upIcon = createIcon("chevron-up", "icon-chevron-up");
+  upIcon.setAttribute("title", "collapse option checkboxes");
   accordionIconContainer.appendChild(downIcon);
   accordionIconContainer.appendChild(upIcon);
   accordionButton.appendChild(accordionIconContainer);

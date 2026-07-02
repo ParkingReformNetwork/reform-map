@@ -35,6 +35,104 @@
   </head>
 
   <body>
+    <!--
+      Icon sprite: each <symbol> holds one inlined icon from Font Awesome Free 6.7.2
+      (CC BY 4.0, https://fontawesome.com/license/free). Referenced via <use href="#icon-name">
+      from both static markup below and src/js/layout/icons.ts.
+    -->
+    <svg aria-hidden="true" style="display: none">
+      <symbol id="icon-arrow-right" viewBox="0 0 448 512">
+        <path
+          fill="currentColor"
+          d="M438.6 278.6c12.5-12.5 12.5-32.8 0-45.3l-160-160c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L338.8 224 32 224c-17.7 0-32 14.3-32 32s14.3 32 32 32l306.7 0L233.4 393.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l160-160z"
+        />
+      </symbol>
+      <symbol id="icon-check" viewBox="0 0 448 512">
+        <path
+          fill="currentColor"
+          d="M438.6 105.4c12.5 12.5 12.5 32.8 0 45.3l-256 256c-12.5 12.5-32.8 12.5-45.3 0l-128-128c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0L160 338.7 393.4 105.4c12.5-12.5 32.8-12.5 45.3 0z"
+        />
+      </symbol>
+      <symbol id="icon-chevron-down" viewBox="0 0 512 512">
+        <path
+          fill="currentColor"
+          d="M233.4 406.6c12.5 12.5 32.8 12.5 45.3 0l192-192c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L256 338.7 86.6 169.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l192 192z"
+        />
+      </symbol>
+      <symbol id="icon-chevron-up" viewBox="0 0 512 512">
+        <path
+          fill="currentColor"
+          d="M233.4 105.4c12.5-12.5 32.8-12.5 45.3 0l192 192c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L256 173.3 86.6 342.6c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3l192-192z"
+        />
+      </symbol>
+      <symbol id="icon-circle-question" viewBox="0 0 512 512">
+        <path
+          fill="currentColor"
+          d="M464 256A208 208 0 1 0 48 256a208 208 0 1 0 416 0zM0 256a256 256 0 1 1 512 0A256 256 0 1 1 0 256zm169.8-90.7c7.9-22.3 29.1-37.3 52.8-37.3l58.3 0c34.9 0 63.1 28.3 63.1 63.1c0 22.6-12.1 43.5-31.7 54.8L280 264.4c-.2 13-10.9 23.6-24 23.6c-13.3 0-24-10.7-24-24l0-13.5c0-8.6 4.6-16.5 12.1-20.8l44.3-25.4c4.7-2.7 7.6-7.7 7.6-13.1c0-8.4-6.8-15.1-15.1-15.1l-58.3 0c-3.4 0-6.4 2.1-7.5 5.3l-.4 1.2c-4.4 12.5-18.2 19-30.6 14.6s-19-18.2-14.6-30.6l.4-1.2zM224 352a32 32 0 1 1 64 0 32 32 0 1 1 -64 0z"
+        />
+      </symbol>
+      <symbol id="icon-up-right-from-square" viewBox="0 0 512 512">
+        <path
+          fill="currentColor"
+          d="M352 0c-12.9 0-24.6 7.8-29.6 19.8s-2.2 25.7 6.9 34.9L370.7 96 201.4 265.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L416 141.3l41.4 41.4c9.2 9.2 22.9 11.9 34.9 6.9s19.8-16.6 19.8-29.6l0-128c0-17.7-14.3-32-32-32L352 0zM80 32C35.8 32 0 67.8 0 112L0 432c0 44.2 35.8 80 80 80l320 0c44.2 0 80-35.8 80-80l0-112c0-17.7-14.3-32-32-32s-32 14.3-32 32l0 112c0 8.8-7.2 16-16 16L80 448c-8.8 0-16-7.2-16-16l0-320c0-8.8 7.2-16 16-16l112 0c17.7 0 32-14.3 32-32s-14.3-32-32-32L80 32z"
+        />
+      </symbol>
+      <symbol id="icon-circle-xmark" viewBox="0 0 512 512">
+        <path
+          fill="currentColor"
+          d="M256 48a208 208 0 1 1 0 416 208 208 0 1 1 0-416zm0 464A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM175 175c-9.4 9.4-9.4 24.6 0 33.9l47 47-47 47c-9.4 9.4-9.4 24.6 0 33.9s24.6 9.4 33.9 0l47-47 47 47c9.4 9.4 24.6 9.4 33.9 0s9.4-24.6 0-33.9l-47-47 47-47c9.4-9.4 9.4-24.6 0-33.9s-24.6-9.4-33.9 0l-47 47-47-47c-9.4-9.4-24.6-9.4-33.9 0z"
+        />
+      </symbol>
+      <symbol id="icon-link" viewBox="0 0 640 512">
+        <path
+          fill="currentColor"
+          d="M579.8 267.7c56.5-56.5 56.5-148 0-204.5c-50-50-128.8-56.5-186.3-15.4l-1.6 1.1c-14.4 10.3-17.7 30.3-7.4 44.6s30.3 17.7 44.6 7.4l1.6-1.1c32.1-22.9 76-19.3 103.8 8.6c31.5 31.5 31.5 82.5 0 114L422.3 334.8c-31.5 31.5-82.5 31.5-114 0c-27.9-27.9-31.5-71.8-8.6-103.8l1.1-1.6c10.3-14.4 6.9-34.4-7.4-44.6s-34.4-6.9-44.6 7.4l-1.1 1.6C206.5 251.2 213 330 263 380c56.5 56.5 148 56.5 204.5 0L579.8 267.7zM60.2 244.3c-56.5 56.5-56.5 148 0 204.5c50 50 128.8 56.5 186.3 15.4l1.6-1.1c14.4-10.3 17.7-30.3 7.4-44.6s-30.3-17.7-44.6-7.4l-1.6 1.1c-32.1 22.9-76 19.3-103.8-8.6C74 372 74 321 105.5 289.5L217.7 177.2c31.5-31.5 82.5-31.5 114 0c27.9 27.9 31.5 71.8 8.6 103.9l-1.1 1.6c-10.3 14.4-6.9 34.4 7.4 44.6s34.4 6.9 44.6-7.4l1.1-1.6C433.5 260.8 427 182 377 132c-56.5-56.5-148-56.5-204.5 0L60.2 244.3z"
+        />
+      </symbol>
+      <symbol id="icon-magnifying-glass" viewBox="0 0 512 512">
+        <path
+          fill="currentColor"
+          d="M416 208c0 45.9-14.9 88.3-40 122.7L502.6 457.4c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L330.7 376c-34.4 25.2-76.8 40-122.7 40C93.1 416 0 322.9 0 208S93.1 0 208 0S416 93.1 416 208zM208 352a144 144 0 1 0 0-288 144 144 0 1 0 0 288z"
+        />
+      </symbol>
+      <symbol id="icon-square" viewBox="0 0 448 512">
+        <path
+          fill="currentColor"
+          d="M384 80c8.8 0 16 7.2 16 16l0 320c0 8.8-7.2 16-16 16L64 432c-8.8 0-16-7.2-16-16L48 96c0-8.8 7.2-16 16-16l320 0zM64 32C28.7 32 0 60.7 0 96L0 416c0 35.3 28.7 64 64 64l320 0c35.3 0 64-28.7 64-64l0-320c0-35.3-28.7-64-64-64L64 32z"
+        />
+      </symbol>
+      <symbol id="icon-square-check" viewBox="0 0 448 512">
+        <path
+          fill="currentColor"
+          d="M64 32C28.7 32 0 60.7 0 96L0 416c0 35.3 28.7 64 64 64l320 0c35.3 0 64-28.7 64-64l0-320c0-35.3-28.7-64-64-64L64 32zM337 209L209 337c-9.4 9.4-24.6 9.4-33.9 0l-64-64c-9.4-9.4-9.4-24.6 0-33.9s24.6-9.4 33.9 0l47 47L303 175c9.4-9.4 24.6-9.4 33.9 0s9.4 24.6 0 33.9z"
+        />
+      </symbol>
+      <symbol id="icon-sliders" viewBox="0 0 512 512">
+        <path
+          fill="currentColor"
+          d="M0 416c0 17.7 14.3 32 32 32l54.7 0c12.3 28.3 40.5 48 73.3 48s61-19.7 73.3-48L480 448c17.7 0 32-14.3 32-32s-14.3-32-32-32l-246.7 0c-12.3-28.3-40.5-48-73.3-48s-61 19.7-73.3 48L32 384c-17.7 0-32 14.3-32 32zm128 0a32 32 0 1 1 64 0 32 32 0 1 1 -64 0zM320 256a32 32 0 1 1 64 0 32 32 0 1 1 -64 0zm32-80c-32.8 0-61 19.7-73.3 48L32 224c-17.7 0-32 14.3-32 32s14.3 32 32 32l246.7 0c12.3 28.3 40.5 48 73.3 48s61-19.7 73.3-48l54.7 0c17.7 0 32-14.3 32-32s-14.3-32-32-32l-54.7 0c-12.3-28.3-40.5-48-73.3-48zM192 128a32 32 0 1 1 0-64 32 32 0 1 1 0 64zm73.3-64C253 35.7 224.8 16 192 16s-61 19.7-73.3 48L32 64C14.3 64 0 78.3 0 96s14.3 32 32 32l86.7 0c12.3 28.3 40.5 48 73.3 48s61-19.7 73.3-48L480 128c17.7 0 32-14.3 32-32s-14.3-32-32-32L265.3 64z"
+        />
+      </symbol>
+      <symbol id="icon-table" viewBox="0 0 512 512">
+        <path
+          fill="currentColor"
+          d="M64 256l0-96 160 0 0 96L64 256zm0 64l160 0 0 96L64 416l0-96zm224 96l0-96 160 0 0 96-160 0zM448 256l-160 0 0-96 160 0 0 96zM64 32C28.7 32 0 60.7 0 96L0 416c0 35.3 28.7 64 64 64l384 0c35.3 0 64-28.7 64-64l0-320c0-35.3-28.7-64-64-64L64 32z"
+        />
+      </symbol>
+      <symbol id="icon-earth-americas" viewBox="0 0 512 512">
+        <path
+          fill="currentColor"
+          d="M57.7 193l9.4 16.4c8.3 14.5 21.9 25.2 38 29.8L163 255.7c17.2 4.9 29 20.6 29 38.5l0 39.9c0 11 6.2 21 16 25.9s16 14.9 16 25.9l0 39c0 15.6 14.9 26.9 29.9 22.6c16.1-4.6 28.6-17.5 32.7-33.8l2.8-11.2c4.2-16.9 15.2-31.4 30.3-40l8.1-4.6c15-8.5 24.2-24.5 24.2-41.7l0-8.3c0-12.7-5.1-24.9-14.1-33.9l-3.9-3.9c-9-9-21.2-14.1-33.9-14.1L257 256c-11.1 0-22.1-2.9-31.8-8.4l-34.5-19.7c-4.3-2.5-7.6-6.5-9.2-11.2c-3.2-9.6 1.1-20 10.2-24.5l5.9-3c6.6-3.3 14.3-3.9 21.3-1.5l23.2 7.7c8.2 2.7 17.2-.4 21.9-7.5c4.7-7 4.2-16.3-1.2-22.8l-13.6-16.3c-10-12-9.9-29.5 .3-41.3l15.7-18.3c8.8-10.3 10.2-25 3.5-36.7l-2.4-4.2c-3.5-.2-6.9-.3-10.4-.3C163.1 48 84.4 108.9 57.7 193zM464 256c0-36.8-9.6-71.4-26.4-101.5L412 164.8c-15.7 6.3-23.8 23.8-18.5 39.8l16.9 50.7c3.5 10.4 12 18.3 22.6 20.9l29.1 7.3c1.2-9 1.8-18.2 1.8-27.5zM0 256a256 256 0 1 1 512 0A256 256 0 1 1 0 256z"
+        />
+      </symbol>
+      <symbol id="icon-triangle-exclamation" viewBox="0 0 512 512">
+        <path
+          fill="currentColor"
+          d="M256 32c14.2 0 27.3 7.5 34.5 19.8l216 368c7.3 12.4 7.3 27.7 .2 40.1S486.3 480 472 480L40 480c-14.3 0-27.6-7.7-34.7-20.1s-7-27.8 .2-40.1l216-368C228.7 39.5 241.8 32 256 32zm0 128c-13.3 0-24 10.7-24 24l0 112c0 13.3 10.7 24 24 24s24-10.7 24-24l0-112c0-13.3-10.7-24-24-24zm32 224a32 32 0 1 0 -64 0 32 32 0 1 0 64 0z"
+        />
+      </symbol>
+    </svg>
+
     <header class="top-header">
       <nav class="header-view-toggle">
         <button
@@ -42,7 +140,7 @@
           title="switch to table view"
           aria-label="switch to table view from map view"
         >
-          <i class="fa-solid fa-table" aria-hidden="true"></i>
+          <svg aria-hidden="true"><use href="#icon-table"></use></svg>
         </button>
         <button
           class="header-icon-container header-map-icon-container"
@@ -50,7 +148,7 @@
           aria-label="switch to map view from table view"
           style="display: none"
         >
-          <i class="fa-solid fa-earth-americas" aria-hidden="true"></i>
+          <svg aria-hidden="true"><use href="#icon-earth-americas"></use></svg>
         </button>
       </nav>
       <nav class="header-control-icons">
@@ -60,7 +158,7 @@
           aria-expanded="false"
           aria-controls="filter-popup"
         >
-          <i class="fa-solid fa-sliders" aria-hidden="true"></i>
+          <svg aria-hidden="true"><use href="#icon-sliders"></use></svg>
           <span class="sr-only">open a popup to control filter options</span>
         </button>
         <button
@@ -69,7 +167,9 @@
           aria-expanded="false"
           aria-controls="search-popup"
         >
-          <i class="fa-solid fa-magnifying-glass" aria-hidden="true"></i>
+          <svg aria-hidden="true">
+            <use href="#icon-magnifying-glass"></use>
+          </svg>
           <span class="sr-only"
             >open a popup to search for a specific place</span
           >
@@ -80,18 +180,23 @@
           aria-expanded="false"
           aria-controls="about-popup"
         >
-          <i class="fa-regular fa-circle-question" aria-hidden="true"></i>
+          <svg aria-hidden="true"><use href="#icon-circle-question"></use></svg>
           <span class="sr-only">toggle a popup describing the map</span>
         </button>
         <a
           class="header-icon-container header-share-icon-container"
           title="copy link"
-          ><i class="share-link-icon fa-solid fa-link" aria-hidden="true"></i
-          ><i
-            class="share-check-icon fa-solid fa-check"
+        >
+          <svg class="share-link-icon" aria-hidden="true">
+            <use href="#icon-link"></use>
+          </svg>
+          <svg
+            class="share-check-icon"
             style="display: none"
             aria-hidden="true"
-          ></i>
+          >
+            <use href="#icon-check"></use>
+          </svg>
           <span class="sr-only"
             >copy a link to the map with the current filter configuration</span
           >
@@ -102,7 +207,9 @@
           title="view fullscreen"
           target="_blank"
         >
-          <i class="fa-solid fa-up-right-from-square" aria-hidden="true"></i>
+          <svg aria-hidden="true">
+            <use href="#icon-up-right-from-square"></use>
+          </svg>
           <span class="sr-only">view fullscreen (opens in new tab)</span>
         </a>
       </nav>
@@ -121,7 +228,7 @@
           title="close the about popup"
           aria-label="close the about popup"
         >
-          <i class="fa-regular fa-circle-xmark" aria-hidden="true"></i>
+          <svg aria-hidden="true"><use href="#icon-circle-xmark"></use></svg>
         </button>
       </header>
 
@@ -153,8 +260,10 @@
               target="_blank"
               href="https://parkingreform.org/resources/mandates-map/"
               >Methodology and key takeaways
-              <i aria-hidden="true" class="fa-solid fa-arrow-right"></i
-            ></a>
+              <svg aria-hidden="true">
+                <use href="#icon-arrow-right"></use>
+              </svg>
+            </a>
           </li>
           <li>
             <a
@@ -162,8 +271,10 @@
               target="_blank"
               href="https://forms.gle/PaYXUP5J7YR1Zi6q6"
               >Submit a report
-              <i aria-hidden="true" class="fa-solid fa-arrow-right"></i
-            ></a>
+              <svg aria-hidden="true">
+                <use href="#icon-arrow-right"></use>
+              </svg>
+            </a>
           </li>
           <li>
             <a
@@ -171,8 +282,10 @@
               target="_blank"
               href="https://parkingreform.org/mandates-map/data/mandates-map-data.zip"
               >Download the data set (zip file)
-              <i aria-hidden="true" class="fa-solid fa-arrow-right"></i
-            ></a>
+              <svg aria-hidden="true">
+                <use href="#icon-arrow-right"></use>
+              </svg>
+            </a>
           </li>
           <li>
             <a
@@ -180,8 +293,10 @@
               target="_blank"
               href="https://parkingreform.org/resources/parking-lot-map"
               >PRN's Parking Lot Map
-              <i aria-hidden="true" class="fa-solid fa-arrow-right"></i
-            ></a>
+              <svg aria-hidden="true">
+                <use href="#icon-arrow-right"></use>
+              </svg>
+            </a>
           </li>
           <li>
             <a
@@ -189,8 +304,10 @@
               target="_blank"
               href="https://parkingreform.org/support/"
               >Support this project with a donation
-              <i aria-hidden="true" class="fa-solid fa-arrow-right"></i
-            ></a>
+              <svg aria-hidden="true">
+                <use href="#icon-arrow-right"></use>
+              </svg>
+            </a>
           </li>
         </ul>
       </div>
@@ -203,7 +320,9 @@
           target="_blank"
           href="https://parkingreform.org/support/"
           >Parking Reform Network
-          <i aria-hidden="true" class="fa-solid fa-arrow-right"></i></a
+          <svg aria-hidden="true">
+            <use href="#icon-arrow-right"></use>
+          </svg> </a
         >. It is based on "A Map of Cities That Got Rid of Parking Minimums",
         initially published by
         <a
@@ -212,8 +331,10 @@
           href="https://strongtowns.org"
           target="_blank"
           >Strong Towns
-          <i aria-hidden="true" class="fa-solid fa-arrow-right"></i
-        ></a>
+          <svg aria-hidden="true">
+            <use href="#icon-arrow-right"></use>
+          </svg>
+        </a>
         in November 2015. Reports have been submitted by many Strong Towns
         readers and Parking Reform Network members over the years; reporters are
         credited on the detailed information pages for each place.
@@ -224,7 +345,8 @@
           class="external-link"
           target="_blank"
           href="https://github.com/ParkingReformNetwork/reform-map"
-          >GitHub <i aria-hidden="true" class="fa-solid fa-arrow-right"></i></a
+          >GitHub
+          <svg aria-hidden="true"><use href="#icon-arrow-right"></use></svg></a
         >, where you can see the code contributors under the "Insights" tab.
       </p>
     </section>
