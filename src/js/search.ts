@@ -13,7 +13,7 @@ function updateSearchPopupUI(isVisible: boolean) {
 
 type SearchPopupObservable = Observable<boolean>;
 
-function initSearchPopup(onFirstOpen: () => void): SearchPopupObservable {
+function initSearchPopup(onOpen: () => void): SearchPopupObservable {
   const isVisible = new Observable<boolean>("search popup", false);
   isVisible.subscribe(updateSearchPopupUI);
 
@@ -24,9 +24,9 @@ function initSearchPopup(onFirstOpen: () => void): SearchPopupObservable {
   icon.addEventListener("click", () => {
     const nowVisible = !isVisible.getValue();
     isVisible.setValue(nowVisible);
-    // Build the (expensive) Choices widget lazily on first open. `div.choices`
-    // does not exist until then, so query it after building.
-    if (nowVisible) onFirstOpen();
+    // Build the Choices.js widget before the setTimeout below, since `div.choices` does
+    // not exist until then.
+    if (nowVisible) onOpen();
     setTimeout(
       () => document.querySelector<HTMLElement>("div.choices")?.click(),
       100,
@@ -53,7 +53,7 @@ export default function initSearch(filterManager: PlaceFilterManager): void {
   const htmlElement = document.querySelector(".search");
   if (!htmlElement) return;
 
-  // Building Choices.js with the full set of places is expensive (~93ms), so
+  // Building Choices.js with the full set of places is expensive (~90ms), so
   // defer it until the user first opens the search popup.
   let choices: Choices | null = null;
 
@@ -89,10 +89,9 @@ export default function initSearch(filterManager: PlaceFilterManager): void {
     });
 
     // Set initial state.
-    choices.setChoiceByValue(filterManager.getState().searchInput || "");
+    choices.setChoiceByValue(filterManager.getState().searchInput ?? "");
   };
 
-  // Also set up the popup, which builds Choices on first open.
   const popupIsVisible = initSearchPopup(buildChoices);
 
   // Ensure that programmatic changes that set FilterState.searchInput to null
