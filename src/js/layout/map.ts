@@ -2,7 +2,7 @@ import { Map, TileLayer } from "leaflet";
 
 export const NO_MANDATES_MARKERS_PANE = "noMandatesMarkers";
 const MIN_ZOOM = 3;
-const MAX_ZOOM = 10;
+const MAX_ZOOM = 13;
 
 const BASE_LAYER = new TileLayer(
   "https://tiles.stadiamaps.com/tiles/stamen_toner_lite/{z}/{x}/{y}{r}.png",
