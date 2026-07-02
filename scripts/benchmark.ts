@@ -15,6 +15,7 @@ const TABLE_COUNTER = "#table-counter";
 const TABLE_TOGGLE = ".header-table-icon-container";
 const MAP_TOGGLE = ".header-map-icon-container";
 const FILTER_TOGGLE = ".header-filter-icon-container";
+const SEARCH_TOGGLE = ".header-search-icon-container";
 const POLICY_DROPDOWN = "#filter-policy-type-dropdown";
 
 // The counters start empty and are populated with text beginning "Showing"
@@ -132,6 +133,8 @@ interface RunResult {
   filterReduceMinJsMs: number;
   filterResetMs: number;
   filterResetJsMs: number;
+  searchInitMs: number;
+  searchInitJsMs: number;
   totalBytes: number;
   numPlaces: number;
   // URL -> bytes transferred, for reporting the largest resources.
@@ -189,6 +192,53 @@ async function timePolicyChange(
         },
       ),
     { target: targetValue, selector: POLICY_DROPDOWN },
+  );
+}
+
+// Click the search icon and time how long until the Choices.js widget is built
+// and PAINTED. Search is initialized lazily (see src/js/search.ts): clicking the
+// icon synchronously constructs `new Choices(...)` from ~6,000 places -- the
+// single most expensive piece of app JS -- which is why it's kept off the
+// initial-load critical path. This measures that deferred cost directly.
+//
+// Runs in-page (like timePolicyChange) so timing isn't polluted by CDP
+// round-trips. `icon.click()` runs the real handler, whose `new Choices(...)`
+// builds the widget's DOM synchronously (the `.choices__inner` container), so
+// when click() returns all the JS is done. But the browser hasn't laid out and
+// painted that DOM yet -- that's the next frame. So, as elsewhere, we wait for
+// the next animation frame and then a macrotask posted from within it (which
+// runs just after that frame paints) and stop the clock there.
+async function timeSearchInit(
+  page: Page,
+): Promise<{ jsMs: number; paintedMs: number }> {
+  return page.evaluate(
+    (selector) =>
+      new Promise<{ jsMs: number; paintedMs: number }>((resolve, reject) => {
+        const icon = document.querySelector<HTMLElement>(selector);
+        if (!icon) {
+          reject(new Error(`search icon not found: ${selector}`));
+          return;
+        }
+
+        const start = performance.now();
+        icon.click();
+        // The click handler has synchronously built Choices.js.
+        const jsMs = performance.now() - start;
+
+        if (!document.querySelector(".choices__inner")) {
+          reject(new Error("search widget (.choices__inner) was not built"));
+          return;
+        }
+
+        requestAnimationFrame(() => {
+          const channel = new MessageChannel();
+          channel.port1.onmessage = () => {
+            resolve({ jsMs, paintedMs: performance.now() - start });
+          };
+          channel.port2.postMessage(undefined);
+        });
+      }),
+    SEARCH_TOGGLE,
   );
 }
 
@@ -299,6 +349,9 @@ async function runOnce(browser: Browser): Promise<RunResult> {
     const forward = await timePolicyChange(page, "reduce parking minimums");
     const back = await timePolicyChange(page, "any parking reform");
 
+    // Time the lazily-built search widget (first click constructs Choices.js).
+    const search = await timeSearchInit(page);
+
     const totalBytes = Object.values(resources).reduce((a, b) => a + b, 0);
 
     return {
@@ -312,6 +365,8 @@ async function runOnce(browser: Browser): Promise<RunResult> {
       filterReduceMinJsMs: forward.jsMs,
       filterResetMs: back.paintedMs,
       filterResetJsMs: back.jsMs,
+      searchInitMs: search.paintedMs,
+      searchInitJsMs: search.jsMs,
       totalBytes,
       numPlaces,
       resources,
@@ -387,6 +442,8 @@ async function main(): Promise<void> {
   const filterReduceMinJs = summarize(runs.map((r) => r.filterReduceMinJsMs));
   const filterReset = summarize(runs.map((r) => r.filterResetMs));
   const filterResetJs = summarize(runs.map((r) => r.filterResetJsMs));
+  const searchInit = summarize(runs.map((r) => r.searchInitMs));
+  const searchInitJs = summarize(runs.map((r) => r.searchInitJsMs));
   const transfer = summarize(runs.map((r) => r.totalBytes));
 
   // Largest resources, using the run with the median total transfer as
@@ -437,6 +494,13 @@ async function main(): Promise<void> {
     )}); ${fmtMs(filterResetJs.median)} JS-only`,
   );
   console.log(
+    `Search init:   median ${fmtMs(searchInit.median)} painted (min ${fmtMs(
+      searchInit.min,
+    )}, max ${fmtMs(searchInit.max)}); ${fmtMs(
+      searchInitJs.median,
+    )} JS-only  first click builds Choices.js`,
+  );
+  console.log(
     `Transfer:      median ${fmtMb(transfer.median)} (min ${fmtMb(
       transfer.min,
     )}, max ${fmtMb(transfer.max)})`,
@@ -463,6 +527,8 @@ async function main(): Promise<void> {
       filterReduceMinJsMs: filterReduceMinJs,
       filterResetMs: filterReset,
       filterResetJsMs: filterResetJs,
+      searchInitMs: searchInit,
+      searchInitJsMs: searchInitJs,
       totalBytes: transfer,
     },
     runs: runs.map((r) => ({
@@ -476,6 +542,8 @@ async function main(): Promise<void> {
       filterReduceMinJsMs: r.filterReduceMinJsMs,
       filterResetMs: r.filterResetMs,
       filterResetJsMs: r.filterResetJsMs,
+      searchInitMs: r.searchInitMs,
+      searchInitJsMs: r.searchInitJsMs,
       totalBytes: r.totalBytes,
     })),
   };
