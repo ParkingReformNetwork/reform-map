@@ -1,4 +1,3 @@
-import initIcons from "./layout/fontAwesome";
 import createMap from "./layout/map";
 import initFilterPopup from "./layout/filterPopup";
 import maybeDisableFullScreenIcon from "./layout/iframe";
@@ -18,7 +17,6 @@ import initSearch from "./search";
 import initTable from "./table";
 
 export default async function initApp(): Promise<void> {
-  initIcons();
   maybeDisableFullScreenIcon();
   initAbout();
   initFilterPopup();

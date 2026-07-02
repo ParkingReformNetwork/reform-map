@@ -112,20 +112,20 @@ $filter-inner-width: calc(
     color: colors.$gray;
   }
 
-  .fa-square {
+  .icon-square {
     display: block;
   }
 
-  .fa-square-check {
+  .icon-square-check {
     display: none;
   }
 
   input[type="checkbox"]:checked {
-    & ~ .fa-square {
+    & ~ .icon-square {
       display: none;
     }
 
-    & ~ .fa-square-check {
+    & ~ .icon-square-check {
       display: block;
     }
   }

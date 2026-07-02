@@ -16,6 +16,7 @@ import {
 import { COUNTRIES_PREFIXED_BY_THE } from "../model/data";
 import { encodedPlaceToUrl } from "../model/placeId";
 import type { ViewState } from "../layout/viewToggle";
+import { iconHtml } from "../layout/icons";
 
 export function determinePlaceDescription(
   numPlaces: number,
@@ -61,7 +62,7 @@ export function determineSearch(
 ): string {
   const placeLink = `<a class="external-link" target="_blank" href=${encodedPlaceToUrl(
     encodedPlace,
-  )}>${placeId} <i aria-hidden="true" class="fa-solid fa-arrow-right"></i></a>`;
+  )}>${placeId} ${iconHtml("arrow-right")}</a>`;
 
   if (view === "map") {
     return `Showing ${placeLink} — ${SEARCH_RESET_HTML}`;

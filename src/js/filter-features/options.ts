@@ -17,6 +17,7 @@ import {
   updateAccordionUI,
 } from "../layout/accordion";
 import { initPopulationSlider } from "./populationSlider";
+import { createIcon } from "../layout/icons";
 
 import optionValuesData from "../../../data/option-values.json" with { type: "json" };
 import {
@@ -406,9 +407,7 @@ function initOutermostContainers(
   const disabledDatasetDiv = document.createElement("div");
   disabledDatasetDiv.classList.add("filter-illegal-dataset-container");
   disabledDatasetDiv.hidden = true;
-  const warningIcon = document.createElement("i");
-  warningIcon.classList.add("fa-solid", "fa-triangle-exclamation");
-  warningIcon.ariaHidden = "true";
+  const warningIcon = createIcon("triangle-exclamation");
   const warningText = document.createElement("span");
   warningText.textContent =
     " This dataset has no entries. To fix, change either the 'reform type' or 'status'.";
