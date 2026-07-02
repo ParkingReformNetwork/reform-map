@@ -1,5 +1,9 @@
 #!/usr/bin/env python3
-"""Compare the summary stats of two benchmark-results/*.json files.
+"""Compare two benchmark-results/*.json files.
+
+Each file has a nested `tasks` map (one high-level task -> {total, stages}) plus a
+top-level `transfer` stat. We print, per task, the overall median delta followed by
+its granular stages indented underneath.
 
 Usage:
     python3 scripts/compare-benchmarks.py <before.json> <after.json>
@@ -17,17 +21,22 @@ def load(path: Path) -> dict[str, Any]:
         return json.load(f)
 
 
-def fmt_value(key: str, value: float) -> str:
-    if key == "totalBytes":
-        return f"{value / 1_000_000:.2f} MB"
+def fmt_ms(value: float) -> str:
     return f"{value:.0f} ms"
 
 
-def fmt_delta(key: str, delta: float) -> str:
+def fmt_mb(value: float) -> str:
+    return f"{value / 1_000_000:.2f} MB"
+
+
+def fmt_delta_ms(delta: float) -> str:
     sign = "+" if delta >= 0 else ""
-    if key == "totalBytes":
-        return f"{sign}{delta / 1_000_000:.2f} MB"
     return f"{sign}{delta:.0f} ms"
+
+
+def fmt_delta_mb(delta: float) -> str:
+    sign = "+" if delta >= 0 else ""
+    return f"{sign}{delta / 1_000_000:.2f} MB"
 
 
 def fmt_percent(pct: float | None) -> str:
@@ -37,9 +46,29 @@ def fmt_percent(pct: float | None) -> str:
     return f"{sign}{pct:.1f}%"
 
 
+def row(
+    label: str,
+    before_median: float | None,
+    after_median: float | None,
+    fmt_value: Any,
+    fmt_delta: Any,
+) -> None:
+    if before_median is None or after_median is None:
+        return
+    delta = after_median - before_median
+    pct = (delta / before_median * 100) if before_median else None
+    print(
+        f"{label:<24}"
+        f"{fmt_value(before_median):>14}"
+        f"{fmt_value(after_median):>14}"
+        f"{fmt_delta(delta):>14}"
+        f"{fmt_percent(pct):>10}"
+    )
+
+
 def main() -> None:
     parser = argparse.ArgumentParser(
-        description="Compare summary stats between two benchmark-results JSON files."
+        description="Compare two benchmark-results JSON files (nested schema)."
     )
     parser.add_argument("before", type=Path, help="Baseline benchmark JSON file")
     parser.add_argument("after", type=Path, help="Candidate benchmark JSON file")
@@ -68,29 +97,45 @@ def main() -> None:
             file=sys.stderr,
         )
 
-    before_summary = before.get("summary", {})
-    after_summary = after.get("summary", {})
-    keys = [k for k in before_summary if k in after_summary]
-    keys += [k for k in after_summary if k not in before_summary]
-
     header = f"{'Metric':<24}{'Before':>14}{'After':>14}{'Delta':>14}{'Delta %':>10}"
     print(header)
     print("-" * len(header))
 
+    before_tasks = before.get("tasks", {})
+    after_tasks = after.get("tasks", {})
+    # Preserve the insertion order the benchmark wrote (initial load first, etc.),
+    # then append any task only present in the newer file.
+    keys = list(before_tasks) + [k for k in after_tasks if k not in before_tasks]
+
     for key in keys:
-        before_median = before_summary.get(key, {}).get("median")
-        after_median = after_summary.get(key, {}).get("median")
-        if before_median is None or after_median is None:
-            continue
-        delta = after_median - before_median
-        pct = (delta / before_median * 100) if before_median else None
-        print(
-            f"{key:<24}"
-            f"{fmt_value(key, before_median):>14}"
-            f"{fmt_value(key, after_median):>14}"
-            f"{fmt_delta(key, delta):>14}"
-            f"{fmt_percent(pct):>10}"
+        b = before_tasks.get(key, {})
+        a = after_tasks.get(key, {})
+        row(
+            key,
+            b.get("total", {}).get("median"),
+            a.get("total", {}).get("median"),
+            fmt_ms,
+            fmt_delta_ms,
         )
+        b_stages = b.get("stages", {})
+        a_stages = a.get("stages", {})
+        stage_keys = list(b_stages) + [k for k in a_stages if k not in b_stages]
+        for stage in stage_keys:
+            row(
+                f"  {stage}",
+                b_stages.get(stage, {}).get("median"),
+                a_stages.get(stage, {}).get("median"),
+                fmt_ms,
+                fmt_delta_ms,
+            )
+
+    row(
+        "transfer",
+        before.get("transfer", {}).get("median"),
+        after.get("transfer", {}).get("median"),
+        fmt_mb,
+        fmt_delta_mb,
+    )
 
 
 if __name__ == "__main__":

@@ -112,7 +112,7 @@ element.appendChild(icon);
 
 ### Benchmark performance
 
-`npm run benchmark` measures initial map load, table-view load, and cold-load transfer size using a headless browser. It expects a production build to already be served, so in one terminal run:
+`npm run benchmark` measures the high-level tasks a user performs — initial page load, opening the table view, switching the policy-type filter (to "reduce minimums" and back to "any reform"), and loading the search widget — plus cold-load transfer size, using a headless browser. It expects a production build to already be served, so in one terminal run:
 
 ```bash
 ❯ npm run build
@@ -125,9 +125,9 @@ Then, in another terminal:
 ❯ npm run benchmark
 ```
 
-It runs a few times with the browser cache disabled (so bundle size counts), prints a median/min/max summary, and writes `benchmark-results/latest.json` for before/after comparison. Options: `--runs N`, `--out <path>`, `--headed`, and `PORT` to override the port.
+It runs a few times with the browser cache disabled (so bundle size counts) and writes `benchmark-results/latest.json` for before/after comparison. Each task is reported as one overall median (with min/max) plus the granular stages that make it up, indented underneath. For example, the initial page load breaks down into network, first paint, data fetch, JS build, and marker paint, which sum to the total; the filter and search tasks split their time-to-paint into a synchronous JS portion and the remaining paint. Options: `--runs N`, `--out <path>`, `--headed`, and `PORT` to override the port.
 
-To compare two saved benchmark files, use `scripts/compare-benchmarks.py benchmark-results/<before.json> benchmark-results/<after.json>`. It prints a table of the summary medians (absolute and percent change) and warns if the two runs have different place counts, since that would make the comparison not apples-to-apples.
+To compare two saved benchmark files, use `scripts/compare-benchmarks.py benchmark-results/<before.json> benchmark-results/<after.json>`. It prints each task's total delta (absolute and percent change) with its stage deltas indented underneath, and warns if the two runs have different place counts, since that would make the comparison not apples-to-apples.
 
 ## Staging
 
