@@ -22,7 +22,7 @@ export type IconName =
 
 function markup(name: IconName, className?: string): string {
   const classAttr = className ? ` class="${className}"` : "";
-  return `<svg${classAttr} aria-hidden="true"><use href="#icon-${name}"></use></svg>`;
+  return `<svg${classAttr} aria-hidden="true" width="1em" height="1em"><use href="#icon-${name}"></use></svg>`;
 }
 
 export function iconHtml(name: IconName, className?: string): string {
