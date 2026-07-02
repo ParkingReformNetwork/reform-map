@@ -41,13 +41,13 @@ The database is stored in Directus and synced nightly to JSON files (`data/*.jso
 - **Fix issues**: `npm run fix` — Auto-fix linting and format issues
 - **Lint**: `npm run lint` — ESLint + Prettier checks
 - **Type check**: `npm run check`
-- **Test**: `npm test` — Playwright tests
+- **Test**: `npx playwright test` — Playwright tests
 
 All PRs require passing lint, type checks, and tests.
 
 ### Testing
 
-- Run with `npm test`
+- Usually run with `npx playwright test` because it's faster than `npm test`. Only use `npm test` if you changed the 11ty template or `data/*.json` files so need to regenerate the HTML detail pages.
 - Playwright tests start the server. If there are issues starting the server, try `rm -rf .parcel-cache` and retry
 - UI features should be manually tested in the browser before merging (dev server at `npm run start`)
 
@@ -64,4 +64,3 @@ Refer to README.me for how to use and add icons.
 ## Performance
 
 When making changes that majorly impact performance, refer to README.md for how to run the benchmark suite. Use the argument `--out benchmark-results/<file-name>.json` with a useful file name.
-
