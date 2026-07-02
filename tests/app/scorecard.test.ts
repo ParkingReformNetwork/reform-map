@@ -81,7 +81,7 @@ test("generateScorecard()", () => {
         title="close the place details popup"
         aria-label="close the place details popup"
       >
-        <svg aria-hidden="true"><use href="#icon-circle-xmark"></use></svg>
+        <svg aria-hidden="true" width="1em" height="1em"><use href="#icon-circle-xmark"></use></svg>
       </button>
     </header>
     <ul>
@@ -89,7 +89,7 @@ test("generateScorecard()", () => {
       <li>All parking minimums removed</li>
     </ul>
     <div>Reform types:</div><ul><li>Add parking maximums</li></ul>
-    <a class="external-link" target="_blank" href=https://my-site.org>Details and citations <svg aria-hidden="true"><use href="#icon-arrow-right"></use></svg></a>
+    <a class="external-link" target="_blank" href=https://my-site.org>Details and citations <svg aria-hidden="true" width="1em" height="1em"><use href="#icon-arrow-right"></use></svg></a>
     `,
   );
 
@@ -111,7 +111,7 @@ test("generateScorecard()", () => {
         title="close the place details popup"
         aria-label="close the place details popup"
       >
-        <svg aria-hidden="true"><use href="#icon-circle-xmark"></use></svg>
+        <svg aria-hidden="true" width="1em" height="1em"><use href="#icon-circle-xmark"></use></svg>
       </button>
     </header>
     <ul>
@@ -119,7 +119,7 @@ test("generateScorecard()", () => {
       
     </ul>
     <div>Reform types:</div><ul><li>Add parking maximums (proposed and repealed)</li><li>Remove parking minimums (adopted)</li><li>Parking benefit district (proposed)</li></ul>
-    <a class="external-link" target="_blank" href=https://my-site.org>Details and citations <svg aria-hidden="true"><use href="#icon-arrow-right"></use></svg></a>
+    <a class="external-link" target="_blank" href=https://my-site.org>Details and citations <svg aria-hidden="true" width="1em" height="1em"><use href="#icon-arrow-right"></use></svg></a>
     `,
   );
 });

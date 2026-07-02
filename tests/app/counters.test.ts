@@ -106,7 +106,7 @@ test("determinePlaceDescription()", () => {
 test("determineSearch()", () => {
   const placeId = "Baltimore, Maryland, United States";
   const encodedPlace = "baltimore-maryland-united-states";
-  const placeLink = `<a class="external-link" target="_blank" href=https://parkingreform.org/mandates-map/city_detail/${encodedPlace}.html>${placeId} <svg aria-hidden="true"><use href="#icon-arrow-right"></use></svg></a>`;
+  const placeLink = `<a class="external-link" target="_blank" href=https://parkingreform.org/mandates-map/city_detail/${encodedPlace}.html>${placeId} <svg aria-hidden="true" width="1em" height="1em"><use href="#icon-arrow-right"></use></svg></a>`;
 
   // Map view always has the same text.
   for (const policyType of ALL_POLICY_TYPE_FILTER) {
