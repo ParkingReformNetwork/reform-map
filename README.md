@@ -93,6 +93,8 @@ Then, in another terminal:
 
 It runs a few times with the browser cache disabled (so bundle size counts), prints a median/min/max summary, and writes `benchmark-results/latest.json` for before/after comparison. Options: `--runs N`, `--out <path>`, `--headed`, and `PORT` to override the port.
 
+To compare two saved benchmark files, use `scripts/compare-benchmarks.py benchmark-results/<before.json> benchmark-results/<after.json>`. It prints a table of the summary medians (absolute and percent change) and warns if the two runs have different place counts, since that would make the comparison not apples-to-apples.
+
 ## Staging
 
 We use continuous deployment, meaning that we re-deploy the site every time we merge a pull request to staging at https://parkingreform.org/mandates-map-staging/. You can check how the site renders about ~1-2 minutes after your change merges.
