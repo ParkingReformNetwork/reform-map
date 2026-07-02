@@ -77,7 +77,7 @@ interface Args {
 function parseArgs(): Args {
   const argv = process.argv.slice(2);
   const args: Args = {
-    runs: 5,
+    runs: 15,
     headed: false,
     out: path.join("benchmark-results", "latest.json"),
   };

@@ -5,7 +5,7 @@
   "type": "module",
   "scripts": {
     "start": "parcel",
-    "build": "rm -rf dist; parcel build --detailed-report",
+    "build": "rm -rf dist .parcel-cache; parcel build --detailed-report",
     "test": "npm run gen-html -- --quiet; playwright test",
     "check": "tsc --noEmit",
     "fmt": "prettier --write .",
