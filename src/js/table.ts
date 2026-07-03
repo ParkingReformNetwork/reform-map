@@ -18,11 +18,11 @@ import {
 
 import { PlaceFilterManager, PolicyTypeFilter } from "./state/FilterState";
 import {
-  Date,
   ProcessedCoreBenefitDistrict,
   ProcessedCoreLandUsePolicy,
   ReformStatus,
 } from "./model/types";
+import { ReformDate } from "./model/ReformDate";
 import { ViewStateObservable } from "./layout/viewToggle";
 import { determineAllPolicyTypes } from "./model/data";
 
@@ -32,13 +32,13 @@ function formatBoolean(cell: CellComponent): string {
 }
 
 function formatDate(cell: CellComponent): string {
-  const v = cell.getValue() as Date | null;
+  const v = cell.getValue() as ReformDate | null;
   return v ? v.format() : "";
 }
 
 export function compareDates(
-  a: Date | undefined,
-  b: Date | undefined,
+  a: ReformDate | undefined,
+  b: ReformDate | undefined,
   _aRow: RowComponent,
   _bRow: RowComponent,
   _col: ColumnComponent,
@@ -52,7 +52,7 @@ export function compareDates(
     if (!a) return -1;
     if (!b) return 1;
   }
-  return a.parsed.valueOf() - b.parsed.valueOf();
+  return a.valueOf() - b.valueOf();
 }
 
 function compareStringArrays(a: string[], b: string[]): number {

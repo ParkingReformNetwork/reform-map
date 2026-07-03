@@ -3,7 +3,6 @@ import fs from "fs/promises";
 import { zipWith } from "lodash-es";
 
 import {
-  Date,
   RawCoreEntry,
   PlaceId,
   RawPlace,
@@ -13,6 +12,7 @@ import {
   RawCoreBenefitDistrict,
   ProcessedCoreBenefitDistrict,
 } from "../../src/js/model/types";
+import { ReformDate } from "../../src/js/model/ReformDate";
 import { processRawCoreEntry } from "../../src/js/model/data";
 
 export interface DirectusFile {
@@ -194,7 +194,7 @@ function processCompleteBenefitDistrict(
 ): ProcessedCompleteBenefitDistrict {
   return {
     ...record,
-    date: Date.fromNullable(record.date),
+    date: ReformDate.fromNullable(record.date),
   };
 }
 
@@ -203,7 +203,7 @@ function processCompleteLandUsePolicy(
 ): ProcessedCompleteLandUsePolicy {
   return {
     ...policy,
-    date: Date.fromNullable(policy.date),
+    date: ReformDate.fromNullable(policy.date),
   };
 }
 

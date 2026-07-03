@@ -5,7 +5,6 @@ import {
   RawCoreEntry,
   RawCoreLandUsePolicy,
   PolicyType,
-  Date,
   RawPlace,
   ProcessedPlace,
   ProcessedCoreLandUsePolicy,
@@ -13,6 +12,7 @@ import {
   RawCoreBenefitDistrict,
   ProcessedCoreBenefitDistrict,
 } from "./types";
+import { ReformDate } from "./ReformDate";
 
 export const COUNTRIES_PREFIXED_BY_THE = new Set([
   "United States",
@@ -88,7 +88,7 @@ function processLandUsePolicy(
 ): ProcessedCoreLandUsePolicy {
   return {
     ...raw,
-    date: Date.fromNullable(raw.date),
+    date: ReformDate.fromNullable(raw.date),
   };
 }
 
@@ -97,7 +97,7 @@ function processBenefitDistrict(
 ): ProcessedCoreBenefitDistrict {
   return {
     ...raw,
-    date: Date.fromNullable(raw.date),
+    date: ReformDate.fromNullable(raw.date),
   };
 }
 
