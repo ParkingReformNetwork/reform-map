@@ -78,9 +78,7 @@ interface PlaceMatchAnyPolicy {
 }
 
 type PlaceMatch =
-  | PlaceMatchSearch
-  | PlaceMatchSinglePolicy
-  | PlaceMatchAnyPolicy;
+  PlaceMatchSearch | PlaceMatchSinglePolicy | PlaceMatchAnyPolicy;
 
 // This allows us to avoid recomputing computed state when the FilterState has not changed.
 interface CacheEntry {
