@@ -109,8 +109,14 @@ export default function initScorecard(
   const scorecardContainer = document.querySelector("#scorecard-container");
   const header = document.querySelector(".top-header");
 
+  // We use this variable to keep track of when a marker was clicked so that
+  // our event listener on `window` clicks to close out the scorecard
+  // can differentiate when we clicked on a marker vs something else.
+  let markerJustClicked = false;
+
   // Clicking a city marker opens up the scorecard.
   markerGroup.on("click", (e) => {
+    markerJustClicked = true;
     const { placeId } = e.sourceTarget as MarkerWithPlaceId;
     scorecardState.setValue({
       type: "visible",
@@ -131,14 +137,17 @@ export default function initScorecard(
     }
   });
 
-  // Clicks outside the popup close it.
+  // Clicks outside the scorecard popup close it.
   window.addEventListener("click", (event) => {
+    // A click on a map dot opens the scorecard; don't let it immediately close it.
+    if (markerJustClicked) {
+      markerJustClicked = false;
+      return;
+    }
     if (
       scorecardState.getValue().type === "visible" &&
       event.target instanceof Element &&
-      // Clicks on map dots should not trigger this event.
-      !(event.target instanceof SVGPathElement) &&
-      // Clicks on the header also should not trigger the event.
+      // Clicks on the header and scorecard should not close the scorecard.
       !header?.contains(event.target) &&
       !scorecardContainer?.contains(event.target)
     ) {
