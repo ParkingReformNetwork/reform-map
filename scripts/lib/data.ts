@@ -3,7 +3,6 @@ import fs from "fs/promises";
 import { zipWith } from "lodash-es";
 
 import {
-  ReformDate,
   RawCoreEntry,
   PlaceId,
   RawPlace,
@@ -13,6 +12,7 @@ import {
   RawCoreBenefitDistrict,
   ProcessedCoreBenefitDistrict,
 } from "../../src/js/model/types";
+import { ReformDate } from "../../src/js/model/ReformDate";
 import { processRawCoreEntry } from "../../src/js/model/data";
 
 export interface DirectusFile {

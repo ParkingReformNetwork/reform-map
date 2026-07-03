@@ -5,7 +5,6 @@ import {
   RawCoreEntry,
   RawCoreLandUsePolicy,
   PolicyType,
-  ReformDate,
   RawPlace,
   ProcessedPlace,
   ProcessedCoreLandUsePolicy,
@@ -13,6 +12,7 @@ import {
   RawCoreBenefitDistrict,
   ProcessedCoreBenefitDistrict,
 } from "./types";
+import { ReformDate } from "./ReformDate";
 
 export const COUNTRIES_PREFIXED_BY_THE = new Set([
   "United States",

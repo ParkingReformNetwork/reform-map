@@ -18,11 +18,11 @@ import {
 
 import { PlaceFilterManager, PolicyTypeFilter } from "./state/FilterState";
 import {
-  ReformDate,
   ProcessedCoreBenefitDistrict,
   ProcessedCoreLandUsePolicy,
   ReformStatus,
 } from "./model/types";
+import { ReformDate } from "./model/ReformDate";
 import { ViewStateObservable } from "./layout/viewToggle";
 import { determineAllPolicyTypes } from "./model/data";
 

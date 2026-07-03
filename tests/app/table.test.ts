@@ -2,7 +2,7 @@ import { expect, test } from "@playwright/test";
 
 import { ColumnComponent, RowComponent, SortDirection } from "tabulator-tables";
 import { compareDates, tableDownloadFileName } from "../../src/js/table";
-import { ReformDate } from "../../src/js/model/types";
+import { ReformDate } from "../../src/js/model/ReformDate";
 
 test("tableDownloadFileName()", () => {
   expect(tableDownloadFileName("any parking reform", "adopted")).toEqual(

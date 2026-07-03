@@ -5,11 +5,11 @@ import { sortBy, without } from "lodash-es";
 import {
   RawCoreLandUsePolicy,
   UNKNOWN_YEAR,
-  ReformDate,
   RawPlace,
   RawCoreEntry,
   RawCoreBenefitDistrict,
 } from "../../src/js/model/types";
+import { ReformDate } from "../../src/js/model/ReformDate";
 
 /** The option values for a single dataset. */
 class OptionValues {

@@ -8,9 +8,9 @@ import { POPULATION_MAX_INDEX } from "../../src/js/filter-features/populationSli
 import {
   PlaceId,
   ProcessedCoreEntry,
-  ReformDate,
   ALL_POLICY_TYPE,
 } from "../../src/js/model/types";
+import { ReformDate } from "../../src/js/model/ReformDate";
 
 test.describe("PlaceFilterManager.matchedPolicyRecords()", () => {
   function defaultState(): FilterState {

@@ -1,6 +1,6 @@
 import { expect, test } from "@playwright/test";
 
-import { ReformDate } from "../../src/js/model/types";
+import { ReformDate } from "../../src/js/model/ReformDate";
 
 test("ReformDate.format()", () => {
   expect(new ReformDate("2020").format()).toEqual("2020");
