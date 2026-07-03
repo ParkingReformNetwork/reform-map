@@ -1,5 +1,8 @@
 /** Config for Eleventy to generate the details pages. */
 
+import { readFileSync } from "node:fs";
+import { fileURLToPath } from "node:url";
+
 // @ts-ignore
 import CleanCSS from "clean-css";
 import { compileString as compileStringSass } from "sass";
@@ -64,14 +67,15 @@ export default async function (eleventyConfig: any) {
     jsTruthy: true,
   });
 
-  eleventyConfig.addFilter(
-    "scss_compile",
-    (code: any) => compileStringSass(code).css,
+  // The stylesheet is static and identical for every page, so compile and
+  // minify it once here rather than once per generated page.
+  const styleScssPath = fileURLToPath(
+    new URL("./scripts/11ty/_includes/style.scss", import.meta.url),
   );
-  eleventyConfig.addFilter(
-    "cssmin",
-    (code: any) => new CleanCSS({}).minify(code).styles,
-  );
+  const compiledStyleCss = new CleanCSS({}).minify(
+    compileStringSass(readFileSync(styleScssPath, "utf-8")).css,
+  ).styles;
+  eleventyConfig.addGlobalData("compiledStyleCss", compiledStyleCss);
 
   const completeData = await readProcessedCompleteData();
   const entries = Object.entries(completeData).map(([placeId, entry]) => ({
