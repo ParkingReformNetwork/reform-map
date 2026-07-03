@@ -11,13 +11,13 @@ export const loadMap = async (page: Page): Promise<void> => {
   await page.goto("");
   // Wait until markers have been added to the map.
   await page.waitForFunction(
-    () => (window.mapTestHandles.markerGroup.getLayers().length ?? 0) > 0,
+    () => (window.mapTestHandles?.markerGroup.getLayers().length ?? 0) > 0,
   );
 };
 
 async function getNumMapMarkers(page: Page): Promise<number> {
   return page.evaluate(
-    () => window.mapTestHandles.markerGroup.getLayers().length ?? 0,
+    () => window.mapTestHandles?.markerGroup.getLayers().length ?? 0,
   );
 }
 
@@ -54,7 +54,9 @@ export async function onScreenMarkerPoints(
   page: Page,
 ): Promise<Array<{ x: number; y: number }>> {
   return page.evaluate(() => {
-    const { map, markerGroup } = window.mapTestHandles;
+    const handles = window.mapTestHandles;
+    if (!handles) return [];
+    const { map, markerGroup } = handles;
     const rect = map.getContainer().getBoundingClientRect();
     const size = map.getSize();
     const points: Array<{ x: number; y: number }> = [];

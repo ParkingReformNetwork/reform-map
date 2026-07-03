@@ -2,7 +2,7 @@ import type { FeatureGroup, Map } from "leaflet";
 
 declare global {
   interface Window {
-    mapTestHandles: { map: Map; markerGroup: FeatureGroup };
+    mapTestHandles?: { map: Map; markerGroup: FeatureGroup };
   }
 }
 
