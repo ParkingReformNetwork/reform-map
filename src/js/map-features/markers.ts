@@ -1,6 +1,5 @@
 import { CircleMarker, FeatureGroup, Map } from "leaflet";
 
-import { NO_MANDATES_MARKERS_PANE } from "../layout/map";
 import { PlaceFilterManager } from "../state/FilterState";
 import { ViewStateObservable } from "../layout/viewToggle";
 import type { PlaceId } from "../model/types";
@@ -12,7 +11,6 @@ const PRIMARY_MARKER_STYLE = {
   color: "white",
   fillColor: "#d7191c",
   fillOpacity: 1,
-  pane: NO_MANDATES_MARKERS_PANE,
 } as const;
 
 const SECONDARY_MARKER_STYLE = {
@@ -34,19 +32,30 @@ function updatePlaceVisibility(
   placesToMarkers: Record<string, MarkerWithPlaceId>,
   markerGroup: FeatureGroup,
 ): void {
-  // Remove markers no longer visible.
+  // Keep track of primary markers so that we can ensure they render on top of secondary ones.
+  const visiblePrimaryMarkers: MarkerWithPlaceId[] = [];
+
+  // Remove markers no longer visible and check if any existing markers are primary.
   for (const placeId of currentlyVisiblePlaceIds) {
+    const marker = placesToMarkers[placeId];
     if (!newVisiblePlaceIds.has(placeId)) {
       // @ts-expect-error the API allows passing a LayerGroup, but the type hint doesn't show this.
-      placesToMarkers[placeId].removeFrom(markerGroup);
+      marker.removeFrom(markerGroup);
     }
+    if (marker.isPrimary) visiblePrimaryMarkers.push(marker);
   }
 
-  // Add new markers not yet visible.
+  // Add newly visible markers.
   for (const placeId of newVisiblePlaceIds) {
+    const marker = placesToMarkers[placeId];
     if (!currentlyVisiblePlaceIds.has(placeId)) {
-      placesToMarkers[placeId].addTo(markerGroup);
+      marker.addTo(markerGroup);
     }
+    if (marker.isPrimary) visiblePrimaryMarkers.push(marker);
+  }
+
+  for (const marker of visiblePrimaryMarkers) {
+    marker.bringToFront();
   }
 }
 

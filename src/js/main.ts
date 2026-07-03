@@ -15,6 +15,7 @@ import initPlaceMarkers from "./map-features/markers";
 import initScorecard from "./map-features/scorecard";
 import initSearch from "./search";
 import initTable from "./table";
+import exposeTestHooks from "./testHooks";
 
 export default async function initApp(): Promise<void> {
   maybeDisableFullScreenIcon();
@@ -32,6 +33,7 @@ export default async function initApp(): Promise<void> {
   const filterManager = new PlaceFilterManager(data, initialState);
 
   const markerGroup = initPlaceMarkers(filterManager, map, viewToggle);
+  exposeTestHooks(map, markerGroup);
   subscribeSnapToPlace(filterManager, map);
   initCounters(filterManager);
   initSearch(filterManager);

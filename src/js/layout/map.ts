@@ -1,6 +1,5 @@
 import { Map, TileLayer } from "leaflet";
 
-export const NO_MANDATES_MARKERS_PANE = "noMandatesMarkers";
 const MIN_ZOOM = 3;
 const MAX_ZOOM = 13;
 
@@ -21,6 +20,8 @@ export default function createMap(): Map {
   const map = new Map("map", {
     layers: [BASE_LAYER],
     worldCopyJump: true,
+    // Canvas mode substantially speeds up the map.
+    preferCanvas: true,
   });
 
   // Set default view show all the US on mobile. While this is fairly zoomed out,
@@ -32,9 +33,5 @@ export default function createMap(): Map {
     '<a href="https://parkingreform.org/support/">Parking Reform Network</a>',
   );
 
-  // Workaround for no mandates markers appearing at the top of the map
-  // https://stackoverflow.com/a/49501320
-  map.createPane(NO_MANDATES_MARKERS_PANE);
-  map.getPane(NO_MANDATES_MARKERS_PANE)!.style.zIndex = "900";
   return map;
 }
