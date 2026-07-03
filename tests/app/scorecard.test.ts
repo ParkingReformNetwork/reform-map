@@ -1,6 +1,6 @@
 import { expect, test } from "@playwright/test";
 
-import { loadMap } from "./utils";
+import { loadMap, onScreenMarkerPoints } from "./utils";
 import { generateScorecard } from "../../src/js/map-features/scorecard";
 import {
   ProcessedCoreBenefitDistrict,
@@ -19,25 +19,32 @@ test("scorecard pops up and closes", async ({ page }) => {
       (el) => el instanceof HTMLElement && !el.hidden,
     );
 
+  // Markers render on the canvas, so we click them at their projected pixel
+  // coordinates rather than via a DOM selector.
+  const points = await onScreenMarkerPoints(page);
+  const firstMarker = points[0];
+  const secondMarker = points[points.length - 1];
+  expect(firstMarker).not.toEqual(secondMarker);
+
   // click on marker
-  await page.locator(".leaflet-interactive").first().click({ force: true });
+  await page.mouse.click(firstMarker.x, firstMarker.y);
   expect(await scorecardIsVisible()).toBe(true);
   // close popup
   await closeIcon.click();
   expect(await scorecardIsVisible()).toBe(false);
 
   // click on marker
-  await page.locator("path:nth-child(4)").first().click({ force: true });
+  await page.mouse.click(firstMarker.x, firstMarker.y);
   expect(await scorecardIsVisible()).toBe(true);
   // click on another marker
-  await page.locator("path:nth-child(8)").first().click({ force: true });
+  await page.mouse.click(secondMarker.x, secondMarker.y);
   expect(await scorecardIsVisible()).toBe(true);
   // close popup
   await closeIcon.click();
   expect(await scorecardIsVisible()).toBe(false);
 
   // click on marker
-  await page.locator(".leaflet-interactive").first().click({ force: true });
+  await page.mouse.click(firstMarker.x, firstMarker.y);
   expect(await scorecardIsVisible()).toBe(true);
   // click outside of popup (not a marker either)
   await page.click("#map-counter");
