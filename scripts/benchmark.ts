@@ -110,7 +110,7 @@ async function assertServerReachable(): Promise<void> {
   } catch (error) {
     console.error(
       `Server not reachable at ${BASE_URL} (${(error as Error).message}).\n` +
-        `Start it first, e.g.:\n  npm run build\n  npm run serve-dist\n` +
+        `Start it first, e.g.:\n  pnpm build\n  pnpm serve-dist\n` +
         `(Override the port with the PORT env var.)`,
     );
     process.exit(1);
@@ -301,8 +301,7 @@ async function runOnce(browser: Browser): Promise<RunResult> {
     // hard-coding its hashed URL.
     const initial: InitialLoadMarks = await page.evaluate(() => {
       const nav = performance.getEntriesByType("navigation")[0] as
-        | PerformanceNavigationTiming
-        | undefined;
+        PerformanceNavigationTiming | undefined;
       const fcp = performance
         .getEntriesByType("paint")
         .find((entry) => entry.name === "first-contentful-paint");

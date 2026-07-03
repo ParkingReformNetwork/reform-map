@@ -16,7 +16,7 @@ export default defineConfig({
     baseURL,
   },
   webServer: {
-    command: `npm run ${webServerCommand}`,
+    command: `pnpm ${webServerCommand}`,
     url: baseURL,
     reuseExistingServer: !process.env.CI,
   },

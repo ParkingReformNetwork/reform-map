@@ -9,19 +9,22 @@ jobs:
     steps:
       - name: Check out repository code
         uses: actions/checkout@v4
+      - name: Enable corepack
+        run: corepack enable
       - name: Set up Node.js
-        uses: actions/setup-node@v3
+        uses: actions/setup-node@v4
         with:
-          node-version: 20
+          node-version: 22
+          cache: pnpm
       - name: Install dependencies
         run: |
-          npm ci
-          npx playwright install --with-deps
+          pnpm install --frozen-lockfile
+          pnpm exec playwright install --with-deps
 
       - name: Build
-        run: npm run build
+        run: pnpm build
       - name: Run tests on dist
-        run: npm run test-dist
+        run: pnpm test-dist
       - name: Archive dist/ contents
         run: |
           cd dist

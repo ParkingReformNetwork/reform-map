@@ -214,7 +214,8 @@ $filter-inner-width: calc(
     color: colors.$black;
 
     background-color: colors.$white;
-    background-image: url(../../assets/unfold-more.svg),
+    background-image:
+      url(../../assets/unfold-more.svg),
       linear-gradient(transparent, transparent);
     background-repeat: no-repeat;
     background-position: right spacing.$element-gap center;

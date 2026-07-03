@@ -37,19 +37,19 @@ The database is stored in Directus and synced nightly to JSON files (`data/*.jso
 
 ### Code quality
 
-- **Format code**: `npm run fmt`
-- **Fix issues**: `npm run fix` — Auto-fix linting and format issues
-- **Lint**: `npm run lint` — ESLint + Prettier checks
-- **Type check**: `npm run check`
+- **Format code**: `pnpm fmt`
+- **Fix issues**: `pnpm fix` — Auto-fix linting and format issues
+- **Lint**: `pnpm lint` — ESLint + Prettier checks
+- **Type check**: `pnpm check`
 - **Test**: `npx playwright test` — Playwright tests
 
 All PRs require passing lint, type checks, and tests.
 
 ### Testing
 
-- Usually run with `npx playwright test` because it's faster than `npm test`. Only use `npm test` if you changed the 11ty template or `data/*.json` files so need to regenerate the HTML detail pages.
+- Usually run with `npx playwright test` because it's faster than `pnpm test`. Only use `pnpm test` if you changed the 11ty template or `data/*.json` files so need to regenerate the HTML detail pages.
 - Playwright tests start the server. If there are issues starting the server, try `rm -rf .parcel-cache` and retry
-- UI features should be manually tested in the browser before merging (dev server at `npm run start`)
+- UI features should be manually tested in the browser before merging (dev server at `pnpm start`)
 
 ## Icons
 

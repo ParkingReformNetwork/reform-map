@@ -16,16 +16,25 @@ The database is stored in Directus and synced nightly to JSON to simplify how th
 
 Prerequisites:
 
-1. Install [Node Package Manager (npm)](https://nodejs.dev/en/download/).
+1. Install [Node.js](https://nodejs.dev/en/download/).
+2. We use [pnpm](https://pnpm.io/) as our package manager, managed via [Corepack](https://nodejs.org/api/corepack.html). Node.js v25+ no longer bundles Corepack, so first install it globally:
 
-_If you are using Windows OS, install [Windows Subsystem for Linux (WSL)](https://learn.microsoft.com/en-us/windows/wsl/install). Currently, there are 2 versions out. WSL 1 will run npm **way** faster<sup>[1](https://stackoverflow.com/questions/68972448/why-is-wsl-extremely-slow-when-compared-with-native-windows-npm-yarn-processing)</sup>. You can switch to version 1 with `wsl --set-version Ubuntu 1`. Run all npm commands in wsl/Ubuntu._
+   ```bash
+   ❯ npm install -g corepack
+   ```
 
-2. Run `npm i` in the main folder.
+You must first install the project's dependencies before running any of the below commands:
+
+```bash
+❯ corepack enable pnpm
+❯ pnpm install
+❯ pnpm exec playwright install
+```
 
 ### Start the development server
 
 ```bash
-❯ npm start
+❯ pnpm start
 ```
 
 Then open http://127.0.0.1:1234 in a browser. Hit `CTRL-C` to stop the development server.
@@ -37,13 +46,13 @@ When the server is running, you can make any changes you want to the project. Re
 We write our code in TypeScript. The types are ignored when starting the server and running tests, but it's useful to manually check for any errors caught by TypeScript:
 
 ```bash
-❯ npm run check
+❯ pnpm check
 ```
 
 ### Run tests
 
 ```bash
-❯ npm test
+❯ pnpm test
 ```
 
 If the tests are taking a long time to start or have unexpected failures, run `rm -rf .parcel-cache` and try the tests again.
@@ -57,7 +66,7 @@ We use Playwright snapshot tests, which save a "snapshot" to the filesystem of t
 We use Prettier to nicely format code.
 
 ```bash
-❯ npm run fmt
+❯ pnpm fmt
 ```
 
 Before pushing code, run this command and commit the changes. Otherwise, PR checks will not pass.
@@ -67,14 +76,14 @@ Before pushing code, run this command and commit the changes. Otherwise, PR chec
 "Linting" means using tools that check for common issues that may be bugs or low code quality.
 
 ```bash
-❯ npm run lint
+❯ pnpm lint
 ```
 
 ### Try out a build locally
 
-You can preview what a build will look like by running `npm run build`. Then use `npm run serve-dist` to start the server. A 'build' are the files sent for production on the real site. This is slightly different from the development server run by `npm start`, which prioritizes a quick start for development.
+You can preview what a build will look like by running `pnpm build`. Then use `pnpm serve-dist` to start the server. A 'build' are the files sent for production on the real site. This is slightly different from the development server run by `pnpm start`, which prioritizes a quick start for development.
 
-`npm run test-dist` will be implemented soon, while `npm test` is the development equivalent.
+`pnpm test-dist` will be implemented soon, while `pnpm test` is the development equivalent.
 
 ### Icons
 
@@ -112,17 +121,17 @@ element.appendChild(icon);
 
 ### Benchmark performance
 
-`npm run benchmark` measures the high-level tasks a user performs — initial page load, opening the table view, switching the policy-type filter (to "reduce minimums" and back to "any reform"), and loading the search widget — plus cold-load transfer size, using a headless browser. It expects a production build to already be served, so in one terminal run:
+`pnpm benchmark` measures the high-level tasks a user performs — initial page load, opening the table view, switching the policy-type filter (to "reduce minimums" and back to "any reform"), and loading the search widget — plus cold-load transfer size, using a headless browser. It expects a production build to already be served, so in one terminal run:
 
 ```bash
-❯ npm run build
-❯ npm run serve-dist
+❯ pnpm build
+❯ pnpm serve-dist
 ```
 
 Then, in another terminal:
 
 ```bash
-❯ npm run benchmark
+❯ pnpm benchmark
 ```
 
 It runs a few times with the browser cache disabled (so bundle size counts) and writes `benchmark-results/latest.json` for before/after comparison. Each task is reported as one overall median (with min/max) plus the granular stages that make it up, indented underneath. For example, the initial page load breaks down into network, first paint, data fetch, JS build, and marker paint, which sum to the total; the filter and search tasks split their time-to-paint into a synchronous JS portion and the remaining paint. Options: `--runs N`, `--out <path>`, `--headed`, and `PORT` to override the port.
@@ -145,7 +154,7 @@ You usually should not need to manually do this. We have a GitHub Action that ru
 
 You can trigger the GitHub Action to run early by clicking "Run workflow" at https://github.com/ParkingReformNetwork/reform-map/actions/workflows/update-data.yaml with the default option, if you're an admin. This will create a pull request that you then need to merge.
 
-To instead manually update the data, first run `npm install`. Then, run `npm run sync-directus`.
+To instead manually update the data, first run `pnpm install`. Then, run `pnpm sync-directus`.
 
 ## State diagram
 
