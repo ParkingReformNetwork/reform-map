@@ -54,7 +54,7 @@ We use Playwright snapshot tests, which save a "snapshot" to the filesystem of t
 
 ### Autoformat code
 
-We use Prettier to nicely format code.
+We use Biome to nicely format code.
 
 ```bash
 ❯ npm run fmt

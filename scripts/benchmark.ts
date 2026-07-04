@@ -301,7 +301,8 @@ async function runOnce(browser: Browser): Promise<RunResult> {
     // hard-coding its hashed URL.
     const initial: InitialLoadMarks = await page.evaluate(() => {
       const nav = performance.getEntriesByType("navigation")[0] as
-        PerformanceNavigationTiming | undefined;
+        | PerformanceNavigationTiming
+        | undefined;
       const fcp = performance
         .getEntriesByType("paint")
         .find((entry) => entry.name === "first-contentful-paint");
