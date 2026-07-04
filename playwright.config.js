@@ -11,7 +11,6 @@ const webServerCommand = port === 1234 ? "start" : "serve-dist";
 const baseURL = `http://127.0.0.1:${port}`;
 
 export default defineConfig({
-  workers: process.env.CI ? 1 : undefined,
   use: {
     baseURL,
   },
