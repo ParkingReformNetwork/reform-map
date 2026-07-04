@@ -12,16 +12,13 @@ jobs:
         with:
           node-version: 22
       - name: Install dependencies
-        run: npm ci
-
-      - name: Typecheck
-        run: npm run check
-      - name: Lint
-        run: npm run lint
-      - name: Run tests
-        run: npm test
-
-      - name: Check redirects and data set generation work
         run: |
-          npm run gen-redirects
-          npm run gen-data-set
+          npm ci
+          npx playwright install --with-deps
+
+      - run: npm run check
+      - run: npm run lint
+      - run: npm test
+
+      - run: npm run gen-redirects
+      - run: npm run gen-data-set
