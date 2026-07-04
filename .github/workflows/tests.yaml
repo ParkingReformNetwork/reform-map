@@ -4,8 +4,6 @@ jobs:
   test:
     if: github.repository_owner == 'ParkingReformNetwork'
     runs-on: ubuntu-latest
-    container:
-      image: mcr.microsoft.com/playwright:v1.61.0-noble
     steps:
       - name: Check out repository code
         uses: actions/checkout@v7
