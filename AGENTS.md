@@ -47,7 +47,7 @@ All PRs require passing lint, type checks, and tests.
 
 ### Testing
 
-- Usually run with `npx playwright test` because it's faster than `npm test`. Only use `npm test` if you changed the 11ty template or `data/*.json` files so need to regenerate the HTML detail pages.
+- Use `npm test` because it regenerates the HTML pages needed for `tests/scripts/generateHtmlPages.test.ts`. If you don't need that test, you can use `npx playwright test`.
 - Playwright tests start the server. If there are issues starting the server, try `rm -rf .parcel-cache` and retry
 - UI features should be manually tested in the browser before merging (dev server at `npm run start`)
 
