@@ -19,7 +19,9 @@ import {
 import { initPopulationSlider } from "./populationSlider";
 import { createIcon } from "../layout/icons";
 
-import optionValuesData from "../../../data/option-values.json" with { type: "json" };
+import optionValuesData from "../../../data/option-values.json" with {
+  type: "json",
+};
 import {
   ALL_POLICY_TYPE,
   ALL_REFORM_STATUS,
