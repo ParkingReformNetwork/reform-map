@@ -2,6 +2,8 @@ import { readFile } from "fs/promises";
 
 import { expect, test } from "@playwright/test";
 
+import { SAMPLE_PLACES } from "../../scripts/lib/samplePlaces";
+
 // This test uses snapshot testing (https://jestjs.io/docs/snapshot-testing#updating-snapshots). If the tests fail and the changes
 // are valid, run `npm test -- --updateSnapshot`.
 
@@ -12,18 +14,11 @@ test("generate html page", async ({}, testInfo) => {
   // eslint-disable-next-line no-param-reassign
   testInfo.snapshotSuffix = "";
 
-  const assertPlace = async (normalizedPlaceId: string): Promise<void> => {
-    const content = await readFile(`city_detail/${normalizedPlaceId}.html`);
-    const snapshotName = normalizedPlaceId.toLowerCase().replace("_", "-");
-    expect(content).toMatchSnapshot(`${snapshotName}.html`);
-  };
-
-  await assertPlace("Abilene_TX");
-  await assertPlace("Abbottstown_PA");
-  await assertPlace("Basalt_CO");
-  await assertPlace("Auburn_ME");
-  // Benefit district
-  await assertPlace("Pasadena_CA");
-  // Country, meaning no supplemental place information in the title
-  await assertPlace("Israel");
+  await Promise.all(
+    SAMPLE_PLACES.map(async ({ encodedId }) => {
+      const content = await readFile(`city_detail/${encodedId}.html`);
+      const snapshotName = encodedId.toLowerCase().replace("_", "-");
+      expect(content).toMatchSnapshot(`${snapshotName}.html`);
+    }),
+  );
 });

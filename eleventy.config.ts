@@ -11,9 +11,11 @@ import { capitalize } from "lodash-es";
 import {
   Citation,
   ProcessedCompleteBenefitDistrict,
+  ProcessedCompleteEntry,
   ProcessedCompleteLandUsePolicy,
   readProcessedCompleteData,
 } from "./scripts/lib/data.js";
+import { SAMPLE_PLACES } from "./scripts/lib/samplePlaces.js";
 import { generateSEO } from "./scripts/lib/staticPages.js";
 import { determinesupplementalPlaceInfo } from "./src/js/model/placeId.js";
 import { ReformStatus } from "./src/js/model/types.js";
@@ -62,6 +64,26 @@ function processBenefitDistrict(
   };
 }
 
+/** Filter down to `SAMPLE_PLACES` for a fast `npm test` run rather than
+ * generating all ~6400 pages. Filtering here, before the `entries.map()`
+ * below, avoids running `generateSEO()`/citation processing for places we
+ * are about to discard anyway. */
+function filterToSamplePlaces(
+  completeData: Record<string, ProcessedCompleteEntry>,
+): Array<[string, ProcessedCompleteEntry]> {
+  const missing = SAMPLE_PLACES.filter(
+    ({ placeId }) => !(placeId in completeData),
+  );
+  if (missing.length > 0) {
+    throw new Error(
+      `SAMPLE_PLACES in scripts/lib/samplePlaces.ts references place IDs no longer in the data: ${missing
+        .map(({ placeId }) => placeId)
+        .join(", ")}`,
+    );
+  }
+  return SAMPLE_PLACES.map(({ placeId }) => [placeId, completeData[placeId]]);
+}
+
 export default async function (eleventyConfig: any) {
   eleventyConfig.setLiquidOptions({
     jsTruthy: true,
@@ -78,7 +100,11 @@ export default async function (eleventyConfig: any) {
   eleventyConfig.addGlobalData("compiledStyleCss", compiledStyleCss);
 
   const completeData = await readProcessedCompleteData();
-  const entries = Object.entries(completeData).map(([placeId, entry]) => ({
+  const rawEntries =
+    process.env.GEN_HTML_SAMPLE === "true"
+      ? filterToSamplePlaces(completeData)
+      : Object.entries(completeData);
+  const entries = rawEntries.map(([placeId, entry]) => ({
     placeId,
     escapedPlaceId: entry.place.encoded,
     seo: generateSEO(placeId, entry),

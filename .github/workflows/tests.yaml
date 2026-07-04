@@ -23,8 +23,7 @@ jobs:
       - name: Run tests
         run: npm test
 
-      - name: Check static generation works
+      - name: Check redirects and data set generation work
         run: |
-          npm run gen-html
           npm run gen-redirects
           npm run gen-data-set
