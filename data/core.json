@@ -116050,36 +116050,20 @@
       "type": "city",
       "encoded": "Vancouver_WA",
       "pop": 190915,
-      "coord": [-122.6744557, 45.6306954]
+      "coord": [-122.6744557, 45.6306954],
+      "repeal": true
     },
-    "add_max": [
-      {
-        "status": "adopted",
-        "scope": ["transit-oriented"],
-        "land": ["all uses"]
-      },
-      {
-        "status": "adopted",
-        "scope": ["city center / business district"],
-        "land": ["all uses"]
-      }
-    ],
-    "reduce_min": [
-      {
-        "status": "adopted",
-        "scope": [
-          "city center / business district",
-          "main street / special",
-          "transit-oriented"
-        ],
-        "land": ["all uses", "commercial"]
-      }
-    ],
     "rm_min": [
       {
         "status": "adopted",
         "scope": ["citywide"],
         "land": ["residential, all uses"]
+      },
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["all uses"],
+        "date": "2026-06-01"
       }
     ]
   },

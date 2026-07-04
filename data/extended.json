@@ -227313,113 +227313,9 @@
     ]
   },
   "Vancouver, Washington, United States": {
-    "add_max": [
-      {
-        "summary": "Parking maximums apply in the Transit Overlay District.",
-        "reporter": "Samuel Deetz",
-        "requirements": ["by right"],
-        "citations": [
-          {
-            "id": 11994,
-            "description": "Vancouver Zoning Code",
-            "url": "https://vancouver.municipal.codes/VMC/20.550.040",
-            "notes": "20.550.040.H.4.",
-            "attachments": [
-              {
-                "fileName": "vancouver-washington-united-states-add-max1-attachment.pdf",
-                "directusId": "4efd11d0-b153-4883-8441-b72fde0d9c6a"
-              }
-            ],
-            "screenshots": [
-              {
-                "fileName": "vancouver-washington-united-states-add-max1-screenshot.png",
-                "directusId": "c1f20bd3-6a61-43ae-995e-450cae919150"
-              }
-            ]
-          }
-        ]
-      },
-      {
-        "summary": "Surface parking lots are restricted in the Downtown District.",
-        "reporter": "Samuel Deetz",
-        "requirements": ["by right"],
-        "citations": [
-          {
-            "id": 16206,
-            "description": "Vancouver Land Use and Development Code",
-            "url": "https://vancouver.municipal.codes/VMC/20.630.060",
-            "notes": "20.630.060",
-            "attachments": [
-              {
-                "fileName": "vancouver-washington-united-states-add-max2-attachment.pdf",
-                "directusId": "143187c6-af44-4e5c-8c75-1f7b7f1e45ea"
-              }
-            ],
-            "screenshots": [
-              {
-                "fileName": "vancouver-washington-united-states-add-max2-screenshot1.png",
-                "directusId": "c0b4d015-cfad-41ae-9c9d-cb80a4b1e933"
-              },
-              {
-                "fileName": "vancouver-washington-united-states-add-max2-screenshot2.png",
-                "directusId": "5b08a742-200f-4c9f-893e-0a1a2165272e"
-              }
-            ]
-          }
-        ]
-      }
-    ],
-    "reduce_min": [
-      {
-        "summary": "Parking requirements are reduced by right in the Transit Overlay District. Parking requirements are reduced for mixed-use projects, uses in the CX City Center District, and for uses close to public parking. Various other reductions are available for a change of use, or for the use of on-street parking in the CN Neighborhood Commercial District.",
-        "reporter": "Samuel Deetz",
-        "requirements": [
-          "by right",
-          "frequent transit",
-          "other",
-          "size of project"
-        ],
-        "citations": [
-          {
-            "id": 11135,
-            "description": "Vancouver Zoning Code",
-            "url": "https://vancouver.municipal.codes/VMC/20.945",
-            "notes": "Chapter 20.945 PARKING AND LOADING\n20.945.030 General Provisions.\nC.\n20.945.070 Minimum Off-Street Parking Requirements.\nF.\nG.\nH.\nI.",
-            "attachments": [
-              {
-                "fileName": "vancouver-washington-united-states-reduce-min-attachment.pdf",
-                "directusId": "6625c42c-9558-4714-b62a-dff70d6e1555"
-              }
-            ],
-            "screenshots": [
-              {
-                "fileName": "vancouver-washington-united-states-reduce-min-screenshot1.png",
-                "directusId": "dde185d6-2176-419b-8d3a-eb4ad8c3cf36"
-              },
-              {
-                "fileName": "vancouver-washington-united-states-reduce-min-screenshot2.png",
-                "directusId": "d840aaff-d687-4dda-9de6-4a2746ad0ff5"
-              },
-              {
-                "fileName": "vancouver-washington-united-states-reduce-min-screenshot3.png",
-                "directusId": "b4712462-5791-499d-95fc-bb3e0ae528da"
-              },
-              {
-                "fileName": "vancouver-washington-united-states-reduce-min-screenshot4.png",
-                "directusId": "55457811-5028-420b-9ceb-1c9d41e51ea5"
-              },
-              {
-                "fileName": "vancouver-washington-united-states-reduce-min-screenshot5.png",
-                "directusId": "bf6120f1-5ec3-4dc9-b2e7-d7a733576c89"
-              }
-            ]
-          }
-        ]
-      }
-    ],
     "rm_min": [
       {
-        "summary": "Any residential development where at least 50% of the units are affordable is exempt from parking mandates.",
+        "summary": "Any residential development where at least 50% of the units are affordable is exempt from parking mandates. This was superseded by the removal of all parking mandates in June 2026.",
         "reporter": "Samuel Deetz",
         "requirements": ["affordable housing"],
         "citations": [
@@ -227430,14 +227326,39 @@
             "notes": "20.945.070(D)(1)",
             "attachments": [
               {
-                "fileName": "vancouver-washington-united-states-remove-min-attachment.pdf",
+                "fileName": "vancouver-washington-united-states-remove-min1-attachment.pdf",
                 "directusId": "be33a9c4-dd87-49ac-a3c2-fdcf8f767b75"
               }
             ],
             "screenshots": [
               {
-                "fileName": "vancouver-washington-united-states-remove-min-screenshot.png",
+                "fileName": "vancouver-washington-united-states-remove-min1-screenshot.png",
                 "directusId": "67105d78-06c0-42d4-bda5-81e0bcab294a"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "summary": "Vancouver removed all parking mandates in June 2026. Certain uses may require a parking study or Transportation Demand Management Plan (TDMP)",
+        "reporter": "Tony Jordan",
+        "requirements": ["by right"],
+        "citations": [
+          {
+            "id": 16915,
+            "description": "Vancouver Zoning Code",
+            "url": "https://www.cityofvancouver.us/wp-content/uploads/2026/06/Vancouver-Municipal-Code-VMC-Title-20-Land-Use-and-Development-Code-dated-as-of-May-5-2026_linked-headings.pdf",
+            "notes": "TABLE 20.450.045-3.\nPage 706",
+            "attachments": [
+              {
+                "fileName": "vancouver-washington-united-states-remove-min2-attachment.pdf",
+                "directusId": "a66997b6-b323-4599-b620-c4860386d5ab"
+              }
+            ],
+            "screenshots": [
+              {
+                "fileName": "vancouver-washington-united-states-remove-min2-screenshot.png",
+                "directusId": "984d03bc-d0c3-48e7-a600-453beebba623"
               }
             ]
           }
