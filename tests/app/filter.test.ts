@@ -1,4 +1,4 @@
-import { type Page, test } from "@playwright/test";
+import { expect, type Page, test } from "@playwright/test";
 import type { ReformStatus } from "../../src/js/model/types";
 import type { PolicyTypeFilter } from "../../src/js/state/FilterState";
 import {
@@ -211,3 +211,41 @@ for (const edgeCase of TESTS) {
     }
   });
 }
+
+// `FilterState`'s option Sets are a single unified view across every dataset, so
+// checked-but-hidden values must persist when the user switches datasets.
+// "Uncheck all" therefore may only drop the options *visible* in the current
+// dataset — not options that exist solely in a different dataset. A regression to
+// naive `new Set()` semantics would wipe the entire set and silently reset the
+// other datasets' selections.
+//
+// The specific years below can be updated as the data changes: "1960" must be a
+// year present only in "reduce parking minimums", and "2020" a year present in
+// both it and "remove parking minimums".
+test("uncheck-all only affects the current dataset's options", async ({
+  page,
+}) => {
+  await loadMap(page);
+  await openFilter(page);
+
+  // In the "remove parking minimums" dataset, uncheck all of its year options.
+  await page
+    .locator("#filter-policy-type-dropdown")
+    .selectOption("remove parking minimums");
+  await page.locator("#filter-accordion-toggle-year").click();
+  await page.locator("#filter-year-uncheck-all").click();
+
+  // Switch to the "reduce parking minimums" dataset, whose year options differ.
+  await page
+    .locator("#filter-policy-type-dropdown")
+    .selectOption("reduce parking minimums");
+
+  // "1960" exists only in this dataset, so uncheck-all above never touched it.
+  await expect(
+    page.locator('.filter-year input[data-value="1960"]'),
+  ).toBeChecked();
+  // "2020" exists in both datasets, so uncheck-all above did remove it.
+  await expect(
+    page.locator('.filter-year input[data-value="2020"]'),
+  ).not.toBeChecked();
+});

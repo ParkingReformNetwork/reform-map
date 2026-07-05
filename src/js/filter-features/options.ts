@@ -157,32 +157,6 @@ function getVisibleCheckboxes(
   );
 }
 
-function extractLabel(
-  input: HTMLInputElement,
-  preserveCapitalization?: boolean,
-): string | undefined {
-  const text = input.parentElement?.textContent?.trim();
-  return preserveCapitalization ? text : text?.toLowerCase();
-}
-
-/**
- * Get all options that are checked, regardless of if they are hidden.
- */
-export function determineCheckedLabels(
-  fieldset: HTMLFieldSetElement,
-  preserveCapitalization?: boolean,
-): Set<string> {
-  return new Set(
-    Array.from(
-      fieldset.querySelectorAll<HTMLInputElement>(
-        'input[type="checkbox"]:checked',
-      ),
-    )
-      .map((input) => extractLabel(input, preserveCapitalization))
-      .filter((x) => x !== undefined),
-  );
-}
-
 export function determineSupplementalTitle(
   fieldset: HTMLFieldSetElement,
 ): string {
@@ -250,12 +224,13 @@ function generateAccordionForFilterGroup(
     const inputId = `filter-${params.htmlName}-option-${i}`;
     const checked = filterState[params.filterStateKey].has(val);
     const description = params.preserveCapitalization ? val : capitalize(val);
-    const [label] = generateCheckbox(
+    const [label, input] = generateCheckbox(
       inputId,
       params.htmlName,
       checked,
       description,
     );
+    input.dataset.value = val;
     filterOptionsContainer.appendChild(label);
   });
 
@@ -308,14 +283,14 @@ function updateCheckboxStats(
 function updateCheckboxVisibility(
   optionsInDataset: readonly string[],
   fieldSet: HTMLFieldSetElement,
-  preserveCapitalization?: boolean,
 ): void {
   const validOptions = new Set(optionsInDataset);
   fieldSet
     .querySelectorAll<HTMLInputElement>('input[type="checkbox"]')
     .forEach((checkbox) => {
-      const label = extractLabel(checkbox, preserveCapitalization);
-      checkbox.parentElement!.hidden = !label || !validOptions.has(label);
+      checkbox.parentElement!.hidden = !validOptions.has(
+        checkbox.dataset.value!,
+      );
     });
 }
 
@@ -330,54 +305,58 @@ function initFilterGroup(
   );
   optionsContainer.appendChild(accordionElements.outerContainer);
 
-  accordionElements.fieldSet.addEventListener("change", () => {
-    updateCheckboxStats(accordionState, accordionElements.fieldSet);
-    const checkedLabels = determineCheckedLabels(
-      accordionElements.fieldSet,
-      params.preserveCapitalization,
+  const currentValues = (): Set<string> =>
+    filterManager.getState()[params.filterStateKey];
+  const visibleValues = (): Set<string> =>
+    new Set(
+      getVisibleCheckboxes(accordionElements.fieldSet).map(
+        (input) => input.dataset.value!,
+      ),
     );
-    filterManager.update({ [params.filterStateKey]: checkedLabels });
+
+  accordionElements.fieldSet.addEventListener("change", (event) => {
+    const input = event.target as HTMLInputElement;
+    const value = input.dataset.value;
+    if (value === undefined) return;
+    const next = new Set(currentValues());
+    if (input.checked) {
+      next.add(value);
+    } else {
+      next.delete(value);
+    }
+    filterManager.update({ [params.filterStateKey]: next });
   });
 
   accordionElements.checkAllButton.addEventListener("click", () => {
-    const visibleCheckboxes = getVisibleCheckboxes(accordionElements.fieldSet);
-    visibleCheckboxes.forEach((input) => {
-      input.checked = true;
-    });
-    updateCheckboxStats(accordionState, accordionElements.fieldSet);
-    const checkedLabels = determineCheckedLabels(
-      accordionElements.fieldSet,
-      params.preserveCapitalization,
-    );
-    filterManager.update({
-      [params.filterStateKey]: checkedLabels,
-    });
+    const next = new Set([...currentValues(), ...visibleValues()]);
+    filterManager.update({ [params.filterStateKey]: next });
   });
 
   accordionElements.uncheckAllButton.addEventListener("click", () => {
-    const visibleCheckboxes = getVisibleCheckboxes(accordionElements.fieldSet);
-    visibleCheckboxes.forEach((input) => {
-      input.checked = false;
-    });
-    updateCheckboxStats(accordionState, accordionElements.fieldSet);
-    const checkedLabels = determineCheckedLabels(
-      accordionElements.fieldSet,
-      params.preserveCapitalization,
+    const visible = visibleValues();
+    const next = new Set(
+      [...currentValues()].filter((value) => !visible.has(value)),
     );
-    filterManager.update({
-      [params.filterStateKey]: checkedLabels,
-    });
+    filterManager.update({ [params.filterStateKey]: next });
   });
 
   filterManager.subscribe(
     `possibly update ${params.htmlName} filter UI`,
     (state) => {
+      // Project state onto the checkboxes. Setting `.checked` programmatically
+      // does not fire a `change` event, so there is no feedback loop.
+      const selected = state[params.filterStateKey];
+      accordionElements.fieldSet
+        .querySelectorAll<HTMLInputElement>('input[type="checkbox"]')
+        .forEach((input) => {
+          input.checked = selected.has(input.dataset.value!);
+        });
+
       updateCheckboxVisibility(
         FILTER_OPTIONS.getOptions(state.policyTypeFilter, state.status)[
           params.filterStateKey
         ],
         accordionElements.fieldSet,
-        params.preserveCapitalization,
       );
       updateCheckboxStats(accordionState, accordionElements.fieldSet);
 
