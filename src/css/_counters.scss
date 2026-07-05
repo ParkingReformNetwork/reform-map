@@ -27,14 +27,14 @@
   border: borders.$component-border;
   border-radius: borders.$border-radius;
 
-  @include breakpoints.gt-xxs {
+  @include breakpoints.gte-xs {
     width: 280px;
     font-size: typography.$font-size-md;
   }
-  @include breakpoints.gt-xs {
+  @include breakpoints.gte-sm {
     width: 300px;
   }
-  @include breakpoints.gt-md {
+  @include breakpoints.gte-lg {
     width: 340px;
   }
 
@@ -55,7 +55,7 @@
   align-items: center;
   justify-content: space-betwen;
 
-  @include breakpoints.gt-xs {
+  @include breakpoints.gte-sm {
     font-size: typography.$font-size-md;
   }
 

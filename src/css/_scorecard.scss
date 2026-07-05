@@ -25,10 +25,10 @@
   border-radius: borders.$border-radius;
   color: colors.$black;
 
-  @include breakpoints.gt-xxs {
+  @include breakpoints.gte-xs {
     width: 340px;
   }
-  @include breakpoints.gt-xs {
+  @include breakpoints.gte-sm {
     width: 400px;
   }
 
@@ -84,7 +84,7 @@
     height: icons.$icon-size-md;
     width: icons.$icon-size-md;
 
-    @include breakpoints.gt-sm {
+    @include breakpoints.gte-md {
       height: icons.$icon-size-lg;
       width: icons.$icon-size-lg;
     }
