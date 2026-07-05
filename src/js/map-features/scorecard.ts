@@ -170,10 +170,11 @@ export default function initScorecard(
 
   // Closing the scorecard resets search.
   scorecardState.subscribe(({ type }) => {
-    // Don't run this code when initializing the scorecardState observable.
-    if (!scorecardState.isInitialized) return;
-
-    if (type === "hidden") {
+    if (
+      scorecardState.isInitialized &&
+      type === "hidden" &&
+      filterManager.getState().searchInput !== null
+    ) {
       filterManager.update({ searchInput: null });
     }
   }, "reset search FilterState when scorecard closed");
