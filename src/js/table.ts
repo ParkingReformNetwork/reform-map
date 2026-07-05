@@ -169,16 +169,20 @@ export function tableDownloadFileName(
   return `parking-reforms--${policy}--${status}.csv`;
 }
 
-function updateCounterDownload(
+/**
+ * Wire up the download button once. The policy type/status it downloads are
+ * read from `getDownloadTarget` at click-time.
+ */
+function initCounterDownload(
   table: Tabulator,
-  policyType: PolicyTypeFilter,
-  status: ReformStatus,
+  getDownloadTarget: () => [PolicyTypeFilter, ReformStatus],
 ): void {
   const button = document.querySelector(".counter-table-download");
   if (!button) return;
-  button.addEventListener("click", () =>
-    table.download("csv", tableDownloadFileName(policyType, status)),
-  );
+  button.addEventListener("click", () => {
+    const [policyType, status] = getDownloadTarget();
+    table.download("csv", tableDownloadFileName(policyType, status));
+  });
 }
 
 export default function initTable(
@@ -386,10 +390,16 @@ export default function initTable(
   // we switch to table view.
   let dataRefreshQueued = false;
 
+  // Track the latest policy type and status for the download button.
+  let downloadPolicyType = currentPolicyTypeFilter;
+  let downloadStatus = currentStatus;
+  initCounterDownload(table, () => [downloadPolicyType, downloadStatus]);
+
   filterManager.subscribe(
     "update table's records",
     ({ policyTypeFilter, status }) => {
-      updateCounterDownload(table, policyTypeFilter, status);
+      downloadPolicyType = policyTypeFilter;
+      downloadStatus = status;
       if (!tableBuilt) return;
       if (viewToggle.getValue() === "map") {
         dataRefreshQueued = true;
