@@ -150,28 +150,15 @@ To instead manually update the data, first run `npm install`. Then, run `npm run
 
 ## State diagram
 
-This shows all possible user interactions on the map, and what triggers what.
+This shows the main user interactions on the map, and what triggers what.
 
 ```mermaid
 graph TD
-    A[about icon]
-    B[about popup]
-    C[about popup close icon]
-    D[click outside popup]
-
     E[zoom buttons]
     F[zoom level]
 
     G[map position]
     H[user scrolling]
-
-    K[filter popup]
-    L[filter icon]
-    M[click outside popup]
-
-    N[search popup]
-    O[search icon]
-    P[click outside popup]
 
     Q[table entries]
 
@@ -203,16 +190,6 @@ graph TD
     Z -->|toggles| AA
 
     S -->|controls| R
-
-    A -->|toggles| B
-    C -->|closes| B
-    D -->|closes| B
-
-    L -->|toggles| K
-    M -->|closes| K
-
-    O -->|toggles| N
-    P -->|closes| N
 
     E -->|controls| F
     X -->|resets| F
