@@ -7,7 +7,7 @@ import {
   type BaseAccordionElements,
   generateAccordion,
   generateCheckbox,
-  updateAccordionUI,
+  wireAccordion,
 } from "../layout/accordion";
 import { createIcon } from "../layout/icons";
 import {
@@ -23,7 +23,7 @@ import {
   type PlaceFilterManager,
   type PolicyTypeFilter,
 } from "../state/FilterState";
-import Observable from "../state/Observable";
+import type Observable from "../state/Observable";
 import { initPopulationSlider } from "./populationSlider";
 
 /** These option values change depending on which dataset is loaded.
@@ -258,7 +258,8 @@ function generateAccordionForFilterGroup(
     uncheckAllButton,
   };
 
-  const accordionState = new Observable<AccordionState>(
+  const accordionState = wireAccordion(
+    elements,
     `filter accordion ${params.htmlName}`,
     {
       hidden: false,
@@ -267,14 +268,6 @@ function generateAccordionForFilterGroup(
       supplementalTitle: determineSupplementalTitle(fieldSet),
     },
   );
-  accordionState.subscribe((state) => updateAccordionUI(elements, state));
-  baseElements.accordionButton.addEventListener("click", () => {
-    const priorState = accordionState.getValue();
-    accordionState.setValue({
-      ...priorState,
-      expanded: !priorState.expanded,
-    });
-  });
   accordionState.initialize();
 
   return [elements, accordionState];

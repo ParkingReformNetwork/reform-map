@@ -1,52 +1,6 @@
 import Choices from "choices.js";
+import { initTogglePopup } from "./layout/popup";
 import type { PlaceFilterManager } from "./state/FilterState";
-import Observable from "./state/Observable";
-
-function updateSearchPopupUI(isVisible: boolean) {
-  const popup = document.querySelector<HTMLElement>("#search-popup");
-  const icon = document.querySelector(".header-search-icon-container");
-  if (!popup || !icon) return;
-  popup.hidden = !isVisible;
-  icon.ariaExpanded = isVisible.toString();
-}
-
-type SearchPopupObservable = Observable<boolean>;
-
-function initSearchPopup(onOpen: () => void): SearchPopupObservable {
-  const isVisible = new Observable<boolean>("search popup", false);
-  isVisible.subscribe(updateSearchPopupUI);
-
-  const popup = document.querySelector("#search-popup");
-  const icon = document.querySelector(".header-search-icon-container");
-  if (!icon) throw new Error("icon not found");
-
-  icon.addEventListener("click", () => {
-    const nowVisible = !isVisible.getValue();
-    isVisible.setValue(nowVisible);
-    // Build the Choices.js widget before the setTimeout below, since `div.choices` does
-    // not exist until then.
-    if (nowVisible) onOpen();
-    setTimeout(
-      () => document.querySelector<HTMLElement>("div.choices")?.click(),
-      100,
-    );
-  });
-
-  // Clicks outside the popup close it.
-  window.addEventListener("click", (event) => {
-    if (
-      isVisible.getValue() === true &&
-      event.target instanceof Element &&
-      !icon?.contains(event.target) &&
-      !popup?.contains(event.target)
-    ) {
-      isVisible.setValue(false);
-    }
-  });
-
-  isVisible.initialize();
-  return isVisible;
-}
 
 export default function initSearch(filterManager: PlaceFilterManager): void {
   const htmlElement = document.querySelector(".search");
@@ -91,7 +45,20 @@ export default function initSearch(filterManager: PlaceFilterManager): void {
     choices.setChoiceByValue(filterManager.getState().searchInput ?? "");
   };
 
-  const popupIsVisible = initSearchPopup(buildChoices);
+  const popupIsVisible = initTogglePopup({
+    id: "search popup",
+    popupSelector: "#search-popup",
+    iconSelector: ".header-search-icon-container",
+    onOpen: () => {
+      // Build the Choices.js widget before focusing it, since `div.choices`
+      // does not exist until then.
+      buildChoices();
+      setTimeout(
+        () => document.querySelector<HTMLElement>("div.choices")?.click(),
+        100,
+      );
+    },
+  });
 
   // Ensure that programmatic changes that set FilterState.searchInput to null
   // update the UI element too.

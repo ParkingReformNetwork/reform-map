@@ -1,13 +1,13 @@
 import {
   type AccordionState,
   generateAccordion,
-  updateAccordionUI,
+  wireAccordion,
 } from "../layout/accordion";
 import {
   type PlaceFilterManager,
   POPULATION_INTERVALS,
 } from "../state/FilterState";
-import Observable from "../state/Observable";
+import type Observable from "../state/Observable";
 
 const THUMBSIZE = 24;
 export const POPULATION_MAX_INDEX = POPULATION_INTERVALS.length - 1;
@@ -64,8 +64,9 @@ function generateSliders(
   right.min = "0";
   controls.append(right);
 
-  const accordionState = new Observable<AccordionState>(
-    `filter accordion population`,
+  const accordionState = wireAccordion(
+    accordionElements,
+    "filter accordion population",
     {
       hidden: false,
       expanded: false,
@@ -75,16 +76,6 @@ function generateSliders(
       ),
     },
   );
-  accordionState.subscribe((state) =>
-    updateAccordionUI(accordionElements, state),
-  );
-  accordionElements.accordionButton.addEventListener("click", () => {
-    const priorState = accordionState.getValue();
-    accordionState.setValue({
-      ...priorState,
-      expanded: !priorState.expanded,
-    });
-  });
 
   accordionElements.contentContainer.append(container);
   optionsContainer.append(accordionElements.outerContainer);

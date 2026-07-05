@@ -1,3 +1,4 @@
+import Observable from "../state/Observable";
 import { createIcon } from "./icons";
 
 export interface BaseAccordionElements {
@@ -14,7 +15,7 @@ export interface AccordionState {
   supplementalTitle?: string;
 }
 
-export function updateAccordionUI(
+function updateAccordionUI(
   elements: BaseAccordionElements,
   state: AccordionState,
 ): void {
@@ -34,6 +35,27 @@ export function updateAccordionUI(
   elements.contentContainer.hidden = !state.expanded;
   upIcon.style.display = state.expanded ? "block" : "none";
   downIcon.style.display = state.expanded ? "none" : "block";
+}
+
+/** Create the Observable backing an accordion and wire the expand/collapse toggle.
+ *
+ * Does not call `initialize()`: callers may add more subscribers first, and
+ * `Observable.subscribe` throws once initialized. */
+export function wireAccordion(
+  elements: BaseAccordionElements,
+  observableId: string,
+  initialState: AccordionState,
+): Observable<AccordionState> {
+  const accordionState = new Observable<AccordionState>(
+    observableId,
+    initialState,
+  );
+  accordionState.subscribe((state) => updateAccordionUI(elements, state));
+  elements.accordionButton.addEventListener("click", () => {
+    const prior = accordionState.getValue();
+    accordionState.setValue({ ...prior, expanded: !prior.expanded });
+  });
+  return accordionState;
 }
 
 export function generateCheckbox(
