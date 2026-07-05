@@ -185,6 +185,23 @@ type FilterGroupParams = {
   hide?: (state: FilterState) => boolean;
 };
 
+function resolveLegend(
+  legend: FilterGroupParams["legend"],
+  state: FilterState,
+): string {
+  return typeof legend === "string" ? legend : legend(state);
+}
+
+/** Reform scope and land use only apply to policies with a specific reform
+ * type, and are irrelevant once the "all minimums removed" toggle is in effect. */
+function hideUnlessScopedPolicy(filterState: FilterState): boolean {
+  return (
+    filterState.policyTypeFilter === "any parking reform" ||
+    filterState.policyTypeFilter === "parking benefit district" ||
+    isAllMinimumsRemovedToggleInEffect(filterState)
+  );
+}
+
 function generateAccordionForFilterGroup(
   filterState: FilterState,
   params: FilterGroupParams,
@@ -246,10 +263,7 @@ function generateAccordionForFilterGroup(
     {
       hidden: false,
       expanded: false,
-      title:
-        typeof params.legend === "string"
-          ? params.legend
-          : params.legend(filterState),
+      title: resolveLegend(params.legend, filterState),
       supplementalTitle: determineSupplementalTitle(fieldSet),
     },
   );
@@ -361,10 +375,7 @@ function initFilterGroup(
 
       const priorAccordionState = accordionState.getValue();
       const hidden = params.hide ? params.hide(state) : false;
-      const title =
-        typeof params.legend === "string"
-          ? params.legend
-          : params.legend(state);
+      const title = resolveLegend(params.legend, state);
       accordionState.setValue({ ...priorAccordionState, title, hidden });
     },
   );
@@ -439,73 +450,39 @@ function initAllMinimumsToggle(
   );
 }
 
-function initPolicyTypeFilterDropdown(
-  filterManager: PlaceFilterManager,
+function initDropdown(
   dropdownContainer: HTMLDivElement,
+  params: {
+    id: string;
+    className: string;
+    label: string;
+    options: readonly string[];
+    initialValue: string;
+    onChange: (value: string) => void;
+  },
 ): void {
-  const id = "filter-policy-type-dropdown";
-
   const container = document.createElement("div");
-  container.className = "filter-policy-type-dropdown-container";
+  container.className = params.className;
 
   const label = document.createElement("label");
-  label.htmlFor = id;
-  label.textContent = "Reform type";
+  label.htmlFor = params.id;
+  label.textContent = params.label;
 
   const select = document.createElement("select");
-  select.id = id;
-  select.name = id;
+  select.id = params.id;
+  select.name = params.id;
 
-  ALL_POLICY_TYPE_FILTER.forEach((option) => {
+  params.options.forEach((option) => {
     const element = document.createElement("option");
     element.value = option;
     element.textContent = capitalize(option);
     select.append(element);
   });
 
-  // Set initial value.
-  select.value = filterManager.getState().policyTypeFilter;
+  select.value = params.initialValue;
 
   select.addEventListener("change", () => {
-    const policyTypeFilter = select.value as PolicyTypeFilter;
-    filterManager.update({ policyTypeFilter });
-  });
-
-  container.append(label);
-  container.append(select);
-  dropdownContainer.append(container);
-}
-
-function initStatusDropdown(
-  filterManager: PlaceFilterManager,
-  dropdownContainer: HTMLDivElement,
-): void {
-  const id = "filter-status-dropdown";
-
-  const container = document.createElement("div");
-  container.className = "filter-status-dropdown-container";
-
-  const label = document.createElement("label");
-  label.htmlFor = id;
-  label.textContent = "Status";
-
-  const select = document.createElement("select");
-  select.id = id;
-  select.name = id;
-
-  ALL_REFORM_STATUS.forEach((option) => {
-    const element = document.createElement("option");
-    element.value = option;
-    element.textContent = capitalize(option);
-    select.append(element);
-  });
-
-  // Set initial value.
-  select.value = filterManager.getState().status;
-
-  select.addEventListener("change", () => {
-    const status = select.value as ReformStatus;
-    filterManager.update({ status });
+    params.onChange(select.value);
   });
 
   container.append(label);
@@ -523,9 +500,27 @@ export function initFilterOptions(filterManager: PlaceFilterManager): void {
     filterPopup,
   );
 
+  const initialState = filterManager.getState();
+
   // Top-level options that change profoundly the app.
-  initPolicyTypeFilterDropdown(filterManager, datasetDiv);
-  initStatusDropdown(filterManager, datasetDiv);
+  initDropdown(datasetDiv, {
+    id: "filter-policy-type-dropdown",
+    className: "filter-policy-type-dropdown-container",
+    label: "Reform type",
+    options: ALL_POLICY_TYPE_FILTER,
+    initialValue: initialState.policyTypeFilter,
+    onChange: (value) =>
+      filterManager.update({ policyTypeFilter: value as PolicyTypeFilter }),
+  });
+  initDropdown(datasetDiv, {
+    id: "filter-status-dropdown",
+    className: "filter-status-dropdown-container",
+    label: "Status",
+    options: ALL_REFORM_STATUS,
+    initialValue: initialState.status,
+    onChange: (value) =>
+      filterManager.update({ status: value as ReformStatus }),
+  });
   initAllMinimumsToggle(filterManager, optionsDiv);
 
   // Options about the reform
@@ -539,19 +534,13 @@ export function initFilterOptions(filterManager: PlaceFilterManager): void {
     htmlName: "scope",
     filterStateKey: "scope",
     legend: "Reform scopes",
-    hide: (filterState) =>
-      filterState.policyTypeFilter === "any parking reform" ||
-      filterState.policyTypeFilter === "parking benefit district" ||
-      isAllMinimumsRemovedToggleInEffect(filterState),
+    hide: hideUnlessScopedPolicy,
   });
   initFilterGroup(filterManager, optionsDiv, {
     htmlName: "land-use",
     filterStateKey: "landUse",
     legend: "Affected land uses",
-    hide: (filterState) =>
-      filterState.policyTypeFilter === "any parking reform" ||
-      filterState.policyTypeFilter === "parking benefit district" ||
-      isAllMinimumsRemovedToggleInEffect(filterState),
+    hide: hideUnlessScopedPolicy,
   });
   initFilterGroup(filterManager, optionsDiv, {
     htmlName: "year",
