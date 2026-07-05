@@ -162,9 +162,6 @@ graph TD
 
     Q[table entries]
 
-    R[table sorting]
-    S[user interaction]
-
     T[counter text]
     AE[AND]
 
@@ -188,8 +185,6 @@ graph TD
 
     %% Relationships
     Z -->|toggles| AA
-
-    S -->|controls| R
 
     E -->|controls| F
     X -->|resets| F
