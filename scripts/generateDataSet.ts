@@ -1,7 +1,3 @@
-/* eslint-disable import/no-extraneous-dependencies */
-/* eslint-disable no-console */
-/* eslint-disable @typescript-eslint/no-explicit-any */
-
 import fs from "node:fs/promises";
 import { sum } from "lodash-es";
 import Papa from "papaparse";

@@ -315,7 +315,6 @@ function updateCheckboxVisibility(
     .querySelectorAll<HTMLInputElement>('input[type="checkbox"]')
     .forEach((checkbox) => {
       const label = extractLabel(checkbox, preserveCapitalization);
-      // eslint-disable-next-line no-param-reassign
       checkbox.parentElement!.hidden = !label || !validOptions.has(label);
     });
 }
@@ -343,7 +342,6 @@ function initFilterGroup(
   accordionElements.checkAllButton.addEventListener("click", () => {
     const visibleCheckboxes = getVisibleCheckboxes(accordionElements.fieldSet);
     visibleCheckboxes.forEach((input) => {
-      // eslint-disable-next-line no-param-reassign
       input.checked = true;
     });
     updateCheckboxStats(accordionState, accordionElements.fieldSet);
@@ -359,7 +357,6 @@ function initFilterGroup(
   accordionElements.uncheckAllButton.addEventListener("click", () => {
     const visibleCheckboxes = getVisibleCheckboxes(accordionElements.fieldSet);
     visibleCheckboxes.forEach((input) => {
-      // eslint-disable-next-line no-param-reassign
       input.checked = false;
     });
     updateCheckboxStats(accordionState, accordionElements.fieldSet);

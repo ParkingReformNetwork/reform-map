@@ -1,7 +1,3 @@
-/* eslint-disable no-console */
-/* eslint-disable no-await-in-loop */
-/* eslint-disable import/no-extraneous-dependencies */
-
 import { execSync } from "node:child_process";
 import fs from "node:fs";
 import path from "node:path";
@@ -289,7 +285,6 @@ async function runOnce(browser: Browser): Promise<RunResult> {
         const w = window as unknown as {
           __bench: { markersPainted: number | null };
         };
-        // eslint-disable-next-line no-underscore-dangle
         return w.__bench.markersPainted != null;
       },
       undefined,
@@ -321,7 +316,6 @@ async function runOnce(browser: Browser): Promise<RunResult> {
       const w = window as unknown as {
         __bench: { counterReady: number; markersPainted: number };
       };
-      // eslint-disable-next-line no-underscore-dangle
       const bench = w.__bench;
       return {
         responseEndMs: nav ? nav.responseEnd : 0,
