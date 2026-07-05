@@ -343,13 +343,12 @@ function initFilterGroup(
   filterManager.subscribe(
     `possibly update ${params.htmlName} filter UI`,
     (state) => {
-      // Project state onto the checkboxes. Setting `.checked` programmatically
-      // does not fire a `change` event, so there is no feedback loop.
-      const selected = state[params.filterStateKey];
       accordionElements.fieldSet
         .querySelectorAll<HTMLInputElement>('input[type="checkbox"]')
         .forEach((input) => {
-          input.checked = selected.has(input.dataset.value!);
+          input.checked = state[params.filterStateKey].has(
+            input.dataset.value!,
+          );
         });
 
       updateCheckboxVisibility(
