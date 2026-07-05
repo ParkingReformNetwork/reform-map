@@ -29,20 +29,22 @@ export function createUrl(searchParams: URLSearchParams): string {
 }
 
 export default function initShareLink(filterManager: PlaceFilterManager): void {
-  filterManager.subscribe("update share link", (filterState) => {
-    const shareIcon = document.querySelector<HTMLButtonElement>(
-      ".header-share-icon-container",
-    );
-    const fullScreenIcon = document.querySelector<HTMLAnchorElement>(
-      ".header-full-screen-icon-container",
-    );
-    if (!shareIcon || !fullScreenIcon) return;
+  const shareIcon = document.querySelector<HTMLButtonElement>(
+    ".header-share-icon-container",
+  );
+  const fullScreenIcon = document.querySelector<HTMLAnchorElement>(
+    ".header-full-screen-icon-container",
+  );
+  if (!shareIcon || !fullScreenIcon) return;
 
-    const shareUrl = createUrl(encodeFilterState(filterState));
-    shareIcon.addEventListener("click", async () => {
-      await copyToClipboard(shareUrl);
-      switchShareIcons(shareIcon);
-    });
+  let shareUrl = createUrl(encodeFilterState(filterManager.getState()));
+  filterManager.subscribe("update share link", (filterState) => {
+    shareUrl = createUrl(encodeFilterState(filterState));
     fullScreenIcon.href = shareUrl;
+  });
+
+  shareIcon.addEventListener("click", async () => {
+    await copyToClipboard(shareUrl);
+    switchShareIcons(shareIcon);
   });
 }
