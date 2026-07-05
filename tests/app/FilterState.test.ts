@@ -98,17 +98,15 @@ test.describe("PlaceFilterManager.matchedPolicyRecords()", () => {
   test("any parking reform", () => {
     const expectedPlace1Match = {
       type: "any",
-      hasAddMax: false,
-      hasRmMin: false,
-      hasReduceMin: true,
-      hasBenefitDistrict: false,
+      policyTypes: ["reduce parking minimums"],
     };
     const expectedPlace2Match = {
       type: "any",
-      hasAddMax: true,
-      hasRmMin: true,
-      hasReduceMin: false,
-      hasBenefitDistrict: true,
+      policyTypes: [
+        "add parking maximums",
+        "remove parking minimums",
+        "parking benefit district",
+      ],
     };
 
     const manager = new PlaceFilterManager(defaultEntries(), defaultState());
@@ -165,10 +163,7 @@ test.describe("PlaceFilterManager.matchedPolicyRecords()", () => {
     expect(manager.matchedPlaces).toEqual({
       "Place 2": {
         type: "any",
-        hasAddMax: true,
-        hasRmMin: false,
-        hasReduceMin: false,
-        hasBenefitDistrict: false,
+        policyTypes: ["add parking maximums"],
       },
     });
     manager.update({

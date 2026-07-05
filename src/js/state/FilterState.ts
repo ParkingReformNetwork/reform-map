@@ -1,4 +1,8 @@
-import { determineAllPolicyTypes, getFilteredIndexes } from "../model/data";
+import {
+  determineAllPolicyTypes,
+  getFilteredIndexes,
+  getLandUsePolicyRecords,
+} from "../model/data";
 import {
   ALL_POLICY_TYPE,
   type PlaceId,
@@ -69,12 +73,9 @@ interface PlaceMatchSinglePolicy {
 
 interface PlaceMatchAnyPolicy {
   type: "any";
-  // Note that we still record if a place has a certain policy type
-  // even if the filter state is actively ignoring that policy.
-  hasRmMin: boolean;
-  hasReduceMin: boolean;
-  hasAddMax: boolean;
-  hasBenefitDistrict: boolean;
+  // Note that we still record all policy types a place has, even ones the
+  // filter state is actively excluding via includedPolicyChanges.
+  policyTypes: PolicyType[];
 }
 
 type PlaceMatch =
@@ -214,12 +215,9 @@ export class PlaceFilterManager {
       matchedCountries.add(this.entries[placeId].place.country);
       matchedPlaceTypes.add(this.entries[placeId].place.type);
       if (match.type === "any") {
-        if (match.hasAddMax) matchedPolicyTypes.add("add parking maximums");
-        if (match.hasReduceMin)
-          matchedPolicyTypes.add("reduce parking minimums");
-        if (match.hasRmMin) matchedPolicyTypes.add("remove parking minimums");
-        if (match.hasBenefitDistrict)
-          matchedPolicyTypes.add("parking benefit district");
+        for (const policyType of match.policyTypes) {
+          matchedPolicyTypes.add(policyType);
+        }
       }
     }
 
@@ -318,65 +316,33 @@ export class PlaceFilterManager {
       const isPolicyType = policyTypes.some((v) =>
         filterState.includedPolicyChanges.has(v),
       );
-      return isPolicyType
-        ? {
-            type: "any",
-            hasAddMax: policyTypes.includes("add parking maximums"),
-            hasReduceMin: policyTypes.includes("reduce parking minimums"),
-            hasRmMin: policyTypes.includes("remove parking minimums"),
-            hasBenefitDistrict: policyTypes.includes(
-              "parking benefit district",
-            ),
-          }
-        : null;
+      return isPolicyType ? { type: "any", policyTypes } : null;
     }
 
-    if (filterState.policyTypeFilter === "add parking maximums") {
-      const matchingPolicies = getFilteredIndexes(
-        entry.add_max ?? [],
-        (policyRecord) => this.matchesLandUsePolicy(policyRecord, {}),
-      );
-      return matchingPolicies.length
-        ? {
-            type: "single policy",
-            policyType: "add parking maximums",
-            matchingIndexes: matchingPolicies,
-          }
-        : null;
-    }
-
-    if (filterState.policyTypeFilter === "reduce parking minimums") {
-      const matchingPolicies = getFilteredIndexes(
-        entry.reduce_min ?? [],
-        (policyRecord) => this.matchesLandUsePolicy(policyRecord, {}),
-      );
-      return matchingPolicies.length
-        ? {
-            type: "single policy",
-            policyType: "reduce parking minimums",
-            matchingIndexes: matchingPolicies,
-          }
-        : null;
-    }
-
-    if (filterState.policyTypeFilter === "remove parking minimums") {
-      // If 'all minimums removed' is in effect, then 'land use' and 'scope' are irrelevent:
+    if (
+      filterState.policyTypeFilter === "add parking maximums" ||
+      filterState.policyTypeFilter === "reduce parking minimums" ||
+      filterState.policyTypeFilter === "remove parking minimums"
+    ) {
+      const policyType = filterState.policyTypeFilter;
+      // If 'all minimums removed' is in effect, then 'land use' and 'scope' are irrelevant:
       //  - the place will only have a single policy record for minimum removal
       //  - that policy record must be set to "All uses" and "Citywide"
-      const allMinimumsInEffect =
+      const ignoreLandAndScope =
+        policyType === "remove parking minimums" &&
         isAllMinimumsRemovedToggleInEffect(filterState);
-      const options = {
-        ignoreScope: allMinimumsInEffect,
-        ignoreLand: allMinimumsInEffect,
-      };
       const matchingPolicies = getFilteredIndexes(
-        entry.rm_min ?? [],
-        (policyRecord) => this.matchesLandUsePolicy(policyRecord, options),
+        getLandUsePolicyRecords(entry, policyType),
+        (policyRecord) =>
+          this.matchesLandUsePolicy(policyRecord, {
+            ignoreScope: ignoreLandAndScope,
+            ignoreLand: ignoreLandAndScope,
+          }),
       );
       return matchingPolicies.length
         ? {
             type: "single policy",
-            policyType: "remove parking minimums",
+            policyType,
             matchingIndexes: matchingPolicies,
           }
         : null;

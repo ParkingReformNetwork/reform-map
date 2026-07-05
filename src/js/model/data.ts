@@ -1,17 +1,19 @@
 import { encodedPlaceToUrl } from "./placeId";
 import { ReformDate } from "./ReformDate";
-import type {
-  PlaceId,
-  PolicyType,
-  ProcessedCoreBenefitDistrict,
-  ProcessedCoreEntry,
-  ProcessedCoreLandUsePolicy,
-  ProcessedPlace,
-  RawCoreBenefitDistrict,
-  RawCoreEntry,
-  RawCoreLandUsePolicy,
-  RawPlace,
-  ReformStatus,
+import {
+  ALL_POLICY_TYPE,
+  type LandUsePolicyType,
+  type PlaceId,
+  type PolicyType,
+  type ProcessedCoreBenefitDistrict,
+  type ProcessedCoreEntry,
+  type ProcessedCoreLandUsePolicy,
+  type ProcessedPlace,
+  type RawCoreBenefitDistrict,
+  type RawCoreEntry,
+  type RawCoreLandUsePolicy,
+  type RawPlace,
+  type ReformStatus,
 } from "./types";
 
 export const COUNTRIES_PREFIXED_BY_THE = new Set([
@@ -54,33 +56,54 @@ export function processPlace(raw: RawPlace): ProcessedPlace {
   };
 }
 
+function getPolicyRecords(
+  entry: RawCoreEntry | ProcessedCoreEntry,
+  policyType: PolicyType,
+): Array<{ status: ReformStatus }> {
+  switch (policyType) {
+    case "add parking maximums":
+      return entry.add_max ?? [];
+    case "reduce parking minimums":
+      return entry.reduce_min ?? [];
+    case "remove parking minimums":
+      return entry.rm_min ?? [];
+    case "parking benefit district":
+      return entry.benefit_district ?? [];
+  }
+}
+
 export function determineAllPolicyTypes(
   entry: RawCoreEntry | ProcessedCoreEntry,
   status: ReformStatus,
 ): PolicyType[] {
-  const hasPolicy = (policies: Array<{ status: ReformStatus }> | undefined) =>
-    !!policies?.filter((policy) => policy.status === status).length;
-
-  const result: PolicyType[] = [];
-  if (hasPolicy(entry.add_max)) result.push("add parking maximums");
-  if (hasPolicy(entry.reduce_min)) result.push("reduce parking minimums");
-  if (hasPolicy(entry.rm_min)) result.push("remove parking minimums");
-  if (hasPolicy(entry.benefit_district))
-    result.push("parking benefit district");
-  return result;
+  return ALL_POLICY_TYPE.filter((policyType) =>
+    getPolicyRecords(entry, policyType).some((p) => p.status === status),
+  );
 }
 
 export function determinePolicyTypeStatuses(
   entry: RawCoreEntry | ProcessedCoreEntry,
 ): Record<PolicyType, Set<ReformStatus>> {
-  const getStatuses = (policies: Array<{ status: ReformStatus }> | undefined) =>
-    new Set(policies?.map((policy) => policy.status) ?? []);
-  return {
-    "add parking maximums": getStatuses(entry.add_max),
-    "reduce parking minimums": getStatuses(entry.reduce_min),
-    "remove parking minimums": getStatuses(entry.rm_min),
-    "parking benefit district": getStatuses(entry.benefit_district),
-  };
+  return Object.fromEntries(
+    ALL_POLICY_TYPE.map((policyType) => [
+      policyType,
+      new Set(getPolicyRecords(entry, policyType).map((p) => p.status)),
+    ]),
+  ) as Record<PolicyType, Set<ReformStatus>>;
+}
+
+export function getLandUsePolicyRecords(
+  entry: ProcessedCoreEntry,
+  policyType: LandUsePolicyType,
+): ProcessedCoreLandUsePolicy[] {
+  switch (policyType) {
+    case "add parking maximums":
+      return entry.add_max ?? [];
+    case "reduce parking minimums":
+      return entry.reduce_min ?? [];
+    case "remove parking minimums":
+      return entry.rm_min ?? [];
+  }
 }
 
 function processLandUsePolicy(
