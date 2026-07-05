@@ -9,7 +9,7 @@ async function copyToClipboard(value: string): Promise<void> {
   }
 }
 
-function switchShareIcons(shareIcon: HTMLAnchorElement): void {
+function switchShareIcons(shareIcon: HTMLButtonElement): void {
   const linkIcon = shareIcon.querySelector<SVGElement>("svg.share-link-icon");
   const checkIcon = shareIcon.querySelector<SVGElement>("svg.share-check-icon");
   if (!linkIcon || !checkIcon) return;
@@ -30,7 +30,7 @@ export function createUrl(searchParams: URLSearchParams): string {
 
 export default function initShareLink(filterManager: PlaceFilterManager): void {
   filterManager.subscribe("update share link", (filterState) => {
-    const shareIcon = document.querySelector<HTMLAnchorElement>(
+    const shareIcon = document.querySelector<HTMLButtonElement>(
       ".header-share-icon-container",
     );
     const fullScreenIcon = document.querySelector<HTMLAnchorElement>(
