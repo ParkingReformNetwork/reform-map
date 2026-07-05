@@ -135,14 +135,28 @@ export function determineAnyReform(
   return `${prefix} 1+ ${state} parking reforms:<ul>${listItems}</ul>`;
 }
 
+function determineSimplePolicy(
+  view: ViewState,
+  placeDescription: string,
+  status: ReformStatus,
+  noun: string,
+): string {
+  return view === "map"
+    ? `Showing ${placeDescription} with ${status} ${noun}`
+    : `Showing details about ${status} ${noun} for ${placeDescription} - ${TABLE_DOWNLOAD_HTML}`;
+}
+
 export function determineReduceMin(
   view: ViewState,
   placeDescription: string,
   status: ReformStatus,
 ): string {
-  return view === "map"
-    ? `Showing ${placeDescription} with ${status} parking minimum reductions`
-    : `Showing details about ${status} parking minimum reductions for ${placeDescription} - ${TABLE_DOWNLOAD_HTML}`;
+  return determineSimplePolicy(
+    view,
+    placeDescription,
+    status,
+    "parking minimum reductions",
+  );
 }
 
 export function determineAddMax(
@@ -150,9 +164,12 @@ export function determineAddMax(
   placeDescription: string,
   status: ReformStatus,
 ): string {
-  return view === "map"
-    ? `Showing ${placeDescription} with ${status} parking maximums`
-    : `Showing details about ${status} parking maximums for ${placeDescription} - ${TABLE_DOWNLOAD_HTML}`;
+  return determineSimplePolicy(
+    view,
+    placeDescription,
+    status,
+    "parking maximums",
+  );
 }
 
 export function determineRmMin(
@@ -186,9 +203,12 @@ export function determineBenefitDistrict(
   placeDescription: string,
   status: ReformStatus,
 ): string {
-  return view === "map"
-    ? `Showing ${placeDescription} with ${status} parking benefit districts`
-    : `Showing details about ${status} parking benefit districts for ${placeDescription} - ${TABLE_DOWNLOAD_HTML}`;
+  return determineSimplePolicy(
+    view,
+    placeDescription,
+    status,
+    "parking benefit districts",
+  );
 }
 
 export function determineHtml(
