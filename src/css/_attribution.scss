@@ -8,12 +8,12 @@
   background-color: colors.$white;
   border-top: borders.$component-border;
 
-  @include breakpoints.gt-xs {
+  @include breakpoints.gte-sm {
     border-top-left-radius: borders.$border-radius;
     border-left: borders.$component-border;
   }
 
-  @include breakpoints.gt-sm {
+  @include breakpoints.gte-md {
     font-size: typography.$font-size-sm;
   }
 }

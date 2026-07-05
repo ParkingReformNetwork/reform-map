@@ -33,7 +33,7 @@
   overflow-y: auto;
   overflow-wrap: break-word;
 
-  @include breakpoints.gt-sm {
+  @include breakpoints.gte-md {
     margin-left: 10%;
   }
 
@@ -77,7 +77,7 @@
     height: icons.$icon-size-md;
     width: icons.$icon-size-md;
 
-    @include breakpoints.gt-sm {
+    @include breakpoints.gte-md {
       height: icons.$icon-size-lg;
       width: icons.$icon-size-lg;
     }

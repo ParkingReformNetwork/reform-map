@@ -13,14 +13,14 @@
   bottom: 30px;
 
   width: 80px;
-  @include breakpoints.gt-xxs {
+  @include breakpoints.gte-xs {
     width: 100px;
   }
 
-  @include breakpoints.gt-xs {
+  @include breakpoints.gte-sm {
     bottom: 15px;
   }
-  @include breakpoints.gt-sm {
+  @include breakpoints.gte-md {
     bottom: 0px;
   }
 

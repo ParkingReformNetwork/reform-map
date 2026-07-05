@@ -26,7 +26,7 @@ div.choices[data-type*="select-one"] {
     border-bottom-left-radius: 0;
     border-bottom-right-radius: 0;
 
-    @include breakpoints.gt-xxs {
+    @include breakpoints.gte-xs {
       width: 320px;
     }
   }
