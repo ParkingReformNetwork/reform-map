@@ -164,7 +164,13 @@ export function initPopulationSlider(
   }, "render population slider");
 
   // Also update UI when values change
+  let priorPopulationSliderIndexes = populationSliderIndexes;
   filterManager.subscribe("update population sliders", (state) => {
+    const [priorLeft, priorRight] = priorPopulationSliderIndexes;
+    const [newLeft, newRight] = state.populationSliderIndexes;
+    if (priorLeft === newLeft && priorRight === newRight) return;
+    priorPopulationSliderIndexes = state.populationSliderIndexes;
+
     const accordionPriorState = accordionStateObservable.getValue();
     accordionStateObservable.setValue({
       ...accordionPriorState,
