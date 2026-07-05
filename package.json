@@ -3,9 +3,6 @@
   "version": "0.1.0",
   "source": "index.html",
   "type": "module",
-  "engines": {
-    "node": ">=22"
-  },
   "scripts": {
     "start": "parcel",
     "build": "rm -rf dist .parcel-cache; parcel build --detailed-report",
