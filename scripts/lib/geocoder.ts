@@ -1,7 +1,11 @@
 /* eslint-disable import/no-extraneous-dependencies */
 /* eslint-disable no-await-in-loop */
 
-import nodeFetch, { RequestInfo, RequestInit, Response } from "node-fetch";
+import nodeFetch, {
+  type RequestInfo,
+  type RequestInit,
+  type Response,
+} from "node-fetch";
 import NodeGeocoder from "node-geocoder";
 
 export async function fetch(

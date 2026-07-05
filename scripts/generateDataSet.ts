@@ -2,18 +2,16 @@
 /* eslint-disable no-console */
 /* eslint-disable @typescript-eslint/no-explicit-any */
 
-import fs from "fs/promises";
-
-import { $, glob } from "zx";
+import fs from "node:fs/promises";
 import { sum } from "lodash-es";
 import Papa from "papaparse";
-
+import { $, glob } from "zx";
+import type { ReformStatus } from "../src/js/model/types";
 import {
-  ProcessedCompleteEntry,
-  ProcessedCompleteLandUsePolicy,
+  type ProcessedCompleteEntry,
+  type ProcessedCompleteLandUsePolicy,
   readProcessedCompleteData,
 } from "./lib/data";
-import { ReformStatus } from "../src/js/model/types";
 
 const DELIMITER = "; ";
 

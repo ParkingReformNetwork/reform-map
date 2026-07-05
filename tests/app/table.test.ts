@@ -1,8 +1,12 @@
 import { expect, test } from "@playwright/test";
 
-import { ColumnComponent, RowComponent, SortDirection } from "tabulator-tables";
-import { compareDates, tableDownloadFileName } from "../../src/js/table";
+import type {
+  ColumnComponent,
+  RowComponent,
+  SortDirection,
+} from "tabulator-tables";
 import { ReformDate } from "../../src/js/model/ReformDate";
+import { compareDates, tableDownloadFileName } from "../../src/js/table";
 
 test("tableDownloadFileName()", () => {
   expect(tableDownloadFileName("any parking reform", "adopted")).toEqual(

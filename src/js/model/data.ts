@@ -1,18 +1,18 @@
 import { encodedPlaceToUrl } from "./placeId";
-import {
+import { ReformDate } from "./ReformDate";
+import type {
   PlaceId,
+  PolicyType,
+  ProcessedCoreBenefitDistrict,
   ProcessedCoreEntry,
+  ProcessedCoreLandUsePolicy,
+  ProcessedPlace,
+  RawCoreBenefitDistrict,
   RawCoreEntry,
   RawCoreLandUsePolicy,
-  PolicyType,
   RawPlace,
-  ProcessedPlace,
-  ProcessedCoreLandUsePolicy,
   ReformStatus,
-  RawCoreBenefitDistrict,
-  ProcessedCoreBenefitDistrict,
 } from "./types";
-import { ReformDate } from "./ReformDate";
 
 export const COUNTRIES_PREFIXED_BY_THE = new Set([
   "United States",

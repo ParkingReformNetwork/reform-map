@@ -1,7 +1,6 @@
 import Choices from "choices.js";
-
+import type { PlaceFilterManager } from "./state/FilterState";
 import Observable from "./state/Observable";
-import { PlaceFilterManager } from "./state/FilterState";
 
 function updateSearchPopupUI(isVisible: boolean) {
   const popup = document.querySelector<HTMLElement>("#search-popup");

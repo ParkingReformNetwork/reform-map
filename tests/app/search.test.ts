@@ -1,11 +1,11 @@
-import { expect, test } from "@playwright/test";
 import type { Page } from "@playwright/test";
+import { expect, test } from "@playwright/test";
 
 import {
   assertNumPlaces,
+  DEFAULT_PLACE_RANGE,
   loadMap,
   openFilter,
-  DEFAULT_PLACE_RANGE,
 } from "./utils";
 
 async function openSearch(page: Page): Promise<void> {

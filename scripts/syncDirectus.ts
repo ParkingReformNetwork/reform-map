@@ -2,45 +2,43 @@
 /* eslint-disable import/no-extraneous-dependencies */
 /* eslint-disable no-await-in-loop */
 
-import fs from "fs/promises";
-
-import { groupBy, kebabCase } from "lodash-es";
+import fs from "node:fs/promises";
 import { updateItem } from "@directus/sdk";
-import NodeGeocoder from "node-geocoder";
-
-import {
-  initDirectus,
-  DirectusClient,
-  Place as DirectusPlace,
-  Citation as DirectusCitation,
-  readItemsBatched,
-  readCitationsFilesBatched,
-  LandUseRecord,
-  BenefitDistrict,
-} from "./lib/directus";
-import {
-  PlaceId as PlaceStringId,
-  PolicyType,
-  RawCoreBenefitDistrict,
-  RawCoreLandUsePolicy,
-} from "../src/js/model/types";
-import { getLongLat, initGeocoder } from "./lib/geocoder";
-import {
-  DirectusFile,
-  Citation,
-  ExtendedLandUsePolicy,
-  RawCompleteEntry,
-  RawCompleteLandUsePolicy,
-  RawCompleteBenefitDistrict,
-  ExtendedBenefitDistrict,
-  readRawCoreData,
-} from "./lib/data";
-import { saveOptionValues } from "./lib/optionValues";
+import { groupBy, kebabCase } from "lodash-es";
+import type NodeGeocoder from "node-geocoder";
 import { COUNTRY_MAPPING } from "../src/js/model/data";
 import {
   determinePlaceIdForDirectus,
   encodePlaceId,
 } from "../src/js/model/placeId";
+import type {
+  PlaceId as PlaceStringId,
+  PolicyType,
+  RawCoreBenefitDistrict,
+  RawCoreLandUsePolicy,
+} from "../src/js/model/types";
+import {
+  type Citation,
+  type DirectusFile,
+  type ExtendedBenefitDistrict,
+  type ExtendedLandUsePolicy,
+  type RawCompleteBenefitDistrict,
+  type RawCompleteEntry,
+  type RawCompleteLandUsePolicy,
+  readRawCoreData,
+} from "./lib/data";
+import {
+  type BenefitDistrict,
+  type Citation as DirectusCitation,
+  type DirectusClient,
+  type Place as DirectusPlace,
+  initDirectus,
+  type LandUseRecord,
+  readCitationsFilesBatched,
+  readItemsBatched,
+} from "./lib/directus";
+import { getLongLat, initGeocoder } from "./lib/geocoder";
+import { saveOptionValues } from "./lib/optionValues";
 
 // --------------------------------------------------------------------------
 // Read prior data

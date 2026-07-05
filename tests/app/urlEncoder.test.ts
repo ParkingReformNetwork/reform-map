@@ -1,33 +1,32 @@
 import { expect, test } from "@playwright/test";
-
-import {
-  encodeFilterState,
-  decodeFilterState,
-  decodePopulation,
-  DEFAULT_FILTER_STATE,
-  STATUS_MAP,
-  POLICY_TYPE_MAP,
-  MERGED_STRING_SET_OPTIONS,
-  PLACE_TYPE_MAP,
-  LAND_USE_MAP,
-  SCOPE_MAP,
-  POLICY_TYPE_NAME,
-  STATUS_NAME,
-  ALL_MINIMUMS_REPEALED_TOGGLE_NAME,
-  YEAR_NAME,
-  INCLUDED_POLICY_NAME,
-  PLACE_TYPE_NAME,
-  LAND_USE_NAME,
-  SCOPE_NAME,
-  COUNTRY_MAP,
-  COUNTRY_NAME,
-  YEAR_MAP,
-} from "../../src/js/state/urlEncoder";
+import { ALL_REFORM_STATUS, UNKNOWN_YEAR } from "../../src/js/model/types";
 import {
   ALL_POLICY_TYPE_FILTER,
-  FilterState,
+  type FilterState,
 } from "../../src/js/state/FilterState";
-import { ALL_REFORM_STATUS, UNKNOWN_YEAR } from "../../src/js/model/types";
+import {
+  ALL_MINIMUMS_REPEALED_TOGGLE_NAME,
+  COUNTRY_MAP,
+  COUNTRY_NAME,
+  DEFAULT_FILTER_STATE,
+  decodeFilterState,
+  decodePopulation,
+  encodeFilterState,
+  INCLUDED_POLICY_NAME,
+  LAND_USE_MAP,
+  LAND_USE_NAME,
+  MERGED_STRING_SET_OPTIONS,
+  PLACE_TYPE_MAP,
+  PLACE_TYPE_NAME,
+  POLICY_TYPE_MAP,
+  POLICY_TYPE_NAME,
+  SCOPE_MAP,
+  SCOPE_NAME,
+  STATUS_MAP,
+  STATUS_NAME,
+  YEAR_MAP,
+  YEAR_NAME,
+} from "../../src/js/state/urlEncoder";
 
 test.describe("encodeFilterState", () => {
   test("default state", () => {

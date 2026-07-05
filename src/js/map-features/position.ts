@@ -1,10 +1,10 @@
-import { Map } from "leaflet";
+import type { Map as LeafletMap } from "leaflet";
 
-import { PlaceFilterManager } from "../state/FilterState";
+import type { PlaceFilterManager } from "../state/FilterState";
 
 export default function subscribeSnapToPlace(
   manager: PlaceFilterManager,
-  map: Map,
+  map: LeafletMap,
 ): void {
   manager.subscribe("move map on search", ({ searchInput }) => {
     if (searchInput) {

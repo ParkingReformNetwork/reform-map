@@ -1,8 +1,8 @@
-import type { FeatureGroup, Map } from "leaflet";
+import type { FeatureGroup, Map as LeafletMap } from "leaflet";
 
 declare global {
   interface Window {
-    mapTestHandles?: { map: Map; markerGroup: FeatureGroup };
+    mapTestHandles?: { map: LeafletMap; markerGroup: FeatureGroup };
   }
 }
 
@@ -15,7 +15,7 @@ declare global {
  * simulate real clicks.
  */
 export default function exposeTestHooks(
-  map: Map,
+  map: LeafletMap,
   markerGroup: FeatureGroup,
 ): void {
   window.mapTestHandles = { map, markerGroup };

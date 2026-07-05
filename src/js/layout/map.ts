@@ -1,4 +1,4 @@
-import { Map, TileLayer } from "leaflet";
+import { Map as LeafletMap, TileLayer } from "leaflet";
 
 const MIN_ZOOM = 3;
 const MAX_ZOOM = 13;
@@ -16,8 +16,8 @@ const BASE_LAYER = new TileLayer(
   },
 );
 
-export default function createMap(): Map {
-  const map = new Map("map", {
+export default function createMap(): LeafletMap {
+  const map = new LeafletMap("map", {
     layers: [BASE_LAYER],
     worldCopyJump: true,
     // Canvas mode substantially speeds up the map.

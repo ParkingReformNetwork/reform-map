@@ -6,7 +6,7 @@ import { execSync } from "node:child_process";
 import fs from "node:fs";
 import path from "node:path";
 
-import { chromium, type Browser, type CDPSession, type Page } from "playwright";
+import { type Browser, type CDPSession, chromium, type Page } from "playwright";
 
 const PORT = process.env.PORT || "8080";
 const BASE_URL = `http://127.0.0.1:${PORT}`;
@@ -84,11 +84,13 @@ function parseArgs(): Args {
   for (let i = 0; i < argv.length; i += 1) {
     const arg = argv[i];
     if (arg === "--runs") {
-      args.runs = parseInt(argv[(i += 1)], 10);
+      i += 1;
+      args.runs = parseInt(argv[i], 10);
     } else if (arg === "--headed") {
       args.headed = true;
     } else if (arg === "--out") {
-      args.out = argv[(i += 1)];
+      i += 1;
+      args.out = argv[i];
     } else {
       throw new Error(`Unknown argument: ${arg}`);
     }

@@ -1,4 +1,4 @@
-import { ReformDate } from "./ReformDate";
+import type { ReformDate } from "./ReformDate";
 
 export type PlaceId = string;
 

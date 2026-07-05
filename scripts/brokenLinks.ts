@@ -4,7 +4,7 @@
 
 import fetch from "node-fetch";
 
-import { readRawExtendedData, getCitations } from "./lib/data";
+import { getCitations, readRawExtendedData } from "./lib/data";
 
 export async function readCitationIdAndLinks(): Promise<
   Array<[number, string]>
@@ -40,8 +40,7 @@ async function findDeadLink(link: string): Promise<number | null> {
     if (response.status >= 400 && response.status !== 403) {
       return response.status;
     }
-    // eslint-disable-next-line @typescript-eslint/no-unused-vars
-  } catch (error) {
+  } catch {
     return -1;
   }
   return null;

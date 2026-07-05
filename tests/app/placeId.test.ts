@@ -1,11 +1,11 @@
 import { expect, test } from "@playwright/test";
 
 import {
-  encodePlaceId,
-  encodedPlaceToUrl,
   determinePlaceIdForDirectus,
-  determinesupplementalPlaceInfo,
   determinePlaceIdWithoutCountry,
+  determinesupplementalPlaceInfo,
+  encodedPlaceToUrl,
+  encodePlaceId,
 } from "../../src/js/model/placeId";
 
 test.describe("determinePlaceIdForDirectus", () => {

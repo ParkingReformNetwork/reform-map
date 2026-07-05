@@ -1,14 +1,13 @@
 import type { FeatureGroup } from "leaflet";
 import { capitalize } from "lodash-es";
-
-import type { ProcessedCoreEntry, PlaceId } from "../model/types";
-import Observable from "../state/Observable";
-import { PlaceFilterManager } from "../state/FilterState";
-import { ViewStateObservable } from "../layout/viewToggle";
-import { determinePolicyTypeStatuses } from "../model/data";
-import type { MarkerWithPlaceId } from "./markers";
-import { determinesupplementalPlaceInfo } from "../model/placeId";
 import { iconHtml } from "../layout/icons";
+import type { ViewStateObservable } from "../layout/viewToggle";
+import { determinePolicyTypeStatuses } from "../model/data";
+import { determinesupplementalPlaceInfo } from "../model/placeId";
+import type { PlaceId, ProcessedCoreEntry } from "../model/types";
+import type { PlaceFilterManager } from "../state/FilterState";
+import Observable from "../state/Observable";
+import type { MarkerWithPlaceId } from "./markers";
 
 export function generateScorecard(entry: ProcessedCoreEntry): string {
   const supplementalPlace = determinesupplementalPlaceInfo(entry.place);
