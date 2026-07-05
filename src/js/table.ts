@@ -18,10 +18,11 @@ import {
 import type { ViewStateObservable } from "./layout/viewToggle";
 import { determineAllPolicyTypes } from "./model/data";
 import type { ReformDate } from "./model/ReformDate";
-import type {
-  ProcessedCoreBenefitDistrict,
-  ProcessedCoreLandUsePolicy,
-  ReformStatus,
+import {
+  ALL_REFORM_STATUS,
+  type ProcessedCoreBenefitDistrict,
+  type ProcessedCoreLandUsePolicy,
+  type ReformStatus,
 } from "./model/types";
 import type { PlaceFilterManager, PolicyTypeFilter } from "./state/FilterState";
 
@@ -205,9 +206,11 @@ export default function initTable(
   // column values change. Whereas for the policy record datasets, we can use a
   // single dataset for all the statuses because the filter code (from FilterState)
   // will already filter out records that don't match the current status.
-  const dataAnyAdopted: any[] = [];
-  const dataAnyProposed: any[] = [];
-  const dataAnyRepealed: any[] = [];
+  const dataAny: Record<ReformStatus, any[]> = {
+    adopted: [],
+    proposed: [],
+    repealed: [],
+  };
   const dataReduceMin: any[] = [];
   const dataRmMin: any[] = [];
   const dataAddMax: any[] = [];
@@ -223,30 +226,16 @@ export default function initTable(
       url: entry.place.url,
     };
 
-    const adopted = determineAllPolicyTypes(entry, "adopted");
-    dataAnyAdopted.push({
-      ...common,
-      reduceMin: adopted.includes("reduce parking minimums"),
-      rmMin: adopted.includes("remove parking minimums"),
-      addMax: adopted.includes("add parking maximums"),
-      benefitDistrict: adopted.includes("parking benefit district"),
-    });
-    const proposed = determineAllPolicyTypes(entry, "proposed");
-    dataAnyProposed.push({
-      ...common,
-      reduceMin: proposed.includes("reduce parking minimums"),
-      rmMin: proposed.includes("remove parking minimums"),
-      addMax: proposed.includes("add parking maximums"),
-      benefitDistrict: proposed.includes("parking benefit district"),
-    });
-    const repealed = determineAllPolicyTypes(entry, "repealed");
-    dataAnyRepealed.push({
-      ...common,
-      reduceMin: repealed.includes("reduce parking minimums"),
-      rmMin: repealed.includes("remove parking minimums"),
-      addMax: repealed.includes("add parking maximums"),
-      benefitDistrict: repealed.includes("parking benefit district"),
-    });
+    for (const status of ALL_REFORM_STATUS) {
+      const types = determineAllPolicyTypes(entry, status);
+      dataAny[status].push({
+        ...common,
+        reduceMin: types.includes("reduce parking minimums"),
+        rmMin: types.includes("remove parking minimums"),
+        addMax: types.includes("add parking maximums"),
+        benefitDistrict: types.includes("parking benefit district"),
+      });
+    }
 
     const saveLandUsePolicies = (
       collection: any[],
@@ -282,35 +271,35 @@ export default function initTable(
     saveParkingBenefit(dataBenefitDistrict, entry.benefit_district);
   });
 
+  const sameForAllStatuses = (
+    tuple: [ColumnDefinition[], any[]],
+  ): Record<ReformStatus, [ColumnDefinition[], any[]]> =>
+    Object.fromEntries(
+      ALL_REFORM_STATUS.map((status) => [status, tuple]),
+    ) as Record<ReformStatus, [ColumnDefinition[], any[]]>;
+
   const filterStateToConfig: Record<
     PolicyTypeFilter,
     Record<ReformStatus, [ColumnDefinition[], any[]]>
   > = {
     "any parking reform": {
-      adopted: [ANY_REFORM_COLUMNS, dataAnyAdopted],
-      proposed: [ANY_REFORM_COLUMNS, dataAnyProposed],
-      repealed: [ANY_REFORM_COLUMNS, dataAnyRepealed],
+      adopted: [ANY_REFORM_COLUMNS, dataAny.adopted],
+      proposed: [ANY_REFORM_COLUMNS, dataAny.proposed],
+      repealed: [ANY_REFORM_COLUMNS, dataAny.repealed],
     },
-    "reduce parking minimums": {
-      adopted: [LAND_USE_COLUMNS, dataReduceMin],
-      proposed: [LAND_USE_COLUMNS, dataReduceMin],
-      repealed: [LAND_USE_COLUMNS, dataReduceMin],
-    },
-    "remove parking minimums": {
-      adopted: [LAND_USE_COLUMNS, dataRmMin],
-      proposed: [LAND_USE_COLUMNS, dataRmMin],
-      repealed: [LAND_USE_COLUMNS, dataRmMin],
-    },
-    "add parking maximums": {
-      adopted: [LAND_USE_COLUMNS, dataAddMax],
-      proposed: [LAND_USE_COLUMNS, dataAddMax],
-      repealed: [LAND_USE_COLUMNS, dataAddMax],
-    },
-    "parking benefit district": {
-      adopted: [BENEFIT_DISTRICT_COLUMNS, dataBenefitDistrict],
-      proposed: [BENEFIT_DISTRICT_COLUMNS, dataBenefitDistrict],
-      repealed: [BENEFIT_DISTRICT_COLUMNS, dataBenefitDistrict],
-    },
+    "reduce parking minimums": sameForAllStatuses([
+      LAND_USE_COLUMNS,
+      dataReduceMin,
+    ]),
+    "remove parking minimums": sameForAllStatuses([
+      LAND_USE_COLUMNS,
+      dataRmMin,
+    ]),
+    "add parking maximums": sameForAllStatuses([LAND_USE_COLUMNS, dataAddMax]),
+    "parking benefit district": sameForAllStatuses([
+      BENEFIT_DISTRICT_COLUMNS,
+      dataBenefitDistrict,
+    ]),
   };
 
   // We track what the filter is currently set to. When the filter changes,
