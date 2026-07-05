@@ -20,11 +20,17 @@ import { determineAllPolicyTypes } from "./model/data";
 import type { ReformDate } from "./model/ReformDate";
 import {
   ALL_REFORM_STATUS,
+  type PlaceId,
   type ProcessedCoreBenefitDistrict,
+  type ProcessedCoreEntry,
   type ProcessedCoreLandUsePolicy,
   type ReformStatus,
 } from "./model/types";
-import type { PlaceFilterManager, PolicyTypeFilter } from "./state/FilterState";
+import type {
+  PlaceFilterManager,
+  PlaceMatch,
+  PolicyTypeFilter,
+} from "./state/FilterState";
 
 function formatBoolean(cell: CellComponent): string {
   const v = cell.getValue() as boolean;
@@ -55,11 +61,11 @@ export function compareDates(
   return a.valueOf() - b.valueOf();
 }
 
-function compareStringArrays(a: string[], b: string[]): number {
+export function compareStringArrays(a: string[], b: string[]): number {
   return a.join(",").localeCompare(b.join(","));
 }
 
-function formatStringArrays(cell: CellComponent): string {
+export function formatStringArrays(cell: CellComponent): string {
   const v = cell.getValue() as string[] | null;
   return v ? v.join("; ") : "";
 }
@@ -170,6 +176,146 @@ export function tableDownloadFileName(
   return `parking-reforms--${policy}--${status}.csv`;
 }
 
+export interface TableRow {
+  placeId: PlaceId;
+  place: string;
+  state: string | null;
+  country: string;
+  placeType: string;
+  population: string;
+  url: string;
+  // Present on "any parking reform" rows.
+  reduceMin?: boolean;
+  rmMin?: boolean;
+  addMax?: boolean;
+  benefitDistrict?: boolean;
+  // Present on single-policy rows.
+  policyIdx?: number;
+  date?: ReformDate | undefined;
+  status?: ReformStatus;
+  landUse?: string[];
+  scope?: string[];
+}
+
+export interface TableDatasets {
+  // "any parking reform" needs a distinct dataset per ReformStatus because the
+  // boolean column values change with the status. The single-policy datasets
+  // can be shared across statuses because the filter (from FilterState) already
+  // removes records that don't match the current status.
+  any: Record<ReformStatus, TableRow[]>;
+  reduceMin: TableRow[];
+  rmMin: TableRow[];
+  addMax: TableRow[];
+  benefitDistrict: TableRow[];
+}
+
+/**
+ * Flatten the core entries into the row datasets Tabulator renders.
+ *
+ * Note that `population` becomes a locale string (e.g. "48,100"), which is why
+ * the Population column's number sorter is configured with a thousand separator.
+ */
+export function buildTableData(
+  entries: Record<PlaceId, ProcessedCoreEntry>,
+): TableDatasets {
+  const any: Record<ReformStatus, TableRow[]> = {
+    adopted: [],
+    proposed: [],
+    repealed: [],
+  };
+  const reduceMin: TableRow[] = [];
+  const rmMin: TableRow[] = [];
+  const addMax: TableRow[] = [];
+  const benefitDistrict: TableRow[] = [];
+  Object.entries(entries).forEach(([placeId, entry]) => {
+    const common = {
+      placeId,
+      place: entry.place.name,
+      state: entry.place.state,
+      country: entry.place.country,
+      placeType: entry.place.type,
+      population: entry.place.pop.toLocaleString("en-us"),
+      url: entry.place.url,
+    };
+
+    for (const status of ALL_REFORM_STATUS) {
+      const types = determineAllPolicyTypes(entry, status);
+      any[status].push({
+        ...common,
+        reduceMin: types.includes("reduce parking minimums"),
+        rmMin: types.includes("remove parking minimums"),
+        addMax: types.includes("add parking maximums"),
+        benefitDistrict: types.includes("parking benefit district"),
+      });
+    }
+
+    const saveLandUsePolicies = (
+      collection: TableRow[],
+      policies: ProcessedCoreLandUsePolicy[] | undefined,
+    ): void =>
+      policies?.forEach((policy, i) => {
+        collection.push({
+          ...common,
+          policyIdx: i,
+          date: policy.date,
+          status: policy.status,
+          landUse: policy.land,
+          scope: policy.scope,
+        });
+      });
+
+    const saveParkingBenefit = (
+      collection: TableRow[],
+      policies: ProcessedCoreBenefitDistrict[] | undefined,
+    ): void =>
+      policies?.forEach((policy, i) => {
+        collection.push({
+          ...common,
+          policyIdx: i,
+          date: policy.date,
+          status: policy.status,
+        });
+      });
+
+    saveLandUsePolicies(addMax, entry.add_max);
+    saveLandUsePolicies(reduceMin, entry.reduce_min);
+    saveLandUsePolicies(rmMin, entry.rm_min);
+    saveParkingBenefit(benefitDistrict, entry.benefit_district);
+  });
+  return { any, reduceMin, rmMin, addMax, benefitDistrict };
+}
+
+/**
+ * Decide whether a table row is visible, given the app's computed
+ * `matchedPlaces` and the currently loaded dataset (policy type x status).
+ *
+ * This bridges FilterState's per-place match to Tabulator's per-row filter.
+ * Search ignores the normal filters but still respects the loaded dataset.
+ */
+export function rowMatchesFilter(
+  row: Pick<TableRow, "placeId" | "status" | "policyIdx">,
+  matchedPlaces: Record<PlaceId, PlaceMatch>,
+  policyTypeFilter: PolicyTypeFilter,
+  status: ReformStatus,
+): boolean {
+  const entry = matchedPlaces[row.placeId];
+  if (!entry) return false;
+  if (entry.type === "any") {
+    return true;
+  }
+  if (entry.type === "search") {
+    // With 'any parking reform', each reform status has a different dataset
+    // already, so it's safe to include the entry from search.
+    if (policyTypeFilter === "any parking reform") {
+      return true;
+    }
+    return row.status === status;
+  }
+  return (
+    row.policyIdx !== undefined && entry.matchingIndexes.includes(row.policyIdx)
+  );
+}
+
 /**
  * Wire up the download button once. The policy type/status it downloads are
  * read from `getDownloadTarget` at click-time.
@@ -207,103 +353,39 @@ export default function initTable(
     DownloadModule,
   ]);
 
-  // For "any parking reform", we need distinct datasets for each ReformStatus because the
-  // column values change. Whereas for the policy record datasets, we can use a
-  // single dataset for all the statuses because the filter code (from FilterState)
-  // will already filter out records that don't match the current status.
-  const dataAny: Record<ReformStatus, any[]> = {
-    adopted: [],
-    proposed: [],
-    repealed: [],
-  };
-  const dataReduceMin: any[] = [];
-  const dataRmMin: any[] = [];
-  const dataAddMax: any[] = [];
-  const dataBenefitDistrict: any[] = [];
-  Object.entries(filterManager.entries).forEach(([placeId, entry]) => {
-    const common = {
-      placeId,
-      place: entry.place.name,
-      state: entry.place.state,
-      country: entry.place.country,
-      placeType: entry.place.type,
-      population: entry.place.pop.toLocaleString("en-us"),
-      url: entry.place.url,
-    };
-
-    for (const status of ALL_REFORM_STATUS) {
-      const types = determineAllPolicyTypes(entry, status);
-      dataAny[status].push({
-        ...common,
-        reduceMin: types.includes("reduce parking minimums"),
-        rmMin: types.includes("remove parking minimums"),
-        addMax: types.includes("add parking maximums"),
-        benefitDistrict: types.includes("parking benefit district"),
-      });
-    }
-
-    const saveLandUsePolicies = (
-      collection: any[],
-      policies: ProcessedCoreLandUsePolicy[] | undefined,
-    ): void =>
-      policies?.forEach((policy, i) => {
-        collection.push({
-          ...common,
-          policyIdx: i,
-          date: policy.date,
-          status: policy.status,
-          landUse: policy.land,
-          scope: policy.scope,
-        });
-      });
-
-    const saveParkingBenefit = (
-      collection: any[],
-      policies: ProcessedCoreBenefitDistrict[] | undefined,
-    ): void =>
-      policies?.forEach((policy, i) => {
-        collection.push({
-          ...common,
-          policyIdx: i,
-          date: policy.date,
-          status: policy.status,
-        });
-      });
-
-    saveLandUsePolicies(dataAddMax, entry.add_max);
-    saveLandUsePolicies(dataReduceMin, entry.reduce_min);
-    saveLandUsePolicies(dataRmMin, entry.rm_min);
-    saveParkingBenefit(dataBenefitDistrict, entry.benefit_district);
-  });
+  const datasets = buildTableData(filterManager.entries);
 
   const sameForAllStatuses = (
-    tuple: [ColumnDefinition[], any[]],
-  ): Record<ReformStatus, [ColumnDefinition[], any[]]> =>
+    tuple: [ColumnDefinition[], TableRow[]],
+  ): Record<ReformStatus, [ColumnDefinition[], TableRow[]]> =>
     Object.fromEntries(
       ALL_REFORM_STATUS.map((status) => [status, tuple]),
-    ) as Record<ReformStatus, [ColumnDefinition[], any[]]>;
+    ) as Record<ReformStatus, [ColumnDefinition[], TableRow[]]>;
 
   const filterStateToConfig: Record<
     PolicyTypeFilter,
-    Record<ReformStatus, [ColumnDefinition[], any[]]>
+    Record<ReformStatus, [ColumnDefinition[], TableRow[]]>
   > = {
     "any parking reform": {
-      adopted: [ANY_REFORM_COLUMNS, dataAny.adopted],
-      proposed: [ANY_REFORM_COLUMNS, dataAny.proposed],
-      repealed: [ANY_REFORM_COLUMNS, dataAny.repealed],
+      adopted: [ANY_REFORM_COLUMNS, datasets.any.adopted],
+      proposed: [ANY_REFORM_COLUMNS, datasets.any.proposed],
+      repealed: [ANY_REFORM_COLUMNS, datasets.any.repealed],
     },
     "reduce parking minimums": sameForAllStatuses([
       LAND_USE_COLUMNS,
-      dataReduceMin,
+      datasets.reduceMin,
     ]),
     "remove parking minimums": sameForAllStatuses([
       LAND_USE_COLUMNS,
-      dataRmMin,
+      datasets.rmMin,
     ]),
-    "add parking maximums": sameForAllStatuses([LAND_USE_COLUMNS, dataAddMax]),
+    "add parking maximums": sameForAllStatuses([
+      LAND_USE_COLUMNS,
+      datasets.addMax,
+    ]),
     "parking benefit district": sameForAllStatuses([
       BENEFIT_DISTRICT_COLUMNS,
-      dataBenefitDistrict,
+      datasets.benefitDistrict,
     ]),
   };
 
@@ -339,25 +421,14 @@ export default function initTable(
   let tableBuilt = false;
   table.on("tableBuilt", () => {
     tableBuilt = true;
-    table.setFilter((row) => {
-      const entry = filterManager.matchedPlaces[row.placeId];
-      if (!entry) return false;
-      if (entry.type === "any") {
-        return true;
-      }
-      // With search, we ignore the normal filters like jurisdiction. However,
-      // we do still have to pay attention to what dataset is loaded
-      // (policy type x status).
-      if (entry.type === "search") {
-        // With 'any parking reform', each reform status has a different dataset already.
-        // So, it's safe to include the entry from search.
-        if (currentPolicyTypeFilter === "any parking reform") {
-          return true;
-        }
-        return row.status === currentStatus;
-      }
-      return entry.matchingIndexes.includes(row.policyIdx);
-    });
+    table.setFilter((row) =>
+      rowMatchesFilter(
+        row,
+        filterManager.matchedPlaces,
+        currentPolicyTypeFilter,
+        currentStatus,
+      ),
+    );
   });
 
   // Either re-filter the data or load an entirely new dataset.

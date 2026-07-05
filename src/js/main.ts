@@ -33,7 +33,6 @@ export default async function initApp(): Promise<void> {
   const filterManager = new PlaceFilterManager(data, initialState);
 
   const markerGroup = initPlaceMarkers(filterManager, map, viewToggle);
-  exposeTestHooks(map, markerGroup);
   subscribeSnapToPlace(filterManager, map);
   initCounters(filterManager);
   initSearch(filterManager);
@@ -41,6 +40,7 @@ export default async function initApp(): Promise<void> {
   initShareLink(filterManager);
 
   const table = initTable(filterManager, viewToggle);
+  exposeTestHooks(map, markerGroup, table);
   addViewToggleSubscribers(viewToggle, table);
 
   initScorecard(filterManager, viewToggle, markerGroup, data);

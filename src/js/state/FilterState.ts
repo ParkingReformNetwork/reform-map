@@ -78,7 +78,7 @@ interface PlaceMatchAnyPolicy {
   policyTypes: PolicyType[];
 }
 
-type PlaceMatch =
+export type PlaceMatch =
   | PlaceMatchSearch
   | PlaceMatchSinglePolicy
   | PlaceMatchAnyPolicy;
