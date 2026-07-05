@@ -27,7 +27,7 @@
   font-size: typography.$font-size-base;
   padding: spacing.$container-edge-spacing;
 
-  @include mixins.card-surface(colors.$white);
+  @include mixins.bordered-surface(colors.$white);
 
   overflow-y: auto;
   overflow-wrap: break-word;

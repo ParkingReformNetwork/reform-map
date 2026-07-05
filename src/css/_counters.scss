@@ -24,7 +24,7 @@
   width: 260px;
 
   color: colors.$black;
-  @include mixins.card-surface(colors.$white);
+  @include mixins.bordered-surface(colors.$white);
 
   @include breakpoints.gte-xs {
     width: 280px;

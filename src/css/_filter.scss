@@ -23,7 +23,7 @@ $filter-inner-width: calc(
   max-height: min(600px, 75vh);
   overflow-y: auto;
 
-  @include mixins.card-surface(colors.$filter-light-gray);
+  @include mixins.bordered-surface(colors.$filter-light-gray);
 
   fieldset {
     border: none;

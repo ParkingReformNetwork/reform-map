@@ -21,7 +21,7 @@
   padding: spacing.$container-edge-spacing;
   width: 300px;
 
-  @include mixins.card-surface(colors.$white);
+  @include mixins.bordered-surface(colors.$white);
   color: colors.$black;
 
   @include breakpoints.gte-xs {

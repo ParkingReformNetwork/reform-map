@@ -13,7 +13,7 @@ $total-width: calc($container-margin-left + $button-width);
 
 div.leaflet-left .leaflet-control {
   margin-left: $container-margin-left;
-  @include mixins.card-surface;
+  @include mixins.bordered-surface;
 }
 
 div.leaflet-control-zoom.leaflet-bar {

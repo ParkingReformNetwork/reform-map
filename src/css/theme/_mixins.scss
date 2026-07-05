@@ -11,7 +11,7 @@
   justify-content: $justify;
 }
 
-@mixin card-surface($background: null) {
+@mixin bordered-surface($background: null) {
   border: borders.$component-border;
   border-radius: borders.$border-radius;
 
