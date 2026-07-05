@@ -131,7 +131,7 @@ export async function initDirectus(): Promise<DirectusClient> {
   const client = createDirectus("https://mandates-map.directus.app")
     .with(rest())
     .with(authentication());
-  await client.login(email, password);
+  await client.login({ email, password });
   return client;
 }
 
