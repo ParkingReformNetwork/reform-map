@@ -17,7 +17,7 @@ import {
 } from "./scripts/lib/data.js";
 import { SAMPLE_PLACES } from "./scripts/lib/samplePlaces.js";
 import { generateSEO } from "./scripts/lib/staticPages.js";
-import { determinesupplementalPlaceInfo } from "./src/js/model/placeId.js";
+import { determineSupplementalPlaceInfo } from "./src/js/model/placeId.js";
 import type { ReformStatus } from "./src/js/model/types.js";
 
 function dateLabel(status: ReformStatus): string {
@@ -110,7 +110,7 @@ export default async function (eleventyConfig: any) {
     seo: generateSEO(placeId, entry),
     place: {
       name: entry.place.name,
-      supplemental: determinesupplementalPlaceInfo(entry.place),
+      supplemental: determineSupplementalPlaceInfo(entry.place),
     },
     population: entry.place.pop.toLocaleString("en-us"),
     repeal: entry.place.repeal,

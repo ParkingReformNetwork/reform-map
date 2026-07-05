@@ -23,7 +23,7 @@ export function determinePlaceIdForDirectus(place: {
  * This is useful for splitting up the full PlaceId into the `name` vs.
  * supplemental info.
  */
-export function determinesupplementalPlaceInfo(place: {
+export function determineSupplementalPlaceInfo(place: {
   name: string;
   state: string | null;
   country: string;

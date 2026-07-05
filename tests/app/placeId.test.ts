@@ -3,7 +3,7 @@ import { expect, test } from "@playwright/test";
 import {
   determinePlaceIdForDirectus,
   determinePlaceIdWithoutCountry,
-  determinesupplementalPlaceInfo,
+  determineSupplementalPlaceInfo,
   encodedPlaceToUrl,
   encodePlaceId,
 } from "../../src/js/model/placeId";
@@ -59,7 +59,7 @@ test.describe("determinePlaceIdForDirectus", () => {
 
 test("determinesupplementalPlaceInfo", () => {
   expect(
-    determinesupplementalPlaceInfo({
+    determineSupplementalPlaceInfo({
       name: "Tucson",
       state: "Arizona",
       country: "United States",
@@ -67,7 +67,7 @@ test("determinesupplementalPlaceInfo", () => {
     }),
   ).toEqual("Arizona, United States");
   expect(
-    determinesupplementalPlaceInfo({
+    determineSupplementalPlaceInfo({
       name: "Tucson",
       state: null,
       country: "United States",
@@ -75,7 +75,7 @@ test("determinesupplementalPlaceInfo", () => {
     }),
   ).toEqual("United States");
   expect(
-    determinesupplementalPlaceInfo({
+    determineSupplementalPlaceInfo({
       name: "Scotland",
       state: null,
       country: "United Kingdom",
@@ -83,7 +83,7 @@ test("determinesupplementalPlaceInfo", () => {
     }),
   ).toEqual("United Kingdom");
   expect(
-    determinesupplementalPlaceInfo({
+    determineSupplementalPlaceInfo({
       name: "United States",
       state: null,
       country: "United States",
