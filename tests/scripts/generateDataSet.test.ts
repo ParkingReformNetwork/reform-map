@@ -15,11 +15,10 @@ function normalize(csv: string): string {
   return csv.replace(/\r\n/g, "\n");
 }
 
-// eslint-disable-next-line no-empty-pattern
+// biome-ignore lint/correctness/noEmptyPattern: Playwright requires the fixtures arg to be an object destructuring pattern.
 test("generate CSVs", async ({}, testInfo) => {
   // Normally, Playwright saves the operating system name in the snapshot results.
   // Our test is OS-independent, so turn this off.
-  // eslint-disable-next-line no-param-reassign
   testInfo.snapshotSuffix = "";
 
   const citation: Citation = {

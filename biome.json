@@ -6,7 +6,8 @@
     "useIgnoreFile": true
   },
   "files": {
-    "maxSize": 20485760
+    "maxSize": 20485760,
+    "includes": ["**", "!**/*.test.ts-snapshots"]
   },
   "formatter": {
     "enabled": true,
@@ -14,9 +15,22 @@
     "indentWidth": 2
   },
   "linter": {
-    "enabled": false
+    "enabled": true,
+    "rules": {
+      "preset": "recommended",
+      "suspicious": { "noExplicitAny": "off" },
+      "style": { "noNonNullAssertion": "off" },
+      "nursery": { "noFloatingPromises": "error" }
+    }
   },
   "assist": {
-    "enabled": false
-  }
+    "enabled": true,
+    "actions": { "source": { "organizeImports": "on" } }
+  },
+  "overrides": [
+    {
+      "includes": ["**/*.html", "**/*.svg"],
+      "linter": { "enabled": false }
+    }
+  ]
 }

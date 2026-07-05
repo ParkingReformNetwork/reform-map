@@ -378,7 +378,7 @@ export default function initTable(
       const [columns2, data2] =
         filterStateToConfig[newPolicyTypeFilter][newStatus];
       table.setColumns(columns2);
-      table.setData(data2);
+      void table.setData(data2);
     }
   };
 
