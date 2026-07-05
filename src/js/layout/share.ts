@@ -1,4 +1,4 @@
-import { PlaceFilterManager } from "../state/FilterState";
+import type { PlaceFilterManager } from "../state/FilterState";
 import { encodeFilterState } from "../state/urlEncoder";
 
 async function copyToClipboard(value: string): Promise<void> {

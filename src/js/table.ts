@@ -1,30 +1,29 @@
 import {
-  Tabulator,
+  type CellComponent,
+  type ColumnComponent,
+  type ColumnDefinition,
+  DownloadModule,
+  ExportModule,
   FilterModule,
   FormatModule,
-  SortModule,
-  ResizeColumnsModule,
-  MoveColumnsModule,
-  ExportModule,
-  DownloadModule,
-  ColumnDefinition,
   FrozenColumnsModule,
+  MoveColumnsModule,
   PageModule,
-  CellComponent,
-  RowComponent,
-  SortDirection,
-  ColumnComponent,
+  ResizeColumnsModule,
+  type RowComponent,
+  type SortDirection,
+  SortModule,
+  Tabulator,
 } from "tabulator-tables";
-
-import { PlaceFilterManager, PolicyTypeFilter } from "./state/FilterState";
-import {
+import type { ViewStateObservable } from "./layout/viewToggle";
+import { determineAllPolicyTypes } from "./model/data";
+import type { ReformDate } from "./model/ReformDate";
+import type {
   ProcessedCoreBenefitDistrict,
   ProcessedCoreLandUsePolicy,
   ReformStatus,
 } from "./model/types";
-import { ReformDate } from "./model/ReformDate";
-import { ViewStateObservable } from "./layout/viewToggle";
-import { determineAllPolicyTypes } from "./model/data";
+import type { PlaceFilterManager, PolicyTypeFilter } from "./state/FilterState";
 
 function formatBoolean(cell: CellComponent): string {
   const v = cell.getValue() as boolean;
@@ -249,7 +248,7 @@ export default function initTable(
       collection: any[],
       policies: ProcessedCoreLandUsePolicy[] | undefined,
     ): void =>
-      policies?.forEach((policy, i) =>
+      policies?.forEach((policy, i) => {
         collection.push({
           ...common,
           policyIdx: i,
@@ -257,21 +256,21 @@ export default function initTable(
           status: policy.status,
           landUse: policy.land,
           scope: policy.scope,
-        }),
-      );
+        });
+      });
 
     const saveParkingBenefit = (
       collection: any[],
       policies: ProcessedCoreBenefitDistrict[] | undefined,
     ): void =>
-      policies?.forEach((policy, i) =>
+      policies?.forEach((policy, i) => {
         collection.push({
           ...common,
           policyIdx: i,
           date: policy.date,
           status: policy.status,
-        }),
-      );
+        });
+      });
 
     saveLandUsePolicies(dataAddMax, entry.add_max);
     saveLandUsePolicies(dataReduceMin, entry.reduce_min);

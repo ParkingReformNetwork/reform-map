@@ -1,17 +1,17 @@
+import { determineAllPolicyTypes, getFilteredIndexes } from "../model/data";
 import {
   ALL_POLICY_TYPE,
-  PlaceId,
-  PlaceType,
-  PolicyType,
-  ProcessedCoreBenefitDistrict,
-  ProcessedCoreEntry,
-  ProcessedCoreLandUsePolicy,
-  ProcessedPlace,
-  ReformStatus,
+  type PlaceId,
+  type PlaceType,
+  type PolicyType,
+  type ProcessedCoreBenefitDistrict,
+  type ProcessedCoreEntry,
+  type ProcessedCoreLandUsePolicy,
+  type ProcessedPlace,
+  type ReformStatus,
   UNKNOWN_YEAR,
 } from "../model/types";
 import Observable from "./Observable";
-import { determineAllPolicyTypes, getFilteredIndexes } from "../model/data";
 
 export const POPULATION_INTERVALS: Array<[string, number]> = [
   ["100", 100],

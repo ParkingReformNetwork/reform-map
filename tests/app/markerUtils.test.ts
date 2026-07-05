@@ -4,7 +4,7 @@ import {
   determineIsPrimary,
   radiusGivenZoom,
 } from "../../src/js/map-features/markerUtils";
-import { ProcessedPlace } from "../../src/js/model/types";
+import type { ProcessedPlace } from "../../src/js/model/types";
 
 test("determineIsPrimary", () => {
   const place: ProcessedPlace = {

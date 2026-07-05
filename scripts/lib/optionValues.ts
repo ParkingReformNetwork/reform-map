@@ -1,15 +1,14 @@
-import fs from "fs/promises";
+import fs from "node:fs/promises";
 
 import { sortBy, without } from "lodash-es";
-
-import {
-  RawCoreLandUsePolicy,
-  UNKNOWN_YEAR,
-  RawPlace,
-  RawCoreEntry,
-  RawCoreBenefitDistrict,
-} from "../../src/js/model/types";
 import { ReformDate } from "../../src/js/model/ReformDate";
+import {
+  type RawCoreBenefitDistrict,
+  type RawCoreEntry,
+  type RawCoreLandUsePolicy,
+  type RawPlace,
+  UNKNOWN_YEAR,
+} from "../../src/js/model/types";
 
 /** The option values for a single dataset. */
 class OptionValues {
@@ -51,8 +50,12 @@ class OptionValues {
   addLandUse(place: RawPlace, landUseRecord: RawCoreLandUsePolicy): void {
     this.#addPlace(place);
     this.#addDate(landUseRecord.date);
-    landUseRecord.scope.forEach((v) => this.scope.add(v));
-    landUseRecord.land.forEach((v) => this.landUse.add(v));
+    landUseRecord.scope.forEach((v) => {
+      this.scope.add(v);
+    });
+    landUseRecord.land.forEach((v) => {
+      this.landUse.add(v);
+    });
   }
 
   export() {

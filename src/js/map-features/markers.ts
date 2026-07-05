@@ -1,10 +1,9 @@
-import { CircleMarker, FeatureGroup, Map } from "leaflet";
-
-import { PlaceFilterManager } from "../state/FilterState";
-import { ViewStateObservable } from "../layout/viewToggle";
-import type { PlaceId } from "../model/types";
-import { radiusGivenZoom, determineIsPrimary } from "./markerUtils";
+import { CircleMarker, FeatureGroup, type Map as LeafletMap } from "leaflet";
+import type { ViewStateObservable } from "../layout/viewToggle";
 import { determinePlaceIdWithoutCountry } from "../model/placeId";
+import type { PlaceId } from "../model/types";
+import type { PlaceFilterManager } from "../state/FilterState";
+import { determineIsPrimary, radiusGivenZoom } from "./markerUtils";
 
 const PRIMARY_MARKER_STYLE = {
   weight: 1,
@@ -61,7 +60,7 @@ function updatePlaceVisibility(
 
 export default function initPlaceMarkers(
   filterManager: PlaceFilterManager,
-  map: Map,
+  map: LeafletMap,
   viewToggle: ViewStateObservable,
 ): FeatureGroup {
   const placesToMarkers: Record<string, MarkerWithPlaceId> = Object.entries(

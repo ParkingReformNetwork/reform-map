@@ -1,9 +1,12 @@
 import {
-  AccordionState,
+  type AccordionState,
   generateAccordion,
   updateAccordionUI,
 } from "../layout/accordion";
-import { PlaceFilterManager, POPULATION_INTERVALS } from "../state/FilterState";
+import {
+  type PlaceFilterManager,
+  POPULATION_INTERVALS,
+} from "../state/FilterState";
 import Observable from "../state/Observable";
 
 const THUMBSIZE = 24;

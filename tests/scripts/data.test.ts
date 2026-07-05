@@ -1,10 +1,10 @@
 import { expect, test } from "@playwright/test";
 
 import {
+  getCitations,
   readRawCompleteData,
   readRawCoreData,
   readRawExtendedData,
-  getCitations,
 } from "../../scripts/lib/data";
 
 test("JSON files have enough entries", async () => {

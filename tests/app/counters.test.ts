@@ -1,28 +1,28 @@
 import { expect, test } from "@playwright/test";
 
 import {
-  determineHtml,
-  determineAnyReform,
   determineAddMax,
+  determineAnyReform,
   determineBenefitDistrict,
+  determineHtml,
+  determinePlaceDescription,
   determineReduceMin,
   determineRmMin,
-  determinePlaceDescription,
   determineSearch,
   SEARCH_RESET_HTML,
   TABLE_DOWNLOAD_HTML,
 } from "../../src/js/filter-features/counters";
-import {
-  ALL_POLICY_TYPE_FILTER,
-  FilterState,
-} from "../../src/js/state/FilterState";
+import type { ViewState } from "../../src/js/layout/viewToggle";
 import {
   ALL_POLICY_TYPE,
   ALL_REFORM_STATUS,
-  PolicyType,
-  ReformStatus,
+  type PolicyType,
+  type ReformStatus,
 } from "../../src/js/model/types";
-import { ViewState } from "../../src/js/layout/viewToggle";
+import {
+  ALL_POLICY_TYPE_FILTER,
+  type FilterState,
+} from "../../src/js/state/FilterState";
 
 test.describe("determineHtml", () => {
   const DEFAULT_STATE: FilterState = {

@@ -2,8 +2,8 @@ import { expect, test } from "@playwright/test";
 import { Window } from "happy-dom";
 
 import {
-  determineSupplementalTitle,
   determineCheckedLabels,
+  determineSupplementalTitle,
 } from "../../src/js/filter-features/options";
 
 function createFieldset(childrenHTML: string): HTMLFieldSetElement {

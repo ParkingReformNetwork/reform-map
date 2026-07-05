@@ -1,32 +1,30 @@
 import { capitalize } from "lodash-es";
-
-import {
-  ALL_POLICY_TYPE_FILTER,
-  FilterState,
-  isAllMinimumsRemovedToggleShown,
-  isAllMinimumsRemovedToggleInEffect,
-  PlaceFilterManager,
-  PolicyTypeFilter,
-} from "../state/FilterState";
-import Observable from "../state/Observable";
-import {
-  BaseAccordionElements,
-  AccordionState,
-  generateAccordion,
-  generateCheckbox,
-  updateAccordionUI,
-} from "../layout/accordion";
-import { initPopulationSlider } from "./populationSlider";
-import { createIcon } from "../layout/icons";
-
 import optionValuesData from "../../../data/option-values.json" with {
   type: "json",
 };
 import {
+  type AccordionState,
+  type BaseAccordionElements,
+  generateAccordion,
+  generateCheckbox,
+  updateAccordionUI,
+} from "../layout/accordion";
+import { createIcon } from "../layout/icons";
+import {
   ALL_POLICY_TYPE,
   ALL_REFORM_STATUS,
-  ReformStatus,
+  type ReformStatus,
 } from "../model/types";
+import {
+  ALL_POLICY_TYPE_FILTER,
+  type FilterState,
+  isAllMinimumsRemovedToggleInEffect,
+  isAllMinimumsRemovedToggleShown,
+  type PlaceFilterManager,
+  type PolicyTypeFilter,
+} from "../state/FilterState";
+import Observable from "../state/Observable";
+import { initPopulationSlider } from "./populationSlider";
 
 /** These option values change depending on which dataset is loaded.
  *

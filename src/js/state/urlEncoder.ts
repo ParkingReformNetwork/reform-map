@@ -1,9 +1,8 @@
 import { isEqual } from "lodash-es";
-
-import type { FilterState } from "./FilterState";
 import { FILTER_OPTIONS } from "../filter-features/options";
 import { POPULATION_MAX_INDEX } from "../filter-features/populationSlider";
 import { COUNTRY_MAPPING } from "../model/data";
+import type { FilterState } from "./FilterState";
 
 export const MERGED_STRING_SET_OPTIONS = {
   placeType: new Set(FILTER_OPTIONS.merged.placeType),
@@ -225,7 +224,7 @@ export function decodePopulation(str: string | null): [number, number] {
     left = Number.parseInt(split[0], 10);
     right = Number.parseInt(split[1], 10);
     // eslint-disable-next-line @typescript-eslint/no-unused-vars
-  } catch (e) {
+  } catch (_e) {
     return DEFAULT_FILTER_STATE.populationSliderIndexes;
   }
   const isValid = left >= 0 && right <= POPULATION_MAX_INDEX && left < right;

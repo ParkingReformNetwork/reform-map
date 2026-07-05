@@ -1,16 +1,15 @@
 import { expect, test } from "@playwright/test";
-
+import { POPULATION_MAX_INDEX } from "../../src/js/filter-features/populationSlider";
+import { ReformDate } from "../../src/js/model/ReformDate";
 import {
-  FilterState,
+  ALL_POLICY_TYPE,
+  type PlaceId,
+  type ProcessedCoreEntry,
+} from "../../src/js/model/types";
+import {
+  type FilterState,
   PlaceFilterManager,
 } from "../../src/js/state/FilterState";
-import { POPULATION_MAX_INDEX } from "../../src/js/filter-features/populationSlider";
-import {
-  PlaceId,
-  ProcessedCoreEntry,
-  ALL_POLICY_TYPE,
-} from "../../src/js/model/types";
-import { ReformDate } from "../../src/js/model/ReformDate";
 
 test.describe("PlaceFilterManager.matchedPolicyRecords()", () => {
   function defaultState(): FilterState {

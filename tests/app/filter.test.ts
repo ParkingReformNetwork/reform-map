@@ -1,19 +1,18 @@
 /* eslint-disable import/no-extraneous-dependencies */
 /* eslint-disable no-await-in-loop */
 
-import { Page, test } from "@playwright/test";
-
+import { type Page, test } from "@playwright/test";
+import type { ReformStatus } from "../../src/js/model/types";
+import type { PolicyTypeFilter } from "../../src/js/state/FilterState";
 import {
-  loadMap,
   assertNumPlaces,
-  selectToggle,
+  DEFAULT_ALL_MINIMUMS_RANGE,
   DEFAULT_PLACE_RANGE,
   getTotalNumPlaces,
+  loadMap,
   openFilter,
-  DEFAULT_ALL_MINIMUMS_RANGE,
+  selectToggle,
 } from "./utils";
-import { PolicyTypeFilter } from "../../src/js/state/FilterState";
-import { ReformStatus } from "../../src/js/model/types";
 
 type StringArrayOption = string[] | "all";
 

@@ -1,19 +1,18 @@
-import fs from "fs/promises";
+import fs from "node:fs/promises";
 
 import { zipWith } from "lodash-es";
-
-import {
-  RawCoreEntry,
-  PlaceId,
-  RawPlace,
-  RawCoreLandUsePolicy,
-  ProcessedPlace,
-  ProcessedCoreLandUsePolicy,
-  RawCoreBenefitDistrict,
-  ProcessedCoreBenefitDistrict,
-} from "../../src/js/model/types";
-import { ReformDate } from "../../src/js/model/ReformDate";
 import { processRawCoreEntry } from "../../src/js/model/data";
+import { ReformDate } from "../../src/js/model/ReformDate";
+import type {
+  PlaceId,
+  ProcessedCoreBenefitDistrict,
+  ProcessedCoreLandUsePolicy,
+  ProcessedPlace,
+  RawCoreBenefitDistrict,
+  RawCoreEntry,
+  RawCoreLandUsePolicy,
+  RawPlace,
+} from "../../src/js/model/types";
 
 export interface DirectusFile {
   fileName: string;

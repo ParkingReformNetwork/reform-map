@@ -2,7 +2,7 @@ function isIFrame(): boolean {
   try {
     return window.self !== window.top;
     // eslint-disable-next-line @typescript-eslint/no-unused-vars
-  } catch (e) {
+  } catch (_e) {
     return false;
   }
 }

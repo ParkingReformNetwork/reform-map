@@ -1,22 +1,21 @@
 import { isEqual } from "lodash-es";
-
-import {
-  FilterState,
-  isAllMinimumsRemovedToggleInEffect,
-  PlaceFilterManager,
-  PolicyTypeFilter,
-} from "../state/FilterState";
-import {
+import { iconHtml } from "../layout/icons";
+import type { ViewState } from "../layout/viewToggle";
+import { COUNTRIES_PREFIXED_BY_THE } from "../model/data";
+import { encodedPlaceToUrl } from "../model/placeId";
+import type {
   PlaceId,
   PlaceType,
   PolicyType,
   ProcessedCoreEntry,
   ReformStatus,
 } from "../model/types";
-import { COUNTRIES_PREFIXED_BY_THE } from "../model/data";
-import { encodedPlaceToUrl } from "../model/placeId";
-import type { ViewState } from "../layout/viewToggle";
-import { iconHtml } from "../layout/icons";
+import {
+  type FilterState,
+  isAllMinimumsRemovedToggleInEffect,
+  type PlaceFilterManager,
+  type PolicyTypeFilter,
+} from "../state/FilterState";
 
 export function determinePlaceDescription(
   numPlaces: number,

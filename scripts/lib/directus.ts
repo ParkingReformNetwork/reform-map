@@ -5,23 +5,23 @@
 /* eslint-disable no-constant-condition */
 
 import {
-  createDirectus,
-  rest,
   authentication,
-  DirectusClient as DirectusClientUntyped,
-  RestClient,
-  RegularCollections,
-  CollectionType,
-  ReadItemOutput,
-  readItems,
+  type CollectionType,
+  createDirectus,
+  type DirectusClient as DirectusClientUntyped,
+  type DirectusFile,
+  type IfAny,
+  type QueryFilter,
+  type ReadFileOutput,
+  type ReadItemOutput,
+  type RegularCollections,
+  type RestClient,
   readFiles,
-  ReadFileOutput,
-  DirectusFile,
-  IfAny,
-  QueryFilter,
+  readItems,
+  rest,
 } from "@directus/sdk";
 
-import {
+import type {
   LandUsePolicyType,
   PlaceType,
   ReformStatus,

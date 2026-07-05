@@ -1,10 +1,10 @@
 import { expect, test } from "@playwright/test";
 
 import {
-  sortCountries,
   determineOptionValues,
+  sortCountries,
 } from "../../scripts/lib/optionValues";
-import { RawCoreEntry, UNKNOWN_YEAR } from "../../src/js/model/types";
+import { type RawCoreEntry, UNKNOWN_YEAR } from "../../src/js/model/types";
 
 test("determineOptionValues()", () => {
   const commonPlace = {
