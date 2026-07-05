@@ -1,11 +1,13 @@
+@use "colors";
+
 @mixin link-styles {
-  color: #337ab7;
+  color: colors.$link;
   text-decoration: none;
 
   @media (hover: hover) {
     &:hover,
     &:focus {
-      color: #23527c;
+      color: colors.$link-hover;
       text-decoration: underline;
     }
   }

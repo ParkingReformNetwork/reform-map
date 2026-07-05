@@ -20,7 +20,7 @@ $filter-inner-width: calc(
   z-index: zindex.$filter-popup;
   width: $filter-total-width;
 
-  max-height: min(600px, 75vh);
+  max-height: min(spacing.$popup-max-height, 75vh);
   overflow-y: auto;
 
   @include mixins.bordered-surface(colors.$filter-light-gray);
@@ -125,7 +125,7 @@ $filter-inner-width: calc(
   span {
     flex: 1;
     margin: spacing.$element-gap;
-    line-height: 1.1;
+    line-height: typography.$line-height-tight;
   }
 }
 
@@ -197,7 +197,7 @@ $filter-inner-width: calc(
     min-height: spacing.$min-touch-target;
     width: 100%;
 
-    margin-top: 5px;
+    margin-top: spacing.$small-gap;
     padding-left: spacing.$element-gap;
 
     border: borders.$component-inner-divider;
@@ -224,5 +224,5 @@ $filter-inner-width: calc(
   margin-bottom: spacing.$element-gap;
   margin-left: spacing.$container-edge-spacing;
   margin-right: spacing.$container-edge-spacing;
-  line-height: 1.3;
+  line-height: typography.$line-height-base;
 }

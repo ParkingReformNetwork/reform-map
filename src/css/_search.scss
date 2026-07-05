@@ -16,7 +16,7 @@ div.choices[data-type*="select-one"] {
   div.choices__inner {
     color: colors.$black;
     font-size: typography.$font-size-base;
-    line-height: 1.2; // To vertically center the text.
+    line-height: typography.$line-height-snug; // To vertically center the text.
 
     min-height: spacing.$min-touch-target;
     width: 285px;

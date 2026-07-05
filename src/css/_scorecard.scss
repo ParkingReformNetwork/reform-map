@@ -15,7 +15,7 @@
   right: spacing.$map-controls-margin-x;
   top: calc(header.$header-height + spacing.$map-controls-margin-top);
 
-  max-height: min(600px, 75vh);
+  max-height: min(spacing.$popup-max-height, 75vh);
   overflow-y: auto;
 
   padding: spacing.$container-edge-spacing;
@@ -53,7 +53,7 @@
 .scorecard-title {
   flex: 1;
   margin: 0;
-  line-height: 1.1;
+  line-height: typography.$line-height-tight;
 
   font-weight: normal;
   font-size: typography.$font-size-xl;
