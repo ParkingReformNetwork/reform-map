@@ -13,7 +13,7 @@ export interface Subscriber<T> {
  * know which other parts of the app need to be updated.
  */
 export default class Observable<T> {
-  private id: string | undefined;
+  private id: string;
 
   private value: T;
 

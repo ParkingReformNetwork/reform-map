@@ -4,14 +4,14 @@ import { iconHtml } from "../layout/icons";
 import { isClickOutside } from "../layout/popup";
 import type { ViewStateObservable } from "../layout/viewToggle";
 import { determinePolicyTypeStatuses } from "../model/data";
-import { determinesupplementalPlaceInfo } from "../model/placeId";
+import { determineSupplementalPlaceInfo } from "../model/placeId";
 import type { PlaceId, ProcessedCoreEntry } from "../model/types";
 import type { PlaceFilterManager } from "../state/FilterState";
 import Observable from "../state/Observable";
 import type { MarkerWithPlaceId } from "./markers";
 
 export function generateScorecard(entry: ProcessedCoreEntry): string {
-  const supplementalPlace = determinesupplementalPlaceInfo(entry.place);
+  const supplementalPlace = determineSupplementalPlaceInfo(entry.place);
   const titleContents = supplementalPlace
     ? `${entry.place.name}<br/><span class="scorecard-supplemental-place-info">${supplementalPlace}</span>`
     : entry.place.name;
