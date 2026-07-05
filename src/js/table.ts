@@ -178,9 +178,14 @@ function initCounterDownload(
   table: Tabulator,
   getDownloadTarget: () => [PolicyTypeFilter, ReformStatus],
 ): void {
-  const button = document.querySelector(".counter-table-download");
-  if (!button) return;
-  button.addEventListener("click", () => {
+  const container = document.getElementById("table-counter");
+  if (!container) return;
+  container.addEventListener("click", (event) => {
+    if (
+      !(event.target instanceof Element) ||
+      !event.target.matches(".counter-table-download")
+    )
+      return;
     const [policyType, status] = getDownloadTarget();
     table.download("csv", tableDownloadFileName(policyType, status));
   });
