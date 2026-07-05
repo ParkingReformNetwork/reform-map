@@ -1,9 +1,3 @@
-/* eslint-disable no-use-before-define */
-/* eslint-disable import/no-extraneous-dependencies */
-/* eslint-disable no-console */
-/* eslint-disable no-await-in-loop */
-/* eslint-disable no-constant-condition */
-
 import {
   authentication,
   type CollectionType,
@@ -152,7 +146,7 @@ export async function readItemsBatched<
   filter:
     | IfAny<
         Schema,
-        Record<string, any>, // eslint-disable-line @typescript-eslint/no-explicit-any
+        Record<string, any>,
         QueryFilter<Schema, CollectionType<Schema, Collection>>
       >
     | undefined = undefined,

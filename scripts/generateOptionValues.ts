@@ -1,5 +1,3 @@
-/* eslint-disable no-console */
-
 /// This script regenerate option-values.json by using the data in core.json.
 ///
 /// This already happens automatically in syncDirectus.ts, the main script. This

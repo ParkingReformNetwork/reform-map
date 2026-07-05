@@ -18,7 +18,7 @@ The database is stored in Directus and synced nightly to JSON files (`data/*.jso
 - **Static site generation**: 11ty for city detail pages
 - **UI components**: Tabulator Tables, Choices.js
 - **Testing**: Playwright, including snapshot test
-- **Code quality**: ESLint, Biome (formatting), TypeScript compiler
+- **Code quality**: Biome (lint + formatting), TypeScript compiler
 
 ## Key Files & Directories
 
@@ -39,7 +39,7 @@ The database is stored in Directus and synced nightly to JSON files (`data/*.jso
 
 - **Format code**: `npm run fmt`
 - **Fix issues**: `npm run fix` — Auto-fix linting and format issues
-- **Lint**: `npm run lint` — ESLint + Biome format checks
+- **Lint**: `npm run lint` — Biome lint + format checks
 - **Type check**: `npm run check`
 - **Test**: `npx playwright test` — Playwright tests
 

@@ -18,9 +18,7 @@ export function updateAccordionUI(
   elements: BaseAccordionElements,
   state: AccordionState,
 ): void {
-  // eslint-disable-next-line no-param-reassign
   elements.outerContainer.hidden = state.hidden;
-  // eslint-disable-next-line no-param-reassign
   elements.accordionTitle.textContent = `${state.title}${state.supplementalTitle ?? ""}`;
 
   const upIcon =
@@ -33,7 +31,6 @@ export function updateAccordionUI(
     "aria-expanded",
     state.expanded.toString(),
   );
-  // eslint-disable-next-line no-param-reassign
   elements.contentContainer.hidden = !state.expanded;
   upIcon.style.display = state.expanded ? "block" : "none";
   downIcon.style.display = state.expanded ? "none" : "block";

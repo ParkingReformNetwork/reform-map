@@ -168,7 +168,6 @@ export function sortCountries(countries: Set<string>): string[] {
 export async function saveOptionValues(entries: RawCoreEntry[]): Promise<void> {
   const result = determineOptionValues(entries);
   const json = JSON.stringify(result, null, 2);
-  // eslint-disable-next-line no-console
   console.log("Writing data/option-values.json");
   await fs.writeFile("data/option-values.json", json);
 }

@@ -1,5 +1,3 @@
-/* eslint-disable no-console */
-
 import * as fs from "node:fs/promises";
 import * as path from "node:path";
 

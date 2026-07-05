@@ -5,7 +5,6 @@ async function copyToClipboard(value: string): Promise<void> {
   try {
     await navigator.clipboard.writeText(value);
   } catch (err) {
-    // eslint-disable-next-line no-console
     console.error("Failed to write to clipboard: ", err);
   }
 }

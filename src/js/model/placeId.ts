@@ -1,4 +1,3 @@
-/* eslint-disable camelcase */
 import { COUNTRY_MAPPING } from "./data";
 import type { PlaceId, PlaceType } from "./types";
 

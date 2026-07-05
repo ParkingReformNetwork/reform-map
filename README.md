@@ -65,10 +65,11 @@ Before pushing code, run this command and commit the changes. Otherwise, PR chec
 ### Lint code
 
 "Linting" means using tools that check for common issues that may be bugs or low code quality.
-
 ```bash
 ❯ npm run lint
 ```
+
+To auto-fix issues, run `npm run fix`.
 
 ### Try out a build locally
 
