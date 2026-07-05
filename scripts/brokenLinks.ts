@@ -40,8 +40,7 @@ async function findDeadLink(link: string): Promise<number | null> {
     if (response.status >= 400 && response.status !== 403) {
       return response.status;
     }
-    // eslint-disable-next-line @typescript-eslint/no-unused-vars
-  } catch (_error) {
+  } catch {
     return -1;
   }
   return null;

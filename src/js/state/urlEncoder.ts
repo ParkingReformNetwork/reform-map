@@ -223,8 +223,7 @@ export function decodePopulation(str: string | null): [number, number] {
     if (split.length !== 2) return DEFAULT_FILTER_STATE.populationSliderIndexes;
     left = Number.parseInt(split[0], 10);
     right = Number.parseInt(split[1], 10);
-    // eslint-disable-next-line @typescript-eslint/no-unused-vars
-  } catch (_e) {
+  } catch {
     return DEFAULT_FILTER_STATE.populationSliderIndexes;
   }
   const isValid = left >= 0 && right <= POPULATION_MAX_INDEX && left < right;
