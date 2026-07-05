@@ -1,6 +1,7 @@
 import type { FeatureGroup } from "leaflet";
 import { capitalize } from "lodash-es";
 import { iconHtml } from "../layout/icons";
+import { isClickOutside } from "../layout/popup";
 import type { ViewStateObservable } from "../layout/viewToggle";
 import { determinePolicyTypeStatuses } from "../model/data";
 import { determinesupplementalPlaceInfo } from "../model/placeId";
@@ -143,12 +144,10 @@ export default function initScorecard(
       markerJustClicked = false;
       return;
     }
+    // Clicks on the header and scorecard should not close the scorecard.
     if (
       scorecardState.getValue().type === "visible" &&
-      event.target instanceof Element &&
-      // Clicks on the header and scorecard should not close the scorecard.
-      !header?.contains(event.target) &&
-      !scorecardContainer?.contains(event.target)
+      isClickOutside(event, [header, scorecardContainer])
     ) {
       scorecardState.setValue({ type: "hidden" });
     }
