@@ -2,6 +2,7 @@
 @use "theme/colors";
 @use "theme/icons";
 @use "theme/hover";
+@use "theme/mixins";
 @use "theme/spacing";
 @use "theme/typography";
 @use "theme/zindex";
@@ -22,10 +23,7 @@ $filter-inner-width: calc(
   max-height: min(600px, 75vh);
   overflow-y: auto;
 
-  background-color: colors.$filter-light-gray;
-  border: borders.$component-border;
-  border-color: black;
-  border-radius: borders.$border-radius;
+  @include mixins.bordered-surface(colors.$filter-light-gray);
 
   fieldset {
     border: none;
@@ -45,9 +43,7 @@ $filter-inner-width: calc(
   padding-left: spacing.$container-edge-spacing;
   padding-right: 0;
 
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
+  @include mixins.flex-center(flex, space-between);
 
   background-color: colors.$filter-medium-gray;
   border-top: borders.$component-inner-divider;
@@ -63,9 +59,7 @@ $filter-inner-width: calc(
   .filter-accordion-icon-container {
     height: spacing.$min-touch-target;
     width: spacing.$min-touch-target;
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
+    @include mixins.flex-center(inline-flex);
 
     svg {
       height: icons.$icon-size-sm;
@@ -87,9 +81,7 @@ $filter-inner-width: calc(
   min-height: spacing.$min-touch-target;
   margin: spacing.$element-gap spacing.$container-edge-spacing;
 
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
+  @include mixins.flex-center(flex, space-between);
 
   background-color: colors.$white;
 

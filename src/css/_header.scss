@@ -2,6 +2,7 @@
 @use "theme/breakpoints";
 @use "theme/colors";
 @use "theme/hover";
+@use "theme/mixins";
 @use "theme/spacing";
 @use "theme/icons";
 @use "theme/typography";
@@ -33,9 +34,7 @@ $header-height: calc(
   height: spacing.$min-touch-target;
   width: spacing.$min-touch-target;
 
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
+  @include mixins.flex-center(inline-flex);
   cursor: pointer;
 
   svg {

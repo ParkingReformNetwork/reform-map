@@ -2,6 +2,7 @@
 @use "theme/breakpoints";
 @use "theme/colors";
 @use "theme/hover";
+@use "theme/mixins";
 @use "theme/spacing";
 @use "theme/icons";
 @use "theme/typography";
@@ -20,9 +21,7 @@
   padding: spacing.$container-edge-spacing;
   width: 300px;
 
-  background-color: colors.$white;
-  border: borders.$component-border;
-  border-radius: borders.$border-radius;
+  @include mixins.bordered-surface(colors.$white);
   color: colors.$black;
 
   @include breakpoints.gte-xs {
@@ -47,9 +46,7 @@
 }
 
 .scorecard-header {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
+  @include mixins.flex-center(inline-flex);
   width: 100%;
 }
 
@@ -67,26 +64,5 @@
 }
 
 .scorecard-close-icon-container {
-  cursor: pointer;
-  height: spacing.$min-touch-target;
-  width: spacing.$min-touch-target;
-  margin-left: auto;
-
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-
-  @include hover.enabled {
-    background-color: colors.$white-hover;
-  }
-
-  svg {
-    height: icons.$icon-size-md;
-    width: icons.$icon-size-md;
-
-    @include breakpoints.gte-md {
-      height: icons.$icon-size-lg;
-      width: icons.$icon-size-lg;
-    }
-  }
+  @include mixins.icon-button-container;
 }
