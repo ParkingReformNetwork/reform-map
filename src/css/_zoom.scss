@@ -1,5 +1,6 @@
 @use "theme/borders";
 @use "theme/colors";
+@use "theme/mixins";
 @use "theme/spacing";
 @use "theme/typography";
 @use "header";
@@ -12,8 +13,7 @@ $total-width: calc($container-margin-left + $button-width);
 
 div.leaflet-left .leaflet-control {
   margin-left: $container-margin-left;
-  border: borders.$component-border;
-  border-radius: borders.$border-radius;
+  @include mixins.card-surface;
 }
 
 div.leaflet-control-zoom.leaflet-bar {
@@ -25,9 +25,7 @@ div.leaflet-control-zoom.leaflet-bar {
     font-size: $label-font-size;
     font-weight: normal;
 
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    @include mixins.flex-center;
 
     @media (hover: hover) {
       &:hover,

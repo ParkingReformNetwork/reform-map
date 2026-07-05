@@ -1,5 +1,6 @@
 @use "theme/colors";
 @use "theme/icons";
+@use "theme/mixins";
 @use "theme/spacing";
 @use "theme/typography";
 
@@ -29,9 +30,7 @@ $thumbsize: icons.$icon-size-md;
   margin-top: spacing.$container-edge-spacing;
   margin-bottom: calc(spacing.$container-edge-spacing + 5px);
 
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+  @include mixins.flex-center(flex, space-between);
 }
 
 .population-slider-controls > input {
