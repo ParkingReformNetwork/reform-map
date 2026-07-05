@@ -23,14 +23,12 @@
       "nursery": { "noFloatingPromises": "error" }
     }
   },
+  "html": {
+    "formatter": { "enabled": true },
+    "linter": { "enabled": true }
+  },
   "assist": {
     "enabled": true,
     "actions": { "source": { "organizeImports": "on" } }
-  },
-  "overrides": [
-    {
-      "includes": ["**/*.html", "**/*.svg"],
-      "linter": { "enabled": false }
-    }
-  ]
+  }
 }

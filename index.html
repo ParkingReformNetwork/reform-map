@@ -2,36 +2,36 @@
 <html lang="en">
   <head>
     <title>Parking reform map | Parking Reform Network</title>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta
       name="description"
       content="An interactive map showing places with parking reforms, such as removing parking minimums and adding parking benefit districts."
-    />
-    <meta property="og:locale" content="en_US" />
-    <meta property="og:type" content="website" />
+    >
+    <meta property="og:locale" content="en_US">
+    <meta property="og:type" content="website">
     <meta
       property="og:title"
       content="Parking reform map &#x2d; Parking Reform Network"
-    />
+    >
     <meta
       property="og:description"
       content="An interactive map showing places with parking reforms, such as removing parking minimums."
-    />
+    >
     <meta
       property="og:url"
       content="https://parkingreform.org/resources/mandates-map/"
-    />
-    <meta property="og:site_name" content="Parking Reform Network" />
+    >
+    <meta property="og:site_name" content="Parking Reform Network">
     <meta
       name="twitter:title"
       content="Parking reform map &#x2d; Parking Reform Network"
-    />
+    >
     <meta
       name="twitter:description"
       content="An interactive map showing places with parking reforms, such as removing parking minimums."
-    />
-    <link rel="stylesheet" href="./src/css/style.scss" />
+    >
+    <link rel="stylesheet" href="./src/css/style.scss">
   </head>
 
   <body>
@@ -136,6 +136,7 @@
     <header class="top-header">
       <nav class="header-view-toggle">
         <button
+          type="button"
           class="header-icon-container header-table-icon-container"
           title="switch to table view"
           aria-label="switch to table view from map view"
@@ -143,6 +144,7 @@
           <svg aria-hidden="true"><use href="#icon-table"></use></svg>
         </button>
         <button
+          type="button"
           class="header-icon-container header-map-icon-container"
           title="switch to map view"
           aria-label="switch to map view from table view"
@@ -153,6 +155,7 @@
       </nav>
       <nav class="header-control-icons">
         <button
+          type="button"
           class="header-icon-container header-filter-icon-container"
           title="open up filter options"
           aria-expanded="false"
@@ -162,6 +165,7 @@
           <span class="sr-only">open a popup to control filter options</span>
         </button>
         <button
+          type="button"
           class="header-icon-container header-search-icon-container"
           title="search for a place"
           aria-expanded="false"
@@ -175,6 +179,7 @@
           >
         </button>
         <button
+          type="button"
           class="header-icon-container header-about-icon-container"
           title="about the map"
           aria-expanded="false"
@@ -183,7 +188,8 @@
           <svg aria-hidden="true"><use href="#icon-circle-question"></use></svg>
           <span class="sr-only">toggle a popup describing the map</span>
         </button>
-        <a
+        <button
+          type="button"
           class="header-icon-container header-share-icon-container"
           title="copy link"
         >
@@ -200,7 +206,7 @@
           <span class="sr-only"
             >copy a link to the map with the current filter configuration</span
           >
-        </a>
+        </button>
         <a
           class="header-icon-container header-full-screen-icon-container"
           href="https://parkingreform.org/mandates-map"
@@ -224,6 +230,7 @@
       <header class="about-popup-header">
         <h2>About the Parking Reform Map</h2>
         <button
+          type="button"
           class="about-popup-close-icon-container"
           title="close the about popup"
           aria-label="close the about popup"
@@ -251,7 +258,7 @@
         back to the map.
       </p>
 
-      <div role="region" aria-labelledby="about-popup-links-heading">
+      <section aria-labelledby="about-popup-links-heading">
         <h3 id="about-popup-links-heading">Relevant links</h3>
         <ul class="about-popup-links-list">
           <li>
@@ -310,7 +317,7 @@
             </a>
           </li>
         </ul>
-      </div>
+      </section>
 
       <h3>Acknowledgments</h3>
       <p>
@@ -322,13 +329,10 @@
           >Parking Reform Network
           <svg aria-hidden="true">
             <use href="#icon-arrow-right"></use>
-          </svg> </a
-        >. It is based on "A Map of Cities That Got Rid of Parking Minimums",
+          </svg>
+        </a>. It is based on "A Map of Cities That Got Rid of Parking Minimums",
         initially published by
-        <a
-          class="external-link"
-          target="_blank"
-          href="https://strongtowns.org"
+        <a class="external-link" target="_blank" href="https://strongtowns.org"
           >Strong Towns
           <svg aria-hidden="true">
             <use href="#icon-arrow-right"></use>
@@ -380,7 +384,8 @@
         ><img
           src="./assets/prn-logo-wide.png"
           alt="Parking Reform Network logo"
-      /></a>
+        ></a
+      >
     </div>
 
     <div
@@ -405,7 +410,8 @@
           ><img
             src="./assets/prn-logo-square.png"
             alt="Parking Reform Network logo"
-        /></a>
+          ></a
+        >
       </section>
       <div id="table-container">
         <div id="table"></div>
