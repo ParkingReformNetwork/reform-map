@@ -64,13 +64,12 @@ Before pushing code, run this command and commit the changes. Otherwise, PR chec
 
 ### Lint code
 
-"Linting" means using tools that check for common issues that may be bugs or low code quality. We use Biome for both linting and formatting.
-
+"Linting" means using tools that check for common issues that may be bugs or low code quality.
 ```bash
 ❯ npm run lint
 ```
 
-`npm run lint` runs `biome ci`, which checks formatting, lint rules, and import organization without writing changes. To auto-fix issues, run `npm run fix`.
+To auto-fix issues, run `npm run fix`.
 
 ### Try out a build locally
 
