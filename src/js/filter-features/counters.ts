@@ -135,7 +135,7 @@ export function determineAnyReform(
   return `${prefix} 1+ ${state} parking reforms:<ul>${listItems}</ul>`;
 }
 
-function determineSimplePolicy(
+function buildSimplePolicyText(
   view: ViewState,
   placeDescription: string,
   status: ReformStatus,
@@ -146,12 +146,12 @@ function determineSimplePolicy(
     : `Showing details about ${status} ${noun} for ${placeDescription} - ${TABLE_DOWNLOAD_HTML}`;
 }
 
-export function determineReduceMin(
+export function buildReduceMinText(
   view: ViewState,
   placeDescription: string,
   status: ReformStatus,
 ): string {
-  return determineSimplePolicy(
+  return buildSimplePolicyText(
     view,
     placeDescription,
     status,
@@ -159,12 +159,12 @@ export function determineReduceMin(
   );
 }
 
-export function determineAddMax(
+export function buildAddMaxText(
   view: ViewState,
   placeDescription: string,
   status: ReformStatus,
 ): string {
-  return determineSimplePolicy(
+  return buildSimplePolicyText(
     view,
     placeDescription,
     status,
@@ -198,12 +198,12 @@ export function determineRmMin(
   return `${summary} - ${TABLE_DOWNLOAD_HTML}`;
 }
 
-export function determineBenefitDistrict(
+export function buildBenefitDistrictText(
   view: ViewState,
   placeDescription: string,
   status: ReformStatus,
 ): string {
-  return determineSimplePolicy(
+  return buildSimplePolicyText(
     view,
     placeDescription,
     status,
@@ -250,9 +250,9 @@ export function determineHtml(
         state.status,
       );
     case "reduce parking minimums":
-      return determineReduceMin(view, placeDescription, state.status);
+      return buildReduceMinText(view, placeDescription, state.status);
     case "add parking maximums":
-      return determineAddMax(view, placeDescription, state.status);
+      return buildAddMaxText(view, placeDescription, state.status);
     case "remove parking minimums":
       return determineRmMin(
         view,
@@ -261,7 +261,7 @@ export function determineHtml(
         state.status,
       );
     case "parking benefit district":
-      return determineBenefitDistrict(view, placeDescription, state.status);
+      return buildBenefitDistrictText(view, placeDescription, state.status);
     default:
       throw new Error(`Unexpected policy type: ${state.policyTypeFilter}`);
   }

@@ -1,12 +1,12 @@
 import { expect, test } from "@playwright/test";
 
 import {
-  determineIsPrimary,
+  isPrimary,
   radiusGivenZoom,
 } from "../../src/js/map-features/markerUtils";
 import type { ProcessedPlace } from "../../src/js/model/types";
 
-test("determineIsPrimary", () => {
+test("isPrimary", () => {
   const place: ProcessedPlace = {
     name: "",
     state: "",
@@ -19,22 +19,20 @@ test("determineIsPrimary", () => {
     url: "",
   };
 
-  expect(determineIsPrimary({ place })).toEqual(false);
+  expect(isPrimary({ place })).toEqual(false);
 
   // Repealed places are always primary.
-  expect(determineIsPrimary({ place: { ...place, repeal: true } })).toEqual(
-    true,
-  );
+  expect(isPrimary({ place: { ...place, repeal: true } })).toEqual(true);
 
   // An adopted parking benefit district makes somewhere primary.
   expect(
-    determineIsPrimary({
+    isPrimary({
       place,
       benefit_district: [{ status: "adopted", date: undefined }],
     }),
   ).toEqual(true);
   expect(
-    determineIsPrimary({
+    isPrimary({
       place,
       benefit_district: [{ status: "repealed", date: undefined }],
     }),

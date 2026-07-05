@@ -1,6 +1,6 @@
 import type { ProcessedCoreEntry } from "../model/types";
 
-export function determineIsPrimary(entry: ProcessedCoreEntry): boolean {
+export function isPrimary(entry: ProcessedCoreEntry): boolean {
   if (entry.place.repeal) return true;
   const numAdoptedBenefitDistricts =
     entry.benefit_district?.filter((record) => record.status === "adopted")
