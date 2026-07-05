@@ -28,7 +28,9 @@ $thumbsize: icons.$icon-size-md;
 .population-slider-controls {
   width: 100%;
   margin-top: spacing.$container-edge-spacing;
-  margin-bottom: calc(spacing.$container-edge-spacing + 5px);
+  margin-bottom: calc(
+    spacing.$container-edge-spacing + spacing.$small-gap
+  );
 
   @include mixins.flex-center(flex, space-between);
 }
