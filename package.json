@@ -3,6 +3,9 @@
   "version": "0.1.0",
   "source": "index.html",
   "type": "module",
+  "engines": {
+    "node": ">=22"
+  },
   "scripts": {
     "start": "parcel",
     "build": "rm -rf dist .parcel-cache; parcel build --detailed-report",
@@ -32,6 +35,7 @@
     "@types/fs-extra": "^11.0.4",
     "@types/leaflet": "^1.9.15",
     "@types/lodash-es": "^4.17.12",
+    "@types/node": "^22.20.0",
     "@types/node-fetch": "^2.6.12",
     "@types/node-geocoder": "^4.2.6",
     "@types/papaparse": "^5.3.15",
@@ -47,7 +51,7 @@
     "sass": "^1.83.0",
     "svgo": "^3.3.3",
     "tsx": "^4.22.4",
-    "typescript": "^5.7.2",
+    "typescript": "^6.0.3",
     "zx": "^8.8.5"
   },
   "targets": {
