@@ -19,7 +19,7 @@ interface Sliders {
   readonly right: HTMLInputElement;
 }
 
-function determineSupplementalTitle(
+function determinePopulationRangeTitle(
   populationSliderIndexes: [number, number],
 ): string {
   const [leftIndex, rightIndex] = populationSliderIndexes;
@@ -71,7 +71,7 @@ function generateSliders(
       hidden: false,
       expanded: false,
       title: "Population",
-      supplementalTitle: determineSupplementalTitle(
+      supplementalTitle: determinePopulationRangeTitle(
         initialPopulationSliderIndexes,
       ),
     },
@@ -174,7 +174,7 @@ export function initPopulationSlider(
     const accordionPriorState = accordionStateObservable.getValue();
     accordionStateObservable.setValue({
       ...accordionPriorState,
-      supplementalTitle: determineSupplementalTitle(
+      supplementalTitle: determinePopulationRangeTitle(
         state.populationSliderIndexes,
       ),
     });

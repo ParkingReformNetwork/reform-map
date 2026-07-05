@@ -236,22 +236,22 @@ export class PlaceFilterManager {
   private matchesPlace(place: ProcessedPlace): boolean {
     const filterState = this.state.getValue();
 
-    const isPlaceType = filterState.placeType.has(place.type);
-    if (!isPlaceType) return false;
+    const matchesPlaceType = filterState.placeType.has(place.type);
+    if (!matchesPlaceType) return false;
 
-    const isCountry = filterState.country.has(place.country);
-    if (!isCountry) return false;
+    const matchesCountry = filterState.country.has(place.country);
+    if (!matchesCountry) return false;
 
-    const isAllMinimumsRepealed =
+    const matchesRepealFilter =
       !isAllMinimumsRemovedToggleInEffect(filterState) || place.repeal;
-    if (!isAllMinimumsRepealed) return false;
+    if (!matchesRepealFilter) return false;
 
     const [sliderLeftIndex, sliderRightIndex] =
       filterState.populationSliderIndexes;
-    const isPopulation =
+    const matchesPopulation =
       place.pop >= POPULATION_INTERVALS[sliderLeftIndex][1] &&
       place.pop <= POPULATION_INTERVALS[sliderRightIndex][1];
-    return isPopulation;
+    return matchesPopulation;
   }
 
   private matchesLandUsePolicy(
@@ -260,22 +260,26 @@ export class PlaceFilterManager {
   ): boolean {
     const filterState = this.state.getValue();
 
-    const isStatus = policyRecord.status === filterState.status;
-    if (!isStatus) return false;
+    const matchesStatus = policyRecord.status === filterState.status;
+    if (!matchesStatus) return false;
 
-    const isYear = filterState.year.has(
+    const matchesYear = filterState.year.has(
       policyRecord.date?.year || UNKNOWN_YEAR,
     );
-    if (!isYear) return false;
+    if (!matchesYear) return false;
 
     if (!options.ignoreScope) {
-      const isScope = policyRecord.scope.some((v) => filterState.scope.has(v));
-      if (!isScope) return false;
+      const matchesScope = policyRecord.scope.some((v) =>
+        filterState.scope.has(v),
+      );
+      if (!matchesScope) return false;
     }
 
     if (!options.ignoreLand) {
-      const isLand = policyRecord.land.some((v) => filterState.landUse.has(v));
-      if (!isLand) return false;
+      const matchesLand = policyRecord.land.some((v) =>
+        filterState.landUse.has(v),
+      );
+      if (!matchesLand) return false;
     }
 
     return true;
@@ -286,11 +290,11 @@ export class PlaceFilterManager {
   ): boolean {
     const filterState = this.state.getValue();
 
-    const isStatus = record.status === filterState.status;
-    if (!isStatus) return false;
+    const matchesStatus = record.status === filterState.status;
+    if (!matchesStatus) return false;
 
-    const isYear = filterState.year.has(record.date?.year || UNKNOWN_YEAR);
-    if (!isYear) return false;
+    const matchesYear = filterState.year.has(record.date?.year || UNKNOWN_YEAR);
+    if (!matchesYear) return false;
 
     return true;
   }
@@ -308,15 +312,14 @@ export class PlaceFilterManager {
         : null;
     }
 
-    const isPlace = this.matchesPlace(entry.place);
-    if (!isPlace) return null;
+    if (!this.matchesPlace(entry.place)) return null;
 
     if (filterState.policyTypeFilter === "any parking reform") {
       const policyTypes = determineAllPolicyTypes(entry, filterState.status);
-      const isPolicyType = policyTypes.some((v) =>
+      const matchesPolicyType = policyTypes.some((v) =>
         filterState.includedPolicyChanges.has(v),
       );
-      return isPolicyType ? { type: "any", policyTypes } : null;
+      return matchesPolicyType ? { type: "any", policyTypes } : null;
     }
 
     if (

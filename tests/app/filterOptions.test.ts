@@ -1,7 +1,7 @@
 import { expect, test } from "@playwright/test";
 import { Window } from "happy-dom";
 
-import { determineSupplementalTitle } from "../../src/js/filter-features/options";
+import { determineCheckedCountTitle } from "../../src/js/filter-features/options";
 
 function createFieldset(childrenHTML: string): HTMLFieldSetElement {
   const window = new Window();
@@ -10,7 +10,7 @@ function createFieldset(childrenHTML: string): HTMLFieldSetElement {
   return document.querySelector("fieldset")! as unknown as HTMLFieldSetElement;
 }
 
-test("determineSupplementalTitle", () => {
+test("determineCheckedCountTitle", () => {
   // 5 checkboxes:
   // - 2 are hidden, one of which is checked
   // - 3 are visible, two of which are checked
@@ -21,5 +21,5 @@ test("determineSupplementalTitle", () => {
       <label hidden><input type="checkbox" checked></label>
       <label hidden><input type="checkbox"></label>
     `);
-  expect(determineSupplementalTitle(fieldset)).toEqual(" (2/3)");
+  expect(determineCheckedCountTitle(fieldset)).toEqual(" (2/3)");
 });

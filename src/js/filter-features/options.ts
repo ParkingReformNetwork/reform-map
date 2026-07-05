@@ -157,7 +157,7 @@ function getVisibleCheckboxes(
   );
 }
 
-export function determineSupplementalTitle(
+export function determineCheckedCountTitle(
   fieldset: HTMLFieldSetElement,
 ): string {
   const visibleCheckboxes = getVisibleCheckboxes(fieldset);
@@ -265,7 +265,7 @@ function generateAccordionForFilterGroup(
       hidden: false,
       expanded: false,
       title: resolveLegend(params.legend, filterState),
-      supplementalTitle: determineSupplementalTitle(fieldSet),
+      supplementalTitle: determineCheckedCountTitle(fieldSet),
     },
   );
   accordionState.initialize();
@@ -280,7 +280,7 @@ function updateCheckboxStats(
   const accordionPriorState = observable.getValue();
   observable.setValue({
     ...accordionPriorState,
-    supplementalTitle: determineSupplementalTitle(fieldSet),
+    supplementalTitle: determineCheckedCountTitle(fieldSet),
   });
 }
 

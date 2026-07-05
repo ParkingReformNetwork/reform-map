@@ -3,7 +3,7 @@ import type { ViewStateObservable } from "../layout/viewToggle";
 import { determinePlaceIdWithoutCountry } from "../model/placeId";
 import type { PlaceId } from "../model/types";
 import type { PlaceFilterManager } from "../state/FilterState";
-import { determineIsPrimary, radiusGivenZoom } from "./markerUtils";
+import { isPrimary, radiusGivenZoom } from "./markerUtils";
 
 const PRIMARY_MARKER_STYLE = {
   weight: 1,
@@ -67,14 +67,19 @@ export default function initPlaceMarkers(
     filterManager.entries,
   ).reduce((acc: Record<string, MarkerWithPlaceId>, [placeId, entry]) => {
     const [long, lat] = entry.place.coord;
-    const isPrimary = determineIsPrimary(entry);
-    const style = isPrimary ? PRIMARY_MARKER_STYLE : SECONDARY_MARKER_STYLE;
+    const entryIsPrimary = isPrimary(entry);
+    const style = entryIsPrimary
+      ? PRIMARY_MARKER_STYLE
+      : SECONDARY_MARKER_STYLE;
     const marker = new CircleMarker([lat, long], {
       ...style,
-      radius: radiusGivenZoom({ zoom: map.getZoom(), isPrimary }),
+      radius: radiusGivenZoom({
+        zoom: map.getZoom(),
+        isPrimary: entryIsPrimary,
+      }),
     }) as MarkerWithPlaceId;
     marker.placeId = placeId;
-    marker.isPrimary = isPrimary;
+    marker.isPrimary = entryIsPrimary;
 
     // The tooltip is the text shown on hover. We strip the country
     // to make it less verbose.
