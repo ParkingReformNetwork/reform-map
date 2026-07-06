@@ -7,11 +7,6 @@
 
 @use "filter";
 
-// uncomment to visualize slider mechanism
-// input {
-//   border: solid;
-// }
-
 $thumbsize: icons.$icon-size-md;
 
 .population-slider-container {
@@ -24,6 +19,11 @@ $thumbsize: icons.$icon-size-md;
     filter.$filter-inner-width - (spacing.$container-edge-spacing * 2)
   );
   margin: spacing.$element-gap spacing.$container-edge-spacing;
+
+  // You can uncomment this code to visualize the slider mechanism when debugging.
+  // input {
+  //   border: solid;
+  // }
 }
 
 .population-slider-controls {

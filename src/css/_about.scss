@@ -39,6 +39,7 @@
   h3 {
     margin: 0;
     font-size: typography.$font-size-lg;
+    font-weight: typography.$font-weight-bold;
   }
 }
 
@@ -52,7 +53,7 @@
     margin-right: spacing.$element-gap;
     line-height: typography.$line-height-base;
     font-size: typography.$font-size-xl;
-    font-weight: 500;
+    font-weight: typography.$font-weight-bold;
   }
 }
 
