@@ -99,7 +99,6 @@ export default function initScorecard(
   filterManager: PlaceFilterManager,
   viewToggle: ViewStateObservable,
   markerGroup: FeatureGroup,
-  data: Record<PlaceId, ProcessedCoreEntry>,
 ): void {
   const scorecardState = new Observable<ScorecardState>("scorecard", {
     type: "hidden",
@@ -121,7 +120,7 @@ export default function initScorecard(
     scorecardState.setValue({
       type: "visible",
       placeId,
-      entry: data[placeId],
+      entry: filterManager.entries[placeId],
     });
   });
 
@@ -132,7 +131,7 @@ export default function initScorecard(
       scorecardState.setValue({
         type: "visible",
         placeId: search,
-        entry: data[search],
+        entry: filterManager.entries[search],
       });
     }
   });

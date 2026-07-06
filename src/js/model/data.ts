@@ -57,23 +57,17 @@ export function processPlace(raw: RawPlace): ProcessedPlace {
 }
 
 function getPolicyRecords(
-  entry: RawCoreEntry | ProcessedCoreEntry,
+  entry: ProcessedCoreEntry,
   policyType: PolicyType,
 ): Array<{ status: ReformStatus }> {
-  switch (policyType) {
-    case "add parking maximums":
-      return entry.add_max ?? [];
-    case "reduce parking minimums":
-      return entry.reduce_min ?? [];
-    case "remove parking minimums":
-      return entry.rm_min ?? [];
-    case "parking benefit district":
-      return entry.benefit_district ?? [];
+  if (policyType === "parking benefit district") {
+    return entry.benefit_district ?? [];
   }
+  return getLandUsePolicyRecords(entry, policyType);
 }
 
 export function determineAllPolicyTypes(
-  entry: RawCoreEntry | ProcessedCoreEntry,
+  entry: ProcessedCoreEntry,
   status: ReformStatus,
 ): PolicyType[] {
   return ALL_POLICY_TYPE.filter((policyType) =>
@@ -82,7 +76,7 @@ export function determineAllPolicyTypes(
 }
 
 export function determinePolicyTypeStatuses(
-  entry: RawCoreEntry | ProcessedCoreEntry,
+  entry: ProcessedCoreEntry,
 ): Record<PolicyType, Set<ReformStatus>> {
   return Object.fromEntries(
     ALL_POLICY_TYPE.map((policyType) => [

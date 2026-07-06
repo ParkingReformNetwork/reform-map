@@ -1,4 +1,3 @@
-import { isEqual } from "lodash-es";
 import { iconHtml } from "../layout/icons";
 import type { ViewState } from "../layout/viewToggle";
 import { COUNTRIES_PREFIXED_BY_THE } from "../model/data";
@@ -30,22 +29,22 @@ export function determinePlaceDescription(
     country = `the ${country}`;
   }
 
-  if (isEqual(matchedPlaceTypes, new Set(["city"]))) {
-    const label = numPlaces === 1 ? "city" : "cities";
-    return `${numPlaces} ${label} in ${country}`;
+  const placeTypeLabels: Record<PlaceType, [string, string]> = {
+    city: ["city", "cities"],
+    county: ["county", "counties"],
+    state: ["state", "states"],
+    country: ["country", "countries"],
+  };
+  const singlePlaceType =
+    matchedPlaceTypes.size === 1 ? Array.from(matchedPlaceTypes)[0] : null;
+  const [singular, plural] = singlePlaceType
+    ? placeTypeLabels[singlePlaceType]
+    : ["place", "places"];
+  const label = numPlaces === 1 ? singular : plural;
+
+  if (singlePlaceType === "country") {
+    return `${numPlaces} ${label}`;
   }
-  if (isEqual(matchedPlaceTypes, new Set(["county"]))) {
-    const label = numPlaces === 1 ? "county" : "counties";
-    return `${numPlaces} ${label} in ${country}`;
-  }
-  if (isEqual(matchedPlaceTypes, new Set(["state"]))) {
-    const label = numPlaces === 1 ? "state" : "states";
-    return `${numPlaces} ${label} in ${country}`;
-  }
-  if (isEqual(matchedPlaceTypes, new Set(["country"]))) {
-    return numPlaces === 1 ? "1 country" : `${numPlaces} countries`;
-  }
-  const label = numPlaces === 1 ? "place" : "places";
   return `${numPlaces} ${label} in ${country}`;
 }
 
@@ -290,23 +289,19 @@ export default function initCounters(manager: PlaceFilterManager): void {
   setUpResetButton(tableCounter, manager);
 
   manager.subscribe("update counters", (state) => {
-    mapCounter.innerHTML = determineHtml(
-      "map",
-      state,
-      manager.entries,
-      manager.numMatchedPlaces,
-      manager.matchedPolicyTypes,
-      manager.matchedCountries,
-      manager.matchedPlaceTypes,
-    );
-    tableCounter.innerHTML = determineHtml(
-      "table",
-      state,
-      manager.entries,
-      manager.numMatchedPlaces,
-      manager.matchedPolicyTypes,
-      manager.matchedCountries,
-      manager.matchedPlaceTypes,
-    );
+    for (const [view, counter] of [
+      ["map", mapCounter],
+      ["table", tableCounter],
+    ] as const) {
+      counter.innerHTML = determineHtml(
+        view,
+        state,
+        manager.entries,
+        manager.numMatchedPlaces,
+        manager.matchedPolicyTypes,
+        manager.matchedCountries,
+        manager.matchedPlaceTypes,
+      );
+    }
   });
 }

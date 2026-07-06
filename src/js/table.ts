@@ -444,10 +444,10 @@ export default function initTable(
     } else {
       currentPolicyTypeFilter = newPolicyTypeFilter;
       currentStatus = newStatus;
-      const [columns2, data2] =
+      const [nextColumns, nextData] =
         filterStateToConfig[newPolicyTypeFilter][newStatus];
-      table.setColumns(columns2);
-      void table.setData(data2);
+      table.setColumns(nextColumns);
+      void table.setData(nextData);
     }
   };
 

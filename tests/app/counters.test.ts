@@ -19,31 +19,14 @@ import {
   type PolicyType,
   type ReformStatus,
 } from "../../src/js/model/types";
-import {
-  ALL_POLICY_TYPE_FILTER,
-  type FilterState,
-} from "../../src/js/state/FilterState";
+import { ALL_POLICY_TYPE_FILTER } from "../../src/js/state/FilterState";
+import { DEFAULT_FILTER_STATE } from "../../src/js/state/urlEncoder";
 
 test.describe("determineHtml", () => {
-  const DEFAULT_STATE: FilterState = {
-    searchInput: null,
-    policyTypeFilter: "any parking reform",
-    allMinimumsRemovedToggle: false,
-    includedPolicyChanges: new Set(ALL_POLICY_TYPE),
-    // The below values are ignored.
-    placeType: new Set(),
-    scope: new Set(),
-    landUse: new Set(),
-    status: "adopted",
-    country: new Set(),
-    year: new Set(),
-    populationSliderIndexes: [0, 0],
-  };
-
   test("no places", () => {
     const result = determineHtml(
       "map",
-      DEFAULT_STATE,
+      DEFAULT_FILTER_STATE,
       {},
       0,
       new Set(),

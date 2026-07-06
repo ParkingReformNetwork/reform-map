@@ -3,6 +3,7 @@ import {
   getFilteredIndexes,
   getLandUsePolicyRecords,
 } from "../model/data";
+import type { ReformDate } from "../model/ReformDate";
 import {
   ALL_POLICY_TYPE,
   type PlaceId,
@@ -254,19 +255,25 @@ export class PlaceFilterManager {
     return matchesPopulation;
   }
 
+  private matchesStatusAndYear(record: {
+    status: ReformStatus;
+    date: ReformDate | undefined;
+  }): boolean {
+    const filterState = this.state.getValue();
+
+    const matchesStatus = record.status === filterState.status;
+    if (!matchesStatus) return false;
+
+    return filterState.year.has(record.date?.year || UNKNOWN_YEAR);
+  }
+
   private matchesLandUsePolicy(
     policyRecord: ProcessedCoreLandUsePolicy,
     options: { ignoreScope?: boolean; ignoreLand?: boolean },
   ): boolean {
     const filterState = this.state.getValue();
 
-    const matchesStatus = policyRecord.status === filterState.status;
-    if (!matchesStatus) return false;
-
-    const matchesYear = filterState.year.has(
-      policyRecord.date?.year || UNKNOWN_YEAR,
-    );
-    if (!matchesYear) return false;
+    if (!this.matchesStatusAndYear(policyRecord)) return false;
 
     if (!options.ignoreScope) {
       const matchesScope = policyRecord.scope.some((v) =>
@@ -288,15 +295,7 @@ export class PlaceFilterManager {
   private matchesBenefitDistrict(
     record: ProcessedCoreBenefitDistrict,
   ): boolean {
-    const filterState = this.state.getValue();
-
-    const matchesStatus = record.status === filterState.status;
-    if (!matchesStatus) return false;
-
-    const matchesYear = filterState.year.has(record.date?.year || UNKNOWN_YEAR);
-    if (!matchesYear) return false;
-
-    return true;
+    return this.matchesStatusAndYear(record);
   }
 
   private getPlaceMatch(placeId: PlaceId): PlaceMatch | null {

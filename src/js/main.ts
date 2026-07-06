@@ -43,7 +43,7 @@ export default async function initApp(): Promise<void> {
   exposeTestHooks(map, markerGroup, table);
   addViewToggleSubscribers(viewToggle, table);
 
-  initScorecard(filterManager, viewToggle, markerGroup, data);
+  initScorecard(filterManager, viewToggle, markerGroup);
 
   viewToggle.initialize();
   filterManager.initialize();
