@@ -1,5 +1,5 @@
 import { expect, type Page, test } from "@playwright/test";
-import { loadMap, openFilter } from "./utils";
+import { filterToCountry, loadMap, openFilter } from "./utils";
 
 /** Switch to the table view and wait for it to become visible. */
 async function showTable(page: Page): Promise<void> {
@@ -76,11 +76,7 @@ test("filtering narrows the visible rows", async ({ page }) => {
 
   await openFilter(page);
   // Restrict to a single small country; the row set should shrink.
-  await page.locator("#filter-accordion-toggle-country").click();
-  await page.locator("#filter-country-uncheck-all").click();
-  await page
-    .locator('.filter-country label:has(input[data-value="Mexico"])')
-    .click();
+  await filterToCountry(page, "Mexico");
 
   const narrowed = await pollNarrowedRowCount(page, baseline);
   expect(narrowed).toBeGreaterThan(0);
@@ -113,11 +109,7 @@ test("filtering while on map view is applied when switching to the table", async
 
   // Filter while the table is hidden (this refresh is queued, not applied yet).
   await openFilter(page);
-  await page.locator("#filter-accordion-toggle-country").click();
-  await page.locator("#filter-country-uncheck-all").click();
-  await page
-    .locator('.filter-country label:has(input[data-value="Mexico"])')
-    .click();
+  await filterToCountry(page, "Mexico");
 
   // Switching back to the table should apply the queued refresh.
   await showTable(page);

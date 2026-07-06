@@ -137,30 +137,18 @@ async function selectIfSet(
   // Else, uncheck all options to reset the state.
   await page.locator(`#filter-${selector}-uncheck-all`).click();
 
-  const labelSelector = `.filter-${selector} label`;
+  // `data-value` holds the raw option value. Every filter group except
+  // "country" renders a capitalized label over a lowercase raw value, so the
+  // label text passed in must be lowercased to match `data-value`.
+  const dataValues =
+    selector === "country"
+      ? values
+      : values.map((value) => value.toLowerCase());
 
-  // Then, get the checkboxes we need to check.
-  const toClick = await page.evaluate(
-    (data) => {
-      const { labelSelector, values } = data;
-      const indices: number[] = [];
-      document.querySelectorAll(labelSelector).forEach((label, index) => {
-        const text = label.querySelector("span")?.textContent || "";
-        if (values.includes(text)) {
-          indices.push(index);
-        }
-      });
-      return indices;
-    },
-    {
-      labelSelector,
-      values,
-    },
-  );
-
-  // Finally, click only the checkboxes we need
-  for (const index of toClick) {
-    await page.locator(labelSelector).nth(index).click();
+  for (const value of dataValues) {
+    await page
+      .locator(`.filter-${selector} label:has(input[data-value="${value}"])`)
+      .click();
   }
 }
 
