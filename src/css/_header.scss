@@ -1,10 +1,8 @@
 @use "theme/borders";
 @use "theme/breakpoints";
 @use "theme/colors";
-@use "theme/hover";
 @use "theme/mixins";
 @use "theme/spacing";
-@use "theme/icons";
 @use "theme/typography";
 
 $header-y-padding: 4px;
@@ -31,20 +29,13 @@ $header-height: calc(
 }
 
 .header-icon-container {
-  height: spacing.$min-touch-target;
-  width: spacing.$min-touch-target;
-
-  @include mixins.flex-center(inline-flex);
-  cursor: pointer;
+  @include mixins.icon-button-container(
+    $hover-bg: colors.$gray-hover,
+    $responsive-icon: false
+  );
 
   svg {
     color: colors.$white;
-    height: icons.$icon-size-md;
-    width: icons.$icon-size-md;
-  }
-
-  @include hover.enabled {
-    background-color: colors.$gray-hover;
   }
 }
 
