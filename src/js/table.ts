@@ -15,6 +15,7 @@ import {
   SortModule,
   Tabulator,
 } from "tabulator-tables";
+import { subscribeLazyViewRefresh } from "./layout/lazyViewRefresh";
 import type { ViewStateObservable } from "./layout/viewToggle";
 import { determineAllPolicyTypes } from "./model/data";
 import type { ReformDate } from "./model/ReformDate";
@@ -451,14 +452,15 @@ export default function initTable(
     }
   };
 
-  // When on map view, we should only lazily update the table the next time
-  // we switch to table view.
-  let dataRefreshQueued = false;
-
   // Track the latest policy type and status for the download button.
   let downloadPolicyType = currentPolicyTypeFilter;
   let downloadStatus = currentStatus;
   initCounterDownload(table, () => [downloadPolicyType, downloadStatus]);
+
+  const refreshTableData = subscribeLazyViewRefresh(viewToggle, "table", () => {
+    const state = filterManager.getState();
+    updateData(state.policyTypeFilter, state.status);
+  });
 
   filterManager.subscribe(
     "update table's records",
@@ -466,21 +468,9 @@ export default function initTable(
       downloadPolicyType = policyTypeFilter;
       downloadStatus = status;
       if (!tableBuilt) return;
-      if (viewToggle.getValue() === "map") {
-        dataRefreshQueued = true;
-        return;
-      }
-
-      updateData(policyTypeFilter, status);
+      refreshTableData();
     },
   );
-
-  viewToggle.subscribe((view) => {
-    if (view === "map" || !dataRefreshQueued) return;
-    dataRefreshQueued = false;
-    const state = filterManager.getState();
-    updateData(state.policyTypeFilter, state.status);
-  }, "apply queued table data refresh");
 
   return table;
 }

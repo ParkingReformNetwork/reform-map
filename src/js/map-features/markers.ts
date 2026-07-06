@@ -1,4 +1,5 @@
 import { CircleMarker, FeatureGroup, type Map as LeafletMap } from "leaflet";
+import { subscribeLazyViewRefresh } from "../layout/lazyViewRefresh";
 import type { ViewStateObservable } from "../layout/viewToggle";
 import { determinePlaceIdWithoutCountry } from "../model/placeId";
 import type { PlaceId } from "../model/types";
@@ -92,16 +93,7 @@ export default function initPlaceMarkers(
   const markerGroup = new FeatureGroup();
   let currentlyVisiblePlaceIds = new Set<string>();
 
-  // When on table view, we should only lazily update the map the next time
-  // we switch to map view.
-  let dataRefreshQueued = false;
-
-  filterManager.subscribe("update map markers", () => {
-    if (viewToggle.getValue() === "table") {
-      dataRefreshQueued = true;
-      return;
-    }
-
+  const refreshMapMarkers = subscribeLazyViewRefresh(viewToggle, "map", () => {
     updatePlaceVisibility(
       currentlyVisiblePlaceIds,
       filterManager.placeIds,
@@ -110,19 +102,7 @@ export default function initPlaceMarkers(
     );
     currentlyVisiblePlaceIds = filterManager.placeIds;
   });
-
-  viewToggle.subscribe((view) => {
-    if (view === "map" && dataRefreshQueued) {
-      updatePlaceVisibility(
-        currentlyVisiblePlaceIds,
-        filterManager.placeIds,
-        placesToMarkers,
-        markerGroup,
-      );
-      currentlyVisiblePlaceIds = filterManager.placeIds;
-      dataRefreshQueued = false;
-    }
-  }, "apply queued map data refresh");
+  filterManager.subscribe("update map markers", refreshMapMarkers);
 
   // Adjust marker size on zoom changes.
   map.addEventListener("zoomend", () => {
