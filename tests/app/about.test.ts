@@ -1,9 +1,10 @@
 import { expect, test } from "@playwright/test";
+import { HEADER_ICON } from "./utils";
 
 test("about popup can be opened and closed", async ({ page }) => {
   await page.goto("");
 
-  const aboutIcon = ".header-about-icon-container";
+  const aboutIcon = HEADER_ICON.about;
   const aboutPopup = page.locator(".about-popup");
 
   // before click

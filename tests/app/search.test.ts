@@ -4,12 +4,12 @@ import { expect, test } from "@playwright/test";
 import {
   assertNumPlaces,
   DEFAULT_PLACE_RANGE,
+  HEADER_ICON,
   loadMap,
-  openFilter,
 } from "./utils";
 
 async function openSearch(page: Page): Promise<void> {
-  await page.locator(".header-search-icon-container").click();
+  await page.locator(HEADER_ICON.search).click();
   // div.choices is position:fixed so #search-popup has zero intrinsic height;
   // wait for the auto-opened dropdown itself instead
   await page.locator(".choices__list--dropdown").waitFor({ state: "visible" });
@@ -30,9 +30,8 @@ async function getDropdownLabels(page: Page): Promise<string[]> {
 
 test("search changes what is shown", async ({ page }) => {
   await loadMap(page);
-  await openFilter(page);
+  await openSearch(page);
 
-  await page.locator(".header-search-icon-container").click();
   await page
     .locator(".choices__list--dropdown > .choices__list > .choices__item")
     .nth(2)
@@ -44,84 +43,81 @@ test("search changes what is shown", async ({ page }) => {
   await assertNumPlaces(page, DEFAULT_PLACE_RANGE);
 });
 
-test("search: typing 'Springfield' shows more than 4 results", async ({
-  page,
-}) => {
-  await loadMap(page);
-  await openSearch(page);
-  await searchFor(page, "Springfield");
+interface SearchCase {
+  desc: string;
+  query: string;
+  minResults?: number;
+  matchAll?: RegExp;
+  excludes?: RegExp;
+  firstLabel?: string;
+  includesLabel?: string;
+}
 
-  const labels = await getDropdownLabels(page);
-  expect(labels.length).toBeGreaterThanOrEqual(5);
-  for (const label of labels) {
-    expect(label).toMatch(/Springfield/i);
-  }
-});
+const TESTS: SearchCase[] = [
+  {
+    desc: "typing 'Springfield' shows more than 4 results",
+    query: "Springfield",
+    minResults: 5,
+    matchAll: /Springfield/i,
+  },
+  {
+    desc: "typing 'Springfield, Ohio' narrows to Springfield OH",
+    query: "Springfield, Ohio",
+    firstLabel: "Springfield, Ohio, United States",
+  },
+  {
+    desc: "typing 'Springfield Ohio' (no comma) narrows to Springfield OH",
+    query: "Springfield Ohio",
+    firstLabel: "Springfield, Ohio, United States",
+  },
+  {
+    desc: "typing 'Salem' shows more than 4 results",
+    query: "Salem",
+    minResults: 5,
+    matchAll: /Salem/i,
+  },
+  {
+    desc: "typing 'Salem, Oregon' shows Salem OR and not Alamogordo",
+    query: "Salem, Oregon",
+    firstLabel: "Salem, Oregon, United States",
+    excludes: /Alamogordo/i,
+  },
+  {
+    desc: "typing 'California' includes 'California, United States'",
+    query: "California",
+    includesLabel: "California, United States",
+  },
+  {
+    desc: "typing 'Salem Oregon' (no comma) shows Salem OR",
+    query: "Salem Oregon",
+    firstLabel: "Salem, Oregon, United States",
+  },
+];
 
-test("search: typing 'Springfield, Ohio' narrows to Springfield OH", async ({
-  page,
-}) => {
-  await loadMap(page);
-  await openSearch(page);
-  await searchFor(page, "Springfield, Ohio");
+for (const searchCase of TESTS) {
+  test(`search: ${searchCase.desc}`, async ({ page }) => {
+    await loadMap(page);
+    await openSearch(page);
+    await searchFor(page, searchCase.query);
 
-  const labels = await getDropdownLabels(page);
-  expect(labels[0]).toBe("Springfield, Ohio, United States");
-});
+    const labels = await getDropdownLabels(page);
 
-test("search: typing 'Springfield Ohio' (no comma) narrows to Springfield OH", async ({
-  page,
-}) => {
-  await loadMap(page);
-  await openSearch(page);
-  await searchFor(page, "Springfield Ohio");
-
-  const labels = await getDropdownLabels(page);
-  expect(labels[0]).toBe("Springfield, Ohio, United States");
-});
-
-test("search: typing 'Salem' shows more than 4 results", async ({ page }) => {
-  await loadMap(page);
-  await openSearch(page);
-  await searchFor(page, "Salem");
-
-  const labels = await getDropdownLabels(page);
-  expect(labels.length).toBeGreaterThanOrEqual(5);
-  for (const label of labels) {
-    expect(label).toMatch(/Salem/i);
-  }
-});
-
-test("search: typing 'Salem, Oregon' shows Salem OR and not Alamogordo", async ({
-  page,
-}) => {
-  await loadMap(page);
-  await openSearch(page);
-  await searchFor(page, "Salem, Oregon");
-
-  const labels = await getDropdownLabels(page);
-  expect(labels[0]).toBe("Salem, Oregon, United States");
-  expect(labels.some((l) => /Alamogordo/i.test(l))).toBe(false);
-});
-
-test("search: typing 'California' includes 'California, United States'", async ({
-  page,
-}) => {
-  await loadMap(page);
-  await openSearch(page);
-  await searchFor(page, "California");
-
-  const labels = await getDropdownLabels(page);
-  expect(labels).toContain("California, United States");
-});
-
-test("search: typing 'Salem Oregon' (no comma) shows Salem OR", async ({
-  page,
-}) => {
-  await loadMap(page);
-  await openSearch(page);
-  await searchFor(page, "Salem Oregon");
-
-  const labels = await getDropdownLabels(page);
-  expect(labels[0]).toBe("Salem, Oregon, United States");
-});
+    if (searchCase.minResults !== undefined) {
+      expect(labels.length).toBeGreaterThanOrEqual(searchCase.minResults);
+    }
+    if (searchCase.matchAll) {
+      for (const label of labels) {
+        expect(label).toMatch(searchCase.matchAll);
+      }
+    }
+    if (searchCase.excludes) {
+      expect(labels.some((l) => searchCase.excludes?.test(l))).toBe(false);
+    }
+    if (searchCase.firstLabel !== undefined) {
+      expect(labels[0]).toBe(searchCase.firstLabel);
+    }
+    if (searchCase.includesLabel !== undefined) {
+      expect(labels).toContain(searchCase.includesLabel);
+    }
+  });
+}

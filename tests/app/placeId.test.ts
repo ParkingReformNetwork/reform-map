@@ -57,7 +57,7 @@ test.describe("determinePlaceIdForDirectus", () => {
   });
 });
 
-test("determinesupplementalPlaceInfo", () => {
+test("determineSupplementalPlaceInfo", () => {
   expect(
     determineSupplementalPlaceInfo({
       name: "Tucson",
@@ -92,7 +92,7 @@ test("determinesupplementalPlaceInfo", () => {
   ).toBeNull();
 });
 
-test("stripCountryFromPlaceId", () => {
+test("determinePlaceIdWithoutCountry", () => {
   expect(
     determinePlaceIdWithoutCountry({
       name: "San Francisco",
