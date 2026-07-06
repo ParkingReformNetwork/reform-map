@@ -1,8 +1,10 @@
 import type { ReformDate } from "./ReformDate";
 
-/// Use in the `default` case of a `switch` to make TypeScript error at compile
-/// time if a new variant is added to the switched-on union without a
-/// corresponding case.
+/**
+ * Use in the `default` case of a `switch` to make TypeScript error at compile
+ * time if a new variant is added to the switched-on union without a
+ * corresponding case.
+ */
 export function assertNever(value: never): never {
   throw new Error(`Unexpected value: ${JSON.stringify(value)}`);
 }
@@ -13,17 +15,19 @@ export const ALL_PLACE_TYPES = ["city", "county", "state", "country"] as const;
 export type PlaceType = (typeof ALL_PLACE_TYPES)[number];
 
 export interface RawPlace {
-  // Full name of the town, city, county, province, state, or country.
+  /** Full name of the town, city, county, province, state, or country. */
   name: string;
-  // State or province abbreviation. Not set for countries.
+  /** State or province abbreviation. Not set for countries. */
   state: string | null;
   country: string;
   type: PlaceType;
-  // The value used for the URL. Note that this may be an outdated value
-  // so that we don't require a redirect.
+  /**
+   * The value used for the URL. Note that this may be an outdated value
+   * so that we don't require a redirect.
+   */
   encoded: string;
   pop: number;
-  // [long, lat]
+  /** [long, lat] */
   coord: [number, number];
   repeal: boolean | undefined;
 }
@@ -45,12 +49,12 @@ export type PolicyType = (typeof ALL_POLICY_TYPE)[number];
 export const ALL_REFORM_STATUS = ["adopted", "proposed", "repealed"] as const;
 export type ReformStatus = (typeof ALL_REFORM_STATUS)[number];
 
-/// Every benefit district record has these values. It is missing some fields like `date`.
+/** Every benefit district record has these values. It is missing some fields like `date`. */
 export interface BaseBenefitDistrict {
   status: ReformStatus;
 }
 
-/// Every land use policy has these values. It is missing some fields like `date`.
+/** Every land use policy has these values. It is missing some fields like `date`. */
 export interface BaseLandUsePolicy {
   status: ReformStatus;
   scope: string[];
@@ -88,7 +92,7 @@ export interface ProcessedCoreEntry {
 }
 export const UNKNOWN_YEAR = "unknown";
 
-/// The types from `data/option-values.json`.
+/** The types from `data/option-values.json`. */
 export interface OptionValues {
   placeType: PlaceType[];
   policy: PolicyType[];

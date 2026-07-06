@@ -83,7 +83,7 @@ class BidirectionalMap<K extends string, V extends string> {
 
 export const POLICY_TYPE_NAME = "reform";
 export const STATUS_NAME = "status";
-export const ALL_MINIMUMS_REPEALED_TOGGLE_NAME = "repeal";
+export const ALL_MINIMUMS_REMOVED_TOGGLE_NAME = "repeal";
 export const YEAR_NAME = "yr";
 export const COUNTRY_NAME = "cntry";
 export const PLACE_TYPE_NAME = "juris";
@@ -155,7 +155,7 @@ export function encodeFilterState(filterState: FilterState): URLSearchParams {
     DEFAULT_FILTER_STATE.allMinimumsRemovedToggle
   ) {
     result.append(
-      ALL_MINIMUMS_REPEALED_TOGGLE_NAME,
+      ALL_MINIMUMS_REMOVED_TOGGLE_NAME,
       filterState.allMinimumsRemovedToggle ? BOOL_TRUE : BOOL_FALSE,
     );
   }
@@ -211,7 +211,7 @@ export function encodeFilterState(filterState: FilterState): URLSearchParams {
   return result;
 }
 
-function decodeAllMinimumsRepealed(v: string | null): boolean {
+function decodeAllMinimumsRemoved(v: string | null): boolean {
   if (v === BOOL_TRUE) return true;
   if (v === BOOL_FALSE) return false;
   return DEFAULT_FILTER_STATE.allMinimumsRemovedToggle;
@@ -249,8 +249,8 @@ export function decodeFilterState(queryString: string): FilterState {
       DEFAULT_FILTER_STATE.policyTypeFilter,
     status:
       STATUS_MAP.decode(params.get(STATUS_NAME)) ?? DEFAULT_FILTER_STATE.status,
-    allMinimumsRemovedToggle: decodeAllMinimumsRepealed(
-      params.get(ALL_MINIMUMS_REPEALED_TOGGLE_NAME),
+    allMinimumsRemovedToggle: decodeAllMinimumsRemoved(
+      params.get(ALL_MINIMUMS_REMOVED_TOGGLE_NAME),
     ),
     includedPolicyChanges: POLICY_TYPE_MAP.decodeSet(
       params.get(INCLUDED_POLICY_NAME),

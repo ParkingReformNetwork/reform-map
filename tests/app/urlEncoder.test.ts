@@ -5,7 +5,7 @@ import {
   type FilterState,
 } from "../../src/js/state/FilterState";
 import {
-  ALL_MINIMUMS_REPEALED_TOGGLE_NAME,
+  ALL_MINIMUMS_REMOVED_TOGGLE_NAME,
   COUNTRY_MAP,
   COUNTRY_NAME,
   DEFAULT_FILTER_STATE,
@@ -130,7 +130,7 @@ test.describe("decodeFilterState", () => {
     const url = [
       POLICY_TYPE_NAME,
       STATUS_NAME,
-      ALL_MINIMUMS_REPEALED_TOGGLE_NAME,
+      ALL_MINIMUMS_REMOVED_TOGGLE_NAME,
       YEAR_NAME,
       INCLUDED_POLICY_NAME,
       PLACE_TYPE_NAME,

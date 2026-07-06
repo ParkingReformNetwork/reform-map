@@ -51,9 +51,9 @@ export const SEARCH_RESET_HTML = `<button class="counter-search-reset" role="but
 export const TABLE_DOWNLOAD_HTML = `<button class="counter-table-download" role="button" aria-label="download table as CSV">download as CSV</button>`;
 
 interface PolicyTypeNouns {
-  // The full noun phrase, e.g. "parking maximums", used on its own.
+  /** The full noun phrase, e.g. "parking maximums", used on its own. */
   full: string;
-  // The shortened noun, e.g. "maximums", used as a list item alongside other policy types.
+  /** The shortened noun, e.g. "maximums", used as a list item alongside other policy types. */
   listItem: string;
 }
 

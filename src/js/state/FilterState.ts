@@ -36,19 +36,21 @@ export const ALL_POLICY_TYPE_FILTER = [
 ] as const;
 export type PolicyTypeFilter = (typeof ALL_POLICY_TYPE_FILTER)[number];
 
-// Note that this only tracks state set by the user.
-// Computed values are handled elsewhere.
-//
-// This is a single unified global view of the state, even though we
-// have multiple datasets like 'remove parking minimums'. Some of the
-// option groups are not relevant to certain datasets; for example,
-// "any parking reform" will ignore `scope`. Likewise, certain values
-// within an option group are irrelevant to certain data sets; for example,
-// while all datasets have 'country', their entries usually only have a subset
-// of the total set of countries across all datsets. Nevertheless,
-// we unify the state so that it persists when changing the policy type.
-//
-// Keep key names in alignment with DataSetSpecificOptions in filter-features/options.ts
+/**
+ * Note that this only tracks state set by the user.
+ * Computed values are handled elsewhere.
+ *
+ * This is a single unified global view of the state, even though we
+ * have multiple datasets like 'remove parking minimums'. Some of the
+ * option groups are not relevant to certain datasets; for example,
+ * "any parking reform" will ignore `scope`. Likewise, certain values
+ * within an option group are irrelevant to certain data sets; for example,
+ * while all datasets have 'country', their entries usually only have a subset
+ * of the total set of countries across all datsets. Nevertheless,
+ * we unify the state so that it persists when changing the policy type.
+ *
+ * Keep key names in alignment with DataSetSpecificOptions in filter-features/options.ts
+ */
 export interface FilterState {
   searchInput: string | null;
   policyTypeFilter: PolicyTypeFilter;
@@ -75,8 +77,10 @@ interface PlaceMatchSinglePolicy {
 
 interface PlaceMatchAnyPolicy {
   type: "any";
-  // Note that we still record all policy types a place has, even ones the
-  // filter state is actively excluding via includedPolicyChanges.
+  /**
+   * Note that we still record all policy types a place has, even ones the
+   * filter state is actively excluding via includedPolicyChanges.
+   */
   policyTypes: PolicyType[];
 }
 
@@ -168,12 +172,14 @@ export class PlaceFilterManager {
     return this.ensureCache().matchedPlaceTypes;
   }
 
-  /// The policy types the matched places have.
-  ///
-  /// This is only set when the policy type is 'any parking reform'.
-  ///
-  /// Stores all policy types belonging to matched places, even if the
-  /// filter state is set to ignore that policy type.
+  /**
+   * The policy types the matched places have.
+   *
+   * This is only set when the policy type is 'any parking reform'.
+   *
+   * Stores all policy types belonging to matched places, even if the
+   * filter state is set to ignore that policy type.
+   */
   get matchedPolicyTypes(): Set<PolicyType> {
     return this.ensureCache().matchedPolicyTypesForAnyPolicy;
   }
@@ -196,7 +202,7 @@ export class PlaceFilterManager {
     this.state.initialize();
   }
 
-  /// Recompute the CacheEntry if FilterState has changed.
+  /** Recompute the CacheEntry if FilterState has changed. */
   private ensureCache(): CacheEntry {
     if (this.cache && this.cache.version === this.stateVersion) {
       return this.cache;

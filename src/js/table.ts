@@ -185,12 +185,12 @@ export interface TableRow {
   placeType: string;
   population: string;
   url: string;
-  // Present on "any parking reform" rows.
+  /** Present on "any parking reform" rows. */
   reduceMin?: boolean;
   rmMin?: boolean;
   addMax?: boolean;
   benefitDistrict?: boolean;
-  // Present on single-policy rows.
+  /** Present on single-policy rows. */
   policyIdx?: number;
   date?: ReformDate | undefined;
   status?: ReformStatus;
@@ -199,10 +199,12 @@ export interface TableRow {
 }
 
 export interface TableDatasets {
-  // "any parking reform" needs a distinct dataset per ReformStatus because the
-  // boolean column values change with the status. The single-policy datasets
-  // can be shared across statuses because the filter (from FilterState) already
-  // removes records that don't match the current status.
+  /**
+   * "any parking reform" needs a distinct dataset per ReformStatus because the
+   * boolean column values change with the status. The single-policy datasets
+   * can be shared across statuses because the filter (from FilterState) already
+   * removes records that don't match the current status.
+   */
   any: Record<ReformStatus, TableRow[]>;
   reduceMin: TableRow[];
   rmMin: TableRow[];

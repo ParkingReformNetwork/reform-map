@@ -178,8 +178,10 @@ type FilterGroupParams = {
   htmlName: string;
   filterStateKey: keyof DataSetSpecificOptions;
   legend: string | ((state: FilterState) => string);
-  /// If not set to true, the option will use Lodash's `capitalize()`. This
-  /// only impacts the UI and not the underlying data.
+  /**
+   * If not set to true, the option will use Lodash's `capitalize()`. This
+   * only impacts the UI and not the underlying data.
+   */
   preserveCapitalization?: boolean;
   useTwoColumns?: boolean;
   hide?: (state: FilterState) => boolean;

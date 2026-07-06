@@ -54,7 +54,7 @@ const INIT_LOAD_INSTRUMENTATION = `
 `;
 
 interface InitialLoadMarks {
-  // Cumulative milliseconds from navigation start.
+  /** Cumulative milliseconds from navigation start. */
   responseEndMs: number;
   fcpMs: number;
   dataFetchedMs: number;
@@ -116,17 +116,21 @@ async function assertServerReachable(): Promise<void> {
 }
 
 interface RunResult {
-  // Initial load broken into cumulative marks from navigation start, so a
-  // regression can be attributed to network, first paint, the (dominant) data
-  // download, JS build, or marker paint -- rather than a single opaque number.
+  /**
+   * Initial load broken into cumulative marks from navigation start, so a
+   * regression can be attributed to network, first paint, the (dominant) data
+   * download, JS build, or marker paint -- rather than a single opaque number.
+   */
   initialResponseEndMs: number;
   initialFcpMs: number;
   initialDataFetchedMs: number;
   initialCounterReadyMs: number;
   initialPaintedMs: number;
   tableLoadMs: number;
-  // "Ms" fields are time-to-paint (felt latency); "JsMs" fields are the
-  // synchronous JS portion only, kept to show how much of the cost is paint.
+  /**
+   * "Ms" fields are time-to-paint (felt latency); "JsMs" fields are the
+   * synchronous JS portion only, kept to show how much of the cost is paint.
+   */
   filterReduceMinMs: number;
   filterReduceMinJsMs: number;
   filterResetMs: number;
@@ -135,7 +139,7 @@ interface RunResult {
   searchInitJsMs: number;
   totalBytes: number;
   numPlaces: number;
-  // URL -> bytes transferred, for reporting the largest resources.
+  /** URL -> bytes transferred, for reporting the largest resources. */
   resources: Record<string, number>;
 }
 
