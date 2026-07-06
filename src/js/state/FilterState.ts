@@ -6,6 +6,7 @@ import {
 import type { ReformDate } from "../model/ReformDate";
 import {
   ALL_POLICY_TYPE,
+  assertNever,
   type PlaceId,
   type PlaceType,
   type PolicyType,
@@ -364,7 +365,7 @@ export class PlaceFilterManager {
       }
 
       default:
-        throw new Error(`Unrecognized policy type`);
+        return assertNever(filterState.policyTypeFilter);
     }
   }
 }
