@@ -8,6 +8,9 @@ import type {
 } from "../../src/js/model/types";
 import { loadMap, onScreenMarkerPoints } from "./utils";
 
+// This test uses snapshot testing (https://jestjs.io/docs/snapshot-testing#updating-snapshots). If the tests fail and the changes
+// are valid, run `npm test -- --updateSnapshot`.
+
 test("scorecard pops up and closes", async ({ page }) => {
   await loadMap(page);
   const closeIcon = page.locator(".scorecard-close-icon-container");
@@ -45,7 +48,12 @@ test("scorecard pops up and closes", async ({ page }) => {
   await expect(scorecard).toBeHidden();
 });
 
-test("generateScorecard()", () => {
+// biome-ignore lint/correctness/noEmptyPattern: Playwright requires the fixtures arg to be an object destructuring pattern.
+test("generateScorecard()", ({}, testInfo) => {
+  // Normally, Playwright saves the operating system name in the snapshot results.
+  // Our test is OS-independent, so turn this off.
+  testInfo.snapshotSuffix = "";
+
   const place: ProcessedPlace = {
     name: "My City",
     state: "Arizona",
