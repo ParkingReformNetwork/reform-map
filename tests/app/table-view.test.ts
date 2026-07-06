@@ -1,9 +1,9 @@
 import { expect, type Page, test } from "@playwright/test";
-import { filterToCountry, loadMap, openFilter } from "./utils";
+import { filterToCountry, HEADER_ICON, loadMap, openFilter } from "./utils";
 
 /** Switch to the table view and wait for it to become visible. */
 async function showTable(page: Page): Promise<void> {
-  await page.locator(".header-table-icon-container").click();
+  await page.locator(HEADER_ICON.table).click();
   await expect(page.locator("#table-view")).toBeVisible();
 }
 
@@ -104,7 +104,7 @@ test("filtering while on map view is applied when switching to the table", async
   // Establish the unfiltered baseline, then return to the map.
   await showTable(page);
   const baseline = await activeRowCount(page);
-  await page.locator(".header-map-icon-container").click();
+  await page.locator(HEADER_ICON.map).click();
   await expect(page.locator("#table-view")).toBeHidden();
 
   // Filter while the table is hidden (this refresh is queued, not applied yet).

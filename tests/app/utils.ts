@@ -7,6 +7,14 @@ import { readRawCoreData } from "../../scripts/lib/data";
 export const DEFAULT_ALL_MINIMUMS_RANGE: [number, number] = [120, 200];
 export const DEFAULT_PLACE_RANGE: [number, number] = [6000, 8500];
 
+export const HEADER_ICON = {
+  about: ".header-about-icon-container",
+  filter: ".header-filter-icon-container",
+  map: ".header-map-icon-container",
+  search: ".header-search-icon-container",
+  table: ".header-table-icon-container",
+};
+
 export async function loadMap(page: Page): Promise<void> {
   await page.goto("");
   // Wait until markers have been added to the map.
@@ -86,7 +94,7 @@ export async function onScreenMarkerPoints(
 }
 
 export async function openFilter(page: Page): Promise<void> {
-  await page.locator(".header-filter-icon-container").click();
+  await page.locator(HEADER_ICON.filter).click();
 }
 
 export async function selectToggle(page: Page): Promise<void> {
