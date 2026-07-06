@@ -7,13 +7,13 @@ import { readRawCoreData } from "../../scripts/lib/data";
 export const DEFAULT_ALL_MINIMUMS_RANGE: [number, number] = [120, 200];
 export const DEFAULT_PLACE_RANGE: [number, number] = [6000, 8500];
 
-export const loadMap = async (page: Page): Promise<void> => {
+export async function loadMap(page: Page): Promise<void> {
   await page.goto("");
   // Wait until markers have been added to the map.
   await page.waitForFunction(
     () => (window.mapTestHandles?.markerGroup.getLayers().length ?? 0) > 0,
   );
-};
+}
 
 async function getNumMapMarkers(page: Page): Promise<number> {
   return page.evaluate(
@@ -26,10 +26,10 @@ export async function getTotalNumPlaces(): Promise<number> {
   return Object.keys(data).length;
 }
 
-export const assertNumPlaces = async (
+export async function assertNumPlaces(
   page: Page,
   range: [number, number],
-): Promise<void> => {
+): Promise<void> {
   await expect
     .poll(() => getNumMapMarkers(page))
     .toBeGreaterThanOrEqual(range[0]);
@@ -45,7 +45,7 @@ export const assertNumPlaces = async (
     counterNumPlaces = counterNumMatch ? parseInt(counterNumMatch[0], 10) : 0;
   }
   expect(mapNumPlaces).toEqual(counterNumPlaces);
-};
+}
 
 /**
  * Get the viewport pixel coordinates for markers currently on screen.
@@ -89,6 +89,6 @@ export async function openFilter(page: Page): Promise<void> {
   await page.locator(".header-filter-icon-container").click();
 }
 
-export const selectToggle = async (page: Page): Promise<void> => {
+export async function selectToggle(page: Page): Promise<void> {
   await page.locator("#filter-all-minimums-toggle-label").click();
-};
+}

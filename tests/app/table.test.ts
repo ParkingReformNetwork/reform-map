@@ -74,8 +74,9 @@ test("compareDates handles descending and ascending", () => {
   expect(compare(undefined, undefined, "desc")).toBe(0);
 });
 
-const cell = (value: unknown): CellComponent =>
-  ({ getValue: () => value }) as CellComponent;
+function cell(value: unknown): CellComponent {
+  return { getValue: () => value } as CellComponent;
+}
 
 test("formatStringArrays joins with '; ' and renders null as empty", () => {
   expect(formatStringArrays(cell(["commercial", "residential"]))).toEqual(

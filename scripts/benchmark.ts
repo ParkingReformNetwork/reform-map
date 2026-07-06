@@ -16,10 +16,10 @@ const POLICY_DROPDOWN = "#filter-policy-type-dropdown";
 
 // The counters start empty and are populated with text beginning "Showing"
 // once the app finishes rendering. See src/js/filter-features/counters.ts.
-const COUNTER_READY = (selector: string): boolean => {
+function COUNTER_READY(selector: string): boolean {
   const el = document.querySelector(selector);
   return !!el && (el.textContent ?? "").trim().startsWith("Showing");
-};
+}
 
 // Instrumentation installed BEFORE the app runs so we can capture two
 // app-specific moments on the browser's own clock (relative to navigation
@@ -536,8 +536,12 @@ function runToNested(r: RunResult): Record<string, unknown> {
   return { ...tasks, totalBytes: r.totalBytes };
 }
 
-const fmtMs = (ms: number): string => `${ms.toFixed(0)} ms`;
-const fmtMb = (bytes: number): string => `${(bytes / 1_000_000).toFixed(2)} MB`;
+function fmtMs(ms: number): string {
+  return `${ms.toFixed(0)} ms`;
+}
+function fmtMb(bytes: number): string {
+  return `${(bytes / 1_000_000).toFixed(2)} MB`;
+}
 
 function gitCommit(): string {
   try {
