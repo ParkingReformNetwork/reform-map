@@ -103,7 +103,9 @@ export default function initScorecard(
   const scorecardState = new Observable<ScorecardState>("scorecard", {
     type: "hidden",
   });
-  scorecardState.subscribe((state) => updateScorecardUI(state));
+  scorecardState.subscribe("update scorecard UI", (state) =>
+    updateScorecardUI(state),
+  );
 
   const scorecardContainer = document.querySelector("#scorecard-container");
   const header = document.querySelector(".top-header");
@@ -168,15 +170,18 @@ export default function initScorecard(
   });
 
   // Closing the scorecard resets search.
-  scorecardState.subscribe(({ type }) => {
-    if (
-      scorecardState.isInitialized &&
-      type === "hidden" &&
-      filterManager.getState().searchInput !== null
-    ) {
-      filterManager.update({ searchInput: null });
-    }
-  }, "reset search FilterState when scorecard closed");
+  scorecardState.subscribe(
+    "reset search FilterState when scorecard closed",
+    ({ type }) => {
+      if (
+        scorecardState.isInitialized &&
+        type === "hidden" &&
+        filterManager.getState().searchInput !== null
+      ) {
+        filterManager.update({ searchInput: null });
+      }
+    },
+  );
 
   scorecardState.initialize();
 }

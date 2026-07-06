@@ -67,5 +67,5 @@ export function addViewToggleSubscribers(
   observable: ViewStateObservable,
   table: Tabulator,
 ): void {
-  observable.subscribe((state) => updateUI(table, state), "switch app view");
+  observable.subscribe("switch app view", (state) => updateUI(table, state));
 }

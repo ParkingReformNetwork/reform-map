@@ -154,14 +154,17 @@ export function initPopulationSlider(
 
   // Update UI whenever accordion is expanded. Note that the accordion
   // must be visible for the width calculations to work.
-  accordionStateObservable.subscribe(({ hidden }) => {
-    if (!hidden && !optionsContainer.hidden) {
-      updateSlidersUI(
-        filterManager.getState().populationSliderIndexes,
-        sliders,
-      );
-    }
-  }, "render population slider");
+  accordionStateObservable.subscribe(
+    "render population slider",
+    ({ hidden }) => {
+      if (!hidden && !optionsContainer.hidden) {
+        updateSlidersUI(
+          filterManager.getState().populationSliderIndexes,
+          sliders,
+        );
+      }
+    },
+  );
 
   // Also update UI when values change
   let priorPopulationSliderIndexes = populationSliderIndexes;

@@ -188,7 +188,7 @@ export class PlaceFilterManager {
   }
 
   subscribe(id: string, observer: (state: FilterState) => void): void {
-    this.state.subscribe(observer, id);
+    this.state.subscribe(id, observer);
   }
 
   initialize(): void {

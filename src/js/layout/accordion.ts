@@ -50,7 +50,9 @@ export function wireAccordion(
     observableId,
     initialState,
   );
-  accordionState.subscribe((state) => updateAccordionUI(elements, state));
+  accordionState.subscribe(`update ${observableId} accordion UI`, (state) =>
+    updateAccordionUI(elements, state),
+  );
   elements.accordionButton.addEventListener("click", () => {
     const prior = accordionState.getValue();
     accordionState.setValue({ ...prior, expanded: !prior.expanded });
