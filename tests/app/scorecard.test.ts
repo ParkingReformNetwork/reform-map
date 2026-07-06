@@ -11,12 +11,7 @@ import { loadMap, onScreenMarkerPoints } from "./utils";
 test("scorecard pops up and closes", async ({ page }) => {
   await loadMap(page);
   const closeIcon = page.locator(".scorecard-close-icon-container");
-
-  const scorecardIsVisible = async () =>
-    page.$eval(
-      ".scorecard-container",
-      (el) => el instanceof HTMLElement && !el.hidden,
-    );
+  const scorecard = page.locator(".scorecard-container");
 
   // Markers render on the canvas, so we click them at their projected pixel
   // coordinates rather than via a DOM selector.
@@ -27,27 +22,27 @@ test("scorecard pops up and closes", async ({ page }) => {
 
   // click on marker
   await page.mouse.click(firstMarker.x, firstMarker.y);
-  expect(await scorecardIsVisible()).toBe(true);
+  await expect(scorecard).toBeVisible();
   // close popup
   await closeIcon.click();
-  expect(await scorecardIsVisible()).toBe(false);
+  await expect(scorecard).toBeHidden();
 
   // click on marker
   await page.mouse.click(firstMarker.x, firstMarker.y);
-  expect(await scorecardIsVisible()).toBe(true);
+  await expect(scorecard).toBeVisible();
   // click on another marker
   await page.mouse.click(secondMarker.x, secondMarker.y);
-  expect(await scorecardIsVisible()).toBe(true);
+  await expect(scorecard).toBeVisible();
   // close popup
   await closeIcon.click();
-  expect(await scorecardIsVisible()).toBe(false);
+  await expect(scorecard).toBeHidden();
 
   // click on marker
   await page.mouse.click(firstMarker.x, firstMarker.y);
-  expect(await scorecardIsVisible()).toBe(true);
+  await expect(scorecard).toBeVisible();
   // click outside of popup (not a marker either)
   await page.click("#map-counter");
-  expect(await scorecardIsVisible()).toBe(false);
+  await expect(scorecard).toBeHidden();
 });
 
 test("generateScorecard()", () => {

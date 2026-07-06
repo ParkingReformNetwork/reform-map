@@ -4,34 +4,32 @@ test("about popup can be opened and closed", async ({ page }) => {
   await page.goto("");
 
   const aboutIcon = ".header-about-icon-container";
-
-  const aboutIsVisible = async () =>
-    page.$eval(".about-popup", (el) => el instanceof HTMLElement && !el.hidden);
+  const aboutPopup = page.locator(".about-popup");
 
   // before click
-  expect(await aboutIsVisible()).toBe(false);
+  await expect(aboutPopup).toBeHidden();
 
   // click about icon (open popup)
   await page.click(aboutIcon);
-  expect(await aboutIsVisible()).toBe(true);
+  await expect(aboutPopup).toBeVisible();
 
   // click about icon (close popup)
   await page.click(aboutIcon);
-  expect(await aboutIsVisible()).toBe(false);
+  await expect(aboutPopup).toBeHidden();
 
   // click about icon (open popup)
   await page.click(aboutIcon);
-  expect(await aboutIsVisible()).toBe(true);
+  await expect(aboutPopup).toBeVisible();
 
   // click x icon in popup
   await page.click(".about-popup-close-icon-container");
-  expect(await aboutIsVisible()).toBe(false);
+  await expect(aboutPopup).toBeHidden();
 
   // click about icon (open popup)
   await page.click(aboutIcon);
-  expect(await aboutIsVisible()).toBe(true);
+  await expect(aboutPopup).toBeVisible();
 
   // click header
   await page.click("header");
-  expect(await aboutIsVisible()).toBe(false);
+  await expect(aboutPopup).toBeHidden();
 });
