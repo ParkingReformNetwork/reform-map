@@ -1,6 +1,7 @@
 import fetch from "node-fetch";
 
 import { getCitations, readRawExtendedData } from "./lib/data";
+import { DIRECTUS_BASE_URL } from "./lib/paths";
 
 export async function readCitationIdAndLinks(): Promise<
   Array<[number, string]>
@@ -49,7 +50,7 @@ async function main(): Promise<void> {
   for (const [i, [id, link]] of citationIdAndLinks.entries()) {
     const deadLink = await findDeadLink(link);
     if (deadLink !== null) {
-      const directusEntry = `https://mandates-map.directus.app/admin/content/citations/${id}`;
+      const directusEntry = `${DIRECTUS_BASE_URL}/admin/content/citations/${id}`;
       console.log(`${link} (${directusEntry})`);
     }
 

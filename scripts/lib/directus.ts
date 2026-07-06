@@ -20,6 +20,7 @@ import type {
   PlaceType,
   ReformStatus,
 } from "../../src/js/model/types.js";
+import { DIRECTUS_BASE_URL } from "./paths";
 
 export const CITATIONS_FILES_FOLDER = "f085de08-b747-4251-973d-1752ccc29649";
 
@@ -30,9 +31,9 @@ export const CITATIONS_FILES_FOLDER = "f085de08-b747-4251-973d-1752ccc29649";
 interface Metadata {
   id: number;
   user_created: string;
-  date_created: "datetime";
+  date_created: string;
   user_updated: string;
-  date_updated: "datetime";
+  date_updated: string;
 }
 
 type PolicyRecord = {
@@ -128,11 +129,32 @@ export async function initDirectus(): Promise<DirectusClient> {
   if (!password) throw new Error("Must set the env var DIRECTUS_PASSWORD");
   delete process.env.DIRECTUS_PASSWORD;
 
-  const client = createDirectus("https://mandates-map.directus.app")
+  const client = createDirectus(DIRECTUS_BASE_URL)
     .with(rest())
     .with(authentication());
   await client.login({ email, password });
   return client;
+}
+
+async function fetchAllBatched<T>(
+  label: string,
+  batchSize: number,
+  fetchBatch: (offset: number, limit: number) => Promise<T[]>,
+): Promise<T[]> {
+  const allItems = [];
+  let offset = 0;
+  while (true) {
+    console.log(`Getting '${label}' records ${offset}-${offset + batchSize}`);
+    const batch = await fetchBatch(offset, batchSize);
+
+    allItems.push(...batch);
+    if (batch.length < batchSize) {
+      break;
+    } else {
+      offset += batchSize;
+    }
+  }
+  return allItems;
 }
 
 export async function readItemsBatched<
@@ -151,29 +173,16 @@ export async function readItemsBatched<
       >
     | undefined = undefined,
 ): Promise<ReadItemOutput<Schema, Collection, { fields: Fields }>[]> {
-  const allItems = [];
-  let offset = 0;
-  while (true) {
-    console.log(
-      `Getting '${collection}' records ${offset}-${offset + batchSize}`,
-    );
-    const batch = await client.request(
+  return fetchAllBatched(collection, batchSize, (offset, limit) =>
+    client.request(
       readItems(collection, {
         fields,
-        limit: batchSize,
+        limit,
         offset,
         ...(filter && { filter }),
       }),
-    );
-
-    allItems.push(...batch);
-    if (batch.length < batchSize) {
-      break;
-    } else {
-      offset += batchSize;
-    }
-  }
-  return allItems;
+    ),
+  );
 }
 
 export async function readCitationsFilesBatched<
@@ -183,27 +192,14 @@ export async function readCitationsFilesBatched<
   fields: Fields,
   batchSize: number = 100,
 ): Promise<ReadFileOutput<Schema, { fields: Fields }>[]> {
-  const allItems = [];
-  let offset = 0;
-  while (true) {
-    console.log(
-      `Getting 'directus_files' records ${offset}-${offset + batchSize}`,
-    );
-    const batch = await client.request(
+  return fetchAllBatched("directus_files", batchSize, (offset, limit) =>
+    client.request(
       readFiles({
         fields,
         filter: { folder: { _eq: CITATIONS_FILES_FOLDER } },
-        limit: batchSize,
+        limit,
         offset,
       }),
-    );
-
-    allItems.push(...batch);
-    if (batch.length < batchSize) {
-      break;
-    } else {
-      offset += batchSize;
-    }
-  }
-  return allItems;
+    ),
+  );
 }

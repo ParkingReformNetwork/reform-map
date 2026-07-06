@@ -9,6 +9,7 @@ import {
   type RawPlace,
   UNKNOWN_YEAR,
 } from "../../src/js/model/types";
+import { OPTION_VALUES_DATA_PATH } from "./paths";
 
 /** The option values for a single dataset. */
 class OptionValues {
@@ -168,6 +169,6 @@ export function sortCountries(countries: Set<string>): string[] {
 export async function saveOptionValues(entries: RawCoreEntry[]): Promise<void> {
   const result = determineOptionValues(entries);
   const json = JSON.stringify(result, null, 2);
-  console.log("Writing data/option-values.json");
-  await fs.writeFile("data/option-values.json", json);
+  console.log(`Writing ${OPTION_VALUES_DATA_PATH}`);
+  await fs.writeFile(OPTION_VALUES_DATA_PATH, json);
 }
