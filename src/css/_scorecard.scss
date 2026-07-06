@@ -3,20 +3,15 @@
 @use "theme/colors";
 @use "theme/hover";
 @use "theme/mixins";
+@use "theme/popup";
 @use "theme/spacing";
 @use "theme/icons";
 @use "theme/typography";
 @use "theme/zindex";
-@use "header";
 
 .scorecard-container {
-  z-index: zindex.$scorecard;
-  position: fixed;
-  right: spacing.$map-controls-margin-x;
-  top: calc(header.$header-height + spacing.$map-controls-margin-top);
-
-  max-height: min(spacing.$popup-max-height, 75vh);
-  overflow-y: auto;
+  @include popup.popup-anchor(zindex.$scorecard);
+  @include popup.popup-scroll;
 
   padding: spacing.$container-edge-spacing;
   width: 300px;

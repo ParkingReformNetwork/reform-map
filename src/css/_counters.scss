@@ -4,17 +4,17 @@
 @use "theme/icons";
 @use "theme/links";
 @use "theme/mixins";
+@use "theme/popup";
 @use "theme/spacing";
 @use "theme/typography";
 @use "theme/zindex";
-@use "header";
 @use "zoom";
 
 .map-counter {
-  z-index: zindex.$map-counter;
-  position: fixed;
-  left: calc(zoom.$total-width + spacing.$map-controls-margin-x);
-  top: calc(header.$header-height + spacing.$map-controls-margin-top);
+  @include popup.popup-anchor(
+    zindex.$map-counter,
+    calc(zoom.$total-width + spacing.$map-controls-margin-x)
+  );
 
   font-size: typography.$font-size-base;
   line-height: typography.$line-height-base;

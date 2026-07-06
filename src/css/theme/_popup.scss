@@ -1,0 +1,21 @@
+@use "../header";
+@use "spacing";
+
+// By default, anchors to the right. Pass $left-offset to anchor to the left
+// instead, at that offset.
+@mixin popup-anchor($z, $left-offset: null) {
+  position: fixed;
+  top: calc(header.$header-height + spacing.$map-controls-margin-top);
+  z-index: $z;
+
+  @if $left-offset {
+    left: $left-offset;
+  } @else {
+    right: spacing.$map-controls-margin-x;
+  }
+}
+
+@mixin popup-scroll {
+  max-height: min(spacing.$popup-max-height, 75vh);
+  overflow-y: auto;
+}

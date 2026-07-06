@@ -1,17 +1,14 @@
 @use "theme/borders";
 @use "theme/breakpoints";
 @use "theme/colors";
+@use "theme/popup";
 @use "theme/spacing";
 @use "theme/typography";
 @use "theme/zindex";
-@use "header";
 
 div.choices[data-type*="select-one"] {
   margin-bottom: 0;
-  z-index: zindex.$search;
-  position: fixed;
-  right: spacing.$map-controls-margin-x;
-  top: calc(header.$header-height + spacing.$map-controls-margin-top);
+  @include popup.popup-anchor(zindex.$search);
 
   div.choices__inner {
     color: colors.$black;
