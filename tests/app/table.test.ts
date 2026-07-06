@@ -17,6 +17,7 @@ import {
   rowMatchesFilter,
   tableDownloadFileName,
 } from "../../src/js/table";
+import { makeEntry, makePlace } from "./utils";
 
 test("tableDownloadFileName()", () => {
   expect(tableDownloadFileName("any parking reform", "adopted")).toEqual(
@@ -176,18 +177,13 @@ test("rowMatchesFilter", () => {
 
 test("buildTableData", () => {
   const entries: Record<PlaceId, ProcessedCoreEntry> = {
-    Springfield: {
-      place: {
+    Springfield: makeEntry({
+      place: makePlace({
         name: "Springfield",
         state: "IL",
-        country: "United States",
-        type: "city",
-        encoded: "",
         pop: 48100,
-        repeal: false,
-        coord: [0, 0],
         url: "https://example.com/springfield",
-      },
+      }),
       reduce_min: [
         {
           status: "adopted",
@@ -204,21 +200,17 @@ test("buildTableData", () => {
           date: undefined,
         },
       ],
-    },
-    Metropolis: {
-      place: {
+    }),
+    Metropolis: makeEntry({
+      place: makePlace({
         name: "Metropolis",
         state: null,
-        country: "United States",
         type: "country",
-        encoded: "",
         pop: 1200000,
         repeal: undefined,
-        coord: [0, 0],
-        url: "",
-      },
+      }),
       benefit_district: [{ status: "adopted", date: new ReformDate("2020") }],
-    },
+    }),
   };
 
   const data = buildTableData(entries);
