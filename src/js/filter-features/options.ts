@@ -7,8 +7,10 @@ import {
   type BaseAccordionElements,
   generateAccordion,
   generateCheckbox,
+  generateGroupSelectorButtons,
   wireAccordion,
 } from "../layout/accordion";
+import { createLabeledSelect } from "../layout/dropdown";
 import { createIcon } from "../layout/icons";
 import {
   ALL_POLICY_TYPE,
@@ -214,21 +216,12 @@ function generateAccordionForFilterGroup(
   fieldSet.className = `filter-${params.htmlName}`;
   baseElements.contentContainer.appendChild(fieldSet);
 
-  const groupSelectorButtons = document.createElement("div");
-  groupSelectorButtons.className = "filter-group-selectors-container";
+  const {
+    container: groupSelectorButtons,
+    checkAllButton,
+    uncheckAllButton,
+  } = generateGroupSelectorButtons(params.htmlName);
   fieldSet.appendChild(groupSelectorButtons);
-
-  const checkAllButton = document.createElement("button");
-  checkAllButton.type = "button";
-  checkAllButton.textContent = "Check all";
-  checkAllButton.id = `filter-${params.htmlName}-check-all`;
-  groupSelectorButtons.appendChild(checkAllButton);
-
-  const uncheckAllButton = document.createElement("button");
-  uncheckAllButton.type = "button";
-  uncheckAllButton.textContent = "Uncheck all";
-  uncheckAllButton.id = `filter-${params.htmlName}-uncheck-all`;
-  groupSelectorButtons.appendChild(uncheckAllButton);
 
   const filterOptionsContainer = document.createElement("div");
   filterOptionsContainer.className = "filter-checkbox-options-container";
@@ -447,46 +440,6 @@ function initAllMinimumsToggle(
   );
 }
 
-function initDropdown(
-  dropdownContainer: HTMLDivElement,
-  params: {
-    id: string;
-    className: string;
-    label: string;
-    options: readonly string[];
-    initialValue: string;
-    onChange: (value: string) => void;
-  },
-): void {
-  const container = document.createElement("div");
-  container.className = params.className;
-
-  const label = document.createElement("label");
-  label.htmlFor = params.id;
-  label.textContent = params.label;
-
-  const select = document.createElement("select");
-  select.id = params.id;
-  select.name = params.id;
-
-  params.options.forEach((option) => {
-    const element = document.createElement("option");
-    element.value = option;
-    element.textContent = capitalize(option);
-    select.append(element);
-  });
-
-  select.value = params.initialValue;
-
-  select.addEventListener("change", () => {
-    params.onChange(select.value);
-  });
-
-  container.append(label);
-  container.append(select);
-  dropdownContainer.append(container);
-}
-
 export function initFilterOptions(filterManager: PlaceFilterManager): void {
   // Note that the order of this function determines the order of the filter.
   const filterPopup = document.querySelector<HTMLFormElement>("#filter-popup");
@@ -500,7 +453,7 @@ export function initFilterOptions(filterManager: PlaceFilterManager): void {
   const initialState = filterManager.getState();
 
   // Top-level options that change profoundly the app.
-  initDropdown(datasetDiv, {
+  createLabeledSelect(datasetDiv, {
     id: "filter-policy-type-dropdown",
     className: "filter-policy-type-dropdown-container",
     label: "Reform type",
@@ -509,7 +462,7 @@ export function initFilterOptions(filterManager: PlaceFilterManager): void {
     onChange: (value) =>
       filterManager.update({ policyTypeFilter: value as PolicyTypeFilter }),
   });
-  initDropdown(datasetDiv, {
+  createLabeledSelect(datasetDiv, {
     id: "filter-status-dropdown",
     className: "filter-status-dropdown-container",
     label: "Status",
