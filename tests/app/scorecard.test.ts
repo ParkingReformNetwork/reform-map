@@ -8,6 +8,9 @@ import type {
 } from "../../src/js/model/types";
 import { loadMap, onScreenMarkerPoints } from "./utils";
 
+// This test uses snapshot testing (https://jestjs.io/docs/snapshot-testing#updating-snapshots). If the tests fail and the changes
+// are valid, run `npm test -- --updateSnapshot`.
+
 test("scorecard pops up and closes", async ({ page }) => {
   await loadMap(page);
   const closeIcon = page.locator(".scorecard-close-icon-container");
@@ -45,7 +48,12 @@ test("scorecard pops up and closes", async ({ page }) => {
   await expect(scorecard).toBeHidden();
 });
 
-test("generateScorecard()", () => {
+// biome-ignore lint/correctness/noEmptyPattern: Playwright requires the fixtures arg to be an object destructuring pattern.
+test("generateScorecard()", ({}, testInfo) => {
+  // Normally, Playwright saves the operating system name in the snapshot results.
+  // Our test is OS-independent, so turn this off.
+  testInfo.snapshotSuffix = "";
+
   const place: ProcessedPlace = {
     name: "My City",
     state: "Arizona",
@@ -73,26 +81,7 @@ test("generateScorecard()", () => {
       place,
       add_max: [landUsePolicy],
     }),
-  ).toEqual(
-    `
-    <header class="scorecard-header">
-      <h2 class="scorecard-title">My City<br/><span class="scorecard-supplemental-place-info">Arizona, United States</span></h2>
-      <button
-        class="scorecard-close-icon-container"
-        title="close the place details popup"
-        aria-label="close the place details popup"
-      >
-        <svg aria-hidden="true" width="1em" height="1em"><use href="#icon-circle-xmark"></use></svg>
-      </button>
-    </header>
-    <ul>
-      <li>245,132 residents</li>
-      <li>All parking minimums removed</li>
-    </ul>
-    <div>Reform types:</div><ul><li>Add parking maximums</li></ul>
-    <a class="external-link" target="_blank" href=https://my-site.org>Details and citations <svg aria-hidden="true" width="1em" height="1em"><use href="#icon-arrow-right"></use></svg></a>
-    `,
-  );
+  ).toMatchSnapshot("scorecard-basic.html");
 
   const repealed: ProcessedCoreEntry = {
     place: { ...place, repeal: false },
@@ -103,24 +92,7 @@ test("generateScorecard()", () => {
     rm_min: [landUsePolicy],
     benefit_district: [benefitDistrict],
   };
-  expect(generateScorecard(repealed)).toEqual(
-    `
-    <header class="scorecard-header">
-      <h2 class="scorecard-title">My City<br/><span class="scorecard-supplemental-place-info">Arizona, United States</span></h2>
-      <button
-        class="scorecard-close-icon-container"
-        title="close the place details popup"
-        aria-label="close the place details popup"
-      >
-        <svg aria-hidden="true" width="1em" height="1em"><use href="#icon-circle-xmark"></use></svg>
-      </button>
-    </header>
-    <ul>
-      <li>245,132 residents</li>
-      
-    </ul>
-    <div>Reform types:</div><ul><li>Add parking maximums (proposed and repealed)</li><li>Remove parking minimums (adopted)</li><li>Parking benefit district (proposed)</li></ul>
-    <a class="external-link" target="_blank" href=https://my-site.org>Details and citations <svg aria-hidden="true" width="1em" height="1em"><use href="#icon-arrow-right"></use></svg></a>
-    `,
+  expect(generateScorecard(repealed)).toMatchSnapshot(
+    "scorecard-repealed.html",
   );
 });
