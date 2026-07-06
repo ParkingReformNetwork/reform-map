@@ -1,9 +1,7 @@
 import { expect, test } from "@playwright/test";
 
 import {
-  buildAddMaxText,
-  buildBenefitDistrictText,
-  buildReduceMinText,
+  buildSimplePolicyText,
   determineAnyReform,
   determineHtml,
   determinePlaceDescription,
@@ -146,35 +144,24 @@ test("determineSearch()", () => {
   );
 });
 
-test("buildAddMaxText()", () => {
-  expect(buildAddMaxText("map", "2 places in Mexico", "adopted")).toEqual(
-    "Showing 2 places in Mexico with adopted parking maximums",
-  );
-  expect(buildAddMaxText("map", "2 places in Mexico", "repealed")).toEqual(
-    "Showing 2 places in Mexico with repealed parking maximums",
-  );
-
-  expect(buildAddMaxText("table", "2 places in Mexico", "adopted")).toEqual(
+test("buildSimplePolicyText()", () => {
+  expect(
+    buildSimplePolicyText(
+      "map",
+      "2 places in Mexico",
+      "adopted",
+      "parking maximums",
+    ),
+  ).toEqual("Showing 2 places in Mexico with adopted parking maximums");
+  expect(
+    buildSimplePolicyText(
+      "table",
+      "2 places in Mexico",
+      "adopted",
+      "parking maximums",
+    ),
+  ).toEqual(
     `Showing details about adopted parking maximums for 2 places in Mexico - ${TABLE_DOWNLOAD_HTML}`,
-  );
-  expect(buildAddMaxText("table", "2 places in Mexico", "repealed")).toEqual(
-    `Showing details about repealed parking maximums for 2 places in Mexico - ${TABLE_DOWNLOAD_HTML}`,
-  );
-});
-
-test("buildReduceMinText()", () => {
-  expect(buildReduceMinText("map", "2 places in Mexico", "adopted")).toEqual(
-    "Showing 2 places in Mexico with adopted parking minimum reductions",
-  );
-  expect(buildReduceMinText("map", "2 places in Mexico", "repealed")).toEqual(
-    "Showing 2 places in Mexico with repealed parking minimum reductions",
-  );
-
-  expect(buildReduceMinText("table", "2 places in Mexico", "adopted")).toEqual(
-    `Showing details about adopted parking minimum reductions for 2 places in Mexico - ${TABLE_DOWNLOAD_HTML}`,
-  );
-  expect(buildReduceMinText("table", "2 places in Mexico", "repealed")).toEqual(
-    `Showing details about repealed parking minimum reductions for 2 places in Mexico - ${TABLE_DOWNLOAD_HTML}`,
   );
 });
 
@@ -215,30 +202,6 @@ test("determineRemoveMin()", () => {
     determineRmMin("table", "2 places in Mexico", true, "repealed"),
   ).toEqual(
     `Showing details about repealed parking minimum removals for 2 places in Mexico - ${TABLE_DOWNLOAD_HTML}`,
-  );
-});
-
-test("buildBenefitDistrictText()", () => {
-  expect(
-    buildBenefitDistrictText("map", "2 places in Mexico", "adopted"),
-  ).toEqual(
-    "Showing 2 places in Mexico with adopted parking benefit districts",
-  );
-  expect(
-    buildBenefitDistrictText("map", "2 places in Mexico", "repealed"),
-  ).toEqual(
-    "Showing 2 places in Mexico with repealed parking benefit districts",
-  );
-
-  expect(
-    buildBenefitDistrictText("table", "2 places in Mexico", "adopted"),
-  ).toEqual(
-    `Showing details about adopted parking benefit districts for 2 places in Mexico - ${TABLE_DOWNLOAD_HTML}`,
-  );
-  expect(
-    buildBenefitDistrictText("table", "2 places in Mexico", "repealed"),
-  ).toEqual(
-    `Showing details about repealed parking benefit districts for 2 places in Mexico - ${TABLE_DOWNLOAD_HTML}`,
   );
 });
 
