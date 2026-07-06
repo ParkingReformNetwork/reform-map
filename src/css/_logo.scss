@@ -21,7 +21,7 @@
     bottom: 15px;
   }
   @include breakpoints.gte-md {
-    bottom: 0px;
+    bottom: 0;
   }
 
   img {

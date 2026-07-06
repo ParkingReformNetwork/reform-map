@@ -1,3 +1,5 @@
+@use "sass:math";
+
 @use "theme/borders";
 @use "theme/colors";
 @use "theme/icons";
@@ -174,7 +176,7 @@ $filter-inner-width: calc(
   margin-bottom: spacing.$container-edge-spacing;
 
   .filter-checkbox {
-    min-width: calc(50% - spacing.$element-gap / 2);
+    min-width: calc(50% - math.div(spacing.$element-gap, 2));
     margin: 0;
   }
 }
