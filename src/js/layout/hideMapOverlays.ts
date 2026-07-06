@@ -4,8 +4,8 @@ export default function maybeHideMapOverlays(queryString: string) {
   const params = queryStringToParams(queryString);
   if (!params.has("hide-map-overlays")) return;
 
-  // We cannot use `.hidden` because viewToggle already uses hidden to control if the elements are shown,
-  // and that gets re-set every time viewToggle is called.
+  // We cannot use `.hidden` for prnLogo/mapCounter because viewToggle.ts
+  // resets `.hidden` on these elements every time the view is switched.
   document.querySelector<HTMLElement>(".prn-logo-map")!.style.display = "none";
   document.querySelector<HTMLElement>("#map-counter")!.style.display = "none";
 

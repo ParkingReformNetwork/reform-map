@@ -28,6 +28,9 @@ function updateUI(table: Tabulator, state: ViewState): void {
   if (!viewIcons || !tableView || !mapView || !mapCounter || !prnLogo) return;
   const { tableIcon, mapIcon } = viewIcons;
 
+  // mapCounter/prnLogo `.hidden` is reset here on every view switch, so
+  // hideMapOverlays.ts must use `style.display` instead of `.hidden` to hide
+  // them permanently — don't "fix" that to use `.hidden` for consistency.
   if (state === "map") {
     tableIcon.style.display = "inline-flex";
     mapIcon.style.display = "none";
