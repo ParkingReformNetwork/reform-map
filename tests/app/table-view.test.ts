@@ -1,11 +1,12 @@
 import { expect, type Page, test } from "@playwright/test";
-import { filterToCountry, HEADER_ICON, loadMap, openFilter } from "./utils";
-
-/** Switch to the table view and wait for it to become visible. */
-async function showTable(page: Page): Promise<void> {
-  await page.locator(HEADER_ICON.table).click();
-  await expect(page.locator("#table-view")).toBeVisible();
-}
+import {
+  filterToCountry,
+  HEADER_ICON,
+  loadMap,
+  openFilter,
+  selectPolicyType,
+  showTable,
+} from "./utils";
 
 /** Number of rows currently passing the table's filter. */
 function activeRowCount(page: Page): Promise<number> {
@@ -51,18 +52,14 @@ test("switching policy type loads different columns", async ({ page }) => {
   );
 
   await openFilter(page);
-  await page
-    .locator("#filter-policy-type-dropdown")
-    .selectOption("reduce parking minimums");
+  await selectPolicyType(page, "reduce parking minimums");
   // A land-use dataset swaps in the scope/land columns instead.
   await expect
     .poll(() => columnFields(page))
     .toEqual(expect.arrayContaining(["date", "scope", "landUse"]));
   expect(await columnFields(page)).not.toContain("reduceMin");
 
-  await page
-    .locator("#filter-policy-type-dropdown")
-    .selectOption("parking benefit district");
+  await selectPolicyType(page, "parking benefit district");
   // Benefit districts have a date but no scope/land.
   await expect.poll(() => columnFields(page)).toContain("date");
   expect(await columnFields(page)).not.toContain("scope");

@@ -4,16 +4,9 @@ import { expect, test } from "@playwright/test";
 import {
   assertNumPlaces,
   DEFAULT_PLACE_RANGE,
-  HEADER_ICON,
   loadMap,
+  openSearch,
 } from "./utils";
-
-async function openSearch(page: Page): Promise<void> {
-  await page.locator(HEADER_ICON.search).click();
-  // div.choices is position:fixed so #search-popup has zero intrinsic height;
-  // wait for the auto-opened dropdown itself instead
-  await page.locator(".choices__list--dropdown").waitFor({ state: "visible" });
-}
 
 async function searchFor(page: Page, text: string): Promise<void> {
   // pressSequentially fires per-keystroke events that Choices.js listens to;

@@ -167,7 +167,7 @@ test("buildSimplePolicyText()", () => {
   );
 });
 
-test("determineRemoveMin()", () => {
+test("determineRmMin()", () => {
   expect(determineRmMin("map", "2 places in Mexico", false, "adopted")).toEqual(
     "Showing 2 places in Mexico with adopted parking minimum removals",
   );
