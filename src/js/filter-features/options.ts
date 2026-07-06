@@ -298,17 +298,13 @@ function updateCheckboxVisibility(
     });
 }
 
-function initFilterGroup(
+/** Wire the checkboxes and check-all/uncheck-all buttons so user interaction
+ * updates filter state. */
+function wireFilterGroupEvents(
   filterManager: PlaceFilterManager,
-  optionsContainer: HTMLDivElement,
+  accordionElements: FilterGroupAccordionElements,
   params: FilterGroupParams,
 ): void {
-  const [accordionElements, accordionState] = generateAccordionForFilterGroup(
-    filterManager.getState(),
-    params,
-  );
-  optionsContainer.appendChild(accordionElements.outerContainer);
-
   const currentValues = (): Set<string> =>
     filterManager.getState()[params.filterStateKey];
   const visibleValues = (): Set<string> =>
@@ -343,32 +339,67 @@ function initFilterGroup(
     );
     filterManager.update({ [params.filterStateKey]: next });
   });
+}
 
-  filterManager.subscribe(
-    `possibly update ${params.htmlName} filter UI`,
-    (state) => {
-      accordionElements.fieldSet
-        .querySelectorAll<HTMLInputElement>('input[type="checkbox"]')
-        .forEach((input) => {
-          input.checked = (state[params.filterStateKey] as Set<string>).has(
-            input.dataset.value!,
-          );
-        });
+/** Wire a subscription so filter state changes are reflected back into the
+ * accordion's checkboxes, visibility, stats, and title. */
+function wireFilterGroupSync(
+  filterManager: PlaceFilterManager,
+  accordionElements: FilterGroupAccordionElements,
+  accordionState: Observable<AccordionState>,
+  params: FilterGroupParams,
+): void {
+  function syncCheckedState(state: FilterState): void {
+    accordionElements.fieldSet
+      .querySelectorAll<HTMLInputElement>('input[type="checkbox"]')
+      .forEach((input) => {
+        input.checked = (state[params.filterStateKey] as Set<string>).has(
+          input.dataset.value!,
+        );
+      });
+  }
 
-      updateCheckboxVisibility(
-        FILTER_OPTIONS.getOptions(state.policyTypeFilter, state.status)[
-          params.filterStateKey
-        ],
-        accordionElements.fieldSet,
-      );
-      updateCheckboxStats(accordionState, accordionElements.fieldSet);
+  function syncVisibility(state: FilterState): void {
+    updateCheckboxVisibility(
+      FILTER_OPTIONS.getOptions(state.policyTypeFilter, state.status)[
+        params.filterStateKey
+      ],
+      accordionElements.fieldSet,
+    );
+  }
 
-      const priorAccordionState = accordionState.getValue();
-      const hidden = params.hide ? params.hide(state) : false;
-      const title = resolveLegend(params.legend, state);
-      accordionState.setValue({ ...priorAccordionState, title, hidden });
-    },
+  function syncStats(): void {
+    updateCheckboxStats(accordionState, accordionElements.fieldSet);
+  }
+
+  function syncAccordionTitleAndVisibility(state: FilterState): void {
+    const priorAccordionState = accordionState.getValue();
+    const hidden = params.hide ? params.hide(state) : false;
+    const title = resolveLegend(params.legend, state);
+    accordionState.setValue({ ...priorAccordionState, title, hidden });
+  }
+
+  filterManager.subscribe(`update ${params.htmlName} filter UI`, (state) => {
+    syncCheckedState(state);
+    syncVisibility(state);
+    syncStats();
+    syncAccordionTitleAndVisibility(state);
+  });
+}
+
+function initFilterGroup(
+  filterManager: PlaceFilterManager,
+  optionsContainer: HTMLDivElement,
+  params: FilterGroupParams,
+): void {
+  const [accordionElements, accordionState] = generateAccordionForFilterGroup(
+    filterManager.getState(),
+    params,
   );
+  optionsContainer.appendChild(accordionElements.outerContainer);
+
+  wireFilterGroupEvents(filterManager, accordionElements, params);
+  wireFilterGroupSync(filterManager, accordionElements, accordionState, params);
 }
 
 function initOutermostContainers(
