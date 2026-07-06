@@ -8,6 +8,7 @@
 
 import { readRawCoreData } from "./lib/data";
 import { saveOptionValues } from "./lib/optionValues";
+import { runScript } from "./lib/runScript";
 
 async function main(): Promise<void> {
   const coreData = await readRawCoreData();
@@ -15,9 +16,4 @@ async function main(): Promise<void> {
   process.exit(0);
 }
 
-if (process.env.NODE_ENV !== "test") {
-  main().catch((error) => {
-    console.error(error);
-    process.exit(1);
-  });
-}
+runScript(main);

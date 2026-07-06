@@ -36,6 +36,7 @@ import {
 import { getLongLat, initGeocoder } from "./lib/geocoder";
 import { saveOptionValues } from "./lib/optionValues";
 import { CORE_DATA_PATH, EXTENDED_DATA_PATH } from "./lib/paths";
+import { runScript } from "./lib/runScript";
 
 // --------------------------------------------------------------------------
 // Read prior data
@@ -636,9 +637,4 @@ async function main(): Promise<void> {
   process.exit(0);
 }
 
-if (process.env.NODE_ENV !== "test") {
-  main().catch((error) => {
-    console.error(error);
-    process.exit(1);
-  });
-}
+runScript(main);

@@ -8,6 +8,7 @@ import {
   type ProcessedCompleteLandUsePolicy,
   readProcessedCompleteData,
 } from "./lib/data";
+import { runScript } from "./lib/runScript";
 
 const DELIMITER = "; ";
 
@@ -217,9 +218,4 @@ async function main(): Promise<void> {
   console.log("Generated zip at data/generated/mandates-map-data.zip");
 }
 
-if (process.env.NODE_ENV !== "test") {
-  main().catch((error) => {
-    console.error(error);
-    process.exit(1);
-  });
-}
+runScript(main);

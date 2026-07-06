@@ -2,6 +2,7 @@ import fetch from "node-fetch";
 
 import { getCitations, readRawExtendedData } from "./lib/data";
 import { DIRECTUS_BASE_URL } from "./lib/paths";
+import { runScript } from "./lib/runScript";
 
 export async function readCitationIdAndLinks(): Promise<
   Array<[number, string]>
@@ -60,9 +61,4 @@ async function main(): Promise<void> {
   }
 }
 
-if (process.env.NODE_ENV !== "test") {
-  main().catch((error) => {
-    console.error(error);
-    process.exit(1);
-  });
-}
+runScript(main);
