@@ -134,7 +134,7 @@ export function determineAnyReform(
   return `${prefix} 1+ ${state} parking reforms:<ul>${listItems}</ul>`;
 }
 
-function buildSimplePolicyText(
+export function buildSimplePolicyText(
   view: ViewState,
   placeDescription: string,
   status: ReformStatus,
@@ -143,32 +143,6 @@ function buildSimplePolicyText(
   return view === "map"
     ? `Showing ${placeDescription} with ${status} ${noun}`
     : `Showing details about ${status} ${noun} for ${placeDescription} - ${TABLE_DOWNLOAD_HTML}`;
-}
-
-export function buildReduceMinText(
-  view: ViewState,
-  placeDescription: string,
-  status: ReformStatus,
-): string {
-  return buildSimplePolicyText(
-    view,
-    placeDescription,
-    status,
-    "parking minimum reductions",
-  );
-}
-
-export function buildAddMaxText(
-  view: ViewState,
-  placeDescription: string,
-  status: ReformStatus,
-): string {
-  return buildSimplePolicyText(
-    view,
-    placeDescription,
-    status,
-    "parking maximums",
-  );
 }
 
 export function determineRmMin(
@@ -195,19 +169,6 @@ export function determineRmMin(
     ? `${prefix} that removed all parking minimums`
     : prefix;
   return `${summary} - ${TABLE_DOWNLOAD_HTML}`;
-}
-
-export function buildBenefitDistrictText(
-  view: ViewState,
-  placeDescription: string,
-  status: ReformStatus,
-): string {
-  return buildSimplePolicyText(
-    view,
-    placeDescription,
-    status,
-    "parking benefit districts",
-  );
 }
 
 export function determineHtml(
@@ -249,9 +210,19 @@ export function determineHtml(
         state.status,
       );
     case "reduce parking minimums":
-      return buildReduceMinText(view, placeDescription, state.status);
+      return buildSimplePolicyText(
+        view,
+        placeDescription,
+        state.status,
+        "parking minimum reductions",
+      );
     case "add parking maximums":
-      return buildAddMaxText(view, placeDescription, state.status);
+      return buildSimplePolicyText(
+        view,
+        placeDescription,
+        state.status,
+        "parking maximums",
+      );
     case "remove parking minimums":
       return determineRmMin(
         view,
@@ -260,7 +231,12 @@ export function determineHtml(
         state.status,
       );
     case "parking benefit district":
-      return buildBenefitDistrictText(view, placeDescription, state.status);
+      return buildSimplePolicyText(
+        view,
+        placeDescription,
+        state.status,
+        "parking benefit districts",
+      );
     default:
       throw new Error(`Unexpected policy type: ${state.policyTypeFilter}`);
   }
