@@ -1,3 +1,4 @@
+@use "theme/borders";
 @use "theme/colors";
 @use "theme/icons";
 @use "theme/mixins";
@@ -66,7 +67,7 @@ $thumbsize: icons.$icon-size-md;
     cursor: pointer;
 
     background: colors.$white;
-    border: 1px solid colors.$gray;
+    border: borders.$border-thickness solid colors.$gray;
     border-radius: 100%;
   }
 

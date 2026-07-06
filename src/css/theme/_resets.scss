@@ -1,3 +1,4 @@
+@use "spacing";
 @use "typography";
 
 *,
@@ -40,7 +41,7 @@ ol {
   margin-top: 0;
   margin-bottom: 10px;
   padding: 0;
-  padding-inline-start: 20px; // Default is 40px
+  padding-inline-start: spacing.$list-indent;
 }
 
 p,

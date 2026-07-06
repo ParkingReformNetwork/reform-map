@@ -21,7 +21,7 @@
   max-height: 70%;
   min-width: 200px;
   max-width: 800px;
-  top: calc(header.$header-height + 25px);
+  top: calc(header.$header-height + spacing.$map-controls-margin-top);
   z-index: zindex.$about;
 
   font-size: typography.$font-size-base;
@@ -63,5 +63,5 @@
 .about-popup-links-list {
   margin-top: spacing.$element-gap;
   padding: 0;
-  padding-inline-start: 20px; // Default is 40px
+  padding-inline-start: spacing.$list-indent;
 }
