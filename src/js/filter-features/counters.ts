@@ -2,7 +2,12 @@ import { iconHtml } from "../layout/icons";
 import type { ViewState } from "../layout/viewToggle";
 import { COUNTRIES_PREFIXED_BY_THE } from "../model/data";
 import { encodedPlaceToUrl } from "../model/placeId";
-import type { PlaceType, PolicyType, ReformStatus } from "../model/types";
+import {
+  assertNever,
+  type PlaceType,
+  type PolicyType,
+  type ReformStatus,
+} from "../model/types";
 import {
   type FilterState,
   isAllMinimumsRemovedToggleInEffect,
@@ -93,9 +98,6 @@ export function determineSearch(
   }
 
   const noun = POLICY_TYPE_NOUNS[policyType];
-  if (!noun) {
-    throw new Error(`Unexpected policy type: ${policyType}`);
-  }
   return `Showing details about ${status} ${noun.full} ${suffix}`;
 }
 
@@ -229,7 +231,7 @@ export function determineHtml(
         POLICY_TYPE_NOUNS["parking benefit district"].full,
       );
     default:
-      throw new Error(`Unexpected policy type: ${state.policyTypeFilter}`);
+      return assertNever(state.policyTypeFilter);
   }
 }
 

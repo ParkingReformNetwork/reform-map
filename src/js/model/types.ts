@@ -1,5 +1,12 @@
 import type { ReformDate } from "./ReformDate";
 
+/// Use in the `default` case of a `switch` to make TypeScript error at compile
+/// time if a new variant is added to the switched-on union without a
+/// corresponding case.
+export function assertNever(value: never): never {
+  throw new Error(`Unexpected value: ${JSON.stringify(value)}`);
+}
+
 export type PlaceId = string;
 
 export const ALL_PLACE_TYPES = ["city", "county", "state", "country"] as const;

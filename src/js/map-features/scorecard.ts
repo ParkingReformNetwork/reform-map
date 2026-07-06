@@ -5,7 +5,11 @@ import { isClickOutside } from "../layout/popup";
 import type { ViewStateObservable } from "../layout/viewToggle";
 import { determinePolicyTypeStatuses } from "../model/data";
 import { determineSupplementalPlaceInfo } from "../model/placeId";
-import type { PlaceId, ProcessedCoreEntry } from "../model/types";
+import {
+  assertNever,
+  type PlaceId,
+  type ProcessedCoreEntry,
+} from "../model/types";
 import type { PlaceFilterManager } from "../state/FilterState";
 import Observable from "../state/Observable";
 import type { MarkerWithPlaceId } from "./markers";
@@ -91,7 +95,7 @@ function updateScorecardUI(state: ScorecardState): void {
       break;
     }
     default:
-      throw new Error(`Unexpected state.type: ${state}`);
+      assertNever(state);
   }
 }
 
