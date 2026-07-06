@@ -4,20 +4,10 @@ import {
   isPrimary,
   radiusGivenZoom,
 } from "../../src/js/map-features/markerUtils";
-import type { ProcessedPlace } from "../../src/js/model/types";
+import { makePlace } from "./utils";
 
 test("isPrimary", () => {
-  const place: ProcessedPlace = {
-    name: "",
-    state: "",
-    country: "",
-    type: "city",
-    encoded: "",
-    pop: 0,
-    repeal: false,
-    coord: [0, 0],
-    url: "",
-  };
+  const place = makePlace();
 
   expect(isPrimary({ place })).toEqual(false);
 

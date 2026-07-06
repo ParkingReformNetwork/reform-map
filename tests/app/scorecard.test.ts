@@ -4,9 +4,8 @@ import type {
   ProcessedCoreBenefitDistrict,
   ProcessedCoreEntry,
   ProcessedCoreLandUsePolicy,
-  ProcessedPlace,
 } from "../../src/js/model/types";
-import { loadMap, onScreenMarkerPoints } from "./utils";
+import { loadMap, makePlace, onScreenMarkerPoints } from "./utils";
 
 // This test uses snapshot testing (https://jestjs.io/docs/snapshot-testing#updating-snapshots). If the tests fail and the changes
 // are valid, run `npm test -- --updateSnapshot`.
@@ -54,17 +53,13 @@ test("generateScorecard()", ({}, testInfo) => {
   // Our test is OS-independent, so turn this off.
   testInfo.snapshotSuffix = "";
 
-  const place: ProcessedPlace = {
+  const place = makePlace({
     name: "My City",
     state: "Arizona",
-    country: "United States",
-    type: "city",
-    encoded: "",
     pop: 245132,
     repeal: true,
-    coord: [0, 0],
     url: "https://my-site.org",
-  };
+  });
   const landUsePolicy: ProcessedCoreLandUsePolicy = {
     status: "adopted",
     scope: [],

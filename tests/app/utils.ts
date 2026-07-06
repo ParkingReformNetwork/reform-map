@@ -3,6 +3,36 @@ import { expect } from "@playwright/test";
 import type { CircleMarker } from "leaflet";
 
 import { readRawCoreData } from "../../scripts/lib/data";
+import type {
+  ProcessedCoreEntry,
+  ProcessedPlace,
+} from "../../src/js/model/types";
+
+export function makePlace(
+  overrides: Partial<ProcessedPlace> = {},
+): ProcessedPlace {
+  return {
+    name: "Place",
+    state: "",
+    country: "United States",
+    type: "city",
+    encoded: "",
+    pop: 48100,
+    repeal: false,
+    coord: [0, 0],
+    url: "",
+    ...overrides,
+  };
+}
+
+export function makeEntry(
+  overrides: Partial<ProcessedCoreEntry> = {},
+): ProcessedCoreEntry {
+  return {
+    place: makePlace(),
+    ...overrides,
+  };
+}
 
 export const DEFAULT_ALL_MINIMUMS_RANGE: [number, number] = [120, 200];
 export const DEFAULT_PLACE_RANGE: [number, number] = [6000, 8500];

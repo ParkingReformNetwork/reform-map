@@ -6,6 +6,7 @@ import {
   PlaceFilterManager,
 } from "../../src/js/state/FilterState";
 import { DEFAULT_FILTER_STATE } from "../../src/js/state/urlEncoder";
+import { makeEntry, makePlace } from "./utils";
 
 test.describe("PlaceFilterManager.matchedPlaces", () => {
   function defaultState(): FilterState {
@@ -21,18 +22,8 @@ test.describe("PlaceFilterManager.matchedPlaces", () => {
 
   function defaultEntries(): Record<PlaceId, ProcessedCoreEntry> {
     return {
-      "Place 1": {
-        place: {
-          name: "Place 1",
-          state: "",
-          country: "United States",
-          type: "city",
-          encoded: "",
-          pop: 48100,
-          repeal: false,
-          coord: [0, 0],
-          url: "",
-        },
+      "Place 1": makeEntry({
+        place: makePlace({ name: "Place 1" }),
         reduce_min: [
           {
             status: "adopted",
@@ -41,19 +32,15 @@ test.describe("PlaceFilterManager.matchedPlaces", () => {
             date: new ReformDate("2024"),
           },
         ],
-      },
-      "Place 2": {
-        place: {
+      }),
+      "Place 2": makeEntry({
+        place: makePlace({
           name: "Place 2",
-          state: "",
           country: "Brazil",
           type: "county",
-          encoded: "",
           pop: 400,
           repeal: true,
-          coord: [0, 0],
-          url: "",
-        },
+        }),
         add_max: [
           {
             status: "adopted",
@@ -82,8 +69,15 @@ test.describe("PlaceFilterManager.matchedPlaces", () => {
             date: new ReformDate("1997"),
           },
         ],
-      },
+      }),
     };
+  }
+
+  /** `defaultEntries()`, but with "Place 2"'s repeal unset. */
+  function noRepealsEntries(): Record<PlaceId, ProcessedCoreEntry> {
+    const entries = defaultEntries();
+    entries["Place 2"].place.repeal = false;
+    return entries;
   }
 
   test("any parking reform", () => {
@@ -246,9 +240,7 @@ test.describe("PlaceFilterManager.matchedPlaces", () => {
     manager.update({ year: defaultState().year });
 
     // `allMinimumsRemovedToggle` should not matter.
-    const noRepealsEntries = defaultEntries();
-    noRepealsEntries["Place 2"].place.repeal = false;
-    const manager2 = new PlaceFilterManager(noRepealsEntries, {
+    const manager2 = new PlaceFilterManager(noRepealsEntries(), {
       ...defaultState(),
       policyTypeFilter: "add parking maximums",
       allMinimumsRemovedToggle: true,
@@ -307,9 +299,7 @@ test.describe("PlaceFilterManager.matchedPlaces", () => {
     expect(manager.matchedPlaces).toEqual({});
     manager.update({ year: defaultState().year });
 
-    const noRepealsEntries = defaultEntries();
-    noRepealsEntries["Place 2"].place.repeal = false;
-    const manager2 = new PlaceFilterManager(noRepealsEntries, {
+    const manager2 = new PlaceFilterManager(noRepealsEntries(), {
       ...defaultState(),
       policyTypeFilter: "remove parking minimums",
       allMinimumsRemovedToggle: true,
@@ -343,9 +333,7 @@ test.describe("PlaceFilterManager.matchedPlaces", () => {
     manager.update({ year: defaultState().year });
 
     // `allMinimumsRemovedToggle` should not matter.
-    const noRepealsEntries = defaultEntries();
-    noRepealsEntries["Place 2"].place.repeal = false;
-    const manager2 = new PlaceFilterManager(noRepealsEntries, {
+    const manager2 = new PlaceFilterManager(noRepealsEntries(), {
       ...defaultState(),
       policyTypeFilter: "parking benefit district",
       allMinimumsRemovedToggle: true,
