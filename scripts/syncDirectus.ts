@@ -268,16 +268,20 @@ interface AttachmentFileNameArgsBase {
   placeId: string;
   hasDistinctPolicyTypes: boolean;
   policyType: PolicyType;
-  /// The index of land use records for the current `policyType`. If
-  /// there is only one record for the `policyType`, this value should
-  /// be set to `null`.
+  /**
+   * The index of land use records for the current `policyType`. If
+   * there is only one record for the `policyType`, this value should
+   * be set to `null`.
+   */
   policyRecordIdx: number | null;
 }
 
 type AttachmentFileNameArgs = AttachmentFileNameArgsBase & {
-  /// The index of citations for the current policy record. If
-  /// there is only one citation for the policy record, this value
-  /// should be set to `null`.
+  /**
+   * The index of citations for the current policy record. If
+   * there is only one citation for the policy record, this value
+   * should be set to `null`.
+   */
   citationIdx: number | null;
 };
 

@@ -13,11 +13,11 @@ const MONTH_ABBREVIATIONS = [
   "Dec",
 ];
 
-/// Wraps a raw date string in the format `yyyy`, `yyyy-mm`, or `yyyy-mm-dd`.
+/** Wraps a raw date string in the format `yyyy`, `yyyy-mm`, or `yyyy-mm-dd`. */
 export class ReformDate {
   readonly raw: string;
 
-  // Memoized [month, day] (1-indexed, defaulting to 1 when raw omits them).
+  /** Memoized [month, day] (1-indexed, defaulting to 1 when raw omits them). */
   #monthDay: [number, number] | undefined;
 
   constructor(raw: string) {
