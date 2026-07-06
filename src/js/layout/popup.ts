@@ -37,7 +37,7 @@ export function initTogglePopup(
   const icon = document.querySelector(options.iconSelector);
   if (!popup || !icon) return isVisible;
 
-  isVisible.subscribe((visible) => {
+  isVisible.subscribe(`toggle ${options.id} popup visibility`, (visible) => {
     popup.hidden = !visible;
     icon.ariaExpanded = visible.toString();
   });

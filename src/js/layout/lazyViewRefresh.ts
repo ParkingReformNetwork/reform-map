@@ -17,11 +17,11 @@ export function subscribeLazyViewRefresh(
 ): () => void {
   let refreshQueued = false;
 
-  viewToggle.subscribe((view) => {
+  viewToggle.subscribe(`apply queued ${activeView} view refresh`, (view) => {
     if (view !== activeView || !refreshQueued) return;
     refreshQueued = false;
     onRefresh();
-  }, `apply queued ${activeView} view refresh`);
+  });
 
   return () => {
     if (viewToggle.getValue() !== activeView) {

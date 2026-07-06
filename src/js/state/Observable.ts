@@ -2,7 +2,7 @@ const SLOW_CALLBACK_THRESHOLD_MS = 2;
 
 export interface Subscriber<T> {
   callback: (value: T) => void;
-  id: string | undefined;
+  id: string;
 }
 
 /**
@@ -39,7 +39,7 @@ export default class Observable<T> {
     this.notify();
   }
 
-  subscribe(callback: (value: T) => void, id?: string): void {
+  subscribe(id: string, callback: (value: T) => void): void {
     if (this.isInitialized) {
       throw new Error("Cannot add subscribers after initialization");
     }
@@ -66,9 +66,8 @@ export default class Observable<T> {
       const duration = performance.now() - start;
 
       if (duration < SLOW_CALLBACK_THRESHOLD_MS) return;
-      const callbackLabel = id ?? "anonymous";
       console.warn(
-        `Slow callback detected: Observable(${this.id}) - Subscriber(${callbackLabel}) (${duration.toFixed(0)}ms)`,
+        `Slow callback detected: Observable(${this.id}) - Subscriber(${id}) (${duration.toFixed(0)}ms)`,
       );
     });
   }
