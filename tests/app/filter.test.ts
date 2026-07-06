@@ -119,11 +119,11 @@ const TESTS: EdgeCase[] = [
   },
 ];
 
-const selectIfSet = async (
+async function selectIfSet(
   page: Page,
   selector: string,
   values?: StringArrayOption,
-): Promise<void> => {
+): Promise<void> {
   if (!values) return;
 
   // First, expand the accordion
@@ -162,7 +162,7 @@ const selectIfSet = async (
   for (const index of toClick) {
     await page.locator(labelSelector).nth(index).click();
   }
-};
+}
 
 for (const edgeCase of TESTS) {
   test(`${edgeCase.desc}`, async ({ page }) => {
