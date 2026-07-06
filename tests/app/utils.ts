@@ -92,3 +92,12 @@ export async function openFilter(page: Page): Promise<void> {
 export async function selectToggle(page: Page): Promise<void> {
   await page.locator("#filter-all-minimums-toggle-label").click();
 }
+
+/** Uncheck all countries, then check only the given one. Assumes the filter is open. */
+export async function filterToCountry(page: Page, name: string): Promise<void> {
+  await page.locator("#filter-accordion-toggle-country").click();
+  await page.locator("#filter-country-uncheck-all").click();
+  await page
+    .locator(`.filter-country label:has(input[data-value="${name}"])`)
+    .click();
+}
