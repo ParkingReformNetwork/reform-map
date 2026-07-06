@@ -89,6 +89,30 @@ export function generateCheckbox(
   return [label, input];
 }
 
+/** Create a "check all" / "uncheck all" button pair, wrapped in a container. */
+export function generateGroupSelectorButtons(htmlName: string): {
+  container: HTMLDivElement;
+  checkAllButton: HTMLButtonElement;
+  uncheckAllButton: HTMLButtonElement;
+} {
+  const container = document.createElement("div");
+  container.className = "filter-group-selectors-container";
+
+  const checkAllButton = document.createElement("button");
+  checkAllButton.type = "button";
+  checkAllButton.textContent = "Check all";
+  checkAllButton.id = `filter-${htmlName}-check-all`;
+  container.appendChild(checkAllButton);
+
+  const uncheckAllButton = document.createElement("button");
+  uncheckAllButton.type = "button";
+  uncheckAllButton.textContent = "Uncheck all";
+  uncheckAllButton.id = `filter-${htmlName}-uncheck-all`;
+  container.appendChild(uncheckAllButton);
+
+  return { container, checkAllButton, uncheckAllButton };
+}
+
 /** Generate the base of an accordion.
  *
  * The contentContainer is empty and needs to be filled in by callers. An Observable
