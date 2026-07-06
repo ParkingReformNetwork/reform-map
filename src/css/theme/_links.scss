@@ -1,15 +1,13 @@
 @use "colors";
+@use "hover";
 
 @mixin link-styles {
   color: colors.$link;
   text-decoration: none;
 
-  @media (hover: hover) {
-    &:hover,
-    &:focus {
-      color: colors.$link-hover;
-      text-decoration: underline;
-    }
+  @include hover.enabled-or-focus {
+    color: colors.$link-hover;
+    text-decoration: underline;
   }
 }
 
@@ -18,12 +16,10 @@ a {
 }
 
 .external-link {
-  @media (hover: hover) {
-    &:hover {
-      // We disable underlining because the font awesome icon won't
-      // have underlining on hover, which looks weird.
-      text-decoration: none;
-    }
+  @include hover.enabled {
+    // We disable underlining because the font awesome icon won't
+    // have underlining on hover, which looks weird.
+    text-decoration: none;
   }
 
   svg {

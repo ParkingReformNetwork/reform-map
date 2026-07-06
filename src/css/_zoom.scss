@@ -1,5 +1,6 @@
 @use "theme/borders";
 @use "theme/colors";
+@use "theme/hover";
 @use "theme/mixins";
 @use "theme/spacing";
 @use "theme/typography";
@@ -27,12 +28,9 @@ div.leaflet-control-zoom.leaflet-bar {
 
     @include mixins.flex-center;
 
-    @media (hover: hover) {
-      &:hover,
-      &:focus {
-        color: unset;
-        text-decoration: none;
-      }
+    @include hover.enabled-or-focus {
+      color: unset;
+      text-decoration: none;
     }
 
     &:first-child {
