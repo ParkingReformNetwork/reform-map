@@ -13,6 +13,7 @@ import type {
   RawCoreLandUsePolicy,
   RawPlace,
 } from "../../src/js/model/types";
+import { CORE_DATA_PATH, EXTENDED_DATA_PATH } from "./paths";
 
 export interface DirectusFile {
   fileName: string;
@@ -77,60 +78,34 @@ export interface ProcessedCompleteEntry {
 export async function readRawCoreData(): Promise<
   Record<PlaceId, RawCoreEntry>
 > {
-  const raw = await fs.readFile("data/core.json", "utf8");
+  const raw = await fs.readFile(CORE_DATA_PATH, "utf8");
   return JSON.parse(raw);
 }
 
 export async function readRawExtendedData(): Promise<
   Record<PlaceId, ExtendedEntry>
 > {
-  const raw = await fs.readFile("data/extended.json", "utf8");
+  const raw = await fs.readFile(EXTENDED_DATA_PATH, "utf8");
   return JSON.parse(raw);
 }
 
-function mergeRawLandUsePolicies(
-  corePolicies: RawCoreLandUsePolicy[],
-  extendedPolicies: ExtendedLandUsePolicy[],
+function mergeRawEntries<Core, Extended>(
+  coreEntries: Core[],
+  extendedEntries: Extended[],
   placeId: PlaceId,
-  policyKeyName: string,
-): RawCompleteLandUsePolicy[] {
-  return zipWith(
-    corePolicies,
-    extendedPolicies,
-    (corePolicy, extendedPolicy) => {
-      if (!corePolicy || !extendedPolicy) {
-        throw new Error(
-          `Unequal number of '${policyKeyName}' entries for '${placeId}' between data/core.json and data/extended.json`,
-        );
-      }
-      return {
-        ...corePolicy,
-        ...extendedPolicy,
-      };
-    },
-  );
-}
-
-function mergeRawBenefitDistrict(
-  corePolicies: RawCoreBenefitDistrict[],
-  extendedPolicies: ExtendedBenefitDistrict[],
-  placeId: PlaceId,
-): RawCompleteBenefitDistrict[] {
-  return zipWith(
-    corePolicies,
-    extendedPolicies,
-    (corePolicy, extendedPolicy) => {
-      if (!corePolicy || !extendedPolicy) {
-        throw new Error(
-          `Unequal number of 'benefit_district' entries for '${placeId}' between data/core.json and data/extended.json`,
-        );
-      }
-      return {
-        ...corePolicy,
-        ...extendedPolicy,
-      };
-    },
-  );
+  entryKeyName: string,
+): (Core & Extended)[] {
+  return zipWith(coreEntries, extendedEntries, (coreEntry, extendedEntry) => {
+    if (!coreEntry || !extendedEntry) {
+      throw new Error(
+        `Unequal number of '${entryKeyName}' entries for '${placeId}' between ${CORE_DATA_PATH} and ${EXTENDED_DATA_PATH}`,
+      );
+    }
+    return {
+      ...coreEntry,
+      ...extendedEntry,
+    };
+  });
 }
 
 export async function readRawCompleteData(): Promise<
@@ -149,7 +124,7 @@ export async function readRawCompleteData(): Promise<
           place: coreEntry.place,
           ...(coreEntry.reduce_min &&
             extendedEntry.reduce_min && {
-              reduce_min: mergeRawLandUsePolicies(
+              reduce_min: mergeRawEntries(
                 coreEntry.reduce_min,
                 extendedEntry.reduce_min,
                 placeId,
@@ -158,7 +133,7 @@ export async function readRawCompleteData(): Promise<
             }),
           ...(coreEntry.rm_min &&
             extendedEntry.rm_min && {
-              rm_min: mergeRawLandUsePolicies(
+              rm_min: mergeRawEntries(
                 coreEntry.rm_min,
                 extendedEntry.rm_min,
                 placeId,
@@ -167,7 +142,7 @@ export async function readRawCompleteData(): Promise<
             }),
           ...(coreEntry.add_max &&
             extendedEntry.add_max && {
-              add_max: mergeRawLandUsePolicies(
+              add_max: mergeRawEntries(
                 coreEntry.add_max,
                 extendedEntry.add_max,
                 placeId,
@@ -176,10 +151,11 @@ export async function readRawCompleteData(): Promise<
             }),
           ...(coreEntry.benefit_district &&
             extendedEntry.benefit_district && {
-              benefit_district: mergeRawBenefitDistrict(
+              benefit_district: mergeRawEntries(
                 coreEntry.benefit_district,
                 extendedEntry.benefit_district,
                 placeId,
+                "benefit_district",
               ),
             }),
         },

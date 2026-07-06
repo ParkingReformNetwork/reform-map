@@ -35,6 +35,8 @@ import {
 } from "./lib/directus";
 import { getLongLat, initGeocoder } from "./lib/geocoder";
 import { saveOptionValues } from "./lib/optionValues";
+import { CORE_DATA_PATH, EXTENDED_DATA_PATH } from "./lib/paths";
+import { runScript } from "./lib/runScript";
 
 // --------------------------------------------------------------------------
 // Read prior data
@@ -493,7 +495,7 @@ function combineData(
           entry.reduce_min?.length ||
           entry.benefit_district?.length,
       )
-      .sort(),
+      .sort(([a], [b]) => (a < b ? -1 : a > b ? 1 : 0)),
   );
 }
 
@@ -546,8 +548,8 @@ async function saveCoreData(
     ]),
   );
   const json = JSON.stringify(pruned, null, 2);
-  console.log("Writing data/core.json");
-  await fs.writeFile("data/core.json", json);
+  console.log(`Writing ${CORE_DATA_PATH}`);
+  await fs.writeFile(CORE_DATA_PATH, json);
 }
 
 async function saveExtendedData(
@@ -582,8 +584,8 @@ async function saveExtendedData(
     ]),
   );
   const json = JSON.stringify(pruned, null, 2);
-  console.log("Writing data/extended.json");
-  await fs.writeFile("data/extended.json", json);
+  console.log(`Writing ${EXTENDED_DATA_PATH}`);
+  await fs.writeFile(EXTENDED_DATA_PATH, json);
 }
 
 // --------------------------------------------------------------------------
@@ -635,9 +637,4 @@ async function main(): Promise<void> {
   process.exit(0);
 }
 
-if (process.env.NODE_ENV !== "test") {
-  main().catch((error) => {
-    console.error(error);
-    process.exit(1);
-  });
-}
+runScript(main);

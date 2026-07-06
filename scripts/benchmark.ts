@@ -4,6 +4,8 @@ import path from "node:path";
 
 import { type Browser, type CDPSession, chromium, type Page } from "playwright";
 
+import { runScript } from "./lib/runScript";
+
 const PORT = process.env.PORT || "8080";
 const BASE_URL = `http://127.0.0.1:${PORT}`;
 
@@ -641,9 +643,4 @@ async function main(): Promise<void> {
   console.log(`\nWrote results to ${args.out}`);
 }
 
-if (process.env.NODE_ENV !== "test") {
-  main().catch((error) => {
-    console.error(error);
-    process.exit(1);
-  });
-}
+runScript(main);

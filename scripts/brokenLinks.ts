@@ -1,6 +1,8 @@
 import fetch from "node-fetch";
 
 import { getCitations, readRawExtendedData } from "./lib/data";
+import { DIRECTUS_BASE_URL } from "./lib/paths";
+import { runScript } from "./lib/runScript";
 
 export async function readCitationIdAndLinks(): Promise<
   Array<[number, string]>
@@ -49,7 +51,7 @@ async function main(): Promise<void> {
   for (const [i, [id, link]] of citationIdAndLinks.entries()) {
     const deadLink = await findDeadLink(link);
     if (deadLink !== null) {
-      const directusEntry = `https://mandates-map.directus.app/admin/content/citations/${id}`;
+      const directusEntry = `${DIRECTUS_BASE_URL}/admin/content/citations/${id}`;
       console.log(`${link} (${directusEntry})`);
     }
 
@@ -59,9 +61,4 @@ async function main(): Promise<void> {
   }
 }
 
-if (process.env.NODE_ENV !== "test") {
-  main().catch((error) => {
-    console.error(error);
-    process.exit(1);
-  });
-}
+runScript(main);

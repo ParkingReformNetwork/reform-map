@@ -1,5 +1,6 @@
 import * as fs from "node:fs/promises";
 import * as path from "node:path";
+import { runScript } from "./lib/runScript";
 
 const REDIRECTS = {
   NewZealand_NZ: "NewZealand",
@@ -89,9 +90,4 @@ async function main(): Promise<void> {
   }
 }
 
-if (process.env.NODE_ENV !== "test") {
-  main().catch((error) => {
-    console.error(error);
-    process.exit(1);
-  });
-}
+runScript(main);
