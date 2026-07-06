@@ -54,7 +54,7 @@ export interface FilterState {
   status: ReformStatus;
   allMinimumsRemovedToggle: boolean;
   placeType: Set<string>;
-  includedPolicyChanges: Set<string>;
+  includedPolicyChanges: Set<PolicyType>;
   scope: Set<string>;
   landUse: Set<string>;
   country: Set<string>;
@@ -313,57 +313,58 @@ export class PlaceFilterManager {
 
     if (!this.matchesPlace(entry.place)) return null;
 
-    if (filterState.policyTypeFilter === "any parking reform") {
-      const policyTypes = determineAllPolicyTypes(entry, filterState.status);
-      const matchesPolicyType = policyTypes.some((v) =>
-        filterState.includedPolicyChanges.has(v),
-      );
-      return matchesPolicyType ? { type: "any", policyTypes } : null;
-    }
+    switch (filterState.policyTypeFilter) {
+      case "any parking reform": {
+        const policyTypes = determineAllPolicyTypes(entry, filterState.status);
+        const matchesPolicyType = policyTypes.some((v) =>
+          filterState.includedPolicyChanges.has(v),
+        );
+        return matchesPolicyType ? { type: "any", policyTypes } : null;
+      }
 
-    if (
-      filterState.policyTypeFilter === "add parking maximums" ||
-      filterState.policyTypeFilter === "reduce parking minimums" ||
-      filterState.policyTypeFilter === "remove parking minimums"
-    ) {
-      const policyType = filterState.policyTypeFilter;
-      // If 'all minimums removed' is in effect, then 'land use' and 'scope' are irrelevant:
-      //  - the place will only have a single policy record for minimum removal
-      //  - that policy record must be set to "All uses" and "Citywide"
-      const ignoreLandAndScope =
-        policyType === "remove parking minimums" &&
-        isAllMinimumsRemovedToggleInEffect(filterState);
-      const matchingPolicies = getFilteredIndexes(
-        getLandUsePolicyRecords(entry, policyType),
-        (policyRecord) =>
-          this.matchesLandUsePolicy(policyRecord, {
-            ignoreScope: ignoreLandAndScope,
-            ignoreLand: ignoreLandAndScope,
-          }),
-      );
-      return matchingPolicies.length
-        ? {
-            type: "single policy",
-            policyType,
-            matchingIndexes: matchingPolicies,
-          }
-        : null;
-    }
+      case "add parking maximums":
+      case "reduce parking minimums":
+      case "remove parking minimums": {
+        const policyType = filterState.policyTypeFilter;
+        // If 'all minimums removed' is in effect, then 'land use' and 'scope' are irrelevant:
+        //  - the place will only have a single policy record for minimum removal
+        //  - that policy record must be set to "All uses" and "Citywide"
+        const ignoreLandAndScope =
+          policyType === "remove parking minimums" &&
+          isAllMinimumsRemovedToggleInEffect(filterState);
+        const matchingPolicies = getFilteredIndexes(
+          getLandUsePolicyRecords(entry, policyType),
+          (policyRecord) =>
+            this.matchesLandUsePolicy(policyRecord, {
+              ignoreScope: ignoreLandAndScope,
+              ignoreLand: ignoreLandAndScope,
+            }),
+        );
+        return matchingPolicies.length
+          ? {
+              type: "single policy",
+              policyType,
+              matchingIndexes: matchingPolicies,
+            }
+          : null;
+      }
 
-    if (filterState.policyTypeFilter === "parking benefit district") {
-      const matchingPolicies = getFilteredIndexes(
-        entry.benefit_district ?? [],
-        (record) => this.matchesBenefitDistrict(record),
-      );
-      return matchingPolicies.length
-        ? {
-            type: "single policy",
-            policyType: "parking benefit district",
-            matchingIndexes: matchingPolicies,
-          }
-        : null;
-    }
+      case "parking benefit district": {
+        const matchingPolicies = getFilteredIndexes(
+          entry.benefit_district ?? [],
+          (record) => this.matchesBenefitDistrict(record),
+        );
+        return matchingPolicies.length
+          ? {
+              type: "single policy",
+              policyType: "parking benefit district",
+              matchingIndexes: matchingPolicies,
+            }
+          : null;
+      }
 
-    throw new Error(`Unrecognized policy type`);
+      default:
+        throw new Error(`Unrecognized policy type`);
+    }
   }
 }

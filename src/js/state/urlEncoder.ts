@@ -2,11 +2,14 @@ import { isEqual } from "lodash-es";
 import { FILTER_OPTIONS } from "../filter-features/options";
 import { POPULATION_MAX_INDEX } from "../filter-features/populationSlider";
 import { COUNTRY_MAPPING } from "../model/data";
+import type { PolicyType } from "../model/types";
 import type { FilterState } from "./FilterState";
 
 export const MERGED_STRING_SET_OPTIONS = {
   placeType: new Set(FILTER_OPTIONS.merged.placeType),
-  includedPolicyChanges: new Set(FILTER_OPTIONS.merged.includedPolicyChanges),
+  includedPolicyChanges: new Set(
+    FILTER_OPTIONS.merged.includedPolicyChanges,
+  ) as Set<PolicyType>,
   scope: new Set(FILTER_OPTIONS.merged.scope),
   landUse: new Set(FILTER_OPTIONS.merged.landUse),
   country: new Set(FILTER_OPTIONS.merged.country),
@@ -252,7 +255,7 @@ export function decodeFilterState(queryString: string): FilterState {
     includedPolicyChanges: POLICY_TYPE_MAP.decodeSet(
       params.get(INCLUDED_POLICY_NAME),
       DEFAULT_FILTER_STATE.includedPolicyChanges,
-    ),
+    ) as Set<PolicyType>,
     year: YEAR_MAP.decodeSet(params.get(YEAR_NAME), DEFAULT_FILTER_STATE.year),
     country: COUNTRY_MAP.decodeSet(
       params.get(COUNTRY_NAME),

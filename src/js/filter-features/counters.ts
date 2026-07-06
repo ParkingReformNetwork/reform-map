@@ -103,7 +103,7 @@ export function determineAnyReform(
   view: ViewState,
   placeDescription: string,
   matchedPolicyTypes: Set<PolicyType>,
-  statePolicyTypes: Set<string>,
+  statePolicyTypes: Set<PolicyType>,
   state: ReformStatus,
 ): string {
   if (view === "table") {
@@ -112,8 +112,8 @@ export function determineAnyReform(
 
   const prefix = `Showing ${placeDescription} with`;
   const policyDescriptions = Array.from(statePolicyTypes)
-    .filter((policy) => matchedPolicyTypes.has(policy as PolicyType))
-    .map((policy) => POLICY_TYPE_NOUNS[policy as PolicyType]);
+    .filter((policy) => matchedPolicyTypes.has(policy))
+    .map((policy) => POLICY_TYPE_NOUNS[policy]);
   if (!policyDescriptions.length) {
     throw new Error(`Expected state.includedPolicyChanges to be set`);
   }
