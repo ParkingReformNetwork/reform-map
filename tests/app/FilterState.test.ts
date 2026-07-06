@@ -1,30 +1,21 @@
 import { expect, test } from "@playwright/test";
-import { POPULATION_MAX_INDEX } from "../../src/js/filter-features/populationSlider";
 import { ReformDate } from "../../src/js/model/ReformDate";
-import {
-  ALL_POLICY_TYPE,
-  type PlaceId,
-  type ProcessedCoreEntry,
-} from "../../src/js/model/types";
+import type { PlaceId, ProcessedCoreEntry } from "../../src/js/model/types";
 import {
   type FilterState,
   PlaceFilterManager,
 } from "../../src/js/state/FilterState";
+import { DEFAULT_FILTER_STATE } from "../../src/js/state/urlEncoder";
 
-test.describe("PlaceFilterManager.matchedPolicyRecords()", () => {
+test.describe("PlaceFilterManager.matchedPlaces", () => {
   function defaultState(): FilterState {
     return {
-      searchInput: null,
-      policyTypeFilter: "any parking reform",
-      status: "adopted",
-      allMinimumsRemovedToggle: false,
-      includedPolicyChanges: new Set(ALL_POLICY_TYPE),
+      ...DEFAULT_FILTER_STATE,
       scope: new Set(["citywide", "city center / business district"]),
       landUse: new Set(["all uses", "commercial", "other"]),
       country: new Set(["United States", "Brazil"]),
       placeType: new Set(["city", "county"]),
       year: new Set(["1997", "2023", "2024"]),
-      populationSliderIndexes: [0, POPULATION_MAX_INDEX],
     };
   }
 
