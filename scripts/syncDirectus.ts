@@ -24,12 +24,8 @@ import {
   readRawCoreData,
 } from "./lib/data";
 import {
-  type BenefitDistrict,
-  type Citation as DirectusCitation,
   type DirectusClient,
-  type Place as DirectusPlace,
   initDirectus,
-  type LandUseRecord,
   readCitationsFilesBatched,
   readItemsBatched,
 } from "./lib/directus";
@@ -61,10 +57,7 @@ async function readPriorEncodedPlaceIds(): Promise<
 async function readPlacesAndEnsureCoordinates(
   client: DirectusClient,
   geocoder: NodeGeocoder.Geocoder,
-): Promise<{
-  directusIdToStringId: Record<number, PlaceStringId>;
-  stringIdToPlace: Record<PlaceStringId, Partial<DirectusPlace>>;
-}> {
+) {
   const records = await readItemsBatched(client, "places", [
     "id",
     "name",
@@ -76,7 +69,7 @@ async function readPlacesAndEnsureCoordinates(
     "coordinates",
   ]);
   const directusIdToStringId: Record<number, PlaceStringId> = {};
-  const stringIdToPlace: Record<PlaceStringId, Partial<DirectusPlace>> = {};
+  const stringIdToPlace: Record<PlaceStringId, (typeof records)[number]> = {};
   for (const record of records) {
     const stringId = determinePlaceIdForDirectus(record);
 
@@ -114,7 +107,7 @@ async function readPlacesAndEnsureCoordinates(
 async function readLandUseRecords(
   client: DirectusClient,
   placeDirectusIdToStringId: Record<number, PlaceStringId>,
-): Promise<Record<PlaceStringId, Array<Partial<LandUseRecord>>>> {
+) {
   const records = await readItemsBatched(
     client,
     "land_use",
@@ -147,7 +140,7 @@ async function readLandUseRecords(
 async function readBenefitDistrictRecords(
   client: DirectusClient,
   placeDirectusIdToStringId: Record<number, PlaceStringId>,
-): Promise<Record<PlaceStringId, Array<Partial<BenefitDistrict>>>> {
+) {
   const records = await readItemsBatched(
     client,
     "benefit_districts",
@@ -173,9 +166,7 @@ async function readBenefitDistrictRecords(
   return groupBy(records, (record) => placeDirectusIdToStringId[record.place]);
 }
 
-async function readCitations(
-  client: DirectusClient,
-): Promise<Record<number, Partial<DirectusCitation>>> {
+async function readCitations(client: DirectusClient) {
   const rawCitations = await readItemsBatched(client, "citations", [
     "id",
     "source_description",
@@ -184,14 +175,19 @@ async function readCitations(
     "broken_url",
     "attachments",
   ]);
-  return Object.fromEntries(rawCitations.map((record) => [record.id, record]));
+  return Object.fromEntries(
+    rawCitations.map((record): [number, (typeof rawCitations)[number]] => [
+      record.id,
+      record,
+    ]),
+  );
 }
 
 async function readCitationsByJunctionId(
   client: DirectusClient,
-  citations: Record<number, Partial<DirectusCitation>>,
+  citations: Awaited<ReturnType<typeof readCitations>>,
   table: "land_use_citations" | "benefit_districts_citations",
-): Promise<Record<number, Partial<DirectusCitation>>> {
+) {
   const junctionRecords = await readItemsBatched(
     client,
     table,
@@ -202,10 +198,12 @@ async function readCitationsByJunctionId(
     junctionRecords.map((record) => [record.id, record.citations_id]),
   );
   return Object.fromEntries(
-    Object.entries(citationIdsByJunctionIds).map(([junctionId, citationId]) => [
-      junctionId,
-      citations[citationId],
-    ]),
+    Object.entries(citationIdsByJunctionIds).map(
+      ([junctionId, citationId]): [string, (typeof citations)[number]] => [
+        junctionId,
+        citations[citationId],
+      ],
+    ),
   );
 }
 
@@ -343,9 +341,13 @@ export function createAttachments(
   return { attachments, screenshots };
 }
 
+type CitationsByJunctionId = Awaited<
+  ReturnType<typeof readCitationsByJunctionId>
+>;
+
 function createCitations(
   citationJunctionIds: number[],
-  citationsByJunctionId: Record<number, Partial<DirectusCitation>>,
+  citationsByJunctionId: CitationsByJunctionId,
   filesByAttachmentJunctionId: Record<number, FileMetadata>,
   fileNameArgs: AttachmentFileNameArgsBase,
 ): Citation[] {
@@ -353,18 +355,18 @@ function createCitations(
     const citationRecord = citationsByJunctionId[junctionId];
     const { attachments, screenshots } = createAttachments(
       filesByAttachmentJunctionId,
-      citationRecord.attachments!,
+      citationRecord.attachments,
       {
         ...fileNameArgs,
         citationIdx: citationJunctionIds.length === 1 ? null : citationIdx,
       },
     );
-    const url = citationRecord.broken_url === true ? null : citationRecord.url!;
+    const url = citationRecord.broken_url === true ? null : citationRecord.url;
     return {
-      id: citationRecord.id!,
-      description: citationRecord.source_description!,
+      id: citationRecord.id,
+      description: citationRecord.source_description,
       url,
-      notes: citationRecord.notes!,
+      notes: citationRecord.notes,
       attachments,
       screenshots,
     };
@@ -373,17 +375,15 @@ function createCitations(
 
 function combineData(
   priorEncodedPlaceIds: Partial<Record<PlaceStringId, string>>,
-  places: Record<PlaceStringId, Partial<DirectusPlace>>,
-  landUseRecords: Record<PlaceStringId, Array<Partial<LandUseRecord>>>,
-  benefitDistrictRecords: Record<
-    PlaceStringId,
-    Array<Partial<BenefitDistrict>>
+  places: Awaited<
+    ReturnType<typeof readPlacesAndEnsureCoordinates>
+  >["stringIdToPlace"],
+  landUseRecords: Awaited<ReturnType<typeof readLandUseRecords>>,
+  benefitDistrictRecords: Awaited<
+    ReturnType<typeof readBenefitDistrictRecords>
   >,
-  citationsByLandUseJunctionId: Record<number, Partial<DirectusCitation>>,
-  citationsByBenefitDistrictJunctionId: Record<
-    number,
-    Partial<DirectusCitation>
-  >,
+  citationsByLandUseJunctionId: CitationsByJunctionId,
+  citationsByBenefitDistrictJunctionId: CitationsByJunctionId,
   filesByAttachmentJunctionId: Record<number, FileMetadata>,
 ): Record<PlaceStringId, RawCompleteEntry> {
   return Object.fromEntries(
@@ -414,25 +414,25 @@ function combineData(
               "add parking maximums": [addMax, numAddMax] as const,
               "reduce parking minimums": [reduceMin, numReduceMin] as const,
               "remove parking minimums": [rmMin, numRmMin] as const,
-            }[record.type!];
+            }[record.type];
             const policyRecordIdx =
               numPolicyRecords > 1 ? collection.length : null;
             const policy = {
-              summary: record.summary!,
-              status: record.status!,
-              scope: record.reform_scope!,
-              land: record.land_uses!,
-              date: record.reform_date! ?? undefined,
-              reporter: record.reporter!,
-              requirements: record.requirements!,
+              summary: record.summary,
+              status: record.status,
+              scope: record.reform_scope,
+              land: record.land_uses,
+              date: record.reform_date ?? undefined,
+              reporter: record.reporter,
+              requirements: record.requirements,
               citations: createCitations(
-                record.citations!,
+                record.citations,
                 citationsByLandUseJunctionId,
                 filesByAttachmentJunctionId,
                 {
                   placeId,
                   hasDistinctPolicyTypes,
-                  policyType: record.type!,
+                  policyType: record.type,
                   policyRecordIdx,
                 },
               ),
@@ -447,12 +447,12 @@ function combineData(
             const policyRecordIdx =
               numBenefitDistrict > 1 ? benefitDistricts.length : null;
             benefitDistricts.push({
-              summary: record.summary!,
-              status: record.status!,
-              date: record.reform_date! ?? undefined,
-              reporter: record.reporter!,
+              summary: record.summary,
+              status: record.status,
+              date: record.reform_date ?? undefined,
+              reporter: record.reporter,
               citations: createCitations(
-                record.citations!,
+                record.citations,
                 citationsByBenefitDistrictJunctionId,
                 filesByAttachmentJunctionId,
                 {
@@ -468,14 +468,15 @@ function combineData(
 
         const result: RawCompleteEntry = {
           place: {
-            name: place.name!,
-            state: place.state!,
-            country:
-              COUNTRY_MAPPING[place.country_code!] ?? place.country_code!,
-            type: place.type!,
+            name: place.name,
+            state: place.state,
+            country: COUNTRY_MAPPING[place.country_code] ?? place.country_code,
+            type: place.type,
             encoded: priorEncodedPlaceIds[placeId] ?? encodePlaceId(placeId),
-            pop: place.population!,
+            pop: place.population,
             repeal: place.complete_minimums_repeal ? true : undefined,
+            // Guaranteed non-null: readPlacesAndEnsureCoordinates backfills
+            // missing coordinates before this function is ever called.
             coord: place.coordinates!.coordinates,
           },
           ...(addMax.length && { add_max: addMax }),
