@@ -19,8 +19,12 @@
   font-size: typography.$font-size-base;
   line-height: typography.$line-height-base;
 
+  // Set a minimum for when the counter is not yet populated.
+  // 68px is the height of the counter with 2 rows, which is the shortest
+  // it will ever be.
+  min-height: 68px;
+
   padding: spacing.$element-gap spacing.$container-edge-spacing;
-  min-height: 40px; // This is for when the counter is not yet populated.
   width: 260px;
 
   color: colors.$black;

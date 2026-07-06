@@ -18,13 +18,14 @@ div.leaflet-left .leaflet-control {
 }
 
 div.leaflet-control-zoom.leaflet-bar {
+  // We add 46px to correctly offset with Leaflet's code.
   top: calc(46px + spacing.$map-controls-margin-top - header.$header-height);
 
   a {
     width: $button-width;
     height: spacing.$min-touch-target;
     font-size: $label-font-size;
-    font-weight: normal;
+    font-weight: typography.$font-weight-regular;
 
     @include mixins.flex-center;
 

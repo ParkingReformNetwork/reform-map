@@ -50,7 +50,7 @@
   margin: 0;
   line-height: typography.$line-height-tight;
 
-  font-weight: normal;
+  font-weight: typography.$font-weight-regular;
   font-size: typography.$font-size-xl;
 
   .scorecard-supplemental-place-info {
