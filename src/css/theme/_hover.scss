@@ -5,3 +5,12 @@
     }
   }
 }
+
+@mixin enabled-or-focus {
+  @media (hover: hover) {
+    &:hover,
+    &:focus {
+      @content;
+    }
+  }
+}
