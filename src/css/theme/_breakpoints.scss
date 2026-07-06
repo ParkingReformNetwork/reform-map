@@ -3,11 +3,10 @@
 // When developing, check how 335px x 600px renders. This is what the map as an iframe
 // looks like on iPhone SE.
 
-$xs-width: "480px";
-$sm-width: "640px";
-$md-width: "768px";
-$lg-width: "1024px";
-$xl-width: "1280px";
+$xs-width: 480px;
+$sm-width: 640px;
+$md-width: 768px;
+$lg-width: 1024px;
 
 @mixin gte-xs() {
   @media screen and (min-width: $xs-width) {
@@ -29,12 +28,6 @@ $xl-width: "1280px";
 
 @mixin gte-lg() {
   @media screen and (min-width: $lg-width) {
-    @content();
-  }
-}
-
-@mixin gte-xl() {
-  @media screen and (min-width: $xl-width) {
     @content();
   }
 }
