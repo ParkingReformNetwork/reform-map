@@ -239,7 +239,9 @@ function generateAccordionForFilterGroup(
   // However, we use the initial filterState to determine if it should be checked.
   FILTER_OPTIONS.merged[params.filterStateKey].forEach((val, i) => {
     const inputId = `filter-${params.htmlName}-option-${i}`;
-    const checked = filterState[params.filterStateKey].has(val);
+    const checked = (filterState[params.filterStateKey] as Set<string>).has(
+      val,
+    );
     const description = params.preserveCapitalization ? val : capitalize(val);
     const [label, input] = generateCheckbox(
       inputId,
@@ -353,7 +355,7 @@ function initFilterGroup(
       accordionElements.fieldSet
         .querySelectorAll<HTMLInputElement>('input[type="checkbox"]')
         .forEach((input) => {
-          input.checked = state[params.filterStateKey].has(
+          input.checked = (state[params.filterStateKey] as Set<string>).has(
             input.dataset.value!,
           );
         });

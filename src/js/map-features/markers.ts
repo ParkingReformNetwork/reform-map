@@ -64,31 +64,30 @@ export default function initPlaceMarkers(
   map: LeafletMap,
   viewToggle: ViewStateObservable,
 ): FeatureGroup {
-  const placesToMarkers: Record<string, MarkerWithPlaceId> = Object.entries(
-    filterManager.entries,
-  ).reduce((acc: Record<string, MarkerWithPlaceId>, [placeId, entry]) => {
-    const [long, lat] = entry.place.coord;
-    const entryIsPrimary = isPrimary(entry);
-    const style = entryIsPrimary
-      ? PRIMARY_MARKER_STYLE
-      : SECONDARY_MARKER_STYLE;
-    const marker = new CircleMarker([lat, long], {
-      ...style,
-      radius: radiusGivenZoom({
-        zoom: map.getZoom(),
-        isPrimary: entryIsPrimary,
-      }),
-    }) as MarkerWithPlaceId;
-    marker.placeId = placeId;
-    marker.isPrimary = entryIsPrimary;
+  const placesToMarkers: Record<string, MarkerWithPlaceId> = Object.fromEntries(
+    Object.entries(filterManager.entries).map(([placeId, entry]) => {
+      const [long, lat] = entry.place.coord;
+      const entryIsPrimary = isPrimary(entry);
+      const style = entryIsPrimary
+        ? PRIMARY_MARKER_STYLE
+        : SECONDARY_MARKER_STYLE;
+      const marker = new CircleMarker([lat, long], {
+        ...style,
+        radius: radiusGivenZoom({
+          zoom: map.getZoom(),
+          isPrimary: entryIsPrimary,
+        }),
+      }) as MarkerWithPlaceId;
+      marker.placeId = placeId;
+      marker.isPrimary = entryIsPrimary;
 
-    // The tooltip is the text shown on hover. We strip the country
-    // to make it less verbose.
-    marker.bindTooltip(determinePlaceIdWithoutCountry(entry.place));
+      // The tooltip is the text shown on hover. We strip the country
+      // to make it less verbose.
+      marker.bindTooltip(determinePlaceIdWithoutCountry(entry.place));
 
-    acc[placeId] = marker;
-    return acc;
-  }, {});
+      return [placeId, marker];
+    }),
+  );
 
   const markerGroup = new FeatureGroup();
   let currentlyVisiblePlaceIds = new Set<string>();

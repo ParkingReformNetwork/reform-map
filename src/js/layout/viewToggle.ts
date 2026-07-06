@@ -5,26 +5,28 @@ export type ViewState = "map" | "table";
 
 export type ViewStateObservable = Observable<ViewState>;
 
-function updateUI(table: Tabulator, state: ViewState): void {
+function getViewIcons(): {
+  tableIcon: HTMLButtonElement;
+  mapIcon: HTMLButtonElement;
+} | null {
   const tableIcon = document.querySelector<HTMLButtonElement>(
     ".header-table-icon-container",
   );
   const mapIcon = document.querySelector<HTMLButtonElement>(
     ".header-map-icon-container",
   );
+  if (!mapIcon || !tableIcon) return null;
+  return { tableIcon, mapIcon };
+}
+
+function updateUI(table: Tabulator, state: ViewState): void {
+  const viewIcons = getViewIcons();
   const tableView = document.querySelector<HTMLElement>("#table-view");
   const mapView = document.querySelector<HTMLElement>("#map");
   const mapCounter = document.querySelector<HTMLElement>("#map-counter");
   const prnLogo = document.querySelector<HTMLElement>(".prn-logo-map");
-  if (
-    !mapIcon ||
-    !tableIcon ||
-    !tableView ||
-    !mapView ||
-    !mapCounter ||
-    !prnLogo
-  )
-    return;
+  if (!viewIcons || !tableView || !mapView || !mapCounter || !prnLogo) return;
+  const { tableIcon, mapIcon } = viewIcons;
 
   if (state === "map") {
     tableIcon.style.display = "inline-flex";
@@ -45,13 +47,9 @@ function updateUI(table: Tabulator, state: ViewState): void {
 }
 
 function updateOnIconClick(observable: ViewStateObservable): void {
-  const tableIcon = document.querySelector<HTMLButtonElement>(
-    ".header-table-icon-container",
-  );
-  const mapIcon = document.querySelector<HTMLButtonElement>(
-    ".header-map-icon-container",
-  );
-  if (!mapIcon || !tableIcon) return;
+  const viewIcons = getViewIcons();
+  if (!viewIcons) return;
+  const { tableIcon, mapIcon } = viewIcons;
 
   tableIcon.addEventListener("click", () => observable.setValue("table"));
   mapIcon.addEventListener("click", () => observable.setValue("map"));
