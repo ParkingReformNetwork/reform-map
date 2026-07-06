@@ -11,12 +11,7 @@ html,
 body {
   padding: 0;
   margin: 0;
-
-  // dvh fallback: without it, mobile browsers may leave an unclickable gap
-  // below the page when the toolbar collapses, since 100vh is fixed at load.
-  height: 100vh;
-  height: 100dvh;
-
+  height: 100%;
   width: 100%;
   display: flex;
   flex-direction: column;
