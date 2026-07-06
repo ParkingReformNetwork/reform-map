@@ -2,13 +2,7 @@ import { iconHtml } from "../layout/icons";
 import type { ViewState } from "../layout/viewToggle";
 import { COUNTRIES_PREFIXED_BY_THE } from "../model/data";
 import { encodedPlaceToUrl } from "../model/placeId";
-import type {
-  PlaceId,
-  PlaceType,
-  PolicyType,
-  ProcessedCoreEntry,
-  ReformStatus,
-} from "../model/types";
+import type { PlaceType, PolicyType, ReformStatus } from "../model/types";
 import {
   type FilterState,
   isAllMinimumsRemovedToggleInEffect,
@@ -51,6 +45,32 @@ export function determinePlaceDescription(
 export const SEARCH_RESET_HTML = `<button class="counter-search-reset" role="button" aria-label="reset search">reset search</button>`;
 export const TABLE_DOWNLOAD_HTML = `<button class="counter-table-download" role="button" aria-label="download table as CSV">download as CSV</button>`;
 
+interface PolicyTypeNouns {
+  // The full noun phrase, e.g. "parking maximums", used on its own.
+  full: string;
+  // The shortened noun, e.g. "maximums", used as a list item alongside other policy types.
+  listItem: string;
+}
+
+const POLICY_TYPE_NOUNS: Record<PolicyType, PolicyTypeNouns> = {
+  "add parking maximums": {
+    full: "parking maximums",
+    listItem: "maximums",
+  },
+  "reduce parking minimums": {
+    full: "parking minimum reductions",
+    listItem: "minimum reductions",
+  },
+  "remove parking minimums": {
+    full: "parking minimum removals",
+    listItem: "minimum removals",
+  },
+  "parking benefit district": {
+    full: "parking benefit districts",
+    listItem: "benefit districts",
+  },
+};
+
 export function determineSearch(
   view: ViewState,
   placeId: string,
@@ -67,18 +87,16 @@ export function determineSearch(
   }
 
   const suffix = `in ${placeLink} — ${SEARCH_RESET_HTML}`;
-  switch (policyType) {
-    case "any parking reform":
-      return `Showing an overview of ${status} parking reforms ${suffix}`;
-    case "add parking maximums":
-      return `Showing details about ${status} parking maximums ${suffix}`;
-    case "reduce parking minimums":
-      return `Showing details about ${status} parking minimum reductions ${suffix}`;
-    case "remove parking minimums":
-      return `Showing details about ${status} parking minimum removals ${suffix}`;
-    default:
-      throw new Error(`Unexpected policy type: ${policyType}`);
+
+  if (policyType === "any parking reform") {
+    return `Showing an overview of ${status} parking reforms ${suffix}`;
   }
+
+  const noun = POLICY_TYPE_NOUNS[policyType];
+  if (!noun) {
+    throw new Error(`Unexpected policy type: ${policyType}`);
+  }
+  return `Showing details about ${status} ${noun.full} ${suffix}`;
 }
 
 export function determineAnyReform(
@@ -92,43 +110,20 @@ export function determineAnyReform(
     return `Showing an overview of ${state} parking reforms in ${placeDescription} - ${TABLE_DOWNLOAD_HTML}`;
   }
 
-  interface Description {
-    singlePolicy: string;
-    multiplePolicies: string;
-  }
-
   const prefix = `Showing ${placeDescription} with`;
-  const policyDescriptionMap: Record<PolicyType, Description> = {
-    "add parking maximums": {
-      singlePolicy: "parking maximums",
-      multiplePolicies: "maximums",
-    },
-    "reduce parking minimums": {
-      singlePolicy: "parking minimum reductions",
-      multiplePolicies: "minimum reductions",
-    },
-    "remove parking minimums": {
-      singlePolicy: "parking minimum removals",
-      multiplePolicies: "minimum removals",
-    },
-    "parking benefit district": {
-      singlePolicy: "parking benefit districts",
-      multiplePolicies: "benefit district",
-    },
-  };
   const policyDescriptions = Array.from(statePolicyTypes)
     .filter((policy) => matchedPolicyTypes.has(policy as PolicyType))
-    .map((policy) => policyDescriptionMap[policy as PolicyType]);
+    .map((policy) => POLICY_TYPE_NOUNS[policy as PolicyType]);
   if (!policyDescriptions.length) {
     throw new Error(`Expected state.includedPolicyChanges to be set`);
   }
   if (policyDescriptions.length === 1) {
-    return `${prefix} ${state} ${policyDescriptions[0].singlePolicy}`;
+    return `${prefix} ${state} ${policyDescriptions[0].full}`;
   }
 
   // Else, multiple policies. Format as a list.
   const listItems = policyDescriptions
-    .map((description) => `<li>${description.multiplePolicies}</li>`)
+    .map((description) => `<li>${description.listItem}</li>`)
     .sort()
     .join("");
   return `${prefix} 1+ ${state} parking reforms:<ul>${listItems}</ul>`;
@@ -174,13 +169,9 @@ export function determineRmMin(
 export function determineHtml(
   view: ViewState,
   state: FilterState,
-  entries: Record<PlaceId, ProcessedCoreEntry>,
-  numPlaces: number,
-  matchedPolicyTypes: Set<PolicyType>,
-  matchedCountries: Set<string>,
-  matchedPlaceTypes: Set<PlaceType>,
+  manager: PlaceFilterManager,
 ): string {
-  if (!numPlaces) {
+  if (!manager.numMatchedPlaces) {
     return "No places selected — use the filter or search icons";
   }
   if (state.searchInput) {
@@ -188,16 +179,16 @@ export function determineHtml(
     return determineSearch(
       view,
       placeId,
-      entries[placeId].place.encoded,
+      manager.entries[placeId].place.encoded,
       state.policyTypeFilter,
       state.status,
     );
   }
 
   const placeDescription = determinePlaceDescription(
-    numPlaces,
-    matchedCountries,
-    matchedPlaceTypes,
+    manager.numMatchedPlaces,
+    manager.matchedCountries,
+    manager.matchedPlaceTypes,
   );
 
   switch (state.policyTypeFilter) {
@@ -205,7 +196,7 @@ export function determineHtml(
       return determineAnyReform(
         view,
         placeDescription,
-        matchedPolicyTypes,
+        manager.matchedPolicyTypes,
         state.includedPolicyChanges,
         state.status,
       );
@@ -214,14 +205,14 @@ export function determineHtml(
         view,
         placeDescription,
         state.status,
-        "parking minimum reductions",
+        POLICY_TYPE_NOUNS["reduce parking minimums"].full,
       );
     case "add parking maximums":
       return buildSimplePolicyText(
         view,
         placeDescription,
         state.status,
-        "parking maximums",
+        POLICY_TYPE_NOUNS["add parking maximums"].full,
       );
     case "remove parking minimums":
       return determineRmMin(
@@ -235,7 +226,7 @@ export function determineHtml(
         view,
         placeDescription,
         state.status,
-        "parking benefit districts",
+        POLICY_TYPE_NOUNS["parking benefit district"].full,
       );
     default:
       throw new Error(`Unexpected policy type: ${state.policyTypeFilter}`);
@@ -265,19 +256,7 @@ export default function initCounters(manager: PlaceFilterManager): void {
   setUpResetButton(tableCounter, manager);
 
   manager.subscribe("update counters", (state) => {
-    for (const [view, counter] of [
-      ["map", mapCounter],
-      ["table", tableCounter],
-    ] as const) {
-      counter.innerHTML = determineHtml(
-        view,
-        state,
-        manager.entries,
-        manager.numMatchedPlaces,
-        manager.matchedPolicyTypes,
-        manager.matchedCountries,
-        manager.matchedPlaceTypes,
-      );
-    }
+    mapCounter.innerHTML = determineHtml("map", state, manager);
+    tableCounter.innerHTML = determineHtml("table", state, manager);
   });
 }

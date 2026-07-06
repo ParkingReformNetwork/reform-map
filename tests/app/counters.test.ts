@@ -17,20 +17,22 @@ import {
   type PolicyType,
   type ReformStatus,
 } from "../../src/js/model/types";
-import { ALL_POLICY_TYPE_FILTER } from "../../src/js/state/FilterState";
+import {
+  ALL_POLICY_TYPE_FILTER,
+  type PlaceFilterManager,
+} from "../../src/js/state/FilterState";
 import { DEFAULT_FILTER_STATE } from "../../src/js/state/urlEncoder";
 
 test.describe("determineHtml", () => {
   test("no places", () => {
-    const result = determineHtml(
-      "map",
-      DEFAULT_FILTER_STATE,
-      {},
-      0,
-      new Set(),
-      new Set(),
-      new Set(),
-    );
+    const manager = {
+      entries: {},
+      numMatchedPlaces: 0,
+      matchedCountries: new Set(),
+      matchedPlaceTypes: new Set(),
+      matchedPolicyTypes: new Set(),
+    } as unknown as PlaceFilterManager;
+    const result = determineHtml("map", DEFAULT_FILTER_STATE, manager);
     expect(result).toEqual(
       "No places selected — use the filter or search icons",
     );
@@ -243,7 +245,7 @@ test("determineAnyReform()", () => {
       statePolicy: ALL_POLICY_TYPE,
       state: "adopted",
     },
-    "Showing 5 places in Mexico with 1+ adopted parking reforms:<ul><li>benefit district</li><li>maximums</li><li>minimum reductions</li><li>minimum removals</li></ul>",
+    "Showing 5 places in Mexico with 1+ adopted parking reforms:<ul><li>benefit districts</li><li>maximums</li><li>minimum reductions</li><li>minimum removals</li></ul>",
   );
   assert(
     {
@@ -252,7 +254,7 @@ test("determineAnyReform()", () => {
       statePolicy: ALL_POLICY_TYPE,
       state: "repealed",
     },
-    "Showing 5 places in Mexico with 1+ repealed parking reforms:<ul><li>benefit district</li><li>maximums</li><li>minimum reductions</li><li>minimum removals</li></ul>",
+    "Showing 5 places in Mexico with 1+ repealed parking reforms:<ul><li>benefit districts</li><li>maximums</li><li>minimum reductions</li><li>minimum removals</li></ul>",
   );
 
   assert(
