@@ -8,6 +8,10 @@ import type {
   ProcessedPlace,
 } from "../../src/js/model/types";
 
+// --------------------------------------------------------------------------
+// Fixtures
+// --------------------------------------------------------------------------
+
 export function makePlace(
   overrides: Partial<ProcessedPlace> = {},
 ): ProcessedPlace {
@@ -34,6 +38,10 @@ export function makeEntry(
   };
 }
 
+// --------------------------------------------------------------------------
+// Constants
+// --------------------------------------------------------------------------
+
 export const DEFAULT_ALL_MINIMUMS_RANGE: [number, number] = [120, 200];
 export const DEFAULT_PLACE_RANGE: [number, number] = [6000, 8500];
 
@@ -44,6 +52,10 @@ export const HEADER_ICON = {
   search: ".header-search-icon-container",
   table: ".header-table-icon-container",
 };
+
+// --------------------------------------------------------------------------
+// Map
+// --------------------------------------------------------------------------
 
 export async function loadMap(page: Page): Promise<void> {
   await page.goto("");
@@ -123,19 +135,87 @@ export async function onScreenMarkerPoints(
   });
 }
 
+// --------------------------------------------------------------------------
+// Header navigation
+// --------------------------------------------------------------------------
+
 export async function openFilter(page: Page): Promise<void> {
   await page.locator(HEADER_ICON.filter).click();
 }
+
+export async function openSearch(page: Page): Promise<void> {
+  await page.locator(HEADER_ICON.search).click();
+  // div.choices is position:fixed so #search-popup has zero intrinsic height;
+  // wait for the auto-opened dropdown itself instead
+  await page.locator(".choices__list--dropdown").waitFor({ state: "visible" });
+}
+
+/** Switch to the table view and wait for it to become visible. */
+export async function showTable(page: Page): Promise<void> {
+  await page.locator(HEADER_ICON.table).click();
+  await expect(page.locator("#table-view")).toBeVisible();
+}
+
+// --------------------------------------------------------------------------
+// Filter
+// --------------------------------------------------------------------------
 
 export async function selectToggle(page: Page): Promise<void> {
   await page.locator("#filter-all-minimums-toggle-label").click();
 }
 
+export type StringArrayOption = string[] | "all";
+
+/**
+ * Uncheck all options in the given accordion group, then check only the
+ * given values (or check-all, if `values` is `"all"`). Assumes the filter is
+ * open. No-op if `values` is undefined.
+ */
+export async function selectIfSet(
+  page: Page,
+  selector: string,
+  values?: StringArrayOption,
+): Promise<void> {
+  if (!values) return;
+
+  // First, expand the accordion
+  await page.locator(`#filter-accordion-toggle-${selector}`).click();
+
+  if (values === "all") {
+    await page.locator(`#filter-${selector}-check-all`).click();
+    return;
+  }
+
+  // Else, uncheck all options to reset the state.
+  await page.locator(`#filter-${selector}-uncheck-all`).click();
+
+  // `data-value` holds the raw option value. Every filter group except
+  // "country" renders a capitalized label over a lowercase raw value, so the
+  // label text passed in must be lowercased to match `data-value`.
+  const dataValues =
+    selector === "country"
+      ? values
+      : values.map((value) => value.toLowerCase());
+
+  for (const value of dataValues) {
+    await page
+      .locator(`.filter-${selector} label:has(input[data-value="${value}"])`)
+      .click();
+  }
+}
+
 /** Uncheck all countries, then check only the given one. Assumes the filter is open. */
 export async function filterToCountry(page: Page, name: string): Promise<void> {
-  await page.locator("#filter-accordion-toggle-country").click();
-  await page.locator("#filter-country-uncheck-all").click();
-  await page
-    .locator(`.filter-country label:has(input[data-value="${name}"])`)
-    .click();
+  await selectIfSet(page, "country", [name]);
+}
+
+export async function selectPolicyType(
+  page: Page,
+  value: string,
+): Promise<void> {
+  await page.locator("#filter-policy-type-dropdown").selectOption(value);
+}
+
+export async function selectStatus(page: Page, value: string): Promise<void> {
+  await page.locator("#filter-status-dropdown").selectOption(value);
 }

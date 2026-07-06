@@ -1,4 +1,4 @@
-import { expect, type Page, test } from "@playwright/test";
+import { expect, test } from "@playwright/test";
 import type { ReformStatus } from "../../src/js/model/types";
 import type { PolicyTypeFilter } from "../../src/js/state/FilterState";
 import {
@@ -8,10 +8,12 @@ import {
   getTotalNumPlaces,
   loadMap,
   openFilter,
+  type StringArrayOption,
+  selectIfSet,
+  selectPolicyType,
+  selectStatus,
   selectToggle,
 } from "./utils";
-
-type StringArrayOption = string[] | "all";
 
 interface EdgeCase {
   desc: string;
@@ -119,54 +121,17 @@ const TESTS: EdgeCase[] = [
   },
 ];
 
-async function selectIfSet(
-  page: Page,
-  selector: string,
-  values?: StringArrayOption,
-): Promise<void> {
-  if (!values) return;
-
-  // First, expand the accordion
-  await page.locator(`#filter-accordion-toggle-${selector}`).click();
-
-  if (values === "all") {
-    await page.locator(`#filter-${selector}-check-all`).click();
-    return;
-  }
-
-  // Else, uncheck all options to reset the state.
-  await page.locator(`#filter-${selector}-uncheck-all`).click();
-
-  // `data-value` holds the raw option value. Every filter group except
-  // "country" renders a capitalized label over a lowercase raw value, so the
-  // label text passed in must be lowercased to match `data-value`.
-  const dataValues =
-    selector === "country"
-      ? values
-      : values.map((value) => value.toLowerCase());
-
-  for (const value of dataValues) {
-    await page
-      .locator(`.filter-${selector} label:has(input[data-value="${value}"])`)
-      .click();
-  }
-}
-
 for (const edgeCase of TESTS) {
   test(`${edgeCase.desc}`, async ({ page }) => {
     await loadMap(page);
     await openFilter(page);
 
     if (edgeCase.policyTypeFilter !== "any parking reform") {
-      await page
-        .locator("#filter-policy-type-dropdown")
-        .selectOption(edgeCase.policyTypeFilter);
+      await selectPolicyType(page, edgeCase.policyTypeFilter);
     }
 
     if (edgeCase.status && edgeCase.status !== "adopted") {
-      await page
-        .locator("#filter-status-dropdown")
-        .selectOption(edgeCase.status);
+      await selectStatus(page, edgeCase.status);
     }
 
     if (edgeCase.allMinimumsRemoved === true) {
@@ -217,16 +182,12 @@ test("uncheck-all only affects the current dataset's options", async ({
   await openFilter(page);
 
   // In the "remove parking minimums" dataset, uncheck all of its year options.
-  await page
-    .locator("#filter-policy-type-dropdown")
-    .selectOption("remove parking minimums");
+  await selectPolicyType(page, "remove parking minimums");
   await page.locator("#filter-accordion-toggle-year").click();
   await page.locator("#filter-year-uncheck-all").click();
 
   // Switch to the "reduce parking minimums" dataset, whose year options differ.
-  await page
-    .locator("#filter-policy-type-dropdown")
-    .selectOption("reduce parking minimums");
+  await selectPolicyType(page, "reduce parking minimums");
 
   // "1960" exists only in this dataset, so uncheck-all above never touched it.
   await expect(
