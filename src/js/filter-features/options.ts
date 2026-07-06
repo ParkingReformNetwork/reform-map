@@ -28,6 +28,10 @@ import {
 import type Observable from "../state/Observable";
 import { initPopulationSlider } from "./populationSlider";
 
+// --------------------------------------------------------------------------
+// Filter option data
+// --------------------------------------------------------------------------
+
 /** These option values change depending on which dataset is loaded.
  *
  * Note that some datasets may not actually use a particular option group, but
@@ -148,6 +152,10 @@ export const FILTER_OPTIONS: FilterOptions = {
   },
 } as const;
 
+// --------------------------------------------------------------------------
+// Checkbox helpers
+// --------------------------------------------------------------------------
+
 function getVisibleCheckboxes(
   fieldset: HTMLFieldSetElement,
 ): Array<HTMLInputElement> {
@@ -169,6 +177,10 @@ export function determineCheckedCountTitle(
   ).length;
   return ` (${checked}/${total})`;
 }
+
+// --------------------------------------------------------------------------
+// Filter group
+// --------------------------------------------------------------------------
 
 type FilterGroupAccordionElements = BaseAccordionElements & {
   fieldSet: HTMLFieldSetElement;
@@ -402,6 +414,10 @@ function initFilterGroup(
   wireFilterGroupSync(filterManager, accordionElements, accordionState, params);
 }
 
+// --------------------------------------------------------------------------
+// Other filter controls
+// --------------------------------------------------------------------------
+
 function initOutermostContainers(
   filterManager: PlaceFilterManager,
   filterPopup: HTMLFormElement,
@@ -470,6 +486,10 @@ function initAllMinimumsToggle(
     },
   );
 }
+
+// --------------------------------------------------------------------------
+// Public API
+// --------------------------------------------------------------------------
 
 export function initFilterOptions(filterManager: PlaceFilterManager): void {
   // Note that the order of this function determines the order of the filter.
