@@ -165,6 +165,28 @@ for (const edgeCase of TESTS) {
   });
 }
 
+// The two population thumbs share a track and must never produce an equal-value
+// range like "100 - 100 residents". Dragging one thumb onto or past the other
+// snaps it back so the min stays strictly below the max.
+test("population slider thumbs cannot cross or coincide", async ({ page }) => {
+  await loadMap(page);
+  await openFilter(page);
+  await page.locator("#filter-accordion-toggle-population-slider").click();
+
+  const left = page.locator(".population-slider-left");
+  const right = page.locator(".population-slider-right");
+
+  // Drag the min thumb to the max end: it stops one interval short of the max.
+  await left.fill("7");
+  await expect(left).toHaveValue("6");
+  await expect(right).toHaveValue("7");
+
+  // Drag the max thumb down onto the min thumb: it stops one interval above it.
+  await right.fill("6");
+  await expect(left).toHaveValue("6");
+  await expect(right).toHaveValue("7");
+});
+
 // `FilterState`'s option Sets are a single unified view across every dataset, so
 // checked-but-hidden values must persist when the user switches datasets.
 // "Uncheck all" therefore may only drop the options *visible* in the current

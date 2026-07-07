@@ -9,12 +9,11 @@ import {
 } from "../state/FilterState";
 import type Observable from "../state/Observable";
 
-const THUMBSIZE = 24;
 export const POPULATION_MAX_INDEX = POPULATION_INTERVALS.length - 1;
 
 interface Sliders {
-  readonly controls: HTMLDivElement;
   readonly label: HTMLDivElement;
+  readonly fill: HTMLDivElement;
   readonly left: HTMLInputElement;
   readonly right: HTMLInputElement;
 }
@@ -45,14 +44,30 @@ function generateSliders(
   controls.className = "population-slider-controls";
   container.append(controls);
 
+  // A static background track with a highlighted "fill" spanning the selected
+  // range. The fill is positioned by updateSlidersUI.
+  const track = document.createElement("div");
+  track.className = "population-slider-track";
+  controls.append(track);
+
+  const fill = document.createElement("div");
+  fill.className = "population-slider-fill";
+  controls.append(fill);
+
+  // Two full-width range inputs are stacked directly on top of each other. CSS
+  // makes only their thumbs interactive (the tracks are inert), so each thumb
+  // can be dragged independently over the shared track drawn behind them.
+  const maxIndex = POPULATION_MAX_INDEX.toString();
+
   const left = document.createElement("input");
   left.setAttribute("aria-labelledby", "population-slider-label");
   left.className = "population-slider-left";
   left.name = "min";
   left.type = "range";
-  left.step = "0.5";
+  left.step = "1";
   left.min = "0";
-  left.value = "0";
+  left.max = maxIndex;
+  left.value = initialPopulationSliderIndexes[0].toString();
   controls.append(left);
 
   const right = document.createElement("input");
@@ -60,8 +75,10 @@ function generateSliders(
   right.className = "population-slider-right";
   right.name = "max";
   right.type = "range";
-  right.step = "0.5";
+  right.step = "1";
   right.min = "0";
+  right.max = maxIndex;
+  right.value = initialPopulationSliderIndexes[1].toString();
   controls.append(right);
 
   const accordionState = wireAccordion(
@@ -82,8 +99,8 @@ function generateSliders(
 
   return [
     {
-      controls,
       label,
+      fill,
       left,
       right,
     },
@@ -99,32 +116,16 @@ function updateSlidersUI(
 
   sliders.left.value = leftIndex.toString();
   sliders.right.value = rightIndex.toString();
-  sliders.left.setAttribute("value", leftIndex.toString());
-  sliders.right.setAttribute("value", rightIndex.toString());
 
-  // We dynamically change the sliders so that they cannot extend past each other.
-  const inBetween = (rightIndex - leftIndex) / 2;
-  const newLeftMax = leftIndex + inBetween;
-  const newRightMin = rightIndex - inBetween;
-  sliders.left.setAttribute("max", newLeftMax.toString());
-  sliders.right.setAttribute("min", newRightMin.toString());
-
-  const intervalSizePx = Math.round(
-    (sliders.controls.offsetWidth + THUMBSIZE / 2) /
-      POPULATION_INTERVALS.length,
-  );
-  const leftWidth = newLeftMax * intervalSizePx;
-  const rightWidth = (POPULATION_MAX_INDEX - newRightMin) * intervalSizePx;
-  sliders.left.style.width = `${leftWidth + THUMBSIZE / 2}px`;
-  sliders.right.style.width = `${rightWidth + THUMBSIZE / 2}px`;
-
-  // The left slider has a fixed anchor. However, the right slider has to move
-  // everytime the range of the slider changes.
-  sliders.right.style.left = `${leftWidth + THUMBSIZE}px`;
+  // Position the highlighted fill between the two thumbs.
+  const leftPercent = (leftIndex / POPULATION_MAX_INDEX) * 100;
+  const rightPercent = (rightIndex / POPULATION_MAX_INDEX) * 100;
+  sliders.fill.style.left = `${leftPercent}%`;
+  sliders.fill.style.width = `${rightPercent - leftPercent}%`;
 
   const leftLabel = POPULATION_INTERVALS[leftIndex][0];
   const rightLabel = POPULATION_INTERVALS[rightIndex][0];
-  sliders.label.innerHTML = `${leftLabel} - ${rightLabel} residents`;
+  sliders.label.textContent = `${leftLabel} - ${rightLabel} residents`;
 }
 
 export function initPopulationSlider(
@@ -137,36 +138,26 @@ export function initPopulationSlider(
     optionsContainer,
   );
 
-  // Set initial state.
-  const maxIndex = POPULATION_MAX_INDEX.toString();
-  sliders.left.setAttribute("max", maxIndex);
-  sliders.right.setAttribute("max", maxIndex);
-  sliders.right.setAttribute("value", populationSliderIndexes[1].toString());
-
-  // Add event listeners.
-  const onChange = (): void => {
-    const leftIndex = Math.floor(parseFloat(sliders.left.value));
-    const rightIndex = Math.ceil(parseFloat(sliders.right.value));
+  // The thumbs must stay at least one interval apart: an equal-value range like
+  // "100 - 100 residents" is meaningless. When the dragged thumb reaches its
+  // neighbor, snap it back by one so the two can never cross or coincide.
+  const onThumbDrag = (dragged: "left" | "right"): void => {
+    let leftIndex = parseInt(sliders.left.value, 10);
+    let rightIndex = parseInt(sliders.right.value, 10);
+    if (dragged === "left") {
+      leftIndex = Math.min(leftIndex, rightIndex - 1);
+      sliders.left.value = leftIndex.toString();
+    } else {
+      rightIndex = Math.max(rightIndex, leftIndex + 1);
+      sliders.right.value = rightIndex.toString();
+    }
     filterManager.update({ populationSliderIndexes: [leftIndex, rightIndex] });
   };
-  sliders.left.addEventListener("input", onChange);
-  sliders.right.addEventListener("input", onChange);
+  sliders.left.addEventListener("input", () => onThumbDrag("left"));
+  sliders.right.addEventListener("input", () => onThumbDrag("right"));
 
-  // Update UI whenever accordion is expanded. Note that the accordion
-  // must be visible for the width calculations to work.
-  accordionStateObservable.subscribe(
-    "render population slider",
-    ({ hidden }) => {
-      if (!hidden && !optionsContainer.hidden) {
-        updateSlidersUI(
-          filterManager.getState().populationSliderIndexes,
-          sliders,
-        );
-      }
-    },
-  );
-
-  // Also update UI when values change
+  // Keep the UI in sync with state. This fires on every filter change, so skip
+  // the work unless the population indexes actually changed.
   let priorPopulationSliderIndexes = populationSliderIndexes;
   filterManager.subscribe("update population sliders", (state) => {
     const [priorLeft, priorRight] = priorPopulationSliderIndexes;
@@ -174,21 +165,15 @@ export function initPopulationSlider(
     if (priorLeft === newLeft && priorRight === newRight) return;
     priorPopulationSliderIndexes = state.populationSliderIndexes;
 
-    const accordionPriorState = accordionStateObservable.getValue();
     accordionStateObservable.setValue({
-      ...accordionPriorState,
+      ...accordionStateObservable.getValue(),
       supplementalTitle: determinePopulationRangeTitle(
         state.populationSliderIndexes,
       ),
     });
-
-    if (
-      !accordionStateObservable.getValue().hidden &&
-      !optionsContainer.hidden
-    ) {
-      updateSlidersUI(state.populationSliderIndexes, sliders);
-    }
+    updateSlidersUI(state.populationSliderIndexes, sliders);
   });
 
+  updateSlidersUI(populationSliderIndexes, sliders);
   accordionStateObservable.initialize();
 }
