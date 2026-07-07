@@ -8,62 +8,95 @@
 @use "filter";
 
 $thumbsize: icons.$icon-size-md;
+$track-height: 4px;
 
 .population-slider-container {
   display: flex;
   flex-direction: column;
   align-items: center;
 
-  // `width` must be hardcoded for the calculations in populationSlider.ts to work.
   width: calc(
     filter.$filter-inner-width - (spacing.$container-edge-spacing * 2)
   );
   margin: spacing.$element-gap spacing.$container-edge-spacing;
-
-  // You can uncomment this code to visualize the slider mechanism when debugging.
-  // input {
-  //   border: solid;
-  // }
 }
 
 .population-slider-controls {
+  position: relative;
   width: 100%;
+  height: $thumbsize;
   margin-top: spacing.$container-edge-spacing;
   margin-bottom: calc(
     spacing.$container-edge-spacing + spacing.$small-gap
   );
-
-  @include mixins.flex-center(flex, space-between);
 }
 
-.population-slider-controls > input {
-  cursor: pointer;
+// The visible track and the highlighted fill are static divs behind the inputs.
+// The inputs themselves are transparent; only their thumbs are drawn.
+.population-slider-track,
+.population-slider-fill {
   position: absolute;
+  top: 50%;
+  height: $track-height;
+  border-radius: $track-height;
+  transform: translateY(-50%);
+}
+
+.population-slider-track {
+  left: 0;
+  width: 100%;
+  background: colors.$gray-light;
+}
+
+.population-slider-fill {
+  background: colors.$gray;
+}
+
+// Both inputs overlap and span the full width. `pointer-events: none` keeps the
+// tracks inert so the thumbs of both inputs stay independently draggable.
+.population-slider-controls > input[type="range"] {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
   margin: 0;
 
+  background: none;
+  pointer-events: none;
+
   -webkit-appearance: none;
+  appearance: none;
   outline: none;
 
-  // Only set the background in the middle third.
-  background: transparent;
-  background-image: linear-gradient(
-    to bottom,
-    transparent 0%,
-    transparent 30%,
-    colors.$gray-light 33%,
-    colors.$gray-light 66%,
-    transparent 60%,
-    transparent 100%
-  );
+  // The max thumb sits above the min thumb so it stays grabbable when the two
+  // are adjacent. They can never fully coincide: the handlers keep min < max.
+  &.population-slider-left {
+    z-index: 3;
+  }
 
-  &::-webkit-slider-thumb,
-  &::-moz-range-thumb,
-  &::-ms-thumb {
+  &.population-slider-right {
+    z-index: 4;
+  }
+
+  &::-webkit-slider-runnable-track {
+    height: 100%;
+    background: transparent;
+  }
+
+  &::-moz-range-track {
+    height: 100%;
+    background: transparent;
+  }
+
+  &::-webkit-slider-thumb {
     width: $thumbsize;
     height: $thumbsize;
+    margin-top: 0;
 
-    -webkit-appearance: none; // Override default look
+    -webkit-appearance: none;
     appearance: none;
+    pointer-events: auto;
     cursor: pointer;
 
     background: colors.$white;
@@ -71,7 +104,15 @@ $thumbsize: icons.$icon-size-md;
     border-radius: 100%;
   }
 
-  &::-webkit-slider-runnable-track {
+  &::-moz-range-thumb {
+    width: $thumbsize;
+    height: $thumbsize;
+    box-sizing: border-box;
+    pointer-events: auto;
     cursor: pointer;
+
+    background: colors.$white;
+    border: borders.$border-thickness solid colors.$gray;
+    border-radius: 100%;
   }
 }
