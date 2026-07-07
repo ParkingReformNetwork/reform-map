@@ -49,24 +49,29 @@ function determineAnyPolicySet(
   };
 }
 
+type CsvRow = Record<string, string | number | null | undefined>;
+
+function placeToCsvRow(entry: ProcessedCompleteEntry): CsvRow {
+  return {
+    place: entry.place.name,
+    state: entry.place.state,
+    country: entry.place.country,
+    population: entry.place.pop,
+    place_type: entry.place.type,
+    lat: entry.place.coord[1],
+    long: entry.place.coord[0],
+  };
+}
+
 export function createAnyPolicyCsvs(data: ProcessedCompleteEntry[]): {
   adopted: string;
   proposed: string;
   repealed: string;
 } {
-  const adopted: any[] = [];
-  const proposed: any[] = [];
-  const repealed: any[] = [];
+  const adopted: CsvRow[] = [];
+  const proposed: CsvRow[] = [];
+  const repealed: CsvRow[] = [];
   data.forEach((entry) => {
-    const initialValues = {
-      place: entry.place.name,
-      state: entry.place.state,
-      country: entry.place.country,
-      place_type: entry.place.type,
-      population: entry.place.pop,
-      lat: entry.place.coord[1],
-      long: entry.place.coord[0],
-    };
     const prnUrl = { prn_url: entry.place.url };
 
     const adoptedPolicySet = determineAnyPolicySet(entry, "adopted");
@@ -75,7 +80,7 @@ export function createAnyPolicyCsvs(data: ProcessedCompleteEntry[]): {
 
     if (adoptedPolicySet.hasReforms) {
       adopted.push({
-        ...initialValues,
+        ...placeToCsvRow(entry),
         all_minimums_removed: toBoolean(entry.place.repeal),
         ...adoptedPolicySet.csvValues,
         ...prnUrl,
@@ -83,14 +88,14 @@ export function createAnyPolicyCsvs(data: ProcessedCompleteEntry[]): {
     }
     if (proposedPolicySet.hasReforms) {
       proposed.push({
-        ...initialValues,
+        ...placeToCsvRow(entry),
         ...proposedPolicySet.csvValues,
         ...prnUrl,
       });
     }
     if (repealedPolicySet.hasReforms) {
       repealed.push({
-        ...initialValues,
+        ...placeToCsvRow(entry),
         ...repealedPolicySet.csvValues,
         ...prnUrl,
       });
@@ -104,13 +109,13 @@ export function createAnyPolicyCsvs(data: ProcessedCompleteEntry[]): {
   };
 }
 
-function validateNumEntries(
+function validateNumEntries<T>(
   csv: string,
   data: ProcessedCompleteEntry[],
-  getter: (entry: ProcessedCompleteEntry) => Array<any> | undefined,
+  getter: (entry: ProcessedCompleteEntry) => Array<T> | undefined,
 ): void {
   const numJson = sum(data.flatMap((entry) => getter(entry)?.length ?? 0));
-  const numCsv = csv.split("\r\n").length - 1;
+  const numCsv = Papa.parse(csv).data.length - 1;
   if (numJson !== numCsv) {
     throw new Error(`CSV has unequal entries to JSON: ${numCsv} vs ${numJson}`);
   }
@@ -126,13 +131,7 @@ export function createLandUseCsv(
     const policies = getter(entry);
     if (!policies) return [];
     return policies.map((policy) => ({
-      place: entry.place.name,
-      state: entry.place.state,
-      country: entry.place.country,
-      population: entry.place.pop,
-      place_type: entry.place.type,
-      lat: entry.place.coord[1],
-      long: entry.place.coord[0],
+      ...placeToCsvRow(entry),
       all_minimums_removed: toBoolean(entry.place.repeal),
       status: policy.status,
       reform_date: policy.date?.raw,
@@ -157,13 +156,7 @@ export function createBenefitDistrictCsv(
     const records = entry.benefit_district;
     if (!records) return [];
     return records.map((record) => ({
-      place: entry.place.name,
-      state: entry.place.state,
-      country: entry.place.country,
-      population: entry.place.pop,
-      place_type: entry.place.type,
-      lat: entry.place.coord[1],
-      long: entry.place.coord[0],
+      ...placeToCsvRow(entry),
       status: record.status,
       reform_date: record.date?.raw,
       summary: record.summary,
