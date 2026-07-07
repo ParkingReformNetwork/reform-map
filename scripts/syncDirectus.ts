@@ -276,7 +276,7 @@ interface AttachmentFileNameArgsBase {
   policyRecordIdx: number | null;
 }
 
-type AttachmentFileNameArgs = AttachmentFileNameArgsBase & {
+export type AttachmentFileNameArgs = AttachmentFileNameArgsBase & {
   /**
    * The index of citations for the current policy record. If
    * there is only one citation for the policy record, this value

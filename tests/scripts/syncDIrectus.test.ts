@@ -1,6 +1,7 @@
 import { expect, test } from "@playwright/test";
 
 import { createAttachments } from "../../scripts/syncDirectus";
+import { makeAttachmentFileNameArgs } from "./utils";
 
 test("createAttachments()", () => {
   const filesByAttachmentJunctionId = {
@@ -16,13 +17,11 @@ test("createAttachments()", () => {
     6: { id: "f", mimeType: "image/jpeg" },
   };
 
-  const simplest = createAttachments(filesByAttachmentJunctionId, [1, 4], {
-    placeId: "Chicago, IL",
-    policyType: "add parking maximums",
-    hasDistinctPolicyTypes: false,
-    policyRecordIdx: null,
-    citationIdx: null,
-  });
+  const simplest = createAttachments(
+    filesByAttachmentJunctionId,
+    [1, 4],
+    makeAttachmentFileNameArgs(),
+  );
   expect(simplest).toEqual({
     attachments: [{ fileName: "chicago-il-attachment.pdf", directusId: "a" }],
     screenshots: [{ fileName: "chicago-il-screenshot.png", directusId: "d" }],
@@ -31,13 +30,7 @@ test("createAttachments()", () => {
   const multipleCitations = createAttachments(
     filesByAttachmentJunctionId,
     [1, 4],
-    {
-      placeId: "Chicago, IL",
-      policyType: "add parking maximums",
-      hasDistinctPolicyTypes: false,
-      policyRecordIdx: null,
-      citationIdx: 1,
-    },
+    makeAttachmentFileNameArgs({ citationIdx: 1 }),
   );
   expect(multipleCitations).toEqual({
     attachments: [
@@ -51,13 +44,7 @@ test("createAttachments()", () => {
   const multipleAttachments = createAttachments(
     filesByAttachmentJunctionId,
     [2, 3, 5, 6],
-    {
-      placeId: "Chicago, IL",
-      policyType: "add parking maximums",
-      hasDistinctPolicyTypes: false,
-      policyRecordIdx: null,
-      citationIdx: null,
-    },
+    makeAttachmentFileNameArgs(),
   );
   expect(multipleAttachments).toEqual({
     attachments: [
@@ -73,13 +60,7 @@ test("createAttachments()", () => {
   const distinctPolicyTypes = createAttachments(
     filesByAttachmentJunctionId,
     [1, 4],
-    {
-      placeId: "Chicago, IL",
-      policyType: "add parking maximums",
-      hasDistinctPolicyTypes: true,
-      policyRecordIdx: null,
-      citationIdx: null,
-    },
+    makeAttachmentFileNameArgs({ hasDistinctPolicyTypes: true }),
   );
   expect(distinctPolicyTypes).toEqual({
     attachments: [
@@ -93,13 +74,10 @@ test("createAttachments()", () => {
   const multiplePolicyRecords = createAttachments(
     filesByAttachmentJunctionId,
     [1, 4],
-    {
-      placeId: "Chicago, IL",
+    makeAttachmentFileNameArgs({
       policyType: "reduce parking minimums",
-      hasDistinctPolicyTypes: false,
       policyRecordIdx: 1,
-      citationIdx: null,
-    },
+    }),
   );
   expect(multiplePolicyRecords).toEqual({
     attachments: [
@@ -113,13 +91,12 @@ test("createAttachments()", () => {
   const mostComplex = createAttachments(
     filesByAttachmentJunctionId,
     [2, 3, 5, 6],
-    {
-      placeId: "Chicago, IL",
+    makeAttachmentFileNameArgs({
       policyType: "remove parking minimums",
       hasDistinctPolicyTypes: true,
       policyRecordIdx: 1,
       citationIdx: 0,
-    },
+    }),
   );
   expect(mostComplex).toEqual({
     attachments: [
