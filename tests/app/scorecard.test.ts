@@ -5,6 +5,7 @@ import type {
   ProcessedCoreEntry,
   ProcessedCoreLandUsePolicy,
 } from "../../src/js/model/types";
+import { useOsIndependentSnapshots } from "../utils";
 import { loadMap, makePlace, onScreenMarkerPoints } from "./utils";
 
 // This test uses snapshot testing (https://jestjs.io/docs/snapshot-testing#updating-snapshots). If the tests fail and the changes
@@ -49,9 +50,7 @@ test("scorecard pops up and closes", async ({ page }) => {
 
 // biome-ignore lint/correctness/noEmptyPattern: Playwright requires the fixtures arg to be an object destructuring pattern.
 test("generateScorecard()", ({}, testInfo) => {
-  // Normally, Playwright saves the operating system name in the snapshot results.
-  // Our test is OS-independent, so turn this off.
-  testInfo.snapshotSuffix = "";
+  useOsIndependentSnapshots(testInfo);
 
   const place = makePlace({
     name: "My City",

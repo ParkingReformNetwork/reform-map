@@ -5,23 +5,14 @@ import type {
   ProcessedCoreEntry,
   ReformStatus,
 } from "../../src/js/model/types";
+import { makeEntry, makePlace } from "../utils";
 
 test.describe("generateSEO", () => {
   const PLACE_ID = "Tucson, Arizona, United States";
   const EXPECTED_TITLE = `Parking reforms in ${PLACE_ID} | Parking Reform Network`;
-  const BASE_ENTRY: ProcessedCoreEntry = {
-    place: {
-      name: "Tucson",
-      state: "",
-      country: "",
-      type: "city",
-      coord: [0, 0],
-      pop: 0,
-      repeal: false,
-      encoded: "",
-      url: "",
-    },
-  };
+  const BASE_ENTRY: ProcessedCoreEntry = makeEntry({
+    place: makePlace({ name: "Tucson", state: "", country: "" }),
+  });
 
   function addReforms(
     entry: ProcessedCoreEntry,

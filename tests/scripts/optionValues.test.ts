@@ -4,24 +4,18 @@ import {
   determineOptionValues,
   sortCountries,
 } from "../../scripts/lib/optionValues";
-import { type RawCoreEntry, UNKNOWN_YEAR } from "../../src/js/model/types";
+import { UNKNOWN_YEAR } from "../../src/js/model/types";
+import { makeRawCoreEntry, makeRawPlace } from "./utils";
 
 test("determineOptionValues()", () => {
-  const commonPlace = {
-    name: "n/a",
-    state: "n/a",
-    encoded: "",
-    pop: 0,
-    coord: [0, 0] as [number, number],
-    repeal: false,
-  };
-  const input: RawCoreEntry[] = [
-    {
-      place: {
-        ...commonPlace,
+  const input = [
+    makeRawCoreEntry({
+      place: makeRawPlace({
+        name: "n/a",
+        state: "n/a",
         country: "United States",
         type: "city",
-      },
+      }),
       rm_min: [
         {
           status: "adopted",
@@ -38,13 +32,14 @@ test("determineOptionValues()", () => {
           date: "2022-02-13",
         },
       ],
-    },
-    {
-      place: {
-        ...commonPlace,
+    }),
+    makeRawCoreEntry({
+      place: makeRawPlace({
+        name: "n/a",
+        state: "n/a",
         country: "Brazil",
         type: "country",
-      },
+      }),
       reduce_min: [
         {
           status: "adopted",
@@ -60,7 +55,7 @@ test("determineOptionValues()", () => {
         },
       ],
       benefit_district: [{ status: "adopted", date: "1997" }],
-    },
+    }),
   ];
   const expected = {
     merged: {

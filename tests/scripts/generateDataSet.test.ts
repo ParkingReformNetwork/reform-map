@@ -7,19 +7,19 @@ import {
 } from "../../scripts/generateDataSet";
 import type { Citation, ProcessedCompleteEntry } from "../../scripts/lib/data";
 import { ReformDate } from "../../src/js/model/ReformDate";
+import {
+  makeCompleteEntry,
+  makePlace,
+  normalizeLineEndings,
+  useOsIndependentSnapshots,
+} from "./utils";
 
 // This test uses snapshot testing (https://jestjs.io/docs/snapshot-testing#updating-snapshots). If the tests fail and the changes
 // are valid, run `npm test -- --updateSnapshot`.
 
-function normalize(csv: string): string {
-  return csv.replace(/\r\n/g, "\n");
-}
-
 // biome-ignore lint/correctness/noEmptyPattern: Playwright requires the fixtures arg to be an object destructuring pattern.
 test("generate CSVs", async ({}, testInfo) => {
-  // Normally, Playwright saves the operating system name in the snapshot results.
-  // Our test is OS-independent, so turn this off.
-  testInfo.snapshotSuffix = "";
+  useOsIndependentSnapshots(testInfo);
 
   const citation: Citation = {
     id: 0,
@@ -31,18 +31,15 @@ test("generate CSVs", async ({}, testInfo) => {
   };
 
   const entries: ProcessedCompleteEntry[] = [
-    {
-      place: {
+    makeCompleteEntry({
+      place: makePlace({
         name: "My City",
         state: "NY",
-        country: "United States",
-        type: "city",
-        encoded: "",
         repeal: true,
         pop: 24104,
         coord: [44.23, 14.23],
         url: "https://parkingreform.org/my-city-details.html",
-      },
+      }),
       add_max: [
         {
           summary: "Maximums summary #1",
@@ -65,19 +62,16 @@ test("generate CSVs", async ({}, testInfo) => {
           citations: [citation],
         },
       ],
-    },
-    {
-      place: {
+    }),
+    makeCompleteEntry({
+      place: makePlace({
         name: "Another Place",
         state: "CA",
-        country: "United States",
-        type: "county",
-        encoded: "",
-        repeal: false,
         pop: 414,
         coord: [80.3, 24.23],
         url: "https://parkingreform.org/another-place.html",
-      },
+        type: "county",
+      }),
       rm_min: [
         {
           summary: "Remove minimums",
@@ -90,19 +84,16 @@ test("generate CSVs", async ({}, testInfo) => {
           citations: [],
         },
       ],
-    },
-    {
-      place: {
+    }),
+    makeCompleteEntry({
+      place: makePlace({
         name: "Place with PBD",
         state: "GDL",
         country: "Mexico",
-        type: "city",
-        encoded: "",
-        repeal: false,
         pop: 5141414,
         coord: [90.3, 30.23],
         url: "https://parkingreform.org/place-with-pbd.html",
-      },
+      }),
       benefit_district: [
         {
           summary: "A really cool district",
@@ -112,16 +103,22 @@ test("generate CSVs", async ({}, testInfo) => {
           citations: [],
         },
       ],
-    },
+    }),
   ];
   const { adopted, proposed, repealed } = createAnyPolicyCsvs(entries);
-  expect(normalize(adopted)).toMatchSnapshot("overview-adopted.csv");
-  expect(normalize(proposed)).toMatchSnapshot("overview-proposed.csv");
-  expect(normalize(repealed)).toMatchSnapshot("overview-repealed.csv");
+  expect(normalizeLineEndings(adopted)).toMatchSnapshot("overview-adopted.csv");
+  expect(normalizeLineEndings(proposed)).toMatchSnapshot(
+    "overview-proposed.csv",
+  );
+  expect(normalizeLineEndings(repealed)).toMatchSnapshot(
+    "overview-repealed.csv",
+  );
 
   const maximums = createLandUseCsv(entries, (entry) => entry.add_max);
-  expect(normalize(maximums)).toMatchSnapshot("maximums.csv");
+  expect(normalizeLineEndings(maximums)).toMatchSnapshot("maximums.csv");
 
   const benefitDistrict = createBenefitDistrictCsv(entries);
-  expect(normalize(benefitDistrict)).toMatchSnapshot("benefit-district.csv");
+  expect(normalizeLineEndings(benefitDistrict)).toMatchSnapshot(
+    "benefit-district.csv",
+  );
 });

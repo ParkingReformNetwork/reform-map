@@ -2,15 +2,14 @@ import { readFile } from "node:fs/promises";
 import { expect, test } from "@playwright/test";
 
 import { SAMPLE_PLACES } from "../../scripts/lib/samplePlaces";
+import { useOsIndependentSnapshots } from "./utils";
 
 // This test uses snapshot testing (https://jestjs.io/docs/snapshot-testing#updating-snapshots). If the tests fail and the changes
 // are valid, run `npm test -- --updateSnapshot`.
 
 // biome-ignore lint/correctness/noEmptyPattern: Playwright requires the fixtures arg to be an object destructuring pattern.
 test("generate html page", async ({}, testInfo) => {
-  // Normally, Playwright saves the operating system name in the snapshot results.
-  // Our test is OS-independent, so turn this off.
-  testInfo.snapshotSuffix = "";
+  useOsIndependentSnapshots(testInfo);
 
   await Promise.all(
     SAMPLE_PLACES.map(async ({ encodedId }) => {
