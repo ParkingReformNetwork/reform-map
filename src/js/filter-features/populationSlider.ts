@@ -54,10 +54,9 @@ function generateSliders(
   fill.className = "population-slider-fill";
   controls.append(fill);
 
-  // Both inputs span the full width and share the same min/max. They overlap;
-  // CSS makes only their thumbs interactive so each thumb can be dragged
-  // independently. This avoids resizing the inputs, which is what made the old
-  // implementation brittle and caused the thumbs to nudge each other.
+  // Two full-width range inputs are stacked directly on top of each other. CSS
+  // makes only their thumbs interactive (the tracks are inert), so each thumb
+  // can be dragged independently over the shared track drawn behind them.
   const maxIndex = POPULATION_MAX_INDEX.toString();
 
   const left = document.createElement("input");
@@ -139,35 +138,26 @@ export function initPopulationSlider(
     optionsContainer,
   );
 
-  // Add event listeners. The thumbs share a track, so we constrain each to keep
-  // the min strictly below the max: a range like "100 - 100" is meaningless. We
-  // correct the dragged input's value immediately so the thumb never visually
-  // overshoots the other.
-  const onLeftInput = (): void => {
-    const rightIndex = parseInt(sliders.right.value, 10);
-    const leftIndex = Math.min(
-      parseInt(sliders.left.value, 10),
-      rightIndex - 1,
-    );
-    sliders.left.value = leftIndex.toString();
+  // The thumbs must stay at least one interval apart: an equal-value range like
+  // "100 - 100 residents" is meaningless. When the dragged thumb reaches its
+  // neighbor, snap it back by one so the two can never cross or coincide.
+  const onThumbDrag = (dragged: "left" | "right"): void => {
+    let leftIndex = parseInt(sliders.left.value, 10);
+    let rightIndex = parseInt(sliders.right.value, 10);
+    if (dragged === "left") {
+      leftIndex = Math.min(leftIndex, rightIndex - 1);
+      sliders.left.value = leftIndex.toString();
+    } else {
+      rightIndex = Math.max(rightIndex, leftIndex + 1);
+      sliders.right.value = rightIndex.toString();
+    }
     filterManager.update({ populationSliderIndexes: [leftIndex, rightIndex] });
   };
-  const onRightInput = (): void => {
-    const leftIndex = parseInt(sliders.left.value, 10);
-    const rightIndex = Math.max(
-      parseInt(sliders.right.value, 10),
-      leftIndex + 1,
-    );
-    sliders.right.value = rightIndex.toString();
-    filterManager.update({ populationSliderIndexes: [leftIndex, rightIndex] });
-  };
-  sliders.left.addEventListener("input", onLeftInput);
-  sliders.right.addEventListener("input", onRightInput);
+  sliders.left.addEventListener("input", () => onThumbDrag("left"));
+  sliders.right.addEventListener("input", () => onThumbDrag("right"));
 
-  // Keep the UI in sync with state. Unlike the old implementation, this no
-  // longer depends on the slider being visible, so there is no render-on-expand
-  // dance. We still guard on the population indexes since this fires for every
-  // filter change.
+  // Keep the UI in sync with state. This fires on every filter change, so skip
+  // the work unless the population indexes actually changed.
   let priorPopulationSliderIndexes = populationSliderIndexes;
   filterManager.subscribe("update population sliders", (state) => {
     const [priorLeft, priorRight] = priorPopulationSliderIndexes;

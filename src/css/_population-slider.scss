@@ -10,6 +10,20 @@
 $thumbsize: icons.$icon-size-md;
 $track-height: 4px;
 
+// The draggable circle. Applied to the vendor-specific thumb pseudo-elements,
+// which can't be grouped in one selector list because a browser drops the whole
+// rule if it doesn't recognize every selector in it.
+@mixin slider-thumb {
+  width: $thumbsize;
+  height: $thumbsize;
+  pointer-events: auto;
+  cursor: pointer;
+
+  background: colors.$white;
+  border: borders.$border-thickness solid colors.$gray;
+  border-radius: 100%;
+}
+
 .population-slider-container {
   display: flex;
   flex-direction: column;
@@ -90,29 +104,14 @@ $track-height: 4px;
   }
 
   &::-webkit-slider-thumb {
-    width: $thumbsize;
-    height: $thumbsize;
-    margin-top: 0;
-
     -webkit-appearance: none;
     appearance: none;
-    pointer-events: auto;
-    cursor: pointer;
-
-    background: colors.$white;
-    border: borders.$border-thickness solid colors.$gray;
-    border-radius: 100%;
+    margin-top: 0;
+    @include slider-thumb;
   }
 
   &::-moz-range-thumb {
-    width: $thumbsize;
-    height: $thumbsize;
     box-sizing: border-box;
-    pointer-events: auto;
-    cursor: pointer;
-
-    background: colors.$white;
-    border: borders.$border-thickness solid colors.$gray;
-    border-radius: 100%;
+    @include slider-thumb;
   }
 }
