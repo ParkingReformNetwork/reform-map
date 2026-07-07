@@ -27,7 +27,7 @@ export async function getLongLat(
 ): Promise<[number, number] | null> {
   const stateQuery = state ? `${state}, ` : "";
   // We try the most precise query first, then fall back to less precise queries.
-  const locationMethods = [() => `${placeName}, ${stateQuery}, ${countryCode}`];
+  const locationMethods = [() => `${placeName}, ${stateQuery}${countryCode}`];
   if (stateQuery) {
     locationMethods.push(() => `${placeName}, ${stateQuery}`);
   }
