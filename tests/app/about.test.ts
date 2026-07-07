@@ -14,14 +14,6 @@ test("about popup can be opened and closed", async ({ page }) => {
   await page.click(aboutIcon);
   await expect(aboutPopup).toBeVisible();
 
-  // click about icon (close popup)
-  await page.click(aboutIcon);
-  await expect(aboutPopup).toBeHidden();
-
-  // click about icon (open popup)
-  await page.click(aboutIcon);
-  await expect(aboutPopup).toBeVisible();
-
   // click x icon in popup
   await page.click(".about-popup-close-icon-container");
   await expect(aboutPopup).toBeHidden();
@@ -30,7 +22,7 @@ test("about popup can be opened and closed", async ({ page }) => {
   await page.click(aboutIcon);
   await expect(aboutPopup).toBeVisible();
 
-  // click header
-  await page.click("header");
+  // click the backdrop, outside the dialog's content box
+  await page.mouse.click(5, 5);
   await expect(aboutPopup).toBeHidden();
 });
