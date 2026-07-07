@@ -272,7 +272,6 @@ function generateAccordionForFilterGroup(
     `filter accordion ${params.htmlName}`,
     {
       hidden: false,
-      expanded: false,
       title: resolveLegend(params.legend, filterState),
       supplementalTitle: determineCheckedCountTitle(fieldSet),
     },

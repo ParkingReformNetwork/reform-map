@@ -30,7 +30,7 @@ $filter-inner-width: calc(
   }
 }
 
-.filter-accordion-toggle {
+summary.filter-accordion-toggle {
   height: spacing.$min-touch-target;
   width: 100%;
   padding: 0;
@@ -40,6 +40,11 @@ $filter-inner-width: calc(
   text-align: left;
   padding-left: spacing.$container-edge-spacing;
   padding-right: 0;
+
+  list-style: none;
+  &::-webkit-details-marker {
+    display: none;
+  }
 
   @include mixins.flex-center(flex, space-between);
 
@@ -62,6 +67,20 @@ $filter-inner-width: calc(
     svg {
       height: icons.$icon-size-sm;
     }
+  }
+
+  .icon-chevron-up {
+    display: none;
+  }
+}
+
+details[open] > summary.filter-accordion-toggle {
+  .icon-chevron-down {
+    display: none;
+  }
+
+  .icon-chevron-up {
+    display: block;
   }
 }
 
