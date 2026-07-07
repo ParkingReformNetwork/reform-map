@@ -1,18 +1,28 @@
 import fetch from "node-fetch";
 
-import { getCitations, readRawExtendedData } from "./lib/data";
+import {
+  type ExtendedEntry,
+  getCitations,
+  readRawExtendedData,
+} from "./lib/data";
 import { DIRECTUS_BASE_URL } from "./lib/paths";
 import { runScript } from "./lib/runScript";
 
-export async function readCitationIdAndLinks(): Promise<
-  Array<[number, string]>
-> {
-  const data = await readRawExtendedData();
+export function extractCitationIdAndLinks(
+  data: Record<string, ExtendedEntry>,
+): Array<[number, string]> {
   return Object.values(data).flatMap((entry) =>
     getCitations(entry)
       .map((citation) => [citation.id, citation.url])
       .filter((pair): pair is [number, string] => pair[1] !== null),
   );
+}
+
+export async function readCitationIdAndLinks(): Promise<
+  Array<[number, string]>
+> {
+  const data = await readRawExtendedData();
+  return extractCitationIdAndLinks(data);
 }
 
 async function findDeadLink(link: string): Promise<number | null> {

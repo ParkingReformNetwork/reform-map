@@ -4,10 +4,18 @@ import {
   determineOptionValues,
   sortCountries,
 } from "../../scripts/lib/optionValues";
-import { UNKNOWN_YEAR } from "../../src/js/model/types";
-import { makeRawCoreEntry, makeRawPlace } from "./utils";
+import {
+  makeRawCoreEntry,
+  makeRawPlace,
+  useOsIndependentSnapshots,
+} from "./utils";
 
-test("determineOptionValues()", () => {
+// This test uses snapshot testing (https://jestjs.io/docs/snapshot-testing#updating-snapshots). If the tests fail and the changes
+// are valid, run `npm test -- --updateSnapshot`.
+// biome-ignore lint/correctness/noEmptyPattern: Playwright requires the fixtures arg to be an object destructuring pattern.
+test("determineOptionValues()", ({}, testInfo) => {
+  useOsIndependentSnapshots(testInfo);
+
   const input = [
     makeRawCoreEntry({
       place: makeRawPlace({
@@ -57,132 +65,9 @@ test("determineOptionValues()", () => {
       benefit_district: [{ status: "adopted", date: "1997" }],
     }),
   ];
-  const expected = {
-    merged: {
-      placeType: ["city", "country"],
-      country: ["United States", "Brazil"],
-      scope: [
-        "city center / business district",
-        "citywide",
-        "regional",
-        "transit-oriented",
-      ],
-      landUse: [
-        "all uses",
-        "commercial",
-        "medical",
-        "other",
-        "residential, all uses",
-      ],
-      year: [UNKNOWN_YEAR, "2025", "2022", "1997"],
-    },
-    anyAdopted: {
-      placeType: ["city", "country"],
-      country: ["United States", "Brazil"],
-      scope: ["city center / business district", "regional"],
-      landUse: ["all uses", "commercial"],
-      year: [UNKNOWN_YEAR, "1997"],
-    },
-    anyProposed: {
-      placeType: ["country"],
-      country: ["Brazil"],
-      scope: ["regional", "transit-oriented"],
-      landUse: ["medical"],
-      year: ["2025"],
-    },
-    anyRepealed: {
-      placeType: ["city"],
-      country: ["United States"],
-      scope: ["citywide"],
-      landUse: ["other", "residential, all uses"],
-      year: ["2022"],
-    },
-    addMaxAdopted: {
-      placeType: [],
-      country: [],
-      scope: [],
-      landUse: [],
-      year: [],
-    },
-    addMaxProposed: {
-      placeType: [],
-      country: [],
-      scope: [],
-      landUse: [],
-      year: [],
-    },
-    addMaxRepealed: {
-      placeType: ["city"],
-      country: ["United States"],
-      scope: ["citywide"],
-      landUse: ["other", "residential, all uses"],
-      year: ["2022"],
-    },
-    reduceMinAdopted: {
-      placeType: ["country"],
-      country: ["Brazil"],
-      scope: ["regional"],
-      landUse: ["commercial"],
-      year: [UNKNOWN_YEAR],
-    },
-    reduceMinProposed: {
-      placeType: ["country"],
-      country: ["Brazil"],
-      scope: ["regional", "transit-oriented"],
-      landUse: ["medical"],
-      year: ["2025"],
-    },
-    reduceMinRepealed: {
-      placeType: [],
-      country: [],
-      scope: [],
-      landUse: [],
-      year: [],
-    },
-    rmMinAdopted: {
-      placeType: ["city"],
-      country: ["United States"],
-      scope: ["city center / business district"],
-      landUse: ["all uses"],
-      year: [UNKNOWN_YEAR],
-    },
-    rmMinProposed: {
-      placeType: [],
-      country: [],
-      scope: [],
-      landUse: [],
-      year: [],
-    },
-    rmMinRepealed: {
-      placeType: [],
-      country: [],
-      scope: [],
-      landUse: [],
-      year: [],
-    },
-    benefitDistrictAdopted: {
-      placeType: ["country"],
-      country: ["Brazil"],
-      scope: [],
-      landUse: [],
-      year: ["1997"],
-    },
-    benefitDistrictProposed: {
-      placeType: [],
-      country: [],
-      scope: [],
-      landUse: [],
-      year: [],
-    },
-    benefitDistrictRepealed: {
-      placeType: [],
-      country: [],
-      scope: [],
-      landUse: [],
-      year: [],
-    },
-  };
-  expect(determineOptionValues(input)).toEqual(expected);
+  expect(JSON.stringify(determineOptionValues(input), null, 2)).toMatchSnapshot(
+    "determineOptionValues.json",
+  );
 });
 
 test("sortCountries", () => {
