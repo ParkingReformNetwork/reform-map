@@ -182,7 +182,7 @@
           type="button"
           class="header-icon-container header-about-icon-container"
           title="about the map"
-          aria-expanded="false"
+          aria-haspopup="dialog"
           aria-controls="about-popup"
         >
           <svg aria-hidden="true"><use href="#icon-circle-question"></use></svg>
@@ -221,12 +221,7 @@
       </nav>
     </header>
 
-    <section
-      id="about-popup"
-      class="about-popup"
-      aria-label="about the map"
-      hidden
-    >
+    <dialog id="about-popup" class="about-popup" aria-label="about the map">
       <header class="about-popup-header">
         <h2>About the Parking Reform Map</h2>
         <button
@@ -352,7 +347,7 @@
           <svg aria-hidden="true"><use href="#icon-arrow-right"></use></svg></a
         >, where you can see the code contributors under the "Insights" tab.
       </p>
-    </section>
+    </dialog>
 
     <section
       id="scorecard-container"
