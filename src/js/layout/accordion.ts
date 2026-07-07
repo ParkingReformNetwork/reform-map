@@ -2,15 +2,14 @@ import Observable from "../state/Observable";
 import { createIcon } from "./icons";
 
 export interface BaseAccordionElements {
-  outerContainer: HTMLDivElement;
+  outerContainer: HTMLDetailsElement;
   accordionTitle: HTMLSpanElement;
-  accordionButton: HTMLButtonElement;
+  accordionButton: HTMLElement;
   contentContainer: HTMLDivElement;
 }
 
 export interface AccordionState {
   hidden: boolean;
-  expanded: boolean;
   title: string;
   supplementalTitle?: string;
 }
@@ -21,23 +20,9 @@ function updateAccordionUI(
 ): void {
   elements.outerContainer.hidden = state.hidden;
   elements.accordionTitle.textContent = `${state.title}${state.supplementalTitle ?? ""}`;
-
-  const upIcon =
-    elements.accordionButton.querySelector<SVGElement>(".icon-chevron-up");
-  const downIcon =
-    elements.accordionButton.querySelector<SVGElement>(".icon-chevron-down");
-  if (!upIcon || !downIcon) return;
-
-  elements.accordionButton.setAttribute(
-    "aria-expanded",
-    state.expanded.toString(),
-  );
-  elements.contentContainer.hidden = !state.expanded;
-  upIcon.style.display = state.expanded ? "block" : "none";
-  downIcon.style.display = state.expanded ? "none" : "block";
 }
 
-/** Create the Observable backing an accordion and wire the expand/collapse toggle.
+/** Create the Observable backing an accordion.
  *
  * Does not call `initialize()`: callers may add more subscribers first, and
  * `Observable.subscribe` throws once initialized. */
@@ -53,10 +38,6 @@ export function wireAccordion(
   accordionState.subscribe(`update ${observableId} accordion UI`, (state) =>
     updateAccordionUI(elements, state),
   );
-  elements.accordionButton.addEventListener("click", () => {
-    const prior = accordionState.getValue();
-    accordionState.setValue({ ...prior, expanded: !prior.expanded });
-  });
   return accordionState;
 }
 
@@ -119,20 +100,16 @@ export function generateGroupSelectorButtons(htmlName: string): {
  * for AccordionState also needs to be configured.
  */
 export function generateAccordion(htmlName: string): BaseAccordionElements {
-  const outerContainer = document.createElement("div");
+  const outerContainer = document.createElement("details");
   outerContainer.className = "filter-accordion";
 
   const buttonId = `filter-accordion-toggle-${htmlName}`;
   const contentId = `filter-accordion-content-${htmlName}`;
   const titleId = `filter-accordion-title-${htmlName}`;
 
-  const accordionButton = document.createElement("button");
-  // Turn off clicking "submitting" the form, which reloads the page.
-  accordionButton.type = "button";
+  const accordionButton = document.createElement("summary");
   accordionButton.id = buttonId;
   accordionButton.className = "filter-accordion-toggle";
-  accordionButton.ariaExpanded = "false";
-  accordionButton.setAttribute("aria-controls", contentId);
 
   const accordionTitle = document.createElement("span");
   accordionTitle.id = titleId;

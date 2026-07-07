@@ -86,7 +86,6 @@ function generateSliders(
     "filter accordion population",
     {
       hidden: false,
-      expanded: false,
       title: "Population",
       supplementalTitle: determinePopulationRangeTitle(
         initialPopulationSliderIndexes,
