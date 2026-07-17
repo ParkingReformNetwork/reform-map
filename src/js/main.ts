@@ -17,6 +17,10 @@ import { decodeFilterState } from "./state/urlEncoder";
 import initTable from "./table";
 import exposeTestHooks from "./testHooks";
 
+// Kicked off at module scope so the ~260 KB core.json bundle downloads in
+// parallel with the rest of page load, rather than waiting for window.onload.
+const dataPromise = readData();
+
 export default async function initApp(): Promise<void> {
   maybeDisableFullScreenIcon();
   initAbout();
@@ -27,7 +31,7 @@ export default async function initApp(): Promise<void> {
   const map = createMap();
   maybeHideMapOverlays(window.location.search);
 
-  const data = await readData();
+  const data = await dataPromise;
 
   const initialState = decodeFilterState(window.location.search);
   const filterManager = new PlaceFilterManager(data, initialState);
