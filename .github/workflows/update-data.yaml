@@ -37,21 +37,37 @@ jobs:
           else
             echo "has_changes=false" >> $GITHUB_OUTPUT
           fi
-      - name: Create Pull Request
+      - name: Commit and push changes
         if: steps.git_status.outputs.has_changes == 'true'
-        uses: peter-evans/create-pull-request@v6
-        with:
-          token: ${{ secrets.UPDATE_DATA_GITHUB_TOKEN }}
-          commit-message: "Update data"
-          branch: "automated-data-update"
-          title: "Update data"
-          body: |
-            ⚠️ Check if the PR deletes any places or renames place IDs
-            (the keys).
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git checkout -B automated-data-update
+          git add -A
+          git commit -m "Update data"
+          git push --force origin automated-data-update
 
-            When a place is deleted, we also delete its details HTML page,
-            meaning it will 404.
+      - name: Create or update Pull Request
+        if: steps.git_status.outputs.has_changes == 'true'
+        env:
+          GH_TOKEN: ${{ secrets.UPDATE_DATA_GITHUB_TOKEN }}
+        run: |
+          if [[ -n $(gh pr list --head automated-data-update --state open --json number --jq '.[0]') ]]; then
+            echo "PR already open for automated-data-update; push updated it."
+            exit 0
+          fi
 
-            When a place is renamed, you should update in `data/core.json`
-            the `encoded` field to use the prior URL value. This allows us
-            to reuse the prior HTML page.
+          body=$(printf '%s\n' \
+            '⚠️ Check if the PR deletes any places or renames place IDs' \
+            '(the keys).' \
+            '' \
+            'When a place is deleted, we also delete its details HTML page,' \
+            'meaning it will 404.' \
+            '' \
+            'When a place is renamed, you should update in `data/core.json`' \
+            'the `encoded` field to use the prior URL value. This allows us' \
+            'to reuse the prior HTML page.')
+          gh pr create \
+            --title "Update data" \
+            --head automated-data-update \
+            --body "$body"
