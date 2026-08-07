@@ -722,11 +722,25 @@
       "pop": 10757,
       "coord": [-117.593272, 47.644611]
     },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["residential, multi-family"],
+        "date": "2026-06-01"
+      }
+    ],
     "rm_min": [
       {
         "status": "adopted",
         "scope": ["transit-oriented"],
         "land": ["residential, low-density"]
+      },
+      {
+        "status": "adopted",
+        "scope": ["transit-oriented"],
+        "land": ["residential, all uses"],
+        "date": "2026-06-01"
       }
     ]
   },
@@ -2318,6 +2332,31 @@
       }
     ]
   },
+  "American Fork, Utah, United States": {
+    "place": {
+      "name": "American Fork",
+      "state": "Utah",
+      "country": "United States",
+      "type": "city",
+      "encoded": "american-fork-utah-united-states",
+      "pop": 35312,
+      "coord": [-111.7959146, 40.3768064]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district", "transit-oriented"],
+        "land": ["all uses"]
+      }
+    ],
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["transit-oriented"],
+        "land": ["all uses"]
+      }
+    ]
+  },
   "Americus, Georgia, United States": {
     "place": {
       "name": "Americus",
@@ -2579,7 +2618,7 @@
     "rm_min": [
       {
         "status": "adopted",
-        "scope": ["city center / business district"],
+        "scope": ["city center / business district", "citywide"],
         "land": ["commercial", "residential, all uses"]
       }
     ]
@@ -2961,6 +3000,30 @@
       }
     ]
   },
+  "Annapolis County Municipality, Nova Scotia, Canada": {
+    "place": {
+      "name": "Annapolis County Municipality",
+      "state": "Nova Scotia",
+      "country": "Canada",
+      "type": "county",
+      "encoded": "annapolis-county-municipality-nova-scotia-canada",
+      "pop": 18834,
+      "coord": [-65.21943410338575, 44.66374516341804]
+    },
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": [
+          "commercial",
+          "industrial",
+          "medical",
+          "other",
+          "residential, all uses"
+        ]
+      }
+    ]
+  },
   "Annapolis Royal, Nova Scotia, Canada": {
     "place": {
       "name": "Annapolis Royal",
@@ -3147,6 +3210,12 @@
         "status": "adopted",
         "scope": ["citywide"],
         "land": ["all uses"]
+      },
+      {
+        "status": "adopted",
+        "scope": ["transit-oriented"],
+        "land": ["residential, all uses"],
+        "date": "2026-01-19"
       }
     ],
     "rm_min": [
@@ -3254,6 +3323,24 @@
         "status": "adopted",
         "scope": ["city center / business district"],
         "land": ["commercial"]
+      }
+    ]
+  },
+  "Appleton, Newfoundland and Labrador, Canada": {
+    "place": {
+      "name": "Appleton",
+      "state": "Newfoundland and Labrador",
+      "country": "Canada",
+      "type": "city",
+      "encoded": "appleton-newfoundland-and-labrador-canada",
+      "pop": 620,
+      "coord": [-54.8621069, 48.9820913]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["all uses"]
       }
     ]
   },
@@ -3866,6 +3953,24 @@
         "status": "adopted",
         "scope": ["city center / business district"],
         "land": ["all uses", "commercial", "residential, multi-family"]
+      }
+    ]
+  },
+  "Arnold's Cove, Newfoundland and Labrador, Canada": {
+    "place": {
+      "name": "Arnold's Cove",
+      "state": "Newfoundland and Labrador",
+      "country": "Canada",
+      "type": "city",
+      "encoded": "arnolds-cove-newfoundland-and-labrador-canada",
+      "pop": 964,
+      "coord": [-53.9830897, 47.7601262]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["all uses"]
       }
     ]
   },
@@ -5582,6 +5687,24 @@
       }
     ]
   },
+  "Avondale, Newfoundland and Labrador, Canada": {
+    "place": {
+      "name": "Avondale",
+      "state": "Newfoundland and Labrador",
+      "country": "Canada",
+      "type": "city",
+      "encoded": "avondale-newfoundland-and-labrador-canada",
+      "pop": 584,
+      "coord": [-53.1921839, 47.4201633]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["all uses"]
+      }
+    ]
+  },
   "Aylmer, Ontario, Canada": {
     "place": {
       "name": "Aylmer",
@@ -5614,6 +5737,24 @@
       {
         "status": "adopted",
         "scope": ["city center / business district"],
+        "land": ["all uses"]
+      }
+    ]
+  },
+  "Badger, Newfoundland and Labrador, Canada": {
+    "place": {
+      "name": "Badger",
+      "state": "Newfoundland and Labrador",
+      "country": "Canada",
+      "type": "city",
+      "encoded": "badger-newfoundland-and-labrador-canada",
+      "pop": 682,
+      "coord": [-56.044006, 48.978414]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
         "land": ["all uses"]
       }
     ]
@@ -5651,6 +5792,42 @@
         "status": "adopted",
         "scope": ["city center / business district"],
         "land": ["all uses"]
+      }
+    ]
+  },
+  "Baie Verte, Newfoundland and Labrador, Canada": {
+    "place": {
+      "name": "Baie Verte",
+      "state": "Newfoundland and Labrador",
+      "country": "Canada",
+      "type": "city",
+      "encoded": "baie-verte-newfoundland-and-labrador-canada",
+      "pop": 1311,
+      "coord": [-56.196442, 49.938848]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["all uses"]
+      }
+    ]
+  },
+  "Baie-D'Urfé, Quebec, Canada": {
+    "place": {
+      "name": "Baie-D'Urfé",
+      "state": "Quebec",
+      "country": "Canada",
+      "type": "city",
+      "encoded": "baie-durfe-quebec-canada",
+      "pop": 3764,
+      "coord": [-73.9153643, 45.4174258]
+    },
+    "add_max": [
+      {
+        "status": "adopted",
+        "scope": ["transit-oriented"],
+        "land": ["commercial", "industrial", "medical", "other"]
       }
     ]
   },
@@ -7148,6 +7325,24 @@
       }
     ]
   },
+  "Bauline, Newfoundland and Labrador, Canada": {
+    "place": {
+      "name": "Bauline",
+      "state": "Newfoundland and Labrador",
+      "country": "Canada",
+      "type": "city",
+      "encoded": "bauline-newfoundland-and-labrador-canada",
+      "pop": 412,
+      "coord": [-52.8370958, 47.7044821]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["all uses"]
+      }
+    ]
+  },
   "Baxter Estates, New York, United States": {
     "place": {
       "name": "Baxter Estates",
@@ -7198,6 +7393,24 @@
       {
         "status": "adopted",
         "scope": ["city center / business district"],
+        "land": ["all uses"]
+      }
+    ]
+  },
+  "Bay Bulls, Newfoundland and Labrador, Canada": {
+    "place": {
+      "name": "Bay Bulls",
+      "state": "Newfoundland and Labrador",
+      "country": "Canada",
+      "type": "city",
+      "encoded": "bay-bulls-newfoundland-and-labrador-canada",
+      "pop": 1566,
+      "coord": [-52.8167185, 47.3176239]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
         "land": ["all uses"]
       }
     ]
@@ -7427,6 +7640,31 @@
       }
     ],
     "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["all uses"]
+      }
+    ]
+  },
+  "Beaconsfield, Quebec, Canada": {
+    "place": {
+      "name": "Beaconsfield",
+      "state": "Quebec",
+      "country": "Canada",
+      "type": "city",
+      "encoded": "beaconsfield-quebec-canada",
+      "pop": 19277,
+      "coord": [-73.8654387, 45.4289766]
+    },
+    "add_max": [
+      {
+        "status": "adopted",
+        "scope": ["transit-oriented"],
+        "land": ["commercial", "industrial", "medical", "other"]
+      }
+    ],
+    "reduce_min": [
       {
         "status": "adopted",
         "scope": ["city center / business district"],
@@ -7973,6 +8211,20 @@
       "pop": 6679,
       "coord": [-69.0067359, 44.4261194]
     },
+    "add_max": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["all uses"]
+      }
+    ],
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district", "citywide"],
+        "land": ["all uses", "commercial", "other"]
+      }
+    ],
     "rm_min": [
       {
         "status": "adopted",
@@ -8950,6 +9202,24 @@
       }
     ]
   },
+  "Bentley, Alberta, Canada": {
+    "place": {
+      "name": "Bentley",
+      "state": "Alberta",
+      "country": "Canada",
+      "type": "city",
+      "encoded": "bentley-alberta-canada",
+      "pop": 1042,
+      "coord": [-114.0432772, 52.4685411]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["all uses"]
+      }
+    ]
+  },
   "Benton Harbor, Michigan, United States": {
     "place": {
       "name": "Benton Harbor",
@@ -9600,6 +9870,31 @@
           "residential, low-density",
           "residential, multi-family"
         ]
+      }
+    ]
+  },
+  "Berwick, Maine, United States": {
+    "place": {
+      "name": "Berwick",
+      "state": "Maine",
+      "country": "United States",
+      "type": "city",
+      "encoded": "berwick-maine-united-states",
+      "pop": 7950,
+      "coord": [-70.8645854, 43.2662985]
+    },
+    "add_max": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["all uses"]
+      }
+    ],
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["commercial"]
       }
     ]
   },
@@ -10457,6 +10752,24 @@
         "status": "adopted",
         "scope": ["city center / business district", "main street / special"],
         "land": ["all uses", "commercial", "residential, all uses"]
+      }
+    ]
+  },
+  "Bishop's Falls, Newfoundland and Labrador, Canada": {
+    "place": {
+      "name": "Bishop's Falls",
+      "state": "Newfoundland and Labrador",
+      "country": "Canada",
+      "type": "city",
+      "encoded": "bishops-falls-newfoundland-and-labrador-canada",
+      "pop": 3082,
+      "coord": [-55.5019426, 49.0153498]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["all uses"]
       }
     ]
   },
@@ -11516,6 +11829,24 @@
       }
     ]
   },
+  "Bonavista, Newfoundland and Labrador, Canada": {
+    "place": {
+      "name": "Bonavista",
+      "state": "Newfoundland and Labrador",
+      "country": "Canada",
+      "type": "city",
+      "encoded": "bonavista-newfoundland-and-labrador-canada",
+      "pop": 3190,
+      "coord": [-53.110338, 48.6541763]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["all uses"]
+      }
+    ]
+  },
   "Bonduel, Wisconsin, United States": {
     "place": {
       "name": "Bonduel",
@@ -12024,6 +12355,24 @@
         "status": "adopted",
         "scope": ["city center / business district"],
         "land": ["all uses", "commercial", "other"]
+      }
+    ]
+  },
+  "Bowden, Alberta, Canada": {
+    "place": {
+      "name": "Bowden",
+      "state": "Alberta",
+      "country": "Canada",
+      "type": "city",
+      "encoded": "bowden-alberta-canada",
+      "pop": 1280,
+      "coord": [-114.0345818, 51.9327066]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["all uses"]
       }
     ]
   },
@@ -12930,6 +13279,24 @@
       }
     ]
   },
+  "Brewer, Maine, United States": {
+    "place": {
+      "name": "Brewer",
+      "state": "Maine",
+      "country": "United States",
+      "type": "city",
+      "encoded": "brewer-maine-united-states",
+      "pop": 9672,
+      "coord": [-68.7621574, 44.7967947]
+    },
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district", "citywide"],
+        "land": ["commercial", "residential, low-density"]
+      }
+    ]
+  },
   "Brewster, New York, United States": {
     "place": {
       "name": "Brewster",
@@ -13635,7 +14002,7 @@
       "country": "Canada",
       "type": "city",
       "encoded": "Bromont_QC",
-      "pop": 7649,
+      "pop": 11357,
       "coord": [-72.6463074, 45.3187339]
     },
     "rm_min": [
@@ -14334,6 +14701,24 @@
           "residential, multi-family"
         ],
         "date": "2026"
+      }
+    ]
+  },
+  "Bruderheim, Alberta, Canada": {
+    "place": {
+      "name": "Bruderheim",
+      "state": "Alberta",
+      "country": "Canada",
+      "type": "city",
+      "encoded": "bruderheim-alberta-canada",
+      "pop": 1329,
+      "coord": [-112.9281172, 53.8019065]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["all uses"]
       }
     ]
   },
@@ -15417,6 +15802,24 @@
       }
     ]
   },
+  "Buxton, Maine, United States": {
+    "place": {
+      "name": "Buxton",
+      "state": "Maine",
+      "country": "United States",
+      "type": "city",
+      "encoded": "buxton-maine-united-states",
+      "pop": 8376,
+      "coord": [-70.540878, 43.612404]
+    },
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["residential, low-density"]
+      }
+    ]
+  },
   "Byesville, Ohio, United States": {
     "place": {
       "name": "Byesville",
@@ -15706,11 +16109,26 @@
       "pop": 1335145,
       "coord": [-114.065465, 51.0460954]
     },
+    "add_max": [
+      {
+        "status": "proposed",
+        "scope": ["city center / business district", "transit-oriented"],
+        "land": ["other", "residential, all uses"],
+        "date": "2027"
+      }
+    ],
     "rm_min": [
       {
         "status": "adopted",
         "scope": ["citywide"],
-        "land": ["commercial", "industrial"]
+        "land": ["commercial", "industrial"],
+        "date": "2020-11-03"
+      },
+      {
+        "status": "proposed",
+        "scope": ["citywide"],
+        "land": ["all uses"],
+        "date": "2027"
       }
     ]
   },
@@ -16850,7 +17268,7 @@
       "name": "Cape Breton Regional Municipality",
       "state": "Nova Scotia",
       "country": "Canada",
-      "type": "city",
+      "type": "county",
       "encoded": "CapeBretonRegionalMunicipality_NS",
       "pop": 93694,
       "coord": [-60.334048393102876, 46.03504935],
@@ -20094,6 +20512,45 @@
         "scope": ["city center / business district"],
         "land": ["all uses"]
       }
+    ],
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["transit-oriented"],
+        "land": ["residential, low-density"]
+      }
+    ]
+  },
+  "Chelan County, Washington, United States": {
+    "place": {
+      "name": "Chelan County",
+      "state": "Washington",
+      "country": "United States",
+      "type": "county",
+      "encoded": "chelan-county-washington-united-states",
+      "pop": 79074,
+      "coord": [-120.6276904, 47.8012197]
+    },
+    "add_max": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["all uses"]
+      }
+    ],
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["all uses"]
+      }
+    ],
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["all uses"]
+      }
     ]
   },
   "Chelan, Washington, United States": {
@@ -21239,6 +21696,42 @@
       }
     ]
   },
+  "Clallam County, Washington, United States": {
+    "place": {
+      "name": "Clallam County",
+      "state": "Washington",
+      "country": "United States",
+      "type": "county",
+      "encoded": "clallam-county-washington-united-states",
+      "pop": 77155,
+      "coord": [-123.7373472, 47.9998383]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["commercial"]
+      }
+    ]
+  },
+  "Clare\tDistrict Municipality, Nova Scotia, Canada": {
+    "place": {
+      "name": "Clare\tDistrict Municipality",
+      "state": "Nova Scotia",
+      "country": "Canada",
+      "type": "county",
+      "encoded": "clare-district-municipality-nova-scotia-canada",
+      "pop": 7678,
+      "coord": [-65.96297457103667, 44.222228617359605]
+    },
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["all uses"]
+      }
+    ]
+  },
   "Claremont, Minnesota, United States": {
     "place": {
       "name": "Claremont",
@@ -21412,6 +21905,24 @@
         "status": "adopted",
         "scope": ["citywide"],
         "land": ["all uses"]
+      }
+    ]
+  },
+  "Clark County, Washington, United States": {
+    "place": {
+      "name": "Clark County",
+      "state": "Washington",
+      "country": "United States",
+      "type": "county",
+      "encoded": "clark-county-washington-united-states",
+      "pop": 503311,
+      "coord": [-122.4940866, 45.7669047]
+    },
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["residential, low-density"]
       }
     ]
   },
@@ -22154,6 +22665,24 @@
       {
         "status": "adopted",
         "scope": ["city center / business district"],
+        "land": ["all uses"]
+      }
+    ]
+  },
+  "Cleburne County, Arkansas, United States": {
+    "place": {
+      "name": "Cleburne County",
+      "state": "Arkansas",
+      "country": "United States",
+      "type": "county",
+      "encoded": "cleburne-county-arkansas-united-states",
+      "pop": 24711,
+      "coord": [-92.0312818, 35.5298937]
+    },
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
         "land": ["all uses"]
       }
     ]
@@ -22938,6 +23467,30 @@
         "status": "adopted",
         "scope": ["city center / business district"],
         "land": ["commercial"]
+      }
+    ]
+  },
+  "Coal Hill, Arkansas, United States": {
+    "place": {
+      "name": "Coal Hill",
+      "state": "Arkansas",
+      "country": "United States",
+      "type": "city",
+      "encoded": "coal-hill-arkansas-united-states",
+      "pop": 820,
+      "coord": [-93.6729697, 35.4373073]
+    },
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": [
+          "commercial",
+          "medical",
+          "other",
+          "residential, low-density",
+          "residential, multi-family"
+        ]
       }
     ]
   },
@@ -30587,6 +31140,24 @@
       }
     ]
   },
+  "Douglas County, Washington, United States": {
+    "place": {
+      "name": "Douglas County",
+      "state": "Washington",
+      "country": "United States",
+      "type": "county",
+      "encoded": "douglas-county-washington-united-states",
+      "pop": 42938,
+      "coord": [-119.6075365, 47.7652709]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["all uses"]
+      }
+    ]
+  },
   "Douglas, Arizona, United States": {
     "place": {
       "name": "Douglas",
@@ -32331,7 +32902,7 @@
       "name": "East Hants",
       "state": "Nova Scotia",
       "country": "Canada",
-      "type": "city",
+      "type": "county",
       "encoded": "east-hants-nova-scotia-canada",
       "pop": 22892,
       "coord": [-63.6829384, 45.1491167]
@@ -33221,6 +33792,24 @@
       }
     ]
   },
+  "Eckville, Alberta, Canada": {
+    "place": {
+      "name": "Eckville",
+      "state": "Alberta",
+      "country": "Canada",
+      "type": "city",
+      "encoded": "eckville-alberta-canada",
+      "pop": 1014,
+      "coord": [-114.3627303, 52.3632655]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["all uses"]
+      }
+    ]
+  },
   "Ecorse, Michigan, United States": {
     "place": {
       "name": "Ecorse",
@@ -33295,6 +33884,31 @@
       "pop": 1027,
       "coord": [-94.5461074, 45.3260745]
     },
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["all uses"]
+      }
+    ]
+  },
+  "Eden, North Carolina, United States": {
+    "place": {
+      "name": "Eden",
+      "state": "North Carolina",
+      "country": "United States",
+      "type": "city",
+      "encoded": "eden-north-carolina-united-states",
+      "pop": 15405,
+      "coord": [-79.7667026, 36.4884715]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["all uses"]
+      }
+    ],
     "rm_min": [
       {
         "status": "adopted",
@@ -33653,6 +34267,13 @@
       "coord": [-113.507996, 53.535411],
       "repeal": true
     },
+    "add_max": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district", "transit-oriented"],
+        "land": ["all uses"]
+      }
+    ],
     "rm_min": [
       {
         "status": "adopted",
@@ -37157,6 +37778,13 @@
         "scope": ["citywide"],
         "land": ["all uses"]
       }
+    ],
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["all uses"]
+      }
     ]
   },
   "Falcon Heights, Minnesota, United States": {
@@ -37526,6 +38154,24 @@
       {
         "status": "adopted",
         "scope": ["citywide"],
+        "land": ["all uses"]
+      }
+    ]
+  },
+  "Farmington, Maine, United States": {
+    "place": {
+      "name": "Farmington",
+      "state": "Maine",
+      "country": "United States",
+      "type": "city",
+      "encoded": "farmington-maine-united-states",
+      "pop": 7592,
+      "coord": [-70.1514536, 44.670628]
+    },
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
         "land": ["all uses"]
       }
     ]
@@ -38916,6 +39562,24 @@
       }
     ]
   },
+  "Foothills County, Alberta, Canada": {
+    "place": {
+      "name": "Foothills County",
+      "state": "Alberta",
+      "country": "Canada",
+      "type": "county",
+      "encoded": "foothills-county-alberta-canada",
+      "pop": 23199,
+      "coord": [-114.044788, 50.6445197]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["all uses"]
+      }
+    ]
+  },
   "Ford City, Pennsylvania, United States": {
     "place": {
       "name": "Ford City",
@@ -40294,6 +40958,24 @@
         "status": "adopted",
         "scope": ["city center / business district", "transit-oriented"],
         "land": ["residential, all uses"]
+      }
+    ]
+  },
+  "Franklin County, Washington, United States": {
+    "place": {
+      "name": "Franklin County",
+      "state": "Washington",
+      "country": "United States",
+      "type": "county",
+      "encoded": "franklin-county-washington-united-states",
+      "pop": 96749,
+      "coord": [-118.8935483, 46.5654696]
+    },
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["all uses"]
       }
     ]
   },
@@ -42135,6 +42817,24 @@
       }
     ]
   },
+  "Garfield County, Washington, United States": {
+    "place": {
+      "name": "Garfield County",
+      "state": "Washington",
+      "country": "United States",
+      "type": "county",
+      "encoded": "garfield-county-washington-united-states",
+      "pop": 2286,
+      "coord": [-117.5294769, 46.4604687]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["industrial"]
+      }
+    ]
+  },
   "Garfield, Kansas, United States": {
     "place": {
       "name": "Garfield",
@@ -42200,6 +42900,24 @@
         "status": "adopted",
         "scope": ["city center / business district", "citywide"],
         "land": ["commercial", "residential, low-density"]
+      }
+    ]
+  },
+  "Garland County, Arkansas, United States": {
+    "place": {
+      "name": "Garland County",
+      "state": "Arkansas",
+      "country": "United States",
+      "type": "county",
+      "encoded": "garland-county-arkansas-united-states",
+      "pop": 100180,
+      "coord": [-93.1838539, 34.5488944]
+    },
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["all uses"]
       }
     ]
   },
@@ -42615,6 +43333,20 @@
         "status": "adopted",
         "scope": ["city center / business district"],
         "land": ["commercial"]
+      },
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["residential, all uses"],
+        "date": "2025-10-06"
+      }
+    ],
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district", "transit-oriented"],
+        "land": ["all uses"],
+        "date": "2026-05-04"
       }
     ]
   },
@@ -45466,6 +46198,24 @@
       }
     ]
   },
+  "Gray, Maine, United States": {
+    "place": {
+      "name": "Gray",
+      "state": "Maine",
+      "country": "United States",
+      "type": "city",
+      "encoded": "gray-maine-united-states",
+      "pop": 8269,
+      "coord": [-70.3303592, 43.8860922]
+    },
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["residential, low-density"]
+      }
+    ]
+  },
   "Grayling Charter Township, Michigan, United States": {
     "place": {
       "name": "Grayling Charter Township",
@@ -46042,6 +46792,12 @@
         "status": "adopted",
         "scope": ["city center / business district"],
         "land": ["all uses"]
+      },
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["all uses"],
+        "date": "2026-07"
       }
     ]
   },
@@ -47438,11 +48194,25 @@
       "pop": 431479,
       "coord": [-63.5859487, 44.648618]
     },
+    "add_max": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["commercial", "other"]
+      }
+    ],
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["all uses"]
+      }
+    ],
     "rm_min": [
       {
         "status": "adopted",
-        "scope": ["city center / business district"],
-        "land": ["all uses"]
+        "scope": ["city center / business district", "citywide"],
+        "land": ["all uses", "other", "residential, low-density"]
       }
     ]
   },
@@ -49693,6 +50463,24 @@
       }
     ]
   },
+  "Havelock, North Carolina, United States": {
+    "place": {
+      "name": "Havelock",
+      "state": "North Carolina",
+      "country": "United States",
+      "type": "city",
+      "encoded": "havelock-north-carolina-united-states",
+      "pop": 16621,
+      "coord": [-76.9014457, 34.8785]
+    },
+    "add_max": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["commercial", "industrial", "medical", "other"]
+      }
+    ]
+  },
   "Haverhill, Massachusetts, United States": {
     "place": {
       "name": "Haverhill",
@@ -49980,6 +50768,24 @@
       }
     ]
   },
+  "Hazelbrook, Prince Edward Island, Canada": {
+    "place": {
+      "name": "Hazelbrook",
+      "state": "Prince Edward Island",
+      "country": "Canada",
+      "type": "city",
+      "encoded": "hazelbrook-prince-edward-island-canada",
+      "pop": 220,
+      "coord": [-62.993359, 46.2216141]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["residential, multi-family"]
+      }
+    ]
+  },
   "Hazen, Arkansas, United States": {
     "place": {
       "name": "Hazen",
@@ -50122,6 +50928,24 @@
       {
         "status": "adopted",
         "scope": ["citywide"],
+        "land": ["all uses"]
+      }
+    ]
+  },
+  "Heber City, Utah, United States": {
+    "place": {
+      "name": "Heber City",
+      "state": "Utah",
+      "country": "United States",
+      "type": "city",
+      "encoded": "heber-city-utah-united-states",
+      "pop": 17438,
+      "coord": [-111.4132963, 40.506463]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district", "main street / special"],
         "land": ["all uses"]
       }
     ]
@@ -50434,6 +51258,49 @@
         "status": "adopted",
         "scope": ["city center / business district"],
         "land": ["all uses"]
+      }
+    ]
+  },
+  "Henderson, North Carolina, United States": {
+    "place": {
+      "name": "Henderson",
+      "state": "North Carolina",
+      "country": "United States",
+      "type": "city",
+      "encoded": "henderson-north-carolina-united-states",
+      "pop": 15060,
+      "coord": [-78.40284028210647, 36.32718057236771]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["all uses"]
+      }
+    ],
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["all uses"]
+      }
+    ]
+  },
+  "Hendersonville, North Carolina, United States": {
+    "place": {
+      "name": "Hendersonville",
+      "state": "North Carolina",
+      "country": "United States",
+      "type": "city",
+      "encoded": "hendersonville-north-carolina-united-states",
+      "pop": 15137,
+      "coord": [-82.4609528, 35.3187279]
+    },
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district", "main street / special"],
+        "land": ["all uses", "commercial", "other", "residential, all uses"]
       }
     ]
   },
@@ -51432,6 +52299,31 @@
         "scope": ["citywide"],
         "land": ["all uses"],
         "date": "2024-06-11"
+      }
+    ]
+  },
+  "Hillsborough, North Carolina, United States": {
+    "place": {
+      "name": "Hillsborough",
+      "state": "North Carolina",
+      "country": "United States",
+      "type": "city",
+      "encoded": "hillsborough-north-carolina-united-states",
+      "pop": 9660,
+      "coord": [-79.0993958, 36.075382]
+    },
+    "add_max": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["all uses"]
+      }
+    ],
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["all uses"]
       }
     ]
   },
@@ -54743,6 +55635,31 @@
       }
     ]
   },
+  "Island County, Washington, United States": {
+    "place": {
+      "name": "Island County",
+      "state": "Washington",
+      "country": "United States",
+      "type": "county",
+      "encoded": "island-county-washington-united-states",
+      "pop": 86857,
+      "coord": [-122.66062557349414, 48.19803407321769]
+    },
+    "add_max": [
+      {
+        "status": "adopted",
+        "scope": ["main street / special"],
+        "land": ["all uses"]
+      }
+    ],
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["main street / special"],
+        "land": ["all uses"]
+      }
+    ]
+  },
   "Island Heights, New Jersey, United States": {
     "place": {
       "name": "Island Heights",
@@ -55535,6 +56452,24 @@
       {
         "status": "adopted",
         "scope": ["citywide"],
+        "land": ["all uses"]
+      }
+    ]
+  },
+  "Jasper, Alberta, Canada": {
+    "place": {
+      "name": "Jasper",
+      "state": "Alberta",
+      "country": "Canada",
+      "type": "city",
+      "encoded": "jasper-alberta-canada",
+      "pop": 4738,
+      "coord": [-118.0824291, 52.8752336]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
         "land": ["all uses"]
       }
     ]
@@ -58066,6 +59001,24 @@
       }
     ]
   },
+  "Killam, Alberta, Canada": {
+    "place": {
+      "name": "Killam",
+      "state": "Alberta",
+      "country": "Canada",
+      "type": "city",
+      "encoded": "killam-alberta-canada",
+      "pop": 918,
+      "coord": [-111.8549407, 52.7929777]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["all uses"]
+      }
+    ]
+  },
   "Killarney, Ontario, Canada": {
     "place": {
       "name": "Killarney",
@@ -58259,6 +59212,24 @@
         "scope": ["citywide"],
         "land": ["all uses"],
         "date": "2024-12-18"
+      }
+    ]
+  },
+  "King County, Washington, United States": {
+    "place": {
+      "name": "King County",
+      "state": "Washington",
+      "country": "United States",
+      "type": "county",
+      "encoded": "king-county-washington-united-states",
+      "pop": 2269675,
+      "coord": [-121.8622122, 47.4873376]
+    },
+    "add_max": [
+      {
+        "status": "adopted",
+        "scope": ["main street / special"],
+        "land": ["commercial", "industrial"]
       }
     ]
   },
@@ -58516,6 +59487,24 @@
       }
     ]
   },
+  "Kingston, Prince Edward Island, Canada": {
+    "place": {
+      "name": "Kingston",
+      "state": "Prince Edward Island",
+      "country": "Canada",
+      "type": "city",
+      "encoded": "kingston-prince-edward-island-canada",
+      "pop": 1111,
+      "coord": [-63.2773896, 46.262924]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["residential, all uses"]
+      }
+    ]
+  },
   "Kingstree, South Carolina, United States": {
     "place": {
       "name": "Kingstree",
@@ -58647,6 +59636,12 @@
         "status": "adopted",
         "scope": ["transit-oriented"],
         "land": ["residential, all uses", "residential, multi-family"]
+      },
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["all uses"],
+        "date": "2026-04-18"
       }
     ],
     "rm_min": [
@@ -58654,6 +59649,12 @@
         "status": "adopted",
         "scope": ["transit-oriented"],
         "land": ["residential, multi-family"]
+      },
+      {
+        "status": "adopted",
+        "scope": ["city center / business district", "citywide"],
+        "land": ["all uses", "commercial", "other", "residential, all uses"],
+        "date": "2026-04-18"
       }
     ]
   },
@@ -58787,6 +59788,56 @@
         "status": "adopted",
         "scope": ["city center / business district"],
         "land": ["commercial", "residential, all uses"]
+      }
+    ]
+  },
+  "Kitsap County, Washington, United States": {
+    "place": {
+      "name": "Kitsap County",
+      "state": "Washington",
+      "country": "United States",
+      "type": "county",
+      "encoded": "kitsap-county-washington-united-states",
+      "pop": 275611,
+      "coord": [-122.6474421, 47.594502]
+    },
+    "add_max": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["all uses"]
+      }
+    ],
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide", "main street / special", "transit-oriented"],
+        "land": ["all uses"]
+      }
+    ]
+  },
+  "Kittitas County, Washington, United States": {
+    "place": {
+      "name": "Kittitas County",
+      "state": "Washington",
+      "country": "United States",
+      "type": "county",
+      "encoded": "kittitas-county-washington-united-states",
+      "pop": 44337,
+      "coord": [-120.5849305, 47.1057471]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["commercial", "industrial", "medical", "other"]
+      }
+    ],
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["residential, low-density"]
       }
     ]
   },
@@ -61376,6 +62427,12 @@
         "status": "adopted",
         "scope": ["main street / special"],
         "land": ["all uses"]
+      },
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["all uses", "residential, all uses"],
+        "date": "2025-12-01"
       }
     ],
     "rm_min": [
@@ -62267,6 +63324,31 @@
       }
     ]
   },
+  "Leask, Saskatchewan, Canada": {
+    "place": {
+      "name": "Leask",
+      "state": "Saskatchewan",
+      "country": "Canada",
+      "type": "city",
+      "encoded": "leask-saskatchewan-canada",
+      "pop": 379,
+      "coord": [-106.7412315, 53.0199419]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["all uses"]
+      }
+    ],
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["commercial", "other"]
+      }
+    ]
+  },
   "Leavenworth, Kansas, United States": {
     "place": {
       "name": "Leavenworth",
@@ -62517,6 +63599,13 @@
       "pop": 34094,
       "coord": [-113.5511681, 53.2607825]
     },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["commercial", "other"]
+      }
+    ],
     "rm_min": [
       {
         "status": "adopted",
@@ -62636,6 +63725,31 @@
         "status": "adopted",
         "scope": ["citywide"],
         "land": ["commercial"]
+      }
+    ]
+  },
+  "Lehi, Utah, United States": {
+    "place": {
+      "name": "Lehi",
+      "state": "Utah",
+      "country": "United States",
+      "type": "city",
+      "encoded": "lehi-utah-united-states",
+      "pop": 81039,
+      "coord": [-111.8486019, 40.3881114]
+    },
+    "add_max": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["commercial", "other"]
+      }
+    ],
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide", "transit-oriented"],
+        "land": ["all uses", "medical", "other"]
       }
     ]
   },
@@ -63055,6 +64169,24 @@
         "status": "adopted",
         "scope": ["city center / business district"],
         "land": ["all uses"]
+      }
+    ]
+  },
+  "Lewis County, Washington, United States": {
+    "place": {
+      "name": "Lewis County",
+      "state": "Washington",
+      "country": "United States",
+      "type": "county",
+      "encoded": "lewis-county-washington-united-states",
+      "pop": 82149,
+      "coord": [-122.3843571, 46.589237]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["main street / special"],
+        "land": ["commercial"]
       }
     ]
   },
@@ -64100,6 +65232,31 @@
         "status": "adopted",
         "scope": ["citywide"],
         "land": ["other"]
+      }
+    ]
+  },
+  "Lindon, Utah, United States": {
+    "place": {
+      "name": "Lindon",
+      "state": "Utah",
+      "country": "United States",
+      "type": "city",
+      "encoded": "lindon-utah-united-states",
+      "pop": 11594,
+      "coord": [-111.72076, 40.3432857]
+    },
+    "add_max": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["all uses"]
+      }
+    ],
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["all uses"]
       }
     ]
   },
@@ -66035,6 +67192,24 @@
       {
         "status": "adopted",
         "scope": ["city center / business district"],
+        "land": ["all uses"]
+      }
+    ]
+  },
+  "Lunenburg District Municipality, Nova Scotia, Canada": {
+    "place": {
+      "name": "Lunenburg District Municipality",
+      "state": "Nova Scotia",
+      "country": "Canada",
+      "type": "county",
+      "encoded": "lunenburg-district-municipality-nova-scotia-canada",
+      "pop": 25545,
+      "coord": [-64.4609981140629, 44.518844854408826]
+    },
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
         "land": ["all uses"]
       }
     ]
@@ -70669,6 +71844,31 @@
       }
     ]
   },
+  "Mebane, North Carolina, United States": {
+    "place": {
+      "name": "Mebane",
+      "state": "North Carolina",
+      "country": "United States",
+      "type": "city",
+      "encoded": "mebane-north-carolina-united-states",
+      "pop": 17797,
+      "coord": [-79.2669619, 36.0959715]
+    },
+    "add_max": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["all uses"]
+      }
+    ],
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["all uses"]
+      }
+    ]
+  },
   "Mechanicsburg, Pennsylvania, United States": {
     "place": {
       "name": "Mechanicsburg",
@@ -72505,6 +73705,38 @@
       }
     ]
   },
+  "Midvale, Utah, United States": {
+    "place": {
+      "name": "Midvale",
+      "state": "Utah",
+      "country": "United States",
+      "type": "city",
+      "encoded": "midvale-utah-united-states",
+      "pop": 35736,
+      "coord": [-111.9106607, 40.6149174]
+    },
+    "add_max": [
+      {
+        "status": "adopted",
+        "scope": ["main street / special"],
+        "land": ["all uses"]
+      }
+    ],
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["main street / special"],
+        "land": ["commercial"]
+      }
+    ],
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["main street / special"],
+        "land": ["commercial", "other"]
+      }
+    ]
+  },
   "Midwest City, Oklahoma, United States": {
     "place": {
       "name": "Midwest City",
@@ -72804,6 +74036,31 @@
         "scope": ["citywide"],
         "land": ["all uses"],
         "date": "2022-07-19"
+      }
+    ]
+  },
+  "Millcreek, Utah, United States": {
+    "place": {
+      "name": "Millcreek",
+      "state": "Utah",
+      "country": "United States",
+      "type": "city",
+      "encoded": "millcreek-utah-united-states",
+      "pop": 63342,
+      "coord": [-111.855583, 40.6992918]
+    },
+    "add_max": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["all uses"]
+      }
+    ],
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district", "citywide"],
+        "land": ["all uses", "commercial"]
       }
     ]
   },
@@ -73235,6 +74492,24 @@
         "status": "adopted",
         "scope": ["city center / business district"],
         "land": ["commercial"]
+      }
+    ]
+  },
+  "Miltonvale Park, Prince Edward Island, Canada": {
+    "place": {
+      "name": "Miltonvale Park",
+      "state": "Prince Edward Island",
+      "country": "Canada",
+      "type": "city",
+      "encoded": "miltonvale-park-prince-edward-island-canada",
+      "pop": 1196,
+      "coord": [-63.21057172567625, 46.30203924133168]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["residential, multi-family"]
       }
     ]
   },
@@ -74125,6 +75400,13 @@
       "pop": 85198,
       "coord": [-64.80011, 46.097995]
     },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["all uses"]
+      }
+    ],
     "rm_min": [
       {
         "status": "adopted",
@@ -75231,6 +76513,31 @@
       }
     ]
   },
+  "Montréal-Ouest / Montreal West, Quebec, Canada": {
+    "place": {
+      "name": "Montréal-Ouest / Montreal West",
+      "state": "Quebec",
+      "country": "Canada",
+      "type": "city",
+      "encoded": "montreal-ouest-montreal-west-quebec-canada",
+      "pop": 5115,
+      "coord": [-73.64572703514112, 45.4527544931797]
+    },
+    "add_max": [
+      {
+        "status": "adopted",
+        "scope": ["transit-oriented"],
+        "land": ["all uses"]
+      }
+    ],
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["all uses"]
+      }
+    ]
+  },
   "Montvale, New Jersey, United States": {
     "place": {
       "name": "Montvale",
@@ -75466,6 +76773,24 @@
       }
     ]
   },
+  "Morehead City, North Carolina, United States": {
+    "place": {
+      "name": "Morehead City",
+      "state": "North Carolina",
+      "country": "United States",
+      "type": "city",
+      "encoded": "morehead-city-north-carolina-united-states",
+      "pop": 9556,
+      "coord": [-76.7260436, 34.7229391]
+    },
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["commercial", "other"]
+      }
+    ]
+  },
   "Morenci, Michigan, United States": {
     "place": {
       "name": "Morenci",
@@ -75545,6 +76870,37 @@
       }
     ],
     "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["all uses"]
+      }
+    ]
+  },
+  "Morganton, North Carolina, United States": {
+    "place": {
+      "name": "Morganton",
+      "state": "North Carolina",
+      "country": "United States",
+      "type": "city",
+      "encoded": "morganton-north-carolina-united-states",
+      "pop": 17474,
+      "coord": [-81.6870837, 35.7454291]
+    },
+    "add_max": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": [
+          "commercial",
+          "industrial",
+          "medical",
+          "other",
+          "residential, multi-family"
+        ]
+      }
+    ],
+    "rm_min": [
       {
         "status": "adopted",
         "scope": ["city center / business district"],
@@ -76203,6 +77559,24 @@
       }
     ]
   },
+  "Mossbank, Saskatchewan, Canada": {
+    "place": {
+      "name": "Mossbank",
+      "state": "Saskatchewan",
+      "country": "Canada",
+      "type": "city",
+      "encoded": "mossbank-saskatchewan-canada",
+      "pop": 368,
+      "coord": [-105.9627832, 49.9402868]
+    },
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["commercial", "medical", "other", "residential, all uses"]
+      }
+    ]
+  },
   "Mound, Minnesota, United States": {
     "place": {
       "name": "Mound",
@@ -76371,6 +77745,24 @@
         "status": "adopted",
         "scope": ["city center / business district"],
         "land": ["commercial", "industrial", "other"]
+      }
+    ]
+  },
+  "Mount Pearl, Newfoundland and Labrador, Canada": {
+    "place": {
+      "name": "Mount Pearl",
+      "state": "Newfoundland and Labrador",
+      "country": "Canada",
+      "type": "city",
+      "encoded": "mount-pearl-newfoundland-and-labrador-canada",
+      "pop": 22957,
+      "coord": [-52.811664, 47.5239607]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["all uses"]
       }
     ]
   },
@@ -77369,6 +78761,24 @@
         "status": "adopted",
         "scope": ["city center / business district"],
         "land": ["all uses"]
+      }
+    ]
+  },
+  "Muenster, Saskatchewan, Canada": {
+    "place": {
+      "name": "Muenster",
+      "state": "Saskatchewan",
+      "country": "Canada",
+      "type": "city",
+      "encoded": "muenster-saskatchewan-canada",
+      "pop": 403,
+      "coord": [-104.9999067, 52.1921406]
+    },
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["commercial", "medical", "other", "residential, multi-family"]
       }
     ]
   },
@@ -81251,6 +82661,25 @@
       }
     ]
   },
+  "Norfolk, Arkansas, United States": {
+    "place": {
+      "name": "Norfolk",
+      "state": "Arkansas",
+      "country": "United States",
+      "type": "city",
+      "encoded": "norfolk-arkansas-united-states",
+      "pop": 465,
+      "coord": [-92.28648232395851, 36.20953656071033]
+    },
+    "rm_min": [
+      {
+        "status": "proposed",
+        "scope": ["citywide"],
+        "land": ["all uses"],
+        "date": "2014"
+      }
+    ]
+  },
   "Norfolk, Nebraska, United States": {
     "place": {
       "name": "Norfolk",
@@ -84049,6 +85478,46 @@
       }
     ]
   },
+  "Ogden, Utah, United States": {
+    "place": {
+      "name": "Ogden",
+      "state": "Utah",
+      "country": "United States",
+      "type": "city",
+      "encoded": "ogden-utah-united-states",
+      "pop": 86973,
+      "coord": [-111.9738429, 41.2230048]
+    },
+    "add_max": [
+      {
+        "status": "adopted",
+        "scope": [
+          "city center / business district",
+          "citywide",
+          "main street / special"
+        ],
+        "land": [
+          "all uses",
+          "residential, all uses",
+          "residential, multi-family"
+        ]
+      }
+    ],
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["main street / special", "transit-oriented"],
+        "land": ["all uses", "residential, all uses"]
+      }
+    ],
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["commercial", "other"]
+      }
+    ]
+  },
   "Ogle County, Illinois, United States": {
     "place": {
       "name": "Ogle County",
@@ -84303,6 +85772,24 @@
       {
         "status": "adopted",
         "scope": ["main street / special"],
+        "land": ["all uses"]
+      }
+    ]
+  },
+  "Old Town, Maine, United States": {
+    "place": {
+      "name": "Old Town",
+      "state": "Maine",
+      "country": "United States",
+      "type": "city",
+      "encoded": "old-town-maine-united-states",
+      "pop": 7431,
+      "coord": [-68.6458909, 44.9353983]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
         "land": ["all uses"]
       }
     ]
@@ -84695,6 +86182,24 @@
       {
         "status": "adopted",
         "scope": ["city center / business district"],
+        "land": ["all uses"]
+      }
+    ]
+  },
+  "Onoway, Alberta, Canada": {
+    "place": {
+      "name": "Onoway",
+      "state": "Alberta",
+      "country": "Canada",
+      "type": "city",
+      "encoded": "onoway-alberta-canada",
+      "pop": 966,
+      "coord": [-114.1910354, 53.7038575]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
         "land": ["all uses"]
       }
     ]
@@ -86375,6 +87880,24 @@
       }
     ]
   },
+  "Oyen, Alberta, Canada": {
+    "place": {
+      "name": "Oyen",
+      "state": "Alberta",
+      "country": "Canada",
+      "type": "city",
+      "encoded": "oyen-alberta-canada",
+      "pop": 917,
+      "coord": [-110.4871975, 51.3488903]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["all uses"]
+      }
+    ]
+  },
   "Ozark, Alabama, United States": {
     "place": {
       "name": "Ozark",
@@ -86440,6 +87963,24 @@
       "coord": [-95.4669194, 39.2333317]
     },
     "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["all uses"]
+      }
+    ]
+  },
+  "Pacific County, Washington, United States": {
+    "place": {
+      "name": "Pacific County",
+      "state": "Washington",
+      "country": "United States",
+      "type": "county",
+      "encoded": "pacific-county-washington-united-states",
+      "pop": 23365,
+      "coord": [-123.768029, 46.5334929]
+    },
+    "reduce_min": [
       {
         "status": "adopted",
         "scope": ["citywide"],
@@ -89394,6 +90935,24 @@
       }
     ]
   },
+  "Pictou County Municipality, Nova Scotia, Canada": {
+    "place": {
+      "name": "Pictou County Municipality",
+      "state": "Nova Scotia",
+      "country": "Canada",
+      "type": "county",
+      "encoded": "pictou-county-municipality-nova-scotia-canada",
+      "pop": 20676,
+      "coord": [-62.856534516365784, 45.61900170911517]
+    },
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["all uses"]
+      }
+    ]
+  },
   "Pictou, Nova Scotia, Canada": {
     "place": {
       "name": "Pictou",
@@ -89434,6 +90993,44 @@
         "status": "adopted",
         "scope": ["city center / business district"],
         "land": ["commercial"]
+      }
+    ]
+  },
+  "Pierce County, Washington, United States": {
+    "place": {
+      "name": "Pierce County",
+      "state": "Washington",
+      "country": "United States",
+      "type": "county",
+      "encoded": "pierce-county-washington-united-states",
+      "pop": 921130,
+      "coord": [-122.2117983, 47.0022547]
+    },
+    "add_max": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": [
+          "commercial",
+          "industrial",
+          "medical",
+          "other",
+          "residential, multi-family"
+        ]
+      }
+    ],
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["main street / special"],
+        "land": ["all uses"]
+      }
+    ],
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["transit-oriented"],
+        "land": ["residential, multi-family"]
       }
     ]
   },
@@ -89732,6 +91329,31 @@
       "pop": 2272,
       "coord": [-109.8609808, 42.8671325]
     },
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["all uses"]
+      }
+    ]
+  },
+  "Pinehurst, North Carolina, United States": {
+    "place": {
+      "name": "Pinehurst",
+      "state": "North Carolina",
+      "country": "United States",
+      "type": "city",
+      "encoded": "pinehurst-north-carolina-united-states",
+      "pop": 17581,
+      "coord": [-79.4692796, 35.1951981]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["all uses"]
+      }
+    ],
     "rm_min": [
       {
         "status": "adopted",
@@ -92722,6 +94344,13 @@
       "pop": 116618,
       "coord": [-111.6585337, 40.2338438]
     },
+    "add_max": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["all uses"]
+      }
+    ],
     "reduce_min": [
       {
         "status": "adopted",
@@ -93765,6 +95394,24 @@
       }
     ]
   },
+  "Red Deer County, Alberta, Canada": {
+    "place": {
+      "name": "Red Deer County",
+      "state": "Alberta",
+      "country": "Canada",
+      "type": "county",
+      "encoded": "red-deer-county-alberta-canada",
+      "pop": 19933,
+      "coord": [-113.767473, 52.1040224]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["all uses"]
+      }
+    ]
+  },
   "Red Deer, Alberta, Canada": {
     "place": {
       "name": "Red Deer",
@@ -94211,7 +95858,7 @@
       "name": "Region of Queens Municipality",
       "state": "Nova Scotia",
       "country": "Canada",
-      "type": "city",
+      "type": "county",
       "encoded": "region-of-queens-municipality-nova-scotia-canada",
       "pop": 10422,
       "coord": [-64.7834746, 44.1588807]
@@ -95920,6 +97567,24 @@
       }
     ]
   },
+  "Roanoke Rapids, North Carolina, United States": {
+    "place": {
+      "name": "Roanoke Rapids",
+      "state": "North Carolina",
+      "country": "United States",
+      "type": "city",
+      "encoded": "roanoke-rapids-north-carolina-united-states",
+      "pop": 15229,
+      "coord": [-77.6573514, 36.4558016]
+    },
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["all uses"]
+      }
+    ]
+  },
   "Roanoke, Alabama, United States": {
     "place": {
       "name": "Roanoke",
@@ -96557,6 +98222,24 @@
         "status": "adopted",
         "scope": ["transit-oriented"],
         "land": ["commercial", "industrial", "medical", "other"]
+      }
+    ]
+  },
+  "Rockingham, North Carolina, United States": {
+    "place": {
+      "name": "Rockingham",
+      "state": "North Carolina",
+      "country": "United States",
+      "type": "city",
+      "encoded": "rockingham-north-carolina-united-states",
+      "pop": 9243,
+      "coord": [-79.77569216230256, 34.93910080778152]
+    },
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district", "citywide"],
+        "land": ["all uses", "residential, low-density"]
       }
     ]
   },
@@ -98535,6 +100218,31 @@
       }
     ]
   },
+  "Saint Pierre and Miquelon, Saint Pierre and Miquelon, France": {
+    "place": {
+      "name": "Saint Pierre and Miquelon",
+      "state": "Saint Pierre and Miquelon",
+      "country": "France",
+      "type": "state",
+      "encoded": "saint-pierre-and-miquelon-saint-pierre-and-miquelon-france",
+      "pop": 5819,
+      "coord": [-56.1768672, 46.7775497]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["commercial", "other"]
+      }
+    ],
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district", "main street / special"],
+        "land": ["all uses"]
+      }
+    ]
+  },
   "Sainte Anne, Manitoba, Canada": {
     "place": {
       "name": "Sainte Anne",
@@ -99245,6 +100953,24 @@
         "scope": ["citywide"],
         "land": ["all uses"],
         "date": "2022-12-06"
+      }
+    ]
+  },
+  "San Juan County, Washington, United States": {
+    "place": {
+      "name": "San Juan County",
+      "state": "Washington",
+      "country": "United States",
+      "type": "county",
+      "encoded": "san-juan-county-washington-united-states",
+      "pop": 17788,
+      "coord": [-122.9919497, 48.5443087]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide", "main street / special"],
+        "land": ["all uses"]
       }
     ]
   },
@@ -102061,6 +103787,12 @@
         "status": "adopted",
         "scope": ["city center / business district"],
         "land": ["commercial"]
+      },
+      {
+        "status": "adopted",
+        "scope": ["citywide", "main street / special"],
+        "land": ["all uses"],
+        "date": "2026-03-18"
       }
     ]
   },
@@ -103490,6 +105222,24 @@
       }
     ]
   },
+  "Skagit County, Washington, United States": {
+    "place": {
+      "name": "Skagit County",
+      "state": "Washington",
+      "country": "United States",
+      "type": "county",
+      "encoded": "skagit-county-washington-united-states",
+      "pop": 129523,
+      "coord": [-121.7332784, 48.4596092]
+    },
+    "add_max": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["all uses"]
+      }
+    ]
+  },
   "Skagway, Alaska, United States": {
     "place": {
       "name": "Skagway",
@@ -103745,6 +105495,24 @@
       }
     ]
   },
+  "Smithfield, North Carolina, United States": {
+    "place": {
+      "name": "Smithfield",
+      "state": "North Carolina",
+      "country": "United States",
+      "type": "city",
+      "encoded": "smithfield-north-carolina-united-states",
+      "pop": 11292,
+      "coord": [-78.346102, 35.5111996]
+    },
+    "add_max": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["all uses"]
+      }
+    ]
+  },
   "Smithfield, Rhode Island, United States": {
     "place": {
       "name": "Smithfield",
@@ -103879,6 +105647,24 @@
       }
     ]
   },
+  "Smoky Lake, Alberta, Canada": {
+    "place": {
+      "name": "Smoky Lake",
+      "state": "Alberta",
+      "country": "Canada",
+      "type": "city",
+      "encoded": "smoky-lake-alberta-canada",
+      "pop": 1127,
+      "coord": [-112.4714095, 54.1136641]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district", "citywide"],
+        "land": ["all uses"]
+      }
+    ]
+  },
   "Smooth Rock Falls, Ontario, Canada": {
     "place": {
       "name": "Smooth Rock Falls",
@@ -103966,6 +105752,38 @@
         "status": "adopted",
         "scope": ["citywide"],
         "land": ["commercial"]
+      }
+    ]
+  },
+  "Snohomish County, Washington, United States": {
+    "place": {
+      "name": "Snohomish County",
+      "state": "Washington",
+      "country": "United States",
+      "type": "county",
+      "encoded": "snohomish-county-washington-united-states",
+      "pop": 827957,
+      "coord": [-121.7304882, 48.0074736]
+    },
+    "add_max": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["all uses"]
+      }
+    ],
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["main street / special", "transit-oriented"],
+        "land": ["all uses", "residential, multi-family"]
+      }
+    ],
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["main street / special", "transit-oriented"],
+        "land": ["residential, low-density", "residential, multi-family"]
       }
     ]
   },
@@ -104510,6 +106328,24 @@
       }
     ]
   },
+  "South Berwick, Maine, United States": {
+    "place": {
+      "name": "South Berwick",
+      "state": "Maine",
+      "country": "United States",
+      "type": "city",
+      "encoded": "south-berwick-maine-united-states",
+      "pop": 7467,
+      "coord": [-70.8087445514922, 43.23439353614466]
+    },
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["residential, low-density"]
+      }
+    ]
+  },
   "South Blooming Grove, New York, United States": {
     "place": {
       "name": "South Blooming Grove",
@@ -105007,6 +106843,31 @@
       }
     ]
   },
+  "South Ogden, Utah, United States": {
+    "place": {
+      "name": "South Ogden",
+      "state": "Utah",
+      "country": "United States",
+      "type": "city",
+      "encoded": "south-ogden-utah-united-states",
+      "pop": 17563,
+      "coord": [-111.9678627, 41.1912782]
+    },
+    "add_max": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["all uses"]
+      }
+    ],
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["all uses", "commercial", "other"]
+      }
+    ]
+  },
   "South Orange, New Jersey, United States": {
     "place": {
       "name": "South Orange",
@@ -105367,6 +107228,38 @@
         "status": "adopted",
         "scope": ["citywide"],
         "land": ["commercial"]
+      }
+    ]
+  },
+  "Southern Pines, North Carolina, United States": {
+    "place": {
+      "name": "Southern Pines",
+      "state": "North Carolina",
+      "country": "United States",
+      "type": "city",
+      "encoded": "southern-pines-north-carolina-united-states",
+      "pop": 15545,
+      "coord": [-79.3922539, 35.1740471]
+    },
+    "add_max": [
+      {
+        "status": "adopted",
+        "scope": ["main street / special"],
+        "land": ["all uses"]
+      }
+    ],
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide", "main street / special"],
+        "land": ["all uses"]
+      }
+    ],
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["all uses"]
       }
     ]
   },
@@ -106527,6 +108420,31 @@
       }
     ]
   },
+  "St. Augustine, Florida, United States": {
+    "place": {
+      "name": "St. Augustine",
+      "state": "Florida",
+      "country": "United States",
+      "type": "city",
+      "encoded": "st-augustine-florida-united-states",
+      "pop": 14329,
+      "coord": [-81.3145395, 29.8946952]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["main street / special"],
+        "land": ["residential, all uses"]
+      }
+    ],
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["main street / special"],
+        "land": ["all uses"]
+      }
+    ]
+  },
   "St. Bernard, Ohio, United States": {
     "place": {
       "name": "St. Bernard",
@@ -106946,6 +108864,31 @@
           "residential, low-density",
           "residential, multi-family"
         ]
+      }
+    ]
+  },
+  "St. George, Utah, United States": {
+    "place": {
+      "name": "St. George",
+      "state": "Utah",
+      "country": "United States",
+      "type": "city",
+      "encoded": "st-george-utah-united-states",
+      "pop": 99184,
+      "coord": [-113.5832063, 37.1098772]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["all uses"]
+      }
+    ],
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["commercial"]
       }
     ]
   },
@@ -107988,6 +109931,24 @@
         "status": "adopted",
         "scope": ["city center / business district"],
         "land": ["all uses"]
+      }
+    ]
+  },
+  "Stanstead, Quebec, Canada": {
+    "place": {
+      "name": "Stanstead",
+      "state": "Quebec",
+      "country": "Canada",
+      "type": "city",
+      "encoded": "stanstead-quebec-canada",
+      "pop": 2824,
+      "coord": [-72.0974591, 45.0105049]
+    },
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["commercial", "other"]
       }
     ]
   },
@@ -109272,6 +111233,24 @@
       }
     ]
   },
+  "Strathcona County, Alberta, Canada": {
+    "place": {
+      "name": "Strathcona County",
+      "state": "Alberta",
+      "country": "Canada",
+      "type": "county",
+      "encoded": "strathcona-county-alberta-canada",
+      "pop": 99225,
+      "coord": [-113.1255397, 53.5762678]
+    },
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["residential, low-density"]
+      }
+    ]
+  },
   "Strathroy-Caradoc, Ontario, Canada": {
     "place": {
       "name": "Strathroy-Caradoc",
@@ -110022,6 +112001,14 @@
         "status": "adopted",
         "scope": ["citywide"],
         "land": ["commercial", "industrial", "medical", "other"]
+      }
+    ],
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["transit-oriented"],
+        "land": ["residential, all uses"],
+        "date": "2026-04-06"
       }
     ]
   },
@@ -112683,6 +114670,38 @@
       }
     ]
   },
+  "Thurston County, Washington, United States": {
+    "place": {
+      "name": "Thurston County",
+      "state": "Washington",
+      "country": "United States",
+      "type": "county",
+      "encoded": "thurston-county-washington-united-states",
+      "pop": 294793,
+      "coord": [-122.8855155, 46.9319983]
+    },
+    "add_max": [
+      {
+        "status": "adopted",
+        "scope": ["citywide", "main street / special"],
+        "land": ["all uses"]
+      }
+    ],
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district", "main street / special"],
+        "land": [
+          "all uses",
+          "commercial",
+          "industrial",
+          "medical",
+          "other",
+          "residential, multi-family"
+        ]
+      }
+    ]
+  },
   "Tiffin, Ohio, United States": {
     "place": {
       "name": "Tiffin",
@@ -114777,6 +116796,24 @@
       }
     ]
   },
+  "Twisp, Washington, United States": {
+    "place": {
+      "name": "Twisp",
+      "state": "Washington",
+      "country": "United States",
+      "type": "city",
+      "encoded": "twisp-washington-united-states",
+      "pop": 992,
+      "coord": [-120.122303, 48.3634784]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["commercial"]
+      }
+    ]
+  },
   "Two Harbors, Minnesota, United States": {
     "place": {
       "name": "Two Harbors",
@@ -115554,6 +117591,12 @@
         "scope": ["citywide"],
         "land": ["all uses"],
         "date": "2025-07-28"
+      },
+      {
+        "status": "adopted",
+        "scope": ["transit-oriented"],
+        "land": ["all uses"],
+        "date": "2026-07-06"
       }
     ]
   },
@@ -118594,6 +120637,31 @@
       }
     ]
   },
+  "Washington County, Arkansas, United States": {
+    "place": {
+      "name": "Washington County",
+      "state": "Arkansas",
+      "country": "United States",
+      "type": "county",
+      "encoded": "washington-county-arkansas-united-states",
+      "pop": 245871,
+      "coord": [-94.2280656, 35.9672625]
+    },
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": [
+          "commercial",
+          "industrial",
+          "medical",
+          "other",
+          "residential, low-density",
+          "residential, multi-family"
+        ]
+      }
+    ]
+  },
   "Washington County, Illinois, United States": {
     "place": {
       "name": "Washington County",
@@ -118860,6 +120928,24 @@
       }
     ]
   },
+  "Washington, North Carolina, United States": {
+    "place": {
+      "name": "Washington",
+      "state": "North Carolina",
+      "country": "United States",
+      "type": "city",
+      "encoded": "washington-north-carolina-united-states",
+      "pop": 9875,
+      "coord": [-77.05652772992954, 35.54320504939014]
+    },
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["commercial", "other"]
+      }
+    ]
+  },
   "Washington, Pennsylvania, United States": {
     "place": {
       "name": "Washington",
@@ -119024,6 +121110,24 @@
         "status": "adopted",
         "scope": ["city center / business district"],
         "land": ["all uses"]
+      }
+    ]
+  },
+  "Waterboro, Maine, United States": {
+    "place": {
+      "name": "Waterboro",
+      "state": "Maine",
+      "country": "United States",
+      "type": "city",
+      "encoded": "waterboro-maine-united-states",
+      "pop": 7936,
+      "coord": [-70.714599, 43.5359817]
+    },
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["residential, low-density"]
       }
     ]
   },
@@ -120620,6 +122724,31 @@
       }
     ]
   },
+  "Wendell, North Carolina, United States": {
+    "place": {
+      "name": "Wendell",
+      "state": "North Carolina",
+      "country": "United States",
+      "type": "city",
+      "encoded": "wendell-north-carolina-united-states",
+      "pop": 9793,
+      "coord": [-78.3697213, 35.780987]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district", "citywide"],
+        "land": [
+          "all uses",
+          "commercial",
+          "industrial",
+          "medical",
+          "other",
+          "residential, multi-family"
+        ]
+      }
+    ]
+  },
   "Wentzville, Missouri, United States": {
     "place": {
       "name": "Wentzville",
@@ -121128,7 +123257,7 @@
       "name": "West Hants Regional Municipality",
       "state": "Nova Scotia",
       "country": "Canada",
-      "type": "city",
+      "type": "county",
       "encoded": "west-hants-regional-municipality-nova-scotia-canada",
       "pop": 19509,
       "coord": [-64.1024703, 44.9907655]
@@ -122583,6 +124712,24 @@
         "status": "adopted",
         "scope": ["city center / business district", "transit-oriented"],
         "land": ["all uses", "residential, all uses"]
+      }
+    ]
+  },
+  "Whatcom County, Washington, United States": {
+    "place": {
+      "name": "Whatcom County",
+      "state": "Washington",
+      "country": "United States",
+      "type": "county",
+      "encoded": "whatcom-county-washington-united-states",
+      "pop": 226847,
+      "coord": [-121.8828175, 48.8107819]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["all uses"]
       }
     ]
   },
@@ -124767,6 +126914,24 @@
       }
     ]
   },
+  "Winterville, North Carolina, United States": {
+    "place": {
+      "name": "Winterville",
+      "state": "North Carolina",
+      "country": "United States",
+      "type": "city",
+      "encoded": "winterville-north-carolina-united-states",
+      "pop": 10462,
+      "coord": [-77.4022447, 35.5282267]
+    },
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["all uses"]
+      }
+    ]
+  },
   "Winthrop Harbor, Illinois, United States": {
     "place": {
       "name": "Winthrop Harbor",
@@ -126227,7 +128392,7 @@
       "name": "Yarmouth District Municipality",
       "state": "Nova Scotia",
       "country": "Canada",
-      "type": "city",
+      "type": "county",
       "encoded": "yarmouth-district-municipality-nova-scotia-canada",
       "pop": 10067,
       "coord": [-65.84371306685354, 43.92835235450593]
