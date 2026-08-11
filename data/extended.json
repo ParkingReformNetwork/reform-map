@@ -49918,6 +49918,35 @@
       }
     ]
   },
+  "Conover, North Carolina, United States": {
+    "reduce_min": [
+      {
+        "summary": "Parking requirements are reduced in the B-3 (Central Business) district. On-street parking may count towards parking requirements citywide.",
+        "reporter": "Samuel Deetz",
+        "requirements": ["by right", "other"],
+        "citations": [
+          {
+            "id": 17081,
+            "description": "Conover Zoning Code",
+            "url": "https://library.municode.com/nc/conover/codes/code_of_ordinances?nodeId=PTIICOOR_APXAZO_ARTIIGERE_DIV3PA_S23.2USPALOPESTPA",
+            "notes": "23.2.2",
+            "attachments": [
+              {
+                "fileName": "conover-north-carolina-united-states-attachment.pdf",
+                "directusId": "1fec598b-8151-4427-b683-34aaf114e73b"
+              }
+            ],
+            "screenshots": [
+              {
+                "fileName": "conover-north-carolina-united-states-screenshot.png",
+                "directusId": "97f1e62f-b7c2-4608-843b-e9aa2d9b62dd"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
   "Conshohocken, Pennsylvania, United States": {
     "reduce_min": [
       {
@@ -76549,6 +76578,35 @@
       }
     ]
   },
+  "Fletcher, North Carolina, United States": {
+    "reduce_min": [
+      {
+        "summary": "Parking requirements may be reduced through on-street parking or bike parking.",
+        "reporter": "Samuel Deetz",
+        "requirements": ["bike parking", "other"],
+        "citations": [
+          {
+            "id": 17083,
+            "description": "Fletcher Land Development Code",
+            "url": "https://www.fletchernc.org/wp-content/uploads/2019/04/9-Parking-and-Loading-April-2019.pdf",
+            "notes": "9.2.A.1.;\n9.2.A.3.;\nPage 2",
+            "attachments": [
+              {
+                "fileName": "fletcher-north-carolina-united-states-attachment.pdf",
+                "directusId": "734481fe-d6e4-448b-a48b-4ba081b8012a"
+              }
+            ],
+            "screenshots": [
+              {
+                "fileName": "fletcher-north-carolina-united-states-screenshot.png",
+                "directusId": "00577b4e-8f62-48e1-9296-e28019d26b0d"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
   "Flint Charter Township, Michigan, United States": {
     "reduce_min": [
       {
@@ -86399,6 +86457,35 @@
               {
                 "fileName": "gibsonburg-ohio-united-states-screenshot.png",
                 "directusId": "2431a194-1c58-49ee-b7f4-588872700ac5"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "Gibsonville, North Carolina, United States": {
+    "rm_min": [
+      {
+        "summary": "Parking mandates do not apply to properties within or surrounded by the CB Central Business District",
+        "reporter": "Samuel Deetz",
+        "requirements": ["by right"],
+        "citations": [
+          {
+            "id": 17080,
+            "description": "Gibsonville Zoning Code",
+            "url": "https://static1.squarespace.com/static/606342d01f37ad2029c30ca8/t/6a1f2337ddc69376b3ff578d/1780425528393/Article_6_Development_Standards.pdf",
+            "notes": "6-2.1(I)\nPage 12",
+            "attachments": [
+              {
+                "fileName": "gibsonville-north-carolina-united-states-attachment.pdf",
+                "directusId": "ea6a53b6-c68b-4a77-b899-632af8fd9abb"
+              }
+            ],
+            "screenshots": [
+              {
+                "fileName": "gibsonville-north-carolina-united-states-screenshot.png",
+                "directusId": "22cef3e7-a91c-4d85-b6b7-d965d87f0dea"
               }
             ]
           }
@@ -172364,6 +172451,39 @@
       }
     ]
   },
+  "Oxford, North Carolina, United States": {
+    "rm_min": [
+      {
+        "summary": "Industrial uses citywide and all uses in the CBD, Central Business District are exempt from parking mandates.",
+        "reporter": "Samuel Deetz",
+        "requirements": ["by right"],
+        "citations": [
+          {
+            "id": 17085,
+            "description": "Oxford Unified Development Ordinance",
+            "url": "https://cms8.revize.com/revize/cityofoxford/2021-07-01%20-%20Approved%20Oxford%20160D%20UDO.pdf",
+            "notes": "9.4.1.G.;\n9.4.2.A.;\nPages 199-200",
+            "attachments": [
+              {
+                "fileName": "oxford-north-carolina-united-states-attachment.pdf",
+                "directusId": "cbf93529-25ae-4519-92f0-409bbf30354b"
+              }
+            ],
+            "screenshots": [
+              {
+                "fileName": "oxford-north-carolina-united-states-screenshot1.png",
+                "directusId": "1832184a-3d2a-4ac7-b595-b91522c75289"
+              },
+              {
+                "fileName": "oxford-north-carolina-united-states-screenshot2.png",
+                "directusId": "2cccf8d1-f2d4-4def-9f84-0f6a2316a0cf"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
   "Oxford, Nova Scotia, Canada": {
     "rm_min": [
       {
@@ -195136,6 +195256,35 @@
               {
                 "fileName": "roxana-illinois-united-states-screenshot2.png",
                 "directusId": "f50fd3d4-a76e-45b5-bec7-0ecd4f3f91c3"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "Roxboro, North Carolina, United States": {
+    "add_max": [
+      {
+        "summary": "Parking maximums are set at 140% of the minimums for multi-family and nonresidential uses.",
+        "reporter": "Samuel Deetz",
+        "requirements": ["by right"],
+        "citations": [
+          {
+            "id": 17082,
+            "description": "Roxboro Unified Development Code",
+            "url": "https://www.cityofroxboro.com/home/showpublisheddocument/10818/639009729877770000",
+            "notes": "Section 9.17",
+            "attachments": [
+              {
+                "fileName": "roxboro-north-carolina-united-states-attachment.pdf",
+                "directusId": "4f653628-5f64-4a74-82e4-294c3cf0d715"
+              }
+            ],
+            "screenshots": [
+              {
+                "fileName": "roxboro-north-carolina-united-states-screenshot.png",
+                "directusId": "115d18fa-a239-412f-8d33-5e9e32c31e08"
               }
             ]
           }
@@ -250071,6 +250220,35 @@
               {
                 "fileName": "woodcliff-lake-new-jersey-united-states-screenshot.png",
                 "directusId": "7ee0ec1f-dc88-42d5-931e-042c98802bda"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "Woodfin, North Carolina, United States": {
+    "reduce_min": [
+      {
+        "summary": "On-street parking may count towards parking requirements in the MV Mountain Village District.",
+        "reporter": "Samuel Deetz",
+        "requirements": ["other"],
+        "citations": [
+          {
+            "id": 17084,
+            "description": "Woodfin Zoning Code",
+            "url": "https://library.municode.com/nc/woodfin/codes/code_of_ordinances?nodeId=PTIICOOR_CH54ZO_ARTVUSDIRECO_S54-150MOVIDIMV",
+            "notes": "Sec. 54-150.(c)(9)",
+            "attachments": [
+              {
+                "fileName": "woodfin-north-carolina-united-states-attachment.pdf",
+                "directusId": "d557bead-e56d-474d-a4dc-f7b780f448ea"
+              }
+            ],
+            "screenshots": [
+              {
+                "fileName": "woodfin-north-carolina-united-states-screenshot.png",
+                "directusId": "03bdb8f2-ce57-4fe7-8e22-b00e71be85aa"
               }
             ]
           }
