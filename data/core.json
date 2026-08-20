@@ -25193,6 +25193,24 @@
       }
     ]
   },
+  "Conover, North Carolina, United States": {
+    "place": {
+      "name": "Conover",
+      "state": "North Carolina",
+      "country": "United States",
+      "type": "city",
+      "encoded": "conover-north-carolina-united-states",
+      "pop": 8421,
+      "coord": [-81.2184383, 35.7065004]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district", "citywide"],
+        "land": ["all uses"]
+      }
+    ]
+  },
   "Conshohocken, Pennsylvania, United States": {
     "place": {
       "name": "Conshohocken",
@@ -38963,6 +38981,24 @@
       }
     ]
   },
+  "Fletcher, North Carolina, United States": {
+    "place": {
+      "name": "Fletcher",
+      "state": "North Carolina",
+      "country": "United States",
+      "type": "city",
+      "encoded": "fletcher-north-carolina-united-states",
+      "pop": 7987,
+      "coord": [-82.5011239, 35.4309336]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["all uses"]
+      }
+    ]
+  },
   "Flint Charter Township, Michigan, United States": {
     "place": {
       "name": "Flint Charter Township",
@@ -43850,6 +43886,24 @@
         "scope": ["city center / business district"],
         "land": ["all uses"],
         "date": "2007-12-20"
+      }
+    ]
+  },
+  "Gibsonville, North Carolina, United States": {
+    "place": {
+      "name": "Gibsonville",
+      "state": "North Carolina",
+      "country": "United States",
+      "type": "city",
+      "encoded": "gibsonville-north-carolina-united-states",
+      "pop": 8971,
+      "coord": [-79.5422462, 36.105691]
+    },
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["all uses"]
       }
     ]
   },
@@ -87788,6 +87842,24 @@
       }
     ]
   },
+  "Oxford, North Carolina, United States": {
+    "place": {
+      "name": "Oxford",
+      "state": "North Carolina",
+      "country": "United States",
+      "type": "city",
+      "encoded": "oxford-north-carolina-united-states",
+      "pop": 8628,
+      "coord": [-78.5908345, 36.3107004]
+    },
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district", "citywide"],
+        "land": ["all uses", "industrial"]
+      }
+    ]
+  },
   "Oxford, Nova Scotia, Canada": {
     "place": {
       "name": "Oxford",
@@ -99491,6 +99563,30 @@
           "medical",
           "other",
           "residential, low-density",
+          "residential, multi-family"
+        ]
+      }
+    ]
+  },
+  "Roxboro, North Carolina, United States": {
+    "place": {
+      "name": "Roxboro",
+      "state": "North Carolina",
+      "country": "United States",
+      "type": "city",
+      "encoded": "roxboro-north-carolina-united-states",
+      "pop": 8134,
+      "coord": [-78.9827881, 36.3937519]
+    },
+    "add_max": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": [
+          "commercial",
+          "industrial",
+          "medical",
+          "other",
           "residential, multi-family"
         ]
       }
@@ -127532,6 +127628,24 @@
       {
         "status": "adopted",
         "scope": ["citywide"],
+        "land": ["all uses"]
+      }
+    ]
+  },
+  "Woodfin, North Carolina, United States": {
+    "place": {
+      "name": "Woodfin",
+      "state": "North Carolina",
+      "country": "United States",
+      "type": "city",
+      "encoded": "woodfin-north-carolina-united-states",
+      "pop": 7936,
+      "coord": [-82.5820725, 35.633444]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["main street / special"],
         "land": ["all uses"]
       }
     ]
