@@ -195,6 +195,38 @@
       }
     ]
   },
+  "Aberdeen, North Carolina, United States": {
+    "place": {
+      "name": "Aberdeen",
+      "state": "North Carolina",
+      "country": "United States",
+      "type": "city",
+      "encoded": "aberdeen-north-carolina-united-states",
+      "pop": 8516,
+      "coord": [-79.4294789, 35.131547]
+    },
+    "add_max": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["commercial", "industrial", "medical", "other"]
+      }
+    ],
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["all uses"]
+      }
+    ],
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["all uses"]
+      }
+    ]
+  },
   "Aberdeen, Saskatchewan, Canada": {
     "place": {
       "name": "Aberdeen",
@@ -1516,6 +1548,24 @@
       }
     ]
   },
+  "Algoma, Wisconsin, United States": {
+    "place": {
+      "name": "Algoma",
+      "state": "Wisconsin",
+      "country": "United States",
+      "type": "city",
+      "encoded": "algoma-wisconsin-united-states",
+      "pop": 3243,
+      "coord": [-87.4364981, 44.6096421]
+    },
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["commercial", "medical", "other", "residential, all uses"]
+      }
+    ]
+  },
   "Algona, Iowa, United States": {
     "place": {
       "name": "Algona",
@@ -2390,6 +2440,24 @@
         "status": "adopted",
         "scope": ["city center / business district"],
         "land": ["all uses"]
+      }
+    ]
+  },
+  "Amery, Wisconsin, United States": {
+    "place": {
+      "name": "Amery",
+      "state": "Wisconsin",
+      "country": "United States",
+      "type": "city",
+      "encoded": "amery-wisconsin-united-states",
+      "pop": 2962,
+      "coord": [-92.3620836, 45.3125385]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["residential, all uses"]
       }
     ]
   },
@@ -3454,6 +3522,24 @@
       }
     ]
   },
+  "Arcadia, New Brunswick, Canada": {
+    "place": {
+      "name": "Arcadia",
+      "state": "New Brunswick",
+      "country": "Canada",
+      "type": "city",
+      "encoded": "arcadia-new-brunswick-canada",
+      "pop": 3720,
+      "coord": [-66.0236432, 45.8435004]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["main street / special"],
+        "land": ["all uses"]
+      }
+    ]
+  },
   "Arcata, California, United States": {
     "place": {
       "name": "Arcata",
@@ -3506,6 +3592,37 @@
         "status": "adopted",
         "scope": ["city center / business district"],
         "land": ["commercial"]
+      }
+    ]
+  },
+  "Archdale, North Carolina, United States": {
+    "place": {
+      "name": "Archdale",
+      "state": "North Carolina",
+      "country": "United States",
+      "type": "city",
+      "encoded": "archdale-north-carolina-united-states",
+      "pop": 11907,
+      "coord": [-79.9719831, 35.914581]
+    },
+    "add_max": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": [
+          "commercial",
+          "industrial",
+          "medical",
+          "other",
+          "residential, multi-family"
+        ]
+      }
+    ],
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["all uses"]
       }
     ]
   },
@@ -6418,6 +6535,30 @@
       }
     ]
   },
+  "Barboursville, West Virginia, United States": {
+    "place": {
+      "name": "Barboursville",
+      "state": "West Virginia",
+      "country": "United States",
+      "type": "city",
+      "encoded": "barboursville-west-virginia-united-states",
+      "pop": 4456,
+      "coord": [-82.2945923, 38.4095298]
+    },
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": [
+          "commercial",
+          "industrial",
+          "medical",
+          "other",
+          "residential, low-density"
+        ]
+      }
+    ]
+  },
   "Bardstown, Kentucky, United States": {
     "place": {
       "name": "Bardstown",
@@ -6545,6 +6686,24 @@
         "status": "adopted",
         "scope": ["city center / business district"],
         "land": ["commercial"]
+      }
+    ]
+  },
+  "Barnwell, Alberta, Canada": {
+    "place": {
+      "name": "Barnwell",
+      "state": "Alberta",
+      "country": "Canada",
+      "type": "city",
+      "encoded": "barnwell-alberta-canada",
+      "pop": 978,
+      "coord": [-112.2622938, 49.7595798]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["all uses"]
       }
     ]
   },
@@ -8387,6 +8546,24 @@
       }
     ]
   },
+  "Belle-Baie, New Brunswick, Canada": {
+    "place": {
+      "name": "Belle-Baie",
+      "state": "New Brunswick",
+      "country": "Canada",
+      "type": "city",
+      "encoded": "belle-baie-new-brunswick-canada",
+      "pop": 14335,
+      "coord": [-65.7923961, 47.7663505]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["commercial", "other"]
+      }
+    ]
+  },
   "Bellefontaine Neighbors, Missouri, United States": {
     "place": {
       "name": "Bellefontaine Neighbors",
@@ -8678,6 +8855,24 @@
       }
     ]
   },
+  "Bellevue, Wisconsin, United States": {
+    "place": {
+      "name": "Bellevue",
+      "state": "Wisconsin",
+      "country": "United States",
+      "type": "city",
+      "encoded": "bellevue-wisconsin-united-states",
+      "pop": 15935,
+      "coord": [-87.9543025, 44.463888]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["main street / special"],
+        "land": ["all uses"]
+      }
+    ]
+  },
   "Bellflower, Illinois, United States": {
     "place": {
       "name": "Bellflower",
@@ -8704,7 +8899,8 @@
       "type": "city",
       "encoded": "Bellingham_WA",
       "pop": 92314,
-      "coord": [-122.4788361, 48.7544012]
+      "coord": [-122.4788361, 48.7544012],
+      "repeal": true
     },
     "rm_min": [
       {
@@ -8714,10 +8910,10 @@
         "date": "2025-01-13"
       },
       {
-        "status": "proposed",
+        "status": "adopted",
         "scope": ["citywide"],
         "land": ["all uses"],
-        "date": "2025-01-13"
+        "date": "2026-08-10"
       }
     ]
   },
@@ -9935,6 +10131,24 @@
       }
     ]
   },
+  "Berwyn, Alberta, Canada": {
+    "place": {
+      "name": "Berwyn",
+      "state": "Alberta",
+      "country": "Canada",
+      "type": "city",
+      "encoded": "berwyn-alberta-canada",
+      "pop": 577,
+      "coord": [-117.7329774, 56.149407]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["all uses"]
+      }
+    ]
+  },
   "Berwyn, Illinois, United States": {
     "place": {
       "name": "Berwyn",
@@ -10932,6 +11146,31 @@
       }
     ]
   },
+  "Black Mountain, North Carolina, United States": {
+    "place": {
+      "name": "Black Mountain",
+      "state": "North Carolina",
+      "country": "United States",
+      "type": "city",
+      "encoded": "black-mountain-north-carolina-united-states",
+      "pop": 8426,
+      "coord": [-82.3205791, 35.6176544]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["all uses"]
+      }
+    ],
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["all uses"]
+      }
+    ]
+  },
   "Black River Falls, Wisconsin, United States": {
     "place": {
       "name": "Black River Falls",
@@ -10966,6 +11205,24 @@
         "status": "adopted",
         "scope": ["city center / business district"],
         "land": ["commercial"]
+      }
+    ]
+  },
+  "Blackfalds, Alberta, Canada": {
+    "place": {
+      "name": "Blackfalds",
+      "state": "Alberta",
+      "country": "Canada",
+      "type": "city",
+      "encoded": "blackfalds-alberta-canada",
+      "pop": 10470,
+      "coord": [-113.8, 52.383333]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["all uses"]
       }
     ]
   },
@@ -12152,6 +12409,24 @@
       }
     ]
   },
+  "Boscobel, Wisconsin, United States": {
+    "place": {
+      "name": "Boscobel",
+      "state": "Wisconsin",
+      "country": "United States",
+      "type": "city",
+      "encoded": "boscobel-wisconsin-united-states",
+      "pop": 3286,
+      "coord": [-90.7057398, 43.1346751]
+    },
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["residential, all uses"]
+      }
+    ]
+  },
   "Bosque Farms, New Mexico, United States": {
     "place": {
       "name": "Bosque Farms",
@@ -12394,6 +12669,24 @@
       }
     ]
   },
+  "Bowen Island, British Columbia, Canada": {
+    "place": {
+      "name": "Bowen Island",
+      "state": "British Columbia",
+      "country": "Canada",
+      "type": "city",
+      "encoded": "bowen-island-british-columbia-canada",
+      "pop": 4256,
+      "coord": [-123.37451527180718, 49.36821519098347]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district", "citywide"],
+        "land": ["commercial", "other", "residential, multi-family"]
+      }
+    ]
+  },
   "Bowling Green, Kentucky, United States": {
     "place": {
       "name": "Bowling Green",
@@ -12530,6 +12823,24 @@
       {
         "status": "adopted",
         "scope": ["city center / business district"],
+        "land": ["all uses"]
+      }
+    ]
+  },
+  "Boyle, Alberta, Canada": {
+    "place": {
+      "name": "Boyle",
+      "state": "Alberta",
+      "country": "Canada",
+      "type": "city",
+      "encoded": "boyle-alberta-canada",
+      "pop": 825,
+      "coord": [-112.809167, 54.590833]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["main street / special"],
         "land": ["all uses"]
       }
     ]
@@ -13269,6 +13580,13 @@
         "status": "adopted",
         "scope": ["citywide"],
         "land": ["all uses"]
+      }
+    ],
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["all uses", "commercial", "industrial", "medical", "other"]
       }
     ],
     "rm_min": [
@@ -15130,6 +15448,24 @@
       }
     ]
   },
+  "Buffalo, Wyoming, United States": {
+    "place": {
+      "name": "Buffalo",
+      "state": "Wyoming",
+      "country": "United States",
+      "type": "city",
+      "encoded": "buffalo-wyoming-united-states",
+      "pop": 4415,
+      "coord": [-106.699287, 44.3480865]
+    },
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["all uses"]
+      }
+    ]
+  },
   "Buhl, Minnesota, United States": {
     "place": {
       "name": "Buhl",
@@ -16590,6 +16926,24 @@
       }
     ]
   },
+  "Camden, North Carolina, United States": {
+    "place": {
+      "name": "Camden",
+      "state": "North Carolina",
+      "country": "United States",
+      "type": "city",
+      "encoded": "camden-north-carolina-united-states",
+      "pop": 10355,
+      "coord": [-76.1150606, 36.3106247]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["all uses"]
+      }
+    ]
+  },
   "Camden, South Carolina, United States": {
     "place": {
       "name": "Camden",
@@ -16780,11 +17134,20 @@
       "pop": 18742,
       "coord": [-112.840576, 53.013131]
     },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["all uses", "commercial"],
+        "date": "2023-01-01"
+      }
+    ],
     "rm_min": [
       {
         "status": "adopted",
         "scope": ["main street / special"],
-        "land": ["all uses"]
+        "land": ["all uses"],
+        "date": "2018"
       }
     ]
   },
@@ -17429,6 +17792,31 @@
         "status": "adopted",
         "scope": ["citywide"],
         "land": ["all uses"]
+      }
+    ]
+  },
+  "Caraquet, New Brunswick, Canada": {
+    "place": {
+      "name": "Caraquet",
+      "state": "New Brunswick",
+      "country": "Canada",
+      "type": "city",
+      "encoded": "caraquet-new-brunswick-canada",
+      "pop": 8125,
+      "coord": [-64.9491778, 47.7909581]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["all uses"]
+      }
+    ],
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district", "citywide"],
+        "land": ["all uses", "industrial", "other"]
       }
     ]
   },
@@ -19074,7 +19462,7 @@
       "pop": 12121,
       "coord": [-87.9875348, 43.2966545]
     },
-    "rm_min": [
+    "reduce_min": [
       {
         "status": "adopted",
         "scope": ["city center / business district"],
@@ -19364,6 +19752,24 @@
         "scope": ["citywide"],
         "land": ["all uses"],
         "date": "2023-06-08"
+      }
+    ]
+  },
+  "Central Saanich, British Columbia, Canada": {
+    "place": {
+      "name": "Central Saanich",
+      "state": "British Columbia",
+      "country": "Canada",
+      "type": "city",
+      "encoded": "central-saanich-british-columbia-canada",
+      "pop": 17385,
+      "coord": [-123.420726, 48.5946782]
+    },
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["residential, low-density"]
       }
     ]
   },
@@ -19738,6 +20144,24 @@
         "scope": ["citywide"],
         "land": ["all uses"],
         "date": "2025-06-20"
+      }
+    ]
+  },
+  "Champdoré, New Brunswick, Canada": {
+    "place": {
+      "name": "Champdoré",
+      "state": "New Brunswick",
+      "country": "Canada",
+      "type": "city",
+      "encoded": "champdore-new-brunswick-canada",
+      "pop": 5115,
+      "coord": [-64.7877947, 46.3923183]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["main street / special"],
+        "land": ["all uses"]
       }
     ]
   },
@@ -21811,6 +22235,24 @@
       }
     ]
   },
+  "Claresholm, Alberta, Canada": {
+    "place": {
+      "name": "Claresholm",
+      "state": "Alberta",
+      "country": "Canada",
+      "type": "city",
+      "encoded": "claresholm-alberta-canada",
+      "pop": 3804,
+      "coord": [-113.5800285, 50.0239458]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["all uses"]
+      }
+    ]
+  },
   "Clarington, Ontario, Canada": {
     "place": {
       "name": "Clarington",
@@ -23141,6 +23583,31 @@
       }
     ]
   },
+  "Clinton, North Carolina, United States": {
+    "place": {
+      "name": "Clinton",
+      "state": "North Carolina",
+      "country": "United States",
+      "type": "city",
+      "encoded": "clinton-north-carolina-united-states",
+      "pop": 8383,
+      "coord": [-78.3233325, 34.9979453]
+    },
+    "add_max": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["commercial", "medical", "other", "residential, multi-family"]
+      }
+    ],
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["all uses"]
+      }
+    ]
+  },
   "Clinton, South Carolina, United States": {
     "place": {
       "name": "Clinton",
@@ -23932,6 +24399,24 @@
         "status": "adopted",
         "scope": ["city center / business district"],
         "land": ["all uses"]
+      }
+    ]
+  },
+  "Coldstream, British Columbia, Canada": {
+    "place": {
+      "name": "Coldstream",
+      "state": "British Columbia",
+      "country": "Canada",
+      "type": "city",
+      "encoded": "coldstream-british-columbia-canada",
+      "pop": 11171,
+      "coord": [-119.2297404, 50.2238758]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["transit-oriented"],
+        "land": ["residential, multi-family"]
       }
     ]
   },
@@ -24932,6 +25417,24 @@
       }
     ]
   },
+  "Comox, British Columbia, Canada": {
+    "place": {
+      "name": "Comox",
+      "state": "British Columbia",
+      "country": "Canada",
+      "type": "city",
+      "encoded": "comox-british-columbia-canada",
+      "pop": 14806,
+      "coord": [-124.9276204, 49.6727575]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["commercial", "other", "residential, all uses"]
+      }
+    ]
+  },
   "Comstock Charter Township, Michigan, United States": {
     "place": {
       "name": "Comstock Charter Township",
@@ -25220,6 +25723,24 @@
       "encoded": "conshohocken-pennsylvania-united-states",
       "pop": 9261,
       "coord": [-75.3015714, 40.0792766]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["all uses"]
+      }
+    ]
+  },
+  "Consort, Alberta, Canada": {
+    "place": {
+      "name": "Consort",
+      "state": "Alberta",
+      "country": "Canada",
+      "type": "city",
+      "encoded": "consort-alberta-canada",
+      "pop": 644,
+      "coord": [-110.7752786, 52.0094273]
     },
     "reduce_min": [
       {
@@ -27404,6 +27925,24 @@
       "coord": [-78.2752927, 42.2175668]
     },
     "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["all uses"]
+      }
+    ]
+  },
+  "Cudahy, Wisconsin, United States": {
+    "place": {
+      "name": "Cudahy",
+      "state": "Wisconsin",
+      "country": "United States",
+      "type": "city",
+      "encoded": "cudahy-wisconsin-united-states",
+      "pop": 18204,
+      "coord": [-87.861471, 42.959738]
+    },
+    "reduce_min": [
       {
         "status": "adopted",
         "scope": ["city center / business district"],
@@ -32090,6 +32629,31 @@
       }
     ]
   },
+  "Dunn, North Carolina, United States": {
+    "place": {
+      "name": "Dunn",
+      "state": "North Carolina",
+      "country": "United States",
+      "type": "city",
+      "encoded": "dunn-north-carolina-united-states",
+      "pop": 8446,
+      "coord": [-78.6093257, 35.3076902]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["all uses"]
+      }
+    ],
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["all uses"]
+      }
+    ]
+  },
   "Dunwoody, Georgia, United States": {
     "place": {
       "name": "Dunwoody",
@@ -33473,6 +34037,31 @@
       }
     ]
   },
+  "Eastern Charlotte, New Brunswick, Canada": {
+    "place": {
+      "name": "Eastern Charlotte",
+      "state": "New Brunswick",
+      "country": "Canada",
+      "type": "city",
+      "encoded": "eastern-charlotte-new-brunswick-canada",
+      "pop": 7325,
+      "coord": [-66.8476937, 45.156237]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["main street / special"],
+        "land": ["all uses"]
+      }
+    ],
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district", "main street / special"],
+        "land": ["all uses"]
+      }
+    ]
+  },
   "Eastlake, Ohio, United States": {
     "place": {
       "name": "Eastlake",
@@ -34319,6 +34908,24 @@
       }
     ]
   },
+  "Edson, Alberta, Canada": {
+    "place": {
+      "name": "Edson",
+      "state": "Alberta",
+      "country": "Canada",
+      "type": "city",
+      "encoded": "edson-alberta-canada",
+      "pop": 8374,
+      "coord": [-116.442847, 53.5858662]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["all uses"]
+      }
+    ]
+  },
   "Edwardsburgh Cardinal, Ontario, Canada": {
     "place": {
       "name": "Edwardsburgh Cardinal",
@@ -34951,6 +35558,31 @@
       }
     ]
   },
+  "Elkford, British Columbia, Canada": {
+    "place": {
+      "name": "Elkford",
+      "state": "British Columbia",
+      "country": "Canada",
+      "type": "city",
+      "encoded": "elkford-british-columbia-canada",
+      "pop": 2749,
+      "coord": [-114.921826, 50.0244558]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["all uses"]
+      }
+    ],
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["all uses"]
+      }
+    ]
+  },
   "Elkhart, Indiana, United States": {
     "place": {
       "name": "Elkhart",
@@ -35370,6 +36002,25 @@
       }
     ]
   },
+  "Ellsworth, Wisconsin, United States": {
+    "place": {
+      "name": "Ellsworth",
+      "state": "Wisconsin",
+      "country": "United States",
+      "type": "city",
+      "encoded": "ellsworth-wisconsin-united-states",
+      "pop": 3348,
+      "coord": [-92.4831218, 44.732122]
+    },
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["residential, low-density"],
+        "date": "2025-03-03"
+      }
+    ]
+  },
   "Ellwood City, Pennsylvania, United States": {
     "place": {
       "name": "Ellwood City",
@@ -35585,6 +36236,38 @@
       "coord": [-96.2920245, 40.8447737]
     },
     "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["all uses"]
+      }
+    ]
+  },
+  "Elon, North Carolina, United States": {
+    "place": {
+      "name": "Elon",
+      "state": "North Carolina",
+      "country": "United States",
+      "type": "city",
+      "encoded": "elon-north-carolina-united-states",
+      "pop": 11324,
+      "coord": [-79.5066895, 36.1029132]
+    },
+    "add_max": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["all uses"]
+      }
+    ],
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide", "main street / special"],
+        "land": ["all uses", "commercial", "other", "residential, multi-family"]
+      }
+    ],
+    "rm_min": [
       {
         "status": "adopted",
         "scope": ["city center / business district"],
@@ -36127,6 +36810,30 @@
         "status": "adopted",
         "scope": ["city center / business district"],
         "land": ["commercial"]
+      }
+    ]
+  },
+  "Enterprise, Northwest Territories, Canada": {
+    "place": {
+      "name": "Enterprise",
+      "state": "Northwest Territories",
+      "country": "Canada",
+      "type": "city",
+      "encoded": "enterprise-northwest-territories-canada",
+      "pop": 100,
+      "coord": [-116.1457724812324, 60.55410105435104]
+    },
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": [
+          "commercial",
+          "industrial",
+          "medical",
+          "other",
+          "residential, all uses"
+        ]
       }
     ]
   },
@@ -37018,6 +37725,24 @@
           "other",
           "residential, multi-family"
         ]
+      }
+    ]
+  },
+  "Evansville, Wyoming, United States": {
+    "place": {
+      "name": "Evansville",
+      "state": "Wyoming",
+      "country": "United States",
+      "type": "city",
+      "encoded": "evansville-wyoming-united-states",
+      "pop": 2746,
+      "coord": [-106.269533, 42.861429]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["commercial", "industrial"]
       }
     ]
   },
@@ -38909,6 +39634,24 @@
       }
     ]
   },
+  "Five Rivers, New Brunswick, Canada": {
+    "place": {
+      "name": "Five Rivers",
+      "state": "New Brunswick",
+      "country": "Canada",
+      "type": "city",
+      "encoded": "five-rivers-new-brunswick-canada",
+      "pop": 3385,
+      "coord": [-65.0937663, 46.5151005]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["main street / special"],
+        "land": ["all uses"]
+      }
+    ]
+  },
   "Flagstaff, Arizona, United States": {
     "place": {
       "name": "Flagstaff",
@@ -39493,6 +40236,24 @@
       }
     ]
   },
+  "Follansbee, West Virginia, United States": {
+    "place": {
+      "name": "Follansbee",
+      "state": "West Virginia",
+      "country": "United States",
+      "type": "city",
+      "encoded": "follansbee-west-virginia-united-states",
+      "pop": 2848,
+      "coord": [-80.5959065, 40.3275693]
+    },
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["all uses"]
+      }
+    ]
+  },
   "Folly Beach, South Carolina, United States": {
     "place": {
       "name": "Folly Beach",
@@ -39983,6 +40744,13 @@
           "other",
           "residential, multi-family"
         ]
+      }
+    ],
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["commercial", "industrial", "medical", "other"]
       }
     ],
     "rm_min": [
@@ -42244,6 +43012,49 @@
       }
     ]
   },
+  "Fundy Albert, New Brunswick, Canada": {
+    "place": {
+      "name": "Fundy Albert",
+      "state": "New Brunswick",
+      "country": "Canada",
+      "type": "city",
+      "encoded": "fundy-albert-new-brunswick-canada",
+      "pop": 6120,
+      "coord": [-64.6639207, 45.7840172]
+    },
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["commercial", "other"]
+      }
+    ]
+  },
+  "Fundy-St. Martins, New Brunswick, Canada": {
+    "place": {
+      "name": "Fundy-St. Martins",
+      "state": "New Brunswick",
+      "country": "Canada",
+      "type": "city",
+      "encoded": "fundy-st-martins-new-brunswick-canada",
+      "pop": 5225,
+      "coord": [-65.3548815, 45.4428876]
+    },
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": [
+          "commercial",
+          "industrial",
+          "medical",
+          "other",
+          "residential, low-density",
+          "residential, multi-family"
+        ]
+      }
+    ]
+  },
   "Fuquay-Varina, North Carolina, United States": {
     "place": {
       "name": "Fuquay-Varina",
@@ -44331,6 +45142,13 @@
         "land": ["commercial", "industrial"]
       }
     ],
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["main street / special"],
+        "land": ["all uses"]
+      }
+    ],
     "rm_min": [
       {
         "status": "adopted",
@@ -44847,6 +45665,24 @@
       }
     ]
   },
+  "Golden, British Columbia, Canada": {
+    "place": {
+      "name": "Golden",
+      "state": "British Columbia",
+      "country": "Canada",
+      "type": "city",
+      "encoded": "golden-british-columbia-canada",
+      "pop": 3986,
+      "coord": [-116.9660656483186, 51.299955843089855]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["all uses"]
+      }
+    ]
+  },
   "Golden, Colorado, United States": {
     "place": {
       "name": "Golden",
@@ -45310,6 +46146,13 @@
         ]
       }
     ],
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["commercial", "industrial", "medical", "other"]
+      }
+    ],
     "rm_min": [
       {
         "status": "adopted",
@@ -45415,6 +46258,24 @@
       }
     ]
   },
+  "Grand Bay-Westfield, New Brunswick, Canada": {
+    "place": {
+      "name": "Grand Bay-Westfield",
+      "state": "New Brunswick",
+      "country": "Canada",
+      "type": "city",
+      "encoded": "grand-bay-westfield-new-brunswick-canada",
+      "pop": 5880,
+      "coord": [-66.2025166, 45.3221951]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["all uses"]
+      }
+    ]
+  },
   "Grand Blanc Charter Township, Michigan, United States": {
     "place": {
       "name": "Grand Blanc Charter Township",
@@ -45453,6 +46314,24 @@
         "status": "adopted",
         "scope": ["citywide"],
         "land": ["all uses"]
+      }
+    ]
+  },
+  "Grand Falls, New Brunswick, Canada": {
+    "place": {
+      "name": "Grand Falls",
+      "state": "New Brunswick",
+      "country": "Canada",
+      "type": "city",
+      "encoded": "grand-falls-new-brunswick-canada",
+      "pop": 10900,
+      "coord": [-67.7407527, 47.047563]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["all uses", "commercial"]
       }
     ]
   },
@@ -48908,6 +49787,24 @@
       }
     ]
   },
+  "Hampton, New Brunswick, Canada": {
+    "place": {
+      "name": "Hampton",
+      "state": "New Brunswick",
+      "country": "Canada",
+      "type": "city",
+      "encoded": "hampton-new-brunswick-canada",
+      "pop": 9345,
+      "coord": [-65.82733232217323, 45.52577900935117]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["all uses"]
+      }
+    ]
+  },
   "Hampton, New Jersey, United States": {
     "place": {
       "name": "Hampton",
@@ -50063,6 +50960,24 @@
       }
     ]
   },
+  "Hartland, New Brunswick, Canada": {
+    "place": {
+      "name": "Hartland",
+      "state": "New Brunswick",
+      "country": "Canada",
+      "type": "city",
+      "encoded": "hartland-new-brunswick-canada",
+      "pop": 3745,
+      "coord": [-67.5257163, 46.2999976]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["all uses"]
+      }
+    ]
+  },
   "Hartland, Wisconsin, United States": {
     "place": {
       "name": "Hartland",
@@ -50209,6 +51124,24 @@
         "scope": ["citywide"],
         "land": ["all uses"],
         "date": "2025-02-24"
+      }
+    ]
+  },
+  "Harvey, New Brunswick, Canada": {
+    "place": {
+      "name": "Harvey",
+      "state": "New Brunswick",
+      "country": "Canada",
+      "type": "city",
+      "encoded": "harvey-new-brunswick-canada",
+      "pop": 3895,
+      "coord": [-67.0070398, 45.7300127]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["all uses"]
       }
     ]
   },
@@ -50840,6 +51773,24 @@
       }
     ]
   },
+  "Hazelton, British Columbia, Canada": {
+    "place": {
+      "name": "Hazelton",
+      "state": "British Columbia",
+      "country": "Canada",
+      "type": "city",
+      "encoded": "hazelton-british-columbia-canada",
+      "pop": 257,
+      "coord": [-127.670882, 55.2553671]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["all uses"]
+      }
+    ]
+  },
   "Hazen, Arkansas, United States": {
     "place": {
       "name": "Hazen",
@@ -51117,6 +52068,24 @@
         "status": "adopted",
         "scope": ["city center / business district", "main street / special"],
         "land": ["all uses", "commercial", "other", "residential, multi-family"]
+      }
+    ]
+  },
+  "Heisler, Alberta, Canada": {
+    "place": {
+      "name": "Heisler",
+      "state": "Alberta",
+      "country": "Canada",
+      "type": "city",
+      "encoded": "heisler-alberta-canada",
+      "pop": 135,
+      "coord": [-112.2237872, 52.6699978]
+    },
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["commercial", "other"]
       }
     ]
   },
@@ -51645,6 +52614,24 @@
       {
         "status": "adopted",
         "scope": ["city center / business district"],
+        "land": ["all uses"]
+      }
+    ]
+  },
+  "Heron Bay, New Brunswick, Canada": {
+    "place": {
+      "name": "Heron Bay",
+      "state": "New Brunswick",
+      "country": "Canada",
+      "type": "city",
+      "encoded": "heron-bay-new-brunswick-canada",
+      "pop": 5485,
+      "coord": [-66.29837924773834, 47.99102393839043]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["main street / special"],
         "land": ["all uses"]
       }
     ]
@@ -53681,6 +54668,24 @@
       }
     ]
   },
+  "Houston, British Columbia, Canada": {
+    "place": {
+      "name": "Houston",
+      "state": "British Columbia",
+      "country": "Canada",
+      "type": "city",
+      "encoded": "houston-british-columbia-canada",
+      "pop": 3052,
+      "coord": [-126.6477077, 54.3982667]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["all uses"]
+      }
+    ]
+  },
   "Houston, Texas, United States": {
     "place": {
       "name": "Houston",
@@ -53714,6 +54719,24 @@
         "status": "adopted",
         "scope": ["citywide"],
         "land": ["commercial", "industrial"]
+      }
+    ]
+  },
+  "Howards Grove, Wisconsin, United States": {
+    "place": {
+      "name": "Howards Grove",
+      "state": "Wisconsin",
+      "country": "United States",
+      "type": "city",
+      "encoded": "howards-grove-wisconsin-united-states",
+      "pop": 3237,
+      "coord": [-87.8200887, 43.8338831]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["residential, all uses"]
       }
     ]
   },
@@ -55402,6 +56425,25 @@
         "status": "adopted",
         "scope": ["city center / business district"],
         "land": ["all uses"]
+      }
+    ]
+  },
+  "Iqaluit, Nunavut, Canada": {
+    "place": {
+      "name": "Iqaluit",
+      "state": "Nunavut",
+      "country": "Canada",
+      "type": "city",
+      "encoded": "iqaluit-nunavut-canada",
+      "pop": 7429,
+      "coord": [-68.5213763, 63.7492738]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["residential, all uses"],
+        "date": "2025-04-08"
       }
     ]
   },
@@ -58999,6 +60041,24 @@
       }
     ]
   },
+  "Keyser, West Virginia, United States": {
+    "place": {
+      "name": "Keyser",
+      "state": "West Virginia",
+      "country": "United States",
+      "type": "city",
+      "encoded": "keyser-west-virginia-united-states",
+      "pop": 4864,
+      "coord": [-78.9739156, 39.4409277]
+    },
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["all uses"]
+      }
+    ]
+  },
   "Kilkenny, County Kilkenny, Ireland": {
     "place": {
       "name": "Kilkenny",
@@ -59870,6 +60930,24 @@
       }
     ]
   },
+  "Kitscoty, Alberta, Canada": {
+    "place": {
+      "name": "Kitscoty",
+      "state": "Alberta",
+      "country": "Canada",
+      "type": "city",
+      "encoded": "kitscoty-alberta-canada",
+      "pop": 852,
+      "coord": [-110.3327022, 53.34181]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district", "citywide"],
+        "land": ["all uses"]
+      }
+    ]
+  },
   "Kittitas County, Washington, United States": {
     "place": {
       "name": "Kittitas County",
@@ -60711,6 +61789,31 @@
       }
     ]
   },
+  "La Ronge, Saskatchewan, Canada": {
+    "place": {
+      "name": "La Ronge",
+      "state": "Saskatchewan",
+      "country": "Canada",
+      "type": "city",
+      "encoded": "la-ronge-saskatchewan-canada",
+      "pop": 2521,
+      "coord": [-105.2900485, 55.1005283]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["all uses", "commercial"]
+      }
+    ],
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["residential, all uses", "residential, multi-family"]
+      }
+    ]
+  },
   "La Vista, Nebraska, United States": {
     "place": {
       "name": "La Vista",
@@ -60826,6 +61929,24 @@
       }
     ]
   },
+  "Lac La Biche, Alberta, Canada": {
+    "place": {
+      "name": "Lac La Biche",
+      "state": "Alberta",
+      "country": "Canada",
+      "type": "city",
+      "encoded": "lac-la-biche-alberta-canada",
+      "pop": 7673,
+      "coord": [-111.97716945644565, 54.771632281452504]
+    },
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["all uses"]
+      }
+    ]
+  },
   "Lac du Bonnet, Manitoba, Canada": {
     "place": {
       "name": "Lac du Bonnet",
@@ -60902,6 +62023,24 @@
       {
         "status": "adopted",
         "scope": ["citywide"],
+        "land": ["all uses"]
+      }
+    ]
+  },
+  "Lacombe, Alberta, Canada": {
+    "place": {
+      "name": "Lacombe",
+      "state": "Alberta",
+      "country": "Canada",
+      "type": "city",
+      "encoded": "lacombe-alberta-canada",
+      "pop": 13396,
+      "coord": [-113.733215, 52.4727515]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
         "land": ["all uses"]
       }
     ]
@@ -61241,6 +62380,24 @@
       }
     ]
   },
+  "Lake Country, British Columbia, Canada": {
+    "place": {
+      "name": "Lake Country",
+      "state": "British Columbia",
+      "country": "Canada",
+      "type": "city",
+      "encoded": "lake-country-british-columbia-canada",
+      "pop": 15817,
+      "coord": [-119.402331, 50.0302364]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["residential, multi-family"]
+      }
+    ]
+  },
   "Lake Elmo, Minnesota, United States": {
     "place": {
       "name": "Lake Elmo",
@@ -61420,12 +62577,6 @@
           "other",
           "residential, multi-family"
         ]
-      },
-      {
-        "status": "proposed",
-        "scope": ["citywide"],
-        "land": ["all uses"],
-        "date": "2023-11-07"
       }
     ],
     "reduce_min": [
@@ -65188,6 +66339,31 @@
       }
     ]
   },
+  "Lincolnton, North Carolina, United States": {
+    "place": {
+      "name": "Lincolnton",
+      "state": "North Carolina",
+      "country": "United States",
+      "type": "city",
+      "encoded": "lincolnton-north-carolina-united-states",
+      "pop": 11091,
+      "coord": [-81.2545251, 35.473745]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["main street / special"],
+        "land": ["all uses"]
+      }
+    ],
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["all uses"]
+      }
+    ]
+  },
   "Lincolnwood, Illinois, United States": {
     "place": {
       "name": "Lincolnwood",
@@ -65225,6 +66401,24 @@
           "transit-oriented"
         ],
         "land": ["all uses", "residential, multi-family"]
+      }
+    ]
+  },
+  "Linden, Alberta, Canada": {
+    "place": {
+      "name": "Linden",
+      "state": "Alberta",
+      "country": "Canada",
+      "type": "city",
+      "encoded": "linden-alberta-canada",
+      "pop": 704,
+      "coord": [-113.489124, 51.591042]
+    },
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["residential, low-density"]
       }
     ]
   },
@@ -67985,6 +69179,24 @@
         "status": "adopted",
         "scope": ["city center / business district"],
         "land": ["all uses"]
+      }
+    ]
+  },
+  "Madison, West Virginia, United States": {
+    "place": {
+      "name": "Madison",
+      "state": "West Virginia",
+      "country": "United States",
+      "type": "city",
+      "encoded": "madison-west-virginia-united-states",
+      "pop": 2913,
+      "coord": [-81.8192892, 38.0670454]
+    },
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["commercial", "industrial", "medical", "other"]
       }
     ]
   },
@@ -72451,6 +73663,24 @@
       }
     ]
   },
+  "Memramcook, New Brunswick, Canada": {
+    "place": {
+      "name": "Memramcook",
+      "state": "New Brunswick",
+      "country": "Canada",
+      "type": "city",
+      "encoded": "memramcook-new-brunswick-canada",
+      "pop": 5030,
+      "coord": [-64.5669642, 45.9763743]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["all uses"]
+      }
+    ]
+  },
   "Menahga, Minnesota, United States": {
     "place": {
       "name": "Menahga",
@@ -72521,6 +73751,13 @@
       "pop": 18268,
       "coord": [-88.4465361, 44.2022293]
     },
+    "add_max": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["residential, low-density"]
+      }
+    ],
     "rm_min": [
       {
         "status": "adopted",
@@ -75398,6 +76635,14 @@
       "pop": 42418,
       "coord": [-90.5136642, 41.5058344]
     },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["residential, all uses"],
+        "date": "2026-06-09"
+      }
+    ],
     "rm_min": [
       {
         "status": "adopted",
@@ -75889,11 +77134,24 @@
       "pop": 10661,
       "coord": [-89.6395, 42.6015]
     },
+    "add_max": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": [
+          "commercial",
+          "industrial",
+          "medical",
+          "other",
+          "residential, multi-family"
+        ]
+      }
+    ],
     "rm_min": [
       {
         "status": "adopted",
         "scope": ["city center / business district"],
-        "land": ["commercial"]
+        "land": ["commercial", "other"]
       }
     ]
   },
@@ -77592,6 +78850,11 @@
         "status": "adopted",
         "scope": ["city center / business district"],
         "land": ["all uses"]
+      },
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["all uses"]
       }
     ]
   },
@@ -77716,10 +78979,15 @@
     },
     "rm_min": [
       {
-        "status": "adopted",
+        "status": "repealed",
         "scope": ["city center / business district"],
         "land": ["all uses"],
         "date": "2022-12-02"
+      },
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["commercial", "other", "residential, low-density"]
       }
     ]
   },
@@ -79743,6 +81011,24 @@
       {
         "status": "adopted",
         "scope": ["city center / business district", "main street / special"],
+        "land": ["all uses"]
+      }
+    ]
+  },
+  "Nashwaak, New Brunswick, Canada": {
+    "place": {
+      "name": "Nashwaak",
+      "state": "New Brunswick",
+      "country": "Canada",
+      "type": "city",
+      "encoded": "nashwaak-new-brunswick-canada",
+      "pop": 4755,
+      "coord": [-66.6944069, 46.2007781]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["main street / special"],
         "land": ["all uses"]
       }
     ]
@@ -81888,6 +83174,24 @@
       }
     ]
   },
+  "Newcastle, Wyoming, United States": {
+    "place": {
+      "name": "Newcastle",
+      "state": "Wyoming",
+      "country": "United States",
+      "type": "city",
+      "encoded": "newcastle-wyoming-united-states",
+      "pop": 3374,
+      "coord": [-104.2051256, 43.8547459]
+    },
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["all uses"]
+      }
+    ]
+  },
   "Newhall, Iowa, United States": {
     "place": {
       "name": "Newhall",
@@ -83253,6 +84557,24 @@
       }
     ]
   },
+  "North Cowichan, British Columbia, Canada": {
+    "place": {
+      "name": "North Cowichan",
+      "state": "British Columbia",
+      "country": "Canada",
+      "type": "city",
+      "encoded": "north-cowichan-british-columbia-canada",
+      "pop": 31990,
+      "coord": [-123.7191813, 48.8247302]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["main street / special"],
+        "land": ["residential, multi-family"]
+      }
+    ]
+  },
   "North East, Maryland, United States": {
     "place": {
       "name": "North East",
@@ -83299,6 +84621,13 @@
       "pop": 5378,
       "coord": [-88.4834419, 43.8113769]
     },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["all uses"]
+      }
+    ],
     "rm_min": [
       {
         "status": "adopted",
@@ -83878,6 +85207,24 @@
         "status": "adopted",
         "scope": ["city center / business district"],
         "land": ["all uses"]
+      }
+    ]
+  },
+  "North Vancouver District Municipality, British Columbia, Canada": {
+    "place": {
+      "name": "North Vancouver District Municipality",
+      "state": "British Columbia",
+      "country": "Canada",
+      "type": "city",
+      "encoded": "north-vancouver-district-municipality-british-columbia-canada",
+      "pop": 88168,
+      "coord": [-123.07816849879589, 49.336572070204305]
+    },
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["transit-oriented"],
+        "land": ["residential, all uses"]
       }
     ]
   },
@@ -84498,6 +85845,24 @@
       }
     ]
   },
+  "Nouvelle-Arcadie, New Brunswick, Canada": {
+    "place": {
+      "name": "Nouvelle-Arcadie",
+      "state": "New Brunswick",
+      "country": "Canada",
+      "type": "city",
+      "encoded": "nouvelle-arcadie-new-brunswick-canada",
+      "pop": 3060,
+      "coord": [-65.4011232, 46.6935871]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["main street / special"],
+        "land": ["all uses"]
+      }
+    ]
+  },
   "Novi, Michigan, United States": {
     "place": {
       "name": "Novi",
@@ -84680,6 +86045,24 @@
         "status": "adopted",
         "scope": ["city center / business district"],
         "land": ["commercial"]
+      }
+    ]
+  },
+  "Oak Bay, British Columbia, Canada": {
+    "place": {
+      "name": "Oak Bay",
+      "state": "British Columbia",
+      "country": "Canada",
+      "type": "city",
+      "encoded": "oak-bay-british-columbia-canada",
+      "pop": 17990,
+      "coord": [-123.3170727, 48.4261126]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district", "main street / special"],
+        "land": ["commercial", "industrial", "medical", "other"]
       }
     ]
   },
@@ -85472,6 +86855,24 @@
       }
     ]
   },
+  "Oconto Falls, Wisconsin, United States": {
+    "place": {
+      "name": "Oconto Falls",
+      "state": "Wisconsin",
+      "country": "United States",
+      "type": "city",
+      "encoded": "oconto-falls-wisconsin-united-states",
+      "pop": 2957,
+      "coord": [-88.1432681, 44.8747779]
+    },
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["all uses"]
+      }
+    ]
+  },
   "Odense, Syddanmark, Denmark": {
     "place": {
       "name": "Odense",
@@ -86101,6 +87502,24 @@
         "status": "adopted",
         "scope": ["city center / business district"],
         "land": ["commercial"]
+      }
+    ]
+  },
+  "Omro, Wisconsin, United States": {
+    "place": {
+      "name": "Omro",
+      "state": "Wisconsin",
+      "country": "United States",
+      "type": "city",
+      "encoded": "omro-wisconsin-united-states",
+      "pop": 3652,
+      "coord": [-88.7442754, 44.0394988]
+    },
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["residential, all uses"]
       }
     ]
   },
@@ -87186,6 +88605,24 @@
       }
     ]
   },
+  "Osoyoos, British Columbia, Canada": {
+    "place": {
+      "name": "Osoyoos",
+      "state": "British Columbia",
+      "country": "Canada",
+      "type": "city",
+      "encoded": "osoyoos-british-columbia-canada",
+      "pop": 5556,
+      "coord": [-119.466667, 49.033333]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["all uses", "residential, multi-family"]
+      }
+    ]
+  },
   "Ossian, Indiana, United States": {
     "place": {
       "name": "Ossian",
@@ -88096,6 +89533,24 @@
       {
         "status": "adopted",
         "scope": ["city center / business district"],
+        "land": ["all uses"]
+      }
+    ]
+  },
+  "Paden City, West Virginia, United States": {
+    "place": {
+      "name": "Paden City",
+      "state": "West Virginia",
+      "country": "United States",
+      "type": "city",
+      "encoded": "paden-city-west-virginia-united-states",
+      "pop": 2541,
+      "coord": [-80.9343057, 39.6036324]
+    },
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
         "land": ["all uses"]
       }
     ]
@@ -89462,6 +90917,24 @@
       }
     ]
   },
+  "Peachland, British Columbia, Canada": {
+    "place": {
+      "name": "Peachland",
+      "state": "British Columbia",
+      "country": "Canada",
+      "type": "city",
+      "encoded": "peachland-british-columbia-canada",
+      "pop": 5789,
+      "coord": [-119.75, 49.766667]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["commercial"]
+      }
+    ]
+  },
   "Peachtree Corners, Georgia, United States": {
     "place": {
       "name": "Peachtree Corners",
@@ -89741,6 +91214,24 @@
         "status": "adopted",
         "scope": ["city center / business district"],
         "land": ["all uses"]
+      }
+    ]
+  },
+  "Pemberton, British Columbia, Canada": {
+    "place": {
+      "name": "Pemberton",
+      "state": "British Columbia",
+      "country": "Canada",
+      "type": "city",
+      "encoded": "pemberton-british-columbia-canada",
+      "pop": 3407,
+      "coord": [-122.808078, 50.3203804]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["commercial", "residential, all uses"]
       }
     ]
   },
@@ -90755,6 +92246,11 @@
         "status": "adopted",
         "scope": ["citywide"],
         "land": ["other"]
+      },
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["all uses"]
       }
     ]
   },
@@ -91325,6 +92821,24 @@
       {
         "status": "adopted",
         "scope": ["city center / business district"],
+        "land": ["all uses"]
+      }
+    ]
+  },
+  "Pine Bluffs, Wyoming, United States": {
+    "place": {
+      "name": "Pine Bluffs",
+      "state": "Wyoming",
+      "country": "United States",
+      "type": "city",
+      "encoded": "pine-bluffs-wyoming-united-states",
+      "pop": 1172,
+      "coord": [-104.0667789, 41.179678]
+    },
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
         "land": ["all uses"]
       }
     ]
@@ -92157,6 +93671,24 @@
       }
     ]
   },
+  "Pleasant Valley, West Virginia, United States": {
+    "place": {
+      "name": "Pleasant Valley",
+      "state": "West Virginia",
+      "country": "United States",
+      "type": "city",
+      "encoded": "pleasant-valley-west-virginia-united-states",
+      "pop": 3498,
+      "coord": [-80.1417454, 39.4553636]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["all uses"]
+      }
+    ]
+  },
   "Pleasant View, Tennessee, United States": {
     "place": {
       "name": "Pleasant View",
@@ -92916,6 +94448,24 @@
       }
     ]
   },
+  "Port Hardy, British Columbia, Canada": {
+    "place": {
+      "name": "Port Hardy",
+      "state": "British Columbia",
+      "country": "Canada",
+      "type": "city",
+      "encoded": "port-hardy-british-columbia-canada",
+      "pop": 3902,
+      "coord": [-127.4976081, 50.7244402]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["all uses"]
+      }
+    ]
+  },
   "Port Hawkesbury, Nova Scotia, Canada": {
     "place": {
       "name": "Port Hawkesbury",
@@ -92985,6 +94535,42 @@
         "status": "adopted",
         "scope": ["city center / business district"],
         "land": ["all uses"]
+      }
+    ]
+  },
+  "Port Moody, British Columbia, Canada": {
+    "place": {
+      "name": "Port Moody",
+      "state": "British Columbia",
+      "country": "Canada",
+      "type": "city",
+      "encoded": "port-moody-british-columbia-canada",
+      "pop": 33535,
+      "coord": [-122.8293554, 49.2821981]
+    },
+    "add_max": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["residential, low-density"]
+      }
+    ],
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": [
+          "city center / business district",
+          "citywide",
+          "transit-oriented"
+        ],
+        "land": ["all uses", "residential, multi-family"]
+      }
+    ],
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["transit-oriented"],
+        "land": ["residential, low-density"]
       }
     ]
   },
@@ -93216,6 +94802,19 @@
       "pop": 10581,
       "coord": [-89.461334, 43.539494]
     },
+    "add_max": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": [
+          "commercial",
+          "industrial",
+          "medical",
+          "other",
+          "residential, multi-family"
+        ]
+      }
+    ],
     "rm_min": [
       {
         "status": "adopted",
@@ -93649,6 +95248,24 @@
         "status": "adopted",
         "scope": ["main street / special"],
         "land": ["commercial", "other", "residential, multi-family"]
+      }
+    ]
+  },
+  "Powell River, British Columbia, Canada": {
+    "place": {
+      "name": "Powell River",
+      "state": "British Columbia",
+      "country": "Canada",
+      "type": "city",
+      "encoded": "powell-river-british-columbia-canada",
+      "pop": 13943,
+      "coord": [-124.524412, 49.835676]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district", "citywide"],
+        "land": ["all uses"]
       }
     ]
   },
@@ -95154,6 +96771,31 @@
       }
     ]
   },
+  "Ranson, West Virginia, United States": {
+    "place": {
+      "name": "Ranson",
+      "state": "West Virginia",
+      "country": "United States",
+      "type": "city",
+      "encoded": "ranson-west-virginia-united-states",
+      "pop": 5433,
+      "coord": [-77.8603829, 39.2952821]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["main street / special"],
+        "land": ["all uses", "other"]
+      }
+    ],
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["main street / special"],
+        "land": ["commercial", "other", "residential, low-density"]
+      }
+    ]
+  },
   "Rantoul, Illinois, United States": {
     "place": {
       "name": "Rantoul",
@@ -95296,6 +96938,24 @@
         "status": "adopted",
         "scope": ["city center / business district"],
         "land": ["residential, all uses"]
+      }
+    ]
+  },
+  "Raymond, Alberta, Canada": {
+    "place": {
+      "name": "Raymond",
+      "state": "Alberta",
+      "country": "Canada",
+      "type": "city",
+      "encoded": "raymond-alberta-canada",
+      "pop": 4199,
+      "coord": [-112.666667, 49.466667]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["all uses", "commercial", "other"]
       }
     ]
   },
@@ -96691,6 +98351,42 @@
       }
     ]
   },
+  "Richmond, British Columbia, Canada": {
+    "place": {
+      "name": "Richmond",
+      "state": "British Columbia",
+      "country": "Canada",
+      "type": "city",
+      "encoded": "richmond-british-columbia-canada",
+      "pop": 209937,
+      "coord": [-123.137414, 49.163168]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": [
+          "city center / business district",
+          "citywide",
+          "main street / special"
+        ],
+        "land": [
+          "all uses",
+          "commercial",
+          "industrial",
+          "medical",
+          "other",
+          "residential, all uses"
+        ]
+      }
+    ],
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["transit-oriented"],
+        "land": ["residential, all uses", "residential, low-density"]
+      }
+    ]
+  },
   "Richmond, Illinois, United States": {
     "place": {
       "name": "Richmond",
@@ -97210,6 +98906,24 @@
       }
     ]
   },
+  "Ripley, West Virginia, United States": {
+    "place": {
+      "name": "Ripley",
+      "state": "West Virginia",
+      "country": "United States",
+      "type": "city",
+      "encoded": "ripley-west-virginia-united-states",
+      "pop": 3079,
+      "coord": [-81.711885, 38.8189684]
+    },
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["commercial", "industrial", "medical", "other"]
+      }
+    ]
+  },
   "Ripon, Wisconsin, United States": {
     "place": {
       "name": "Ripon",
@@ -97636,6 +99350,50 @@
         "status": "adopted",
         "scope": ["citywide"],
         "land": ["all uses"]
+      }
+    ]
+  },
+  "Riverview, New Brunswick, Canada": {
+    "place": {
+      "name": "Riverview",
+      "state": "New Brunswick",
+      "country": "Canada",
+      "type": "city",
+      "encoded": "riverview-new-brunswick-canada",
+      "pop": 20580,
+      "coord": [-64.8033246, 46.0612076]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district", "citywide"],
+        "land": ["all uses"]
+      }
+    ]
+  },
+  "Rivière-du-Nord, New Brunswick, Canada": {
+    "place": {
+      "name": "Rivière-du-Nord",
+      "state": "New Brunswick",
+      "country": "Canada",
+      "type": "city",
+      "encoded": "riviere-du-nord-new-brunswick-canada",
+      "pop": 3530,
+      "coord": [-65.0950059, 47.7933555]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["all uses"]
+      }
+    ],
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["industrial", "other"],
+        "date": "2026-04-21"
       }
     ]
   },
@@ -98728,6 +100486,37 @@
       }
     ]
   },
+  "Rolesville, North Carolina, United States": {
+    "place": {
+      "name": "Rolesville",
+      "state": "North Carolina",
+      "country": "United States",
+      "type": "city",
+      "encoded": "rolesville-north-carolina-united-states",
+      "pop": 9475,
+      "coord": [-78.4573914, 35.9232862]
+    },
+    "add_max": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": [
+          "commercial",
+          "industrial",
+          "medical",
+          "other",
+          "residential, multi-family"
+        ]
+      }
+    ],
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district", "main street / special"],
+        "land": ["all uses"]
+      }
+    ]
+  },
   "Rolla, Missouri, United States": {
     "place": {
       "name": "Rolla",
@@ -99321,6 +101110,24 @@
         "status": "adopted",
         "scope": ["city center / business district"],
         "land": ["all uses"]
+      }
+    ]
+  },
+  "Rosthern No. 403 Rural Municipality, Saskatchewan, Canada": {
+    "place": {
+      "name": "Rosthern No. 403 Rural Municipality",
+      "state": "Saskatchewan",
+      "country": "Canada",
+      "type": "county",
+      "encoded": "rosthern-no-403-rural-municipality-saskatchewan-canada",
+      "pop": 2473,
+      "coord": [-106.390839327338, 52.60250489434227]
+    },
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["residential, low-density", "residential, multi-family"]
       }
     ]
   },
@@ -100129,6 +101936,63 @@
       }
     ]
   },
+  "Ryley, Alberta, Canada": {
+    "place": {
+      "name": "Ryley",
+      "state": "Alberta",
+      "country": "Canada",
+      "type": "city",
+      "encoded": "ryley-alberta-canada",
+      "pop": 484,
+      "coord": [-112.4382519, 53.2924056]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["all uses"]
+      }
+    ],
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["all uses"]
+      }
+    ]
+  },
+  "Saanich, British Columbia, Canada": {
+    "place": {
+      "name": "Saanich",
+      "state": "British Columbia",
+      "country": "Canada",
+      "type": "city",
+      "encoded": "saanich-british-columbia-canada",
+      "pop": 117735,
+      "coord": [-123.376494, 48.4594315]
+    },
+    "add_max": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["residential, multi-family"]
+      }
+    ],
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["transit-oriented"],
+        "land": ["all uses", "residential, low-density"]
+      }
+    ],
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide", "transit-oriented"],
+        "land": ["residential, all uses"]
+      }
+    ]
+  },
   "Sabetha, Kansas, United States": {
     "place": {
       "name": "Sabetha",
@@ -100336,6 +102200,31 @@
         "status": "adopted",
         "scope": ["city center / business district", "main street / special"],
         "land": ["all uses"]
+      }
+    ]
+  },
+  "Saint-Quentin, New Brunswick, Canada": {
+    "place": {
+      "name": "Saint-Quentin",
+      "state": "New Brunswick",
+      "country": "Canada",
+      "type": "city",
+      "encoded": "saint-quentin-new-brunswick-canada",
+      "pop": 3630,
+      "coord": [-67.3906756, 47.5129555]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["all uses"]
+      }
+    ],
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["commercial"]
       }
     ]
   },
@@ -101144,6 +103033,24 @@
       }
     ],
     "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["all uses"]
+      }
+    ]
+  },
+  "San Tan Valley, Arizona, United States": {
+    "place": {
+      "name": "San Tan Valley",
+      "state": "Arizona",
+      "country": "United States",
+      "type": "city",
+      "encoded": "san-tan-valley-arizona-united-states",
+      "pop": 99894,
+      "coord": [-111.5849298, 33.179814]
+    },
+    "add_max": [
       {
         "status": "adopted",
         "scope": ["citywide"],
@@ -103510,6 +105417,24 @@
       }
     ]
   },
+  "Seymour, Wisconsin, United States": {
+    "place": {
+      "name": "Seymour",
+      "state": "Wisconsin",
+      "country": "United States",
+      "type": "city",
+      "encoded": "seymour-wisconsin-united-states",
+      "pop": 3546,
+      "coord": [-88.312718, 44.5429082]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["all uses"]
+      }
+    ]
+  },
   "Shaker Heights, Ohio, United States": {
     "place": {
       "name": "Shaker Heights",
@@ -103735,6 +105660,19 @@
       "pop": 9243,
       "coord": [-88.6089917, 44.7822064]
     },
+    "add_max": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": [
+          "commercial",
+          "industrial",
+          "medical",
+          "other",
+          "residential, multi-family"
+        ]
+      }
+    ],
     "rm_min": [
       {
         "status": "adopted",
@@ -103824,6 +105762,24 @@
       "coord": [-87.71453, 43.7508284]
     },
     "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["all uses"]
+      }
+    ]
+  },
+  "Shediac, New Brunswick, Canada": {
+    "place": {
+      "name": "Shediac",
+      "state": "New Brunswick",
+      "country": "Canada",
+      "type": "city",
+      "encoded": "shediac-new-brunswick-canada",
+      "pop": 10670,
+      "coord": [-64.5492146, 46.219454]
+    },
+    "reduce_min": [
       {
         "status": "adopted",
         "scope": ["city center / business district"],
@@ -104500,6 +106456,24 @@
       }
     ]
   },
+  "Shippagan, New Brunswick, Canada": {
+    "place": {
+      "name": "Shippagan",
+      "state": "New Brunswick",
+      "country": "Canada",
+      "type": "city",
+      "encoded": "shippagan-new-brunswick-canada",
+      "pop": 4925,
+      "coord": [-64.7181216, 47.7418049]
+    },
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["all uses"]
+      }
+    ]
+  },
   "Shippensburg, Pennsylvania, United States": {
     "place": {
       "name": "Shippensburg",
@@ -104646,11 +106620,26 @@
       "pop": 13290,
       "coord": [-87.8881302, 43.0883957]
     },
-    "reduce_min": [
+    "add_max": [
       {
         "status": "adopted",
         "scope": ["citywide"],
         "land": ["all uses"]
+      }
+    ],
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["all uses"],
+        "date": "2021-11-15"
+      }
+    ],
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["commercial", "other"]
       }
     ]
   },
@@ -106130,6 +108119,24 @@
       }
     ]
   },
+  "Somers, Wisconsin, United States": {
+    "place": {
+      "name": "Somers",
+      "state": "Wisconsin",
+      "country": "United States",
+      "type": "city",
+      "encoded": "somers-wisconsin-united-states",
+      "pop": 8402,
+      "coord": [-87.9147732, 42.6404275]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["all uses"]
+      }
+    ]
+  },
   "Somerset, Pennsylvania, United States": {
     "place": {
       "name": "Somerset",
@@ -107359,6 +109366,24 @@
       }
     ]
   },
+  "Southern Victoria, New Brunswick, Canada": {
+    "place": {
+      "name": "Southern Victoria",
+      "state": "New Brunswick",
+      "country": "Canada",
+      "type": "city",
+      "encoded": "southern-victoria-new-brunswick-canada",
+      "pop": 2550,
+      "coord": [-67.7286007, 46.7558746]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["main street / special"],
+        "land": ["all uses"]
+      }
+    ]
+  },
   "Southern View, Illinois, United States": {
     "place": {
       "name": "Southern View",
@@ -107463,6 +109488,24 @@
       {
         "status": "adopted",
         "scope": ["city center / business district"],
+        "land": ["all uses"]
+      }
+    ]
+  },
+  "Southwest Rural District, New Brunswick, Canada": {
+    "place": {
+      "name": "Southwest Rural District",
+      "state": "New Brunswick",
+      "country": "Canada",
+      "type": "county",
+      "encoded": "southwest-rural-district-new-brunswick-canada",
+      "pop": 26015,
+      "coord": [-67.1084748, 45.3969286]
+    },
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["main street / special"],
         "land": ["all uses"]
       }
     ]
@@ -108498,6 +110541,31 @@
       }
     ]
   },
+  "St. Andrews, New Brunswick, Canada": {
+    "place": {
+      "name": "St. Andrews",
+      "state": "New Brunswick",
+      "country": "Canada",
+      "type": "city",
+      "encoded": "st-andrews-new-brunswick-canada",
+      "pop": 2950,
+      "coord": [-67.0516937, 45.0749302]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["all uses"]
+      }
+    ],
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["commercial"]
+      }
+    ]
+  },
   "St. Ansgar, Iowa, United States": {
     "place": {
       "name": "St. Ansgar",
@@ -108864,6 +110932,24 @@
       "encoded": "st-francis-minnesota-united-states",
       "pop": 8142,
       "coord": [-93.3597084, 45.3864283]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["all uses"]
+      }
+    ]
+  },
+  "St. Francis, Wisconsin, United States": {
+    "place": {
+      "name": "St. Francis",
+      "state": "Wisconsin",
+      "country": "United States",
+      "type": "city",
+      "encoded": "st-francis-wisconsin-united-states",
+      "pop": 9161,
+      "coord": [-87.8709308, 42.9744081]
     },
     "reduce_min": [
       {
@@ -109739,6 +111825,24 @@
         "status": "adopted",
         "scope": ["city center / business district"],
         "land": ["all uses", "residential, all uses"]
+      }
+    ]
+  },
+  "St. Stephen, New Brunswick, Canada": {
+    "place": {
+      "name": "St. Stephen",
+      "state": "New Brunswick",
+      "country": "Canada",
+      "type": "city",
+      "encoded": "st-stephen-new-brunswick-canada",
+      "pop": 8165,
+      "coord": [-67.2760077, 45.1926679]
+    },
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["all uses"]
       }
     ]
   },
@@ -111169,6 +113273,19 @@
       "pop": 13173,
       "coord": [-89.2178997, 42.9167389]
     },
+    "add_max": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": [
+          "commercial",
+          "industrial",
+          "medical",
+          "other",
+          "residential, multi-family"
+        ]
+      }
+    ],
     "rm_min": [
       {
         "status": "adopted",
@@ -111229,6 +113346,24 @@
         "scope": ["city center / business district"],
         "land": ["all uses"],
         "date": "2020-02-17"
+      }
+    ]
+  },
+  "Strait Shores, New Brunswick, Canada": {
+    "place": {
+      "name": "Strait Shores",
+      "state": "New Brunswick",
+      "country": "Canada",
+      "type": "city",
+      "encoded": "strait-shores-new-brunswick-canada",
+      "pop": 1935,
+      "coord": [-63.98930341349811, 46.09937574421704]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["commercial", "other"]
       }
     ]
   },
@@ -111537,6 +113672,13 @@
       "pop": 9646,
       "coord": [-87.377042, 44.8341639]
     },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["main street / special"],
+        "land": ["all uses", "commercial", "other"]
+      }
+    ],
     "rm_min": [
       {
         "status": "adopted",
@@ -111960,6 +114102,24 @@
       }
     ]
   },
+  "Summerfield, North Carolina, United States": {
+    "place": {
+      "name": "Summerfield",
+      "state": "North Carolina",
+      "country": "United States",
+      "type": "city",
+      "encoded": "summerfield-north-carolina-united-states",
+      "pop": 10951,
+      "coord": [-79.9047583, 36.2087468]
+    },
+    "add_max": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["commercial", "industrial"]
+      }
+    ]
+  },
   "Summerset, South Dakota, United States": {
     "place": {
       "name": "Summerset",
@@ -112060,6 +114220,24 @@
       {
         "status": "adopted",
         "scope": ["city center / business district"],
+        "land": ["all uses"]
+      }
+    ]
+  },
+  "Summit, Wisconsin, United States": {
+    "place": {
+      "name": "Summit",
+      "state": "Wisconsin",
+      "country": "United States",
+      "type": "city",
+      "encoded": "summit-wisconsin-united-states",
+      "pop": 4784,
+      "coord": [-88.470359, 43.0623393]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
         "land": ["all uses"]
       }
     ]
@@ -112522,6 +114700,18 @@
         "status": "adopted",
         "scope": ["city center / business district"],
         "land": ["all uses"]
+      },
+      {
+        "status": "adopted",
+        "scope": ["city center / business district", "main street / special"],
+        "land": ["residential, multi-family"]
+      }
+    ],
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["transit-oriented"],
+        "land": ["residential, all uses"]
       }
     ]
   },
@@ -112540,6 +114730,24 @@
         "status": "adopted",
         "scope": ["city center / business district"],
         "land": ["commercial", "other"]
+      }
+    ]
+  },
+  "Sussex, New Brunswick, Canada": {
+    "place": {
+      "name": "Sussex",
+      "state": "New Brunswick",
+      "country": "Canada",
+      "type": "city",
+      "encoded": "sussex-new-brunswick-canada",
+      "pop": 6030,
+      "coord": [-65.5104239, 45.7234763]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["all uses"]
       }
     ]
   },
@@ -112875,6 +115083,24 @@
         "status": "adopted",
         "scope": ["citywide"],
         "land": ["other"]
+      }
+    ]
+  },
+  "Sylvan Lake, Alberta, Canada": {
+    "place": {
+      "name": "Sylvan Lake",
+      "state": "Alberta",
+      "country": "Canada",
+      "type": "city",
+      "encoded": "sylvan-lake-alberta-canada",
+      "pop": 15995,
+      "coord": [-114.0974155, 52.3102136]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["all uses"]
       }
     ]
   },
@@ -113322,6 +115548,24 @@
       }
     ]
   },
+  "Tantramar, New Brunswick, Canada": {
+    "place": {
+      "name": "Tantramar",
+      "state": "New Brunswick",
+      "country": "Canada",
+      "type": "city",
+      "encoded": "tantramar-new-brunswick-canada",
+      "pop": 9020,
+      "coord": [-64.3674812, 45.9201777]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["commercial", "other", "residential, multi-family"]
+      }
+    ]
+  },
   "Taos Ski Valley, New Mexico, United States": {
     "place": {
       "name": "Taos Ski Valley",
@@ -113356,6 +115600,24 @@
       "encoded": "Taos_NM",
       "pop": 6474,
       "coord": [-105.573284, 36.4072377]
+    },
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["all uses"]
+      }
+    ]
+  },
+  "Tarboro, North Carolina, United States": {
+    "place": {
+      "name": "Tarboro",
+      "state": "North Carolina",
+      "country": "United States",
+      "type": "city",
+      "encoded": "tarboro-north-carolina-united-states",
+      "pop": 10721,
+      "coord": [-77.5358049, 35.8968236]
     },
     "rm_min": [
       {
@@ -114064,6 +116326,24 @@
       }
     ]
   },
+  "Terrace, British Columbia, Canada": {
+    "place": {
+      "name": "Terrace",
+      "state": "British Columbia",
+      "country": "Canada",
+      "type": "city",
+      "encoded": "terrace-british-columbia-canada",
+      "pop": 12017,
+      "coord": [-128.599548, 54.5172715]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["all uses"]
+      }
+    ]
+  },
   "Terre Haute, Indiana, United States": {
     "place": {
       "name": "Terre Haute",
@@ -114663,6 +116943,24 @@
       }
     ]
   },
+  "Thorsby, Alberta, Canada": {
+    "place": {
+      "name": "Thorsby",
+      "state": "Alberta",
+      "country": "Canada",
+      "type": "city",
+      "encoded": "thorsby-alberta-canada",
+      "pop": 967,
+      "coord": [-114.0506558, 53.2273921]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["all uses"]
+      }
+    ]
+  },
   "Thousand Oaks, California, United States": {
     "place": {
       "name": "Thousand Oaks",
@@ -114678,6 +116976,24 @@
         "status": "adopted",
         "scope": ["citywide", "transit-oriented"],
         "land": ["residential, low-density"]
+      }
+    ]
+  },
+  "Three Hills, Alberta, Canada": {
+    "place": {
+      "name": "Three Hills",
+      "state": "Alberta",
+      "country": "Canada",
+      "type": "city",
+      "encoded": "three-hills-alberta-canada",
+      "pop": 3042,
+      "coord": [-113.268475, 51.7024122]
+    },
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["all uses"]
       }
     ]
   },
@@ -114727,6 +117043,24 @@
         "status": "adopted",
         "scope": ["city center / business district"],
         "land": ["commercial"]
+      }
+    ]
+  },
+  "Three Rivers, New Brunswick, Canada": {
+    "place": {
+      "name": "Three Rivers",
+      "state": "New Brunswick",
+      "country": "Canada",
+      "type": "city",
+      "encoded": "three-rivers-new-brunswick-canada",
+      "pop": 3990,
+      "coord": [-65.1616302, 45.9023463]
+    },
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["commercial", "other", "residential, all uses"]
       }
     ]
   },
@@ -115373,6 +117707,13 @@
         "land": ["all uses"],
         "date": "2024-07-16"
       }
+    ],
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["all uses"]
+      }
     ]
   },
   "Tomahawk, Wisconsin, United States": {
@@ -115631,6 +117972,30 @@
         "scope": ["citywide"],
         "land": ["all uses"],
         "date": "1994-10-18"
+      }
+    ]
+  },
+  "Towamencin Township, Pennsylvania, United States": {
+    "place": {
+      "name": "Towamencin Township",
+      "state": "Pennsylvania",
+      "country": "United States",
+      "type": "city",
+      "encoded": "towamencin-township-pennsylvania-united-states",
+      "pop": 18002,
+      "coord": [-75.3325943, 40.2464615]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["all uses"]
+      },
+      {
+        "status": "proposed",
+        "scope": ["citywide"],
+        "land": ["residential, multi-family"],
+        "date": "2026"
       }
     ]
   },
@@ -115976,6 +118341,35 @@
         "status": "adopted",
         "scope": ["citywide"],
         "land": ["commercial", "industrial", "other", "residential, all uses"]
+      }
+    ]
+  },
+  "Tracadie, New Brunswick, Canada": {
+    "place": {
+      "name": "Tracadie",
+      "state": "New Brunswick",
+      "country": "Canada",
+      "type": "city",
+      "encoded": "tracadie-new-brunswick-canada",
+      "pop": 16095,
+      "coord": [-64.9120499, 47.5169819]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["all uses"]
+      }
+    ],
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": [
+          "city center / business district",
+          "citywide",
+          "main street / special"
+        ],
+        "land": ["all uses", "industrial", "other"]
       }
     ]
   },
@@ -116535,6 +118929,24 @@
       }
     ]
   },
+  "Tuktoyaktuk, Northwest Territories, Canada": {
+    "place": {
+      "name": "Tuktoyaktuk",
+      "state": "Northwest Territories",
+      "country": "Canada",
+      "type": "city",
+      "encoded": "tuktoyaktuk-northwest-territories-canada",
+      "pop": 937,
+      "coord": [-133.031904, 69.4440189]
+    },
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["residential, all uses"]
+      }
+    ]
+  },
   "Tukwila, Washington, United States": {
     "place": {
       "name": "Tukwila",
@@ -116556,6 +118968,24 @@
           "other",
           "residential, all uses"
         ]
+      }
+    ]
+  },
+  "Tulita, Northwest Territories, Canada": {
+    "place": {
+      "name": "Tulita",
+      "state": "Northwest Territories",
+      "country": "Canada",
+      "type": "city",
+      "encoded": "tulita-northwest-territories-canada",
+      "pop": 396,
+      "coord": [-125.5719263, 64.9019115]
+    },
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["industrial", "medical", "other", "residential, all uses"]
       }
     ]
   },
@@ -116938,6 +119368,13 @@
       "pop": 11271,
       "coord": [-87.5692479, 44.1538845]
     },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["other"]
+      }
+    ],
     "rm_min": [
       {
         "status": "adopted",
@@ -118045,6 +120482,24 @@
       }
     ]
   },
+  "Valley Waters, New Brunswick, Canada": {
+    "place": {
+      "name": "Valley Waters",
+      "state": "New Brunswick",
+      "country": "Canada",
+      "type": "city",
+      "encoded": "valley-waters-new-brunswick-canada",
+      "pop": 4545,
+      "coord": [-65.8797289, 45.6682907]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["main street / special"],
+        "land": ["all uses"]
+      }
+    ]
+  },
   "Valley, Nebraska, United States": {
     "place": {
       "name": "Valley",
@@ -118172,6 +120627,13 @@
       "coord": [-123.113952, 49.2608724],
       "repeal": true
     },
+    "add_max": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["all uses"]
+      }
+    ],
     "rm_min": [
       {
         "status": "adopted",
@@ -118251,6 +120713,24 @@
       "encoded": "Vandergrift_PA",
       "pop": 5075,
       "coord": [-79.5647741, 40.6028462]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["all uses"]
+      }
+    ]
+  },
+  "Vanderhoof, British Columbia, Canada": {
+    "place": {
+      "name": "Vanderhoof",
+      "state": "British Columbia",
+      "country": "Canada",
+      "type": "city",
+      "encoded": "vanderhoof-british-columbia-canada",
+      "pop": 4346,
+      "coord": [-124.0076627, 54.0175289]
     },
     "reduce_min": [
       {
@@ -118530,6 +121010,24 @@
       {
         "status": "adopted",
         "scope": ["city center / business district"],
+        "land": ["all uses"]
+      }
+    ]
+  },
+  "Vernon, Wisconsin, United States": {
+    "place": {
+      "name": "Vernon",
+      "state": "Wisconsin",
+      "country": "United States",
+      "type": "city",
+      "encoded": "vernon-wisconsin-united-states",
+      "pop": 7474,
+      "coord": [-88.25427090424463, 42.89702774478516]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
         "land": ["all uses"]
       }
     ]
@@ -118933,6 +121431,24 @@
         "status": "adopted",
         "scope": ["city center / business district"],
         "land": ["commercial", "other", "residential, all uses"]
+      }
+    ]
+  },
+  "View Royal, British Columbia, Canada": {
+    "place": {
+      "name": "View Royal",
+      "state": "British Columbia",
+      "country": "Canada",
+      "type": "city",
+      "encoded": "view-royal-british-columbia-canada",
+      "pop": 11575,
+      "coord": [-123.434306, 48.4518052]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["commercial", "other", "residential, multi-family"]
       }
     ]
   },
@@ -119705,6 +122221,24 @@
         "scope": ["citywide"],
         "land": ["all uses"],
         "date": "2022-04-12"
+      }
+    ]
+  },
+  "Wales, Wisconsin, United States": {
+    "place": {
+      "name": "Wales",
+      "state": "Wisconsin",
+      "country": "United States",
+      "type": "city",
+      "encoded": "wales-wisconsin-united-states",
+      "pop": 2862,
+      "coord": [-88.3767626, 43.0044549]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["all uses"]
       }
     ]
   },
@@ -121870,6 +124404,24 @@
       }
     ]
   },
+  "Waunakee, Wisconsin, United States": {
+    "place": {
+      "name": "Waunakee",
+      "state": "Wisconsin",
+      "country": "United States",
+      "type": "city",
+      "encoded": "waunakee-wisconsin-united-states",
+      "pop": 14879,
+      "coord": [-89.4548402, 43.1919623]
+    },
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["residential, low-density"]
+      }
+    ]
+  },
   "Wauneta, Nebraska, United States": {
     "place": {
       "name": "Wauneta",
@@ -122333,6 +124885,31 @@
       }
     ]
   },
+  "Waynesville, North Carolina, United States": {
+    "place": {
+      "name": "Waynesville",
+      "state": "North Carolina",
+      "country": "United States",
+      "type": "city",
+      "encoded": "waynesville-north-carolina-united-states",
+      "pop": 10140,
+      "coord": [-82.9888725, 35.4887476]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["main street / special"],
+        "land": ["all uses", "commercial"]
+      }
+    ],
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district", "citywide"],
+        "land": ["all uses", "industrial", "other"]
+      }
+    ]
+  },
   "Waynesville, Ohio, United States": {
     "place": {
       "name": "Waynesville",
@@ -122682,6 +125259,24 @@
       {
         "status": "adopted",
         "scope": ["city center / business district"],
+        "land": ["all uses"]
+      }
+    ]
+  },
+  "Wells, British Columbia, Canada": {
+    "place": {
+      "name": "Wells",
+      "state": "British Columbia",
+      "country": "Canada",
+      "type": "city",
+      "encoded": "wells-british-columbia-canada",
+      "pop": 218,
+      "coord": [-121.5723679, 53.1044428]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district", "citywide"],
         "land": ["all uses"]
       }
     ]
@@ -123503,6 +126098,24 @@
       }
     ]
   },
+  "West Kelowna, British Columbia, Canada": {
+    "place": {
+      "name": "West Kelowna",
+      "state": "British Columbia",
+      "country": "Canada",
+      "type": "city",
+      "encoded": "west-kelowna-british-columbia-canada",
+      "pop": 36078,
+      "coord": [-119.582876, 49.8585784]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["commercial", "other", "residential, multi-family"]
+      }
+    ]
+  },
   "West Lafayette, Indiana, United States": {
     "place": {
       "name": "West Lafayette",
@@ -124061,6 +126674,24 @@
         "status": "adopted",
         "scope": ["city center / business district"],
         "land": ["all uses"]
+      }
+    ]
+  },
+  "West Vancouver, British Columbia, Canada": {
+    "place": {
+      "name": "West Vancouver",
+      "state": "British Columbia",
+      "country": "Canada",
+      "type": "city",
+      "encoded": "west-vancouver-british-columbia-canada",
+      "pop": 44122,
+      "coord": [-123.159479, 49.3311208]
+    },
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["main street / special", "transit-oriented"],
+        "land": ["residential, low-density"]
       }
     ]
   },
@@ -127918,6 +130549,31 @@
       }
     ]
   },
+  "Woodstock, New Brunswick, Canada": {
+    "place": {
+      "name": "Woodstock",
+      "state": "New Brunswick",
+      "country": "Canada",
+      "type": "city",
+      "encoded": "woodstock-new-brunswick-canada",
+      "pop": 11915,
+      "coord": [-67.573471, 46.150346]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["all uses"]
+      }
+    ],
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["residential, multi-family"]
+      }
+    ]
+  },
   "Woodstock, Ohio, United States": {
     "place": {
       "name": "Woodstock",
@@ -128921,6 +131577,13 @@
         "scope": ["city center / business district"],
         "land": ["all uses"]
       }
+    ],
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["all uses"]
+      }
     ]
   },
   "Yorktown, Indiana, United States": {
@@ -129140,6 +131803,20 @@
       "pop": 95548,
       "coord": [-114.624631, 32.705784]
     },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide", "main street / special"],
+        "land": [
+          "all uses",
+          "commercial",
+          "industrial",
+          "medical",
+          "other",
+          "residential, low-density"
+        ]
+      }
+    ],
     "rm_min": [
       {
         "status": "adopted",
