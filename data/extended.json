@@ -2516,6 +2516,35 @@
       }
     ]
   },
+  "Albemarle County, Virginia, United States": {
+    "add_max": [
+      {
+        "summary": "Parking maximums are set at 120% of the minimums.",
+        "reporter": "Samuel Deetz",
+        "requirements": ["by right"],
+        "citations": [
+          {
+            "id": 17317,
+            "description": "Albemarle County Zoning Code",
+            "url": "https://library.municode.com/va/albemarle_county/codes/code_of_ordinances?nodeId=CH18ZO_ARTIIBARE_S4GERE_S4.12PASTLO_S4.12.4PAAR",
+            "notes": "Sec. 4.12.4.a.",
+            "attachments": [
+              {
+                "fileName": "albemarle-county-virginia-united-states-attachment.pdf",
+                "directusId": "24b81a57-4e5b-42eb-9802-036fe4e732b2"
+              }
+            ],
+            "screenshots": [
+              {
+                "fileName": "albemarle-county-virginia-united-states-screenshot.png",
+                "directusId": "1662f043-94e3-4bc7-9fa3-e1b9b6319af2"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
   "Albemarle, North Carolina, United States": {
     "rm_min": [
       {
@@ -2776,26 +2805,92 @@
     ]
   },
   "Albuquerque, New Mexico, United States": {
+    "add_max": [
+      {
+        "summary": "Parking maximums apply to nonresidential surface parking in downtown, urban centers, transit areas, Old Town, and the McClellan Park small area.",
+        "reporter": null,
+        "requirements": ["by right"],
+        "citations": [
+          {
+            "id": 17286,
+            "description": "Albuquerque Integrated Development Ordinance",
+            "url": "https://documents.cabq.gov/planning/IDO/2025_IDO_Update/IDO_2026_Effective-2026-05-06.pdf",
+            "notes": "5-5(C)(7)\nPages 322-323",
+            "attachments": [
+              {
+                "fileName": "albuquerque-new-mexico-united-states-add-max-attachment.pdf",
+                "directusId": "2d01b72b-0234-4e79-9798-0543cbb025aa"
+              }
+            ],
+            "screenshots": [
+              {
+                "fileName": "albuquerque-new-mexico-united-states-add-max-screenshot.png",
+                "directusId": "cc1a8b49-fa7a-4ece-8900-a9ca03d5eb3a"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "reduce_min": [
+      {
+        "summary": "Parking requirements are reduced by 50% in Barelas and Employment Centers. Citywide reductions are available for EV chargers, carpool parking, carshare, on-street parking, or proximity to parks, trails, transit, or public parking.",
+        "reporter": null,
+        "requirements": ["carshare", "frequent transit", "other"],
+        "citations": [
+          {
+            "id": 17285,
+            "description": "Albuquerque Integrated Development Ordinance",
+            "url": "https://documents.cabq.gov/planning/IDO/2025_IDO_Update/IDO_2026_Effective-2026-05-06.pdf",
+            "notes": "5-5(B)(2)(c);\n5-5(C)(5);\n5-5(C)(6);\nPages 309, 318-322",
+            "attachments": [
+              {
+                "fileName": "albuquerque-new-mexico-united-states-reduce-min-attachment.pdf",
+                "directusId": "812fba91-f0a6-4ee6-9dba-8d405572d4f8"
+              }
+            ],
+            "screenshots": [
+              {
+                "fileName": "albuquerque-new-mexico-united-states-reduce-min-screenshot1.png",
+                "directusId": "80d61535-96e8-4731-ae4a-bfcd3c5e64e7"
+              },
+              {
+                "fileName": "albuquerque-new-mexico-united-states-reduce-min-screenshot2.png",
+                "directusId": "83c66855-cf54-49b7-8f1a-b5f003f5face"
+              },
+              {
+                "fileName": "albuquerque-new-mexico-united-states-reduce-min-screenshot3.png",
+                "directusId": "233e102d-58ea-4094-a1fa-8f6070a6f319"
+              },
+              {
+                "fileName": "albuquerque-new-mexico-united-states-reduce-min-screenshot4.png",
+                "directusId": "a5445a80-86ec-4992-9613-4f6c172ed564"
+              }
+            ]
+          }
+        ]
+      }
+    ],
     "rm_min": [
       {
-        "summary": "Albuquerque New Mexico has eliminated off street parking requirements in the downtown and SU-1 Transit Oriented Development.  They have also reduced parking minimums in many other areas and had on street parking account for off street parking by different reduction rates in areas like transit oriented developments.",
+        "summary": "Albuquerque has eliminated off street parking requirements for downtown, Transit Oriented Development, Old Town, and small nonresidential uses in Nob Hill.",
         "reporter": "Carrie Barkhurst",
-        "requirements": ["by right"],
+        "requirements": ["by right", "size of project"],
         "citations": [
           {
             "id": 8052,
             "description": "City Code",
-            "url": "https://www.cabq.gov/planning/documents/1416322.pdf",
+            "url": null,
             "notes": "(B) Zones. (1) SU-1 Transit Oriented Development - part j",
             "attachments": [
               {
-                "fileName": "albuquerque-new-mexico-united-states-citation1-attachment.pdf",
+                "fileName": "albuquerque-new-mexico-united-states-remove-min-citation1-attachment.pdf",
                 "directusId": "9e81ade3-9291-40c9-b247-c70bcd3c4371"
               }
             ],
             "screenshots": [
               {
-                "fileName": "albuquerque-new-mexico-united-states-citation1-screenshot.png",
+                "fileName": "albuquerque-new-mexico-united-states-remove-min-citation1-screenshot.png",
                 "directusId": "e3318c15-42c9-42d7-8421-e641b42e71ca"
               }
             ]
@@ -2803,18 +2898,40 @@
           {
             "id": 8053,
             "description": "City Code",
-            "url": "https://www.cabq.gov/planning/documents/1416322.pdf",
+            "url": null,
             "notes": "(2) SU-1 Transit Oriented Development - Community Activity Center part J",
             "attachments": [
               {
-                "fileName": "albuquerque-new-mexico-united-states-citation2-attachment.pdf",
+                "fileName": "albuquerque-new-mexico-united-states-remove-min-citation2-attachment.pdf",
                 "directusId": "74aec44a-2125-4a13-8338-ddd2ea6bc922"
               }
             ],
             "screenshots": [
               {
-                "fileName": "albuquerque-new-mexico-united-states-citation2-screenshot.png",
+                "fileName": "albuquerque-new-mexico-united-states-remove-min-citation2-screenshot.png",
                 "directusId": "b77c6ea0-edfe-4849-a819-a1ae57f94317"
+              }
+            ]
+          },
+          {
+            "id": 17284,
+            "description": "Albuquerque Integrated Development Code",
+            "url": "https://documents.cabq.gov/planning/IDO/2025_IDO_Update/IDO_2026_Effective-2026-05-06.pdf",
+            "notes": "5-5(B)(2)(a);\n5-5(B)(2)(d);\nPages 308-310",
+            "attachments": [
+              {
+                "fileName": "albuquerque-new-mexico-united-states-remove-min-citation3-attachment.pdf",
+                "directusId": "f3e02dc2-8052-4f52-bcf6-cd5f423e66a7"
+              }
+            ],
+            "screenshots": [
+              {
+                "fileName": "albuquerque-new-mexico-united-states-remove-min-citation3-screenshot1.png",
+                "directusId": "4efc0884-6192-41dd-a099-266a577a5b5b"
+              },
+              {
+                "fileName": "albuquerque-new-mexico-united-states-remove-min-citation3-screenshot2.png",
+                "directusId": "e1fb3334-d7eb-4532-abb5-bdc2ab24db42"
               }
             ]
           }
@@ -7134,6 +7251,35 @@
       }
     ]
   },
+  "Appomattox County, Virginia, United States": {
+    "add_max": [
+      {
+        "summary": "Parking maximums are set at 125% of the minimums.",
+        "reporter": "Samuel Deetz",
+        "requirements": ["by right"],
+        "citations": [
+          {
+            "id": 17318,
+            "description": "Appomattox County Zoning Code",
+            "url": "https://ecode360.com/45128942",
+            "notes": "§ 19.6-90.12",
+            "attachments": [
+              {
+                "fileName": "appomattox-county-virginia-united-states-attachment.pdf",
+                "directusId": "7e09225d-7ea9-477c-9538-f993b8ae8722"
+              }
+            ],
+            "screenshots": [
+              {
+                "fileName": "appomattox-county-virginia-united-states-screenshot.png",
+                "directusId": "e8fee6d3-5534-416a-b6fd-43824fb8290b"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
   "Arab, Alabama, United States": {
     "reduce_min": [
       {
@@ -8740,6 +8886,35 @@
               {
                 "fileName": "ashburn-georgia-united-states-screenshot.png",
                 "directusId": "3322d2df-7654-4727-aa0d-49764ece52c5"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "Ashcroft, British Columbia, Canada": {
+    "rm_min": [
+      {
+        "summary": "Properties within the C1 (Commercial Mixed Use 1) zone and not adjacent to a controlled access highway are exempt from parking mandates.",
+        "reporter": "Samuel Deetz",
+        "requirements": ["by right"],
+        "citations": [
+          {
+            "id": 17330,
+            "description": "Ashcroft Zoning Bylaw",
+            "url": "https://ashcroftbc.ca/wp-content/uploads/2025/02/Zoning-Bylaw-2018-Bylaw-No.-823.pdf",
+            "notes": "16.2\nPage 60",
+            "attachments": [
+              {
+                "fileName": "ashcroft-british-columbia-canada-attachment.pdf",
+                "directusId": "6aa72b37-8c98-434e-b7b6-0065fe3d4a84"
+              }
+            ],
+            "screenshots": [
+              {
+                "fileName": "ashcroft-british-columbia-canada-screenshot.png",
+                "directusId": "9b6e1b13-ad3c-4937-a097-d918d042a733"
               }
             ]
           }
@@ -16598,6 +16773,39 @@
               {
                 "fileName": "bel-aire-kansas-united-states-screenshot.png",
                 "directusId": "cf415a92-d09d-4896-ade4-6132d7287414"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "Belcarra, British Columbia, Canada": {
+    "rm_min": [
+      {
+        "summary": "The Duplex or One or Two-House Zone (RM-1), and Farrer Cove South Zone (RM-2) are exempt from parking mandates.",
+        "reporter": "Samuel Deetz",
+        "requirements": ["by right"],
+        "citations": [
+          {
+            "id": 17313,
+            "description": "Belcarra Zoning Bylaw",
+            "url": "https://belcarra.ca/assets/media/2021/05/Bylaw-510-2018-Zoning-Bylaw-Consolidated-.pdf",
+            "notes": "303.9;\n304.9;\nPages 32, 36",
+            "attachments": [
+              {
+                "fileName": "belcarra-british-columbia-canada-attachment.pdf",
+                "directusId": "0c35a4b5-4c18-4873-9b89-85b825038be1"
+              }
+            ],
+            "screenshots": [
+              {
+                "fileName": "belcarra-british-columbia-canada-screenshot1.png",
+                "directusId": "78a02df5-30da-4871-9161-99a5a4605cbb"
+              },
+              {
+                "fileName": "belcarra-british-columbia-canada-screenshot2.png",
+                "directusId": "b9938fa3-37f7-497c-a866-02dbb41adb04"
               }
             ]
           }
@@ -25053,6 +25261,35 @@
       }
     ]
   },
+  "Botetourt County, Virginia, United States": {
+    "reduce_min": [
+      {
+        "summary": "Within the Gateway Crossing Overlay District, parking requirements are reduced and on-street parking may count towards requirements.",
+        "reporter": "Samuel Deetz",
+        "requirements": ["by right", "other"],
+        "citations": [
+          {
+            "id": 17319,
+            "description": "Botetourt County Zoning Code",
+            "url": "https://library.municode.com/va/botetourt_county/codes/code_of_ordinances?nodeId=COCO_CH25ZO_ARTIIIOVDI_DIV2GACROVDI_S25-430.1PA",
+            "notes": "Sec. 25-430.1.(1)",
+            "attachments": [
+              {
+                "fileName": "botetourt-county-virginia-united-states-attachment.pdf",
+                "directusId": "798da7ec-6bd3-4932-8c64-c815ed4c2e2a"
+              }
+            ],
+            "screenshots": [
+              {
+                "fileName": "botetourt-county-virginia-united-states-screenshot.png",
+                "directusId": "7707d6ac-ee45-42f8-9949-cc2c6125e3dd"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
   "Bothell, Washington, United States": {
     "rm_min": [
       {
@@ -28637,7 +28874,7 @@
           {
             "id": 8382,
             "description": "Broken Bow Zoning Code",
-            "url": "https://cdn.cityofbrokenbow.org/uploads/2022/08/25084714/Broken-Bow-Zoning-Ordinance.pdf",
+            "url": "https://cityofbrokenbow.org/wp-content/uploads/2022/08/Broken-Bow-Zoning-Ordinance.pdf",
             "notes": "ARTICLE 7 – PARKING REGULATIONS\n7.3 SCHEDULE OF MINIMUM OFF-STREET PARKING AND LOADING REQUIREMENTS\n7.3.03\nPage 132 of pdf, page 130 of original document",
             "attachments": [
               {
@@ -39842,7 +40079,7 @@
     ],
     "rm_min": [
       {
-        "summary": "Champaign eliminated parking requirements for all multi-family dwellings in the \"University District\". No off-street parking is required for any use within the MFUniv, CB1, CB2, and CB3 Districts. Elderly housing is subject to reduced parking requirements in all zones. ",
+        "summary": "Champaign eliminated parking requirements for all multi-family dwellings in the \"University District\". No off-street parking is required for any use within the MFUniv, CB1, CB2, and CB3 Districts. Elderly housing is subject to reduced parking requirements in all zones. These exemptions were superseded by the full elimination of parking mandates in 2026.",
         "reporter": "Ben LeRoy",
         "requirements": ["by right"],
         "citations": [
@@ -39871,25 +40108,25 @@
         ]
       },
       {
-        "summary": "City Council directed staff to draft an ordinance to remove parking mandates in June 2025.",
-        "reporter": "Samuel Deetz",
+        "summary": "Champaign eliminated off-street vehicle parking requirements citywide with an update to the zoning code in 2026.",
+        "reporter": "Lucas\tHennessey",
         "requirements": ["by right"],
         "citations": [
           {
-            "id": 13811,
-            "description": "Champaign Incremental Development Memo",
-            "url": "https://documents.ci.champaign.il.us/object?id=1DX9rCf5UKdL6LDwBPIkIvphsCRcfe0O2",
-            "notes": null,
+            "id": 17396,
+            "description": "Champaign Council Bill No. 2026-133",
+            "url": "https://cityofchampaign.sharepoint.com/sites/CityofChampaignMeetingDocuments/City%20Council%20Documents/Forms/AllItems.aspx?viewid=16f646bd%2D741b%2D4963%2D9d9b%2D37cd625d8a21&ga=1&id=%2Fsites%2FCityofChampaignMeetingDocuments%2FCity%20Council%20Documents%2FCity%20Council%20Documents%2FCouncil%20Bills%20and%20Reports%20to%20Council%2F2026%20Council%20Bills%20and%20Reports%20to%20Council%2FCB%202026%2D133%20An%20Ordinance%20Repealing%20Chapter%2037%20of%20the%20Champaign%20Municipal%20Code%20and%20Replacing%20It%20with%20Chapter%2037%20of%202026%2Epdf&parent=%2Fsites%2FCityofChampaignMeetingDocuments%2FCity%20Council%20Documents%2FCity%20Council%20Documents%2FCouncil%20Bills%20and%20Reports%20to%20Council%2F2026%20Council%20Bills%20and%20Reports%20to%20Council",
+            "notes": "Sec. 37-602.\nPage 129",
             "attachments": [
               {
                 "fileName": "champaign-illinois-united-states-remove-min2-attachment.pdf",
-                "directusId": "70869641-165e-4676-983b-3c6476fd8476"
+                "directusId": "e063a384-c4c1-449e-8c84-2a58bbc98103"
               }
             ],
             "screenshots": [
               {
                 "fileName": "champaign-illinois-united-states-remove-min2-screenshot.png",
-                "directusId": "b4193aa4-4aa3-4cb1-86b9-9e876b8481a6"
+                "directusId": "5b053a84-46d6-4352-ae07-c16dc763627b"
               }
             ]
           }
@@ -42730,6 +42967,39 @@
       }
     ]
   },
+  "Chetwynd, British Columbia, Canada": {
+    "reduce_min": [
+      {
+        "summary": "Parking requirements are reduced by 50% for nonresidential uses in the C1 Town Centre Commercial District. A fee in lieu of parking may be provided for commercial uses near public parking.",
+        "reporter": "Samuel Deetz",
+        "requirements": ["by right", "in-lieu fees", "other"],
+        "citations": [
+          {
+            "id": 17353,
+            "description": "Chetwynd Zoning Bylaw",
+            "url": "https://www.gochetwynd.com/wp-content/uploads/2023/08/BL1150-Chetwynd-Zoning-Bylaw-No.-1150-2023-with-1162-and-maps-1.pdf",
+            "notes": "5.6.6;\n5.12;\nPages 40, 43",
+            "attachments": [
+              {
+                "fileName": "chetwynd-british-columbia-canada-attachment.pdf",
+                "directusId": "6912117e-4a0a-446c-b1a9-60e7025c76fb"
+              }
+            ],
+            "screenshots": [
+              {
+                "fileName": "chetwynd-british-columbia-canada-screenshot1.png",
+                "directusId": "d56d4a70-c454-4347-b3b2-f45df384c0ed"
+              },
+              {
+                "fileName": "chetwynd-british-columbia-canada-screenshot2.png",
+                "directusId": "c2dd6018-935b-47a5-b693-c222e0b9d8fc"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
   "Cheviot, Ohio, United States": {
     "rm_min": [
       {
@@ -44548,6 +44818,35 @@
               {
                 "fileName": "clarkdale-arizona-united-states-screenshot.png",
                 "directusId": "017c57aa-bc2e-47f9-a575-ff909970a4f3"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "Clarke County, Virginia, United States": {
+    "add_max": [
+      {
+        "summary": "Parking maximums are set at 150% of the minimums.",
+        "reporter": "Samuel Deetz",
+        "requirements": ["by right"],
+        "citations": [
+          {
+            "id": 17320,
+            "description": "Clarke County Zoning Code",
+            "url": "https://www.clarkecounty.gov/home/showpublisheddocument/15262/639131424641400000",
+            "notes": "7.2.5.J.\nPage 341",
+            "attachments": [
+              {
+                "fileName": "clarke-county-virginia-united-states-attachment.pdf",
+                "directusId": "bfabb0f3-1fea-4a23-9fb9-c27493af3f3c"
+              }
+            ],
+            "screenshots": [
+              {
+                "fileName": "clarke-county-virginia-united-states-screenshot.png",
+                "directusId": "0f240459-cfc9-4430-bd82-ff7c7998ccd4"
               }
             ]
           }
@@ -46571,6 +46870,35 @@
               {
                 "fileName": "clinton-county-indiana-united-states-screenshot.png",
                 "directusId": "00ebee35-ebe9-4367-86e3-4edc844002ee"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "Clinton, British Columbia, Canada": {
+    "reduce_min": [
+      {
+        "summary": "A fee in lieu of parking may be provided for all uses.",
+        "reporter": "Samuel Deetz",
+        "requirements": ["in-lieu fees"],
+        "citations": [
+          {
+            "id": 17309,
+            "description": "Clinton Zoning Bylaw",
+            "url": "https://village.clinton.bc.ca/wp-content/uploads/2026/02/Bylaw-No.-607-2025-Zoning-1.pdf",
+            "notes": "20.1.4 \nPage 70",
+            "attachments": [
+              {
+                "fileName": "clinton-british-columbia-canada-attachment.pdf",
+                "directusId": "673173a9-9243-4ab3-8f0a-819e88d8be70"
+              }
+            ],
+            "screenshots": [
+              {
+                "fileName": "clinton-british-columbia-canada-screenshot.png",
+                "directusId": "cf5abb7a-591e-405c-a968-94eea17a36d6"
               }
             ]
           }
@@ -54496,6 +54824,39 @@
       }
     ]
   },
+  "Creston, British Columbia, Canada": {
+    "reduce_min": [
+      {
+        "summary": "On-street parking may count towards a portion of parking requirements. Parking requirements are reduced for multi-family uses within 500 metres of the Downtown Core.",
+        "reporter": "Samuel Deetz",
+        "requirements": ["by right", "other"],
+        "citations": [
+          {
+            "id": 17347,
+            "description": "Creston Zoning Bylaw",
+            "url": "https://www.creston.ca/sites/default/files/2026-06/Zoning-1958.pdf",
+            "notes": "5.1.7;\nTable 5.1;\npages 24, 27",
+            "attachments": [
+              {
+                "fileName": "creston-british-columbia-canada-attachment.pdf",
+                "directusId": "54f4fa52-fd34-4209-ba3e-9f20a7deef54"
+              }
+            ],
+            "screenshots": [
+              {
+                "fileName": "creston-british-columbia-canada-screenshot1.png",
+                "directusId": "deea1d93-28e0-498c-820a-817da2f2653d"
+              },
+              {
+                "fileName": "creston-british-columbia-canada-screenshot2.png",
+                "directusId": "eb852b4a-51a0-442b-bf22-f5f5ffa52d8c"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
   "Creston, Illinois, United States": {
     "reduce_min": [
       {
@@ -55565,6 +55926,93 @@
               {
                 "fileName": "cumberland-gap-tennessee-united-states-screenshot.png",
                 "directusId": "2176f66e-f054-4565-8ce6-f33b1f4e77f2"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "Cumberland, British Columbia, Canada": {
+    "add_max": [
+      {
+        "summary": "Parking maximums apply to multi-family and lodging uses in the Village Core, and to most uses in the rest of the village.",
+        "reporter": "Samuel Deetz",
+        "requirements": ["by right"],
+        "citations": [
+          {
+            "id": 17395,
+            "description": "Cumberland Zoning Bylaw",
+            "url": "https://cumberland.ca/wp-content/uploads/2026/08/Bylaw-1238-consolidated_27Jul2026_nav.pdf",
+            "notes": "9.4.1\nPages 68-75",
+            "attachments": [
+              {
+                "fileName": "cumberland-british-columbia-canada-add-max-attachment.pdf",
+                "directusId": "a7ff9de2-cba2-4269-87a8-670579c0534b"
+              }
+            ],
+            "screenshots": [
+              {
+                "fileName": "cumberland-british-columbia-canada-add-max-screenshot.png",
+                "directusId": "f3df5a42-ca2c-4bdb-9deb-2e13b2b30f84"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "reduce_min": [
+      {
+        "summary": "A fee in lieu of parking may be provided for any use.",
+        "reporter": "Samuel Deetz",
+        "requirements": ["in-lieu fees"],
+        "citations": [
+          {
+            "id": 17393,
+            "description": "Cumberland Zoning Bylaw",
+            "url": "https://cumberland.ca/wp-content/uploads/2026/08/Bylaw-1238-consolidated_27Jul2026_nav.pdf",
+            "notes": "9.2 \nPage 61",
+            "attachments": [
+              {
+                "fileName": "cumberland-british-columbia-canada-reduce-min-attachment.pdf",
+                "directusId": "cebe13b3-7f07-4071-9039-f07c0b2c3847"
+              }
+            ],
+            "screenshots": [
+              {
+                "fileName": "cumberland-british-columbia-canada-reduce-min-screenshot.png",
+                "directusId": "3780dc27-b173-40e2-a9aa-a6a6b6ce4c56"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "rm_min": [
+      {
+        "summary": "The  Village Core is exempt from parking mandates, except for residential and lodging uses.",
+        "reporter": "Samuel Deetz",
+        "requirements": ["by right"],
+        "citations": [
+          {
+            "id": 17394,
+            "description": "Cumberland Zoning Bylaw",
+            "url": "https://cumberland.ca/wp-content/uploads/2026/08/Bylaw-1238-consolidated_27Jul2026_nav.pdf",
+            "notes": "Table 9.4.1(1)\nPages 67-69",
+            "attachments": [
+              {
+                "fileName": "cumberland-british-columbia-canada-remove-min-attachment.pdf",
+                "directusId": "5fea3ee4-1a72-4f57-8c1d-a68a44aa2877"
+              }
+            ],
+            "screenshots": [
+              {
+                "fileName": "cumberland-british-columbia-canada-remove-min-screenshot1.png",
+                "directusId": "65cc3286-00e4-4a19-b4e8-027bb8b45ade"
+              },
+              {
+                "fileName": "cumberland-british-columbia-canada-remove-min-screenshot2.png",
+                "directusId": "305a5bd7-4ef2-4856-8fa2-d5db9788bea6"
               }
             ]
           }
@@ -71300,18 +71748,43 @@
             "notes": "ARTICLE IV. GENERAL DEVELOPMENT REGULATIONS\n21-4-1: OFF-STREET PARKING AND LOADING\n   21-4-1.5: NUMBER OF PARKING SPACES REQUIRED\n      D.   Uses In The Downtown Core Overlay\n   21-4-1.6: ALTERNATIVE PARKING PROVISIONS\n      B.   On-Street Parking",
             "attachments": [
               {
-                "fileName": "eloy-arizona-united-states-attachment.pdf",
+                "fileName": "eloy-arizona-united-states-reduce-min1-attachment.pdf",
                 "directusId": "eb677127-c905-4ca8-9622-e505a56f9c36"
               }
             ],
             "screenshots": [
               {
-                "fileName": "eloy-arizona-united-states-screenshot1.png",
+                "fileName": "eloy-arizona-united-states-reduce-min1-screenshot1.png",
                 "directusId": "662e1aeb-8837-4c62-b4e7-27fa23853bb1"
               },
               {
-                "fileName": "eloy-arizona-united-states-screenshot2.png",
+                "fileName": "eloy-arizona-united-states-reduce-min1-screenshot2.png",
                 "directusId": "1a161a19-acc5-4480-bece-825e9a22c73e"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "summary": "Parking requirements are reduced through the provision of EV chargers.",
+        "reporter": "Samuel Deetz",
+        "requirements": ["other"],
+        "citations": [
+          {
+            "id": 17278,
+            "description": "Eloy Zoning Code",
+            "url": "https://codelibrary.amlegal.com/codes/eloyaz/latest/eloy_az/0-0-0-9631",
+            "notes": "21-4-1.6.F.",
+            "attachments": [
+              {
+                "fileName": "eloy-arizona-united-states-reduce-min2-attachment.pdf",
+                "directusId": "8ff6d1dc-0f0b-4435-aed3-6e2d83f137e0"
+              }
+            ],
+            "screenshots": [
+              {
+                "fileName": "eloy-arizona-united-states-reduce-min2-screenshot.png",
+                "directusId": "398ee472-873e-4419-bdad-75ec66ed8a80"
               }
             ]
           }
@@ -72900,6 +73373,75 @@
               {
                 "fileName": "eskridge-kansas-united-states-screenshot.png",
                 "directusId": "18bf5102-6b28-44d2-9771-f81b53121a6c"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "Esquimalt, British Columbia, Canada": {
+    "reduce_min": [
+      {
+        "summary": "Parking requirements may be reduced for carshare, bike parking, or the provision of transit passes. Parking requirements are reduced by right for residential and commercial uses in the frequent transit areas.",
+        "reporter": "Samuel Deetz",
+        "requirements": [
+          "bike parking",
+          "carshare",
+          "frequent transit",
+          "other"
+        ],
+        "citations": [
+          {
+            "id": 17381,
+            "description": "Esquimalt Parking Bylaw",
+            "url": "https://www.esquimalt.ca/media/file/parking-bylaw-2025-no-3089",
+            "notes": "TABLE 1.;\nTABLE 3.;\nPages 6-8, 13",
+            "attachments": [
+              {
+                "fileName": "esquimalt-british-columbia-canada-reduce-min-attachment.pdf",
+                "directusId": "f34add4c-b514-478c-954c-703559901cfb"
+              }
+            ],
+            "screenshots": [
+              {
+                "fileName": "esquimalt-british-columbia-canada-reduce-min-screenshot1.png",
+                "directusId": "5b5afe65-1ed4-4276-afc2-0caa690e56e1"
+              },
+              {
+                "fileName": "esquimalt-british-columbia-canada-reduce-min-screenshot2.png",
+                "directusId": "7ce079d8-734b-4b53-842b-b2641ed58a5f"
+              },
+              {
+                "fileName": "esquimalt-british-columbia-canada-reduce-min-screenshot3.png",
+                "directusId": "de6f78fd-6dc9-4fbd-863f-611d6057e2f7"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "rm_min": [
+      {
+        "summary": "Affordable housing within the frequent transit areas is exempt from parking mandates.",
+        "reporter": "Samuel Deetz",
+        "requirements": ["affordable housing"],
+        "citations": [
+          {
+            "id": 17382,
+            "description": "Esquimalt Parking Bylaw",
+            "url": "https://www.esquimalt.ca/media/file/parking-bylaw-2025-no-3089",
+            "notes": "TABLE 1.\nPage 7",
+            "attachments": [
+              {
+                "fileName": "esquimalt-british-columbia-canada-remove-min-attachment.pdf",
+                "directusId": "ea39d338-8dab-4b0c-88a9-d8cf5546e1e1"
+              }
+            ],
+            "screenshots": [
+              {
+                "fileName": "esquimalt-british-columbia-canada-remove-min-screenshot.png",
+                "directusId": "d76f75c5-87d7-40a2-85b8-46aec3939ac8"
               }
             ]
           }
@@ -77651,7 +78193,7 @@
           {
             "id": 9056,
             "description": "Firth Zoning Code",
-            "url": "https://www.firth.nebraska.gov/file_download/inline/ba8bd3e4-4729-45a1-96aa-a1a255c38de9",
+            "url": "https://www.firth.nebraska.gov/documents/815/Village_of_Firth_NE_Zoning_Regulations_Revised_Sep_3_2024.pdf",
             "notes": "ARTICLE FIVE: SUPPLEMENTAL REGULATIONS \n5.22 Parking Regulations: General Provisions\n5.22.1 \nPage 90 of pdf, page 89 of original document",
             "attachments": [
               {
@@ -77910,14 +78452,87 @@
             "notes": "Division 10-50.80: Parking Standards\n10-50.80.040 Number of Motor Vehicle Parking Spaces Required\nC.    General to All Zones.\n1.    Maximum Number of Parking Spaces.",
             "attachments": [
               {
-                "fileName": "flagstaff-arizona-united-states-attachment.pdf",
+                "fileName": "flagstaff-arizona-united-states-add-max-attachment.pdf",
                 "directusId": "549a7b14-ac91-4e6e-a4f5-83460b037a04"
               }
             ],
             "screenshots": [
               {
-                "fileName": "flagstaff-arizona-united-states-screenshot.png",
+                "fileName": "flagstaff-arizona-united-states-add-max-screenshot.png",
                 "directusId": "56752aa7-59bb-4509-97a0-36572caa1281"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "reduce_min": [
+      {
+        "summary": "On-street parking may count towards nonresidential requirements in the transect zones. Parking requirements may be reduced citywide for transit, tree preservation, bicycle parking, motorcycle parking, adaptive reuse, provision of transit passes, or an in-lieu fee.",
+        "reporter": "Samuel Deetz",
+        "requirements": [
+          "bike parking",
+          "frequent transit",
+          "in-lieu fees",
+          "other",
+          "transportation demand management",
+          "tree preservation"
+        ],
+        "citations": [
+          {
+            "id": 17283,
+            "description": "Flagstaff Zoning Code",
+            "url": "https://www.codepublishing.com/AZ/Flagstaff/html/Flagstaff10/Flagstaff1050080.html",
+            "notes": "10-50.80.040.B.4.;\n10-50.80.060;\n10-50.80.061;\n10-50.80.070.B.",
+            "attachments": [
+              {
+                "fileName": "flagstaff-arizona-united-states-reduce-min-attachment.pdf",
+                "directusId": "7a77649d-e6c7-4ead-974c-66b0fe520439"
+              }
+            ],
+            "screenshots": [
+              {
+                "fileName": "flagstaff-arizona-united-states-reduce-min-screenshot1.png",
+                "directusId": "8f206af6-f80f-44a0-a511-5a075c010fa7"
+              },
+              {
+                "fileName": "flagstaff-arizona-united-states-reduce-min-screenshot2.png",
+                "directusId": "ff461429-c00f-487a-944a-fc141208a0ce"
+              },
+              {
+                "fileName": "flagstaff-arizona-united-states-reduce-min-screenshot3.png",
+                "directusId": "a0a218b8-18f8-4e98-8871-b0e2d2821ac4"
+              },
+              {
+                "fileName": "flagstaff-arizona-united-states-reduce-min-screenshot4.png",
+                "directusId": "601147f6-013e-45f5-8dd3-3156978db1f6"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "rm_min": [
+      {
+        "summary": "The first 2,000 square feet of retail uses in the T4, T5, and T6 transect zones is exempt from parking mandates.",
+        "reporter": "Samuel Deetz",
+        "requirements": ["by right", "size of project"],
+        "citations": [
+          {
+            "id": 17282,
+            "description": "Flagstaff Zoning Code",
+            "url": "https://www.codepublishing.com/AZ/Flagstaff/html/Flagstaff10/Flagstaff1040040.html#10.40.40",
+            "notes": "10-40.40.070.G.;\n10-40.40.080.G.;\n10-40.40.090.G.;\n10-40.40.100.F.",
+            "attachments": [
+              {
+                "fileName": "flagstaff-arizona-united-states-remove-min-attachment.pdf",
+                "directusId": "be6fa0ce-2bad-4917-8143-c30651853f9c"
+              }
+            ],
+            "screenshots": [
+              {
+                "fileName": "flagstaff-arizona-united-states-remove-min-screenshot.png",
+                "directusId": "fd5d2fac-a184-4e4f-a5de-16a25c0f0d0e"
               }
             ]
           }
@@ -80166,7 +80781,7 @@
           {
             "id": 9086,
             "description": "Fort Calhoun Zoning Code",
-            "url": "https://meeting.sparqdata.com/Public/Stored/fortcalhoun?docTypeId=224411&file=e3902f96-b310-4172-a088-a4025126c858",
+            "url": "https://www.fortcalhoun.org/wp-content/uploads/2025/02/FC-Zoning-Regulation-Updated-2024.11.20.pdf",
             "notes": "ARTICLE 7: PARKING REQUIREMENTS\nSection 7.02 Off-Street Automobile Storage\n7.02.08\nPage 103 of pdf, page 102 of original document",
             "attachments": [
               {
@@ -83525,6 +84140,35 @@
       }
     ]
   },
+  "Fredonia, Arizona, United States": {
+    "reduce_min": [
+      {
+        "summary": "In all commercial or industrial zones, businesses and industries are required to provide \"sufficient\" off-street parking, but there are no specific parking requirements.",
+        "reporter": "Samuel Deetz",
+        "requirements": ["other"],
+        "citations": [
+          {
+            "id": 17324,
+            "description": "Fredonia Zoning Code",
+            "url": "https://codelibrary.amlegal.com/codes/fredonia/latest/fredonia_az/0-0-0-3584",
+            "notes": "§ 153.072",
+            "attachments": [
+              {
+                "fileName": "fredonia-arizona-united-states-attachment.pdf",
+                "directusId": "8dc44391-6456-42b4-a258-b619296f274e"
+              }
+            ],
+            "screenshots": [
+              {
+                "fileName": "fredonia-arizona-united-states-screenshot.png",
+                "directusId": "77ae3f92-a86d-4af1-91bb-c33dcf63fe7c"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
   "Fredonia, Kansas, United States": {
     "rm_min": [
       {
@@ -83996,14 +84640,32 @@
             "notes": "Page 271",
             "attachments": [
               {
-                "fileName": "fremont-nebraska-united-states-attachment.pdf",
+                "fileName": "fremont-nebraska-united-states-citation1-attachment.pdf",
                 "directusId": "942db3e2-abc8-4dd9-84d0-445851314b0e"
               }
             ],
             "screenshots": [
               {
-                "fileName": "fremont-nebraska-united-states-screenshot.png",
+                "fileName": "fremont-nebraska-united-states-citation1-screenshot.png",
                 "directusId": "2174299f-c084-4266-acb4-310dfe549817"
+              }
+            ]
+          },
+          {
+            "id": 17327,
+            "description": "Fremont Unified Development Code",
+            "url": "https://www.fremontne.gov/DocumentCenter/View/10223/Ordinance-5730---Unified-Development-Code-Effective-12102025-PDF",
+            "notes": "11-601.B.2.c.\nPage 99",
+            "attachments": [
+              {
+                "fileName": "fremont-nebraska-united-states-citation2-attachment.pdf",
+                "directusId": "78b93e4b-99c0-44a6-b5b8-2cba471f1ebf"
+              }
+            ],
+            "screenshots": [
+              {
+                "fileName": "fremont-nebraska-united-states-citation2-screenshot.png",
+                "directusId": "b321a37d-d40f-4c83-b41b-ee70e3c72a2f"
               }
             ]
           }
@@ -84584,6 +85246,39 @@
               {
                 "fileName": "fruitland-maryland-united-states-screenshot.png",
                 "directusId": "0449a783-775e-4267-8a2b-ac6f62625e65"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "Fruitvale, British Columbia, Canada": {
+    "reduce_min": [
+      {
+        "summary": "Within the Village Centre Commercial zone, parking is reduced for multi-family dwellings, and a fee in lieu may be provided for all uses.",
+        "reporter": "Samuel Deetz",
+        "requirements": ["by right"],
+        "citations": [
+          {
+            "id": 17346,
+            "description": "Fruitvale Zoning Bylaw",
+            "url": "https://fruitvale.ca/wp-content/uploads/2026/05/846-Zoning-Bylaw-Final-Consolidated.pdf",
+            "notes": "9.1.5.c);\n9.5.2.;\nPages 57, 62",
+            "attachments": [
+              {
+                "fileName": "fruitvale-british-columbia-canada-attachment.pdf",
+                "directusId": "7e4915c5-09f4-4372-aa36-fac453ca5a47"
+              }
+            ],
+            "screenshots": [
+              {
+                "fileName": "fruitvale-british-columbia-canada-screenshot1.png",
+                "directusId": "f8f1ddb2-a161-435a-acde-1a573c597b77"
+              },
+              {
+                "fileName": "fruitvale-british-columbia-canada-screenshot2.png",
+                "directusId": "99308563-a409-434c-bf95-d7cc2a7622d0"
               }
             ]
           }
@@ -88014,6 +88709,39 @@
               {
                 "fileName": "gibsonburg-ohio-united-states-screenshot.png",
                 "directusId": "2431a194-1c58-49ee-b7f4-588872700ac5"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "Gibsons, British Columbia, Canada": {
+    "reduce_min": [
+      {
+        "summary": "Parking requirements may be reduced for multi-family residential through carshare or for any use by paying a fee in lieu of parking.",
+        "reporter": "Samuel Deetz",
+        "requirements": ["carshare", "in-lieu fees"],
+        "citations": [
+          {
+            "id": 17289,
+            "description": "Gibsons Zoning Bylaw",
+            "url": "https://gibsons.civicweb.net/filepro/documents/108/?preview=89468",
+            "notes": "4.1.4.2.;\n4.1.4.3.;\nPages 48-49",
+            "attachments": [
+              {
+                "fileName": "gibsons-british-columbia-canada-attachment.pdf",
+                "directusId": "ec09c8cc-3c29-4183-b85e-13de2fab79ae"
+              }
+            ],
+            "screenshots": [
+              {
+                "fileName": "gibsons-british-columbia-canada-screenshot1.png",
+                "directusId": "7f41b388-75cd-4560-ab28-d749cf880ad3"
+              },
+              {
+                "fileName": "gibsons-british-columbia-canada-screenshot2.png",
+                "directusId": "fa306fe6-1d5d-43c4-aaca-4cd87aec233f"
               }
             ]
           }
@@ -99179,6 +99907,35 @@
       }
     ]
   },
+  "Harrison Hot Springs, British Columbia, Canada": {
+    "reduce_min": [
+      {
+        "summary": "A fee in lieu of parking may be provided for commercial uses.",
+        "reporter": "Samuel Deetz",
+        "requirements": ["in-lieu fees"],
+        "citations": [
+          {
+            "id": 17331,
+            "description": "Harrison Hot Springs Zoning Bylaw",
+            "url": "https://www.harrisonhotsprings.ca/sites/default/files/2026-03/Zoning-Bylaw-No.-1115--%28Consolidated-to-December-15%2C-2025%29.pdf",
+            "notes": "6.2 \nPage 47",
+            "attachments": [
+              {
+                "fileName": "harrison-hot-springs-british-columbia-canada-attachment.pdf",
+                "directusId": "3d93122c-b301-4fb0-9b82-e9192bc44fd9"
+              }
+            ],
+            "screenshots": [
+              {
+                "fileName": "harrison-hot-springs-british-columbia-canada-screenshot.png",
+                "directusId": "9aaf63e8-1f3b-42c7-af0f-bcba85f49702"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
   "Harrison Township, New Jersey, United States": {
     "add_max": [
       {
@@ -100562,8 +101319,8 @@
           {
             "id": 9350,
             "description": "Hastings Zoning Code",
-            "url": "https://library.municode.com/ne/hastings/codes/code_of_ordinances?nodeId=CH34ZOOR_ARTIIISUDIRE_S34-308PALO",
-            "notes": "Sec. 34-308. - Parking and loading. (6)Maximum parking.",
+            "url": "https://library.municode.com/ne/hastings/codes/code_of_ordinances?nodeId=COOR_CH54ZOOR_ARTVIISUDIRE_S54-708PALO",
+            "notes": "Sec. 54-708. - Parking and loading. (6)Maximum parking.",
             "attachments": [
               {
                 "fileName": "hastings-nebraska-united-states-add-max-attachment.pdf",
@@ -100589,8 +101346,8 @@
           {
             "id": 14107,
             "description": "Hastings Zoning Code",
-            "url": "https://library.municode.com/ne/hastings/codes/code_of_ordinances/413326?nodeId=CH34ZOOR_ARTIIISUDIRE_S34-308PALO",
-            "notes": "Sec. 34-308. Table 308-1",
+            "url": "https://library.municode.com/ne/hastings/codes/code_of_ordinances?nodeId=COOR_CH54ZOOR_ARTVIISUDIRE_S54-708PALO",
+            "notes": "Sec. 54-708. Table 708-1",
             "attachments": [
               {
                 "fileName": "hastings-nebraska-united-states-remove-min-attachment.pdf",
@@ -103488,6 +104245,35 @@
       }
     ]
   },
+  "Highland County, Virginia, United States": {
+    "add_max": [
+      {
+        "summary": "Parking maximums are set at 125% of the minimums for commercial uses.",
+        "reporter": "Samuel Deetz",
+        "requirements": ["by right"],
+        "citations": [
+          {
+            "id": 17321,
+            "description": "Highland County Zoning Code",
+            "url": "https://view.officeapps.live.com/op/view.aspx?src=https%3A%2F%2Fwww.highlandcova.org%2Fsites%2Fg%2Ffiles%2Fvyhlif6766%2Ff%2Fpages%2Fzoning_ordinance_amended_04062021.docx&wdOrigin=BROWSELINK",
+            "notes": "703.03\nPage 84",
+            "attachments": [
+              {
+                "fileName": "highland-county-virginia-united-states-attachment.pdf",
+                "directusId": "007cc8c5-19bf-4256-ae7c-9ead43479b41"
+              }
+            ],
+            "screenshots": [
+              {
+                "fileName": "highland-county-virginia-united-states-screenshot.png",
+                "directusId": "652d4428-6754-4795-9e4a-bf4c38a88d85"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
   "Highland Falls, New York, United States": {
     "rm_min": [
       {
@@ -106179,6 +106965,39 @@
       }
     ]
   },
+  "Hope, British Columbia, Canada": {
+    "reduce_min": [
+      {
+        "summary": "Commercial uses in downtown Hope may provide a fee in lieu of parking.",
+        "reporter": "Samuel Deetz",
+        "requirements": ["in-lieu fees"],
+        "citations": [
+          {
+            "id": 17350,
+            "description": "Hope Zoning Bylaw",
+            "url": "https://hope.ca/uploads/dm/86966/Zoning_Bylaw_March_2025_Consolidated",
+            "notes": "6.4\nPages 33-34",
+            "attachments": [
+              {
+                "fileName": "hope-british-columbia-canada-attachment.pdf",
+                "directusId": "c92a80fd-97da-4f2c-b6ea-0f419b069b19"
+              }
+            ],
+            "screenshots": [
+              {
+                "fileName": "hope-british-columbia-canada-screenshot1.png",
+                "directusId": "b6e83268-4ee4-4ecc-93e4-32dab44b5a0f"
+              },
+              {
+                "fileName": "hope-british-columbia-canada-screenshot2.png",
+                "directusId": "ce0f453e-1aa2-497d-ae2b-76e63ab41929"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
   "Hopewell Township (Cumberland County), New Jersey, United States": {
     "reduce_min": [
       {
@@ -107052,7 +107871,7 @@
           {
             "id": 11643,
             "description": "Huachuca City Zoning Code",
-            "url": "https://www.codepublishing.com/AZ/HuachucaCity/#!/HuachucaCity18/HuachucaCity18105.html#18.105.030",
+            "url": "https://ecode360.com/48363381",
             "notes": "18.105.030.B.",
             "attachments": [
               {
@@ -107184,6 +108003,35 @@
               {
                 "fileName": "hudson-falls-new-york-united-states-screenshot.png",
                 "directusId": "04a7073c-2ba3-42d6-a800-15f31babd76e"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "Hudson's Hope, British Columbia, Canada": {
+    "reduce_min": [
+      {
+        "summary": "A fee in lieu of parking may be provided for uses located near a public parking facility.",
+        "reporter": "Samuel Deetz",
+        "requirements": ["in-lieu fees", "other"],
+        "citations": [
+          {
+            "id": 17312,
+            "description": "Hudson's Hope Zoning Bylaw",
+            "url": "https://hudsonshope.ca/wp-content/uploads/2024/07/2024-06-07-Zoning-Bylaw-No.-949-Clean-Version-with-Maps-ORIGINAL-SIGNED-BY-2.pdf",
+            "notes": "B.4.1.\nPage 60",
+            "attachments": [
+              {
+                "fileName": "hudsons-hope-british-columbia-canada-attachment.pdf",
+                "directusId": "5bb35a0c-e918-4c1b-8eb6-3ae0be00481e"
+              }
+            ],
+            "screenshots": [
+              {
+                "fileName": "hudsons-hope-british-columbia-canada-screenshot.png",
+                "directusId": "670c6fa4-97f5-4b4a-96e4-d441f97b7bb0"
               }
             ]
           }
@@ -109989,6 +110837,66 @@
       }
     ]
   },
+  "Invermere, British Columbia, Canada": {
+    "add_max": [
+      {
+        "summary": "Parking maximums apply to home-based businesses.",
+        "reporter": "Samuel Deetz",
+        "requirements": ["by right"],
+        "citations": [
+          {
+            "id": 17335,
+            "description": "Invermere Zoning Bylaw",
+            "url": "https://invermere.civicweb.net/filepro/documents/20334/?preview=20335",
+            "notes": "4.1(10)\nPage 29",
+            "attachments": [
+              {
+                "fileName": "invermere-british-columbia-canada-add-max-attachment.pdf",
+                "directusId": "6a38cab2-5e7a-4dd3-a8e6-0ae3b209a363"
+              }
+            ],
+            "screenshots": [
+              {
+                "fileName": "invermere-british-columbia-canada-add-max-screenshot.png",
+                "directusId": "c8f43048-4fa6-4773-b3cd-f5216598e771"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "reduce_min": [
+      {
+        "summary": "Within the C-1, Downtown Commercial zone, parking requirements are reduced and a fee in lieu of parking may be provided.",
+        "reporter": "Samuel Deetz",
+        "requirements": ["by right", "in-lieu fees"],
+        "citations": [
+          {
+            "id": 17334,
+            "description": "Invermere Zoning Bylaw",
+            "url": "https://invermere.civicweb.net/filepro/documents/20334/?preview=20335",
+            "notes": "5.15(4)(d);\n5.15(5)(a);\nPage 71",
+            "attachments": [
+              {
+                "fileName": "invermere-british-columbia-canada-reduce-min-attachment.pdf",
+                "directusId": "6635bdd6-9228-4162-8591-52fddf042db0"
+              }
+            ],
+            "screenshots": [
+              {
+                "fileName": "invermere-british-columbia-canada-reduce-min-screenshot1.png",
+                "directusId": "990301a9-da4d-4aab-98b9-df0e5bcbd6d6"
+              },
+              {
+                "fileName": "invermere-british-columbia-canada-reduce-min-screenshot2.png",
+                "directusId": "456368f1-0ce6-4637-b914-da824204249c"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
   "Inverness County Municipality, Nova Scotia, Canada": {
     "rm_min": [
       {
@@ -111602,9 +112510,14 @@
           {
             "id": 9487,
             "description": "Jackson Zoning Code",
-            "url": null,
-            "notes": "707-A C-4 Central Business District\n707.04-A Vehicular Parking Regulations\n3.\nPage 121 of pdf, page 113 of original document",
-            "attachments": [],
+            "url": "https://jacksonms.gov/wp-content/uploads/2026/06/COJ-Zoning-Ordinance-Amended-December-2024.pdf",
+            "notes": "707.04-A.3.\nPage 128",
+            "attachments": [
+              {
+                "fileName": "jackson-mississippi-united-states-attachment.pdf",
+                "directusId": "0eca74c3-7b49-4ea8-8579-e86427fea04b"
+              }
+            ],
             "screenshots": [
               {
                 "fileName": "jackson-mississippi-united-states-screenshot.png",
@@ -112233,6 +113146,35 @@
               {
                 "fileName": "jacobus-pennsylvania-united-states-screenshot.png",
                 "directusId": "9b82e819-a84f-4802-9a83-896d47c4bb41"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "James City County, Virginia, United States": {
+    "add_max": [
+      {
+        "summary": "Parking maximums are set at 120% of the minimums for commercial uses.",
+        "reporter": "Samuel Deetz",
+        "requirements": ["by right"],
+        "citations": [
+          {
+            "id": 17322,
+            "description": "James City County Zoning Code",
+            "url": "https://library.municode.com/va/james_city_county/codes/code_of_ordinances?nodeId=CD_ORD_CH24ZO_ARTIISPRE_DIV2HISTPALO_S24-59MIOREPARE",
+            "notes": "Sec. 24-59.(b)",
+            "attachments": [
+              {
+                "fileName": "james-city-county-virginia-united-states-attachment.pdf",
+                "directusId": "a1aaedac-98ac-4671-8992-7657e813a26e"
+              }
+            ],
+            "screenshots": [
+              {
+                "fileName": "james-city-county-virginia-united-states-screenshot.png",
+                "directusId": "0ed0ddcf-096d-4ae5-8a38-95153c04cbe7"
               }
             ]
           }
@@ -116901,6 +117843,39 @@
       }
     ]
   },
+  "Kent, British Columbia, Canada": {
+    "reduce_min": [
+      {
+        "summary": "Within the Commercial – Town Centre zone, commercial changes of use are exempt and new commercial uses have reduced requirements excluding motel, hotel, service stations, motor vehicle sales and recreation\nvehicle sales uses. Affordable housing has reduced requirements citywide.\n\n",
+        "reporter": "Samuel Deetz",
+        "requirements": ["affordable housing", "by right", "other"],
+        "citations": [
+          {
+            "id": 17351,
+            "description": "Kent Zoning Bylaw",
+            "url": "https://www.kentbc.ca/media/5aefsox2/zoning-bylaw_consolidated-june-20-2024.pdf",
+            "notes": "7.17.1.3.;\n7.17.10.2.;\n7.17.10.3.;\nPages 54, 61",
+            "attachments": [
+              {
+                "fileName": "kent-british-columbia-canada-attachment.pdf",
+                "directusId": "41d6efc8-1a1a-401a-9d51-2d1cdfd5c497"
+              }
+            ],
+            "screenshots": [
+              {
+                "fileName": "kent-british-columbia-canada-screenshot1.png",
+                "directusId": "f88a2ce8-5dbb-44c2-8114-ce0c23ba757a"
+              },
+              {
+                "fileName": "kent-british-columbia-canada-screenshot2.png",
+                "directusId": "86ba3130-3d99-48bc-92d6-5b15ec59f5ad"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
   "Kent, Ohio, United States": {
     "rm_min": [
       {
@@ -117150,6 +118125,35 @@
               {
                 "fileName": "keokuk-iowa-united-states-screenshot.png",
                 "directusId": "1ea0a2e5-94e4-4743-a5fa-66c0103e1bdb"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "Keremeos, British Columbia, Canada": {
+    "reduce_min": [
+      {
+        "summary": "Parking requirements for commercial uses in the Village Centre (VC) zone are reduced by 50%. All uses in this zone may pay a fee in lieu of parking. Parking requirements may be reduced citywide through the provision of bike parking.",
+        "reporter": "Samuel Deetz",
+        "requirements": ["bike parking", "by right", "in-lieu fees"],
+        "citations": [
+          {
+            "id": 17329,
+            "description": "Keremeos Zoning Bylaw",
+            "url": "https://keremeos.civicweb.net/filepro/documents/1590/?preview=15676",
+            "notes": "9.4;\n9.5;\nPage 42",
+            "attachments": [
+              {
+                "fileName": "keremeos-british-columbia-canada-attachment.pdf",
+                "directusId": "6f5a5899-4360-4020-b7e0-3972ffc9a69e"
+              }
+            ],
+            "screenshots": [
+              {
+                "fileName": "keremeos-british-columbia-canada-screenshot.png",
+                "directusId": "0ee3abb0-4fee-4c14-9c8e-af7eba9ad459"
               }
             ]
           }
@@ -119219,6 +120223,43 @@
               {
                 "fileName": "kitchener-ontario-canada-screenshot.png",
                 "directusId": "745acc04-954e-4425-a273-3d7e83446f37"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "Kitimat, British Columbia, Canada": {
+    "reduce_min": [
+      {
+        "summary": "Parking requirements may be reduced for residential and lodging uses through the provision of bike or bus parking, or EV chargers. A fee in lieu of parking may be provided in the M2 Service Centre General Zone and M2-A Service Centre Commercial Zone.",
+        "reporter": "Samuel Deetz",
+        "requirements": ["bike parking", "in-lieu fees", "other"],
+        "citations": [
+          {
+            "id": 17376,
+            "description": "Kitimat Zoning Bylaw",
+            "url": "https://kitimat-docs.simplicitycms.ca/docs/part9-planning-20250526.pdf",
+            "notes": "9.4.10.31.;\n9.5.13.31.;\n9.5.15.14.;\n9.6.2.16.;\n9.6.3.13.;\n9.6.4.12.;\nPages 81, 128, 134, 142, 144, 147",
+            "attachments": [
+              {
+                "fileName": "kitimat-british-columbia-canada-attachment.pdf",
+                "directusId": "ef41a120-20b1-45dc-9638-9af24dd7f479"
+              }
+            ],
+            "screenshots": [
+              {
+                "fileName": "kitimat-british-columbia-canada-screenshot1.png",
+                "directusId": "ab63929c-e8c9-48a6-abef-5ccbf98130d2"
+              },
+              {
+                "fileName": "kitimat-british-columbia-canada-screenshot2.png",
+                "directusId": "d723950b-4345-43b3-abd5-31ac91a6c387"
+              },
+              {
+                "fileName": "kitimat-british-columbia-canada-screenshot3.png",
+                "directusId": "cb2ff10e-cd07-4d09-8294-dd0f317bc0ad"
               }
             ]
           }
@@ -121644,6 +122685,70 @@
       }
     ]
   },
+  "Ladysmith, British Columbia, Canada": {
+    "reduce_min": [
+      {
+        "summary": "A fee in lieu of parking may be provided for residential uses in the downtown area, and nonresidential uses outside of the downtown area.",
+        "reporter": "Samuel Deetz",
+        "requirements": ["in-lieu fees"],
+        "citations": [
+          {
+            "id": 17370,
+            "description": "Ladysmith Zoning Bylaw",
+            "url": "https://www.ladysmith.ca/docs/default-source/bylaws-2021/1860-schedule-a_zoning-bylaw-consolidation-november2024-website.pdf?sfvrsn=b319e88c_88",
+            "notes": "8.2.3.\nPage 63",
+            "attachments": [
+              {
+                "fileName": "ladysmith-british-columbia-canada-reduce-min-attachment.pdf",
+                "directusId": "5df22e10-11c5-4486-a641-9635203cd7d2"
+              }
+            ],
+            "screenshots": [
+              {
+                "fileName": "ladysmith-british-columbia-canada-reduce-min-screenshot1.png",
+                "directusId": "0bb20606-e225-48f2-8041-e058a9fb3d8f"
+              },
+              {
+                "fileName": "ladysmith-british-columbia-canada-reduce-min-screenshot2.png",
+                "directusId": "9169d9f4-1a69-460d-9729-81332e69984e"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "rm_min": [
+      {
+        "summary": "Nonresidential uses in the downtown area are exempt from parking mandates.",
+        "reporter": "Samuel Deetz",
+        "requirements": ["by right"],
+        "citations": [
+          {
+            "id": 17369,
+            "description": "Ladysmith Zoning Bylaw",
+            "url": "https://www.ladysmith.ca/docs/default-source/bylaws-2021/1860-schedule-a_zoning-bylaw-consolidation-november2024-website.pdf?sfvrsn=b319e88c_88",
+            "notes": "8.1.d)\npage 57",
+            "attachments": [
+              {
+                "fileName": "ladysmith-british-columbia-canada-remove-min-attachment.pdf",
+                "directusId": "0e8b82e8-e468-43b8-9b8e-b92c133dd889"
+              }
+            ],
+            "screenshots": [
+              {
+                "fileName": "ladysmith-british-columbia-canada-remove-min-screenshot1.png",
+                "directusId": "71fe17e1-3259-47fe-ac9e-354cb38588b1"
+              },
+              {
+                "fileName": "ladysmith-british-columbia-canada-remove-min-screenshot2.png",
+                "directusId": "4d31a936-8895-445d-9225-80109e648c78"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
   "Ladysmith, Wisconsin, United States": {
     "reduce_min": [
       {
@@ -122220,6 +123325,43 @@
               {
                 "fileName": "lake-country-british-columbia-canada-screenshot.png",
                 "directusId": "b0203b3e-7000-4c51-b172-10f1f9650a31"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "Lake Cowichan, British Columbia, Canada": {
+    "reduce_min": [
+      {
+        "summary": "Parking requirements are reduced for office and lodging uses in the Uptown Core. A fee in lieu of parking may be provided for any commercially zoned property. Apartments with unbundled parking have reduced requirements.",
+        "reporter": "Samuel Deetz",
+        "requirements": [
+          "by right",
+          "in-lieu fees",
+          "transportation demand management"
+        ],
+        "citations": [
+          {
+            "id": 17364,
+            "description": "Lake Cowichan Zoning Bylaw",
+            "url": "https://www.town.lakecowichan.bc.ca/dl/1055-2021%20Zoning%20Bylaw%20Consolidated%2026-02-24.pdf",
+            "notes": "Schedule B.5.;\nSchedule B.6.;\nSchedule B.7.7.2.;\nPages 49, 55",
+            "attachments": [
+              {
+                "fileName": "lake-cowichan-british-columbia-canada-attachment.pdf",
+                "directusId": "3e9e9f53-03f3-422e-b915-6895a9c3a796"
+              }
+            ],
+            "screenshots": [
+              {
+                "fileName": "lake-cowichan-british-columbia-canada-screenshot1.png",
+                "directusId": "446ba51a-ba7e-4e50-acc7-48d7d8aa342d"
+              },
+              {
+                "fileName": "lake-cowichan-british-columbia-canada-screenshot2.png",
+                "directusId": "1fa3d27b-43bc-467d-87c9-d6014af6ebd3"
               }
             ]
           }
@@ -129599,6 +130741,43 @@
       }
     ]
   },
+  "Lillooet, British Columbia, Canada": {
+    "reduce_min": [
+      {
+        "summary": "A change of use in commercial or industrial zones is exempt from parking mandates. Commercial uses in the C1 Downtown Core zone have reduced requirements. Uses in nonresidential zones may provide a fee in lieu of parking.",
+        "reporter": "Samuel Deetz",
+        "requirements": ["by right", "in-lieu fees", "other"],
+        "citations": [
+          {
+            "id": 17356,
+            "description": "Lillooet Zoning Bylaw",
+            "url": "https://lillooet.civicweb.net/filepro/documents/88075/?preview=94551",
+            "notes": "8.2.1;\nTable 8.2;\n8.13;\nPages 37, 40, 48",
+            "attachments": [
+              {
+                "fileName": "lillooet-british-columbia-canada-attachment.pdf",
+                "directusId": "fa7a9882-1d46-45d5-b393-74f48fb1727c"
+              }
+            ],
+            "screenshots": [
+              {
+                "fileName": "lillooet-british-columbia-canada-screenshot1.png",
+                "directusId": "e2947944-1fe4-4bd8-9a71-b4371782925b"
+              },
+              {
+                "fileName": "lillooet-british-columbia-canada-screenshot2.png",
+                "directusId": "08fdfedf-7cba-439d-95de-76e7bd0d761e"
+              },
+              {
+                "fileName": "lillooet-british-columbia-canada-screenshot3.png",
+                "directusId": "fba0301d-9d78-4eb6-be70-c29028dd4629"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
   "Limon, Colorado, United States": {
     "rm_min": [
       {
@@ -134232,6 +135411,35 @@
       }
     ]
   },
+  "Lumby, British Columbia, Canada": {
+    "reduce_min": [
+      {
+        "summary": "Parking requirements for residential uses were reduced in 2024.",
+        "reporter": "Samuel Deetz",
+        "requirements": ["by right"],
+        "citations": [
+          {
+            "id": 17348,
+            "description": "Lumby Zoning Bylaw",
+            "url": "https://lumby.civicweb.net/filepro/documents/108/?preview=7189",
+            "notes": "601.3.\nPage 38",
+            "attachments": [
+              {
+                "fileName": "lumby-british-columbia-canada-attachment.pdf",
+                "directusId": "b03b604a-f7a2-4edb-b838-31ac3f16d737"
+              }
+            ],
+            "screenshots": [
+              {
+                "fileName": "lumby-british-columbia-canada-screenshot.png",
+                "directusId": "8385f344-5919-4104-8344-ab31a5af6f6b"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
   "Lumpkin County, Georgia, United States": {
     "add_max": [
       {
@@ -135056,6 +136264,64 @@
               {
                 "fileName": "lyons-oregon-united-states-screenshot.png",
                 "directusId": "6a07183a-db75-4e04-8d57-72c22c21739a"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "Mackenzie, British Columbia, Canada": {
+    "reduce_min": [
+      {
+        "summary": "Parking requirements are reduced by 50% for nonresidential uses in the CD-1 Comprehensive Development zone.",
+        "reporter": "Samuel Deetz",
+        "requirements": ["by right"],
+        "citations": [
+          {
+            "id": 17362,
+            "description": "Mackenzie Zoning Bylaw",
+            "url": "https://districtofmackenzie.ca/wp-content/uploads/2025/10/Bylaw-No.-1368-Zoning-Industrial-and-Townsite-Maps.pdf",
+            "notes": "5.6.6.\nPage 38",
+            "attachments": [
+              {
+                "fileName": "mackenzie-british-columbia-canada-reduce-min1-attachment.pdf",
+                "directusId": "872f2bff-950a-4c4b-b1e3-fa8bdf80f46b"
+              }
+            ],
+            "screenshots": [
+              {
+                "fileName": "mackenzie-british-columbia-canada-reduce-min1-screenshot.png",
+                "directusId": "5c745de4-c81c-4e0b-b55a-a9924b5d472d"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "summary": "Parking requirements were reduced for residential uses in 2024.",
+        "reporter": "Samuel Deetz",
+        "requirements": ["by right"],
+        "citations": [
+          {
+            "id": 17363,
+            "description": "Mackenzie Zoning Bylaw",
+            "url": "https://districtofmackenzie.ca/wp-content/uploads/2025/10/Bylaw-No.-1368-Zoning-Industrial-and-Townsite-Maps.pdf",
+            "notes": "Table 3\nPages 2, 38",
+            "attachments": [
+              {
+                "fileName": "mackenzie-british-columbia-canada-reduce-min2-attachment.pdf",
+                "directusId": "f9c8db32-e8ad-4e2c-b09b-57b26b30fcb1"
+              }
+            ],
+            "screenshots": [
+              {
+                "fileName": "mackenzie-british-columbia-canada-reduce-min2-screenshot1.png",
+                "directusId": "cf04026b-b1b4-4a81-9571-62a46ad603c1"
+              },
+              {
+                "fileName": "mackenzie-british-columbia-canada-reduce-min2-screenshot2.png",
+                "directusId": "668dbf49-2d66-4c29-999b-6847e3cb3579"
               }
             ]
           }
@@ -141081,6 +142347,35 @@
       }
     ]
   },
+  "Masset, British Columbia, Canada": {
+    "reduce_min": [
+      {
+        "summary": "The draft zoning bylaw would have reduced parking requirements for the residential component of a mixed-use building.",
+        "reporter": "Samuel Deetz",
+        "requirements": ["other"],
+        "citations": [
+          {
+            "id": 17343,
+            "description": "Masset Draft Zoning Bylaw",
+            "url": "https://massetbc.com/images/uploads/pdfs/677_DRAFT_Village_of_Masset_Zoning_Bylaw_-_FINAL.pdf",
+            "notes": "7.3(1)\npage 38",
+            "attachments": [
+              {
+                "fileName": "masset-british-columbia-canada-attachment.pdf",
+                "directusId": "a5d0f2d0-58d2-4191-8788-776b8009e9cf"
+              }
+            ],
+            "screenshots": [
+              {
+                "fileName": "masset-british-columbia-canada-screenshot.png",
+                "directusId": "babb6835-7eaa-48ae-8dc7-d8a0dbf2d523"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
   "Massillon, Ohio, United States": {
     "reduce_min": [
       {
@@ -141627,16 +142922,29 @@
             "notes": "4.17.4.1.A.\nPage 94",
             "attachments": [
               {
-                "fileName": "mayflower-arkansas-united-states-remove-min-attachment.pdf",
+                "fileName": "mayflower-arkansas-united-states-remove-min-citation1-attachment.pdf",
                 "directusId": "934cc422-e70b-4a37-abc9-4a3f6b68ad8b"
               }
             ],
             "screenshots": [
               {
-                "fileName": "mayflower-arkansas-united-states-remove-min-screenshot.png",
+                "fileName": "mayflower-arkansas-united-states-remove-min-citation1-screenshot.png",
                 "directusId": "2bb437ef-bfa4-4322-9cb8-f87502dfef53"
               }
             ]
+          },
+          {
+            "id": 17290,
+            "description": "Mayflower Zoning Code",
+            "url": "https://mayflowerar.gov/mayflower-codes/chapter-14-04-mayflower-zoning-regulations/14-04-10-parking-space-requirements/",
+            "notes": null,
+            "attachments": [
+              {
+                "fileName": "mayflower-arkansas-united-states-remove-min-citation2-attachment.pdf",
+                "directusId": "940e6ed4-6afc-4c04-8d01-bb1e2f90bf45"
+              }
+            ],
+            "screenshots": []
           }
         ]
       }
@@ -143697,6 +145005,35 @@
       }
     ]
   },
+  "Meeteetse, Wyoming, United States": {
+    "rm_min": [
+      {
+        "summary": "The C-1 Central Business District Zone is exempt from parking mandates, except for dwellings on floors other than the ground floor.",
+        "reporter": "Samuel Deetz",
+        "requirements": ["by right"],
+        "citations": [
+          {
+            "id": 17314,
+            "description": "Meeteetse Zoning Code",
+            "url": "https://www.townofmeeteetse.org/documents",
+            "notes": "Open \"Chapter 18 - Zoning\"\nSec. 18-51.\nPage 27",
+            "attachments": [
+              {
+                "fileName": "meeteetse-wyoming-united-states-attachment.pdf",
+                "directusId": "504860f3-ccd8-420c-8191-68ca4938d93b"
+              }
+            ],
+            "screenshots": [
+              {
+                "fileName": "meeteetse-wyoming-united-states-screenshot.png",
+                "directusId": "9ceb4cb2-c0fc-4947-9481-517681b64326"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
   "Melbourne, Florida, United States": {
     "reduce_min": [
       {
@@ -145261,30 +146598,66 @@
     ]
   },
   "Merritt, British Columbia, Canada": {
+    "reduce_min": [
+      {
+        "summary": "A fee in lieu of parking may be provided in the city center. Parking requirements are also reduced for affordable housing near transit, for uses providing public benefits, or uses in the city center.",
+        "reporter": "Don McArthur",
+        "requirements": [
+          "affordable housing",
+          "by right",
+          "frequent transit",
+          "in-lieu fees"
+        ],
+        "citations": [
+          {
+            "id": 17377,
+            "description": "Merritt Zoning Bylaw",
+            "url": "https://www.merritt.ca/wp-content/uploads/2026/02/2284_Zoning-Bylaw_2026.pdf",
+            "notes": "5.8;\n5.9;\n5.10;\n5.11;\n5.12;\nPages 74-75",
+            "attachments": [
+              {
+                "fileName": "merritt-british-columbia-canada-reduce-min-attachment.pdf",
+                "directusId": "455e11b0-2031-4e59-909b-05872c630f76"
+              }
+            ],
+            "screenshots": [
+              {
+                "fileName": "merritt-british-columbia-canada-reduce-min-screenshot1.png",
+                "directusId": "41a3c907-d7dd-4add-8293-48c3c0e7d77b"
+              },
+              {
+                "fileName": "merritt-british-columbia-canada-reduce-min-screenshot2.png",
+                "directusId": "37c0886b-7e89-4bdf-a412-e6b6d1766b0b"
+              }
+            ]
+          }
+        ]
+      }
+    ],
     "rm_min": [
       {
-        "summary": "No minimum parking requirements for food and drinking establishments in city center..\n\nParking in lieu program that allow developers in the city center parking zone to pay fees to the city to enable them to build without parking spaces for other uses. ",
+        "summary": "There are no minimum parking requirements for food and drinking establishments in city center or secondary suites near transit.",
         "reporter": "Don McArthur",
-        "requirements": ["in-lieu fees"],
+        "requirements": [
+          "accessory dwelling units",
+          "by right",
+          "frequent transit"
+        ],
         "citations": [
           {
             "id": 9929,
-            "description": "City of Merritt zoning bylaw 2284. See table 5.17 for minimum parking exemptions for businesses along main street. See section 5.11.2 for in lieu parking policy within the City Centre Parking Zone.\n",
+            "description": "Merritt Zoning Bylaw 2284",
             "url": "https://www.merritt.ca/wp-content/uploads/2024/08/July-2024_Zoning-Bylaw-2284-2020.pdf",
-            "notes": null,
+            "notes": "5.10.1;\nTable 5.17;\nPages 75, 79",
             "attachments": [
               {
-                "fileName": "merritt-british-columbia-canada-attachment.pdf",
+                "fileName": "merritt-british-columbia-canada-remove-min-attachment.pdf",
                 "directusId": "76d3148d-6861-49db-a0b2-50ed04ded692"
               }
             ],
             "screenshots": [
               {
-                "fileName": "merritt-british-columbia-canada-screenshot1.png",
-                "directusId": "157873f8-661b-49e3-a4e3-165e8a5c2acf"
-              },
-              {
-                "fileName": "merritt-british-columbia-canada-screenshot2.png",
+                "fileName": "merritt-british-columbia-canada-remove-min-screenshot.png",
                 "directusId": "9fc50432-0b75-42fd-87ea-1a6e599fb222"
               }
             ]
@@ -146975,6 +148348,35 @@
               {
                 "fileName": "midvale-utah-united-states-remove-min-screenshot.png",
                 "directusId": "8a4756ab-2394-4766-8f01-cde67b27a160"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "Midway, British Columbia, Canada": {
+    "reduce_min": [
+      {
+        "summary": "A change of use is exempt from parking mandates.",
+        "reporter": "Samuel Deetz",
+        "requirements": ["other"],
+        "citations": [
+          {
+            "id": 17342,
+            "description": "Midway Zoning Bylaw",
+            "url": "https://midwaybc.ca/wp-content/uploads/2019/07/Village-of-Midway-Zoning-Bylaw-No.-464-2015.pdf",
+            "notes": "314.\nPage 16",
+            "attachments": [
+              {
+                "fileName": "midway-british-columbia-canada-attachment.pdf",
+                "directusId": "dc033ce7-f4dd-4ae9-89b8-ac4d2896bd96"
+              }
+            ],
+            "screenshots": [
+              {
+                "fileName": "midway-british-columbia-canada-screenshot.png",
+                "directusId": "dc8f5961-fded-42ef-aaf0-de9451c641e2"
               }
             ]
           }
@@ -158170,6 +159572,39 @@
       }
     ]
   },
+  "Nakusp, British Columbia, Canada": {
+    "reduce_min": [
+      {
+        "summary": "A change of use is exempt from parking mandates. A fee in lieu of parking may be provided for any use.",
+        "reporter": "Samuel Deetz",
+        "requirements": ["in-lieu fees", "other"],
+        "citations": [
+          {
+            "id": 17333,
+            "description": "Nakusp Zoning Bylaw",
+            "url": "https://nakusp.civicweb.net/filepro/documents/5589/?preview=15437",
+            "notes": "4.2.3;\n4.3;\npages 37-38",
+            "attachments": [
+              {
+                "fileName": "nakusp-british-columbia-canada-attachment.pdf",
+                "directusId": "fad948c6-d50d-4afc-994b-456e5dbd913b"
+              }
+            ],
+            "screenshots": [
+              {
+                "fileName": "nakusp-british-columbia-canada-screenshot1.png",
+                "directusId": "4a6fb129-29a4-49b6-8ab9-4a21a5fb918b"
+              },
+              {
+                "fileName": "nakusp-british-columbia-canada-screenshot2.png",
+                "directusId": "e3bd5f8e-d764-42ee-9097-0b5a178127b4"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
   "Nampa, Idaho, United States": {
     "rm_min": [
       {
@@ -167166,6 +168601,53 @@
       }
     ]
   },
+  "North Saanich, British Columbia, Canada": {
+    "reduce_min": [
+      {
+        "summary": "Parking requirements were reduced for apartments and townhomes in 2026.",
+        "reporter": "Samuel Deetz",
+        "requirements": ["by right"],
+        "citations": [
+          {
+            "id": 17389,
+            "description": "North Saanich Zoning Bylaw 1255",
+            "url": "https://www.northsaanich.ca/media/file/1255-district-north-saanich-zoning-bylaw-no-1255-consolidated-2023",
+            "notes": "306.1.\nPage 40",
+            "attachments": [
+              {
+                "fileName": "north-saanich-british-columbia-canada-citation1-attachment.pdf",
+                "directusId": "b0285abf-2d42-4f40-92f5-7eda4afd2bab"
+              }
+            ],
+            "screenshots": [
+              {
+                "fileName": "north-saanich-british-columbia-canada-citation1-screenshot.png",
+                "directusId": "11472e1d-a3ae-49a1-b7a5-acf0eeb698ca"
+              }
+            ]
+          },
+          {
+            "id": 17390,
+            "description": "North Saanich Zoning Bylaw 1606",
+            "url": "https://www.northsaanich.ca/media/file/appendix-north-saanch-zoning-bylaw-1606-2025",
+            "notes": "405.1.\nPage 48",
+            "attachments": [
+              {
+                "fileName": "north-saanich-british-columbia-canada-citation2-attachment.pdf",
+                "directusId": "554b29f9-7a6e-4bd1-921b-1bb89f23f0f4"
+              }
+            ],
+            "screenshots": [
+              {
+                "fileName": "north-saanich-british-columbia-canada-citation2-screenshot.png",
+                "directusId": "8c99bb3a-1b6d-4bff-8f1c-0cc47fc467c3"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
   "North Salt Lake, Utah, United States": {
     "add_max": [
       {
@@ -167701,6 +169183,30 @@
                 "directusId": "148524c7-c9ad-49a6-944d-8b173743536f"
               }
             ]
+          }
+        ]
+      }
+    ]
+  },
+  "Northern Rockies, British Columbia, Canada": {
+    "rm_min": [
+      {
+        "summary": "There are no parking mandates in the rural areas.",
+        "reporter": "Samuel Deetz",
+        "requirements": ["by right"],
+        "citations": [
+          {
+            "id": 17375,
+            "description": "Northern Rockies Zoning Bylaw",
+            "url": "https://nr.civicweb.net/document/125394/",
+            "notes": null,
+            "attachments": [
+              {
+                "fileName": "northern-rockies-british-columbia-canada-attachment.pdf",
+                "directusId": "e8389749-149e-447e-b6b7-ed32013fd165"
+              }
+            ],
+            "screenshots": []
           }
         ]
       }
@@ -171439,6 +172945,66 @@
       }
     ]
   },
+  "Oliver, British Columbia, Canada": {
+    "reduce_min": [
+      {
+        "summary": "Parking requirements are reduced by 50% for commercial uses in the TC Town Centre and GC General Commercial zones. Within the TC zone, a fee in lieu of parking may also be provided.",
+        "reporter": "Samuel Deetz",
+        "requirements": ["by right", "in-lieu fees"],
+        "citations": [
+          {
+            "id": 17301,
+            "description": "Oliver Zoning Bylaw",
+            "url": "https://portal.laserfiche.ca/Portal/DocView.aspx?id=36093&repo=r-00013955076a",
+            "notes": "8.4.a);\n8.5;\nPages 46-47",
+            "attachments": [
+              {
+                "fileName": "oliver-british-columbia-canada-reduce-min-attachment.pdf",
+                "directusId": "1a413c5b-893d-411a-9358-5dafe08b54cb"
+              }
+            ],
+            "screenshots": [
+              {
+                "fileName": "oliver-british-columbia-canada-reduce-min-screenshot1.png",
+                "directusId": "1a74f112-afb2-44b3-a6bc-70069f79eabe"
+              },
+              {
+                "fileName": "oliver-british-columbia-canada-reduce-min-screenshot2.png",
+                "directusId": "bdd5643f-ded0-4218-9fd8-36d3f908b631"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "rm_min": [
+      {
+        "summary": "Nonresidential uses in the historic downtown area are exempt from parking mandates.",
+        "reporter": "Samuel Deetz",
+        "requirements": ["by right"],
+        "citations": [
+          {
+            "id": 17300,
+            "description": "Oliver Zoning Bylaw",
+            "url": "https://portal.laserfiche.ca/Portal/DocView.aspx?id=36093&repo=r-00013955076a",
+            "notes": "8.4.b)\nPage 47",
+            "attachments": [
+              {
+                "fileName": "oliver-british-columbia-canada-remove-min-attachment.pdf",
+                "directusId": "3505b2f6-c5b6-421f-bb8f-86cf4f6941d1"
+              }
+            ],
+            "screenshots": [
+              {
+                "fileName": "oliver-british-columbia-canada-remove-min-screenshot.png",
+                "directusId": "07ff01f8-e64d-4fb1-ba6d-59a92941264f"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
   "Olivia, Minnesota, United States": {
     "rm_min": [
       {
@@ -172434,6 +174000,35 @@
       }
     ]
   },
+  "Orange County, Virginia, United States": {
+    "add_max": [
+      {
+        "summary": "Parking maximums are set at 110% of the minimums, but may be exceeded with pervious pavement.",
+        "reporter": "Samuel Deetz",
+        "requirements": ["by right"],
+        "citations": [
+          {
+            "id": 17316,
+            "description": "Orange County Zoning Code",
+            "url": "https://orangecountyva.municipalcodeonline.com/book?type=ordinances#name=Sec_70-673_Parking_Requirements",
+            "notes": "Sec 70-673(d)",
+            "attachments": [
+              {
+                "fileName": "orange-county-virginia-united-states-attachment.pdf",
+                "directusId": "ba9755fa-d0e4-4456-95d1-289f4c8ba699"
+              }
+            ],
+            "screenshots": [
+              {
+                "fileName": "orange-county-virginia-united-states-screenshot.png",
+                "directusId": "67e32501-2029-42ab-a902-a13662ef25d0"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
   "Orange Township, New Jersey, United States": {
     "reduce_min": [
       {
@@ -173236,18 +174831,45 @@
             "notes": "Section 27.7.F.3.;\nSection 27.7.G.4.h.",
             "attachments": [
               {
-                "fileName": "oro-valley-arizona-united-states-attachment.pdf",
+                "fileName": "oro-valley-arizona-united-states-reduce-min-attachment.pdf",
                 "directusId": "970d59ac-e881-4480-8cf3-690c025cfad3"
               }
             ],
             "screenshots": [
               {
-                "fileName": "oro-valley-arizona-united-states-screenshot1.png",
+                "fileName": "oro-valley-arizona-united-states-reduce-min-screenshot1.png",
                 "directusId": "003f5c62-34a1-40e4-9635-b663c789230c"
               },
               {
-                "fileName": "oro-valley-arizona-united-states-screenshot2.png",
+                "fileName": "oro-valley-arizona-united-states-reduce-min-screenshot2.png",
                 "directusId": "e7f6b72e-0574-44e1-8c71-0bed83f6b4fc"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "rm_min": [
+      {
+        "summary": "Public schools are exempt from parking mandates.",
+        "reporter": "Samuel Deetz",
+        "requirements": ["by right"],
+        "citations": [
+          {
+            "id": 17279,
+            "description": "Oro Valley",
+            "url": "https://orovalley.town.codes/ZC/27.7",
+            "notes": "Table 27-14.",
+            "attachments": [
+              {
+                "fileName": "oro-valley-arizona-united-states-remove-min-attachment.pdf",
+                "directusId": "34c6ede2-4ef4-4daf-8e22-ab527bf28cb8"
+              }
+            ],
+            "screenshots": [
+              {
+                "fileName": "oro-valley-arizona-united-states-remove-min-screenshot.png",
+                "directusId": "c7982a7d-ed4f-47a6-ac1d-d76063647b35"
               }
             ]
           }
@@ -177903,7 +179525,12 @@
             "description": "Pawnee City Zoning Code",
             "url": "https://pawneecitynebraska.com/documents/194/Pawnee_City_Planning_Commision_-_Bylwas_and_Rules_of_Procedure_.docx.pdf",
             "notes": "ARTICLE NINE: OFF-STREET PARKING 9.2 General Applications b. Exemptions",
-            "attachments": [],
+            "attachments": [
+              {
+                "fileName": "pawnee-city-nebraska-united-states-attachment.pdf",
+                "directusId": "2b3a31ae-9621-4e86-b1a8-663c3fec260d"
+              }
+            ],
             "screenshots": [
               {
                 "fileName": "pawnee-city-nebraska-united-states-screenshot.png",
@@ -179361,9 +180988,36 @@
     ]
   },
   "Penticton, British Columbia, Canada": {
+    "reduce_min": [
+      {
+        "summary": "City wide parking minimums can be reduced by 1 space, per 5 bicycle parking, and 1 space for a fee of $13,000.",
+        "reporter": "Anthony Haddad",
+        "requirements": ["bike parking", "in-lieu fees"],
+        "citations": [
+          {
+            "id": 17385,
+            "description": "Penticton Zoning Bylaw",
+            "url": "https://www.penticton.ca/sites/default/files/uploads/bylaws/Zoning%20Bylaw%202024-22%20%28Consolidated%20October%202025%29.pdf",
+            "notes": "6.1.2\nPages 48-49",
+            "attachments": [
+              {
+                "fileName": "penticton-british-columbia-canada-reduce-min-attachment.pdf",
+                "directusId": "47a1777a-9b99-489e-8167-dcbd332bbc76"
+              }
+            ],
+            "screenshots": [
+              {
+                "fileName": "penticton-british-columbia-canada-reduce-min-screenshot.png",
+                "directusId": "6443e40b-ef38-4018-af65-bb61fa3e3341"
+              }
+            ]
+          }
+        ]
+      }
+    ],
     "rm_min": [
       {
-        "summary": "No minimum parking or loading is required in commercial zones C5 and C6. City wide parking minimums can be reduced by 1 space, per 5 bicycle parking, and 1 space for a fee of $13,000.",
+        "summary": "No minimum parking or loading is required in commercial zones C5 and C6.",
         "reporter": "Anthony Haddad",
         "requirements": ["by right"],
         "citations": [
@@ -179374,21 +181028,21 @@
             "notes": "11.5.3 other regulations",
             "attachments": [
               {
-                "fileName": "penticton-british-columbia-canada-attachment.pdf",
+                "fileName": "penticton-british-columbia-canada-remove-min-attachment.pdf",
                 "directusId": "bca15c05-3d15-4fe5-9f87-96cc6ab8c167"
               }
             ],
             "screenshots": [
               {
-                "fileName": "penticton-british-columbia-canada-screenshot1.png",
+                "fileName": "penticton-british-columbia-canada-remove-min-screenshot1.png",
                 "directusId": "3db96f87-55df-42a0-be9c-5604b42791ae"
               },
               {
-                "fileName": "penticton-british-columbia-canada-screenshot2.png",
+                "fileName": "penticton-british-columbia-canada-remove-min-screenshot2.png",
                 "directusId": "30067415-41d8-4ec1-8d46-485698a5d2f2"
               },
               {
-                "fileName": "penticton-british-columbia-canada-screenshot3.png",
+                "fileName": "penticton-british-columbia-canada-remove-min-screenshot3.png",
                 "directusId": "5eba076f-57da-4941-aca2-15f46dc2bcfc"
               }
             ]
@@ -181058,9 +182712,87 @@
     ]
   },
   "Phoenix, Arizona, United States": {
+    "add_max": [
+      {
+        "summary": "Parking maximums apply to all uses in the downtown and transit-oriented development districts and to large-scale commercial retail citywide.",
+        "reporter": "Sean Sweat",
+        "requirements": ["by right"],
+        "citations": [
+          {
+            "id": 17280,
+            "description": "Phoenix Zoning Code",
+            "url": "https://phoenix.municipal.codes/ZO/702",
+            "notes": "662.L.1.;\n663.L.1.;\n702.D.;\n1206.B.",
+            "attachments": [
+              {
+                "fileName": "phoenix-arizona-united-states-add-max-attachment.pdf",
+                "directusId": "fdcac02a-a119-4f78-ac69-0e5a462d6ae7"
+              }
+            ],
+            "screenshots": [
+              {
+                "fileName": "phoenix-arizona-united-states-add-max-screenshot1.png",
+                "directusId": "e355db3e-4fd6-45c8-86c3-a65da7280e61"
+              },
+              {
+                "fileName": "phoenix-arizona-united-states-add-max-screenshot2.png",
+                "directusId": "48d57eaf-b008-49ca-9092-bdf136440301"
+              },
+              {
+                "fileName": "phoenix-arizona-united-states-add-max-screenshot3.png",
+                "directusId": "8b827c61-2e31-49eb-b048-47740c61e219"
+              },
+              {
+                "fileName": "phoenix-arizona-united-states-add-max-screenshot4.png",
+                "directusId": "7023088c-c64d-4acf-9d0d-7e74b6498fde"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "reduce_min": [
+      {
+        "summary": "Within transit-oriented development districts, parking requirements are reduced for residential and commercial uses which may also count on-street parking towards parking requirements. Citywide reductions are available for sustainability, recycling containers, or infill development.",
+        "reporter": "Sean Sweat",
+        "requirements": ["by right", "other"],
+        "citations": [
+          {
+            "id": 17281,
+            "description": "Phoenix Zoning Code",
+            "url": "https://phoenix.municipal.codes/ZO/662",
+            "notes": "662.L.;\n663.L.;\n702.E.;\n1223.",
+            "attachments": [
+              {
+                "fileName": "phoenix-arizona-united-states-reduce-min-attachment.pdf",
+                "directusId": "5f79ed62-e110-4288-827f-f4e5efedfcba"
+              }
+            ],
+            "screenshots": [
+              {
+                "fileName": "phoenix-arizona-united-states-reduce-min-screenshot1.png",
+                "directusId": "83d64184-4f39-4b57-ba00-53bf51d7996e"
+              },
+              {
+                "fileName": "phoenix-arizona-united-states-reduce-min-screenshot2.png",
+                "directusId": "cd505962-0e60-4267-be58-69997e064404"
+              },
+              {
+                "fileName": "phoenix-arizona-united-states-reduce-min-screenshot3.png",
+                "directusId": "070a7c0d-2c51-4cb0-9cec-323573852eea"
+              },
+              {
+                "fileName": "phoenix-arizona-united-states-reduce-min-screenshot4.png",
+                "directusId": "dbaae8ad-3f46-4f52-8f47-6ff3c3290a69"
+              }
+            ]
+          }
+        ]
+      }
+    ],
     "rm_min": [
       {
-        "summary": "No car parking is required for non-residential uses in the Downtown and Warehouse districts. Reductions for residential and commercial parking requirements are automatic near light rail stations. Parking maximums are in place for most uses, but there are ample opportunities to increase them.",
+        "summary": "No car parking is required for non-residential uses in the Downtown and Warehouse districts.",
         "reporter": "Sean Sweat",
         "requirements": ["by right"],
         "citations": [
@@ -181071,13 +182803,13 @@
             "notes": "D. Parking Requirements For Large Scale Commercial Retail Developments. - Parking Maximums",
             "attachments": [
               {
-                "fileName": "phoenix-arizona-united-states-citation1-attachment.pdf",
+                "fileName": "phoenix-arizona-united-states-remove-min-citation1-attachment.pdf",
                 "directusId": "5de892b1-09fe-4af1-a10a-c61649e989ec"
               }
             ],
             "screenshots": [
               {
-                "fileName": "phoenix-arizona-united-states-citation1-screenshot.png",
+                "fileName": "phoenix-arizona-united-states-remove-min-citation1-screenshot.png",
                 "directusId": "b2290526-96be-4562-b805-45598a94f75d"
               }
             ]
@@ -181089,13 +182821,13 @@
             "notes": "Non-Residential: No parking required in Business Core and Warehouse Character Areas.",
             "attachments": [
               {
-                "fileName": "phoenix-arizona-united-states-citation2-attachment.pdf",
+                "fileName": "phoenix-arizona-united-states-remove-min-citation2-attachment.pdf",
                 "directusId": "1d451e12-16d4-4178-aec0-951d0560e266"
               }
             ],
             "screenshots": [
               {
-                "fileName": "phoenix-arizona-united-states-citation2-screenshot.png",
+                "fileName": "phoenix-arizona-united-states-remove-min-citation2-screenshot.png",
                 "directusId": "1d66a5da-72e5-4da4-905f-3f6d176e6f21"
               }
             ]
@@ -181107,13 +182839,13 @@
             "notes": " Subsection of Section 662, (L)(1)(a)",
             "attachments": [
               {
-                "fileName": "phoenix-arizona-united-states-citation3-attachment.pdf",
+                "fileName": "phoenix-arizona-united-states-remove-min-citation3-attachment.pdf",
                 "directusId": "45af1cf1-d74a-47db-aa8f-94070a396225"
               }
             ],
             "screenshots": [
               {
-                "fileName": "phoenix-arizona-united-states-citation3-screenshot.png",
+                "fileName": "phoenix-arizona-united-states-remove-min-citation3-screenshot.png",
                 "directusId": "3adac555-05ab-4738-9f2c-3b4a46b9e1ae"
               }
             ]
@@ -183115,7 +184847,7 @@
           {
             "id": 10429,
             "description": "Plainview Zoning Code",
-            "url": "https://www.cityofplainviewne.com/images/City_of_Plainview_Zoning_Code_Book.pdf",
+            "url": "https://cityofplainviewne.com/wp-content/uploads/2026/08/City_of_Plainview_Zoning_Code_Book.pdf",
             "notes": "ARTICLE NINE OFF-STREET PARKING \n902 General Applications\nb. Exemptions\nPage 72",
             "attachments": [
               {
@@ -184771,6 +186503,35 @@
       }
     ]
   },
+  "Port Alice, British Columbia, Canada": {
+    "rm_min": [
+      {
+        "summary": "Commercial uses, other than tourist accommodation or service station, are exempt from parking mandates.",
+        "reporter": "Samuel Deetz",
+        "requirements": ["by right"],
+        "citations": [
+          {
+            "id": 17310,
+            "description": "Port Alice Zoning Bylaw",
+            "url": "https://portalice.ca/wp-content/uploads/2026/01/688-Zoning-Bylaw.pdf",
+            "notes": "3.3.1.\nPage 21",
+            "attachments": [
+              {
+                "fileName": "port-alice-british-columbia-canada-attachment.pdf",
+                "directusId": "87b9e4c9-4c55-4270-80b4-aa4c5b87d2fa"
+              }
+            ],
+            "screenshots": [
+              {
+                "fileName": "port-alice-british-columbia-canada-screenshot.png",
+                "directusId": "11827be7-636f-4eb8-818a-730959855f4e"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
   "Port Allegany, Pennsylvania, United States": {
     "reduce_min": [
       {
@@ -184972,6 +186733,79 @@
                 "directusId": "17588a04-fbac-49c8-9197-2054d285f58e"
               }
             ]
+          }
+        ]
+      }
+    ]
+  },
+  "Port Coquitlam, British Columbia, Canada": {
+    "reduce_min": [
+      {
+        "summary": "Most changes of use are exempt from parking mandates. A fee in lieu of parking may be provided for any use downtown or for rental housing citywide.",
+        "reporter": "Samuel Deetz",
+        "requirements": ["in-lieu fees", "other"],
+        "citations": [
+          {
+            "id": 17293,
+            "description": "Port Coquitlam Parking and Development Management Bylaw",
+            "url": "https://www.portcoquitlam.ca/sites/default/files/2024-10/4078%20-%20Parking%20and%20Development%20Management%20Bylaw.pdf",
+            "notes": "5.2;\n9.;\nPages 2, 6",
+            "attachments": [
+              {
+                "fileName": "port-coquitlam-british-columbia-canada-reduce-min-attachment.pdf",
+                "directusId": "ec0dae0a-f62a-4306-af1e-ccdcd17c7056"
+              }
+            ],
+            "screenshots": [
+              {
+                "fileName": "port-coquitlam-british-columbia-canada-reduce-min-screenshot1.png",
+                "directusId": "44a5d987-b2dd-40e0-9b66-01cf9f6bdb16"
+              },
+              {
+                "fileName": "port-coquitlam-british-columbia-canada-reduce-min-screenshot2.png",
+                "directusId": "62d2aa59-9ebc-4723-beec-31b112ebda53"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "rm_min": [
+      {
+        "summary": "Parcels designated for Frequent Transit Development (FTD) by the Official Community Plan, and RS-zoned parcels within 400m of a prescribed bus stop are exempt from residential off-street parking requirements.",
+        "reporter": "Samuel Deetz",
+        "requirements": ["by right", "frequent transit"],
+        "citations": [
+          {
+            "id": 17294,
+            "description": "Port Coquitlam Parking and Development Management Bylaw",
+            "url": "https://www.portcoquitlam.ca/sites/default/files/2024-10/4078%20-%20Parking%20and%20Development%20Management%20Bylaw.pdf",
+            "notes": "19;\n20;\nPage 12",
+            "attachments": [
+              {
+                "fileName": "port-coquitlam-british-columbia-canada-remove-min-citation1-attachment.pdf",
+                "directusId": "e16e8045-0a16-4e0d-ac25-88b07a9f2920"
+              }
+            ],
+            "screenshots": [
+              {
+                "fileName": "port-coquitlam-british-columbia-canada-remove-min-citation1-screenshot.png",
+                "directusId": "34489366-f53f-4171-9484-adb33789a549"
+              }
+            ]
+          },
+          {
+            "id": 17295,
+            "description": "Port Coquitlam Official Community Plan",
+            "url": "https://www.portcoquitlam.ca/media/file/3838-official-community-planpdf",
+            "notes": "Appendix 2 Frequent Transit Maps\nPages 193-195",
+            "attachments": [
+              {
+                "fileName": "port-coquitlam-british-columbia-canada-remove-min-citation2-attachment.pdf",
+                "directusId": "a2284f97-7a46-4e6b-a115-f967aabd74be"
+              }
+            ],
+            "screenshots": []
           }
         ]
       }
@@ -186594,6 +188428,35 @@
       }
     ]
   },
+  "Pouce Coupe, British Columbia, Canada": {
+    "reduce_min": [
+      {
+        "summary": "Parking requirements are reduced by 50% for nonresidential uses in the C2 – Core Commercial zone.",
+        "reporter": "Samuel Deetz",
+        "requirements": ["by right"],
+        "citations": [
+          {
+            "id": 17311,
+            "description": "Pouce Coupe Zoning Bylaw",
+            "url": "https://poucecoupe.civicweb.net/filepro/documents/5385/?preview=42991",
+            "notes": "5.6.6.\nPage 35",
+            "attachments": [
+              {
+                "fileName": "pouce-coupe-british-columbia-canada-attachment.pdf",
+                "directusId": "e525f73e-5b98-49bd-afaa-06b0f8a6f081"
+              }
+            ],
+            "screenshots": [
+              {
+                "fileName": "pouce-coupe-british-columbia-canada-screenshot.png",
+                "directusId": "4e480076-a768-4eee-8649-66df468267db"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
   "Poughkeepsie, New York, United States": {
     "add_max": [
       {
@@ -187636,6 +189499,121 @@
               {
                 "fileName": "prince-georges-county-maryland-united-states-remove-min-screenshot3.png",
                 "directusId": "be714770-9fb9-4dc5-80c2-f18f565aa3ad"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "Prince George, British Columbia, Canada": {
+    "rm_min": [
+      {
+        "summary": "Residential uses in the UNBC Bus Exchange Transit-Oriented Area, and all uses in the downtown are exempt from parking mandates.",
+        "reporter": "Samuel Deetz",
+        "requirements": ["by right"],
+        "citations": [
+          {
+            "id": 17291,
+            "description": "Prince George Zoning Bylaw",
+            "url": "https://www.princegeorge.ca/sites/default/files/2026-07/BL7850_CONSOLIDATED_2026-07-06.pdf",
+            "notes": "7.1.5;\nTable 7.4 Note;\nPages 82, 91",
+            "attachments": [
+              {
+                "fileName": "prince-george-british-columbia-canada-citation1-attachment.pdf",
+                "directusId": "f7fab77a-7dc5-4504-b9bf-2e2a64f0647c"
+              }
+            ],
+            "screenshots": [
+              {
+                "fileName": "prince-george-british-columbia-canada-citation1-screenshot1.png",
+                "directusId": "baafb15d-8b8d-4560-81e2-14717ae5f6c2"
+              },
+              {
+                "fileName": "prince-george-british-columbia-canada-citation1-screenshot2.png",
+                "directusId": "9265f374-36a0-488b-ad32-423a3bf13da4"
+              },
+              {
+                "fileName": "prince-george-british-columbia-canada-citation1-screenshot3.png",
+                "directusId": "7cae17bf-b670-4102-906c-01ff1b3aaa1a"
+              }
+            ]
+          },
+          {
+            "id": 17292,
+            "description": "Prince George Schedule A",
+            "url": "https://www.princegeorge.ca/sites/default/files/2023-04/PGDOCS-307904-v1-BL1996_BYLAW-ADOPTED.pdf",
+            "notes": "Page 5",
+            "attachments": [
+              {
+                "fileName": "prince-george-british-columbia-canada-citation2-attachment.pdf",
+                "directusId": "a0d497a1-0dd4-4988-9c3c-26887fc6997f"
+              }
+            ],
+            "screenshots": [
+              {
+                "fileName": "prince-george-british-columbia-canada-citation2-screenshot.png",
+                "directusId": "a0fb5665-fd70-454b-98a3-48bc776f131a"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "Prince Rupert, British Columbia, Canada": {
+    "reduce_min": [
+      {
+        "summary": "A fee in lieu of parking may be provided in the Downtown Core Areas, excluding new office, commercial, and mixed-use buildings in the Parking Specified Area.",
+        "reporter": "Samuel Deetz",
+        "requirements": ["in-lieu fees"],
+        "citations": [
+          {
+            "id": 17340,
+            "description": "Prince Rupert Zoning Bylaw",
+            "url": "https://www.princerupert.ca/media/1493",
+            "notes": "10.2.3(c)\nPage 36",
+            "attachments": [
+              {
+                "fileName": "prince-rupert-british-columbia-canada-reduce-min-attachment.pdf",
+                "directusId": "f3549cd8-6448-4570-bbc0-0d41a42e3f35"
+              }
+            ],
+            "screenshots": [
+              {
+                "fileName": "prince-rupert-british-columbia-canada-reduce-min-screenshot.png",
+                "directusId": "7089ac40-72cf-4d43-9d57-de211f347370"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "rm_min": [
+      {
+        "summary": "No off-street parking space requirement applies to new commercial, office, or mixed-use buildings in the Parking Specified Area. However, existing parking must remain.",
+        "reporter": "Samuel Deetz",
+        "requirements": ["by right", "other"],
+        "citations": [
+          {
+            "id": 17341,
+            "description": "Prince Rupert Zoning Bylaw",
+            "url": "https://www.princerupert.ca/media/1493",
+            "notes": "10.2.2E(a)\nPages 36, 47",
+            "attachments": [
+              {
+                "fileName": "prince-rupert-british-columbia-canada-remove-min-attachment.pdf",
+                "directusId": "5d0e9f2b-8514-4019-973e-af218b482f90"
+              }
+            ],
+            "screenshots": [
+              {
+                "fileName": "prince-rupert-british-columbia-canada-remove-min-screenshot1.png",
+                "directusId": "27ece58f-918e-41f9-adc1-1e42c4fa5307"
+              },
+              {
+                "fileName": "prince-rupert-british-columbia-canada-remove-min-screenshot2.png",
+                "directusId": "6db38953-14e2-44fa-9e3b-2122de92c046"
               }
             ]
           }
@@ -188805,6 +190783,62 @@
       }
     ]
   },
+  "Qualicum Beach, British Columbia, Canada": {
+    "reduce_min": [
+      {
+        "summary": "Within the Village neighbourhood, parking requirements are reduced and may be further reduced through EV chargers or bike parking.",
+        "reporter": "Samuel Deetz",
+        "requirements": ["bike parking", "by right", "other"],
+        "citations": [
+          {
+            "id": 17392,
+            "description": "Qualicum Beach Zoning Bylaw",
+            "url": "https://qualicumbeach.com/preview/?file_path=Bylaws/Zoning%20Bylaw%2C%20Bylaw%20No.%20900%2C%202024/Zoning%20Bylaw%2C%20Bylaw%20No.%20900%2C%202024%20(Combined%20Version).pdf",
+            "notes": "SCHEDULE ‘3B’ 2.\nPage 164",
+            "attachments": [
+              {
+                "fileName": "qualicum-beach-british-columbia-canada-reduce-min-attachment.pdf",
+                "directusId": "fa3b4ccc-627b-4b93-957d-5c109d4b7086"
+              }
+            ],
+            "screenshots": [
+              {
+                "fileName": "qualicum-beach-british-columbia-canada-reduce-min-screenshot.png",
+                "directusId": "f21a80fd-e940-4082-94cf-1289081badce"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "rm_min": [
+      {
+        "summary": "Uses that operate only between the hours of 6pm and 6am or only on Sundays are not required to provide parking.",
+        "reporter": "Samuel Deetz",
+        "requirements": ["other"],
+        "citations": [
+          {
+            "id": 17391,
+            "description": "Qualicum Beach Zoning Bylaw",
+            "url": "https://qualicumbeach.com/preview/?file_path=Bylaws/Zoning%20Bylaw%2C%20Bylaw%20No.%20900%2C%202024/Zoning%20Bylaw%2C%20Bylaw%20No.%20900%2C%202024%20(Combined%20Version).pdf",
+            "notes": "2.6\nPage 161",
+            "attachments": [
+              {
+                "fileName": "qualicum-beach-british-columbia-canada-remove-min-attachment.pdf",
+                "directusId": "c33378f2-feec-41ac-9fdc-a20dce82d992"
+              }
+            ],
+            "screenshots": [
+              {
+                "fileName": "qualicum-beach-british-columbia-canada-remove-min-screenshot.png",
+                "directusId": "720b02ee-28aa-40c8-a53a-566117d529ee"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
   "Queen Creek, Arizona, United States": {
     "add_max": [
       {
@@ -189184,6 +191218,66 @@
               {
                 "fileName": "radford-virginia-united-states-screenshot.png",
                 "directusId": "e61a017b-05ea-4820-a75e-33c71ab43a52"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "Radium Hot Springs, British Columbia, Canada": {
+    "reduce_min": [
+      {
+        "summary": "On-street parking may count towards parking requirements for nonresidential, non-lodging uses in the C1 (Main Street Mixed Use), and C2 (Neighbourhood Mixed Use) zones. Nonresidential, non-lodging uses village-wide may provide a fee in lieu of parking.",
+        "reporter": "Samuel Deetz",
+        "requirements": ["in-lieu fees", "other"],
+        "citations": [
+          {
+            "id": 17355,
+            "description": "Radium Hot Springs Zoning Bylaw",
+            "url": "https://radiumhotsprings.civicweb.net/filepro/documents/8505/?preview=21642",
+            "notes": "5.4.4;\n5.5;\nPages 27-28",
+            "attachments": [
+              {
+                "fileName": "radium-hot-springs-british-columbia-canada-reduce-min-attachment.pdf",
+                "directusId": "28a4f227-d593-453b-b6bd-9b1fe6c78ace"
+              }
+            ],
+            "screenshots": [
+              {
+                "fileName": "radium-hot-springs-british-columbia-canada-reduce-min-screenshot1.png",
+                "directusId": "34f0cfc6-0b45-4b2a-8cfe-8ed2cbf16d86"
+              },
+              {
+                "fileName": "radium-hot-springs-british-columbia-canada-reduce-min-screenshot2.png",
+                "directusId": "6603d0d2-7738-4219-9837-d6db96ac94dd"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "rm_min": [
+      {
+        "summary": "No parking is required for restaurants with six or fewer seats.",
+        "reporter": "Samuel Deetz",
+        "requirements": ["by right", "size of project"],
+        "citations": [
+          {
+            "id": 17354,
+            "description": "Radium Hot Springs Zoning Bylaw",
+            "url": "https://radiumhotsprings.civicweb.net/filepro/documents/8505/?preview=21642",
+            "notes": "5.3.1.c)\nPage 25",
+            "attachments": [
+              {
+                "fileName": "radium-hot-springs-british-columbia-canada-remove-min-attachment.pdf",
+                "directusId": "ca208932-924c-4a75-b5bd-0c065b3589db"
+              }
+            ],
+            "screenshots": [
+              {
+                "fileName": "radium-hot-springs-british-columbia-canada-remove-min-screenshot.png",
+                "directusId": "ed89d7d6-7d26-4712-87ab-2a2fe96a4576"
               }
             ]
           }
@@ -189889,6 +191983,35 @@
               {
                 "fileName": "rapid-city-south-dakota-united-states-screenshot.png",
                 "directusId": "8a09fe8a-4a27-4543-8d1d-f36e43d221f6"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "Rappahannock County, Virginia, United States": {
+    "add_max": [
+      {
+        "summary": "Parking maximums are set at 120% of the minimums.",
+        "reporter": "Samuel Deetz",
+        "requirements": ["by right"],
+        "citations": [
+          {
+            "id": 17315,
+            "description": "Rappahannock County Zoning Code",
+            "url": "https://ecode360.com/8809020#8809024",
+            "notes": "§ 170-78R",
+            "attachments": [
+              {
+                "fileName": "rappahannock-county-virginia-united-states-attachment.pdf",
+                "directusId": "b866bede-293d-44a0-a3ac-ff0e92e17993"
+              }
+            ],
+            "screenshots": [
+              {
+                "fileName": "rappahannock-county-virginia-united-states-screenshot.png",
+                "directusId": "89d139cc-84e2-467e-b1ab-e36970a4e8dd"
               }
             ]
           }
@@ -191738,6 +193861,71 @@
               {
                 "fileName": "republic-missouri-united-states-screenshot.png",
                 "directusId": "869489ca-4907-4f50-9e54-a495e076deeb"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "Revelstoke, British Columbia, Canada": {
+    "reduce_min": [
+      {
+        "summary": "Parking requirements are reduced for tourist accommodation uses in the MU-1 and MU-2 downtown zones. Citywide, a fee in lieu of parking may be provided and apartments have reduced requirements near transit or where bike parking is provided.",
+        "reporter": "Samuel Deetz",
+        "requirements": [
+          "bike parking",
+          "by right",
+          "frequent transit",
+          "in-lieu fees"
+        ],
+        "citations": [
+          {
+            "id": 17368,
+            "description": "Revelstoke Zoning Bylaw",
+            "url": "https://revelstoke.civicweb.net/filepro/documents/1049/?expanded=238706,238710&preview=193929",
+            "notes": "11.2(31);\n11.5;\nPages 267, 272",
+            "attachments": [
+              {
+                "fileName": "revelstoke-british-columbia-canada-reduce-min-attachment.pdf",
+                "directusId": "3fdd8cbb-64b4-49a3-9e91-11a3c1928601"
+              }
+            ],
+            "screenshots": [
+              {
+                "fileName": "revelstoke-british-columbia-canada-reduce-min-screenshot1.png",
+                "directusId": "9198a2f9-5b7e-4c8b-94f3-69bfbee9d85e"
+              },
+              {
+                "fileName": "revelstoke-british-columbia-canada-reduce-min-screenshot2.png",
+                "directusId": "e6306c63-b5a5-47cd-858a-55dc618daf00"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "rm_min": [
+      {
+        "summary": "Accessory dwelling units under 29.0 sq. m are exempt from parking mandates.",
+        "reporter": "Samuel Deetz",
+        "requirements": ["accessory dwelling units", "size of project"],
+        "citations": [
+          {
+            "id": 17367,
+            "description": "Revelstoke Zoning Bylaw",
+            "url": "https://revelstoke.civicweb.net/filepro/documents/1049/?expanded=238706,238710&preview=193929",
+            "notes": "11.2(4)\nPage 264",
+            "attachments": [
+              {
+                "fileName": "revelstoke-british-columbia-canada-remove-min-attachment.pdf",
+                "directusId": "94bb89eb-8dac-406d-a572-a49f3775a09e"
+              }
+            ],
+            "screenshots": [
+              {
+                "fileName": "revelstoke-british-columbia-canada-remove-min-screenshot.png",
+                "directusId": "41130e95-cd05-43fa-9e5c-5ae7a0618125"
               }
             ]
           }
@@ -198142,6 +200330,66 @@
       }
     ]
   },
+  "Rossland, British Columbia, Canada": {
+    "add_max": [
+      {
+        "summary": "Parking maximums are set at 120% of the minimums.",
+        "reporter": "Samuel Deetz",
+        "requirements": ["by right"],
+        "citations": [
+          {
+            "id": 17299,
+            "description": "Rossland Zoning Bylaw",
+            "url": "https://rossland.civicweb.net/document/55924/",
+            "notes": "5.3.5.c)\nPage 57",
+            "attachments": [
+              {
+                "fileName": "rossland-british-columbia-canada-add-max-attachment.pdf",
+                "directusId": "84e60193-dcf6-4e05-b4a0-dd0b25c259db"
+              }
+            ],
+            "screenshots": [
+              {
+                "fileName": "rossland-british-columbia-canada-add-max-screenshot.png",
+                "directusId": "4ee48920-e157-421b-8273-b824075a15e5"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "reduce_min": [
+      {
+        "summary": "On-street parking may count towards parking requirements in the C-1 Commercial Downtown Core District. A fee in lieu of parking may be provided in most districts.",
+        "reporter": "Samuel Deetz",
+        "requirements": ["in-lieu fees", "other"],
+        "citations": [
+          {
+            "id": 17298,
+            "description": "Rossland Zoning Bylaw",
+            "url": "https://rossland.civicweb.net/document/55924/",
+            "notes": "5.3.5.b);\n5.8;\nPages 57, 60",
+            "attachments": [
+              {
+                "fileName": "rossland-british-columbia-canada-reduce-min-attachment.pdf",
+                "directusId": "d21dc667-5c71-4a11-bba8-5e9ecf2fbc36"
+              }
+            ],
+            "screenshots": [
+              {
+                "fileName": "rossland-british-columbia-canada-reduce-min-screenshot1.png",
+                "directusId": "cd6a485d-fb6a-4f8b-b77b-82cdeba2731c"
+              },
+              {
+                "fileName": "rossland-british-columbia-canada-reduce-min-screenshot2.png",
+                "directusId": "0037ae56-7641-485a-ab64-097a8bc90ee0"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
   "Rossville, Georgia, United States": {
     "reduce_min": [
       {
@@ -198272,7 +200520,7 @@
           {
             "id": 15496,
             "description": "Rosthern Zoning Bylaw",
-            "url": "https://www.rosthern.com/Home/DownloadDocument?docId=0a774627-a16d-4bc8-b2ae-4e021be28e88",
+            "url": "https://rosthern.com/uploads/dm/66379/Zoning_Bylaw_200808",
             "notes": "4.7.2\nPage 46",
             "attachments": [
               {
@@ -198299,7 +200547,7 @@
           {
             "id": 15497,
             "description": "Rosthern Zoning Bylaw",
-            "url": "https://www.rosthern.com/Home/DownloadDocument?docId=0a774627-a16d-4bc8-b2ae-4e021be28e88",
+            "url": "https://rosthern.com/uploads/dm/66379/Zoning_Bylaw_200808",
             "notes": "TABLE 4-2;\nTABLE 4-3;\nPages 53-58",
             "attachments": [
               {
@@ -201370,6 +203618,90 @@
       }
     ]
   },
+  "Salmo, British Columbia, Canada": {
+    "rm_min": [
+      {
+        "summary": "Parking mandates only apply in residential zones or to bed and breakfasts.",
+        "reporter": "Samuel Deetz",
+        "requirements": ["by right"],
+        "citations": [
+          {
+            "id": 17360,
+            "description": "Salmo Zoning Bylaw",
+            "url": "https://salmo.ca/wp-content/uploads/2024/09/489-Zoning-Bylaw-Consolidated-by-540-633-698-708-754-and-757.pdf",
+            "notes": null,
+            "attachments": [
+              {
+                "fileName": "salmo-british-columbia-canada-attachment.pdf",
+                "directusId": "767afd35-4730-4e4b-90e1-2622001053a2"
+              }
+            ],
+            "screenshots": []
+          }
+        ]
+      }
+    ]
+  },
+  "Salmon Arm, British Columbia, Canada": {
+    "reduce_min": [
+      {
+        "summary": "Within the downtown “Designated Parking Area”, residential parking requirements are reduced and a fee in lieu of parking may be provided.",
+        "reporter": "Samuel Deetz",
+        "requirements": ["by right", "in-lieu fees"],
+        "citations": [
+          {
+            "id": 17337,
+            "description": "Salmon Arm Zoning Bylaw",
+            "url": "https://salmonarm.ca/DocumentCenter/View/74/Zoning-Bylaw-No-2303?bidId=",
+            "notes": "APPENDIX I.1;\nAPPENDIX I.9;\nPages 160, 163",
+            "attachments": [
+              {
+                "fileName": "salmon-arm-british-columbia-canada-reduce-min-attachment.pdf",
+                "directusId": "d0cbf307-6564-4270-9018-b766dbba03ab"
+              }
+            ],
+            "screenshots": [
+              {
+                "fileName": "salmon-arm-british-columbia-canada-reduce-min-screenshot1.png",
+                "directusId": "c06f962d-f396-438d-aeb8-2591308355a8"
+              },
+              {
+                "fileName": "salmon-arm-british-columbia-canada-reduce-min-screenshot2.png",
+                "directusId": "529a9a27-4fff-4b09-a7a0-37817e1b6fb8"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "rm_min": [
+      {
+        "summary": "That first 1,858 square metres of commercial uses within the downtown “Designated Parking Area” are exempted from providing off-street parking.",
+        "reporter": "Samuel Deetz",
+        "requirements": ["by right", "size of project"],
+        "citations": [
+          {
+            "id": 17336,
+            "description": "Salmon Arm Zoning Bylaw",
+            "url": "https://salmonarm.ca/DocumentCenter/View/74/Zoning-Bylaw-No-2303?bidId=",
+            "notes": "APPENDIX I.9\nPage 163",
+            "attachments": [
+              {
+                "fileName": "salmon-arm-british-columbia-canada-remove-min-attachment.pdf",
+                "directusId": "61fcf80a-1aa3-4d3a-b9f2-bb30b2b2b7ae"
+              }
+            ],
+            "screenshots": [
+              {
+                "fileName": "salmon-arm-british-columbia-canada-remove-min-screenshot.png",
+                "directusId": "c2e136f3-31f6-41c9-a767-1df4732a4c88"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
   "Salt Lake City, Utah, United States": {
     "add_max": [
       {
@@ -203042,6 +205374,35 @@
               {
                 "fileName": "santa-clarita-california-united-states-screenshot.png",
                 "directusId": "c77100b0-4188-403c-b578-9f2e90999d16"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "Santa Cruz County, Arizona, United States": {
+    "rm_min": [
+      {
+        "summary": "Accessory dwelling units are exempt from parking mandates.",
+        "reporter": "Samuel Deetz",
+        "requirements": ["accessory dwelling units", "by right"],
+        "citations": [
+          {
+            "id": 17323,
+            "description": "Santa Cruz County Zoning and Development Code",
+            "url": "https://www.santacruzcountyaz.gov/DocumentCenter/View/14126/Santa-Cruz-County-Zoning-and-Development-Code",
+            "notes": "SEC. 1101\nPage 106",
+            "attachments": [
+              {
+                "fileName": "santa-cruz-county-arizona-united-states-attachment.pdf",
+                "directusId": "97eb9192-ec8c-49df-afc6-4040afbee915"
+              }
+            ],
+            "screenshots": [
+              {
+                "fileName": "santa-cruz-county-arizona-united-states-screenshot.png",
+                "directusId": "71cb39dc-974e-4fe8-9f5b-d37b8d94c5cf"
               }
             ]
           }
@@ -204932,9 +207293,14 @@
           {
             "id": 10725,
             "description": "Schuyler Land Development Ordinance",
-            "url": null,
+            "url": "https://www.schuylernebraska.net/media/11",
             "notes": "ARTICLE NINE OFF-STREET PARKING 11-902 General Applications B. Exemptions\nPage 124 of pdf, page 9-1 of original document",
-            "attachments": [],
+            "attachments": [
+              {
+                "fileName": "schuyler-nebraska-united-states-attachment.pdf",
+                "directusId": "ddfcdd66-05ce-46be-b6b2-08f6d79f7bd7"
+              }
+            ],
             "screenshots": [
               {
                 "fileName": "schuyler-nebraska-united-states-screenshot.png",
@@ -206066,6 +208432,43 @@
               {
                 "fileName": "sebewaing-michigan-united-states-screenshot4.png",
                 "directusId": "fab11660-f1e1-4b78-8f57-a9ef3eb6e4a2"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "Sechelt, British Columbia, Canada": {
+    "reduce_min": [
+      {
+        "summary": "Apartments in the Downtown area have reduced parking requirements and changes of use are exempt.",
+        "reporter": "Samuel Deetz",
+        "requirements": ["by right", "other"],
+        "citations": [
+          {
+            "id": 17373,
+            "description": "Sechelt Zoning Bylaw",
+            "url": "https://www.sechelt.ca/media/frrcd5c5/580-2022-zoning-bylaw.pdf",
+            "notes": "3.13.1;\n3.14;\nPages 98, 100-101",
+            "attachments": [
+              {
+                "fileName": "sechelt-british-columbia-canada-attachment.pdf",
+                "directusId": "1054e74f-b380-4934-8b3e-f398412d4ec0"
+              }
+            ],
+            "screenshots": [
+              {
+                "fileName": "sechelt-british-columbia-canada-screenshot1.png",
+                "directusId": "5b5ccaa5-2b50-4afb-9fc0-ca22040a32e8"
+              },
+              {
+                "fileName": "sechelt-british-columbia-canada-screenshot2.png",
+                "directusId": "713fdae1-2be6-4638-896e-b7209767693d"
+              },
+              {
+                "fileName": "sechelt-british-columbia-canada-screenshot3.png",
+                "directusId": "968925a3-44c0-44f9-a868-044206399b3d"
               }
             ]
           }
@@ -209693,6 +212096,72 @@
       }
     ]
   },
+  "Sicamous, British Columbia, Canada": {
+    "reduce_min": [
+      {
+        "summary": "A fee in lieu of parking may be provided for commercial uses in commercial zones.",
+        "reporter": "Samuel Deetz",
+        "requirements": ["in-lieu fees"],
+        "citations": [
+          {
+            "id": 17332,
+            "description": "Sicamous Zoning Bylaw",
+            "url": "https://sicamous.civicweb.net/filepro/documents/819/?preview=125687",
+            "notes": "D.1.7\nPage 150",
+            "attachments": [
+              {
+                "fileName": "sicamous-british-columbia-canada-attachment.pdf",
+                "directusId": "29ac9606-4aca-4fb0-b208-0a5a4f89faef"
+              }
+            ],
+            "screenshots": [
+              {
+                "fileName": "sicamous-british-columbia-canada-screenshot.png",
+                "directusId": "95594ed8-1444-4a16-b75d-0feba88c18d0"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "Sidney, British Columbia, Canada": {
+    "reduce_min": [
+      {
+        "summary": "A fee in lieu of parking may be provided in the downtown or Industrial (M1) areas. Commercial and industrial changes of use are exempt from parking mandates.",
+        "reporter": "Samuel Deetz",
+        "requirements": ["in-lieu fees", "other"],
+        "citations": [
+          {
+            "id": 17374,
+            "description": "Sidney Zoning Bylaw",
+            "url": "https://www.sidney.ca/wp-content/uploads/2140-Off-Street-Parking-Loading.pdf",
+            "notes": "4.6;\n4.11.1;\nPages 4-5, 10-11",
+            "attachments": [
+              {
+                "fileName": "sidney-british-columbia-canada-attachment.pdf",
+                "directusId": "449e41cc-d19b-4b15-b63f-8f1aeaa81e29"
+              }
+            ],
+            "screenshots": [
+              {
+                "fileName": "sidney-british-columbia-canada-screenshot1.png",
+                "directusId": "17399414-708b-43f3-b1a8-49d1f5ffb837"
+              },
+              {
+                "fileName": "sidney-british-columbia-canada-screenshot2.png",
+                "directusId": "2bf51486-cb5c-431d-b43a-3dd3e2565be3"
+              },
+              {
+                "fileName": "sidney-british-columbia-canada-screenshot3.png",
+                "directusId": "3a394d39-2de4-4b20-9e44-0133b4a82c3a"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
   "Sidney, Iowa, United States": {
     "rm_min": [
       {
@@ -211197,6 +213666,35 @@
       }
     ]
   },
+  "Slocan, British Columbia, Canada": {
+    "reduce_min": [
+      {
+        "summary": "On-street parking may count towards parking requirements for small uses in the Core Commercial Zone, excluding residential and lodging uses.",
+        "reporter": "Samuel Deetz",
+        "requirements": ["other", "size of project"],
+        "citations": [
+          {
+            "id": 17308,
+            "description": "Slocan Zoning Bylaw",
+            "url": "https://www.slocancity.com/wp-content/uploads/2025/10/633-Zoning-Bylaw-2013-CONSOLIDATED-Updated-Feb.-10-25.pdf",
+            "notes": "4.21(1)d)\nPage 17",
+            "attachments": [
+              {
+                "fileName": "slocan-british-columbia-canada-attachment.pdf",
+                "directusId": "0b60a0fd-afa9-4a2c-938e-b0b12ec43f55"
+              }
+            ],
+            "screenshots": [
+              {
+                "fileName": "slocan-british-columbia-canada-screenshot.png",
+                "directusId": "741826ea-6c45-4a89-84b3-0a0000af0ed5"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
   "Slocomb, Alabama, United States": {
     "rm_min": [
       {
@@ -211248,6 +213746,62 @@
               {
                 "fileName": "smith-center-kansas-united-states-screenshot.png",
                 "directusId": "8ec09fe3-8c29-43dc-b1d9-777e20246e1b"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "Smithers, British Columbia, Canada": {
+    "reduce_min": [
+      {
+        "summary": "A fee in lieu of parking may be provided in the C-1 Town Centre Commercial zone.",
+        "reporter": "Samuel Deetz",
+        "requirements": ["in-lieu fees"],
+        "citations": [
+          {
+            "id": 17359,
+            "description": "Smithers Zoning Bylaw",
+            "url": "https://smithers.civicweb.net/filepro/documents/74636/?preview=265053",
+            "notes": "2.10.8\nPage 30",
+            "attachments": [
+              {
+                "fileName": "smithers-british-columbia-canada-reduce-min-attachment.pdf",
+                "directusId": "a1a61b6e-5f5d-423b-862a-9dd5e9cac77d"
+              }
+            ],
+            "screenshots": [
+              {
+                "fileName": "smithers-british-columbia-canada-reduce-min-screenshot.png",
+                "directusId": "da06b594-66ce-4e95-9bf3-b31bafb0eb0a"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "rm_min": [
+      {
+        "summary": "Most uses, other than lodging, are exempt from parking mandates in the C-1 and C-1A zones, between Highway 16 and Railway Avenue.",
+        "reporter": "Samuel Deetz",
+        "requirements": ["by right"],
+        "citations": [
+          {
+            "id": 17358,
+            "description": "Smithers Zoning Bylaw",
+            "url": "https://smithers.civicweb.net/filepro/documents/74636/?preview=265053",
+            "notes": "2.10.1(b);\n2.10.1(c);\nPages 24-25",
+            "attachments": [
+              {
+                "fileName": "smithers-british-columbia-canada-remove-min-attachment.pdf",
+                "directusId": "119d331e-63fc-44dd-82a2-e90581fc98f1"
+              }
+            ],
+            "screenshots": [
+              {
+                "fileName": "smithers-british-columbia-canada-remove-min-screenshot.png",
+                "directusId": "b242967e-0909-4a29-99fa-cd7d447ad41f"
               }
             ]
           }
@@ -212653,6 +215207,66 @@
               {
                 "fileName": "somonauk-illinois-united-states-screenshot2.png",
                 "directusId": "dd73195f-db96-4044-ad08-15acebd3d65c"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "Sooke, British Columbia, Canada": {
+    "reduce_min": [
+      {
+        "summary": "Within the Town Centre area, parking requirements are reduced by 50%. A fee in lieu of parking may be provided for new uses outside the Town Centre area, and for changes of use citywide.",
+        "reporter": "Samuel Deetz",
+        "requirements": ["by right", "in-lieu fees"],
+        "citations": [
+          {
+            "id": 17338,
+            "description": "Sooke Zoning Bylaw",
+            "url": "https://www.sooke.ca/media/4amdk3cw/bylaw-600-consolidation-to-2026-04-16.pdf",
+            "notes": "4.5.h);\n4.8;\nPages 56, 59",
+            "attachments": [
+              {
+                "fileName": "sooke-british-columbia-canada-reduce-min-attachment.pdf",
+                "directusId": "4ed1836d-ab0f-40f4-a542-b6fba3257e71"
+              }
+            ],
+            "screenshots": [
+              {
+                "fileName": "sooke-british-columbia-canada-reduce-min-screenshot1.png",
+                "directusId": "d4a00ff8-b254-4e05-a9ff-542e0a5dfcc2"
+              },
+              {
+                "fileName": "sooke-british-columbia-canada-reduce-min-screenshot2.png",
+                "directusId": "b60acbb5-aabf-4692-a3a7-df9de50e430c"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "rm_min": [
+      {
+        "summary": "Uses located within the Town Centre, operating only outside the hours of 6 am to 6 pm need not provide off-street parking spaces provided that the lot on which the use is located is within 100m of a parking lot containing sufficient parking spaces to satisfy the parking space requirement that applies to the use.",
+        "reporter": "Samuel Deetz",
+        "requirements": ["other"],
+        "citations": [
+          {
+            "id": 17339,
+            "description": "Sooke Zoning Bylaw",
+            "url": "https://www.sooke.ca/media/4amdk3cw/bylaw-600-consolidation-to-2026-04-16.pdf",
+            "notes": "4.5.i)\nPage 56",
+            "attachments": [
+              {
+                "fileName": "sooke-british-columbia-canada-remove-min-attachment.pdf",
+                "directusId": "28714839-ad28-420a-91e0-deec983c1044"
+              }
+            ],
+            "screenshots": [
+              {
+                "fileName": "sooke-british-columbia-canada-remove-min-screenshot.png",
+                "directusId": "8cb9cf32-3aca-439c-ad09-2e79f3eb824e"
               }
             ]
           }
@@ -214851,6 +217465,43 @@
       }
     ]
   },
+  "Spallumcheen, British Columbia, Canada": {
+    "reduce_min": [
+      {
+        "summary": "Parking requirements were reduced for restaurants, golf courses, and other commercial uses in 2024.",
+        "reporter": "Samuel Deetz",
+        "requirements": ["by right"],
+        "citations": [
+          {
+            "id": 17365,
+            "description": "Spallumcheen Zoning Bylaw",
+            "url": "https://spallumcheen.civicweb.net/filepro/documents/10/?preview=34972",
+            "notes": "1101.3.\nPages 162-164",
+            "attachments": [
+              {
+                "fileName": "spallumcheen-british-columbia-canada-attachment.pdf",
+                "directusId": "301bd7ef-1d1e-43db-b24c-0cb39291bd8d"
+              }
+            ],
+            "screenshots": [
+              {
+                "fileName": "spallumcheen-british-columbia-canada-screenshot1.png",
+                "directusId": "bf1598cb-4dd8-43f1-810b-8aab3ecc8323"
+              },
+              {
+                "fileName": "spallumcheen-british-columbia-canada-screenshot2.png",
+                "directusId": "fa0c9d87-a612-4f24-adca-e785819b31b7"
+              },
+              {
+                "fileName": "spallumcheen-british-columbia-canada-screenshot3.png",
+                "directusId": "a43745eb-25b9-4e66-909f-3c772b3b2b39"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
   "Spanish Fork, Utah, United States": {
     "rm_min": [
       {
@@ -216770,6 +219421,70 @@
       }
     ]
   },
+  "Squamish, British Columbia, Canada": {
+    "add_max": [
+      {
+        "summary": "Parking maximums apply to residential, commercial and industrial uses.",
+        "reporter": "Samuel Deetz",
+        "requirements": ["by right"],
+        "citations": [
+          {
+            "id": 17384,
+            "description": "Squamish Zoning Bylaw",
+            "url": "https://squamish.civicweb.net/filepro/documents/68132/?preview=269651",
+            "notes": "41.12\nPages 603-604",
+            "attachments": [
+              {
+                "fileName": "squamish-british-columbia-canada-add-max-attachment.pdf",
+                "directusId": "2ba69b08-5a8c-463e-8565-cfcafc3d28e3"
+              }
+            ],
+            "screenshots": [
+              {
+                "fileName": "squamish-british-columbia-canada-add-max-screenshot.png",
+                "directusId": "c786c719-57a6-4554-b3eb-3a9585c71567"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "reduce_min": [
+      {
+        "summary": "A change of use in downtown Squamish or the Tantalus Road area is exempt from parking mandates. A fee in lieu of parking may be provided for uses in downtown Squamish or water-access lots.",
+        "reporter": "Samuel Deetz",
+        "requirements": ["in-lieu fees", "other"],
+        "citations": [
+          {
+            "id": 17383,
+            "description": "Squamish Zoning Bylaw",
+            "url": "https://squamish.civicweb.net/filepro/documents/68132/?preview=269651",
+            "notes": "41.1(b);\n41.2(c);\n41.2(e);\n41.8;\nPages 585-586, 596",
+            "attachments": [
+              {
+                "fileName": "squamish-british-columbia-canada-reduce-min-attachment.pdf",
+                "directusId": "d11adad2-c943-4a98-8e06-fc4e1013905f"
+              }
+            ],
+            "screenshots": [
+              {
+                "fileName": "squamish-british-columbia-canada-reduce-min-screenshot1.png",
+                "directusId": "36fcbb47-bb45-4028-aab9-66d015456f2c"
+              },
+              {
+                "fileName": "squamish-british-columbia-canada-reduce-min-screenshot2.png",
+                "directusId": "fb3ddace-d394-4d1d-8004-cf2ce026ef0b"
+              },
+              {
+                "fileName": "squamish-british-columbia-canada-reduce-min-screenshot3.png",
+                "directusId": "48fa3b7b-8cc2-41ca-899b-f0a2e8feda5b"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
   "St-Pierre-Jolys, Manitoba, Canada": {
     "rm_min": [
       {
@@ -216883,6 +219598,35 @@
               {
                 "fileName": "st-albert-alberta-canada-screenshot2.png",
                 "directusId": "5f7a0e54-8ba2-4743-8e43-8d02fcc035f0"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "St. Andrews Rural Municipality, Manitoba, Canada": {
+    "add_max": [
+      {
+        "summary": "Parking maximums apply to single-family and two-family dwellings.",
+        "reporter": "Samuel Deetz",
+        "requirements": ["by right"],
+        "citations": [
+          {
+            "id": 17287,
+            "description": "St. Andrews Rural Municipality Zoning Bylaw",
+            "url": "https://www.redriverplanning.com/wcm-docs/zoning_by_laws/St._Andrews_Zoning_By-law_Consolidation_November_14_2025__20251126155824.pdf",
+            "notes": "Table 5\nPage 39",
+            "attachments": [
+              {
+                "fileName": "st-andrews-rural-municipality-manitoba-canada-attachment.pdf",
+                "directusId": "4faab00d-1e6f-4a40-8ca4-d0157e6481bb"
+              }
+            ],
+            "screenshots": [
+              {
+                "fileName": "st-andrews-rural-municipality-manitoba-canada-screenshot.png",
+                "directusId": "1e99d43d-d374-4356-9ab4-9699854bd451"
               }
             ]
           }
@@ -217520,6 +220264,35 @@
               {
                 "fileName": "st-claire-shores-michigan-united-states-remove-min-screenshot.png",
                 "directusId": "24afc7fd-199c-4dc9-ba9e-3f7b709b907d"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "St. Clements Rural Municipality, Manitoba, Canada": {
+    "add_max": [
+      {
+        "summary": "Parking maximums apply to single-family and two-family residences.",
+        "reporter": "Samuel Deetz",
+        "requirements": ["by right"],
+        "citations": [
+          {
+            "id": 17288,
+            "description": "St. Clements Rural Municipality Zoning Bylaw",
+            "url": "https://www.redriverplanning.com/wcm-docs/zoning_by_laws/ZBL_5_2002_-_Consolidated_Version_UPDATED_MARCH2026_20260309115628.pdf",
+            "notes": "Table 5\nPage 37",
+            "attachments": [
+              {
+                "fileName": "st-clements-rural-municipality-manitoba-canada-attachment.pdf",
+                "directusId": "284b91e5-48a5-4fcf-9fe4-a8a35629214f"
+              }
+            ],
+            "screenshots": [
+              {
+                "fileName": "st-clements-rural-municipality-manitoba-canada-screenshot.png",
+                "directusId": "8a1580da-fe04-49ca-911d-e1f80081aa27"
               }
             ]
           }
@@ -220576,14 +223349,39 @@
             "notes": "14.10.3.C.",
             "attachments": [
               {
-                "fileName": "starkville-mississippi-united-states-add-max-attachment.pdf",
+                "fileName": "starkville-mississippi-united-states-add-max1-attachment.pdf",
                 "directusId": "2c3801fd-f725-45fe-8982-255675859160"
               }
             ],
             "screenshots": [
               {
-                "fileName": "starkville-mississippi-united-states-add-max-screenshot.png",
+                "fileName": "starkville-mississippi-united-states-add-max1-screenshot.png",
                 "directusId": "771fe308-a143-4975-90a5-2ab1548eeeeb"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "summary": "Institutional and commercial uses that share a parking lot with other commercial uses may not exceed their minimum parking by more than twenty-five percent (25%).",
+        "reporter": "Samuel Deetz",
+        "requirements": ["other"],
+        "citations": [
+          {
+            "id": 17326,
+            "description": "Starkville Unified Development Code",
+            "url": "https://starkville.municipalcodeonline.com/book?type=development#name=14.10.3_Calculation_Of_Required_Parking",
+            "notes": "14.10.3.C.",
+            "attachments": [
+              {
+                "fileName": "starkville-mississippi-united-states-add-max2-attachment.pdf",
+                "directusId": "1562a30e-afb8-4141-a873-46269879574f"
+              }
+            ],
+            "screenshots": [
+              {
+                "fileName": "starkville-mississippi-united-states-add-max2-screenshot.png",
+                "directusId": "34766845-a362-4dd8-9ba4-ff33938ddd58"
               }
             ]
           }
@@ -224176,6 +226974,66 @@
       }
     ]
   },
+  "Summerland, British Columbia, Canada": {
+    "reduce_min": [
+      {
+        "summary": "No additional parking is required for a change of commercial use in an existing building within the Central Business (CB1) zone and Downtown Commercial designated areas of the OCP. A fee in lieu of parking may be provided for commercial uses in the CB1 – Central Business Zone and the CT – Commercial Tourist Zone.",
+        "reporter": "Samuel Deetz",
+        "requirements": ["in-lieu fees", "other"],
+        "citations": [
+          {
+            "id": 17371,
+            "description": "Summerland Zoning Bylaw",
+            "url": "https://www.summerland.ca/docs/default-source/your-city-hall/bylaws---policies/district-bylaws/schedule-%27a%27---consolidated-to-march-3-2026e705a85cf68d6e33909cff00007e7f94.pdf?sfvrsn=ee88c6fb_0",
+            "notes": "6.1.5;\n6.4;\nPages 41, 46",
+            "attachments": [
+              {
+                "fileName": "summerland-british-columbia-canada-reduce-min-attachment.pdf",
+                "directusId": "17dd383e-1101-49f6-9cae-d72b940b04c2"
+              }
+            ],
+            "screenshots": [
+              {
+                "fileName": "summerland-british-columbia-canada-reduce-min-screenshot1.png",
+                "directusId": "127bdd6a-490b-49b9-a2e6-cee8d0d5c8a2"
+              },
+              {
+                "fileName": "summerland-british-columbia-canada-reduce-min-screenshot2.png",
+                "directusId": "e3027796-9716-428b-9fad-006c75ed8f33"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "rm_min": [
+      {
+        "summary": "Apartments in the Central Business CB1 zone are exempt from parking mandates.",
+        "reporter": "Samuel Deetz",
+        "requirements": ["by right"],
+        "citations": [
+          {
+            "id": 17372,
+            "description": "Summerland Zoning Bylaw",
+            "url": "https://www.summerland.ca/docs/default-source/your-city-hall/bylaws---policies/district-bylaws/schedule-%27a%27---consolidated-to-march-3-2026e705a85cf68d6e33909cff00007e7f94.pdf?sfvrsn=ee88c6fb_0",
+            "notes": "Table 6.1\nPage 44",
+            "attachments": [
+              {
+                "fileName": "summerland-british-columbia-canada-remove-min-attachment.pdf",
+                "directusId": "3d4384f6-faed-41c1-8ac3-04acce9714cb"
+              }
+            ],
+            "screenshots": [
+              {
+                "fileName": "summerland-british-columbia-canada-remove-min-screenshot.png",
+                "directusId": "610faa16-8520-4c48-8f5e-dfa6e9406361"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
   "Summerset, South Dakota, United States": {
     "add_max": [
       {
@@ -224619,6 +227477,35 @@
               {
                 "fileName": "sumter-south-carolina-united-states-remove-min2-screenshot.png",
                 "directusId": "29e330f2-8f44-4077-afa6-ef14465ccacc"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "Sun Peaks, British Columbia, Canada": {
+    "reduce_min": [
+      {
+        "summary": "Parking requirements are reduced for assembly uses  located within 500 metres of a Resort Visitor Parking Lot.",
+        "reporter": "Samuel Deetz",
+        "requirements": ["by right"],
+        "citations": [
+          {
+            "id": 17361,
+            "description": "Sun Peaks Zoning Bylaw",
+            "url": "https://sunpeaks.civicweb.net/filepro/documents/562/?preview=48158",
+            "notes": "TABLE 4B\nPage 38",
+            "attachments": [
+              {
+                "fileName": "sun-peaks-british-columbia-canada-attachment.pdf",
+                "directusId": "d61e91f7-c997-434f-8de1-31c517bbae76"
+              }
+            ],
+            "screenshots": [
+              {
+                "fileName": "sun-peaks-british-columbia-canada-screenshot.png",
+                "directusId": "c3f5c825-dcaa-40e9-a6f0-319ec1b844e5"
               }
             ]
           }
@@ -228031,6 +230918,62 @@
       }
     ]
   },
+  "Telkwa, British Columbia, Canada": {
+    "reduce_min": [
+      {
+        "summary": "Up to 10% of parking requirements may be satisfied by the provision of alternative transportation features in the form of one (1) car-share space or electric car charging station per ten (10) reduced parking spaces, or a public bus stop.",
+        "reporter": "Samuel Deetz",
+        "requirements": ["carshare", "frequent transit", "other"],
+        "citations": [
+          {
+            "id": 17345,
+            "description": "Telkwa Zoning Bylaw",
+            "url": "https://13721588-f9b1-4620-990b-6d30bd8bee43.filesusr.com/ugd/a93d86_9bedd68db9be4179adca3b8b55fb8789.pdf",
+            "notes": "16.1.1.2.\nPage 63",
+            "attachments": [
+              {
+                "fileName": "telkwa-british-columbia-canada-reduce-min-attachment.pdf",
+                "directusId": "a16ffcbf-a2b0-48d6-8805-86c6b7cd563c"
+              }
+            ],
+            "screenshots": [
+              {
+                "fileName": "telkwa-british-columbia-canada-reduce-min-screenshot.png",
+                "directusId": "96b36187-be30-47bd-a38d-38130a1830db"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "rm_min": [
+      {
+        "summary": "Parking mandates do not apply to uses in the C1 Downtown Commercial zone unless they are adjacent to a controlled access Highway.",
+        "reporter": "Samuel Deetz",
+        "requirements": ["by right"],
+        "citations": [
+          {
+            "id": 17344,
+            "description": "Telkwa Zoning Bylaw",
+            "url": "https://13721588-f9b1-4620-990b-6d30bd8bee43.filesusr.com/ugd/a93d86_9bedd68db9be4179adca3b8b55fb8789.pdf",
+            "notes": "16.1.1.1\nPage 63",
+            "attachments": [
+              {
+                "fileName": "telkwa-british-columbia-canada-remove-min-attachment.pdf",
+                "directusId": "e6518728-32f5-44e0-a986-8bbe58b66feb"
+              }
+            ],
+            "screenshots": [
+              {
+                "fileName": "telkwa-british-columbia-canada-remove-min-screenshot.png",
+                "directusId": "8e09fe27-d5ea-4911-9c03-1917fb471974"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
   "Temagami, Ontario, Canada": {
     "rm_min": [
       {
@@ -230840,6 +233783,43 @@
       }
     ]
   },
+  "Tofino, British Columbia, Canada": {
+    "reduce_min": [
+      {
+        "summary": "Parking requirements are reduced in the Downtown zone. Parking requirements may be reduced in the Neighbourhood Nodes, Downtown, Gateway, and Tourism Focus Development Permit Areas through bike parking or a fee in lieu.",
+        "reporter": "Samuel Deetz",
+        "requirements": ["bike parking", "by right", "in-lieu fees"],
+        "citations": [
+          {
+            "id": 17357,
+            "description": "Tofino Zoning Bylaw",
+            "url": "https://tofino.civicweb.net/document/157800/",
+            "notes": "6.3.1.;\n6.10.;\n6.11.1.;\nPages 47, 50-51",
+            "attachments": [
+              {
+                "fileName": "tofino-british-columbia-canada-attachment.pdf",
+                "directusId": "bb40de66-2042-4377-b16d-b5e91a279415"
+              }
+            ],
+            "screenshots": [
+              {
+                "fileName": "tofino-british-columbia-canada-screenshot1.png",
+                "directusId": "92c39d50-7910-4420-88f2-035394194f3e"
+              },
+              {
+                "fileName": "tofino-british-columbia-canada-screenshot2.png",
+                "directusId": "135d1b78-84d2-4c10-89bd-3ca02ceada82"
+              },
+              {
+                "fileName": "tofino-british-columbia-canada-screenshot3.png",
+                "directusId": "c8db3623-e654-4cc3-847d-04ab359c78a7"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
   "Toledo, Iowa, United States": {
     "rm_min": [
       {
@@ -231260,6 +234240,35 @@
               {
                 "fileName": "tomahawk-wisconsin-united-states-screenshot.png",
                 "directusId": "3a9c7c11-cf88-4ae6-aa61-04a4e64e87c8"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "Tombstone, Arizona, United States": {
+    "reduce_min": [
+      {
+        "summary": "Commercial and industrial uses are required to provide \"sufficient\" parking, but have no specific requirements.",
+        "reporter": "Samuel Deetz",
+        "requirements": ["other"],
+        "citations": [
+          {
+            "id": 17325,
+            "description": "Tombstone Zoning Code",
+            "url": "https://codelibrary.amlegal.com/codes/tombstoneaz/latest/tombstone_az/0-0-0-4660",
+            "notes": "10-13-2.F.",
+            "attachments": [
+              {
+                "fileName": "tombstone-arizona-united-states-attachment.pdf",
+                "directusId": "e5e7982d-3057-43d1-be18-7696d67803ea"
+              }
+            ],
+            "screenshots": [
+              {
+                "fileName": "tombstone-arizona-united-states-screenshot.png",
+                "directusId": "fcb3a117-2c26-4730-8a14-8022e2cfe0de"
               }
             ]
           }
@@ -232442,6 +235451,43 @@
               {
                 "fileName": "tracadie-new-brunswick-canada-remove-min-screenshot2.png",
                 "directusId": "cec25504-d4ca-4a00-8a35-e717b2957cd2"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "Trail, British Columbia, Canada": {
+    "reduce_min": [
+      {
+        "summary": "Parking requirements are reduced for apartments in the C1 General Commercial Zone. A change of use is exempt within the Parking Exemption Area and a fee in lieu may be provided for new buildings in the Communal Parking Areas.",
+        "reporter": "Samuel Deetz",
+        "requirements": ["by right", "in-lieu fees", "other"],
+        "citations": [
+          {
+            "id": 17366,
+            "description": "Trail Zoning Bylaw",
+            "url": "https://trail.ca/wp-content/uploads/2026/06/Zoning-Bylaw.pdf",
+            "notes": "30(1);\n30(4);\nPages 80, 84, 89",
+            "attachments": [
+              {
+                "fileName": "trail-british-columbia-canada-attachment.pdf",
+                "directusId": "510f5a41-a363-4fe7-9241-d77a12cbf980"
+              }
+            ],
+            "screenshots": [
+              {
+                "fileName": "trail-british-columbia-canada-screenshot1.png",
+                "directusId": "2c40adc5-9446-46c3-bdcb-57348bb8cbb2"
+              },
+              {
+                "fileName": "trail-british-columbia-canada-screenshot2.png",
+                "directusId": "f49528f3-ce41-4bae-b48b-d0f8f2f2c2df"
+              },
+              {
+                "fileName": "trail-british-columbia-canada-screenshot3.png",
+                "directusId": "12963be8-12a9-480f-af3f-51a807f1c23b"
               }
             ]
           }
@@ -233862,6 +236908,35 @@
       }
     ]
   },
+  "Tumbler Ridge, British Columbia, Canada": {
+    "reduce_min": [
+      {
+        "summary": "A fee in lieu of parking may be provided where there is public parking within 200m.",
+        "reporter": "Samuel Deetz",
+        "requirements": ["in-lieu fees", "other"],
+        "citations": [
+          {
+            "id": 17349,
+            "description": "Tumbler Ridge Zoning Bylaw",
+            "url": "https://tumblerridge.civicweb.net/filepro/documents/?expanded=2878&preview=55947",
+            "notes": "7.2.2\nPage 67",
+            "attachments": [
+              {
+                "fileName": "tumbler-ridge-british-columbia-canada-attachment.pdf",
+                "directusId": "a32dac97-bb01-4dec-b1cf-a97360640c18"
+              }
+            ],
+            "screenshots": [
+              {
+                "fileName": "tumbler-ridge-british-columbia-canada-screenshot.png",
+                "directusId": "8b6623fa-610a-466d-8181-b80c752b323e"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
   "Tumwater, Washington, United States": {
     "add_max": [
       {
@@ -234824,6 +237899,35 @@
               {
                 "fileName": "u-s-virgin-islands-united-states-screenshot.png",
                 "directusId": "1f795f73-1f47-4938-85ac-d0f5dab3b373"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "Ucluelet, British Columbia, Canada": {
+    "reduce_min": [
+      {
+        "summary": "A fee in lieu of parking may be provided for uses in the Village Square.",
+        "reporter": "Samuel Deetz",
+        "requirements": ["in-lieu fees"],
+        "citations": [
+          {
+            "id": 17352,
+            "description": "Ucluelet Zoning Bylaw",
+            "url": "https://ucluelet.civicweb.net/document/72466/",
+            "notes": "506 \nPage 70",
+            "attachments": [
+              {
+                "fileName": "ucluelet-british-columbia-canada-attachment.pdf",
+                "directusId": "22bc53c2-4f8c-45c0-922d-3d73da10dd67"
+              }
+            ],
+            "screenshots": [
+              {
+                "fileName": "ucluelet-british-columbia-canada-screenshot.png",
+                "directusId": "464d386b-98d0-48e3-a083-fe438a03586b"
               }
             ]
           }
@@ -236302,6 +239406,35 @@
       }
     ]
   },
+  "Valemount, British Columbia, Canada": {
+    "reduce_min": [
+      {
+        "summary": "A fee in lieu of parking may be provided citywide, except the ENV and RR1, R1 and R2 zones.",
+        "reporter": "Samuel Deetz",
+        "requirements": ["in-lieu fees"],
+        "citations": [
+          {
+            "id": 17328,
+            "description": "Valemount Zoning Bylaw",
+            "url": "https://valemount.civicweb.net/filepro/documents/108/?preview=94496",
+            "notes": "3.12\nPage 34",
+            "attachments": [
+              {
+                "fileName": "valemount-british-columbia-canada-attachment.pdf",
+                "directusId": "6a476fd0-6960-40e1-ad01-3eb8627c0f79"
+              }
+            ],
+            "screenshots": [
+              {
+                "fileName": "valemount-british-columbia-canada-screenshot.png",
+                "directusId": "4983dfe8-7669-4651-ba27-1e64b2cc2a3a"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
   "Valentine, Nebraska, United States": {
     "rm_min": [
       {
@@ -237462,6 +240595,102 @@
       }
     ]
   },
+  "Vernon, British Columbia, Canada": {
+    "add_max": [
+      {
+        "summary": "Parking maximums apply to all uses.",
+        "reporter": "Samuel Deetz",
+        "requirements": ["by right"],
+        "citations": [
+          {
+            "id": 17302,
+            "description": "Vernon Zoning Bylaw",
+            "url": "https://www.vernon.ca/sites/default/files/docs/planning-building/zoning/bylaw6000/6000%20Zoning%20Bylaw%20-%20COMBINED.pdf",
+            "notes": "Table 7.7\nPages 77-79",
+            "attachments": [
+              {
+                "fileName": "vernon-british-columbia-canada-add-max-attachment.pdf",
+                "directusId": "5daea25b-745f-43b5-af1d-f7c94b9a754d"
+              }
+            ],
+            "screenshots": [
+              {
+                "fileName": "vernon-british-columbia-canada-add-max-screenshot.png",
+                "directusId": "fb0b5475-8a07-481c-8355-b6c5eb540c2a"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "reduce_min": [
+      {
+        "summary": "A change of use is exempt from parking mandates.",
+        "reporter": "Samuel Deetz",
+        "requirements": ["other"],
+        "citations": [
+          {
+            "id": 17304,
+            "description": "Vernon Zoning Bylaw",
+            "url": "https://www.vernon.ca/sites/default/files/docs/planning-building/zoning/bylaw6000/6000%20Zoning%20Bylaw%20-%20COMBINED.pdf",
+            "notes": "7.1.3 \nPage 67",
+            "attachments": [
+              {
+                "fileName": "vernon-british-columbia-canada-reduce-min-attachment.pdf",
+                "directusId": "b1344c77-2e63-4139-b2d3-b64e8b2242dd"
+              }
+            ],
+            "screenshots": [
+              {
+                "fileName": "vernon-british-columbia-canada-reduce-min-screenshot.png",
+                "directusId": "812728fe-13f9-4334-9f46-86e9e999f0f9"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "rm_min": [
+      {
+        "summary": "Residential uses located in a TOD Area or within 400m of a Frequent Transit Route are exempt from parking mandates. ",
+        "reporter": "Samuel Deetz",
+        "requirements": ["frequent transit"],
+        "citations": [
+          {
+            "id": 17303,
+            "description": "Vernon Zoning Bylaw",
+            "url": "https://www.vernon.ca/sites/default/files/docs/planning-building/zoning/bylaw6000/6000%20Zoning%20Bylaw%20-%20COMBINED.pdf",
+            "notes": "7.3.5\nPage 71",
+            "attachments": [
+              {
+                "fileName": "vernon-british-columbia-canada-remove-min-citation1-attachment.pdf",
+                "directusId": "8933cbd3-7930-474d-af50-5597538e930d"
+              }
+            ],
+            "screenshots": [
+              {
+                "fileName": "vernon-british-columbia-canada-remove-min-citation1-screenshot.png",
+                "directusId": "5cb03045-8f04-4234-b92a-02eb3a912af0"
+              }
+            ]
+          },
+          {
+            "id": 17305,
+            "description": "Vernon Schedule B",
+            "url": "https://www.vernon.ca/sites/default/files/docs/planning-building/zoning/bylaw6000/schedule-b-tod-areas.pdf",
+            "notes": null,
+            "attachments": [
+              {
+                "fileName": "vernon-british-columbia-canada-remove-min-citation2-attachment.pdf",
+                "directusId": "301c65f9-91a7-4c9f-9e74-e5b5226b246b"
+              }
+            ],
+            "screenshots": []
+          }
+        ]
+      }
+    ]
+  },
   "Vernon, Connecticut, United States": {
     "reduce_min": [
       {
@@ -238012,6 +241241,51 @@
     ]
   },
   "Victoria, British Columbia, Canada": {
+    "reduce_min": [
+      {
+        "summary": "Parking requirements are reduced for residential and commercial uses in village and business zones.",
+        "reporter": "Samuel Deetz",
+        "requirements": ["by right"],
+        "citations": [
+          {
+            "id": 17387,
+            "description": "Victoria Zoning Bylaw",
+            "url": "https://www.victoria.ca/media/file/zoning-bylaw-2018",
+            "notes": "Table 1\nPages 111-112",
+            "attachments": [
+              {
+                "fileName": "victoria-british-columbia-canada-reduce-min-citation1-attachment.pdf",
+                "directusId": "fbb0e925-7511-471c-80fb-34d8cc5f4a15"
+              }
+            ],
+            "screenshots": [
+              {
+                "fileName": "victoria-british-columbia-canada-reduce-min-citation1-screenshot.png",
+                "directusId": "568227bd-c1a6-4877-81d1-5644770ef861"
+              }
+            ]
+          },
+          {
+            "id": 17388,
+            "description": "Victoria Zoning Bylaw Schedule C",
+            "url": "https://www.victoria.ca/media/file/schedule-c",
+            "notes": "Table 1\nPages 6-8",
+            "attachments": [
+              {
+                "fileName": "victoria-british-columbia-canada-reduce-min-citation2-attachment.pdf",
+                "directusId": "b08f6f05-909b-4d48-82e8-ce30b76f8d73"
+              }
+            ],
+            "screenshots": [
+              {
+                "fileName": "victoria-british-columbia-canada-reduce-min-citation2-screenshot.png",
+                "directusId": "d7289d46-61c8-4252-9813-cbe61115b6c6"
+              }
+            ]
+          }
+        ]
+      }
+    ],
     "rm_min": [
       {
         "summary": "Within downtown Victoria, all uses in the Mixed Use Residential District-1 Zone (MRD-1), and uses on a lot smaller than 1100 square meters in the  Old Town District-1 Zone (OTD-1) are exempt from parking mandates. Within the other downtown zones, various specific lots are exempted.",
@@ -238025,18 +241299,43 @@
             "notes": "4.3.5.;\n4.4.5.;\nPages 50, 52 of pdf, pages 46, 48 of original document",
             "attachments": [
               {
-                "fileName": "victoria-british-columbia-canada-attachment.pdf",
+                "fileName": "victoria-british-columbia-canada-remove-min1-attachment.pdf",
                 "directusId": "51b193cf-8251-45ea-8813-6434436c250a"
               }
             ],
             "screenshots": [
               {
-                "fileName": "victoria-british-columbia-canada-screenshot1.png",
+                "fileName": "victoria-british-columbia-canada-remove-min1-screenshot1.png",
                 "directusId": "32d0954a-7be7-4580-b2b4-3a0697b3f2c8"
               },
               {
-                "fileName": "victoria-british-columbia-canada-screenshot2.png",
+                "fileName": "victoria-british-columbia-canada-remove-min1-screenshot2.png",
                 "directusId": "3ea8f945-d229-409b-a2ac-6b2abe3b1f05"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "summary": "Secondary Suites, Garden Suites or buildings constructed as a single-detached dwelling or duplex, to create a duplex, multiple dwelling, Assisted Living Facility or a Child Care Facility are exempt citywide.",
+        "reporter": "Samuel Deetz",
+        "requirements": ["by right"],
+        "citations": [
+          {
+            "id": 17386,
+            "description": "Victoria Zoning Bylaw",
+            "url": "https://www.victoria.ca/media/file/zoning-bylaw-2018",
+            "notes": "Table 1\nPage 110",
+            "attachments": [
+              {
+                "fileName": "victoria-british-columbia-canada-remove-min2-attachment.pdf",
+                "directusId": "980f3fe3-4978-4c1e-8d7c-fea4445b7ad4"
+              }
+            ],
+            "screenshots": [
+              {
+                "fileName": "victoria-british-columbia-canada-remove-min2-screenshot.png",
+                "directusId": "ca1bd50b-b357-404f-9879-51e51817fb81"
               }
             ]
           }
@@ -249971,6 +253270,101 @@
       }
     ]
   },
+  "Whistler, British Columbia, Canada": {
+    "add_max": [
+      {
+        "summary": "Parking maximums apply to Small-Scale Multi-Unit Housing.",
+        "reporter": "Samuel Deetz",
+        "requirements": ["by right"],
+        "citations": [
+          {
+            "id": 17378,
+            "description": "Whistler Zoning Bylaw",
+            "url": "https://www.whistler.ca/wp-content/uploads/Zoning-_and_Parking_Bylaw_303_2015_2026-05-01.pdf",
+            "notes": "35.(15)\npage 55",
+            "attachments": [
+              {
+                "fileName": "whistler-british-columbia-canada-add-max-attachment.pdf",
+                "directusId": "9269c308-739b-4508-b0f3-05c567047667"
+              }
+            ],
+            "screenshots": [
+              {
+                "fileName": "whistler-british-columbia-canada-add-max-screenshot.png",
+                "directusId": "698aca3e-774d-4f47-8768-ca03b6446607"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "reduce_min": [
+      {
+        "summary": "A fee in lieu of parking may be provided for commercial uses in the CC1 Commercial Core One Zone when located near a parking facility. Parking requirements in more rural areas may be reduced for providing solid waste storage.",
+        "reporter": "Samuel Deetz",
+        "requirements": ["in-lieu fees", "other"],
+        "citations": [
+          {
+            "id": 17380,
+            "description": "Whistler Zoning Bylaw",
+            "url": "https://www.whistler.ca/wp-content/uploads/Zoning-_and_Parking_Bylaw_303_2015_2026-05-01.pdf",
+            "notes": "6.1.(4);\n6.4.(14)(a);\nPages 58, 62",
+            "attachments": [
+              {
+                "fileName": "whistler-british-columbia-canada-reduce-min-attachment.pdf",
+                "directusId": "876e41ef-8c3d-467e-87da-b7ca24ba5a88"
+              }
+            ],
+            "screenshots": [
+              {
+                "fileName": "whistler-british-columbia-canada-reduce-min-screenshot1.png",
+                "directusId": "1327eb86-81ef-4e19-b545-5d248d85d6ab"
+              },
+              {
+                "fileName": "whistler-british-columbia-canada-reduce-min-screenshot2.png",
+                "directusId": "bdbd033d-092a-4b4b-bbb5-1690f7d831dc"
+              },
+              {
+                "fileName": "whistler-british-columbia-canada-reduce-min-screenshot3.png",
+                "directusId": "fa32ec90-ba1b-40d6-b373-4829ea5922eb"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "rm_min": [
+      {
+        "summary": "The MC2 Mountain Commercial Two Zone is exempt from parking mandates. Residential uses in transit-oriented areas are also exempt.",
+        "reporter": "Samuel Deetz",
+        "requirements": ["by right"],
+        "citations": [
+          {
+            "id": 17379,
+            "description": "Whistler Zoning Bylaw",
+            "url": "https://www.whistler.ca/wp-content/uploads/Zoning-_and_Parking_Bylaw_303_2015_2026-05-01.pdf",
+            "notes": "6.1.(5);\n6.4.(17);\nPages 58, 62",
+            "attachments": [
+              {
+                "fileName": "whistler-british-columbia-canada-remove-min-attachment.pdf",
+                "directusId": "4a428041-fc64-4df9-88d0-e3a6ce7c187c"
+              }
+            ],
+            "screenshots": [
+              {
+                "fileName": "whistler-british-columbia-canada-remove-min-screenshot1.png",
+                "directusId": "c5613e31-3029-48c9-8864-e8939f99663f"
+              },
+              {
+                "fileName": "whistler-british-columbia-canada-remove-min-screenshot2.png",
+                "directusId": "b4494816-d0e4-4386-80ba-aaf44d9de3e2"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
   "Whitby, Ontario, Canada": {
     "reduce_min": [
       {
@@ -250336,6 +253730,62 @@
               {
                 "fileName": "white-plains-new-york-united-states-screenshot.png",
                 "directusId": "ecd93d27-48ba-44a0-aa84-1212deced23d"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "White Rock, British Columbia, Canada": {
+    "reduce_min": [
+      {
+        "summary": "Parking requirements may be reduced by up to a 10% through transportation demand management measures, such as carshare.",
+        "reporter": "Samuel Deetz",
+        "requirements": ["carshare", "transportation demand management"],
+        "citations": [
+          {
+            "id": 17297,
+            "description": "White Rock Zoning Bylaw",
+            "url": "https://www.whiterockcity.ca/DocumentCenter/View/8003/Zoning-Bylaw-2024-No-2506-Adopted-June-27-2024",
+            "notes": "4.14.3 \nPage 35",
+            "attachments": [
+              {
+                "fileName": "white-rock-british-columbia-canada-reduce-min-attachment.pdf",
+                "directusId": "863ab4b7-c303-4b5b-b50c-313c587cae68"
+              }
+            ],
+            "screenshots": [
+              {
+                "fileName": "white-rock-british-columbia-canada-reduce-min-screenshot.png",
+                "directusId": "0873b066-5510-4988-9a67-4e1dcedb9203"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "rm_min": [
+      {
+        "summary": "Semi-detached, rowhouse, and house-plex residential development within 400m of a bus stop is exempt from parking mandates.",
+        "reporter": "Samuel Deetz",
+        "requirements": ["frequent transit"],
+        "citations": [
+          {
+            "id": 17296,
+            "description": "White Rock Zoning Bylaw",
+            "url": "https://www.whiterockcity.ca/DocumentCenter/View/8003/Zoning-Bylaw-2024-No-2506-Adopted-June-27-2024",
+            "notes": "4.14.1\nPage 34",
+            "attachments": [
+              {
+                "fileName": "white-rock-british-columbia-canada-remove-min-attachment.pdf",
+                "directusId": "d216fd2c-5d36-4c8d-bdfc-f9bb59015ccb"
+              }
+            ],
+            "screenshots": [
+              {
+                "fileName": "white-rock-british-columbia-canada-remove-min-screenshot.png",
+                "directusId": "0abb6072-e12b-4602-a8a1-c95cfc3af103"
               }
             ]
           }
@@ -251033,26 +254483,66 @@
     ]
   },
   "Wickenburg, Arizona, United States": {
+    "reduce_min": [
+      {
+        "summary": "Wickenburg decreased all commercial parking regulations by 25% in January 2021.",
+        "reporter": "Steve Boyle",
+        "requirements": ["by right"],
+        "citations": [
+          {
+            "id": 17306,
+            "description": "Wickenburg Zoning Code",
+            "url": "https://s3-us-west-2.amazonaws.com/municipalcodeonline.com-new/wickenburg/ADC/files/ordinance/1698074619_14%20Zoning%20Ordinance_202207071155085525.pdf",
+            "notes": "Section 14-17-2.A.\nPage 53",
+            "attachments": [
+              {
+                "fileName": "wickenburg-arizona-united-states-reduce-min-citation1-attachment.pdf",
+                "directusId": "7c5205eb-53f9-4f31-b9b7-073382a73840"
+              }
+            ],
+            "screenshots": [
+              {
+                "fileName": "wickenburg-arizona-united-states-reduce-min-citation1-screenshot.png",
+                "directusId": "e46effc6-42c0-4b5b-9c9e-7186a31e7516"
+              }
+            ]
+          },
+          {
+            "id": 17307,
+            "description": "Wickenburg Sun",
+            "url": "https://www.wickenburgsun.com/news/business/council-eases-downtown-parking-rules/article_055ad523-3342-5f4e-8d90-3ddc70afea56.html",
+            "notes": null,
+            "attachments": [],
+            "screenshots": [
+              {
+                "fileName": "wickenburg-arizona-united-states-reduce-min-citation2-screenshot.png",
+                "directusId": "c64baaf7-c656-43ef-ad4f-7d781e6e8869"
+              }
+            ]
+          }
+        ]
+      }
+    ],
     "rm_min": [
       {
-        "summary": "The Town of Wickenburg eliminated parking requirements in the downtown zoning district and decreased all other commercial parking regulations by 25% in January 2021.",
+        "summary": "The Town of Wickenburg eliminated parking requirements in the downtown zoning district.",
         "reporter": "Steve Boyle",
         "requirements": ["by right"],
         "citations": [
           {
             "id": 11299,
-            "description": "Searchable PDF",
+            "description": "Wickenburg Zoning Code",
             "url": "https://s3-us-west-2.amazonaws.com/municipalcodeonline.com-new/wickenburg/ADC/files/ordinance/1698074619_14%20Zoning%20Ordinance_202207071155085525.pdf",
             "notes": "Section 14-17-2",
             "attachments": [
               {
-                "fileName": "wickenburg-arizona-united-states-citation1-attachment.pdf",
+                "fileName": "wickenburg-arizona-united-states-remove-min-citation1-attachment.pdf",
                 "directusId": "c1c70dc7-8eeb-4c82-afc7-77dc93d4b311"
               }
             ],
             "screenshots": [
               {
-                "fileName": "wickenburg-arizona-united-states-citation1-screenshot.png",
+                "fileName": "wickenburg-arizona-united-states-remove-min-citation1-screenshot.png",
                 "directusId": "cef92a5f-e408-4d8a-8f16-2964172d98e6"
               }
             ]
@@ -251063,7 +254553,12 @@
             "url": "https://wickenburgsun.com/news/7991/council-eases-downtown-parking-rules/",
             "notes": null,
             "attachments": [],
-            "screenshots": []
+            "screenshots": [
+              {
+                "fileName": "wickenburg-arizona-united-states-remove-min-citation2-screenshot.png",
+                "directusId": "73b482d2-4fcf-426a-befd-a0558badc4f6"
+              }
+            ]
           },
           {
             "id": 11301,
@@ -251072,7 +254567,7 @@
             "notes": "Town eliminated minimum parking requirements for all uses in Downtown District.  ~ Steve Boyle, Town Planner",
             "attachments": [
               {
-                "fileName": "wickenburg-arizona-united-states-citation3-attachment.pdf",
+                "fileName": "wickenburg-arizona-united-states-remove-min-citation3-attachment.pdf",
                 "directusId": "6b5aceb1-b74a-4905-8e2d-77ca9928e1a1"
               }
             ],

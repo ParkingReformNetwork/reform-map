@@ -1144,6 +1144,24 @@
       }
     ]
   },
+  "Albemarle County, Virginia, United States": {
+    "place": {
+      "name": "Albemarle County",
+      "state": "Virginia",
+      "country": "United States",
+      "type": "county",
+      "encoded": "albemarle-county-virginia-united-states",
+      "pop": 112395,
+      "coord": [-78.6086754, 38.0085107]
+    },
+    "add_max": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["all uses"]
+      }
+    ]
+  },
   "Albemarle, North Carolina, United States": {
     "place": {
       "name": "Albemarle",
@@ -1305,11 +1323,29 @@
       "pop": 560513,
       "coord": [-106.650985, 35.0841034]
     },
+    "add_max": [
+      {
+        "status": "adopted",
+        "scope": [
+          "city center / business district",
+          "main street / special",
+          "transit-oriented"
+        ],
+        "land": ["commercial", "other"]
+      }
+    ],
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide", "main street / special"],
+        "land": ["all uses"]
+      }
+    ],
     "rm_min": [
       {
         "status": "adopted",
         "scope": ["city center / business district", "transit-oriented"],
-        "land": ["all uses"]
+        "land": ["all uses", "commercial", "other"]
       }
     ]
   },
@@ -3441,6 +3477,24 @@
       }
     ]
   },
+  "Appomattox County, Virginia, United States": {
+    "place": {
+      "name": "Appomattox County",
+      "state": "Virginia",
+      "country": "United States",
+      "type": "county",
+      "encoded": "appomattox-county-virginia-united-states",
+      "pop": 16119,
+      "coord": [-78.7944052, 37.379893]
+    },
+    "add_max": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["all uses"]
+      }
+    ]
+  },
   "Arab, Alabama, United States": {
     "place": {
       "name": "Arab",
@@ -4235,6 +4289,24 @@
       "encoded": "ashburn-georgia-united-states",
       "pop": 4291,
       "coord": [-83.6535591, 31.7059751]
+    },
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["all uses"]
+      }
+    ]
+  },
+  "Ashcroft, British Columbia, Canada": {
+    "place": {
+      "name": "Ashcroft",
+      "state": "British Columbia",
+      "country": "Canada",
+      "type": "city",
+      "encoded": "ashcroft-british-columbia-canada",
+      "pop": 1670,
+      "coord": [-121.2835436, 50.7212409]
     },
     "rm_min": [
       {
@@ -8321,6 +8393,24 @@
         "status": "adopted",
         "scope": ["citywide"],
         "land": ["industrial", "other"]
+      }
+    ]
+  },
+  "Belcarra, British Columbia, Canada": {
+    "place": {
+      "name": "Belcarra",
+      "state": "British Columbia",
+      "country": "Canada",
+      "type": "city",
+      "encoded": "belcarra-british-columbia-canada",
+      "pop": 687,
+      "coord": [-122.914882, 49.3137023]
+    },
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["main street / special"],
+        "land": ["all uses"]
       }
     ]
   },
@@ -12510,6 +12600,24 @@
         "scope": ["citywide"],
         "land": ["residential, all uses"],
         "date": "2025"
+      }
+    ]
+  },
+  "Botetourt County, Virginia, United States": {
+    "place": {
+      "name": "Botetourt County",
+      "state": "Virginia",
+      "country": "United States",
+      "type": "county",
+      "encoded": "botetourt-county-virginia-united-states",
+      "pop": 33596,
+      "coord": [-79.8029569, 37.5520825]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["main street / special"],
+        "land": ["all uses"]
       }
     ]
   },
@@ -20123,7 +20231,8 @@
       "type": "city",
       "encoded": "Champaign_IL",
       "pop": 88909,
-      "coord": [-88.2430932, 40.1164841]
+      "coord": [-88.2430932, 40.1164841],
+      "repeal": true
     },
     "add_max": [
       {
@@ -20137,13 +20246,14 @@
       {
         "status": "adopted",
         "scope": ["city center / business district", "main street / special"],
-        "land": ["all uses"]
+        "land": ["all uses"],
+        "date": "2015"
       },
       {
-        "status": "proposed",
+        "status": "adopted",
         "scope": ["citywide"],
         "land": ["all uses"],
-        "date": "2025-06-20"
+        "date": "2026-09-01"
       }
     ]
   },
@@ -21502,6 +21612,24 @@
       }
     ]
   },
+  "Chetwynd, British Columbia, Canada": {
+    "place": {
+      "name": "Chetwynd",
+      "state": "British Columbia",
+      "country": "Canada",
+      "type": "city",
+      "encoded": "chetwynd-british-columbia-canada",
+      "pop": 2302,
+      "coord": [-121.62960201938758, 55.697658393989165]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district", "citywide"],
+        "land": ["commercial", "other"]
+      }
+    ]
+  },
   "Cheviot, Ohio, United States": {
     "place": {
       "name": "Cheviot",
@@ -22418,6 +22546,24 @@
       {
         "status": "adopted",
         "scope": ["city center / business district"],
+        "land": ["all uses"]
+      }
+    ]
+  },
+  "Clarke County, Virginia, United States": {
+    "place": {
+      "name": "Clarke County",
+      "state": "Virginia",
+      "country": "United States",
+      "type": "county",
+      "encoded": "clarke-county-virginia-united-states",
+      "pop": 14783,
+      "coord": [-77.9926448, 39.119728]
+    },
+    "add_max": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
         "land": ["all uses"]
       }
     ]
@@ -23469,6 +23615,24 @@
       {
         "status": "adopted",
         "scope": ["city center / business district"],
+        "land": ["all uses"]
+      }
+    ]
+  },
+  "Clinton, British Columbia, Canada": {
+    "place": {
+      "name": "Clinton",
+      "state": "British Columbia",
+      "country": "Canada",
+      "type": "city",
+      "encoded": "clinton-british-columbia-canada",
+      "pop": 568,
+      "coord": [-121.5865327, 51.0916737]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
         "land": ["all uses"]
       }
     ]
@@ -27493,6 +27657,24 @@
       }
     ]
   },
+  "Creston, British Columbia, Canada": {
+    "place": {
+      "name": "Creston",
+      "state": "British Columbia",
+      "country": "Canada",
+      "type": "city",
+      "encoded": "creston-british-columbia-canada",
+      "pop": 5583,
+      "coord": [-116.5130934, 49.0974046]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district", "citywide"],
+        "land": ["all uses", "residential, multi-family"]
+      }
+    ]
+  },
   "Creston, Illinois, United States": {
     "place": {
       "name": "Creston",
@@ -28048,6 +28230,45 @@
       "pop": 313,
       "coord": [-83.6685252, 36.599527]
     },
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["commercial", "other"]
+      }
+    ]
+  },
+  "Cumberland, British Columbia, Canada": {
+    "place": {
+      "name": "Cumberland",
+      "state": "British Columbia",
+      "country": "Canada",
+      "type": "city",
+      "encoded": "cumberland-british-columbia-canada",
+      "pop": 4447,
+      "coord": [-125.0319702, 49.6184754]
+    },
+    "add_max": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": [
+          "commercial",
+          "industrial",
+          "medical",
+          "other",
+          "residential, all uses",
+          "residential, multi-family"
+        ]
+      }
+    ],
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["all uses"]
+      }
+    ],
     "rm_min": [
       {
         "status": "adopted",
@@ -36290,6 +36511,12 @@
         "status": "adopted",
         "scope": ["city center / business district", "citywide"],
         "land": ["all uses", "commercial", "industrial", "other"]
+      },
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["all uses"],
+        "date": "2018-07-23"
       }
     ]
   },
@@ -37111,6 +37338,31 @@
         "status": "adopted",
         "scope": ["city center / business district"],
         "land": ["all uses"]
+      }
+    ]
+  },
+  "Esquimalt, British Columbia, Canada": {
+    "place": {
+      "name": "Esquimalt",
+      "state": "British Columbia",
+      "country": "Canada",
+      "type": "city",
+      "encoded": "esquimalt-british-columbia-canada",
+      "pop": 17533,
+      "coord": [-123.41359, 48.429995]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide", "transit-oriented"],
+        "land": ["all uses", "commercial", "residential, all uses"]
+      }
+    ],
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["transit-oriented"],
+        "land": ["residential, all uses"]
       }
     ]
   },
@@ -39667,6 +39919,20 @@
         "status": "adopted",
         "scope": ["citywide"],
         "land": ["all uses"]
+      }
+    ],
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide", "main street / special"],
+        "land": ["all uses", "commercial", "other", "residential, multi-family"]
+      }
+    ],
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["main street / special"],
+        "land": ["commercial"]
       }
     ]
   },
@@ -42337,6 +42603,24 @@
       }
     ]
   },
+  "Fredonia, Arizona, United States": {
+    "place": {
+      "name": "Fredonia",
+      "state": "Arizona",
+      "country": "United States",
+      "type": "city",
+      "encoded": "fredonia-arizona-united-states",
+      "pop": 1323,
+      "coord": [-112.5253435, 36.949932]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["all uses"]
+      }
+    ]
+  },
   "Fredonia, Kansas, United States": {
     "place": {
       "name": "Fredonia",
@@ -42889,6 +43173,24 @@
         "status": "adopted",
         "scope": ["city center / business district"],
         "land": ["all uses"]
+      }
+    ]
+  },
+  "Fruitvale, British Columbia, Canada": {
+    "place": {
+      "name": "Fruitvale",
+      "state": "British Columbia",
+      "country": "Canada",
+      "type": "city",
+      "encoded": "fruitvale-british-columbia-canada",
+      "pop": 1958,
+      "coord": [-117.5427909, 49.1150289]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["all uses", "residential, multi-family"]
       }
     ]
   },
@@ -44697,6 +44999,24 @@
         "scope": ["city center / business district"],
         "land": ["all uses"],
         "date": "2007-12-20"
+      }
+    ]
+  },
+  "Gibsons, British Columbia, Canada": {
+    "place": {
+      "name": "Gibsons",
+      "state": "British Columbia",
+      "country": "Canada",
+      "type": "city",
+      "encoded": "gibsons-british-columbia-canada",
+      "pop": 4758,
+      "coord": [-123.508918, 49.4006197]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["all uses", "residential, multi-family"]
       }
     ]
   },
@@ -50535,6 +50855,24 @@
       }
     ]
   },
+  "Harrison Hot Springs, British Columbia, Canada": {
+    "place": {
+      "name": "Harrison Hot Springs",
+      "state": "British Columbia",
+      "country": "Canada",
+      "type": "city",
+      "encoded": "harrison-hot-springs-british-columbia-canada",
+      "pop": 1905,
+      "coord": [-121.7846077, 49.2991748]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["commercial"]
+      }
+    ]
+  },
   "Harrison Township, New Jersey, United States": {
     "place": {
       "name": "Harrison Township",
@@ -52933,6 +53271,24 @@
       }
     ]
   },
+  "Highland County, Virginia, United States": {
+    "place": {
+      "name": "Highland County",
+      "state": "Virginia",
+      "country": "United States",
+      "type": "county",
+      "encoded": "highland-county-virginia-united-states",
+      "pop": 2232,
+      "coord": [-79.5907978, 38.3841897]
+    },
+    "add_max": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["commercial"]
+      }
+    ]
+  },
   "Highland Falls, New York, United States": {
     "place": {
       "name": "Highland Falls",
@@ -54317,6 +54673,24 @@
       }
     ]
   },
+  "Hope, British Columbia, Canada": {
+    "place": {
+      "name": "Hope",
+      "state": "British Columbia",
+      "country": "Canada",
+      "type": "city",
+      "encoded": "hope-british-columbia-canada",
+      "pop": 6686,
+      "coord": [-121.4415851, 49.3799779]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["commercial"]
+      }
+    ]
+  },
   "Hopewell Township (Cumberland County), New Jersey, United States": {
     "place": {
       "name": "Hopewell Township (Cumberland County)",
@@ -54863,6 +55237,24 @@
         "status": "adopted",
         "scope": ["citywide"],
         "land": ["commercial", "industrial", "medical", "other"]
+      }
+    ]
+  },
+  "Hudson's Hope, British Columbia, Canada": {
+    "place": {
+      "name": "Hudson's Hope",
+      "state": "British Columbia",
+      "country": "Canada",
+      "type": "city",
+      "encoded": "hudsons-hope-british-columbia-canada",
+      "pop": 841,
+      "coord": [-121.914047, 56.0259608]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["all uses"]
       }
     ]
   },
@@ -56301,6 +56693,31 @@
       }
     ]
   },
+  "Invermere, British Columbia, Canada": {
+    "place": {
+      "name": "Invermere",
+      "state": "British Columbia",
+      "country": "Canada",
+      "type": "city",
+      "encoded": "invermere-british-columbia-canada",
+      "pop": 3917,
+      "coord": [-116.0302062, 50.504853]
+    },
+    "add_max": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["other"]
+      }
+    ],
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["all uses"]
+      }
+    ]
+  },
   "Inverness County Municipality, Nova Scotia, Canada": {
     "place": {
       "name": "Inverness County Municipality",
@@ -57379,6 +57796,24 @@
         "status": "adopted",
         "scope": ["city center / business district"],
         "land": ["all uses", "commercial"]
+      }
+    ]
+  },
+  "James City County, Virginia, United States": {
+    "place": {
+      "name": "James City County",
+      "state": "Virginia",
+      "country": "United States",
+      "type": "county",
+      "encoded": "james-city-county-virginia-united-states",
+      "pop": 78254,
+      "coord": [-76.7972515, 37.3211485]
+    },
+    "add_max": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["commercial"]
       }
     ]
   },
@@ -59676,6 +60111,24 @@
       }
     ]
   },
+  "Kent, British Columbia, Canada": {
+    "place": {
+      "name": "Kent",
+      "state": "British Columbia",
+      "country": "Canada",
+      "type": "city",
+      "encoded": "kent-british-columbia-canada",
+      "pop": 6300,
+      "coord": [-121.8490676, 49.2826623]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district", "citywide"],
+        "land": ["commercial", "residential, all uses"]
+      }
+    ]
+  },
   "Kent, Ohio, United States": {
     "place": {
       "name": "Kent",
@@ -59814,6 +60267,24 @@
         "status": "adopted",
         "scope": ["city center / business district"],
         "land": ["all uses"]
+      }
+    ]
+  },
+  "Keremeos, British Columbia, Canada": {
+    "place": {
+      "name": "Keremeos",
+      "state": "British Columbia",
+      "country": "Canada",
+      "type": "city",
+      "encoded": "keremeos-british-columbia-canada",
+      "pop": 1608,
+      "coord": [-119.8245226, 49.2074507]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district", "citywide"],
+        "land": ["all uses", "commercial"]
       }
     ]
   },
@@ -60902,6 +61373,24 @@
         "status": "adopted",
         "scope": ["city center / business district"],
         "land": ["commercial", "residential, all uses"]
+      }
+    ]
+  },
+  "Kitimat, British Columbia, Canada": {
+    "place": {
+      "name": "Kitimat",
+      "state": "British Columbia",
+      "country": "Canada",
+      "type": "city",
+      "encoded": "kitimat-british-columbia-canada",
+      "pop": 8236,
+      "coord": [-128.6540519, 54.0535577]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide", "main street / special"],
+        "land": ["all uses", "residential, all uses"]
       }
     ]
   },
@@ -62071,6 +62560,37 @@
       }
     ]
   },
+  "Ladysmith, British Columbia, Canada": {
+    "place": {
+      "name": "Ladysmith",
+      "state": "British Columbia",
+      "country": "Canada",
+      "type": "city",
+      "encoded": "ladysmith-british-columbia-canada",
+      "pop": 8990,
+      "coord": [-123.8157964, 48.9936579]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district", "citywide"],
+        "land": [
+          "commercial",
+          "industrial",
+          "medical",
+          "other",
+          "residential, all uses"
+        ]
+      }
+    ],
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["commercial", "other"]
+      }
+    ]
+  },
   "Ladysmith, Wisconsin, United States": {
     "place": {
       "name": "Ladysmith",
@@ -62395,6 +62915,24 @@
         "status": "adopted",
         "scope": ["city center / business district"],
         "land": ["residential, multi-family"]
+      }
+    ]
+  },
+  "Lake Cowichan, British Columbia, Canada": {
+    "place": {
+      "name": "Lake Cowichan",
+      "state": "British Columbia",
+      "country": "Canada",
+      "type": "city",
+      "encoded": "lake-cowichan-british-columbia-canada",
+      "pop": 3325,
+      "coord": [-124.0562815, 48.8259486]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district", "citywide"],
+        "land": ["all uses", "commercial", "residential, multi-family"]
       }
     ]
   },
@@ -66045,6 +66583,24 @@
       }
     ]
   },
+  "Lillooet, British Columbia, Canada": {
+    "place": {
+      "name": "Lillooet",
+      "state": "British Columbia",
+      "country": "Canada",
+      "type": "city",
+      "encoded": "lillooet-british-columbia-canada",
+      "pop": 2302,
+      "coord": [-121.933691, 50.693938]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["all uses", "commercial"]
+      }
+    ]
+  },
   "Limon, Colorado, United States": {
     "place": {
       "name": "Limon",
@@ -68401,6 +68957,25 @@
       }
     ]
   },
+  "Lumby, British Columbia, Canada": {
+    "place": {
+      "name": "Lumby",
+      "state": "British Columbia",
+      "country": "Canada",
+      "type": "city",
+      "encoded": "lumby-british-columbia-canada",
+      "pop": 2063,
+      "coord": [-118.9656007, 50.2501374]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["residential, all uses"],
+        "date": "2024"
+      }
+    ]
+  },
   "Lumpkin County, Georgia, United States": {
     "place": {
       "name": "Lumpkin County",
@@ -68809,6 +69384,30 @@
         "status": "adopted",
         "scope": ["citywide"],
         "land": ["residential, low-density"]
+      }
+    ]
+  },
+  "Mackenzie, British Columbia, Canada": {
+    "place": {
+      "name": "Mackenzie",
+      "state": "British Columbia",
+      "country": "Canada",
+      "type": "city",
+      "encoded": "mackenzie-british-columbia-canada",
+      "pop": 3281,
+      "coord": [-123.0926095, 55.3243966]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["commercial", "other"]
+      },
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["residential, all uses"],
+        "date": "2024-06-10"
       }
     ]
   },
@@ -72018,6 +72617,25 @@
       }
     ]
   },
+  "Masset, British Columbia, Canada": {
+    "place": {
+      "name": "Masset",
+      "state": "British Columbia",
+      "country": "Canada",
+      "type": "city",
+      "encoded": "masset-british-columbia-canada",
+      "pop": 838,
+      "coord": [-132.1452236, 54.0124473]
+    },
+    "reduce_min": [
+      {
+        "status": "proposed",
+        "scope": ["citywide"],
+        "land": ["residential, multi-family"],
+        "date": "2025"
+      }
+    ]
+  },
   "Massillon, Ohio, United States": {
     "place": {
       "name": "Massillon",
@@ -73411,6 +74029,24 @@
       }
     ]
   },
+  "Meeteetse, Wyoming, United States": {
+    "place": {
+      "name": "Meeteetse",
+      "state": "Wyoming",
+      "country": "United States",
+      "type": "city",
+      "encoded": "meeteetse-wyoming-united-states",
+      "pop": 309,
+      "coord": [-108.871519, 44.157177]
+    },
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["commercial", "other"]
+      }
+    ]
+  },
   "Melbourne, Florida, United States": {
     "place": {
       "name": "Melbourne",
@@ -74206,11 +74842,19 @@
       "pop": 7139,
       "coord": [-120.7884149, 50.1124876]
     },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district", "citywide"],
+        "land": ["all uses", "residential, all uses"],
+        "date": "2022-04-01"
+      }
+    ],
     "rm_min": [
       {
         "status": "adopted",
-        "scope": ["city center / business district"],
-        "land": ["commercial"],
+        "scope": ["city center / business district", "transit-oriented"],
+        "land": ["commercial", "residential, low-density"],
         "date": "2022-04-01"
       }
     ]
@@ -75025,6 +75669,24 @@
         "status": "adopted",
         "scope": ["main street / special"],
         "land": ["commercial", "other"]
+      }
+    ]
+  },
+  "Midway, British Columbia, Canada": {
+    "place": {
+      "name": "Midway",
+      "state": "British Columbia",
+      "country": "Canada",
+      "type": "city",
+      "encoded": "midway-british-columbia-canada",
+      "pop": 651,
+      "coord": [-118.7736487, 49.0079724]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["all uses"]
       }
     ]
   },
@@ -80756,6 +81418,24 @@
       }
     ]
   },
+  "Nakusp, British Columbia, Canada": {
+    "place": {
+      "name": "Nakusp",
+      "state": "British Columbia",
+      "country": "Canada",
+      "type": "city",
+      "encoded": "nakusp-british-columbia-canada",
+      "pop": 1589,
+      "coord": [-117.7974031, 50.2396111]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["all uses"]
+      }
+    ]
+  },
   "Nampa, Idaho, United States": {
     "place": {
       "name": "Nampa",
@@ -85133,6 +85813,25 @@
       }
     ]
   },
+  "North Saanich, British Columbia, Canada": {
+    "place": {
+      "name": "North Saanich",
+      "state": "British Columbia",
+      "country": "Canada",
+      "type": "city",
+      "encoded": "north-saanich-british-columbia-canada",
+      "pop": 12235,
+      "coord": [-123.432794, 48.6563671]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["residential, multi-family"],
+        "date": "2026"
+      }
+    ]
+  },
   "North Salt Lake, Utah, United States": {
     "place": {
       "name": "North Salt Lake",
@@ -85375,6 +86074,24 @@
         "scope": ["city center / business district", "citywide"],
         "land": ["all uses"],
         "date": "2025-09-22"
+      }
+    ]
+  },
+  "Northern Rockies, British Columbia, Canada": {
+    "place": {
+      "name": "Northern Rockies",
+      "state": "British Columbia",
+      "country": "Canada",
+      "type": "city",
+      "encoded": "northern-rockies-british-columbia-canada",
+      "pop": 3947,
+      "coord": [-122.8709621, 59.124587]
+    },
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["main street / special"],
+        "land": ["all uses"]
       }
     ]
   },
@@ -87321,6 +88038,31 @@
       }
     ]
   },
+  "Oliver, British Columbia, Canada": {
+    "place": {
+      "name": "Oliver",
+      "state": "British Columbia",
+      "country": "Canada",
+      "type": "city",
+      "encoded": "oliver-british-columbia-canada",
+      "pop": 5094,
+      "coord": [-119.55, 49.183333]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["all uses", "commercial"]
+      }
+    ],
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["commercial", "other"]
+      }
+    ]
+  },
   "Olivia, Minnesota, United States": {
     "place": {
       "name": "Olivia",
@@ -87831,6 +88573,30 @@
       }
     ]
   },
+  "Orange County, Virginia, United States": {
+    "place": {
+      "name": "Orange County",
+      "state": "Virginia",
+      "country": "United States",
+      "type": "county",
+      "encoded": "orange-county-virginia-united-states",
+      "pop": 36254,
+      "coord": [-78.013983, 38.2490349]
+    },
+    "add_max": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": [
+          "commercial",
+          "industrial",
+          "medical",
+          "other",
+          "residential, multi-family"
+        ]
+      }
+    ]
+  },
   "Orange Township, New Jersey, United States": {
     "place": {
       "name": "Orange Township",
@@ -88228,6 +88994,13 @@
         "status": "adopted",
         "scope": ["citywide"],
         "land": ["commercial", "industrial", "medical", "other"]
+      }
+    ],
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["other"]
       }
     ]
   },
@@ -91515,6 +92288,13 @@
       "pop": 33761,
       "coord": [-119.5932499, 49.5003268]
     },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["all uses"]
+      }
+    ],
     "rm_min": [
       {
         "status": "adopted",
@@ -92350,6 +93130,20 @@
       "pop": 1680992,
       "coord": [-112.0741417, 33.4484367]
     },
+    "add_max": [
+      {
+        "status": "adopted",
+        "scope": ["citywide", "transit-oriented"],
+        "land": ["all uses", "commercial"]
+      }
+    ],
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide", "transit-oriented"],
+        "land": ["all uses", "commercial", "residential, all uses"]
+      }
+    ],
     "rm_min": [
       {
         "status": "adopted",
@@ -94304,6 +95098,24 @@
       }
     ]
   },
+  "Port Alice, British Columbia, Canada": {
+    "place": {
+      "name": "Port Alice",
+      "state": "British Columbia",
+      "country": "Canada",
+      "type": "city",
+      "encoded": "port-alice-british-columbia-canada",
+      "pop": 739,
+      "coord": [-127.488098, 50.426893]
+    },
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["commercial"]
+      }
+    ]
+  },
   "Port Allegany, Pennsylvania, United States": {
     "place": {
       "name": "Port Allegany",
@@ -94427,6 +95239,31 @@
         "status": "adopted",
         "scope": ["city center / business district"],
         "land": ["commercial", "other"]
+      }
+    ]
+  },
+  "Port Coquitlam, British Columbia, Canada": {
+    "place": {
+      "name": "Port Coquitlam",
+      "state": "British Columbia",
+      "country": "Canada",
+      "type": "city",
+      "encoded": "port-coquitlam-british-columbia-canada",
+      "pop": 61498,
+      "coord": [-122.780542, 49.2621643]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district", "citywide"],
+        "land": ["commercial", "other", "residential, all uses"]
+      }
+    ],
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["transit-oriented"],
+        "land": ["residential, all uses"]
       }
     ]
   },
@@ -95161,6 +95998,24 @@
       }
     ]
   },
+  "Pouce Coupe, British Columbia, Canada": {
+    "place": {
+      "name": "Pouce Coupe",
+      "state": "British Columbia",
+      "country": "Canada",
+      "type": "city",
+      "encoded": "pouce-coupe-british-columbia-canada",
+      "pop": 762,
+      "coord": [-120.1321911, 55.714682]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["commercial", "other"]
+      }
+    ]
+  },
   "Poughkeepsie, New York, United States": {
     "place": {
       "name": "Poughkeepsie",
@@ -95676,6 +96531,49 @@
         "status": "adopted",
         "scope": ["city center / business district"],
         "land": ["commercial", "medical", "other", "residential, all uses"]
+      }
+    ]
+  },
+  "Prince George, British Columbia, Canada": {
+    "place": {
+      "name": "Prince George",
+      "state": "British Columbia",
+      "country": "Canada",
+      "type": "city",
+      "encoded": "prince-george-british-columbia-canada",
+      "pop": 76708,
+      "coord": [-122.7453699, 53.9128645]
+    },
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district", "transit-oriented"],
+        "land": ["all uses", "residential, all uses"]
+      }
+    ]
+  },
+  "Prince Rupert, British Columbia, Canada": {
+    "place": {
+      "name": "Prince Rupert",
+      "state": "British Columbia",
+      "country": "Canada",
+      "type": "city",
+      "encoded": "prince-rupert-british-columbia-canada",
+      "pop": 12300,
+      "coord": [-130.32549, 54.3126572]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["all uses"]
+      }
+    ],
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["commercial", "other", "residential, multi-family"]
       }
     ]
   },
@@ -96252,6 +97150,31 @@
       }
     ]
   },
+  "Qualicum Beach, British Columbia, Canada": {
+    "place": {
+      "name": "Qualicum Beach",
+      "state": "British Columbia",
+      "country": "Canada",
+      "type": "city",
+      "encoded": "qualicum-beach-british-columbia-canada",
+      "pop": 9303,
+      "coord": [-124.4439409, 49.3479861]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["main street / special"],
+        "land": ["all uses", "residential, all uses"]
+      }
+    ],
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["commercial", "other"]
+      }
+    ]
+  },
   "Queen Creek, Arizona, United States": {
     "place": {
       "name": "Queen Creek",
@@ -96462,6 +97385,31 @@
         "status": "adopted",
         "scope": ["city center / business district"],
         "land": ["commercial", "other"]
+      }
+    ]
+  },
+  "Radium Hot Springs, British Columbia, Canada": {
+    "place": {
+      "name": "Radium Hot Springs",
+      "state": "British Columbia",
+      "country": "Canada",
+      "type": "city",
+      "encoded": "radium-hot-springs-british-columbia-canada",
+      "pop": 1339,
+      "coord": [-116.0760592, 50.6200728]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district", "citywide"],
+        "land": ["commercial", "other"]
+      }
+    ],
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["commercial"]
       }
     ]
   },
@@ -96829,6 +97777,25 @@
         "status": "adopted",
         "scope": ["city center / business district"],
         "land": ["all uses"]
+      }
+    ]
+  },
+  "Rappahannock County, Virginia, United States": {
+    "place": {
+      "name": "Rappahannock County",
+      "state": "Virginia",
+      "country": "United States",
+      "type": "county",
+      "encoded": "rappahannock-county-virginia-united-states",
+      "pop": 7348,
+      "coord": [-78.1495818, 38.6926326]
+    },
+    "add_max": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["all uses"],
+        "date": "2008-01-07"
       }
     ]
   },
@@ -97853,6 +98820,31 @@
         "status": "adopted",
         "scope": ["city center / business district"],
         "land": ["all uses"]
+      }
+    ]
+  },
+  "Revelstoke, British Columbia, Canada": {
+    "place": {
+      "name": "Revelstoke",
+      "state": "British Columbia",
+      "country": "Canada",
+      "type": "city",
+      "encoded": "revelstoke-british-columbia-canada",
+      "pop": 8275,
+      "coord": [-118.1956709, 50.998045]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district", "citywide"],
+        "land": ["all uses", "commercial", "residential, multi-family"]
+      }
+    ],
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["residential, low-density"]
       }
     ]
   },
@@ -101059,6 +102051,31 @@
       }
     ]
   },
+  "Rossland, British Columbia, Canada": {
+    "place": {
+      "name": "Rossland",
+      "state": "British Columbia",
+      "country": "Canada",
+      "type": "city",
+      "encoded": "rossland-british-columbia-canada",
+      "pop": 4140,
+      "coord": [-117.7997859, 49.0778179]
+    },
+    "add_max": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["all uses"]
+      }
+    ],
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district", "citywide"],
+        "land": ["all uses"]
+      }
+    ]
+  },
   "Rossville, Georgia, United States": {
     "place": {
       "name": "Rossville",
@@ -102670,6 +103687,49 @@
       }
     ]
   },
+  "Salmo, British Columbia, Canada": {
+    "place": {
+      "name": "Salmo",
+      "state": "British Columbia",
+      "country": "Canada",
+      "type": "city",
+      "encoded": "salmo-british-columbia-canada",
+      "pop": 1140,
+      "coord": [-117.2787054, 49.1934431]
+    },
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district", "main street / special"],
+        "land": ["all uses"]
+      }
+    ]
+  },
+  "Salmon Arm, British Columbia, Canada": {
+    "place": {
+      "name": "Salmon Arm",
+      "state": "British Columbia",
+      "country": "Canada",
+      "type": "city",
+      "encoded": "salmon-arm-british-columbia-canada",
+      "pop": 19432,
+      "coord": [-119.2790529, 50.7005059]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["all uses", "residential, all uses"]
+      }
+    ],
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["commercial"]
+      }
+    ]
+  },
   "Salt Lake City, Utah, United States": {
     "place": {
       "name": "Salt Lake City",
@@ -103384,6 +104444,24 @@
       "encoded": "SantaClarita_CA",
       "pop": 228673,
       "coord": [-118.5538088, 34.4127963]
+    },
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["residential, low-density"]
+      }
+    ]
+  },
+  "Santa Cruz County, Arizona, United States": {
+    "place": {
+      "name": "Santa Cruz County",
+      "state": "Arizona",
+      "country": "United States",
+      "type": "county",
+      "encoded": "santa-cruz-county-arizona-united-states",
+      "pop": 47669,
+      "coord": [-110.847628, 31.5094579]
     },
     "rm_min": [
       {
@@ -104824,6 +105902,24 @@
         "status": "adopted",
         "scope": ["city center / business district", "main street / special"],
         "land": ["commercial", "industrial", "other"]
+      }
+    ]
+  },
+  "Sechelt, British Columbia, Canada": {
+    "place": {
+      "name": "Sechelt",
+      "state": "British Columbia",
+      "country": "Canada",
+      "type": "city",
+      "encoded": "sechelt-british-columbia-canada",
+      "pop": 10847,
+      "coord": [-123.763124, 49.4721147]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["all uses", "residential, multi-family"]
       }
     ]
   },
@@ -106735,6 +107831,46 @@
       }
     ]
   },
+  "Sicamous, British Columbia, Canada": {
+    "place": {
+      "name": "Sicamous",
+      "state": "British Columbia",
+      "country": "Canada",
+      "type": "city",
+      "encoded": "sicamous-british-columbia-canada",
+      "pop": 2613,
+      "coord": [-118.9826386, 50.8367991]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["commercial"]
+      }
+    ]
+  },
+  "Sidney, British Columbia, Canada": {
+    "place": {
+      "name": "Sidney",
+      "state": "British Columbia",
+      "country": "Canada",
+      "type": "city",
+      "encoded": "sidney-british-columbia-canada",
+      "pop": 12318,
+      "coord": [-123.398324, 48.6505788]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": [
+          "city center / business district",
+          "citywide",
+          "main street / special"
+        ],
+        "land": ["all uses", "commercial", "industrial"]
+      }
+    ]
+  },
   "Sidney, Iowa, United States": {
     "place": {
       "name": "Sidney",
@@ -107544,6 +108680,24 @@
       }
     ]
   },
+  "Slocan, British Columbia, Canada": {
+    "place": {
+      "name": "Slocan",
+      "state": "British Columbia",
+      "country": "Canada",
+      "type": "city",
+      "encoded": "slocan-british-columbia-canada",
+      "pop": 379,
+      "coord": [-117.4660927, 49.767825]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["commercial", "other"]
+      }
+    ]
+  },
   "Slocomb, Alabama, United States": {
     "place": {
       "name": "Slocomb",
@@ -107577,6 +108731,31 @@
         "status": "adopted",
         "scope": ["city center / business district"],
         "land": ["all uses"]
+      }
+    ]
+  },
+  "Smithers, British Columbia, Canada": {
+    "place": {
+      "name": "Smithers",
+      "state": "British Columbia",
+      "country": "Canada",
+      "type": "city",
+      "encoded": "smithers-british-columbia-canada",
+      "pop": 5378,
+      "coord": [-127.1760991, 54.7792074]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["all uses"]
+      }
+    ],
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["commercial", "other", "residential, all uses"]
       }
     ]
   },
@@ -108315,6 +109494,31 @@
         "status": "adopted",
         "scope": ["city center / business district", "citywide"],
         "land": ["all uses", "commercial"]
+      }
+    ]
+  },
+  "Sooke, British Columbia, Canada": {
+    "place": {
+      "name": "Sooke",
+      "state": "British Columbia",
+      "country": "Canada",
+      "type": "city",
+      "encoded": "sooke-british-columbia-canada",
+      "pop": 15086,
+      "coord": [-123.731517, 48.3825724]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district", "citywide"],
+        "land": ["all uses"]
+      }
+    ],
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["commercial", "other"]
       }
     ]
   },
@@ -109510,6 +110714,25 @@
       }
     ]
   },
+  "Spallumcheen, British Columbia, Canada": {
+    "place": {
+      "name": "Spallumcheen",
+      "state": "British Columbia",
+      "country": "Canada",
+      "type": "city",
+      "encoded": "spallumcheen-british-columbia-canada",
+      "pop": 5307,
+      "coord": [-119.2740572, 50.4468294]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["commercial", "other"],
+        "date": "2024"
+      }
+    ]
+  },
   "Spanish Fork, Utah, United States": {
     "place": {
       "name": "Spanish Fork",
@@ -110469,6 +111692,31 @@
       }
     ]
   },
+  "Squamish, British Columbia, Canada": {
+    "place": {
+      "name": "Squamish",
+      "state": "British Columbia",
+      "country": "Canada",
+      "type": "city",
+      "encoded": "squamish-british-columbia-canada",
+      "pop": 23819,
+      "coord": [-123.155861, 49.6980743]
+    },
+    "add_max": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["commercial", "industrial", "residential, all uses"]
+      }
+    ],
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district", "main street / special"],
+        "land": ["all uses"]
+      }
+    ]
+  },
   "St-Pierre-Jolys, Manitoba, Canada": {
     "place": {
       "name": "St-Pierre-Jolys",
@@ -110538,6 +111786,24 @@
         "status": "adopted",
         "scope": ["city center / business district"],
         "land": ["commercial", "other", "residential, multi-family"]
+      }
+    ]
+  },
+  "St. Andrews Rural Municipality, Manitoba, Canada": {
+    "place": {
+      "name": "St. Andrews Rural Municipality",
+      "state": "Manitoba",
+      "country": "Canada",
+      "type": "county",
+      "encoded": "st-andrews-rural-municipality-manitoba-canada",
+      "pop": 11723,
+      "coord": [-97.00267911866761, 50.23675861186673]
+    },
+    "add_max": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["residential, low-density"]
       }
     ]
   },
@@ -110851,6 +112117,24 @@
         "scope": ["city center / business district"],
         "land": ["all uses"],
         "date": "2025-02-18"
+      }
+    ]
+  },
+  "St. Clements Rural Municipality, Manitoba, Canada": {
+    "place": {
+      "name": "St. Clements Rural Municipality",
+      "state": "Manitoba",
+      "country": "Canada",
+      "type": "county",
+      "encoded": "st-clements-rural-municipality-manitoba-canada",
+      "pop": 11586,
+      "coord": [-96.73600135600257, 50.27264725453196]
+    },
+    "add_max": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["residential, low-density"]
       }
     ]
   },
@@ -112350,6 +113634,11 @@
       "coord": [-88.8183872, 33.4503998]
     },
     "add_max": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["commercial", "other"]
+      },
       {
         "status": "adopted",
         "scope": ["citywide"],
@@ -114120,6 +115409,31 @@
       }
     ]
   },
+  "Summerland, British Columbia, Canada": {
+    "place": {
+      "name": "Summerland",
+      "state": "British Columbia",
+      "country": "Canada",
+      "type": "city",
+      "encoded": "summerland-british-columbia-canada",
+      "pop": 12042,
+      "coord": [-119.666667, 49.6]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["commercial"]
+      }
+    ],
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["residential, multi-family"]
+      }
+    ]
+  },
   "Summerset, South Dakota, United States": {
     "place": {
       "name": "Summerset",
@@ -114340,6 +115654,24 @@
         "scope": ["city center / business district"],
         "land": ["all uses"],
         "date": "2026"
+      }
+    ]
+  },
+  "Sun Peaks, British Columbia, Canada": {
+    "place": {
+      "name": "Sun Peaks",
+      "state": "British Columbia",
+      "country": "Canada",
+      "type": "city",
+      "encoded": "sun-peaks-british-columbia-canada",
+      "pop": 1404,
+      "coord": [-119.8823295, 50.8844684]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["main street / special"],
+        "land": ["other"]
       }
     ]
   },
@@ -116116,6 +117448,31 @@
       }
     ]
   },
+  "Telkwa, British Columbia, Canada": {
+    "place": {
+      "name": "Telkwa",
+      "state": "British Columbia",
+      "country": "Canada",
+      "type": "city",
+      "encoded": "telkwa-british-columbia-canada",
+      "pop": 1474,
+      "coord": [-127.0509663, 54.6965165]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["all uses"]
+      }
+    ],
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["all uses"]
+      }
+    ]
+  },
   "Temagami, Ontario, Canada": {
     "place": {
       "name": "Temagami",
@@ -117545,6 +118902,24 @@
       }
     ]
   },
+  "Tofino, British Columbia, Canada": {
+    "place": {
+      "name": "Tofino",
+      "state": "British Columbia",
+      "country": "Canada",
+      "type": "city",
+      "encoded": "tofino-british-columbia-canada",
+      "pop": 2516,
+      "coord": [-125.9048279, 49.1528473]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district", "main street / special"],
+        "land": ["all uses"]
+      }
+    ]
+  },
   "Toledo, Iowa, United States": {
     "place": {
       "name": "Toledo",
@@ -117731,6 +119106,24 @@
         "status": "adopted",
         "scope": ["city center / business district"],
         "land": ["all uses"]
+      }
+    ]
+  },
+  "Tombstone, Arizona, United States": {
+    "place": {
+      "name": "Tombstone",
+      "state": "Arizona",
+      "country": "United States",
+      "type": "city",
+      "encoded": "tombstone-arizona-united-states",
+      "pop": 1308,
+      "coord": [-110.0652028, 31.714229]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["commercial", "industrial"]
       }
     ]
   },
@@ -118370,6 +119763,24 @@
           "main street / special"
         ],
         "land": ["all uses", "industrial", "other"]
+      }
+    ]
+  },
+  "Trail, British Columbia, Canada": {
+    "place": {
+      "name": "Trail",
+      "state": "British Columbia",
+      "country": "Canada",
+      "type": "city",
+      "encoded": "trail-british-columbia-canada",
+      "pop": 7920,
+      "coord": [-117.7097659, 49.0945296]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["all uses", "residential, multi-family"]
       }
     ]
   },
@@ -119039,6 +120450,24 @@
       }
     ]
   },
+  "Tumbler Ridge, British Columbia, Canada": {
+    "place": {
+      "name": "Tumbler Ridge",
+      "state": "British Columbia",
+      "country": "Canada",
+      "type": "city",
+      "encoded": "tumbler-ridge-british-columbia-canada",
+      "pop": 2399,
+      "coord": [-120.998067, 55.1262007]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["all uses"]
+      }
+    ]
+  },
   "Tumwater, Washington, United States": {
     "place": {
       "name": "Tumwater",
@@ -119531,6 +120960,24 @@
         "status": "adopted",
         "scope": ["citywide"],
         "land": ["other"]
+      }
+    ]
+  },
+  "Ucluelet, British Columbia, Canada": {
+    "place": {
+      "name": "Ucluelet",
+      "state": "British Columbia",
+      "country": "Canada",
+      "type": "city",
+      "encoded": "ucluelet-british-columbia-canada",
+      "pop": 2066,
+      "coord": [-125.546049, 48.9426817]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["all uses"]
       }
     ]
   },
@@ -120341,6 +121788,24 @@
       }
     ]
   },
+  "Valemount, British Columbia, Canada": {
+    "place": {
+      "name": "Valemount",
+      "state": "British Columbia",
+      "country": "Canada",
+      "type": "city",
+      "encoded": "valemount-british-columbia-canada",
+      "pop": 1052,
+      "coord": [-119.280579, 52.8315124]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["all uses"]
+      }
+    ]
+  },
   "Valentine, Nebraska, United States": {
     "place": {
       "name": "Valentine",
@@ -120978,6 +122443,38 @@
       }
     ]
   },
+  "Vernon, British Columbia, Canada": {
+    "place": {
+      "name": "Vernon",
+      "state": "British Columbia",
+      "country": "Canada",
+      "type": "city",
+      "encoded": "vernon-british-columbia-canada",
+      "pop": 44519,
+      "coord": [-119.2718157, 50.2668671]
+    },
+    "add_max": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["all uses"]
+      }
+    ],
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["all uses"]
+      }
+    ],
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["transit-oriented"],
+        "land": ["residential, all uses"]
+      }
+    ]
+  },
   "Vernon, Connecticut, United States": {
     "place": {
       "name": "Vernon",
@@ -121282,11 +122779,23 @@
       "pop": 91867,
       "coord": [-123.364953, 48.4283182]
     },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["commercial", "residential, all uses"]
+      }
+    ],
     "rm_min": [
       {
         "status": "adopted",
         "scope": ["city center / business district"],
         "land": ["all uses"]
+      },
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["other", "residential, low-density"]
       }
     ]
   },
@@ -127569,6 +129078,38 @@
       }
     ]
   },
+  "Whistler, British Columbia, Canada": {
+    "place": {
+      "name": "Whistler",
+      "state": "British Columbia",
+      "country": "Canada",
+      "type": "city",
+      "encoded": "whistler-british-columbia-canada",
+      "pop": 13982,
+      "coord": [-122.9543022, 50.1171903]
+    },
+    "add_max": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["residential, low-density"]
+      }
+    ],
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district", "main street / special"],
+        "land": ["all uses", "commercial"]
+      }
+    ],
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district", "transit-oriented"],
+        "land": ["all uses", "residential, all uses"]
+      }
+    ]
+  },
   "Whitby, Ontario, Canada": {
     "place": {
       "name": "Whitby",
@@ -127752,6 +129293,31 @@
         "status": "adopted",
         "scope": ["city center / business district"],
         "land": ["all uses"]
+      }
+    ]
+  },
+  "White Rock, British Columbia, Canada": {
+    "place": {
+      "name": "White Rock",
+      "state": "British Columbia",
+      "country": "Canada",
+      "type": "city",
+      "encoded": "white-rock-british-columbia-canada",
+      "pop": 21939,
+      "coord": [-122.797924, 49.0235357]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["all uses"]
+      }
+    ],
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["transit-oriented"],
+        "land": ["residential, low-density"]
       }
     ]
   },
@@ -128119,11 +129685,20 @@
       "pop": 8092,
       "coord": [-112.7301353, 33.9680962]
     },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["commercial"],
+        "date": "2021-01-26"
+      }
+    ],
     "rm_min": [
       {
         "status": "adopted",
         "scope": ["city center / business district"],
-        "land": ["all uses"]
+        "land": ["all uses"],
+        "date": "2021-01-26"
       }
     ]
   },
