@@ -12461,6 +12461,31 @@
       }
     ]
   },
+  "Boothbay Harbor, Maine, United States": {
+    "place": {
+      "name": "Boothbay Harbor",
+      "state": "Maine",
+      "country": "United States",
+      "type": "city",
+      "encoded": "boothbay-harbor-maine-united-states",
+      "pop": 2027,
+      "coord": [-69.6278039, 43.8512524]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["all uses"]
+      }
+    ],
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["residential, low-density"]
+      }
+    ]
+  },
   "Bordentown Township, New Jersey, United States": {
     "place": {
       "name": "Bordentown Township",
@@ -13930,6 +13955,24 @@
       {
         "status": "adopted",
         "scope": ["city center / business district"],
+        "land": ["all uses"]
+      }
+    ]
+  },
+  "Bridgton, Maine, United States": {
+    "place": {
+      "name": "Bridgton",
+      "state": "Maine",
+      "country": "United States",
+      "type": "city",
+      "encoded": "bridgton-maine-united-states",
+      "pop": 5418,
+      "coord": [-70.7088701, 44.0543839]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
         "land": ["all uses"]
       }
     ]
@@ -17016,6 +17059,25 @@
       }
     ]
   },
+  "Camden, Maine, United States": {
+    "place": {
+      "name": "Camden",
+      "state": "Maine",
+      "country": "United States",
+      "type": "city",
+      "encoded": "camden-maine-united-states",
+      "pop": 5232,
+      "coord": [-69.0851729, 44.2154945]
+    },
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district", "citywide"],
+        "land": ["commercial", "residential, all uses"],
+        "date": "2021-11-02"
+      }
+    ]
+  },
   "Camden, New Jersey, United States": {
     "place": {
       "name": "Camden",
@@ -17661,6 +17723,24 @@
       }
     ]
   },
+  "Canton, North Carolina, United States": {
+    "place": {
+      "name": "Canton",
+      "state": "North Carolina",
+      "country": "United States",
+      "type": "city",
+      "encoded": "canton-north-carolina-united-states",
+      "pop": 4422,
+      "coord": [-82.8373558, 35.5328838]
+    },
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["all uses"]
+      }
+    ]
+  },
   "Canton, Ohio, United States": {
     "place": {
       "name": "Canton",
@@ -18057,6 +18137,24 @@
         "status": "adopted",
         "scope": ["citywide"],
         "land": ["commercial"]
+      }
+    ]
+  },
+  "Cardston, Alberta, Canada": {
+    "place": {
+      "name": "Cardston",
+      "state": "Alberta",
+      "country": "Canada",
+      "type": "city",
+      "encoded": "cardston-alberta-canada",
+      "pop": 3724,
+      "coord": [-113.3165704, 49.2001157]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["commercial", "industrial", "other"]
       }
     ]
   },
@@ -21009,6 +21107,24 @@
         "status": "adopted",
         "scope": ["city center / business district"],
         "land": ["all uses"]
+      }
+    ]
+  },
+  "Cheatham County, Tennessee, United States": {
+    "place": {
+      "name": "Cheatham County",
+      "state": "Tennessee",
+      "country": "United States",
+      "type": "county",
+      "encoded": "cheatham-county-tennessee-united-states",
+      "pop": 41072,
+      "coord": [-87.0967857, 36.2444954]
+    },
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["commercial", "other"]
       }
     ]
   },
@@ -27974,6 +28090,24 @@
       }
     ]
   },
+  "Crossfield, Alberta, Canada": {
+    "place": {
+      "name": "Crossfield",
+      "state": "Alberta",
+      "country": "Canada",
+      "type": "city",
+      "encoded": "crossfield-alberta-canada",
+      "pop": 3599,
+      "coord": [-114.0309938, 51.4272738]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["all uses"]
+      }
+    ]
+  },
   "Crossville, Alabama, United States": {
     "place": {
       "name": "Crossville",
@@ -31484,6 +31618,24 @@
       }
     ]
   },
+  "Didsbury, Alberta, Canada": {
+    "place": {
+      "name": "Didsbury",
+      "state": "Alberta",
+      "country": "Canada",
+      "type": "city",
+      "encoded": "didsbury-alberta-canada",
+      "pop": 5070,
+      "coord": [-114.1375682, 51.6567661]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["all uses"]
+      }
+    ]
+  },
   "Dietzenbach, Hesse, Germany": {
     "place": {
       "name": "Dietzenbach",
@@ -33754,6 +33906,24 @@
       }
     ]
   },
+  "East Hawkesbury, Ontario, Canada": {
+    "place": {
+      "name": "East Hawkesbury",
+      "state": "Ontario",
+      "country": "Canada",
+      "type": "city",
+      "encoded": "east-hawkesbury-ontario-canada",
+      "pop": 3418,
+      "coord": [-74.4870155, 45.499031]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["commercial", "other"]
+      }
+    ]
+  },
   "East Helena, Montana, United States": {
     "place": {
       "name": "East Helena",
@@ -34737,6 +34907,24 @@
         "land": ["all uses"]
       }
     ],
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["all uses"]
+      }
+    ]
+  },
+  "Edenton, North Carolina, United States": {
+    "place": {
+      "name": "Edenton",
+      "state": "North Carolina",
+      "country": "United States",
+      "type": "city",
+      "encoded": "edenton-north-carolina-united-states",
+      "pop": 4397,
+      "coord": [-76.6077213, 36.057938]
+    },
     "rm_min": [
       {
         "status": "adopted",
@@ -38573,6 +38761,24 @@
       {
         "status": "adopted",
         "scope": ["city center / business district"],
+        "land": ["all uses"]
+      }
+    ]
+  },
+  "Fairfield, Maine, United States": {
+    "place": {
+      "name": "Fairfield",
+      "state": "Maine",
+      "country": "United States",
+      "type": "city",
+      "encoded": "fairfield-maine-united-states",
+      "pop": 6484,
+      "coord": [-69.599075, 44.588511]
+    },
+    "add_max": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
         "land": ["all uses"]
       }
     ]
@@ -49716,6 +49922,24 @@
       }
     ]
   },
+  "Hamilton County, Tennessee, United States": {
+    "place": {
+      "name": "Hamilton County",
+      "state": "Tennessee",
+      "country": "United States",
+      "type": "county",
+      "encoded": "hamilton-county-tennessee-united-states",
+      "pop": 366207,
+      "coord": [-85.1940792, 35.1755638]
+    },
+    "add_max": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["commercial"]
+      }
+    ]
+  },
   "Hamilton Township (Mercer County), New Jersey, United States": {
     "place": {
       "name": "Hamilton Township (Mercer County)",
@@ -49884,6 +50108,24 @@
       "coord": [-77.662492, 39.1342719]
     },
     "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["all uses"]
+      }
+    ]
+  },
+  "Hamlet, North Carolina, United States": {
+    "place": {
+      "name": "Hamlet",
+      "state": "North Carolina",
+      "country": "United States",
+      "type": "city",
+      "encoded": "hamlet-north-carolina-united-states",
+      "pop": 6042,
+      "coord": [-79.6972143, 34.8863657]
+    },
+    "rm_min": [
       {
         "status": "adopted",
         "scope": ["city center / business district"],
@@ -54206,6 +54448,24 @@
       }
     ]
   },
+  "Hollis, Maine, United States": {
+    "place": {
+      "name": "Hollis",
+      "state": "Maine",
+      "country": "United States",
+      "type": "city",
+      "encoded": "hollis-maine-united-states",
+      "pop": 4745,
+      "coord": [-70.5918789, 43.604293]
+    },
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["residential, low-density"]
+      }
+    ]
+  },
   "Hollister, Missouri, United States": {
     "place": {
       "name": "Hollister",
@@ -55907,6 +56167,24 @@
       }
     ]
   },
+  "Huron-Kinloss, Ontario, Canada": {
+    "place": {
+      "name": "Huron-Kinloss",
+      "state": "Ontario",
+      "country": "Canada",
+      "type": "city",
+      "encoded": "huron-kinloss-ontario-canada",
+      "pop": 7723,
+      "coord": [-81.5470691, 44.0344127]
+    },
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["commercial", "other"]
+      }
+    ]
+  },
   "Hurstbourne, Kentucky, United States": {
     "place": {
       "name": "Hurstbourne",
@@ -57227,6 +57505,24 @@
       }
     ],
     "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["all uses"]
+      }
+    ]
+  },
+  "Islesboro, Maine, United States": {
+    "place": {
+      "name": "Islesboro",
+      "state": "Maine",
+      "country": "United States",
+      "type": "city",
+      "encoded": "islesboro-maine-united-states",
+      "pop": 583,
+      "coord": [-68.9081685, 44.2892934]
+    },
+    "reduce_min": [
       {
         "status": "adopted",
         "scope": ["city center / business district"],
@@ -69687,6 +69983,24 @@
       }
     ]
   },
+  "Madison, Maine, United States": {
+    "place": {
+      "name": "Madison",
+      "state": "Maine",
+      "country": "United States",
+      "type": "city",
+      "encoded": "madison-maine-united-states",
+      "pop": 4726,
+      "coord": [-69.8797829, 44.7977513]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["all uses"]
+      }
+    ]
+  },
   "Madison, Nebraska, United States": {
     "place": {
       "name": "Madison",
@@ -71792,6 +72106,24 @@
       }
     ]
   },
+  "Marion, North Carolina, United States": {
+    "place": {
+      "name": "Marion",
+      "state": "North Carolina",
+      "country": "United States",
+      "type": "city",
+      "encoded": "marion-north-carolina-united-states",
+      "pop": 7717,
+      "coord": [-82.0091028, 35.6841022]
+    },
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["all uses"]
+      }
+    ]
+  },
   "Marion, Ohio, United States": {
     "place": {
       "name": "Marion",
@@ -73750,6 +74082,24 @@
         "status": "adopted",
         "scope": ["city center / business district"],
         "land": ["all uses"]
+      }
+    ]
+  },
+  "Mechanic Falls, Maine, United States": {
+    "place": {
+      "name": "Mechanic Falls",
+      "state": "Maine",
+      "country": "United States",
+      "type": "city",
+      "encoded": "mechanic-falls-maine-united-states",
+      "pop": 3107,
+      "coord": [-70.392151, 44.111747]
+    },
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["residential, low-density"]
       }
     ]
   },
@@ -76975,6 +77325,24 @@
       "coord": [-86.1807031, 41.6611642]
     },
     "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["all uses"]
+      }
+    ]
+  },
+  "Mission Hills, Kansas, United States": {
+    "place": {
+      "name": "Mission Hills",
+      "state": "Kansas",
+      "country": "United States",
+      "type": "city",
+      "encoded": "mission-hills-kansas-united-states",
+      "pop": 3594,
+      "coord": [-94.6169014, 39.0177834]
+    },
+    "reduce_min": [
       {
         "status": "adopted",
         "scope": ["city center / business district"],
@@ -81670,6 +82038,24 @@
       }
     ]
   },
+  "Nashville, North Carolina, United States": {
+    "place": {
+      "name": "Nashville",
+      "state": "North Carolina",
+      "country": "United States",
+      "type": "city",
+      "encoded": "nashville-north-carolina-united-states",
+      "pop": 5632,
+      "coord": [-77.9655406, 35.974598]
+    },
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["all uses"]
+      }
+    ]
+  },
   "Nashville, Tennessee, United States": {
     "place": {
       "name": "Nashville",
@@ -84030,6 +84416,24 @@
       }
     ],
     "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["all uses"]
+      }
+    ]
+  },
+  "Newport, North Carolina, United States": {
+    "place": {
+      "name": "Newport",
+      "state": "North Carolina",
+      "country": "United States",
+      "type": "city",
+      "encoded": "newport-north-carolina-united-states",
+      "pop": 4364,
+      "coord": [-76.8591057, 34.7865497]
+    },
+    "rm_min": [
       {
         "status": "adopted",
         "scope": ["city center / business district"],
@@ -87705,6 +88109,24 @@
         "status": "adopted",
         "scope": ["city center / business district"],
         "land": ["other"]
+      }
+    ]
+  },
+  "Ogunquit, Maine, United States": {
+    "place": {
+      "name": "Ogunquit",
+      "state": "Maine",
+      "country": "United States",
+      "type": "city",
+      "encoded": "ogunquit-maine-united-states",
+      "pop": 1577,
+      "coord": [-70.5992201, 43.2489755]
+    },
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["commercial", "other"]
       }
     ]
   },
@@ -94850,6 +95272,24 @@
         "status": "adopted",
         "scope": ["citywide"],
         "land": ["all uses"]
+      }
+    ]
+  },
+  "Poland, Maine, United States": {
+    "place": {
+      "name": "Poland",
+      "state": "Maine",
+      "country": "United States",
+      "type": "city",
+      "encoded": "poland-maine-united-states",
+      "pop": 5906,
+      "coord": [-70.3944732, 44.061633]
+    },
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["residential, low-density"]
       }
     ]
   },
@@ -102646,6 +103086,24 @@
       }
     ]
   },
+  "Rumford, Maine, United States": {
+    "place": {
+      "name": "Rumford",
+      "state": "Maine",
+      "country": "United States",
+      "type": "city",
+      "encoded": "rumford-maine-united-states",
+      "pop": 5858,
+      "coord": [-70.6156055, 44.5367001]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["all uses"]
+      }
+    ]
+  },
   "Rumson, New Jersey, United States": {
     "place": {
       "name": "Rumson",
@@ -106601,6 +107059,25 @@
       }
     ]
   },
+  "Shapleigh, Maine, United States": {
+    "place": {
+      "name": "Shapleigh",
+      "state": "Maine",
+      "country": "United States",
+      "type": "city",
+      "encoded": "shapleigh-maine-united-states",
+      "pop": 2921,
+      "coord": [-70.8474271, 43.5406476]
+    },
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["residential, low-density"],
+        "date": "2023-06-03"
+      }
+    ]
+  },
   "Sharon, Connecticut, United States": {
     "place": {
       "name": "Sharon",
@@ -107958,6 +108435,24 @@
         "status": "adopted",
         "scope": ["city center / business district", "citywide"],
         "land": ["all uses", "commercial", "industrial", "other"]
+      }
+    ]
+  },
+  "Siler City, North Carolina, United States": {
+    "place": {
+      "name": "Siler City",
+      "state": "North Carolina",
+      "country": "United States",
+      "type": "city",
+      "encoded": "siler-city-north-carolina-united-states",
+      "pop": 7702,
+      "coord": [-79.4622431, 35.7234734]
+    },
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["commercial", "other"]
       }
     ]
   },
@@ -111009,6 +111504,24 @@
       "encoded": "Spicer_MN",
       "pop": 1112,
       "coord": [-94.9400088, 45.2330198]
+    },
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["all uses"]
+      }
+    ]
+  },
+  "Spindale, North Carolina, United States": {
+    "place": {
+      "name": "Spindale",
+      "state": "North Carolina",
+      "country": "United States",
+      "type": "city",
+      "encoded": "spindale-north-carolina-united-states",
+      "pop": 4225,
+      "coord": [-81.9312068, 35.3574856]
     },
     "rm_min": [
       {
@@ -122280,6 +122793,24 @@
       }
     ]
   },
+  "Vegreville, Alberta, Canada": {
+    "place": {
+      "name": "Vegreville",
+      "state": "Alberta",
+      "country": "Canada",
+      "type": "city",
+      "encoded": "vegreville-alberta-canada",
+      "pop": 5689,
+      "coord": [-112.05, 53.5]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["all uses"]
+      }
+    ]
+  },
   "Velva, North Dakota, United States": {
     "place": {
       "name": "Velva",
@@ -122385,6 +122916,24 @@
       {
         "status": "adopted",
         "scope": ["city center / business district"],
+        "land": ["all uses"]
+      }
+    ]
+  },
+  "Vermilion, Alberta, Canada": {
+    "place": {
+      "name": "Vermilion",
+      "state": "Alberta",
+      "country": "Canada",
+      "type": "city",
+      "encoded": "vermilion-alberta-canada",
+      "pop": 3948,
+      "coord": [-110.8542072, 53.3527093]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district", "citywide"],
         "land": ["all uses"]
       }
     ]
@@ -123436,6 +123985,24 @@
       }
     ]
   },
+  "Wadesboro, North Carolina, United States": {
+    "place": {
+      "name": "Wadesboro",
+      "state": "North Carolina",
+      "country": "United States",
+      "type": "city",
+      "encoded": "wadesboro-north-carolina-united-states",
+      "pop": 5008,
+      "coord": [-80.07674, 34.9681767]
+    },
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["all uses"]
+      }
+    ]
+  },
   "Wadsworth, Illinois, United States": {
     "place": {
       "name": "Wadsworth",
@@ -123693,6 +124260,31 @@
         "status": "adopted",
         "scope": ["city center / business district", "main street / special"],
         "land": ["commercial", "other"]
+      }
+    ]
+  },
+  "Waldoboro, Maine, United States": {
+    "place": {
+      "name": "Waldoboro",
+      "state": "Maine",
+      "country": "United States",
+      "type": "city",
+      "encoded": "waldoboro-maine-united-states",
+      "pop": 5154,
+      "coord": [-69.3740897, 44.1092497]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district", "citywide"],
+        "land": ["residential, all uses"]
+      }
+    ],
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["all uses"]
       }
     ]
   },
@@ -129956,6 +130548,24 @@
       }
     ]
   },
+  "Williamson County, Tennessee, United States": {
+    "place": {
+      "name": "Williamson County",
+      "state": "Tennessee",
+      "country": "United States",
+      "type": "county",
+      "encoded": "williamson-county-tennessee-united-states",
+      "pop": 247726,
+      "coord": [-86.8978708, 35.8772991]
+    },
+    "add_max": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["all uses"]
+      }
+    ]
+  },
   "Williamsport, Pennsylvania, United States": {
     "place": {
       "name": "Williamsport",
@@ -131250,6 +131860,24 @@
         "scope": ["citywide"],
         "land": ["residential, all uses"],
         "date": "1964-02-18"
+      }
+    ]
+  },
+  "Winthrop, Maine, United States": {
+    "place": {
+      "name": "Winthrop",
+      "state": "Maine",
+      "country": "United States",
+      "type": "city",
+      "encoded": "winthrop-maine-united-states",
+      "pop": 6121,
+      "coord": [-69.9712542, 44.3072643]
+    },
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["residential, low-density"]
       }
     ]
   },
