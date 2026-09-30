@@ -3770,6 +3770,24 @@
       }
     ]
   },
+  "Arena, Wisconsin, United States": {
+    "place": {
+      "name": "Arena",
+      "state": "Wisconsin",
+      "country": "United States",
+      "type": "city",
+      "encoded": "arena-wisconsin-united-states",
+      "pop": 844,
+      "coord": [-89.9126606, 43.165548]
+    },
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["residential, all uses"]
+      }
+    ]
+  },
   "Argo, Alabama, United States": {
     "place": {
       "name": "Argo",
@@ -4196,6 +4214,24 @@
         "status": "adopted",
         "scope": ["city center / business district"],
         "land": ["commercial", "other"]
+      }
+    ]
+  },
+  "Arundel, Maine, United States": {
+    "place": {
+      "name": "Arundel",
+      "state": "Maine",
+      "country": "United States",
+      "type": "city",
+      "encoded": "arundel-maine-united-states",
+      "pop": 4264,
+      "coord": [-70.4778292, 43.3825857]
+    },
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["residential, low-density"]
       }
     ]
   },
@@ -4943,6 +4979,24 @@
       }
     ]
   },
+  "Athol, Massachusetts, United States": {
+    "place": {
+      "name": "Athol",
+      "state": "Massachusetts",
+      "country": "United States",
+      "type": "city",
+      "encoded": "athol-massachusetts-united-states",
+      "pop": 11945,
+      "coord": [-72.2268141, 42.594001]
+    },
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["all uses"]
+      }
+    ]
+  },
   "Atikokan, Ontario, Canada": {
     "place": {
       "name": "Atikokan",
@@ -5202,6 +5256,24 @@
         "scope": ["citywide"],
         "land": ["commercial", "industrial", "other"],
         "date": "2021-07-19"
+      }
+    ]
+  },
+  "Auburn, Massachusetts, United States": {
+    "place": {
+      "name": "Auburn",
+      "state": "Massachusetts",
+      "country": "United States",
+      "type": "city",
+      "encoded": "auburn-massachusetts-united-states",
+      "pop": 16889,
+      "coord": [-71.8358095, 42.1945465]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["main street / special"],
+        "land": ["commercial", "other"]
       }
     ]
   },
@@ -6568,6 +6640,29 @@
         "status": "adopted",
         "scope": ["citywide"],
         "land": ["all uses"]
+      }
+    ]
+  },
+  "Bar Harbor, Maine, United States": {
+    "place": {
+      "name": "Bar Harbor",
+      "state": "Maine",
+      "country": "United States",
+      "type": "city",
+      "encoded": "bar-harbor-maine-united-states",
+      "pop": 5098,
+      "coord": [-68.2043361, 44.3876378]
+    },
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district", "citywide"],
+        "land": [
+          "commercial",
+          "other",
+          "residential, all uses",
+          "residential, multi-family"
+        ]
       }
     ]
   },
@@ -8267,6 +8362,38 @@
       }
     ]
   },
+  "Bedford, Massachusetts, United States": {
+    "place": {
+      "name": "Bedford",
+      "state": "Massachusetts",
+      "country": "United States",
+      "type": "city",
+      "encoded": "bedford-massachusetts-united-states",
+      "pop": 14383,
+      "coord": [-71.2817947, 42.4917301]
+    },
+    "add_max": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["industrial", "other"]
+      }
+    ],
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["all uses", "residential, all uses"]
+      }
+    ],
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["main street / special"],
+        "land": ["commercial", "residential, multi-family"]
+      }
+    ]
+  },
   "Bedford, Pennsylvania, United States": {
     "place": {
       "name": "Bedford",
@@ -8978,6 +9105,24 @@
         "status": "adopted",
         "scope": ["city center / business district"],
         "land": ["all uses"]
+      }
+    ]
+  },
+  "Bellingham, Massachusetts, United States": {
+    "place": {
+      "name": "Bellingham",
+      "state": "Massachusetts",
+      "country": "United States",
+      "type": "city",
+      "encoded": "bellingham-massachusetts-united-states",
+      "pop": 16945,
+      "coord": [-71.4746436, 42.0869493]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["transit-oriented"],
+        "land": ["residential, multi-family"]
       }
     ]
   },
@@ -9982,6 +10127,24 @@
       {
         "status": "adopted",
         "scope": ["city center / business district"],
+        "land": ["all uses"]
+      }
+    ]
+  },
+  "Berlin, Vermont, United States": {
+    "place": {
+      "name": "Berlin",
+      "state": "Vermont",
+      "country": "United States",
+      "type": "city",
+      "encoded": "berlin-vermont-united-states",
+      "pop": 2849,
+      "coord": [-72.5759414, 44.2100604]
+    },
+    "add_max": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
         "land": ["all uses"]
       }
     ]
@@ -12461,6 +12624,31 @@
       }
     ]
   },
+  "Boothbay Harbor, Maine, United States": {
+    "place": {
+      "name": "Boothbay Harbor",
+      "state": "Maine",
+      "country": "United States",
+      "type": "city",
+      "encoded": "boothbay-harbor-maine-united-states",
+      "pop": 2027,
+      "coord": [-69.6278039, 43.8512524]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["all uses"]
+      }
+    ],
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["residential, low-density"]
+      }
+    ]
+  },
   "Bordentown Township, New Jersey, United States": {
     "place": {
       "name": "Bordentown Township",
@@ -13930,6 +14118,24 @@
       {
         "status": "adopted",
         "scope": ["city center / business district"],
+        "land": ["all uses"]
+      }
+    ]
+  },
+  "Bridgton, Maine, United States": {
+    "place": {
+      "name": "Bridgton",
+      "state": "Maine",
+      "country": "United States",
+      "type": "city",
+      "encoded": "bridgton-maine-united-states",
+      "pop": 5418,
+      "coord": [-70.7088701, 44.0543839]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
         "land": ["all uses"]
       }
     ]
@@ -17016,6 +17222,25 @@
       }
     ]
   },
+  "Camden, Maine, United States": {
+    "place": {
+      "name": "Camden",
+      "state": "Maine",
+      "country": "United States",
+      "type": "city",
+      "encoded": "camden-maine-united-states",
+      "pop": 5232,
+      "coord": [-69.0851729, 44.2154945]
+    },
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district", "citywide"],
+        "land": ["commercial", "residential, all uses"],
+        "date": "2021-11-02"
+      }
+    ]
+  },
   "Camden, New Jersey, United States": {
     "place": {
       "name": "Camden",
@@ -17661,6 +17886,24 @@
       }
     ]
   },
+  "Canton, North Carolina, United States": {
+    "place": {
+      "name": "Canton",
+      "state": "North Carolina",
+      "country": "United States",
+      "type": "city",
+      "encoded": "canton-north-carolina-united-states",
+      "pop": 4422,
+      "coord": [-82.8373558, 35.5328838]
+    },
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["all uses"]
+      }
+    ]
+  },
   "Canton, Ohio, United States": {
     "place": {
       "name": "Canton",
@@ -18057,6 +18300,24 @@
         "status": "adopted",
         "scope": ["citywide"],
         "land": ["commercial"]
+      }
+    ]
+  },
+  "Cardston, Alberta, Canada": {
+    "place": {
+      "name": "Cardston",
+      "state": "Alberta",
+      "country": "Canada",
+      "type": "city",
+      "encoded": "cardston-alberta-canada",
+      "pop": 3724,
+      "coord": [-113.3165704, 49.2001157]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["commercial", "industrial", "other"]
       }
     ]
   },
@@ -20033,6 +20294,24 @@
       }
     ]
   },
+  "Centuria, Wisconsin, United States": {
+    "place": {
+      "name": "Centuria",
+      "state": "Wisconsin",
+      "country": "United States",
+      "type": "city",
+      "encoded": "centuria-wisconsin-united-states",
+      "pop": 891,
+      "coord": [-92.554092, 45.4513484]
+    },
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["all uses"]
+      }
+    ]
+  },
   "Cerro Gordo, Illinois, United States": {
     "place": {
       "name": "Cerro Gordo",
@@ -21009,6 +21288,24 @@
         "status": "adopted",
         "scope": ["city center / business district"],
         "land": ["all uses"]
+      }
+    ]
+  },
+  "Cheatham County, Tennessee, United States": {
+    "place": {
+      "name": "Cheatham County",
+      "state": "Tennessee",
+      "country": "United States",
+      "type": "county",
+      "encoded": "cheatham-county-tennessee-united-states",
+      "pop": 41072,
+      "coord": [-87.0967857, 36.2444954]
+    },
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["commercial", "other"]
       }
     ]
   },
@@ -23142,6 +23439,24 @@
       }
     ]
   },
+  "Clear Lake, Wisconsin, United States": {
+    "place": {
+      "name": "Clear Lake",
+      "state": "Wisconsin",
+      "country": "United States",
+      "type": "city",
+      "encoded": "clear-lake-wisconsin-united-states",
+      "pop": 1099,
+      "coord": [-92.2702808, 45.2514424]
+    },
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["all uses"]
+      }
+    ]
+  },
   "Clearfield, Utah, United States": {
     "place": {
       "name": "Clearfield",
@@ -23686,6 +24001,24 @@
       }
     ]
   },
+  "Clinton, Massachusetts, United States": {
+    "place": {
+      "name": "Clinton",
+      "state": "Massachusetts",
+      "country": "United States",
+      "type": "city",
+      "encoded": "clinton-massachusetts-united-states",
+      "pop": 15428,
+      "coord": [-71.6874099, 42.4212463]
+    },
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["main street / special"],
+        "land": ["commercial"]
+      }
+    ]
+  },
   "Clinton, Michigan, United States": {
     "place": {
       "name": "Clinton",
@@ -23818,6 +24151,13 @@
       "pop": 2221,
       "coord": [-88.865107, 42.5577925]
     },
+    "add_max": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["residential, all uses"]
+      }
+    ],
     "rm_min": [
       {
         "status": "adopted",
@@ -26873,13 +27213,20 @@
       "type": "city",
       "encoded": "CottageGrove_WI",
       "pop": 7303,
-      "coord": [-89.1988571, 43.0785747]
+      "coord": [-89.1988571, 43.0785747],
+      "repeal": true
     },
     "rm_min": [
       {
         "status": "adopted",
         "scope": ["city center / business district"],
         "land": ["all uses"]
+      },
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["all uses"],
+        "date": "2026-09-21"
       }
     ]
   },
@@ -27266,6 +27613,24 @@
         "status": "adopted",
         "scope": ["citywide"],
         "land": ["all uses"]
+      }
+    ]
+  },
+  "Cowley, Alberta, Canada": {
+    "place": {
+      "name": "Cowley",
+      "state": "Alberta",
+      "country": "Canada",
+      "type": "city",
+      "encoded": "cowley-alberta-canada",
+      "pop": 216,
+      "coord": [-114.073325, 49.56901]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["residential, multi-family"]
       }
     ]
   },
@@ -27974,6 +28339,24 @@
       }
     ]
   },
+  "Crossfield, Alberta, Canada": {
+    "place": {
+      "name": "Crossfield",
+      "state": "Alberta",
+      "country": "Canada",
+      "type": "city",
+      "encoded": "crossfield-alberta-canada",
+      "pop": 3599,
+      "coord": [-114.0309938, 51.4272738]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["all uses"]
+      }
+    ]
+  },
   "Crossville, Alabama, United States": {
     "place": {
       "name": "Crossville",
@@ -28498,6 +28881,24 @@
         "status": "adopted",
         "scope": ["city center / business district", "citywide"],
         "land": ["all uses", "commercial", "other"]
+      }
+    ]
+  },
+  "Cypress County, Alberta, Canada": {
+    "place": {
+      "name": "Cypress County",
+      "state": "Alberta",
+      "country": "Canada",
+      "type": "county",
+      "encoded": "cypress-county-alberta-canada",
+      "pop": 7524,
+      "coord": [-110.515021, 50.2017337]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["all uses"]
       }
     ]
   },
@@ -31484,6 +31885,24 @@
       }
     ]
   },
+  "Didsbury, Alberta, Canada": {
+    "place": {
+      "name": "Didsbury",
+      "state": "Alberta",
+      "country": "Canada",
+      "type": "city",
+      "encoded": "didsbury-alberta-canada",
+      "pop": 5070,
+      "coord": [-114.1375682, 51.6567661]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["all uses"]
+      }
+    ]
+  },
   "Dietzenbach, Hesse, Germany": {
     "place": {
       "name": "Dietzenbach",
@@ -31747,6 +32166,24 @@
         "status": "adopted",
         "scope": ["city center / business district"],
         "land": ["commercial", "other"]
+      }
+    ]
+  },
+  "Donalda, Alberta, Canada": {
+    "place": {
+      "name": "Donalda",
+      "state": "Alberta",
+      "country": "Canada",
+      "type": "city",
+      "encoded": "donalda-alberta-canada",
+      "pop": 226,
+      "coord": [-112.576918, 52.5838892]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["all uses"]
       }
     ]
   },
@@ -32612,6 +33049,24 @@
       }
     ]
   },
+  "Dudley, Massachusetts, United States": {
+    "place": {
+      "name": "Dudley",
+      "state": "Massachusetts",
+      "country": "United States",
+      "type": "city",
+      "encoded": "dudley-massachusetts-united-states",
+      "pop": 11921,
+      "coord": [-71.89876917300775, 42.04488442753743]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["all uses"]
+      }
+    ]
+  },
   "Duluth, Georgia, United States": {
     "place": {
       "name": "Duluth",
@@ -33088,6 +33543,24 @@
       }
     ]
   },
+  "Duxbury, Massachusetts, United States": {
+    "place": {
+      "name": "Duxbury",
+      "state": "Massachusetts",
+      "country": "United States",
+      "type": "city",
+      "encoded": "duxbury-massachusetts-united-states",
+      "pop": 16090,
+      "coord": [-70.672259, 42.0417695]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["transit-oriented"],
+        "land": ["residential, all uses"]
+      }
+    ]
+  },
   "Dyersburg, Tennessee, United States": {
     "place": {
       "name": "Dyersburg",
@@ -33360,6 +33833,24 @@
         "status": "adopted",
         "scope": ["city center / business district"],
         "land": ["commercial", "other"]
+      }
+    ]
+  },
+  "Early County, Georgia, United States": {
+    "place": {
+      "name": "Early County",
+      "state": "Georgia",
+      "country": "United States",
+      "type": "county",
+      "encoded": "early-county-georgia-united-states",
+      "pop": 10854,
+      "coord": [-84.9282058, 31.3454341]
+    },
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["all uses"]
       }
     ]
   },
@@ -33754,6 +34245,24 @@
       }
     ]
   },
+  "East Hawkesbury, Ontario, Canada": {
+    "place": {
+      "name": "East Hawkesbury",
+      "state": "Ontario",
+      "country": "Canada",
+      "type": "city",
+      "encoded": "east-hawkesbury-ontario-canada",
+      "pop": 3418,
+      "coord": [-74.4870155, 45.499031]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["commercial", "other"]
+      }
+    ]
+  },
   "East Helena, Montana, United States": {
     "place": {
       "name": "East Helena",
@@ -33889,6 +34398,24 @@
       {
         "status": "adopted",
         "scope": ["city center / business district"],
+        "land": ["all uses"]
+      }
+    ]
+  },
+  "East Montpelier, Vermont, United States": {
+    "place": {
+      "name": "East Montpelier",
+      "state": "Vermont",
+      "country": "United States",
+      "type": "city",
+      "encoded": "east-montpelier-vermont-united-states",
+      "pop": 2598,
+      "coord": [-72.4857574, 44.2715266]
+    },
+    "add_max": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
         "land": ["all uses"]
       }
     ]
@@ -34279,6 +34806,24 @@
       {
         "status": "adopted",
         "scope": ["city center / business district", "main street / special"],
+        "land": ["all uses"]
+      }
+    ]
+  },
+  "Easthampton, Massachusetts, United States": {
+    "place": {
+      "name": "Easthampton",
+      "state": "Massachusetts",
+      "country": "United States",
+      "type": "city",
+      "encoded": "easthampton-massachusetts-united-states",
+      "pop": 16211,
+      "coord": [-72.6719579, 42.2708804]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
         "land": ["all uses"]
       }
     ]
@@ -34737,6 +35282,24 @@
         "land": ["all uses"]
       }
     ],
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["all uses"]
+      }
+    ]
+  },
+  "Edenton, North Carolina, United States": {
+    "place": {
+      "name": "Edenton",
+      "state": "North Carolina",
+      "country": "United States",
+      "type": "city",
+      "encoded": "edenton-north-carolina-united-states",
+      "pop": 4397,
+      "coord": [-76.6077213, 36.057938]
+    },
     "rm_min": [
       {
         "status": "adopted",
@@ -35549,6 +36112,30 @@
       }
     ]
   },
+  "Eliot, Maine, United States": {
+    "place": {
+      "name": "Eliot",
+      "state": "Maine",
+      "country": "United States",
+      "type": "city",
+      "encoded": "eliot-maine-united-states",
+      "pop": 6717,
+      "coord": [-70.7776375, 43.1081291]
+    },
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["residential, low-density"]
+      },
+      {
+        "status": "adopted",
+        "scope": ["main street / special"],
+        "land": ["commercial", "other"],
+        "date": "2025-11-04"
+      }
+    ]
+  },
   "Elizabeth City, North Carolina, United States": {
     "place": {
       "name": "Elizabeth City",
@@ -36192,6 +36779,38 @@
       }
     ]
   },
+  "Ellsworth, Maine, United States": {
+    "place": {
+      "name": "Ellsworth",
+      "state": "Maine",
+      "country": "United States",
+      "type": "city",
+      "encoded": "ellsworth-maine-united-states",
+      "pop": 8399,
+      "coord": [-68.4243599, 44.5414596]
+    },
+    "add_max": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["all uses"]
+      }
+    ],
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["all uses"]
+      }
+    ],
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["residential, low-density"]
+      }
+    ]
+  },
   "Ellsworth, Michigan, United States": {
     "place": {
       "name": "Ellsworth",
@@ -36464,6 +37083,24 @@
       }
     ]
   },
+  "Elnora, Alberta, Canada": {
+    "place": {
+      "name": "Elnora",
+      "state": "Alberta",
+      "country": "Canada",
+      "type": "city",
+      "encoded": "elnora-alberta-canada",
+      "pop": 288,
+      "coord": [-113.1988043, 51.9953983]
+    },
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["main street / special"],
+        "land": ["residential, low-density"]
+      }
+    ]
+  },
   "Elon, North Carolina, United States": {
     "place": {
       "name": "Elon",
@@ -36636,6 +37273,24 @@
       }
     ]
   },
+  "Emanuel County, Georgia, United States": {
+    "place": {
+      "name": "Emanuel County",
+      "state": "Georgia",
+      "country": "United States",
+      "type": "county",
+      "encoded": "emanuel-county-georgia-united-states",
+      "pop": 22768,
+      "coord": [-82.291685, 32.6080151]
+    },
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["all uses"]
+      }
+    ]
+  },
   "Emerson, New Jersey, United States": {
     "place": {
       "name": "Emerson",
@@ -36679,6 +37334,24 @@
         "scope": ["citywide"],
         "land": ["all uses"],
         "date": "2019-07-19"
+      }
+    ]
+  },
+  "Emigration Canyon, Utah, United States": {
+    "place": {
+      "name": "Emigration Canyon",
+      "state": "Utah",
+      "country": "United States",
+      "type": "city",
+      "encoded": "emigration-canyon-utah-united-states",
+      "pop": 1465,
+      "coord": [-111.7592783, 40.770046]
+    },
+    "add_max": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["all uses"]
       }
     ]
   },
@@ -37175,6 +37848,24 @@
       {
         "status": "adopted",
         "scope": ["city center / business district"],
+        "land": ["all uses"]
+      }
+    ]
+  },
+  "Erda, Utah, United States": {
+    "place": {
+      "name": "Erda",
+      "state": "Utah",
+      "country": "United States",
+      "type": "city",
+      "encoded": "erda-utah-united-states",
+      "pop": 3294,
+      "coord": [-112.304392, 40.6127217]
+    },
+    "add_max": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
         "land": ["all uses"]
       }
     ]
@@ -38577,6 +39268,24 @@
       }
     ]
   },
+  "Fairfield, Maine, United States": {
+    "place": {
+      "name": "Fairfield",
+      "state": "Maine",
+      "country": "United States",
+      "type": "city",
+      "encoded": "fairfield-maine-united-states",
+      "pop": 6484,
+      "coord": [-69.599075, 44.588511]
+    },
+    "add_max": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["all uses"]
+      }
+    ]
+  },
   "Fairfield, Nebraska, United States": {
     "place": {
       "name": "Fairfield",
@@ -38591,6 +39300,24 @@
       {
         "status": "adopted",
         "scope": ["city center / business district"],
+        "land": ["all uses"]
+      }
+    ]
+  },
+  "Fairhaven, Massachusetts, United States": {
+    "place": {
+      "name": "Fairhaven",
+      "state": "Massachusetts",
+      "country": "United States",
+      "type": "city",
+      "encoded": "fairhaven-massachusetts-united-states",
+      "pop": 15924,
+      "coord": [-70.9036487, 41.6376043]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["main street / special"],
         "land": ["all uses"]
       }
     ]
@@ -43898,6 +44625,31 @@
       }
     ]
   },
+  "Gardiner, Maine, United States": {
+    "place": {
+      "name": "Gardiner",
+      "state": "Maine",
+      "country": "United States",
+      "type": "city",
+      "encoded": "gardiner-maine-united-states",
+      "pop": 5961,
+      "coord": [-69.7715207, 44.2294707]
+    },
+    "add_max": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["all uses"]
+      }
+    ],
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district", "main street / special"],
+        "land": ["all uses"]
+      }
+    ]
+  },
   "Gardner, Kansas, United States": {
     "place": {
       "name": "Gardner",
@@ -44641,6 +45393,24 @@
       }
     ]
   },
+  "Genola, Utah, United States": {
+    "place": {
+      "name": "Genola",
+      "state": "Utah",
+      "country": "United States",
+      "type": "city",
+      "encoded": "genola-utah-united-states",
+      "pop": 1766,
+      "coord": [-111.843269, 39.9963426]
+    },
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["residential, low-density"]
+      }
+    ]
+  },
   "George, Iowa, United States": {
     "place": {
       "name": "George",
@@ -45141,6 +45911,24 @@
       "coord": [-98.153565, 40.773909]
     },
     "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["all uses"]
+      }
+    ]
+  },
+  "Girard, Kansas, United States": {
+    "place": {
+      "name": "Girard",
+      "state": "Kansas",
+      "country": "United States",
+      "type": "city",
+      "encoded": "girard-kansas-united-states",
+      "pop": 2496,
+      "coord": [-94.8380215, 37.5111596]
+    },
+    "reduce_min": [
       {
         "status": "adopted",
         "scope": ["city center / business district"],
@@ -48809,6 +49597,30 @@
       }
     ]
   },
+  "Groton, Massachusetts, United States": {
+    "place": {
+      "name": "Groton",
+      "state": "Massachusetts",
+      "country": "United States",
+      "type": "city",
+      "encoded": "groton-massachusetts-united-states",
+      "pop": 11315,
+      "coord": [-71.5745402, 42.6112242]
+    },
+    "add_max": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": [
+          "commercial",
+          "industrial",
+          "medical",
+          "other",
+          "residential, multi-family"
+        ]
+      }
+    ]
+  },
   "Groton, South Dakota, United States": {
     "place": {
       "name": "Groton",
@@ -49716,6 +50528,24 @@
       }
     ]
   },
+  "Hamilton County, Tennessee, United States": {
+    "place": {
+      "name": "Hamilton County",
+      "state": "Tennessee",
+      "country": "United States",
+      "type": "county",
+      "encoded": "hamilton-county-tennessee-united-states",
+      "pop": 366207,
+      "coord": [-85.1940792, 35.1755638]
+    },
+    "add_max": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["commercial"]
+      }
+    ]
+  },
   "Hamilton Township (Mercer County), New Jersey, United States": {
     "place": {
       "name": "Hamilton Township (Mercer County)",
@@ -49884,6 +50714,24 @@
       "coord": [-77.662492, 39.1342719]
     },
     "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["all uses"]
+      }
+    ]
+  },
+  "Hamlet, North Carolina, United States": {
+    "place": {
+      "name": "Hamlet",
+      "state": "North Carolina",
+      "country": "United States",
+      "type": "city",
+      "encoded": "hamlet-north-carolina-united-states",
+      "pop": 6042,
+      "coord": [-79.6972143, 34.8863657]
+    },
+    "rm_min": [
       {
         "status": "adopted",
         "scope": ["city center / business district"],
@@ -50322,6 +51170,24 @@
       {
         "status": "adopted",
         "scope": ["citywide"],
+        "land": ["all uses"]
+      }
+    ]
+  },
+  "Hanover, Massachusetts, United States": {
+    "place": {
+      "name": "Hanover",
+      "state": "Massachusetts",
+      "country": "United States",
+      "type": "city",
+      "encoded": "hanover-massachusetts-united-states",
+      "pop": 14833,
+      "coord": [-70.8119859, 42.1131572]
+    },
+    "add_max": [
+      {
+        "status": "adopted",
+        "scope": ["main street / special"],
         "land": ["all uses"]
       }
     ]
@@ -54206,6 +55072,24 @@
       }
     ]
   },
+  "Hollis, Maine, United States": {
+    "place": {
+      "name": "Hollis",
+      "state": "Maine",
+      "country": "United States",
+      "type": "city",
+      "encoded": "hollis-maine-united-states",
+      "pop": 4745,
+      "coord": [-70.5918789, 43.604293]
+    },
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["residential, low-density"]
+      }
+    ]
+  },
   "Hollister, Missouri, United States": {
     "place": {
       "name": "Hollister",
@@ -54221,6 +55105,38 @@
         "status": "adopted",
         "scope": ["city center / business district"],
         "land": ["commercial"]
+      }
+    ]
+  },
+  "Holliston, Massachusetts, United States": {
+    "place": {
+      "name": "Holliston",
+      "state": "Massachusetts",
+      "country": "United States",
+      "type": "city",
+      "encoded": "holliston-massachusetts-united-states",
+      "pop": 14996,
+      "coord": [-71.4245049, 42.2000966]
+    },
+    "add_max": [
+      {
+        "status": "adopted",
+        "scope": ["transit-oriented"],
+        "land": ["residential, all uses"]
+      }
+    ],
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["all uses"]
+      }
+    ],
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["commercial", "other"]
       }
     ]
   },
@@ -55461,6 +56377,24 @@
       }
     ]
   },
+  "Hull, Massachusetts, United States": {
+    "place": {
+      "name": "Hull",
+      "state": "Massachusetts",
+      "country": "United States",
+      "type": "city",
+      "encoded": "hull-massachusetts-united-states",
+      "pop": 10072,
+      "coord": [-70.9078243, 42.3020436]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["main street / special"],
+        "land": ["commercial"]
+      }
+    ]
+  },
   "Humboldt, Saskatchewan, Canada": {
     "place": {
       "name": "Humboldt",
@@ -55904,6 +56838,24 @@
         "status": "adopted",
         "scope": ["city center / business district"],
         "land": ["all uses"]
+      }
+    ]
+  },
+  "Huron-Kinloss, Ontario, Canada": {
+    "place": {
+      "name": "Huron-Kinloss",
+      "state": "Ontario",
+      "country": "Canada",
+      "type": "city",
+      "encoded": "huron-kinloss-ontario-canada",
+      "pop": 7723,
+      "coord": [-81.5470691, 44.0344127]
+    },
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["commercial", "other"]
       }
     ]
   },
@@ -56827,6 +57779,24 @@
       }
     ]
   },
+  "Ipswich, Massachusetts, United States": {
+    "place": {
+      "name": "Ipswich",
+      "state": "Massachusetts",
+      "country": "United States",
+      "type": "city",
+      "encoded": "ipswich-massachusetts-united-states",
+      "pop": 13785,
+      "coord": [-70.8411583, 42.679273]
+    },
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district", "main street / special"],
+        "land": ["commercial"]
+      }
+    ]
+  },
   "Ipswich, South Dakota, United States": {
     "place": {
       "name": "Ipswich",
@@ -57227,6 +58197,24 @@
       }
     ],
     "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["all uses"]
+      }
+    ]
+  },
+  "Islesboro, Maine, United States": {
+    "place": {
+      "name": "Islesboro",
+      "state": "Maine",
+      "country": "United States",
+      "type": "city",
+      "encoded": "islesboro-maine-united-states",
+      "pop": 583,
+      "coord": [-68.9081685, 44.2892934]
+    },
+    "reduce_min": [
       {
         "status": "adopted",
         "scope": ["city center / business district"],
@@ -59970,6 +60958,24 @@
       }
     ]
   },
+  "Kennebunkport, Maine, United States": {
+    "place": {
+      "name": "Kennebunkport",
+      "state": "Maine",
+      "country": "United States",
+      "type": "city",
+      "encoded": "kennebunkport-maine-united-states",
+      "pop": 3629,
+      "coord": [-70.4771132, 43.3614989]
+    },
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["main street / special"],
+        "land": ["all uses"]
+      }
+    ]
+  },
   "Kenner, Louisiana, United States": {
     "place": {
       "name": "Kenner",
@@ -60046,6 +61052,12 @@
         "status": "adopted",
         "scope": ["city center / business district"],
         "land": ["all uses"]
+      },
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["residential, multi-family"],
+        "date": "2025-06-24"
       }
     ]
   },
@@ -61434,6 +62446,31 @@
         "status": "adopted",
         "scope": ["city center / business district", "citywide"],
         "land": ["all uses"]
+      }
+    ]
+  },
+  "Kittery, Maine, United States": {
+    "place": {
+      "name": "Kittery",
+      "state": "Maine",
+      "country": "United States",
+      "type": "city",
+      "encoded": "kittery-maine-united-states",
+      "pop": 10070,
+      "coord": [-70.743658, 43.0856724]
+    },
+    "add_max": [
+      {
+        "status": "adopted",
+        "scope": ["main street / special"],
+        "land": ["residential, all uses"]
+      }
+    ],
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["residential, low-density"]
       }
     ]
   },
@@ -63544,6 +64581,31 @@
       }
     ]
   },
+  "Lakeville, Massachusetts, United States": {
+    "place": {
+      "name": "Lakeville",
+      "state": "Massachusetts",
+      "country": "United States",
+      "type": "city",
+      "encoded": "lakeville-massachusetts-united-states",
+      "pop": 11523,
+      "coord": [-70.9494854, 41.8459353]
+    },
+    "add_max": [
+      {
+        "status": "adopted",
+        "scope": ["main street / special"],
+        "land": ["all uses"]
+      }
+    ],
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["main street / special"],
+        "land": ["commercial", "other"]
+      }
+    ]
+  },
   "Lakeville, Minnesota, United States": {
     "place": {
       "name": "Lakeville",
@@ -65521,6 +66583,24 @@
       }
     ]
   },
+  "Leicester, Massachusetts, United States": {
+    "place": {
+      "name": "Leicester",
+      "state": "Massachusetts",
+      "country": "United States",
+      "type": "city",
+      "encoded": "leicester-massachusetts-united-states",
+      "pop": 11087,
+      "coord": [-71.9081505, 42.2459002]
+    },
+    "add_max": [
+      {
+        "status": "adopted",
+        "scope": ["transit-oriented"],
+        "land": ["all uses"]
+      }
+    ]
+  },
   "Leland Grove, Illinois, United States": {
     "place": {
       "name": "Leland Grove",
@@ -67477,6 +68557,24 @@
       }
     ]
   },
+  "Littleton, Massachusetts, United States": {
+    "place": {
+      "name": "Littleton",
+      "state": "Massachusetts",
+      "country": "United States",
+      "type": "city",
+      "encoded": "littleton-massachusetts-united-states",
+      "pop": 10141,
+      "coord": [-71.5120096, 42.5375917]
+    },
+    "add_max": [
+      {
+        "status": "adopted",
+        "scope": ["transit-oriented"],
+        "land": ["residential, multi-family"]
+      }
+    ]
+  },
   "Livingston Township, New Jersey, United States": {
     "place": {
       "name": "Livingston Township",
@@ -68849,6 +69947,24 @@
       }
     ]
   },
+  "Loyal, Wisconsin, United States": {
+    "place": {
+      "name": "Loyal",
+      "state": "Wisconsin",
+      "country": "United States",
+      "type": "city",
+      "encoded": "loyal-wisconsin-united-states",
+      "pop": 1203,
+      "coord": [-90.4959724, 44.7369073]
+    },
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["all uses"]
+      }
+    ]
+  },
   "Lubbock, Texas, United States": {
     "place": {
       "name": "Lubbock",
@@ -69241,6 +70357,24 @@
         "status": "adopted",
         "scope": ["city center / business district"],
         "land": ["all uses"]
+      }
+    ]
+  },
+  "Lynnfield, Massachusetts, United States": {
+    "place": {
+      "name": "Lynnfield",
+      "state": "Massachusetts",
+      "country": "United States",
+      "type": "city",
+      "encoded": "lynnfield-massachusetts-united-states",
+      "pop": 13000,
+      "coord": [-71.0481084, 42.5389836]
+    },
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["transit-oriented"],
+        "land": ["residential, low-density"]
       }
     ]
   },
@@ -69684,6 +70818,24 @@
         "status": "adopted",
         "scope": ["main street / special"],
         "land": ["commercial"]
+      }
+    ]
+  },
+  "Madison, Maine, United States": {
+    "place": {
+      "name": "Madison",
+      "state": "Maine",
+      "country": "United States",
+      "type": "city",
+      "encoded": "madison-maine-united-states",
+      "pop": 4726,
+      "coord": [-69.8797829, 44.7977513]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["all uses"]
       }
     ]
   },
@@ -70897,6 +72049,24 @@
       }
     ]
   },
+  "Manitouwadge, Ontario, Canada": {
+    "place": {
+      "name": "Manitouwadge",
+      "state": "Ontario",
+      "country": "Canada",
+      "type": "city",
+      "encoded": "manitouwadge-ontario-canada",
+      "pop": 1974,
+      "coord": [-85.8384058, 49.121541]
+    },
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["commercial"]
+      }
+    ]
+  },
   "Manitowoc, Wisconsin, United States": {
     "place": {
       "name": "Manitowoc",
@@ -71792,6 +72962,24 @@
       }
     ]
   },
+  "Marion, North Carolina, United States": {
+    "place": {
+      "name": "Marion",
+      "state": "North Carolina",
+      "country": "United States",
+      "type": "city",
+      "encoded": "marion-north-carolina-united-states",
+      "pop": 7717,
+      "coord": [-82.0091028, 35.6841022]
+    },
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["all uses"]
+      }
+    ]
+  },
   "Marion, Ohio, United States": {
     "place": {
       "name": "Marion",
@@ -72520,6 +73708,24 @@
       }
     ]
   },
+  "Mashpee, Massachusetts, United States": {
+    "place": {
+      "name": "Mashpee",
+      "state": "Massachusetts",
+      "country": "United States",
+      "type": "city",
+      "encoded": "mashpee-massachusetts-united-states",
+      "pop": 15060,
+      "coord": [-70.4811383, 41.6484421]
+    },
+    "add_max": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["all uses"]
+      }
+    ]
+  },
   "Mason City, Iowa, United States": {
     "place": {
       "name": "Mason City",
@@ -72948,6 +74154,31 @@
         "scope": ["citywide"],
         "land": ["all uses"],
         "date": "2026"
+      }
+    ]
+  },
+  "Maynard, Massachusetts, United States": {
+    "place": {
+      "name": "Maynard",
+      "state": "Massachusetts",
+      "country": "United States",
+      "type": "city",
+      "encoded": "maynard-massachusetts-united-states",
+      "pop": 10746,
+      "coord": [-71.4539683, 42.4321064]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["commercial", "other"]
+      }
+    ],
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["transit-oriented"],
+        "land": ["residential, low-density"]
       }
     ]
   },
@@ -73753,6 +74984,24 @@
       }
     ]
   },
+  "Mechanic Falls, Maine, United States": {
+    "place": {
+      "name": "Mechanic Falls",
+      "state": "Maine",
+      "country": "United States",
+      "type": "city",
+      "encoded": "mechanic-falls-maine-united-states",
+      "pop": 3107,
+      "coord": [-70.392151, 44.111747]
+    },
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["residential, low-density"]
+      }
+    ]
+  },
   "Mechanicsburg, Pennsylvania, United States": {
     "place": {
       "name": "Mechanicsburg",
@@ -73792,6 +75041,24 @@
       {
         "status": "adopted",
         "scope": ["city center / business district"],
+        "land": ["all uses"]
+      }
+    ]
+  },
+  "Medfield, Massachusetts, United States": {
+    "place": {
+      "name": "Medfield",
+      "state": "Massachusetts",
+      "country": "United States",
+      "type": "city",
+      "encoded": "medfield-massachusetts-united-states",
+      "pop": 12799,
+      "coord": [-71.30546, 42.1865609]
+    },
+    "add_max": [
+      {
+        "status": "adopted",
+        "scope": ["main street / special"],
         "land": ["all uses"]
       }
     ]
@@ -74026,6 +75293,31 @@
         "status": "adopted",
         "scope": ["city center / business district"],
         "land": ["all uses"]
+      }
+    ]
+  },
+  "Medway, Massachusetts, United States": {
+    "place": {
+      "name": "Medway",
+      "state": "Massachusetts",
+      "country": "United States",
+      "type": "city",
+      "encoded": "medway-massachusetts-united-states",
+      "pop": 13115,
+      "coord": [-71.39690287630984, 42.14234294302324]
+    },
+    "add_max": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["all uses"]
+      }
+    ],
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide", "transit-oriented"],
+        "land": ["residential, low-density"]
       }
     ]
   },
@@ -75992,6 +77284,24 @@
       }
     ]
   },
+  "Millbury, Massachusetts, United States": {
+    "place": {
+      "name": "Millbury",
+      "state": "Massachusetts",
+      "country": "United States",
+      "type": "city",
+      "encoded": "millbury-massachusetts-united-states",
+      "pop": 13831,
+      "coord": [-71.7603934, 42.1913817]
+    },
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["commercial", "other"]
+      }
+    ]
+  },
   "Millcreek, Utah, United States": {
     "place": {
       "name": "Millcreek",
@@ -76157,6 +77467,24 @@
         "status": "adopted",
         "scope": ["citywide"],
         "land": ["all uses"]
+      }
+    ]
+  },
+  "Millinocket, Maine, United States": {
+    "place": {
+      "name": "Millinocket",
+      "state": "Maine",
+      "country": "United States",
+      "type": "city",
+      "encoded": "millinocket-maine-united-states",
+      "pop": 4114,
+      "coord": [-68.70894492775233, 45.656597328541096]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["commercial", "industrial", "other"]
       }
     ]
   },
@@ -76975,6 +78303,24 @@
       "coord": [-86.1807031, 41.6611642]
     },
     "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["all uses"]
+      }
+    ]
+  },
+  "Mission Hills, Kansas, United States": {
+    "place": {
+      "name": "Mission Hills",
+      "state": "Kansas",
+      "country": "United States",
+      "type": "city",
+      "encoded": "mission-hills-kansas-united-states",
+      "pop": 3594,
+      "coord": [-94.6169014, 39.0177834]
+    },
+    "reduce_min": [
       {
         "status": "adopted",
         "scope": ["city center / business district"],
@@ -81011,6 +82357,24 @@
       }
     ]
   },
+  "Municipal District of Greenview No. 16, Alberta, Canada": {
+    "place": {
+      "name": "Municipal District of Greenview No. 16",
+      "state": "Alberta",
+      "country": "Canada",
+      "type": "county",
+      "encoded": "municipal-district-of-greenview-no-16-alberta-canada",
+      "pop": 8584,
+      "coord": [-117.9455025, 54.7420045]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["all uses"]
+      }
+    ]
+  },
   "Munising, Michigan, United States": {
     "place": {
       "name": "Munising",
@@ -81436,6 +82800,24 @@
       }
     ]
   },
+  "Nampa, Alberta, Canada": {
+    "place": {
+      "name": "Nampa",
+      "state": "Alberta",
+      "country": "Canada",
+      "type": "city",
+      "encoded": "nampa-alberta-canada",
+      "pop": 367,
+      "coord": [-117.133908, 56.0388789]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["all uses"]
+      }
+    ]
+  },
   "Nampa, Idaho, United States": {
     "place": {
       "name": "Nampa",
@@ -81483,6 +82865,29 @@
         "scope": ["city center / business district"],
         "land": ["all uses"],
         "date": "2025-07-07"
+      }
+    ]
+  },
+  "Nantucket, Massachusetts, United States": {
+    "place": {
+      "name": "Nantucket",
+      "state": "Massachusetts",
+      "country": "United States",
+      "type": "city",
+      "encoded": "nantucket-massachusetts-united-states",
+      "pop": 14255,
+      "coord": [-70.09842, 41.2844408]
+    },
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district", "main street / special"],
+        "land": [
+          "all uses",
+          "commercial",
+          "residential, low-density",
+          "residential, multi-family"
+        ]
       }
     ]
   },
@@ -81661,6 +83066,24 @@
       "encoded": "nashville-georgia-united-states",
       "pop": 4947,
       "coord": [-83.2501548, 31.2074197]
+    },
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["all uses"]
+      }
+    ]
+  },
+  "Nashville, North Carolina, United States": {
+    "place": {
+      "name": "Nashville",
+      "state": "North Carolina",
+      "country": "United States",
+      "type": "city",
+      "encoded": "nashville-north-carolina-united-states",
+      "pop": 5632,
+      "coord": [-77.9655406, 35.974598]
     },
     "rm_min": [
       {
@@ -84037,6 +85460,24 @@
       }
     ]
   },
+  "Newport, North Carolina, United States": {
+    "place": {
+      "name": "Newport",
+      "state": "North Carolina",
+      "country": "United States",
+      "type": "city",
+      "encoded": "newport-north-carolina-united-states",
+      "pop": 4364,
+      "coord": [-76.8591057, 34.7865497]
+    },
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["all uses"]
+      }
+    ]
+  },
   "Newport, Oregon, United States": {
     "place": {
       "name": "Newport",
@@ -84718,6 +86159,24 @@
       }
     ]
   },
+  "Norfolk, Massachusetts, United States": {
+    "place": {
+      "name": "Norfolk",
+      "state": "Massachusetts",
+      "country": "United States",
+      "type": "city",
+      "encoded": "norfolk-massachusetts-united-states",
+      "pop": 11662,
+      "coord": [-71.32515598429694, 42.11990333033325]
+    },
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["transit-oriented"],
+        "land": ["residential, low-density"]
+      }
+    ]
+  },
   "Norfolk, Nebraska, United States": {
     "place": {
       "name": "Norfolk",
@@ -84893,6 +86352,31 @@
       {
         "status": "adopted",
         "scope": ["city center / business district"],
+        "land": ["all uses"]
+      }
+    ]
+  },
+  "North Adams, Massachusetts, United States": {
+    "place": {
+      "name": "North Adams",
+      "state": "Massachusetts",
+      "country": "United States",
+      "type": "city",
+      "encoded": "north-adams-massachusetts-united-states",
+      "pop": 12961,
+      "coord": [-73.1118997, 42.6990349]
+    },
+    "add_max": [
+      {
+        "status": "adopted",
+        "scope": ["main street / special"],
+        "land": ["all uses"]
+      }
+    ],
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district", "main street / special"],
         "land": ["all uses"]
       }
     ]
@@ -85341,7 +86825,7 @@
       "country": "Canada",
       "type": "city",
       "encoded": "north-grenville-ontario-canada",
-      "pop": 4051,
+      "pop": 17964,
       "coord": [-75.6448304, 44.9858427]
     },
     "reduce_min": [
@@ -85777,6 +87261,31 @@
       }
     ]
   },
+  "North Reading, Massachusetts, United States": {
+    "place": {
+      "name": "North Reading",
+      "state": "Massachusetts",
+      "country": "United States",
+      "type": "city",
+      "encoded": "north-reading-massachusetts-united-states",
+      "pop": 15554,
+      "coord": [-71.0786653, 42.5750939]
+    },
+    "add_max": [
+      {
+        "status": "adopted",
+        "scope": ["main street / special"],
+        "land": ["residential, all uses"]
+      }
+    ],
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["main street / special"],
+        "land": ["residential, all uses"]
+      }
+    ]
+  },
   "North Ridgeville, Ohio, United States": {
     "place": {
       "name": "North Ridgeville",
@@ -86047,6 +87556,38 @@
         "status": "adopted",
         "scope": ["main street / special"],
         "land": ["all uses"]
+      }
+    ]
+  },
+  "Northborough, Massachusetts, United States": {
+    "place": {
+      "name": "Northborough",
+      "state": "Massachusetts",
+      "country": "United States",
+      "type": "city",
+      "encoded": "northborough-massachusetts-united-states",
+      "pop": 15741,
+      "coord": [-71.6422408, 42.3196015]
+    },
+    "add_max": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["commercial", "industrial"]
+      }
+    ],
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district", "citywide"],
+        "land": ["all uses"]
+      }
+    ],
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["commercial", "other"]
       }
     ]
   },
@@ -87708,6 +89249,24 @@
       }
     ]
   },
+  "Ogunquit, Maine, United States": {
+    "place": {
+      "name": "Ogunquit",
+      "state": "Maine",
+      "country": "United States",
+      "type": "city",
+      "encoded": "ogunquit-maine-united-states",
+      "pop": 1577,
+      "coord": [-70.5992201, 43.2489755]
+    },
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["commercial", "other"]
+      }
+    ]
+  },
   "Ohio County, Indiana, United States": {
     "place": {
       "name": "Ohio County",
@@ -88867,6 +90426,24 @@
       }
     ]
   },
+  "Orfordville, Wisconsin, United States": {
+    "place": {
+      "name": "Orfordville",
+      "state": "Wisconsin",
+      "country": "United States",
+      "type": "city",
+      "encoded": "orfordville-wisconsin-united-states",
+      "pop": 1473,
+      "coord": [-89.2561257, 42.628479]
+    },
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["all uses"]
+      }
+    ]
+  },
   "Orillia, Ontario, Canada": {
     "place": {
       "name": "Orillia",
@@ -90002,6 +91579,24 @@
       }
     ]
   },
+  "Oxford, Maine, United States": {
+    "place": {
+      "name": "Oxford",
+      "state": "Maine",
+      "country": "United States",
+      "type": "city",
+      "encoded": "oxford-maine-united-states",
+      "pop": 4229,
+      "coord": [-70.49323915344998, 44.13140700769507]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["main street / special"],
+        "land": ["commercial"]
+      }
+    ]
+  },
   "Oxford, Mississippi, United States": {
     "place": {
       "name": "Oxford",
@@ -90445,6 +92040,24 @@
       "encoded": "palmer-alaska-united-states",
       "pop": 5888,
       "coord": [-149.11109, 61.5995703]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["all uses"]
+      }
+    ]
+  },
+  "Palmer, Massachusetts, United States": {
+    "place": {
+      "name": "Palmer",
+      "state": "Massachusetts",
+      "country": "United States",
+      "type": "city",
+      "encoded": "palmer-massachusetts-united-states",
+      "pop": 12448,
+      "coord": [-72.3299783, 42.1574489]
     },
     "reduce_min": [
       {
@@ -92419,6 +94032,24 @@
         "scope": ["city center / business district"],
         "land": ["all uses"],
         "date": "2002-06"
+      }
+    ]
+  },
+  "Pepperell, Massachusetts, United States": {
+    "place": {
+      "name": "Pepperell",
+      "state": "Massachusetts",
+      "country": "United States",
+      "type": "city",
+      "encoded": "pepperell-massachusetts-united-states",
+      "pop": 11604,
+      "coord": [-71.5785924, 42.6650324]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["main street / special"],
+        "land": ["residential, all uses"]
       }
     ]
   },
@@ -94853,6 +96484,24 @@
       }
     ]
   },
+  "Poland, Maine, United States": {
+    "place": {
+      "name": "Poland",
+      "state": "Maine",
+      "country": "United States",
+      "type": "city",
+      "encoded": "poland-maine-united-states",
+      "pop": 5906,
+      "coord": [-70.3944732, 44.061633]
+    },
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["residential, low-density"]
+      }
+    ]
+  },
   "Polk City, Iowa, United States": {
     "place": {
       "name": "Polk City",
@@ -97081,6 +98730,24 @@
       }
     ]
   },
+  "Putnam County, West Virginia, United States": {
+    "place": {
+      "name": "Putnam County",
+      "state": "West Virginia",
+      "country": "United States",
+      "type": "county",
+      "encoded": "putnam-county-west-virginia-united-states",
+      "pop": 57440,
+      "coord": [-81.9150148, 38.4939687]
+    },
+    "add_max": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["all uses"]
+      }
+    ]
+  },
   "Puyallup, Washington, United States": {
     "place": {
       "name": "Puyallup",
@@ -97926,6 +99593,24 @@
       }
     ]
   },
+  "Raymond, Maine, United States": {
+    "place": {
+      "name": "Raymond",
+      "state": "Maine",
+      "country": "United States",
+      "type": "city",
+      "encoded": "raymond-maine-united-states",
+      "pop": 4536,
+      "coord": [-70.470428, 43.901851]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["commercial"]
+      }
+    ]
+  },
   "Raymore, Missouri, United States": {
     "place": {
       "name": "Raymore",
@@ -98616,6 +100301,24 @@
         "status": "adopted",
         "scope": ["citywide", "main street / special"],
         "land": ["commercial"]
+      }
+    ]
+  },
+  "Rehoboth, Massachusetts, United States": {
+    "place": {
+      "name": "Rehoboth",
+      "state": "Massachusetts",
+      "country": "United States",
+      "type": "city",
+      "encoded": "rehoboth-massachusetts-united-states",
+      "pop": 12502,
+      "coord": [-71.2494938, 41.8403786]
+    },
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["transit-oriented"],
+        "land": ["residential, low-density"]
       }
     ]
   },
@@ -101130,6 +102833,24 @@
       }
     ]
   },
+  "Rockport, Maine, United States": {
+    "place": {
+      "name": "Rockport",
+      "state": "Maine",
+      "country": "United States",
+      "type": "city",
+      "encoded": "rockport-maine-united-states",
+      "pop": 3644,
+      "coord": [-69.0730466, 44.1875416]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["main street / special"],
+        "land": ["all uses"]
+      }
+    ]
+  },
   "Rockton, Illinois, United States": {
     "place": {
       "name": "Rockton",
@@ -102646,6 +104367,24 @@
       }
     ]
   },
+  "Rumford, Maine, United States": {
+    "place": {
+      "name": "Rumford",
+      "state": "Maine",
+      "country": "United States",
+      "type": "city",
+      "encoded": "rumford-maine-united-states",
+      "pop": 5858,
+      "coord": [-70.6156055, 44.5367001]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["all uses"]
+      }
+    ]
+  },
   "Rumson, New Jersey, United States": {
     "place": {
       "name": "Rumson",
@@ -103010,6 +104749,24 @@
       }
     ]
   },
+  "Sabattus, Maine, United States": {
+    "place": {
+      "name": "Sabattus",
+      "state": "Maine",
+      "country": "United States",
+      "type": "city",
+      "encoded": "sabattus-maine-united-states",
+      "pop": 5044,
+      "coord": [-70.1076532, 44.1200148]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["all uses"]
+      }
+    ]
+  },
   "Sabetha, Kansas, United States": {
     "place": {
       "name": "Sabetha",
@@ -103025,6 +104782,31 @@
         "status": "adopted",
         "scope": ["city center / business district"],
         "land": ["all uses"]
+      }
+    ]
+  },
+  "Saco, Maine, United States": {
+    "place": {
+      "name": "Saco",
+      "state": "Maine",
+      "country": "United States",
+      "type": "city",
+      "encoded": "saco-maine-united-states",
+      "pop": 20381,
+      "coord": [-70.4429855, 43.500739]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["all uses"]
+      }
+    ],
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["residential, low-density"]
       }
     ]
   },
@@ -106014,6 +107796,24 @@
       }
     ]
   },
+  "Seekonk, Massachusetts, United States": {
+    "place": {
+      "name": "Seekonk",
+      "state": "Massachusetts",
+      "country": "United States",
+      "type": "city",
+      "encoded": "seekonk-massachusetts-united-states",
+      "pop": 15531,
+      "coord": [-71.3369973, 41.808434]
+    },
+    "add_max": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["all uses"]
+      }
+    ]
+  },
   "Seguin, Ontario, Canada": {
     "place": {
       "name": "Seguin",
@@ -106601,6 +108401,25 @@
       }
     ]
   },
+  "Shapleigh, Maine, United States": {
+    "place": {
+      "name": "Shapleigh",
+      "state": "Maine",
+      "country": "United States",
+      "type": "city",
+      "encoded": "shapleigh-maine-united-states",
+      "pop": 2921,
+      "coord": [-70.8474271, 43.5406476]
+    },
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["residential, low-density"],
+        "date": "2023-06-03"
+      }
+    ]
+  },
   "Sharon, Connecticut, United States": {
     "place": {
       "name": "Sharon",
@@ -107164,6 +108983,30 @@
         "status": "adopted",
         "scope": ["city center / business district"],
         "land": ["commercial", "residential, all uses"]
+      }
+    ]
+  },
+  "Shellbrook No. 493 Rural Municipality, Saskatchewan, Canada": {
+    "place": {
+      "name": "Shellbrook No. 493 Rural Municipality",
+      "state": "Saskatchewan",
+      "country": "Canada",
+      "type": "county",
+      "encoded": "shellbrook-no-493-rural-municipality-saskatchewan-canada",
+      "pop": 1581,
+      "coord": [-106.3350969550591, 53.34475727783846]
+    },
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": [
+          "commercial",
+          "industrial",
+          "medical",
+          "other",
+          "residential, all uses"
+        ]
       }
     ]
   },
@@ -107889,6 +109732,24 @@
       }
     ]
   },
+  "Sidney, Maine, United States": {
+    "place": {
+      "name": "Sidney",
+      "state": "Maine",
+      "country": "United States",
+      "type": "city",
+      "encoded": "sidney-maine-united-states",
+      "pop": 4645,
+      "coord": [-69.740524, 44.446526]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["commercial"]
+      }
+    ]
+  },
   "Sidney, Montana, United States": {
     "place": {
       "name": "Sidney",
@@ -107958,6 +109819,24 @@
         "status": "adopted",
         "scope": ["city center / business district", "citywide"],
         "land": ["all uses", "commercial", "industrial", "other"]
+      }
+    ]
+  },
+  "Siler City, North Carolina, United States": {
+    "place": {
+      "name": "Siler City",
+      "state": "North Carolina",
+      "country": "United States",
+      "type": "city",
+      "encoded": "siler-city-north-carolina-united-states",
+      "pop": 7702,
+      "coord": [-79.4622431, 35.7234734]
+    },
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["commercial", "other"]
       }
     ]
   },
@@ -110520,6 +112399,24 @@
       }
     ]
   },
+  "Southborough, Massachusetts, United States": {
+    "place": {
+      "name": "Southborough",
+      "state": "Massachusetts",
+      "country": "United States",
+      "type": "city",
+      "encoded": "southborough-massachusetts-united-states",
+      "pop": 10450,
+      "coord": [-71.5245087, 42.3056501]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["all uses"]
+      }
+    ]
+  },
   "Southbridge, Massachusetts, United States": {
     "place": {
       "name": "Southbridge",
@@ -110946,6 +112843,31 @@
       }
     ]
   },
+  "Spencer, Massachusetts, United States": {
+    "place": {
+      "name": "Spencer",
+      "state": "Massachusetts",
+      "country": "United States",
+      "type": "city",
+      "encoded": "spencer-massachusetts-united-states",
+      "pop": 11992,
+      "coord": [-71.9934879, 42.2436316]
+    },
+    "add_max": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["all uses"]
+      }
+    ],
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["all uses"]
+      }
+    ]
+  },
   "Spencer, Tennessee, United States": {
     "place": {
       "name": "Spencer",
@@ -111009,6 +112931,24 @@
       "encoded": "Spicer_MN",
       "pop": 1112,
       "coord": [-94.9400088, 45.2330198]
+    },
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["all uses"]
+      }
+    ]
+  },
+  "Spindale, North Carolina, United States": {
+    "place": {
+      "name": "Spindale",
+      "state": "North Carolina",
+      "country": "United States",
+      "type": "city",
+      "encoded": "spindale-north-carolina-united-states",
+      "pop": 4225,
+      "coord": [-81.9312068, 35.3574856]
     },
     "rm_min": [
       {
@@ -115737,6 +117677,24 @@
       }
     ]
   },
+  "Sundance Beach, Alberta, Canada": {
+    "place": {
+      "name": "Sundance Beach",
+      "state": "Alberta",
+      "country": "Canada",
+      "type": "city",
+      "encoded": "sundance-beach-alberta-canada",
+      "pop": 100,
+      "coord": [-114.1174811, 53.0822016]
+    },
+    "add_max": [
+      {
+        "status": "adopted",
+        "scope": ["main street / special"],
+        "land": ["all uses"]
+      }
+    ]
+  },
   "Sundance, Wyoming, United States": {
     "place": {
       "name": "Sundance",
@@ -119250,6 +121208,24 @@
       }
     ]
   },
+  "Topsham, Maine, United States": {
+    "place": {
+      "name": "Topsham",
+      "state": "Maine",
+      "country": "United States",
+      "type": "city",
+      "encoded": "topsham-maine-united-states",
+      "pop": 9560,
+      "coord": [-69.9635448, 43.9247398]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district", "citywide"],
+        "land": ["all uses"]
+      }
+    ]
+  },
   "Topton, Pennsylvania, United States": {
     "place": {
       "name": "Topton",
@@ -119297,6 +121273,20 @@
       "coord": [-79.3839347, 43.6534817],
       "repeal": true
     },
+    "add_max": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": [
+          "commercial",
+          "industrial",
+          "medical",
+          "other",
+          "residential, low-density",
+          "residential, multi-family"
+        ]
+      }
+    ],
     "rm_min": [
       {
         "status": "adopted",
@@ -120684,6 +122674,24 @@
       }
     ]
   },
+  "Twiggs County, Georgia, United States": {
+    "place": {
+      "name": "Twiggs County",
+      "state": "Georgia",
+      "country": "United States",
+      "type": "county",
+      "encoded": "twiggs-county-georgia-united-states",
+      "pop": 8022,
+      "coord": [-83.4351636, 32.6467914]
+    },
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["other"]
+      }
+    ]
+  },
   "Twin Falls, Idaho, United States": {
     "place": {
       "name": "Twin Falls",
@@ -120881,6 +122889,24 @@
         "status": "adopted",
         "scope": ["city center / business district"],
         "land": ["all uses"]
+      }
+    ]
+  },
+  "Tyngsborough, Massachusetts, United States": {
+    "place": {
+      "name": "Tyngsborough",
+      "state": "Massachusetts",
+      "country": "United States",
+      "type": "city",
+      "encoded": "tyngsborough-massachusetts-united-states",
+      "pop": 12380,
+      "coord": [-71.4227726, 42.6761451]
+    },
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["transit-oriented"],
+        "land": ["residential, low-density"]
       }
     ]
   },
@@ -122280,6 +124306,24 @@
       }
     ]
   },
+  "Vegreville, Alberta, Canada": {
+    "place": {
+      "name": "Vegreville",
+      "state": "Alberta",
+      "country": "Canada",
+      "type": "city",
+      "encoded": "vegreville-alberta-canada",
+      "pop": 5689,
+      "coord": [-112.05, 53.5]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["all uses"]
+      }
+    ]
+  },
   "Velva, North Dakota, United States": {
     "place": {
       "name": "Velva",
@@ -122385,6 +124429,24 @@
       {
         "status": "adopted",
         "scope": ["city center / business district"],
+        "land": ["all uses"]
+      }
+    ]
+  },
+  "Vermilion, Alberta, Canada": {
+    "place": {
+      "name": "Vermilion",
+      "state": "Alberta",
+      "country": "Canada",
+      "type": "city",
+      "encoded": "vermilion-alberta-canada",
+      "pop": 3948,
+      "coord": [-110.8542072, 53.3527093]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district", "citywide"],
         "land": ["all uses"]
       }
     ]
@@ -123436,6 +125498,24 @@
       }
     ]
   },
+  "Wadesboro, North Carolina, United States": {
+    "place": {
+      "name": "Wadesboro",
+      "state": "North Carolina",
+      "country": "United States",
+      "type": "city",
+      "encoded": "wadesboro-north-carolina-united-states",
+      "pop": 5008,
+      "coord": [-80.07674, 34.9681767]
+    },
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["all uses"]
+      }
+    ]
+  },
   "Wadsworth, Illinois, United States": {
     "place": {
       "name": "Wadsworth",
@@ -123693,6 +125773,31 @@
         "status": "adopted",
         "scope": ["city center / business district", "main street / special"],
         "land": ["commercial", "other"]
+      }
+    ]
+  },
+  "Waldoboro, Maine, United States": {
+    "place": {
+      "name": "Waldoboro",
+      "state": "Maine",
+      "country": "United States",
+      "type": "city",
+      "encoded": "waldoboro-maine-united-states",
+      "pop": 5154,
+      "coord": [-69.3740897, 44.1092497]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district", "citywide"],
+        "land": ["residential, all uses"]
+      }
+    ],
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["all uses"]
       }
     ]
   },
@@ -124017,6 +126122,24 @@
       }
     ]
   },
+  "Walton County, Georgia, United States": {
+    "place": {
+      "name": "Walton County",
+      "state": "Georgia",
+      "country": "United States",
+      "type": "county",
+      "encoded": "walton-county-georgia-united-states",
+      "pop": 96673,
+      "coord": [-83.740416, 33.762884]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["all uses"]
+      }
+    ]
+  },
   "Walton, Kentucky, United States": {
     "place": {
       "name": "Walton",
@@ -124243,6 +126366,38 @@
       }
     ]
   },
+  "Ware, Massachusetts, United States": {
+    "place": {
+      "name": "Ware",
+      "state": "Massachusetts",
+      "country": "United States",
+      "type": "city",
+      "encoded": "ware-massachusetts-united-states",
+      "pop": 10066,
+      "coord": [-72.2397806, 42.2599297]
+    },
+    "add_max": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["all uses"]
+      }
+    ],
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["all uses"]
+      }
+    ],
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["transit-oriented"],
+        "land": ["residential, low-density"]
+      }
+    ]
+  },
   "Wareham, Massachusetts, United States": {
     "place": {
       "name": "Wareham",
@@ -124349,6 +126504,24 @@
         "status": "adopted",
         "scope": ["city center / business district"],
         "land": ["all uses"]
+      }
+    ]
+  },
+  "Warren, Maine, United States": {
+    "place": {
+      "name": "Warren",
+      "state": "Maine",
+      "country": "United States",
+      "type": "city",
+      "encoded": "warren-maine-united-states",
+      "pop": 4865,
+      "coord": [-69.240646, 44.12062]
+    },
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["residential, low-density"]
       }
     ]
   },
@@ -124798,6 +126971,24 @@
           "residential, low-density",
           "residential, multi-family"
         ]
+      }
+    ]
+  },
+  "Washington County, Georgia, United States": {
+    "place": {
+      "name": "Washington County",
+      "state": "Georgia",
+      "country": "United States",
+      "type": "county",
+      "encoded": "washington-county-georgia-united-states",
+      "pop": 19988,
+      "coord": [-82.7748026, 32.9619979]
+    },
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["all uses"]
       }
     ]
   },
@@ -126214,6 +128405,24 @@
         "status": "adopted",
         "scope": ["city center / business district"],
         "land": ["all uses"]
+      }
+    ]
+  },
+  "Wayland, Massachusetts, United States": {
+    "place": {
+      "name": "Wayland",
+      "state": "Massachusetts",
+      "country": "United States",
+      "type": "city",
+      "encoded": "wayland-massachusetts-united-states",
+      "pop": 13943,
+      "coord": [-71.3606721, 42.3632063]
+    },
+    "add_max": [
+      {
+        "status": "adopted",
+        "scope": ["main street / special"],
+        "land": ["commercial"]
       }
     ]
   },
@@ -128623,6 +130832,24 @@
       }
     ]
   },
+  "Weston, Massachusetts, United States": {
+    "place": {
+      "name": "Weston",
+      "state": "Massachusetts",
+      "country": "United States",
+      "type": "city",
+      "encoded": "weston-massachusetts-united-states",
+      "pop": 11851,
+      "coord": [-71.3031132, 42.3667625]
+    },
+    "add_max": [
+      {
+        "status": "adopted",
+        "scope": ["main street / special"],
+        "land": ["residential, multi-family"]
+      }
+    ]
+  },
   "Weston, Missouri, United States": {
     "place": {
       "name": "Weston",
@@ -128851,6 +131078,31 @@
         "status": "adopted",
         "scope": ["city center / business district"],
         "land": ["all uses"]
+      }
+    ]
+  },
+  "Westwood, Massachusetts, United States": {
+    "place": {
+      "name": "Westwood",
+      "state": "Massachusetts",
+      "country": "United States",
+      "type": "city",
+      "encoded": "westwood-massachusetts-united-states",
+      "pop": 16266,
+      "coord": [-71.2233829, 42.2186913]
+    },
+    "add_max": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["all uses"]
+      }
+    ],
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["transit-oriented"],
+        "land": ["residential, low-density"]
       }
     ]
   },
@@ -129633,6 +131885,24 @@
       }
     ]
   },
+  "Whitfield County, Georgia, United States": {
+    "place": {
+      "name": "Whitfield County",
+      "state": "Georgia",
+      "country": "United States",
+      "type": "county",
+      "encoded": "whitfield-county-georgia-united-states",
+      "pop": 102864,
+      "coord": [-84.9745026, 34.7969288]
+    },
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["all uses"]
+      }
+    ]
+  },
   "Whiting, Indiana, United States": {
     "place": {
       "name": "Whiting",
@@ -129648,6 +131918,24 @@
         "status": "adopted",
         "scope": ["city center / business district"],
         "land": ["all uses"]
+      }
+    ]
+  },
+  "Whitman, Massachusetts, United States": {
+    "place": {
+      "name": "Whitman",
+      "state": "Massachusetts",
+      "country": "United States",
+      "type": "city",
+      "encoded": "whitman-massachusetts-united-states",
+      "pop": 15121,
+      "coord": [-70.935599, 42.0806617]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["transit-oriented"],
+        "land": ["residential, multi-family"]
       }
     ]
   },
@@ -129753,6 +132041,24 @@
         "status": "adopted",
         "scope": ["main street / special"],
         "land": ["all uses"]
+      }
+    ]
+  },
+  "Wilkes County, Georgia, United States": {
+    "place": {
+      "name": "Wilkes County",
+      "state": "Georgia",
+      "country": "United States",
+      "type": "county",
+      "encoded": "wilkes-county-georgia-united-states",
+      "pop": 9565,
+      "coord": [-82.7385978, 33.7898432]
+    },
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["residential, low-density"]
       }
     ]
   },
@@ -129953,6 +132259,24 @@
         "status": "adopted",
         "scope": ["city center / business district"],
         "land": ["commercial", "other"]
+      }
+    ]
+  },
+  "Williamson County, Tennessee, United States": {
+    "place": {
+      "name": "Williamson County",
+      "state": "Tennessee",
+      "country": "United States",
+      "type": "county",
+      "encoded": "williamson-county-tennessee-united-states",
+      "pop": 247726,
+      "coord": [-86.8978708, 35.8772991]
+    },
+    "add_max": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["all uses"]
       }
     ]
   },
@@ -130494,6 +132818,31 @@
       {
         "status": "adopted",
         "scope": ["citywide"],
+        "land": ["all uses"]
+      }
+    ]
+  },
+  "Winchendon, Massachusetts, United States": {
+    "place": {
+      "name": "Winchendon",
+      "state": "Massachusetts",
+      "country": "United States",
+      "type": "city",
+      "encoded": "winchendon-massachusetts-united-states",
+      "pop": 10364,
+      "coord": [-72.0499767, 42.6815126]
+    },
+    "add_max": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["all uses"]
+      }
+    ],
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["main street / special"],
         "land": ["all uses"]
       }
     ]
@@ -131093,6 +133442,24 @@
       }
     ]
   },
+  "Winslow, Maine, United States": {
+    "place": {
+      "name": "Winslow",
+      "state": "Maine",
+      "country": "United States",
+      "type": "city",
+      "encoded": "winslow-maine-united-states",
+      "pop": 7948,
+      "coord": [-69.6287139, 44.538237]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["main street / special"],
+        "land": ["all uses"]
+      }
+    ]
+  },
   "Winston-Salem, North Carolina, United States": {
     "place": {
       "name": "Winston-Salem",
@@ -131253,6 +133620,24 @@
       }
     ]
   },
+  "Winthrop, Maine, United States": {
+    "place": {
+      "name": "Winthrop",
+      "state": "Maine",
+      "country": "United States",
+      "type": "city",
+      "encoded": "winthrop-maine-united-states",
+      "pop": 6121,
+      "coord": [-69.9712542, 44.3072643]
+    },
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["residential, low-density"]
+      }
+    ]
+  },
   "Winthrop, Massachusetts, United States": {
     "place": {
       "name": "Winthrop",
@@ -131304,6 +133689,24 @@
         "status": "adopted",
         "scope": ["city center / business district", "citywide"],
         "land": ["all uses", "commercial", "other"]
+      }
+    ]
+  },
+  "Wiscasset, Maine, United States": {
+    "place": {
+      "name": "Wiscasset",
+      "state": "Maine",
+      "country": "United States",
+      "type": "city",
+      "encoded": "wiscasset-maine-united-states",
+      "pop": 3742,
+      "coord": [-69.6650998, 44.0026295]
+    },
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["residential, low-density"]
       }
     ]
   },
@@ -132490,6 +134893,24 @@
       }
     ]
   },
+  "Wrentham, Massachusetts, United States": {
+    "place": {
+      "name": "Wrentham",
+      "state": "Massachusetts",
+      "country": "United States",
+      "type": "city",
+      "encoded": "wrentham-massachusetts-united-states",
+      "pop": 12178,
+      "coord": [-71.3281114, 42.0667652]
+    },
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["all uses"]
+      }
+    ]
+  },
   "Wrightstown, New Jersey, United States": {
     "place": {
       "name": "Wrightstown",
@@ -133079,6 +135500,31 @@
         "status": "adopted",
         "scope": ["citywide"],
         "land": ["all uses"]
+      }
+    ]
+  },
+  "York, Maine, United States": {
+    "place": {
+      "name": "York",
+      "state": "Maine",
+      "country": "United States",
+      "type": "city",
+      "encoded": "york-maine-united-states",
+      "pop": 13723,
+      "coord": [-70.65106950795987, 43.1438849650411]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["all uses", "commercial", "other"]
+      }
+    ],
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["residential, low-density"]
       }
     ]
   },
