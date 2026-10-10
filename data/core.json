@@ -682,6 +682,24 @@
       }
     ]
   },
+  "Ahoskie, North Carolina, United States": {
+    "place": {
+      "name": "Ahoskie",
+      "state": "North Carolina",
+      "country": "United States",
+      "type": "city",
+      "encoded": "ahoskie-north-carolina-united-states",
+      "pop": 4891,
+      "coord": [-76.9857687, 36.2855245]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["all uses"]
+      }
+    ]
+  },
   "Aiken, South Carolina, United States": {
     "place": {
       "name": "Aiken",
@@ -2979,6 +2997,31 @@
       }
     ]
   },
+  "Angier, North Carolina, United States": {
+    "place": {
+      "name": "Angier",
+      "state": "North Carolina",
+      "country": "United States",
+      "type": "city",
+      "encoded": "angier-north-carolina-united-states",
+      "pop": 5265,
+      "coord": [-78.7391813, 35.5071045]
+    },
+    "add_max": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["all uses"]
+      }
+    ],
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["all uses"]
+      }
+    ]
+  },
   "Angola, Indiana, United States": {
     "place": {
       "name": "Angola",
@@ -3677,6 +3720,24 @@
         "status": "adopted",
         "scope": ["citywide"],
         "land": ["all uses"]
+      }
+    ]
+  },
+  "Archer Lodge, North Carolina, United States": {
+    "place": {
+      "name": "Archer Lodge",
+      "state": "North Carolina",
+      "country": "United States",
+      "type": "city",
+      "encoded": "archer-lodge-north-carolina-united-states",
+      "pop": 4797,
+      "coord": [-78.3755557, 35.6940442]
+    },
+    "add_max": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["commercial"]
       }
     ]
   },
@@ -5966,6 +6027,31 @@
       }
     ]
   },
+  "Ayden, North Carolina, United States": {
+    "place": {
+      "name": "Ayden",
+      "state": "North Carolina",
+      "country": "United States",
+      "type": "city",
+      "encoded": "ayden-north-carolina-united-states",
+      "pop": 4977,
+      "coord": [-77.4175729, 35.4711635]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["all uses"]
+      }
+    ],
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["all uses"]
+      }
+    ]
+  },
   "Aylmer, Ontario, Canada": {
     "place": {
       "name": "Aylmer",
@@ -8066,6 +8152,31 @@
       }
     ]
   },
+  "Beaufort, North Carolina, United States": {
+    "place": {
+      "name": "Beaufort",
+      "state": "North Carolina",
+      "country": "United States",
+      "type": "city",
+      "encoded": "beaufort-north-carolina-united-states",
+      "pop": 4464,
+      "coord": [-76.8927522, 35.469331]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["residential, multi-family"]
+      }
+    ],
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["all uses"]
+      }
+    ]
+  },
   "Beaufort, South Carolina, United States": {
     "place": {
       "name": "Beaufort",
@@ -9633,6 +9744,31 @@
       }
     ]
   },
+  "Benson, North Carolina, United States": {
+    "place": {
+      "name": "Benson",
+      "state": "North Carolina",
+      "country": "United States",
+      "type": "city",
+      "encoded": "benson-north-carolina-united-states",
+      "pop": 3967,
+      "coord": [-78.5480563, 35.3814368]
+    },
+    "add_max": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["all uses"]
+      }
+    ],
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["all uses"]
+      }
+    ]
+  },
   "Bentley, Alberta, Canada": {
     "place": {
       "name": "Bentley",
@@ -10140,6 +10276,24 @@
       "encoded": "berlin-vermont-united-states",
       "pop": 2849,
       "coord": [-72.5759414, 44.2100604]
+    },
+    "add_max": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["all uses"]
+      }
+    ]
+  },
+  "Bermuda Run, North Carolina, United States": {
+    "place": {
+      "name": "Bermuda Run",
+      "state": "North Carolina",
+      "country": "United States",
+      "type": "city",
+      "encoded": "bermuda-run-north-carolina-united-states",
+      "pop": 3120,
+      "coord": [-80.4219996, 36.0037477]
     },
     "add_max": [
       {
@@ -11783,7 +11937,8 @@
       "type": "city",
       "encoded": "Bloomington_IN",
       "pop": 79168,
-      "coord": [-86.5342881, 39.1670396]
+      "coord": [-86.5342881, 39.1670396],
+      "repeal": true
     },
     "add_max": [
       {
@@ -11797,6 +11952,12 @@
         "status": "adopted",
         "scope": ["city center / business district"],
         "land": ["all uses"]
+      },
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["all uses"],
+        "date": "2026-09-16"
       }
     ]
   },
@@ -18657,6 +18818,31 @@
       }
     ]
   },
+  "Carolina Beach, North Carolina, United States": {
+    "place": {
+      "name": "Carolina Beach",
+      "state": "North Carolina",
+      "country": "United States",
+      "type": "city",
+      "encoded": "carolina-beach-north-carolina-united-states",
+      "pop": 6564,
+      "coord": [-77.8935966, 34.0351727]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["all uses", "commercial", "industrial", "medical", "other"]
+      }
+    ],
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["all uses"]
+      }
+    ]
+  },
   "Carpentersville, Illinois, United States": {
     "place": {
       "name": "Carpentersville",
@@ -22158,6 +22344,38 @@
       "pop": 4080,
       "coord": [-88.1628151, 44.028944]
     },
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["all uses"]
+      }
+    ]
+  },
+  "China Grove, North Carolina, United States": {
+    "place": {
+      "name": "China Grove",
+      "state": "North Carolina",
+      "country": "United States",
+      "type": "city",
+      "encoded": "china-grove-north-carolina-united-states",
+      "pop": 4434,
+      "coord": [-80.5817318, 35.569306]
+    },
+    "add_max": [
+      {
+        "status": "adopted",
+        "scope": ["main street / special"],
+        "land": ["all uses"]
+      }
+    ],
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide", "main street / special"],
+        "land": ["all uses"]
+      }
+    ],
     "rm_min": [
       {
         "status": "adopted",
@@ -27931,6 +28149,24 @@
       }
     ]
   },
+  "Creedmoor, North Carolina, United States": {
+    "place": {
+      "name": "Creedmoor",
+      "state": "North Carolina",
+      "country": "United States",
+      "type": "city",
+      "encoded": "creedmoor-north-carolina-united-states",
+      "pop": 4866,
+      "coord": [-78.6862272, 36.122741]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["all uses"]
+      }
+    ]
+  },
   "Creighton, Nebraska, United States": {
     "place": {
       "name": "Creighton",
@@ -28983,6 +29219,24 @@
       "encoded": "dallas-georgia-united-states",
       "pop": 14042,
       "coord": [-84.8407732, 33.9237141]
+    },
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["all uses"]
+      }
+    ]
+  },
+  "Dallas, North Carolina, United States": {
+    "place": {
+      "name": "Dallas",
+      "state": "North Carolina",
+      "country": "United States",
+      "type": "city",
+      "encoded": "dallas-north-carolina-united-states",
+      "pop": 5927,
+      "coord": [-81.1765654, 35.3160119]
     },
     "rm_min": [
       {
@@ -36226,6 +36480,24 @@
       }
     ]
   },
+  "Elizabethtown, North Carolina, United States": {
+    "place": {
+      "name": "Elizabethtown",
+      "state": "North Carolina",
+      "country": "United States",
+      "type": "city",
+      "encoded": "elizabethtown-north-carolina-united-states",
+      "pop": 3296,
+      "coord": [-78.6052899, 34.6293372]
+    },
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["all uses"]
+      }
+    ]
+  },
   "Elizabethtown, Pennsylvania, United States": {
     "place": {
       "name": "Elizabethtown",
@@ -36456,6 +36728,31 @@
         "status": "adopted",
         "scope": ["city center / business district"],
         "land": ["all uses"]
+      }
+    ]
+  },
+  "Elkin, North Carolina, United States": {
+    "place": {
+      "name": "Elkin",
+      "state": "North Carolina",
+      "country": "United States",
+      "type": "city",
+      "encoded": "elkin-north-carolina-united-states",
+      "pop": 4122,
+      "coord": [-80.8507968, 36.2440504]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["all uses"]
+      }
+    ],
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["commercial", "other"]
       }
     ]
   },
@@ -39970,6 +40267,31 @@
       }
     ]
   },
+  "Farmville, North Carolina, United States": {
+    "place": {
+      "name": "Farmville",
+      "state": "North Carolina",
+      "country": "United States",
+      "type": "city",
+      "encoded": "farmville-north-carolina-united-states",
+      "pop": 4461,
+      "coord": [-77.5852496, 35.5954381]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district", "citywide"],
+        "land": ["all uses", "residential, multi-family"]
+      }
+    ],
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["commercial", "other"]
+      }
+    ]
+  },
   "Farmville, Virginia, United States": {
     "place": {
       "name": "Farmville",
@@ -41453,6 +41775,31 @@
         "status": "adopted",
         "scope": ["citywide"],
         "land": ["all uses"]
+      }
+    ]
+  },
+  "Forest City, North Carolina, United States": {
+    "place": {
+      "name": "Forest City",
+      "state": "North Carolina",
+      "country": "United States",
+      "type": "city",
+      "encoded": "forest-city-north-carolina-united-states",
+      "pop": 7377,
+      "coord": [-81.8649245, 35.3337279]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["residential, all uses"]
+      }
+    ],
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["commercial", "other"]
       }
     ]
   },
@@ -42957,6 +43304,38 @@
       "pop": 941,
       "coord": [-98.952581, 40.096124]
     },
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["all uses"]
+      }
+    ]
+  },
+  "Franklin, North Carolina, United States": {
+    "place": {
+      "name": "Franklin",
+      "state": "North Carolina",
+      "country": "United States",
+      "type": "city",
+      "encoded": "franklin-north-carolina-united-states",
+      "pop": 4175,
+      "coord": [-78.2787229, 36.1028596]
+    },
+    "add_max": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["all uses"]
+      }
+    ],
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["main street / special"],
+        "land": ["all uses"]
+      }
+    ],
     "rm_min": [
       {
         "status": "adopted",
@@ -47900,6 +48279,24 @@
       "coord": [-95.5455752, 44.8099575]
     },
     "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["all uses"]
+      }
+    ]
+  },
+  "Granite Falls, North Carolina, United States": {
+    "place": {
+      "name": "Granite Falls",
+      "state": "North Carolina",
+      "country": "United States",
+      "type": "city",
+      "encoded": "granite-falls-north-carolina-united-states",
+      "pop": 4965,
+      "coord": [-81.4306458, 35.7965205]
+    },
+    "reduce_min": [
       {
         "status": "adopted",
         "scope": ["city center / business district"],
@@ -55158,6 +55555,24 @@
       }
     ]
   },
+  "Holly Ridge, North Carolina, United States": {
+    "place": {
+      "name": "Holly Ridge",
+      "state": "North Carolina",
+      "country": "United States",
+      "type": "city",
+      "encoded": "holly-ridge-north-carolina-united-states",
+      "pop": 4171,
+      "coord": [-77.5549696, 34.4954448]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["all uses"]
+      }
+    ]
+  },
   "Holly Springs, Georgia, United States": {
     "place": {
       "name": "Holly Springs",
@@ -61574,6 +61989,24 @@
       }
     ]
   },
+  "Kill Devil Hills, North Carolina, United States": {
+    "place": {
+      "name": "Kill Devil Hills",
+      "state": "North Carolina",
+      "country": "United States",
+      "type": "city",
+      "encoded": "kill-devil-hills-north-carolina-united-states",
+      "pop": 7633,
+      "coord": [-75.6776147, 36.0321186]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["all uses"]
+      }
+    ]
+  },
   "Killaloe, Hagarty and Richards, Ontario, Canada": {
     "place": {
       "name": "Killaloe, Hagarty and Richards",
@@ -67663,6 +68096,31 @@
       }
     ]
   },
+  "Lillington, North Carolina, United States": {
+    "place": {
+      "name": "Lillington",
+      "state": "North Carolina",
+      "country": "United States",
+      "type": "city",
+      "encoded": "lillington-north-carolina-united-states",
+      "pop": 4735,
+      "coord": [-78.8156001, 35.399121]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["all uses"]
+      }
+    ],
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["all uses"]
+      }
+    ]
+  },
   "Lillooet, British Columbia, Canada": {
     "place": {
       "name": "Lillooet",
@@ -70500,6 +70958,26 @@
         "status": "adopted",
         "scope": ["city center / business district"],
         "land": ["all uses"]
+      }
+    ]
+  },
+  "Lyons, New York, United States": {
+    "place": {
+      "name": "Lyons",
+      "state": "New York",
+      "country": "United States",
+      "type": "city",
+      "encoded": "lyons-new-york-united-states",
+      "pop": 5679,
+      "coord": [-76.9902456, 43.0642305],
+      "repeal": true
+    },
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["all uses"],
+        "date": "2026-09-23"
       }
     ]
   },
@@ -73563,6 +74041,37 @@
       {
         "status": "adopted",
         "scope": ["city center / business district"],
+        "land": ["all uses"]
+      }
+    ]
+  },
+  "Marvin, North Carolina, United States": {
+    "place": {
+      "name": "Marvin",
+      "state": "North Carolina",
+      "country": "United States",
+      "type": "city",
+      "encoded": "marvin-north-carolina-united-states",
+      "pop": 6358,
+      "coord": [-80.8211737, 34.999287]
+    },
+    "add_max": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": [
+          "commercial",
+          "industrial",
+          "medical",
+          "other",
+          "residential, multi-family"
+        ]
+      }
+    ],
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district", "citywide"],
         "land": ["all uses"]
       }
     ]
@@ -76978,6 +77487,24 @@
       {
         "status": "adopted",
         "scope": ["citywide"],
+        "land": ["all uses"]
+      }
+    ]
+  },
+  "Midway, North Carolina, United States": {
+    "place": {
+      "name": "Midway",
+      "state": "North Carolina",
+      "country": "United States",
+      "type": "city",
+      "encoded": "midway-north-carolina-united-states",
+      "pop": 4742,
+      "coord": [-80.2181043, 35.9534706]
+    },
+    "add_max": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
         "land": ["all uses"]
       }
     ]
@@ -82764,6 +83291,24 @@
       }
     ]
   },
+  "Nags Head, North Carolina, United States": {
+    "place": {
+      "name": "Nags Head",
+      "state": "North Carolina",
+      "country": "United States",
+      "type": "city",
+      "encoded": "nags-head-north-carolina-united-states",
+      "pop": 3146,
+      "coord": [-75.624062, 35.9573923]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["main street / special"],
+        "land": ["commercial", "other"]
+      }
+    ]
+  },
   "Naicam, Saskatchewan, Canada": {
     "place": {
       "name": "Naicam",
@@ -87519,6 +88064,24 @@
         "status": "adopted",
         "scope": ["city center / business district"],
         "land": ["commercial", "other"]
+      }
+    ]
+  },
+  "North Wilkesboro, North Carolina, United States": {
+    "place": {
+      "name": "North Wilkesboro",
+      "state": "North Carolina",
+      "country": "United States",
+      "type": "city",
+      "encoded": "north-wilkesboro-north-carolina-united-states",
+      "pop": 4131,
+      "coord": [-81.1475841, 36.1584651]
+    },
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["all uses"]
       }
     ]
   },
@@ -95533,6 +96096,24 @@
       }
     ]
   },
+  "Pittsboro, North Carolina, United States": {
+    "place": {
+      "name": "Pittsboro",
+      "state": "North Carolina",
+      "country": "United States",
+      "type": "city",
+      "encoded": "pittsboro-north-carolina-united-states",
+      "pop": 4537,
+      "coord": [-79.1771539, 35.7201229]
+    },
+    "add_max": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["all uses"]
+      }
+    ]
+  },
   "Pittsburg, Kansas, United States": {
     "place": {
       "name": "Pittsburg",
@@ -96060,6 +96641,24 @@
       }
     ]
   },
+  "Pleasant Garden, North Carolina, United States": {
+    "place": {
+      "name": "Pleasant Garden",
+      "state": "North Carolina",
+      "country": "United States",
+      "type": "city",
+      "encoded": "pleasant-garden-north-carolina-united-states",
+      "pop": 5000,
+      "coord": [-79.762131, 35.9621197]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district", "citywide"],
+        "land": ["all uses", "industrial"]
+      }
+    ]
+  },
   "Pleasant Hill, Missouri, United States": {
     "place": {
       "name": "Pleasant Hill",
@@ -96329,6 +96928,24 @@
         "scope": ["city center / business district"],
         "land": ["commercial", "other"],
         "date": "2023-09-12"
+      }
+    ]
+  },
+  "Plymouth, North Carolina, United States": {
+    "place": {
+      "name": "Plymouth",
+      "state": "North Carolina",
+      "country": "United States",
+      "type": "city",
+      "encoded": "plymouth-north-carolina-united-states",
+      "pop": 3320,
+      "coord": [-76.7485555, 35.8668281]
+    },
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["commercial"]
       }
     ]
   },
@@ -99080,6 +99697,31 @@
       }
     ]
   },
+  "Raeford, North Carolina, United States": {
+    "place": {
+      "name": "Raeford",
+      "state": "North Carolina",
+      "country": "United States",
+      "type": "city",
+      "encoded": "raeford-north-carolina-united-states",
+      "pop": 4559,
+      "coord": [-79.2241998, 34.9809996]
+    },
+    "add_max": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["all uses"]
+      }
+    ],
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["all uses"]
+      }
+    ]
+  },
   "Rahway, New Jersey, United States": {
     "place": {
       "name": "Rahway",
@@ -99236,6 +99878,24 @@
         "status": "adopted",
         "scope": ["citywide"],
         "land": ["residential, low-density"]
+      }
+    ]
+  },
+  "Randleman, North Carolina, United States": {
+    "place": {
+      "name": "Randleman",
+      "state": "North Carolina",
+      "country": "United States",
+      "type": "city",
+      "encoded": "randleman-north-carolina-united-states",
+      "pop": 4595,
+      "coord": [-79.8030873, 35.8179143]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["all uses"]
       }
     ]
   },
@@ -104631,6 +105291,24 @@
       }
     ]
   },
+  "Rutherfordton, North Carolina, United States": {
+    "place": {
+      "name": "Rutherfordton",
+      "state": "North Carolina",
+      "country": "United States",
+      "type": "city",
+      "encoded": "rutherfordton-north-carolina-united-states",
+      "pop": 3640,
+      "coord": [-81.9567716, 35.3692877]
+    },
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["all uses"]
+      }
+    ]
+  },
   "Ruthven, Iowa, United States": {
     "place": {
       "name": "Ruthven",
@@ -107937,6 +108615,31 @@
         "status": "adopted",
         "scope": ["citywide"],
         "land": ["commercial"]
+      }
+    ]
+  },
+  "Selma, North Carolina, United States": {
+    "place": {
+      "name": "Selma",
+      "state": "North Carolina",
+      "country": "United States",
+      "type": "city",
+      "encoded": "selma-north-carolina-united-states",
+      "pop": 6317,
+      "coord": [-78.2844435, 35.5365485]
+    },
+    "add_max": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["commercial", "industrial", "other"]
+      }
+    ],
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["all uses"]
       }
     ]
   },
@@ -114353,6 +115056,30 @@
       }
     ]
   },
+  "St. James, North Carolina, United States": {
+    "place": {
+      "name": "St. James",
+      "state": "North Carolina",
+      "country": "United States",
+      "type": "city",
+      "encoded": "st-james-north-carolina-united-states",
+      "pop": 6529,
+      "coord": [-78.1180445, 33.94655]
+    },
+    "add_max": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": [
+          "commercial",
+          "industrial",
+          "medical",
+          "other",
+          "residential, multi-family"
+        ]
+      }
+    ]
+  },
   "St. John the Baptist Parish, Louisiana, United States": {
     "place": {
       "name": "St. John the Baptist Parish",
@@ -117786,6 +118513,31 @@
       }
     ]
   },
+  "Sunset Beach, North Carolina, United States": {
+    "place": {
+      "name": "Sunset Beach",
+      "state": "North Carolina",
+      "country": "United States",
+      "type": "city",
+      "encoded": "sunset-beach-north-carolina-united-states",
+      "pop": 4175,
+      "coord": [-78.512231, 33.880728]
+    },
+    "add_max": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["all uses"]
+      }
+    ],
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["main street / special"],
+        "land": ["all uses"]
+      }
+    ]
+  },
   "Sunset Hills, Missouri, United States": {
     "place": {
       "name": "Sunset Hills",
@@ -117910,6 +118662,24 @@
       {
         "status": "adopted",
         "scope": ["city center / business district"],
+        "land": ["all uses"]
+      }
+    ]
+  },
+  "Surf City, North Carolina, United States": {
+    "place": {
+      "name": "Surf City",
+      "state": "North Carolina",
+      "country": "United States",
+      "type": "city",
+      "encoded": "surf-city-north-carolina-united-states",
+      "pop": 3867,
+      "coord": [-77.5460805, 34.4271121]
+    },
+    "add_max": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
         "land": ["all uses"]
       }
     ]
@@ -118137,6 +118907,24 @@
       "encoded": "swan-hills-alberta-canada",
       "pop": 1201,
       "coord": [-115.4008258, 54.7180657]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["all uses"]
+      }
+    ]
+  },
+  "Swansboro, North Carolina, United States": {
+    "place": {
+      "name": "Swansboro",
+      "state": "North Carolina",
+      "country": "United States",
+      "type": "city",
+      "encoded": "swansboro-north-carolina-united-states",
+      "pop": 3744,
+      "coord": [-77.1232174, 34.6896728]
     },
     "reduce_min": [
       {
@@ -118546,6 +119334,37 @@
         "scope": ["citywide"],
         "land": ["all uses"],
         "date": "2023-06-26"
+      }
+    ]
+  },
+  "Tabor City, North Carolina, United States": {
+    "place": {
+      "name": "Tabor City",
+      "state": "North Carolina",
+      "country": "United States",
+      "type": "city",
+      "encoded": "tabor-city-north-carolina-united-states",
+      "pop": 3781,
+      "coord": [-78.8766916, 34.1487804]
+    },
+    "add_max": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": [
+          "commercial",
+          "industrial",
+          "medical",
+          "other",
+          "residential, multi-family"
+        ]
+      }
+    ],
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district", "citywide"],
+        "land": ["all uses"]
       }
     ]
   },
@@ -121997,6 +122816,24 @@
       }
     ]
   },
+  "Trinity, North Carolina, United States": {
+    "place": {
+      "name": "Trinity",
+      "state": "North Carolina",
+      "country": "United States",
+      "type": "city",
+      "encoded": "trinity-north-carolina-united-states",
+      "pop": 7006,
+      "coord": [-79.9909647, 35.8947375]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["all uses"]
+      }
+    ]
+  },
   "Troup County, Georgia, United States": {
     "place": {
       "name": "Troup County",
@@ -122045,6 +122882,24 @@
         "status": "adopted",
         "scope": ["city center / business district", "transit-oriented"],
         "land": ["all uses"]
+      }
+    ]
+  },
+  "Troutman, North Carolina, United States": {
+    "place": {
+      "name": "Troutman",
+      "state": "North Carolina",
+      "country": "United States",
+      "type": "city",
+      "encoded": "troutman-north-carolina-united-states",
+      "pop": 3698,
+      "coord": [-80.8882314, 35.7005832]
+    },
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["industrial", "medical", "other"]
       }
     ]
   },
@@ -123764,6 +124619,24 @@
       "coord": [-73.6731749, 42.4134168]
     },
     "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["all uses"]
+      }
+    ]
+  },
+  "Valdese, North Carolina, United States": {
+    "place": {
+      "name": "Valdese",
+      "state": "North Carolina",
+      "country": "United States",
+      "type": "city",
+      "encoded": "valdese-north-carolina-united-states",
+      "pop": 4689,
+      "coord": [-81.5633738, 35.7431562]
+    },
+    "rm_min": [
       {
         "status": "adopted",
         "scope": ["city center / business district"],
@@ -125967,6 +126840,24 @@
         "scope": ["citywide"],
         "land": ["commercial", "other", "residential, all uses"],
         "date": "2025-10-22"
+      }
+    ]
+  },
+  "Wallace, North Carolina, United States": {
+    "place": {
+      "name": "Wallace",
+      "state": "North Carolina",
+      "country": "United States",
+      "type": "city",
+      "encoded": "wallace-north-carolina-united-states",
+      "pop": 3883,
+      "coord": [-77.9960816, 34.7348655]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["all uses"]
       }
     ]
   },
@@ -128675,6 +129566,24 @@
       "coord": [-97.7970748, 32.7589648]
     },
     "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["all uses"]
+      }
+    ]
+  },
+  "Weaverville, North Carolina, United States": {
+    "place": {
+      "name": "Weaverville",
+      "state": "North Carolina",
+      "country": "United States",
+      "type": "city",
+      "encoded": "weaverville-north-carolina-united-states",
+      "pop": 4567,
+      "coord": [-82.5603625, 35.6967238]
+    },
+    "reduce_min": [
       {
         "status": "adopted",
         "scope": ["city center / business district"],
@@ -131805,6 +132714,24 @@
       }
     ]
   },
+  "Whiteville, North Carolina, United States": {
+    "place": {
+      "name": "Whiteville",
+      "state": "North Carolina",
+      "country": "United States",
+      "type": "city",
+      "encoded": "whiteville-north-carolina-united-states",
+      "pop": 4766,
+      "coord": [-78.703148, 34.3217345]
+    },
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["all uses"]
+      }
+    ]
+  },
   "Whitewater, Kansas, United States": {
     "place": {
       "name": "Whitewater",
@@ -132071,6 +132998,24 @@
       "encoded": "Wilkes-Barre_PA",
       "pop": 44328,
       "coord": [-75.8817316, 41.2464824]
+    },
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["all uses"]
+      }
+    ]
+  },
+  "Wilkesboro, North Carolina, United States": {
+    "place": {
+      "name": "Wilkesboro",
+      "state": "North Carolina",
+      "country": "United States",
+      "type": "city",
+      "encoded": "wilkesboro-north-carolina-united-states",
+      "pop": 3687,
+      "coord": [-81.1517636, 36.1483916]
     },
     "rm_min": [
       {
@@ -135911,6 +136856,38 @@
       "pop": 528,
       "coord": [-93.2970164, 42.1612414]
     },
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["all uses"]
+      }
+    ]
+  },
+  "Zebulon, North Carolina, United States": {
+    "place": {
+      "name": "Zebulon",
+      "state": "North Carolina",
+      "country": "United States",
+      "type": "city",
+      "encoded": "zebulon-north-carolina-united-states",
+      "pop": 6903,
+      "coord": [-78.3126798, 35.8212013]
+    },
+    "add_max": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["commercial"]
+      }
+    ],
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["all uses"]
+      }
+    ],
     "rm_min": [
       {
         "status": "adopted",
