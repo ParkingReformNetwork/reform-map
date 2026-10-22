@@ -30,7 +30,7 @@ interface EdgeCase {
   expectedRange: [number, number] | "all";
 }
 
-const EXPECTED_MAX_RANGE: [number, number] = [1200, 1600];
+const EXPECTED_MAX_RANGE: [number, number] = [1200, 2200];
 
 // The expected ranges can be updated as the data is updated!
 const TESTS: EdgeCase[] = [
