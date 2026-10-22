@@ -59,13 +59,14 @@ jobs:
 
             rm -rf /var/www/${{ secrets.PRN_SERVER_HOST }}/mandates-map/details-tmp
 
-      - name: Notify Slack that new data is live
+      - name: Notify Slack that new data needs a prod deploy
         if: startsWith(github.event.head_commit.message, 'Update data')
         env:
           SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK_URL }}
         run: |
+          deploy_url="$GITHUB_SERVER_URL/$GITHUB_REPOSITORY/actions/workflows/deploy-map-prod.yaml"
           curl --fail --silent --show-error -X POST -H 'Content-Type: application/json' \
-            --data "{\"text\":\":rocket: New reform map data is live: https://parkingreform.org/resources/mandates-map/\"}" \
+            --data "{\"text\":\":construction: New reform map data is on staging and the city detail pages are live. Run *Deploy map to prod* to update the live map: $deploy_url\"}" \
             "$SLACK_WEBHOOK_URL"
 
       - name: Notify Slack on failure
