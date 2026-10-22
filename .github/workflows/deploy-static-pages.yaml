@@ -58,3 +58,13 @@ jobs:
               /var/www/${{ secrets.PRN_SERVER_HOST }}/mandates-map/city_detail/
 
             rm -rf /var/www/${{ secrets.PRN_SERVER_HOST }}/mandates-map/details-tmp
+
+      - name: Notify Slack on failure
+        if: failure()
+        env:
+          SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK_URL }}
+        run: |
+          run_url="$GITHUB_SERVER_URL/$GITHUB_REPOSITORY/actions/runs/$GITHUB_RUN_ID"
+          curl --fail --silent --show-error -X POST -H 'Content-Type: application/json' \
+            --data "{\"text\":\":x: *$GITHUB_WORKFLOW* failed in $GITHUB_REPOSITORY: $run_url\"}" \
+            "$SLACK_WEBHOOK_URL"
