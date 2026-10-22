@@ -16,3 +16,21 @@ jobs:
             rsync --archive --verbose --no-times \
               /var/www/${{ secrets.PRN_SERVER_HOST }}/mandates-map-staging/ \
               /var/www/${{ secrets.PRN_SERVER_HOST }}/mandates-map/
+
+      - name: Notify Slack on success
+        env:
+          SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK_URL }}
+        run: |
+          curl --fail --silent --show-error -X POST -H 'Content-Type: application/json' \
+            --data "{\"text\":\":rocket: The live reform map was updated by $GITHUB_ACTOR.\"}" \
+            "$SLACK_WEBHOOK_URL"
+
+      - name: Notify Slack on failure
+        if: failure()
+        env:
+          SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK_URL }}
+        run: |
+          run_url="$GITHUB_SERVER_URL/$GITHUB_REPOSITORY/actions/runs/$GITHUB_RUN_ID"
+          curl --fail --silent --show-error -X POST -H 'Content-Type: application/json' \
+            --data "{\"text\":\":x: *$GITHUB_WORKFLOW* failed in $GITHUB_REPOSITORY: $run_url\"}" \
+            "$SLACK_WEBHOOK_URL"

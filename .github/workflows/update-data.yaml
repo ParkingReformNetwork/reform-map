@@ -71,3 +71,24 @@ jobs:
             --title "Update data" \
             --head automated-data-update \
             --body "$body"
+
+      - name: Notify Slack of new data
+        if: steps.git_status.outputs.has_changes == 'true'
+        env:
+          GH_TOKEN: ${{ secrets.UPDATE_DATA_GITHUB_TOKEN }}
+          SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK_URL }}
+        run: |
+          pr_url=$(gh pr list --head automated-data-update --state open --json url --jq '.[0].url')
+          curl --fail --silent --show-error -X POST -H 'Content-Type: application/json' \
+            --data "{\"text\":\":white_check_mark: New reform map data is ready. Review and merge to publish: $pr_url\"}" \
+            "$SLACK_WEBHOOK_URL"
+
+      - name: Notify Slack on failure
+        if: failure()
+        env:
+          SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK_URL }}
+        run: |
+          run_url="$GITHUB_SERVER_URL/$GITHUB_REPOSITORY/actions/runs/$GITHUB_RUN_ID"
+          curl --fail --silent --show-error -X POST -H 'Content-Type: application/json' \
+            --data "{\"text\":\":x: *$GITHUB_WORKFLOW* failed in $GITHUB_REPOSITORY: $run_url\"}" \
+            "$SLACK_WEBHOOK_URL"
