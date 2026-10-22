@@ -17,6 +17,14 @@ jobs:
               /var/www/${{ secrets.PRN_SERVER_HOST }}/mandates-map-staging/ \
               /var/www/${{ secrets.PRN_SERVER_HOST }}/mandates-map/
 
+      - name: Notify Slack on success
+        env:
+          SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK_URL }}
+        run: |
+          curl --fail --silent --show-error -X POST -H 'Content-Type: application/json' \
+            --data "{\"text\":\":rocket: The reform map app was deployed to production by $GITHUB_ACTOR.\"}" \
+            "$SLACK_WEBHOOK_URL"
+
       - name: Notify Slack on failure
         if: failure()
         env:

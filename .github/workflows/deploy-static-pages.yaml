@@ -59,6 +59,15 @@ jobs:
 
             rm -rf /var/www/${{ secrets.PRN_SERVER_HOST }}/mandates-map/details-tmp
 
+      - name: Notify Slack that new data is live
+        if: startsWith(github.event.head_commit.message, 'Update data')
+        env:
+          SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK_URL }}
+        run: |
+          curl --fail --silent --show-error -X POST -H 'Content-Type: application/json' \
+            --data "{\"text\":\":rocket: New reform map data is live: https://parkingreform.org/resources/mandates-map/\"}" \
+            "$SLACK_WEBHOOK_URL"
+
       - name: Notify Slack on failure
         if: failure()
         env:
