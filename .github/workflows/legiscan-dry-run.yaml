@@ -3,11 +3,7 @@ name: LegiScan dry run
 # Directus. Manual only: the LegiScan crash course caps getMasterListRaw at
 # once an hour per session and getBill at once per 3 hours per bill, so do not
 # re-run this within an hour of a previous run.
-on:
-  workflow_dispatch:
-  # Temporary, so the run can be triggered before this file is on main.
-  push:
-    branches: [legiscan-dry-run]
+on: [workflow_dispatch]
 jobs:
   dry-run:
     if: github.repository_owner == 'ParkingReformNetwork'
