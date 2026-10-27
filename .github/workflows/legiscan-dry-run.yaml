@@ -1,0 +1,32 @@
+name: LegiScan dry run
+# Read-only check of tracked state bills against LegiScan. Writes nothing to
+# Directus. Manual only: the LegiScan crash course caps getMasterListRaw at
+# once an hour per session and getBill at once per 3 hours per bill, so do not
+# re-run this within an hour of a previous run.
+on: [workflow_dispatch]
+jobs:
+  dry-run:
+    if: github.repository_owner == 'ParkingReformNetwork'
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository code
+        uses: actions/checkout@v7
+      - name: Set up Node.js
+        uses: actions/setup-node@v6
+        with:
+          node-version: 26
+      - run: npm ci
+
+      - name: Compare tracker bills with LegiScan
+        run: npx tsx scripts/legiscanDryRun.ts
+        env:
+          LEGISCAN_API_KEY: ${{ secrets.LEGISCAN_API_KEY }}
+
+      # Raw JSON responses, kept so the run can be replayed without spending
+      # queries again (crash course: cache responses, use the hashes).
+      - name: Save raw LegiScan responses
+        uses: actions/upload-artifact@v4
+        with:
+          name: legiscan-raw-responses
+          path: legiscan-dry-run/
+          retention-days: 14
