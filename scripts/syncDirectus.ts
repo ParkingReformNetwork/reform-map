@@ -70,6 +70,21 @@ async function readPlacesAndEnsureCoordinates(
   ]);
   const directusIdToStringId: Record<number, PlaceStringId> = {};
   const stringIdToPlace: Record<PlaceStringId, (typeof records)[number]> = {};
+
+  // Directus requires coordinates to be unique across places. The geocoder
+  // can return the same point for two places, e.g. a county and its seat
+  // (New Castle County, DE resolves to the same node as New Castle, DE), so
+  // check before writing rather than failing on Directus's 400.
+  const stringIdByCoordinates = new Map<string, PlaceStringId>();
+  for (const record of records) {
+    if (record.coordinates) {
+      stringIdByCoordinates.set(
+        record.coordinates.coordinates.join(","),
+        determinePlaceIdForDirectus(record),
+      );
+    }
+  }
+
   for (const record of records) {
     const stringId = determinePlaceIdForDirectus(record);
 
@@ -86,8 +101,15 @@ async function readPlacesAndEnsureCoordinates(
           `Failed to get coordinates for ${stringId} (place ID ${record.id}). You can manually add the coordinates to Directus and try the sync again.`,
         );
       }
+      const collidingStringId = stringIdByCoordinates.get(longLat.join(","));
+      if (collidingStringId) {
+        throw new Error(
+          `Geocoded coordinates for ${stringId} (place ID ${record.id}) are identical to ${collidingStringId}'s (${longLat.join(", ")}), and Directus requires coordinates to be unique. Manually add distinct coordinates to Directus and try the sync again.`,
+        );
+      }
       const coordinates = { type: "Point" as const, coordinates: longLat };
       record.coordinates = coordinates;
+      stringIdByCoordinates.set(longLat.join(","), stringId);
       await client.request(
         updateItem("places", record.id, {
           coordinates,
