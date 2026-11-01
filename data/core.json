@@ -2436,6 +2436,24 @@
       }
     ]
   },
+  "American Falls, Idaho, United States": {
+    "place": {
+      "name": "American Falls",
+      "state": "Idaho",
+      "country": "United States",
+      "type": "city",
+      "encoded": "american-falls-idaho-united-states",
+      "pop": 4568,
+      "coord": [-112.854437, 42.7860227]
+    },
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["all uses"]
+      }
+    ]
+  },
   "American Fork, Utah, United States": {
     "place": {
       "name": "American Fork",
@@ -12779,6 +12797,31 @@
       }
     ]
   },
+  "Bonners Ferry, Idaho, United States": {
+    "place": {
+      "name": "Bonners Ferry",
+      "state": "Idaho",
+      "country": "United States",
+      "type": "city",
+      "encoded": "bonners-ferry-idaho-united-states",
+      "pop": 2520,
+      "coord": [-116.3119832, 48.6972317]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["residential, all uses"]
+      }
+    ],
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["commercial"]
+      }
+    ]
+  },
   "Bonnyville, Alberta, Canada": {
     "place": {
       "name": "Bonnyville",
@@ -19623,6 +19666,31 @@
       }
     ]
   },
+  "Cascade, Idaho, United States": {
+    "place": {
+      "name": "Cascade",
+      "state": "Idaho",
+      "country": "United States",
+      "type": "city",
+      "encoded": "cascade-idaho-united-states",
+      "pop": 1005,
+      "coord": [-116.0525592, 44.5127]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["commercial", "industrial"]
+      }
+    ],
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["main street / special"],
+        "land": ["all uses"]
+      }
+    ]
+  },
   "Casco Township, Michigan, United States": {
     "place": {
       "name": "Casco Township",
@@ -20857,6 +20925,24 @@
         "status": "adopted",
         "scope": ["transit-oriented"],
         "land": ["commercial", "residential, all uses"]
+      }
+    ]
+  },
+  "Challis, Idaho, United States": {
+    "place": {
+      "name": "Challis",
+      "state": "Idaho",
+      "country": "United States",
+      "type": "city",
+      "encoded": "challis-idaho-united-states",
+      "pop": 902,
+      "coord": [-114.23137, 44.5051319]
+    },
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["all uses"]
       }
     ]
   },
@@ -22620,6 +22706,24 @@
       {
         "status": "adopted",
         "scope": ["city center / business district"],
+        "land": ["all uses"]
+      }
+    ]
+  },
+  "Chimney Rock, North Carolina, United States": {
+    "place": {
+      "name": "Chimney Rock",
+      "state": "North Carolina",
+      "country": "United States",
+      "type": "city",
+      "encoded": "chimney-rock-north-carolina-united-states",
+      "pop": 140,
+      "coord": [-82.24893550506567, 35.44001553634174]
+    },
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district", "main street / special"],
         "land": ["all uses"]
       }
     ]
@@ -27171,6 +27275,24 @@
         "status": "adopted",
         "scope": ["citywide"],
         "land": ["all uses"]
+      }
+    ]
+  },
+  "Copperton, Utah, United States": {
+    "place": {
+      "name": "Copperton",
+      "state": "Utah",
+      "country": "United States",
+      "type": "city",
+      "encoded": "copperton-utah-united-states",
+      "pop": 865,
+      "coord": [-112.0974382, 40.5647049]
+    },
+    "add_max": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["commercial", "medical", "other", "residential, all uses"]
       }
     ]
   },
@@ -32634,6 +32756,24 @@
       }
     ]
   },
+  "Dillsboro, North Carolina, United States": {
+    "place": {
+      "name": "Dillsboro",
+      "state": "North Carolina",
+      "country": "United States",
+      "type": "city",
+      "encoded": "dillsboro-north-carolina-united-states",
+      "pop": 213,
+      "coord": [-83.2506638, 35.3700615]
+    },
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["all uses"]
+      }
+    ]
+  },
   "Dillsburg, Pennsylvania, United States": {
     "place": {
       "name": "Dillsburg",
@@ -32876,9 +33016,18 @@
     },
     "add_max": [
       {
-        "status": "adopted",
+        "status": "repealed",
         "scope": ["citywide"],
-        "land": ["all uses"]
+        "land": ["all uses"],
+        "date": "2025-09-15"
+      }
+    ],
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["all uses"],
+        "date": "2025-09-15"
       }
     ]
   },
@@ -33422,6 +33571,44 @@
         "status": "adopted",
         "scope": ["citywide", "transit-oriented"],
         "land": ["all uses", "commercial", "industrial", "other"]
+      }
+    ]
+  },
+  "Driggs, Idaho, United States": {
+    "place": {
+      "name": "Driggs",
+      "state": "Idaho",
+      "country": "United States",
+      "type": "city",
+      "encoded": "driggs-idaho-united-states",
+      "pop": 1984,
+      "coord": [-111.110887, 43.7231753]
+    },
+    "add_max": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": [
+          "commercial",
+          "industrial",
+          "medical",
+          "other",
+          "residential, multi-family"
+        ]
+      }
+    ],
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["commercial"]
+      }
+    ],
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["commercial", "other"]
       }
     ]
   },
@@ -34640,6 +34827,24 @@
           "residential, multi-family"
         ],
         "date": "2024-12-09"
+      }
+    ]
+  },
+  "East Bend, North Carolina, United States": {
+    "place": {
+      "name": "East Bend",
+      "state": "North Carolina",
+      "country": "United States",
+      "type": "city",
+      "encoded": "east-bend-north-carolina-united-states",
+      "pop": 634,
+      "coord": [-80.5074142, 36.215775]
+    },
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["all uses"]
       }
     ]
   },
@@ -38569,6 +38774,25 @@
         "status": "adopted",
         "scope": ["city center / business district"],
         "land": ["all uses"]
+      }
+    ]
+  },
+  "Ephraim, Utah, United States": {
+    "place": {
+      "name": "Ephraim",
+      "state": "Utah",
+      "country": "United States",
+      "type": "city",
+      "encoded": "ephraim-utah-united-states",
+      "pop": 5805,
+      "coord": [-111.586305, 39.3596842]
+    },
+    "reduce_min": [
+      {
+        "status": "repealed",
+        "scope": ["citywide"],
+        "land": ["other", "residential, all uses"],
+        "date": "2026-10-21"
       }
     ]
   },
@@ -44809,6 +45033,24 @@
       }
     ]
   },
+  "Fruitland, Idaho, United States": {
+    "place": {
+      "name": "Fruitland",
+      "state": "Idaho",
+      "country": "United States",
+      "type": "city",
+      "encoded": "fruitland-idaho-united-states",
+      "pop": 6072,
+      "coord": [-116.916414, 44.0088935]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["all uses"]
+      }
+    ]
+  },
   "Fruitland, Maryland, United States": {
     "place": {
       "name": "Fruitland",
@@ -45657,6 +45899,26 @@
         "status": "adopted",
         "scope": ["citywide"],
         "land": ["industrial"]
+      }
+    ]
+  },
+  "Garfield Heights, Ohio, United States": {
+    "place": {
+      "name": "Garfield Heights",
+      "state": "Ohio",
+      "country": "United States",
+      "type": "city",
+      "encoded": "garfield-heights-ohio-united-states",
+      "pop": 29781,
+      "coord": [-81.6059581, 41.4169974],
+      "repeal": true
+    },
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["all uses"],
+        "date": "2026-01-12"
       }
     ]
   },
@@ -47302,6 +47564,24 @@
         "status": "adopted",
         "scope": ["citywide"],
         "land": ["all uses"]
+      }
+    ]
+  },
+  "Glenns Ferry, Idaho, United States": {
+    "place": {
+      "name": "Glenns Ferry",
+      "state": "Idaho",
+      "country": "United States",
+      "type": "city",
+      "encoded": "glenns-ferry-idaho-united-states",
+      "pop": 1282,
+      "coord": [-115.3009037, 42.9548989]
+    },
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["commercial", "residential, multi-family"]
       }
     ]
   },
@@ -50832,6 +51112,24 @@
       }
     ]
   },
+  "Gunnison, Utah, United States": {
+    "place": {
+      "name": "Gunnison",
+      "state": "Utah",
+      "country": "United States",
+      "type": "city",
+      "encoded": "gunnison-utah-united-states",
+      "pop": 3537,
+      "coord": [-111.818258, 39.1552391]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["commercial"]
+      }
+    ]
+  },
   "Guntersville, Alabama, United States": {
     "place": {
       "name": "Guntersville",
@@ -51159,6 +51457,31 @@
       "coord": [-83.3726575, 30.9913064]
     },
     "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["all uses"]
+      }
+    ]
+  },
+  "Hailey, Idaho, United States": {
+    "place": {
+      "name": "Hailey",
+      "state": "Idaho",
+      "country": "United States",
+      "type": "city",
+      "encoded": "hailey-idaho-united-states",
+      "pop": 9161,
+      "coord": [-114.315325, 43.519629]
+    },
+    "add_max": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["all uses"]
+      }
+    ],
+    "reduce_min": [
       {
         "status": "adopted",
         "scope": ["city center / business district"],
@@ -52076,6 +52399,24 @@
       {
         "status": "adopted",
         "scope": ["city center / business district"],
+        "land": ["all uses"]
+      }
+    ]
+  },
+  "Hanksville, Utah, United States": {
+    "place": {
+      "name": "Hanksville",
+      "state": "Utah",
+      "country": "United States",
+      "type": "city",
+      "encoded": "hanksville-utah-united-states",
+      "pop": 203,
+      "coord": [-110.706401, 38.3737755]
+    },
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
         "land": ["all uses"]
       }
     ]
@@ -55955,6 +56296,24 @@
       }
     ]
   },
+  "Hobgood, North Carolina, United States": {
+    "place": {
+      "name": "Hobgood",
+      "state": "North Carolina",
+      "country": "United States",
+      "type": "city",
+      "encoded": "hobgood-north-carolina-united-states",
+      "pop": 268,
+      "coord": [-77.3980465, 36.0295946]
+    },
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["all uses"]
+      }
+    ]
+  },
   "Hoboken, New Jersey, United States": {
     "place": {
       "name": "Hoboken",
@@ -56173,6 +56532,24 @@
         "status": "adopted",
         "scope": ["citywide"],
         "land": ["residential, low-density"]
+      }
+    ]
+  },
+  "Hollister, Idaho, United States": {
+    "place": {
+      "name": "Hollister",
+      "state": "Idaho",
+      "country": "United States",
+      "type": "city",
+      "encoded": "hollister-idaho-united-states",
+      "pop": 243,
+      "coord": [-114.575039, 42.3532439]
+    },
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["all uses"]
       }
     ]
   },
@@ -56420,6 +56797,24 @@
         "status": "adopted",
         "scope": ["main street / special"],
         "land": ["commercial", "other"]
+      }
+    ]
+  },
+  "Holyrood, Kansas, United States": {
+    "place": {
+      "name": "Holyrood",
+      "state": "Kansas",
+      "country": "United States",
+      "type": "city",
+      "encoded": "holyrood-kansas-united-states",
+      "pop": 403,
+      "coord": [-98.4111777, 38.5869549]
+    },
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["all uses"]
       }
     ]
   },
@@ -57293,6 +57688,24 @@
         "status": "adopted",
         "scope": ["city center / business district"],
         "land": ["all uses"]
+      }
+    ]
+  },
+  "Hudson, Kansas, United States": {
+    "place": {
+      "name": "Hudson",
+      "state": "Kansas",
+      "country": "United States",
+      "type": "city",
+      "encoded": "hudson-kansas-united-states",
+      "pop": 100,
+      "coord": [-98.6600832, 38.1055694]
+    },
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["commercial", "other"]
       }
     ]
   },
@@ -74847,6 +75260,24 @@
       }
     ]
   },
+  "Marriott-Slaterville, Utah, United States": {
+    "place": {
+      "name": "Marriott-Slaterville",
+      "state": "Utah",
+      "country": "United States",
+      "type": "city",
+      "encoded": "marriott-slaterville-utah-united-states",
+      "pop": 1885,
+      "coord": [-112.018179, 41.2679264]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["commercial", "industrial", "medical", "other"]
+      }
+    ]
+  },
   "Mars Hill, North Carolina, United States": {
     "place": {
       "name": "Mars Hill",
@@ -85700,7 +86131,7 @@
       "type": "county",
       "encoded": "new-castle-county-delaware-united-states",
       "pop": 570719,
-      "coord": [-75.57574708140454, 39.66320050228737]
+      "coord": [-75.60584270133533, 39.66554190661131]
     },
     "add_max": [
       {
@@ -86379,6 +86810,24 @@
         "status": "adopted",
         "scope": ["city center / business district"],
         "land": ["all uses"]
+      }
+    ]
+  },
+  "New Plymouth, Idaho, United States": {
+    "place": {
+      "name": "New Plymouth",
+      "state": "Idaho",
+      "country": "United States",
+      "type": "city",
+      "encoded": "new-plymouth-idaho-united-states",
+      "pop": 1494,
+      "coord": [-116.819874, 43.9703347]
+    },
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["commercial"]
       }
     ]
   },
@@ -97430,12 +97879,13 @@
       "type": "city",
       "encoded": "Pittsburgh_PA",
       "pop": 300286,
-      "coord": [-79.9900861, 40.4416941]
+      "coord": [-79.9900861, 40.4416941],
+      "repeal": true
     },
     "add_max": [
       {
         "status": "adopted",
-        "scope": ["city center / business district"],
+        "scope": ["citywide"],
         "land": ["all uses"]
       }
     ],
@@ -97448,10 +97898,10 @@
     ],
     "rm_min": [
       {
-        "status": "proposed",
+        "status": "adopted",
         "scope": ["citywide"],
         "land": ["all uses"],
-        "date": "2025"
+        "date": "2026-10-27"
       }
     ]
   },
@@ -99950,6 +100400,24 @@
       }
     ]
   },
+  "Preston, Idaho, United States": {
+    "place": {
+      "name": "Preston",
+      "state": "Idaho",
+      "country": "United States",
+      "type": "city",
+      "encoded": "preston-idaho-united-states",
+      "pop": 5591,
+      "coord": [-111.876617, 42.0963133]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["all uses"]
+      }
+    ]
+  },
   "Prestonsburg, Kentucky, United States": {
     "place": {
       "name": "Prestonsburg",
@@ -101468,6 +101936,24 @@
         "status": "adopted",
         "scope": ["main street / special"],
         "land": ["all uses"]
+      }
+    ]
+  },
+  "Rathdrum, Idaho, United States": {
+    "place": {
+      "name": "Rathdrum",
+      "state": "Idaho",
+      "country": "United States",
+      "type": "city",
+      "encoded": "rathdrum-idaho-united-states",
+      "pop": 9211,
+      "coord": [-116.896931, 47.8111504]
+    },
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["commercial", "other"]
       }
     ]
   },
@@ -103968,11 +104454,12 @@
       "type": "city",
       "encoded": "riverside-ohio-united-states",
       "pop": 24474,
-      "coord": [-84.1246358, 39.7793976]
+      "coord": [-84.1246358, 39.7793976],
+      "repeal": true
     },
     "add_max": [
       {
-        "status": "adopted",
+        "status": "repealed",
         "scope": ["city center / business district"],
         "land": ["all uses"]
       }
@@ -103982,6 +104469,14 @@
         "status": "adopted",
         "scope": ["city center / business district"],
         "land": ["all uses"]
+      }
+    ],
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["all uses"],
+        "date": "2026-03-16"
       }
     ]
   },
@@ -105474,6 +105969,24 @@
       {
         "status": "adopted",
         "scope": ["citywide"],
+        "land": ["all uses"]
+      }
+    ]
+  },
+  "Roosevelt, Utah, United States": {
+    "place": {
+      "name": "Roosevelt",
+      "state": "Utah",
+      "country": "United States",
+      "type": "city",
+      "encoded": "roosevelt-utah-united-states",
+      "pop": 6960,
+      "coord": [-109.9887605, 40.299403]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
         "land": ["all uses"]
       }
     ]
@@ -107588,6 +108101,24 @@
       }
     ]
   },
+  "Salmon, Idaho, United States": {
+    "place": {
+      "name": "Salmon",
+      "state": "Idaho",
+      "country": "United States",
+      "type": "city",
+      "encoded": "salmon-idaho-united-states",
+      "pop": 3119,
+      "coord": [-113.895773, 45.1759213]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["all uses"]
+      }
+    ]
+  },
   "Salt Lake City, Utah, United States": {
     "place": {
       "name": "Salt Lake City",
@@ -108517,6 +109048,24 @@
       {
         "status": "adopted",
         "scope": ["citywide"],
+        "land": ["all uses"]
+      }
+    ]
+  },
+  "Saratoga, North Carolina, United States": {
+    "place": {
+      "name": "Saratoga",
+      "state": "North Carolina",
+      "country": "United States",
+      "type": "city",
+      "encoded": "saratoga-north-carolina-united-states",
+      "pop": 353,
+      "coord": [-77.7756011, 35.6536691]
+    },
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
         "land": ["all uses"]
       }
     ]
@@ -122259,6 +122808,24 @@
       }
     ]
   },
+  "The Highlands, Kansas, United States": {
+    "place": {
+      "name": "The Highlands",
+      "state": "Kansas",
+      "country": "United States",
+      "type": "city",
+      "encoded": "the-highlands-kansas-united-states",
+      "pop": 349,
+      "coord": [-97.949844, 38.1646003]
+    },
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["all uses"]
+      }
+    ]
+  },
   "The Pas, Manitoba, Canada": {
     "place": {
       "name": "The Pas",
@@ -127252,6 +127819,30 @@
         "status": "adopted",
         "scope": ["city center / business district"],
         "land": ["commercial"]
+      }
+    ]
+  },
+  "Victor, Idaho, United States": {
+    "place": {
+      "name": "Victor",
+      "state": "Idaho",
+      "country": "United States",
+      "type": "city",
+      "encoded": "victor-idaho-united-states",
+      "pop": 2157,
+      "coord": [-111.111309, 43.6025939]
+    },
+    "add_max": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": [
+          "commercial",
+          "industrial",
+          "medical",
+          "other",
+          "residential, multi-family"
+        ]
       }
     ]
   },
@@ -134611,6 +135202,24 @@
       {
         "status": "adopted",
         "scope": ["city center / business district"],
+        "land": ["all uses"]
+      }
+    ]
+  },
+  "Wilder, Idaho, United States": {
+    "place": {
+      "name": "Wilder",
+      "state": "Idaho",
+      "country": "United States",
+      "type": "city",
+      "encoded": "wilder-idaho-united-states",
+      "pop": 1597,
+      "coord": [-116.9118157, 43.6765486]
+    },
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
         "land": ["all uses"]
       }
     ]
