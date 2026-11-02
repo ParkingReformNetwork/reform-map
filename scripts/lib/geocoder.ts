@@ -47,6 +47,21 @@ export function initGeocoder(): NodeGeocoder.Geocoder {
   return NodeGeocoder({ provider: "openstreetmap", fetch });
 }
 
+// Directus names Canadian rural municipalities like "Shellbrook No. 493 Rural
+// Municipality", but OpenStreetMap only matches "Shellbrook No. 493". Try
+// dropping the suffix after the full name fails (7 of the last 30 nightly
+// sync failures were this).
+const PLACE_NAME_SUFFIXES = [/\s+Rural Municipality$/i];
+
+export function placeNameVariants(placeName: string): string[] {
+  const variants = [placeName];
+  for (const suffix of PLACE_NAME_SUFFIXES) {
+    const stripped = placeName.replace(suffix, "");
+    if (stripped !== placeName) variants.push(stripped);
+  }
+  return variants;
+}
+
 export async function getLongLat(
   placeName: string,
   state: string | null,
@@ -55,14 +70,18 @@ export async function getLongLat(
 ): Promise<[number, number] | null> {
   const stateQuery = state ? `${state}, ` : "";
   // We try the most precise query first, then fall back to less precise queries.
-  const locationMethods = [() => `${placeName}, ${stateQuery}${countryCode}`];
+  const locationStrings = [`${placeName}, ${stateQuery}${countryCode}`];
   if (stateQuery) {
-    locationMethods.push(() => `${placeName}, ${stateQuery}`);
+    locationStrings.push(`${placeName}, ${stateQuery}`);
   }
-  locationMethods.push(() => `${placeName}`);
+  locationStrings.push(placeName);
+  // Alternate spellings of the name stay scoped to the state and country so
+  // they cannot drift to an unrelated place with the same base name.
+  for (const variant of placeNameVariants(placeName).slice(1)) {
+    locationStrings.push(`${variant}, ${stateQuery}${countryCode}`);
+  }
 
-  for (const getLocationString of locationMethods) {
-    const locationString = getLocationString();
+  for (const locationString of locationStrings) {
     const geocodeResults = await geocoder.geocode(locationString);
     if (geocodeResults.length > 0) {
       const lat = geocodeResults[0].latitude;
