@@ -516,7 +516,14 @@
       "citywide",
       "transit-oriented"
     ],
-    "landUse": ["all uses", "commercial", "other", "residential, all uses"],
+    "landUse": [
+      "all uses",
+      "commercial",
+      "industrial",
+      "medical",
+      "other",
+      "residential, all uses"
+    ],
     "year": ["unknown", "2026"]
   },
   "rmMinAdopted": {
