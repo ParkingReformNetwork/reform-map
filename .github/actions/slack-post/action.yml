@@ -1,0 +1,67 @@
+name: Post to Slack
+description: >
+  Post a message with the PRN Github Bot. Replies in the pinned status thread
+  when SLACK_STATUS_THREAD_TS is set (otherwise posts to the channel), and
+  optionally refreshes the pinned status card.
+
+  Expects env: SLACK_BOT_TOKEN, SLACK_CHANNEL_ID, and optionally
+  SLACK_STATUS_THREAD_TS (the repo variable set by the "Slack status thread"
+  workflow).
+inputs:
+  text:
+    description: Message text (Slack mrkdwn).
+    required: true
+  broadcast:
+    description: Also show this thread reply in the channel (reply_broadcast).
+    default: "false"
+  status:
+    description: If set, rewrite the pinned status card's "Latest" line to this.
+    default: ""
+outputs:
+  ts:
+    description: Timestamp of the posted message.
+    value: ${{ steps.post.outputs.ts }}
+runs:
+  using: composite
+  steps:
+    - id: post
+      shell: bash
+      env:
+        TEXT: ${{ inputs.text }}
+        BROADCAST: ${{ inputs.broadcast }}
+        STATUS: ${{ inputs.status }}
+      run: |
+        set -euo pipefail
+        if [[ -z "${SLACK_BOT_TOKEN:-}" || -z "${SLACK_CHANNEL_ID:-}" ]]; then
+          echo "::error::SLACK_BOT_TOKEN and SLACK_CHANNEL_ID must be set in env"
+          exit 1
+        fi
+        thread_ts="${SLACK_STATUS_THREAD_TS:-}"
+
+        call() {
+          local method="$1" payload="$2" resp
+          resp=$(curl --silent --show-error --fail-with-body -X POST "https://slack.com/api/$method" \
+            -H "Authorization: Bearer $SLACK_BOT_TOKEN" \
+            -H 'Content-Type: application/json; charset=utf-8' \
+            --data "$payload")
+          if [[ "$(jq -r '.ok' <<<"$resp")" != "true" ]]; then
+            echo "::error::Slack $method failed: $(jq -r '.error // "unknown"' <<<"$resp")"
+            exit 1
+          fi
+          printf '%s' "$resp"
+        }
+
+        payload=$(jq -n --arg ch "$SLACK_CHANNEL_ID" --arg text "$TEXT" \
+          --arg ts "$thread_ts" --argjson bc "$BROADCAST" \
+          '{channel: $ch, text: $text, unfurl_links: false, unfurl_media: false}
+           + (if $ts != "" then {thread_ts: $ts, reply_broadcast: $bc} else {} end)')
+        resp=$(call chat.postMessage "$payload")
+        echo "ts=$(jq -r '.ts' <<<"$resp")" >> "$GITHUB_OUTPUT"
+
+        if [[ -n "$thread_ts" && -n "$STATUS" ]]; then
+          card=$(printf ':pushpin: *Reform map data pipeline*\nLatest: %s (%s)\nEvery run reports in this thread. Failures and live map deploys are also posted to the channel.' \
+            "$STATUS" "$(date -u '+%b %-d, %Y %H:%M UTC')")
+          update=$(jq -n --arg ch "$SLACK_CHANNEL_ID" --arg ts "$thread_ts" --arg text "$card" \
+            '{channel: $ch, ts: $ts, text: $text}')
+          call chat.update "$update" > /dev/null
+        fi

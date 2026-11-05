@@ -1,0 +1,53 @@
+name: Slack status thread
+# Run once (manually) to create the pinned status message that every other
+# workflow replies to. It saves the message timestamp in the repo variable
+# SLACK_STATUS_THREAD_TS. Pin the message in Slack by hand afterwards.
+#
+# If the message is ever deleted, run this again with "replace" checked.
+on:
+  workflow_dispatch:
+    inputs:
+      replace:
+        description: Post a new status message even if one is already recorded
+        type: boolean
+        default: false
+jobs:
+  seed:
+    if: github.repository_owner == 'ParkingReformNetwork'
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository code
+        uses: actions/checkout@v7
+
+      - name: Skip if a status thread already exists
+        if: vars.SLACK_STATUS_THREAD_TS != '' && !inputs.replace
+        run: |
+          echo "SLACK_STATUS_THREAD_TS is already set (${{ vars.SLACK_STATUS_THREAD_TS }}). Re-run with 'replace' to post a new one."
+          echo "skip=true" >> "$GITHUB_ENV"
+
+      - name: Post the status message
+        if: env.skip != 'true'
+        id: post
+        uses: ./.github/actions/slack-post
+        env:
+          SLACK_BOT_TOKEN: ${{ secrets.SLACK_BOT_TOKEN }}
+          SLACK_CHANNEL_ID: ${{ secrets.SLACK_CHANNEL_ID }}
+          # Deliberately no SLACK_STATUS_THREAD_TS: this is the parent message.
+        with:
+          text: |
+            :pushpin: *Reform map data pipeline*
+            Latest: status thread created
+            Every run reports in this thread. Failures and live map deploys are also posted to the channel.
+
+      - name: Save the timestamp as a repo variable
+        if: env.skip != 'true'
+        env:
+          GH_TOKEN: ${{ secrets.UPDATE_DATA_GITHUB_TOKEN }}
+          TS: ${{ steps.post.outputs.ts }}
+        run: |
+          if gh variable set SLACK_STATUS_THREAD_TS --body "$TS" --repo "$GITHUB_REPOSITORY"; then
+            echo "Saved SLACK_STATUS_THREAD_TS=$TS"
+          else
+            echo "::warning::Could not save the variable automatically. Run: gh variable set SLACK_STATUS_THREAD_TS --body $TS --repo $GITHUB_REPOSITORY"
+          fi
+          echo "Now pin the new message in Slack."
