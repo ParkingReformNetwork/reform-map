@@ -72,23 +72,42 @@ jobs:
             --head automated-data-update \
             --body "$body"
 
-      - name: Notify Slack of new data
+      - name: Find the data PR
         if: steps.git_status.outputs.has_changes == 'true'
+        id: pr
         env:
           GH_TOKEN: ${{ secrets.UPDATE_DATA_GITHUB_TOKEN }}
-          SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK_URL }}
         run: |
-          pr_url=$(gh pr list --head automated-data-update --state open --json url --jq '.[0].url')
-          curl --fail --silent --show-error -X POST -H 'Content-Type: application/json' \
-            --data "{\"text\":\":white_check_mark: New reform map data is ready. Review and merge to publish: $pr_url\"}" \
-            "$SLACK_WEBHOOK_URL"
+          echo "url=$(gh pr list --head automated-data-update --state open --json url --jq '.[0].url')" >> "$GITHUB_OUTPUT"
+      - name: Notify Slack of new data
+        if: steps.git_status.outputs.has_changes == 'true'
+        uses: ./.github/actions/slack-post
+        env:
+          SLACK_BOT_TOKEN: ${{ secrets.SLACK_BOT_TOKEN }}
+          SLACK_CHANNEL_ID: ${{ secrets.SLACK_CHANNEL_ID }}
+          SLACK_STATUS_THREAD_TS: ${{ vars.SLACK_STATUS_THREAD_TS }}
+        with:
+          text: ":white_check_mark: New reform map data is ready. Review and merge to publish: ${{ steps.pr.outputs.url }}"
+          status: "new data ready for review, ${{ steps.pr.outputs.url }}"
+      - name: Notify Slack of no changes
+        if: steps.git_status.outputs.has_changes == 'false'
+        uses: ./.github/actions/slack-post
+        env:
+          SLACK_BOT_TOKEN: ${{ secrets.SLACK_BOT_TOKEN }}
+          SLACK_CHANNEL_ID: ${{ secrets.SLACK_CHANNEL_ID }}
+          SLACK_STATUS_THREAD_TS: ${{ vars.SLACK_STATUS_THREAD_TS }}
+        with:
+          text: ":zzz: Nightly sync ran. No data changes."
+          status: "nightly sync ran, no changes"
 
       - name: Notify Slack on failure
         if: failure()
+        uses: ./.github/actions/slack-post
         env:
-          SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK_URL }}
-        run: |
-          run_url="$GITHUB_SERVER_URL/$GITHUB_REPOSITORY/actions/runs/$GITHUB_RUN_ID"
-          curl --fail --silent --show-error -X POST -H 'Content-Type: application/json' \
-            --data "{\"text\":\":x: *$GITHUB_WORKFLOW* failed in $GITHUB_REPOSITORY: $run_url\"}" \
-            "$SLACK_WEBHOOK_URL"
+          SLACK_BOT_TOKEN: ${{ secrets.SLACK_BOT_TOKEN }}
+          SLACK_CHANNEL_ID: ${{ secrets.SLACK_CHANNEL_ID }}
+          SLACK_STATUS_THREAD_TS: ${{ vars.SLACK_STATUS_THREAD_TS }}
+        with:
+          text: ":x: *Update Data* failed: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}"
+          broadcast: "true"
+          status: "FAILED: Update Data, ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}"

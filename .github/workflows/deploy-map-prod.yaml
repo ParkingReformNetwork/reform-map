@@ -5,6 +5,8 @@ jobs:
     if: github.repository_owner == 'ParkingReformNetwork'
     runs-on: ubuntu-latest
     steps:
+      - name: Check out repository code
+        uses: actions/checkout@v7
       - name: Copy from staging to production
         uses: appleboy/ssh-action@master
         with:
@@ -18,19 +20,24 @@ jobs:
               /var/www/${{ secrets.PRN_SERVER_HOST }}/mandates-map/
 
       - name: Notify Slack on success
+        uses: ./.github/actions/slack-post
         env:
-          SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK_URL }}
-        run: |
-          curl --fail --silent --show-error -X POST -H 'Content-Type: application/json' \
-            --data "{\"text\":\":rocket: The live reform map was updated by $GITHUB_ACTOR.\"}" \
-            "$SLACK_WEBHOOK_URL"
+          SLACK_BOT_TOKEN: ${{ secrets.SLACK_BOT_TOKEN }}
+          SLACK_CHANNEL_ID: ${{ secrets.SLACK_CHANNEL_ID }}
+          SLACK_STATUS_THREAD_TS: ${{ vars.SLACK_STATUS_THREAD_TS }}
+        with:
+          text: ":rocket: The live reform map was updated by ${{ github.actor }}."
+          broadcast: "true"
+          status: "live map updated by ${{ github.actor }}"
 
       - name: Notify Slack on failure
         if: failure()
+        uses: ./.github/actions/slack-post
         env:
-          SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK_URL }}
-        run: |
-          run_url="$GITHUB_SERVER_URL/$GITHUB_REPOSITORY/actions/runs/$GITHUB_RUN_ID"
-          curl --fail --silent --show-error -X POST -H 'Content-Type: application/json' \
-            --data "{\"text\":\":x: *$GITHUB_WORKFLOW* failed in $GITHUB_REPOSITORY: $run_url\"}" \
-            "$SLACK_WEBHOOK_URL"
+          SLACK_BOT_TOKEN: ${{ secrets.SLACK_BOT_TOKEN }}
+          SLACK_CHANNEL_ID: ${{ secrets.SLACK_CHANNEL_ID }}
+          SLACK_STATUS_THREAD_TS: ${{ vars.SLACK_STATUS_THREAD_TS }}
+        with:
+          text: ":x: *Deploy map to prod* failed: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}"
+          broadcast: "true"
+          status: "FAILED: Deploy map to prod, ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}"
