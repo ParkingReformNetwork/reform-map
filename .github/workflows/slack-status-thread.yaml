@@ -5,6 +5,8 @@ name: Slack status thread
 #
 # If the message is ever deleted, run this again with "replace" checked.
 on:
+  push: # TEMP for testing, remove before merge
+    branches: [slack-status-thread]
   workflow_dispatch:
     inputs:
       replace:
