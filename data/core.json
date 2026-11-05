@@ -151,6 +151,24 @@
       }
     ]
   },
+  "Aberdeen, Idaho, United States": {
+    "place": {
+      "name": "Aberdeen",
+      "state": "Idaho",
+      "country": "United States",
+      "type": "city",
+      "encoded": "aberdeen-idaho-united-states",
+      "pop": 1756,
+      "coord": [-112.838322, 42.9445915]
+    },
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["main street / special"],
+        "land": ["all uses"]
+      }
+    ]
+  },
   "Aberdeen, Maryland, United States": {
     "place": {
       "name": "Aberdeen",
@@ -7185,6 +7203,30 @@
       }
     ]
   },
+  "Barron County, Wisconsin, United States": {
+    "place": {
+      "name": "Barron County",
+      "state": "Wisconsin",
+      "country": "United States",
+      "type": "county",
+      "encoded": "barron-county-wisconsin-united-states",
+      "pop": 46711,
+      "coord": [-91.8454099, 45.423557]
+    },
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": [
+          "commercial",
+          "industrial",
+          "medical",
+          "other",
+          "residential, low-density"
+        ]
+      }
+    ]
+  },
   "Barron, Wisconsin, United States": {
     "place": {
       "name": "Barron",
@@ -11285,6 +11327,24 @@
       {
         "status": "adopted",
         "scope": ["city center / business district"],
+        "land": ["all uses"]
+      }
+    ]
+  },
+  "Bingham County, Idaho, United States": {
+    "place": {
+      "name": "Bingham County",
+      "state": "Idaho",
+      "country": "United States",
+      "type": "county",
+      "encoded": "bingham-county-idaho-united-states",
+      "pop": 47992,
+      "coord": [-112.3598354, 43.1881598]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
         "land": ["all uses"]
       }
     ]
@@ -15561,6 +15621,24 @@
       }
     ]
   },
+  "Brown County, Kansas, United States": {
+    "place": {
+      "name": "Brown County",
+      "state": "Kansas",
+      "country": "United States",
+      "type": "county",
+      "encoded": "brown-county-kansas-united-states",
+      "pop": 9508,
+      "coord": [-95.5819952, 39.824223]
+    },
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["all uses"]
+      }
+    ]
+  },
   "Brown Deer, Wisconsin, United States": {
     "place": {
       "name": "Brown Deer",
@@ -16663,6 +16741,24 @@
       }
     ]
   },
+  "Burns, Kansas, United States": {
+    "place": {
+      "name": "Burns",
+      "state": "Kansas",
+      "country": "United States",
+      "type": "city",
+      "encoded": "burns-kansas-united-states",
+      "pop": 234,
+      "coord": [-96.8864144, 38.0902957]
+    },
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["all uses"]
+      }
+    ]
+  },
   "Burns, Oregon, United States": {
     "place": {
       "name": "Burns",
@@ -17413,6 +17509,24 @@
         "status": "adopted",
         "scope": ["city center / business district", "citywide"],
         "land": ["all uses"]
+      }
+    ]
+  },
+  "Cambridge, Idaho, United States": {
+    "place": {
+      "name": "Cambridge",
+      "state": "Idaho",
+      "country": "United States",
+      "type": "city",
+      "encoded": "cambridge-idaho-united-states",
+      "pop": 335,
+      "coord": [-116.6760812, 44.572596]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["commercial", "industrial", "medical", "other"]
       }
     ]
   },
@@ -23344,6 +23458,24 @@
       }
     ]
   },
+  "Clark County, Kansas, United States": {
+    "place": {
+      "name": "Clark County",
+      "state": "Kansas",
+      "country": "United States",
+      "type": "county",
+      "encoded": "clark-county-kansas-united-states",
+      "pop": 1991,
+      "coord": [-99.8133765, 37.2045719]
+    },
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["all uses"]
+      }
+    ]
+  },
   "Clark County, Kentucky, United States": {
     "place": {
       "name": "Clark County",
@@ -23801,6 +23933,24 @@
       {
         "status": "adopted",
         "scope": ["city center / business district"],
+        "land": ["all uses"]
+      }
+    ]
+  },
+  "Clay County, Kansas, United States": {
+    "place": {
+      "name": "Clay County",
+      "state": "Kansas",
+      "country": "United States",
+      "type": "county",
+      "encoded": "clay-county-kansas-united-states",
+      "pop": 8117,
+      "coord": [-97.1718432, 39.3615169]
+    },
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
         "land": ["all uses"]
       }
     ]
@@ -28000,6 +28150,30 @@
       }
     ]
   },
+  "Cottonwood, Idaho, United States": {
+    "place": {
+      "name": "Cottonwood",
+      "state": "Idaho",
+      "country": "United States",
+      "type": "city",
+      "encoded": "cottonwood-idaho-united-states",
+      "pop": 822,
+      "coord": [-116.3498781, 46.0482116]
+    },
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": [
+          "commercial",
+          "industrial",
+          "medical",
+          "other",
+          "residential, all uses"
+        ]
+      }
+    ]
+  },
   "Council Bluffs, Iowa, United States": {
     "place": {
       "name": "Council Bluffs",
@@ -28048,7 +28222,7 @@
     },
     "reduce_min": [
       {
-        "status": "adopted",
+        "status": "repealed",
         "scope": ["citywide"],
         "land": ["commercial", "industrial", "medical", "other"]
       }
@@ -28307,6 +28481,24 @@
       }
     ]
   },
+  "Cowley County, Kansas, United States": {
+    "place": {
+      "name": "Cowley County",
+      "state": "Kansas",
+      "country": "United States",
+      "type": "county",
+      "encoded": "cowley-county-kansas-united-states",
+      "pop": 34549,
+      "coord": [-96.8675685, 37.2413155]
+    },
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["all uses"]
+      }
+    ]
+  },
   "Cowley, Alberta, Canada": {
     "place": {
       "name": "Cowley",
@@ -28419,6 +28611,24 @@
         "status": "adopted",
         "scope": ["city center / business district"],
         "land": ["all uses"]
+      }
+    ]
+  },
+  "Craigmont, Idaho, United States": {
+    "place": {
+      "name": "Craigmont",
+      "state": "Idaho",
+      "country": "United States",
+      "type": "city",
+      "encoded": "craigmont-idaho-united-states",
+      "pop": 458,
+      "coord": [-116.467088, 46.241276]
+    },
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["main street / special"],
+        "land": ["residential, all uses"]
       }
     ]
   },
@@ -31311,6 +31521,24 @@
         "status": "adopted",
         "scope": ["main street / special"],
         "land": ["commercial"]
+      }
+    ]
+  },
+  "Deer Park, Wisconsin, United States": {
+    "place": {
+      "name": "Deer Park",
+      "state": "Wisconsin",
+      "country": "United States",
+      "type": "city",
+      "encoded": "deer-park-wisconsin-united-states",
+      "pop": 249,
+      "coord": [-92.3854703, 45.1880196]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["residential, multi-family"]
       }
     ]
   },
@@ -40445,6 +40673,24 @@
       }
     ]
   },
+  "Fairview, Kansas, United States": {
+    "place": {
+      "name": "Fairview",
+      "state": "Kansas",
+      "country": "United States",
+      "type": "city",
+      "encoded": "fairview-kansas-united-states",
+      "pop": 240,
+      "coord": [-95.728042, 39.841111]
+    },
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["all uses"]
+      }
+    ]
+  },
   "Fairview, New Jersey, United States": {
     "place": {
       "name": "Fairview",
@@ -40609,6 +40855,24 @@
         "status": "adopted",
         "scope": ["main street / special"],
         "land": ["commercial"]
+      }
+    ]
+  },
+  "Fall River, Wisconsin, United States": {
+    "place": {
+      "name": "Fall River",
+      "state": "Wisconsin",
+      "country": "United States",
+      "type": "city",
+      "encoded": "fall-river-wisconsin-united-states",
+      "pop": 1801,
+      "coord": [-89.0442238, 43.3873717]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["residential, multi-family"]
       }
     ]
   },
@@ -44886,6 +45150,24 @@
       }
     ]
   },
+  "Friendship, Wisconsin, United States": {
+    "place": {
+      "name": "Friendship",
+      "state": "Wisconsin",
+      "country": "United States",
+      "type": "city",
+      "encoded": "friendship-wisconsin-united-states",
+      "pop": 648,
+      "coord": [-89.8161783, 43.9716638]
+    },
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["all uses"]
+      }
+    ]
+  },
   "Friesland, Wisconsin, United States": {
     "place": {
       "name": "Friesland",
@@ -48473,6 +48755,24 @@
       }
     ]
   },
+  "Graham County, Kansas, United States": {
+    "place": {
+      "name": "Graham County",
+      "state": "Kansas",
+      "country": "United States",
+      "type": "county",
+      "encoded": "graham-county-kansas-united-states",
+      "pop": 2415,
+      "coord": [-99.8980624, 39.34062]
+    },
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["all uses"]
+      }
+    ]
+  },
   "Graham, North Carolina, United States": {
     "place": {
       "name": "Graham",
@@ -49373,6 +49673,24 @@
         "status": "adopted",
         "scope": ["city center / business district"],
         "land": ["all uses"]
+      }
+    ]
+  },
+  "Gratiot, Wisconsin, United States": {
+    "place": {
+      "name": "Gratiot",
+      "state": "Wisconsin",
+      "country": "United States",
+      "type": "city",
+      "encoded": "gratiot-wisconsin-united-states",
+      "pop": 224,
+      "coord": [-90.0234299, 42.5802357]
+    },
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["residential, multi-family"]
       }
     ]
   },
@@ -50623,6 +50941,24 @@
         "scope": ["citywide"],
         "land": ["all uses"],
         "date": "2025-11-04"
+      }
+    ]
+  },
+  "Gresham, Wisconsin, United States": {
+    "place": {
+      "name": "Gresham",
+      "state": "Wisconsin",
+      "country": "United States",
+      "type": "city",
+      "encoded": "gresham-wisconsin-united-states",
+      "pop": 530,
+      "coord": [-88.7869262, 44.8518159]
+    },
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["all uses"]
       }
     ]
   },
@@ -52596,6 +52932,24 @@
         "status": "adopted",
         "scope": ["city center / business district"],
         "land": ["all uses", "commercial"]
+      }
+    ]
+  },
+  "Hansen, Idaho, United States": {
+    "place": {
+      "name": "Hansen",
+      "state": "Idaho",
+      "country": "United States",
+      "type": "city",
+      "encoded": "hansen-idaho-united-states",
+      "pop": 1086,
+      "coord": [-114.301272, 42.5311224]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["all uses"]
       }
     ]
   },
@@ -57779,6 +58133,25 @@
       }
     ]
   },
+  "Hudson, Quebec, Canada": {
+    "place": {
+      "name": "Hudson",
+      "state": "Quebec",
+      "country": "Canada",
+      "type": "city",
+      "encoded": "hudson-quebec-canada",
+      "pop": 5411,
+      "coord": [-74.150848, 45.464465]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["all uses"],
+        "date": "2020-01-15"
+      }
+    ]
+  },
   "Hudson, Wisconsin, United States": {
     "place": {
       "name": "Hudson",
@@ -60876,6 +61249,24 @@
       }
     ]
   },
+  "Jemez Springs, New Mexico, United States": {
+    "place": {
+      "name": "Jemez Springs",
+      "state": "New Mexico",
+      "country": "United States",
+      "type": "city",
+      "encoded": "jemez-springs-new-mexico-united-states",
+      "pop": 198,
+      "coord": [-106.6921555, 35.76851]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["all uses"]
+      }
+    ]
+  },
   "Jemison, Alabama, United States": {
     "place": {
       "name": "Jemison",
@@ -61709,6 +62100,24 @@
       }
     ]
   },
+  "Juliaetta, Idaho, United States": {
+    "place": {
+      "name": "Juliaetta",
+      "state": "Idaho",
+      "country": "United States",
+      "type": "city",
+      "encoded": "juliaetta-idaho-united-states",
+      "pop": 624,
+      "coord": [-116.705986, 46.5787804]
+    },
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["all uses"]
+      }
+    ]
+  },
   "Junction City, Kansas, United States": {
     "place": {
       "name": "Junction City",
@@ -62085,6 +62494,24 @@
       {
         "status": "adopted",
         "scope": ["transit-oriented"],
+        "land": ["all uses"]
+      }
+    ]
+  },
+  "Kanorado, Kansas, United States": {
+    "place": {
+      "name": "Kanorado",
+      "state": "Kansas",
+      "country": "United States",
+      "type": "city",
+      "encoded": "kanorado-kansas-united-states",
+      "pop": 153,
+      "coord": [-102.0375459, 39.3368506]
+    },
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
         "land": ["all uses"]
       }
     ]
@@ -63734,6 +64161,24 @@
       }
     ]
   },
+  "Kingston, Tennessee, United States": {
+    "place": {
+      "name": "Kingston",
+      "state": "Tennessee",
+      "country": "United States",
+      "type": "city",
+      "encoded": "kingston-tennessee-united-states",
+      "pop": 5953,
+      "coord": [-84.5160916, 35.8713147]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["all uses"]
+      }
+    ]
+  },
   "Kingstree, South Carolina, United States": {
     "place": {
       "name": "Kingstree",
@@ -64448,6 +64893,24 @@
       }
     ]
   },
+  "Kooskia, Idaho, United States": {
+    "place": {
+      "name": "Kooskia",
+      "state": "Idaho",
+      "country": "United States",
+      "type": "city",
+      "encoded": "kooskia-idaho-united-states",
+      "pop": 514,
+      "coord": [-115.9779188, 46.1448942]
+    },
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["all uses"]
+      }
+    ]
+  },
   "Kouts, Indiana, United States": {
     "place": {
       "name": "Kouts",
@@ -65126,6 +65589,24 @@
       {
         "status": "adopted",
         "scope": ["city center / business district"],
+        "land": ["all uses"]
+      }
+    ]
+  },
+  "Labette County, Kansas, United States": {
+    "place": {
+      "name": "Labette County",
+      "state": "Kansas",
+      "country": "United States",
+      "type": "county",
+      "encoded": "labette-county-kansas-united-states",
+      "pop": 20184,
+      "coord": [-95.3103729, 37.1899712]
+    },
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
         "land": ["all uses"]
       }
     ]
@@ -67483,6 +67964,24 @@
       }
     ]
   },
+  "Lava Hot Springs, Idaho, United States": {
+    "place": {
+      "name": "Lava Hot Springs",
+      "state": "Idaho",
+      "country": "United States",
+      "type": "city",
+      "encoded": "lava-hot-springs-idaho-united-states",
+      "pop": 358,
+      "coord": [-112.011071, 42.6193625]
+    },
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["all uses"]
+      }
+    ]
+  },
   "Laval, Quebec, Canada": {
     "place": {
       "name": "Laval",
@@ -68909,6 +69408,24 @@
       {
         "status": "adopted",
         "scope": ["city center / business district"],
+        "land": ["all uses"]
+      }
+    ]
+  },
+  "Lewisville, Idaho, United States": {
+    "place": {
+      "name": "Lewisville",
+      "state": "Idaho",
+      "country": "United States",
+      "type": "city",
+      "encoded": "lewisville-idaho-united-states",
+      "pop": 421,
+      "coord": [-112.010526, 43.695744]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
         "land": ["all uses"]
       }
     ]
@@ -70455,6 +70972,24 @@
       }
     ]
   },
+  "Livingston, Wisconsin, United States": {
+    "place": {
+      "name": "Livingston",
+      "state": "Wisconsin",
+      "country": "United States",
+      "type": "city",
+      "encoded": "livingston-wisconsin-united-states",
+      "pop": 637,
+      "coord": [-90.4310057, 42.90106]
+    },
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["all uses"]
+      }
+    ]
+  },
   "Livonia, Michigan, United States": {
     "place": {
       "name": "Livonia",
@@ -71762,6 +72297,24 @@
       }
     ]
   },
+  "Lowell, Oregon, United States": {
+    "place": {
+      "name": "Lowell",
+      "state": "Oregon",
+      "country": "United States",
+      "type": "city",
+      "encoded": "lowell-oregon-united-states",
+      "pop": 1196,
+      "coord": [-122.783682, 43.9184592]
+    },
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district", "citywide"],
+        "land": ["other", "residential, all uses", "residential, low-density"]
+      }
+    ]
+  },
   "Lower Alloways Creek Township, New Jersey, United States": {
     "place": {
       "name": "Lower Alloways Creek Township",
@@ -72425,6 +72978,24 @@
         "status": "adopted",
         "scope": ["citywide"],
         "land": ["residential, low-density"]
+      }
+    ]
+  },
+  "Mackay, Idaho, United States": {
+    "place": {
+      "name": "Mackay",
+      "state": "Idaho",
+      "country": "United States",
+      "type": "city",
+      "encoded": "mackay-idaho-united-states",
+      "pop": 439,
+      "coord": [-113.613355, 43.91463]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["all uses"]
       }
     ]
   },
@@ -80334,6 +80905,24 @@
       }
     ]
   },
+  "Minto-Odanah Rural Municipality, Manitoba, Canada": {
+    "place": {
+      "name": "Minto-Odanah Rural Municipality",
+      "state": "Manitoba",
+      "country": "Canada",
+      "type": "county",
+      "encoded": "minto-odanah-rural-municipality-manitoba-canada",
+      "pop": 1121,
+      "coord": [-99.8183954, 50.262703]
+    },
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["all uses"]
+      }
+    ]
+  },
   "Minturn, Colorado, United States": {
     "place": {
       "name": "Minturn",
@@ -81499,6 +82088,24 @@
       {
         "status": "adopted",
         "scope": ["city center / business district"],
+        "land": ["all uses"]
+      }
+    ]
+  },
+  "Montgomery County, Kansas, United States": {
+    "place": {
+      "name": "Montgomery County",
+      "state": "Kansas",
+      "country": "United States",
+      "type": "county",
+      "encoded": "montgomery-county-kansas-united-states",
+      "pop": 31486,
+      "coord": [-95.7628341, 37.1983948]
+    },
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
         "land": ["all uses"]
       }
     ]
@@ -84820,6 +85427,24 @@
       }
     ]
   },
+  "Myton, Utah, United States": {
+    "place": {
+      "name": "Myton",
+      "state": "Utah",
+      "country": "United States",
+      "type": "city",
+      "encoded": "myton-utah-united-states",
+      "pop": 662,
+      "coord": [-110.061816, 40.1944043]
+    },
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["all uses"]
+      }
+    ]
+  },
   "München, Bavaria, Germany": {
     "place": {
       "name": "München",
@@ -85665,6 +86290,24 @@
       }
     ]
   },
+  "Neosho, Wisconsin, United States": {
+    "place": {
+      "name": "Neosho",
+      "state": "Wisconsin",
+      "country": "United States",
+      "type": "city",
+      "encoded": "neosho-wisconsin-united-states",
+      "pop": 591,
+      "coord": [-88.5181557, 43.3102782]
+    },
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["commercial"]
+      }
+    ]
+  },
   "Neptune Township, New Jersey, United States": {
     "place": {
       "name": "Neptune Township",
@@ -85687,6 +86330,24 @@
         "status": "adopted",
         "scope": ["citywide"],
         "land": ["all uses", "other"]
+      }
+    ]
+  },
+  "Neshkoro, Wisconsin, United States": {
+    "place": {
+      "name": "Neshkoro",
+      "state": "Wisconsin",
+      "country": "United States",
+      "type": "city",
+      "encoded": "neshkoro-wisconsin-united-states",
+      "pop": 412,
+      "coord": [-89.2185368, 43.9616959]
+    },
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["all uses"]
       }
     ]
   },
@@ -87924,6 +88585,30 @@
       }
     ]
   },
+  "Nezperce, Idaho, United States": {
+    "place": {
+      "name": "Nezperce",
+      "state": "Idaho",
+      "country": "United States",
+      "type": "city",
+      "encoded": "nezperce-idaho-united-states",
+      "pop": 458,
+      "coord": [-116.240697, 46.2348914]
+    },
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": [
+          "commercial",
+          "industrial",
+          "medical",
+          "other",
+          "residential, all uses"
+        ]
+      }
+    ]
+  },
   "Niagara Falls, New York, United States": {
     "place": {
       "name": "Niagara Falls",
@@ -88748,6 +89433,24 @@
       }
     ]
   },
+  "North Bay, Wisconsin, United States": {
+    "place": {
+      "name": "North Bay",
+      "state": "Wisconsin",
+      "country": "United States",
+      "type": "city",
+      "encoded": "north-bay-wisconsin-united-states",
+      "pop": 209,
+      "coord": [-87.7797972, 42.7647416]
+    },
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["all uses"]
+      }
+    ]
+  },
   "North Beach, Maryland, United States": {
     "place": {
       "name": "North Beach",
@@ -88990,6 +89693,24 @@
         "status": "adopted",
         "scope": ["city center / business district"],
         "land": ["all uses"]
+      }
+    ]
+  },
+  "North Freedom, Wisconsin, United States": {
+    "place": {
+      "name": "North Freedom",
+      "state": "Wisconsin",
+      "country": "United States",
+      "type": "city",
+      "encoded": "north-freedom-wisconsin-united-states",
+      "pop": 603,
+      "coord": [-89.866476, 43.4602946]
+    },
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["residential, multi-family"]
       }
     ]
   },
@@ -90072,6 +90793,24 @@
       }
     ]
   },
+  "Norton County, Kansas, United States": {
+    "place": {
+      "name": "Norton County",
+      "state": "Kansas",
+      "country": "United States",
+      "type": "county",
+      "encoded": "norton-county-kansas-united-states",
+      "pop": 5459,
+      "coord": [-99.9100033, 39.7944702]
+    },
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["all uses"]
+      }
+    ]
+  },
   "Norton, Kansas, United States": {
     "place": {
       "name": "Norton",
@@ -90335,6 +91074,24 @@
         "status": "adopted",
         "scope": ["citywide"],
         "land": ["commercial", "residential, low-density"]
+      }
+    ]
+  },
+  "Notus, Idaho, United States": {
+    "place": {
+      "name": "Notus",
+      "state": "Idaho",
+      "country": "United States",
+      "type": "city",
+      "encoded": "notus-idaho-united-states",
+      "pop": 609,
+      "coord": [-116.7993684, 43.727631]
+    },
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["all uses"]
       }
     ]
   },
@@ -94248,6 +95005,24 @@
       }
     ]
   },
+  "Palco, Kansas, United States": {
+    "place": {
+      "name": "Palco",
+      "state": "Kansas",
+      "country": "United States",
+      "type": "city",
+      "encoded": "palco-kansas-united-states",
+      "pop": 208,
+      "coord": [-99.562888, 39.252231]
+    },
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["all uses"]
+      }
+    ]
+  },
   "Palmdale, California, United States": {
     "place": {
       "name": "Palmdale",
@@ -95349,6 +96124,24 @@
       {
         "status": "adopted",
         "scope": ["city center / business district"],
+        "land": ["all uses"]
+      }
+    ]
+  },
+  "Pawnee Rock, Kansas, United States": {
+    "place": {
+      "name": "Pawnee Rock",
+      "state": "Kansas",
+      "country": "United States",
+      "type": "city",
+      "encoded": "pawnee-rock-kansas-united-states",
+      "pop": 193,
+      "coord": [-98.9809292, 38.2652911]
+    },
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
         "land": ["all uses"]
       }
     ]
@@ -96896,6 +97689,24 @@
       {
         "status": "adopted",
         "scope": ["city center / business district"],
+        "land": ["all uses"]
+      }
+    ]
+  },
+  "Phillips County, Kansas, United States": {
+    "place": {
+      "name": "Phillips County",
+      "state": "Kansas",
+      "country": "United States",
+      "type": "county",
+      "encoded": "phillips-county-kansas-united-states",
+      "pop": 4981,
+      "coord": [-99.346586, 39.7961542]
+    },
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
         "land": ["all uses"]
       }
     ]
@@ -101822,6 +102633,24 @@
       }
     ]
   },
+  "Ransom, Kansas, United States": {
+    "place": {
+      "name": "Ransom",
+      "state": "Kansas",
+      "country": "United States",
+      "type": "city",
+      "encoded": "ransom-kansas-united-states",
+      "pop": 260,
+      "coord": [-99.9337342, 38.6361254]
+    },
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["all uses"]
+      }
+    ]
+  },
   "Ranson, West Virginia, United States": {
     "place": {
       "name": "Ranson",
@@ -104746,6 +105575,24 @@
       }
     ]
   },
+  "Roberts, Idaho, United States": {
+    "place": {
+      "name": "Roberts",
+      "state": "Idaho",
+      "country": "United States",
+      "type": "city",
+      "encoded": "roberts-idaho-united-states",
+      "pop": 500,
+      "coord": [-112.126363, 43.720188]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["all uses"]
+      }
+    ]
+  },
   "Roberts, Wisconsin, United States": {
     "place": {
       "name": "Roberts",
@@ -104761,6 +105608,42 @@
         "status": "adopted",
         "scope": ["citywide"],
         "land": ["all uses"]
+      }
+    ]
+  },
+  "Robinson, Kansas, United States": {
+    "place": {
+      "name": "Robinson",
+      "state": "Kansas",
+      "country": "United States",
+      "type": "city",
+      "encoded": "robinson-kansas-united-states",
+      "pop": 183,
+      "coord": [-95.4105347, 39.8166687]
+    },
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["all uses"]
+      }
+    ]
+  },
+  "Roblin\tRural Municipality, Manitoba, Canada": {
+    "place": {
+      "name": "Roblin\tRural Municipality",
+      "state": "Manitoba",
+      "country": "Canada",
+      "type": "county",
+      "encoded": "roblin-rural-municipality-manitoba-canada",
+      "pop": 3089,
+      "coord": [-97.4203333, 49.8682525]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["commercial"]
       }
     ]
   },
@@ -106289,6 +107172,24 @@
       }
     ]
   },
+  "Rosholt, Wisconsin, United States": {
+    "place": {
+      "name": "Rosholt",
+      "state": "Wisconsin",
+      "country": "United States",
+      "type": "city",
+      "encoded": "rosholt-wisconsin-united-states",
+      "pop": 478,
+      "coord": [-89.3088427, 44.6285666]
+    },
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["all uses"]
+      }
+    ]
+  },
   "Roslyn, New York, United States": {
     "place": {
       "name": "Roslyn",
@@ -107087,6 +107988,24 @@
         "status": "adopted",
         "scope": ["city center / business district", "citywide"],
         "land": ["commercial", "industrial", "medical", "other"]
+      }
+    ]
+  },
+  "Russell-Binscarth Rural Municipality, Manitoba, Canada": {
+    "place": {
+      "name": "Russell-Binscarth Rural Municipality",
+      "state": "Manitoba",
+      "country": "Canada",
+      "type": "county",
+      "encoded": "russell-binscarth-rural-municipality-manitoba-canada",
+      "pop": 2596,
+      "coord": [-101.2095489, 50.7718965]
+    },
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["commercial"]
       }
     ]
   },
@@ -115056,6 +115975,24 @@
       }
     ]
   },
+  "South Wayne, Wisconsin, United States": {
+    "place": {
+      "name": "South Wayne",
+      "state": "Wisconsin",
+      "country": "United States",
+      "type": "city",
+      "encoded": "south-wayne-wisconsin-united-states",
+      "pop": 446,
+      "coord": [-89.8798448, 42.5688955]
+    },
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["all uses"]
+      }
+    ]
+  },
   "South Whitley, Indiana, United States": {
     "place": {
       "name": "South Whitley",
@@ -118196,6 +119133,24 @@
       }
     ]
   },
+  "Stanton County, Kansas, United States": {
+    "place": {
+      "name": "Stanton County",
+      "state": "Kansas",
+      "country": "United States",
+      "type": "county",
+      "encoded": "stanton-county-kansas-united-states",
+      "pop": 2084,
+      "coord": [-101.7935648, 37.5691072]
+    },
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["all uses"]
+      }
+    ]
+  },
   "Stanton, Michigan, United States": {
     "place": {
       "name": "Stanton",
@@ -119707,6 +120662,24 @@
       {
         "status": "adopted",
         "scope": ["city center / business district"],
+        "land": ["all uses"]
+      }
+    ]
+  },
+  "Stuartburn Rural Municipality, Manitoba, Canada": {
+    "place": {
+      "name": "Stuartburn Rural Municipality",
+      "state": "Manitoba",
+      "country": "Canada",
+      "type": "county",
+      "encoded": "stuartburn-rural-municipality-manitoba-canada",
+      "pop": 1731,
+      "coord": [-96.7636727, 49.1338403]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
         "land": ["all uses"]
       }
     ]
@@ -123093,6 +124066,24 @@
       }
     ]
   },
+  "Thompson Rural Municipality, Manitoba, Canada": {
+    "place": {
+      "name": "Thompson Rural Municipality",
+      "state": "Manitoba",
+      "country": "Canada",
+      "type": "county",
+      "encoded": "thompson-rural-municipality-manitoba-canada",
+      "pop": 1518,
+      "coord": [-97.3497256, 49.8726815]
+    },
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["commercial"]
+      }
+    ]
+  },
   "Thompson's Station, Tennessee, United States": {
     "place": {
       "name": "Thompson's Station",
@@ -125808,6 +126799,31 @@
         "status": "adopted",
         "scope": ["city center / business district"],
         "land": ["commercial"]
+      }
+    ]
+  },
+  "Two Borders\tRural Municipality, Manitoba, Canada": {
+    "place": {
+      "name": "Two Borders\tRural Municipality",
+      "state": "Manitoba",
+      "country": "Canada",
+      "type": "county",
+      "encoded": "two-borders-rural-municipality-manitoba-canada",
+      "pop": 1120,
+      "coord": [-101.0081801, 49.1336301]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["main street / special"],
+        "land": ["all uses"]
+      }
+    ],
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["all uses"]
       }
     ]
   },
@@ -131970,6 +132986,24 @@
       }
     ]
   },
+  "Weippe, Idaho, United States": {
+    "place": {
+      "name": "Weippe",
+      "state": "Idaho",
+      "country": "United States",
+      "type": "city",
+      "encoded": "weippe-idaho-united-states",
+      "pop": 400,
+      "coord": [-115.938194, 46.3760149]
+    },
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["all uses"]
+      }
+    ]
+  },
   "Weir, Kansas, United States": {
     "place": {
       "name": "Weir",
@@ -133521,6 +134555,24 @@
       }
     ]
   },
+  "West St. Paul Rural Municipality, Manitoba, Canada": {
+    "place": {
+      "name": "West St. Paul Rural Municipality",
+      "state": "Manitoba",
+      "country": "Canada",
+      "type": "county",
+      "encoded": "west-st-paul-rural-municipality-manitoba-canada",
+      "pop": 6682,
+      "coord": [-97.06267, 49.9857724]
+    },
+    "add_max": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["residential, low-density"]
+      }
+    ]
+  },
   "West Union, Iowa, United States": {
     "place": {
       "name": "West Union",
@@ -133652,6 +134704,24 @@
         "status": "adopted",
         "scope": ["city center / business district"],
         "land": ["commercial"]
+      }
+    ]
+  },
+  "WestLake-Gladstone Rural Municipality, Manitoba, Canada": {
+    "place": {
+      "name": "WestLake-Gladstone Rural Municipality",
+      "state": "Manitoba",
+      "country": "Canada",
+      "type": "county",
+      "encoded": "westlake-gladstone-rural-municipality-manitoba-canada",
+      "pop": 3273,
+      "coord": [-98.8598443, 50.2849267]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["all uses"]
       }
     ]
   },
@@ -133825,6 +134895,24 @@
         "land": ["commercial", "other"]
       }
     ],
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["all uses"]
+      }
+    ]
+  },
+  "Westfield, Wisconsin, United States": {
+    "place": {
+      "name": "Westfield",
+      "state": "Wisconsin",
+      "country": "United States",
+      "type": "city",
+      "encoded": "westfield-wisconsin-united-states",
+      "pop": 1302,
+      "coord": [-89.493266, 43.8856953]
+    },
     "rm_min": [
       {
         "status": "adopted",
@@ -134365,6 +135453,24 @@
       }
     ]
   },
+  "Weyerhaeuser, Wisconsin, United States": {
+    "place": {
+      "name": "Weyerhaeuser",
+      "state": "Wisconsin",
+      "country": "United States",
+      "type": "city",
+      "encoded": "weyerhaeuser-wisconsin-united-states",
+      "pop": 232,
+      "coord": [-91.415286, 45.4226495]
+    },
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["all uses"]
+      }
+    ]
+  },
   "Weymouth, Massachusetts, United States": {
     "place": {
       "name": "Weymouth",
@@ -134471,6 +135577,24 @@
         "status": "adopted",
         "scope": ["city center / business district"],
         "land": ["all uses"]
+      }
+    ]
+  },
+  "Wheeler, Wisconsin, United States": {
+    "place": {
+      "name": "Wheeler",
+      "state": "Wisconsin",
+      "country": "United States",
+      "type": "city",
+      "encoded": "wheeler-wisconsin-united-states",
+      "pop": 326,
+      "coord": [-91.9081875, 45.0444121]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["residential, multi-family"]
       }
     ]
   },
@@ -134638,6 +135762,37 @@
       }
     ]
   },
+  "White City, Utah, United States": {
+    "place": {
+      "name": "White City",
+      "state": "Utah",
+      "country": "United States",
+      "type": "city",
+      "encoded": "white-city-utah-united-states",
+      "pop": 5568,
+      "coord": [-111.864378, 40.5657817]
+    },
+    "add_max": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": [
+          "commercial",
+          "medical",
+          "other",
+          "residential, low-density",
+          "residential, multi-family"
+        ]
+      }
+    ],
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["all uses"]
+      }
+    ]
+  },
   "White Cloud, Michigan, United States": {
     "place": {
       "name": "White Cloud",
@@ -134685,6 +135840,24 @@
       "coord": [-83.5007875, 42.6555688]
     },
     "add_max": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["all uses"]
+      }
+    ]
+  },
+  "White Lake, Wisconsin, United States": {
+    "place": {
+      "name": "White Lake",
+      "state": "Wisconsin",
+      "country": "United States",
+      "type": "city",
+      "encoded": "white-lake-wisconsin-united-states",
+      "pop": 262,
+      "coord": [-88.764551, 45.157193]
+    },
+    "rm_min": [
       {
         "status": "adopted",
         "scope": ["citywide"],
