@@ -1,0 +1,28 @@
+name: Slack test TEMP
+on:
+  push:
+    branches: [slack-status-thread]
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7
+      - name: Thread reply (no broadcast)
+        uses: ./.github/actions/slack-post
+        env:
+          SLACK_BOT_TOKEN: ${{ secrets.SLACK_BOT_TOKEN }}
+          SLACK_CHANNEL_ID: ${{ secrets.SLACK_CHANNEL_ID }}
+          SLACK_STATUS_THREAD_TS: ${{ vars.SLACK_STATUS_THREAD_TS }}
+        with:
+          text: ":test_tube: Test reply from the new workflow wiring. Should appear only in the thread."
+          status: "test reply posted (thread only)"
+      - name: Thread reply (broadcast)
+        uses: ./.github/actions/slack-post
+        env:
+          SLACK_BOT_TOKEN: ${{ secrets.SLACK_BOT_TOKEN }}
+          SLACK_CHANNEL_ID: ${{ secrets.SLACK_CHANNEL_ID }}
+          SLACK_STATUS_THREAD_TS: ${{ vars.SLACK_STATUS_THREAD_TS }}
+        with:
+          text: ":test_tube: Test broadcast reply. Should appear in the thread and in the channel."
+          broadcast: "true"
+          status: "test broadcast posted"
