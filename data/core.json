@@ -3555,6 +3555,13 @@
       "pop": 75644,
       "coord": [-88.4069744, 44.2613967]
     },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["all uses"]
+      }
+    ],
     "rm_min": [
       {
         "status": "adopted",
@@ -5148,6 +5155,24 @@
       }
     ]
   },
+  "Atkinson, North Carolina, United States": {
+    "place": {
+      "name": "Atkinson",
+      "state": "North Carolina",
+      "country": "United States",
+      "type": "city",
+      "encoded": "atkinson-north-carolina-united-states",
+      "pop": 296,
+      "coord": [-78.171107, 34.5285008]
+    },
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["all uses"]
+      }
+    ]
+  },
   "Atlanta, Georgia, United States": {
     "place": {
       "name": "Atlanta",
@@ -5747,6 +5772,24 @@
         "status": "adopted",
         "scope": ["city center / business district"],
         "land": ["commercial"]
+      }
+    ]
+  },
+  "Aurora, North Carolina, United States": {
+    "place": {
+      "name": "Aurora",
+      "state": "North Carolina",
+      "country": "United States",
+      "type": "city",
+      "encoded": "aurora-north-carolina-united-states",
+      "pop": 455,
+      "coord": [-76.78867583907302, 35.30455931137573]
+    },
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["all uses"]
       }
     ]
   },
@@ -6902,6 +6945,25 @@
       }
     ]
   },
+  "Barcelona, Barcelona, Spain": {
+    "place": {
+      "name": "Barcelona",
+      "state": "Barcelona",
+      "country": "Spain",
+      "type": "city",
+      "encoded": "barcelona-barcelona-spain",
+      "pop": 1627559,
+      "coord": [2.177073, 41.3825802]
+    },
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["residential, all uses"],
+        "date": "2026-09"
+      }
+    ]
+  },
   "Bardstown, Kentucky, United States": {
     "place": {
       "name": "Bardstown",
@@ -7211,7 +7273,7 @@
       "type": "county",
       "encoded": "barron-county-wisconsin-united-states",
       "pop": 46711,
-      "coord": [-91.8454099, 45.423557]
+      "coord": [-91.83022463772627, 45.44430792814903]
     },
     "rm_min": [
       {
@@ -8895,6 +8957,31 @@
         "status": "adopted",
         "scope": ["city center / business district", "main street / special"],
         "land": ["all uses"]
+      }
+    ]
+  },
+  "Bellaire, Texas, United States": {
+    "place": {
+      "name": "Bellaire",
+      "state": "Texas",
+      "country": "United States",
+      "type": "city",
+      "encoded": "bellaire-texas-united-states",
+      "pop": 17202,
+      "coord": [-95.4588299, 29.7057858]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district", "citywide"],
+        "land": [
+          "commercial",
+          "industrial",
+          "medical",
+          "other",
+          "residential, multi-family"
+        ],
+        "date": "2026-09-21"
       }
     ]
   },
@@ -11339,7 +11426,7 @@
       "type": "county",
       "encoded": "bingham-county-idaho-united-states",
       "pop": 47992,
-      "coord": [-112.3598354, 43.1881598]
+      "coord": [-112.46648370977393, 43.27345265522562]
     },
     "reduce_min": [
       {
@@ -20071,6 +20158,24 @@
       }
     ]
   },
+  "Castle Valley, Utah, United States": {
+    "place": {
+      "name": "Castle Valley",
+      "state": "Utah",
+      "country": "United States",
+      "type": "city",
+      "encoded": "castle-valley-utah-united-states",
+      "pop": 348,
+      "coord": [-109.409005, 38.6394278]
+    },
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["all uses"]
+      }
+    ]
+  },
   "Castlegar, British Columbia, Canada": {
     "place": {
       "name": "Castlegar",
@@ -20779,6 +20884,24 @@
         "status": "adopted",
         "scope": ["citywide"],
         "land": ["residential, low-density"]
+      }
+    ]
+  },
+  "Central Valley, Utah, United States": {
+    "place": {
+      "name": "Central Valley",
+      "state": "Utah",
+      "country": "United States",
+      "type": "city",
+      "encoded": "central-valley-utah-united-states",
+      "pop": 686,
+      "coord": [-112.098814, 38.7038587]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["commercial", "medical", "other"]
       }
     ]
   },
@@ -23815,6 +23938,30 @@
       }
     ]
   },
+  "Clarkton, North Carolina, United States": {
+    "place": {
+      "name": "Clarkton",
+      "state": "North Carolina",
+      "country": "United States",
+      "type": "city",
+      "encoded": "clarkton-north-carolina-united-states",
+      "pop": 614,
+      "coord": [-78.6561257, 34.4873922]
+    },
+    "add_max": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": [
+          "commercial",
+          "industrial",
+          "medical",
+          "other",
+          "residential, low-density"
+        ]
+      }
+    ]
+  },
   "Clatskanie, Oregon, United States": {
     "place": {
       "name": "Clatskanie",
@@ -23945,7 +24092,7 @@
       "type": "county",
       "encoded": "clay-county-kansas-united-states",
       "pop": 8117,
-      "coord": [-97.1718432, 39.3615169]
+      "coord": [-97.17750830377393, 39.35150465090845]
     },
     "rm_min": [
       {
@@ -29062,6 +29209,24 @@
       }
     ]
   },
+  "Creswell, North Carolina, United States": {
+    "place": {
+      "name": "Creswell",
+      "state": "North Carolina",
+      "country": "United States",
+      "type": "city",
+      "encoded": "creswell-north-carolina-united-states",
+      "pop": 207,
+      "coord": [-76.393796, 35.8693818]
+    },
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["all uses"]
+      }
+    ]
+  },
   "Creswell, Oregon, United States": {
     "place": {
       "name": "Creswell",
@@ -29495,6 +29660,14 @@
       "coord": [-118.396466, 34.0211224],
       "repeal": true
     },
+    "add_max": [
+      {
+        "status": "proposed",
+        "scope": ["citywide"],
+        "land": ["all uses"],
+        "date": "2026-11-09"
+      }
+    ],
     "rm_min": [
       {
         "status": "adopted",
@@ -41515,6 +41688,14 @@
         "scope": ["city center / business district"],
         "land": ["all uses"]
       }
+    ],
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["residential, multi-family"],
+        "date": "2026-09-01"
+      }
     ]
   },
   "Federalsburg, Maryland, United States": {
@@ -42837,6 +43018,31 @@
         "scope": ["city center / business district", "transit-oriented"],
         "land": ["all uses"],
         "date": "2024-11-25"
+      }
+    ]
+  },
+  "Forest Hills, North Carolina, United States": {
+    "place": {
+      "name": "Forest Hills",
+      "state": "North Carolina",
+      "country": "United States",
+      "type": "city",
+      "encoded": "forest-hills-north-carolina-united-states",
+      "pop": 303,
+      "coord": [-83.1934785, 35.297322]
+    },
+    "add_max": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["commercial", "other"]
+      }
+    ],
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["commercial", "other", "residential, multi-family"]
       }
     ]
   },
@@ -46034,6 +46240,24 @@
         "status": "adopted",
         "scope": ["city center / business district"],
         "land": ["all uses"]
+      }
+    ]
+  },
+  "Garden City, Utah, United States": {
+    "place": {
+      "name": "Garden City",
+      "state": "Utah",
+      "country": "United States",
+      "type": "city",
+      "encoded": "garden-city-utah-united-states",
+      "pop": 545,
+      "coord": [-111.393539, 41.946878]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["commercial"]
       }
     ]
   },
@@ -49558,6 +49782,25 @@
         "status": "adopted",
         "scope": ["citywide"],
         "land": ["all uses"]
+      }
+    ]
+  },
+  "Grantsboro, North Carolina, United States": {
+    "place": {
+      "name": "Grantsboro",
+      "state": "North Carolina",
+      "country": "United States",
+      "type": "city",
+      "encoded": "grantsboro-north-carolina-united-states",
+      "pop": 692,
+      "coord": [-76.84246, 35.1406429]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["commercial"],
+        "date": "2013-10-15"
       }
     ]
   },
@@ -54530,6 +54773,24 @@
         "status": "adopted",
         "scope": ["city center / business district"],
         "land": ["commercial", "other"]
+      }
+    ]
+  },
+  "Hayesville, North Carolina, United States": {
+    "place": {
+      "name": "Hayesville",
+      "state": "North Carolina",
+      "country": "United States",
+      "type": "city",
+      "encoded": "hayesville-north-carolina-united-states",
+      "pop": 461,
+      "coord": [-83.8179427, 35.0462818]
+    },
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["all uses"]
       }
     ]
   },
@@ -65601,7 +65862,7 @@
       "type": "county",
       "encoded": "labette-county-kansas-united-states",
       "pop": 20184,
-      "coord": [-95.3103729, 37.1899712]
+      "coord": [-95.32222425984293, 37.16374143743474]
     },
     "rm_min": [
       {
@@ -80913,7 +81174,7 @@
       "type": "county",
       "encoded": "minto-odanah-rural-municipality-manitoba-canada",
       "pop": 1121,
-      "coord": [-99.8183954, 50.262703]
+      "coord": [-99.80703820690154, 50.276470586837675]
     },
     "rm_min": [
       {
@@ -82100,7 +82361,7 @@
       "type": "county",
       "encoded": "montgomery-county-kansas-united-states",
       "pop": 31486,
-      "coord": [-95.7628341, 37.1983948]
+      "coord": [-95.76221329208563, 37.17762258983568]
     },
     "rm_min": [
       {
@@ -87046,6 +87307,30 @@
         "status": "adopted",
         "scope": ["city center / business district"],
         "land": ["commercial"]
+      }
+    ]
+  },
+  "New Harmony, Utah, United States": {
+    "place": {
+      "name": "New Harmony",
+      "state": "Utah",
+      "country": "United States",
+      "type": "city",
+      "encoded": "new-harmony-utah-united-states",
+      "pop": 353,
+      "coord": [-113.309673, 37.4794243]
+    },
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": [
+          "commercial",
+          "industrial",
+          "medical",
+          "other",
+          "residential, all uses"
+        ]
       }
     ]
   },
@@ -92769,6 +93054,12 @@
       {
         "status": "adopted",
         "scope": ["citywide"],
+        "land": ["residential, all uses"],
+        "date": "2026-10-06"
+      },
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
         "land": ["all uses"]
       }
     ],
@@ -95637,6 +95928,24 @@
         "status": "adopted",
         "scope": ["city center / business district"],
         "land": ["commercial", "other"]
+      }
+    ]
+  },
+  "Parkton, North Carolina, United States": {
+    "place": {
+      "name": "Parkton",
+      "state": "North Carolina",
+      "country": "United States",
+      "type": "city",
+      "encoded": "parkton-north-carolina-united-states",
+      "pop": 504,
+      "coord": [-79.0116971, 34.9026635]
+    },
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["commercial", "other", "residential, all uses"]
       }
     ]
   },
@@ -104113,6 +104422,24 @@
       }
     ]
   },
+  "Richfield, North Carolina, United States": {
+    "place": {
+      "name": "Richfield",
+      "state": "North Carolina",
+      "country": "United States",
+      "type": "city",
+      "encoded": "richfield-north-carolina-united-states",
+      "pop": 582,
+      "coord": [-80.2578343, 35.4701406]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["all uses"]
+      }
+    ]
+  },
   "Richfield, Wisconsin, United States": {
     "place": {
       "name": "Richfield",
@@ -105629,15 +105956,15 @@
       }
     ]
   },
-  "Roblin\tRural Municipality, Manitoba, Canada": {
+  "Roblin Rural Municipality, Manitoba, Canada": {
     "place": {
-      "name": "Roblin\tRural Municipality",
+      "name": "Roblin Rural Municipality",
       "state": "Manitoba",
       "country": "Canada",
       "type": "county",
       "encoded": "roblin-rural-municipality-manitoba-canada",
       "pop": 3089,
-      "coord": [-97.4203333, 49.8682525]
+      "coord": [-99.2731825064487, 49.108467845029296]
     },
     "reduce_min": [
       {
@@ -107999,7 +108326,7 @@
       "type": "county",
       "encoded": "russell-binscarth-rural-municipality-manitoba-canada",
       "pop": 2596,
-      "coord": [-101.2095489, 50.7718965]
+      "coord": [-101.3675319394829, 50.73560915723726]
     },
     "rm_min": [
       {
@@ -109081,6 +109408,24 @@
         "status": "adopted",
         "scope": ["transit-oriented"],
         "land": ["commercial", "industrial", "other", "residential, all uses"]
+      }
+    ]
+  },
+  "Salt Lake County, Utah, United States": {
+    "place": {
+      "name": "Salt Lake County",
+      "state": "Utah",
+      "country": "United States",
+      "type": "county",
+      "encoded": "salt-lake-county-utah-united-states",
+      "pop": 1185238,
+      "coord": [-111.9103124, 40.6632297]
+    },
+    "add_max": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["all uses"]
       }
     ]
   },
@@ -119141,7 +119486,7 @@
       "type": "county",
       "encoded": "stanton-county-kansas-united-states",
       "pop": 2084,
-      "coord": [-101.7935648, 37.5691072]
+      "coord": [-101.82702812528808, 37.56698537163363]
     },
     "rm_min": [
       {
@@ -120674,7 +121019,7 @@
       "type": "county",
       "encoded": "stuartburn-rural-municipality-manitoba-canada",
       "pop": 1731,
-      "coord": [-96.7636727, 49.1338403]
+      "coord": [-96.52928599472779, 49.09116330368536]
     },
     "reduce_min": [
       {
@@ -121232,6 +121577,24 @@
         "status": "adopted",
         "scope": ["city center / business district", "citywide"],
         "land": ["all uses", "industrial"]
+      }
+    ]
+  },
+  "Summit County, Utah, United States": {
+    "place": {
+      "name": "Summit County",
+      "state": "Utah",
+      "country": "United States",
+      "type": "county",
+      "encoded": "summit-county-utah-united-states",
+      "pop": 42357,
+      "coord": [-111.1233396, 40.8320852]
+    },
+    "add_max": [
+      {
+        "status": "adopted",
+        "scope": ["main street / special"],
+        "land": ["all uses"]
       }
     ]
   },
@@ -122512,6 +122875,12 @@
         "status": "adopted",
         "scope": ["main street / special", "transit-oriented"],
         "land": ["all uses", "commercial", "residential, low-density"]
+      },
+      {
+        "status": "proposed",
+        "scope": ["citywide"],
+        "land": ["all uses"],
+        "date": "2026-12-01"
       }
     ]
   },
@@ -124074,7 +124443,7 @@
       "type": "county",
       "encoded": "thompson-rural-municipality-manitoba-canada",
       "pop": 1518,
-      "coord": [-97.3497256, 49.8726815]
+      "coord": [-98.25440197397786, 49.345361534722855]
     },
     "rm_min": [
       {
@@ -125169,6 +125538,24 @@
         "status": "adopted",
         "scope": ["city center / business district"],
         "land": ["all uses"]
+      }
+    ]
+  },
+  "Topsail Beach, North Carolina, United States": {
+    "place": {
+      "name": "Topsail Beach",
+      "state": "North Carolina",
+      "country": "United States",
+      "type": "city",
+      "encoded": "topsail-beach-north-carolina-united-states",
+      "pop": 461,
+      "coord": [-77.6305293, 34.3651685]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["commercial", "other"]
       }
     ]
   },
@@ -126576,6 +126963,24 @@
       }
     ]
   },
+  "Turkey, North Carolina, United States": {
+    "place": {
+      "name": "Turkey",
+      "state": "North Carolina",
+      "country": "United States",
+      "type": "city",
+      "encoded": "turkey-north-carolina-united-states",
+      "pop": 213,
+      "coord": [-78.183049, 34.9923888]
+    },
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["all uses"]
+      }
+    ]
+  },
   "Turner, Oregon, United States": {
     "place": {
       "name": "Turner",
@@ -126802,9 +127207,9 @@
       }
     ]
   },
-  "Two Borders\tRural Municipality, Manitoba, Canada": {
+  "Two Borders Rural Municipality, Manitoba, Canada": {
     "place": {
-      "name": "Two Borders\tRural Municipality",
+      "name": "Two Borders Rural Municipality",
       "state": "Manitoba",
       "country": "Canada",
       "type": "county",
@@ -134563,7 +134968,7 @@
       "type": "county",
       "encoded": "west-st-paul-rural-municipality-manitoba-canada",
       "pop": 6682,
-      "coord": [-97.06267, 49.9857724]
+      "coord": [-97.0988074847908, 50.01013026248475]
     },
     "add_max": [
       {
