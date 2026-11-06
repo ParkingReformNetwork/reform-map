@@ -213,6 +213,11 @@ test.describe("mappers are fully comprehensive", () => {
   });
 
   test("country", () => {
-    expect(COUNTRY_MAP.keys()).toEqual(MERGED_STRING_SET_OPTIONS.country);
+    // COUNTRY_MAPPING lists every ISO country, so it is a superset of the
+    // countries currently in the data.
+    const encodable = COUNTRY_MAP.keys();
+    for (const country of MERGED_STRING_SET_OPTIONS.country) {
+      expect(encodable).toContain(country);
+    }
   });
 });
