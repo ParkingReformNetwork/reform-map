@@ -12297,6 +12297,24 @@
       }
     ]
   },
+  "Blount County, Tennessee, United States": {
+    "place": {
+      "name": "Blount County",
+      "state": "Tennessee",
+      "country": "United States",
+      "type": "county",
+      "encoded": "blount-county-tennessee-united-states",
+      "pop": 135280,
+      "coord": [-83.9314465, 35.6719722]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["commercial", "industrial"]
+      }
+    ]
+  },
   "Blowing Rock, North Carolina, United States": {
     "place": {
       "name": "Blowing Rock",
@@ -31224,6 +31242,24 @@
       }
     ]
   },
+  "DeKalb County, Tennessee, United States": {
+    "place": {
+      "name": "DeKalb County",
+      "state": "Tennessee",
+      "country": "United States",
+      "type": "county",
+      "encoded": "dekalb-county-tennessee-united-states",
+      "pop": 20080,
+      "coord": [-85.83965, 35.9804643]
+    },
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["all uses"]
+      }
+    ]
+  },
   "DeKalb, Illinois, United States": {
     "place": {
       "name": "DeKalb",
@@ -41741,6 +41777,24 @@
       }
     ]
   },
+  "Fentress County, Tennessee, United States": {
+    "place": {
+      "name": "Fentress County",
+      "state": "Tennessee",
+      "country": "United States",
+      "type": "county",
+      "encoded": "fentress-county-tennessee-united-states",
+      "pop": 18489,
+      "coord": [-84.9266843, 36.3572145]
+    },
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["all uses"]
+      }
+    ]
+  },
   "Fergus Falls, Minnesota, United States": {
     "place": {
       "name": "Fergus Falls",
@@ -44323,6 +44377,24 @@
         "status": "adopted",
         "scope": ["city center / business district", "transit-oriented"],
         "land": ["residential, all uses"]
+      }
+    ]
+  },
+  "Franklin County, Tennessee, United States": {
+    "place": {
+      "name": "Franklin County",
+      "state": "Tennessee",
+      "country": "United States",
+      "type": "county",
+      "encoded": "franklin-county-tennessee-united-states",
+      "pop": 42774,
+      "coord": [-86.1084401, 35.1680139]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["main street / special"],
+        "land": ["commercial", "medical", "other", "residential, multi-family"]
       }
     ]
   },
@@ -52359,6 +52431,31 @@
       }
     ]
   },
+  "Hamblen County, Tennessee, United States": {
+    "place": {
+      "name": "Hamblen County",
+      "state": "Tennessee",
+      "country": "United States",
+      "type": "county",
+      "encoded": "hamblen-county-tennessee-united-states",
+      "pop": 64499,
+      "coord": [-83.267995, 36.2068067]
+    },
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": [
+          "commercial",
+          "industrial",
+          "medical",
+          "other",
+          "residential, low-density",
+          "residential, multi-family"
+        ]
+      }
+    ]
+  },
   "Hamburg, New Jersey, United States": {
     "place": {
       "name": "Hamburg",
@@ -55605,6 +55702,24 @@
       {
         "status": "adopted",
         "scope": ["city center / business district", "main street / special"],
+        "land": ["all uses"]
+      }
+    ]
+  },
+  "Henry County, Tennessee, United States": {
+    "place": {
+      "name": "Henry County",
+      "state": "Tennessee",
+      "country": "United States",
+      "type": "county",
+      "encoded": "henry-county-tennessee-united-states",
+      "pop": 32199,
+      "coord": [-88.3108196, 36.3180775]
+    },
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
         "land": ["all uses"]
       }
     ]
@@ -94588,6 +94703,24 @@
       }
     ]
   },
+  "Overton County, Tennessee, United States": {
+    "place": {
+      "name": "Overton County",
+      "state": "Tennessee",
+      "country": "United States",
+      "type": "county",
+      "encoded": "overton-county-tennessee-united-states",
+      "pop": 22511,
+      "coord": [-85.286641, 36.3396292]
+    },
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["all uses"]
+      }
+    ]
+  },
   "Ovid, Michigan, United States": {
     "place": {
       "name": "Ovid",
@@ -106809,6 +106942,24 @@
       {
         "status": "adopted",
         "scope": ["city center / business district"],
+        "land": ["all uses"]
+      }
+    ]
+  },
+  "Rocky Ridge, Utah, United States": {
+    "place": {
+      "name": "Rocky Ridge",
+      "state": "Utah",
+      "country": "United States",
+      "type": "city",
+      "encoded": "rocky-ridge-utah-united-states",
+      "pop": 901,
+      "coord": [-111.824287, 39.9331884]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
         "land": ["all uses"]
       }
     ]
@@ -131630,6 +131781,31 @@
         "scope": ["main street / special"],
         "land": ["all uses"],
         "date": "2024-10-15"
+      }
+    ]
+  },
+  "Washington County, Tennessee, United States": {
+    "place": {
+      "name": "Washington County",
+      "state": "Tennessee",
+      "country": "United States",
+      "type": "county",
+      "encoded": "washington-county-tennessee-united-states",
+      "pop": 133001,
+      "coord": [-82.4911791, 36.2636501]
+    },
+    "add_max": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["all uses"]
+      }
+    ],
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["all uses"]
       }
     ]
   },
