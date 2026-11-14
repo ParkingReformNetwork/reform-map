@@ -982,6 +982,31 @@
       }
     ]
   },
+  "Alamance County, North Carolina, United States": {
+    "place": {
+      "name": "Alamance County",
+      "state": "North Carolina",
+      "country": "United States",
+      "type": "county",
+      "encoded": "alamance-county-north-carolina-united-states",
+      "pop": 171415,
+      "coord": [-79.3992505, 36.0702678]
+    },
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": [
+          "commercial",
+          "industrial",
+          "medical",
+          "other",
+          "residential, low-density",
+          "residential, multi-family"
+        ]
+      }
+    ]
+  },
   "Alameda County, California, United States": {
     "place": {
       "name": "Alameda County",
@@ -1850,6 +1875,24 @@
       }
     ]
   },
+  "Alliance, Alberta, Canada": {
+    "place": {
+      "name": "Alliance",
+      "state": "Alberta",
+      "country": "Canada",
+      "type": "city",
+      "encoded": "alliance-alberta-canada",
+      "pop": 166,
+      "coord": [-111.7832364, 52.4335554]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["all uses"]
+      }
+    ]
+  },
   "Alliance, Nebraska, United States": {
     "place": {
       "name": "Alliance",
@@ -2662,6 +2705,24 @@
         "status": "adopted",
         "scope": ["city center / business district"],
         "land": ["commercial"]
+      }
+    ]
+  },
+  "Amisk, Alberta, Canada": {
+    "place": {
+      "name": "Amisk",
+      "state": "Alberta",
+      "country": "Canada",
+      "type": "city",
+      "encoded": "amisk-alberta-canada",
+      "pop": 219,
+      "coord": [-111.0591824, 52.5646576]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["all uses"]
       }
     ]
   },
@@ -6293,6 +6354,31 @@
       }
     ]
   },
+  "Bailey, North Carolina, United States": {
+    "place": {
+      "name": "Bailey",
+      "state": "North Carolina",
+      "country": "United States",
+      "type": "city",
+      "encoded": "bailey-north-carolina-united-states",
+      "pop": 566,
+      "coord": [-78.1151037, 35.7789584]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["commercial", "industrial", "medical", "other"]
+      }
+    ],
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["all uses"]
+      }
+    ]
+  },
   "Bainbridge Island, Washington, United States": {
     "place": {
       "name": "Bainbridge Island",
@@ -7152,6 +7238,24 @@
         "status": "adopted",
         "scope": ["city center / business district", "citywide"],
         "land": ["all uses", "commercial", "industrial", "medical", "other"]
+      }
+    ]
+  },
+  "Barrhead County, Alberta, Canada": {
+    "place": {
+      "name": "Barrhead County",
+      "state": "Alberta",
+      "country": "Canada",
+      "type": "county",
+      "encoded": "barrhead-county-alberta-canada",
+      "pop": 5877,
+      "coord": [-114.4747952, 54.1688675]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["all uses"]
       }
     ]
   },
@@ -9945,6 +10049,24 @@
       }
     ]
   },
+  "Benson County, North Dakota, United States": {
+    "place": {
+      "name": "Benson County",
+      "state": "North Dakota",
+      "country": "United States",
+      "type": "county",
+      "encoded": "benson-county-north-dakota-united-states",
+      "pop": 5964,
+      "coord": [-99.403103, 48.0191362]
+    },
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["all uses"]
+      }
+    ]
+  },
   "Benson, Arizona, United States": {
     "place": {
       "name": "Benson",
@@ -10515,6 +10637,24 @@
       "coord": [-80.4219996, 36.0037477]
     },
     "add_max": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["all uses"]
+      }
+    ]
+  },
+  "Bernalillo, New Mexico, United States": {
+    "place": {
+      "name": "Bernalillo",
+      "state": "New Mexico",
+      "country": "United States",
+      "type": "city",
+      "encoded": "bernalillo-new-mexico-united-states",
+      "pop": 8977,
+      "coord": [-106.55115923608372, 35.300156500283045]
+    },
+    "reduce_min": [
       {
         "status": "adopted",
         "scope": ["citywide"],
@@ -11119,6 +11259,24 @@
           "residential, low-density",
           "residential, multi-family"
         ]
+      }
+    ]
+  },
+  "Bifrost-Riverton Rural Municipality, Manitoba, Canada": {
+    "place": {
+      "name": "Bifrost-Riverton Rural Municipality",
+      "state": "Manitoba",
+      "country": "Canada",
+      "type": "county",
+      "encoded": "bifrost-riverton-rural-municipality-manitoba-canada",
+      "pop": 3320,
+      "coord": [-97.15662304630563, 51.036088377105415]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["commercial"]
       }
     ]
   },
@@ -15941,6 +16099,24 @@
       }
     ]
   },
+  "Brunswick County, North Carolina, United States": {
+    "place": {
+      "name": "Brunswick County",
+      "state": "North Carolina",
+      "country": "United States",
+      "type": "county",
+      "encoded": "brunswick-county-north-carolina-united-states",
+      "pop": 136693,
+      "coord": [-78.24434, 34.0624283]
+    },
+    "add_max": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["all uses"]
+      }
+    ]
+  },
   "Brunswick, Georgia, United States": {
     "place": {
       "name": "Brunswick",
@@ -17198,6 +17374,30 @@
         "status": "adopted",
         "scope": ["city center / business district"],
         "land": ["commercial"]
+      }
+    ]
+  },
+  "Cabarrus County, North Carolina, United States": {
+    "place": {
+      "name": "Cabarrus County",
+      "state": "North Carolina",
+      "country": "United States",
+      "type": "county",
+      "encoded": "cabarrus-county-north-carolina-united-states",
+      "pop": 225804,
+      "coord": [-80.52976842140427, 35.414577858040914]
+    },
+    "add_max": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": [
+          "commercial",
+          "industrial",
+          "medical",
+          "other",
+          "residential, multi-family"
+        ]
       }
     ]
   },
@@ -20248,6 +20448,31 @@
       }
     ]
   },
+  "Caswell County, North Carolina, United States": {
+    "place": {
+      "name": "Caswell County",
+      "state": "North Carolina",
+      "country": "United States",
+      "type": "county",
+      "encoded": "caswell-county-north-carolina-united-states",
+      "pop": 22736,
+      "coord": [-79.3357315, 36.4035101]
+    },
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": [
+          "commercial",
+          "industrial",
+          "medical",
+          "other",
+          "residential, low-density",
+          "residential, multi-family"
+        ]
+      }
+    ]
+  },
   "Catasauqua, Pennsylvania, United States": {
     "place": {
       "name": "Catasauqua",
@@ -20262,6 +20487,24 @@
       {
         "status": "adopted",
         "scope": ["main street / special"],
+        "land": ["all uses"]
+      }
+    ]
+  },
+  "Catawba County, North Carolina, United States": {
+    "place": {
+      "name": "Catawba County",
+      "state": "North Carolina",
+      "country": "United States",
+      "type": "county",
+      "encoded": "catawba-county-north-carolina-united-states",
+      "pop": 160610,
+      "coord": [-81.17979997862508, 35.67297975700556]
+    },
+    "add_max": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
         "land": ["all uses"]
       }
     ]
@@ -20317,6 +20560,24 @@
         "status": "adopted",
         "scope": ["citywide"],
         "land": ["commercial"]
+      }
+    ]
+  },
+  "Cavalier County, North Dakota, United States": {
+    "place": {
+      "name": "Cavalier County",
+      "state": "North Dakota",
+      "country": "United States",
+      "type": "county",
+      "encoded": "cavalier-county-north-dakota-united-states",
+      "pop": 3704,
+      "coord": [-98.5001391, 48.7664381]
+    },
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["all uses"]
       }
     ]
   },
@@ -20822,15 +21083,36 @@
       "type": "city",
       "encoded": "CentralFalls_RI",
       "pop": 22583,
-      "coord": [-71.3876472, 41.8873726],
-      "repeal": true
+      "coord": [-71.3876472, 41.8873726]
     },
+    "add_max": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["all uses"],
+        "date": "2025-12-08"
+      }
+    ],
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["residential, all uses"],
+        "date": "2025-12-08"
+      }
+    ],
     "rm_min": [
       {
         "status": "adopted",
         "scope": ["citywide"],
         "land": ["all uses"],
         "date": "2022-10-26"
+      },
+      {
+        "status": "adopted",
+        "scope": ["citywide", "main street / special"],
+        "land": ["all uses", "residential, low-density"],
+        "date": "2025-12-08"
       }
     ]
   },
@@ -21108,6 +21390,44 @@
         "status": "adopted",
         "scope": ["city center / business district"],
         "land": ["all uses"]
+      }
+    ]
+  },
+  "Chadbourn, North Carolina, United States": {
+    "place": {
+      "name": "Chadbourn",
+      "state": "North Carolina",
+      "country": "United States",
+      "type": "city",
+      "encoded": "chadbourn-north-carolina-united-states",
+      "pop": 1574,
+      "coord": [-78.8269664, 34.3221129]
+    },
+    "add_max": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": [
+          "commercial",
+          "industrial",
+          "medical",
+          "other",
+          "residential, multi-family"
+        ]
+      }
+    ],
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district", "citywide"],
+        "land": [
+          "all uses",
+          "commercial",
+          "industrial",
+          "medical",
+          "other",
+          "residential, multi-family"
+        ]
       }
     ]
   },
@@ -23263,6 +23583,24 @@
       }
     ]
   },
+  "Cibola County, New Mexico, United States": {
+    "place": {
+      "name": "Cibola County",
+      "state": "New Mexico",
+      "country": "United States",
+      "type": "county",
+      "encoded": "cibola-county-new-mexico-united-states",
+      "pop": 27172,
+      "coord": [-107.9398474, 34.8722771]
+    },
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["all uses"]
+      }
+    ]
+  },
   "Cimarron, Kansas, United States": {
     "place": {
       "name": "Cimarron",
@@ -23277,6 +23615,24 @@
       {
         "status": "adopted",
         "scope": ["city center / business district"],
+        "land": ["all uses"]
+      }
+    ]
+  },
+  "Cimarron, New Mexico, United States": {
+    "place": {
+      "name": "Cimarron",
+      "state": "New Mexico",
+      "country": "United States",
+      "type": "city",
+      "encoded": "cimarron-new-mexico-united-states",
+      "pop": 792,
+      "coord": [-104.915592, 36.5110288]
+    },
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
         "land": ["all uses"]
       }
     ]
@@ -25446,6 +25802,44 @@
       }
     ]
   },
+  "Coats, North Carolina, United States": {
+    "place": {
+      "name": "Coats",
+      "state": "North Carolina",
+      "country": "United States",
+      "type": "city",
+      "encoded": "coats-north-carolina-united-states",
+      "pop": 2155,
+      "coord": [-78.6719592, 35.4079393]
+    },
+    "add_max": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": [
+          "commercial",
+          "industrial",
+          "medical",
+          "other",
+          "residential, multi-family"
+        ]
+      }
+    ],
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district", "citywide"],
+        "land": [
+          "all uses",
+          "commercial",
+          "industrial",
+          "medical",
+          "other",
+          "residential, multi-family"
+        ]
+      }
+    ]
+  },
   "Cobalt, Ontario, Canada": {
     "place": {
       "name": "Cobalt",
@@ -25866,6 +26260,24 @@
         "status": "adopted",
         "scope": ["transit-oriented"],
         "land": ["residential, multi-family"]
+      }
+    ]
+  },
+  "Colfax, North Dakota, United States": {
+    "place": {
+      "name": "Colfax",
+      "state": "North Dakota",
+      "country": "United States",
+      "type": "city",
+      "encoded": "colfax-north-dakota-united-states",
+      "pop": 172,
+      "coord": [-96.8745267, 46.4694065]
+    },
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["all uses"]
       }
     ]
   },
@@ -26681,6 +27093,24 @@
       {
         "status": "adopted",
         "scope": ["city center / business district"],
+        "land": ["all uses"]
+      }
+    ]
+  },
+  "Columbus, North Dakota, United States": {
+    "place": {
+      "name": "Columbus",
+      "state": "North Dakota",
+      "country": "United States",
+      "type": "city",
+      "encoded": "columbus-north-dakota-united-states",
+      "pop": 139,
+      "coord": [-102.780453, 48.904199]
+    },
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
         "land": ["all uses"]
       }
     ]
@@ -29581,6 +30011,24 @@
       }
     ]
   },
+  "Cuba, New Mexico, United States": {
+    "place": {
+      "name": "Cuba",
+      "state": "New Mexico",
+      "country": "United States",
+      "type": "city",
+      "encoded": "cuba-new-mexico-united-states",
+      "pop": 628,
+      "coord": [-106.958428, 36.0219333]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["all uses"]
+      }
+    ]
+  },
   "Cuba, New York, United States": {
     "place": {
       "name": "Cuba",
@@ -29821,6 +30269,12 @@
         "status": "adopted",
         "scope": ["main street / special"],
         "land": ["all uses"]
+      },
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["commercial", "residential, all uses"],
+        "date": "2026-04-15"
       }
     ]
   },
@@ -29893,6 +30347,31 @@
         "status": "adopted",
         "scope": ["city center / business district"],
         "land": ["commercial"]
+      }
+    ]
+  },
+  "Currituck County, North Carolina, United States": {
+    "place": {
+      "name": "Currituck County",
+      "state": "North Carolina",
+      "country": "United States",
+      "type": "county",
+      "encoded": "currituck-county-north-carolina-united-states",
+      "pop": 28100,
+      "coord": [-75.9118432, 36.3918723]
+    },
+    "add_max": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["commercial", "industrial"]
+      }
+    ],
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["all uses"]
       }
     ]
   },
@@ -32111,6 +32590,31 @@
       }
     ]
   },
+  "Deloraine-Winchester Rural Municipality, Manitoba, Canada": {
+    "place": {
+      "name": "Deloraine-Winchester Rural Municipality",
+      "state": "Manitoba",
+      "country": "Canada",
+      "type": "county",
+      "encoded": "deloraine-winchester-rural-municipality-manitoba-canada",
+      "pop": 1478,
+      "coord": [-100.43140981970078, 49.14954822949213]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["main street / special"],
+        "land": ["all uses"]
+      }
+    ],
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["all uses"]
+      }
+    ]
+  },
   "Delran Township, New Jersey, United States": {
     "place": {
       "name": "Delran Township",
@@ -33968,6 +34472,24 @@
       }
     ]
   },
+  "Doña Ana County, New Mexico, United States": {
+    "place": {
+      "name": "Doña Ana County",
+      "state": "New Mexico",
+      "country": "United States",
+      "type": "county",
+      "encoded": "dona-ana-county-new-mexico-united-states",
+      "pop": 219561,
+      "coord": [-106.92090770132567, 32.32385532676443]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["all uses"]
+      }
+    ]
+  },
   "Draper, Utah, United States": {
     "place": {
       "name": "Draper",
@@ -34729,6 +35251,13 @@
       "coord": [-78.8751582, 36.0181316],
       "repeal": true
     },
+    "add_max": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["all uses"]
+      }
+    ],
     "rm_min": [
       {
         "status": "adopted",
@@ -38732,6 +39261,24 @@
       }
     ]
   },
+  "Emerson-Franklin Rural Municipality, Manitoba, Canada": {
+    "place": {
+      "name": "Emerson-Franklin Rural Municipality",
+      "state": "Manitoba",
+      "country": "Canada",
+      "type": "county",
+      "encoded": "emerson-franklin-rural-municipality-manitoba-canada",
+      "pop": 2437,
+      "coord": [-96.98892178169831, 49.08123722411591]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["main street / special"],
+        "land": ["all uses"]
+      }
+    ]
+  },
   "Emeryville, California, United States": {
     "place": {
       "name": "Emeryville",
@@ -39272,6 +39819,24 @@
       {
         "status": "adopted",
         "scope": ["city center / business district"],
+        "land": ["all uses"]
+      }
+    ]
+  },
+  "Epping, North Dakota, United States": {
+    "place": {
+      "name": "Epping",
+      "state": "North Dakota",
+      "country": "United States",
+      "type": "city",
+      "encoded": "epping-north-dakota-united-states",
+      "pop": 100,
+      "coord": [-103.3571326, 48.2791887]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
         "land": ["all uses"]
       }
     ]
@@ -39879,6 +40444,24 @@
       {
         "status": "adopted",
         "scope": ["city center / business district"],
+        "land": ["all uses"]
+      }
+    ]
+  },
+  "Eunice, New Mexico, United States": {
+    "place": {
+      "name": "Eunice",
+      "state": "New Mexico",
+      "country": "United States",
+      "type": "city",
+      "encoded": "eunice-new-mexico-united-states",
+      "pop": 3056,
+      "coord": [-103.159002, 32.4388224]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
         "land": ["all uses"]
       }
     ]
@@ -43269,6 +43852,24 @@
       }
     ]
   },
+  "Forsyth County, North Carolina, United States": {
+    "place": {
+      "name": "Forsyth County",
+      "state": "North Carolina",
+      "country": "United States",
+      "type": "county",
+      "encoded": "forsyth-county-north-carolina-united-states",
+      "pop": 382590,
+      "coord": [-80.2415712, 36.1476399]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["all uses", "residential, multi-family"]
+      }
+    ]
+  },
   "Forsyth, Georgia, United States": {
     "place": {
       "name": "Forsyth",
@@ -44377,6 +44978,24 @@
         "status": "adopted",
         "scope": ["city center / business district", "transit-oriented"],
         "land": ["residential, all uses"]
+      }
+    ]
+  },
+  "Franklin County, North Carolina, United States": {
+    "place": {
+      "name": "Franklin County",
+      "state": "North Carolina",
+      "country": "United States",
+      "type": "county",
+      "encoded": "franklin-county-north-carolina-united-states",
+      "pop": 68573,
+      "coord": [-78.27238846208682, 36.096112910440056]
+    },
+    "add_max": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["commercial", "industrial", "medical", "other"]
       }
     ]
   },
@@ -46068,6 +46687,24 @@
       }
     ]
   },
+  "Galesburg, North Dakota, United States": {
+    "place": {
+      "name": "Galesburg",
+      "state": "North Dakota",
+      "country": "United States",
+      "type": "city",
+      "encoded": "galesburg-north-dakota-united-states",
+      "pop": 118,
+      "coord": [-97.4064772, 47.2699845]
+    },
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["all uses"]
+      }
+    ]
+  },
   "Galion, Ohio, United States": {
     "place": {
       "name": "Galion",
@@ -46586,6 +47223,24 @@
       }
     ]
   },
+  "Garland, North Carolina, United States": {
+    "place": {
+      "name": "Garland",
+      "state": "North Carolina",
+      "country": "United States",
+      "type": "city",
+      "encoded": "garland-north-carolina-united-states",
+      "pop": 595,
+      "coord": [-78.3940736, 34.7858352]
+    },
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["commercial", "other", "residential, all uses"]
+      }
+    ]
+  },
   "Garland, Texas, United States": {
     "place": {
       "name": "Garland",
@@ -46762,6 +47417,38 @@
       }
     ]
   },
+  "Gaston County, North Carolina, United States": {
+    "place": {
+      "name": "Gaston County",
+      "state": "North Carolina",
+      "country": "United States",
+      "type": "county",
+      "encoded": "gaston-county-north-carolina-united-states",
+      "pop": 227943,
+      "coord": [-81.179014, 35.2849659]
+    },
+    "add_max": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["all uses"]
+      }
+    ],
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["all uses"]
+      }
+    ],
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["commercial", "other", "residential, low-density"]
+      }
+    ]
+  },
   "Gaston, Oregon, United States": {
     "place": {
       "name": "Gaston",
@@ -46855,6 +47542,24 @@
         "status": "adopted",
         "scope": ["city center / business district"],
         "land": ["all uses"]
+      }
+    ]
+  },
+  "Gates County, North Carolina, United States": {
+    "place": {
+      "name": "Gates County",
+      "state": "North Carolina",
+      "country": "United States",
+      "type": "county",
+      "encoded": "gates-county-north-carolina-united-states",
+      "pop": 10478,
+      "coord": [-76.6944133, 36.4412509]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["residential, low-density"]
       }
     ]
   },
@@ -49991,6 +50696,24 @@
       }
     ]
   },
+  "Grassland Rural Municipality, Manitoba, Canada": {
+    "place": {
+      "name": "Grassland Rural Municipality",
+      "state": "Manitoba",
+      "country": "Canada",
+      "type": "county",
+      "encoded": "grassland-rural-municipality-manitoba-canada",
+      "pop": 1583,
+      "coord": [-100.37801881782175, 49.45096662938135]
+    },
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["all uses"]
+      }
+    ]
+  },
   "Gratiot, Wisconsin, United States": {
     "place": {
       "name": "Gratiot",
@@ -50637,6 +51360,24 @@
       {
         "status": "adopted",
         "scope": ["main street / special"],
+        "land": ["all uses"]
+      }
+    ]
+  },
+  "Greene County, North Carolina, United States": {
+    "place": {
+      "name": "Greene County",
+      "state": "North Carolina",
+      "country": "United States",
+      "type": "county",
+      "encoded": "greene-county-north-carolina-united-states",
+      "pop": 20451,
+      "coord": [-77.6728536, 35.481724]
+    },
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
         "land": ["all uses"]
       }
     ]
@@ -51677,6 +52418,31 @@
       }
     ]
   },
+  "Guilford County, North Carolina, United States": {
+    "place": {
+      "name": "Guilford County",
+      "state": "North Carolina",
+      "country": "United States",
+      "type": "county",
+      "encoded": "guilford-county-north-carolina-united-states",
+      "pop": 541299,
+      "coord": [-79.7973945033968, 36.12656513048937]
+    },
+    "add_max": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["commercial"]
+      }
+    ],
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["all uses", "industrial", "other"]
+      }
+    ]
+  },
   "Guilford, Connecticut, United States": {
     "place": {
       "name": "Guilford",
@@ -51944,6 +52710,24 @@
       }
     ]
   },
+  "Gwinner, North Dakota, United States": {
+    "place": {
+      "name": "Gwinner",
+      "state": "North Dakota",
+      "country": "United States",
+      "type": "city",
+      "encoded": "gwinner-north-dakota-united-states",
+      "pop": 924,
+      "coord": [-97.662596, 46.225796]
+    },
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["all uses"]
+      }
+    ]
+  },
   "Gwinnett County, Georgia, United States": {
     "place": {
       "name": "Gwinnett County",
@@ -52053,6 +52837,24 @@
         "scope": ["city center / business district"],
         "land": ["residential, all uses"],
         "date": "2008-06-10"
+      }
+    ]
+  },
+  "Hagerman, New Mexico, United States": {
+    "place": {
+      "name": "Hagerman",
+      "state": "New Mexico",
+      "country": "United States",
+      "type": "city",
+      "encoded": "hagerman-new-mexico-united-states",
+      "pop": 975,
+      "coord": [-104.327155, 33.11503]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["all uses"]
       }
     ]
   },
@@ -52439,7 +53241,7 @@
       "type": "county",
       "encoded": "hamblen-county-tennessee-united-states",
       "pop": 64499,
-      "coord": [-83.267995, 36.2068067]
+      "coord": [-83.24642950121255, 36.19717326398532]
     },
     "rm_min": [
       {
@@ -53530,6 +54332,24 @@
         "status": "adopted",
         "scope": ["city center / business district"],
         "land": ["commercial"]
+      }
+    ]
+  },
+  "Harnett County, North Carolina, United States": {
+    "place": {
+      "name": "Harnett County",
+      "state": "North Carolina",
+      "country": "United States",
+      "type": "county",
+      "encoded": "harnett-county-north-carolina-united-states",
+      "pop": 133568,
+      "coord": [-78.8624963, 35.388093]
+    },
+    "add_max": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["commercial", "industrial", "medical", "other"]
       }
     ]
   },
@@ -55714,7 +56534,7 @@
       "type": "county",
       "encoded": "henry-county-tennessee-united-states",
       "pop": 32199,
-      "coord": [-88.3108196, 36.3180775]
+      "coord": [-88.30180475014232, 36.34857934131509]
     },
     "rm_min": [
       {
@@ -56133,6 +56953,24 @@
       {
         "status": "adopted",
         "scope": ["city center / business district"],
+        "land": ["all uses"]
+      }
+    ]
+  },
+  "Hidalgo County, New Mexico, United States": {
+    "place": {
+      "name": "Hidalgo County",
+      "state": "New Mexico",
+      "country": "United States",
+      "type": "county",
+      "encoded": "hidalgo-county-new-mexico-united-states",
+      "pop": 4178,
+      "coord": [-108.7598468, 31.801493]
+    },
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
         "land": ["all uses"]
       }
     ]
@@ -58112,6 +58950,30 @@
           "residential, all uses"
         ],
         "date": "2024-11-19"
+      }
+    ]
+  },
+  "Hot Springs, North Carolina, United States": {
+    "place": {
+      "name": "Hot Springs",
+      "state": "North Carolina",
+      "country": "United States",
+      "type": "city",
+      "encoded": "hot-springs-north-carolina-united-states",
+      "pop": 520,
+      "coord": [-82.8290318, 35.8923253]
+    },
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": [
+          "commercial",
+          "industrial",
+          "medical",
+          "other",
+          "residential, all uses"
+        ]
       }
     ]
   },
@@ -61143,6 +62005,31 @@
       }
     ]
   },
+  "Jamestown, North Carolina, United States": {
+    "place": {
+      "name": "Jamestown",
+      "state": "North Carolina",
+      "country": "United States",
+      "type": "city",
+      "encoded": "jamestown-north-carolina-united-states",
+      "pop": 3668,
+      "coord": [-79.9357573, 35.9940038]
+    },
+    "add_max": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["all uses"]
+      }
+    ],
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["all uses"]
+      }
+    ]
+  },
   "Jamestown, North Dakota, United States": {
     "place": {
       "name": "Jamestown",
@@ -63244,6 +64131,31 @@
       {
         "status": "adopted",
         "scope": ["citywide"],
+        "land": ["all uses"]
+      }
+    ]
+  },
+  "Kenansville, North Carolina, United States": {
+    "place": {
+      "name": "Kenansville",
+      "state": "North Carolina",
+      "country": "United States",
+      "type": "city",
+      "encoded": "kenansville-north-carolina-united-states",
+      "pop": 770,
+      "coord": [-77.9622069, 34.9623883]
+    },
+    "add_max": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["all uses"]
+      }
+    ],
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
         "land": ["all uses"]
       }
     ]
@@ -67328,6 +68240,24 @@
       }
     ]
   },
+  "Lakota, North Dakota, United States": {
+    "place": {
+      "name": "Lakota",
+      "state": "North Dakota",
+      "country": "United States",
+      "type": "city",
+      "encoded": "lakota-north-dakota-united-states",
+      "pop": 683,
+      "coord": [-98.3443585, 48.0430537]
+    },
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["all uses"]
+      }
+    ]
+  },
   "Lamar County, Mississippi, United States": {
     "place": {
       "name": "Lamar County",
@@ -69012,6 +69942,31 @@
       }
     ]
   },
+  "Lee County, North Carolina, United States": {
+    "place": {
+      "name": "Lee County",
+      "state": "North Carolina",
+      "country": "United States",
+      "type": "county",
+      "encoded": "lee-county-north-carolina-united-states",
+      "pop": 63285,
+      "coord": [-79.17527359474818, 35.44738440204395]
+    },
+    "add_max": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["commercial"]
+      }
+    ],
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district", "transit-oriented"],
+        "land": ["all uses"]
+      }
+    ]
+  },
   "Lee's Summit, Missouri, United States": {
     "place": {
       "name": "Lee's Summit",
@@ -69602,6 +70557,24 @@
       {
         "status": "adopted",
         "scope": ["city center / business district"],
+        "land": ["all uses"]
+      }
+    ]
+  },
+  "Lewis County, Tennessee, United States": {
+    "place": {
+      "name": "Lewis County",
+      "state": "Tennessee",
+      "country": "United States",
+      "type": "county",
+      "encoded": "lewis-county-tennessee-united-states",
+      "pop": 12582,
+      "coord": [-87.4950257, 35.5291497]
+    },
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
         "land": ["all uses"]
       }
     ]
@@ -70278,6 +71251,24 @@
       }
     ]
   },
+  "Lignite, North Dakota, United States": {
+    "place": {
+      "name": "Lignite",
+      "state": "North Dakota",
+      "country": "United States",
+      "type": "city",
+      "encoded": "lignite-north-dakota-united-states",
+      "pop": 141,
+      "coord": [-102.562949, 48.877532]
+    },
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["all uses"]
+      }
+    ]
+  },
   "Ligonier, Indiana, United States": {
     "place": {
       "name": "Ligonier",
@@ -70458,6 +71449,31 @@
         "status": "adopted",
         "scope": ["main street / special"],
         "land": ["commercial"]
+      }
+    ]
+  },
+  "Lincoln County, North Carolina, United States": {
+    "place": {
+      "name": "Lincoln County",
+      "state": "North Carolina",
+      "country": "United States",
+      "type": "county",
+      "encoded": "lincoln-county-north-carolina-united-states",
+      "pop": 86810,
+      "coord": [-81.2062724, 35.4866424]
+    },
+    "add_max": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["all uses"]
+      }
+    ],
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["all uses"]
       }
     ]
   },
@@ -72170,7 +73186,7 @@
     },
     "add_max": [
       {
-        "status": "adopted",
+        "status": "repealed",
         "scope": ["transit-oriented"],
         "land": ["commercial", "other"]
       }
@@ -72178,8 +73194,8 @@
     "reduce_min": [
       {
         "status": "adopted",
-        "scope": ["transit-oriented"],
-        "land": ["all uses"]
+        "scope": ["citywide"],
+        "land": ["residential, low-density"]
       }
     ]
   },
@@ -73354,6 +74370,24 @@
         "status": "adopted",
         "scope": ["citywide"],
         "land": ["residential, low-density"]
+      }
+    ]
+  },
+  "Macdonald Rural Municipality, Manitoba, Canada": {
+    "place": {
+      "name": "Macdonald Rural Municipality",
+      "state": "Manitoba",
+      "country": "Canada",
+      "type": "county",
+      "encoded": "macdonald-rural-municipality-manitoba-canada",
+      "pop": 8120,
+      "coord": [-97.4569652067678, 49.68003346520848]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["commercial"]
       }
     ]
   },
@@ -76315,6 +77349,31 @@
       }
     ]
   },
+  "Marshall, North Carolina, United States": {
+    "place": {
+      "name": "Marshall",
+      "state": "North Carolina",
+      "country": "United States",
+      "type": "city",
+      "encoded": "marshall-north-carolina-united-states",
+      "pop": 777,
+      "coord": [-82.6839313, 35.7974807]
+    },
+    "add_max": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["commercial", "medical", "other", "residential, multi-family"]
+      }
+    ],
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["all uses"]
+      }
+    ]
+  },
   "Marshall, Wisconsin, United States": {
     "place": {
       "name": "Marshall",
@@ -77610,6 +78669,24 @@
       }
     ]
   },
+  "McDowell County, North Carolina, United States": {
+    "place": {
+      "name": "McDowell County",
+      "state": "North Carolina",
+      "country": "United States",
+      "type": "county",
+      "encoded": "mcdowell-county-north-carolina-united-states",
+      "pop": 44578,
+      "coord": [-82.0482171, 35.6608869]
+    },
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["all uses"]
+      }
+    ]
+  },
   "McFarland, Kansas, United States": {
     "place": {
       "name": "McFarland",
@@ -78038,6 +79115,24 @@
         "status": "adopted",
         "scope": ["city center / business district"],
         "land": ["all uses"]
+      }
+    ]
+  },
+  "Mecklenburg County, North Carolina, United States": {
+    "place": {
+      "name": "Mecklenburg County",
+      "state": "North Carolina",
+      "country": "United States",
+      "type": "county",
+      "encoded": "mecklenburg-county-north-carolina-united-states",
+      "pop": 1115482,
+      "coord": [-80.82281710039781, 35.2827095530565]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["commercial", "industrial", "other"]
       }
     ]
   },
@@ -79190,6 +80285,24 @@
       }
     ]
   },
+  "Mesilla, New Mexico, United States": {
+    "place": {
+      "name": "Mesilla",
+      "state": "New Mexico",
+      "country": "United States",
+      "type": "city",
+      "encoded": "mesilla-new-mexico-united-states",
+      "pop": 1797,
+      "coord": [-106.7952056, 32.2741174]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["commercial"]
+      }
+    ]
+  },
   "Mesquite, Texas, United States": {
     "place": {
       "name": "Mesquite",
@@ -80083,6 +81196,31 @@
         "status": "adopted",
         "scope": ["citywide"],
         "land": ["all uses"]
+      }
+    ]
+  },
+  "Milan, New Mexico, United States": {
+    "place": {
+      "name": "Milan",
+      "state": "New Mexico",
+      "country": "United States",
+      "type": "city",
+      "encoded": "milan-new-mexico-united-states",
+      "pop": 2456,
+      "coord": [-107.8908919, 35.1697175]
+    },
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": [
+          "commercial",
+          "industrial",
+          "medical",
+          "other",
+          "residential, low-density",
+          "residential, multi-family"
+        ]
       }
     ]
   },
@@ -83059,6 +84197,24 @@
         "scope": ["city center / business district"],
         "land": ["all uses"],
         "date": "2022-02-01"
+      }
+    ]
+  },
+  "Mooreton, North Dakota, United States": {
+    "place": {
+      "name": "Mooreton",
+      "state": "North Dakota",
+      "country": "United States",
+      "type": "city",
+      "encoded": "mooreton-north-dakota-united-states",
+      "pop": 177,
+      "coord": [-96.876192, 46.26857]
+    },
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["all uses"]
       }
     ]
   },
@@ -87425,6 +88581,24 @@
       }
     ]
   },
+  "New Hanover County, North Carolina, United States": {
+    "place": {
+      "name": "New Hanover County",
+      "state": "North Carolina",
+      "country": "United States",
+      "type": "county",
+      "encoded": "new-hanover-county-north-carolina-united-states",
+      "pop": 225702,
+      "coord": [-77.86853817082883, 34.29015155077697]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["main street / special"],
+        "land": ["commercial"]
+      }
+    ]
+  },
   "New Harmony, Utah, United States": {
     "place": {
       "name": "New Harmony",
@@ -88927,6 +90101,24 @@
         "scope": ["city center / business district"],
         "land": ["commercial"],
         "date": "2025-11-17"
+      }
+    ]
+  },
+  "Newton, Mississippi, United States": {
+    "place": {
+      "name": "Newton",
+      "state": "Mississippi",
+      "country": "United States",
+      "type": "city",
+      "encoded": "newton-mississippi-united-states",
+      "pop": 3195,
+      "coord": [-89.1631247997672, 32.32144879134154]
+    },
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["commercial"]
       }
     ]
   },
@@ -94485,6 +95677,24 @@
       }
     ]
   },
+  "Otero County, New Mexico, United States": {
+    "place": {
+      "name": "Otero County",
+      "state": "New Mexico",
+      "country": "United States",
+      "type": "county",
+      "encoded": "otero-county-new-mexico-united-states",
+      "pop": 67839,
+      "coord": [-105.8063662, 32.5059533]
+    },
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["all uses"]
+      }
+    ]
+  },
   "Otsego, Michigan, United States": {
     "place": {
       "name": "Otsego",
@@ -97091,6 +98301,24 @@
       }
     ]
   },
+  "Pembina Rural Municipality, Manitoba, Canada": {
+    "place": {
+      "name": "Pembina Rural Municipality",
+      "state": "Manitoba",
+      "country": "Canada",
+      "type": "county",
+      "encoded": "pembina-rural-municipality-manitoba-canada",
+      "pop": 2406,
+      "coord": [-98.47167597035747, 49.162283808207036]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["all uses"]
+      }
+    ]
+  },
   "Pembroke, Georgia, United States": {
     "place": {
       "name": "Pembroke",
@@ -97138,6 +98366,24 @@
       "coord": [-75.2549025, 40.8687064]
     },
     "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["all uses"]
+      }
+    ]
+  },
+  "Pender County, North Carolina, United States": {
+    "place": {
+      "name": "Pender County",
+      "state": "North Carolina",
+      "country": "United States",
+      "type": "county",
+      "encoded": "pender-county-north-carolina-united-states",
+      "pop": 60203,
+      "coord": [-77.8959525, 34.5294394]
+    },
+    "add_max": [
       {
         "status": "adopted",
         "scope": ["citywide"],
@@ -98477,6 +99723,24 @@
       }
     ]
   },
+  "Pierce County, North Dakota, United States": {
+    "place": {
+      "name": "Pierce County",
+      "state": "North Dakota",
+      "country": "United States",
+      "type": "county",
+      "encoded": "pierce-county-north-dakota-united-states",
+      "pop": 3990,
+      "coord": [-100.0625504, 48.1957108]
+    },
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["all uses"]
+      }
+    ]
+  },
   "Pierce County, Washington, United States": {
     "place": {
       "name": "Pierce County",
@@ -98998,6 +100262,24 @@
       {
         "status": "adopted",
         "scope": ["city center / business district"],
+        "land": ["all uses"]
+      }
+    ]
+  },
+  "Pipestone Rural Municipality, Manitoba, Canada": {
+    "place": {
+      "name": "Pipestone Rural Municipality",
+      "state": "Manitoba",
+      "country": "Canada",
+      "type": "county",
+      "encoded": "pipestone-rural-municipality-manitoba-canada",
+      "pop": 1422,
+      "coord": [-101.10753536321364, 49.66659571936545]
+    },
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
         "land": ["all uses"]
       }
     ]
@@ -102376,6 +103658,24 @@
       }
     ]
   },
+  "Putnam County, Tennessee, United States": {
+    "place": {
+      "name": "Putnam County",
+      "state": "Tennessee",
+      "country": "United States",
+      "type": "county",
+      "encoded": "putnam-county-tennessee-united-states",
+      "pop": 79854,
+      "coord": [-85.4553784, 36.1379872]
+    },
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["all uses"]
+      }
+    ]
+  },
   "Putnam County, West Virginia, United States": {
     "place": {
       "name": "Putnam County",
@@ -104233,6 +105533,24 @@
       }
     ]
   },
+  "Renville County, North Dakota, United States": {
+    "place": {
+      "name": "Renville County",
+      "state": "North Dakota",
+      "country": "United States",
+      "type": "county",
+      "encoded": "renville-county-north-dakota-united-states",
+      "pop": 2282,
+      "coord": [-101.7009103, 48.6579169]
+    },
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["all uses"]
+      }
+    ]
+  },
   "Renville, Minnesota, United States": {
     "place": {
       "name": "Renville",
@@ -105223,6 +106541,31 @@
         "status": "adopted",
         "scope": ["city center / business district"],
         "land": ["commercial", "other"]
+      }
+    ]
+  },
+  "Riding Mountain West Rural Municipality, Manitoba, Canada": {
+    "place": {
+      "name": "Riding Mountain West Rural Municipality",
+      "state": "Manitoba",
+      "country": "Canada",
+      "type": "county",
+      "encoded": "riding-mountain-west-rural-municipality-manitoba-canada",
+      "pop": 1442,
+      "coord": [-101.24868323403517, 50.96635014808933]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide", "main street / special"],
+        "land": ["all uses"]
+      }
+    ],
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["all uses"]
       }
     ]
   },
@@ -107113,6 +108456,30 @@
       }
     ]
   },
+  "Roland Rural Municipality, Manitoba, Canada": {
+    "place": {
+      "name": "Roland Rural Municipality",
+      "state": "Manitoba",
+      "country": "Canada",
+      "type": "county",
+      "encoded": "roland-rural-municipality-manitoba-canada",
+      "pop": 1145,
+      "coord": [-97.93691646732827, 49.36588808170252]
+    },
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": [
+          "commercial",
+          "industrial",
+          "medical",
+          "other",
+          "residential, low-density"
+        ]
+      }
+    ]
+  },
   "Rolesville, North Carolina, United States": {
     "place": {
       "name": "Rolesville",
@@ -108311,9 +109678,10 @@
     },
     "rm_min": [
       {
-        "status": "adopted",
+        "status": "repealed",
         "scope": ["city center / business district"],
-        "land": ["all uses"]
+        "land": ["all uses"],
+        "date": "2025-01-14"
       }
     ]
   },
@@ -109601,6 +110969,24 @@
           "other",
           "residential, all uses"
         ]
+      }
+    ]
+  },
+  "Saluda, North Carolina, United States": {
+    "place": {
+      "name": "Saluda",
+      "state": "North Carolina",
+      "country": "United States",
+      "type": "city",
+      "encoded": "saluda-north-carolina-united-states",
+      "pop": 631,
+      "coord": [-82.3492839, 35.2362264]
+    },
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["all uses"]
       }
     ]
   },
@@ -111339,6 +112725,30 @@
         "scope": ["citywide"],
         "land": ["all uses"],
         "date": "2023-03-21"
+      }
+    ]
+  },
+  "Scotland County, North Carolina, United States": {
+    "place": {
+      "name": "Scotland County",
+      "state": "North Carolina",
+      "country": "United States",
+      "type": "county",
+      "encoded": "scotland-county-north-carolina-united-states",
+      "pop": 34174,
+      "coord": [-79.4903372, 34.8628902]
+    },
+    "add_max": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": [
+          "commercial",
+          "industrial",
+          "medical",
+          "other",
+          "residential, low-density"
+        ]
       }
     ]
   },
@@ -114745,6 +116155,31 @@
       }
     ]
   },
+  "Smith County, Tennessee, United States": {
+    "place": {
+      "name": "Smith County",
+      "state": "Tennessee",
+      "country": "United States",
+      "type": "county",
+      "encoded": "smith-county-tennessee-united-states",
+      "pop": 19904,
+      "coord": [-85.99399854625605, 36.249069992690764]
+    },
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": [
+          "commercial",
+          "industrial",
+          "medical",
+          "other",
+          "residential, low-density",
+          "residential, multi-family"
+        ]
+      }
+    ]
+  },
   "Smithers, British Columbia, Canada": {
     "place": {
       "name": "Smithers",
@@ -117076,6 +118511,44 @@
         "status": "adopted",
         "scope": ["city center / business district"],
         "land": ["all uses"]
+      }
+    ]
+  },
+  "Spencer, North Carolina, United States": {
+    "place": {
+      "name": "Spencer",
+      "state": "North Carolina",
+      "country": "United States",
+      "type": "city",
+      "encoded": "spencer-north-carolina-united-states",
+      "pop": 3308,
+      "coord": [-80.4347596, 35.6920144]
+    },
+    "add_max": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": [
+          "commercial",
+          "industrial",
+          "medical",
+          "other",
+          "residential, multi-family"
+        ]
+      }
+    ],
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district", "citywide"],
+        "land": [
+          "all uses",
+          "commercial",
+          "industrial",
+          "medical",
+          "other",
+          "residential, multi-family"
+        ]
       }
     ]
   },
@@ -119611,6 +121084,24 @@
       }
     ]
   },
+  "Stanly County, North Carolina, United States": {
+    "place": {
+      "name": "Stanly County",
+      "state": "North Carolina",
+      "country": "United States",
+      "type": "county",
+      "encoded": "stanly-county-north-carolina-united-states",
+      "pop": 62504,
+      "coord": [-80.2391366, 35.3235477]
+    },
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["all uses"]
+      }
+    ]
+  },
   "Stanstead, Quebec, Canada": {
     "place": {
       "name": "Stanstead",
@@ -122020,6 +123511,24 @@
       }
     ]
   },
+  "Sundre, Alberta, Canada": {
+    "place": {
+      "name": "Sundre",
+      "state": "Alberta",
+      "country": "Canada",
+      "type": "city",
+      "encoded": "sundre-alberta-canada",
+      "pop": 2672,
+      "coord": [-114.6539162, 51.7942911]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["all uses", "residential, multi-family"]
+      }
+    ]
+  },
   "Sundridge, Ontario, Canada": {
     "place": {
       "name": "Sundridge",
@@ -123598,6 +125107,24 @@
         "status": "adopted",
         "scope": ["citywide"],
         "land": ["commercial"]
+      }
+    ]
+  },
+  "Taylor, Nebraska, United States": {
+    "place": {
+      "name": "Taylor",
+      "state": "Nebraska",
+      "country": "United States",
+      "type": "city",
+      "encoded": "taylor-nebraska-united-states",
+      "pop": 141,
+      "coord": [-99.3796861, 41.7712841]
+    },
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["all uses"]
       }
     ]
   },
@@ -126622,6 +128149,44 @@
       }
     ]
   },
+  "Troy, North Carolina, United States": {
+    "place": {
+      "name": "Troy",
+      "state": "North Carolina",
+      "country": "United States",
+      "type": "city",
+      "encoded": "troy-north-carolina-united-states",
+      "pop": 2850,
+      "coord": [-79.8944901, 35.3584743]
+    },
+    "add_max": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": [
+          "commercial",
+          "industrial",
+          "medical",
+          "other",
+          "residential, multi-family"
+        ]
+      }
+    ],
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district", "citywide"],
+        "land": [
+          "all uses",
+          "commercial",
+          "industrial",
+          "medical",
+          "other",
+          "residential, multi-family"
+        ]
+      }
+    ]
+  },
   "Troy, Ohio, United States": {
     "place": {
       "name": "Troy",
@@ -127856,6 +129421,24 @@
       {
         "status": "adopted",
         "scope": ["city center / business district"],
+        "land": ["commercial"]
+      }
+    ]
+  },
+  "Union County, North Carolina, United States": {
+    "place": {
+      "name": "Union County",
+      "state": "North Carolina",
+      "country": "United States",
+      "type": "county",
+      "encoded": "union-county-north-carolina-united-states",
+      "pop": 238267,
+      "coord": [-80.50152208883354, 34.95921771813249]
+    },
+    "add_max": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
         "land": ["commercial"]
       }
     ]
@@ -130222,6 +131805,24 @@
         "status": "adopted",
         "scope": ["city center / business district"],
         "land": ["all uses"]
+      }
+    ]
+  },
+  "Wagram, North Carolina, United States": {
+    "place": {
+      "name": "Wagram",
+      "state": "North Carolina",
+      "country": "United States",
+      "type": "city",
+      "encoded": "wagram-north-carolina-united-states",
+      "pop": 615,
+      "coord": [-79.3661515, 34.8879397]
+    },
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["commercial", "other", "residential, all uses"]
       }
     ]
   },
@@ -133185,6 +134786,30 @@
       }
     ]
   },
+  "Wayne County, North Carolina, United States": {
+    "place": {
+      "name": "Wayne County",
+      "state": "North Carolina",
+      "country": "United States",
+      "type": "county",
+      "encoded": "wayne-county-north-carolina-united-states",
+      "pop": 117333,
+      "coord": [-78.01116985536567, 35.33692622998548]
+    },
+    "add_max": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": [
+          "commercial",
+          "industrial",
+          "medical",
+          "other",
+          "residential, multi-family"
+        ]
+      }
+    ]
+  },
   "Wayne Township, New Jersey, United States": {
     "place": {
       "name": "Wayne Township",
@@ -135570,6 +137195,24 @@
       }
     ]
   },
+  "Westlock County, Alberta, Canada": {
+    "place": {
+      "name": "Westlock County",
+      "state": "Alberta",
+      "country": "Canada",
+      "type": "county",
+      "encoded": "westlock-county-alberta-canada",
+      "pop": 7186,
+      "coord": [-113.8513211, 54.2700377]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district", "citywide"],
+        "land": ["all uses"]
+      }
+    ]
+  },
   "Westminster, Maryland, United States": {
     "place": {
       "name": "Westminster",
@@ -136996,6 +138639,24 @@
       }
     ]
   },
+  "Wildrose, North Dakota, United States": {
+    "place": {
+      "name": "Wildrose",
+      "state": "North Dakota",
+      "country": "United States",
+      "type": "city",
+      "encoded": "wildrose-north-dakota-united-states",
+      "pop": 115,
+      "coord": [-103.184351, 48.630584]
+    },
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["all uses"]
+      }
+    ]
+  },
   "Wildwood Crest, New Jersey, United States": {
     "place": {
       "name": "Wildwood Crest",
@@ -137727,6 +139388,24 @@
       }
     ]
   },
+  "Wilson County, North Carolina, United States": {
+    "place": {
+      "name": "Wilson County",
+      "state": "North Carolina",
+      "country": "United States",
+      "type": "county",
+      "encoded": "wilson-county-north-carolina-united-states",
+      "pop": 78784,
+      "coord": [-77.92082629980838, 35.67518009482772]
+    },
+    "add_max": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["all uses"]
+      }
+    ]
+  },
   "Wilson, North Carolina, United States": {
     "place": {
       "name": "Wilson",
@@ -138174,6 +139853,24 @@
       }
     ]
   },
+  "Wing, North Dakota, United States": {
+    "place": {
+      "name": "Wing",
+      "state": "North Dakota",
+      "country": "United States",
+      "type": "city",
+      "encoded": "wing-north-dakota-united-states",
+      "pop": 132,
+      "coord": [-100.279002, 47.140824]
+    },
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["all uses"]
+      }
+    ]
+  },
   "Wingate, North Carolina, United States": {
     "place": {
       "name": "Wingate",
@@ -138376,6 +140073,24 @@
         "scope": ["city center / business district", "citywide"],
         "land": ["all uses", "residential, all uses"],
         "date": "2024-05-06"
+      }
+    ]
+  },
+  "Winona, Mississippi, United States": {
+    "place": {
+      "name": "Winona",
+      "state": "Mississippi",
+      "country": "United States",
+      "type": "city",
+      "encoded": "winona-mississippi-united-states",
+      "pop": 4505,
+      "coord": [-89.7277222, 33.4822954]
+    },
+    "rm_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district"],
+        "land": ["all uses"]
       }
     ]
   },
@@ -139373,6 +141088,24 @@
       }
     ]
   },
+  "Woodlands County, Alberta, Canada": {
+    "place": {
+      "name": "Woodlands County",
+      "state": "Alberta",
+      "country": "Canada",
+      "type": "county",
+      "encoded": "woodlands-county-alberta-canada",
+      "pop": 4558,
+      "coord": [-115.2252675, 54.3558467]
+    },
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": ["all uses"]
+      }
+    ]
+  },
   "Woodlawn, Ohio, United States": {
     "place": {
       "name": "Woodlawn",
@@ -139707,6 +141440,12 @@
         "status": "adopted",
         "scope": ["city center / business district"],
         "land": ["commercial"]
+      },
+      {
+        "status": "adopted",
+        "scope": ["main street / special"],
+        "land": ["commercial", "industrial", "medical", "other"],
+        "date": "2022-12-19"
       }
     ]
   },
@@ -140774,6 +142513,44 @@
         "status": "adopted",
         "scope": ["city center / business district"],
         "land": ["commercial", "other", "residential, low-density"]
+      }
+    ]
+  },
+  "Youngsville, North Carolina, United States": {
+    "place": {
+      "name": "Youngsville",
+      "state": "North Carolina",
+      "country": "United States",
+      "type": "city",
+      "encoded": "youngsville-north-carolina-united-states",
+      "pop": 2016,
+      "coord": [-78.4767034, 36.0247769]
+    },
+    "add_max": [
+      {
+        "status": "adopted",
+        "scope": ["citywide"],
+        "land": [
+          "commercial",
+          "industrial",
+          "medical",
+          "other",
+          "residential, multi-family"
+        ]
+      }
+    ],
+    "reduce_min": [
+      {
+        "status": "adopted",
+        "scope": ["city center / business district", "citywide"],
+        "land": [
+          "all uses",
+          "commercial",
+          "industrial",
+          "medical",
+          "other",
+          "residential, multi-family"
+        ]
       }
     ]
   },
