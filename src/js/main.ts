@@ -2,6 +2,7 @@ import initCounters from "./filter-features/counters";
 import { initFilterOptions } from "./filter-features/options";
 import initAbout from "./layout/about";
 import initFilterPopup from "./layout/filterPopup";
+import initFundraisingBanner from "./layout/fundraisingBanner";
 import maybeHideMapOverlays from "./layout/hideMapOverlays";
 import maybeDisableFullScreenIcon from "./layout/iframe";
 import createMap from "./layout/map";
@@ -24,6 +25,7 @@ export default async function initApp(): Promise<void> {
   maybeDisableFullScreenIcon();
   initAbout();
   initFilterPopup();
+  initFundraisingBanner(window.location.search);
 
   const viewToggle = initViewToggle();
 
