@@ -1,0 +1,71 @@
+@use "theme/borders";
+@use "theme/breakpoints";
+@use "theme/colors";
+@use "theme/hover";
+@use "theme/mixins";
+@use "theme/spacing";
+@use "theme/typography";
+
+.fundraising-banner {
+  display: flex;
+  align-items: center;
+  gap: spacing.$element-gap;
+  width: 100%;
+  padding: spacing.$small-gap spacing.$small-gap spacing.$small-gap
+    spacing.$element-gap;
+
+  background-color: colors.$teal;
+  color: colors.$black;
+  font-size: typography.$font-size-sm;
+  line-height: typography.$line-height-snug;
+
+  @include breakpoints.gte-sm {
+    font-size: typography.$font-size-base;
+  }
+}
+
+.fundraising-banner-text {
+  flex: 1;
+  margin: 0;
+
+  // Keep the banner to a line or two on phones.
+  .fundraising-banner-more {
+    display: none;
+    @include breakpoints.gte-sm {
+      display: inline;
+    }
+  }
+
+  strong {
+    font-weight: typography.$font-weight-bold;
+  }
+}
+
+.fundraising-banner-donate {
+  flex-shrink: 0;
+  padding: spacing.$small-gap spacing.$element-gap;
+  min-height: 36px;
+  @include mixins.flex-center(inline-flex);
+
+  border-radius: borders.$border-radius;
+  background-color: colors.$gray;
+  color: colors.$white;
+  font-weight: typography.$font-weight-bold;
+  text-decoration: none;
+  white-space: nowrap;
+
+  @include hover.enabled-or-focus {
+    background-color: colors.$gray-hover;
+    color: colors.$white;
+  }
+}
+
+.fundraising-banner-close {
+  @include mixins.icon-button-container($hover-bg: transparent);
+  margin-left: 0;
+  border-radius: borders.$border-radius;
+
+  @include hover.enabled-or-focus {
+    background-color: rgb(0 0 0 / 10%);
+  }
+}

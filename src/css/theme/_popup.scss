@@ -5,7 +5,11 @@
 // instead, at that offset.
 @mixin popup-anchor($z, $left-offset: null) {
   position: fixed;
-  top: calc(header.$header-height + spacing.$map-controls-margin-top);
+  // The fundraising banner, when shown, sets --fundraising-banner-height.
+  top: calc(
+    var(--fundraising-banner-height, 0px) + header.$header-height +
+      spacing.$map-controls-margin-top
+  );
   z-index: $z;
 
   @if $left-offset {
